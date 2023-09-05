@@ -62,7 +62,7 @@ public class CreateDiskReplicaPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class CreateDiskReplicaPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The ID of the replication pair.
          */
         public Builder replicaPairId(String replicaPairId) {
             this.replicaPairId = replicaPairId;
@@ -78,7 +78,7 @@ public class CreateDiskReplicaPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the replication pair.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

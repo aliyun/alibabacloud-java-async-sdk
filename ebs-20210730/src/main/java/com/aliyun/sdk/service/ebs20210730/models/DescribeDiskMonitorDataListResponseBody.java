@@ -74,7 +74,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * MonitorData.
+         * The near real-time monitoring data of the disks.
          */
         public Builder monitorData(java.util.List < MonitorData> monitorData) {
             this.monitorData = monitorData;
@@ -82,7 +82,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +162,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * BurstIOCount.
+             * The number of burst I/O operations.
              */
             public Builder burstIOCount(Long burstIOCount) {
                 this.burstIOCount = burstIOCount;
@@ -170,7 +170,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -178,7 +178,7 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The beginning of the time range during which the performance of the disk bursts. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

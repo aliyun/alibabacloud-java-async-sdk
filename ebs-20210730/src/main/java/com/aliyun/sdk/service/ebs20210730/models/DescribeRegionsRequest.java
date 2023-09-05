@@ -82,7 +82,14 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The name of the region.
+         * The language in which the regions and zones are named. This parameter corresponds to the `LocalName` response parameter. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US: English
+         * *   ja: Japanese
+         * 
+         * Default value: zh-CN.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +98,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The endpoint of the region.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +107,14 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * Details about the regions.
+         * The type of resource. Valid values:
+         * <p>
+         * 
+         * *   ear: async replication
+         * *   lens: CloudLens for EBS
+         * *   dbsc: Dedicated Block Storage Cluster
+         * 
+         * Default value: ear.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

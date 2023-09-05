@@ -270,28 +270,6 @@ public class CreateDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.
-         */
-        public Builder bandwidth(Long bandwidth) {
-            this.putQueryParameter("Bandwidth", bandwidth);
-            this.bandwidth = bandwidth;
-            return this;
-        }
-
-        /**
-         * The subscription duration of the replication pair. This parameter is required when the `ChargeType` parameter is set to PREPAY. The unit of the subscription duration is specified by the `PeriodUnit` parameter.
-         * <p>
-         * 
-         * *   Valid values when the `PeriodUnit` parameter is set to Week: 1, 2, 3, and 4.
-         * *   Valid values when the `PeriodUnit` parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
-         */
-        public Builder chargeType(String chargeType) {
-            this.putQueryParameter("ChargeType", chargeType);
-            this.chargeType = chargeType;
-            return this;
-        }
-
-        /**
          * The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:
          * <p>
          * 
@@ -304,9 +282,9 @@ public class CreateDiskReplicaPairRequest extends Request {
          * 
          * When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder bandwidth(Long bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
             return this;
         }
 
@@ -319,6 +297,24 @@ public class CreateDiskReplicaPairRequest extends Request {
          * 
          * Default value: POSTPAY.
          */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
@@ -326,7 +322,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary disk.
+         * The ID of the secondary disk.
          */
         public Builder destinationDiskId(String destinationDiskId) {
             this.putQueryParameter("DestinationDiskId", destinationDiskId);
@@ -335,7 +331,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the secondary disk.
+         * The region ID of the secondary disk. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -344,7 +340,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * The zone ID of the secondary disk.
          */
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);
@@ -353,7 +349,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The region ID of the secondary disk. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+         * The ID of the primary disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -362,11 +358,24 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
             this.pairName = pairName;
+            return this;
+        }
+
+        /**
+         * The subscription duration of the replication pair. This parameter is required when the `ChargeType` parameter is set to PREPAY. The unit of the subscription duration is specified by the `PeriodUnit` parameter.
+         * <p>
+         * 
+         * *   Valid values when the `PeriodUnit` parameter is set to Week: 1, 2, 3, and 4.
+         * *   Valid values when the `PeriodUnit` parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         */
+        public Builder period(Long period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
             return this;
         }
 
@@ -379,15 +388,6 @@ public class CreateDiskReplicaPairRequest extends Request {
          * 
          * Default value: Month.
          */
-        public Builder period(Long period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
-         */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
@@ -395,7 +395,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the replication pair.
+         * The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -404,7 +404,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary disk.
+         * The ID of the region in which to create the replication pair.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -413,7 +413,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The key of tag N to add to the replication pair.
+         * The ID of the resource group to which to assign the replication group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -422,7 +422,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the primary disk.
+         * The zone ID of the primary disk.
          */
         public Builder sourceZoneId(String sourceZoneId) {
             this.putQueryParameter("SourceZoneId", sourceZoneId);
@@ -431,7 +431,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -485,7 +485,7 @@ public class CreateDiskReplicaPairRequest extends Request {
             private String value; 
 
             /**
-             * The value of tag N to add to the replication pair.
+             * The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,7 +493,7 @@ public class CreateDiskReplicaPairRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -70,7 +70,7 @@ public class DescribeDiskReplicaPairProgressRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the replication pair.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DescribeDiskReplicaPairProgressRequest extends Request {
         }
 
         /**
-         * ReplicaPairId.
+         * The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~)operation to query the IDs of existing replication pairs.
          */
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);

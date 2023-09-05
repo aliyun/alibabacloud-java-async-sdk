@@ -62,7 +62,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * MonitorData.
+         * The near real-time monitoring data of the disk.
          */
         public Builder monitorData(java.util.List < MonitorData> monitorData) {
             this.monitorData = monitorData;
@@ -70,7 +70,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private Long writeIOPS; 
 
             /**
-             * BPSPercent.
+             * The percentage of BPS.
              */
             public Builder BPSPercent(Long BPSPercent) {
                 this.BPSPercent = BPSPercent;
@@ -222,7 +222,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * BurstIOCount.
+             * The number of burst I/O operations.
              */
             public Builder burstIOCount(Long burstIOCount) {
                 this.burstIOCount = burstIOCount;
@@ -230,7 +230,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -238,7 +238,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * IOPSPercent.
+             * The percentage of IOPS.
              */
             public Builder IOPSPercent(Long IOPSPercent) {
                 this.IOPSPercent = IOPSPercent;
@@ -246,7 +246,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReadBPS.
+             * The read bandwidth of the disk. Unit: Mbit/s.
              */
             public Builder readBPS(Long readBPS) {
                 this.readBPS = readBPS;
@@ -254,7 +254,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReadIOPS.
+             * The maximum number of read IOPS.
              */
             public Builder readIOPS(Long readIOPS) {
                 this.readIOPS = readIOPS;
@@ -262,7 +262,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -270,7 +270,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * WriteBPS.
+             * The write bandwidth of the disk. Unit: Mbit/s.
              */
             public Builder writeBPS(Long writeBPS) {
                 this.writeBPS = writeBPS;
@@ -278,7 +278,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * WriteIOPS.
+             * The maximum number of write IOPS.
              */
             public Builder writeIOPS(Long writeIOPS) {
                 this.writeIOPS = writeIOPS;

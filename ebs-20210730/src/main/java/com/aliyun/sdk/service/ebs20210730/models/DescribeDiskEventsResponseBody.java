@@ -74,7 +74,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DiskEvents.
+         * The risk events of the disk.
          */
         public Builder diskEvents(java.util.List < DiskEvents> diskEvents) {
             this.diskEvents = diskEvents;
@@ -82,7 +82,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +210,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * The description of the event.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +218,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -226,7 +226,12 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendAction.
+             * The recommended action after the event occurred. Valid values:
+             * <p>
+             * 
+             * *   Resize: resizes the disk.
+             * *   ModifyDiskSpec: changes the category of the disk.
+             * *   NoAction: performs no operation.
              */
             public Builder recommendAction(String recommendAction) {
                 this.recommendAction = recommendAction;
@@ -234,7 +239,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the disk.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -242,7 +247,11 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the event. Valid values:
+             * <p>
+             * 
+             * *   Solved
+             * *   UnSolved
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +259,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the event occurred. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -258,7 +267,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the event. Only DataNeedProtect can be returned.
              */
             public Builder type(String type) {
                 this.type = type;

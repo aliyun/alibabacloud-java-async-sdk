@@ -160,7 +160,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID list of the resource. You can specify up to 50 resource IDs in each call.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -172,9 +172,9 @@ public class UntagResourcesRequest extends Request {
          * The type of the resource. Valid values:
          * <p>
          * 
-         * *   dbsc: dedicated block storage cluster
-         * *   pair: the replication pair.
-         * *   group: replication pair-consistent group
+         * *   dedicatedblockstoragecluster: dedicated block storage cluster
+         * *   diskreplicapair: the replication pair.
+         * *   diskreplicagroup: replication pair-consistent group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -183,7 +183,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The list of tag keys. You can specify up to 20 tag keys in the list.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

@@ -152,7 +152,12 @@ public class DescribeDiskEventsRequest extends Request {
         } 
 
         /**
-         * DiskCategory.
+         * The type of the disk. Valid values:
+         * <p>
+         * 
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: standard SSD.
+         * *   cloud_essd: enhanced SSD (ESSD).
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -161,7 +166,7 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -170,7 +175,7 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +184,13 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default values:
+         * 
+         * *   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.
+         * *   If this parameter is set to a value greater than 100, the default value is 100.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -188,7 +199,7 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in this request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +208,7 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the disk. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -206,7 +217,7 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -215,7 +226,7 @@ public class DescribeDiskEventsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The event type. Set the value to DataNeedProtect, which indicates that the disk data needs to be protected.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

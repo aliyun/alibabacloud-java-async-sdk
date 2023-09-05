@@ -284,7 +284,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

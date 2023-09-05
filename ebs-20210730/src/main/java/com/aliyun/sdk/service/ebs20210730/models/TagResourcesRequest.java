@@ -132,7 +132,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID list of the resources. You can specify up to 50 IDs in each request.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -144,9 +144,9 @@ public class TagResourcesRequest extends Request {
          * The type of the resource. Valid values:
          * <p>
          * 
-         * *   dbsc: dedicated block storage cluster
-         * *   pair: replication pair
-         * *   group: replication pair-consistent group
+         * *   dedicatedblockstoragecluster: dedicated block storage cluster
+         * *   diskreplicapair: replication pair
+         * *   diskreplicagroup: replication pair-consistent group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -155,7 +155,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

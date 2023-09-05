@@ -140,7 +140,10 @@ public class ModifyDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The bandwidth value. Unit: Kbit/s.
+         * <p>
+         * 
+         * >  This parameter is unavailable.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);

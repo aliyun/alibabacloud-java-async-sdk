@@ -20,19 +20,19 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     @NameInMap("Category")
     private String category;
 
-    @Body
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
+    @Query
     @NameInMap("DedicatedBlockStorageClusterId")
     private java.util.List < String > dedicatedBlockStorageClusterId;
 
-    @Body
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
+    @Query
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -230,10 +230,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
+            this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
             return this;
         }
@@ -242,28 +242,25 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
          * DedicatedBlockStorageClusterId.
          */
         public Builder dedicatedBlockStorageClusterId(java.util.List < String > dedicatedBlockStorageClusterId) {
-            this.putBodyParameter("DedicatedBlockStorageClusterId", dedicatedBlockStorageClusterId);
+            this.putQueryParameter("DedicatedBlockStorageClusterId", dedicatedBlockStorageClusterId);
             this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
             return this;
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 500.
-         * <p>
-         * 
-         * Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
-            this.putBodyParameter("MaxResults", maxResults);
+            this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusters operation. Leave this parameter empty the first time you call this operation.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
-            this.putBodyParameter("NextToken", nextToken);
+            this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
             return this;
         }

@@ -167,7 +167,10 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The IDs of replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).
+         * <p>
+         * 
+         * This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried.
          */
         public Builder groupIds(String groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -176,14 +179,62 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).
+         * The maximum number of entries to return on each page. Valid values: 1 to 500.
          * <p>
          * 
-         * This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried.
+         * Default value: 10.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The region ID of the replication pair-consistent group.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the replication group belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -198,54 +249,6 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
          *     *   production: primary site
          *     *   backup: secondary site
          */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The query token returned in this call.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceGroupId.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Valid values: 1 to 100.
-         */
         public Builder site(String site) {
             this.putQueryParameter("Site", site);
             this.site = site;
@@ -253,7 +256,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -307,7 +310,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the replication group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -315,7 +318,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the replication group.
              */
             public Builder value(String value) {
                 this.value = value;

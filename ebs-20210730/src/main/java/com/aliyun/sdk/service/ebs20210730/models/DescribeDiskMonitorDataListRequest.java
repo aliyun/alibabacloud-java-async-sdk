@@ -142,7 +142,7 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         } 
 
         /**
-         * DiskIds.
+         * The IDs of the disks. The value is a JSON array that contains multiple disk IDs. Separate the IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -151,7 +151,7 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,7 +160,12 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. If you specify this parameter, both `MaxResults` and `NextToken` are used for a paged query.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -169,7 +174,7 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in this request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -178,7 +183,7 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -187,7 +192,7 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -196,7 +201,10 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the monitoring data. Set the value to pro.
+         * <p>
+         * 
+         * pro: burst performance data, such as burst I/O operations.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

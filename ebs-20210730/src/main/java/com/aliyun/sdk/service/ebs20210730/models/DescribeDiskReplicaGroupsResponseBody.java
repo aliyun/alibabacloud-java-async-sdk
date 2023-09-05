@@ -98,7 +98,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the replication pair-consistent group.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +106,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region in which the primary site is deployed.
+         * Details about the replication pair-consistent groups.
          */
         public Builder replicaGroups(java.util.List < ReplicaGroups> replicaGroups) {
             this.replicaGroups = replicaGroups;
@@ -130,7 +130,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the replication pair-consistent groups.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the replication group.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -198,7 +198,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the replication group.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -467,7 +467,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The number of entries returned per page.
+             * The bandwidth value. Unit: Mbit/s. This parameter is unavailable and has a system-preset value.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -475,7 +475,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds.
+             * The description of the replication pair-consistent group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -483,7 +483,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the replication pair-consistent group.
+             * The ID of the region in which the secondary site is deployed.
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -491,10 +491,126 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the replication pair-consistent group.
+             * The ID of the zone in which the secondary site is deployed.
              */
             public Builder destinationZoneId(String destinationZoneId) {
                 this.destinationZoneId = destinationZoneId;
+                return this;
+            }
+
+            /**
+             * The name of the replication pair-consistent group.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.
+             */
+            public Builder lastRecoverPoint(Long lastRecoverPoint) {
+                this.lastRecoverPoint = lastRecoverPoint;
+                return this;
+            }
+
+            /**
+             * The IDs of the replications pairs that belong to the replication pair-consistent group.
+             */
+            public Builder pairIds(java.util.List < byte[] > pairIds) {
+                this.pairIds = pairIds;
+                return this;
+            }
+
+            /**
+             * The number of replications pairs that belong to the replication pair-consistent group.
+             */
+            public Builder pairNumber(Long pairNumber) {
+                this.pairNumber = pairNumber;
+                return this;
+            }
+
+            /**
+             * The initial source region (primary region) of the replication pair-consistent group.
+             */
+            public Builder primaryRegion(String primaryRegion) {
+                this.primaryRegion = primaryRegion;
+                return this;
+            }
+
+            /**
+             * The initial source zone (primary zone) of the replication pair-consistent group.
+             */
+            public Builder primaryZone(String primaryZone) {
+                this.primaryZone = primaryZone;
+                return this;
+            }
+
+            /**
+             * The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds.
+             */
+            public Builder RPO(Long RPO) {
+                this.RPO = RPO;
+                return this;
+            }
+
+            /**
+             * The ID of the replication pair-consistent group.
+             */
+            public Builder replicaGroupId(String replicaGroupId) {
+                this.replicaGroupId = replicaGroupId;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the replication group belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:
+             * <p>
+             * 
+             * *   production: primary site
+             * *   backup: secondary site
+             */
+            public Builder site(String site) {
+                this.site = site;
+                return this;
+            }
+
+            /**
+             * The ID of the region in which the primary site is deployed.
+             */
+            public Builder sourceRegionId(String sourceRegionId) {
+                this.sourceRegionId = sourceRegionId;
+                return this;
+            }
+
+            /**
+             * The ID of the zone in which the primary site is deployed.
+             */
+            public Builder sourceZoneId(String sourceZoneId) {
+                this.sourceZoneId = sourceZoneId;
+                return this;
+            }
+
+            /**
+             * The initial destination region (secondary region) of the replication pair-consistent group.
+             */
+            public Builder standbyRegion(String standbyRegion) {
+                this.standbyRegion = standbyRegion;
+                return this;
+            }
+
+            /**
+             * The initial destination zone (secondary zone) of the replication pair-consistent group.
+             */
+            public Builder standbyZone(String standbyZone) {
+                this.standbyZone = standbyZone;
                 return this;
             }
 
@@ -521,129 +637,13 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
              * *   delete_failed: The replication pair-consistent group cannot be deleted.
              * *   deleted: The replication pair-consistent group is deleted.
              */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
-                return this;
-            }
-
-            /**
-             * The IDs of the replications pairs that belong to the replication pair-consistent group.
-             */
-            public Builder lastRecoverPoint(Long lastRecoverPoint) {
-                this.lastRecoverPoint = lastRecoverPoint;
-                return this;
-            }
-
-            /**
-             * The initial source region (primary region) of the replication pair-consistent group.
-             */
-            public Builder pairIds(java.util.List < byte[] > pairIds) {
-                this.pairIds = pairIds;
-                return this;
-            }
-
-            /**
-             * The initial destination region (secondary region) of the replication pair-consistent group.
-             */
-            public Builder pairNumber(Long pairNumber) {
-                this.pairNumber = pairNumber;
-                return this;
-            }
-
-            /**
-             * The initial source zone (primary zone) of the replication pair-consistent group.
-             */
-            public Builder primaryRegion(String primaryRegion) {
-                this.primaryRegion = primaryRegion;
-                return this;
-            }
-
-            /**
-             * The bandwidth value. Unit: Mbit/s. This parameter is unavailable and has a system-preset value.
-             */
-            public Builder primaryZone(String primaryZone) {
-                this.primaryZone = primaryZone;
-                return this;
-            }
-
-            /**
-             * The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:
-             * <p>
-             * 
-             * *   production: primary site
-             * *   backup: secondary site
-             */
-            public Builder RPO(Long RPO) {
-                this.RPO = RPO;
-                return this;
-            }
-
-            /**
-             * The ID of the zone in which the primary site is deployed.
-             */
-            public Builder replicaGroupId(String replicaGroupId) {
-                this.replicaGroupId = replicaGroupId;
-                return this;
-            }
-
-            /**
-             * ResourceGroupId.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The number of replications pairs that belong to the replication pair-consistent group.
-             */
-            public Builder site(String site) {
-                this.site = site;
-                return this;
-            }
-
-            /**
-             * The ID of the region in which the secondary site is deployed.
-             */
-            public Builder sourceRegionId(String sourceRegionId) {
-                this.sourceRegionId = sourceRegionId;
-                return this;
-            }
-
-            /**
-             * The ID of the zone in which the secondary site is deployed.
-             */
-            public Builder sourceZoneId(String sourceZoneId) {
-                this.sourceZoneId = sourceZoneId;
-                return this;
-            }
-
-            /**
-             * The initial destination zone (secondary zone) of the replication pair-consistent group.
-             */
-            public Builder standbyRegion(String standbyRegion) {
-                this.standbyRegion = standbyRegion;
-                return this;
-            }
-
-            /**
-             * The page number of the returned page.
-             */
-            public Builder standbyZone(String standbyZone) {
-                this.standbyZone = standbyZone;
-                return this;
-            }
-
-            /**
-             * The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.
-             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * Tags.
+             * The tags of the replication pair.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

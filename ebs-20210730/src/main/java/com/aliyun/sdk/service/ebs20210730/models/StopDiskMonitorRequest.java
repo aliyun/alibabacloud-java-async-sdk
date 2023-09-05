@@ -70,7 +70,7 @@ public class StopDiskMonitorRequest extends Request {
         } 
 
         /**
-         * DiskIds.
+         * The IDs of the disks for which you want to disable near real-time monitoring.
          */
         public Builder diskIds(java.util.List < String > diskIds) {
             String diskIdsShrink = shrink(diskIds, "DiskIds", "json");
@@ -80,7 +80,7 @@ public class StopDiskMonitorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which you want to disable near real-time monitoring for disks. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

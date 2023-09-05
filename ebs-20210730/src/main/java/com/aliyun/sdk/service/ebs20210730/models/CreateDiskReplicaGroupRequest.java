@@ -199,7 +199,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * The bandwidth value. Unit: Mbit/s.
+         * The bandwidth value. Unit: Kbit/s.
          * <p>
          * 
          * >  This parameter is unavailable.
@@ -274,7 +274,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to assign the replication group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -292,7 +292,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -346,7 +346,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,7 +354,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

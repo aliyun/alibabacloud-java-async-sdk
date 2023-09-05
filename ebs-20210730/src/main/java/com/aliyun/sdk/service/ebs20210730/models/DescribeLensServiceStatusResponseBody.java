@@ -50,7 +50,7 @@ public class DescribeLensServiceStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,12 @@ public class DescribeLensServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of CloudLens for EBS. Valid values:
+         * <p>
+         * 
+         * *   Applying
+         * *   UnAvailable
+         * *   Available
          */
         public Builder status(String status) {
             this.status = status;

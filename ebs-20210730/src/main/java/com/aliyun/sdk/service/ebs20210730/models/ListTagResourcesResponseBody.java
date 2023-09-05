@@ -165,9 +165,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * The type of the resource. Valid values:
              * <p>
              * 
-             * *   dbsc: dedicated block storage cluster
-             * *   pair: replication pair
-             * *   group: replication pair-consistent group
+             * *   dedicatedblockstoragecluster: dedicated block storage cluster
+             * *   diskreplicapair: replication pair
+             * *   diskreplicagroup: replication pair-consistent group
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

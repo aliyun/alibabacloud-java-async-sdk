@@ -62,7 +62,7 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Progress.
+         * The replication progress of the replication pair.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -70,7 +70,7 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RecoverPoint.
+         * The timestamp that indicates the last recovery point in time. The value is returned only after the replication pair works for replicating data.
          */
         public Builder recoverPoint(Long recoverPoint) {
             this.recoverPoint = recoverPoint;
@@ -78,7 +78,7 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

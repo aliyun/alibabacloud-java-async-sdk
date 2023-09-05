@@ -128,7 +128,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         } 
 
         /**
-         * DiskId.
+         * The ID of the disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -137,7 +137,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +146,13 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The interval at which the near real-time monitoring data is collected. Unit: seconds. Valid values:
+         * <p>
+         * 
+         * *   5
+         * *   60
+         * 
+         * Default value: 5.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -155,7 +161,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the disk.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +170,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -173,7 +179,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the monitoring data. Valid values:
+         * <p>
+         * 
+         * *   basic: baseline performance data.
+         * *   pro: burst performance data, such as burst I/O operations.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
