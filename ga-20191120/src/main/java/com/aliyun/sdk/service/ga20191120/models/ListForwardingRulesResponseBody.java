@@ -86,7 +86,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ForwardingRules.
+         * The information about the forwarding rules.
          */
         public Builder forwardingRules(java.util.List < ForwardingRules> forwardingRules) {
             this.forwardingRules = forwardingRules;
@@ -94,7 +94,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** is returned, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +162,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             private String endpointGroupId; 
 
             /**
-             * EndpointGroupId.
+             * The ID of the endpoint group.
+             * <p>
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -199,7 +206,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             private java.util.List < ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * ServerGroupTuples.
+             * The information about the endpoint group.
+             * <p>
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.
              */
             public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -223,10 +233,14 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         @NameInMap("RuleActionType")
         private String ruleActionType;
 
+        @NameInMap("RuleActionValue")
+        private String ruleActionValue;
+
         private RuleActions(Builder builder) {
             this.forwardGroupConfig = builder.forwardGroupConfig;
             this.order = builder.order;
             this.ruleActionType = builder.ruleActionType;
+            this.ruleActionValue = builder.ruleActionValue;
         }
 
         public static Builder builder() {
@@ -258,13 +272,24 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             return this.ruleActionType;
         }
 
+        /**
+         * @return ruleActionValue
+         */
+        public String getRuleActionValue() {
+            return this.ruleActionValue;
+        }
+
         public static final class Builder {
             private ForwardGroupConfig forwardGroupConfig; 
             private Integer order; 
             private String ruleActionType; 
+            private String ruleActionValue; 
 
             /**
-             * ForwardGroupConfig.
+             * The configuration of the forwarding action.
+             * <p>
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -272,7 +297,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Order.
+             * The forwarding priority.
+             * <p>
+             * 
+             * >  This parameter does not take effect.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -280,10 +308,63 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleActionType.
+             * The type of the forwarding action. Valid values:
+             * <p>
+             * 
+             * *   **ForwardGroup**: forwards a request.
+             * *   **Redirect:** redirects a request.
+             * *   **FixResponse**: returns a fixed response.
+             * *   **Rewrite:** rewrites a request.
+             * *   **AddHeader**: adds a header to a request.
+             * *   **RemoveHeaderConfig**: deletes the header of a request.
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
+                return this;
+            }
+
+            /**
+             * The value of the forwarding action type.
+             * <p>
+             * 
+             * Different JSON strings are returned based on the **RuleActionType** parameter.
+             * 
+             * *   If **RuleActionType** is set to **ForwardGroup**, the information about a virtual endpoint group is returned. Configuration information:
+             * 
+             *     *   `type`: the type of the resource that is returned. The value is `endpointgroup`.
+             *     *   `value`: the ID of the virtual endpoint group that is returned.
+             * 
+             * *   If **RuleActionType** is set to **Redirect**, the redirect configuration is returned. Configuration information:
+             * 
+             *     *   `protocol`: the protocol of requests after the requests are redirected.
+             *     *   `domain`: the domain name to which requests are redirected.
+             *     *   `port`: the port to which requests are redirected.
+             *     *   `path`: the path to which requests are redirected.
+             *     *   `query`: the query string to which requests are redirected.
+             *     *   `code`: the redirect code.
+             * 
+             * *   If **RuleActionType** is set to **FixResponse**, the information about the fixed response that you configured is returned. Configuration information:
+             * 
+             *     *   `code`: the HTTP status code that is returned.
+             *     *   `type`: the type of the response content that is returned.
+             *     *   `content`: the response content that is returned.
+             * 
+             * *   If **RuleActionType** is set to **AddHeader**, the information about the HTTP header that is added is returned. Configuration information:
+             * 
+             *     *   `name`: the name of the HTTP header that is returned.
+             *     *   `type`: the content type of the HTTP header that is returned.
+             *     *   `value`: the content of the HTTP header that is returned.
+             * 
+             * *   If **RuleActionType** is set to **RemoveHeader**, the information about the HTTP header that is deleted is returned.
+             * 
+             * *   If **RuleActionType** is set to **Rewrite**, the rewrite configuration is returned. Configuration information:
+             * 
+             *     *   `domain`: the domain name to which requests are redirected.
+             *     *   `path`: the path to which requests are redirected.
+             *     *   `query`: the query string to which requests are redirected.
+             */
+            public Builder ruleActionValue(String ruleActionValue) {
+                this.ruleActionValue = ruleActionValue;
                 return this;
             }
 
@@ -321,7 +402,12 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Values.
+             * The domain name.
+             * <p>
+             * 
+             * The domain name must be 3 to 128 characters in length, and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?).
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -362,7 +448,12 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Values.
+             * The path.
+             * <p>
+             * 
+             * The path must be 1 to 128 characters in length and must start with a forward slash (/). The path can contain only letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?).
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -386,10 +477,14 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         @NameInMap("RuleConditionType")
         private String ruleConditionType;
 
+        @NameInMap("RuleConditionValue")
+        private String ruleConditionValue;
+
         private RuleConditions(Builder builder) {
             this.hostConfig = builder.hostConfig;
             this.pathConfig = builder.pathConfig;
             this.ruleConditionType = builder.ruleConditionType;
+            this.ruleConditionValue = builder.ruleConditionValue;
         }
 
         public static Builder builder() {
@@ -421,13 +516,24 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             return this.ruleConditionType;
         }
 
+        /**
+         * @return ruleConditionValue
+         */
+        public String getRuleConditionValue() {
+            return this.ruleConditionValue;
+        }
+
         public static final class Builder {
             private HostConfig hostConfig; 
             private PathConfig pathConfig; 
             private String ruleConditionType; 
+            private String ruleConditionValue; 
 
             /**
-             * HostConfig.
+             * The configuration of the domain name.
+             * <p>
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -435,7 +541,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PathConfig.
+             * The configuration of the path.
+             * <p>
+             * 
+             * >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -443,10 +552,38 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConditionType.
+             * The type of the forwarding condition.
+             * <p>
+             * 
+             * *   **Host**: domain name
+             * *   **Path**: path
+             * *   **RequestHeader**: HTTP header
+             * *   **Query**: query string
+             * *   **Method**: HTTP method
+             * *   **Cookie**: cookie
+             * *   **SourceIP**: source IP address
              */
             public Builder ruleConditionType(String ruleConditionType) {
                 this.ruleConditionType = ruleConditionType;
+                return this;
+            }
+
+            /**
+             * The value of the forwarding condition type.
+             * <p>
+             * 
+             * Different JSON strings are returned based on the **RuleConditionType** parameter.
+             * 
+             * *   If **RuleConditionType** is set to **Host**, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.
+             * *   If **RuleConditionType** is set to **Path**, a path condition is returned. If multiple forwarding conditions whose types are path are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.
+             * *   If **RuleConditionType** is set to **RequestHeader**, an HTTP header condition that consists of key-value pairs is returned.
+             * *   If **RuleConditionType** is set to **Query**, a query string condition that consists of key-value pairs is returned.
+             * *   If **RuleConditionType** is set to **Method**, an HTTP method condition is returned.
+             * *   If **RuleConditionType** is set to **Cookie**, a cookie condition that consists of key-value pairs is returned.
+             * *   If **RuleConditionType** is set to **SourceIP**, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.
+             */
+            public Builder ruleConditionValue(String ruleConditionValue) {
+                this.ruleConditionValue = ruleConditionValue;
                 return this;
             }
 
@@ -457,7 +594,91 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         } 
 
     }
+    public static class ServiceManagedInfos extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("ChildType")
+        private String childType;
+
+        @NameInMap("IsManaged")
+        private Boolean isManaged;
+
+        private ServiceManagedInfos(Builder builder) {
+            this.action = builder.action;
+            this.childType = builder.childType;
+            this.isManaged = builder.isManaged;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceManagedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return childType
+         */
+        public String getChildType() {
+            return this.childType;
+        }
+
+        /**
+         * @return isManaged
+         */
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String childType; 
+            private Boolean isManaged; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * ChildType.
+             */
+            public Builder childType(String childType) {
+                this.childType = childType;
+                return this;
+            }
+
+            /**
+             * IsManaged.
+             */
+            public Builder isManaged(Boolean isManaged) {
+                this.isManaged = isManaged;
+                return this;
+            }
+
+            public ServiceManagedInfos build() {
+                return new ServiceManagedInfos(this);
+            } 
+
+        } 
+
+    }
     public static class ForwardingRules extends TeaModel {
+        @NameInMap("ForwardingRuleDirection")
+        private String forwardingRuleDirection;
+
         @NameInMap("ForwardingRuleId")
         private String forwardingRuleId;
 
@@ -479,7 +700,17 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         @NameInMap("RuleConditions")
         private java.util.List < RuleConditions> ruleConditions;
 
+        @NameInMap("ServiceId")
+        private String serviceId;
+
+        @NameInMap("ServiceManaged")
+        private Boolean serviceManaged;
+
+        @NameInMap("ServiceManagedInfos")
+        private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+
         private ForwardingRules(Builder builder) {
+            this.forwardingRuleDirection = builder.forwardingRuleDirection;
             this.forwardingRuleId = builder.forwardingRuleId;
             this.forwardingRuleName = builder.forwardingRuleName;
             this.forwardingRuleStatus = builder.forwardingRuleStatus;
@@ -487,6 +718,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.ruleActions = builder.ruleActions;
             this.ruleConditions = builder.ruleConditions;
+            this.serviceId = builder.serviceId;
+            this.serviceManaged = builder.serviceManaged;
+            this.serviceManagedInfos = builder.serviceManagedInfos;
         }
 
         public static Builder builder() {
@@ -495,6 +729,13 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
         public static ForwardingRules create() {
             return builder().build();
+        }
+
+        /**
+         * @return forwardingRuleDirection
+         */
+        public String getForwardingRuleDirection() {
+            return this.forwardingRuleDirection;
         }
 
         /**
@@ -546,7 +787,29 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             return this.ruleConditions;
         }
 
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return serviceManaged
+         */
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
+         * @return serviceManagedInfos
+         */
+        public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+            return this.serviceManagedInfos;
+        }
+
         public static final class Builder {
+            private String forwardingRuleDirection; 
             private String forwardingRuleId; 
             private String forwardingRuleName; 
             private String forwardingRuleStatus; 
@@ -554,9 +817,23 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             private Integer priority; 
             private java.util.List < RuleActions> ruleActions; 
             private java.util.List < RuleConditions> ruleConditions; 
+            private String serviceId; 
+            private Boolean serviceManaged; 
+            private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
 
             /**
-             * ForwardingRuleId.
+             * The direction in which the forwarding rule takes effect.
+             * <p>
+             * 
+             * By default, **request** is returned, which indicates that the forwarding rule takes effect on requests.
+             */
+            public Builder forwardingRuleDirection(String forwardingRuleDirection) {
+                this.forwardingRuleDirection = forwardingRuleDirection;
+                return this;
+            }
+
+            /**
+             * The ID of the forwarding rule.
              */
             public Builder forwardingRuleId(String forwardingRuleId) {
                 this.forwardingRuleId = forwardingRuleId;
@@ -564,7 +841,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardingRuleName.
+             * The name of the forwarding rule.
              */
             public Builder forwardingRuleName(String forwardingRuleName) {
                 this.forwardingRuleName = forwardingRuleName;
@@ -572,7 +849,12 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardingRuleStatus.
+             * The status of the forwarding rule.
+             * <p>
+             * 
+             * *   **active**: The forwarding rule is normal.
+             * *   **configuring**: The forwarding rule is being modified.
+             * *   **deleting**: The forwarding rule is being deleted.
              */
             public Builder forwardingRuleStatus(String forwardingRuleStatus) {
                 this.forwardingRuleStatus = forwardingRuleStatus;
@@ -580,7 +862,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerId.
+             * The ID of the listener.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -588,7 +870,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the forwarding rule.
+             * <p>
+             * 
+             * Valid values: **1** to **10000**. A lower value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -596,7 +881,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleActions.
+             * The forwarding action.
              */
             public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
@@ -604,10 +889,34 @@ public class ListForwardingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConditions.
+             * The forwarding conditions.
              */
             public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
+                return this;
+            }
+
+            /**
+             * ServiceId.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServiceManaged.
+             */
+            public Builder serviceManaged(Boolean serviceManaged) {
+                this.serviceManaged = serviceManaged;
+                return this;
+            }
+
+            /**
+             * ServiceManagedInfos.
+             */
+            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+                this.serviceManagedInfos = serviceManagedInfos;
                 return this;
             }
 

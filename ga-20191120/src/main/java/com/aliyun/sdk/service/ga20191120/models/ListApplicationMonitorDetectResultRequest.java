@@ -28,6 +28,7 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -115,18 +116,18 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationMonitorDetectResultRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.taskId = response.taskId;
+        private Builder(ListApplicationMonitorDetectResultRequest request) {
+            super(request);
+            this.beginTime = request.beginTime;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * BeginTime.
+         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -135,7 +136,7 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +145,7 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +154,7 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -162,7 +163,7 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +172,7 @@ public class ListApplicationMonitorDetectResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The origin probing task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

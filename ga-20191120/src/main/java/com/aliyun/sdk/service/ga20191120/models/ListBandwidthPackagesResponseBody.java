@@ -86,7 +86,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BandwidthPackages.
+         * Details about the bandwidth plans.
          */
         public Builder bandwidthPackages(java.util.List < BandwidthPackages> bandwidthPackages) {
             this.bandwidthPackages = bandwidthPackages;
@@ -94,7 +94,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,67 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the bandwidth plan.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the bandwidth plan.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class BandwidthPackages extends TeaModel {
         @NameInMap("Accelerators")
         private java.util.List < String > accelerators;
@@ -174,8 +235,14 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("State")
         private String state;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("Type")
         private String type;
@@ -195,7 +262,9 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             this.name = builder.name;
             this.ratio = builder.ratio;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.state = builder.state;
+            this.tags = builder.tags;
             this.type = builder.type;
         }
 
@@ -306,10 +375,24 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
             return this.state;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -334,11 +417,13 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             private String name; 
             private Integer ratio; 
             private String regionId; 
+            private String resourceGroupId; 
             private String state; 
+            private java.util.List < Tags> tags; 
             private String type; 
 
             /**
-             * Accelerators.
+             * The ID of the GA instance that is associated with the bandwidth plan.
              */
             public Builder accelerators(java.util.List < String > accelerators) {
                 this.accelerators = accelerators;
@@ -346,7 +431,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth value of the bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -354,7 +439,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageId.
+             * The ID of the bandwidth plan.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -362,7 +447,12 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthType.
+             * The type of the bandwidth. Valid values:
+             * <p>
+             * 
+             * *   **Basic**: standard
+             * *   **Enhanced**: enhanced
+             * *   **Advanced**: premium
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -370,7 +460,11 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BillingType.
+             * The metering method that is used when you use the pay-as-you-go billing method.
+             * <p>
+             * 
+             * *   **PayByTraffic**: pay-by-data-transfer
+             * *   **PayBY95**: pay-by-95th-percentile
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -378,7 +472,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CbnGeographicRegionIdA.
+             * Area A of the cross-border acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.
+             * <p>
+             * 
+             * This parameter is returned only if you call this operation on the international site (alibabacloud.com).
              */
             public Builder cbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
                 this.cbnGeographicRegionIdA = cbnGeographicRegionIdA;
@@ -386,7 +483,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CbnGeographicRegionIdB.
+             * Area B of the cross-border acceleration bandwidth plan. Only **Global** (global) is returned.
+             * <p>
+             * 
+             * This parameter is returned only if you call this operation on the international site (alibabacloud.com).
              */
             public Builder cbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
                 this.cbnGeographicRegionIdB = cbnGeographicRegionIdB;
@@ -394,7 +494,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -402,7 +502,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the bandwidth plan was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -410,7 +510,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the bandwidth plan.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -418,7 +518,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The timestamp when the bandwidth plan expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -426,7 +526,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the bandwidth plan.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -434,7 +534,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Ratio.
+             * The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile metering method is used.
              */
             public Builder ratio(Integer ratio) {
                 this.ratio = ratio;
@@ -442,7 +542,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -450,7 +550,25 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The status of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **init**: The bandwidth plan is being initialized.
+             * *   **active**: The bandwidth plan is available.
+             * *   **binded**: The bandwidth plan is associated.
+             * *   **binding**: The bandwidth plan is being associated.
+             * *   **unbinding**: The bandwidth plan is being disassociated.
+             * *   **updating**: The bandwidth plan is being updated.
+             * *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
+             * *   **locked**: The bandwidth plan is locked.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -458,7 +576,21 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The tag of the bandwidth plan.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The type of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **Basic**: a basic bandwidth plan
+             * *   **CrossDomain**: a cross-border acceleration bandwidth plan
+             * 
+             * If you call this operation on the China site (aliyun.com), only **Basic** is returned.
              */
             public Builder type(String type) {
                 this.type = type;

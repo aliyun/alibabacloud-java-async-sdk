@@ -63,14 +63,14 @@ public class GetBasicAcceleratorRequest extends Request {
             super();
         } 
 
-        private Builder(GetBasicAcceleratorRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.regionId = response.regionId;
+        private Builder(GetBasicAcceleratorRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 全球加速实例Id
+         * The ID of the basic GA instance that you want to query.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -79,7 +79,7 @@ public class GetBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

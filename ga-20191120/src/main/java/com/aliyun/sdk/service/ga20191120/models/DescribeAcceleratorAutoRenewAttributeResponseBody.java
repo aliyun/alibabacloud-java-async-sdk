@@ -86,7 +86,7 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -94,7 +94,11 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * AutoRenew.
+         * Indicates whether auto-renewal is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: enabled
+         * *   **false** (default): disabled
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = autoRenew;
@@ -102,7 +106,10 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * AutoRenewDuration.
+         * The auto-renewal duration. Unit: months.
+         * <p>
+         * 
+         * This parameter is returned only if **AutoRenew** is set to **true**.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;
@@ -110,7 +117,12 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * RenewalStatus.
+         * Indicates how the GA instance is renewed. Valid values:
+         * <p>
+         * 
+         * *   **AutoRenewal**: The GA instance is automatically renewed.
+         * *   **Normal**: You must manually renew the GA instance.
+         * *   **NotRenewal**: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.renewalStatus = renewalStatus;
@@ -118,7 +130,7 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

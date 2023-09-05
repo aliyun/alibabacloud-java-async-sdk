@@ -102,17 +102,20 @@ public class UpdateEndpointGroupAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEndpointGroupAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.endpointGroupId = response.endpointGroupId;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(UpdateEndpointGroupAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.endpointGroupId = request.endpointGroupId;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,7 +124,7 @@ public class UpdateEndpointGroupAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the endpoint group that you want to modify.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +133,7 @@ public class UpdateEndpointGroupAttributeRequest extends Request {
         }
 
         /**
-         * EndpointGroupId.
+         * The ID of the endpoint group.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -139,7 +142,10 @@ public class UpdateEndpointGroupAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the endpoint group that you want to modify.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +154,7 @@ public class UpdateEndpointGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -57,11 +57,23 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
+    @NameInMap("ServiceId")
+    private String serviceId;
+
+    @NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @NameInMap("ServiceManagedInfos")
+    private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+
     @NameInMap("State")
     private String state;
 
+    @NameInMap("Type")
+    private String type;
+
     @NameInMap("XForwardedForConfig")
-    private XForwardedForConfig XForwardedForConfig;
+    private XForwardedForConfig xForwardedForConfig;
 
     private DescribeListenerResponseBody(Builder builder) {
         this.acceleratorId = builder.acceleratorId;
@@ -79,8 +91,12 @@ public class DescribeListenerResponseBody extends TeaModel {
         this.relatedAcls = builder.relatedAcls;
         this.requestId = builder.requestId;
         this.securityPolicyId = builder.securityPolicyId;
+        this.serviceId = builder.serviceId;
+        this.serviceManaged = builder.serviceManaged;
+        this.serviceManagedInfos = builder.serviceManagedInfos;
         this.state = builder.state;
-        this.XForwardedForConfig = builder.XForwardedForConfig;
+        this.type = builder.type;
+        this.xForwardedForConfig = builder.xForwardedForConfig;
     }
 
     public static Builder builder() {
@@ -197,6 +213,27 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
+     * @return serviceManagedInfos
+     */
+    public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+        return this.serviceManagedInfos;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -204,10 +241,17 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     /**
-     * @return XForwardedForConfig
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * @return xForwardedForConfig
      */
     public XForwardedForConfig getXForwardedForConfig() {
-        return this.XForwardedForConfig;
+        return this.xForwardedForConfig;
     }
 
     public static final class Builder {
@@ -226,11 +270,15 @@ public class DescribeListenerResponseBody extends TeaModel {
         private java.util.List < RelatedAcls> relatedAcls; 
         private String requestId; 
         private String securityPolicyId; 
+        private String serviceId; 
+        private Boolean serviceManaged; 
+        private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
         private String state; 
-        private XForwardedForConfig XForwardedForConfig; 
+        private String type; 
+        private XForwardedForConfig xForwardedForConfig; 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -238,7 +286,13 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * AclType.
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the ACL, the listener does not forward requests.
+         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.
+         * 
+         * If the value of **Status** is **on**, this parameter is returned.
          */
         public Builder aclType(String aclType) {
             this.aclType = aclType;
@@ -246,7 +300,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * BackendPorts.
+         * Details about the backend ports.
          */
         public Builder backendPorts(java.util.List < BackendPorts> backendPorts) {
             this.backendPorts = backendPorts;
@@ -254,7 +308,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Certificates.
+         * The SSL certificates.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.certificates = certificates;
@@ -262,7 +316,11 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * ClientAffinity.
+         * Indicates whether client affinity is enabled for the listener.
+         * <p>
+         * 
+         * *   If **NONE** is returned, client affinity is disabled. In this case, requests from the same client may be forwarded to different endpoints.
+         * *   If **SOURCE_IP** is returned, client affinity is enabled. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
          */
         public Builder clientAffinity(String clientAffinity) {
             this.clientAffinity = clientAffinity;
@@ -270,7 +328,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The timestamp when the listener was created. Unit: milliseconds.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -278,7 +336,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the listener.
          */
         public Builder description(String description) {
             this.description = description;
@@ -286,7 +344,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -294,7 +352,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the listener.
          */
         public Builder name(String name) {
             this.name = name;
@@ -302,7 +360,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * PortRanges.
+         * Details about the listener ports.
          */
         public Builder portRanges(java.util.List < PortRanges> portRanges) {
             this.portRanges = portRanges;
@@ -310,7 +368,13 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * The network transmission protocol that is used by the listener. Valid values:
+         * <p>
+         * 
+         * *   **tcp**: TCP
+         * *   **udp**: UDP
+         * *   **http**: HTTP
+         * *   **https**: HTTPS
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -318,7 +382,11 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyProtocol.
+         * Indicates whether the client IP address preservation feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: The client IP address preservation feature is enabled. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.
+         * *   **false**: The client IP address preservation feature is disabled.
          */
         public Builder proxyProtocol(Boolean proxyProtocol) {
             this.proxyProtocol = proxyProtocol;
@@ -326,7 +394,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedAcls.
+         * The information about the access control list (ACL) that is associated with the listener.
          */
         public Builder relatedAcls(java.util.List < RelatedAcls> relatedAcls) {
             this.relatedAcls = relatedAcls;
@@ -334,7 +402,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -342,7 +410,35 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityPolicyId.
+         * The ID of the security policy.
+         * <p>
+         * 
+         * *   **tls_cipher_policy\_1\_0**
+         * 
+         *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_1**
+         * 
+         *     *   Supported TLS versions: TLS 1.1 and TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_2**
+         * 
+         *     *   Supported TLS version: TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_2\_strict**
+         * 
+         *     *   Supported TLS version: TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
+         * 
+         *     *   Supported TLS versions: TLS 1.2 and TLS 1.3
+         *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+         * 
+         * >  This parameter is returned only for HTTPS listeners.
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.securityPolicyId = securityPolicyId;
@@ -350,7 +446,37 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * ServiceManagedInfos.
+         */
+        public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+            this.serviceManagedInfos = serviceManagedInfos;
+            return this;
+        }
+
+        /**
+         * The state of the listener. Valid values:
+         * <p>
+         * 
+         * *   **configuring**: The listener is being configured.
+         * *   **init**: The listener is being initialized.
+         * *   **updating**: The listener is being updated.
+         * *   **deleting**: The listener is being deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -358,10 +484,22 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * XForwardedForConfig.
+         * The routing type of the listener. Valid values:
+         * <p>
+         * 
+         * *   **Standard**: intelligent routing
+         * *   **CustomRouting**: custom routing
          */
-        public Builder XForwardedForConfig(XForwardedForConfig XForwardedForConfig) {
-            this.XForwardedForConfig = XForwardedForConfig;
+        public Builder type(String type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * The configurations of the `XForward` headers.
+         */
+        public Builder xForwardedForConfig(XForwardedForConfig xForwardedForConfig) {
+            this.xForwardedForConfig = xForwardedForConfig;
             return this;
         }
 
@@ -410,7 +548,10 @@ public class DescribeListenerResponseBody extends TeaModel {
             private String toPort; 
 
             /**
-             * FromPort.
+             * The start port in the range of ports used by the backend server to receive requests.
+             * <p>
+             * 
+             * This parameter is returned only when you configure an HTTPS listener and the listening port is the same port used by the backend server to provide services.
              */
             public Builder fromPort(String fromPort) {
                 this.fromPort = fromPort;
@@ -418,7 +559,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * ToPort.
+             * The end port in the range of ports used by the backend server to receive requests.
              */
             public Builder toPort(String toPort) {
                 this.toPort = toPort;
@@ -471,7 +612,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * The ID of the SSL certificate.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -479,7 +620,10 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the certificate.
+             * <p>
+             * 
+             * Only **Server** can be returned. This value Server indicates a server certificate.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -532,7 +676,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             private Integer toPort; 
 
             /**
-             * FromPort.
+             * The start port in the range of listening ports used to receive and forward requests to endpoints.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -540,7 +684,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * ToPort.
+             * The end port in the range of listening ports used to receive and forward requests to endpoints.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -593,7 +737,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AclId.
+             * The ID of the ACL that is associated with the listener.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -601,7 +745,11 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the access control feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -615,28 +763,109 @@ public class DescribeListenerResponseBody extends TeaModel {
         } 
 
     }
+    public static class ServiceManagedInfos extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("ChildType")
+        private String childType;
+
+        @NameInMap("IsManaged")
+        private Boolean isManaged;
+
+        private ServiceManagedInfos(Builder builder) {
+            this.action = builder.action;
+            this.childType = builder.childType;
+            this.isManaged = builder.isManaged;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceManagedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return childType
+         */
+        public String getChildType() {
+            return this.childType;
+        }
+
+        /**
+         * @return isManaged
+         */
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String childType; 
+            private Boolean isManaged; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * ChildType.
+             */
+            public Builder childType(String childType) {
+                this.childType = childType;
+                return this;
+            }
+
+            /**
+             * IsManaged.
+             */
+            public Builder isManaged(Boolean isManaged) {
+                this.isManaged = isManaged;
+                return this;
+            }
+
+            public ServiceManagedInfos build() {
+                return new ServiceManagedInfos(this);
+            } 
+
+        } 
+
+    }
     public static class XForwardedForConfig extends TeaModel {
         @NameInMap("XForwardedForGaApEnabled")
-        private Boolean XForwardedForGaApEnabled;
+        private Boolean xForwardedForGaApEnabled;
 
         @NameInMap("XForwardedForGaIdEnabled")
-        private Boolean XForwardedForGaIdEnabled;
+        private Boolean xForwardedForGaIdEnabled;
 
         @NameInMap("XForwardedForPortEnabled")
-        private Boolean XForwardedForPortEnabled;
+        private Boolean xForwardedForPortEnabled;
 
         @NameInMap("XForwardedForProtoEnabled")
-        private Boolean XForwardedForProtoEnabled;
+        private Boolean xForwardedForProtoEnabled;
 
         @NameInMap("XRealIpEnabled")
-        private Boolean XRealIpEnabled;
+        private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {
-            this.XForwardedForGaApEnabled = builder.XForwardedForGaApEnabled;
-            this.XForwardedForGaIdEnabled = builder.XForwardedForGaIdEnabled;
-            this.XForwardedForPortEnabled = builder.XForwardedForPortEnabled;
-            this.XForwardedForProtoEnabled = builder.XForwardedForProtoEnabled;
-            this.XRealIpEnabled = builder.XRealIpEnabled;
+            this.xForwardedForGaApEnabled = builder.xForwardedForGaApEnabled;
+            this.xForwardedForGaIdEnabled = builder.xForwardedForGaIdEnabled;
+            this.xForwardedForPortEnabled = builder.xForwardedForPortEnabled;
+            this.xForwardedForProtoEnabled = builder.xForwardedForProtoEnabled;
+            this.xRealIpEnabled = builder.xRealIpEnabled;
         }
 
         public static Builder builder() {
@@ -648,84 +877,114 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * @return XForwardedForGaApEnabled
+         * @return xForwardedForGaApEnabled
          */
         public Boolean getXForwardedForGaApEnabled() {
-            return this.XForwardedForGaApEnabled;
+            return this.xForwardedForGaApEnabled;
         }
 
         /**
-         * @return XForwardedForGaIdEnabled
+         * @return xForwardedForGaIdEnabled
          */
         public Boolean getXForwardedForGaIdEnabled() {
-            return this.XForwardedForGaIdEnabled;
+            return this.xForwardedForGaIdEnabled;
         }
 
         /**
-         * @return XForwardedForPortEnabled
+         * @return xForwardedForPortEnabled
          */
         public Boolean getXForwardedForPortEnabled() {
-            return this.XForwardedForPortEnabled;
+            return this.xForwardedForPortEnabled;
         }
 
         /**
-         * @return XForwardedForProtoEnabled
+         * @return xForwardedForProtoEnabled
          */
         public Boolean getXForwardedForProtoEnabled() {
-            return this.XForwardedForProtoEnabled;
+            return this.xForwardedForProtoEnabled;
         }
 
         /**
-         * @return XRealIpEnabled
+         * @return xRealIpEnabled
          */
         public Boolean getXRealIpEnabled() {
-            return this.XRealIpEnabled;
+            return this.xRealIpEnabled;
         }
 
         public static final class Builder {
-            private Boolean XForwardedForGaApEnabled; 
-            private Boolean XForwardedForGaIdEnabled; 
-            private Boolean XForwardedForPortEnabled; 
-            private Boolean XForwardedForProtoEnabled; 
-            private Boolean XRealIpEnabled; 
+            private Boolean xForwardedForGaApEnabled; 
+            private Boolean xForwardedForGaIdEnabled; 
+            private Boolean xForwardedForPortEnabled; 
+            private Boolean xForwardedForProtoEnabled; 
+            private Boolean xRealIpEnabled; 
 
             /**
-             * XForwardedForGaApEnabled.
+             * Indicates whether the `GA-AP` header is used to retrieve the information about acceleration regions. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             * 
+             * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
-            public Builder XForwardedForGaApEnabled(Boolean XForwardedForGaApEnabled) {
-                this.XForwardedForGaApEnabled = XForwardedForGaApEnabled;
+            public Builder xForwardedForGaApEnabled(Boolean xForwardedForGaApEnabled) {
+                this.xForwardedForGaApEnabled = xForwardedForGaApEnabled;
                 return this;
             }
 
             /**
-             * XForwardedForGaIdEnabled.
+             * Indicates whether the `GA-ID` header is used to retrieve the ID of the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             * 
+             * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
-            public Builder XForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
-                this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
+            public Builder xForwardedForGaIdEnabled(Boolean xForwardedForGaIdEnabled) {
+                this.xForwardedForGaIdEnabled = xForwardedForGaIdEnabled;
                 return this;
             }
 
             /**
-             * XForwardedForPortEnabled.
+             * Indicates whether the `GA-X-Forward-Port` header is used to retrieve the listener ports of the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             * 
+             * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
-            public Builder XForwardedForPortEnabled(Boolean XForwardedForPortEnabled) {
-                this.XForwardedForPortEnabled = XForwardedForPortEnabled;
+            public Builder xForwardedForPortEnabled(Boolean xForwardedForPortEnabled) {
+                this.xForwardedForPortEnabled = xForwardedForPortEnabled;
                 return this;
             }
 
             /**
-             * XForwardedForProtoEnabled.
+             * Indicates whether the `GA-X-Forward-Proto` header is used to retrieve the listener protocol of the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             * 
+             * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
-            public Builder XForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
-                this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            public Builder xForwardedForProtoEnabled(Boolean xForwardedForProtoEnabled) {
+                this.xForwardedForProtoEnabled = xForwardedForProtoEnabled;
                 return this;
             }
 
             /**
-             * XRealIpEnabled.
+             * Indicates whether the `X-Real-IP` header is used to retrieve client IP addresses. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
-            public Builder XRealIpEnabled(Boolean XRealIpEnabled) {
-                this.XRealIpEnabled = XRealIpEnabled;
+            public Builder xRealIpEnabled(Boolean xRealIpEnabled) {
+                this.xRealIpEnabled = xRealIpEnabled;
                 return this;
             }
 

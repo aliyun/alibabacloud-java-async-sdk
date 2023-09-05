@@ -18,6 +18,7 @@ public class ListApplicationMonitorRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -87,16 +88,16 @@ public class ListApplicationMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationMonitorRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.searchValue = response.searchValue;
+        private Builder(ListApplicationMonitorRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.searchValue = request.searchValue;
         } 
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +106,7 @@ public class ListApplicationMonitorRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -114,7 +115,7 @@ public class ListApplicationMonitorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +124,7 @@ public class ListApplicationMonitorRequest extends Request {
         }
 
         /**
-         * SearchValue.
+         * The keyword that is used to search for origin probing tasks. You can enter a URL, an IP address, a GA instance ID, or a listener ID to perform a fuzzy match.
          */
         public Builder searchValue(String searchValue) {
             this.putQueryParameter("SearchValue", searchValue);

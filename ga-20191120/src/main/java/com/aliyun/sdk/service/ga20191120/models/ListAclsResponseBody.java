@@ -86,7 +86,7 @@ public class ListAclsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Acls.
+         * The network ACLs.
          */
         public Builder acls(java.util.List < Acls> acls) {
             this.acls = acls;
@@ -94,7 +94,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** is returned, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +135,67 @@ public class ListAclsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the network ACL.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the network ACL.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Acls extends TeaModel {
         @NameInMap("AclId")
         private String aclId;
@@ -144,11 +209,19 @@ public class ListAclsResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private Acls(Builder builder) {
             this.aclId = builder.aclId;
             this.aclName = builder.aclName;
             this.aclStatus = builder.aclStatus;
             this.addressIPVersion = builder.addressIPVersion;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -187,14 +260,30 @@ public class ListAclsResponseBody extends TeaModel {
             return this.addressIPVersion;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String aclId; 
             private String aclName; 
             private String aclStatus; 
             private String addressIPVersion; 
+            private String resourceGroupId; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * AclId.
+             * The ID of the network ACL.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -202,7 +291,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * The name of the network ACL.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -210,7 +299,14 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * The status of the network ACL. Valid values:
+             * <p>
+             * 
+             * *   **init**: The network ACL is being initialized.
+             * *   **active**: The network ACL is available.
+             * *   **configuring**: The network ACL is being configured.
+             * *   **updating**: The network ACL is being updated.
+             * *   **deleting:** The network ACL is being deleted.
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -218,10 +314,30 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressIPVersion.
+             * The IP version of the network ACL. Valid values:
+             * <p>
+             * 
+             * *   **IPv4**
+             * *   **IPv6**
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The tags of the network ACL.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -75,15 +75,15 @@ public class DeleteEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEndpointGroupRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.endpointGroupId = response.endpointGroupId;
+        private Builder(DeleteEndpointGroupRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.endpointGroupId = request.endpointGroupId;
         } 
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -92,7 +92,12 @@ public class DeleteEndpointGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -101,7 +106,7 @@ public class DeleteEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointGroupId.
+         * The ID of the endpoint group that you want to delete.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);

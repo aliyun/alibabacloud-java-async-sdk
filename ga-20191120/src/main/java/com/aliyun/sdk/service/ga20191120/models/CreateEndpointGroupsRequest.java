@@ -117,18 +117,18 @@ public class CreateEndpointGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEndpointGroupsRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointGroupConfigurations = response.endpointGroupConfigurations;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(CreateEndpointGroupsRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointGroupConfigurations = request.endpointGroupConfigurations;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -137,7 +137,12 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +151,11 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -155,7 +164,7 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * EndpointGroupConfigurations.
+         * Terminal node group configuration information.
          */
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
@@ -164,7 +173,10 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
+         * <p>
+         * 
+         * >  If the protocol of the listener is **HTTP** or **HTTPS**, only one endpoint group is created after you call the **CreateEndpointGroups** operation.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -173,7 +185,7 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +251,12 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long weight; 
 
             /**
-             * Endpoint.
+             * The IP address, domain name or instance id according to the type of the endpoint.
+             * <p>
+             * 
+             * You can specify up to 100 endpoint IP addresses or domain names in an endpoint group.
+             * 
+             * >  This parameter is required.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -247,7 +264,27 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * 
+             * You can specify up to 100 endpoint types for an endpoint group.
+             * 
+             * > 
+             * 
+             * *   This parameter is required.
+             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
+             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system creates the service-linked role.
+             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system creates the service-linked role.
+             * 
+             * For more information, see [Service-linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -255,7 +292,16 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the endpoint.
+             * <p>
+             * 
+             * Valid values: **0** to **255**.
+             * 
+             * You can set the weights of up to 100 endpoints in an endpoint group.
+             * 
+             * > 
+             * *   This parameter is required.
+             * *   If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -308,7 +354,10 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long listenerPort; 
 
             /**
-             * EndpointPort.
+             * The endpoint port that is mapped to the listener port.
+             * <p>
+             * 
+             * You can specify endpoint ports in up to five port mappings.
              */
             public Builder endpointPort(Long endpointPort) {
                 this.endpointPort = endpointPort;
@@ -316,7 +365,14 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * ListenerPort.
+             * The listener port that is mapped to the endpoint port.
+             * <p>
+             * 
+             * You can specify listener ports in up to five port mappings.
+             * 
+             * > 
+             * *   Only HTTP and HTTPS listeners support port mappings.
+             * *   The listener port in a port mapping must be the one used by the current listener.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -538,7 +594,13 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long trafficPercentage; 
 
             /**
-             * EnableClientIPPreservationProxyProtocol.
+             * Specifies whether to use the proxy protocol to preserve client IP addresses. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**: uses the proxy protocol to preserve client IP addresses.
+             * *   **false**: does not use the proxy protocol to preserve client IP addresses.
+             * 
+             * You can specify this parameter for up to 10 endpoint groups.
              */
             public Builder enableClientIPPreservationProxyProtocol(Boolean enableClientIPPreservationProxyProtocol) {
                 this.enableClientIPPreservationProxyProtocol = enableClientIPPreservationProxyProtocol;
@@ -546,7 +608,13 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EnableClientIPPreservationToa.
+             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**: preserves client IP addresses by using the TOA module.
+             * *   **false**: does not preserve client IP addresses by using the TOA module.
+             * 
+             * You can specify this parameter for up to 10 endpoint groups.
              */
             public Builder enableClientIPPreservationToa(Boolean enableClientIPPreservationToa) {
                 this.enableClientIPPreservationToa = enableClientIPPreservationToa;
@@ -554,7 +622,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointConfigurations.
+             * Terminal node configuration information.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -562,7 +630,12 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupDescription.
+             * The description of the endpoint group.
+             * <p>
+             * 
+             * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+             * 
+             * You can enter the descriptions of up to 10 endpoint groups.
              */
             public Builder endpointGroupDescription(String endpointGroupDescription) {
                 this.endpointGroupDescription = endpointGroupDescription;
@@ -570,7 +643,12 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupName.
+             * The name of the endpoint group.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+             * 
+             * You can enter the names of up to 10 endpoint groups.
              */
             public Builder endpointGroupName(String endpointGroupName) {
                 this.endpointGroupName = endpointGroupName;
@@ -578,7 +656,10 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupRegion.
+             * The ID of the region where you want to create the endpoint group.
+             * <p>
+             * 
+             * You can enter the IDs of up to 10 regions.
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -586,7 +667,15 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupType.
+             * The type of the endpoint group. Default value: default. Valid values:
+             * <p>
+             * 
+             * *   **default**: a default endpoint group.
+             * *   **virtual**: a virtual endpoint group.
+             * 
+             * You can specify the types of up to 10 endpoint groups.
+             * 
+             * >  Only HTTP and HTTPS listeners support virtual endpoint groups.
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
@@ -594,7 +683,17 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointRequestProtocol.
+             * The protocol that is used by the backend service. Default value: HTTP. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: HTTP
+             * *   **HTTPS**: HTTPS
+             * 
+             * You can specify up to 10 backend service protocols.
+             * 
+             * > 
+             * *   You can set this parameter only if the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.
+             * *   For an **HTTP** listener, the backend service protocol must be **HTTP**.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -602,7 +701,13 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckEnabled.
+             * Specifies whether to enable the health check feature. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**: enables the health check feature.
+             * *   **false**: disables the health check feature.
+             * 
+             * You can enable the health check feature for up to 10 endpoint groups.
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -610,7 +715,10 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckIntervalSeconds.
+             * The interval at which health checks are performed. Unit: seconds.
+             * <p>
+             * 
+             * You can specify up to 10 health check intervals.
              */
             public Builder healthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -618,7 +726,10 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckPath.
+             * The path to which health check requests are sent.
+             * <p>
+             * 
+             * You can specify up to 10 health check paths.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -626,7 +737,10 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckPort.
+             * The port that is used for health checks. Valid values: **1** to **65535**.
+             * <p>
+             * 
+             * You can specify up to 10 ports for health checks.
              */
             public Builder healthCheckPort(Long healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
@@ -634,7 +748,14 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckProtocol.
+             * The protocol over which health check requests are sent. Valid values:
+             * <p>
+             * 
+             * *   **tcp**: TCP
+             * *   **http**: HTTP
+             * *   **https**: HTTPS
+             * 
+             * You can specify up to 10 health check protocols.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -642,7 +763,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * PortOverrides.
+             * The mappings between ports.
              */
             public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
                 this.portOverrides = portOverrides;
@@ -650,7 +771,12 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * ThresholdCount.
+             * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
+             * <p>
+             * 
+             * Valid values: **2** to **10**. Default value: **3**.
+             * 
+             * You can specify the number of consecutive health check successes or failures for up to 10 endpoint groups.
              */
             public Builder thresholdCount(Long thresholdCount) {
                 this.thresholdCount = thresholdCount;
@@ -658,7 +784,12 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * TrafficPercentage.
+             * The value of the traffic distribution ratio. If a listener is associated with multiple endpoint groups, you can set this parameter to distribute different percentages of traffic to the endpoint groups.
+             * <p>
+             * 
+             * Valid values: **1** to **100**. Default value: **100**.
+             * 
+             * You can specify the traffic distribution ratios for up to 10 endpoint groups.
              */
             public Builder trafficPercentage(Long trafficPercentage) {
                 this.trafficPercentage = trafficPercentage;

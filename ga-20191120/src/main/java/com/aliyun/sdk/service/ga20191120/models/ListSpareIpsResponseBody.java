@@ -50,7 +50,7 @@ public class ListSpareIpsResponseBody extends TeaModel {
         private java.util.List < SpareIps> spareIps; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSpareIpsResponseBody extends TeaModel {
         }
 
         /**
-         * SpareIps.
+         * The secondary IP addresses that are associated with the CNAME.
          */
         public Builder spareIps(java.util.List < SpareIps> spareIps) {
             this.spareIps = spareIps;
@@ -110,7 +110,7 @@ public class ListSpareIpsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * SpareIp.
+             * The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.
              */
             public Builder spareIp(String spareIp) {
                 this.spareIp = spareIp;
@@ -118,7 +118,11 @@ public class ListSpareIpsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the secondary IP address. Valid values:
+             * <p>
+             * 
+             * *   **active:** The secondary IP address is available.
+             * *   **inuse:** The secondary IP address is in use.
              */
             public Builder state(String state) {
                 this.state = state;

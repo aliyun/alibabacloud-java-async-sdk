@@ -62,7 +62,7 @@ public class CreateAcceleratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -70,7 +70,10 @@ public class CreateAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
+         * <p>
+         * 
+         * If you did not configure automatic payment, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payments.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +81,7 @@ public class CreateAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class DeleteBasicAcceleratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 全球加速实例Id
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -58,7 +58,7 @@ public class DeleteBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

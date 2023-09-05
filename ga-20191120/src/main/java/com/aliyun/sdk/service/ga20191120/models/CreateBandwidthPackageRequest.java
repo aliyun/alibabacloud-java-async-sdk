@@ -17,6 +17,15 @@ public class CreateBandwidthPackageRequest extends Request {
     private Boolean autoPay;
 
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
+    @NameInMap("AutoRenewDuration")
+    @Validation(maximum = 12, minimum = 1)
+    private Integer autoRenewDuration;
+
+    @Query
     @NameInMap("AutoUseCoupon")
     private String autoUseCoupon;
 
@@ -58,6 +67,10 @@ public class CreateBandwidthPackageRequest extends Request {
     private String pricingCycle;
 
     @Query
+    @NameInMap("PromotionOptionNo")
+    private String promotionOptionNo;
+
+    @Query
     @NameInMap("Ratio")
     private Integer ratio;
 
@@ -67,6 +80,14 @@ public class CreateBandwidthPackageRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("Type")
     @Validation(required = true)
     private String type;
@@ -74,6 +95,8 @@ public class CreateBandwidthPackageRequest extends Request {
     private CreateBandwidthPackageRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewDuration = builder.autoRenewDuration;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.bandwidth = builder.bandwidth;
         this.bandwidthType = builder.bandwidthType;
@@ -84,8 +107,11 @@ public class CreateBandwidthPackageRequest extends Request {
         this.clientToken = builder.clientToken;
         this.duration = builder.duration;
         this.pricingCycle = builder.pricingCycle;
+        this.promotionOptionNo = builder.promotionOptionNo;
         this.ratio = builder.ratio;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.type = builder.type;
     }
 
@@ -107,6 +133,20 @@ public class CreateBandwidthPackageRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewDuration
+     */
+    public Integer getAutoRenewDuration() {
+        return this.autoRenewDuration;
     }
 
     /**
@@ -180,6 +220,13 @@ public class CreateBandwidthPackageRequest extends Request {
     }
 
     /**
+     * @return promotionOptionNo
+     */
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
+    }
+
+    /**
      * @return ratio
      */
     public Integer getRatio() {
@@ -194,6 +241,20 @@ public class CreateBandwidthPackageRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -202,6 +263,8 @@ public class CreateBandwidthPackageRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateBandwidthPackageRequest, Builder> {
         private Boolean autoPay; 
+        private Boolean autoRenew; 
+        private Integer autoRenewDuration; 
         private String autoUseCoupon; 
         private Integer bandwidth; 
         private String bandwidthType; 
@@ -212,34 +275,46 @@ public class CreateBandwidthPackageRequest extends Request {
         private String clientToken; 
         private String duration; 
         private String pricingCycle; 
+        private String promotionOptionNo; 
         private Integer ratio; 
         private String regionId; 
+        private String resourceGroupId; 
+        private java.util.List < Tag> tag; 
         private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateBandwidthPackageRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.autoUseCoupon = response.autoUseCoupon;
-            this.bandwidth = response.bandwidth;
-            this.bandwidthType = response.bandwidthType;
-            this.billingType = response.billingType;
-            this.cbnGeographicRegionIdA = response.cbnGeographicRegionIdA;
-            this.cbnGeographicRegionIdB = response.cbnGeographicRegionIdB;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.duration = response.duration;
-            this.pricingCycle = response.pricingCycle;
-            this.ratio = response.ratio;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(CreateBandwidthPackageRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewDuration = request.autoRenewDuration;
+            this.autoUseCoupon = request.autoUseCoupon;
+            this.bandwidth = request.bandwidth;
+            this.bandwidthType = request.bandwidthType;
+            this.billingType = request.billingType;
+            this.cbnGeographicRegionIdA = request.cbnGeographicRegionIdA;
+            this.cbnGeographicRegionIdB = request.cbnGeographicRegionIdB;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.duration = request.duration;
+            this.pricingCycle = request.pricingCycle;
+            this.promotionOptionNo = request.promotionOptionNo;
+            this.ratio = request.ratio;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
+            this.type = request.type;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+         * *   **true**: enables automatic payment. Payments are automatically completed.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -248,7 +323,40 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables auto-renewal.
+         * *   **false** (default): does not enable auto-renewal.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * The auto-renewal duration. Unit: months.
+         * <p>
+         * 
+         * Valid values: **1** to **12**. Default value: **1**.
+         * 
+         * >  This parameter is required only if **AutoRenew** is set to **true**.
+         */
+        public Builder autoRenewDuration(Integer autoRenewDuration) {
+            this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
+            this.autoRenewDuration = autoRenewDuration;
+            return this;
+        }
+
+        /**
+         * Specifies whether to automatically pay bills by using coupons. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         * 
+         * >  This parameter is required only if **AutoPay** is set to **true**.
          */
         public Builder autoUseCoupon(String autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -257,7 +365,10 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The bandwidth of the bandwidth plan. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **2** to **2000**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -266,7 +377,14 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * BandwidthType.
+         * The type of the bandwidth. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: standard bandwidth
+         * *   **Enhanced**: enhanced bandwidth
+         * *   **Advanced**: premium bandwidth
+         * 
+         * If **Type** is set to **Basic**, this parameter is required.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -275,7 +393,11 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * BillingType.
+         * The metering method that is used when you use the pay-as-you-go billing method. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic** (default): pay-by-data-transfer
+         * *   **PayBY95**: pay-by-95th-percentile By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.
          */
         public Builder billingType(String billingType) {
             this.putQueryParameter("BillingType", billingType);
@@ -284,7 +406,10 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * CbnGeographicRegionIdA.
+         * Area A to be connected. Set the value to **China-mainland**.
+         * <p>
+         * 
+         * You can set this parameter only if you call this operation on the international site (alibabacloud.com).
          */
         public Builder cbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
             this.putQueryParameter("CbnGeographicRegionIdA", cbnGeographicRegionIdA);
@@ -293,7 +418,10 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * CbnGeographicRegionIdB.
+         * Area B to be connected. Set the value to **Global**.
+         * <p>
+         * 
+         * You can set this parameter only if you call this operation on the international site (alibabacloud.com).
          */
         public Builder cbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
             this.putQueryParameter("CbnGeographicRegionIdB", cbnGeographicRegionIdB);
@@ -302,7 +430,11 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   **PREPAY** (default): subscription
+         * *   **POSTPAY**: pay-as-you-go By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -311,7 +443,12 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The ClientToken value contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -320,7 +457,13 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration.
+         * <p>
+         * 
+         * *   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.
+         * *   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.
+         * 
+         * If **ChargeType** is set to **PREPAY**, this parameter is required.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -329,7 +472,13 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The billing cycle. Valid values:
+         * <p>
+         * 
+         * *   **Month**: billed on a monthly basis.
+         * *   **Year**: billed on an annual basis.
+         * 
+         * If **ChargeType** is set to **PREPAY**, this parameter is required.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -338,7 +487,22 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Ratio.
+         * The coupon code.
+         * <p>
+         * 
+         * >  This parameter is only available on the international site (alibabacloud.com).
+         */
+        public Builder promotionOptionNo(String promotionOptionNo) {
+            this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
+            this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+
+        /**
+         * The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.
+         * <p>
+         * 
+         * >  This parameter is required only if **BillingType** is set to **PayBY95**.
          */
         public Builder ratio(Integer ratio) {
             this.putQueryParameter("Ratio", ratio);
@@ -347,7 +511,7 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -356,7 +520,31 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Type.
+         * The ID of the resource group.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The type of the bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: a basic bandwidth plan
+         * *   **CrossDomain**: a cross-region acceleration bandwidth plan
+         * 
+         * If you call this operation on the Alibaba Cloud China site, only **Basic** is supported.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -371,4 +559,65 @@ public class CreateBandwidthPackageRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

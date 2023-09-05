@@ -50,7 +50,7 @@ public class AssociateAdditionalCertificatesWithListenerResponseBody extends Tea
         private String requestId; 
 
         /**
-         * ListenerId.
+         * The listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -58,7 +58,7 @@ public class AssociateAdditionalCertificatesWithListenerResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

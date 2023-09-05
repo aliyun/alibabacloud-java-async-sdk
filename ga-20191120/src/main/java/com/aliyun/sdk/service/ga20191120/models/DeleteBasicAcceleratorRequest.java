@@ -63,14 +63,14 @@ public class DeleteBasicAcceleratorRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBasicAcceleratorRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.regionId = response.regionId;
+        private Builder(DeleteBasicAcceleratorRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 全球加速实例Id
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -79,7 +79,7 @@ public class DeleteBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

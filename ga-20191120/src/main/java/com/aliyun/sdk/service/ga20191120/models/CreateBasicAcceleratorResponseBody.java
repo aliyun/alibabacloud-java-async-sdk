@@ -62,7 +62,7 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 全球加速实例ID
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -70,7 +70,7 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 订单Id
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -39,12 +39,17 @@ public class ListEndpointGroupsRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private ListEndpointGroupsRequest(Builder builder) {
         super(builder);
@@ -56,6 +61,7 @@ public class ListEndpointGroupsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -127,6 +133,13 @@ public class ListEndpointGroupsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListEndpointGroupsRequest, Builder> {
         private String acceleratorId; 
         private String accessLogSwitch; 
@@ -136,25 +149,27 @@ public class ListEndpointGroupsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEndpointGroupsRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.accessLogSwitch = response.accessLogSwitch;
-            this.endpointGroupId = response.endpointGroupId;
-            this.endpointGroupType = response.endpointGroupType;
-            this.listenerId = response.listenerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListEndpointGroupsRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.accessLogSwitch = request.accessLogSwitch;
+            this.endpointGroupId = request.endpointGroupId;
+            this.endpointGroupType = request.endpointGroupType;
+            this.listenerId = request.listenerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.tag = request.tag;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -163,7 +178,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * AccessLogSwitch.
+         * The total number of entries returned.
          */
         public Builder accessLogSwitch(String accessLogSwitch) {
             this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
@@ -172,7 +187,11 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * EndpointGroupId.
+         * The protocol that is used to monitor latency. Valid values:
+         * <p>
+         * 
+         * *   **icmp**: ICMP
+         * *   **tcp**: TCP
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -181,7 +200,12 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * EndpointGroupType.
+         * The type of the endpoint group. Valid values:
+         * <p>
+         * 
+         * *   **default**
+         * *   **virtual**
+         * *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
          */
         public Builder endpointGroupType(String endpointGroupType) {
             this.putQueryParameter("EndpointGroupType", endpointGroupType);
@@ -190,7 +214,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The number of entries returned per page.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -199,7 +223,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -208,7 +232,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,11 +241,20 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The endpoint port.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The name of the endpoint group.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -232,4 +265,70 @@ public class ListEndpointGroupsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The ID of the listener.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The type of the endpoint group. Valid values:
+             * <p>
+             * 
+             * *   **default**: a default endpoint group
+             * *   **virtual**: a virtual endpoint group
+             * *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

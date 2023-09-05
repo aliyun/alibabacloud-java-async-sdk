@@ -50,7 +50,7 @@ public class DeleteBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BandwidthPackageId.
+         * The bandwidth plan ID.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -58,7 +58,7 @@ public class DeleteBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

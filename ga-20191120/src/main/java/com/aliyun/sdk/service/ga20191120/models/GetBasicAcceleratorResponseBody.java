@@ -15,6 +15,9 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     @NameInMap("AcceleratorId")
     private String acceleratorId;
 
+    @NameInMap("BandwidthBillingType")
+    private String bandwidthBillingType;
+
     @NameInMap("BasicBandwidthPackage")
     private BasicBandwidthPackage basicBandwidthPackage;
 
@@ -30,8 +33,14 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     private Long createTime;
 
+    @NameInMap("CrossBorderStatus")
+    private Boolean crossBorderStatus;
+
     @NameInMap("CrossDomainBandwidthPackage")
     private CrossDomainBandwidthPackage crossDomainBandwidthPackage;
+
+    @NameInMap("CrossPrivateState")
+    private String crossPrivateState;
 
     @NameInMap("Description")
     private String description;
@@ -51,24 +60,35 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("State")
     private String state;
 
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private GetBasicAcceleratorResponseBody(Builder builder) {
         this.acceleratorId = builder.acceleratorId;
+        this.bandwidthBillingType = builder.bandwidthBillingType;
         this.basicBandwidthPackage = builder.basicBandwidthPackage;
         this.basicEndpointGroupId = builder.basicEndpointGroupId;
         this.basicIpSetId = builder.basicIpSetId;
         this.cenId = builder.cenId;
         this.createTime = builder.createTime;
+        this.crossBorderStatus = builder.crossBorderStatus;
         this.crossDomainBandwidthPackage = builder.crossDomainBandwidthPackage;
+        this.crossPrivateState = builder.crossPrivateState;
         this.description = builder.description;
         this.expiredTime = builder.expiredTime;
         this.instanceChargeType = builder.instanceChargeType;
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.state = builder.state;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -84,6 +104,13 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
      */
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    /**
+     * @return bandwidthBillingType
+     */
+    public String getBandwidthBillingType() {
+        return this.bandwidthBillingType;
     }
 
     /**
@@ -122,10 +149,24 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     }
 
     /**
+     * @return crossBorderStatus
+     */
+    public Boolean getCrossBorderStatus() {
+        return this.crossBorderStatus;
+    }
+
+    /**
      * @return crossDomainBandwidthPackage
      */
     public CrossDomainBandwidthPackage getCrossDomainBandwidthPackage() {
         return this.crossDomainBandwidthPackage;
+    }
+
+    /**
+     * @return crossPrivateState
+     */
+    public String getCrossPrivateState() {
+        return this.crossPrivateState;
     }
 
     /**
@@ -171,30 +212,49 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
         return this.state;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder {
         private String acceleratorId; 
+        private String bandwidthBillingType; 
         private BasicBandwidthPackage basicBandwidthPackage; 
         private String basicEndpointGroupId; 
         private String basicIpSetId; 
         private String cenId; 
         private Long createTime; 
+        private Boolean crossBorderStatus; 
         private CrossDomainBandwidthPackage crossDomainBandwidthPackage; 
+        private String crossPrivateState; 
         private String description; 
         private Long expiredTime; 
         private String instanceChargeType; 
         private String name; 
         private String regionId; 
         private String requestId; 
+        private String resourceGroupId; 
         private String state; 
+        private java.util.List < Tags> tags; 
 
         /**
-         * 全球加速实例Id
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -202,7 +262,20 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 绑定的基础带宽包
+         * The bandwidth metering method.
+         * <p>
+         * 
+         * *   **BandwidthPackage**: billed based on bandwidth plans.
+         * *   **CDT**: billed by Cloud Data Transfer (CDT) and based on data transfer.
+         * *   **CDT95**: billed by CDT and based on the 95th percentile bandwidth. This bandwidth metering method is available only to users that are included in the whitelist.
+         */
+        public Builder bandwidthBillingType(String bandwidthBillingType) {
+            this.bandwidthBillingType = bandwidthBillingType;
+            return this;
+        }
+
+        /**
+         * The details about the basic bandwidth plan that is associated with the basic GA instance.
          */
         public Builder basicBandwidthPackage(BasicBandwidthPackage basicBandwidthPackage) {
             this.basicBandwidthPackage = basicBandwidthPackage;
@@ -210,7 +283,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例下车点Id
+         * The ID of the endpoint group.
          */
         public Builder basicEndpointGroupId(String basicEndpointGroupId) {
             this.basicEndpointGroupId = basicEndpointGroupId;
@@ -218,7 +291,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例上车点Id
+         * The ID of the acceleration region.
          */
         public Builder basicIpSetId(String basicIpSetId) {
             this.basicIpSetId = basicIpSetId;
@@ -226,7 +299,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 使用的云企业网Id
+         * The ID of the Cloud Enterprise Network (CEN) instance to which the basic GA instance is attached.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -234,7 +307,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例创建时间
+         * The timestamp that indicates when the basic GA instance is created.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -242,7 +315,23 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 绑定的跨境带宽包
+         * 基础型全球加速实例是否开启跨境线路功能。取值：
+         * <p>
+         * 
+         * - **true**：开启跨境线路功能，可以加速跨境线路。
+         * 
+         * - **false**：关闭跨境线路功能，不可以加速跨境线路。
+         */
+        public Builder crossBorderStatus(Boolean crossBorderStatus) {
+            this.crossBorderStatus = crossBorderStatus;
+            return this;
+        }
+
+        /**
+         * The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.
+         * <p>
+         * 
+         * This array is returned only for GA instances that are created on the international site (alibabacloud.com).
          */
         public Builder crossDomainBandwidthPackage(CrossDomainBandwidthPackage crossDomainBandwidthPackage) {
             this.crossDomainBandwidthPackage = crossDomainBandwidthPackage;
@@ -250,7 +339,19 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例描述
+         * Indicates whether cross-border acceleration is enabled.
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         */
+        public Builder crossPrivateState(String crossPrivateState) {
+            this.crossPrivateState = crossPrivateState;
+            return this;
+        }
+
+        /**
+         * The description of the basic GA instance.
          */
         public Builder description(String description) {
             this.description = description;
@@ -258,7 +359,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 到期时间
+         * The timestamp that indicates when the basic GA instance expires.
+         * <p>
+         * 
+         * The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder expiredTime(Long expiredTime) {
             this.expiredTime = expiredTime;
@@ -266,7 +370,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例收费类型
+         * The billing method of the basic GA instance. Only **PREPAY** is returned, which indicates the subscription billing method.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -274,7 +378,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例名称
+         * The name of the basic GA instance.
          */
         public Builder name(String name) {
             this.name = name;
@@ -282,7 +386,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId
+         * The ID of the region where the basic GA instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -290,7 +394,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,10 +402,35 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 实例状态
+         * The ID of the resource group to which the basic GA instance belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The status of the basic GA instance.
+         * <p>
+         * 
+         * *   **init**: The GA instance is being initialized.
+         * *   **active**: The GA instance is available.
+         * *   **configuring**: The GA instance is being configured.
+         * *   **binding**: The GA instance is being associated.
+         * *   **unbinding**: The GA instance is being disassociated.
+         * *   **deleting**: The GA instance is being deleted.
+         * *   **finacialLocked**: The GA instance is locked due to overdue payments.
          */
         public Builder state(String state) {
             this.state = state;
+            return this;
+        }
+
+        /**
+         * The tags of the basic GA instance.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -362,7 +491,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * 基础带宽包带宽
+             * The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -370,7 +499,12 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * 基础带宽包类型
+             * The type of the bandwidth that is provided by the basic bandwidth plan.
+             * <p>
+             * 
+             * *   **Basic**: basic
+             * *   **Enhanced**: enhanced
+             * *   **Advanced**: premium
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -378,7 +512,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * 基础带宽包Id
+             * The ID of the basic bandwidth plan.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -431,7 +565,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * 跨境带宽包带宽
+             * The bandwidth value of the cross-border acceleration bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -439,7 +573,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * 跨境带宽包Id
+             * The ID of the cross-border acceleration bandwidth plan.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -448,6 +582,67 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
             public CrossDomainBandwidthPackage build() {
                 return new CrossDomainBandwidthPackage(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the basic GA instance.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the basic GA instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

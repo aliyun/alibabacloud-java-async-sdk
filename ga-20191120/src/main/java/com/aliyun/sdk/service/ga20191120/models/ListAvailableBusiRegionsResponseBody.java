@@ -50,7 +50,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * The information about the regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,6 +72,9 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
+        @NameInMap("ChinaMainland")
+        private Boolean chinaMainland;
+
         @NameInMap("LocalName")
         private String localName;
 
@@ -82,6 +85,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         private String regionId;
 
         private Regions(Builder builder) {
+            this.chinaMainland = builder.chinaMainland;
             this.localName = builder.localName;
             this.pop = builder.pop;
             this.regionId = builder.regionId;
@@ -93,6 +97,13 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
 
         public static Regions create() {
             return builder().build();
+        }
+
+        /**
+         * @return chinaMainland
+         */
+        public Boolean getChinaMainland() {
+            return this.chinaMainland;
         }
 
         /**
@@ -117,12 +128,21 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean chinaMainland; 
             private String localName; 
             private Boolean pop; 
             private String regionId; 
 
             /**
-             * LocalName.
+             * ChinaMainland.
+             */
+            public Builder chinaMainland(Boolean chinaMainland) {
+                this.chinaMainland = chinaMainland;
+                return this;
+            }
+
+            /**
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +150,11 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Pop.
+             * Indicates whether the region is a point of presence (PoP). Valid values:
+             * <p>
+             * 
+             * *   **true**: The region is a PoP.
+             * *   **false**: The region is not a PoP.
              */
             public Builder pop(Boolean pop) {
                 this.pop = pop;
@@ -138,7 +162,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

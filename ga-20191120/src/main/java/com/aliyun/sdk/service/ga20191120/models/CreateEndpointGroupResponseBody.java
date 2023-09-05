@@ -50,7 +50,7 @@ public class CreateEndpointGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EndpointGroupId.
+         * The ID of the endpoint group.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -58,7 +58,7 @@ public class CreateEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

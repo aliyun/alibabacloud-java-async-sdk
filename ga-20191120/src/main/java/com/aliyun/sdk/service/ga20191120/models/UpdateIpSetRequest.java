@@ -90,16 +90,16 @@ public class UpdateIpSetRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIpSetRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.ipSetId = response.ipSetId;
-            this.regionId = response.regionId;
+        private Builder(UpdateIpSetRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.ipSetId = request.ipSetId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * Bandwidth.
+         * The new bandwidth to be allocated to the acceleration region. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -108,7 +108,12 @@ public class UpdateIpSetRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -117,7 +122,7 @@ public class UpdateIpSetRequest extends Request {
         }
 
         /**
-         * IpSetId.
+         * The ID of the acceleration region that you want to modify.
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);
@@ -126,7 +131,7 @@ public class UpdateIpSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

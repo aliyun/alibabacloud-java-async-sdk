@@ -103,17 +103,17 @@ public class AddEntriesToAclRequest extends Request {
             super();
         } 
 
-        private Builder(AddEntriesToAclRequest response) {
-            super(response);
-            this.aclEntries = response.aclEntries;
-            this.aclId = response.aclId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
+        private Builder(AddEntriesToAclRequest request) {
+            super(request);
+            this.aclEntries = request.aclEntries;
+            this.aclId = request.aclId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AclEntries.
+         * The IP addresses or CIDR blocks that you want to add to the ACL. You can add at most 20 entries in each request.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.putQueryParameter("AclEntries", aclEntries);
@@ -122,7 +122,7 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -131,7 +131,12 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +145,11 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -149,7 +158,7 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +212,10 @@ public class AddEntriesToAclRequest extends Request {
             private String entryDescription; 
 
             /**
-             * Entry.
+             * The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to add to the ACL. You can add at most 20 entries in each request.
+             * <p>
+             * 
+             * > This parameter is required.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -211,7 +223,12 @@ public class AddEntriesToAclRequest extends Request {
             }
 
             /**
-             * EntryDescription.
+             * The description of the entry.
+             * <p>
+             * 
+             * You can add the descriptions of up to 20 entries in each request.
+             * 
+             * The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;

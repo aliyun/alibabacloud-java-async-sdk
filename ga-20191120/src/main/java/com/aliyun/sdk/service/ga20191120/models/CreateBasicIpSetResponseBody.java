@@ -50,7 +50,7 @@ public class CreateBasicIpSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 加速地域接入点Id
+         * The region ID of the GA instance.
          */
         public Builder ipSetId(String ipSetId) {
             this.ipSetId = ipSetId;
@@ -58,7 +58,7 @@ public class CreateBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

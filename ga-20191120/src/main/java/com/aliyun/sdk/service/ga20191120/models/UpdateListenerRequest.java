@@ -63,7 +63,7 @@ public class UpdateListenerRequest extends Request {
 
     @Query
     @NameInMap("XForwardedForConfig")
-    private XForwardedForConfig XForwardedForConfig;
+    private XForwardedForConfig xForwardedForConfig;
 
     private UpdateListenerRequest(Builder builder) {
         super(builder);
@@ -79,7 +79,7 @@ public class UpdateListenerRequest extends Request {
         this.proxyProtocol = builder.proxyProtocol;
         this.regionId = builder.regionId;
         this.securityPolicyId = builder.securityPolicyId;
-        this.XForwardedForConfig = builder.XForwardedForConfig;
+        this.xForwardedForConfig = builder.xForwardedForConfig;
     }
 
     public static Builder builder() {
@@ -180,10 +180,10 @@ public class UpdateListenerRequest extends Request {
     }
 
     /**
-     * @return XForwardedForConfig
+     * @return xForwardedForConfig
      */
     public XForwardedForConfig getXForwardedForConfig() {
-        return this.XForwardedForConfig;
+        return this.xForwardedForConfig;
     }
 
     public static final class Builder extends Request.Builder<UpdateListenerRequest, Builder> {
@@ -199,31 +199,31 @@ public class UpdateListenerRequest extends Request {
         private String proxyProtocol; 
         private String regionId; 
         private String securityPolicyId; 
-        private XForwardedForConfig XForwardedForConfig; 
+        private XForwardedForConfig xForwardedForConfig; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateListenerRequest response) {
-            super(response);
-            this.backendPorts = response.backendPorts;
-            this.certificates = response.certificates;
-            this.clientAffinity = response.clientAffinity;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.listenerId = response.listenerId;
-            this.name = response.name;
-            this.portRanges = response.portRanges;
-            this.protocol = response.protocol;
-            this.proxyProtocol = response.proxyProtocol;
-            this.regionId = response.regionId;
-            this.securityPolicyId = response.securityPolicyId;
-            this.XForwardedForConfig = response.XForwardedForConfig;
+        private Builder(UpdateListenerRequest request) {
+            super(request);
+            this.backendPorts = request.backendPorts;
+            this.certificates = request.certificates;
+            this.clientAffinity = request.clientAffinity;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.listenerId = request.listenerId;
+            this.name = request.name;
+            this.portRanges = request.portRanges;
+            this.protocol = request.protocol;
+            this.proxyProtocol = request.proxyProtocol;
+            this.regionId = request.regionId;
+            this.securityPolicyId = request.securityPolicyId;
+            this.xForwardedForConfig = request.xForwardedForConfig;
         } 
 
         /**
-         * BackendPorts.
+         * The range of ports that are used by backend servers to receive requests.
          */
         public Builder backendPorts(java.util.List < BackendPorts> backendPorts) {
             this.putQueryParameter("BackendPorts", backendPorts);
@@ -232,7 +232,7 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * Certificates.
+         * The SSL certificate.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
@@ -241,7 +241,11 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * ClientAffinity.
+         * Specifies whether to enable client affinity for the listener.
+         * <p>
+         * 
+         * *   If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.
+         * *   To enable client affinity, set this parameter to **SOURCE_IP**. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
          */
         public Builder clientAffinity(String clientAffinity) {
             this.putQueryParameter("ClientAffinity", clientAffinity);
@@ -250,7 +254,12 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -259,7 +268,7 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the listener. The description can be at most 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -268,7 +277,7 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -277,7 +286,10 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the listener.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -286,7 +298,12 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * PortRanges.
+         * The listener ports that are used to receive requests and forward the requests to endpoints.
+         * <p>
+         * 
+         * Valid values: **1** to **65499**.
+         * 
+         * The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
          */
         public Builder portRanges(java.util.List < PortRanges> portRanges) {
             this.putQueryParameter("PortRanges", portRanges);
@@ -295,7 +312,13 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The network transmission protocol that is used by the listener. Valid values:
+         * <p>
+         * 
+         * *   **tcp**: TCP
+         * *   **udp**: UDP
+         * *   **http**: HTTP
+         * *   **https**: HTTPS
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -304,7 +327,13 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * ProxyProtocol.
+         * Specifies whether to reserve client IP addresses. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.
+         * *   **false** (default): disables client IP preservation.
+         * 
+         * > This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).
          */
         public Builder proxyProtocol(String proxyProtocol) {
             this.putQueryParameter("ProxyProtocol", proxyProtocol);
@@ -313,7 +342,7 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -322,7 +351,35 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * SecurityPolicyId.
+         * The ID of the security policy. Valid values:
+         * <p>
+         * 
+         * *   **tls_cipher_policy\_1\_0**
+         * 
+         *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_1**
+         * 
+         *     *   Supported TLS versions: TLS 1.1 and TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_2**
+         * 
+         *     *   Supported TLS version: TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_2\_strict**
+         * 
+         *     *   Supported TLS version: TLS 1.2
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+         * 
+         * *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
+         * 
+         *     *   Supported TLS versions: TLS 1.2 and TLS 1.3
+         *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+         * 
+         * > This parameter is available only when you create an HTTPS listener.
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putQueryParameter("SecurityPolicyId", securityPolicyId);
@@ -331,11 +388,11 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * XForwardedForConfig.
+         * The `XForward` headers.
          */
-        public Builder XForwardedForConfig(XForwardedForConfig XForwardedForConfig) {
-            this.putQueryParameter("XForwardedForConfig", XForwardedForConfig);
-            this.XForwardedForConfig = XForwardedForConfig;
+        public Builder xForwardedForConfig(XForwardedForConfig xForwardedForConfig) {
+            this.putQueryParameter("XForwardedForConfig", xForwardedForConfig);
+            this.xForwardedForConfig = xForwardedForConfig;
             return this;
         }
 
@@ -385,7 +442,10 @@ public class UpdateListenerRequest extends Request {
             private Integer toPort; 
 
             /**
-             * FromPort.
+             * The first port in the range of ports that are used by backend servers to receive requests.
+             * <p>
+             * 
+             * > This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -393,7 +453,10 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * ToPort.
+             * The last port in the range of ports that are used by backend servers to receive requests.
+             * <p>
+             * 
+             * > This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -434,7 +497,10 @@ public class UpdateListenerRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the SSL certificate.
+             * <p>
+             * 
+             * > This parameter is required only when you configure an HTTPS listener.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -489,7 +555,14 @@ public class UpdateListenerRequest extends Request {
             private Integer toPort; 
 
             /**
-             * FromPort.
+             * The first port of the listener port range that is used to receive and forward requests to endpoints.
+             * <p>
+             * 
+             * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+             * 
+             * The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+             * 
+             * > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -497,7 +570,14 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * ToPort.
+             * The last port of the listener port range that is used to receive and forward requests to endpoints.
+             * <p>
+             * 
+             * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+             * 
+             * The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+             * 
+             * > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -513,26 +593,26 @@ public class UpdateListenerRequest extends Request {
     }
     public static class XForwardedForConfig extends TeaModel {
         @NameInMap("XForwardedForGaApEnabled")
-        private Boolean XForwardedForGaApEnabled;
+        private Boolean xForwardedForGaApEnabled;
 
         @NameInMap("XForwardedForGaIdEnabled")
-        private Boolean XForwardedForGaIdEnabled;
+        private Boolean xForwardedForGaIdEnabled;
 
         @NameInMap("XForwardedForPortEnabled")
-        private Boolean XForwardedForPortEnabled;
+        private Boolean xForwardedForPortEnabled;
 
         @NameInMap("XForwardedForProtoEnabled")
-        private Boolean XForwardedForProtoEnabled;
+        private Boolean xForwardedForProtoEnabled;
 
         @NameInMap("XRealIpEnabled")
-        private Boolean XRealIpEnabled;
+        private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {
-            this.XForwardedForGaApEnabled = builder.XForwardedForGaApEnabled;
-            this.XForwardedForGaIdEnabled = builder.XForwardedForGaIdEnabled;
-            this.XForwardedForPortEnabled = builder.XForwardedForPortEnabled;
-            this.XForwardedForProtoEnabled = builder.XForwardedForProtoEnabled;
-            this.XRealIpEnabled = builder.XRealIpEnabled;
+            this.xForwardedForGaApEnabled = builder.xForwardedForGaApEnabled;
+            this.xForwardedForGaIdEnabled = builder.xForwardedForGaIdEnabled;
+            this.xForwardedForPortEnabled = builder.xForwardedForPortEnabled;
+            this.xForwardedForProtoEnabled = builder.xForwardedForProtoEnabled;
+            this.xRealIpEnabled = builder.xRealIpEnabled;
         }
 
         public static Builder builder() {
@@ -544,84 +624,114 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * @return XForwardedForGaApEnabled
+         * @return xForwardedForGaApEnabled
          */
         public Boolean getXForwardedForGaApEnabled() {
-            return this.XForwardedForGaApEnabled;
+            return this.xForwardedForGaApEnabled;
         }
 
         /**
-         * @return XForwardedForGaIdEnabled
+         * @return xForwardedForGaIdEnabled
          */
         public Boolean getXForwardedForGaIdEnabled() {
-            return this.XForwardedForGaIdEnabled;
+            return this.xForwardedForGaIdEnabled;
         }
 
         /**
-         * @return XForwardedForPortEnabled
+         * @return xForwardedForPortEnabled
          */
         public Boolean getXForwardedForPortEnabled() {
-            return this.XForwardedForPortEnabled;
+            return this.xForwardedForPortEnabled;
         }
 
         /**
-         * @return XForwardedForProtoEnabled
+         * @return xForwardedForProtoEnabled
          */
         public Boolean getXForwardedForProtoEnabled() {
-            return this.XForwardedForProtoEnabled;
+            return this.xForwardedForProtoEnabled;
         }
 
         /**
-         * @return XRealIpEnabled
+         * @return xRealIpEnabled
          */
         public Boolean getXRealIpEnabled() {
-            return this.XRealIpEnabled;
+            return this.xRealIpEnabled;
         }
 
         public static final class Builder {
-            private Boolean XForwardedForGaApEnabled; 
-            private Boolean XForwardedForGaIdEnabled; 
-            private Boolean XForwardedForPortEnabled; 
-            private Boolean XForwardedForProtoEnabled; 
-            private Boolean XRealIpEnabled; 
+            private Boolean xForwardedForGaApEnabled; 
+            private Boolean xForwardedForGaIdEnabled; 
+            private Boolean xForwardedForPortEnabled; 
+            private Boolean xForwardedForProtoEnabled; 
+            private Boolean xRealIpEnabled; 
 
             /**
-             * XForwardedForGaApEnabled.
+             * Specifies whether to use the `GA-AP` header to retrieve information about acceleration regions. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false** (default): no
+             * 
+             * > This parameter is available only when you create an HTTPS or HTTP listener.
              */
-            public Builder XForwardedForGaApEnabled(Boolean XForwardedForGaApEnabled) {
-                this.XForwardedForGaApEnabled = XForwardedForGaApEnabled;
+            public Builder xForwardedForGaApEnabled(Boolean xForwardedForGaApEnabled) {
+                this.xForwardedForGaApEnabled = xForwardedForGaApEnabled;
                 return this;
             }
 
             /**
-             * XForwardedForGaIdEnabled.
+             * Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false** (default): no
+             * 
+             * > This parameter is available only when you create an HTTPS or HTTP listener.
              */
-            public Builder XForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
-                this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
+            public Builder xForwardedForGaIdEnabled(Boolean xForwardedForGaIdEnabled) {
+                this.xForwardedForGaIdEnabled = xForwardedForGaIdEnabled;
                 return this;
             }
 
             /**
-             * XForwardedForPortEnabled.
+             * Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false** (default): no
+             * 
+             * > This parameter is available only when you create an HTTPS or HTTP listener.
              */
-            public Builder XForwardedForPortEnabled(Boolean XForwardedForPortEnabled) {
-                this.XForwardedForPortEnabled = XForwardedForPortEnabled;
+            public Builder xForwardedForPortEnabled(Boolean xForwardedForPortEnabled) {
+                this.xForwardedForPortEnabled = xForwardedForPortEnabled;
                 return this;
             }
 
             /**
-             * XForwardedForProtoEnabled.
+             * Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false** (default): no
+             * 
+             * > This parameter is available only when you create an HTTPS or HTTP listener.
              */
-            public Builder XForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
-                this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            public Builder xForwardedForProtoEnabled(Boolean xForwardedForProtoEnabled) {
+                this.xForwardedForProtoEnabled = xForwardedForProtoEnabled;
                 return this;
             }
 
             /**
-             * XRealIpEnabled.
+             * Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false** (default): no
+             * 
+             * > This parameter is available only when you create an HTTPS or HTTP listener.
              */
-            public Builder XRealIpEnabled(Boolean XRealIpEnabled) {
-                this.XRealIpEnabled = XRealIpEnabled;
+            public Builder xRealIpEnabled(Boolean xRealIpEnabled) {
+                this.xRealIpEnabled = xRealIpEnabled;
                 return this;
             }
 

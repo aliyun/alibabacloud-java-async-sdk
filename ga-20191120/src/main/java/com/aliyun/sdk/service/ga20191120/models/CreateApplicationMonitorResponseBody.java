@@ -50,7 +50,7 @@ public class CreateApplicationMonitorResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the origin probing task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

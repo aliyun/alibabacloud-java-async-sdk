@@ -104,17 +104,17 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
             super();
         } 
 
-        private Builder(DissociateAdditionalCertificatesFromListenerRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.domains = response.domains;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(DissociateAdditionalCertificatesFromListenerRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.domains = request.domains;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -123,7 +123,12 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -141,7 +146,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -150,7 +155,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -141,20 +141,24 @@ public class UpdateBandwidthPackageRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateBandwidthPackageRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.autoUseCoupon = response.autoUseCoupon;
-            this.bandwidth = response.bandwidth;
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.bandwidthType = response.bandwidthType;
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(UpdateBandwidthPackageRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.autoUseCoupon = request.autoUseCoupon;
+            this.bandwidth = request.bandwidth;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.bandwidthType = request.bandwidthType;
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables automatic payment. If you select this option, you must go to Order Center to complete the payment after an order is generated.
+         * *   **true**: enables automatic payment. Payments are automatically completed.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -163,7 +167,11 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * Specifies whether to use coupons. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -172,7 +180,10 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The bandwidth value of the bandwidth plan. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **2** to **2000**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -181,7 +192,7 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * BandwidthPackageId.
+         * The ID of the bandwidth plan that you want to modify.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -190,7 +201,14 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * BandwidthType.
+         * The type of bandwidth. Valid values:
+         * <p>
+         * 
+         * *   **Basic**
+         * *   **Enhanced**
+         * *   **Advanced**
+         * 
+         * >  You can upgrade **Basic** bandwidth to **Enhanced** bandwidth. You cannot change **Enhanced** or **Advanced** bandwidth to another type of bandwidth.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -199,7 +217,10 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the bandwidth plan.
+         * <p>
+         * 
+         * The description can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +229,7 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the bandwidth plan. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -217,7 +238,7 @@ public class UpdateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

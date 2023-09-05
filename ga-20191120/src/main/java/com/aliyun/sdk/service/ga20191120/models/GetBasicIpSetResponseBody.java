@@ -19,7 +19,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     private String acceleratorId;
 
     @NameInMap("Bandwidth")
-    private Integer bandwidth;
+    private Long bandwidth;
 
     @NameInMap("IpAddress")
     private String ipAddress;
@@ -29,6 +29,9 @@ public class GetBasicIpSetResponseBody extends TeaModel {
 
     @NameInMap("IpVersion")
     private String ipVersion;
+
+    @NameInMap("IspType")
+    private String ispType;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -43,6 +46,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         this.ipAddress = builder.ipAddress;
         this.ipSetId = builder.ipSetId;
         this.ipVersion = builder.ipVersion;
+        this.ispType = builder.ispType;
         this.requestId = builder.requestId;
         this.state = builder.state;
     }
@@ -72,7 +76,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     /**
      * @return bandwidth
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.bandwidth;
     }
 
@@ -98,6 +102,13 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     }
 
     /**
+     * @return ispType
+     */
+    public String getIspType() {
+        return this.ispType;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -114,15 +125,16 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     public static final class Builder {
         private String accelerateRegionId; 
         private String acceleratorId; 
-        private Integer bandwidth; 
+        private Long bandwidth; 
         private String ipAddress; 
         private String ipSetId; 
         private String ipVersion; 
+        private String ispType; 
         private String requestId; 
         private String state; 
 
         /**
-         * 加速地域Id
+         * The ID of the region where the basic GA instance is deployed.
          */
         public Builder accelerateRegionId(String accelerateRegionId) {
             this.accelerateRegionId = accelerateRegionId;
@@ -130,7 +142,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 全球加速实例Id
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -138,15 +150,15 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 加速地域带宽
+         * The bandwidth of the acceleration region of the basic GA instance. Unit: Mbit/s.
          */
-        public Builder bandwidth(Integer bandwidth) {
+        public Builder bandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
         /**
-         * 加速接入点IP地址
+         * The accelerated IP address.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -154,7 +166,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 加速接入点id
+         * The ID of the acceleration region of the basic GA instance.
          */
         public Builder ipSetId(String ipSetId) {
             this.ipSetId = ipSetId;
@@ -162,7 +174,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 加速接入点地址类型
+         * The version of the accelerated IP address. Only **IPv4** is returned. This indicates that an IPv4 address is used.
          */
         public Builder ipVersion(String ipVersion) {
             this.ipVersion = ipVersion;
@@ -170,7 +182,15 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * IspType.
+         */
+        public Builder ispType(String ispType) {
+            this.ispType = ispType;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +198,13 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * 加速接入点状态
+         * The status of the acceleration region of the basic GA instance. Valid values:
+         * <p>
+         * 
+         * *   **init**: The acceleration region is being initialized.
+         * *   **active**: The acceleration region is in the running state.
+         * *   **updating**: The acceleration region is being configured.
+         * *   **Deleting**: The acceleration region is being deleted.
          */
         public Builder state(String state) {
             this.state = state;

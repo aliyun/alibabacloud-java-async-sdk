@@ -74,7 +74,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EndpointGroups.
+         * The information about the endpoint group.
          */
         public Builder endpointGroups(java.util.List < EndpointGroups> endpointGroups) {
             this.endpointGroups = endpointGroups;
@@ -82,7 +82,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HealthStatus.
+         * The health status of the listener. Valid values:
+         * <p>
+         * 
+         * *   **normal**: The listener is normal.
+         * *   **Abnormal**: The listener is abnormal.
+         * *   **partiallyAbnormal**: Some exceptions occur to the listener.
          */
         public Builder healthStatus(String healthStatus) {
             this.healthStatus = healthStatus;
@@ -90,7 +95,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -98,7 +103,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +203,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Address.
+             * The IP address of the endpoint.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -206,7 +211,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * The ID of the endpoint.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -214,7 +219,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * HealthDetail.
+             * The health check details of the endpoint.
+             * <p>
+             * 
+             * >  This parameter is unavailable.
              */
             public Builder healthDetail(String healthDetail) {
                 this.healthDetail = healthDetail;
@@ -222,7 +230,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * The health status of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **init**: The endpoint is being initialized.
+             * *   **normal**: The endpoint is normal.
+             * *   **Abnormal**: The endpoint is abnormal.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -230,7 +243,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that is used to connect to the endpoint.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -238,7 +251,16 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
              */
             public Builder type(String type) {
                 this.type = type;
@@ -327,7 +349,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
             private String healthStatus; 
 
             /**
-             * EndpointGroupId.
+             * The ID of the endpoint group.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -335,7 +357,11 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointGroupType.
+             * The type of the endpoint group. Valid values:
+             * <p>
+             * 
+             * *   **default**: a default endpoint group
+             * *   **virtual**: a virtual endpoint group
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
@@ -343,7 +369,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The information about the endpoints.
              */
             public Builder endpoints(java.util.List < Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -351,7 +377,7 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardingRuleIds.
+             * The IDs of the forwarding rules.
              */
             public Builder forwardingRuleIds(java.util.List < String > forwardingRuleIds) {
                 this.forwardingRuleIds = forwardingRuleIds;
@@ -359,7 +385,13 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * The health status of the endpoint group. Valid values:
+             * <p>
+             * 
+             * *   **init**: The endpoint group is being initialized.
+             * *   **normal**: The endpoint group is normal.
+             * *   **Abnormal**: The endpoint group is abnormal.
+             * *   **partiallyAbnormal**: Some endpoint groups that are associated with the listener are abnormal.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;

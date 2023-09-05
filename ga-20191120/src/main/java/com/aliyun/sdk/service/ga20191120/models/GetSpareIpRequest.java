@@ -103,17 +103,17 @@ public class GetSpareIpRequest extends Request {
             super();
         } 
 
-        private Builder(GetSpareIpRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.spareIp = response.spareIp;
+        private Builder(GetSpareIpRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.spareIp = request.spareIp;
         } 
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -122,7 +122,10 @@ public class GetSpareIpRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -131,7 +134,11 @@ public class GetSpareIpRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request.
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,7 +147,7 @@ public class GetSpareIpRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +156,7 @@ public class GetSpareIpRequest extends Request {
         }
 
         /**
-         * SpareIp.
+         * The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.
          */
         public Builder spareIp(String spareIp) {
             this.putQueryParameter("SpareIp", spareIp);

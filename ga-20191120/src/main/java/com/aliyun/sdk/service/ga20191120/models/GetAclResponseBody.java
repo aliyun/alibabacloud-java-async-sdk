@@ -33,6 +33,12 @@ public class GetAclResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private GetAclResponseBody(Builder builder) {
         this.aclEntries = builder.aclEntries;
         this.aclId = builder.aclId;
@@ -41,6 +47,8 @@ public class GetAclResponseBody extends TeaModel {
         this.addressIPVersion = builder.addressIPVersion;
         this.relatedListeners = builder.relatedListeners;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -100,6 +108,20 @@ public class GetAclResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder {
         private java.util.List < AclEntries> aclEntries; 
         private String aclId; 
@@ -108,9 +130,11 @@ public class GetAclResponseBody extends TeaModel {
         private String addressIPVersion; 
         private java.util.List < RelatedListeners> relatedListeners; 
         private String requestId; 
+        private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
 
         /**
-         * AclEntries.
+         * The network ACL entry.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -118,7 +142,11 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * AclId.
+         * The IP version of the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**
+         * *   **IPv6**
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -134,7 +162,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * AclStatus.
+         * The list of network ACL entries that are returned. A maximum of 20 network ACL entries can be returned.
          */
         public Builder aclStatus(String aclStatus) {
             this.aclStatus = aclStatus;
@@ -142,7 +170,14 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * AddressIPVersion.
+         * The state of the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **init**: The network ACL is being initialized.
+         * *   **active**: The network ACL is available.
+         * *   **configuring**: The network ACL is being configured.
+         * *   **updating**: The network ACL is being updated.
+         * *   **deleting**: The network ACL is being deleted.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -150,7 +185,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedListeners.
+         * The ID of the listener.
          */
         public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
             this.relatedListeners = relatedListeners;
@@ -158,10 +193,26 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the network ACL.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -210,7 +261,7 @@ public class GetAclResponseBody extends TeaModel {
             private String entryDescription; 
 
             /**
-             * Entry.
+             * The description of the network ACL entry.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -218,7 +269,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * EntryDescription.
+             * The listeners that are associated with the network ACL.
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;
@@ -283,7 +334,7 @@ public class GetAclResponseBody extends TeaModel {
             private String listenerId; 
 
             /**
-             * AcceleratorId.
+             * The name of the network ACL.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -291,7 +342,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * AclType.
+             * The ID of the GA instance.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -299,7 +350,11 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerId.
+             * The type of the network ACL.
+             * <p>
+             * 
+             * *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the network ACL, the listener does not forward requests.
+             * *   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the network ACL, the listener forwards all requests.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -308,6 +363,67 @@ public class GetAclResponseBody extends TeaModel {
 
             public RelatedListeners build() {
                 return new RelatedListeners(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

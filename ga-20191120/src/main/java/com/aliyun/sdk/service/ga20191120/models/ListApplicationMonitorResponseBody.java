@@ -86,7 +86,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApplicationMonitors.
+         * The list of origin probing tasks.
          */
         public Builder applicationMonitors(java.util.List < ApplicationMonitors> applicationMonitors) {
             this.applicationMonitors = applicationMonitors;
@@ -94,7 +94,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,14 +138,23 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         @NameInMap("Address")
         private String address;
 
+        @NameInMap("DetectEnable")
+        private Boolean detectEnable;
+
         @NameInMap("DetectThreshold")
         private Integer detectThreshold;
+
+        @NameInMap("DetectTimes")
+        private Integer detectTimes;
 
         @NameInMap("ListenerId")
         private String listenerId;
 
         @NameInMap("OptionsJson")
         private String optionsJson;
+
+        @NameInMap("SilenceTime")
+        private Integer silenceTime;
 
         @NameInMap("State")
         private String state;
@@ -159,9 +168,12 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         private ApplicationMonitors(Builder builder) {
             this.acceleratorId = builder.acceleratorId;
             this.address = builder.address;
+            this.detectEnable = builder.detectEnable;
             this.detectThreshold = builder.detectThreshold;
+            this.detectTimes = builder.detectTimes;
             this.listenerId = builder.listenerId;
             this.optionsJson = builder.optionsJson;
+            this.silenceTime = builder.silenceTime;
             this.state = builder.state;
             this.taskId = builder.taskId;
             this.taskName = builder.taskName;
@@ -190,10 +202,24 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
+         * @return detectEnable
+         */
+        public Boolean getDetectEnable() {
+            return this.detectEnable;
+        }
+
+        /**
          * @return detectThreshold
          */
         public Integer getDetectThreshold() {
             return this.detectThreshold;
+        }
+
+        /**
+         * @return detectTimes
+         */
+        public Integer getDetectTimes() {
+            return this.detectTimes;
         }
 
         /**
@@ -208,6 +234,13 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
          */
         public String getOptionsJson() {
             return this.optionsJson;
+        }
+
+        /**
+         * @return silenceTime
+         */
+        public Integer getSilenceTime() {
+            return this.silenceTime;
         }
 
         /**
@@ -234,15 +267,18 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         public static final class Builder {
             private String acceleratorId; 
             private String address; 
+            private Boolean detectEnable; 
             private Integer detectThreshold; 
+            private Integer detectTimes; 
             private String listenerId; 
             private String optionsJson; 
+            private Integer silenceTime; 
             private String state; 
             private String taskId; 
             private String taskName; 
 
             /**
-             * AcceleratorId.
+             * The ID of the GA instance on which the origin probing task runs.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -250,7 +286,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Address.
+             * The URL or IP address that was probed.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -258,7 +294,19 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * DetectThreshold.
+             * Indicates whether the automatic diagnostics feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder detectEnable(Boolean detectEnable) {
+                this.detectEnable = detectEnable;
+                return this;
+            }
+
+            /**
+             * The threshold that is used to trigger the automatic diagnostics feature.
              */
             public Builder detectThreshold(Integer detectThreshold) {
                 this.detectThreshold = detectThreshold;
@@ -266,7 +314,15 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerId.
+             * The number of times that are required to reach the threshold before the automatic diagnostics feature can be triggered.
+             */
+            public Builder detectTimes(Integer detectTimes) {
+                this.detectTimes = detectTimes;
+                return this;
+            }
+
+            /**
+             * The ID of the listener on which the origin probing task runs.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -274,7 +330,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * OptionsJson.
+             * The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.
              */
             public Builder optionsJson(String optionsJson) {
                 this.optionsJson = optionsJson;
@@ -282,7 +338,26 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.
+             * <p>
+             * 
+             * If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of **DetectTimes** , the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
+             * 
+             * Unit: seconds.
+             */
+            public Builder silenceTime(Integer silenceTime) {
+                this.silenceTime = silenceTime;
+                return this;
+            }
+
+            /**
+             * The status of the origin probing task. Valid values:
+             * <p>
+             * 
+             * *   **active:** The origin probing task is running.
+             * *   **inactive:** The origin probing task is stopped.
+             * *   **init:** The origin probing task is being initialized.
+             * *   **deleting:** The origin probing task is being deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -290,7 +365,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The origin probing task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -298,7 +373,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The origin probing task name.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

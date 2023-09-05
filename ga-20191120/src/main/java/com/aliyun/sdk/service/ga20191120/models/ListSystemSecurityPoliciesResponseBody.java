@@ -86,7 +86,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityPolicies.
+         * The list of TLS security policies.
          */
         public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
@@ -118,7 +118,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,28 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             private java.util.List < String > tlsVersions; 
 
             /**
-             * Ciphers.
+             * The supported cipher suites. The value of this parameter is determined by the value of **TLSVersions**.
+             * <p>
+             * 
+             * The specified cipher suites must be supported by at least one value of **TLSVersions**. For example, if you set TLSVersions to **TLSv1.3**, you must specify cipher suites that are supported by **TLSv1.3**.
+             * 
+             * *   Valid values when TLSVersions is set to **TLSv1.0** or **TLSv1.1**:
+             * 
+             *     *   ECDHE-ECDSA-AES128-SHA
+             *     *   ECDHE-ECDSA-AES256-SHA
+             *     *   ECDHE-RSA-AES128-SHA
+             *     *   ECDHE-RSA-AES256-SHA
+             *     *   AES128-SHA
+             *     *   AES256-SHA
+             *     *   DES-CBC3-SHA
+             * 
+             * *   Valid values when TLSVersions is set to **TLSv1.2**:
+             * 
+             * ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA256 AES256-SHA256
+             * 
+             * *   Valid values when TLSVersions is set to **TLSv1.3**:
+             * 
+             * TLS_AES\_128\_GCM_SHA256 TLS_AES\_256\_GCM_SHA384 TLS_CHACHA20\_POLY1305\_SHA256 TLS_AES\_128\_CCM_SHA256 TLS_AES\_128\_CCM\_8\_SHA256
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -190,7 +211,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityPolicyId.
+             * The TLS security policy ID.
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -198,7 +219,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TlsVersions.
+             * The supported TLS protocol versions. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
              */
             public Builder tlsVersions(java.util.List < String > tlsVersions) {
                 this.tlsVersions = tlsVersions;

@@ -144,20 +144,25 @@ public class ConfigEndpointProbeRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigEndpointProbeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.enable = response.enable;
-            this.endpoint = response.endpoint;
-            this.endpointGroupId = response.endpointGroupId;
-            this.endpointType = response.endpointType;
-            this.probePort = response.probePort;
-            this.probeProtocol = response.probeProtocol;
-            this.regionId = response.regionId;
+        private Builder(ConfigEndpointProbeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.enable = request.enable;
+            this.endpoint = request.endpoint;
+            this.endpointGroupId = request.endpointGroupId;
+            this.endpointType = request.endpointType;
+            this.probePort = request.probePort;
+            this.probeProtocol = request.probeProtocol;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -166,7 +171,11 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable latency monitoring. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -175,7 +184,7 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * The endpoint.
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -184,7 +193,7 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * EndpointGroupId.
+         * The endpoint group ID.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -193,7 +202,13 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * EndpointType.
+         * The type of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Ip:** a custom IP address.
+         * *   **Domain:** a custom domain name.
+         * *   **EIP:** an Alibaba Cloud elastic IP address (EIP).
+         * *   **PublicIp:** an Alibaba Cloud public IP address.
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -202,7 +217,7 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * ProbePort.
+         * The port that is used to monitor latency. Valid values: **0** to **65535**.
          */
         public Builder probePort(String probePort) {
             this.putQueryParameter("ProbePort", probePort);
@@ -211,7 +226,11 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * ProbeProtocol.
+         * The protocol that is used to monitor latency. Valid values:
+         * <p>
+         * 
+         * *   **tcp:** TCP.
+         * *   **icmp:** ICMP.
          */
         public Builder probeProtocol(String probeProtocol) {
             this.putQueryParameter("ProbeProtocol", probeProtocol);
@@ -220,7 +239,7 @@ public class ConfigEndpointProbeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

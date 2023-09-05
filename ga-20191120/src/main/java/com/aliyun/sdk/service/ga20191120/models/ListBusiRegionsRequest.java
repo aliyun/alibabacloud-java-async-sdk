@@ -49,13 +49,13 @@ public class ListBusiRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListBusiRegionsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListBusiRegionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

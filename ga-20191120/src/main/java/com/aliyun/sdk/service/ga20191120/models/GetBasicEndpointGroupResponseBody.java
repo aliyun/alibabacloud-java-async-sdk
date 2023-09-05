@@ -27,6 +27,9 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     @NameInMap("EndpointGroupRegion")
     private String endpointGroupRegion;
 
+    @NameInMap("EndpointSubAddress")
+    private String endpointSubAddress;
+
     @NameInMap("EndpointType")
     private String endpointType;
 
@@ -45,6 +48,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         this.endpointAddress = builder.endpointAddress;
         this.endpointGroupId = builder.endpointGroupId;
         this.endpointGroupRegion = builder.endpointGroupRegion;
+        this.endpointSubAddress = builder.endpointSubAddress;
         this.endpointType = builder.endpointType;
         this.name = builder.name;
         this.requestId = builder.requestId;
@@ -95,6 +99,13 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return endpointSubAddress
+     */
+    public String getEndpointSubAddress() {
+        return this.endpointSubAddress;
+    }
+
+    /**
      * @return endpointType
      */
     public String getEndpointType() {
@@ -128,13 +139,14 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         private String endpointAddress; 
         private String endpointGroupId; 
         private String endpointGroupRegion; 
+        private String endpointSubAddress; 
         private String endpointType; 
         private String name; 
         private String requestId; 
         private String state; 
 
         /**
-         * 全球加速实例Id
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -142,7 +154,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点组描述
+         * The description of the endpoint group.
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,7 +162,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点组地址
+         * The address of the endpoint.
          */
         public Builder endpointAddress(String endpointAddress) {
             this.endpointAddress = endpointAddress;
@@ -158,7 +170,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点组Id
+         * The ID of the endpoint group.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -166,7 +178,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点组所在地域
+         * The ID of the region where the endpoint group resides.
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.endpointGroupRegion = endpointGroupRegion;
@@ -174,7 +186,28 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点类型
+         * The secondary address of the endpoint.
+         * <p>
+         * 
+         * This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
+         * 
+         * *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
+         * *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
+         * *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
+         */
+        public Builder endpointSubAddress(String endpointSubAddress) {
+            this.endpointSubAddress = endpointSubAddress;
+            return this;
+        }
+
+        /**
+         * The type of endpoint. Valid values:
+         * <p>
+         * 
+         * *   **ENI**: elastic network interface (ENI).
+         * *   **SLB**: Classic Load Balancer (CLB) instance.
+         * *   **ECS**: Elastic Compute Service (ECS) instance.
+         * *   **NLB**: Network Load Balancer (NLB) instance
          */
         public Builder endpointType(String endpointType) {
             this.endpointType = endpointType;
@@ -182,7 +215,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点组名称
+         * The name of the endpoint group.
          */
         public Builder name(String name) {
             this.name = name;
@@ -190,7 +223,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +231,13 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 终端节点组状态
+         * The status of the endpoint group. Valid values:
+         * <p>
+         * 
+         * *   **init**: being initialized.
+         * *   **active**: running as expected.
+         * *   **updating**: being updated.
+         * *   **deleting**: being deleted.
          */
         public Builder state(String state) {
             this.state = state;

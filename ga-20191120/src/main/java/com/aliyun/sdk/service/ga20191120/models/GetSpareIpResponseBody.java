@@ -50,7 +50,7 @@ public class GetSpareIpResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class GetSpareIpResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The status of the secondary IP address. Valid values:
+         * <p>
+         * 
+         * *   **active:** The secondary IP address is available.
+         * *   **inuse:** The secondary IP address is in use.
          */
         public Builder state(String state) {
             this.state = state;

@@ -22,7 +22,6 @@ public class UpdateBasicEndpointGroupRequest extends Request {
 
     @Query
     @NameInMap("EndpointAddress")
-    @Validation(required = true)
     private String endpointAddress;
 
     @Query
@@ -31,8 +30,11 @@ public class UpdateBasicEndpointGroupRequest extends Request {
     private String endpointGroupId;
 
     @Query
+    @NameInMap("EndpointSubAddress")
+    private String endpointSubAddress;
+
+    @Query
     @NameInMap("EndpointType")
-    @Validation(required = true)
     private String endpointType;
 
     @Query
@@ -50,6 +52,7 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         this.description = builder.description;
         this.endpointAddress = builder.endpointAddress;
         this.endpointGroupId = builder.endpointGroupId;
+        this.endpointSubAddress = builder.endpointSubAddress;
         this.endpointType = builder.endpointType;
         this.name = builder.name;
         this.regionId = builder.regionId;
@@ -97,6 +100,13 @@ public class UpdateBasicEndpointGroupRequest extends Request {
     }
 
     /**
+     * @return endpointSubAddress
+     */
+    public String getEndpointSubAddress() {
+        return this.endpointSubAddress;
+    }
+
+    /**
      * @return endpointType
      */
     public String getEndpointType() {
@@ -122,6 +132,7 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         private String description; 
         private String endpointAddress; 
         private String endpointGroupId; 
+        private String endpointSubAddress; 
         private String endpointType; 
         private String name; 
         private String regionId; 
@@ -130,19 +141,25 @@ public class UpdateBasicEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateBasicEndpointGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.endpointAddress = response.endpointAddress;
-            this.endpointGroupId = response.endpointGroupId;
-            this.endpointType = response.endpointType;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(UpdateBasicEndpointGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.endpointAddress = request.endpointAddress;
+            this.endpointGroupId = request.endpointGroupId;
+            this.endpointSubAddress = request.endpointSubAddress;
+            this.endpointType = request.endpointType;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 客户端Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,7 +168,10 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点组描述
+         * The description of the endpoint group that is associated with the basic GA instance.
+         * <p>
+         * 
+         * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -160,7 +180,7 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点地址
+         * The address of the endpoint.
          */
         public Builder endpointAddress(String endpointAddress) {
             this.putQueryParameter("EndpointAddress", endpointAddress);
@@ -169,7 +189,7 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点组Id
+         * The ID of the endpoint group that is associated with the basic GA instance.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -178,7 +198,26 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点类型
+         * The secondary address of the endpoint.
+         * <p>
+         * 
+         * This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.
+         * 
+         * *   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
+         * *   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
+         */
+        public Builder endpointSubAddress(String endpointSubAddress) {
+            this.putQueryParameter("EndpointSubAddress", endpointSubAddress);
+            this.endpointSubAddress = endpointSubAddress;
+            return this;
+        }
+
+        /**
+         * The type of endpoint. Valid values:
+         * <p>
+         * 
+         * *   **ENI**: elastic network interface (ENI)
+         * *   **SLB**: Server Load Balancer (SLB) instance
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -187,7 +226,10 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点组名称
+         * The name of the endpoint group that is associated with the basic GA instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -196,7 +238,7 @@ public class UpdateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * Regionid
+         * The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

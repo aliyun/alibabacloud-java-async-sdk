@@ -63,14 +63,14 @@ public class DescribeEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEndpointGroupRequest response) {
-            super(response);
-            this.endpointGroupId = response.endpointGroupId;
-            this.regionId = response.regionId;
+        private Builder(DescribeEndpointGroupRequest request) {
+            super(request);
+            this.endpointGroupId = request.endpointGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * EndpointGroupId.
+         * The ID of the endpoint group that you want to query.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -79,7 +79,7 @@ public class DescribeEndpointGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where your Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

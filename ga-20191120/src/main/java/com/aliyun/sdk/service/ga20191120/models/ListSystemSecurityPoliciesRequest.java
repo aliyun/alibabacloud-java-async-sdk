@@ -18,6 +18,7 @@ public class ListSystemSecurityPoliciesRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -74,15 +75,15 @@ public class ListSystemSecurityPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListSystemSecurityPoliciesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListSystemSecurityPoliciesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -91,7 +92,7 @@ public class ListSystemSecurityPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +101,7 @@ public class ListSystemSecurityPoliciesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

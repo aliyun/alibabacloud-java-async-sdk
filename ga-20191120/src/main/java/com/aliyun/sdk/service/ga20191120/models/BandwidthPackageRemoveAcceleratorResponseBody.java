@@ -62,7 +62,7 @@ public class BandwidthPackageRemoveAcceleratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Accelerators.
+         * The ID of the GA instance.
          */
         public Builder accelerators(java.util.List < String > accelerators) {
             this.accelerators = accelerators;
@@ -70,7 +70,7 @@ public class BandwidthPackageRemoveAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * BandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -78,7 +78,7 @@ public class BandwidthPackageRemoveAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

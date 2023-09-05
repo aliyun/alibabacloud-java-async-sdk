@@ -30,8 +30,20 @@ public class DescribeIpSetResponseBody extends TeaModel {
     @NameInMap("IpVersion")
     private String ipVersion;
 
+    @NameInMap("IspType")
+    private String ispType;
+
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("ServiceId")
+    private String serviceId;
+
+    @NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @NameInMap("ServiceManagedInfos")
+    private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
     @NameInMap("State")
     private String state;
@@ -43,7 +55,11 @@ public class DescribeIpSetResponseBody extends TeaModel {
         this.ipAddressList = builder.ipAddressList;
         this.ipSetId = builder.ipSetId;
         this.ipVersion = builder.ipVersion;
+        this.ispType = builder.ispType;
         this.requestId = builder.requestId;
+        this.serviceId = builder.serviceId;
+        this.serviceManaged = builder.serviceManaged;
+        this.serviceManagedInfos = builder.serviceManagedInfos;
         this.state = builder.state;
     }
 
@@ -98,10 +114,38 @@ public class DescribeIpSetResponseBody extends TeaModel {
     }
 
     /**
+     * @return ispType
+     */
+    public String getIspType() {
+        return this.ispType;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
+     * @return serviceManagedInfos
+     */
+    public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+        return this.serviceManagedInfos;
     }
 
     /**
@@ -118,11 +162,15 @@ public class DescribeIpSetResponseBody extends TeaModel {
         private java.util.List < String > ipAddressList; 
         private String ipSetId; 
         private String ipVersion; 
+        private String ispType; 
         private String requestId; 
+        private String serviceId; 
+        private Boolean serviceManaged; 
+        private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
         private String state; 
 
         /**
-         * AccelerateRegionId.
+         * The ID of the acceleration region.
          */
         public Builder accelerateRegionId(String accelerateRegionId) {
             this.accelerateRegionId = accelerateRegionId;
@@ -130,7 +178,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -138,7 +186,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * Bandwidth.
+         * The bandwidth that is allocated to the acceleration region. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -146,7 +194,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddressList.
+         * The list of accelerated IP addresses in the acceleration region.
          */
         public Builder ipAddressList(java.util.List < String > ipAddressList) {
             this.ipAddressList = ipAddressList;
@@ -154,7 +202,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * IpSetId.
+         * The ID of the acceleration region.
          */
         public Builder ipSetId(String ipSetId) {
             this.ipSetId = ipSetId;
@@ -162,7 +210,11 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * IpVersion.
+         * The version of the IP protocol. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**
+         * *   **IPv6**
          */
         public Builder ipVersion(String ipVersion) {
             this.ipVersion = ipVersion;
@@ -170,7 +222,30 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The line type of the elastic IP address (EIP) in the acceleration region.
+         * <p>
+         * 
+         * *   **BGP**: BGP (Multi-ISP) lines.
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+         * 
+         * If you are allowed to use single-ISP bandwidth, one of the following values is returned:
+         * 
+         * *   **ChinaTelecom**: China Telecom (single ISP).
+         * *   **ChinaUnicom**: China Unicom (single ISP).
+         * *   **ChinaMobile**: China Mobile (single ISP).
+         * *   **ChinaTelecom_L2**: China Telecom (single ISP)\_L2.
+         * *   **ChinaUnicom_L2**: China Unicom (single ISP)\_L2.
+         * *   **ChinaMobile_L2**: China Mobile (single ISP)\_L2.
+         * 
+         * >  The supported single-ISP line types vary based on the acceleration region.
+         */
+        public Builder ispType(String ispType) {
+            this.ispType = ispType;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +253,37 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * ServiceManagedInfos.
+         */
+        public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+            this.serviceManagedInfos = serviceManagedInfos;
+            return this;
+        }
+
+        /**
+         * The status of the acceleration region. Valid values:
+         * <p>
+         * 
+         * *   **init**: The acceleration region is being initialized.
+         * *   **active**: The acceleration region is in the running state.
+         * *   **updating**: The acceleration region is being configured.
+         * *   **deleting:** The VPN gateway is being deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -191,4 +296,85 @@ public class DescribeIpSetResponseBody extends TeaModel {
 
     } 
 
+    public static class ServiceManagedInfos extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("ChildType")
+        private String childType;
+
+        @NameInMap("IsManaged")
+        private Boolean isManaged;
+
+        private ServiceManagedInfos(Builder builder) {
+            this.action = builder.action;
+            this.childType = builder.childType;
+            this.isManaged = builder.isManaged;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceManagedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return childType
+         */
+        public String getChildType() {
+            return this.childType;
+        }
+
+        /**
+         * @return isManaged
+         */
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String childType; 
+            private Boolean isManaged; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * ChildType.
+             */
+            public Builder childType(String childType) {
+                this.childType = childType;
+                return this;
+            }
+
+            /**
+             * IsManaged.
+             */
+            public Builder isManaged(Boolean isManaged) {
+                this.isManaged = isManaged;
+                return this;
+            }
+
+            public ServiceManagedInfos build() {
+                return new ServiceManagedInfos(this);
+            } 
+
+        } 
+
+    }
 }

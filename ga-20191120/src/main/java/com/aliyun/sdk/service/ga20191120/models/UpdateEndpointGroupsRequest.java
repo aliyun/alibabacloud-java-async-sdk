@@ -103,17 +103,22 @@ public class UpdateEndpointGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEndpointGroupsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointGroupConfigurations = response.endpointGroupConfigurations;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(UpdateEndpointGroupsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointGroupConfigurations = request.endpointGroupConfigurations;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +127,11 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -131,7 +140,7 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * EndpointGroupConfigurations.
+         * Terminal node group configuration information.
          */
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
@@ -140,7 +149,7 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -149,7 +158,7 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,12 +175,15 @@ public class UpdateEndpointGroupsRequest extends Request {
 
     public static class EndpointConfigurations extends TeaModel {
         @NameInMap("Endpoint")
+        @Validation(required = true)
         private String endpoint;
 
         @NameInMap("Type")
+        @Validation(required = true)
         private String type;
 
         @NameInMap("Weight")
+        @Validation(required = true)
         private Long weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -215,7 +227,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             private Long weight; 
 
             /**
-             * Endpoint.
+             * The IP address, domain name or instance id according to the type of the endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -223,7 +235,23 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * 
+             * > 
+             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
+             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system creates the service-linked role.
+             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system creates the service-linked role.
+             * 
+             *     For more information, see [Service-linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -231,7 +259,12 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the endpoint.
+             * <p>
+             * 
+             * Valid values: **0** to **255**.
+             * 
+             * >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -284,7 +317,10 @@ public class UpdateEndpointGroupsRequest extends Request {
             private Long listenerPort; 
 
             /**
-             * EndpointPort.
+             * The endpoint port.
+             * <p>
+             * 
+             * Valid values: **1** to **65499**.
              */
             public Builder endpointPort(Long endpointPort) {
                 this.endpointPort = endpointPort;
@@ -292,7 +328,14 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * ListenerPort.
+             * The listening port.
+             * <p>
+             * 
+             * Valid values: **1** to **65499**.
+             * 
+             * > 
+             * *   Only HTTP and HTTPS listeners support port mapping.
+             * *   The listener port in a port mapping must be the one used by the current listener.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -314,6 +357,7 @@ public class UpdateEndpointGroupsRequest extends Request {
         private Boolean enableClientIPPreservationToa;
 
         @NameInMap("EndpointConfigurations")
+        @Validation(required = true)
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
         @NameInMap("EndpointGroupDescription")
@@ -502,7 +546,11 @@ public class UpdateEndpointGroupsRequest extends Request {
             private Long trafficPercentage; 
 
             /**
-             * EnableClientIPPreservationProxyProtocol.
+             * Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
+             * <p>
+             * 
+             * *   **true**: uses the proxy protocol to preserve client IP addresses.
+             * *   **false**: does not use the proxy protocol to preserve client IP addresses.
              */
             public Builder enableClientIPPreservationProxyProtocol(Boolean enableClientIPPreservationProxyProtocol) {
                 this.enableClientIPPreservationProxyProtocol = enableClientIPPreservationProxyProtocol;
@@ -510,7 +558,11 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EnableClientIPPreservationToa.
+             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
+             * <p>
+             * 
+             * *   **true**: preserves client IP addresses by using the TOA module.
+             * *   **false**: does not preserve client IP addresses by using the TOA module.
              */
             public Builder enableClientIPPreservationToa(Boolean enableClientIPPreservationToa) {
                 this.enableClientIPPreservationToa = enableClientIPPreservationToa;
@@ -518,7 +570,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointConfigurations.
+             * Terminal node configuration information.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -526,7 +578,10 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupDescription.
+             * The description of the endpoint group.
+             * <p>
+             * 
+             * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder endpointGroupDescription(String endpointGroupDescription) {
                 this.endpointGroupDescription = endpointGroupDescription;
@@ -534,7 +589,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupId.
+             * The ID of the endpoint.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -542,7 +597,10 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupName.
+             * The name of the endpoint group.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder endpointGroupName(String endpointGroupName) {
                 this.endpointGroupName = endpointGroupName;
@@ -550,7 +608,15 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointRequestProtocol.
+             * The protocol that is used by the backend service. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: HTTP
+             * *   **HTTPS**: HTTPS
+             * 
+             * > 
+             * *   You can set this property only if the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
+             * *   For an HTTP listener, the backend service protocol must be HTTP.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -558,7 +624,11 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckEnabled.
+             * Specifies whether to enable the health check feature. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**: enables the health check feature.
+             * *   **false**: disables the health check feature.
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -566,7 +636,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckIntervalSeconds.
+             * The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.
              */
             public Builder healthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -574,7 +644,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckPath.
+             * The path to which health check requests are sent.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -582,7 +652,10 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckPort.
+             * The port that is used for health checks.
+             * <p>
+             * 
+             * Valid values: **1** to **65535**.
              */
             public Builder healthCheckPort(Long healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
@@ -590,7 +663,12 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * HealthCheckProtocol.
+             * The protocol over which health check requests are sent.
+             * <p>
+             * 
+             * *   **tcp**: TCP
+             * *   **http**: HTTP
+             * *   **https**: HTTPS
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -598,7 +676,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * PortOverrides.
+             * The mappings between ports.
              */
             public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
                 this.portOverrides = portOverrides;
@@ -606,7 +684,10 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * ThresholdCount.
+             * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
+             * <p>
+             * 
+             * Valid values: **2** to **10**.
              */
             public Builder thresholdCount(Long thresholdCount) {
                 this.thresholdCount = thresholdCount;
@@ -614,7 +695,10 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * TrafficPercentage.
+             * The traffic ratio for the endpoint group when the specified listener is associated with multiple endpoint groups.
+             * <p>
+             * 
+             * Valid values: **1** to **100**.
              */
             public Builder trafficPercentage(Long trafficPercentage) {
                 this.trafficPercentage = trafficPercentage;

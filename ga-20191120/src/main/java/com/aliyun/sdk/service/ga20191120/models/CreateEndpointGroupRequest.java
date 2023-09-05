@@ -82,6 +82,10 @@ public class CreateEndpointGroupRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("ThresholdCount")
     private Integer thresholdCount;
 
@@ -107,6 +111,7 @@ public class CreateEndpointGroupRequest extends Request {
         this.name = builder.name;
         this.portOverrides = builder.portOverrides;
         this.regionId = builder.regionId;
+        this.tag = builder.tag;
         this.thresholdCount = builder.thresholdCount;
         this.trafficPercentage = builder.trafficPercentage;
     }
@@ -237,6 +242,13 @@ public class CreateEndpointGroupRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return thresholdCount
      */
     public Integer getThresholdCount() {
@@ -267,6 +279,7 @@ public class CreateEndpointGroupRequest extends Request {
         private String name; 
         private java.util.List < PortOverrides> portOverrides; 
         private String regionId; 
+        private java.util.List < Tag> tag; 
         private Integer thresholdCount; 
         private Integer trafficPercentage; 
 
@@ -274,30 +287,31 @@ public class CreateEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEndpointGroupRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.endpointConfigurations = response.endpointConfigurations;
-            this.endpointGroupRegion = response.endpointGroupRegion;
-            this.endpointGroupType = response.endpointGroupType;
-            this.endpointRequestProtocol = response.endpointRequestProtocol;
-            this.healthCheckEnabled = response.healthCheckEnabled;
-            this.healthCheckIntervalSeconds = response.healthCheckIntervalSeconds;
-            this.healthCheckPath = response.healthCheckPath;
-            this.healthCheckPort = response.healthCheckPort;
-            this.healthCheckProtocol = response.healthCheckProtocol;
-            this.listenerId = response.listenerId;
-            this.name = response.name;
-            this.portOverrides = response.portOverrides;
-            this.regionId = response.regionId;
-            this.thresholdCount = response.thresholdCount;
-            this.trafficPercentage = response.trafficPercentage;
+        private Builder(CreateEndpointGroupRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.endpointConfigurations = request.endpointConfigurations;
+            this.endpointGroupRegion = request.endpointGroupRegion;
+            this.endpointGroupType = request.endpointGroupType;
+            this.endpointRequestProtocol = request.endpointRequestProtocol;
+            this.healthCheckEnabled = request.healthCheckEnabled;
+            this.healthCheckIntervalSeconds = request.healthCheckIntervalSeconds;
+            this.healthCheckPath = request.healthCheckPath;
+            this.healthCheckPort = request.healthCheckPort;
+            this.healthCheckProtocol = request.healthCheckProtocol;
+            this.listenerId = request.listenerId;
+            this.name = request.name;
+            this.portOverrides = request.portOverrides;
+            this.regionId = request.regionId;
+            this.tag = request.tag;
+            this.thresholdCount = request.thresholdCount;
+            this.trafficPercentage = request.trafficPercentage;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -306,7 +320,12 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -315,7 +334,10 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the endpoint group.
+         * <p>
+         * 
+         * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -324,7 +346,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointConfigurations.
+         * The configurations of the endpoint.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
@@ -333,7 +355,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointGroupRegion.
+         * The ID of the region in which to create the endpoint group.
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);
@@ -342,7 +364,13 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointGroupType.
+         * The type of the endpoint group. Default value: default. Valid values:
+         * <p>
+         * 
+         * *   **default**: a default endpoint group.
+         * *   **virtual**: a virtual endpoint group.
+         * 
+         * >  Only HTTP and HTTPS listeners support virtual endpoint groups.
          */
         public Builder endpointGroupType(String endpointGroupType) {
             this.putQueryParameter("EndpointGroupType", endpointGroupType);
@@ -351,7 +379,14 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointRequestProtocol.
+         * The protocol that is used by the backend service. Default value: HTTP. Valid values:
+         * <p>
+         * 
+         * *   **HTTP**
+         * *   **HTTPS**
+         * 
+         * > *   You can set this parameter only when the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.
+         * >*   For an **HTTP** listener, the backend service protocol must be **HTTP**.
          */
         public Builder endpointRequestProtocol(String endpointRequestProtocol) {
             this.putQueryParameter("EndpointRequestProtocol", endpointRequestProtocol);
@@ -360,7 +395,11 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * HealthCheckEnabled.
+         * Specifies whether to enable the health check feature. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the health check feature.
+         * *   **false**: disables the health check feature.
          */
         public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
             this.putQueryParameter("HealthCheckEnabled", healthCheckEnabled);
@@ -369,7 +408,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * HealthCheckIntervalSeconds.
+         * The interval at which health checks are performed. Unit: seconds.
          */
         public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
             this.putQueryParameter("HealthCheckIntervalSeconds", healthCheckIntervalSeconds);
@@ -378,7 +417,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * HealthCheckPath.
+         * The path to which to send health check requests.
          */
         public Builder healthCheckPath(String healthCheckPath) {
             this.putQueryParameter("HealthCheckPath", healthCheckPath);
@@ -387,7 +426,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * HealthCheckPort.
+         * The port that is used for health checks.
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);
@@ -396,7 +435,12 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * HealthCheckProtocol.
+         * The protocol over which to send health check requests. Valid values:
+         * <p>
+         * 
+         * *   **tcp**: TCP
+         * *   **http**: HTTP
+         * *   **https**: HTTPS
          */
         public Builder healthCheckProtocol(String healthCheckProtocol) {
             this.putQueryParameter("HealthCheckProtocol", healthCheckProtocol);
@@ -405,7 +449,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -414,7 +458,10 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the endpoint group.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -423,7 +470,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * PortOverrides.
+         * The mappings between ports.
          */
         public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
             this.putQueryParameter("PortOverrides", portOverrides);
@@ -432,7 +479,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -441,7 +488,19 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * ThresholdCount.
+         * Tags of GA instances.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
+         * <p>
+         * 
+         * Valid values: **2** to **10**. Default value: **3**.
          */
         public Builder thresholdCount(Integer thresholdCount) {
             this.putQueryParameter("ThresholdCount", thresholdCount);
@@ -450,7 +509,10 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * TrafficPercentage.
+         * The traffic ratio for the endpoint group when the specified listener is associated with multiple endpoint groups.
+         * <p>
+         * 
+         * Valid values: **1** to **100**.
          */
         public Builder trafficPercentage(Integer trafficPercentage) {
             this.putQueryParameter("TrafficPercentage", trafficPercentage);
@@ -469,6 +531,9 @@ public class CreateEndpointGroupRequest extends Request {
         @NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
+        @NameInMap("EnableProxyProtocol")
+        private Boolean enableProxyProtocol;
+
         @NameInMap("Endpoint")
         @Validation(required = true)
         private String endpoint;
@@ -483,6 +548,7 @@ public class CreateEndpointGroupRequest extends Request {
 
         private EndpointConfigurations(Builder builder) {
             this.enableClientIPPreservation = builder.enableClientIPPreservation;
+            this.enableProxyProtocol = builder.enableProxyProtocol;
             this.endpoint = builder.endpoint;
             this.type = builder.type;
             this.weight = builder.weight;
@@ -501,6 +567,13 @@ public class CreateEndpointGroupRequest extends Request {
          */
         public Boolean getEnableClientIPPreservation() {
             return this.enableClientIPPreservation;
+        }
+
+        /**
+         * @return enableProxyProtocol
+         */
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
         }
 
         /**
@@ -526,12 +599,17 @@ public class CreateEndpointGroupRequest extends Request {
 
         public static final class Builder {
             private Boolean enableClientIPPreservation; 
+            private Boolean enableProxyProtocol; 
             private String endpoint; 
             private String type; 
             private Integer weight; 
 
             /**
-             * EnableClientIPPreservation.
+             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**: preserves client IP addresses by using the TOA module.
+             * *   **false**: does not preserve client IP addresses by using the TOA module.
              */
             public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
                 this.enableClientIPPreservation = enableClientIPPreservation;
@@ -539,7 +617,19 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   **true**: preserves client IP addresses by using the ProxyProtocol module.
+             * *   **false**: does not preserve client IP addresses by using the ProxyProtocol module.
+             */
+            public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
+                this.enableProxyProtocol = enableProxyProtocol;
+                return this;
+            }
+
+            /**
+             * The IP address, domain name or instance id according to the type of the endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -547,7 +637,23 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * 
+             * > 
+             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * 
+             *     For more information, see [Service-linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -555,7 +661,12 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the endpoint.
+             * <p>
+             * 
+             * Valid values: **0** to **255**.
+             * 
+             * >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -608,7 +719,7 @@ public class CreateEndpointGroupRequest extends Request {
             private Integer listenerPort; 
 
             /**
-             * EndpointPort.
+             * The endpoint port that is mapped to the listener port.
              */
             public Builder endpointPort(Integer endpointPort) {
                 this.endpointPort = endpointPort;
@@ -616,7 +727,11 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * ListenerPort.
+             * The listener port that is mapped to the endpoint port.
+             * <p>
+             * 
+             * > *   Only HTTP and HTTPS listeners support port mappings.
+             * >*   The listener port must be the one used by the current listener.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -625,6 +740,77 @@ public class CreateEndpointGroupRequest extends Request {
 
             public PortOverrides build() {
                 return new PortOverrides(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the GA instance. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify up to 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the GA instance. The tag value cannot be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify up to 20 tag values.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ReplaceBandwidthPackageRequest extends Request {
     @Query
+    @NameInMap("AcceleratorId")
+    private String acceleratorId;
+
+    @Query
     @NameInMap("BandwidthPackageId")
     @Validation(required = true)
     private String bandwidthPackageId;
@@ -29,6 +33,7 @@ public class ReplaceBandwidthPackageRequest extends Request {
 
     private ReplaceBandwidthPackageRequest(Builder builder) {
         super(builder);
+        this.acceleratorId = builder.acceleratorId;
         this.bandwidthPackageId = builder.bandwidthPackageId;
         this.regionId = builder.regionId;
         this.targetBandwidthPackageId = builder.targetBandwidthPackageId;
@@ -45,6 +50,13 @@ public class ReplaceBandwidthPackageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceleratorId
+     */
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     /**
@@ -69,6 +81,7 @@ public class ReplaceBandwidthPackageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReplaceBandwidthPackageRequest, Builder> {
+        private String acceleratorId; 
         private String bandwidthPackageId; 
         private String regionId; 
         private String targetBandwidthPackageId; 
@@ -77,15 +90,29 @@ public class ReplaceBandwidthPackageRequest extends Request {
             super();
         } 
 
-        private Builder(ReplaceBandwidthPackageRequest response) {
-            super(response);
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.regionId = response.regionId;
-            this.targetBandwidthPackageId = response.targetBandwidthPackageId;
+        private Builder(ReplaceBandwidthPackageRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.regionId = request.regionId;
+            this.targetBandwidthPackageId = request.targetBandwidthPackageId;
         } 
 
         /**
-         * BandwidthPackageId.
+         * The GA instance ID.
+         */
+        public Builder acceleratorId(String acceleratorId) {
+            this.putQueryParameter("AcceleratorId", acceleratorId);
+            this.acceleratorId = acceleratorId;
+            return this;
+        }
+
+        /**
+         * The ID of the required bandwidth plan. When you specify a replacement bandwidth plan, take note of the following items:
+         * <p>
+         * 
+         * *   Only a bandwidth plan that is not associated with a GA instance can be specified.
+         * *   If you want to replace a basic bandwidth plan, make sure that the bandwidth provided by the replacement bandwidth plan is not less than the total bandwidth allocated to the acceleration area.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -94,7 +121,7 @@ public class ReplaceBandwidthPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +130,7 @@ public class ReplaceBandwidthPackageRequest extends Request {
         }
 
         /**
-         * TargetBandwidthPackageId.
+         * The ID of the bandwidth plan that you want to replace.
          */
         public Builder targetBandwidthPackageId(String targetBandwidthPackageId) {
             this.putQueryParameter("TargetBandwidthPackageId", targetBandwidthPackageId);

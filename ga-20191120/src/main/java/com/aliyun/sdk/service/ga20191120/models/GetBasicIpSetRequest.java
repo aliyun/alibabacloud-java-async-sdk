@@ -76,15 +76,20 @@ public class GetBasicIpSetRequest extends Request {
             super();
         } 
 
-        private Builder(GetBasicIpSetRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ipSetId = response.ipSetId;
-            this.regionId = response.regionId;
+        private Builder(GetBasicIpSetRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ipSetId = request.ipSetId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 客户端Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +98,7 @@ public class GetBasicIpSetRequest extends Request {
         }
 
         /**
-         * 加速接入点Id
+         * The ID of the acceleration region of the basic GA instance.
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);
@@ -102,7 +107,7 @@ public class GetBasicIpSetRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

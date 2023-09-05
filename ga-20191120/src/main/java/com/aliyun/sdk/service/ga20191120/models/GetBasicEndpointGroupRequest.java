@@ -76,15 +76,20 @@ public class GetBasicEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetBasicEndpointGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.endpointGroupId = response.endpointGroupId;
-            this.regionId = response.regionId;
+        private Builder(GetBasicEndpointGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.endpointGroupId = request.endpointGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 客户端Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +98,7 @@ public class GetBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点组Id
+         * The ID of the endpoint group.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -102,7 +107,7 @@ public class GetBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

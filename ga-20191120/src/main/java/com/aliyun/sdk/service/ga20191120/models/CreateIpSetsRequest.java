@@ -90,16 +90,16 @@ public class CreateIpSetsRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIpSetsRequest response) {
-            super(response);
-            this.accelerateRegion = response.accelerateRegion;
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
+        private Builder(CreateIpSetsRequest request) {
+            super(request);
+            this.accelerateRegion = request.accelerateRegion;
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AccelerateRegion.
+         * The information about the acceleration regions.
          */
         public Builder accelerateRegion(java.util.List < AccelerateRegion> accelerateRegion) {
             this.putQueryParameter("AccelerateRegion", accelerateRegion);
@@ -108,7 +108,7 @@ public class CreateIpSetsRequest extends Request {
         }
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -117,7 +117,12 @@ public class CreateIpSetsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,7 +131,7 @@ public class CreateIpSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,10 +157,14 @@ public class CreateIpSetsRequest extends Request {
         @NameInMap("IpVersion")
         private String ipVersion;
 
+        @NameInMap("IspType")
+        private String ispType;
+
         private AccelerateRegion(Builder builder) {
             this.accelerateRegionId = builder.accelerateRegionId;
             this.bandwidth = builder.bandwidth;
             this.ipVersion = builder.ipVersion;
+            this.ispType = builder.ispType;
         }
 
         public static Builder builder() {
@@ -187,13 +196,24 @@ public class CreateIpSetsRequest extends Request {
             return this.ipVersion;
         }
 
+        /**
+         * @return ispType
+         */
+        public String getIspType() {
+            return this.ispType;
+        }
+
         public static final class Builder {
             private String accelerateRegionId; 
             private Integer bandwidth; 
             private String ipVersion; 
+            private String ispType; 
 
             /**
-             * AccelerateRegionId.
+             * The acceleration region IDs.
+             * <p>
+             * 
+             * The number of regions that can be added varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
              */
             public Builder accelerateRegionId(String accelerateRegionId) {
                 this.accelerateRegionId = accelerateRegionId;
@@ -201,7 +221,14 @@ public class CreateIpSetsRequest extends Request {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   Each acceleration region must be allocated a minimum of 2 Mbit/s of bandwidth.
+             * 
+             * *   The total bandwidth for all acceleration regions cannot exceed the maximum bandwidth of the basic bandwidth plan.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -209,10 +236,37 @@ public class CreateIpSetsRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * The IP version used to connect to the GA instance. Valid values:
+             * <p>
+             * 
+             * *   **IPv4** (default)
+             * *   **IPv6**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
+             * <p>
+             * 
+             * *   **BGP**
+             * *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
+             * 
+             * If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:
+             * 
+             * *   **ChinaTelecom**: China Telecom (single ISP)
+             * *   **ChinaUnicom**: China Unicom (single ISP)
+             * *   **ChinaMobile**: China Mobile (single ISP)
+             * *   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)
+             * *   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)
+             * *   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)
+             * 
+             * > Different acceleration regions support different single-ISP BGP lines.
+             */
+            public Builder ispType(String ispType) {
+                this.ispType = ispType;
                 return this;
             }
 

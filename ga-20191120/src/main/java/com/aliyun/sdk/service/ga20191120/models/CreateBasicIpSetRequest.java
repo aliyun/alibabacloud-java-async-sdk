@@ -23,8 +23,16 @@ public class CreateBasicIpSetRequest extends Request {
     private String acceleratorId;
 
     @Query
+    @NameInMap("Bandwidth")
+    private Long bandwidth;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
+
+    @Query
+    @NameInMap("IspType")
+    private String ispType;
 
     @Query
     @NameInMap("RegionId")
@@ -35,7 +43,9 @@ public class CreateBasicIpSetRequest extends Request {
         super(builder);
         this.accelerateRegionId = builder.accelerateRegionId;
         this.acceleratorId = builder.acceleratorId;
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
+        this.ispType = builder.ispType;
         this.regionId = builder.regionId;
     }
 
@@ -67,10 +77,24 @@ public class CreateBasicIpSetRequest extends Request {
     }
 
     /**
+     * @return bandwidth
+     */
+    public Long getBandwidth() {
+        return this.bandwidth;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return ispType
+     */
+    public String getIspType() {
+        return this.ispType;
     }
 
     /**
@@ -83,23 +107,30 @@ public class CreateBasicIpSetRequest extends Request {
     public static final class Builder extends Request.Builder<CreateBasicIpSetRequest, Builder> {
         private String accelerateRegionId; 
         private String acceleratorId; 
+        private Long bandwidth; 
         private String clientToken; 
+        private String ispType; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateBasicIpSetRequest response) {
-            super(response);
-            this.accelerateRegionId = response.accelerateRegionId;
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
+        private Builder(CreateBasicIpSetRequest request) {
+            super(request);
+            this.accelerateRegionId = request.accelerateRegionId;
+            this.acceleratorId = request.acceleratorId;
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.ispType = request.ispType;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 加速地域Id
+         * The ID of the acceleration region.
+         * <p>
+         * 
+         * You can call the [ListAvailableBusiRegions](~~261190~~) operation to query the most recent acceleration region list.
          */
         public Builder accelerateRegionId(String accelerateRegionId) {
             this.putQueryParameter("AccelerateRegionId", accelerateRegionId);
@@ -108,7 +139,7 @@ public class CreateBasicIpSetRequest extends Request {
         }
 
         /**
-         * 基础版全球加速实例Id
+         * The ID of the basic GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -117,7 +148,21 @@ public class CreateBasicIpSetRequest extends Request {
         }
 
         /**
-         * 客户端Token
+         * The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.
+         */
+        public Builder bandwidth(Long bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,7 +171,31 @@ public class CreateBasicIpSetRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
+         * <p>
+         * 
+         * *   **BGP** (default)
+         * *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
+         * 
+         * If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:
+         * 
+         * *   **ChinaTelecom**: China Telecom (single ISP)
+         * *   **ChinaUnicom**: China Unicom (single ISP)
+         * *   **ChinaMobile**: China Mobile (single ISP)
+         * *   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)
+         * *   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)
+         * *   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)
+         * 
+         * > Different acceleration regions support different single-ISP BGP lines.
+         */
+        public Builder ispType(String ispType) {
+            this.putQueryParameter("IspType", ispType);
+            this.ispType = ispType;
+            return this;
+        }
+
+        /**
+         * The region ID of the basic GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

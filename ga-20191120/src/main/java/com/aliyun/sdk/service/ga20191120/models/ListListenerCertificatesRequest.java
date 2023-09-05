@@ -117,18 +117,18 @@ public class ListListenerCertificatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListListenerCertificatesRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.listenerId = response.listenerId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.role = response.role;
+        private Builder(ListListenerCertificatesRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.listenerId = request.listenerId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.role = request.role;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -137,7 +137,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -146,7 +146,10 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return.
+         * <p>
+         * 
+         * Valid values: **1** to **50**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -155,7 +158,11 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first and only query, ignore this parameter.
+         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -164,7 +171,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +180,13 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * Role.
+         * The type of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **default**: a default certificate
+         * *   **additional**: an additional certificate
+         * 
+         * If you do not set this parameter, default and additional certificates are returned by default.
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

@@ -50,7 +50,7 @@ public class CreateListenerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -58,7 +58,7 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

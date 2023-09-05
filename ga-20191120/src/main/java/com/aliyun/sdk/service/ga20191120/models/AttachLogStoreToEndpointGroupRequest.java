@@ -146,20 +146,20 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AttachLogStoreToEndpointGroupRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.endpointGroupIds = response.endpointGroupIds;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
-            this.slsLogStoreName = response.slsLogStoreName;
-            this.slsProjectName = response.slsProjectName;
-            this.slsRegionId = response.slsRegionId;
+        private Builder(AttachLogStoreToEndpointGroupRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.endpointGroupIds = request.endpointGroupIds;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
+            this.slsLogStoreName = request.slsLogStoreName;
+            this.slsProjectName = request.slsProjectName;
+            this.slsRegionId = request.slsRegionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -168,7 +168,12 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +182,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointGroupIds.
+         * The IDs of the endpoint groups.
          */
         public Builder endpointGroupIds(java.util.List < String > endpointGroupIds) {
             this.putQueryParameter("EndpointGroupIds", endpointGroupIds);
@@ -186,7 +191,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -195,7 +200,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,7 +209,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * SlsLogStoreName.
+         * The name of the Logstore.
          */
         public Builder slsLogStoreName(String slsLogStoreName) {
             this.putQueryParameter("SlsLogStoreName", slsLogStoreName);
@@ -213,7 +218,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * SlsProjectName.
+         * The name of the Log Service project.
          */
         public Builder slsProjectName(String slsProjectName) {
             this.putQueryParameter("SlsProjectName", slsProjectName);
@@ -222,7 +227,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * SlsRegionId.
+         * The region ID of the Log Service project.
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putQueryParameter("SlsRegionId", slsRegionId);

@@ -77,15 +77,15 @@ public class BandwidthPackageRemoveAcceleratorRequest extends Request {
             super();
         } 
 
-        private Builder(BandwidthPackageRemoveAcceleratorRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.regionId = response.regionId;
+        private Builder(BandwidthPackageRemoveAcceleratorRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -94,7 +94,7 @@ public class BandwidthPackageRemoveAcceleratorRequest extends Request {
         }
 
         /**
-         * BandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -103,7 +103,7 @@ public class BandwidthPackageRemoveAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

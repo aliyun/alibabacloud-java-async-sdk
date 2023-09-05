@@ -75,15 +75,15 @@ public class DeleteListenerRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteListenerRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.listenerId = response.listenerId;
+        private Builder(DeleteListenerRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.listenerId = request.listenerId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance for which you want to delete a listener.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -92,7 +92,12 @@ public class DeleteListenerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -101,7 +106,7 @@ public class DeleteListenerRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener that you want to delete.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);

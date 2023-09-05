@@ -63,14 +63,14 @@ public class UpdateIpSetsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIpSetsRequest response) {
-            super(response);
-            this.ipSets = response.ipSets;
-            this.regionId = response.regionId;
+        private Builder(UpdateIpSetsRequest request) {
+            super(request);
+            this.ipSets = request.ipSets;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * IpSets.
+         * The acceleration regions.
          */
         public Builder ipSets(java.util.List < IpSets> ipSets) {
             this.putQueryParameter("IpSets", ipSets);
@@ -79,7 +79,7 @@ public class UpdateIpSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -135,7 +135,10 @@ public class UpdateIpSetsRequest extends Request {
             private String ipSetId; 
 
             /**
-             * Bandwidth.
+             * The new bandwidth of the acceleration region. Unit: Mbit/s.
+             * <p>
+             * 
+             * You can specify the bandwidth for up to 100 acceleration regions.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -143,7 +146,10 @@ public class UpdateIpSetsRequest extends Request {
             }
 
             /**
-             * IpSetId.
+             * The ID of the acceleration region that you want to modify.
+             * <p>
+             * 
+             * You can specify the IDs of up to 100 acceleration regions.
              */
             public Builder ipSetId(String ipSetId) {
                 this.ipSetId = ipSetId;

@@ -50,7 +50,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Areas.
+         * The acceleration areas.
          */
         public Builder areas(java.util.List < Areas> areas) {
             this.areas = areas;
@@ -58,7 +58,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * LocalName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -183,7 +183,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             private java.util.List < RegionList> regionList; 
 
             /**
-             * AreaId.
+             * The ID of the acceleration area.
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -191,7 +191,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The name of the acceleration area.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -199,7 +199,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * RegionList.
+             * The list of regions.
              */
             public Builder regionList(java.util.List < RegionList> regionList) {
                 this.regionList = regionList;

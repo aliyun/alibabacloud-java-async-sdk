@@ -63,14 +63,14 @@ public class DescribeListenerRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeListenerRequest response) {
-            super(response);
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeListenerRequest request) {
+            super(request);
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ListenerId.
+         * The ID of the listener that you want to query.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -79,7 +79,7 @@ public class DescribeListenerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

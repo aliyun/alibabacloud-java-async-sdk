@@ -29,23 +29,45 @@ public class CreateBasicAcceleratorRequest extends Request {
     private String autoUseCoupon;
 
     @Query
+    @NameInMap("BandwidthBillingType")
+    private String bandwidthBillingType;
+
+    @Query
+    @NameInMap("ChargeType")
+    private String chargeType;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("Duration")
-    @Validation(required = true)
     private Integer duration;
 
     @Query
     @NameInMap("PricingCycle")
-    @Validation(required = true)
     private String pricingCycle;
+
+    @Query
+    @NameInMap("PromotionOptionNo")
+    private String promotionOptionNo;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private CreateBasicAcceleratorRequest(Builder builder) {
         super(builder);
@@ -53,10 +75,16 @@ public class CreateBasicAcceleratorRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoRenewDuration = builder.autoRenewDuration;
         this.autoUseCoupon = builder.autoUseCoupon;
+        this.bandwidthBillingType = builder.bandwidthBillingType;
+        this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.duration = builder.duration;
         this.pricingCycle = builder.pricingCycle;
+        this.promotionOptionNo = builder.promotionOptionNo;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -101,10 +129,31 @@ public class CreateBasicAcceleratorRequest extends Request {
     }
 
     /**
+     * @return bandwidthBillingType
+     */
+    public String getBandwidthBillingType() {
+        return this.bandwidthBillingType;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -122,10 +171,31 @@ public class CreateBasicAcceleratorRequest extends Request {
     }
 
     /**
+     * @return promotionOptionNo
+     */
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateBasicAcceleratorRequest, Builder> {
@@ -133,29 +203,45 @@ public class CreateBasicAcceleratorRequest extends Request {
         private Boolean autoRenew; 
         private Integer autoRenewDuration; 
         private String autoUseCoupon; 
+        private String bandwidthBillingType; 
+        private String chargeType; 
         private String clientToken; 
+        private Boolean dryRun; 
         private Integer duration; 
         private String pricingCycle; 
+        private String promotionOptionNo; 
         private String regionId; 
+        private String resourceGroupId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateBasicAcceleratorRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewDuration = response.autoRenewDuration;
-            this.autoUseCoupon = response.autoUseCoupon;
-            this.clientToken = response.clientToken;
-            this.duration = response.duration;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
+        private Builder(CreateBasicAcceleratorRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewDuration = request.autoRenewDuration;
+            this.autoUseCoupon = request.autoUseCoupon;
+            this.bandwidthBillingType = request.bandwidthBillingType;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.duration = request.duration;
+            this.pricingCycle = request.pricingCycle;
+            this.promotionOptionNo = request.promotionOptionNo;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**
-         * 自动续费
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **false:** disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.
+         * *   **true:** enables automatic payment. Payments are automatically completed.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -164,7 +250,11 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * 自动续费
+         * Specifies whether to enable auto-renewal for the basic GA instance. Valid values:
+         * <p>
+         * 
+         * *   **true:** enables auto-renewal for the basic GA instance.
+         * *   **false:** disables auto-renewal for the basic GA instance. This is the default value.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -173,7 +263,12 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * 续费周期
+         * The auto-renewal duration. Unit: months.
+         * <p>
+         * 
+         * Valid values: **1** to **12**. Default value: **1**.
+         * 
+         * >  This parameter takes effect only when the **AutoPay** parameter is set to **true**.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -182,7 +277,13 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * 自动使用优惠券
+         * Specifies whether to automatically apply coupons to your bills. Valid values:
+         * <p>
+         * 
+         * *   **true:** automatically applies coupons to your bills.
+         * *   **false:** does not automatically apply coupons to your bills. This is the default value.
+         * 
+         * >  This parameter takes effect only when the **AutoPay** parameter is set to **true**.
          */
         public Builder autoUseCoupon(String autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -191,7 +292,38 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * 客户端Token
+         * The bandwidth billing method. Valid values:
+         * <p>
+         * 
+         * *   **BandwidthPackage:** billed based on bandwidth plans.
+         * *   **CDT:** billed based on data transfer. The bills are managed by using Cloud Data Transfer (CDT).
+         * *   **CDT95:** billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.
+         */
+        public Builder bandwidthBillingType(String bandwidthBillingType) {
+            this.putQueryParameter("BandwidthBillingType", bandwidthBillingType);
+            this.bandwidthBillingType = bandwidthBillingType;
+            return this;
+        }
+
+        /**
+         * The billing method of the basic GA instance. Valid values:
+         * <p>
+         * - **PREPAY**: subscription. This is the default value.
+         * - **POSTPAY**: pay-as-you-go.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putQueryParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +332,24 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * 购买时长
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true:** performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * The subscription duration of the GA instance.
+         * <p>
+         * 
+         * *   If you set the **PricingCycle** parameter to **Month**, the valid values for the **Duration** parameter are **1** to **9**.
+         * *   If you set the **PricingCycle** parameter to **Year**, the valid values for the **Duration** parameter are **1** to **3**.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -209,7 +358,11 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * 时长单位
+         * The billing cycle of the basic GA instance. Valid values:
+         * <p>
+         * 
+         * *   **Month:** billed on a monthly basis.
+         * *   **Year:** billed on an annual basis.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -218,11 +371,41 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId
+         * The code of the coupon.
+         * <p>
+         * 
+         * >  This parameter takes effect only for accounts registered on the international site (alibabacloud.com).
+         */
+        public Builder promotionOptionNo(String promotionOptionNo) {
+            this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
+            this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+
+        /**
+         * The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the basic GA instance belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The tags of the basic GA instance.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -233,4 +416,75 @@ public class CreateBasicAcceleratorRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the basic GA instance. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify up to 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the basic GA instance. The tag value cannot be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify up to 20 tag values.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

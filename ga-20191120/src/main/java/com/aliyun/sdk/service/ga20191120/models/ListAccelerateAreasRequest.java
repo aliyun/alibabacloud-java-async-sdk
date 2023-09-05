@@ -49,13 +49,13 @@ public class ListAccelerateAreasRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccelerateAreasRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListAccelerateAreasRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * The region ID of the Global Accelerator instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,7 +62,7 @@ public class AssociateAclsWithListenerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AclIds.
+         * The ID of the ACL.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.aclIds = aclIds;
@@ -70,7 +70,7 @@ public class AssociateAclsWithListenerResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -78,7 +78,7 @@ public class AssociateAclsWithListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

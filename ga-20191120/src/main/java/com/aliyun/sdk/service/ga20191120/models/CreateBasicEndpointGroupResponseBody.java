@@ -50,7 +50,7 @@ public class CreateBasicEndpointGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 终端节点组Id
+         * The endpoint group ID.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -58,7 +58,7 @@ public class CreateBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

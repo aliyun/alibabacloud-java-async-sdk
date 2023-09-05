@@ -62,7 +62,7 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -70,7 +70,10 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
+         * <p>
+         * 
+         * If bills are not automatically paid, you must go to the Order Center to complete the payments.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +81,7 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

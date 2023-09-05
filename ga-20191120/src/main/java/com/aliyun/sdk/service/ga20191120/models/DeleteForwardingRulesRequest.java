@@ -104,17 +104,17 @@ public class DeleteForwardingRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteForwardingRulesRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.forwardingRuleIds = response.forwardingRuleIds;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(DeleteForwardingRulesRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.forwardingRuleIds = request.forwardingRuleIds;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -123,7 +123,12 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,7 +137,7 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * ForwardingRuleIds.
+         * The forwarding rules.
          */
         public Builder forwardingRuleIds(java.util.List < String > forwardingRuleIds) {
             this.putQueryParameter("ForwardingRuleIds", forwardingRuleIds);
@@ -141,7 +146,7 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -150,7 +155,7 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

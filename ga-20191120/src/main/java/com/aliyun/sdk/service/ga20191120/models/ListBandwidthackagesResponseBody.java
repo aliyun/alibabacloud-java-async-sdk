@@ -86,7 +86,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BandwidthPackages.
+         * Details about the bandwidth plans.
          */
         public Builder bandwidthPackages(java.util.List < BandwidthPackages> bandwidthPackages) {
             this.bandwidthPackages = bandwidthPackages;
@@ -94,7 +94,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,67 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class BandwidthPackages extends TeaModel {
         @NameInMap("Accelerators")
         private java.util.List < String > accelerators;
@@ -159,8 +220,14 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("State")
         private String state;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private BandwidthPackages(Builder builder) {
             this.accelerators = builder.accelerators;
@@ -172,7 +239,9 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.name = builder.name;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.state = builder.state;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -247,10 +316,24 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
             return this.state;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -263,10 +346,12 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             private String expiredTime; 
             private String name; 
             private String regionId; 
+            private String resourceGroupId; 
             private String state; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * Accelerators.
+             * The ID of the GA instance that is associated with the bandwidth plan.
              */
             public Builder accelerators(java.util.List < String > accelerators) {
                 this.accelerators = accelerators;
@@ -274,7 +359,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth value of the bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -282,7 +367,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageId.
+             * The ID of the bandwidth plan.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -290,7 +375,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -298,7 +383,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the bandwidth plan was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,7 +391,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the bandwidth plan.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +399,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The timestamp when the bandwidth plan expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -322,7 +407,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the GA instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +415,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the request.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,10 +423,36 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The state of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **init**: The bandwidth plan is being initialized.
+             * *   **active**: The bandwidth plan is available.
+             * *   **binded**: The bandwidth plan is associated with a GA instance.
+             * *   **binding**: The bandwidth plan is being associated.
+             * *   **unbinding**: The bandwidth plan is being disassociated.
+             * *   **updating**: The bandwidth plan is being updated.
+             * *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
+             * *   **Locked**: The bandwidth plan is locked.
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

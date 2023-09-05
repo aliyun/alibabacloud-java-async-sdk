@@ -62,7 +62,7 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DdosId.
+         * The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.
          */
         public Builder ddosId(String ddosId) {
             this.ddosId = ddosId;
@@ -70,7 +70,7 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * GaId.
+         * The ID of the GA instance that is associated with the Anti-DDoS Pro/Premium instance.
          */
         public Builder gaId(String gaId) {
             this.gaId = gaId;
@@ -78,7 +78,7 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

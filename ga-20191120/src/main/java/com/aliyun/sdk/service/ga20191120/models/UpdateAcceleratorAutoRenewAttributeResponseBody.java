@@ -50,7 +50,7 @@ public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -58,7 +58,7 @@ public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

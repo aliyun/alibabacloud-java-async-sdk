@@ -103,17 +103,17 @@ public class DeleteSpareIpsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSpareIpsRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.spareIps = response.spareIps;
+        private Builder(DeleteSpareIpsRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.spareIps = request.spareIps;
         } 
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -122,7 +122,12 @@ public class DeleteSpareIpsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -131,7 +136,11 @@ public class DeleteSpareIpsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true:** performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (defalut): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,7 +149,7 @@ public class DeleteSpareIpsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +158,10 @@ public class DeleteSpareIpsRequest extends Request {
         }
 
         /**
-         * SpareIps.
+         * The secondary IP addresses to be deleted for the CNAME. If an acceleration area of the GA instance becomes unavailable, GA redirects the access traffic to the secondary IP addresses.
+         * <p>
+         * 
+         * Separate the IP addresses with commas (,). You can specify up to two secondary IP addresses.
          */
         public Builder spareIps(java.util.List < String > spareIps) {
             this.putQueryParameter("SpareIps", spareIps);

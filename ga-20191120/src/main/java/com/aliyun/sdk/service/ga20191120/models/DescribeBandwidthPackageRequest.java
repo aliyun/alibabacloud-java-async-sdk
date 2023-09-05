@@ -63,14 +63,14 @@ public class DescribeBandwidthPackageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBandwidthPackageRequest response) {
-            super(response);
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.regionId = response.regionId;
+        private Builder(DescribeBandwidthPackageRequest request) {
+            super(request);
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * BandwidthPackageId.
+         * The ID of the bandwidth plan that you want to query.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -79,7 +79,7 @@ public class DescribeBandwidthPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

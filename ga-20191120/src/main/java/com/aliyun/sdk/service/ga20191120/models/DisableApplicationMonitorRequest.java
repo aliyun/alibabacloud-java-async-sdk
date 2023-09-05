@@ -75,15 +75,20 @@ public class DisableApplicationMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(DisableApplicationMonitorRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.taskId = response.taskId;
+        private Builder(DisableApplicationMonitorRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +97,7 @@ public class DisableApplicationMonitorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +106,7 @@ public class DisableApplicationMonitorRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the origin probing task that you want to disable.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

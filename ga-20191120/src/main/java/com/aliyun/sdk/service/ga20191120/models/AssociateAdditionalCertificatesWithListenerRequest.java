@@ -104,17 +104,17 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
             super();
         } 
 
-        private Builder(AssociateAdditionalCertificatesWithListenerRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.certificates = response.certificates;
-            this.clientToken = response.clientToken;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(AssociateAdditionalCertificatesWithListenerRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.certificates = request.certificates;
+            this.clientToken = request.clientToken;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -123,7 +123,10 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * Certificates.
+         * The additional certificates.
+         * <p>
+         * 
+         * You can specify up to 10 certificate IDs in each request.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
@@ -132,7 +135,12 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -141,7 +149,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * ListenerId.
+         * The listener ID. Only HTTPS listeners are supported.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -150,7 +158,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -206,7 +214,10 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
             private String id; 
 
             /**
-             * Domain.
+             * The domain name specified by the certificate. You can associate each domain name with only one additional certificate.
+             * <p>
+             * 
+             * You can specify up to 10 domain names in each request.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -214,7 +225,10 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
             }
 
             /**
-             * Id.
+             * The certificate ID. Only server certificates are supported.
+             * <p>
+             * 
+             * You can specify up to 10 certificate IDs in each request.
              */
             public Builder id(String id) {
                 this.id = id;

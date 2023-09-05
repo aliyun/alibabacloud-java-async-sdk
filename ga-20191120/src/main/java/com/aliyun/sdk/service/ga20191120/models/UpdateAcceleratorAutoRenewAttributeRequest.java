@@ -127,19 +127,19 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAcceleratorAutoRenewAttributeRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewDuration = response.autoRenewDuration;
-            this.clientToken = response.clientToken;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.renewalStatus = response.renewalStatus;
+        private Builder(UpdateAcceleratorAutoRenewAttributeRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewDuration = request.autoRenewDuration;
+            this.clientToken = request.clientToken;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.renewalStatus = request.renewalStatus;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -148,7 +148,11 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the GA instance. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables auto-renewal for the GA instance.
+         * *   **false**: does not enable auto-renewal for the GA instance.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -157,7 +161,12 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * AutoRenewDuration.
+         * The auto-renewal period. Unit: months.
+         * <p>
+         * 
+         * Valid values: **1** to **12**.
+         * 
+         * >  This parameter is required only if **AutoRenew** is set to **true**.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -166,7 +175,12 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate a token, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -175,7 +189,10 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the GA instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -184,7 +201,7 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +210,14 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * Specifies how to renew the GA instance. Valid values:
+         * <p>
+         * 
+         * *   **AutoRenewal**: The GA instance is automatically renewed.
+         * *   **Normal**: You must manually renew the GA instance.
+         * *   **NotRenewal**: Choose this option if you do not want to renew the GA instance after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance. You can change the value of this parameter from NotRenewal to **Normal** for a GA instance, and then manually renew the instance. You can also set the RenewalStatus parameter to **AutoRenewal**.
+         * 
+         * >  **RenewalStatus** takes precedence over **AutoRenew**. If you do not specify **RenewalStatus**, the **AutoRenew** parameter is used by default.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

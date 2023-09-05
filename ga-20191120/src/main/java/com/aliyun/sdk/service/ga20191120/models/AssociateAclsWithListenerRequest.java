@@ -117,18 +117,18 @@ public class AssociateAclsWithListenerRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateAclsWithListenerRequest response) {
-            super(response);
-            this.aclIds = response.aclIds;
-            this.aclType = response.aclType;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.listenerId = response.listenerId;
-            this.regionId = response.regionId;
+        private Builder(AssociateAclsWithListenerRequest request) {
+            super(request);
+            this.aclIds = request.aclIds;
+            this.aclType = request.aclType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.listenerId = request.listenerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AclIds.
+         * The ID of the ACL. You can associate up to two ACL IDs.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);
@@ -137,7 +137,11 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * AclType.
+         * The type of ACL. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to it, the listener does not forward requests.
+         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are denied. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to it, the listener forwards all requests.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -146,7 +150,12 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -155,7 +164,11 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -164,7 +177,7 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -173,7 +186,7 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

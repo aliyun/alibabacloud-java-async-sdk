@@ -18,8 +18,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     @NameInMap("Address")
     private String address;
 
+    @NameInMap("DetectEnable")
+    private Boolean detectEnable;
+
     @NameInMap("DetectThreshold")
-    private String detectThreshold;
+    private Integer detectThreshold;
+
+    @NameInMap("DetectTimes")
+    private Integer detectTimes;
 
     @NameInMap("IspCityList")
     private java.util.List < IspCityList> ispCityList;
@@ -36,6 +42,9 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SilenceTime")
+    private Integer silenceTime;
+
     @NameInMap("TaskId")
     private String taskId;
 
@@ -45,12 +54,15 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     private DescribeApplicationMonitorResponseBody(Builder builder) {
         this.acceleratorId = builder.acceleratorId;
         this.address = builder.address;
+        this.detectEnable = builder.detectEnable;
         this.detectThreshold = builder.detectThreshold;
+        this.detectTimes = builder.detectTimes;
         this.ispCityList = builder.ispCityList;
         this.listenerId = builder.listenerId;
         this.optionsJson = builder.optionsJson;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.silenceTime = builder.silenceTime;
         this.taskId = builder.taskId;
         this.taskName = builder.taskName;
     }
@@ -78,10 +90,24 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     }
 
     /**
+     * @return detectEnable
+     */
+    public Boolean getDetectEnable() {
+        return this.detectEnable;
+    }
+
+    /**
      * @return detectThreshold
      */
-    public String getDetectThreshold() {
+    public Integer getDetectThreshold() {
         return this.detectThreshold;
+    }
+
+    /**
+     * @return detectTimes
+     */
+    public Integer getDetectTimes() {
+        return this.detectTimes;
     }
 
     /**
@@ -120,6 +146,13 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     }
 
     /**
+     * @return silenceTime
+     */
+    public Integer getSilenceTime() {
+        return this.silenceTime;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -136,17 +169,20 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     public static final class Builder {
         private String acceleratorId; 
         private String address; 
-        private String detectThreshold; 
+        private Boolean detectEnable; 
+        private Integer detectThreshold; 
+        private Integer detectTimes; 
         private java.util.List < IspCityList> ispCityList; 
         private String listenerId; 
         private String optionsJson; 
         private String regionId; 
         private String requestId; 
+        private Integer silenceTime; 
         private String taskId; 
         private String taskName; 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance on which the origin probing task ran.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -154,7 +190,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Address.
+         * The URL or IP address that was probed.
          */
         public Builder address(String address) {
             this.address = address;
@@ -162,15 +198,38 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * DetectThreshold.
+         * Indicates whether the automatic diagnostics feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
-        public Builder detectThreshold(String detectThreshold) {
+        public Builder detectEnable(Boolean detectEnable) {
+            this.detectEnable = detectEnable;
+            return this;
+        }
+
+        /**
+         * The threshold that is used to trigger automatic diagnostics.
+         * <p>
+         * 
+         * If the availability of the origin server drops below the specified threshold, the automatic diagnostics feature is triggered.
+         */
+        public Builder detectThreshold(Integer detectThreshold) {
             this.detectThreshold = detectThreshold;
             return this;
         }
 
         /**
-         * IspCityList.
+         * The number of times that are required to reach the threshold before the automatic diagnostics feature is triggered.
+         */
+        public Builder detectTimes(Integer detectTimes) {
+            this.detectTimes = detectTimes;
+            return this;
+        }
+
+        /**
+         * The probe points of the Internet service provider (ISP).
          */
         public Builder ispCityList(java.util.List < IspCityList> ispCityList) {
             this.ispCityList = ispCityList;
@@ -178,7 +237,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerId.
+         * The ID of the listener on which the origin probing task ran.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -186,7 +245,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * OptionsJson.
+         * The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.
          */
         public Builder optionsJson(String optionsJson) {
             this.optionsJson = optionsJson;
@@ -194,7 +253,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -202,7 +261,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +269,20 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers automatic diagnostics, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.
+         * <p>
+         * 
+         * If the number of consecutive times that the availability rate drops below the automatic diagnostics threshold reaches the value of **DetectTimes**, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period regardless of whether the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
+         * 
+         * Unit: seconds.
+         */
+        public Builder silenceTime(Integer silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+
+        /**
+         * The ID of the origin probing task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -218,7 +290,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * The name of the origin probing task.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -294,7 +366,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * City.
+             * The ID of the city where the probe point of the ISP is deployed.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -302,7 +374,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The name of the city where the probe point of the ISP is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -310,7 +382,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The probe point ID of the ISP.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -318,7 +390,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The probe point name of the ISP.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

@@ -63,14 +63,14 @@ public class GetAclRequest extends Request {
             super();
         } 
 
-        private Builder(GetAclRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.regionId = response.regionId;
+        private Builder(GetAclRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AclId.
+         * The ID of the request.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -79,7 +79,7 @@ public class GetAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the network ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

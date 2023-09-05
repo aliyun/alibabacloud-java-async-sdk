@@ -50,7 +50,7 @@ public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DdosId.
+         * The ID of the Anti-DDoS Pro/Premium instance that was disassociated from the GA instance.
          */
         public Builder ddosId(String ddosId) {
             this.ddosId = ddosId;
@@ -58,7 +58,7 @@ public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

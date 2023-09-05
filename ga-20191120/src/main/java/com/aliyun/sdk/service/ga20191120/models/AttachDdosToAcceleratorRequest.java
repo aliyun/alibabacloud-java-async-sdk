@@ -90,16 +90,16 @@ public class AttachDdosToAcceleratorRequest extends Request {
             super();
         } 
 
-        private Builder(AttachDdosToAcceleratorRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.ddosId = response.ddosId;
-            this.ddosRegionId = response.ddosRegionId;
-            this.regionId = response.regionId;
+        private Builder(AttachDdosToAcceleratorRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.ddosId = request.ddosId;
+            this.ddosRegionId = request.ddosRegionId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance with which the Anti-DDoS Pro/Premium instance is associated.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -108,7 +108,7 @@ public class AttachDdosToAcceleratorRequest extends Request {
         }
 
         /**
-         * DdosId.
+         * The ID of the Anti-DDoS Pro/Premium instance to be associated with the GA instance.
          */
         public Builder ddosId(String ddosId) {
             this.putQueryParameter("DdosId", ddosId);
@@ -117,7 +117,11 @@ public class AttachDdosToAcceleratorRequest extends Request {
         }
 
         /**
-         * DdosRegionId.
+         * The region where the Anti-DDoS Pro/Premium instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: regions in the Chinese mainland
+         * *   **ap-southeast-1**: regions outside the Chinese mainland
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -126,7 +130,7 @@ public class AttachDdosToAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

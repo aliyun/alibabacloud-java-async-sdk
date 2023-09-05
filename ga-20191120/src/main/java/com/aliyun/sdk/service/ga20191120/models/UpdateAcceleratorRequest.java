@@ -140,20 +140,20 @@ public class UpdateAcceleratorRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAcceleratorRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.autoPay = response.autoPay;
-            this.autoUseCoupon = response.autoUseCoupon;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.spec = response.spec;
+        private Builder(UpdateAcceleratorRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.autoPay = request.autoPay;
+            this.autoUseCoupon = request.autoUseCoupon;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.spec = request.spec;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -162,7 +162,11 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+         * *   **true**: enables automatic payment. Payments are automatically completed.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -171,7 +175,13 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: automatically pays bills by using coupons.
+         * *   **false**: does not automatically pay bills by using coupons.
+         * 
+         * >  This parameter takes effect only if the **AutoPay** parameter is set to **true**.
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -180,7 +190,12 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,7 +204,7 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the GA instance. The description can be up to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -198,7 +213,10 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the GA instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -207,7 +225,7 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +234,29 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * Spec.
+         * The specification of the GA instance. Valid values:
+         * <p>
+         * 
+         * *   **1**: Small Ⅰ
+         * *   **2**: Small Ⅱ
+         * *   **3**: Small Ⅲ
+         * *   **5**: Medium Ⅰ
+         * *   **8**: Medium Ⅱ
+         * *   **10**: Medium Ⅲ
+         * *   **20**: Large Ⅰ
+         * *   **30**: Large Ⅱ
+         * *   **40**: Large Ⅲ
+         * *   **50**: Large Ⅳ
+         * *   **60**: Large Ⅴ
+         * *   **70**: Large Ⅵ
+         * *   **80**: Large VⅡ
+         * *   **90**: Large VⅢ
+         * *   **100**: Super Large Ⅰ
+         * *   **200**: Super Large Ⅱ
+         * 
+         * >  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.
+         * 
+         * Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

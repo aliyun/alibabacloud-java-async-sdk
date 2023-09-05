@@ -63,14 +63,17 @@ public class DescribeIpSetRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpSetRequest response) {
-            super(response);
-            this.ipSetId = response.ipSetId;
-            this.regionId = response.regionId;
+        private Builder(DescribeIpSetRequest request) {
+            super(request);
+            this.ipSetId = request.ipSetId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * IpSetId.
+         * The ID of the acceleration region.
+         * <p>
+         * 
+         * You can call the [ListIpSets](~~153247~~) operation to query the IDs of acceleration regions of a specified GA instance.
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);
@@ -79,7 +82,7 @@ public class DescribeIpSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

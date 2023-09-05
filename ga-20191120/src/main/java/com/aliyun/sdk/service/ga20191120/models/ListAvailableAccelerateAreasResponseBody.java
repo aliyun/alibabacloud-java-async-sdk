@@ -50,7 +50,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Areas.
+         * The information about acceleration areas.
          */
         public Builder areas(java.util.List < Areas> areas) {
             this.areas = areas;
@@ -58,7 +58,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,15 +72,27 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     } 
 
     public static class RegionList extends TeaModel {
+        @NameInMap("ChinaMainland")
+        private Boolean chinaMainland;
+
+        @NameInMap("IspTypeList")
+        private java.util.List < String > ispTypeList;
+
         @NameInMap("LocalName")
         private String localName;
 
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("SupportIpv6")
+        private Boolean supportIpv6;
+
         private RegionList(Builder builder) {
+            this.chinaMainland = builder.chinaMainland;
+            this.ispTypeList = builder.ispTypeList;
             this.localName = builder.localName;
             this.regionId = builder.regionId;
+            this.supportIpv6 = builder.supportIpv6;
         }
 
         public static Builder builder() {
@@ -89,6 +101,20 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
 
         public static RegionList create() {
             return builder().build();
+        }
+
+        /**
+         * @return chinaMainland
+         */
+        public Boolean getChinaMainland() {
+            return this.chinaMainland;
+        }
+
+        /**
+         * @return ispTypeList
+         */
+        public java.util.List < String > getIspTypeList() {
+            return this.ispTypeList;
         }
 
         /**
@@ -105,12 +131,38 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        /**
+         * @return supportIpv6
+         */
+        public Boolean getSupportIpv6() {
+            return this.supportIpv6;
+        }
+
         public static final class Builder {
+            private Boolean chinaMainland; 
+            private java.util.List < String > ispTypeList; 
             private String localName; 
             private String regionId; 
+            private Boolean supportIpv6; 
 
             /**
-             * LocalName.
+             * ChinaMainland.
+             */
+            public Builder chinaMainland(Boolean chinaMainland) {
+                this.chinaMainland = chinaMainland;
+                return this;
+            }
+
+            /**
+             * IspTypeList.
+             */
+            public Builder ispTypeList(java.util.List < String > ispTypeList) {
+                this.ispTypeList = ispTypeList;
+                return this;
+            }
+
+            /**
+             * The name of the acceleration region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,10 +170,18 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the acceleration region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SupportIpv6.
+             */
+            public Builder supportIpv6(Boolean supportIpv6) {
+                this.supportIpv6 = supportIpv6;
                 return this;
             }
 
@@ -183,7 +243,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             private java.util.List < RegionList> regionList; 
 
             /**
-             * AreaId.
+             * The ID of the acceleration area.
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -191,7 +251,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The name of the acceleration area.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -199,7 +259,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * RegionList.
+             * The information about acceleration regions.
              */
             public Builder regionList(java.util.List < RegionList> regionList) {
                 this.regionList = regionList;

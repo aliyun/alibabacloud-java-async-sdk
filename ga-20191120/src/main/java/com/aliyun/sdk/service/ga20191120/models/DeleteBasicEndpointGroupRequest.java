@@ -62,14 +62,19 @@ public class DeleteBasicEndpointGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBasicEndpointGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.endpointGroupId = response.endpointGroupId;
+        private Builder(DeleteBasicEndpointGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.endpointGroupId = request.endpointGroupId;
         } 
 
         /**
-         * 客户端Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -78,7 +83,7 @@ public class DeleteBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * 终端节点组Id
+         * The ID of the endpoint group that is associated with the basic GA instance.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);

@@ -63,14 +63,14 @@ public class DeleteIpSetsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIpSetsRequest response) {
-            super(response);
-            this.ipSetIds = response.ipSetIds;
-            this.regionId = response.regionId;
+        private Builder(DeleteIpSetsRequest request) {
+            super(request);
+            this.ipSetIds = request.ipSetIds;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * IpSetIds.
+         * The ID of the acceleration region that you want to delete.
          */
         public Builder ipSetIds(java.util.List < String > ipSetIds) {
             this.putQueryParameter("IpSetIds", ipSetIds);
@@ -79,7 +79,7 @@ public class DeleteIpSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

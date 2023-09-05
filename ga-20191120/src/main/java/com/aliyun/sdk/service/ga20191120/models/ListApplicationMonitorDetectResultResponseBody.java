@@ -86,7 +86,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApplicationMonitorDetectResultList.
+         * Details about the diagnostic result of the origin probing task.
          */
         public Builder applicationMonitorDetectResultList(java.util.List < ApplicationMonitorDetectResultList> applicationMonitorDetectResultList) {
             this.applicationMonitorDetectResultList = applicationMonitorDetectResultList;
@@ -94,7 +94,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,8 +135,14 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         @NameInMap("AcceleratorId")
         private String acceleratorId;
 
+        @NameInMap("Content")
+        private String content;
+
         @NameInMap("Detail")
         private String detail;
+
+        @NameInMap("DetectTime")
+        private String detectTime;
 
         @NameInMap("DiagStatus")
         private String diagStatus;
@@ -150,16 +156,22 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         @NameInMap("Protocol")
         private String protocol;
 
+        @NameInMap("StatusCode")
+        private String statusCode;
+
         @NameInMap("TaskId")
         private String taskId;
 
         private ApplicationMonitorDetectResultList(Builder builder) {
             this.acceleratorId = builder.acceleratorId;
+            this.content = builder.content;
             this.detail = builder.detail;
+            this.detectTime = builder.detectTime;
             this.diagStatus = builder.diagStatus;
             this.listenerId = builder.listenerId;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.statusCode = builder.statusCode;
             this.taskId = builder.taskId;
         }
 
@@ -179,10 +191,24 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
          * @return detail
          */
         public String getDetail() {
             return this.detail;
+        }
+
+        /**
+         * @return detectTime
+         */
+        public String getDetectTime() {
+            return this.detectTime;
         }
 
         /**
@@ -214,6 +240,13 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusCode
+         */
+        public String getStatusCode() {
+            return this.statusCode;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -222,15 +255,18 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String acceleratorId; 
+            private String content; 
             private String detail; 
+            private String detectTime; 
             private String diagStatus; 
             private String listenerId; 
             private String port; 
             private String protocol; 
+            private String statusCode; 
             private String taskId; 
 
             /**
-             * AcceleratorId.
+             * The ID of the GA instance on which the origin probing task runs.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -238,7 +274,27 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * The response content returned by the origin probing task.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * The description of the diagnostic result. Valid values:
+             * <p>
+             * 
+             * *   **All forward nodes work well.**: The origin server is normal.
+             * *   **Endpoint network error.**: The origin server is abnormal. You must check whether the origin server is running as expected.
+             * *   **Public network error.**: An Internet error occurred. This refers to a network error that occurred when the client connects to the acceleration region.
+             * *   **Ga internal error.**: An internal error occurred. For example, an exception occurred when a request is processed by GA.
+             * *   **Ga has been deleted.**: The current GA instance is deleted.
+             * *   **Ga state is not stable**: The current GA instance is in an unstable state, such as the Configuring state.
+             * *   **Ga has no listener configuration.**: No listener is configured for the current GA instance.
+             * *   **Missing endpoint configuration.**: No endpoint is configured.
+             * *   **Missing acceleration region configuration.**: No acceleration region is configured.
+             * *   **Missing endpointgroup configuration.**: No endpoint group is configured.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -246,7 +302,19 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * DiagStatus.
+             * The time when the diagnosis of the origin probing task ends.
+             */
+            public Builder detectTime(String detectTime) {
+                this.detectTime = detectTime;
+                return this;
+            }
+
+            /**
+             * The diagnostic result of the origin probing task. Valid values:
+             * <p>
+             * 
+             * *   **success:** The origin probing task succeeded.
+             * *   **failed:** The origin probing task failed.
              */
             public Builder diagStatus(String diagStatus) {
                 this.diagStatus = diagStatus;
@@ -254,7 +322,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerId.
+             * The ID of the listener on which the origin probing task runs.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -262,7 +330,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The listening port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -270,7 +338,15 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The network transmission protocol that is used by the listener. Valid values:
+             * <p>
+             * 
+             * *   **tcp:** TCP.
+             * *   **udp:** UDP.
+             * *   **http:** HTTP.
+             * *   **https:** HTTPS.
+             * 
+             * >  UDP listeners do not support probing.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -278,7 +354,15 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The error code returned by the origin probing task.
+             */
+            public Builder statusCode(String statusCode) {
+                this.statusCode = statusCode;
+                return this;
+            }
+
+            /**
+             * The origin probing task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

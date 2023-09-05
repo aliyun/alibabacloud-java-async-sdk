@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAvailableAccelerateAreasRequest extends Request {
     @Query
     @NameInMap("AcceleratorId")
-    @Validation(required = true)
     private String acceleratorId;
 
     @Query
@@ -63,14 +62,14 @@ public class ListAvailableAccelerateAreasRequest extends Request {
             super();
         } 
 
-        private Builder(ListAvailableAccelerateAreasRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.regionId = response.regionId;
+        private Builder(ListAvailableAccelerateAreasRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -79,7 +78,7 @@ public class ListAvailableAccelerateAreasRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

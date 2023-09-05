@@ -103,17 +103,17 @@ public class UpdateAclAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAclAttributeRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclName = response.aclName;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
+        private Builder(UpdateAclAttributeRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclName = request.aclName;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -122,7 +122,7 @@ public class UpdateAclAttributeRequest extends Request {
         }
 
         /**
-         * AclName.
+         * The name of the network ACL.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -131,7 +131,12 @@ public class UpdateAclAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +145,11 @@ public class UpdateAclAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck this request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without modifying the attributes of the network ACL. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -149,7 +158,7 @@ public class UpdateAclAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

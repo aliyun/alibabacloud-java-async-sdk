@@ -86,7 +86,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Certificates.
+         * Details about the certificates.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.certificates = certificates;
@@ -94,7 +94,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** is returned, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -141,10 +145,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         private Boolean isDefault;
 
+        @NameInMap("State")
+        private String state;
+
         private Certificates(Builder builder) {
             this.certificateId = builder.certificateId;
             this.domain = builder.domain;
             this.isDefault = builder.isDefault;
+            this.state = builder.state;
         }
 
         public static Builder builder() {
@@ -176,13 +184,21 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             return this.isDefault;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
         public static final class Builder {
             private String certificateId; 
             private String domain; 
             private Boolean isDefault; 
+            private String state; 
 
             /**
-             * CertificateId.
+             * The ID of the certificate.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -190,7 +206,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name associated with the additional certificate.
+             * <p>
+             * 
+             * This parameter is not returned if the certificate is a default one.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -198,10 +217,26 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the certificate is a default one:
+             * <p>
+             * 
+             * *   **true**: a default certificate
+             * *   **false**: an additional certificate
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
+             * The state of the certificate.
+             * <p>
+             * 
+             * *   **active**: The certificate is associated with a listener and takes effect.
+             * *   **updating**: The additional certificate is being replaced.
+             */
+            public Builder state(String state) {
+                this.state = state;
                 return this;
             }
 

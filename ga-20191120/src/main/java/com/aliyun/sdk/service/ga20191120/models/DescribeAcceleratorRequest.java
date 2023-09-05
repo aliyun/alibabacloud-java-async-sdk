@@ -63,14 +63,14 @@ public class DescribeAcceleratorRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAcceleratorRequest response) {
-            super(response);
-            this.acceleratorId = response.acceleratorId;
-            this.regionId = response.regionId;
+        private Builder(DescribeAcceleratorRequest request) {
+            super(request);
+            this.acceleratorId = request.acceleratorId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance that you want to query.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -79,7 +79,7 @@ public class DescribeAcceleratorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

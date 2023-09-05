@@ -62,7 +62,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AcceleratorId.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -70,7 +70,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
         }
 
         /**
-         * IpSets.
+         * The details about the acceleration regions.
          */
         public Builder ipSets(java.util.List < IpSets> ipSets) {
             this.ipSets = ipSets;
@@ -78,7 +78,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,10 +101,14 @@ public class CreateIpSetsResponseBody extends TeaModel {
         @NameInMap("IpSetId")
         private String ipSetId;
 
+        @NameInMap("IspType")
+        private String ispType;
+
         private IpSets(Builder builder) {
             this.accelerateRegionId = builder.accelerateRegionId;
             this.bandwidth = builder.bandwidth;
             this.ipSetId = builder.ipSetId;
+            this.ispType = builder.ispType;
         }
 
         public static Builder builder() {
@@ -136,13 +140,21 @@ public class CreateIpSetsResponseBody extends TeaModel {
             return this.ipSetId;
         }
 
+        /**
+         * @return ispType
+         */
+        public String getIspType() {
+            return this.ispType;
+        }
+
         public static final class Builder {
             private String accelerateRegionId; 
             private Integer bandwidth; 
             private String ipSetId; 
+            private String ispType; 
 
             /**
-             * AccelerateRegionId.
+             * The acceleration region ID.
              */
             public Builder accelerateRegionId(String accelerateRegionId) {
                 this.accelerateRegionId = accelerateRegionId;
@@ -150,7 +162,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth allocated to the acceleration region. Unit: **Mbit/s**.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -158,10 +170,18 @@ public class CreateIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * IpSetId.
+             * The acceleration region ID.
              */
             public Builder ipSetId(String ipSetId) {
                 this.ipSetId = ipSetId;
+                return this;
+            }
+
+            /**
+             * The line type of the EIP in the acceleration region.
+             */
+            public Builder ispType(String ispType) {
+                this.ispType = ispType;
                 return this;
             }
 

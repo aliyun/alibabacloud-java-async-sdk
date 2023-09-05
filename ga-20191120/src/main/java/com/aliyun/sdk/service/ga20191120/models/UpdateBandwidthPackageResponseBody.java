@@ -74,7 +74,7 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BandwidthPackage.
+         * The bandwidth plan ID.
          */
         public Builder bandwidthPackage(String bandwidthPackage) {
             this.bandwidthPackage = bandwidthPackage;
@@ -82,7 +82,7 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the bandwidth plan.
          */
         public Builder description(String description) {
             this.description = description;
@@ -90,7 +90,7 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the bandwidth plan.
          */
         public Builder name(String name) {
             this.name = name;
@@ -98,7 +98,7 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ForwardingRules.
+         * The forwarding rules.
          */
         public Builder forwardingRules(java.util.List < ForwardingRules> forwardingRules) {
             this.forwardingRules = forwardingRules;
@@ -58,7 +58,7 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
             private String forwardingRuleId; 
 
             /**
-             * ForwardingRuleId.
+             * The forwarding rule ID.
              */
             public Builder forwardingRuleId(String forwardingRuleId) {
                 this.forwardingRuleId = forwardingRuleId;

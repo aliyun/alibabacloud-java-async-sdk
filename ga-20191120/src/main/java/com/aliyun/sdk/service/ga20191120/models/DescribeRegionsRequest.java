@@ -49,13 +49,13 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * The ID of the region to query.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
