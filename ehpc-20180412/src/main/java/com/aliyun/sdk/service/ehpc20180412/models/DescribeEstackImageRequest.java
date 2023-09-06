@@ -69,7 +69,7 @@ public class DescribeEstackImageRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -78,7 +78,7 @@ public class DescribeEstackImageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

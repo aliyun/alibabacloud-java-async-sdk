@@ -55,13 +55,7 @@ public class DescribeClusterRequest extends Request {
         } 
 
         /**
-         * The type of the image. Valid values:
-         * <p>
-         * 
-         * *   system: public image
-         * *   self: custom image
-         * *   others: shared image
-         * *   marketplace: Alibaba Cloud Marketplace image
+         * The cluster ID. You can call the [ListClusters](~~87116~~) operation to query the list of clusters in a region.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

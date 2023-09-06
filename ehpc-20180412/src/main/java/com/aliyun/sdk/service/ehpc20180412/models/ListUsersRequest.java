@@ -84,7 +84,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -96,12 +96,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          * <p>
          * 
          * Pages start from page 1.
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -113,7 +113,7 @@ public class ListUsersRequest extends Request {
          * The number of entries to return on each page. Valid values: 1 to 50.
          * <p>
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

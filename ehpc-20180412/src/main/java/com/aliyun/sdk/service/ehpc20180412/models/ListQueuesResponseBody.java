@@ -159,7 +159,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
+             * The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter only takes effect when SpotStrategy is set to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -233,6 +233,9 @@ public class ListQueuesResponseBody extends TeaModel {
         @NameInMap("ImageId")
         private String imageId;
 
+        @NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
         @NameInMap("QueueName")
         private String queueName;
 
@@ -248,6 +251,9 @@ public class ListQueuesResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("UseESS")
+        private Boolean useESS;
+
         private QueueInfo(Builder builder) {
             this.computeInstanceType = builder.computeInstanceType;
             this.deploymentSetId = builder.deploymentSetId;
@@ -255,11 +261,13 @@ public class ListQueuesResponseBody extends TeaModel {
             this.hostNamePrefix = builder.hostNamePrefix;
             this.hostNameSuffix = builder.hostNameSuffix;
             this.imageId = builder.imageId;
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
             this.queueName = builder.queueName;
             this.resourceGroupId = builder.resourceGroupId;
             this.spotInstanceTypes = builder.spotInstanceTypes;
             this.spotStrategy = builder.spotStrategy;
             this.type = builder.type;
+            this.useESS = builder.useESS;
         }
 
         public static Builder builder() {
@@ -313,6 +321,13 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
          * @return queueName
          */
         public String getQueueName() {
@@ -347,6 +362,13 @@ public class ListQueuesResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return useESS
+         */
+        public Boolean getUseESS() {
+            return this.useESS;
+        }
+
         public static final class Builder {
             private ComputeInstanceType computeInstanceType; 
             private String deploymentSetId; 
@@ -354,14 +376,16 @@ public class ListQueuesResponseBody extends TeaModel {
             private String hostNamePrefix; 
             private String hostNameSuffix; 
             private String imageId; 
+            private String networkInterfaceTrafficMode; 
             private String queueName; 
             private String resourceGroupId; 
             private SpotInstanceTypes spotInstanceTypes; 
             private String spotStrategy; 
             private String type; 
+            private Boolean useESS; 
 
             /**
-             * The instance type of the compute nodes.
+             * The instance type of compute node.
              */
             public Builder computeInstanceType(ComputeInstanceType computeInstanceType) {
                 this.computeInstanceType = computeInstanceType;
@@ -377,11 +401,11 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the queue enabled auto scale-out. Valid values:
+             * Indicates whether the queue enabled the auto scale-out. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: The queue enabled auto scale-out.
+             * *   false: The queue disabled auto scale-out.
              */
             public Builder enableAutoGrow(Boolean enableAutoGrow) {
                 this.enableAutoGrow = enableAutoGrow;
@@ -389,7 +413,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The orefix of the host name.
+             * The prefix of the hostname.
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -409,6 +433,14 @@ public class ListQueuesResponseBody extends TeaModel {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
                 return this;
             }
 
@@ -440,8 +472,8 @@ public class ListQueuesResponseBody extends TeaModel {
              * The preemption policy of the compute nodes. Valid values:
              * <p>
              * 
-             * *   NoSpot: The instance is a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+             * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
+             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
              * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder spotStrategy(String spotStrategy) {
@@ -450,7 +482,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the queue. Valid values:
+             * The type of queue. Valid values:
              * <p>
              * 
              * *   Execution: Queues in which jobs can be executed.
@@ -458,6 +490,14 @@ public class ListQueuesResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * UseESS.
+             */
+            public Builder useESS(Boolean useESS) {
+                this.useESS = useESS;
                 return this;
             }
 

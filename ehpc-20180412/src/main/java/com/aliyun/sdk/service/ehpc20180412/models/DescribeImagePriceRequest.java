@@ -132,7 +132,7 @@ public class DescribeImagePriceRequest extends Request {
          * The number of images that you want to purchase. Valid values: 1 to 1000.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -141,7 +141,7 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * The ID of an image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -159,14 +159,14 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The subscription duration. Valid values:
+         * The subscription duration of the read-only instance. Valid values:
          * <p>
          * 
          * *   If PriceUnit is set to Day, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, and 30.
          * *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
          * *   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -182,7 +182,7 @@ public class DescribeImagePriceRequest extends Request {
          * *   Month
          * *   Year
          * 
-         * Default value: Day
+         * Default value: Day.
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);

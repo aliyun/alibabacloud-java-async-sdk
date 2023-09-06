@@ -106,7 +106,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The array of local images.
+         * The array of images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -130,7 +130,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             private String updateDateTime; 
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -258,7 +258,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the repository.
+             * The name of the certificate application repository.
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -266,7 +266,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image.
+             * The state of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -339,7 +339,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             private java.util.List < ImagesImages> images; 
 
             /**
-             * The array of local images.
+             * The array of images.
              */
             public Builder images(java.util.List < ImagesImages> images) {
                 this.images = images;

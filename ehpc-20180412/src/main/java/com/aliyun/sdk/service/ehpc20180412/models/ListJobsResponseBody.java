@@ -94,7 +94,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -406,7 +406,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * The job ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -438,7 +438,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user that runs the job.
+             * The name of the user that ran the job.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -446,7 +446,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+             * The priority of the job. Valid values: 0 to 9. A large value indicates a higher priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -470,7 +470,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job started to run.
+             * The time when the job was created.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -478,11 +478,11 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values: Valid values:
+             * The status of the job. Valid values:
              * <p>
              * 
              * *   FINISHED: The job is completed
-             * *   RUNNING: The job is running.
+             * *   RUNNING: The job connector is running.
              * *   QUEUED: The job is pending in a queue.
              */
             public Builder state(String state) {

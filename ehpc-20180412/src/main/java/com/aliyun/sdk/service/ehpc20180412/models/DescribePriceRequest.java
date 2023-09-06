@@ -104,7 +104,7 @@ public class DescribePriceRequest extends Request {
          * *   PostPaid: pay-as-you-go
          * *   PrePaid: subscription
          * 
-         * Default value: PostPaid
+         * Default value: PostPaid.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -113,7 +113,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Product List
+         * The information about the service.
          */
         public Builder commodities(java.util.List < Commodities> commodities) {
             this.putQueryParameter("Commodities", commodities);
@@ -138,7 +138,7 @@ public class DescribePriceRequest extends Request {
          * *   Year: pay-by-year
          * *   Hour: pay-by-hour
          * 
-         * Default value: Hour
+         * Default value: Hour.
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -232,13 +232,13 @@ public class DescribePriceRequest extends Request {
              * <p>
              * 
              * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: SSD
+             * *   cloud_ssd: standard SSD
              * *   cloud_essd: ESSD
              * *   cloud: basic disk
              * 
-             * Default value: cloud_efficiency
+             * Default value: cloud_efficiency.
              * 
-             * Valid values of N: 0 to 4
+             * Valid values of N: 0 to 4.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -252,9 +252,9 @@ public class DescribePriceRequest extends Request {
              * *   true
              * *   false
              * 
-             * Default value: true
+             * Default value: true.
              * 
-             * Valid values of N: 0 to 4
+             * Valid values of N: 0 to 4.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -265,12 +265,12 @@ public class DescribePriceRequest extends Request {
              * Specifies whether to encrypt the data disk. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: encrypts the data disk.
+             * *   false: does not encrypt the data disk.
              * 
-             * Default value: false
+             * Default value: false.
              * 
-             * Valid values of N: 0 to 4
+             * Valid values of N: 0 to 4.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -278,17 +278,17 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Default value: PL1. Valid values:
+             * The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
              * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
-             * Default value: PL1
+             * Default value: PL1.
              * 
-             * Valid values of N: 0 to 4
+             * Valid values of N: 0 to 4.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -299,11 +299,11 @@ public class DescribePriceRequest extends Request {
              * The size of the data disk. Unit: GB.
              * <p>
              * 
-             * Valid values: 40 to 500
+             * Valid values: 40 to 500.
              * 
-             * Default value: 40
+             * Default value: 40.
              * 
-             * Valid values of N: 0 to 4
+             * Valid values of N: 0 to 4.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -471,7 +471,7 @@ public class DescribePriceRequest extends Request {
              * The node quantity of the type. Valid values: 1 to 1000.
              * <p>
              * 
-             * Default value: 1
+             * Default value: 1.
              * 
              * Valid values of N: 1 to 10
              */
@@ -481,7 +481,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The list of data disks created with the node.
+             * The list of data disks.
              */
             public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -492,7 +492,7 @@ public class DescribePriceRequest extends Request {
              * The instance type of the node.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -506,7 +506,7 @@ public class DescribePriceRequest extends Request {
              * *   PayByBandwidth: pay-by-bandwidth
              * *   PayByTraffic: pay-by-traffic
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -517,11 +517,11 @@ public class DescribePriceRequest extends Request {
              * The maximum outbound public bandwidth of the node. Unit: Mbit/s.
              * <p>
              * 
-             * Valid values: 0 to 100
+             * Valid values: 0 to 100.
              * 
-             * Default value: 0
+             * Default value: 0.
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder internetMaxBandWidthOut(Integer internetMaxBandWidthOut) {
                 this.internetMaxBandWidthOut = internetMaxBandWidthOut;
@@ -532,7 +532,7 @@ public class DescribePriceRequest extends Request {
              * The network type of the node. Valid value: VPC.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -547,7 +547,7 @@ public class DescribePriceRequest extends Request {
              * *   Manager: management node
              * *   Login: logon node
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -562,9 +562,9 @@ public class DescribePriceRequest extends Request {
              * *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
              * *   If PriceUnit is set to Hour, the valid value of the Period parameter is 1.
              * 
-             * Default value: 1
+             * Default value: 1.
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -576,13 +576,13 @@ public class DescribePriceRequest extends Request {
              * <p>
              * 
              * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: SSD
+             * *   cloud_ssd: standard SSD
              * *   cloud_essd: ESSD
              * *   cloud: basic disk
              * 
              * Default value: cloud_efficiency
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -590,15 +590,15 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Default value: PL1. Valid values:
+             * The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
              * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
-             * Default value: PL1
+             * Default value: PL1.
              * 
              * Valid values of N: 1 to 10
              */
@@ -611,11 +611,11 @@ public class DescribePriceRequest extends Request {
              * The system disk size of the node. Unit: GB.
              * <p>
              * 
-             * Valid values: 40 to 500
+             * Valid values: 40 to 500.
              * 
-             * Default value: 40
+             * Default value: 40.
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

@@ -69,7 +69,7 @@ public class ListContainerAppsRequest extends Request {
         } 
 
         /**
-         * The page number of the returned page.
+         * The page number to return.
          * <p>
          * 
          * Pages start from page 1.

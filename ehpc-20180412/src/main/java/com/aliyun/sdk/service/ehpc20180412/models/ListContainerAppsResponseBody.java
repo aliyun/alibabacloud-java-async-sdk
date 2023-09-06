@@ -94,7 +94,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the containerized application was created.
+             * The time at which the containerized application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +246,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the containerized application.
+             * The ID of the container application.
              */
             public Builder id(String id) {
                 this.id = id;

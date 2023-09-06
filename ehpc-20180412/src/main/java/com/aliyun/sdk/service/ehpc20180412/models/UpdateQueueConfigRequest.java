@@ -26,13 +26,16 @@ public class UpdateQueueConfigRequest extends Request {
     private String deploymentSetId;
 
     @Query
+    @NameInMap("NetworkInterfaceTrafficMode")
+    private String networkInterfaceTrafficMode;
+
+    @Query
     @NameInMap("QueueName")
     @Validation(required = true)
     private String queueName;
 
     @Query
     @NameInMap("ResourceGroupId")
-    @Validation(required = true)
     private String resourceGroupId;
 
     private UpdateQueueConfigRequest(Builder builder) {
@@ -40,6 +43,7 @@ public class UpdateQueueConfigRequest extends Request {
         this.clusterId = builder.clusterId;
         this.computeInstanceType = builder.computeInstanceType;
         this.deploymentSetId = builder.deploymentSetId;
+        this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.queueName = builder.queueName;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -79,6 +83,13 @@ public class UpdateQueueConfigRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceTrafficMode
+     */
+    public String getNetworkInterfaceTrafficMode() {
+        return this.networkInterfaceTrafficMode;
+    }
+
+    /**
      * @return queueName
      */
     public String getQueueName() {
@@ -96,6 +107,7 @@ public class UpdateQueueConfigRequest extends Request {
         private String clusterId; 
         private String computeInstanceType; 
         private String deploymentSetId; 
+        private String networkInterfaceTrafficMode; 
         private String queueName; 
         private String resourceGroupId; 
 
@@ -108,12 +120,13 @@ public class UpdateQueueConfigRequest extends Request {
             this.clusterId = request.clusterId;
             this.computeInstanceType = request.computeInstanceType;
             this.deploymentSetId = request.deploymentSetId;
+            this.networkInterfaceTrafficMode = request.networkInterfaceTrafficMode;
             this.queueName = request.queueName;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -137,11 +150,20 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * DeploymentSetId.
+         * The ID of the deployment set. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
             this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceTrafficMode.
+         */
+        public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
             return this;
         }
 
@@ -155,7 +177,7 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          * <p>
          * 
          * You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.

@@ -62,7 +62,7 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security group.
+         * The security group ID.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;

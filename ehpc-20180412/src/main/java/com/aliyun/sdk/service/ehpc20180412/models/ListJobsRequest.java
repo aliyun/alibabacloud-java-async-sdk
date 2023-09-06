@@ -126,7 +126,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -150,12 +150,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          * <p>
          * 
-         * Pages start from page 1.
+         * Pages start from 1.
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -164,10 +164,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
+         * The number of entries to return per page. Maximum value: 50.
          * <p>
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,7 +182,7 @@ public class ListJobsRequest extends Request {
          * *   true
          * *   false
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder rerunable(String rerunable) {
             this.putQueryParameter("Rerunable", rerunable);

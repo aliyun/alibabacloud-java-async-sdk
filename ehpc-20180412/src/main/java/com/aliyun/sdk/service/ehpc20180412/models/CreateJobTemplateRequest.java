@@ -405,7 +405,7 @@ public class CreateJobTemplateRequest extends Request {
          * The number of compute nodes. Valid values: 1 to 500.
          * <p>
          * 
-         * >  If the parameter is not specified, the Task, Thread, Mem, and Gpu parameters become invalid.
+         * >  If you do not specify this parameter, the Task, Thread, Mem, or GPU parameters do not take effect.
          */
         public Builder node(Integer node) {
             this.putQueryParameter("Node", node);
@@ -423,10 +423,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+         * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
          * <p>
          * 
-         * Default value: 0
+         * Default value: 0.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -438,7 +438,7 @@ public class CreateJobTemplateRequest extends Request {
          * The name of the queue in which the job is run.
          * <p>
          * 
-         * You can call the [ListQueues](~~92176~~) operation to query the queue name.
+         * You can call the [ListQueues](~~92176~~) operation to query the name of the queue.
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);
@@ -447,11 +447,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether the job can be rerun. Valid values:
+         * Specifies whether to automatically rerun the job after the job fails. Valid value:
          * <p>
          * 
-         * *   true: The job can be rerun.
-         * *   false: The job cannot be rerun.
+         * *   true: reruns the job.
+         * *   false: does not rerun the job.
          */
         public Builder reRunable(Boolean reRunable) {
             this.putQueryParameter("ReRunable", reRunable);
@@ -534,8 +534,8 @@ public class CreateJobTemplateRequest extends Request {
          * Specifies whether to decompress the job files downloaded from an OSS bucket. Valid values:
          * <p>
          * 
-         * *   true: The job files are decompressed.
-         * *   false: The job files are not decompressed.
+         * *   true: decompresses the job file.
+         * *   false: does not decompress the job file.
          */
         public Builder withUnzipCmd(Boolean withUnzipCmd) {
             this.putQueryParameter("WithUnzipCmd", withUnzipCmd);

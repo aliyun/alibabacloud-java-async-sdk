@@ -106,7 +106,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +133,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
+         * *   true: The request was successful.
          * *   false: The request failed.
          */
         public Builder success(Boolean success) {
@@ -466,7 +466,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * The job ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -506,7 +506,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+             * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -525,8 +525,8 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
              * Indicates whether the job can be run again. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: yes
+             * *   false: no
              */
             public Builder rerunable(Boolean rerunable) {
                 this.rerunable = rerunable;
@@ -550,7 +550,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job started to run.
+             * The time when the job was created.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -558,11 +558,11 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
+             * The status of the job. Valid value:
              * <p>
              * 
              * *   FINISHED: The job is completed.
-             * *   RUNNING: The job connector is running.
+             * *   RUNNING: The job is running.
              * *   QUEUED: The job is pending in a queue.
              */
             public Builder state(String state) {

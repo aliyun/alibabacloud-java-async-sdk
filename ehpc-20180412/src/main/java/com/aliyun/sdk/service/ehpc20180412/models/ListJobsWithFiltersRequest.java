@@ -260,7 +260,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -303,7 +303,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The name of the job. Fuzzy match is supported.
+         * The name of the job. Fuzzy search is supported.
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -319,7 +319,7 @@ public class ListJobsWithFiltersRequest extends Request {
          * *   finished
          * *   notfinish
          * 
-         * Default value: all
+         * Default value: all.
          */
         public Builder jobStatus(String jobStatus) {
             this.putQueryParameter("JobStatus", jobStatus);
@@ -328,7 +328,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * The information about the computing nodes that are used to run the job.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putQueryParameter("Nodes", nodes);
@@ -337,12 +337,12 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number to return.
          * <p>
          * 
-         * Pages start from page 1.
+         * Pages start from 1.
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -351,10 +351,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
+         * The number of entries per page. Maximum value: 50.
          * <p>
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -376,7 +376,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * Queues.
+         * The information about the queues in which the job is run.
          */
         public Builder queues(java.util.List < String > queues) {
             this.putQueryParameter("Queues", queues);
@@ -385,10 +385,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
-         * 
-         * You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
+         * The ID of the region. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -410,7 +407,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * Users.
+         * The users that run the job.
          */
         public Builder users(java.util.List < String > users) {
             this.putQueryParameter("Users", users);

@@ -166,8 +166,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the zone.
-      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
       *
      */
     @Override
@@ -286,6 +285,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+      *
+     */
     @Override
     public CompletableFuture<DeleteContainerAppsResponse> deleteContainerApps(DeleteContainerAppsRequest request) {
         try {
@@ -431,7 +434,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
       * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
      */
@@ -687,6 +689,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+      *
+     */
     @Override
     public CompletableFuture<GetAutoScaleConfigResponse> getAutoScaleConfig(GetAutoScaleConfigRequest request) {
         try {
@@ -1420,7 +1427,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The new cluster name.
+      * ## Usage notes
+      * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
       *
      */
     @Override
@@ -1618,7 +1626,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Configures the auto scaling settings of a cluster.
+      * ## Usage notes
+      * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
       *
      */
     @Override
@@ -1995,7 +2004,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
       *
      */
     @Override

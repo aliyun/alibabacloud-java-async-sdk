@@ -98,7 +98,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * The number of images that you want to purchase.
+         * The number of instances that are purchased.
          */
         public Builder amount(Integer amount) {
             this.amount = amount;
@@ -106,7 +106,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The discount that is applied.
+         * The discount.
          */
         public Builder discountPrice(Float discountPrice) {
             this.discountPrice = discountPrice;
@@ -114,7 +114,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image.
+         * The ID of the custom image.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -130,7 +130,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

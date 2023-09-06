@@ -62,7 +62,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * JobInfos.
+         * The list of detailed information about the serverless job.
          */
         public Builder jobInfos(java.util.List < JobInfos> jobInfos) {
             this.jobInfos = jobInfos;
@@ -70,7 +70,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long indexStep; 
 
             /**
-             * IndexEnd.
+             * The end value of the array job index.
              */
             public Builder indexEnd(Long indexEnd) {
                 this.indexEnd = indexEnd;
@@ -150,7 +150,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStart.
+             * The starting value of the array job index.
              */
             public Builder indexStart(Long indexStart) {
                 this.indexStart = indexStart;
@@ -158,7 +158,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexStep.
+             * The interval of the array job index.
              */
             public Builder indexStep(Long indexStep) {
                 this.indexStep = indexStep;
@@ -283,7 +283,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -291,7 +291,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -299,7 +299,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -307,7 +307,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The information about the container status.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -315,7 +315,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -323,7 +323,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -331,7 +331,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -339,7 +339,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   Waiting
+             * *   Running
+             * *   Terminated
              */
             public Builder state(String state) {
                 this.state = state;
@@ -380,7 +385,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String fieldPath; 
 
             /**
-             * FieldPath.
+             * The path of the field.
              */
             public Builder fieldPath(String fieldPath) {
                 this.fieldPath = fieldPath;
@@ -421,7 +426,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private FieldRef fieldRef; 
 
             /**
-             * FieldRef.
+             * The specified field.
              */
             public Builder fieldRef(FieldRef fieldRef) {
                 this.fieldRef = fieldRef;
@@ -486,7 +491,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private ValueFrom valueFrom; 
 
             /**
-             * Key.
+             * The key of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -494,7 +499,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -502,7 +507,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueFrom.
+             * The source of the environment variable value. This parameter can be used only when the variable value is not specified.
              */
             public Builder valueFrom(ValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -567,7 +572,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String scheme; 
 
             /**
-             * Path.
+             * The path to which HTTP GET requests are sent.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -575,7 +580,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port to which HTTP GET requests are sent.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -583,7 +588,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * The protocol type of the HTTP GET requests.
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -636,7 +641,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long port; 
 
             /**
-             * Host.
+             * The name of the host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -644,7 +649,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -769,7 +774,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long timeoutSeconds; 
 
             /**
-             * Execs.
+             * The commands that are run.
              */
             public Builder execs(java.util.List < String > execs) {
                 this.execs = execs;
@@ -777,7 +782,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureThreshold.
+             * The minimum number of consecutive failures that must occur for the probe to be considered failed. Default value: 3.
              */
             public Builder failureThreshold(Long failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -785,7 +790,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpGet。
+             * The HTTP GET method that is used to check the container.
              */
             public Builder httpGet(HttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -793,7 +798,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialDelaySeconds.
+             * The number of seconds between the time when the startup of the container ends and the time when the check starts.
              */
             public Builder initialDelaySeconds(Long initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -801,7 +806,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodSeconds.
+             * The interval at which the probe is run. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder periodSeconds(Long periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -809,7 +814,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessThreshold.
+             * The minimum number of consecutive successes for the probe to be considered successful after having failed. Default value: 1. Set the value to 1.
              */
             public Builder successThreshold(Long successThreshold) {
                 this.successThreshold = successThreshold;
@@ -817,7 +822,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TcpSocket。
+             * The TCP socket method that is used to check the container.
              */
             public Builder tcpSocket(TcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -825,7 +830,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
              */
             public Builder timeoutSeconds(Long timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -878,7 +883,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -886,7 +891,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1011,7 +1016,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -1019,7 +1024,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -1027,7 +1032,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1035,7 +1040,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the container status.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1043,7 +1048,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1051,7 +1056,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -1059,7 +1064,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1067,7 +1072,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the container. Valid values:
+             * <p>
+             * 
+             * *   Waiting: The container is being started.
+             * *   Running: The container is running.
+             * *   Terminated: The container terminates running.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1132,7 +1142,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String scheme; 
 
             /**
-             * Path.
+             * The path to which HTTP GET requests are sent.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1140,7 +1150,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port to which the system sends an HTTP GET request for a health check.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1148,7 +1158,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * HTTP／HTTPS。
+             * The protocol type of the HTTP GET requests.
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1201,7 +1211,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long port; 
 
             /**
-             * Host。
+             * The IP address of the host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1209,7 +1219,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1334,7 +1344,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long timeoutSeconds; 
 
             /**
-             * Execs.
+             * The commands that are run in the container when you use the command line interface (CLI) to perform health checks.
              */
             public Builder execs(java.util.List < String > execs) {
                 this.execs = execs;
@@ -1342,7 +1352,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureThreshold.
+             * The minimum number of consecutive failures that must occur for the check to be considered failure. Default value: 3.
              */
             public Builder failureThreshold(Long failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -1350,7 +1360,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpGet。
+             * The HTTP GET method that is used to check the container.
              */
             public Builder httpGet(ReadinessProbeHttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -1358,7 +1368,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialDelaySeconds.
+             * The number of seconds between the time when the startup of the container ends and the time when the check starts.
              */
             public Builder initialDelaySeconds(Long initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -1366,7 +1376,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodSeconds.
+             * The interval at which the check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder periodSeconds(Long periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -1374,7 +1384,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessThreshold.
+             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
              */
             public Builder successThreshold(Long successThreshold) {
                 this.successThreshold = successThreshold;
@@ -1382,7 +1392,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TcpSocket。
+             * The TCP socket method that is used to check the container.
              */
             public Builder tcpSocket(ReadinessProbeTcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -1390,7 +1400,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * The timeout period of the check. Default value: 1. Minimum value: 1.
              */
             public Builder timeoutSeconds(Long timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -1431,7 +1441,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private java.util.List < String > adds; 
 
             /**
-             * Adds.
+             * The permissions specific to the processes in the container.
              */
             public Builder adds(java.util.List < String > adds) {
                 this.adds = adds;
@@ -1496,7 +1506,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long runAsUser; 
 
             /**
-             * Capability.
+             * The permissions specific to the processes in the container.
              */
             public Builder capability(Capability capability) {
                 this.capability = capability;
@@ -1504,7 +1514,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyRootFilesystem.
+             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -1512,7 +1522,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RunAsUser.
+             * The UID that is used to run the entry point of the container process.
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -1601,7 +1611,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String subPath; 
 
             /**
-             * MountPath.
+             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1609,7 +1619,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPropagation.
+             * The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:
+             * <p>
+             * 
+             * *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.
+             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -1617,7 +1632,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the volume.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1625,7 +1640,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * Indicates whether the volumes are read-only.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1633,7 +1648,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SubPath.
+             * The subdirectory of the volume. This parameter specifies different subdirectories of the same volume that the instance can mount to different subdirectories of containers.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -1926,7 +1941,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * Args.
+             * The startup parameter of the container.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -1934,7 +1949,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Commands.
+             * The startup command of the container.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -1942,7 +1957,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs of the container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -1950,7 +1965,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentState.
+             * The current status of the container.
              */
             public Builder currentState(CurrentState currentState) {
                 this.currentState = currentState;
@@ -1958,7 +1973,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVars.
+             * The environment variables.
              */
             public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1966,7 +1981,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -1974,7 +1989,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1982,7 +1997,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImagePullPolicy.
+             * The policy for image pulling. Valid values:
+             * <p>
+             * 
+             * *   Always: Each time instances are created, image pulling is performed.
+             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -1990,7 +2010,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LivenessProbe.
+             * The liveness probe of the container.
              */
             public Builder livenessProbe(LivenessProbe livenessProbe) {
                 this.livenessProbe = livenessProbe;
@@ -1998,7 +2018,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the instance. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2006,7 +2026,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The container name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2014,7 +2034,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The exposed ports and protocols of the container.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -2022,7 +2042,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousState.
+             * The previous status of the container.
              */
             public Builder previousState(PreviousState previousState) {
                 this.previousState = previousState;
@@ -2030,7 +2050,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadinessProbe.
+             * The readiness probe that is used to check whether the container is ready to serve a request.
              */
             public Builder readinessProbe(ReadinessProbe readinessProbe) {
                 this.readinessProbe = readinessProbe;
@@ -2038,7 +2058,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ready.
+             * Indicates whether the container passed the readiness probe.
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -2046,7 +2066,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RestartCount.
+             * The number of times that the instance worker restarted.
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -2054,7 +2074,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityContext.
+             * The security context of the container.
              */
             public Builder securityContext(SecurityContext securityContext) {
                 this.securityContext = securityContext;
@@ -2062,7 +2082,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Stdin.
+             * Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -2070,7 +2090,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StdinOnce.
+             * Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, remains empty until the first client attaches to stdin, and then is open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -2078,7 +2098,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Tty.
+             * Indicates whether interaction is enabled. Default value: false. If the value of the Command parameter is /bin/bash, the value of this parameter must be set to true.
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -2086,7 +2106,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMounts.
+             * Information about the mounted volumes.
              */
             public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -2094,7 +2114,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * The working directory.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -2147,7 +2167,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The variable name of the option.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2155,7 +2175,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The variable value of the option.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2220,7 +2240,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private java.util.List < String > searches; 
 
             /**
-             * NameServers.
+             * The IP addresses of DNS servers.
              */
             public Builder nameServers(java.util.List < String > nameServers) {
                 this.nameServers = nameServers;
@@ -2228,7 +2248,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * The options. Each option is a name-value pair. The value in the name-value pair is optional.
              */
             public Builder options(java.util.List < Options> options) {
                 this.options = options;
@@ -2236,7 +2256,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Searches.
+             * The search domains of the DNS server.
              */
             public Builder searches(java.util.List < String > searches) {
                 this.searches = searches;
@@ -2289,7 +2309,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the Sysctl parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2297,7 +2317,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the Sysctl parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2338,7 +2358,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private java.util.List < Sysctls> sysctls; 
 
             /**
-             * Sysctls.
+             * The Sysctl parameters.
              */
             public Builder sysctls(java.util.List < Sysctls> sysctls) {
                 this.sysctls = sysctls;
@@ -2451,7 +2471,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of the events.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -2459,7 +2479,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * The time when the event started.
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -2467,7 +2487,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * The time when the event ended.
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -2475,7 +2495,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2483,7 +2503,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the object to which the event belongs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2491,7 +2511,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The name of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2499,7 +2519,11 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * *   Normal
+             * *   Warning
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2552,7 +2576,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * Hostnames.
+             * The information about the host.
              */
             public Builder hostnames(java.util.List < String > hostnames) {
                 this.hostnames = hostnames;
@@ -2560,7 +2584,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the host.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2685,7 +2709,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -2693,7 +2717,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -2701,7 +2725,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -2709,7 +2733,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message of the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2717,7 +2741,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2725,7 +2749,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -2733,7 +2757,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2741,7 +2765,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the container. Valid values:
+             * <p>
+             * 
+             * *   Waiting
+             * *   Running
+             * *   Terminated
              */
             public Builder state(String state) {
                 this.state = state;
@@ -2782,7 +2811,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String fieldPath; 
 
             /**
-             * FieldPath.
+             * The path of the field in the specified version. Set the value to `status.podIP`.
              */
             public Builder fieldPath(String fieldPath) {
                 this.fieldPath = fieldPath;
@@ -2823,7 +2852,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private ValueFromFieldRef fieldRef; 
 
             /**
-             * FieldRef.
+             * The specified field.
              */
             public Builder fieldRef(ValueFromFieldRef fieldRef) {
                 this.fieldRef = fieldRef;
@@ -2888,7 +2917,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private EnvironmentVarsValueFrom valueFrom; 
 
             /**
-             * Key.
+             * The key of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2896,7 +2925,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2904,7 +2933,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueFrom.
+             * The source of the environment variable value. This parameter can be used only when the variable value is not specified.
              */
             public Builder valueFrom(EnvironmentVarsValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -2957,7 +2986,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -2965,7 +2994,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -3090,7 +3119,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -3098,7 +3127,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -3106,7 +3135,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -3114,7 +3143,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the container status.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -3122,7 +3151,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -3130,7 +3159,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -3138,7 +3167,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3146,7 +3175,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the container. Valid values: Waiting, Running, and Terminated.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -3187,7 +3216,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private java.util.List < String > adds; 
 
             /**
-             * Adds.
+             * The permissions specific to the processes in the container.
              */
             public Builder adds(java.util.List < String > adds) {
                 this.adds = adds;
@@ -3252,7 +3281,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long runAsUser; 
 
             /**
-             * Capability.
+             * The permissions specific to the processes in the container.
              */
             public Builder capability(SecurityContextCapability capability) {
                 this.capability = capability;
@@ -3260,7 +3289,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyRootFilesystem.
+             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -3268,7 +3297,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RunAsUser.
+             * The UID that is used to run the entry point of the container process.
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -3345,7 +3374,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Boolean readOnly; 
 
             /**
-             * MountPath.
+             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3353,7 +3382,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPropagation.
+             * The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:
+             * <p>
+             * 
+             * *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.
+             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.
+             * 
+             * Default value: None.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -3361,7 +3397,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the volume. The name is the same as the volume you selected when you purchased the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3369,7 +3405,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * Default value: False.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -3602,7 +3638,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * Args.
+             * The startup parameters.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -3610,7 +3646,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * The startup command.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -3618,7 +3654,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -3626,7 +3662,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentState.
+             * The current status of the container.
              */
             public Builder currentState(InitContainersCurrentState currentState) {
                 this.currentState = currentState;
@@ -3634,7 +3670,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVars.
+             * The environment variables.
              */
             public Builder environmentVars(java.util.List < InitContainersEnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -3642,7 +3678,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Long gpu) {
                 this.gpu = gpu;
@@ -3650,7 +3686,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -3658,7 +3694,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImagePullPolicy.
+             * The policy for image pulling.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -3666,7 +3702,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The size of memory that is allocated to the init container. Unit: GiB.
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -3674,7 +3710,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The container name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3682,7 +3718,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The exposed ports and protocols of the container.
              */
             public Builder ports(java.util.List < InitContainersPorts> ports) {
                 this.ports = ports;
@@ -3690,7 +3726,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousState.
+             * The previous status of the container.
              */
             public Builder previousState(InitContainersPreviousState previousState) {
                 this.previousState = previousState;
@@ -3698,7 +3734,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ready.
+             * Indicates whether the container passed the readiness probe.
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -3706,7 +3742,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RestartCount.
+             * The number of times that the instance worker restarted.
              */
             public Builder restartCount(Long restartCount) {
                 this.restartCount = restartCount;
@@ -3714,7 +3750,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityContext.
+             * The security context of the container.
              */
             public Builder securityContext(InitContainersSecurityContext securityContext) {
                 this.securityContext = securityContext;
@@ -3722,7 +3758,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMounts.
+             * The information about the volumes that are mounted to the init container.
              */
             public Builder volumeMounts(java.util.List < InitContainersVolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -3730,7 +3766,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * The working directory.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -3783,7 +3819,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3791,7 +3827,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3844,7 +3880,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * Content.
+             * The content of the configuration file. Maximum size: 32 KB.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -3852,7 +3888,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The relative path to the configuration file.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -4037,7 +4073,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConfigFileVolumeConfigFileToPaths.
+             * The paths to configuration files.
              */
             public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
@@ -4045,7 +4081,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskVolumeDiskId.
+             * The ID of the disk volume if you set Type to DiskVolume.
              */
             public Builder diskVolumeDiskId(String diskVolumeDiskId) {
                 this.diskVolumeDiskId = diskVolumeDiskId;
@@ -4053,7 +4089,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskVolumeFsType.
+             * The file system type of the disk volume.
              */
             public Builder diskVolumeFsType(String diskVolumeFsType) {
                 this.diskVolumeFsType = diskVolumeFsType;
@@ -4061,7 +4097,11 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyDirVolumeMedium.
+             * The storage media of emptyDir volume N. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:
+             * <p>
+             * 
+             * *   Memory: uses memory as the storage media.
+             * *   LocalRaid0: forms local disks into RAID 0. This value is applicable only to scenarios in which an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
              */
             public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
                 this.emptyDirVolumeMedium = emptyDirVolumeMedium;
@@ -4069,7 +4109,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyDirVolumeSizeLimit.
+             * The storage size of the emptyDir volume. If you specify this parameter, include the unit in the value. We recommend that you use Gi or Mi.
              */
             public Builder emptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
                 this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
@@ -4077,7 +4117,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FlexVolumeDriver.
+             * The name of the driver when you set the Type parameter to FlexVolume.
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -4085,7 +4125,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FlexVolumeFsType.
+             * The file system type when you set the Type parameter to FlexVolume. The default value is determined by the script of the FlexVolume plug-in.
              */
             public Builder flexVolumeFsType(String flexVolumeFsType) {
                 this.flexVolumeFsType = flexVolumeFsType;
@@ -4093,7 +4133,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FlexVolumeOptions.
+             * The FlexVolume options.
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;
@@ -4101,7 +4141,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NFSVolumePath.
+             * The path to the NFS volume.
              */
             public Builder NFSVolumePath(String NFSVolumePath) {
                 this.NFSVolumePath = NFSVolumePath;
@@ -4109,7 +4149,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NFSVolumeReadOnly.
+             * Indicates whether the NFS volume is read-only.
              */
             public Builder NFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
                 this.NFSVolumeReadOnly = NFSVolumeReadOnly;
@@ -4117,7 +4157,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NFSVolumeServer.
+             * The endpoint of the server when you set the Type parameter to NFSVolume.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -4125,7 +4165,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the volume.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4133,7 +4173,13 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the volume. Valid values:
+             * <p>
+             * 
+             * *   EmptyDirVolume
+             * *   NFSVolume
+             * *   ConfigFileVolume
+             * *   FlexVolume
              */
             public Builder type(String type) {
                 this.type = type;
@@ -4618,7 +4664,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ContainerGroupId.
+             * The ID of the container group.
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -4626,7 +4672,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerGroupName.
+             * The name of the container group.
              */
             public Builder containerGroupName(String containerGroupName) {
                 this.containerGroupName = containerGroupName;
@@ -4634,7 +4680,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Containers.
+             * The list of containers in the container group.
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -4642,7 +4688,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that are allocated to the container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -4650,7 +4696,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance is created. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -4658,7 +4704,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Discount.
+             * The discount.
              */
             public Builder discount(Long discount) {
                 this.discount = discount;
@@ -4666,7 +4712,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DnsConfig.
+             * The Domain Name System (DNS) settings.
              */
             public Builder dnsConfig(DnsConfig dnsConfig) {
                 this.dnsConfig = dnsConfig;
@@ -4674,7 +4720,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EciSecurityContext.
+             * The security context of the container group.
              */
             public Builder eciSecurityContext(EciSecurityContext eciSecurityContext) {
                 this.eciSecurityContext = eciSecurityContext;
@@ -4682,7 +4728,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EniInstanceId.
+             * The ID of the elastic network interface (ENI).
              */
             public Builder eniInstanceId(String eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
@@ -4690,7 +4736,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EphemeralStorage.
+             * The size of the temporary storage space. Unit: GiB.
              */
             public Builder ephemeralStorage(Long ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -4698,7 +4744,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * The event information. Up to 50 events can be returned.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -4706,7 +4752,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the instance failed to run due to overdue payments. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -4714,7 +4760,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedTime.
+             * The time when the instance failed to run. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder failedTime(String failedTime) {
                 this.failedTime = failedTime;
@@ -4722,7 +4768,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAliases.
+             * The hostname mapping of a container in the elastic container instance.
              */
             public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
@@ -4730,7 +4776,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InitContainers.
+             * The init containers.
              */
             public Builder initContainers(java.util.List < InitContainers> initContainers) {
                 this.initContainers = initContainers;
@@ -4738,7 +4784,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the Elastic Compute Service (ECS) instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -4746,7 +4792,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -4754,7 +4800,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -4762,7 +4808,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Address.
+             * The IPv6 address.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -4770,7 +4816,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the instance. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4778,7 +4824,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RamRoleName.
+             * The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -4786,7 +4832,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -4794,7 +4840,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -4802,7 +4848,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RestartPolicy.
+             * The instance restart policy. Valid values:
+             * <p>
+             * 
+             * *   Always: Always restarts the instance if a container in the instance exits upon termination.
+             * *   Never: Never restarts the instance if a container in the instance exits upon termination.
+             * *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
              */
             public Builder restartPolicy(String restartPolicy) {
                 this.restartPolicy = restartPolicy;
@@ -4810,7 +4861,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group to which the instances belong.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4818,7 +4869,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price for the preemptible instance.
+             * <p>
+             * 
+             * This parameter is returned only if you set SpotStrategy to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -4826,7 +4880,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding policy for the instance. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The node is a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The node is a preemptible instance that has a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -4834,7 +4893,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid value:
+             * <p>
+             * 
+             * *   Pending: The instance is being started.
+             * *   Running: The instance is running.
+             * *   Succeeded: The instance runs successfully.
+             * *   Failed: The instance fails to run.
+             * *   Scheduling: The instance is being created.
+             * *   ScheduleFailed: The instance fails to be created.
+             * *   Restarting: The instance is being restarted.
+             * *   Updating: The instance is being updated.
+             * *   Terminating: The instance is being terminated.
+             * *   Expired: The instance expires.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4842,7 +4913,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SucceededTime.
+             * The time when all containers exited on success. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
              */
             public Builder succeededTime(String succeededTime) {
                 this.succeededTime = succeededTime;
@@ -4850,7 +4921,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the instances.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -4858,7 +4929,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantEniInstanceId.
+             * This parameter is unavailable.
              */
             public Builder tenantEniInstanceId(String tenantEniInstanceId) {
                 this.tenantEniInstanceId = tenantEniInstanceId;
@@ -4866,7 +4937,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantEniIp.
+             * This parameter is unavailable.
              */
             public Builder tenantEniIp(String tenantEniIp) {
                 this.tenantEniIp = tenantEniIp;
@@ -4874,7 +4945,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantSecurityGroupId.
+             * This parameter is unavailable.
              */
             public Builder tenantSecurityGroupId(String tenantSecurityGroupId) {
                 this.tenantSecurityGroupId = tenantSecurityGroupId;
@@ -4882,7 +4953,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantVSwitchId.
+             * This parameter is unavailable.
              */
             public Builder tenantVSwitchId(String tenantVSwitchId) {
                 this.tenantVSwitchId = tenantVSwitchId;
@@ -4890,7 +4961,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -4898,7 +4969,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Volumes.
+             * The information about volumes.
              */
             public Builder volumes(java.util.List < Volumes> volumes) {
                 this.volumes = volumes;
@@ -4906,7 +4977,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the elastic container instances belong.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -4914,7 +4985,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone in which the elastic container instance is deployed.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -5099,7 +5170,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * ArrayProperties.
+             * The properties of the array job.
              */
             public Builder arrayProperties(ArrayProperties arrayProperties) {
                 this.arrayProperties = arrayProperties;
@@ -5107,7 +5178,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerGroups.
+             * The information of the container groups that are used to run the serverless job.
              */
             public Builder containerGroups(java.util.List < ContainerGroups> containerGroups) {
                 this.containerGroups = containerGroups;
@@ -5115,7 +5186,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the serverless job ended.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -5123,7 +5194,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IsArrayJob.
+             * Indicates whether the job is an array job.
              */
             public Builder isArrayJob(Boolean isArrayJob) {
                 this.isArrayJob = isArrayJob;
@@ -5131,7 +5202,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the serverless job or the subtask (array job).
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -5139,7 +5210,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * The name of the serverless job.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -5147,7 +5218,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the serverless job is last modified.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -5155,7 +5226,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The scheduling priority of the serverless job.
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -5163,7 +5234,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The name of the queue in which the serverless job is run.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -5171,7 +5242,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the serverless job started.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -5179,7 +5250,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the serverless job. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Initing
+             * *   Running
+             * *   Succeeded
+             * *   Canceled
+             * *   Failed
              */
             public Builder state(String state) {
                 this.state = state;
@@ -5187,7 +5266,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * The time when the serverless job is submitted.
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;
@@ -5195,7 +5274,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username that is used to run the serverless job.
              */
             public Builder user(String user) {
                 this.user = user;

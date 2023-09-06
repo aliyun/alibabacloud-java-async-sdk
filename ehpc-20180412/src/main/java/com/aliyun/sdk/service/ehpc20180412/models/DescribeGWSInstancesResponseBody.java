@@ -94,7 +94,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the current page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of the information.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             private String appPath; 
 
             /**
-             * AppArgs.
+             * The runtime parameters of the application.
              */
             public Builder appArgs(String appArgs) {
                 this.appArgs = appArgs;
@@ -198,7 +198,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution directory of the application.
+             * The running path of the application.
              */
             public Builder appPath(String appPath) {
                 this.appPath = appPath;
@@ -388,10 +388,10 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             private String workMode; 
 
             /**
-             * The list of application information.
+             * The application information.
              * <p>
              * 
-             * >  If the WorkMode parameter is set to Desktop, an empty value is returned in this parameter.
+             * >  This parameter is emtryp if the working mode is Desktop.
              */
             public Builder appList(AppList appList) {
                 this.appList = appList;
@@ -399,7 +399,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the visualizatio service.
+             * The ID of the visualization cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -407,7 +407,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the visualization instance was created.
+             * The time at which the visualization instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -415,7 +415,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the visualization instance expires.
+             * The time at which the visualization instance expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -450,16 +450,16 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
              * The status of the visualization instance. Valid values:
              * <p>
              * 
-             * *   Creating: The instance is being created.
-             * *   Starting: The instance is being started.
-             * *   Stopping: The instance is being stopped.
-             * *   Stopped: The instance is stopped.
-             * *   Initializing: The instance is being initialized.
-             * *   Unregistered: The instance is not registered.
-             * *   Registered: The instance is registered.
-             * *   InUse: The instance is in use.
-             * *   Missing: The instance cannot be found.
-             * *   Cloning: An image is being generated based on the instance.
+             * *   Creating
+             * *   Starting
+             * *   Stopping
+             * *   Stopped
+             * *   Initializing
+             * *   Unregistered
+             * *   Registered
+             * *   InUse
+             * *   Missing
+             * *   Cloning: The image is being created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -467,10 +467,10 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the entity to which the visualization instance is assigned.
+             * The username assigned to the visualization instance.
              * <p>
              * 
-             * >  If the instance is not assigned to a specified user, this parameter is empty.
+             * >  This parameter is empty if the instance is not assigned to specified users.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -481,8 +481,8 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
              * The working mode of the visualization instance. Valid values:
              * <p>
              * 
-             * *   Desktop
-             * *   Application
+             * *   Desktop: the desktop mode
+             * *   Application: the application mode
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

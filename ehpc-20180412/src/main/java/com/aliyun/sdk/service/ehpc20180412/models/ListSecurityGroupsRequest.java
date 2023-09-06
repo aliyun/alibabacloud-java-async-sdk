@@ -55,7 +55,7 @@ public class ListSecurityGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

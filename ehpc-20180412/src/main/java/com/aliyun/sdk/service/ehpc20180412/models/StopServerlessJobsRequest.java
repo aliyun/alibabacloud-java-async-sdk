@@ -70,7 +70,10 @@ public class StopServerlessJobsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,14 @@ public class StopServerlessJobsRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * The serverless job IDs or subtask IDs (array jobs).
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you specify the job ID of an array job, all subtasks under the array job are stopped.
+         * 
+         * *   If you specify the ID of a subtask of an array job, only the subtask is stopped.
          */
         public Builder jobIds(java.util.List < String > jobIds) {
             this.putQueryParameter("JobIds", jobIds);

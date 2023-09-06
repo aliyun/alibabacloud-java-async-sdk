@@ -153,7 +153,7 @@ public class ModifyClusterAttributesRequest extends Request {
         } 
 
         /**
-         * The ID of the image.
+         * The ID of the cluster that you want to modify.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -162,7 +162,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new cluster description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -171,7 +171,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The IDs of the images.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -180,7 +180,13 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * The new image type of the cluster. Valid values:
+         * <p>
+         * 
+         * *   system: public image
+         * *   self: custom image
+         * *   others: shared image
+         * *   marketplace: Alibaba Cloud Marketplace image
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -189,7 +195,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The new cluster name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -198,7 +204,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * 授权实例配置时，要绑定RAM角色的节点类型。
+         * The type of the node to which you want to bind the RAM role.
          */
         public Builder ramNodeTypes(java.util.List < String > ramNodeTypes) {
             this.putQueryParameter("RamNodeTypes", ramNodeTypes);
@@ -207,7 +213,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * 授权实例配置时，实例RAM角色的名称。
+         * The name of the instance RAM role.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -216,7 +222,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * WinAdPar.
+         * The parameters that are used to connect to the Windows AD server.
          */
         public Builder winAdPar(WinAdPar winAdPar) {
             this.putQueryParameter("WinAdPar", winAdPar);
@@ -306,7 +312,7 @@ public class ModifyClusterAttributesRequest extends Request {
             private String fallbackHomeDir; 
 
             /**
-             * AdDc.
+             * The domain name of the Windows AD server.
              */
             public Builder adDc(String adDc) {
                 this.adDc = adDc;
@@ -314,7 +320,7 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * AdIp.
+             * The IP address of the Windows AD server.
              */
             public Builder adIp(String adIp) {
                 this.adIp = adIp;
@@ -322,7 +328,7 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * AdUser.
+             * The Windows AD server administrator.
              */
             public Builder adUser(String adUser) {
                 this.adUser = adUser;
@@ -330,7 +336,7 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * AdUserPasswd.
+             * The administrator password of the Windows AD server.
              */
             public Builder adUserPasswd(String adUserPasswd) {
                 this.adUserPasswd = adUserPasswd;
@@ -338,7 +344,7 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * FallbackHomeDir.
+             * The home directory of the Linux server.
              */
             public Builder fallbackHomeDir(String fallbackHomeDir) {
                 this.fallbackHomeDir = fallbackHomeDir;

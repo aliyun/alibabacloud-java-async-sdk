@@ -55,7 +55,7 @@ public class DeleteContainerAppsRequest extends Request {
         } 
 
         /**
-         * ContainerApp.
+         * The information about containers.
          */
         public Builder containerApp(java.util.List < ContainerApp> containerApp) {
             this.putQueryParameter("ContainerApp", containerApp);
@@ -98,9 +98,6 @@ public class DeleteContainerAppsRequest extends Request {
 
             /**
              * The ID of the containerized application that you want to delete. Valid values of N: 1 to 100.
-             * <p>
-             * 
-             * You can call the [ListContainerApps](~~87333~~) operation to query the ID of the containerized application.
              */
             public Builder id(String id) {
                 this.id = id;

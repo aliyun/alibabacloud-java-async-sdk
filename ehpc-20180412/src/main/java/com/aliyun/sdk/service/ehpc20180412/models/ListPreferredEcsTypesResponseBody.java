@@ -70,7 +70,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of recommended ECS instances. Each series contains the recommended ECS instance types for various nodes of the E-HPC cluster.
+         * The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes in the E-HPC cluster.
          */
         public Builder series(Series series) {
             this.series = series;
@@ -354,7 +354,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance series ID. Valid values:
+             * The ID of the ECS instance series. Valid values:
              * <p>
              * 
              * *   HighCompute: compute-optimized instance families
@@ -368,7 +368,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance series name. Valid values:
+             * The name of the instance series. Valid values:
              * <p>
              * 
              * *   SeriesHighCompute

@@ -84,7 +84,7 @@ public class AddSecurityGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +93,7 @@ public class AddSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -105,7 +105,7 @@ public class AddSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * The security group ID of the instance.
          * <p>
          * 
          * You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups in the current region.

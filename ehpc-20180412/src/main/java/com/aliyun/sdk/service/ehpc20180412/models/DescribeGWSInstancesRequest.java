@@ -125,7 +125,7 @@ public class DescribeGWSInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the visualization service.
+         * The ID of the visualization cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

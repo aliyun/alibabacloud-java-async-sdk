@@ -30,12 +30,17 @@ public class AddQueueRequest extends Request {
     @Validation(required = true)
     private String queueName;
 
+    @Query
+    @NameInMap("UseESS")
+    private Boolean useESS;
+
     private AddQueueRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.deploymentSetId = builder.deploymentSetId;
         this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.queueName = builder.queueName;
+        this.useESS = builder.useESS;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class AddQueueRequest extends Request {
         return this.queueName;
     }
 
+    /**
+     * @return useESS
+     */
+    public Boolean getUseESS() {
+        return this.useESS;
+    }
+
     public static final class Builder extends Request.Builder<AddQueueRequest, Builder> {
         private String clusterId; 
         private String deploymentSetId; 
         private String networkInterfaceTrafficMode; 
         private String queueName; 
+        private Boolean useESS; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class AddQueueRequest extends Request {
             this.deploymentSetId = request.deploymentSetId;
             this.networkInterfaceTrafficMode = request.networkInterfaceTrafficMode;
             this.queueName = request.queueName;
+            this.useESS = request.useESS;
         } 
 
         /**
@@ -133,6 +147,15 @@ public class AddQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
+            return this;
+        }
+
+        /**
+         * UseESS.
+         */
+        public Builder useESS(Boolean useESS) {
+            this.putQueryParameter("UseESS", useESS);
+            this.useESS = useESS;
             return this;
         }
 

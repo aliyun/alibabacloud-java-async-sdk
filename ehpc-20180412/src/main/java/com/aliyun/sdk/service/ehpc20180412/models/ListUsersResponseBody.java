@@ -86,7 +86,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * The number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +202,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * The username of the account.
              */
             public Builder name(String name) {
                 this.name = name;

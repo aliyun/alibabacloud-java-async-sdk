@@ -87,7 +87,7 @@ public class DeleteJobsRequest extends Request {
          * Specifies whether to use an asynchronous link to delete the jobs.
          * <p>
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -96,7 +96,7 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.

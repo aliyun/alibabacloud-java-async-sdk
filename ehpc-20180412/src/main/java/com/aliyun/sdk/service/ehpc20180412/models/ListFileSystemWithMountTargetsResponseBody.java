@@ -94,7 +94,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries returned per page. Valid values: 1 to 50. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,13 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             private String vswId; 
 
             /**
-             * The name of the permission group that applied to the mount target.
+             * Specifies whether to use the user default permission group.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: ueses the default permission group. If you use the default permission group, access from all IP addresses are allowed. The default permission group and the permission rules in the default permission group cannot be deleted.
+             * *   false: does not use the default permission group.
              */
             public Builder accessGroup(String accessGroup) {
                 this.accessGroup = accessGroup;
@@ -226,7 +232,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the mount target.
+             * The domain where the mount target resides.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -234,11 +240,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the mount target. Valid values:
+             * The network type of the cluster. Valid values:
              * <p>
              * 
-             * *   Vpc: virtual private cloud (VPC)
-             * *   Classic: the classic network
+             * *   vpc: Virtual Private Cloud (VPC)
+             * *   classic: the classic network
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -250,7 +256,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
              * <p>
              * 
              * *   Active: The mount target is available.
-             * *   Inactive: The mount target is inactive.
+             * *   Inactive: The mount target is unavailable.
              * *   Pending: The mount target is being created or modified.
              * *   Deleting: The mount target is being deleted.
              */
@@ -616,7 +622,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file system was created.
+             * The time at which the file system is created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -632,11 +638,16 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file system is encrypted. Valid values:
+             * Specifies whether to encrypt the data in the file system.
              * <p>
              * 
-             * *   0: The file system is not encrypted.
-             * *   1: The file system is encrypted.
+             * You can use keys that are managed by Key Management Service (KMS) to encrypt the data that is stored in a file system. When you read and write the encrypted data, the data is automatically decrypted.
+             * 
+             * Valid values:
+             * 
+             * *   0 (default): The data in the file system is not encrypted.
+             * *   1: NAS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.
+             * *   2: KMS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to extreme.
              */
             public Builder encryptType(Integer encryptType) {
                 this.encryptType = encryptType;
@@ -655,8 +666,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
              * The type of the file system. Valid values:
              * <p>
              * 
-             * *   standard: General-purpose NAS file system
-             * *   extreme: Extreme NAS file system
+             * *   standard: general-purpose NAS. extreme: Extreme NAS.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -664,7 +674,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The used capacity of the file system. Unit: bytes.
+             * The used storage of the NAS file system. Unit: byte.
              */
             public Builder meteredSize(Integer meteredSize) {
                 this.meteredSize = meteredSize;
@@ -672,7 +682,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of mount targets.
+             * The mount targets.
              */
             public Builder mountTargetList(MountTargetList mountTargetList) {
                 this.mountTargetList = mountTargetList;
@@ -691,8 +701,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
              * The protocol type of the file system. Valid values:
              * <p>
              * 
-             * - NFS
-             * - SMB
+             * *   NFS- SMB
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -700,7 +709,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -711,12 +720,12 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
              * The status of the file system. Valid values:
              * <p>
              * 
-             * - Pending: The file system is being created or modified.
-             * - Running: The file system is available.
-             * - Stopped: The file system is stopped.
-             * - Extending: The file system is being scaled out.
-             * - Stopping: The file system is being stopped.
-             * - Deleting: The file system is being deleted.
+             * *   Pending: The file system is processing a task.
+             * *   Running: The file system is available.
+             * *   Stopped: The file system is unavailable.
+             * *   Extending: The file system is being scaled out.
+             * *   Stopping: The file system is being disabled.
+             * *   Deleting: The file system is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -724,11 +733,10 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the file system. 
+             * The storage type of the file system.
              * <p>
              * 
-             * - If FileSystemType is set to standard, the StorageType parameter has the following valid values: Capacity and Performance.
-             * - If FileSystemType is set to extreme, the StorageType parameter has the following valid values: standard and advance.
+             * *   Valid values when FileSystemType is set to standard: Capacity and Performance. Valid values when FileSystemType is set to extreme: standard and advance.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -736,7 +744,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID of the node.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

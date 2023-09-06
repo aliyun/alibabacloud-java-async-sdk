@@ -49,8 +49,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyNodesResponse> applyNodes(ApplyNodesRequest request);
 
     /**
-      * The ID of the zone.
-      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
       *
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
@@ -73,6 +72,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
+    /**
+      * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+      *
+     */
     CompletableFuture<DeleteContainerAppsResponse> deleteContainerApps(DeleteContainerAppsRequest request);
 
     CompletableFuture<DeleteGWSClusterResponse> deleteGWSCluster(DeleteGWSClusterRequest request);
@@ -98,7 +101,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request);
 
     /**
-      * ## Description
       * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
      */
@@ -138,6 +140,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAccountingReportResponse> getAccountingReport(GetAccountingReportRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+      *
+     */
     CompletableFuture<GetAutoScaleConfigResponse> getAutoScaleConfig(GetAutoScaleConfigRequest request);
 
     CompletableFuture<GetCloudMetricLogsResponse> getCloudMetricLogs(GetCloudMetricLogsRequest request);
@@ -247,7 +254,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVolumesResponse> listVolumes(ListVolumesRequest request);
 
     /**
-      * The new cluster name.
+      * ## Usage notes
+      * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
       *
      */
     CompletableFuture<ModifyClusterAttributesResponse> modifyClusterAttributes(ModifyClusterAttributesRequest request);
@@ -289,7 +297,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCloudMetricProfilingResponse> runCloudMetricProfiling(RunCloudMetricProfilingRequest request);
 
     /**
-      * Configures the auto scaling settings of a cluster.
+      * ## Usage notes
+      * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
       *
      */
     CompletableFuture<SetAutoScaleConfigResponse> setAutoScaleConfig(SetAutoScaleConfigRequest request);
@@ -354,7 +363,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClusterVolumesResponse> updateClusterVolumes(UpdateClusterVolumesRequest request);
 
     /**
-      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
       *
      */
     CompletableFuture<UpdateQueueConfigResponse> updateQueueConfig(UpdateQueueConfigRequest request);

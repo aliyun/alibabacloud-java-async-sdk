@@ -94,7 +94,7 @@ public class SummaryImagesRequest extends Request {
         }
 
         /**
-         * The names of all images in the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +103,7 @@ public class SummaryImagesRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The image type. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);

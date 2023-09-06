@@ -60,6 +60,10 @@ public class SubmitServerlessJobRequest extends Request {
     private String ramRoleName;
 
     @Query
+    @NameInMap("RetryStrategy")
+    private RetryStrategy retryStrategy;
+
+    @Query
     @NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
@@ -88,6 +92,7 @@ public class SubmitServerlessJobRequest extends Request {
         this.jobPriority = builder.jobPriority;
         this.memory = builder.memory;
         this.ramRoleName = builder.ramRoleName;
+        this.retryStrategy = builder.retryStrategy;
         this.spotPriceLimit = builder.spotPriceLimit;
         this.spotStrategy = builder.spotStrategy;
         this.timeout = builder.timeout;
@@ -185,6 +190,13 @@ public class SubmitServerlessJobRequest extends Request {
     }
 
     /**
+     * @return retryStrategy
+     */
+    public RetryStrategy getRetryStrategy() {
+        return this.retryStrategy;
+    }
+
+    /**
      * @return spotPriceLimit
      */
     public Float getSpotPriceLimit() {
@@ -224,6 +236,7 @@ public class SubmitServerlessJobRequest extends Request {
         private Long jobPriority; 
         private Float memory; 
         private String ramRoleName; 
+        private RetryStrategy retryStrategy; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private Long timeout; 
@@ -246,6 +259,7 @@ public class SubmitServerlessJobRequest extends Request {
             this.jobPriority = request.jobPriority;
             this.memory = request.memory;
             this.ramRoleName = request.ramRoleName;
+            this.retryStrategy = request.retryStrategy;
             this.spotPriceLimit = request.spotPriceLimit;
             this.spotStrategy = request.spotStrategy;
             this.timeout = request.timeout;
@@ -253,7 +267,12 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
         /**
-         * ArrayProperties.
+         * The configuration of the array job.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.
          */
         public Builder arrayProperties(ArrayProperties arrayProperties) {
             String arrayPropertiesShrink = shrink(arrayProperties, "ArrayProperties", "json");
@@ -263,7 +282,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -272,7 +294,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * Container.
+         * The properties of the serverless job container.
          */
         public Builder container(Container container) {
             String containerShrink = shrink(container, "Container", "json");
@@ -282,7 +304,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * The vCPU size of the serverless job container. Unit: cores.
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -291,7 +313,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * DependsOn.
+         * The serverless job dependencies.
          */
         public Builder dependsOn(java.util.List < DependsOn> dependsOn) {
             String dependsOnShrink = shrink(dependsOn, "DependsOn", "json");
@@ -301,7 +323,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * EphemeralStorage.
+         * The size of the temporary storage that is added to the serverless job container. Unit: GiB.
+         * <p>
+         * 
+         * >  By default, the serverless job container provides 30 GiB of free storage quota. If you require storage of more than 30 GiB, you can use this parameter to specify the temporary storage to add to the job container.
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -310,17 +335,17 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The ECS instance types used by the serverless job container.
          */
         public Builder instanceType(java.util.List < String > instanceType) {
-            String instanceTypeShrink = shrink(instanceType, "InstanceType", "simple");
+            String instanceTypeShrink = shrink(instanceType, "InstanceType", "json");
             this.putQueryParameter("InstanceType", instanceTypeShrink);
             this.instanceType = instanceType;
             return this;
         }
 
         /**
-         * JobName.
+         * The name of the serverless job.
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -329,7 +354,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * JobPriority.
+         * The scheduling priority of the serverless job. Valid values: 0 to 999. A greater value indicates a higher priority.
          */
         public Builder jobPriority(Long jobPriority) {
             this.putQueryParameter("JobPriority", jobPriority);
@@ -338,7 +363,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * Memory.
+         * The memory size of the serverless job container. Unit: GiB.
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -347,7 +372,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * RamRoleName.
+         * The name of the RAM role that is associated with the serverless job container.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -356,7 +381,20 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * SpotPriceLimit.
+         * RetryStrategy.
+         */
+        public Builder retryStrategy(RetryStrategy retryStrategy) {
+            String retryStrategyShrink = shrink(retryStrategy, "RetryStrategy", "json");
+            this.putQueryParameter("RetryStrategy", retryStrategyShrink);
+            this.retryStrategy = retryStrategy;
+            return this;
+        }
+
+        /**
+         * The maximum hourly price of the preemptible instance. The value can contain up to three decimal places.
+         * <p>
+         * 
+         * If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -365,7 +403,14 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * The bidding policy for the instance. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is created as a pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.
+         * 
+         * Default value: NoSpot.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -374,7 +419,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The validity period of the serverless job. After the validity period expires, the job is forcibly terminated. Unit: seconds.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -383,10 +428,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The IDs of the vSwitches to which the serverless job container belongs.
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
-            String vSwitchIdShrink = shrink(vSwitchId, "VSwitchId", "simple");
+            String vSwitchIdShrink = shrink(vSwitchId, "VSwitchId", "json");
             this.putQueryParameter("VSwitchId", vSwitchIdShrink);
             this.vSwitchId = vSwitchId;
             return this;
@@ -450,7 +495,7 @@ public class SubmitServerlessJobRequest extends Request {
             private Long indexStep; 
 
             /**
-             * IndexEnd.
+             * The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.
              */
             public Builder indexEnd(Long indexEnd) {
                 this.indexEnd = indexEnd;
@@ -458,7 +503,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * IndexStart.
+             * The starting value of the array job index. Valid values: 0 to 4999.
              */
             public Builder indexStart(Long indexStart) {
                 this.indexStart = indexStart;
@@ -466,7 +511,10 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * IndexStep.
+             * The interval of the array job index.
+             * <p>
+             * 
+             * >  If the IndexStart of the array job is set to 1, IndexEnd is set to 5, and IndexStep is set to 2, the array job contains three subtasks. The subtask indexes are 1, 3, and 5.
              */
             public Builder indexStep(Long indexStep) {
                 this.indexStep = indexStep;
@@ -519,7 +567,7 @@ public class SubmitServerlessJobRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * 环境变量名。长度为1~128位。格式要求：[0-9a-zA-Z]，以及下划线，不能以数字开头。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -527,7 +575,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the environment variable for the container. The value must be 0 to 256 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -592,7 +640,12 @@ public class SubmitServerlessJobRequest extends Request {
             private String mountPath; 
 
             /**
-             * FlexVolumeDriver.
+             * 使用FlexVolume插件挂载数据卷时的驱动类型。取值范围如下：
+             * <p>
+             * 
+             * alicloud/nas：挂载NAS。
+             * 
+             * alicloud/oss：挂载OSS。
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -600,7 +653,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * FlexVolumeOptions.
+             * FlexVolume对象选项列表。为KV形式，采用JSON传递。
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;
@@ -608,7 +661,10 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * The directory to which the volume is mounted.
+             * <p>
+             * 
+             * > The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -722,7 +778,7 @@ public class SubmitServerlessJobRequest extends Request {
             private String workingDir; 
 
             /**
-             * Arg.
+             * The arguments of the container startup command. You can specify up to 10 arguments.
              */
             public Builder arg(java.util.List < String > arg) {
                 this.arg = arg;
@@ -730,7 +786,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * Command.
+             * The container startup commands.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -738,7 +794,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * EnvironmentVar.
+             * The environment variable of the container.
              */
             public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
@@ -746,7 +802,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs of the container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -754,7 +810,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -762,7 +818,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * VolumeMount.
+             * The data volumes mounted to the container.
              */
             public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -770,7 +826,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * WorkingDir.
+             * The working directory of the container.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -823,7 +879,7 @@ public class SubmitServerlessJobRequest extends Request {
             private String type; 
 
             /**
-             * JobId.
+             * The ID of the dependent job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -831,7 +887,15 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the dependency. Valid values:
+             * <p>
+             * 
+             * *   AfterSucceeded: **All subtasks** of the array job or the dependent job are successfully run. The exit code is 0.
+             * *   AfterFailed: **Any subtask** of the array job or the dependent job fails. The exit code is not 0.
+             * *   AfterAny: The dependent job completes.
+             * *   AfterCorresponding: The subtasks of the array job is successfully run. The exit code is 0.
+             * 
+             * Default value: AfterSucceeded.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -840,6 +904,129 @@ public class SubmitServerlessJobRequest extends Request {
 
             public DependsOn build() {
                 return new DependsOn(this);
+            } 
+
+        } 
+
+    }
+    public static class EvaluateOnExit extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("OnExitCode")
+        private String onExitCode;
+
+        private EvaluateOnExit(Builder builder) {
+            this.action = builder.action;
+            this.onExitCode = builder.onExitCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EvaluateOnExit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return onExitCode
+         */
+        public String getOnExitCode() {
+            return this.onExitCode;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String onExitCode; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * OnExitCode.
+             */
+            public Builder onExitCode(String onExitCode) {
+                this.onExitCode = onExitCode;
+                return this;
+            }
+
+            public EvaluateOnExit build() {
+                return new EvaluateOnExit(this);
+            } 
+
+        } 
+
+    }
+    public static class RetryStrategy extends TeaModel {
+        @NameInMap("Attempts")
+        @Validation(maximum = 10, minimum = 1)
+        private Integer attempts;
+
+        @NameInMap("EvaluateOnExit")
+        private java.util.List < EvaluateOnExit> evaluateOnExit;
+
+        private RetryStrategy(Builder builder) {
+            this.attempts = builder.attempts;
+            this.evaluateOnExit = builder.evaluateOnExit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RetryStrategy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attempts
+         */
+        public Integer getAttempts() {
+            return this.attempts;
+        }
+
+        /**
+         * @return evaluateOnExit
+         */
+        public java.util.List < EvaluateOnExit> getEvaluateOnExit() {
+            return this.evaluateOnExit;
+        }
+
+        public static final class Builder {
+            private Integer attempts; 
+            private java.util.List < EvaluateOnExit> evaluateOnExit; 
+
+            /**
+             * Attempts.
+             */
+            public Builder attempts(Integer attempts) {
+                this.attempts = attempts;
+                return this;
+            }
+
+            /**
+             * EvaluateOnExit.
+             */
+            public Builder evaluateOnExit(java.util.List < EvaluateOnExit> evaluateOnExit) {
+                this.evaluateOnExit = evaluateOnExit;
+                return this;
+            }
+
+            public RetryStrategy build() {
+                return new RetryStrategy(this);
             } 
 
         } 

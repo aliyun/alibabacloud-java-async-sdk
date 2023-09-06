@@ -747,7 +747,10 @@ public class SubmitJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * Count.
+             * The number of retries for the job. Valid values: 1 to 10. You can only retry jobs that are run on the PBS clusters.
+             * <p>
+             * 
+             * >  If this parameter is left empty, the JobRetry.Priority and JobRetry.OnExitCode parameters do not take effect.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -755,7 +758,10 @@ public class SubmitJobRequest extends Request {
             }
 
             /**
-             * OnExitCode.
+             * The retry condition of the job. If the exit code is the value of the parameter, the job retry is triggered.
+             * <p>
+             * 
+             * >  If this parameter is left empty, the job retry is triggered when the exit code is not 0.
              */
             public Builder onExitCode(Integer onExitCode) {
                 this.onExitCode = onExitCode;
@@ -763,10 +769,10 @@ public class SubmitJobRequest extends Request {
             }
 
             /**
-             * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
+             * The priority of the job retry. Valid values: 0 to 9. A larger value indicates a higher priority.
              * <p>
              * 
-             * Default value: 0.
+             * >  If this parameter is left empty, the priority of the job retry is min {Priority of the original job +1, 9}.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

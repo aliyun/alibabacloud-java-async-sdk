@@ -70,7 +70,10 @@ public class DescribeServerlessJobsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,14 @@ public class DescribeServerlessJobsRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * The list of serverless job IDs or the subtask IDs (array jobs).
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If the serverless job is an array job, you can specify only the subtask ID. Specify the subtask ID in the format of \<array job ID>\_< subtask index>. For example, 10\_3 indicates the subtask whose index is 3 in the array job whose ID is 10.
+         * 
+         * *   You can specify only a single ID in one request.
          */
         public Builder jobIds(java.util.List < String > jobIds) {
             this.putQueryParameter("JobIds", jobIds);

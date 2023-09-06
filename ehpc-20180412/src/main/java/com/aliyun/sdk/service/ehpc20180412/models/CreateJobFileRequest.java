@@ -128,7 +128,10 @@ public class CreateJobFileRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Indicates whether to use an asynchronous link to submit job files.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -137,7 +140,7 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -158,7 +161,7 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The user to which the job belongs.
+         * The user to which the job file belongs.
          * <p>
          * 
          * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
@@ -170,7 +173,7 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The password of the user.
+         * The user password.
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);

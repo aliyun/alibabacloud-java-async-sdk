@@ -94,7 +94,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             private String recentUpdateTime; 
 
             /**
-             * The name of the image.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;

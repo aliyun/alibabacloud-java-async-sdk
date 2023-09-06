@@ -70,7 +70,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +81,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * The total price.
          * <p>
          * 
-         * Unit: USD
+         * Unit: USD.
          */
         public Builder totalTradePrice(Float totalTradePrice) {
             this.totalTradePrice = totalTradePrice;
@@ -184,7 +184,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * The original price of the image.
              * <p>
              * 
-             * Unit: USD
+             * Unit: USD.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -195,7 +195,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * The final price.
              * <p>
              * 
-             * Unit: USD
+             * Unit: USD.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

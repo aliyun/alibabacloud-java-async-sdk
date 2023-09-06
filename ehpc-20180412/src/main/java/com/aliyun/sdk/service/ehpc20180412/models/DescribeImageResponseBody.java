@@ -58,7 +58,7 @@ public class DescribeImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeImageResponseBody extends TeaModel {
             private String updateDateTime; 
 
             /**
-             * The ID of the image.
+             * The ID of the custom image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -186,7 +186,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image.
+             * The state of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -202,7 +202,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image.
+             * The tags of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -665,7 +665,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
+         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with `http://` or` https://`.
          * <p>
          * 
          * This parameter is empty by default.
@@ -931,9 +931,7 @@ public class CreateHybridClusterRequest extends Request {
          * You can select an existing security group by its ID.
          * <p>
          * 
-         * **
-         * 
-         * **If you specify this parameter, you cannot specify the **SecurityGroupName`  parameter. `
+         * > If you specify this parameter, you cannot specify the `SecurityGroupName`  parameter.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

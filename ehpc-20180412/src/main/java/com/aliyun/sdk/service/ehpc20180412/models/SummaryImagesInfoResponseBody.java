@@ -50,7 +50,7 @@ public class SummaryImagesInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImagesInfo.
+         * The detailed information about the image.
          */
         public Builder imagesInfo(String imagesInfo) {
             this.imagesInfo = imagesInfo;
@@ -58,7 +58,7 @@ public class SummaryImagesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

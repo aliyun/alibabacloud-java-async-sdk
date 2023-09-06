@@ -195,7 +195,10 @@ public class ListServerlessJobsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -204,7 +207,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * The list of serverless job IDs or subtask IDs (array jobs).
          */
         public Builder jobIds(java.util.List < String > jobIds) {
             this.putQueryParameter("JobIds", jobIds);
@@ -213,7 +216,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * JobNames.
+         * The names of the serverless jobs.
          */
         public Builder jobNames(java.util.List < String > jobNames) {
             this.putQueryParameter("JobNames", jobNames);
@@ -222,7 +225,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +234,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +243,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,7 +252,11 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * StartOrder.
+         * Specifies whether to sort the serverless jobs by the job start time. Valid value:
+         * <p>
+         * 
+         * *   Asc: ascending order
+         * *   Desc: descending order
          */
         public Builder startOrder(String startOrder) {
             this.putQueryParameter("StartOrder", startOrder);
@@ -258,7 +265,17 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * State.
+         * The status of the serverless job. Valid value:
+         * <p>
+         * 
+         * *   All
+         * *   Pending
+         * *   Running
+         * *   Succeeded
+         * *   Canceled
+         * *   Failed
+         * 
+         * Default value: All.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -267,7 +284,11 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * SubmitOrder.
+         * Specifies whether to sort the serverless jobs by the job submission time. Valid value:
+         * <p>
+         * 
+         * *   Asc: ascending order
+         * *   Desc: descending order
          */
         public Builder submitOrder(String submitOrder) {
             this.putQueryParameter("SubmitOrder", submitOrder);
@@ -276,7 +297,10 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * SubmitTimeEnd.
+         * The latest time at which the job is submitted.
+         * <p>
+         * 
+         * >  You can use this parameter to query the job list based on the job submission time.
          */
         public Builder submitTimeEnd(String submitTimeEnd) {
             this.putQueryParameter("SubmitTimeEnd", submitTimeEnd);
@@ -285,7 +309,10 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * SubmitTimeStart.
+         * The earliest time at which the job is submitted.
+         * <p>
+         * 
+         * >  You can use this parameter to query the job list based on the job submission time.
          */
         public Builder submitTimeStart(String submitTimeStart) {
             this.putQueryParameter("SubmitTimeStart", submitTimeStart);

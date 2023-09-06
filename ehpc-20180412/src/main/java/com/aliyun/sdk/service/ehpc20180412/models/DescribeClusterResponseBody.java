@@ -50,7 +50,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The mount target of the file system. Mount targets cannot be automatically created for NAS file systems.
+         * The cluster information.
          */
         public Builder clusterInfo(ClusterInfo clusterInfo) {
             this.clusterInfo = clusterInfo;
@@ -58,7 +58,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The image tag of the operating system.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * DeployMode.
+             * The deployment mode of the custom component. Valid values:
+             * <p>
+             * 
+             * *   local
+             * *   ecs
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -154,7 +158,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The TCP port number of the custom component.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -162,7 +166,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareId.
+             * The software ID of the component.
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -170,7 +174,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The running status of the custom component. Valid values:
+             * <p>
+             * 
+             * *   running
+             * *   stopped
+             * *   exception
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +187,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * The endpoint of the custom component service.
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -284,7 +293,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The hostname of the on-premises management nodes.
+             * The name of the software.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,12 +301,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of on-premises management nodes. Valid values:
-             * <p>
-             * 
-             * - scheduler
-             * - account
-             * - account, scheduler
+             * The tag of the software.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -305,7 +309,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the on-premises management nodes.
+             * The version of the software.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -399,7 +403,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * Count.
+             * The number of compute nodes in the cluster.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -407,7 +411,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the compute nodes.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -460,7 +464,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * Count.
+             * The number of logon nodes in the cluster.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -468,7 +472,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the logon nodes.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -521,7 +525,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * Count.
+             * The number of management nodes.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -529,7 +533,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the management nodes.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -582,7 +586,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * Count.
+             * The number of proxy nodes.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -590,7 +594,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the proxy node.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -667,7 +671,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private ProxyMgr proxyMgr; 
 
             /**
-             * Compute.
+             * The list of compute nodes.
              */
             public Builder compute(Compute compute) {
                 this.compute = compute;
@@ -675,7 +679,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Login.
+             * The list of logon nodes.
              */
             public Builder login(Login login) {
                 this.login = login;
@@ -683,7 +687,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Manager.
+             * The information of management nodes.
              */
             public Builder manager(Manager manager) {
                 this.manager = manager;
@@ -691,7 +695,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyMgr.
+             * The list of proxy nodes on the cloud.
+             * <p>
+             * 
+             * This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.
              */
             public Builder proxyMgr(ProxyMgr proxyMgr) {
                 this.proxyMgr = proxyMgr;
@@ -756,7 +763,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String osTag; 
 
             /**
-             * ImageId.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -764,7 +771,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   system: public image
+             * *   self: custom image
+             * *   others: shared image
+             * *   marketplace: Alibaba Cloud Marketplace image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -772,7 +785,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * An array of OS images that are supported by E-HPC.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -873,7 +886,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * AccountType.
+             * The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
+             * 
+             * Default value: nis.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -881,7 +900,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Dir.
+             * The directory of the on-premises node in the cluster.
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -889,7 +908,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The hostname of the on-premises node in the cluster.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -897,7 +916,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the on-premises node in the cluster.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -905,7 +924,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the on-premises node in the cluster. Valid values:
+             * <p>
+             * 
+             * *   Manager: management node
+             * *   Login: logon node
+             * *   Compute: compute node
              */
             public Builder role(String role) {
                 this.role = role;
@@ -913,7 +937,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The scheduler type of the on-premises node in the cluster. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   slurm
+             * *   opengridscheduler
+             * *   deadline
+             * 
+             * Default value: pbs.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1019,7 +1051,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * HostName.
+             * The hostname of the on-premises management nodes.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1027,7 +1059,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The IP address of the on-premises management nodes.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1035,7 +1067,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of on-premises management nodes. Valid values:
+             * <p>
+             * 
+             * *   scheduler
+             * *   account
+             * *   account, scheduler
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1129,7 +1166,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Args.
+             * The runtime parameters of the script.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -1137,7 +1174,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL used to download the script.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1831,7 +1868,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The version of the E-HPC client.
+             * The server type of the account. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -1839,7 +1880,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * AddOnsInfo.
+             * The information about the custom component service.
              */
             public Builder addOnsInfo(ClusterInfoAddOnsInfo addOnsInfo) {
                 this.addOnsInfo = addOnsInfo;
@@ -1847,10 +1888,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of on-premises management nodes. 
-             * <p>
-             * 
-             * This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.
+             * The array of the software in the cluster. The array contains the name and version of the software.
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -1858,7 +1896,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenew.
+             * Specifies whether to enable auto-renewal. The parameter takes effect only when EcsChargeType is set to PrePaid. Valid values:
+             * <p>
+             * 
+             * *   true: enables auto-renewal.
+             * *   false: disables auto-renewal.
+             * 
+             * Default value: true.
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1866,7 +1910,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenewPeriod.
+             * The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
+             * <p>
+             * 
+             * *   If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.
+             * *   If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.
+             * 
+             * Default value: 1.
              */
             public Builder autoRenewPeriod(String autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1874,7 +1924,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of scripts downloaded after the cluster was created.
+             * The image of the cluster.
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -1882,7 +1932,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of proxy nodes.
+             * The version of the E-HPC client.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -1890,7 +1940,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterVersion.
+             * The version of the E-HPC cluster.
              */
             public Builder clusterVersion(String clusterVersion) {
                 this.clusterVersion = clusterVersion;
@@ -1898,7 +1948,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeSpotPriceLimit.
+             * The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
              */
             public Builder computeSpotPriceLimit(String computeSpotPriceLimit) {
                 this.computeSpotPriceLimit = computeSpotPriceLimit;
@@ -1906,7 +1956,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeSpotStrategy.
+             * The bidding method of the compute node. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The instance is created as a pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder computeSpotStrategy(String computeSpotStrategy) {
                 this.computeSpotStrategy = computeSpotStrategy;
@@ -1914,7 +1969,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Elastic Compute Service (ECS) instance.
+             * The time at which the instance is created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1922,7 +1977,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of management nodes.
+             * The mode in which the cluster is deployed. Valid values:
+             * <p>
+             * 
+             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
+             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
+             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
+             * *   Tiny: The account node, scheduling node, and logon node are deployed on one node. The compute node is separately deployed.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1930,7 +1991,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the software.
+             * The description of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1938,7 +1999,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the on-premises E-HPC cluster.
+             * <p>
+             * 
+             * This parameter takes effect only when the AccoutType parameter is set to Idap.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1946,7 +2010,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * The billing method of the nodes in the cluster. Valid values:
+             * <p>
+             * 
+             * *   PostPaid: pay-as-you-go
+             * *   PrePaid: subscription
              */
             public Builder ecsChargeType(String ecsChargeType) {
                 this.ecsChargeType = ecsChargeType;
@@ -1954,7 +2022,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInfo.
+             * The list of ECS instance specifications and quantity.
              */
             public Builder ecsInfo(EcsInfo ecsInfo) {
                 this.ecsInfo = ecsInfo;
@@ -1962,7 +2030,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the software.
+             * Specifies whether to enable the high availability feature.
+             * <p>
+             * 
+             * >  If high availability is enabled, each management role in the cluster uses both primary and secondary instances.
              */
             public Builder haEnable(Boolean haEnable) {
                 this.haEnable = haEnable;
@@ -1970,7 +2041,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the proxy node.
+             * The instance ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1978,7 +2049,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The runtime parameter of the script.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1986,7 +2057,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the logon nodes.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1994,7 +2065,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the management nodes.
+             * The image type. Valid values:
+             * <p>
+             * 
+             * *   system: public image
+             * *   self: custom image
+             * *   others: shared image
+             * *   marketplace: Alibaba Cloud Marketplace image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -2002,7 +2079,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * InitialImage.
+             * The image information of the operating systems.
              */
             public Builder initialImage(InitialImage initialImage) {
                 this.initialImage = initialImage;
@@ -2010,7 +2087,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch. E-HPC can be deployed only in VPCs.
+             * The name of the AccessKey pair.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2018,10 +2095,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of proxy nodes on the cloud. 
+             * The location where the cluster is deployed. Valid values:
              * <p>
              * 
-             * This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.
+             * *   OnPremise: The node is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -2029,7 +2107,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that was used to download the script.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2037,7 +2115,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * The information of the on-premises node in the cluster.
              */
             public Builder nodes(Nodes nodes) {
                 this.nodes = nodes;
@@ -2045,7 +2123,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * OnPremiseInfo.
+             * The list of on-premises management nodes.
+             * <p>
+             * 
+             * This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.
              */
             public Builder onPremiseInfo(ClusterInfoOnPremiseInfo onPremiseInfo) {
                 this.onPremiseInfo = onPremiseInfo;
@@ -2053,7 +2134,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * OpenldapPar.
+             * The parameter that is used to connect to the OpenLDAP server.
              */
             public Builder openldapPar(String openldapPar) {
                 this.openldapPar = openldapPar;
@@ -2061,7 +2142,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of management nodes.
+             * The operating system tag of the image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -2069,7 +2150,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.
+             * <p>
+             * 
+             * *   If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.
+             * *   If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+             * *   If you set PriceUnit to Hour, the valid value of the Period parameter is 1.
+             * 
+             * Default value: 1.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -2077,7 +2165,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * The unit of the subscription duration. Valid value:
+             * <p>
+             * 
+             * *   Year
+             * *   Month
+             * *   Hour
+             * 
+             * Default value: Month.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -2085,7 +2180,19 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Plugin.
+             * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
+             * <p>
+             * 
+             * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
+             * 
+             * *   pluginMod: the mode of the plug-in. The following modes are supported:
+             * 
+             *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.
+             *     *   image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.
+             * 
+             * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in the oss mode and a non-shared directory in the image mode.
+             * 
+             * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only if you set the pluginMod parameter to oss.
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;
@@ -2093,7 +2200,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PostInstallScripts.
+             * The list of post-installation scripts
              */
             public Builder postInstallScripts(PostInstallScripts postInstallScripts) {
                 this.postInstallScripts = postInstallScripts;
@@ -2101,7 +2208,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RamNodeTypes.
+             * The node type details of the instance RAM role.
              */
             public Builder ramNodeTypes(String ramNodeTypes) {
                 this.ramNodeTypes = ramNodeTypes;
@@ -2109,7 +2216,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RamRoleName.
+             * The name of the instance Resource Access Management (RAM) role.
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -2117,7 +2224,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2125,7 +2232,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the compute nodes.
+             * The remote directory on which the file system is mounted.
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -2133,7 +2240,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2141,11 +2248,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cluster is deployed. Valid values:
-             * <p>
-             * 
-             * *   OnPremise: The cluster is deployed on a hybrid cloud.
-             * *   PublicCloud: The node is deployed on a public cloud.
+             * The ID of the Super Computing Cluster (SCC) instance. If the cluster is not an SCC instance, a null string is returned.
              */
             public Builder sccClusterId(String sccClusterId) {
                 this.sccClusterId = sccClusterId;
@@ -2153,7 +2256,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerPreInstall.
+             * Specifies whether the scheduler is preinstalled for the image. Valid values:
+             * <p>
+             * 
+             * *   true: The scheduler is preinstalled. When you create a node or scale out a cluster, you do not need to install the scheduler.
+             * *   false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.
              */
             public Builder schedulerPreInstall(Integer schedulerPreInstall) {
                 this.schedulerPreInstall = schedulerPreInstall;
@@ -2161,7 +2268,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of ECS instance specifications and quantity.
+             * The type of the scheduler. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   slurm
+             * *   opengridscheduler
+             * *   deadline
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -2169,7 +2282,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network shared storage. Valid value: NAS.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2177,7 +2290,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The remote directory on which the file system is mounted.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   uninit: The cluster is not initialized.
+             * *   creating: The cluster is being created.
+             * *   init: The cluster is being initialized.
+             * *   running: The cluster is running.
+             * *   exception: The cluster encounters an exception.
+             * *   releasing: The cluster is being released.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2185,7 +2306,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of logon nodes.
+             * The vSwitch ID. E-HPC can be deployed only in VPCs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2193,7 +2314,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the software.
+             * The ID of the Apsara File Storage NAS file system. NAS file systems cannot be automatically created.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -2201,7 +2322,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of compute nodes.
+             * The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -2209,7 +2330,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The array of the software in the cluster. The array contains the name and version of the software.
+             * The type of the protocol that is used by the file system. Valid values:
+             * <p>
+             * 
+             * *   nfs
+             * *   smb
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -2217,7 +2342,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logon nodes.
+             * The type of the network shared storage. Valid value: NAS.
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -2225,7 +2350,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the security group.
+             * The VPC ID of the node.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2233,7 +2358,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * WinAdPar.
+             * The parameter that is used to connect to the Windows AD server.
              */
             public Builder winAdPar(String winAdPar) {
                 this.winAdPar = winAdPar;
@@ -2241,7 +2366,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * WithoutAgent.
+             * Specifies whether to not install the agent.
              */
             public Builder withoutAgent(Integer withoutAgent) {
                 this.withoutAgent = withoutAgent;
@@ -2249,7 +2374,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

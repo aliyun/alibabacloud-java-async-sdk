@@ -122,7 +122,7 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * The ID of the cluster that you want to manage.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -140,7 +140,7 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * The tag of the image. Default value: latest.
+         * The tags of the image. Default value: latest.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);

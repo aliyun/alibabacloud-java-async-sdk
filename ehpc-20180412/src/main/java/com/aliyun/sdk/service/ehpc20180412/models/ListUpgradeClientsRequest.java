@@ -70,7 +70,7 @@ public class ListUpgradeClientsRequest extends Request {
         } 
 
         /**
-         * The upgrade records of the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class ListUpgradeClientsRequest extends Request {
         }
 
         /**
-         * The latest version of the E-HPC client.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

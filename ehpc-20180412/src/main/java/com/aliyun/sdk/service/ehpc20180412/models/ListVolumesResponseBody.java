@@ -86,7 +86,7 @@ public class ListVolumesResponseBody extends TeaModel {
         private Volumes volumes; 
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -270,10 +270,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cluster was deployed. Valid values:
+             * The location where the cluster is deployed. Valid values:
              * <p>
              * 
-             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   OnPremise: The node is deployed on a hybrid cloud.
              * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
@@ -517,7 +517,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -525,7 +525,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The instance name.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -533,7 +533,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

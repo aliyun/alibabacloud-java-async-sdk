@@ -218,7 +218,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         private String uid; 
 
         /**
-         * The ID of the cluster.
+         * The ID of the associated cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -240,7 +240,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether auto scale-out is enabled.
+         * Specifies whether to enable auto scale-out.
          */
         public Builder enableAutoGrow(Boolean enableAutoGrow) {
             this.enableAutoGrow = enableAutoGrow;
@@ -248,7 +248,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether auto scale-in is enabled.
+         * Specifies whether to enable auto scale-in.
          */
         public Builder enableAutoShrink(Boolean enableAutoShrink) {
             this.enableAutoShrink = enableAutoShrink;
@@ -264,7 +264,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ratio of added nodes to the original ones. Valid values: 0 to 100.
+         * The percentage of extra compute nodes. Valid values: 0 to 100.
          */
         public Builder extraNodesGrowRatio(Integer extraNodesGrowRatio) {
             this.extraNodesGrowRatio = extraNodesGrowRatio;
@@ -272,7 +272,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The scale-out interval. The interval at which the compute nodes were scaled out. Valid values: 2 to 10.
+         * The interval between two consecutive rounds of scale-in. Valid values: 2 to 10.
          */
         public Builder growIntervalInMinutes(Integer growIntervalInMinutes) {
             this.growIntervalInMinutes = growIntervalInMinutes;
@@ -280,7 +280,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of the added nodes. Valid values: 1 to 100.
+         * The percentage of each round of scale-out. Valid values: 1 to 100.
          */
         public Builder growRatio(Integer growRatio) {
             this.growRatio = growRatio;
@@ -288,7 +288,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period before the node was started. Valid values: 10 to 60.
+         * The timeout period before the scale-out nodes were started. Valid values: 10 to 60.
          */
         public Builder growTimeoutInMinutes(Integer growTimeoutInMinutes) {
             this.growTimeoutInMinutes = growTimeoutInMinutes;
@@ -304,7 +304,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -312,7 +312,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive idle times of a node during a scale-in check. Valid values: 2 to 5.
+         * The number of consecutive idle times of a node during the resource shrink check. Valid values: 2 to 5.
          */
         public Builder shrinkIdleTimes(Integer shrinkIdleTimes) {
             this.shrinkIdleTimes = shrinkIdleTimes;
@@ -320,7 +320,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The scale-in interval. The interval at which the compute nodes were scaled in. Valid values: 2 to 10.
+         * The interval between two consecutive rounds of scale-out. Valid values: 2 to 10.
          */
         public Builder shrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
             this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
@@ -328,7 +328,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum hourly rate of the instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.
+         * The maximum hourly price of the new ECS instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.
          */
         public Builder spotPriceLimit(String spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -336,12 +336,12 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The bidding policy for the compute nodes. Valid values:
+         * The bidding method of the compute nodes. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible one with a user-defined maximum hourly rate.
-         * *   SpotAsPriceGo: The instance is created as a pay-as-you-go instance that is automatically priced based on the Alibaba Cloud Marketplace.
+         * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -349,7 +349,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the user.
+         * The user ID.
          */
         public Builder uid(String uid) {
             this.uid = uid;

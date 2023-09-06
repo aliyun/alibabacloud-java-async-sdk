@@ -86,7 +86,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Jobs.
+         * The list of serverless jobs.
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -94,7 +94,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number returned.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * EndTime.
+             * The time at which the serverless job ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -274,7 +274,11 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IsArrayJob.
+             * Indicates whether the job is an array job. Valid values:
+             * <p>
+             * 
+             * *   True: yes
+             * *   False: no
              */
             public Builder isArrayJob(Boolean isArrayJob) {
                 this.isArrayJob = isArrayJob;
@@ -282,7 +286,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the serverless job or subtask (array job).
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -290,7 +294,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * The name of the serverless job.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -298,7 +302,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The scheduling priority of the serverless job. Valid values are 0 to 999. A greater value indicates a higher priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -306,7 +310,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The name of the queue in which the serverless job is run.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -314,7 +318,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time at which the serverless job started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -322,7 +326,15 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the serverless job. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Initing
+             * *   Running
+             * *   Succeeded
+             * *   Canceled
+             * *   Failed
              */
             public Builder state(String state) {
                 this.state = state;
@@ -330,7 +342,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * The time at which the serverless job is submitted.
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -338,7 +350,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username that is used to run the serverless job.
              */
             public Builder user(String user) {
                 this.user = user;

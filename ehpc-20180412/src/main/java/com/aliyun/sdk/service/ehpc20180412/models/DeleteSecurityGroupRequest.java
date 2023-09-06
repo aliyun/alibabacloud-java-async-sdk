@@ -70,7 +70,7 @@ public class DeleteSecurityGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the security group.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DeleteSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The security group ID of the instance.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
