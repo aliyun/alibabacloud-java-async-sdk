@@ -261,6 +261,12 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("LineLabel")
         private String lineLabel;
 
+        @NameInMap("LineSPContactInfo")
+        private String lineSPContactInfo;
+
+        @NameInMap("LineServiceProvider")
+        private String lineServiceProvider;
+
         @NameInMap("LineType")
         private String lineType;
 
@@ -283,6 +289,8 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.lineCode = builder.lineCode;
             this.lineLabel = builder.lineLabel;
+            this.lineSPContactInfo = builder.lineSPContactInfo;
+            this.lineServiceProvider = builder.lineServiceProvider;
             this.lineType = builder.lineType;
             this.loaUrl = builder.loaUrl;
             this.PMInfo = builder.PMInfo;
@@ -341,6 +349,20 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
 
         /**
+         * @return lineSPContactInfo
+         */
+        public String getLineSPContactInfo() {
+            return this.lineSPContactInfo;
+        }
+
+        /**
+         * @return lineServiceProvider
+         */
+        public String getLineServiceProvider() {
+            return this.lineServiceProvider;
+        }
+
+        /**
          * @return lineType
          */
         public String getLineType() {
@@ -382,6 +404,8 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String instanceId; 
             private String lineCode; 
             private String lineLabel; 
+            private String lineSPContactInfo; 
+            private String lineServiceProvider; 
             private String lineType; 
             private String loaUrl; 
             private PhysicalConnectionLOATypePMInfo PMInfo; 
@@ -433,6 +457,22 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
              */
             public Builder lineLabel(String lineLabel) {
                 this.lineLabel = lineLabel;
+                return this;
+            }
+
+            /**
+             * LineSPContactInfo.
+             */
+            public Builder lineSPContactInfo(String lineSPContactInfo) {
+                this.lineSPContactInfo = lineSPContactInfo;
+                return this;
+            }
+
+            /**
+             * LineServiceProvider.
+             */
+            public Builder lineServiceProvider(String lineServiceProvider) {
+                this.lineServiceProvider = lineServiceProvider;
                 return this;
             }
 

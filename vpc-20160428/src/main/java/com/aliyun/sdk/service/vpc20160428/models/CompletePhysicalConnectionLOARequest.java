@@ -17,6 +17,10 @@ public class CompletePhysicalConnectionLOARequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("FinishWork")
+    private Boolean finishWork;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -28,6 +32,14 @@ public class CompletePhysicalConnectionLOARequest extends Request {
     @Query
     @NameInMap("LineLabel")
     private String lineLabel;
+
+    @Query
+    @NameInMap("LineSPContactInfo")
+    private String lineSPContactInfo;
+
+    @Query
+    @NameInMap("LineServiceProvider")
+    private String lineServiceProvider;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -53,9 +65,12 @@ public class CompletePhysicalConnectionLOARequest extends Request {
     private CompletePhysicalConnectionLOARequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.finishWork = builder.finishWork;
         this.instanceId = builder.instanceId;
         this.lineCode = builder.lineCode;
         this.lineLabel = builder.lineLabel;
+        this.lineSPContactInfo = builder.lineSPContactInfo;
+        this.lineServiceProvider = builder.lineServiceProvider;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -84,6 +99,13 @@ public class CompletePhysicalConnectionLOARequest extends Request {
     }
 
     /**
+     * @return finishWork
+     */
+    public Boolean getFinishWork() {
+        return this.finishWork;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -102,6 +124,20 @@ public class CompletePhysicalConnectionLOARequest extends Request {
      */
     public String getLineLabel() {
         return this.lineLabel;
+    }
+
+    /**
+     * @return lineSPContactInfo
+     */
+    public String getLineSPContactInfo() {
+        return this.lineSPContactInfo;
+    }
+
+    /**
+     * @return lineServiceProvider
+     */
+    public String getLineServiceProvider() {
+        return this.lineServiceProvider;
     }
 
     /**
@@ -141,9 +177,12 @@ public class CompletePhysicalConnectionLOARequest extends Request {
 
     public static final class Builder extends Request.Builder<CompletePhysicalConnectionLOARequest, Builder> {
         private String clientToken; 
+        private Boolean finishWork; 
         private String instanceId; 
         private String lineCode; 
         private String lineLabel; 
+        private String lineSPContactInfo; 
+        private String lineServiceProvider; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -157,9 +196,12 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         private Builder(CompletePhysicalConnectionLOARequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.finishWork = request.finishWork;
             this.instanceId = request.instanceId;
             this.lineCode = request.lineCode;
             this.lineLabel = request.lineLabel;
+            this.lineSPContactInfo = request.lineSPContactInfo;
+            this.lineServiceProvider = request.lineServiceProvider;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -178,6 +220,15 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * FinishWork.
+         */
+        public Builder finishWork(Boolean finishWork) {
+            this.putQueryParameter("FinishWork", finishWork);
+            this.finishWork = finishWork;
             return this;
         }
 
@@ -205,6 +256,24 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         public Builder lineLabel(String lineLabel) {
             this.putQueryParameter("LineLabel", lineLabel);
             this.lineLabel = lineLabel;
+            return this;
+        }
+
+        /**
+         * LineSPContactInfo.
+         */
+        public Builder lineSPContactInfo(String lineSPContactInfo) {
+            this.putQueryParameter("LineSPContactInfo", lineSPContactInfo);
+            this.lineSPContactInfo = lineSPContactInfo;
+            return this;
+        }
+
+        /**
+         * LineServiceProvider.
+         */
+        public Builder lineServiceProvider(String lineServiceProvider) {
+            this.putQueryParameter("LineServiceProvider", lineServiceProvider);
+            this.lineServiceProvider = lineServiceProvider;
             return this;
         }
 
