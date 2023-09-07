@@ -46,7 +46,7 @@ public class ApplyTagPoliciesRequest extends Request {
 
     @Query
     @NameInMap("Rules")
-    private String rules;
+    private java.util.Map < String, RulesValue > rules;
 
     private ApplyTagPoliciesRequest(Builder builder) {
         super(builder);
@@ -125,7 +125,7 @@ public class ApplyTagPoliciesRequest extends Request {
     /**
      * @return rules
      */
-    public String getRules() {
+    public java.util.Map < String, RulesValue > getRules() {
         return this.rules;
     }
 
@@ -137,7 +137,7 @@ public class ApplyTagPoliciesRequest extends Request {
         private String namespace; 
         private String namespaceId; 
         private String region; 
-        private String rules; 
+        private java.util.Map < String, RulesValue > rules; 
 
         private Builder() {
             super();
@@ -225,8 +225,9 @@ public class ApplyTagPoliciesRequest extends Request {
         /**
          * The details of the routing rule.
          */
-        public Builder rules(String rules) {
-            this.putQueryParameter("Rules", rules);
+        public Builder rules(java.util.Map < String, RulesValue > rules) {
+            String rulesShrink = shrink(rules, "Rules", "json");
+            this.putQueryParameter("Rules", rulesShrink);
             this.rules = rules;
             return this;
         }

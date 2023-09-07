@@ -15,9 +15,6 @@ public class GetApplicationListResponseBody extends TeaModel {
     @NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
-    private String errorCode;
-
     @NameInMap("Message")
     private String message;
 
@@ -29,7 +26,6 @@ public class GetApplicationListResponseBody extends TeaModel {
 
     private GetApplicationListResponseBody(Builder builder) {
         this.data = builder.data;
-        this.errorCode = builder.errorCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -48,13 +44,6 @@ public class GetApplicationListResponseBody extends TeaModel {
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     /**
@@ -80,7 +69,6 @@ public class GetApplicationListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
-        private String errorCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -90,14 +78,6 @@ public class GetApplicationListResponseBody extends TeaModel {
          */
         public Builder data(Data data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * ErrorCode.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
             return this;
         }
 
@@ -163,9 +143,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Status")
         private Long status;
 
-        @NameInMap("TagCount")
-        private Long tagCount;
-
         @NameInMap("UserId")
         private String userId;
 
@@ -179,7 +156,6 @@ public class GetApplicationListResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.source = builder.source;
             this.status = builder.status;
-            this.tagCount = builder.tagCount;
             this.userId = builder.userId;
         }
 
@@ -255,13 +231,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagCount
-         */
-        public Long getTagCount() {
-            return this.tagCount;
-        }
-
-        /**
          * @return userId
          */
         public String getUserId() {
@@ -278,7 +247,6 @@ public class GetApplicationListResponseBody extends TeaModel {
             private String regionId; 
             private String source; 
             private Long status; 
-            private Long tagCount; 
             private String userId; 
 
             /**
@@ -350,14 +318,6 @@ public class GetApplicationListResponseBody extends TeaModel {
              */
             public Builder status(Long status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * TagCount.
-             */
-            public Builder tagCount(Long tagCount) {
-                this.tagCount = tagCount;
                 return this;
             }
 
