@@ -18,7 +18,6 @@ public class CreateMyBaseRequest extends Request {
 
     @Query
     @NameInMap("ClientToken")
-    @Validation(required = true)
     private String clientToken;
 
     @Query
@@ -33,6 +32,22 @@ public class CreateMyBaseRequest extends Request {
     @NameInMap("ECSClassList")
     @Validation(required = true)
     private java.util.List < ECSClassList> ECSClassList;
+
+    @Query
+    @NameInMap("EcsDeploymentSetId")
+    private String ecsDeploymentSetId;
+
+    @Query
+    @NameInMap("EcsHostName")
+    private String ecsHostName;
+
+    @Query
+    @NameInMap("EcsInstanceName")
+    private String ecsInstanceName;
+
+    @Query
+    @NameInMap("EcsUniqueSuffix")
+    private String ecsUniqueSuffix;
 
     @Query
     @NameInMap("Engine")
@@ -66,7 +81,6 @@ public class CreateMyBaseRequest extends Request {
 
     @Query
     @NameInMap("Period")
-    @Validation(required = true)
     private String period;
 
     @Query
@@ -113,6 +127,10 @@ public class CreateMyBaseRequest extends Request {
         this.dedicatedHostGroupDescription = builder.dedicatedHostGroupDescription;
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
         this.ECSClassList = builder.ECSClassList;
+        this.ecsDeploymentSetId = builder.ecsDeploymentSetId;
+        this.ecsHostName = builder.ecsHostName;
+        this.ecsInstanceName = builder.ecsInstanceName;
+        this.ecsUniqueSuffix = builder.ecsUniqueSuffix;
         this.engine = builder.engine;
         this.imageId = builder.imageId;
         this.keyPairName = builder.keyPairName;
@@ -177,6 +195,34 @@ public class CreateMyBaseRequest extends Request {
      */
     public java.util.List < ECSClassList> getECSClassList() {
         return this.ECSClassList;
+    }
+
+    /**
+     * @return ecsDeploymentSetId
+     */
+    public String getEcsDeploymentSetId() {
+        return this.ecsDeploymentSetId;
+    }
+
+    /**
+     * @return ecsHostName
+     */
+    public String getEcsHostName() {
+        return this.ecsHostName;
+    }
+
+    /**
+     * @return ecsInstanceName
+     */
+    public String getEcsInstanceName() {
+        return this.ecsInstanceName;
+    }
+
+    /**
+     * @return ecsUniqueSuffix
+     */
+    public String getEcsUniqueSuffix() {
+        return this.ecsUniqueSuffix;
     }
 
     /**
@@ -297,6 +343,10 @@ public class CreateMyBaseRequest extends Request {
         private String dedicatedHostGroupDescription; 
         private String dedicatedHostGroupId; 
         private java.util.List < ECSClassList> ECSClassList; 
+        private String ecsDeploymentSetId; 
+        private String ecsHostName; 
+        private String ecsInstanceName; 
+        private String ecsUniqueSuffix; 
         private String engine; 
         private String imageId; 
         private String keyPairName; 
@@ -325,6 +375,10 @@ public class CreateMyBaseRequest extends Request {
             this.dedicatedHostGroupDescription = request.dedicatedHostGroupDescription;
             this.dedicatedHostGroupId = request.dedicatedHostGroupId;
             this.ECSClassList = request.ECSClassList;
+            this.ecsDeploymentSetId = request.ecsDeploymentSetId;
+            this.ecsHostName = request.ecsHostName;
+            this.ecsInstanceName = request.ecsInstanceName;
+            this.ecsUniqueSuffix = request.ecsUniqueSuffix;
             this.engine = request.engine;
             this.imageId = request.imageId;
             this.keyPairName = request.keyPairName;
@@ -362,7 +416,7 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
-         * 集群名称，未传则为空
+         * DedicatedHostGroupDescription.
          */
         public Builder dedicatedHostGroupDescription(String dedicatedHostGroupDescription) {
             this.putQueryParameter("DedicatedHostGroupDescription", dedicatedHostGroupDescription);
@@ -390,7 +444,43 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
-         * 引擎类型
+         * EcsDeploymentSetId.
+         */
+        public Builder ecsDeploymentSetId(String ecsDeploymentSetId) {
+            this.putQueryParameter("EcsDeploymentSetId", ecsDeploymentSetId);
+            this.ecsDeploymentSetId = ecsDeploymentSetId;
+            return this;
+        }
+
+        /**
+         * EcsHostName.
+         */
+        public Builder ecsHostName(String ecsHostName) {
+            this.putQueryParameter("EcsHostName", ecsHostName);
+            this.ecsHostName = ecsHostName;
+            return this;
+        }
+
+        /**
+         * EcsInstanceName.
+         */
+        public Builder ecsInstanceName(String ecsInstanceName) {
+            this.putQueryParameter("EcsInstanceName", ecsInstanceName);
+            this.ecsInstanceName = ecsInstanceName;
+            return this;
+        }
+
+        /**
+         * EcsUniqueSuffix.
+         */
+        public Builder ecsUniqueSuffix(String ecsUniqueSuffix) {
+            this.putQueryParameter("EcsUniqueSuffix", ecsUniqueSuffix);
+            this.ecsUniqueSuffix = ecsUniqueSuffix;
+            return this;
+        }
+
+        /**
+         * Engine.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -399,7 +489,7 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
-         * 镜像ID
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -498,7 +588,7 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
-         * 安全组ID
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

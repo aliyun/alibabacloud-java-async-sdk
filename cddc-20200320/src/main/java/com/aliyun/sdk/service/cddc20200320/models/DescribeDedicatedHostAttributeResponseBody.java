@@ -730,7 +730,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * VSwitch ID。
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;

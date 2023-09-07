@@ -75,6 +75,9 @@ public class CreateMyBaseResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
+        @NameInMap("DedicatedHostGroupName")
+        private String dedicatedHostGroupName;
+
         @NameInMap("ECSInstanceIds")
         private String ECSInstanceIds;
 
@@ -83,6 +86,7 @@ public class CreateMyBaseResponseBody extends TeaModel {
 
         private OrderListOrderList(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
+            this.dedicatedHostGroupName = builder.dedicatedHostGroupName;
             this.ECSInstanceIds = builder.ECSInstanceIds;
             this.orderId = builder.orderId;
         }
@@ -103,6 +107,13 @@ public class CreateMyBaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return dedicatedHostGroupName
+         */
+        public String getDedicatedHostGroupName() {
+            return this.dedicatedHostGroupName;
+        }
+
+        /**
          * @return ECSInstanceIds
          */
         public String getECSInstanceIds() {
@@ -118,6 +129,7 @@ public class CreateMyBaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTimestamp; 
+            private String dedicatedHostGroupName; 
             private String ECSInstanceIds; 
             private String orderId; 
 
@@ -126,6 +138,14 @@ public class CreateMyBaseResponseBody extends TeaModel {
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * DedicatedHostGroupName.
+             */
+            public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
+                this.dedicatedHostGroupName = dedicatedHostGroupName;
                 return this;
             }
 
