@@ -146,7 +146,11 @@ public class RefreshDBClusterStorageUsageRequest extends Request {
         }
 
         /**
-         * SyncRealTime.
+         * Specifies whether to enable real-time synchronization. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**: T + 1
          */
         public Builder syncRealTime(Boolean syncRealTime) {
             this.putQueryParameter("SyncRealTime", syncRealTime);

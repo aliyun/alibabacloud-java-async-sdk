@@ -100,7 +100,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -109,7 +109,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -118,7 +118,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see [Performance parameters](~~141787~~).
+         * <p>
+         * 
+         * >  You can specify a maximum of five performance metrics.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -127,7 +130,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -194,7 +194,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         private String topologies; 
 
         /**
-         * Comment.
+         * The description of a migration exception. If no exception occurs during the migration, an empty string is returned.
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -202,7 +202,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterEndpointList.
+         * The endpoints of the PolarDB cluster.
          */
         public Builder DBClusterEndpointList(java.util.List < DBClusterEndpointList> DBClusterEndpointList) {
             this.DBClusterEndpointList = DBClusterEndpointList;
@@ -210,7 +210,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -218,7 +218,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterReadWriteMode.
+         * The mode of the PolarDB cluster. Valid values:
+         * <p>
+         * 
+         * *   **rw**: read and write mode
+         * *   **ro**: read-only mode
          */
         public Builder DBClusterReadWriteMode(String DBClusterReadWriteMode) {
             this.DBClusterReadWriteMode = DBClusterReadWriteMode;
@@ -226,7 +230,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * DelayedSeconds.
+         * The replication latency between the ApsaraDB RDS instance and the PolarDB cluster. Unit: seconds.
          */
         public Builder delayedSeconds(Integer delayedSeconds) {
             this.delayedSeconds = delayedSeconds;
@@ -234,7 +238,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * DtsInstanceId.
+         * The ID of the synchronous task.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.dtsInstanceId = dtsInstanceId;
@@ -242,7 +246,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * The expiration time of the replication between ApsaraDB RDS and PolarDB. The time is in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -250,7 +254,16 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationStatus.
+         * The migration state of the PolarDB cluster. Valid values:
+         * <p>
+         * 
+         * *   **NO_MIGRATION**: No migration task is running.
+         * *   **RDS2POLARDB_CLONING**: Data is being replicated.
+         * *   **RDS2POLARDB_SYNCING**: Data is being replicated. During the replication, the PolarDB cluster is running in read-only mode and the source ApsaraDB RDS instance is running in read and write mode.
+         * *   **SWITCHING**: Databases are being switched.
+         * *   **POLARDB2RDS_SYNCING**: Databases are switched. The PolarDB cluster is running in read and write mode and the source ApsaraDB RDS instance is running in read-only mode. In this state, you can modify the endpoints for your applications.
+         * *   **ROLLBACK**: The migration is being rolled back. After the rollback is complete, the value **RDS2POLARDB_SYNCING** is returned.
+         * *   **CLOSING_MIGRATION**: The migration task is being terminated.
          */
         public Builder migrationStatus(String migrationStatus) {
             this.migrationStatus = migrationStatus;
@@ -258,7 +271,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * RdsEndpointList.
+         * The endpoints of the ApsaraDB RDS instance.
          */
         public Builder rdsEndpointList(java.util.List < RdsEndpointList> rdsEndpointList) {
             this.rdsEndpointList = rdsEndpointList;
@@ -266,7 +279,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * RdsReadWriteMode.
+         * The mode of the source ApsaraDB RDS instance. Valid values:
+         * <p>
+         * 
+         * *   **rw**: read and write mode
+         * *   **ro**: read-only mode
          */
         public Builder rdsReadWriteMode(String rdsReadWriteMode) {
             this.rdsReadWriteMode = rdsReadWriteMode;
@@ -274,7 +291,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +299,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * SourceRDSDBInstanceId.
+         * The ID of the source ApsaraDB RDS instance.
          */
         public Builder sourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
             this.sourceRDSDBInstanceId = sourceRDSDBInstanceId;
@@ -290,7 +307,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * SrcDbType.
+         * The type of the source database. Valid values:
+         * <p>
+         * 
+         * *   **PolarDBMySQL**: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.
+         * *   **RDS**: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.
          */
         public Builder srcDbType(String srcDbType) {
             this.srcDbType = srcDbType;
@@ -298,7 +319,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Topologies.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **RDS2POLARDB**: Data is replicated from an ApsaraDB RDS instance to a PolarDB cluster.
+         * *   **POLARDB2RDS**: Data is replicated from a PolarDB cluster to an ApsaraDB RDS instance.
          */
         public Builder topologies(String topologies) {
             this.topologies = topologies;
@@ -410,7 +435,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * ConnectionString.
+             * The connection string.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -418,7 +443,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the endpoint.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -426,7 +451,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Public**: the public endpoint
+             * *   **Private**: the internal endpoint (VPC)
+             * *   **Inner**: the internal endpoint (classic network)
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -434,7 +464,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -442,7 +472,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * SSLEnabled.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**
+             * *   **Disabled**
              */
             public Builder SSLEnabled(String SSLEnabled) {
                 this.SSLEnabled = SSLEnabled;
@@ -450,7 +484,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The VPC ID.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -458,7 +492,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -523,7 +557,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String endpointType; 
 
             /**
-             * AddressItems.
+             * Details about the endpoints.
              */
             public Builder addressItems(java.util.List < AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -531,7 +565,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointId.
+             * The ID of the endpoint.
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -539,7 +573,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Cluster**: the default cluster endpoint
+             * *   **Primary**: the primary endpoint
+             * *   **Custom**: the custom cluster endpoint
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -652,7 +691,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * ConnectionString.
+             * The connection string.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -660,7 +699,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the endpoint.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -668,7 +707,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Public**: the public endpoint
+             * *   **Private**: the internal endpoint (VPC)
+             * *   **Inner**: the internal endpoint (classic network)
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -676,7 +720,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -684,7 +728,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * SSLEnabled.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**
+             * *   **Disabled**
              */
             public Builder SSLEnabled(String SSLEnabled) {
                 this.SSLEnabled = SSLEnabled;
@@ -692,7 +740,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The VPC ID.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -700,7 +748,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -765,7 +813,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String endpointType; 
 
             /**
-             * AddressItems.
+             * Details about the endpoints.
              */
             public Builder addressItems(java.util.List < RdsEndpointListAddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -773,7 +821,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointId.
+             * The ID of the endpoint.
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -781,7 +829,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: the standard endpoint
+             * *   **ReadWriteSplitting**: the read/write splitting endpoint
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;

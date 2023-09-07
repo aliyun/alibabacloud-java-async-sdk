@@ -74,7 +74,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,7 +82,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * DBNodeIds.
+         * The details of the nodes.
          */
         public Builder DBNodeIds(java.util.List < String > DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -90,7 +90,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -98,7 +98,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

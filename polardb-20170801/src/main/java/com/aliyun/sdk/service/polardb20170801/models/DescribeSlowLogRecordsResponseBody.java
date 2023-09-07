@@ -110,7 +110,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -118,7 +118,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The type of the database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -126,7 +126,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details about slow query logs.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -134,7 +134,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -142,7 +142,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -150,7 +150,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of SQL statements.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -306,7 +306,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -314,7 +314,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeId.
+             * The ID of the node.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -322,7 +322,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionStartTime.
+             * The time when the SQL statement was executed. The time is in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -330,7 +330,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The IP address of the client that is used to connect to the database.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -338,7 +338,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LockTimes.
+             * The period of time during which the SQL statement was locked. Unit: seconds.
              */
             public Builder lockTimes(Long lockTimes) {
                 this.lockTimes = lockTimes;
@@ -346,7 +346,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseRowCounts.
+             * The number of rows parsed by the SQL statement.
              */
             public Builder parseRowCounts(Long parseRowCounts) {
                 this.parseRowCounts = parseRowCounts;
@@ -354,7 +354,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeMS.
+             * The time range for the query. Unit: milliseconds.
              */
             public Builder queryTimeMS(Long queryTimeMS) {
                 this.queryTimeMS = queryTimeMS;
@@ -362,7 +362,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimes.
+             * The amount of time that was consumed to execute the SQL statement. Unit: seconds.
              */
             public Builder queryTimes(Long queryTimes) {
                 this.queryTimes = queryTimes;
@@ -370,7 +370,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRowCounts.
+             * The number of rows returned by the SQL statement.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -378,7 +378,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The SQL statement that is executed in the query.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;

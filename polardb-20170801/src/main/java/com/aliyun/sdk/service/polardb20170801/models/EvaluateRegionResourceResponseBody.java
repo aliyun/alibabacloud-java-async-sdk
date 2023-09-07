@@ -74,7 +74,11 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 是否有足够的资源
+         * Indicates whether sufficient resources are available. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder DBInstanceAvailable(String DBInstanceAvailable) {
             this.DBInstanceAvailable = DBInstanceAvailable;
@@ -82,7 +86,12 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 引擎
+         * The type of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -90,7 +99,21 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 引擎版本
+         * The version of the database engine
+         * <p>
+         * 
+         * *   Valid values for the MySQL database engine:
+         * 
+         *     *   **5.6**
+         *     *   **5.7**
+         *     *   **8.0**
+         * 
+         * *   Valid values for the PostgreSQL database engine:
+         * 
+         *     *   **11**
+         *     *   **14**
+         * 
+         * *   Valid value for the Oracle database engine: **11**
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -98,7 +121,7 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

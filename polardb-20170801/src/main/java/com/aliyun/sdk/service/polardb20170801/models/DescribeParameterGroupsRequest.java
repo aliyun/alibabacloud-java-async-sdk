@@ -153,7 +153,7 @@ public class DescribeParameterGroupsRequest extends Request {
         } 
 
         /**
-         * DBType.
+         * The type of the database engine. Only **MySQL** is supported.
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -162,7 +162,12 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **5.6**
+         * *   **5.7**
+         * *   **8.0**
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -189,7 +194,10 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available for your account, such as the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +206,7 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the virtual node belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

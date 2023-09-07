@@ -126,7 +126,7 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +135,10 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         }
 
         /**
-         * MaintainTime.
+         * The maintenance window of the cluster. Specify the maintenance window in the `HH:mmZ-HH:mmZ` format. For example, the value `16:00Z-17:00Z` indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).
+         * <p>
+         *  
+         * >  The maintenance window must start on the hour and last for an hour.
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

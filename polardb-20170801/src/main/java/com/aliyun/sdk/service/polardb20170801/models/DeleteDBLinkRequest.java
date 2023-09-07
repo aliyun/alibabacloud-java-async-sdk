@@ -126,7 +126,10 @@ public class DeleteDBLinkRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the source cluster where a database link is to be deleted.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +138,7 @@ public class DeleteDBLinkRequest extends Request {
         }
 
         /**
-         * DBLinkName.
+         * The name of the database link to be deleted.
          */
         public Builder DBLinkName(String DBLinkName) {
             this.putQueryParameter("DBLinkName", DBLinkName);

@@ -50,7 +50,7 @@ public class OpenAITaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class OpenAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

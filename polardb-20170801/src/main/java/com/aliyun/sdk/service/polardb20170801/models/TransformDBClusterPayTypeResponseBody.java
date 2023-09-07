@@ -86,7 +86,11 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ChargeType.
+         * The billing method of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -94,7 +98,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -102,7 +106,10 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * The time when the cluster expires.
+         * <p>
+         * 
+         * >  This parameter is returned if you set the **PayType** parameter to **Prepaid**.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -110,7 +117,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -118,7 +125,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

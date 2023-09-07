@@ -50,7 +50,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The details of the backup task.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String taskAction; 
 
             /**
-             * BackupJobId.
+             * The ID of the backup task.
              */
             public Builder backupJobId(String backupJobId) {
                 this.backupJobId = backupJobId;
@@ -166,7 +166,15 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * BackupProgressStatus.
+             * The state of the backup task. Valid values:
+             * <p>
+             * 
+             * *   **NoStart**
+             * *   **Preparing**
+             * *   **Waiting**
+             * *   **Uploading**
+             * *   **Checking**
+             * *   **Finished**
              */
             public Builder backupProgressStatus(String backupProgressStatus) {
                 this.backupProgressStatus = backupProgressStatus;
@@ -174,7 +182,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * JobMode.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **Automated**
+             * *   **Manual**
              */
             public Builder jobMode(String jobMode) {
                 this.jobMode = jobMode;
@@ -182,7 +194,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The progress of the backup task in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -190,7 +202,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -198,7 +210,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAction.
+             * The type of the backup task. Valid values:
+             * <p>
+             * 
+             * *   **TempBackupTask**: The backup task is an adhoc backup task.
+             * *   **NormalBackupTask**: The backup task is a common backup task.
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;

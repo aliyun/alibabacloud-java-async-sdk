@@ -200,7 +200,7 @@ public class DescribeSlowLogsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -209,7 +209,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -218,7 +218,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the yyyy-MM-ddZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -245,7 +245,10 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: any non-zero positive integer.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +257,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 30 to 100. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +266,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +293,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

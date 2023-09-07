@@ -18,6 +18,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     private String createTime;
 
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
     @NameInMap("DBClusters")
     private java.util.List < DBClusters> DBClusters;
 
@@ -39,9 +42,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeGlobalDatabaseNetworkResponseBody(Builder builder) {
         this.connections = builder.connections;
         this.createTime = builder.createTime;
+        this.DBClusterId = builder.DBClusterId;
         this.DBClusters = builder.DBClusters;
         this.DBType = builder.DBType;
         this.DBVersion = builder.DBVersion;
@@ -49,6 +56,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         this.GDNId = builder.GDNId;
         this.GDNStatus = builder.GDNStatus;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -71,6 +79,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     /**
@@ -122,9 +137,17 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private java.util.List < Connections> connections; 
         private String createTime; 
+        private String DBClusterId; 
         private java.util.List < DBClusters> DBClusters; 
         private String DBType; 
         private String DBVersion; 
@@ -132,9 +155,10 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String GDNId; 
         private String GDNStatus; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
-         * Connections.
+         * The information about the connection to the cluster.
          */
         public Builder connections(java.util.List < Connections> connections) {
             this.connections = connections;
@@ -142,7 +166,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time at which the GDN was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -150,7 +174,15 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusters.
+         * The ID of the cluster.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * The clusters that are included in the GDN.
          */
         public Builder DBClusters(java.util.List < DBClusters> DBClusters) {
             this.DBClusters = DBClusters;
@@ -158,7 +190,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * The type of the database engine. Only MySQL is supported.
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -166,7 +198,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine. Only version 8.0 is supported.
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -174,7 +206,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * GDNDescription.
+         * The description of the GDN. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   It cannot start with `http://` or `https://`.
+         * *   It must start with a letter.
+         * *   It can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   It must be 2 to 126 characters in length.
          */
         public Builder GDNDescription(String GDNDescription) {
             this.GDNDescription = GDNDescription;
@@ -182,7 +220,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * GDNId.
+         * The ID of the GDN.
          */
         public Builder GDNId(String GDNId) {
             this.GDNId = GDNId;
@@ -190,7 +228,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * GDNStatus.
+         * The status of the GDN. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The GDN is being created.
+         * *   **active**: The GDN is running.
+         * *   **deleting**: The GDN is being deleted.
+         * *   **locked**: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.
+         * *   **removing_member**: The secondary cluster is being removed from the GDN.
          */
         public Builder GDNStatus(String GDNStatus) {
             this.GDNStatus = GDNStatus;
@@ -198,10 +243,18 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -262,7 +315,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * ConnectionString.
+             * The URL of the endpoint.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -270,7 +323,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -278,7 +331,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the endpoint.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -415,7 +468,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreationTime.
+             * The time when the node was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -423,7 +476,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeClass.
+             * The specifications of the node in the cluster.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -431,7 +484,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeId.
+             * The ID of the node.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -439,7 +492,11 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeRole.
+             * The role of the node. Valid values:
+             * <p>
+             * 
+             * *   **Writer**: The node is the primary node.
+             * *   **Reader**: The node is a read-only node.
              */
             public Builder DBNodeRole(String DBNodeRole) {
                 this.DBNodeRole = DBNodeRole;
@@ -447,7 +504,22 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStatus.
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The cluster is being created.
+             * *   **Running**: The cluster is running.
+             * *   **Deleting**: The cluster is being deleted.
+             * *   **Rebooting**: The cluster is restarting.
+             * *   **DBNodeCreating**: PolarProxy is being added.
+             * *   **DBNodeDeleting**: PolarProxy is being deleted.
+             * *   **ClassChanging**: The specifications of PolarProxy are being changed.
+             * *   **NetAddressCreating**: The network connection is being created.
+             * *   **NetAddressDeleting**: The network connection is being deleted.
+             * *   **NetAddressModifying**: The network connection is being modified.
+             * *   **MinorVersionUpgrading**: The minor version is being updated.
+             * *   **Maintaining**: The cluster is being maintained.
+             * *   **Switching**: A failover is being performed.
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
                 this.DBNodeStatus = DBNodeStatus;
@@ -455,7 +527,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * FailoverPriority.
+             * The priority of failover. Each node is assigned a failover priority. If a failover occurs, a node can be selected as the primary node based on the priority. A larger value indicates a higher priority. Valid values: 1 to 15.
              */
             public Builder failoverPriority(Integer failoverPriority) {
                 this.failoverPriority = failoverPriority;
@@ -463,7 +535,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnections.
+             * The maximum number of concurrent connections to the cluster.
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -471,7 +543,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIOPS.
+             * The maximum input/output operations per second (IOPS).
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -479,7 +551,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the cluster.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -676,7 +748,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String storageUsed; 
 
             /**
-             * DBClusterDescription.
+             * The description of the cluster.
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -684,7 +756,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster in the GDN.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -692,7 +764,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterStatus.
+             * The status of the cluster in the GDN. For more information, see [Cluster status table](~~99286~~).
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -700,7 +772,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeClass.
+             * The specifications of the node in the cluster.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -708,7 +780,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodes.
+             * The details of the node.
              */
             public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
                 this.DBNodes = DBNodes;
@@ -716,7 +788,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * The type of the database engine. Only MySQL is supported.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -724,7 +796,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine. Only version 8.0 is supported.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -732,7 +804,10 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The expiration time of the cluster.
+             * <p>
+             * 
+             * > A specific value is returned only for subscription (**Prepaid**) clusters. For pay-as-you-go (**Postpaid**) clusters, an empty string is returned.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -740,7 +815,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * Indicates whether the cluster is expired. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * > This parameter is returned only for subscription (**Prepaid**) clusters.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -748,7 +829,11 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Postpaid**: pay-as-you-go.
+             * *   **Prepaid**: subscription.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -756,7 +841,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the cluster resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -764,7 +849,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaLag.
+             * The latency of cross-region data replication between the primary cluster and secondary clusters. Unit: seconds.
              */
             public Builder replicaLag(String replicaLag) {
                 this.replicaLag = replicaLag;
@@ -772,7 +857,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Primary**: the primary cluster
+             * *   **standby**: the secondary cluster
+             * 
+             * > A GDN consists of one primary cluster and up to four secondary clusters.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -780,7 +871,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsed.
+             * The storage space that is occupied by the cluster. Unit: bytes.
              */
             public Builder storageUsed(String storageUsed) {
                 this.storageUsed = storageUsed;

@@ -62,7 +62,7 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         private String SQLCollectorStatus; 
 
         /**
-         * DBClusterId.
+         * The IDs of the clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SQLCollectorStatus.
+         * Indicates whether the SQL Explorer feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disabled**
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.SQLCollectorStatus = SQLCollectorStatus;

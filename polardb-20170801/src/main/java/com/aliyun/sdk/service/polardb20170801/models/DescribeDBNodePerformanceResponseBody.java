@@ -110,7 +110,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBNodeId.
+         * The ID of the cluster node.
          */
         public Builder DBNodeId(String DBNodeId) {
             this.DBNodeId = DBNodeId;
@@ -118,7 +118,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * The type of the database engine.
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -126,7 +126,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine.
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -134,7 +134,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +142,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * The cluster performance metrics.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -150,7 +150,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -210,7 +210,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Timestamp.
+             * The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -218,7 +218,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -324,7 +324,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             private Points points; 
 
             /**
-             * Measurement.
+             * The performance metrics that you want to query.
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -332,7 +332,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The name of the performance metric.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -340,7 +340,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * The performance metrics.
              */
             public Builder points(Points points) {
                 this.points = points;

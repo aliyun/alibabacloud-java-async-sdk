@@ -74,7 +74,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The result data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned for the request.
+         * <p>
+         * 
+         * >  If the request is successful, **Successful** is returned. If the request fails, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -270,7 +273,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Action.
+             * The type of the scheduled tasks.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -278,7 +281,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -286,7 +289,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbClusterDescription.
+             * The description of the cluster.
              */
             public Builder dbClusterDescription(String dbClusterDescription) {
                 this.dbClusterDescription = dbClusterDescription;
@@ -294,7 +297,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbClusterStatus.
+             * The state of the cluster.
              */
             public Builder dbClusterStatus(String dbClusterStatus) {
                 this.dbClusterStatus = dbClusterStatus;
@@ -302,7 +305,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ID of the order.
+             * <p>
+             * 
+             * >  This parameter is returned only when you set the `Action` parameter to **CreateDBNodes** or **ModifyDBNodeClass**.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -310,7 +316,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PlannedEndTime.
+             * The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
              */
             public Builder plannedEndTime(String plannedEndTime) {
                 this.plannedEndTime = plannedEndTime;
@@ -318,7 +324,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PlannedStartTime.
+             * The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
              */
             public Builder plannedStartTime(String plannedStartTime) {
                 this.plannedStartTime = plannedStartTime;
@@ -326,7 +332,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PlannedTime.
+             * The expected start time of the task. The time is displayed in UTC.
              */
             public Builder plannedTime(String plannedTime) {
                 this.plannedTime = plannedTime;
@@ -334,7 +340,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region in which the scheduled task runs.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -342,7 +348,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the scheduled task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +356,11 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCancel.
+             * Indicates whether the scheduled task can be canceled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder taskCancel(Boolean taskCancel) {
                 this.taskCancel = taskCancel;
@@ -358,7 +368,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -435,7 +445,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             private Integer totalRecordCount; 
 
             /**
-             * PageNumber.
+             * The page number of the page returned.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -443,7 +453,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -451,7 +461,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TimerInfos.
+             * The details of the scheduled task.
              */
             public Builder timerInfos(java.util.List < TimerInfos> timerInfos) {
                 this.timerInfos = timerInfos;
@@ -459,7 +469,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRecordCount.
+             * The total number of entries returned.
              */
             public Builder totalRecordCount(Integer totalRecordCount) {
                 this.totalRecordCount = totalRecordCount;

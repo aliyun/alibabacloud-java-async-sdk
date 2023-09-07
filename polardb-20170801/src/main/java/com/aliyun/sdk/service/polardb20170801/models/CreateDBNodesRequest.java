@@ -27,6 +27,10 @@ public class CreateDBNodesRequest extends Request {
     private java.util.List < DBNode> DBNode;
 
     @Query
+    @NameInMap("DBNodeType")
+    private String DBNodeType;
+
+    @Query
     @NameInMap("EndpointBindList")
     private String endpointBindList;
 
@@ -67,6 +71,7 @@ public class CreateDBNodesRequest extends Request {
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.DBNode = builder.DBNode;
+        this.DBNodeType = builder.DBNodeType;
         this.endpointBindList = builder.endpointBindList;
         this.imciSwitch = builder.imciSwitch;
         this.ownerAccount = builder.ownerAccount;
@@ -110,6 +115,13 @@ public class CreateDBNodesRequest extends Request {
      */
     public java.util.List < DBNode> getDBNode() {
         return this.DBNode;
+    }
+
+    /**
+     * @return DBNodeType
+     */
+    public String getDBNodeType() {
+        return this.DBNodeType;
     }
 
     /**
@@ -179,6 +191,7 @@ public class CreateDBNodesRequest extends Request {
         private String clientToken; 
         private String DBClusterId; 
         private java.util.List < DBNode> DBNode; 
+        private String DBNodeType; 
         private String endpointBindList; 
         private String imciSwitch; 
         private String ownerAccount; 
@@ -198,6 +211,7 @@ public class CreateDBNodesRequest extends Request {
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.DBNode = request.DBNode;
+            this.DBNodeType = request.DBNodeType;
             this.endpointBindList = request.endpointBindList;
             this.imciSwitch = request.imciSwitch;
             this.ownerAccount = request.ownerAccount;
@@ -210,7 +224,7 @@ public class CreateDBNodesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -219,7 +233,7 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -228,7 +242,7 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * DBNode.
+         * The details of the read-only node.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             this.putQueryParameter("DBNode", DBNode);
@@ -237,7 +251,24 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * EndpointBindList.
+         * The type of the node. Valid values:
+         * <p>
+         * 
+         * *   RO
+         * *   STANDBY
+         */
+        public Builder DBNodeType(String DBNodeType) {
+            this.putQueryParameter("DBNodeType", DBNodeType);
+            this.DBNodeType = DBNodeType;
+            return this;
+        }
+
+        /**
+         * The ID of the cluster endpoint to which the read-only node is added. If you want to add the read-only node to multiple endpoints at the same time, separate the endpoint IDs with commas (,).
+         * <p>
+         * > - You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query the details of cluster endpoints, including endpoint IDs.
+         * >- You can enter the ID of the default cluster endpoint or a custom cluster endpoint.
+         * >- If you leave this parameter empty, the read-only node is added to all cluster endpoints for which the **Automatically Associate New Nodes** feature is enabled. If you set `AutoAddNewNodes` to `Enable`, the Automatically Associate New Nodes feature is enabled.
          */
         public Builder endpointBindList(String endpointBindList) {
             this.putQueryParameter("EndpointBindList", endpointBindList);
@@ -246,7 +277,13 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * ImciSwitch.
+         * Specifies whether to enable the In-Memory Column Index (IMCI) feature. Default value: OFF. Valid values:
+         * <p>
+         * 
+         * *   **ON**
+         * *   **OFF**
+         * 
+         * > This parameter is invalid for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.
          */
         public Builder imciSwitch(String imciSwitch) {
             this.putQueryParameter("ImciSwitch", imciSwitch);
@@ -273,7 +310,11 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * >- The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
+         * >- If you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -282,7 +323,11 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * >- The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
+         * >- If you leave this parameter empty, the task for adding the read-only node is immediately run by default.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -291,7 +336,7 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -363,7 +408,16 @@ public class CreateDBNodesRequest extends Request {
             private String zoneId; 
 
             /**
-             * TargetClass.
+             * The specifications of the read-only node that you want to add, which must be the same as the specifications of the existing nodes. For more information, see the following topics:
+             * <p>
+             * 
+             * *   PolarDB for MySQL: [Specifications of compute nodes](~~102542~~)
+             * *   PolarDB for PostgreSQL (Compatible with Oracle): [Specifications of compute nodes](~~207921~~)
+             * *   PolarDB for PostgreSQL: [Specifications of compute nodes](~~209380~~)
+             * 
+             * >- You need to specify either DBNode.N.ZoneId or DBNode.N.TargetClass. N is an integer that starts from 1. The maximum value of N is equal to 16 minus the number of existing nodes.
+             * >- You can add multiple read-only nodes at the same time only to PolarDB for MySQL clusters, which can contain up to of 15 read-only nodes.
+             * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
              */
             public Builder targetClass(String targetClass) {
                 this.targetClass = targetClass;
@@ -371,7 +425,12 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the node that you want to add, which must be the same as the zone ID of existing nodes. You can call the [DescribeRegions](~~98041~~) operation to query the IDs of zones.
+             * <p>
+             * 
+             * >- You need to specify either DBNode.N.ZoneId or DBNode.N.TargetClass. N is an integer that starts from 1. The maximum value of N is equal to 16 minus the number of existing nodes.
+             * >- You can add multiple read-only nodes at the same time only to PolarDB for MySQL clusters, which can contain up to of 15 read-only nodes.
+             * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

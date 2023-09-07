@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterParametersResponseBody</p>
  */
 public class DescribeDBClusterParametersResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
     @NameInMap("DBType")
     private String DBType;
 
@@ -21,6 +24,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     @NameInMap("Engine")
     private String engine;
 
+    @NameInMap("ParameterNumbers")
+    private String parameterNumbers;
+
+    @NameInMap("Parameters")
+    private Parameters parameters;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -28,9 +37,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     private RunningParameters runningParameters;
 
     private DescribeDBClusterParametersResponseBody(Builder builder) {
+        this.DBClusterId = builder.DBClusterId;
         this.DBType = builder.DBType;
         this.DBVersion = builder.DBVersion;
         this.engine = builder.engine;
+        this.parameterNumbers = builder.parameterNumbers;
+        this.parameters = builder.parameters;
         this.requestId = builder.requestId;
         this.runningParameters = builder.runningParameters;
     }
@@ -41,6 +53,13 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     public static DescribeDBClusterParametersResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     /**
@@ -65,6 +84,20 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     }
 
     /**
+     * @return parameterNumbers
+     */
+    public String getParameterNumbers() {
+        return this.parameterNumbers;
+    }
+
+    /**
+     * @return parameters
+     */
+    public Parameters getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -79,14 +112,30 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBClusterId; 
         private String DBType; 
         private String DBVersion; 
         private String engine; 
+        private String parameterNumbers; 
+        private Parameters parameters; 
         private String requestId; 
         private RunningParameters runningParameters; 
 
         /**
-         * DBType.
+         * The ID of the cluster.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * The database engine that the cluster runs. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -94,7 +143,15 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine. 
+         * <p>
+         * 
+         * - Valid values for the MySQL database engine:    - **5.6**
+         *   - **5.7**
+         *   - **8.0**
+         * - Valid value for the PostgreSQL database engine:    - **11**
+         *   - **14**
+         * - Valid value for the Oracle database engine: **11**
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -102,7 +159,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The cluster engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -110,7 +167,23 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of parameters.
+         */
+        public Builder parameterNumbers(String parameterNumbers) {
+            this.parameterNumbers = parameterNumbers;
+            return this;
+        }
+
+        /**
+         * A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+         */
+        public Builder parameters(Parameters parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +191,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RunningParameters.
+         * The parameters that are in use.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -131,6 +204,248 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     } 
 
+    public static class ParametersParameters extends TeaModel {
+        @NameInMap("IsEqual")
+        private String isEqual;
+
+        @NameInMap("distParameterDescription")
+        private String distParameterDescription;
+
+        @NameInMap("distParameterName")
+        private String distParameterName;
+
+        @NameInMap("distParameterOptional")
+        private String distParameterOptional;
+
+        @NameInMap("distParameterValue")
+        private String distParameterValue;
+
+        @NameInMap("rdsParameterDescription")
+        private String rdsParameterDescription;
+
+        @NameInMap("rdsParameterName")
+        private String rdsParameterName;
+
+        @NameInMap("rdsParameterOptional")
+        private String rdsParameterOptional;
+
+        @NameInMap("rdsParameterValue")
+        private String rdsParameterValue;
+
+        private ParametersParameters(Builder builder) {
+            this.isEqual = builder.isEqual;
+            this.distParameterDescription = builder.distParameterDescription;
+            this.distParameterName = builder.distParameterName;
+            this.distParameterOptional = builder.distParameterOptional;
+            this.distParameterValue = builder.distParameterValue;
+            this.rdsParameterDescription = builder.rdsParameterDescription;
+            this.rdsParameterName = builder.rdsParameterName;
+            this.rdsParameterOptional = builder.rdsParameterOptional;
+            this.rdsParameterValue = builder.rdsParameterValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParametersParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isEqual
+         */
+        public String getIsEqual() {
+            return this.isEqual;
+        }
+
+        /**
+         * @return distParameterDescription
+         */
+        public String getDistParameterDescription() {
+            return this.distParameterDescription;
+        }
+
+        /**
+         * @return distParameterName
+         */
+        public String getDistParameterName() {
+            return this.distParameterName;
+        }
+
+        /**
+         * @return distParameterOptional
+         */
+        public String getDistParameterOptional() {
+            return this.distParameterOptional;
+        }
+
+        /**
+         * @return distParameterValue
+         */
+        public String getDistParameterValue() {
+            return this.distParameterValue;
+        }
+
+        /**
+         * @return rdsParameterDescription
+         */
+        public String getRdsParameterDescription() {
+            return this.rdsParameterDescription;
+        }
+
+        /**
+         * @return rdsParameterName
+         */
+        public String getRdsParameterName() {
+            return this.rdsParameterName;
+        }
+
+        /**
+         * @return rdsParameterOptional
+         */
+        public String getRdsParameterOptional() {
+            return this.rdsParameterOptional;
+        }
+
+        /**
+         * @return rdsParameterValue
+         */
+        public String getRdsParameterValue() {
+            return this.rdsParameterValue;
+        }
+
+        public static final class Builder {
+            private String isEqual; 
+            private String distParameterDescription; 
+            private String distParameterName; 
+            private String distParameterOptional; 
+            private String distParameterValue; 
+            private String rdsParameterDescription; 
+            private String rdsParameterName; 
+            private String rdsParameterOptional; 
+            private String rdsParameterValue; 
+
+            /**
+             * Indicates whether the source parameters and current parameters have the same value.
+             */
+            public Builder isEqual(String isEqual) {
+                this.isEqual = isEqual;
+                return this;
+            }
+
+            /**
+             * The description of the parameter of the current cluster.
+             */
+            public Builder distParameterDescription(String distParameterDescription) {
+                this.distParameterDescription = distParameterDescription;
+                return this;
+            }
+
+            /**
+             * The name of the parameter of the current cluster.
+             */
+            public Builder distParameterName(String distParameterName) {
+                this.distParameterName = distParameterName;
+                return this;
+            }
+
+            /**
+             * The valid values of the parameter of the current cluster.
+             */
+            public Builder distParameterOptional(String distParameterOptional) {
+                this.distParameterOptional = distParameterOptional;
+                return this;
+            }
+
+            /**
+             * The value of the parameter of the current cluster.
+             */
+            public Builder distParameterValue(String distParameterValue) {
+                this.distParameterValue = distParameterValue;
+                return this;
+            }
+
+            /**
+             * The description of the parameter of the source instance.
+             */
+            public Builder rdsParameterDescription(String rdsParameterDescription) {
+                this.rdsParameterDescription = rdsParameterDescription;
+                return this;
+            }
+
+            /**
+             * The name of the parameter of the source instance.
+             */
+            public Builder rdsParameterName(String rdsParameterName) {
+                this.rdsParameterName = rdsParameterName;
+                return this;
+            }
+
+            /**
+             * The valid values of the parameter of the source instance.
+             */
+            public Builder rdsParameterOptional(String rdsParameterOptional) {
+                this.rdsParameterOptional = rdsParameterOptional;
+                return this;
+            }
+
+            /**
+             * The value of the parameter of the source instance.
+             */
+            public Builder rdsParameterValue(String rdsParameterValue) {
+                this.rdsParameterValue = rdsParameterValue;
+                return this;
+            }
+
+            public ParametersParameters build() {
+                return new ParametersParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class Parameters extends TeaModel {
+        @NameInMap("Parameters")
+        private java.util.List < ParametersParameters> parameters;
+
+        private Parameters(Builder builder) {
+            this.parameters = builder.parameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameters
+         */
+        public java.util.List < ParametersParameters> getParameters() {
+            return this.parameters;
+        }
+
+        public static final class Builder {
+            private java.util.List < ParametersParameters> parameters; 
+
+            /**
+             * A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+             */
+            public Builder parameters(java.util.List < ParametersParameters> parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
+            } 
+
+        } 
+
+    }
     public static class Parameter extends TeaModel {
         @NameInMap("CheckingCode")
         private String checkingCode;
@@ -290,7 +605,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -298,7 +613,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The data type of the parameter value. Valid values:
+             * <p>
+             * 
+             * *   **INT**
+             * *   **STRING**
+             * *   **B**
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -306,7 +626,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultParameterValue.
+             * The default value of the parameter.
              */
             public Builder defaultParameterValue(String defaultParameterValue) {
                 this.defaultParameterValue = defaultParameterValue;
@@ -314,7 +634,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Factor.
+             * A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.
              */
             public Builder factor(String factor) {
                 this.factor = factor;
@@ -322,7 +642,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:
+             * <p>
+             * 
+             * *   **false**
+             * *   **true**
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -330,7 +654,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsModifiable.
+             * Indicates whether the parameter can be modified. Valid values:
+             * <p>
+             * 
+             * *   **false**
+             * *   **true**
              */
             public Builder isModifiable(Boolean isModifiable) {
                 this.isModifiable = isModifiable;
@@ -338,7 +666,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsNodeAvailable.
+             * Indicates whether the parameter is a global parameter. Valid values:
+             * <p>
+             * 
+             * *   **0**: yes. The modified parameter value is synchronized to other nodes.
+             * *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -346,7 +678,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParamRelyRule.
+             * The dependencies of the parameter.
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -354,7 +686,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -362,7 +694,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -370,7 +702,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterStatus.
+             * The status of the parameter. Valid values:
+             * <p>
+             * 
+             * *   **Normal**
+             * *   **Modifying**
              */
             public Builder parameterStatus(String parameterStatus) {
                 this.parameterStatus = parameterStatus;
@@ -378,7 +714,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

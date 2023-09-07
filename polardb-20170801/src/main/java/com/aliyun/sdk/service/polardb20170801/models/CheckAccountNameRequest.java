@@ -126,7 +126,7 @@ public class CheckAccountNameRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,7 +135,10 @@ public class CheckAccountNameRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

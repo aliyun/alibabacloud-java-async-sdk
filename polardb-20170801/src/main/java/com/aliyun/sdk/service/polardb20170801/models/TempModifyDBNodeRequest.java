@@ -185,7 +185,7 @@ public class TempModifyDBNodeRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,7 +194,7 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * 实例Id
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -203,7 +203,7 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * DBNode.
+         * The information of the added node.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             this.putQueryParameter("DBNode", DBNode);
@@ -212,7 +212,7 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * 变更类型
+         * The type of configuration change. Set the value to **TempUpgrade**.
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -221,7 +221,11 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * 操作类型（Add:增加节点; Modify:变配）
+         * The type of operation performed on the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Add**: add one or more nodes to the cluster.
+         * *   **Modify**: temporarily upgrade the configuration of the cluster.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -266,7 +270,10 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * 变更还原时间(说明：还原时间不能早于当前时间推后1小时，不能晚于集群到期时间的前1天)
+         * The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.
+         * <p>
+         * 
+         * >  The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -320,7 +327,10 @@ public class TempModifyDBNodeRequest extends Request {
             private String zoneId; 
 
             /**
-             * TargetClass.
+             * The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.
+             * <p>
+             * 
+             * >  You can call the [DescribeDBClusters](~~98094~~) operation to view the instance types of original nodes.
              */
             public Builder targetClass(String targetClass) {
                 this.targetClass = targetClass;
@@ -328,7 +338,7 @@ public class TempModifyDBNodeRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

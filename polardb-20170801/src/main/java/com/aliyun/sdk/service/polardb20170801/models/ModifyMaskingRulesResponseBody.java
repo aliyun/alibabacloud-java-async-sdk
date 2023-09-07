@@ -62,7 +62,10 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Message.
+         * The message that is returned for the request.
+         * <p>
+         * 
+         * > If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -70,7 +73,7 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,11 @@ public class ModifyMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid value:
+         * <p>
+         * 
+         * *   **true**:
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

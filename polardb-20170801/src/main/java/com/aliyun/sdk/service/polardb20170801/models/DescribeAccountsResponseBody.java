@@ -74,7 +74,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Accounts.
+         * The details of the account.
          */
         public Builder accounts(java.util.List < Accounts> accounts) {
             this.accounts = accounts;
@@ -82,7 +82,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +90,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -98,7 +98,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String DBName; 
 
             /**
-             * AccountPrivilege.
+             * The permissions that the account is granted on the database. Valid values:
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -158,7 +158,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -283,7 +283,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private java.util.List < DatabasePrivileges> databasePrivileges; 
 
             /**
-             * AccountDescription.
+             * The description of the account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -291,7 +291,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountLockState.
+             * The locking state of the account. Valid values:
+             * <p>
+             * 
+             * *   **UnLock**
+             * *   **Lock**
              */
             public Builder accountLockState(String accountLockState) {
                 this.accountLockState = accountLockState;
@@ -299,7 +303,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -307,7 +311,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPassword.
+             * The password of the account that is used to log on to the database.
              */
             public Builder accountPassword(String accountPassword) {
                 this.accountPassword = accountPassword;
@@ -315,7 +319,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPasswordValidTime.
+             * The validity period of the password.
              */
             public Builder accountPasswordValidTime(String accountPasswordValidTime) {
                 this.accountPasswordValidTime = accountPasswordValidTime;
@@ -323,7 +327,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The state of the account. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The account is being created.
+             * *   **Available**: The account is available.
+             * *   **Deleting**: The account is being deleted
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -331,7 +340,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * The type of the account. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: a standard account
+             * *   **Super**: a privileged account
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -339,7 +352,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePrivileges.
+             * The list of database permissions that are granted to the account.
              */
             public Builder databasePrivileges(java.util.List < DatabasePrivileges> databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;

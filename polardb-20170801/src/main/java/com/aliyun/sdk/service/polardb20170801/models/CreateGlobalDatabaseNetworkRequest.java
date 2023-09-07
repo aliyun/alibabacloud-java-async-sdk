@@ -176,7 +176,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the primary cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -185,7 +185,13 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * GDNDescription.
+         * The description of the GDN. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   It cannot start with [http:// or https://.](http://https://。)
+         * *   It must start with a letter.
+         * *   It can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   It must be 2 to 126 characters in length.
          */
         public Builder GDNDescription(String GDNDescription) {
             this.putQueryParameter("GDNDescription", GDNDescription);
@@ -212,7 +218,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

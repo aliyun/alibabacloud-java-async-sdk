@@ -221,7 +221,13 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * IsHistory.
+         * Specifies whether to return the historical tasks. Valid values:
+         * <p>
+         * 
+         * *   **0**: returns the current task.
+         * *   **1**: returns the historical tasks.
+         * 
+         * Default value: **0**.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -248,7 +254,7 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -257,7 +263,10 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **30**, **50**, or **100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +275,10 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID of the pending event. You can call the [DescribeRegions](~~98041~~) operation to query the regions and zones that are supported by PolarDB.
+         * <p>
+         * >- You can set this parameter to **all** to view all pending events within your account.
+         * >- If you set `Region` to **all**, you must set `TaskType` to **all**.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -275,7 +287,7 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -311,7 +323,16 @@ public class DescribePendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The task type of pending events. Valid values:
+         * <p>
+         * 
+         * *   **DatabaseSoftwareUpgrading**: database software upgrades
+         * *   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades
+         * *   **DatabaseStorageUpgrading**: database storage upgrades
+         * *   **DatabaseProxyUpgrading**: minor version upgrades of the proxy
+         * *   **all**: queries the details of the pending events of all preceding types.
+         * 
+         * > If the `Region` parameter is set to **all**, the `TaskType` parameter must be set to **all**.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

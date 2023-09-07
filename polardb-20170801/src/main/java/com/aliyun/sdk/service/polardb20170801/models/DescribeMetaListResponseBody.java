@@ -118,7 +118,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The details of databases and tables that can be restored.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -126,7 +126,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageCount.
+         * The total number of returned pages.
          */
         public Builder totalPageCount(String totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -158,7 +158,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries.
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -210,7 +210,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             private java.util.List < String > tables; 
 
             /**
-             * Database.
+             * The name of the database that can be restored.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -218,7 +218,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * The name of the table that can be restored.
              */
             public Builder tables(java.util.List < String > tables) {
                 this.tables = tables;

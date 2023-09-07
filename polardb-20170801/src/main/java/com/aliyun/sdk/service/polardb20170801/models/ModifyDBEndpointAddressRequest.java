@@ -197,7 +197,12 @@ public class ModifyDBEndpointAddressRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the new endpoint. The prefix must meet the following requirements:
+         * <p>
+         * 
+         * *   It can contain lowercase letters, digits, and hyphens (-).
+         * *   It must start with a letter and end with a digit or a letter.
+         * *   It must be 6 to 30 characters in length.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -206,7 +211,10 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -215,7 +223,10 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * The ID of the endpoint.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint IDs.
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -224,7 +235,11 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Public**
+         * *   **Private**
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -251,7 +266,10 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number. Valid values: 3000 to 5999.
+         * <p>
+         * 
+         * > This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -260,7 +278,15 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * PrivateZoneAddressPrefix.
+         * The prefix of the private domain name. The prefix must meet the following requirements:
+         * <p>
+         * 
+         * *   The prefix can contain lowercase letters, digits, and hyphens (-).
+         * *   The prefix must start with a letter and end with a digit or a letter.
+         * *   The prefix must be 6 to 30 characters in length.
+         * 
+         * >- You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see [Pricing](~~71338~~).
+         * >- This parameter takes effect only if you set **NetType** to Private.
          */
         public Builder privateZoneAddressPrefix(String privateZoneAddressPrefix) {
             this.putQueryParameter("PrivateZoneAddressPrefix", privateZoneAddressPrefix);
@@ -269,7 +295,10 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * PrivateZoneName.
+         * The name of the private zone.
+         * <p>
+         * 
+         * > This parameter takes effect only when **NetType** is set to Private.
          */
         public Builder privateZoneName(String privateZoneName) {
             this.putQueryParameter("PrivateZoneName", privateZoneName);

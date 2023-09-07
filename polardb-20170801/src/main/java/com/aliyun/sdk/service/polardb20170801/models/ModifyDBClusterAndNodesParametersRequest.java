@@ -195,7 +195,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -204,9 +204,10 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         }
 
         /**
-         * 1、修改多个指定节点的参数，以‘，’分割。，修改此集群的集群参数和指定节点的参数
+         * The node ID. You can set this parameter to modify the parameters of a specified node or of the cluster. Separate multiple node IDs with commas (,).
          * <p>
-         * 2、当为空时，说明没有指定，则只修改集群参数。
+         * 
+         * > If you do not specify this parameter, only the cluster parameters are modified.
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -215,7 +216,11 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         }
 
         /**
-         * 立即执行或定时执行修改参数并重启取值：  false（默认值）：定时执行 true：立即执行
+         * Specifies an immediate or scheduled task to modify parameters and restart the cluster. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **false**: runs the kernel upgrade task in a scheduled manner.
+         * *   **true**: immediately runs the kernel upgrade task.
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -242,7 +247,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         }
 
         /**
-         * 参数模板ID。
+         * The ID of the parameter template that is used for the instance.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -251,7 +256,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         }
 
         /**
-         * 参数及其值的JSON串，参数的值都是字符串类型，例如{"wait_timeout":"86","innodb_old_blocks_time":"10"}
+         * The JSON string for the parameter and its value.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -260,7 +265,14 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         }
 
         /**
-         * 开始执行目标定时任务的最晚时间。格式为YYYY-MM-DDThh:mm:ssZ（UTC）。
+         * The latest start time to run the task. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.
+         * 
+         * *   By default, if you specify the `PlannedStartTime` parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: `Value of the PlannedEndTime parameter + 30 minutes`. For example, if you set the `PlannedStartTime` parameter to `2021-01-14T09:00:00Z` and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -269,7 +281,14 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         }
 
         /**
-         * 开始执行定时（即在目标时间段内执行）内核版本升级任务的最早时间。格式为YYYY-MM-DDThh:mm:ssZ（UTC）。
+         * The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.
+         * 
+         * *   If this parameter is empty, the upgrade task is immediately performed.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);

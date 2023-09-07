@@ -125,7 +125,10 @@ public class DescribeDBLinksRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster for which you want to query the database links.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,7 +137,7 @@ public class DescribeDBLinksRequest extends Request {
         }
 
         /**
-         * DBLinkName.
+         * The name of the database link. If you leave this parameter empty, the system returns all the database links.
          */
         public Builder DBLinkName(String DBLinkName) {
             this.putQueryParameter("DBLinkName", DBLinkName);

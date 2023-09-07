@@ -191,7 +191,10 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup set.
+         * <p>
+         * 
+         * >  You must specify this parameter if you need to restore a database or a table by using a backup set. You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -200,7 +203,10 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters within your account.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -245,7 +251,14 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time for the restoration. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You must specify this parameter if you need to restore the database or the table to a point in time.
+         * 
+         * *   You can restore your cluster to a particular time only over the past seven days.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -263,7 +276,10 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * TableMeta.
+         * The JSON string that contains the information of the database and the table that you want to restore. All values of the database and table information are of the string type. Example: `[ { "tables":[ { "name":"testtb", "type":"table", "newname":"testtb_restore" } ], "name":"testdb", "type":"db", "newname":"testdb_restore" } ]`.
+         * <p>
+         * 
+         * >  You can call the [DescribeMetaList](~~194770~~) operation to query the names and details of databases and tables that can be restored and enter their information into the corresponding locations in the preceding example.
          */
         public Builder tableMeta(String tableMeta) {
             this.putQueryParameter("TableMeta", tableMeta);

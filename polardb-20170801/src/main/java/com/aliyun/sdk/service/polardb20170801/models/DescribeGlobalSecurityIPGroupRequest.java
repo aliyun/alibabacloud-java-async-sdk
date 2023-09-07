@@ -153,7 +153,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * GlobalSecurityGroupId.
+         * The ID of the IP whitelist template.
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -180,7 +180,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the IP whitelist template.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +189,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

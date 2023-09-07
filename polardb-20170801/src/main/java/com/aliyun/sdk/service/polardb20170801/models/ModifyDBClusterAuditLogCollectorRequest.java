@@ -126,7 +126,11 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
         } 
 
         /**
-         * CollectorStatus.
+         * Specifies whether to enable or disable SQL collector. Valid values:
+         * <p>
+         * 
+         * *   Enable
+         * *   Disable
          */
         public Builder collectorStatus(String collectorStatus) {
             this.putQueryParameter("CollectorStatus", collectorStatus);
@@ -135,7 +139,7 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

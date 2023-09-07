@@ -86,7 +86,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * Items.
+         * The details of backup sets.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -165,6 +165,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("DBClusterId")
         private String DBClusterId;
 
+        @NameInMap("ExpectExpireTime")
+        private String expectExpireTime;
+
+        @NameInMap("ExpectExpireType")
+        private String expectExpireType;
+
         @NameInMap("IsAvail")
         private String isAvail;
 
@@ -180,6 +186,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupsLevel = builder.backupsLevel;
             this.consistentTime = builder.consistentTime;
             this.DBClusterId = builder.DBClusterId;
+            this.expectExpireTime = builder.expectExpireTime;
+            this.expectExpireType = builder.expectExpireType;
             this.isAvail = builder.isAvail;
         }
 
@@ -269,6 +277,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return expectExpireTime
+         */
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
+        }
+
+        /**
+         * @return expectExpireType
+         */
+        public String getExpectExpireType() {
+            return this.expectExpireType;
+        }
+
+        /**
          * @return isAvail
          */
         public String getIsAvail() {
@@ -287,10 +309,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupsLevel; 
             private String consistentTime; 
             private String DBClusterId; 
+            private String expectExpireTime; 
+            private String expectExpireType; 
             private String isAvail; 
 
             /**
-             * BackupEndTime.
+             * The end time of the backup task. The time is displayed in UTC.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -298,7 +322,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * The ID of the backup set.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -306,7 +330,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * The backup method. Only **Snapshot** may be returned.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -314,7 +338,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **Automated**
+             * *   **Manual**
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -322,7 +350,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetSize.
+             * The size of the backup set. Unit: bytes.
+             * <p>
+             * 
+             * > After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](~~164881~~).
              */
             public Builder backupSetSize(String backupSetSize) {
                 this.backupSetSize = backupSetSize;
@@ -330,7 +361,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The start time of the backup task. The time is displayed in UTC. Unit: seconds.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -338,7 +369,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * The status of the backup set. Valid values:
+             * <p>
+             * 
+             * *   **Success**
+             * *   **Failed**
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -346,7 +381,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The type of the backup. Only **FullBackup** may be returned.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -354,7 +389,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupsLevel.
+             * The level of the backup set. Valid values:
+             * <p>
+             * 
+             * *   **Level-1**
+             * *   **Level-2**
              */
             public Builder backupsLevel(String backupsLevel) {
                 this.backupsLevel = backupsLevel;
@@ -362,7 +401,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistentTime.
+             * The snapshot checkpoint time. The value follows the Unix time format. Unit: seconds.
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -370,7 +409,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -378,7 +417,54 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvail.
+             * �The expected expiration time of the backup set (This parameter is supported only for instances that are enabled with sparse backup).
+             */
+            public Builder expectExpireTime(String expectExpireTime) {
+                this.expectExpireTime = expectExpireTime;
+                return this;
+            }
+
+            /**
+             * The expected expiration type of the backup set (This parameter is supported only for instances that are enabled with sparse backup).
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   NEVER
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   EXPIRED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DELAY
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             */
+            public Builder expectExpireType(String expectExpireType) {
+                this.expectExpireType = expectExpireType;
+                return this;
+            }
+
+            /**
+             * Indicates whether the backup set is available. Valid values:
+             * <p>
+             * 
+             * *   **0**: The backup set is unavailable.
+             * *   **1**: The backup set is available.
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;

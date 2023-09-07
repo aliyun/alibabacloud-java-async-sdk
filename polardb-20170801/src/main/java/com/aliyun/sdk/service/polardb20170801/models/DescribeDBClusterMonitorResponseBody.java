@@ -50,7 +50,7 @@ public class DescribeDBClusterMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Period.
+         * The interval at which monitoring data is collected. Unit: seconds.
          */
         public Builder period(String period) {
             this.period = period;
@@ -58,7 +58,7 @@ public class DescribeDBClusterMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

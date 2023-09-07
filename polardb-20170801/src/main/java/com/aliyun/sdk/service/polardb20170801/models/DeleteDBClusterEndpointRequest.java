@@ -126,7 +126,7 @@ public class DeleteDBClusterEndpointRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +135,7 @@ public class DeleteDBClusterEndpointRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * The ID of the custom cluster endpoint.
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);

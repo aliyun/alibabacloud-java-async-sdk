@@ -62,7 +62,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceName.
+         * The ID of the cluster.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +70,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         }
 
         /**
-         * DBLinkInfos.
+         * Details about the database links.
          */
         public Builder DBLinkInfos(java.util.List < DBLinkInfos> DBLinkInfos) {
             this.DBLinkInfos = DBLinkInfos;
@@ -78,7 +78,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             private String targetDBName; 
 
             /**
-             * DBInstanceName.
+             * The ID of the source cluster that the database link connects.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -186,7 +186,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * DBLinkName.
+             * The name of the database link.
              */
             public Builder DBLinkName(String DBLinkName) {
                 this.DBLinkName = DBLinkName;
@@ -194,7 +194,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDBName.
+             * The name of the source database of the database link.
              */
             public Builder sourceDBName(String sourceDBName) {
                 this.sourceDBName = sourceDBName;
@@ -202,7 +202,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetAccount.
+             * The account of the destination database of the database link.
              */
             public Builder targetAccount(String targetAccount) {
                 this.targetAccount = targetAccount;
@@ -210,7 +210,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDBInstanceName.
+             * The ID of the destination cluster that the database link connects.
+             * <p>
+             * 
+             * > If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.
              */
             public Builder targetDBInstanceName(String targetDBInstanceName) {
                 this.targetDBInstanceName = targetDBInstanceName;
@@ -218,7 +221,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDBName.
+             * The name of the destination database of the database link.
              */
             public Builder targetDBName(String targetDBName) {
                 this.targetDBName = targetDBName;

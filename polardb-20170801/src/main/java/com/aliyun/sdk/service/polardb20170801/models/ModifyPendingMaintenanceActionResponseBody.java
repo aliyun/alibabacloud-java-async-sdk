@@ -50,7 +50,7 @@ public class ModifyPendingMaintenanceActionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ids.
+         * The ID of the task.
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -58,7 +58,7 @@ public class ModifyPendingMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

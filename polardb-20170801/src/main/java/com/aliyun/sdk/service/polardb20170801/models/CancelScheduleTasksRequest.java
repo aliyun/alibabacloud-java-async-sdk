@@ -140,7 +140,10 @@ public class CancelScheduleTasksRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,7 +170,7 @@ public class CancelScheduleTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,7 +197,11 @@ public class CancelScheduleTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the scheduled task that you want to cancel.
+         * <p>
+         * 
+         * > *   You can call the [DescribeScheduleTasks](~~199648~~) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.
+         * >*   You can cancel only the tasks whose status is `pending`.``
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

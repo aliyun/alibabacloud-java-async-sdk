@@ -111,7 +111,10 @@ public class RestartDBNodeRequest extends Request {
         } 
 
         /**
-         * DBNodeId.
+         * The ID of the node.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.
          */
         public Builder DBNodeId(String DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);

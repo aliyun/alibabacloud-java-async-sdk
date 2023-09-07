@@ -170,7 +170,7 @@ public class CreateStoragePlanRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -197,7 +197,11 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * Period.
+         * The unit of the subscription duration for the storage plan. Valid values:
+         * <p>
+         * 
+         * *   **Month**
+         * *   **Year**
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -224,7 +228,7 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * StorageClass.
+         * The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000
          */
         public Builder storageClass(String storageClass) {
             this.putQueryParameter("StorageClass", storageClass);
@@ -233,7 +237,11 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The type of the storage plan. Valid values:
+         * <p>
+         * 
+         * *   **Mainland**: The storage plan is used inside the Chinese mainland.
+         * *   **Overseas**: The storage plan is used outside the Chinese mainland.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -242,7 +250,11 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the storage plan.
+         * <p>
+         * 
+         * *   If **Period** is set to **Month**, the value ranges from 1 to 9.
+         * *   If **Period** is set to **Year**, the value can be 1, 2, 3, or 5.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

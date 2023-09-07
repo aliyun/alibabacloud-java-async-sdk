@@ -98,7 +98,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +106,11 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptNewTables.
+         * Indicates whether automatic encryption is enabled for new tables. Valid values:
+         * <p>
+         * 
+         * *   **ON**
+         * *   **OFF**
          */
         public Builder encryptNewTables(String encryptNewTables) {
             this.encryptNewTables = encryptNewTables;
@@ -114,7 +118,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the custom key.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -122,7 +126,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +134,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         }
 
         /**
-         * TDERegion.
+         * The region where the TDE key resides.
          */
         public Builder TDERegion(String TDERegion) {
             this.TDERegion = TDERegion;
@@ -138,7 +142,11 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         }
 
         /**
-         * TDEStatus.
+         * Indicates whether TDE encryption is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enabled**
+         * *   **Disabled**
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;

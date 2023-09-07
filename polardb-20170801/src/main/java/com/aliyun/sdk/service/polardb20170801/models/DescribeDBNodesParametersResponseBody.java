@@ -86,7 +86,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBNodeIds.
+         * The IDs of the nodes.
          */
         public Builder DBNodeIds(java.util.List < DBNodeIds> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -94,7 +94,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * The type of the database engine. Set the value to **MySQL**.
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -102,7 +102,12 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the MySQL database engine. Valid values:
+         * <p>
+         * 
+         * *   **5.6**
+         * *   **5.7**
+         * *   **8.0**
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -110,7 +115,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The cluster engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -118,7 +123,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +295,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -298,7 +303,12 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The data type of the parameter value. Valid values:
+             * <p>
+             * 
+             * *   **INT**
+             * *   **STRING**
+             * *   **B**
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -306,7 +316,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultParameterValue.
+             * The default value of the parameter.
              */
             public Builder defaultParameterValue(String defaultParameterValue) {
                 this.defaultParameterValue = defaultParameterValue;
@@ -314,7 +324,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Factor.
+             * A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.
              */
             public Builder factor(String factor) {
                 this.factor = factor;
@@ -322,7 +332,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:
+             * <p>
+             * 
+             * *   **false**
+             * *   **true**
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -330,7 +344,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsModifiable.
+             * Indicates whether the parameter can be modified. Valid values:
+             * <p>
+             * 
+             * *   **false**
+             * *   **true**
              */
             public Builder isModifiable(Boolean isModifiable) {
                 this.isModifiable = isModifiable;
@@ -338,7 +356,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsNodeAvailable.
+             * Indicates whether the parameter is a global parameter. Valid values:
+             * <p>
+             * 
+             * *   **0**: yes. The modified parameter value is synchronized to other nodes.
+             * *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized to.
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -346,7 +368,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParamRelyRule.
+             * The dependencies of the parameter.
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -354,7 +376,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -362,7 +384,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -370,7 +392,11 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterStatus.
+             * The status of the parameter. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **modifying**
              */
             public Builder parameterStatus(String parameterStatus) {
                 this.parameterStatus = parameterStatus;
@@ -378,7 +404,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -431,7 +457,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             private java.util.List < RunningParameters> runningParameters; 
 
             /**
-             * DBNodeId.
+             * The ID of the node.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -439,7 +465,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * RunningParameters.
+             * The parameters of the current node.
              */
             public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;

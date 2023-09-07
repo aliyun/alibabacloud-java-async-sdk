@@ -139,7 +139,7 @@ public class DescribeBackupTasksRequest extends Request {
         } 
 
         /**
-         * BackupJobId.
+         * The ID of the backup task.
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -148,7 +148,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. Valid values:
+         * <p>
+         * 
+         * *   **Automated**
+         * *   **Manual**
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -157,7 +161,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

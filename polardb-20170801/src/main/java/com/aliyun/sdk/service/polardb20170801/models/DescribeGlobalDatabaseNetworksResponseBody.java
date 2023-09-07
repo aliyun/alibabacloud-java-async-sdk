@@ -86,7 +86,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * Details about the GDNs.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of records on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -182,7 +182,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             private String role; 
 
             /**
-             * DBClusterId.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -190,7 +190,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -198,7 +198,13 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Primary**: the primary cluster
+             * *   **standby**: the secondary cluster
+             * 
+             * > A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](~~160381~~).
              */
             public Builder role(String role) {
                 this.role = role;
@@ -311,7 +317,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             private String GDNStatus; 
 
             /**
-             * CreateTime.
+             * The time when the GDN was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -319,7 +325,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusters.
+             * Details about clusters in the GDN.
              */
             public Builder DBClusters(java.util.List < DBClusters> DBClusters) {
                 this.DBClusters = DBClusters;
@@ -327,7 +333,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * The type of the database engine. Only **MySQL** is supported.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -335,7 +341,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine. Only the **8.0** version is supported.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -343,7 +349,13 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * GDNDescription.
+             * The description of the GDN. The description must meet the following requirements:
+             * <p>
+             * 
+             * *   It cannot start with [http:// or https://.](http://https://。)
+             * *   It must start with a letter.
+             * *   It can contain letters, digits, underscores (\_), and hyphens (-).
+             * *   It must be 2 to 126 characters in length.
              */
             public Builder GDNDescription(String GDNDescription) {
                 this.GDNDescription = GDNDescription;
@@ -351,7 +363,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * GDNId.
+             * The ID of the GDN.
              */
             public Builder GDNId(String GDNId) {
                 this.GDNId = GDNId;
@@ -359,7 +371,14 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * GDNStatus.
+             * The status of the GDN. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The GDN is being created.
+             * *   **active**: The GDN is running.
+             * *   **deleting**: The GDN is being deleted.
+             * *   **locked**: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.
+             * *   **removing_member**: The secondary cluster is being removed from the GDN.
              */
             public Builder GDNStatus(String GDNStatus) {
                 this.GDNStatus = GDNStatus;

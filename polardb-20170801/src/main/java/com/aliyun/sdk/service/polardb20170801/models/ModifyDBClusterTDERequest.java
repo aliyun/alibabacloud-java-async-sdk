@@ -168,7 +168,7 @@ public class ModifyDBClusterTDERequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -177,7 +177,11 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * EncryptNewTables.
+         * Specifies whether to enable automatic encryption for new tables. Valid values:
+         * <p>
+         * 
+         * *   **ON**
+         * *   **OFF**
          */
         public Builder encryptNewTables(String encryptNewTables) {
             this.putQueryParameter("EncryptNewTables", encryptNewTables);
@@ -186,7 +190,7 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the custom key.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -231,7 +235,7 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -240,7 +244,7 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * TDEStatus.
+         * Modifies the TDE status. Set the value to **Enable**.
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

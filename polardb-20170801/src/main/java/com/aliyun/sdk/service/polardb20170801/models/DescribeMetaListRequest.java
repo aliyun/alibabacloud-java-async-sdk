@@ -43,7 +43,7 @@ public class DescribeMetaListRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -219,7 +219,12 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the data backup file.
+         * <p>
+         * 
+         * > 
+         * *   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.
+         * *   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -228,7 +233,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters under your account.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -237,7 +245,12 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * GetDbName.
+         * Specify the specific database name (such as `test_db`) to query the names of all data tables that can be restored in the desired database.
+         * <p>
+         * 
+         * > 
+         * *   You can specify only one database name each time.
+         * *   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.
          */
         public Builder getDbName(String getDbName) {
             this.putQueryParameter("GetDbName", getDbName);
@@ -264,7 +277,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -273,7 +286,16 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * 
+         * *   **50**
+         * 
+         * *   **100**
+         * 
+         *     Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -300,7 +322,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  When you run a query, you must specify the `BackId` or `RestoreTime` parameter. You can call the [DescribeBackups](~~98102~~) operation to query the point in time for the restoration.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

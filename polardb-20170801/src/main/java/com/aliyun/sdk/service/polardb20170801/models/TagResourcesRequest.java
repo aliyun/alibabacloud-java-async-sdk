@@ -174,7 +174,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +210,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **cluster**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -273,7 +273,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag keys.
+             * <p>
+             * 
+             * >  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +284,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag values.
+             * <p>
+             * 
+             * >  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Value` is paired with a value of `Tag.N.Key`.
              */
             public Builder value(String value) {
                 this.value = value;

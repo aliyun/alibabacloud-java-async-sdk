@@ -148,7 +148,15 @@ public class CloseDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * ContinueEnableBinlog.
+         * Specifies whether to continue to enable binary logging. Valid values:
+         * <p>
+         * 
+         * *   **true**: continues to enable binary logging.
+         * *   **false**: disables binary logging.
+         * 
+         * Default value: **true**.
+         * 
+         * > If binary logging is disabled, your PolarDB cluster is restarted.
          */
         public Builder continueEnableBinlog(Boolean continueEnableBinlog) {
             this.putQueryParameter("ContinueEnableBinlog", continueEnableBinlog);
@@ -157,7 +165,7 @@ public class CloseDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

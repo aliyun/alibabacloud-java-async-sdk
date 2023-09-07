@@ -22,6 +22,10 @@ public class DescribeDBClusterEndpointsRequest extends Request {
     private String DBEndpointId;
 
     @Query
+    @NameInMap("DescribeType")
+    private String describeType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -41,6 +45,7 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBEndpointId = builder.DBEndpointId;
+        this.describeType = builder.describeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -75,6 +80,13 @@ public class DescribeDBClusterEndpointsRequest extends Request {
     }
 
     /**
+     * @return describeType
+     */
+    public String getDescribeType() {
+        return this.describeType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -105,6 +117,7 @@ public class DescribeDBClusterEndpointsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDBClusterEndpointsRequest, Builder> {
         private String DBClusterId; 
         private String DBEndpointId; 
+        private String describeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -118,6 +131,7 @@ public class DescribeDBClusterEndpointsRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.DBEndpointId = request.DBEndpointId;
+            this.describeType = request.describeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -125,7 +139,10 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -134,11 +151,20 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * The ID of the endpoint.
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
             this.DBEndpointId = DBEndpointId;
+            return this;
+        }
+
+        /**
+         * DescribeType.
+         */
+        public Builder describeType(String describeType) {
+            this.putQueryParameter("DescribeType", describeType);
+            this.describeType = describeType;
             return this;
         }
 

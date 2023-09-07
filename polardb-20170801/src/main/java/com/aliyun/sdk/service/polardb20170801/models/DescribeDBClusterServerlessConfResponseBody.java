@@ -122,7 +122,11 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         private String secondsUntilAutoPause; 
 
         /**
-         * AllowShutDown.
+         * Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder allowShutDown(String allowShutDown) {
             this.allowShutDown = allowShutDown;
@@ -130,7 +134,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the serverless cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -138,7 +142,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +150,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleMax.
+         * The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
          */
         public Builder scaleMax(String scaleMax) {
             this.scaleMax = scaleMax;
@@ -154,7 +158,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleMin.
+         * The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.
          */
         public Builder scaleMin(String scaleMin) {
             this.scaleMin = scaleMin;
@@ -162,7 +166,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleRoNumMax.
+         * The maximum number of read-only nodes for scaling. Valid values: 0 to 15.
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.scaleRoNumMax = scaleRoNumMax;
@@ -170,7 +174,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleRoNumMin.
+         * The minimum number of read-only nodes for scaling. Valid values: 0 to 15.
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.scaleRoNumMin = scaleRoNumMin;
@@ -178,7 +182,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * SecondsUntilAutoPause.
+         * The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;

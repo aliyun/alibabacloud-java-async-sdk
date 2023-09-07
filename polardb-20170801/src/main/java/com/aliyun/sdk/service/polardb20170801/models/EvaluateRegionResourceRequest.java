@@ -242,7 +242,12 @@ public class EvaluateRegionResourceRequest extends Request {
         } 
 
         /**
-         * 指定实例链路类型，默认为后端随机选择，可取值为：lvs|proxy|dns
+         * The cluster link type. The backend randomly selects the default value. Valid values:
+         * <p>
+         * 
+         * *   **lvs** :Linux virtual server
+         * *   **proxy**: proxy server
+         * *   **dns**: domain name system
          */
         public Builder DBInstanceConnType(String DBInstanceConnType) {
             this.putQueryParameter("DBInstanceConnType", DBInstanceConnType);
@@ -251,7 +256,12 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 实例规格
+         * The specifications of the node. For information about node specifications, see the following topics:
+         * <p>
+         * 
+         * *   PolarDB for MySQL: [Specifications of compute nodes](~~102542~~)
+         * *   PolarDB for Oracle: [Specifications of compute nodes](~~207921~~)
+         * *   PolarDB for PostgreSQL: [Specifications of compute nodes](~~209380~~)
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -260,7 +270,12 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 引擎
+         * The type of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -269,7 +284,21 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 引擎版本
+         * The version of the database engine
+         * <p>
+         * 
+         * *   Valid values for the MySQL database engine:
+         * 
+         *     *   **5.6**
+         *     *   **5.7**
+         *     *   **8.0**
+         * 
+         * *   Valid values for the PostgreSQL database engine:
+         * 
+         *     *   **11**
+         *     *   **14**
+         * 
+         * *   Valid value for the Oracle database engine: **11**
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -278,7 +307,11 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 可用区模式（传统模式、多可用区模式）
+         * Specifies whether to return the zones in which the single-zone deployment method is supported. Default value: 0. Valid values:
+         * <p>
+         * 
+         * *   **0**: no value returned
+         * *   **1**: returns the zones.
          */
         public Builder dispenseMode(String dispenseMode) {
             this.putQueryParameter("DispenseMode", dispenseMode);
@@ -287,7 +320,11 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 是否创建Maxscale
+         * Specifies whether Maxscale is created. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder needMaxScaleLink(String needMaxScaleLink) {
             this.putQueryParameter("NeedMaxScaleLink", needMaxScaleLink);
@@ -314,7 +351,10 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 地域ID
+         * The region ID.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -323,7 +363,7 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 资源组Id
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -350,7 +390,7 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 子域
+         * The subdomain. It is the child domain of the top-level domain name or parent domain. For example, if the parent domain name is cn-beijing, its child domain can be cn-beijing-i-aliyun.
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -359,7 +399,10 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * 可用区ID
+         * The zone ID.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

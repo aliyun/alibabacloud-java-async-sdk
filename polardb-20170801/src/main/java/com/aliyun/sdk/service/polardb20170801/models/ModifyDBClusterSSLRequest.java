@@ -167,7 +167,7 @@ public class ModifyDBClusterSSLRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -176,7 +176,15 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * The ID of the endpoint.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is required for a PolarDB for MySQL cluster.
+         * 
+         * *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
+         * *   You can call the [DescribeDBClusterSSL](~~153414~~) operation to view the details of the endpoint.
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -185,7 +193,18 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type supported by the endpoint that is specified by **DBEndpointId**. Valid values:
+         * <p>
+         * 
+         * *   **Public**
+         * *   **Private**
+         * *   **Inner**
+         * 
+         * > 
+         * 
+         * *   This parameter is required for a PolarDB for MySQL cluster.
+         * 
+         * *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -230,7 +249,11 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * SSLAutoRotate.
+         * Specifies whether automatic rotation of SSL certificates is enabled.
+         * <p>
+         * 
+         * *   **Enable**: The feature is enabled.
+         * *   **Disable**: The feature is disabled.
          */
         public Builder SSLAutoRotate(String SSLAutoRotate) {
             this.putQueryParameter("SSLAutoRotate", SSLAutoRotate);
@@ -239,7 +262,14 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * SSLEnabled.
+         * The SSL encryption status. Valid values:
+         * <p>
+         * 
+         * *   **Disable**: SSL encryption is disabled.
+         * *   **Enable**: SSL encryption is enabled.
+         * *   **Update**: The SSL certificate is updated.
+         * 
+         * > After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](~~153182~~).
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

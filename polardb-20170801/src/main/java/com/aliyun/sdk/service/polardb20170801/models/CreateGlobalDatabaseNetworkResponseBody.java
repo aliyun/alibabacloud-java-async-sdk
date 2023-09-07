@@ -50,7 +50,7 @@ public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GDNId.
+         * The ID of the GDN.
          */
         public Builder GDNId(String GDNId) {
             this.GDNId = GDNId;
@@ -58,7 +58,7 @@ public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -141,7 +141,7 @@ public class ModifyDBDescriptionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -150,7 +150,11 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * DBDescription.
+         * The description of the database. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   It cannot start with `http://` or `https://`.
+         * *   It must be 2 to 256 characters in length.
          */
         public Builder DBDescription(String DBDescription) {
             this.putQueryParameter("DBDescription", DBDescription);
@@ -159,7 +163,7 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

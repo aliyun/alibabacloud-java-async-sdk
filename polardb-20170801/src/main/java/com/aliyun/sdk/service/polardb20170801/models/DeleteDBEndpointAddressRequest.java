@@ -141,7 +141,10 @@ public class DeleteDBEndpointAddressRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters that belong to your account, such as the cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -150,7 +153,10 @@ public class DeleteDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * The ID of the endpoint.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query the endpoints of a specified PolarDB cluster.
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -159,7 +165,7 @@ public class DeleteDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type of the endpoint. Set the value to **Public** (public network).
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);

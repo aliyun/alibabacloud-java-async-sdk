@@ -125,7 +125,12 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
-         * BackupRetentionPolicyOnClusterDeletion.
+         * The retention policy for the backup sets when you delete the cluster. Valid values:
+         * <p>
+         * 
+         * *   **ALL**: permanently retains all backups.
+         * *   **LATEST**: permanently retains the most recent backup. A backup is automatically created before you delete the cluster.
+         * *   **NONE**: No backup sets are retained after you delete the cluster.
          */
         public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
             this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
@@ -134,7 +139,7 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

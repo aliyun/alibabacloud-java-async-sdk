@@ -140,7 +140,10 @@ public class ResetAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The username of the account.
+         * <p>
+         * 
+         * > You can reset only the permissions of a privileged account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -149,7 +152,12 @@ public class ResetAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the account. The password must meet the following requirements:
+         * <p>
+         * 
+         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   The password must be 8 to 32 characters in length.
+         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -158,7 +166,7 @@ public class ResetAccountRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

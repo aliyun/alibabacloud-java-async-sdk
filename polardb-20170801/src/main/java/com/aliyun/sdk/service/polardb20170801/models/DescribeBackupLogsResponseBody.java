@@ -86,7 +86,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * Items.
+         * The details of the backup logs.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -242,7 +242,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             private String linkExpiredTime; 
 
             /**
-             * BackupLogEndTime.
+             * The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder backupLogEndTime(String backupLogEndTime) {
                 this.backupLogEndTime = backupLogEndTime;
@@ -250,7 +250,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLogId.
+             * The ID of the backup log.
              */
             public Builder backupLogId(String backupLogId) {
                 this.backupLogId = backupLogId;
@@ -258,7 +258,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLogName.
+             * The name of the backup log.
              */
             public Builder backupLogName(String backupLogName) {
                 this.backupLogName = backupLogName;
@@ -266,7 +266,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLogSize.
+             * The size of the backup log. Unit: bytes.
              */
             public Builder backupLogSize(String backupLogSize) {
                 this.backupLogSize = backupLogSize;
@@ -274,7 +274,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLogStartTime.
+             * The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder backupLogStartTime(String backupLogStartTime) {
                 this.backupLogStartTime = backupLogStartTime;
@@ -282,7 +282,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadLink.
+             * The public URL used to download the backup log.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -290,7 +290,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDownloadLink.
+             * The internal URL used to download the backup log.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -298,7 +298,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LinkExpiredTime.
+             * The time when the download URL expires.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;

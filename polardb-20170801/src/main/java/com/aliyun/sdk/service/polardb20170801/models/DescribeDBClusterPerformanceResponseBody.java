@@ -110,7 +110,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -118,7 +118,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * The type of the database engine.
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -126,7 +126,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine.
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -134,7 +134,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +142,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * The cluster performance metrics.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -150,7 +150,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -210,7 +210,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Timestamp.
+             * The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -218,7 +218,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -336,7 +336,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private Points points; 
 
             /**
-             * DBNodeId.
+             * The ID of the cluster node.
+             * <p>
+             * 
+             * >  The value of this parameter is not returned if the `Key` parameter is set to `PolarDBDiskUsage`.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -344,7 +347,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Measurement.
+             * The performance metrics that are returned.
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -352,7 +355,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The name of the performance metric.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -360,7 +363,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * The performance metrics.
              */
             public Builder points(Points points) {
                 this.points = points;

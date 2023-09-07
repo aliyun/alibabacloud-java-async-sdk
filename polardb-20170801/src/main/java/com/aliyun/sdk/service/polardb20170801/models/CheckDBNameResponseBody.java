@@ -50,7 +50,7 @@ public class CheckDBNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -58,7 +58,7 @@ public class CheckDBNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

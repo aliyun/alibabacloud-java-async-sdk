@@ -50,7 +50,11 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CollectorStatus.
+         * The status of SQL data collector. Valid values:
+         * <p>
+         * 
+         * *   Enable: SQL data collector is enabled.
+         * *   Disabled: SQL data collector is disabled.
          */
         public Builder collectorStatus(String collectorStatus) {
             this.collectorStatus = collectorStatus;
@@ -58,7 +62,7 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

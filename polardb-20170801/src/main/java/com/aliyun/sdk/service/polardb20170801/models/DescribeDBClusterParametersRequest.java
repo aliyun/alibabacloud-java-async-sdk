@@ -18,6 +18,10 @@ public class DescribeDBClusterParametersRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("DescribeType")
+    private String describeType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -36,6 +40,7 @@ public class DescribeDBClusterParametersRequest extends Request {
     private DescribeDBClusterParametersRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.describeType = builder.describeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -60,6 +65,13 @@ public class DescribeDBClusterParametersRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return describeType
+     */
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     /**
@@ -92,6 +104,7 @@ public class DescribeDBClusterParametersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBClusterParametersRequest, Builder> {
         private String DBClusterId; 
+        private String describeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -104,6 +117,7 @@ public class DescribeDBClusterParametersRequest extends Request {
         private Builder(DescribeDBClusterParametersRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.describeType = request.describeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -111,11 +125,24 @@ public class DescribeDBClusterParametersRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * The kernel parameter. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: the kernel parameters.
+         * *   **MigrationFromRDS**: compares the current parameters with the parameters of the source RDS instance.
+         */
+        public Builder describeType(String describeType) {
+            this.putQueryParameter("DescribeType", describeType);
+            this.describeType = describeType;
             return this;
         }
 

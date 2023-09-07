@@ -86,7 +86,11 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EnableBackupLog.
+         * Indicates whether the log backup feature was enabled. Valid values:
+         * <p>
+         * 
+         * *   0: disabled.
+         * *   1: enabled. By default, the log backup feature is enabled and cannot be disabled.
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -110,7 +114,11 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The retention period of the logs. Valid values:
+         * <p>
+         * 
+         * *   7 to 7300: The logs are retained for 7 to 7,300 days.
+         * *   \-1: The logs are permanently retained.
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -118,7 +126,7 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

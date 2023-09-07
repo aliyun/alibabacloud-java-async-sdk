@@ -18,6 +18,10 @@ public class DescribeClassListRequest extends Request {
     private String commodityCode;
 
     @Query
+    @NameInMap("MasterHa")
+    private String masterHa;
+
+    @Query
     @NameInMap("OrderType")
     private String orderType;
 
@@ -48,6 +52,7 @@ public class DescribeClassListRequest extends Request {
     private DescribeClassListRequest(Builder builder) {
         super(builder);
         this.commodityCode = builder.commodityCode;
+        this.masterHa = builder.masterHa;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -75,6 +80,13 @@ public class DescribeClassListRequest extends Request {
      */
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    /**
+     * @return masterHa
+     */
+    public String getMasterHa() {
+        return this.masterHa;
     }
 
     /**
@@ -128,6 +140,7 @@ public class DescribeClassListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeClassListRequest, Builder> {
         private String commodityCode; 
+        private String masterHa; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -143,6 +156,7 @@ public class DescribeClassListRequest extends Request {
         private Builder(DescribeClassListRequest request) {
             super(request);
             this.commodityCode = request.commodityCode;
+            this.masterHa = request.masterHa;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -153,7 +167,7 @@ public class DescribeClassListRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * The maximum number of IOPS.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -162,7 +176,21 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The number of nodes. Valid values:
+         * <p>
+         * 
+         * *   single
+         * *   cluster
+         * *   all
+         */
+        public Builder masterHa(String masterHa) {
+            this.putQueryParameter("MasterHa", masterHa);
+            this.masterHa = masterHa;
+            return this;
+        }
+
+        /**
+         * The specification type of the cluster.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -189,7 +217,7 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The number of CPU cores.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +226,7 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

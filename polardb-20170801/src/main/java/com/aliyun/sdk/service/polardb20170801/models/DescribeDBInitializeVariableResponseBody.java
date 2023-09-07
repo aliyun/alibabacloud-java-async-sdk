@@ -74,7 +74,11 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         private Variables variables; 
 
         /**
-         * DBType.
+         * The type of the database engine. Valid values:
+         * <p>
+         * 
+         * *   Oracle
+         * *   PostgreSQL
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -82,7 +86,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine.
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -90,7 +94,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         }
 
         /**
-         * Variables.
+         * The attributes that are returned.
          */
         public Builder variables(Variables variables) {
             this.variables = variables;
@@ -162,7 +166,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             private String ctype; 
 
             /**
-             * Charset.
+             * The character set that is supported.
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -170,7 +174,14 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             }
 
             /**
-             * Collate.
+             * The language that indicates the collation of the databases that are created.
+             * <p>
+             * 
+             * >- The language must be compatible with the character set that is specified by **CharacterSetName**.
+             * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
+             * >- This parameter is optional for PolarDB for MySQL clusters.
+             * 
+             * To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -178,7 +189,15 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             }
 
             /**
-             * Ctype.
+             * The language that indicates the character type of the database.
+             * <p>
+             * 
+             * >- The language must be compatible with the character set that is specified by **CharacterSetName**.
+             * >- The specified value must be the same as the value of **Collate**.
+             * >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
+             * >- This parameter is optional for PolarDB for MySQL clusters.
+             * 
+             * To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;

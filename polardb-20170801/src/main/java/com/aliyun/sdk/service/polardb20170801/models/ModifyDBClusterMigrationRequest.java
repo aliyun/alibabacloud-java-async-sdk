@@ -206,7 +206,10 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * ConnectionStrings.
+         * The endpoints to be switched. The endpoints are in the JSON format.
+         * <p>
+         * 
+         * > This parameter is valid when the SwapConnectionString parameter is set to true.
          */
         public Builder connectionStrings(String connectionStrings) {
             this.putQueryParameter("ConnectionStrings", connectionStrings);
@@ -215,7 +218,7 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -224,7 +227,11 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * NewMasterInstanceId.
+         * The ID of the new instance or new cluster. Valid values:
+         * <p>
+         * 
+         * *   To perform a data migration, enter the ID of the PolarDB cluster.
+         * *   To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.
          */
         public Builder newMasterInstanceId(String newMasterInstanceId) {
             this.putQueryParameter("NewMasterInstanceId", newMasterInstanceId);
@@ -278,7 +285,7 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * SourceRDSDBInstanceId.
+         * The ID of the source ApsaraDB RDS instance.
          */
         public Builder sourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
             this.putQueryParameter("SourceRDSDBInstanceId", sourceRDSDBInstanceId);
@@ -287,7 +294,13 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * SwapConnectionString.
+         * Specifies whether to switch the endpoints. Valid values:
+         * <p>
+         * 
+         * *   **true**: switches the endpoints. If you select this option, you do not need the change the endpoint in your applications.
+         * *   **false**: does not switch the endpoints. If you select this option, you must specify the endpoint of the PolarDB cluster in your applications.
+         * 
+         * Default value: **false**.
          */
         public Builder swapConnectionString(String swapConnectionString) {
             this.putQueryParameter("SwapConnectionString", swapConnectionString);

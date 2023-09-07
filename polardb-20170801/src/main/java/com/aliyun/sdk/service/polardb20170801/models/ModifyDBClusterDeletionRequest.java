@@ -125,7 +125,10 @@ public class ModifyDBClusterDeletionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to.obtain the cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +155,11 @@ public class ModifyDBClusterDeletionRequest extends Request {
         }
 
         /**
-         * Protection.
+         * Specifies whether to enable the cluster lock feature. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.
+         * *   **false**: disables the cluster lock feature.
          */
         public Builder protection(Boolean protection) {
             this.putQueryParameter("Protection", protection);

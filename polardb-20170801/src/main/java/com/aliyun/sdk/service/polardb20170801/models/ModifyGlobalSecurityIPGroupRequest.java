@@ -184,7 +184,10 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * GIpList.
+         * The IP address in the whitelist template.
+         * <p>
+         * 
+         * >  Multiple IP addresses are separated by commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -193,7 +196,12 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalIgName.
+         * The name of the IP whitelist template. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name can contain lowercase letters, digits, and underscores (\_).
+         * *   The name must start with a letter and end with a letter or digit.
+         * *   The name must be 2 to 120 characters in length.
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -202,7 +210,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalSecurityGroupId.
+         * The ID of the IP whitelist template.
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -229,7 +237,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +246,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

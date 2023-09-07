@@ -50,7 +50,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParameterGroup.
+         * Details about the parameter templates.
          */
         public Builder parameterGroup(java.util.List < ParameterGroup> parameterGroup) {
             this.parameterGroup = parameterGroup;
@@ -58,7 +58,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String paramValue; 
 
             /**
-             * ParamName.
+             * The name of the parameter.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -118,7 +118,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -267,7 +267,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String parameterGroupType; 
 
             /**
-             * CreateTime.
+             * The time when the parameter template was created. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -275,7 +275,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * The type of the database engine.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -283,7 +283,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -291,7 +291,11 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether to restart the cluster when this parameter template is applied. Valid values:
+             * <p>
+             * 
+             * *   **0**: A restart is not required.
+             * *   **1**: A restart is required.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -299,7 +303,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterCounts.
+             * The number of parameters in the parameter template.
              */
             public Builder parameterCounts(Integer parameterCounts) {
                 this.parameterCounts = parameterCounts;
@@ -307,7 +311,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDetail.
+             * Details about the parameters.
              */
             public Builder parameterDetail(java.util.List < ParameterDetail> parameterDetail) {
                 this.parameterDetail = parameterDetail;
@@ -315,7 +319,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupDesc.
+             * The description of the parameter template.
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -323,7 +327,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupId.
+             * The ID of the parameter template.
              */
             public Builder parameterGroupId(String parameterGroupId) {
                 this.parameterGroupId = parameterGroupId;
@@ -331,7 +335,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupName.
+             * The name of the parameter template.
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -339,7 +343,12 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupType.
+             * The type of the parameter template. Valid values:
+             * <p>
+             * 
+             * *   **0**: the default parameter template.
+             * *   **1**: a custom parameter template.
+             * *   **2**: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.
              */
             public Builder parameterGroupType(String parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;

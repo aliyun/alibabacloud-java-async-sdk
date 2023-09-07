@@ -126,7 +126,7 @@ public class ModifyDBClusterMonitorRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,7 +153,7 @@ public class ModifyDBClusterMonitorRequest extends Request {
         }
 
         /**
-         * Period.
+         * The interval at which monitoring data is collected. Valid values: **5** and **60**. Unit: seconds.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);

@@ -47,6 +47,18 @@ public class CreateDBEndpointAddressRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
+    @Query
+    @NameInMap("VPCId")
+    private String VPCId;
+
+    @Query
+    @NameInMap("ZoneInfo")
+    private java.util.List < ZoneInfo> zoneInfo;
+
     private CreateDBEndpointAddressRequest(Builder builder) {
         super(builder);
         this.connectionStringPrefix = builder.connectionStringPrefix;
@@ -57,6 +69,9 @@ public class CreateDBEndpointAddressRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupId = builder.securityGroupId;
+        this.VPCId = builder.VPCId;
+        this.zoneInfo = builder.zoneInfo;
     }
 
     public static Builder builder() {
@@ -128,6 +143,27 @@ public class CreateDBEndpointAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
+     * @return VPCId
+     */
+    public String getVPCId() {
+        return this.VPCId;
+    }
+
+    /**
+     * @return zoneInfo
+     */
+    public java.util.List < ZoneInfo> getZoneInfo() {
+        return this.zoneInfo;
+    }
+
     public static final class Builder extends Request.Builder<CreateDBEndpointAddressRequest, Builder> {
         private String connectionStringPrefix; 
         private String DBClusterId; 
@@ -137,6 +173,9 @@ public class CreateDBEndpointAddressRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityGroupId; 
+        private String VPCId; 
+        private java.util.List < ZoneInfo> zoneInfo; 
 
         private Builder() {
             super();
@@ -152,10 +191,18 @@ public class CreateDBEndpointAddressRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
+            this.VPCId = request.VPCId;
+            this.zoneInfo = request.zoneInfo;
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the new endpoint. The prefix of the endpoint must meet the following requirements:
+         * <p>
+         * 
+         * *   The prefix can contain lowercase letters, digits, and hyphens (-).
+         * *   The prefix must start with a letter and end with a digit or a letter.
+         * *   The prefix must be 6 to 40 characters in length.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -164,7 +211,7 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -173,7 +220,10 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * The ID of the endpoint.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint details.
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -182,7 +232,7 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type of the endpoint. Set the value to **Public**.
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -226,6 +276,33 @@ public class CreateDBEndpointAddressRequest extends Request {
             return this;
         }
 
+        /**
+         * The ID of the ECS security group.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the virtual private cloud (VPC).
+         */
+        public Builder VPCId(String VPCId) {
+            this.putQueryParameter("VPCId", VPCId);
+            this.VPCId = VPCId;
+            return this;
+        }
+
+        /**
+         * The details of the zones.
+         */
+        public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
+            this.putQueryParameter("ZoneInfo", zoneInfo);
+            this.zoneInfo = zoneInfo;
+            return this;
+        }
+
         @Override
         public CreateDBEndpointAddressRequest build() {
             return new CreateDBEndpointAddressRequest(this);
@@ -233,4 +310,65 @@ public class CreateDBEndpointAddressRequest extends Request {
 
     } 
 
+    public static class ZoneInfo extends TeaModel {
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        private ZoneInfo(Builder builder) {
+            this.vSwitchId = builder.vSwitchId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZoneInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String vSwitchId; 
+            private String zoneId; 
+
+            /**
+             * The ID of the vSwitch.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * The ID of the zone.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public ZoneInfo build() {
+                return new ZoneInfo(this);
+            } 
+
+        } 
+
+    }
 }

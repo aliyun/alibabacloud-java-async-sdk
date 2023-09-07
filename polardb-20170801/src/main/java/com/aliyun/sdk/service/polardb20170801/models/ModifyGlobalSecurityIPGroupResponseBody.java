@@ -50,7 +50,7 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GlobalSecurityIPGroup.
+         * The details of the global IP whitelist template.
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -58,7 +58,7 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * DBInstances.
+             * The clusters that are associated with the IP address whitelist template.
              */
             public Builder DBInstances(java.util.List < String > DBInstances) {
                 this.DBInstances = DBInstances;
@@ -154,7 +154,10 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GIpList.
+             * The IP address in the whitelist template.
+             * <p>
+             * 
+             * >  Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -162,7 +165,12 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalIgName.
+             * The name of the IP whitelist template. The name must meet the following requirements:
+             * <p>
+             * 
+             * *   The name can contain lowercase letters, digits, and underscores (\_).
+             * *   The name must start with a letter and end with a letter or a digit.
+             * *   The name must be 2 to 120 characters in length.
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -170,7 +178,7 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalSecurityGroupId.
+             * The ID of the IP whitelist template.
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -178,7 +186,7 @@ public class ModifyGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

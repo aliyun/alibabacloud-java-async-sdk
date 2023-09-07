@@ -156,7 +156,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -165,7 +165,16 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * The permissions that are granted to the account. Valid values:
+         * <p>
+         * 
+         * *   **ReadWrite**: read and write permissions
+         * *   **ReadOnly**: read-only permissions
+         * *   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.
+         * *   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.
+         * *   **ReadIndex**: The account has the read and index permissions on the database.
+         * 
+         * > The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb\_1** database and the **read** permission on the **testdb\_2** database.
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -174,7 +183,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -183,7 +192,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The names of the databases that the account can access. You can grant the access permissions on one or more databases to the specified standard account. If you need to specify multiple database names, separate the database names with commas (,).
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

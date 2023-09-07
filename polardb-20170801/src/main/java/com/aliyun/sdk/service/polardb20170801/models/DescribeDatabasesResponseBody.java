@@ -74,7 +74,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Databases.
+         * Details about databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -82,7 +82,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +90,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -98,7 +98,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String privilegeStatus; 
 
             /**
-             * AccountName.
+             * The username of the account.
+             * <p>
+             * 
+             * > A PolarDB for MySQL cluster does not support privileged accounts.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -182,7 +185,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilege.
+             * The permissions that are granted to the account. Valid values:
+             * <p>
+             * 
+             * *   **ReadWrite**: read and write permissions
+             * *   **ReadOnly**: read-only permissions
+             * *   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.
+             * *   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.
+             * *   **ReadIndex**: The account has the read and index permissions on the database.
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -190,7 +200,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The state of the account. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Available**
+             * *   **Deleting**
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -198,7 +213,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeStatus.
+             * The authorization state of the account. Valid values:
+             * <p>
+             * 
+             * *   **Empowering**: The system is granting permissions to the account.
+             * *   **Empowered**: Permissions are granted to the account.
+             * *   **Removing**: The system is revoking permissions from the account.
              */
             public Builder privilegeStatus(String privilegeStatus) {
                 this.privilegeStatus = privilegeStatus;
@@ -272,6 +292,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("Engine")
         private String engine;
 
+        @NameInMap("MasterID")
+        private String masterID;
+
         private Database(Builder builder) {
             this.accounts = builder.accounts;
             this.characterSetName = builder.characterSetName;
@@ -279,6 +302,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.DBName = builder.DBName;
             this.DBStatus = builder.DBStatus;
             this.engine = builder.engine;
+            this.masterID = builder.masterID;
         }
 
         public static Builder builder() {
@@ -331,6 +355,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             return this.engine;
         }
 
+        /**
+         * @return masterID
+         */
+        public String getMasterID() {
+            return this.masterID;
+        }
+
         public static final class Builder {
             private Accounts accounts; 
             private String characterSetName; 
@@ -338,9 +369,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String DBName; 
             private String DBStatus; 
             private String engine; 
+            private String masterID; 
 
             /**
-             * Accounts.
+             * Details about the accounts.
+             * <p>
+             * 
+             * > A PolarDB for MySQL cluster does not support privileged accounts.
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
@@ -348,7 +383,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterSetName.
+             * The character set that the database uses. For more information, see [Character set tables](~~99716~~).
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -356,7 +391,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBDescription.
+             * The description of the database.
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -364,7 +399,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -372,7 +407,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DBStatus.
+             * The state of the database. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Running**
+             * *   **Deleting**
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -380,10 +420,23 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The type of the database engine. Valid values:
+             * <p>
+             * 
+             * *   **MySQL**
+             * *   **Oracle**
+             * *   **PostgreSQL**
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * The ID of the primary node in the cluster of Multi-master Cluster (Database/Table) Edition.
+             */
+            public Builder masterID(String masterID) {
+                this.masterID = masterID;
                 return this;
             }
 

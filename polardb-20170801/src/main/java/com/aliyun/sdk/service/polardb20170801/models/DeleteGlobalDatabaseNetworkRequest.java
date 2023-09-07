@@ -162,7 +162,7 @@ public class DeleteGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * GDNId.
+         * The ID of the GDN.
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -189,7 +189,7 @@ public class DeleteGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

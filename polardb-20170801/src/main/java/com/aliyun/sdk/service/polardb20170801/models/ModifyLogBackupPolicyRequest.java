@@ -153,7 +153,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -162,7 +165,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupAnotherRegionRegion.
+         * The region in which you want to store cross-region log backups. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
          */
         public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
             this.putQueryParameter("LogBackupAnotherRegionRegion", logBackupAnotherRegionRegion);
@@ -171,7 +174,14 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupAnotherRegionRetentionPeriod.
+         * The retention period of cross-region log backups. Valid values:
+         * <p>
+         * 
+         * *   **0**: The cross-region backup feature is disabled.
+         * *   **30 to 7300**: Cross-region log backups are retained for 30 to 7,300 days.
+         * *   **-1**: The log backups are permanently retained.
+         * 
+         * >  When you create a cluster, the default value of this parameter is **0**.
          */
         public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
             this.putQueryParameter("LogBackupAnotherRegionRetentionPeriod", logBackupAnotherRegionRetentionPeriod);
@@ -180,7 +190,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The retention period of the log backups. Valid values:
+         * <p>
+         * 
+         * *   3 to 7300: The log backups are retained for 3 to 7,300 days.
+         * *   \-1: The log backups are permanently retained.
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);

@@ -199,7 +199,7 @@ public class CreateParameterGroupRequest extends Request {
         } 
 
         /**
-         * DBType.
+         * The type of the database engine. Only **MySQL** is supported.
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -208,7 +208,12 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **5.6**
+         * *   **5.7**
+         * *   **8.0**
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -235,7 +240,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupDesc.
+         * The description of the parameter template. It must be 0 to 199 characters in length.
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -244,7 +249,11 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupName.
+         * The name of the parameter template. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   It can contain letters, digits, and underscores (\_). It must start with a letter and cannot end with an underscore.**
+         * *   It must be 8 to 64 characters in length.
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -253,7 +262,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The JSON string that consists of parameters and values. The parameter values are strings. Example: `{"wait_timeout":"86400","innodb_old_blocks_time":"1000"}`.
+         * <p>
+         * 
+         * > You can call the [DescribeParameterTemplates](~~207428~~) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -262,7 +274,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +286,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

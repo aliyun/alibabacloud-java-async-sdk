@@ -153,7 +153,13 @@ public class DescribePendingMaintenanceActionsRequest extends Request {
         } 
 
         /**
-         * IsHistory.
+         * Specifies whether to return the historical tasks. Valid values:
+         * <p>
+         * 
+         * *   **0**: returns the current task.
+         * *   **1**: returns the historical tasks.
+         * 
+         * Default value: **0**.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -180,7 +186,7 @@ public class DescribePendingMaintenanceActionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +195,7 @@ public class DescribePendingMaintenanceActionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -227,7 +227,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -236,7 +236,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. Valid values:
+         * <p>
+         * 
+         * *   **Automated**
+         * *   **Manual**
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -245,7 +249,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * BackupRegion.
+         * The region where the cross-region data backup file of the instance is stored.
+         * <p>
+         * 
+         * > This parameter is valid only for PolarDB for MySQL clusters.
          */
         public Builder backupRegion(String backupRegion) {
             this.putQueryParameter("BackupRegion", backupRegion);
@@ -254,7 +261,11 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * BackupStatus.
+         * The status of the backup set. Valid values:
+         * <p>
+         * 
+         * *   **Success**
+         * *   **Failed**
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -263,7 +274,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -272,7 +283,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the `YYYY-MM-DDThh:mmZ` format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -299,7 +310,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -308,7 +319,14 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -335,7 +353,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

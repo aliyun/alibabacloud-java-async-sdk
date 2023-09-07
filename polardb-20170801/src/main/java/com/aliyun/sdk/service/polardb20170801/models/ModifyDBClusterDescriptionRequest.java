@@ -126,7 +126,11 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         } 
 
         /**
-         * DBClusterDescription.
+         * The name of the cluster. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name cannot start with `http://` or `https://`.
+         * *   The name must be 2 to 256 characters in length.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -135,7 +139,7 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the PolarDB cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

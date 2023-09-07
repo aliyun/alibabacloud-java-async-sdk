@@ -169,7 +169,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to unbinds all tags from the cluster. Valid values: **true** and **false**. Default value: **false**.
+         * <p>
+         * 
+         * >  This parameter takes effect only when the value of the `TagKey.n` parameter is empty.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -196,7 +199,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -205,7 +211,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of the clusters.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -232,7 +238,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **cluster**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -241,7 +247,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The keys of the tags.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

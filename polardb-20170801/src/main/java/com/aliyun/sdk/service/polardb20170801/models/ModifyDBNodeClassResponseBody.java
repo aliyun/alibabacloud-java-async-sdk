@@ -62,7 +62,7 @@ public class ModifyDBNodeClassResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The ID of the PolarDB cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class ModifyDBNodeClassResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class ModifyDBNodeClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

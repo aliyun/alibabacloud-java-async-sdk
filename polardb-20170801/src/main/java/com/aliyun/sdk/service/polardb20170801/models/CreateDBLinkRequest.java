@@ -284,7 +284,7 @@ public class CreateDBLinkRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -293,7 +293,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the source cluster that the database link connects.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -302,7 +305,12 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * DBLinkName.
+         * The name of the database link.
+         * <p>
+         * 
+         * *   The name must contain lowercase letters and can also contain digits and underscores (\_).
+         * *   The name must start with a letter and end with a letter or digit.
+         * *   The name must be 1 to 64 characters in length.
          */
         public Builder DBLinkName(String DBLinkName) {
             this.putQueryParameter("DBLinkName", DBLinkName);
@@ -329,7 +337,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~98041~~) operation to query information about regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -338,7 +349,7 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -365,7 +376,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * SourceDBName.
+         * The name of the source database.
+         * <p>
+         * 
+         * >  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.
          */
         public Builder sourceDBName(String sourceDBName) {
             this.putQueryParameter("SourceDBName", sourceDBName);
@@ -374,7 +388,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * TargetDBAccount.
+         * The account of the destination database.
+         * <p>
+         * 
+         * >  You can call the [DescribeAccounts](~~173549~~) operation to query the account of a PolarDB cluster.
          */
         public Builder targetDBAccount(String targetDBAccount) {
             this.putQueryParameter("TargetDBAccount", targetDBAccount);
@@ -383,7 +400,11 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * TargetDBInstanceName.
+         * The ID of the destination cluster that the database link connects.
+         * <p>
+         * 
+         * > *   If the destination cluster is a user-created Oracle database on an ECS instance, set the value to `null`.
+         * > *   You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
          */
         public Builder targetDBInstanceName(String targetDBInstanceName) {
             this.putQueryParameter("TargetDBInstanceName", targetDBInstanceName);
@@ -392,7 +413,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * TargetDBName.
+         * The name of the destination database.
+         * <p>
+         * 
+         * >  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.
          */
         public Builder targetDBName(String targetDBName) {
             this.putQueryParameter("TargetDBName", targetDBName);
@@ -401,7 +425,7 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * TargetDBPasswd.
+         * The account password of the destination database.
          */
         public Builder targetDBPasswd(String targetDBPasswd) {
             this.putQueryParameter("TargetDBPasswd", targetDBPasswd);
@@ -410,7 +434,7 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * TargetIp.
+         * The IP address of the user-created Oracle database on an ECS instance.
          */
         public Builder targetIp(String targetIp) {
             this.putQueryParameter("TargetIp", targetIp);
@@ -419,7 +443,7 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * TargetPort.
+         * The port number of the user-created Oracle database on an ECS instance.
          */
         public Builder targetPort(String targetPort) {
             this.putQueryParameter("TargetPort", targetPort);
@@ -428,7 +452,10 @@ public class CreateDBLinkRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC).
+         * <p>
+         * 
+         * >  You can call the [DescribeVpcs](~~35739~~) operation to query information about VPCs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

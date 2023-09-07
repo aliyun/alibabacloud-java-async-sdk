@@ -46,6 +46,10 @@ public class UpgradeDBClusterVersionRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("TargetDBRevisionVersionCode")
+    private String targetDBRevisionVersionCode;
+
+    @Query
     @NameInMap("UpgradeLabel")
     private String upgradeLabel;
 
@@ -67,6 +71,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.targetDBRevisionVersionCode = builder.targetDBRevisionVersionCode;
         this.upgradeLabel = builder.upgradeLabel;
         this.upgradePolicy = builder.upgradePolicy;
         this.upgradeType = builder.upgradeType;
@@ -142,6 +147,13 @@ public class UpgradeDBClusterVersionRequest extends Request {
     }
 
     /**
+     * @return targetDBRevisionVersionCode
+     */
+    public String getTargetDBRevisionVersionCode() {
+        return this.targetDBRevisionVersionCode;
+    }
+
+    /**
      * @return upgradeLabel
      */
     public String getUpgradeLabel() {
@@ -171,6 +183,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String targetDBRevisionVersionCode; 
         private String upgradeLabel; 
         private String upgradePolicy; 
         private String upgradeType; 
@@ -189,6 +202,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.targetDBRevisionVersionCode = request.targetDBRevisionVersionCode;
             this.upgradeLabel = request.upgradeLabel;
             this.upgradePolicy = request.upgradePolicy;
             this.upgradeType = request.upgradeType;
@@ -231,7 +245,14 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * The latest start time to run the task that updates the kernel version of the cluster. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
+         * 
+         * *   If you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is `PlannedEndTime + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -240,7 +261,14 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
+         * 
+         * *   If you do not specify this parameter, the kernel update task runs immediately after you submit the request.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -263,6 +291,15 @@ public class UpgradeDBClusterVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * 目标版本的VersionCode，参数取值可从[DescribeDBClusterVersion](~~2319145~~)接口获取。
+         */
+        public Builder targetDBRevisionVersionCode(String targetDBRevisionVersionCode) {
+            this.putQueryParameter("TargetDBRevisionVersionCode", targetDBRevisionVersionCode);
+            this.targetDBRevisionVersionCode = targetDBRevisionVersionCode;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableZones.
+         * The available zones of the cluster.
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -58,7 +58,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,17 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String DBNodeClass; 
 
             /**
-             * Category.
+             * The edition of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: Cluster Edition.
+             * *   **Basic**: Single Node Edition.
+             * *   **ArchiveNormal**: X-Engine.
+             * *   **NormalMultimaster**: Multi-master Cluster (Database/Table) Edition.
+             * *   **SENormal**: Standard Edition.
+             * 
+             * >- Only PolarDB for MySQL supports Single Node Edition.
+             * >- Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -118,7 +128,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeClass.
+             * The specifications of the node.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -171,7 +181,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String engine; 
 
             /**
-             * AvailableResources.
+             * The available resources.
              */
             public Builder availableResources(java.util.List < AvailableResources> availableResources) {
                 this.availableResources = availableResources;
@@ -179,7 +189,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The version of the database engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -244,7 +254,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * RegionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -252,7 +262,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedEngines.
+             * The database engines that the available resources support.
              */
             public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -260,7 +270,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the cluster.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

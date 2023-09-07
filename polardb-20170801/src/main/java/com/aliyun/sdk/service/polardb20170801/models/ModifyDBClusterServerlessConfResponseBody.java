@@ -50,7 +50,7 @@ public class ModifyDBClusterServerlessConfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The ID of the serverless cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -58,7 +58,7 @@ public class ModifyDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

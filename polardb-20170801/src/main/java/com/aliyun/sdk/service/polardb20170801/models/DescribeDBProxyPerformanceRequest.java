@@ -100,7 +100,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -109,7 +109,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -118,7 +118,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metrics that you want to query. Separate multiple indicators with commas (,). For more information, see [Performance parameters](~~141787~~).
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -127,7 +127,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

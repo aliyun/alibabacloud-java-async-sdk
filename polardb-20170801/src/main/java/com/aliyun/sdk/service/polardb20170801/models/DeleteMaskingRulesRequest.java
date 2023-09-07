@@ -70,7 +70,10 @@ public class DeleteMaskingRulesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -79,7 +82,10 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * RuleNameList.
+         * The name of the masking rule. You can specify multiple masking rules at a time. Separate the masking rules with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeMaskingRules](~~212573~~) operation to query details of all the masking rules for a specified cluster, such as the names of the masking rules.
          */
         public Builder ruleNameList(String ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);

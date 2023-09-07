@@ -181,7 +181,7 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         } 
 
         /**
-         * DBNodeClass.
+         * The specifications of the node. For more information, see [Specifications of compute nodes](~~102542~~).
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -190,7 +190,12 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * DBType.
+         * The type of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -199,7 +204,21 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine. Valid values for the MySQL database engine:
+         * <p>
+         * 
+         * *   **5.6**
+         * *   **5.7**
+         * *   **8.0**
+         * 
+         * Valid values for the PostgreSQL database engine:
+         * 
+         * *   **11**
+         * *   **14**
+         * 
+         * Valid value for the Oracle database engine: **11**
+         * 
+         * > This parameter is required when you specify the **DBType** parameter.
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -226,7 +245,11 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -235,7 +258,10 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster. Default value: **cn-hangzhou**.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +288,10 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query the available zones.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

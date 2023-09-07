@@ -134,7 +134,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -142,7 +142,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end date of the query.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -150,7 +150,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The type of the database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -158,7 +158,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details about slow query logs.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -166,7 +166,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of SQL statements that are returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -182,7 +182,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start date of the query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -198,7 +198,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -394,7 +394,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             private Long totalLockTimes; 
 
             /**
-             * CreateTime.
+             * The date when the data was generated.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -402,7 +402,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -410,7 +410,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeId.
+             * The ID of the node.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -418,7 +418,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExecutionTime.
+             * The longest execution duration of a specific SQL statement in the query. Unit: seconds.
              */
             public Builder maxExecutionTime(Long maxExecutionTime) {
                 this.maxExecutionTime = maxExecutionTime;
@@ -426,7 +426,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLockTime.
+             * The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.
              */
             public Builder maxLockTime(Long maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -434,7 +434,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseMaxRowCount.
+             * The largest number of rows that were parsed by a specific SQL statement in the query.
              */
             public Builder parseMaxRowCount(Long parseMaxRowCount) {
                 this.parseMaxRowCount = parseMaxRowCount;
@@ -442,7 +442,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseTotalRowCounts.
+             * The total number of rows that were parsed by all SQL statements in the query.
              */
             public Builder parseTotalRowCounts(Long parseTotalRowCounts) {
                 this.parseTotalRowCounts = parseTotalRowCounts;
@@ -450,7 +450,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnMaxRowCount.
+             * The largest number of rows that were returned by a specific SQL statement in the query.
              */
             public Builder returnMaxRowCount(Long returnMaxRowCount) {
                 this.returnMaxRowCount = returnMaxRowCount;
@@ -458,7 +458,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnTotalRowCounts.
+             * The total number of rows that were returned by all SQL statements in the query.
              */
             public Builder returnTotalRowCounts(Long returnTotalRowCounts) {
                 this.returnTotalRowCounts = returnTotalRowCounts;
@@ -466,7 +466,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLHASH.
+             * The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.
              */
             public Builder SQLHASH(String SQLHASH) {
                 this.SQLHASH = SQLHASH;
@@ -474,7 +474,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The SQL statement that is executed in the query.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -482,7 +482,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalExecutionCounts.
+             * The total number of executions of the SQL statements.
              */
             public Builder totalExecutionCounts(Long totalExecutionCounts) {
                 this.totalExecutionCounts = totalExecutionCounts;
@@ -490,7 +490,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalExecutionTimes.
+             * The total duration that was caused by all SQL statements in the query. Unit: seconds.
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;
@@ -498,7 +498,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLockTimes.
+             * The total lock duration that was caused by all SQL statements in the query. Unit: seconds.
              */
             public Builder totalLockTimes(Long totalLockTimes) {
                 this.totalLockTimes = totalLockTimes;

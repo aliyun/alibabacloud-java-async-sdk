@@ -18,6 +18,14 @@ public class OpenAITaskRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("DescribeType")
+    private String describeType;
+
+    @Query
+    @NameInMap("NodeType")
+    private String nodeType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -53,6 +61,8 @@ public class OpenAITaskRequest extends Request {
     private OpenAITaskRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.describeType = builder.describeType;
+        this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.password = builder.password;
@@ -81,6 +91,20 @@ public class OpenAITaskRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return describeType
+     */
+    public String getDescribeType() {
+        return this.describeType;
+    }
+
+    /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     /**
@@ -141,6 +165,8 @@ public class OpenAITaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<OpenAITaskRequest, Builder> {
         private String DBClusterId; 
+        private String describeType; 
+        private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String password; 
@@ -157,6 +183,8 @@ public class OpenAITaskRequest extends Request {
         private Builder(OpenAITaskRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.describeType = request.describeType;
+            this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.password = request.password;
@@ -168,11 +196,29 @@ public class OpenAITaskRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DescribeType.
+         */
+        public Builder describeType(String describeType) {
+            this.putQueryParameter("DescribeType", describeType);
+            this.describeType = describeType;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
             return this;
         }
 
@@ -195,7 +241,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password used to access the database for which you want to enable the PolarDB for AI feature.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -204,7 +250,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +259,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -240,7 +286,7 @@ public class OpenAITaskRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username used to access the database for which you want to enable the PolarDB for AI feature.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

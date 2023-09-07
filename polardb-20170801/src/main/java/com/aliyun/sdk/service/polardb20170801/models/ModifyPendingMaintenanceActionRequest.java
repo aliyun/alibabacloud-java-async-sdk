@@ -169,7 +169,7 @@ public class ModifyPendingMaintenanceActionRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The ID of the task. You can specify multiple task IDs at a time to modify the switching time of the tasks in a unified manner. The task IDs must be separated with commas (,).
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -196,7 +196,10 @@ public class ModifyPendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~98041~~) operation to query the region ID details.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -205,7 +208,7 @@ public class ModifyPendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -241,7 +244,7 @@ public class ModifyPendingMaintenanceActionRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * The time that you specify for the background to perform the action that corresponds to the pending event. Specify the time in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);

@@ -126,7 +126,10 @@ public class DeleteBackupRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeBackups](~~98102~~) operation to query the backup IDs.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -135,7 +138,7 @@ public class DeleteBackupRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

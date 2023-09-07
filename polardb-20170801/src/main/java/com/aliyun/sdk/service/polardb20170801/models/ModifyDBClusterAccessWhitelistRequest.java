@@ -195,7 +195,11 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         } 
 
         /**
-         * DBClusterIPArrayAttribute.
+         * The attributes of the IP whitelist group. Set this parameter to **hidden** to hide the IP whitelist group in the console.
+         * <p>
+         * 
+         * > *   The IP whitelist group that has appeared in the console cannot be hidden.
+         * > *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
          */
         public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
             this.putQueryParameter("DBClusterIPArrayAttribute", DBClusterIPArrayAttribute);
@@ -204,7 +208,18 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * DBClusterIPArrayName.
+         * The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.
+         * <p>
+         * 
+         * *   If the specified whitelist group name does not exist, the whitelist group is created.
+         * *   If the specified whitelist group name exists, the whitelist group is modified.
+         * *   If you do not specify this parameter, the default group is modified.
+         * 
+         * > 
+         * 
+         * *   You can create a maximum of 50 IP whitelist groups for a cluster.
+         * 
+         * *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
          */
         public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
             this.putQueryParameter("DBClusterIPArrayName", DBClusterIPArrayName);
@@ -213,7 +228,7 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -222,7 +237,14 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * The method used to modify the IP whitelist. Valid values:
+         * <p>
+         * 
+         * *   **Cover** (default): overwrites the original IP whitelist.
+         * *   **Append**: appends IP addresses to the original whitelist.
+         * *   **Delete**: deletes IP addresses.
+         * 
+         * >  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -267,7 +289,11 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * The ID of the security group. Separate multiple security groups with commas (,).
+         * <p>
+         * 
+         * > *   You can add a maximum of three security groups to a cluster.
+         * > *   This parameter can be specified only when the **WhiteListType** parameter is set to **SecurityGroup**.
          */
         public Builder securityGroupIds(String securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -276,7 +302,13 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * SecurityIps.
+         * The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:
+         * <p>
+         * 
+         * *   IP addresses. Example: 10.23.12.24.
+         * *   CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.
+         * 
+         * >  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);
@@ -285,7 +317,13 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * WhiteListType.
+         * The type of the whitelist. Valid values:
+         * <p>
+         * 
+         * *   **IP**: IP whitelist group.
+         * *   **SecurityGroup**: security group.
+         * 
+         * Default value: **IP**.
          */
         public Builder whiteListType(String whiteListType) {
             this.putQueryParameter("WhiteListType", whiteListType);

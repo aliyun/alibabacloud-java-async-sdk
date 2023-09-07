@@ -163,7 +163,10 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster in the GDN.
+         * <p>
+         * 
+         * >  You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to view the ID of the cluster in the GDN.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -172,7 +175,7 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         }
 
         /**
-         * GDNId.
+         * The ID of the GDN.
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);

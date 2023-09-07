@@ -158,7 +158,10 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupId.
+         * The ID of the parameter template.
+         * <p>
+         * 
+         * > You can call the [DescribeParameterGroups](~~207178~~) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -167,7 +170,10 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available within your account, such as the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +182,7 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

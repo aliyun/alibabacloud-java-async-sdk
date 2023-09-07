@@ -195,7 +195,11 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         } 
 
         /**
-         * AllowShutDown.
+         * Specifies whether to enable No-activity Suspension. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder allowShutDown(String allowShutDown) {
             this.putQueryParameter("AllowShutDown", allowShutDown);
@@ -204,7 +208,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the serverless cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -249,7 +253,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -258,7 +262,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -267,7 +271,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMax.
+         * The maximum number of read-only nodes for scaling. Valid values: 0 to 15.
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
@@ -276,7 +280,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMin.
+         * The minimum number of read-only nodes for scaling. Valid values: 0 to 15.
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);
@@ -285,7 +289,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * SecondsUntilAutoPause.
+         * The detection period for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.putQueryParameter("SecondsUntilAutoPause", secondsUntilAutoPause);

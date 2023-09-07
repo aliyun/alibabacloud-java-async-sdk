@@ -321,7 +321,7 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * ConnectionString.
+         * The endpoint of the cluster.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -330,7 +330,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * The description of the cluster. Fuzzy match is supported.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -339,7 +339,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * The ID of the cluster. Separate multiple cluster IDs with commas (,).
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -348,7 +348,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterStatus.
+         * The state of the cluster that you want to query. For information about valid values, see [Cluster states](~~99286~~).
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -357,7 +357,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBNodeIds.
+         * The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -366,7 +366,12 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBType.
+         * The database engine that the cluster runs. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -375,7 +380,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * The database engine version of the cluster.
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -384,7 +389,11 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Expired.
+         * Specifies whether the cluster has expired. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("Expired", expired);
@@ -411,7 +420,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -420,7 +429,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Valid values: **30**, **50**, or **100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -429,7 +441,11 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -438,7 +454,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * RecentCreationInterval.
+         * Filters clusters created in the last N days. Valid values: 0 to 15.
          */
         public Builder recentCreationInterval(Integer recentCreationInterval) {
             this.putQueryParameter("RecentCreationInterval", recentCreationInterval);
@@ -447,7 +463,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * RecentExpirationInterval.
+         * Filters clusters that expire after N days. Valid values: 0 to 15.
          */
         public Builder recentExpirationInterval(Integer recentExpirationInterval) {
             this.putQueryParameter("RecentExpirationInterval", recentExpirationInterval);
@@ -456,7 +472,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -465,7 +484,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -492,7 +511,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the cluster.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -546,7 +565,10 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.
+             * <p>
+             * 
+             * > The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -554,7 +576,10 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * > The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

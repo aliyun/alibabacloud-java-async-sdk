@@ -122,7 +122,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster for which the task was created.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -130,7 +130,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -138,7 +138,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +146,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -154,7 +154,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +170,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The details of the task.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -178,7 +178,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -374,7 +374,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * BeginTime.
+             * The time when the task was started. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -382,7 +382,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepName.
+             * The name of the current step.
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -390,7 +390,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The database name.
+             * <p>
+             * 
+             * >  This parameter is returned for only the tasks that involve database operations.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -398,7 +401,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedFinishTime.
+             * The estimated end time of the task. In most cases, this parameter is empty.
              */
             public Builder expectedFinishTime(String expectedFinishTime) {
                 this.expectedFinishTime = expectedFinishTime;
@@ -406,7 +409,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the task was completed. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -414,7 +417,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the task in percentage.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -422,7 +425,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProgressInfo.
+             * The description of the task progress. If no progress description is provided for the task, this parameter is empty.
              */
             public Builder progressInfo(String progressInfo) {
                 this.progressInfo = progressInfo;
@@ -430,7 +433,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Remain.
+             * The estimated remaining duration of the task. Unit: seconds.
              */
             public Builder remain(Integer remain) {
                 this.remain = remain;
@@ -438,7 +441,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StepProgressInfo.
+             * The progress of the subtasks. For example, the value `1/4` indicates that the task consists of four subtasks and the first subtask is in progress.
              */
             public Builder stepProgressInfo(String stepProgressInfo) {
                 this.stepProgressInfo = stepProgressInfo;
@@ -446,7 +449,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StepsInfo.
+             * The details of the subtasks.
              */
             public Builder stepsInfo(String stepsInfo) {
                 this.stepsInfo = stepsInfo;
@@ -454,7 +457,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAction.
+             * The API operation that is used by the task. Example: `CreateDBInstance`.
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -462,7 +465,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskErrorCode.
+             * The error code that is returned when an error occurs.
+             * <p>
+             * 
+             * >  This parameter is returned only when the task is in the **Stop** state.
              */
             public Builder taskErrorCode(String taskErrorCode) {
                 this.taskErrorCode = taskErrorCode;
@@ -470,7 +476,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskErrorMessage.
+             * The error message that is returned when an error occurs.
+             * <p>
+             * 
+             * >  This parameter is returned only when the task is in the **Stop** state.
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -478,7 +487,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

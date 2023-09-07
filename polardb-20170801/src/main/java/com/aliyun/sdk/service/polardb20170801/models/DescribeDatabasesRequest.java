@@ -153,7 +153,7 @@ public class DescribeDatabasesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -162,7 +162,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
+         * <p>
+         * 
+         * > You cannot specify multiple database names.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -189,7 +192,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +201,14 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

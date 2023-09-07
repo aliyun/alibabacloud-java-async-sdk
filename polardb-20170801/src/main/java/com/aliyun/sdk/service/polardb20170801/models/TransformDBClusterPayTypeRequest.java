@@ -197,7 +197,7 @@ public class TransformDBClusterPayTypeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +206,7 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -233,7 +233,11 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -242,7 +246,13 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal cycle of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
+         * 
+         * >  This parameter is required if you set the **PayType** parameter to **Prepaid**.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -251,7 +261,7 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +270,7 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -287,7 +297,13 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the cluster. Valid values:
+         * <p>
+         * 
+         * *   If the **Period** parameter is set to **Year**, the **UsedTime** parameter can be set to 1, 2, or 3.
+         * *   If the **Period** parameter is set to **Month**, the **UsedTime** parameter can be set to 1, 2, 3, 4, 5, 6, 7, 8, or 9.
+         * 
+         * >  This parameter is required if you set the **PayType** parameter to **Prepaid**.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

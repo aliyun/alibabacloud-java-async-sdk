@@ -50,7 +50,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The details of the endpoints.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * ConnectionString.
+             * The endpoint.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -190,7 +190,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -198,7 +198,11 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Public**
+             * *   **Private**
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -206,7 +210,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -214,7 +218,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateZoneConnectionString.
+             * The private domain name that is bound to the endpoint.
              */
             public Builder privateZoneConnectionString(String privateZoneConnectionString) {
                 this.privateZoneConnectionString = privateZoneConnectionString;
@@ -222,7 +226,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -230,7 +234,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -238,7 +242,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * The ID of the virtual private cloud (VPC) instance.
+             * <p>
+             * 
+             * > This parameter is returned for only PolarDB for MySQL clusters.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -387,7 +394,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String readWriteMode; 
 
             /**
-             * AddressItems.
+             * The details of the endpoint.
              */
             public Builder addressItems(java.util.List < AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -395,7 +402,11 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoAddNewNodes.
+             * Indicates whether new nodes are automatically associated with the default cluster endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Enable**
+             * *   **Disable**
              */
             public Builder autoAddNewNodes(String autoAddNewNodes) {
                 this.autoAddNewNodes = autoAddNewNodes;
@@ -403,7 +414,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -411,7 +422,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointDescription.
+             * The name of the endpoint.
              */
             public Builder DBEndpointDescription(String DBEndpointDescription) {
                 this.DBEndpointDescription = DBEndpointDescription;
@@ -419,7 +430,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointId.
+             * The ID of the endpoint.
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -427,7 +438,26 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointConfig.
+             * The advanced configurations of the endpoint.
+             * <p>
+             * 
+             * *   **DistributedTransaction**: indicates whether transaction splitting is enabled. Valid values:
+             * 
+             *     *   **on**
+             *     *   **off**
+             * 
+             * *   **ConsistLevel**: the consistency level of sessions. Valid values:
+             * 
+             *     *   **0**: eventual consistency.
+             *     *   **1**: session consistency.
+             *     *   **2**: global consistency.
+             * 
+             * *   **LoadBalanceStrategy**: the load balancing policy that automatically schedules loads. Only **load** may be returned.
+             * 
+             * *   **MasterAcceptReads**: indicates whether the primary node processes read requests. Valid values:
+             * 
+             *     *   **on**
+             *     *   **off**
              */
             public Builder endpointConfig(String endpointConfig) {
                 this.endpointConfig = endpointConfig;
@@ -435,7 +465,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Cluster**: the default endpoint.
+             * *   **Primary**: the primary endpoint.
+             * *   **Custom**: a custom cluster endpoint.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -443,7 +478,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeWithRoles.
+             * The role name of each node in the endpoint. The role name of the primary node is **Writer**. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number, such as **Reader1** and **Reader2**.
+             * <p>
+             * 
+             * > This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.
              */
             public Builder nodeWithRoles(String nodeWithRoles) {
                 this.nodeWithRoles = nodeWithRoles;
@@ -451,7 +489,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * The nodes in the endpoint.
              */
             public Builder nodes(String nodes) {
                 this.nodes = nodes;
@@ -459,7 +497,11 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWriteMode.
+             * The read/write mode. Valid values:
+             * <p>
+             * 
+             * *   **ReadWrite**: handles read and write requests. Automatic read/write splitting is enabled.
+             * *   **ReadOnly**: handles read-only requests.
              */
             public Builder readWriteMode(String readWriteMode) {
                 this.readWriteMode = readWriteMode;

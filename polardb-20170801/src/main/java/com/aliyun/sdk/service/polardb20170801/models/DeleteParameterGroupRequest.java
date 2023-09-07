@@ -158,7 +158,11 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupId.
+         * The parameter template ID.
+         * <p>
+         * 
+         *  
+         * >  You can call the [DescribeParameterGroups](~~207178~~) operation to query the parameter template ID.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -167,7 +171,10 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         *  
+         * >  You can call the [DescribeRegions](~~98041~~) operation to query available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +183,7 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

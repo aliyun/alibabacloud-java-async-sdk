@@ -153,7 +153,7 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -162,7 +162,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -189,7 +189,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return. Set this parameter to an integer that is larger than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +198,14 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -141,7 +141,7 @@ public class ModifyAccountPasswordRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +150,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -159,7 +159,12 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * NewAccountPassword.
+         * The new password of the account. The new password must meet the following requirements:
+         * <p>
+         * 
+         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   It must be 8 to 32 characters in length.
+         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);

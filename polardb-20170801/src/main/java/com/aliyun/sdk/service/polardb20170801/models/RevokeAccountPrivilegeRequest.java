@@ -141,7 +141,10 @@ public class RevokeAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the account.
+         * <p>
+         * 
+         * >  You can specify only a standard account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +153,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the PolarDB cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -159,7 +162,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The names of the databases. If you need to specify multiple database names, separate the names with commas (,).
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);

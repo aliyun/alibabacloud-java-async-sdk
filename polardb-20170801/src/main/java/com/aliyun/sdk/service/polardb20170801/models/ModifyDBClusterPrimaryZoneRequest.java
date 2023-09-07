@@ -22,6 +22,10 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
     private Boolean fromTimeService;
 
     @Query
+    @NameInMap("IsSwitchOverForDisaster")
+    private String isSwitchOverForDisaster;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -46,6 +50,10 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("VPCId")
+    private String VPCId;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -58,12 +66,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.fromTimeService = builder.fromTimeService;
+        this.isSwitchOverForDisaster = builder.isSwitchOverForDisaster;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.plannedEndTime = builder.plannedEndTime;
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
     }
@@ -93,6 +103,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
      */
     public Boolean getFromTimeService() {
         return this.fromTimeService;
+    }
+
+    /**
+     * @return isSwitchOverForDisaster
+     */
+    public String getIsSwitchOverForDisaster() {
+        return this.isSwitchOverForDisaster;
     }
 
     /**
@@ -138,6 +155,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
     }
 
     /**
+     * @return VPCId
+     */
+    public String getVPCId() {
+        return this.VPCId;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -154,12 +178,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBClusterPrimaryZoneRequest, Builder> {
         private String DBClusterId; 
         private Boolean fromTimeService; 
+        private String isSwitchOverForDisaster; 
         private String ownerAccount; 
         private Long ownerId; 
         private String plannedEndTime; 
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String VPCId; 
         private String vSwitchId; 
         private String zoneId; 
 
@@ -171,18 +197,23 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.fromTimeService = request.fromTimeService;
+            this.isSwitchOverForDisaster = request.isSwitchOverForDisaster;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.plannedEndTime = request.plannedEndTime;
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~173433~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -191,11 +222,24 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * FromTimeService.
+         * Specifies an immediate or scheduled task to switch the primary zone. Valid values:
+         * <p>
+         * 
+         * *   false: scheduled task
+         * *   true: immediate task
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
             this.fromTimeService = fromTimeService;
+            return this;
+        }
+
+        /**
+         * IsSwitchOverForDisaster.
+         */
+        public Builder isSwitchOverForDisaster(String isSwitchOverForDisaster) {
+            this.putQueryParameter("IsSwitchOverForDisaster", isSwitchOverForDisaster);
+            this.isSwitchOverForDisaster = isSwitchOverForDisaster;
             return this;
         }
 
@@ -218,7 +262,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * The latest start time to run the task. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.
+         * 
+         * *   By default, if you specify the `PlannedStartTime` parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: `Value of the PlannedEndTime parameter + 30 minutes`. For example, if you set the `PlannedStartTime` parameter to `2021-01-14T09:00:00Z` and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -227,7 +278,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * The earliest time to switch the primary zone within the scheduled time period. Specify the parameter in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.
+         * 
+         * *   If this parameter is empty, the primary zone is immediately switched.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -254,7 +312,26 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * VPCId.
+         */
+        public Builder VPCId(String VPCId) {
+            this.putQueryParameter("VPCId", VPCId);
+            this.VPCId = VPCId;
+            return this;
+        }
+
+        /**
+         * The vSwitch ID of in the destination primary zone.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.
+         * 
+         * *   For a PolarDB for MySQL cluster:
+         * 
+         *     *   This parameter is optional if no vSwitches have been created in the destination zone. The default vSwitch is used.
+         *     *   This parameter is required if a vSwitch has been created in the destination zone.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -263,7 +340,10 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the destination primary zone.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

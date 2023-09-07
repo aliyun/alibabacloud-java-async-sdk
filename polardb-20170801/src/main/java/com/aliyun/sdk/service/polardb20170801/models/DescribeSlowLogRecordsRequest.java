@@ -214,7 +214,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -223,7 +226,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -232,7 +235,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. The interval between the start time and end time must be within 24 hours. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > This parameter must be set to a time value in UTC (UTC+0 time zone). If your service resides in another time zone, convert the time value. For example, if the local time in the time zone where your service resides is 12:00 (UTC +8) and you want to query slow query logs at 08:00 (UTC +8) to 12:00, set this parameter to a time value that ranges from 00:00, set this parameter to 04:00.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -259,7 +265,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is larger than 0.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +277,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +293,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available for your account, such as the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,7 +323,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * SQLHASH.
+         * The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.
          */
         public Builder SQLHASH(String SQLHASH) {
             this.putQueryParameter("SQLHASH", SQLHASH);
@@ -313,7 +332,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You can specify a time range of up to 30 days.
+         * 
+         * *   This parameter must be set to a time value in UTC (UTC+0 time zone). If your service resides in another time zone, convert the time value. For example, if the local time in the time zone where your service resides is 12:00 (UTC +8) and you want to query slow query logs at 08:00 (UTC +8) to 12:00, set this parameter to a time value that ranges from 00:00, set this parameter to 04:00.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

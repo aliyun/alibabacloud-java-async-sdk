@@ -62,7 +62,7 @@ public class CreateStoragePlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class CreateStoragePlanResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateStoragePlanResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

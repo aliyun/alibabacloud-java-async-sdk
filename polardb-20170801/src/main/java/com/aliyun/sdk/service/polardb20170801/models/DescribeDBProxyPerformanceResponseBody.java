@@ -110,7 +110,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -118,7 +118,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * The type of the database engine.
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -126,7 +126,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine.
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -134,7 +134,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +142,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * Details about the performance metrics.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -150,7 +150,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -210,7 +210,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Timestamp.
+             * The time when the metric value was collected. This value is a timestamp in milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -218,7 +218,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -336,7 +336,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private Points points; 
 
             /**
-             * DBNodeId.
+             * The ID of the node.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -344,7 +344,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Measurement.
+             * The performance metric.
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -352,7 +352,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The name of the performance metric.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -360,7 +360,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * The list of the performance metrics.
              */
             public Builder points(Points points) {
                 this.points = points;

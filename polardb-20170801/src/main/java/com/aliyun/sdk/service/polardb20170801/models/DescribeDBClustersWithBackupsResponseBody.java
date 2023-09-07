@@ -86,7 +86,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The details about the cluster.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The total number of returned pages.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of clusters returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -374,7 +374,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreateTime.
+             * The time when the cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -382,7 +382,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterDescription.
+             * The name of the cluster.
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -390,7 +390,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -398,7 +398,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterNetworkType.
+             * The network type of the cluster.
              */
             public Builder DBClusterNetworkType(String DBClusterNetworkType) {
                 this.DBClusterNetworkType = DBClusterNetworkType;
@@ -406,7 +406,20 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterStatus.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   Creating: The cluster is being created.
+             * *   Running: The cluster is running.
+             * *   Deleting: The cluster is being released.
+             * *   Rebooting: The cluster is restarting.
+             * *   DBNodeCreating: The node is being added.
+             * *   DBNodeDeleting: The node is being deleted.
+             * *   ClassChanging: The specifications of the node are being changed.
+             * *   NetAddressCreating: The network connection is being created.
+             * *   NetAddressDeleting: The network connection is being deleted.
+             * *   NetAddressModifying: The network connection is being modified.
+             * *   Deleted: The cluster has been released.
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -414,7 +427,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeClass.
+             * The specifications of the node.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -422,7 +435,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * The type of the database engine.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -430,7 +443,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -438,7 +451,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * The time when the cluster was deleted.
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -446,7 +459,11 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionLock.
+             * Indicates whether the cluster is locked and can be deleted. Valid values:
+             * <p>
+             * 
+             * *   **0**: The cluster is not locked and can be deleted.
+             * *   **1**: The cluster is locked and cannot be deleted.
              */
             public Builder deletionLock(Integer deletionLock) {
                 this.deletionLock = deletionLock;
@@ -454,7 +471,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The type of the database engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -462,7 +479,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the cluster expires.
+             * <p>
+             * 
+             * > A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -470,7 +490,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * Indicates whether the cluster has expired.
+             * <p>
+             * 
+             * > A specific value will be returned only for subscription clusters.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -478,7 +501,11 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * Indicates whether the cluster was released. Valid values:
+             * <p>
+             * 
+             * *   1: released
+             * *   0: not released
              */
             public Builder isDeleted(Integer isDeleted) {
                 this.isDeleted = isDeleted;
@@ -486,7 +513,12 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * The state of the cluster lock. Valid values:
+             * <p>
+             * 
+             * *   **Unlock**: The cluster is not locked.
+             * *   **ManualLock**: The cluster is manually locked.
+             * *   **LockByExpiration**: The cluster is automatically locked after the cluster expires.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -494,7 +526,11 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   **Postpaid**: pay-as-you-go.
+             * *   **Prepaid**: subscription
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -502,7 +538,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -510,7 +546,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC ID of the cluster.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -518,7 +554,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone in which the instance is located.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

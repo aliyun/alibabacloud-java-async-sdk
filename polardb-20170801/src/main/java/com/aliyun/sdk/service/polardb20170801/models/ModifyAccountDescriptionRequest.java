@@ -141,7 +141,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * AccountDescription.
+         * The description of the account. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   The description cannot start with `http://` or `https://`.
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -150,7 +154,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -159,7 +163,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

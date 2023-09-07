@@ -50,7 +50,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParameterGroups.
+         * The details of parameter templates.
          */
         public Builder parameterGroups(java.util.List < ParameterGroups> parameterGroups) {
             this.parameterGroups = parameterGroups;
@@ -58,7 +58,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             private String parameterGroupType; 
 
             /**
-             * CreateTime.
+             * The time when the parameter template was created. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -202,7 +202,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * The type of the engine.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -210,7 +210,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -218,7 +218,11 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Indicates whether to restart the cluster when this parameter template is applied. Valid values:
+             * <p>
+             * 
+             * *   **0**: A restart is not required.
+             * *   **1**: A restart is required.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -226,7 +230,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterCounts.
+             * The number of parameters in the parameter template.
              */
             public Builder parameterCounts(Long parameterCounts) {
                 this.parameterCounts = parameterCounts;
@@ -234,7 +238,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupDesc.
+             * The description of the parameter template.
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -242,7 +246,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupId.
+             * The ID of the parameter template.
              */
             public Builder parameterGroupId(String parameterGroupId) {
                 this.parameterGroupId = parameterGroupId;
@@ -250,7 +254,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupName.
+             * The name of the parameter template.
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -258,7 +262,12 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupType.
+             * The type of the parameter template. Valid values:
+             * <p>
+             * 
+             * *   **0**: the default parameter template.
+             * *   **1**: a custom parameter template.
+             * *   **2**: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.
              */
             public Builder parameterGroupType(String parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;

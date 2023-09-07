@@ -223,7 +223,11 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         } 
 
         /**
-         * DBClusterDescription.
+         * The name of the cluster. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   It cannot start with `http://` or `https://`.
+         * *   It must be 2 to 256 characters in length.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -232,7 +236,7 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -241,7 +245,12 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * DBType.
+         * The type of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -250,7 +259,21 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * The version of the database engine.
+         * <p>
+         * 
+         * *   Valid values for the MySQL database engine:
+         * 
+         *     *   **5.6**
+         *     *   **5.7**
+         *     *   **8.0**
+         * 
+         * *   Valid values for the PostgreSQL database engine:
+         * 
+         *     *   **11**
+         *     *   **14**
+         * 
+         * *   Valid value for the Oracle database engine: **11**
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -259,7 +282,11 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * IsDeleted.
+         * Specifies whether the cluster is deleted. Valid values:
+         * <p>
+         * 
+         * *   **0**: not deleted
+         * *   **1**: deleted
          */
         public Builder isDeleted(Integer isDeleted) {
             this.putQueryParameter("IsDeleted", isDeleted);
@@ -286,7 +313,7 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -295,7 +322,14 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -304,7 +338,10 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~98041~~) operation to query information about regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -313,7 +350,7 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

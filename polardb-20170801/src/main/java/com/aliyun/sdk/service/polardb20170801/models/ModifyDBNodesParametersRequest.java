@@ -196,7 +196,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -205,7 +205,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 节点名称，多个节点名按照“，”分割
+         * The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -214,7 +214,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 立即执行或定时执行修改参数并重启取值：  false（默认值）：定时执行 true：立即执行
+         * Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: false: runs the task on schedule. true: runs the task immediately. Default value: false.
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -241,7 +241,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 参数模板ID。
+         * The ID of the parameter template that is used for the cluster.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -250,7 +250,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 参数及其值的JSON串，参数的值都是字符串类型，例如{"wait_timeout":"86","innodb_old_blocks_time":"10"}
+         * The JSON string that specifies the parameter and its value.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -259,7 +259,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 开始执行目标定时任务的最晚时间。格式为YYYY-MM-DDThh:mm:ssZ（UTC）。
+         * The latest start time to run the task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -268,7 +268,7 @@ public class ModifyDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 开始执行定时（即在目标时间段内执行）内核版本升级任务的最早时间。格式为YYYY-MM-DDThh:mm:ssZ（UTC）。
+         * The earliest start time to run the task to upgrade the kernel version of the cluster. The task runs within a specified period of time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);

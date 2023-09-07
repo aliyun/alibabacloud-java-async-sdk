@@ -86,7 +86,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +94,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The result data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned for the request.
+         * <p>
+         * 
+         * > If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid value:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +165,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             private java.util.List < String > ruleList; 
 
             /**
-             * RuleList.
+             * Details about the masking rules.
              */
             public Builder ruleList(java.util.List < String > ruleList) {
                 this.ruleList = ruleList;

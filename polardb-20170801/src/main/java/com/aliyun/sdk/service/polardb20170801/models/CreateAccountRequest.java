@@ -56,6 +56,10 @@ public class CreateAccountRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PrivForAllDB")
+    private String privForAllDB;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -75,6 +79,7 @@ public class CreateAccountRequest extends Request {
         this.DBName = builder.DBName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.privForAllDB = builder.privForAllDB;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -163,6 +168,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return privForAllDB
+     */
+    public String getPrivForAllDB() {
+        return this.privForAllDB;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -187,6 +199,7 @@ public class CreateAccountRequest extends Request {
         private String DBName; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String privForAllDB; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -206,12 +219,17 @@ public class CreateAccountRequest extends Request {
             this.DBName = request.DBName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.privForAllDB = request.privForAllDB;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccountDescription.
+         * The description of the account. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   It cannot start with `http://` or `https://`.
+         * *   It must be 2 to 256 characters in length.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -220,7 +238,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the account. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   It must start with a lowercase letter and end with a letter or a digit.
+         * *   It can contain lowercase letters, digits, and underscores (\_).
+         * *   It must be 2 to 16 characters in length.
+         * *   It cannot be root, admin, or another username that is reserved by the system.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -229,7 +253,12 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the account. The password must meet the following requirements:
+         * <p>
+         * 
+         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   It must be 8 to 32 characters in length.
+         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -238,7 +267,21 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * The permissions that are granted to the account. Valid values:
+         * <p>
+         * 
+         * *   **ReadWrite**: read and write permissions
+         * *   **ReadOnly**: read-only permissions
+         * *   **DMLOnly**: the permissions to execute only DML statements
+         * *   **DDLOnly**: the permissions to execute only DDL statements
+         * *   **ReadIndex**: the read and index permissions
+         * 
+         * > 
+         * 
+         * *   The `AccountPrivilege` parameter is valid only after you specify the `DBName` parameter.
+         * 
+         * *   If multiple database names are specified by the `DBName` parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set `DBName` to `DB1,DB2`, and set `AccountPrivilege` to `ReadWrite,ReadOnly`.
+         * *   This parameter is valid only for standard accounts of PolarDB for MySQL clusters.
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -247,7 +290,18 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * The type of the account. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: standard account
+         * *   **Super**: privileged account
+         * 
+         * > 
+         * 
+         * *   If you leave this parameter empty, the default value **Super** is used.
+         * 
+         * *   You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](~~68508~~).
+         * *   You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](~~68508~~).
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -256,7 +310,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -265,7 +319,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -274,7 +328,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).
+         * <p>
+         * 
+         * > This parameter is valid only for standard accounts of PolarDB for MySQL clusters.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -297,6 +354,15 @@ public class CreateAccountRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PrivForAllDB.
+         */
+        public Builder privForAllDB(String privForAllDB) {
+            this.putQueryParameter("PrivForAllDB", privForAllDB);
+            this.privForAllDB = privForAllDB;
             return this;
         }
 

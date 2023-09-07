@@ -196,7 +196,10 @@ public class DescribeTasksRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You must specify `DBNodeId` or `DBClusterId`. You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -205,7 +208,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * DBNodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  You must specify `DBNodeId` or `DBClusterId`. You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as node IDs.
          */
         public Builder DBNodeId(String DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);
@@ -214,7 +220,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -241,7 +247,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return. The value is an integer that is greater than 0.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +259,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +289,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -286,7 +298,21 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the tasks that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Waiting**: The task is pending.
+         * *   **Running**: The task is running.
+         * *   **Finished**: The task is completed.
+         * *   **Closed**: The task is closed.
+         * *   **Pause**: The task is suspended.
+         * *   **Stop**: The task is interrupted.
+         * 
+         * > 
+         * 
+         * *   If you do not specify this parameter, the operation returns the details of only the tasks that are in the **Waiting** or **Running** state for the cluster or node.
+         * 
+         * *   You can enter multiple task states. Separate multiple task states with commas (,).
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -126,7 +126,7 @@ public class DescribeDBNodesParametersRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +135,7 @@ public class DescribeDBNodesParametersRequest extends Request {
         }
 
         /**
-         * 查询指定节点的参数列表
+         * The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);

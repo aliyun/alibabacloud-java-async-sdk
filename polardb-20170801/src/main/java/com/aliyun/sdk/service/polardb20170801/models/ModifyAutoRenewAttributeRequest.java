@@ -182,7 +182,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterIds.
+         * The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -191,7 +191,14 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The automatic renewal period.
+         * <p>
+         * 
+         *  
+         * *   Valid values when **PeriodUnit** is set to **Month**: `1, 2, 3, 6, and 12`.
+         * *   Valid values when **PeriodUnit** is set to **Year**: `1, 2, and 3`.
+         *  
+         * Default value: **1**.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -218,7 +225,13 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal period. Valid values:
+         * <p>
+         *  
+         * *   **Year**
+         * *   **Month**
+         *  
+         * Default value: **Month**.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -227,7 +240,11 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. The region ID can be up to 50 characters in length.
+         * <p>
+         * cn-hangzhou
+         *  
+         * >  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,7 +253,16 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * The auto-renewal state of the cluster. Valid values:
+         * <p>
+         *  
+         * *   **AutoRenewal:** The cluster are automatically renewed.
+         * *   **Normal**: The cluster is manually renewed.
+         * *   **NotRenewal:** The cluster is not renewed after expiration.
+         *  
+         * Default value: **AutoRenewal**.
+         *  
+         * >  If this parameter is set to **NotRenewal**, the system does not send a text message for the cluster expiration, but only sends a message three days before the cluster expires to remind you that the cluster is not renewed.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -245,7 +271,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

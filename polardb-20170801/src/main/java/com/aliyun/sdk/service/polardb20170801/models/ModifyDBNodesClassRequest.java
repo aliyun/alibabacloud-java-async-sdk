@@ -197,7 +197,7 @@ public class ModifyDBNodesClassRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +206,7 @@ public class ModifyDBNodesClassRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -215,7 +215,7 @@ public class ModifyDBNodesClassRequest extends Request {
         }
 
         /**
-         * DBNode.
+         * The details of the nodes.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             this.putQueryParameter("DBNode", DBNode);
@@ -224,7 +224,11 @@ public class ModifyDBNodesClassRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * The type of the configuration change. Valid values:
+         * <p>
+         * 
+         * *   **Upgrade**
+         * *   **Downgrade**
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -251,7 +255,11 @@ public class ModifyDBNodesClassRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * The latest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > *   The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
+         * >*   By default, if you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `Value of PlannedEndTime + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -260,7 +268,12 @@ public class ModifyDBNodesClassRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > *   This parameter takes effect only when `ModifyType` is set to `Upgrade`.
+         * >*   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.
+         * >*   If this parameter is empty, the upgrade task is immediately performed.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -287,7 +300,11 @@ public class ModifyDBNodesClassRequest extends Request {
         }
 
         /**
-         * SubCategory.
+         * The category of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **normal_exclusive**: dedicated
+         * *   **normal_general**: genera-purpose
          */
         public Builder subCategory(String subCategory) {
             this.putQueryParameter("SubCategory", subCategory);
@@ -341,7 +358,10 @@ public class ModifyDBNodesClassRequest extends Request {
             private String targetClass; 
 
             /**
-             * DBNodeId.
+             * The ID of the node.
+             * <p>
+             * 
+             * >  If you specify this parameter, DBNode.N.TargetClass is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -349,7 +369,10 @@ public class ModifyDBNodesClassRequest extends Request {
             }
 
             /**
-             * TargetClass.
+             * The specifications of the node that you want to change. For more information, see [Specifications of compute nodes](~~102542~~).
+             * <p>
+             * 
+             * >  If you specify this parameter, DBNode.N.DBNodeId is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.
              */
             public Builder targetClass(String targetClass) {
                 this.targetClass = targetClass;

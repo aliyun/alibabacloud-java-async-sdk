@@ -21,6 +21,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("FilterRegion")
+    private String filterRegion;
+
+    @Query
     @NameInMap("GDNDescription")
     private String GDNDescription;
 
@@ -64,6 +68,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DBClusterId = builder.DBClusterId;
+        this.filterRegion = builder.filterRegion;
         this.GDNDescription = builder.GDNDescription;
         this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
@@ -101,6 +106,13 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return filterRegion
+     */
+    public String getFilterRegion() {
+        return this.filterRegion;
     }
 
     /**
@@ -176,6 +188,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeGlobalDatabaseNetworksRequest, Builder> {
         private String regionId; 
         private String DBClusterId; 
+        private String filterRegion; 
         private String GDNDescription; 
         private String GDNId; 
         private String ownerAccount; 
@@ -195,6 +208,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DBClusterId = request.DBClusterId;
+            this.filterRegion = request.filterRegion;
             this.GDNDescription = request.GDNDescription;
             this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
@@ -217,7 +231,10 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -226,7 +243,22 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * GDNDescription.
+         * Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.
+         */
+        public Builder filterRegion(String filterRegion) {
+            this.putQueryParameter("FilterRegion", filterRegion);
+            this.filterRegion = filterRegion;
+            return this;
+        }
+
+        /**
+         * The description of the GDN. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   It cannot start with [http:// or https://.](http://https://。)
+         * *   It must start with a letter.
+         * *   It can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   It must be 2 to 126 characters in length.
          */
         public Builder GDNDescription(String GDNDescription) {
             this.putQueryParameter("GDNDescription", GDNDescription);
@@ -235,7 +267,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * GDNId.
+         * The ID of the GDN.
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -262,7 +294,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. The value must be an integer that is greater than 0.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -271,7 +303,12 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 30. Valid values:
+         * <p>
+         * 
+         * *   30
+         * *   50
+         * *   100
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +317,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

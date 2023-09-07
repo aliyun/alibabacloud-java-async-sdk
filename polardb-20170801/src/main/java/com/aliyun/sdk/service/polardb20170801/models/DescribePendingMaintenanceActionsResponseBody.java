@@ -50,7 +50,7 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         private java.util.List < TypeList> typeList; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         }
 
         /**
-         * TypeList.
+         * The details of pending events.
          */
         public Builder typeList(java.util.List < TypeList> typeList) {
             this.typeList = typeList;
@@ -110,7 +110,7 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * Count.
+             * The number of pending events.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +118,13 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The task type of pending events. Valid values:
+             * <p>
+             * 
+             * *   **DatabaseSoftwareUpgrading**: database software upgrades
+             * *   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades
+             * *   **DatabaseStorageUpgrading**: database storage upgrades
+             * *   **DatabaseProxyUpgrading**: minor version upgrades of the proxy
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

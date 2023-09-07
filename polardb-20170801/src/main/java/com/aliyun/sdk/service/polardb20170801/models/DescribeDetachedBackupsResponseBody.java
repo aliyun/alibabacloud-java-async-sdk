@@ -86,7 +86,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * Items.
+         * Details about the backup sets.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -302,7 +302,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             private String storeStatus; 
 
             /**
-             * BackupEndTime.
+             * The end time of the backup task. The time is displayed in UTC.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -310,7 +310,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * The ID of the backup set.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -318,7 +318,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * The backup method. Only snapshot backups are supported. The value is set to **Snapshot**.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -326,7 +326,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **Automated**
+             * *   **Manual**
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -334,7 +338,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetSize.
+             * The size of the backup set. Unit: bytes.
+             * <p>
+             * 
+             * > After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.
              */
             public Builder backupSetSize(String backupSetSize) {
                 this.backupSetSize = backupSetSize;
@@ -342,7 +349,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The start time of the backup task. The time is displayed in UTC.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -350,7 +357,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * The status of the backup set. Valid values:
+             * <p>
+             * 
+             * *   **Success**
+             * *   **Failed**
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -358,7 +369,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The type of the backup. Only full backups are supported. The value is set to **FullBackup**.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -366,7 +377,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupsLevel.
+             * The level of the backup set. Valid values:
+             * <p>
+             * 
+             * *   **Level-1**: level-1 backup set
+             * *   **Level-2**: level-2 backup set
              */
             public Builder backupsLevel(String backupsLevel) {
                 this.backupsLevel = backupsLevel;
@@ -374,7 +389,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistentTime.
+             * The snapshot checkpoint time. The value is a Unix timestamp.
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -382,7 +397,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -390,7 +405,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvail.
+             * Indicates whether the backup set is available. Valid values:
+             * <p>
+             * 
+             * *   **0**: The data backup set is unavailable.
+             * *   **1**: The data backup set is available.
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
@@ -398,7 +417,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * StoreStatus.
+             * Indicates whether the backup set can be deleted. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**: The backup set can be deleted.
+             * *   **Disabled**: The backup set cannot be deleted.
              */
             public Builder storeStatus(String storeStatus) {
                 this.storeStatus = storeStatus;

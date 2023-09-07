@@ -74,7 +74,7 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         private String statusName; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,7 +82,7 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,11 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the PolarDB for AI feature. Valid values:
+         * <p>
+         * 
+         * *   **1**: The feature is enabled.
+         * *   **2**: The feature is disabled.
          */
         public Builder status(String status) {
             this.status = status;
@@ -98,7 +102,7 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StatusName.
+         * The state description of the PolarDB for AI feature.
          */
         public Builder statusName(String statusName) {
             this.statusName = statusName;

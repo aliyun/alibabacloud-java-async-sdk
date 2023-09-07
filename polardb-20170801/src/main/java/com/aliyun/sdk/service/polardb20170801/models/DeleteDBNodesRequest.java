@@ -27,6 +27,10 @@ public class DeleteDBNodesRequest extends Request {
     private java.util.List < String > DBNodeId;
 
     @Query
+    @NameInMap("DBNodeType")
+    private String DBNodeType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -47,6 +51,7 @@ public class DeleteDBNodesRequest extends Request {
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeId = builder.DBNodeId;
+        this.DBNodeType = builder.DBNodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -88,6 +93,13 @@ public class DeleteDBNodesRequest extends Request {
     }
 
     /**
+     * @return DBNodeType
+     */
+    public String getDBNodeType() {
+        return this.DBNodeType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -119,6 +131,7 @@ public class DeleteDBNodesRequest extends Request {
         private String clientToken; 
         private String DBClusterId; 
         private java.util.List < String > DBNodeId; 
+        private String DBNodeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -133,6 +146,7 @@ public class DeleteDBNodesRequest extends Request {
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeId = request.DBNodeId;
+            this.DBNodeType = request.DBNodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -140,7 +154,7 @@ public class DeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +163,7 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -158,11 +172,27 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * DBNodeId.
+         * The IDs of the nodes.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.
          */
         public Builder DBNodeId(java.util.List < String > DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);
             this.DBNodeId = DBNodeId;
+            return this;
+        }
+
+        /**
+         * The type of the node. Valid values:
+         * <p>
+         * 
+         * *   RO
+         * *   STANDBY
+         */
+        public Builder DBNodeType(String DBNodeType) {
+            this.putQueryParameter("DBNodeType", DBNodeType);
+            this.DBNodeType = DBNodeType;
             return this;
         }
 

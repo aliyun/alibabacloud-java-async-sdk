@@ -62,7 +62,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterSecurityGroups.
+         * The Elastic Compute Service (ECS) security groups that are associated with the cluster.
          */
         public Builder DBClusterSecurityGroups(DBClusterSecurityGroups DBClusterSecurityGroups) {
             this.DBClusterSecurityGroups = DBClusterSecurityGroups;
@@ -70,7 +70,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The details about the cluster.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +78,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * SecurityGroupId.
+             * The ID of the ECS security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -138,7 +138,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * The name of the ECS security group.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -244,7 +244,11 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * DBClusterIPArrayAttribute.
+             * The attributes of the IP whitelist group. Set this parameter to **hidden** to hide the IP whitelist group in the console.
+             * <p>
+             * 
+             * > *   The IP whitelist group that has appeared in the console cannot be hidden.
+             * > *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -252,7 +256,15 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterIPArrayName.
+             * The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.
+             * <p>
+             * 
+             * *   If the specified whitelist group name does not exist, the whitelist group is created.
+             * *   If the specified whitelist group name exists, the whitelist group is modified.
+             * *   If you do not specify this parameter, the default group is modified.
+             * 
+             * > *   You can create a maximum of 50 IP whitelist groups for a cluster.
+             * >*   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -260,7 +272,13 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIps.
+             * The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:
+             * <p>
+             * 
+             * *   IP addresses. Example: 10.23.12.24.
+             * *   CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.
+             * 
+             * >  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;

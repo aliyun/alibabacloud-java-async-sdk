@@ -86,7 +86,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The renewal information about the clusters.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The total number of pages returned.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +218,11 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             private String renewalStatus; 
 
             /**
-             * AutoRenewEnabled.
+             * Indicates whether the auto-renewal feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: enabled
+             * *   false: disabled
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -226,7 +230,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -234,7 +238,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The renewal duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -242,7 +246,11 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * The unit of the duration. Valid values:
+             * <p>
+             * 
+             * *   Year
+             * *   Month
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -250,7 +258,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -258,7 +266,12 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalStatus.
+             * The renewal status. Valid values:
+             * <p>
+             * 
+             * *   AutoRenewal: The cluster is automatically renewed.
+             * *   Normal: The cluster is manually renewed. The system sends a text message to remind you before the cluster expires.
+             * *   NotRenewal: The cluster is not renewed. The system does not send a reminder for expiration but only sends a text message three days before the cluster expires to remind you that the cluster is not renewed.
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;

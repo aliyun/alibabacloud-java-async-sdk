@@ -181,7 +181,10 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster that will become the primary cluster in the GDN.
+         * <p>
+         * 
+         * You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to query the ID of the cluster in the GDN.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -190,7 +193,11 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * Forced.
+         * Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder forced(Boolean forced) {
             this.putQueryParameter("Forced", forced);
@@ -199,7 +206,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * GDNId.
+         * The ID of the GDN.
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -226,7 +233,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +242,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

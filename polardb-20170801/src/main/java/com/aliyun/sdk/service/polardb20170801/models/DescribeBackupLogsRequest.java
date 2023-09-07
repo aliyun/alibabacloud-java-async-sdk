@@ -185,7 +185,7 @@ public class DescribeBackupLogsRequest extends Request {
         } 
 
         /**
-         * BackupRegion.
+         * The region for the backup data.
          */
         public Builder backupRegion(String backupRegion) {
             this.putQueryParameter("BackupRegion", backupRegion);
@@ -194,7 +194,7 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -203,7 +203,7 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -230,7 +230,7 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return. The value must be an integer that is larger than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +239,14 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +273,7 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

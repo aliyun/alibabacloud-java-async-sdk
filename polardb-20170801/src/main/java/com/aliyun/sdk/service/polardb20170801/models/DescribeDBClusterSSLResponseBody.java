@@ -62,7 +62,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         private String SSLAutoRotate; 
 
         /**
-         * Items.
+         * The list of SSL connections.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -70,7 +70,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,13 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLAutoRotate.
+         * Indicates whether automatic rotation of SSL certificates is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enable**: The feature is enabled.
+         * *   **Disable**: The feature is disabled.
+         * 
+         * > This parameter is valid only for a PolarDB for MySQL cluster.
          */
         public Builder SSLAutoRotate(String SSLAutoRotate) {
             this.SSLAutoRotate = SSLAutoRotate;
@@ -154,7 +160,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             private String SSLExpireTime; 
 
             /**
-             * DBEndpointId.
+             * The ID of the endpoint.
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -162,7 +168,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * SSLConnectionString.
+             * The SSL connection string.
              */
             public Builder SSLConnectionString(String SSLConnectionString) {
                 this.SSLConnectionString = SSLConnectionString;
@@ -170,7 +176,11 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * SSLEnabled.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**: SSL is enabled.
+             * *   **Disable**: SSL is disabled.
              */
             public Builder SSLEnabled(String SSLEnabled) {
                 this.SSLEnabled = SSLEnabled;
@@ -178,7 +188,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * SSLExpireTime.
+             * The time when the server certificate expires. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder SSLExpireTime(String SSLExpireTime) {
                 this.SSLExpireTime = SSLExpireTime;
