@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeAirItineraryResponse> recognizeAirItinerary(RecognizeAirItineraryRequest request);
 
+    CompletableFuture<RecognizeAllTextResponse> recognizeAllText(RecognizeAllTextRequest request);
+
     CompletableFuture<RecognizeBankAcceptanceResponse> recognizeBankAcceptance(RecognizeBankAcceptanceRequest request);
 
     CompletableFuture<RecognizeBankAccountLicenseResponse> recognizeBankAccountLicense(RecognizeBankAccountLicenseRequest request);
