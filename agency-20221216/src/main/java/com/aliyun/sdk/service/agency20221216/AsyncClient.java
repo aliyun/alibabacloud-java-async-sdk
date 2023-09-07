@@ -33,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EditZeroCreditShutdownResponse> editZeroCreditShutdown(EditZeroCreditShutdownRequest request);
 
+    CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request);
+
     /**
       * *   Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
       * *   You can call this operation to subscribe to only one type of bill at a time.

@@ -68,7 +68,7 @@ public class EditZeroCreditShutdownRequest extends Request {
         } 
 
         /**
-         * shutdownPolicy
+         * ShutdownPolicy.
          */
         public Builder shutdownPolicy(String shutdownPolicy) {
             this.putQueryParameter("ShutdownPolicy", shutdownPolicy);

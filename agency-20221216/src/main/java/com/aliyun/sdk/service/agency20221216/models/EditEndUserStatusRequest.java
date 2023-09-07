@@ -68,7 +68,7 @@ public class EditEndUserStatusRequest extends Request {
         } 
 
         /**
-         * creditStatus
+         * CreditStatus.
          */
         public Builder creditStatus(String creditStatus) {
             this.putQueryParameter("CreditStatus", creditStatus);

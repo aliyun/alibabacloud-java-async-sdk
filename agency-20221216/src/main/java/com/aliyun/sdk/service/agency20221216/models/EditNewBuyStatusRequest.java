@@ -68,7 +68,7 @@ public class EditNewBuyStatusRequest extends Request {
         } 
 
         /**
-         * newBuyStatus
+         * NewBuyStatus.
          */
         public Builder newBuyStatus(String newBuyStatus) {
             this.putQueryParameter("NewBuyStatus", newBuyStatus);
@@ -77,7 +77,7 @@ public class EditNewBuyStatusRequest extends Request {
         }
 
         /**
-         * uid
+         * Uid.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
