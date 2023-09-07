@@ -22,7 +22,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("Results")
-    private java.util.List < Results> results;
+    private Results results;
 
     @NameInMap("Success")
     private Boolean success;
@@ -67,7 +67,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public Results getResults() {
         return this.results;
     }
 
@@ -82,7 +82,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private Results results; 
         private Boolean success; 
 
         /**
@@ -112,7 +112,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         /**
          * Results.
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(Results results) {
             this.results = results;
             return this;
         }
@@ -212,7 +212,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         } 
 
     }
-    public static class Results extends TeaModel {
+    public static class ResultsResult extends TeaModel {
         @NameInMap("Code")
         private String code;
 
@@ -225,7 +225,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         @NameInMap("Success")
         private Boolean success;
 
-        private Results(Builder builder) {
+        private ResultsResult(Builder builder) {
             this.code = builder.code;
             this.message = builder.message;
             this.result = builder.result;
@@ -236,7 +236,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Results create() {
+        public static ResultsResult create() {
             return builder().build();
         }
 
@@ -303,6 +303,47 @@ public class InviteSubAccountResponseBody extends TeaModel {
              */
             public Builder success(Boolean success) {
                 this.success = success;
+                return this;
+            }
+
+            public ResultsResult build() {
+                return new ResultsResult(this);
+            } 
+
+        } 
+
+    }
+    public static class Results extends TeaModel {
+        @NameInMap("Result")
+        private java.util.List < ResultsResult> result;
+
+        private Results(Builder builder) {
+            this.result = builder.result;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Results create() {
+            return builder().build();
+        }
+
+        /**
+         * @return result
+         */
+        public java.util.List < ResultsResult> getResult() {
+            return this.result;
+        }
+
+        public static final class Builder {
+            private java.util.List < ResultsResult> result; 
+
+            /**
+             * Result.
+             */
+            public Builder result(java.util.List < ResultsResult> result) {
+                this.result = result;
                 return this;
             }
 
