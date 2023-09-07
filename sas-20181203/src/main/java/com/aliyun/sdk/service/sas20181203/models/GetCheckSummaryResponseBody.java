@@ -186,7 +186,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * The number of check items that passed the check.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -311,7 +311,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consist of the standard IDs of check items.
+             * The information about the check items.
              */
             public Builder standards(java.util.List < Standards> standards) {
                 this.standards = standards;

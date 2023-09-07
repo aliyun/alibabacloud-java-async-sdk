@@ -86,7 +86,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the basic information about the instances.
+         * The basic information about the affected instances.
          */
         public Builder basicData(java.util.List < BasicData> basicData) {
             this.basicData = basicData;
@@ -226,7 +226,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -234,7 +234,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -242,7 +242,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -250,14 +250,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statuses of check items. Multiple statuses are separated by commas (,). Valid values:
+             * The states of check items. Multiple states are separated with commas (,). Valid values:
              * <p>
              * 
-             * *   **PASS**
-             * *   **NOT_PASS**
-             * *   **CHECKING**
-             * *   **NOT_CHECK**
-             * *   **WHITELIST**
+             * *   **PASS**: The instance passed the check.
+             * *   **NOT_PASS**: The instance failed to pass the check.
+             * *   **CHECKING**: The instance is being checked.
+             * *   **NOT_CHECK**: The instance is not checked.
+             * *   **WHITELIST**: The instance is in the whitelist.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -470,8 +470,8 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
              * Indicates whether the search condition is used. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder search(Boolean search) {
                 this.search = search;
@@ -495,7 +495,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the check results for the instances. Valid values:
+             * The type of the check result for the instance. Valid values:
              * <p>
              * 
              * *   **text**

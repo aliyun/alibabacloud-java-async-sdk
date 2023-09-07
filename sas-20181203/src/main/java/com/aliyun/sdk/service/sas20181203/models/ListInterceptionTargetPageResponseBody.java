@@ -307,7 +307,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The name of the application to which the network object belongs.
+             * The name of the application of the network object.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -331,7 +331,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the images of the network object.
+             * The images of the network object.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -347,7 +347,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The rule type. Valid values:
+             * The type of the rule. Valid value:
              * <p>
              * 
              * *   customize: custom rule
@@ -358,7 +358,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the labels specified for the network object.
+             * The tags specified for the network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -385,7 +385,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object. Valid values:
+             * The type of the network object. Valid value:
              * <p>
              * 
              * *   IMAGE

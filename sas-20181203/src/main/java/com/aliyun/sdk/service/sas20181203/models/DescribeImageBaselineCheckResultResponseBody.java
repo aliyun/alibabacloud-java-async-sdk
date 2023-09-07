@@ -238,7 +238,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The key of the type for the image baseline.
+             * The key of the image baseline type.
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -246,7 +246,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items.
+             * The number of baseline check items.
              */
             public Builder baselineItemCount(Integer baselineItemCount) {
                 this.baselineItemCount = baselineItemCount;
@@ -283,7 +283,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * The timestamp generated when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -299,7 +299,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * The timestamp generated when the last scan was performed. Unit: milliseconds.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;

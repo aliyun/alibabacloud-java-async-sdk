@@ -32,6 +32,10 @@ public class AddPrivateRegistryRequest extends Request {
     private String password;
 
     @Query
+    @NameInMap("Port")
+    private Integer port;
+
+    @Query
     @NameInMap("ProtocolType")
     @Validation(required = true)
     private Long protocolType;
@@ -75,6 +79,7 @@ public class AddPrivateRegistryRequest extends Request {
         this.extraParam = builder.extraParam;
         this.netType = builder.netType;
         this.password = builder.password;
+        this.port = builder.port;
         this.protocolType = builder.protocolType;
         this.registryHostIp = builder.registryHostIp;
         this.registryRegionId = builder.registryRegionId;
@@ -124,6 +129,13 @@ public class AddPrivateRegistryRequest extends Request {
      */
     public String getPassword() {
         return this.password;
+    }
+
+    /**
+     * @return port
+     */
+    public Integer getPort() {
+        return this.port;
     }
 
     /**
@@ -187,6 +199,7 @@ public class AddPrivateRegistryRequest extends Request {
         private String extraParam; 
         private Long netType; 
         private String password; 
+        private Integer port; 
         private Long protocolType; 
         private String registryHostIp; 
         private String registryRegionId; 
@@ -206,6 +219,7 @@ public class AddPrivateRegistryRequest extends Request {
             this.extraParam = request.extraParam;
             this.netType = request.netType;
             this.password = request.password;
+            this.port = request.port;
             this.protocolType = request.protocolType;
             this.registryHostIp = request.registryHostIp;
             this.registryRegionId = request.registryRegionId;
@@ -257,6 +271,15 @@ public class AddPrivateRegistryRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * Port.
+         */
+        public Builder port(Integer port) {
+            this.putQueryParameter("Port", port);
+            this.port = port;
             return this;
         }
 

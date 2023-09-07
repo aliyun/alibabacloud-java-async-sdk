@@ -430,7 +430,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * The number of alerts that are generated on the image.
+             * The number of alerts that are generated for the image.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -486,7 +486,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image baseline risks exist. Valid values:
+             * Indicates whether the baseline risks exist. Valid values:
              * <p>
              * 
              * *   **NO**
@@ -498,7 +498,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the image was created. Unit: milliseconds.
+             * The timestamp generated when the image was created. Unit: milliseconds.
              */
             public Builder imageCreate(String imageCreate) {
                 this.imageCreate = imageCreate;
@@ -506,7 +506,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -522,7 +522,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the image was updated. Unit: milliseconds.
+             * The timestamp generated when the image was updated. Unit: milliseconds.
              */
             public Builder imageUpdate(String imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -530,7 +530,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image instance.
+             * The ID of the image.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -538,7 +538,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image.
+             * The ID of the region in which the image resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -599,8 +599,8 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
              * Indicates whether risks exist. Valid values:
              * <p>
              * 
-             * *   **NO**: No risks exist.
-             * *   **YES**: Risks exist.
+             * *   **NO**
+             * *   **YES**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -632,20 +632,20 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
              * The scan status of the image. Valid values:
              * <p>
              * 
-             * *   **INIT**: The image scan task is to be started.
+             * *   **INIT**: The image scan task is pending startup.
              * *   **START**: The image scan task is started.
              * *   **MESSAGE_SEND**: The message about the image scan task is sent.
-             * *   **START_RUN**: The image scan task is started.
+             * *   **START_RUN**: The image analysis task is started.
              * *   **DOWNLOAD**: The image scan result is downloaded.
-             * *   **PRE_ANALYZER**: The image scan task is being processed.
+             * *   **PRE_ANALYZER**: The image pre-analysis is started.
              * *   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.
-             * *   **CVE_ANALYZER**: The CVE analysis is complete.
+             * *   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis is complete.
              * *   **BIN_ANALYZER**: The binary analysis of the image is complete.
              * *   **OTHER_ANALYZER**: The extended analysis of the image is complete.
              * *   **SUCCESS**: The image scan task is complete.
-             * *   **PRE_ANALYZER_SUCCESS**: The image scan task is processed.
-             * *   **FAIL**: The image scan task fails.
-             * *   **TIMEOUT**: The image scan task times out.
+             * *   **PRE_ANALYZER_SUCCESS**: The image pre-analysis is complete.
+             * *   **FAIL**: The image scan task failed.
+             * *   **TIMEOUT**: The image scan task timed out.
              */
             public Builder scaStatus(String scaStatus) {
                 this.scaStatus = scaStatus;
@@ -653,10 +653,10 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image. Valid values:
+             * The status of the image. Valid value:
              * <p>
              * 
-             * *   **NORMAL**: The image is normal.
+             * *   **NORMAL**
              */
             public Builder status(String status) {
                 this.status = status;

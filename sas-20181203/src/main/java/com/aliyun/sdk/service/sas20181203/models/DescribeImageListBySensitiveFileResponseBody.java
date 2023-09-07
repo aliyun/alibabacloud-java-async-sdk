@@ -126,7 +126,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the images.
+         * The information about the images.
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -309,7 +309,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The image digest.
+             * The digest of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -317,7 +317,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp of when the first scan was performed. Unit: milliseconds.
+             * The timestamp generated when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -333,7 +333,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp of when the last scan was performed. Unit: milliseconds.
+             * The timestamp when the last scan was performed. Unit: milliseconds.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -341,7 +341,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image instance.
+             * The ID of the region in which the image instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -367,9 +367,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             /**
              * The risk level. Valid values:
              * <p>
-             * - **high**
-             * - **medium**
-             * - **low**
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -377,7 +378,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * The tag of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

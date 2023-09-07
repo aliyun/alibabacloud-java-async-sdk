@@ -122,6 +122,8 @@ public class InstallPmAgentRequest extends Request {
         /**
          * The type of the client.
          * <p>
+         * 
+         * *   **aliyun_assist**: Cloud Assistant client
          * *   **aliyun_monitor**: CloudMonitor client
          */
         public Builder type(String type) {

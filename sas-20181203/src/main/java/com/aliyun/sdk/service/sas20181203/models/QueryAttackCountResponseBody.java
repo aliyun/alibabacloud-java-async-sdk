@@ -214,7 +214,7 @@ public class QueryAttackCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ATT\&CK phase.
+             * The stage ID of the ATT\&CK attack.
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -222,7 +222,7 @@ public class QueryAttackCountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ATT\&CK phase.
+             * The type of stage of the ATT\&CK attack.
              */
             public Builder tacticType(String tacticType) {
                 this.tacticType = tacticType;

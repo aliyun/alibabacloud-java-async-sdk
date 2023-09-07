@@ -327,7 +327,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The ID of the alert event.
+             * The event ID.
              */
             public Builder alarmEventId(Long alarmEventId) {
                 this.alarmEventId = alarmEventId;
@@ -367,7 +367,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was first generated. Unit: milliseconds.
+             * The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -375,7 +375,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was last generated. Unit: milliseconds.
+             * The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -404,7 +404,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the alert event. Valid values:
+             * The risk level. Valid values:
              * <p>
              * 
              * *   **2**: low
@@ -502,7 +502,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **100**
+             * The number of entries returned per page. Default value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

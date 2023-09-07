@@ -70,7 +70,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of baselines.
+         * The baselines.
          */
         public Builder risks(java.util.List < Risks> risks) {
             this.risks = risks;
@@ -198,7 +198,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;

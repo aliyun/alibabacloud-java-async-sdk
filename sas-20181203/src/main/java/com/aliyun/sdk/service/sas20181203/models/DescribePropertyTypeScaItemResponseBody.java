@@ -239,7 +239,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The middleware type. Valid values:
+             * The type of the middleware. Valid values:
              * <p>
              * 
              * *   **system_service**: system service

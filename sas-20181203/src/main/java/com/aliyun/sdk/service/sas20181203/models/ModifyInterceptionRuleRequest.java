@@ -165,7 +165,11 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The list of destination network objects.
+         * The destination objects of the rule. The following parameters are included:
+         * <p>
+         * 
+         * *   targetId: the ID of the destination object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
+         * *   ports: the destination port ranges.
          */
         public Builder dstTarget(java.util.Map < String, ? > dstTarget) {
             String dstTargetShrink = shrink(dstTarget, "DstTarget", "json");
@@ -229,7 +233,10 @@ public class ModifyInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The list of source network objects.
+         * The source object of the rule. The following parameters are included:
+         * <p>
+         * 
+         * *   targetId: the ID of the source object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
          */
         public Builder srcTarget(java.util.Map < String, ? > srcTarget) {
             String srcTargetShrink = shrink(srcTarget, "SrcTarget", "json");

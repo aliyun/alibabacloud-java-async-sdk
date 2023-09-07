@@ -263,10 +263,10 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * The endpoint.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -277,7 +277,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
              * The name of the module.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **lkm**.
+             * > This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -288,7 +288,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
              * The path to the startup item.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **autorun**.
+             * > This parameter is returned only when **Biz** is set to **autorun**.
              */
             public Builder path(String path) {
                 this.path = path;

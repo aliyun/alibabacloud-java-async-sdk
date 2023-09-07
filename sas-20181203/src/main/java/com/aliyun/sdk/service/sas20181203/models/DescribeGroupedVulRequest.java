@@ -272,7 +272,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. This parameter is valid only for application vulnerabilities. Valid values:
+         * The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:
          * <p>
          * 
          * *   **sca**: vulnerability that is detected based on software component analysis
@@ -374,7 +374,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -413,15 +416,14 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerabilities. Valid values:
+         * The type of the vulnerability that you want to query. Default value: cve. Valid values:
          * <p>
          * 
          * *   **cve**: Linux software vulnerability
          * *   **sys**: Windows system vulnerability
          * *   **cms**: Web-CMS vulnerability
          * *   **app**: application vulnerability
-         * *   **emg**: urgent vulnerabilities
-         * *   **sca**: vulnerability that is detected based on software component analysis
+         * *   **emg**: urgent vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

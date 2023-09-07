@@ -45,6 +45,10 @@ public class DescribeVulListRequest extends Request {
     private String necessity;
 
     @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("PageSize")
     private Integer pageSize;
 
@@ -66,6 +70,10 @@ public class DescribeVulListRequest extends Request {
     private String type;
 
     @Query
+    @NameInMap("UseNextToken")
+    private Boolean useNextToken;
+
+    @Query
     @NameInMap("Uuids")
     private String uuids;
 
@@ -83,11 +91,13 @@ public class DescribeVulListRequest extends Request {
         this.lang = builder.lang;
         this.name = builder.name;
         this.necessity = builder.necessity;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.statusList = builder.statusList;
         this.type = builder.type;
+        this.useNextToken = builder.useNextToken;
         this.uuids = builder.uuids;
         this.vpcInstanceIds = builder.vpcInstanceIds;
     }
@@ -162,6 +172,13 @@ public class DescribeVulListRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -197,6 +214,13 @@ public class DescribeVulListRequest extends Request {
     }
 
     /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -219,11 +243,13 @@ public class DescribeVulListRequest extends Request {
         private String lang; 
         private String name; 
         private String necessity; 
+        private String nextToken; 
         private Integer pageSize; 
         private String remark; 
         private Long resourceDirectoryAccountId; 
         private String statusList; 
         private String type; 
+        private Boolean useNextToken; 
         private String uuids; 
         private String vpcInstanceIds; 
 
@@ -241,11 +267,13 @@ public class DescribeVulListRequest extends Request {
             this.lang = request.lang;
             this.name = request.name;
             this.necessity = request.necessity;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.statusList = request.statusList;
             this.type = request.type;
+            this.useNextToken = request.useNextToken;
             this.uuids = request.uuids;
             this.vpcInstanceIds = request.vpcInstanceIds;
         } 
@@ -342,6 +370,15 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
@@ -391,6 +428,15 @@ public class DescribeVulListRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

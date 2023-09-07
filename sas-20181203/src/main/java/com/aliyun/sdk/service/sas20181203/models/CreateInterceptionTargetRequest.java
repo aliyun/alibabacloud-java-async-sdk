@@ -209,7 +209,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The object name.
+         * The name of the object to be blocked.
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -218,9 +218,10 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The object type. Valid value: 
+         * The object type. Valid value:
          * <p>
-         * - **IMAGE**: specifies an image
+         * 
+         * *   **IMAGE**
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

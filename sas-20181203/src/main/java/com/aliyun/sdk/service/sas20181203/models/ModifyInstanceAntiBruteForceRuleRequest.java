@@ -125,7 +125,7 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

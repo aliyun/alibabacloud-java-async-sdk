@@ -78,7 +78,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * The number of entries per page. Default value: **10**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -351,7 +351,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
+             * The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -367,7 +367,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the software is installed. Unit: milliseconds.
+             * The timestamp generated when the software is installed. Unit: milliseconds.
              */
             public Builder installTimeDt(Long installTimeDt) {
                 this.installTimeDt = installTimeDt;

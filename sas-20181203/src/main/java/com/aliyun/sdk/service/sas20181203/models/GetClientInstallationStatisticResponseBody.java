@@ -50,7 +50,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientInstallRatio.
+         * The statistics on the client installation rate.
          */
         public Builder clientInstallRatio(ClientInstallRatio clientInstallRatio) {
             this.clientInstallRatio = clientInstallRatio;
@@ -58,7 +58,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             private Integer installedAssetCount; 
 
             /**
-             * AssetTotalCount.
+             * The total number of cloud assets.
              */
             public Builder assetTotalCount(Integer assetTotalCount) {
                 this.assetTotalCount = assetTotalCount;
@@ -142,7 +142,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CalculateTime.
+             * The timestamp of the calculation. Unit: millisecond.
              */
             public Builder calculateTime(Long calculateTime) {
                 this.calculateTime = calculateTime;
@@ -150,7 +150,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * InstallRatio.
+             * The installation rate. Unit: %.
              */
             public Builder installRatio(Double installRatio) {
                 this.installRatio = installRatio;
@@ -158,7 +158,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledAssetCount.
+             * The number of assets on which the client is installed.
              */
             public Builder installedAssetCount(Integer installedAssetCount) {
                 this.installedAssetCount = installedAssetCount;
@@ -211,7 +211,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * Items.
+             * The current statistics on the installation rate of the client.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -219,7 +219,14 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The type of the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: a cloud asset provided by Alibaba Cloud.
+             * *   **1**: a third-party cloud asset
+             * *   **2**: an asset in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a lightweight cloud asset
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;
@@ -296,7 +303,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             private Integer installedAssetCount; 
 
             /**
-             * AssetTotalCount.
+             * The total number of cloud assets.
              */
             public Builder assetTotalCount(Integer assetTotalCount) {
                 this.assetTotalCount = assetTotalCount;
@@ -304,7 +311,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CalculateTime.
+             * The timestamp of the calculation. Unit: millisecond.
              */
             public Builder calculateTime(Long calculateTime) {
                 this.calculateTime = calculateTime;
@@ -312,7 +319,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * InstallRatio.
+             * The installation rate. Unit: %.
              */
             public Builder installRatio(Double installRatio) {
                 this.installRatio = installRatio;
@@ -320,7 +327,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledAssetCount.
+             * The number of cloud assets on which the client is installed.
              */
             public Builder installedAssetCount(Integer installedAssetCount) {
                 this.installedAssetCount = installedAssetCount;
@@ -373,7 +380,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * Items.
+             * The statistics on the client installation rate.
              */
             public Builder items(java.util.List < HistoryItemsItems> items) {
                 this.items = items;
@@ -381,7 +388,14 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The type of the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: a cloud asset provided by Alibaba Cloud.
+             * *   **1**: a third-party cloud asset
+             * *   **2**: an asset in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a lightweight cloud asset
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;
@@ -446,7 +460,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             private java.util.List < HistoryItems> historyItems; 
 
             /**
-             * CurrentItems.
+             * The current statistics on the installation rate of the client.
              */
             public Builder currentItems(java.util.List < CurrentItems> currentItems) {
                 this.currentItems = currentItems;
@@ -454,7 +468,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Dates.
+             * The time when statistics were collected.
              */
             public Builder dates(java.util.List < Long > dates) {
                 this.dates = dates;
@@ -462,7 +476,7 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryItems.
+             * The historical statistics on the installation rate of the agent.
              */
             public Builder historyItems(java.util.List < HistoryItems> historyItems) {
                 this.historyItems = historyItems;

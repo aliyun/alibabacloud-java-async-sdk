@@ -116,6 +116,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMaliciousNoteResponse> createMaliciousNote(CreateMaliciousNoteRequest request);
 
+    CompletableFuture<CreateOpaClusterPluginResponse> createOpaClusterPlugin(CreateOpaClusterPluginRequest request);
+
     /**
       * A server can belong only to one server group. If you call the CreateOrUpdateAssetGroup operation and the server specified in request parameters belongs to Server Group A, the server is removed from Server Group A and then added to the newly created or specified server group after the call is complete.
       *
@@ -172,6 +174,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteHoneypotProbeResponse> deleteHoneypotProbe(DeleteHoneypotProbeRequest request);
 
+    CompletableFuture<DeleteHoneypotProbeBindResponse> deleteHoneypotProbeBind(DeleteHoneypotProbeBindRequest request);
+
     CompletableFuture<DeleteInstallCodeResponse> deleteInstallCode(DeleteInstallCodeRequest request);
 
     CompletableFuture<DeleteInterceptionRuleResponse> deleteInterceptionRule(DeleteInterceptionRuleRequest request);
@@ -179,6 +183,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteInterceptionTargetResponse> deleteInterceptionTarget(DeleteInterceptionTargetRequest request);
 
     CompletableFuture<DeleteLoginBaseConfigResponse> deleteLoginBaseConfig(DeleteLoginBaseConfigRequest request);
+
+    CompletableFuture<DeleteMaliciousNoteResponse> deleteMaliciousNote(DeleteMaliciousNoteRequest request);
 
     CompletableFuture<DeletePrivateRegistryResponse> deletePrivateRegistry(DeletePrivateRegistryRequest request);
 
@@ -779,6 +785,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAssetsPropertyItemResponse> getAssetsPropertyItem(GetAssetsPropertyItemRequest request);
 
+    CompletableFuture<GetAuthVersionStatisticResponse> getAuthVersionStatistic(GetAuthVersionStatisticRequest request);
+
     CompletableFuture<GetBackupStorageCountResponse> getBackupStorageCount(GetBackupStorageCountRequest request);
 
     CompletableFuture<GetCheckConfigResponse> getCheckConfig(GetCheckConfigRequest request);
@@ -813,6 +821,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClusterSuspEventStatisticsResponse> getClusterSuspEventStatistics(GetClusterSuspEventStatisticsRequest request);
 
+    CompletableFuture<GetCommonSwitchConfigResponse> getCommonSwitchConfig(GetCommonSwitchConfigRequest request);
+
     CompletableFuture<GetFileDetectApiInvokeInfoResponse> getFileDetectApiInvokeInfo(GetFileDetectApiInvokeInfoRequest request);
 
     /**
@@ -821,11 +831,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetFileDetectResultResponse> getFileDetectResult(GetFileDetectResultRequest request);
 
+    CompletableFuture<GetHoneypotAttackStatisticsResponse> getHoneypotAttackStatistics(GetHoneypotAttackStatisticsRequest request);
+
     CompletableFuture<GetHoneypotNodeResponse> getHoneypotNode(GetHoneypotNodeRequest request);
 
     CompletableFuture<GetHoneypotPresetResponse> getHoneypotPreset(GetHoneypotPresetRequest request);
 
     CompletableFuture<GetHoneypotProbeResponse> getHoneypotProbe(GetHoneypotProbeRequest request);
+
+    CompletableFuture<GetHoneypotStatisticsResponse> getHoneypotStatistics(GetHoneypotStatisticsRequest request);
 
     CompletableFuture<GetImageScanNumInPeriodResponse> getImageScanNumInPeriod(GetImageScanNumInPeriodRequest request);
 
@@ -841,6 +855,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOnceTaskResultInfoResponse> getOnceTaskResultInfo(GetOnceTaskResultInfoRequest request);
 
+    CompletableFuture<GetOpaClusterBaseLineListResponse> getOpaClusterBaseLineList(GetOpaClusterBaseLineListRequest request);
+
+    CompletableFuture<GetOpaClusterImageListResponse> getOpaClusterImageList(GetOpaClusterImageListRequest request);
+
+    CompletableFuture<GetOpaClusterLabelListResponse> getOpaClusterLabelList(GetOpaClusterLabelListRequest request);
+
+    CompletableFuture<GetOpaClusterNamespaceListResponse> getOpaClusterNamespaceList(GetOpaClusterNamespaceListRequest request);
+
+    CompletableFuture<GetOpaPluginStatusResponse> getOpaPluginStatus(GetOpaPluginStatusRequest request);
+
+    CompletableFuture<GetOpaStrategyTemplateSummaryResponse> getOpaStrategyTemplateSummary(GetOpaStrategyTemplateSummaryRequest request);
+
     CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request);
 
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
@@ -848,6 +874,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSecurityScoreRuleResponse> getSecurityScoreRule(GetSecurityScoreRuleRequest request);
 
     CompletableFuture<GetServiceTrailResponse> getServiceTrail(GetServiceTrailRequest request);
+
+    CompletableFuture<GetStrategyTemplateDetailResponse> getStrategyTemplateDetail(GetStrategyTemplateDetailRequest request);
 
     CompletableFuture<GetSuspiciousStatisticsResponse> getSuspiciousStatistics(GetSuspiciousStatisticsRequest request);
 
@@ -926,6 +954,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterCnnfStatusDetailResponse> listClusterCnnfStatusDetail(ListClusterCnnfStatusDetailRequest request);
 
     CompletableFuture<ListClusterInterceptionConfigResponse> listClusterInterceptionConfig(ListClusterInterceptionConfigRequest request);
+
+    CompletableFuture<ListCriteriaStrategyResponse> listCriteriaStrategy(ListCriteriaStrategyRequest request);
 
     CompletableFuture<ListHoneypotResponse> listHoneypot(ListHoneypotRequest request);
 
@@ -1038,7 +1068,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNoticeConfigResponse> modifyNoticeConfig(ModifyNoticeConfigRequest request);
 
     /**
-      * **Prerequisites** A service-linked role is created, and Security Center is authorized to access cloud resources. You can call the [CreateServiceLinkedRole](~~CreateServiceLinkedRole~~) operation to create service-linked roles and authorize Security Center to access cloud resources. **Scenarios** Before you use the log analysis feature of Security Center, you must call the ModifyOpenLogShipper operation to activate Log Service.
+      * **Prerequisites** [Simple Log Service](https://www.alibabacloud.com/help/en/log-service/latest/billable-items) is activated. A service-linked role for Security Center is created, and Security Center is authorized to access cloud resources. You can call the [CreateServiceLinkedRole](~~CreateServiceLinkedRole~~) operation to create a service-linked role for Security Center and authorize Security Center to access cloud resources. **Scenarios** Before you use the log analysis feature of Security Center, you must call the [ModifyOpenLogShipper](~~ModifyOpenLogShipper~~) operation to activate Simple Log Service.
       *
      */
     CompletableFuture<ModifyOpenLogShipperResponse> modifyOpenLogShipper(ModifyOpenLogShipperRequest request);

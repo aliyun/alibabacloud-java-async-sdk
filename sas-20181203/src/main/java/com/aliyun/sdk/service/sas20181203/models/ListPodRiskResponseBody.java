@@ -363,7 +363,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the pod was created. Unit: milliseconds.
+             * The timestamp that indicates the time when the pod was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -379,7 +379,7 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The instance ID of the node.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

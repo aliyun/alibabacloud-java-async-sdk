@@ -70,7 +70,7 @@ public class GetClientInstallationStatisticRequest extends Request {
         } 
 
         /**
-         * TimeEnd.
+         * The timestamp that specifies the end of the time range to collect statistics. Unit: millisecond.
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -79,7 +79,7 @@ public class GetClientInstallationStatisticRequest extends Request {
         }
 
         /**
-         * TimeStart.
+         * The timestamp that specifies the beginning of the time range to collect statistics. Unit: millisecond.
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

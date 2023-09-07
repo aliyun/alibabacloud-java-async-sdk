@@ -69,11 +69,11 @@ public class GetHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * 设置请求和接收消息的语言类型，默认为**zh**。取值：
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
-         * - **zh**：中文
-         * - **en**：英文
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +82,10 @@ public class GetHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the probe.
+         * The probe ID.
+         * <p>
+         * 
+         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

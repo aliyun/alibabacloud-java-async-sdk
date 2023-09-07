@@ -118,10 +118,10 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
+         * The baseline ID.
          * <p>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.
+         * >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the baseline IDs.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);

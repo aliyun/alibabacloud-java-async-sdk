@@ -62,7 +62,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * The malicious files.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the exception.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * NameKey.
+             * The name key of the exception.
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -170,7 +170,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the exception.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +178,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the exception.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -243,7 +243,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String noteTime; 
 
             /**
-             * Note.
+             * The remark.
              */
             public Builder note(String note) {
                 this.note = note;
@@ -251,7 +251,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * NoteId.
+             * The ID of the remark.
              */
             public Builder noteId(String noteId) {
                 this.noteId = noteId;
@@ -259,7 +259,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * NoteTime.
+             * The time when the remark was created.
              */
             public Builder noteTime(String noteTime) {
                 this.noteTime = noteTime;
@@ -540,7 +540,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Details.
+             * The details of the exception.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -548,7 +548,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL to download the malicious image sample.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -556,7 +556,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The file path.
              */
             public Builder filePath(Long filePath) {
                 this.filePath = filePath;
@@ -564,7 +564,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FirstScanTimestamp.
+             * The timestamp generated when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -572,7 +572,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * HighLight.
+             * The highlighted JSON string.
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;
@@ -580,7 +580,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The event ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -588,7 +588,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -596,7 +596,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -604,7 +604,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -612,7 +612,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestScanTimestamp.
+             * The timestamp generated when the last scan was performed. Unit: milliseconds.
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -620,7 +620,12 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity of the malicious file. Valid values:
+             * <p>
+             * 
+             * *   serious
+             * *   suspicious
+             * *   remind
              */
             public Builder level(String level) {
                 this.level = level;
@@ -628,7 +633,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousMd5.
+             * The MD5 hash value of the malicious file.
              */
             public Builder maliciousMd5(String maliciousMd5) {
                 this.maliciousMd5 = maliciousMd5;
@@ -636,7 +641,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousName.
+             * The name of the malicious file.
              */
             public Builder maliciousName(String maliciousName) {
                 this.maliciousName = maliciousName;
@@ -644,7 +649,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Notes.
+             * The remarks.
              */
             public Builder notes(java.util.List < Notes> notes) {
                 this.notes = notes;
@@ -652,7 +657,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OperateResult.
+             * The handling result of the exception.
              */
             public Builder operateResult(String operateResult) {
                 this.operateResult = operateResult;
@@ -660,7 +665,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTimestamp.
+             * The timestamp generated when the exception is handled. Unit: milliseconds.
              */
             public Builder operateTimestamp(String operateTimestamp) {
                 this.operateTimestamp = operateTimestamp;
@@ -668,7 +673,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Partition.
+             * The partition of the disk.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -676,7 +681,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the asset that is scanned.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -684,7 +689,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset that is scanned.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -692,7 +697,10 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the asset that is scanned. Valid values:
+             * <p>
+             * 
+             * *   2: The scanned asset is an image.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -700,7 +708,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -777,7 +785,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -785,7 +793,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -793,7 +801,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -801,7 +809,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

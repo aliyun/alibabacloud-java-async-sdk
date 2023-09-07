@@ -240,7 +240,7 @@ public class DescribeWarningMachinesRequest extends Request {
          * The ID of the container cluster.
          * <p>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -285,10 +285,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The ID of the new server group to which the servers belong.
+         * The ID of the asset group.
          * <p>
          * 
-         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         * > You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -332,7 +332,7 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The number of entries per page. Default value: **10**, which indicates that 10 entries of server information are displayed on each page. A maximum of 100 entries can be returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -344,7 +344,7 @@ public class DescribeWarningMachinesRequest extends Request {
          * The ID of the risk item.
          * <p>
          * 
-         * >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
+         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);

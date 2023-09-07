@@ -358,7 +358,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * The starting progress percentage of web tamper proofing. Valid values: 0 to 100.
+             * The percentage of the starting progress of web tamper proofing. Valid values: 0 to 100.
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -378,7 +378,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             }
 
             /**
-             * The error message for web tamper proofing. Valid values:
+             * The exception details of web tamper proofing. Valid values:
              * <p>
              * 
              * *   **client offline**: The Security Center agent is offline.
@@ -408,8 +408,8 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
              * The protection status of the server. Valid values:
              * <p>
              * 
-             * *   **on**: protected
-             * *   **off**: unprotected
+             * *   **on**: The server is protected.
+             * *   **off**: The server is not protected.
              */
             public Builder status(String status) {
                 this.status = status;

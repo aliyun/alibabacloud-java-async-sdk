@@ -139,7 +139,7 @@ public class BindAuthToMachineRequest extends Request {
         } 
 
         /**
-         * The edition of Security Center. Valid values:
+         * The edition of Security Center that is authorized to protect the asset. Valid values:
          * <p>
          * 
          * *   **6**: Anti-virus edition
@@ -205,11 +205,11 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * The logical relationship among multiple search conditions. Valid values:
+         * The logical relationship that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:
          * <p>
          * 
-         * *   **OR**: Search conditions are evaluated by using a logical **OR**.
-         * *   **AND**: Search conditions are evaluated by using a logical **AND**.
+         * *   **OR******
+         * *   **AND******
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);

@@ -68,7 +68,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         } 
 
         /**
-         * AssetRefreshConfigs.
+         * The asset synchronization configurations.
          */
         public Builder assetRefreshConfigs(java.util.List < AssetRefreshConfigs> assetRefreshConfigs) {
             this.putQueryParameter("AssetRefreshConfigs", assetRefreshConfigs);
@@ -77,7 +77,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which your Security Center service resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +143,15 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             private Integer vendor; 
 
             /**
-             * SchedulePeriod.
+             * The interval at which assets are synchronized. Unit: minutes. Valid values:
+             * <p>
+             * 
+             * *   **60**
+             * *   **180**
+             * *   **360**
+             * *   **720**
+             * *   **1440**
+             * *   **10080**
              */
             public Builder schedulePeriod(Integer schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -151,7 +159,11 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * Status.
+             * The status of the asset synchronization feature. Valid values:
+             * <p>
+             * 
+             * *   **1**: Asset synchronization is enabled.
+             * *   **0**: Asset synchronization is disabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -159,7 +171,12 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * Vendor.
+             * The service provider of the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **3**: Tencent Cloud
+             * *   **4**: HUAWEI CLOUD
+             * *   **7**: Amazon Web Services (AWS)
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

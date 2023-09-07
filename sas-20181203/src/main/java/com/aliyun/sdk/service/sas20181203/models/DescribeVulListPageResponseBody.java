@@ -202,7 +202,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The CVE ID of the vulnerability.
+             * The common vulnerabilities and exposures (CVE) ID of the vulnerability.
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;

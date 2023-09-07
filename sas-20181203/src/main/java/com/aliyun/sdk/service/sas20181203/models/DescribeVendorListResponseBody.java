@@ -50,7 +50,7 @@ public class DescribeVendorListResponseBody extends TeaModel {
         private java.util.List < String > vendorNameList; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVendorListResponseBody extends TeaModel {
         }
 
         /**
-         * VendorNameList.
+         * An array that consists of the service providers.
          */
         public Builder vendorNameList(java.util.List < String > vendorNameList) {
             this.vendorNameList = vendorNameList;

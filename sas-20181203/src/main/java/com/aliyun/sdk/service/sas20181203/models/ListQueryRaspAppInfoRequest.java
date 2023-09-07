@@ -68,7 +68,11 @@ public class ListQueryRaspAppInfoRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,7 @@ public class ListQueryRaspAppInfoRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the RASP-enabled applications. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -250,7 +250,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline risk item. Valid values:
+             * The status of the baseline risks. Valid values:
              * <p>
              * 
              * *   **0**: unfixed
@@ -267,8 +267,8 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
              * Indicates whether the baseline check item is added to the whitelist. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: The baseline check item is not added to the whitelist.
+             * *   **1**: The baseline check item is added to the whitelist.
              */
             public Builder whiteList(Integer whiteList) {
                 this.whiteList = whiteList;

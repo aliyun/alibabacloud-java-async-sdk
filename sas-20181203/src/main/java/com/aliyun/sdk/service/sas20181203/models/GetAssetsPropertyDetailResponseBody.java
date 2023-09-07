@@ -648,7 +648,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the process was started. Unit: milliseconds.
+             * The timestamp generated when the process was started. Unit: milliseconds.
              * <p>
              * 
              * > This parameter is returned only when **Biz** is set to **web_server**.

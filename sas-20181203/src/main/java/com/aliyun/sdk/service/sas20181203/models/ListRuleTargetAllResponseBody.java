@@ -138,7 +138,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object. Valid values:
+             * The type of the object. Valid values:
              * <p>
              * 
              * *   IMAGE

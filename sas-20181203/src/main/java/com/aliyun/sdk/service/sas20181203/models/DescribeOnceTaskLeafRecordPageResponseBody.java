@@ -101,6 +101,9 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         @NameInMap("ClusterName")
         private String clusterName;
 
+        @NameInMap("CostTimeInfo")
+        private String costTimeInfo;
+
         @NameInMap("Digest")
         private String digest;
 
@@ -141,6 +144,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
+            this.costTimeInfo = builder.costTimeInfo;
             this.digest = builder.digest;
             this.image = builder.image;
             this.nodeInstanceId = builder.nodeInstanceId;
@@ -182,6 +186,13 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
          */
         public String getClusterName() {
             return this.clusterName;
+        }
+
+        /**
+         * @return costTimeInfo
+         */
+        public String getCostTimeInfo() {
+            return this.costTimeInfo;
         }
 
         /**
@@ -272,6 +283,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             private String appName; 
             private String clusterId; 
             private String clusterName; 
+            private String costTimeInfo; 
             private String digest; 
             private String image; 
             private String nodeInstanceId; 
@@ -306,6 +318,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * CostTimeInfo.
+             */
+            public Builder costTimeInfo(String costTimeInfo) {
+                this.costTimeInfo = costTimeInfo;
                 return this;
             }
 

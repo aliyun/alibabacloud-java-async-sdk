@@ -98,7 +98,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The installation information of the RASP-enabled application.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +230,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * RaspAppName.
+             * The name of the RASP-enabled application.
              */
             public Builder raspAppName(String raspAppName) {
                 this.raspAppName = raspAppName;
@@ -234,7 +238,12 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RaspOnlineStatus.
+             * The online status of the RASP-enabled applications. Valid values:
+             * <p>
+             * 
+             * *   **0**: All RASP-enabled applications are online.
+             * *   **1**: Part of the RASP-enabled applications are online.
+             * *   **2**: All RASP-enabled applications are offline.
              */
             public Builder raspOnlineStatus(Integer raspOnlineStatus) {
                 this.raspOnlineStatus = raspOnlineStatus;
@@ -242,7 +251,12 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RaspStatus.
+             * The installation status of the RASP-enabled application. Valid values:
+             * <p>
+             * 
+             * *   **SUCCESS**: The RASP-enabled application is installed.
+             * *   **FAIL**: The RASP-enabled application fails to be installed.
+             * *   **INSTALL**: The RASP-enabled application is being installed.
              */
             public Builder raspStatus(String raspStatus) {
                 this.raspStatus = raspStatus;
@@ -250,7 +264,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 推送失败结果
+             * The result returned if the push fails.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -258,7 +272,7 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -182,7 +182,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -191,7 +191,11 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is handled. Valid values:
+         * <p>
+         * 
+         * *   Y: The vulnerability is handled.
+         * *   N: The vulnerability is not handled.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -200,7 +204,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The event ID.
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -209,7 +213,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * FuzzyMaliciousName.
+         * The name of the malicious file that you want to query.
+         * <p>
+         * 
+         * > Fuzzy match is supported.
          */
         public Builder fuzzyMaliciousName(String fuzzyMaliciousName) {
             this.putQueryParameter("FuzzyMaliciousName", fuzzyMaliciousName);
@@ -218,7 +225,11 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -227,7 +238,12 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Levels.
+         * The severities of the malicious files. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   serious
+         * *   suspicious
+         * *   remind
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -236,7 +252,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * MaliciousMd5.
+         * The MD5 hash value of the malicious file.
          */
         public Builder maliciousMd5(String maliciousMd5) {
             this.putQueryParameter("MaliciousMd5", maliciousMd5);
@@ -245,7 +261,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +270,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -263,7 +279,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the asset.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

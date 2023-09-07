@@ -257,7 +257,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The sort type of the instances.
+         * The types of the conditions based on which the check items are sorted.
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);

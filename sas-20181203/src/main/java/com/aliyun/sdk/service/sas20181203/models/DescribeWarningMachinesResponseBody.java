@@ -138,7 +138,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the servers.
+         * The information about the servers.
          */
         public Builder warningMachines(java.util.List < WarningMachines> warningMachines) {
             this.warningMachines = warningMachines;
@@ -377,8 +377,8 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
              * Indicates whether Security Center is authorized to protect the asset. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -386,7 +386,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * The container ID.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -394,7 +394,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of container.
+             * The name of the container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -410,7 +410,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The server ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -469,8 +469,8 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
              * Indicates whether a port on the server is accessible over the Internet. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder portOpen(Boolean portOpen) {
                 this.portOpen = portOpen;

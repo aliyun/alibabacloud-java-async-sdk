@@ -122,7 +122,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         private Integer startTime; 
 
         /**
-         * An array that consists of days in a week on which an automatic check is performed.
+         * The days in a week on which an automatic check is performed.
          */
         public Builder cycleDays(java.util.List < Integer > cycleDays) {
             this.cycleDays = cycleDays;
@@ -130,7 +130,11 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAddCheck.
+         * Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder enableAddCheck(Boolean enableAddCheck) {
             this.enableAddCheck = enableAddCheck;
@@ -138,7 +142,11 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAutoCheck.
+         * Indicates whether the automatic check is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder enableAutoCheck(Boolean enableAutoCheck) {
             this.enableAutoCheck = enableAutoCheck;
@@ -149,10 +157,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
          * The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:
          * <p>
          * 
-         * *   **00:00 to 06:00:** The StartTime parameter is set to 0 and the EndTime parameter is set to 6.
-         * *   **06:00 to 12:00**: The StartTime parameter is set to 6 and the EndTime parameter is set to 12.
-         * *   **12:00 to 18:00**: The StartTime parameter is set to 12 and the EndTime parameter is set to 18.
-         * *   **18:00 to 24:00:** The StartTime parameter is set to 18 and the EndTime parameter is set to 24.
+         * *   **00:00 to 06:00**: If StartTime is set to 00:00, EndTime must be set to 06:00.
+         * *   **06:00 to 12:00**: If StartTime is set to 06:00, EndTime must be set to 12:00.
+         * *   **12:00 to 18:00**: If StartTime is set to 12:00, EndTime must be set to 18:00.
+         * *   **18:00 to 24:00**: If StartTime is set to 18:00, EndTime must be set to 24:00.
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -168,7 +176,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SelectedChecks.
+         * The check items selected in the policy.
          */
         public Builder selectedChecks(java.util.List < SelectedChecks> selectedChecks) {
             this.selectedChecks = selectedChecks;
@@ -176,7 +184,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the check items.
+         * The information about the check items.
          */
         public Builder standards(java.util.List < Standards> standards) {
             this.standards = standards;
@@ -236,7 +244,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
             private Long sectionId; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -244,7 +252,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SectionId.
+             * The section ID of the check item.
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;
@@ -340,8 +348,8 @@ public class GetCheckConfigResponseBody extends TeaModel {
              * The status of the check item. Valid values:
              * <p>
              * 
-             * *   **ON**: enabled
-             * *   **OFF**: disabled
+             * *   **ON**: The check item is enabled.
+             * *   **OFF**: The check item is disabled.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -118,7 +118,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The used quota for web tamper proofing.
+         * The associated tamper proofing quota.
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -142,7 +142,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the quota for web tamper proofing expires.
+         * The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -158,7 +158,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of processes that are added to the process whitelist.
+         * The number of processes in the whitelist.
          */
         public Builder whiteCount(Integer whiteCount) {
             this.whiteCount = whiteCount;

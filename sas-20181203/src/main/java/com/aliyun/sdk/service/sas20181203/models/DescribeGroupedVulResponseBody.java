@@ -94,7 +94,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the vulnerability.
+         * The information about the vulnerability.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -360,7 +360,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Related.
+             * The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.
              */
             public Builder related(String related) {
                 this.related = related;
@@ -398,8 +398,8 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              * *   **cve**: Linux software vulnerability
              * *   **sys**: Windows system vulnerability
              * *   **cms**: Web-CMS vulnerability
-             * *   **app**: application vulnerabilitiy
-             * *   **emg**: urgent vulnerabilities
+             * *   **app**: application vulnerability
+             * *   **emg**: urgent vulnerability
              * *   **sca**: vulnerability that is detected based on software component analysis
              */
             public Builder type(String type) {

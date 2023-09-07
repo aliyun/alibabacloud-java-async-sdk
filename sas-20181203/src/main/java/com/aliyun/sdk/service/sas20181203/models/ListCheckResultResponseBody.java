@@ -62,7 +62,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The check items.
+         * The information about the check items.
          */
         public Builder checks(java.util.List < Checks> checks) {
             this.checks = checks;
@@ -186,7 +186,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the requirement item for the check item.
+             * The display name of the requirement item of the check item.
              */
             public Builder requirementShowName(String requirementShowName) {
                 this.requirementShowName = requirementShowName;
@@ -202,7 +202,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The section display name of the check item.
+             * The section display name of section of the check item.
              */
             public Builder sectionShowName(String sectionShowName) {
                 this.sectionShowName = sectionShowName;
@@ -411,7 +411,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The check policies.
+             * The information about the check policies.
              */
             public Builder checkPolicies(java.util.List < CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
@@ -448,11 +448,11 @@ public class ListCheckResultResponseBody extends TeaModel {
              *     *   **POLICY**
              *     *   **GROUP**
              * 
-             * *   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:
+             * *   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:
              * 
              *     *   **DOMAIN**
              * 
-             * *   If **InstanceType** is set to other values, this parameter supports the following valid values:
+             * *   If **InstanceType** is set to other values, this parameter supports the following valid value:
              * 
              *     *   **INSTANCE**
              */
@@ -465,28 +465,28 @@ public class ListCheckResultResponseBody extends TeaModel {
              * The asset type of the cloud service. Valid values:
              * <p>
              * 
-             * *   **ECS**: ECS
-             * *   **SLB**: SLB
+             * *   **ECS**: Elastic Compute Service (ECS)
+             * *   **SLB**: Server Load Balancer (SLB)
              * *   **RDS**: ApsaraDB RDS
-             * *   **MONGODB**: MongoDB
-             * *   **KVSTORE**: Redis
+             * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
+             * *   **KVSTORE**: ApsaraDB for Redis
              * *   **ACR**: Container Registry
-             * *   **CSK**: ACK
-             * *   **VPC**: VPC
+             * *   **CSK**: Container Service for Kubernetes (ACK)
+             * *   **VPC**: Virtual Private Cloud (VPC)
              * *   **ACTIONTRAIL**: ActionTrail
-             * *   **CDN**: CDN
-             * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
+             * *   **CDN**: Alibaba Cloud CDN (CDN)
+             * *   **CAS**: Certificate Management Service
              * *   **RDC**: Apsara Devops
-             * *   **RAM**: RAM
+             * *   **RAM**: Resource Access Management (RAM)
              * *   **DDOS**: Anti-DDoS
-             * *   **WAF**: WAF
-             * *   **OSS**: OSS
+             * *   **WAF**: Web Application Firewall (WAF)
+             * *   **OSS**: Object Storage Service (OSS)
              * *   **POLARDB**: PolarDB
              * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-             * *   **MSE**: MSE
-             * *   **NAS**: NAS
-             * *   **SDDP**: SDDP
-             * *   **EIP**: EIP
+             * *   **MSE**: Microservices Engine (MSE)
+             * *   **NAS**: Apsara File Storage NAS (NAS)
+             * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
+             * *   **EIP**: Elastic IP Address (EIP)
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -494,7 +494,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last check was performed. Unit: milliseconds.
+             * The timestamp generated when the last check was performed. Unit: milliseconds.
              */
             public Builder lastCheckTime(Long lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -554,7 +554,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the cloud service provider.
+             * The cloud service provider.
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

@@ -93,10 +93,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values: 
-         * <p>
-         * - **cve**: Linux software vulnerability 
-         * - **sys**: Windows system vulnerability
+         * The type of the vulnerability. Valid values: -**cve**: Linux software vulnerability -**sys**: Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

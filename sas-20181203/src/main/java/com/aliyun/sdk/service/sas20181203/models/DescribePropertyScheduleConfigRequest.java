@@ -55,7 +55,7 @@ public class DescribePropertyScheduleConfigRequest extends Request {
         } 
 
         /**
-         * The type of the asset fingerprints to query. Valid values:
+         * The type of the asset fingerprints. Valid values:
          * <p>
          * 
          * *   **scheduler_port_period**: listening port

@@ -106,7 +106,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the probe.
+         * The information about the probe.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -311,7 +311,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the monitoring record.
+             * The unique ID of the service that is monitored.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -335,7 +335,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IP addresses of the sever on which the probe is deployed.
+             * The IP addresses that are monitored.
              */
             public Builder serviceIpList(java.util.List < String > serviceIpList) {
                 this.serviceIpList = serviceIpList;
@@ -512,7 +512,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The error that indicates a binding failure.
+             * The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.
              */
             public Builder err(String err) {
                 this.err = err;
@@ -528,7 +528,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the port binding record.
+             * The unique ID of the port binding record.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -536,7 +536,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the error.
+             * The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -544,7 +544,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type.
+             * The type of the protocol.
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -560,7 +560,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The binding status. Valid values:
+             * The status of the port of the honeypot that is bound to the probe. Valid values:
              * <p>
              * 
              * *   **1**: abnormal
@@ -661,7 +661,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the binding record.
+             * The unique ID of the honeypot that is bound to the probe.
              */
             public Builder bindId(String bindId) {
                 this.bindId = bindId;
@@ -669,7 +669,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the ports that are bound to the probe.
+             * The ports that are bound to the probe.
              */
             public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
                 this.bindPortList = bindPortList;
@@ -677,7 +677,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot.
+             * The honeypot ID.
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -685,7 +685,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IP addresses that are monitored.
+             * The IP addresses that are monitored.
              */
             public Builder serviceIpList(java.util.List < String > serviceIpList) {
                 this.serviceIpList = serviceIpList;
@@ -693,7 +693,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the service. Valid values:
+             * The status of the honeypot that is bound to the probe. Valid values:
              * <p>
              * 
              * *   **1**: abnormal
@@ -994,7 +994,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the CIDR blocks that are allowed to access the VPC probe.
+             * The CIDR blocks of the probe deployed in a virtual private cloud (VPC).
              */
             public Builder cidrList(java.util.List < String > cidrList) {
                 this.cidrList = cidrList;
@@ -1042,7 +1042,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the honeypots to which the probe forwards traffic.
+             * The honeypots that are bound to the probe.
              */
             public Builder honeypotProbeBindList(java.util.List < HoneypotProbeBindList> honeypotProbeBindList) {
                 this.honeypotProbeBindList = honeypotProbeBindList;
@@ -1158,7 +1158,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC in which the VPC probe is deployed.
+             * The ID of the VPC in which the probe is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

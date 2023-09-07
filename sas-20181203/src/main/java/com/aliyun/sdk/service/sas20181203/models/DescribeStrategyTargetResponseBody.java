@@ -58,7 +58,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the assets to which the baseline check policy is applied.
+         * The information about the assets to which the baseline check policy is applied.
          */
         public Builder strategyTargets(java.util.List < StrategyTargets> strategyTargets) {
             this.strategyTargets = strategyTargets;
@@ -145,8 +145,8 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
              * Indicates whether the baseline check policy is applied to the asset group. Valid values:
              * <p>
              * 
-             * *   **add**: yes
-             * *   **del**: no
+             * *   **add**: The baseline check policy is applied to the asset group.
+             * *   **del**: the baseline check policy is not applied to the asset group.
              */
             public Builder flag(String flag) {
                 this.flag = flag;

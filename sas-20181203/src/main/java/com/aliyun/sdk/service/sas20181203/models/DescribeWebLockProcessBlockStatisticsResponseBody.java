@@ -170,7 +170,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
             private String process; 
 
             /**
-             * The number of processes on the current page.
+             * The number of processes that are returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;

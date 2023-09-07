@@ -58,7 +58,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the baseline check policies.
+         * The details of the baseline check policies.
          */
         public Builder strategies(java.util.List < Strategies> strategies) {
             this.strategies = strategies;
@@ -125,8 +125,8 @@ public class DescribeStrategyResponseBody extends TeaModel {
              * Indicates whether the baseline check policy is applied to the asset group. Valid values:
              * <p>
              * 
-             * *   **add**: yes
-             * *   **del**: no
+             * *   **add**: The baseline check policy is applied to the asset group.
+             * *   **del**: the baseline check policy is not applied to the asset group.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -343,7 +343,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * An array consisting of the assets to which the baseline check policy is applied.
+             * The details of the assets to which the baseline check policy is applied.
              */
             public Builder configTargets(java.util.List < ConfigTargets> configTargets) {
                 this.configTargets = configTargets;
@@ -354,8 +354,8 @@ public class DescribeStrategyResponseBody extends TeaModel {
              * The type of the baseline check policy. Valid values:
              * <p>
              * 
-             * *   **common**: standard baseline check policy
-             * *   **custom**: custom baseline check policy
+             * *   **common**
+             * *   **custom**
              */
             public Builder customType(String customType) {
                 this.customType = customType;
@@ -399,7 +399,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline check based on the baseline check policy ends.
+             * The end time of the baseline check policy.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -410,8 +410,8 @@ public class DescribeStrategyResponseBody extends TeaModel {
              * The status of the baseline check policy. Valid values:
              * <p>
              * 
-             * *   **1**: disabled
-             * *   **2**: enabled
+             * *   **1**: not executed
+             * *   **2**: executing
              */
             public Builder execStatus(Integer execStatus) {
                 this.execStatus = execStatus;
@@ -435,7 +435,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of risk items to all baseline check items in the baseline check result.
+             * The proportion of risky baselines in the baseline check result.
              */
             public Builder passRate(Integer passRate) {
                 this.passRate = passRate;
@@ -459,7 +459,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline check based on the baseline check policy starts.
+             * The start time of the baseline check policy.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -467,11 +467,11 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the baseline check policy. Valid values:
+             * The source type of the baseline check policy. Valid values:
              * <p>
              * 
-             * *   **1**: built-in policy, which indicates that the baseline check policy is provided and performed by Security Center by default.
-             * *   **2**: user-defined policy, which can be a standard or custom baseline check policy.
+             * *   **1**: indicates a built-in policy provided and performed by Security Center by default.
+             * *   **2**: indicates a user-defined policy. It can be a standard or custom baseline check policy.
              */
             public Builder type(Integer type) {
                 this.type = type;

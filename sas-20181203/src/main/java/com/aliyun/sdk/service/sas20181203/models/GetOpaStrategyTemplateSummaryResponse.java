@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetOpaStrategyTemplateSummaryResponse} extends {@link TeaModel}
+ *
+ * <p>GetOpaStrategyTemplateSummaryResponse</p>
+ */
+public class GetOpaStrategyTemplateSummaryResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetOpaStrategyTemplateSummaryResponseBody body;
+
+    private GetOpaStrategyTemplateSummaryResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetOpaStrategyTemplateSummaryResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetOpaStrategyTemplateSummaryResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetOpaStrategyTemplateSummaryResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetOpaStrategyTemplateSummaryResponseBody body);
+
+        @Override
+        GetOpaStrategyTemplateSummaryResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetOpaStrategyTemplateSummaryResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetOpaStrategyTemplateSummaryResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetOpaStrategyTemplateSummaryResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetOpaStrategyTemplateSummaryResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetOpaStrategyTemplateSummaryResponse build() {
+            return new GetOpaStrategyTemplateSummaryResponse(this);
+        } 
+
+    } 
+
+}

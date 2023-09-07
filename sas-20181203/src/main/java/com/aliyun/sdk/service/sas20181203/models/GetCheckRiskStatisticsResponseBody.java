@@ -391,7 +391,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the statistics on check items that are used in the risk scenario by baseline type.
+             * The statistics on check items that are used in the risk scenario by baseline type.
              */
             public Builder subStatistics(java.util.List < SubStatistics> subStatistics) {
                 this.subStatistics = subStatistics;

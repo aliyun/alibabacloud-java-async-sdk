@@ -180,7 +180,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -198,7 +198,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The timestamp at which the software update ends. Unit: milliseconds.
+         * The timestamp generated when the software update ends. Unit: milliseconds.
          */
         public Builder installTimeEnd(Long installTimeEnd) {
             this.putQueryParameter("InstallTimeEnd", installTimeEnd);
@@ -207,7 +207,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The timestamp at which the software update starts. Unit: milliseconds.
+         * The timestamp generated when the software update starts. Unit: milliseconds.
          */
         public Builder installTimeStart(Long installTimeStart) {
             this.putQueryParameter("InstallTimeStart", installTimeStart);
@@ -225,7 +225,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
