@@ -26,8 +26,8 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     private java.util.Map < String, Integer > config;
 
     @Body
-    @NameInMap("dataSource")
-    private String dataSource;
+    @NameInMap("dataSourceName")
+    private String dataSourceName;
 
     @Body
     @NameInMap("dataSourceType")
@@ -50,21 +50,21 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     private String partition;
 
     @Body
-    @NameInMap("triggerBuild")
-    private Boolean triggerBuild;
+    @NameInMap("pushMode")
+    private String pushMode;
 
     private ModifyClusterOfflineConfigRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.buildMode = builder.buildMode;
         this.config = builder.config;
-        this.dataSource = builder.dataSource;
+        this.dataSourceName = builder.dataSourceName;
         this.dataSourceType = builder.dataSourceType;
         this.dataTimeSec = builder.dataTimeSec;
         this.domain = builder.domain;
         this.generation = builder.generation;
         this.partition = builder.partition;
-        this.triggerBuild = builder.triggerBuild;
+        this.pushMode = builder.pushMode;
     }
 
     public static Builder builder() {
@@ -102,10 +102,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     }
 
     /**
-     * @return dataSource
+     * @return dataSourceName
      */
-    public String getDataSource() {
-        return this.dataSource;
+    public String getDataSourceName() {
+        return this.dataSourceName;
     }
 
     /**
@@ -144,23 +144,23 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     }
 
     /**
-     * @return triggerBuild
+     * @return pushMode
      */
-    public Boolean getTriggerBuild() {
-        return this.triggerBuild;
+    public String getPushMode() {
+        return this.pushMode;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterOfflineConfigRequest, Builder> {
         private String instanceId; 
         private String buildMode; 
         private java.util.Map < String, Integer > config; 
-        private String dataSource; 
+        private String dataSourceName; 
         private String dataSourceType; 
         private Integer dataTimeSec; 
         private String domain; 
         private Long generation; 
         private String partition; 
-        private Boolean triggerBuild; 
+        private String pushMode; 
 
         private Builder() {
             super();
@@ -171,13 +171,13 @@ public class ModifyClusterOfflineConfigRequest extends Request {
             this.instanceId = request.instanceId;
             this.buildMode = request.buildMode;
             this.config = request.config;
-            this.dataSource = request.dataSource;
+            this.dataSourceName = request.dataSourceName;
             this.dataSourceType = request.dataSourceType;
             this.dataTimeSec = request.dataTimeSec;
             this.domain = request.domain;
             this.generation = request.generation;
             this.partition = request.partition;
-            this.triggerBuild = request.triggerBuild;
+            this.pushMode = request.pushMode;
         } 
 
         /**
@@ -208,11 +208,11 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * dataSourceName.
          */
-        public Builder dataSource(String dataSource) {
-            this.putBodyParameter("dataSource", dataSource);
-            this.dataSource = dataSource;
+        public Builder dataSourceName(String dataSourceName) {
+            this.putBodyParameter("dataSourceName", dataSourceName);
+            this.dataSourceName = dataSourceName;
             return this;
         }
 
@@ -262,15 +262,11 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger reindexing.
-         * <p>
-         * 
-         * *   true: synchronizes the configuration and triggers reindexing.
-         * *   false: waits for the configuration to take effect next time when reindexing is triggered.
+         * pushMode.
          */
-        public Builder triggerBuild(Boolean triggerBuild) {
-            this.putBodyParameter("triggerBuild", triggerBuild);
-            this.triggerBuild = triggerBuild;
+        public Builder pushMode(String pushMode) {
+            this.putBodyParameter("pushMode", pushMode);
+            this.pushMode = pushMode;
             return this;
         }
 
