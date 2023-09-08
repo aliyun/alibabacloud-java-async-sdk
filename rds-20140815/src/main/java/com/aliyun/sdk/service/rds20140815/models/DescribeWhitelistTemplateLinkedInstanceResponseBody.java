@@ -134,7 +134,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

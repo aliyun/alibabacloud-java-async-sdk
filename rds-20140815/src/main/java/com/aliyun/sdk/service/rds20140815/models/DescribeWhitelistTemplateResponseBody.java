@@ -134,7 +134,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -258,7 +258,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist.
+             * The ID of the whitelist template.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -266,7 +266,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist.
+             * The name of the IP whitelist template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -315,7 +315,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             private Template template; 
 
             /**
-             * The information about the IP whitelist.
+             * The information about the IP whitelist template.
              */
             public Builder template(Template template) {
                 this.template = template;

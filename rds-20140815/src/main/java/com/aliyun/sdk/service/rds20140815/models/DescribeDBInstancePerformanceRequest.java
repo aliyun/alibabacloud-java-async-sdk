@@ -128,7 +128,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -137,7 +137,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          * <p>
          * 
          * >  The time span between the beginning time and the end time must be longer than the monitoring frequency. Otherwise, this operation may return an empty array.
@@ -149,10 +149,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The performance metric that you want to query. If you enter more than one performance metric, separate them with commas (,). You can enter up to 30 performance metrics. For more information, see [Performance parameters](~~26316~~).
+         * The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 values. For more information, see [Performance parameters](~~26316~~).
          * <p>
          * 
-         * >  If you set the **Key** parameter to **MySQL_SpaceUsage** or **SQLServer_SpaceUsage**, you can query the performance metric only over one day.
+         * >  If you set **Key** to **MySQL_SpaceUsage** or **SQLServer_SpaceUsage**, you can only query the monitoring data within one day.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -161,7 +161,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The unique ID of the instance.
+         * The ID of the instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

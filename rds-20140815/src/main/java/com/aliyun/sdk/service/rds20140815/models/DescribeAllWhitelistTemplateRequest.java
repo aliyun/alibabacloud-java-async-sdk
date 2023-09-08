@@ -143,8 +143,8 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
          * Specifies whether to enable fuzzy search. Valid values:
          * <p>
          * 
-         * *   **true**: enables the feature.
-         * *   **false**: disables the feature.
+         * *   **true**
+         * *   **false**
          */
         public Builder fuzzySearch(Boolean fuzzySearch) {
             this.putQueryParameter("FuzzySearch", fuzzySearch);
@@ -171,7 +171,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * 资源组ID。 关于资源组的更多信息，请参见什么是资源组。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -198,7 +198,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The name of the whitelist. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist during the fuzzy search.
+         * The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

@@ -161,6 +161,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         private String engineVersion;
 
+        @NameInMap("ExpireStatus")
+        private String expireStatus;
+
         @NameInMap("IsHotfixVersion")
         private Boolean isHotfixVersion;
 
@@ -186,6 +189,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             this.communityMinorVersion = builder.communityMinorVersion;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
+            this.expireStatus = builder.expireStatus;
             this.isHotfixVersion = builder.isHotfixVersion;
             this.minorVersion = builder.minorVersion;
             this.nodeType = builder.nodeType;
@@ -222,6 +226,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
          */
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        /**
+         * @return expireStatus
+         */
+        public String getExpireStatus() {
+            return this.expireStatus;
         }
 
         /**
@@ -277,6 +288,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             private String communityMinorVersion; 
             private String engine; 
             private String engineVersion; 
+            private String expireStatus; 
             private Boolean isHotfixVersion; 
             private String minorVersion; 
             private String nodeType; 
@@ -309,6 +321,14 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * ExpireStatus.
+             */
+            public Builder expireStatus(String expireStatus) {
+                this.expireStatus = expireStatus;
                 return this;
             }
 

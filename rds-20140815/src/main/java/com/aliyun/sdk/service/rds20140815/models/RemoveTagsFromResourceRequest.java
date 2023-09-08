@@ -205,7 +205,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -214,7 +214,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -241,7 +241,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -250,7 +250,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -280,7 +280,7 @@ public class RemoveTagsFromResourceRequest extends Request {
          * A set of a TagKey and a TagValue that you use to unbind the tag. Format: {"key1":"value1"}.
          * <p>
          * 
-         * >  The TagKey is required, and the TagValue is optional.
+         * >  You cannot specify an empty string for TagKey. You can specify an empty string for TagValue.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -289,7 +289,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * The ID of the proxy pattern.
+         * The ID of the proxy mode.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -343,7 +343,7 @@ public class RemoveTagsFromResourceRequest extends Request {
             private String value; 
 
             /**
-             * The TagKey of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. The TagKey is required, and the TagValue is optional.
+             * The TagKey of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -351,7 +351,7 @@ public class RemoveTagsFromResourceRequest extends Request {
             }
 
             /**
-             * The TagValue of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. The TagKey is required, and the TagValue is optional.
+             * The TagValue of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
              */
             public Builder value(String value) {
                 this.value = value;

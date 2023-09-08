@@ -97,7 +97,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * The name of the instance.
+         * The instance name.
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -106,7 +106,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * 资源组ID，可以为空。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

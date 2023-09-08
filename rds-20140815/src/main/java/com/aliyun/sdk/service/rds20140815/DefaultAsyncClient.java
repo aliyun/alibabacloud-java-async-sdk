@@ -545,13 +545,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Applicable database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
-      * *   MariaDB
+      * ### Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       * ### References
-      * >  Fees are generated if the call is successful. Before you call this operation, make sure that you understand the billing rules. For more information, see the following topics:
+      * > : Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
       * *   [Create an ApsaraDB RDS for MySQL instance](~~148036~~)
       * *   [Create a serverless ApsaraDB RDS for MySQL instance](~~412231~~)
       * *   [Create an ApsaraDB RDS for PostgreSQL instance](~~148038~~)
@@ -1197,7 +1197,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ##
+      * ## Precautions
       * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution when you delete a global active database cluster.
       * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](~~26229~~) to release the instances one after another.
       *
@@ -1238,10 +1238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Supported database engine
-      * PostgreSQL
+      * ### Supported database engines
+      * RDS PostgreSQL
       * ### References
-      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * [Manage extensions](~~2402409~~)
       *
      */
@@ -1408,9 +1408,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
       *
      */
     @Override
@@ -1499,8 +1499,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * To query the time range to which you can restore data by using a common backup file, see [DescribeBackups](~~26273~~).
       * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+      * *   MySQL. For more information, see [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~).
+      * *   PostgreSQL. For more information, see [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
       *
      */
     @Override
@@ -1619,7 +1619,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       * ### Usage notes
       * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a download URL.
       * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by **LinkExpiredTime**. You must download the backup files before the expiration time.
-      * *   If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see [Grant backup file download permissions to a RAM user with read-only permissions](~100043~).
+      * *   If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see [Grant backup file download permissions to a RAM user with read-only permissions](~~100043~~).
       * *   Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by StartTime and EndTime.
       *
      */
@@ -1818,11 +1818,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
-      * *   MariaDB
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       *
      */
     @Override
@@ -2040,7 +2040,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
-      * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
+      * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB TX:
       *     *   5-second monitoring frequency
       *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
       *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
@@ -2054,7 +2054,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
       *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
       *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
-      * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
+      * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB TX:
       *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
       *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
       *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
@@ -2186,7 +2186,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
-      * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
+      * **
+      * **Description:** This operation is phased out. Use the [DescribeDBInstances](~~610396~~) operation instead.
       *
      */
     @Override
@@ -2637,9 +2638,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
       *
      */
     @Override
@@ -2881,10 +2882,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Supported database engine
-      * PostgreSQL
+      * ### Supported database engines
+      * RDS PostgreSQL
       * ### References
-      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * [Manage extensions](~~2402409~~)
       *
      */
@@ -3349,9 +3350,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
       *
      */
     @Override
@@ -3370,9 +3371,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
       *
      */
     @Override
@@ -3428,9 +3429,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
       *
      */
     @Override
@@ -3933,9 +3934,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
-      * *   You can change only the prefix of an endpoint.
-      * *   The read/write splitting endpoint cannot be changed.
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
+      * *   [Change the endpoint and port number of an ApsaraDB RDS for MySQL instance](~~96163~~)
+      * *   [Change the endpoint and port number of an ApsaraDB RDS for PostgreSQL instance](~~96788~~)
+      * *   [Change the endpoint and port number of an ApsaraDB RDS for SQL Server instance](~~95740~~)
+      * *   [Change the endpoint and port number of an ApsaraDB RDS for MariaDB instance](~~97157~~)
       *
      */
     @Override
@@ -4591,11 +4600,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Supported database engine
-      * MySQL
+      * ### Supported database engines
+      * RDS MySQL
       * ### References
-      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-      * [Modify the latency at which a read-only ApsaraDB RDS for MySQL instance replicates data from its primary RDS instance](~~96056~~)
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Set the data replication latency of a read-only ApsaraDB RDS for MySQL instance](~~96056~~)
       *
      */
     @Override
@@ -4664,9 +4673,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The SQL explorer must be enabled for the instance.
-      * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
-      * >  After you shorten the log backup retention period, log backpack files that are stored longer than the specified log backup retention period are immediately deleted.
+      * ### Supported database engines
+      * RDS MySQL
+      * ### Precautions
+      * After you shorten the log backup retention period, log backup files that are stored longer than the specified log backup retention period are immediately deleted.
+      * ### References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Use the SQL Explorer and Audit feature](~~476574~~)
       *
      */
     @Override
@@ -4934,9 +4947,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation has the following limits:
-      * *   A maximum of 10 tags can be unbound in a single request.
-      * *   If a tag is unbound from all of the instances to which the tag has been bound, the tag is automatically deleted.
+      * The following list describes the limits:
+      * *   Up to 10 tags can be unbound in a single request.
+      * *   If a tag is unbound from all instances to which the tag has been bound, the tag is automatically deleted.
       * *   If you specify only a TagKey, all tags that match the TagKey condition are unbound.
       * *   You must specify at least a TagKey or a set of a TagKey and a TagValue.
       *
@@ -5032,12 +5045,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
-      * *   MariaDB
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       * ### References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * *   [Restart an ApsaraDB RDS for MySQL instance](~~96051~~)
       * *   [Restart an ApsaraDB RDS for PostgreSQL instance](~~96798~~)
       * *   [Restart an ApsaraDB RDS for SQL Server instance](~~95656~~)
@@ -5404,10 +5417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Supported database engine
-      * PostgreSQL
+      * ### Supported database engines
+      * RDS PostgreSQL
       * ### References
-      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * [Manage extensions](~~2402409~~)
       *
      */

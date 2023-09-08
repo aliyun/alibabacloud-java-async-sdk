@@ -112,7 +112,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the instance.
+         * The instance name.
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -121,7 +121,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * 资源组ID。 关于资源组的更多信息，请参见什么是资源组。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

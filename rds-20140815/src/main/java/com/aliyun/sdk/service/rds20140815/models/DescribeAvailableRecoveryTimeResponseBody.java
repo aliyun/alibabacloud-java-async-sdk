@@ -86,7 +86,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cross-region backup file.
+         * The ID of the cross-region data backup file.
          */
         public Builder crossBackupId(Integer crossBackupId) {
             this.crossBackupId = crossBackupId;
@@ -110,7 +110,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the source instance.
+         * The region where the source instance resides.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -118,7 +118,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

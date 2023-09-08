@@ -113,7 +113,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The switch to enable or disable Babelfish.
              * <p>
              * 
-             * > If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.
+             * >  If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.
              */
             public Builder babelfishEnabled(String babelfishEnabled) {
                 this.babelfishEnabled = babelfishEnabled;
@@ -127,7 +127,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **single-db**
              * *   **multi-db**
              * 
-             * > For more information about migration modes for Babelfish, see [Migration mode](~~428613~~).
+             * >  For more information about migration modes for Babelfish, see [Migration modes](~~428613~~).
              */
             public Builder migrationMode(String migrationMode) {
                 this.migrationMode = migrationMode;
@@ -375,7 +375,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private DBInstanceIds DBInstanceIds; 
 
             /**
-             * An array consisting of the IDs of the instances.
+             * The IDs of the instances.
              */
             public Builder DBInstanceIds(DBInstanceIds DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -540,7 +540,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **true**: The feature is enabled.
              * *   **false** (default): The feature is disabled.
              * 
-             * > After the automatic start and stop feature is enabled, if no connections are established to the instance within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance automatically resumes.
+             * >  After the automatic suspension feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.
              */
             public Builder autoPause(Boolean autoPause) {
                 this.autoPause = autoPause;
@@ -570,7 +570,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **true**: The feature is enabled.
              * *   **false** (default): The feature is disabled.
              * 
-             * > In most cases, the RCU scaling of a serverless instance immediately takes effect. In some cases, the RCU scaling does not immediately take effect. If this happens, you can enable the forced scaling feature to forcefully scale the RCUs of the serverless instance.
+             * >  In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;
@@ -611,7 +611,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1564,7 +1564,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.
              * <p>
              * 
-             * > This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).
+             * >  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see Introduction to Babelfish.[](~~428613~~)
              */
             public Builder babelfishConfig(BabelfishConfig babelfishConfig) {
                 this.babelfishConfig = babelfishConfig;
@@ -1638,7 +1638,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **1**: shared proxy
              * *   **2**: dedicated proxy
              * 
-             * > We recommend that you use the **ProxyType** parameter instead of this parameter.
+             * >  We recommend that you use the ProxyType parameter instead of this parameter.
              */
             public Builder consoleVersion(String consoleVersion) {
                 this.consoleVersion = consoleVersion;
@@ -1654,7 +1654,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The minor engine version of the instance.
+             * The version of the database engine.
              */
             public Builder currentKernelVersion(String currentKernelVersion) {
                 this.currentKernelVersion = currentKernelVersion;
@@ -1708,7 +1708,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -1756,7 +1756,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * *   **local_ssd** and **ephemeral_ssd**: local SSD
-             * *   **cloud_ssd**: standard SSD.
+             * *   **cloud_ssd**: standard SSD
              * *   **cloud_essd**: enhanced SSD (ESSD)
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
@@ -1821,7 +1821,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * The database engine version of the serverless instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -1832,7 +1832,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The expiration time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > Pay-as-you-go instances never expire.
+             * **
+             * 
+             * **Description** Pay-as-you-go instances never expire.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1872,7 +1874,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+             * The ID of the instance from which the incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
              */
             public Builder incrementSourceDBInstanceId(String incrementSourceDBInstanceId) {
                 this.incrementSourceDBInstanceId = incrementSourceDBInstanceId;
@@ -1947,7 +1949,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The ID of the primary instance.
              * <p>
              * 
-             * > If this parameter is not returned, the instance is the primary instance.
+             * **
+             * 
+             * **Description** If this parameter is not returned, the instance is the primary instance.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -1990,7 +1994,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether PgBouncer is enabled.
              * <p>
              * 
-             * > This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is **true**.
+             * >  This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is **true**.
              */
             public Builder PGBouncerEnabled(String PGBouncerEnabled) {
                 this.PGBouncerEnabled = PGBouncerEnabled;
@@ -2055,7 +2059,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2119,7 +2123,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone.
+             * The time zone of the instance.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -2171,7 +2175,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

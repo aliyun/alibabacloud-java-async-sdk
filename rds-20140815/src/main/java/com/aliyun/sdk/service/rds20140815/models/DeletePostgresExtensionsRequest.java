@@ -187,7 +187,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The database for which you want to create an extension. If you want to uninstall extensions for multiple databases, separate multiple databases with commas (,).
+         * The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);
@@ -196,7 +196,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The name of the extension. If you want to uninstall multiple extensions, separate the extension names with commas (,).
+         * The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).
          */
         public Builder extensions(String extensions) {
             this.putQueryParameter("Extensions", extensions);

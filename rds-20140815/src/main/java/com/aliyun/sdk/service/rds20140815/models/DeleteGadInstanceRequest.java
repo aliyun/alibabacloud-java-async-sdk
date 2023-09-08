@@ -92,7 +92,7 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the central node of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the information.
+         * The region ID of the central node of the global active database cluster. You can call the [DescribeRegions](~~330105~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * 资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)接口获取。
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

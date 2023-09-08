@@ -134,7 +134,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -258,7 +258,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the whitelist.
+             * The ID of the whitelist template.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -266,7 +266,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The name of the whitelist.
+             * The name of the whitelist template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -327,7 +327,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             private java.util.List < Templates> templates; 
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder insName(String insName) {
                 this.insName = insName;

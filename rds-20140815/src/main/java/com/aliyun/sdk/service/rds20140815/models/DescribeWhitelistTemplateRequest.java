@@ -97,7 +97,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * ResourceGroupId.
+         * 资源组ID。 关于资源组的更多信息，请参见什么是资源组。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -124,7 +124,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the IP whitelist. You can call the DescribeAllWhitelistTemplate operation to query the ID of the IP whitelist.
+         * The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);

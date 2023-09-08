@@ -104,7 +104,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
          * *   **200**: success
          * *   **400**: client error
          * *   **401**: identity authentication failed
-         * *   **404**: requested page not found
+         * *   **404**: request page not found
          * *   **500**: server error
          */
         public Builder code(String code) {
@@ -134,7 +134,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -258,7 +258,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the whitelist.
+             * The ID of the whitelist template.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -266,7 +266,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the whitelist.
+             * The name of the whitelist template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -387,7 +387,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private Integer totalRecords; 
 
             /**
-             * The page number returned.
+             * The page number.
              */
             public Builder currPageNumbers(Integer currPageNumbers) {
                 this.currPageNumbers = currPageNumbers;
@@ -395,7 +395,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data that meets conditions is displayed on the next page. Valid values:
+             * Indicates whether the data that meets the conditions is displayed on the next page. Valid values:
              * <p>
              * 
              * *   **true**
@@ -407,7 +407,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data that meets conditions is displayed on the previous page. Valid values:
+             * Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:
              * <p>
              * 
              * *   **true**
@@ -419,7 +419,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries to return on each page.
              */
             public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
                 this.maxRecordsPerPage = maxRecordsPerPage;
@@ -427,7 +427,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The information about whitelists returned by page.
+             * The information about whitelist templates that are returned by page.
              */
             public Builder templates(java.util.List < Templates> templates) {
                 this.templates = templates;

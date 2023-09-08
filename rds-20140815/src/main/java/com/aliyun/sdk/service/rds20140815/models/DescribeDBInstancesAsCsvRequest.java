@@ -153,7 +153,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         } 
 
         /**
-         * CachedAsync.
+         * A deprecated parameter. You do not need to configure this parameter.
          */
         public Builder cachedAsync(Boolean cachedAsync) {
             this.putQueryParameter("CachedAsync", cachedAsync);
@@ -162,7 +162,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +171,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * ExportKey.
+         * A deprecated parameter. You do not need to configure this parameter.
          */
         public Builder exportKey(String exportKey) {
             this.putQueryParameter("ExportKey", exportKey);
@@ -189,7 +189,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +198,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

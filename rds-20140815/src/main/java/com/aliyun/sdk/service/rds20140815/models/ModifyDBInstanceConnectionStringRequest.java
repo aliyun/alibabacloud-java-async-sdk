@@ -234,7 +234,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -270,7 +270,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * PGBouncerPort.
+         * The PgBouncer port.
+         * <p>
+         * 
+         * > This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances. If you enable PgBouncer for your instance, you can change the PgBouncer port of the instance.
          */
         public Builder PGBouncerPort(String PGBouncerPort) {
             this.putQueryParameter("PGBouncerPort", PGBouncerPort);

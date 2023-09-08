@@ -678,8 +678,8 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
              * The connection mode of the instance. Valid values:
              * <p>
              * 
-             * *   **Performance**: standard mode
-             * *   **Safety**: enhanced mode
+             * *   **Performance**: standard mode.
+             * *   **Safety**: safe mode.
              */
             public Builder connectionMode(String connectionMode) {
                 this.connectionMode = connectionMode;
@@ -695,7 +695,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video file was created.
+             * The creation time.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -703,7 +703,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores that are configured for the instance.
+             * The number of CPU cores.
              */
             public Builder DBInstanceCPU(String DBInstanceCPU) {
                 this.DBInstanceCPU = DBInstanceCPU;
@@ -735,7 +735,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -743,7 +743,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance. Unit: MB.
+             * The memory capacity of the instance. Unit: MB.
              */
             public Builder DBInstanceMemory(Long DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
@@ -754,8 +754,8 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Internet**
-             * *   **Intranet**
+             * *   **Internet**: Internet
+             * *   **Intranet**: internal network
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -801,7 +801,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -825,7 +825,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * ExportKey.
+             * A deprecated parameter. You do not need to configure this parameter.
              */
             public Builder exportKey(String exportKey) {
                 this.exportKey = exportKey;
@@ -849,7 +849,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network.
+             * The network type.
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -889,7 +889,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections that are allowed by the instance.
+             * The maximum number of concurrent connections.
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -897,7 +897,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of I/O requests that is processed by the instance per second.
+             * The maximum number of I/O requests per second.
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -929,7 +929,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -937,7 +937,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist of the instance.
+             * The IP address whitelist.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -945,7 +945,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveZones.
+             * A deprecated parameter. You do not need to configure this parameter.
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -953,7 +953,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * None.
+             * N/A.
              */
             public Builder supportUpgradeAccountType(String supportUpgradeAccountType) {
                 this.supportUpgradeAccountType = supportUpgradeAccountType;
@@ -961,7 +961,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * The tags.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -977,7 +977,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -985,7 +985,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -993,7 +993,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance resides.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

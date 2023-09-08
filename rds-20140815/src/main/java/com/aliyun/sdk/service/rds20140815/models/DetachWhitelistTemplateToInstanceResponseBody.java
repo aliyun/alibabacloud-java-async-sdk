@@ -98,7 +98,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned. Valid values:
+         * The response code. Valid values:
          * <p>
          * 
          * *   **200**: success
@@ -197,8 +197,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
              * The status code returned. Valid values:
              * <p>
              * 
-             * *   **ok**: The request is successfully returned.
-             * *   **error**: The request fails to be returned.
+             * *   **ok**: The request is successful.
+             * *   **error**: The request fails.
              */
             public Builder status(String status) {
                 this.status = status;
