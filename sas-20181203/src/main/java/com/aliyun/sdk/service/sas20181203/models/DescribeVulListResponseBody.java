@@ -15,6 +15,9 @@ public class DescribeVulListResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
@@ -29,6 +32,7 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     private DescribeVulListResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
@@ -48,6 +52,13 @@ public class DescribeVulListResponseBody extends TeaModel {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
+        private String nextToken; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -90,6 +102,14 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
