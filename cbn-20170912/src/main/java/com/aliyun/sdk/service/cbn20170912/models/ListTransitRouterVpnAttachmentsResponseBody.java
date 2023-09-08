@@ -447,7 +447,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;

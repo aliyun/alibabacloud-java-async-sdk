@@ -195,7 +195,12 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,7 +209,11 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends the request. If the request passes the precheck, the custom route table is created.
+         * *   **true**: prechecks the request but does not create the custom route table. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -249,7 +258,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * RouteTableOptions.
+         * The features of the route table.
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -258,7 +267,10 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -267,7 +279,7 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the Enterprise Edition transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -276,7 +288,10 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableDescription.
+         * The description of the custom route table.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
          */
         public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
             this.putQueryParameter("TransitRouterRouteTableDescription", transitRouterRouteTableDescription);
@@ -285,7 +300,10 @@ public class CreateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableName.
+         * The name of the custom route table.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
          */
         public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
             this.putQueryParameter("TransitRouterRouteTableName", transitRouterRouteTableName);
@@ -327,7 +345,11 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             private String multiRegionECMP; 
 
             /**
-             * MultiRegionECMP.
+             * Specifies whether to enable multi-region equal-cost multi-path (ECMP) routing. Valid values:
+             * <p>
+             * 
+             * *   **disable**(default) If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **enable** If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;
@@ -380,7 +402,12 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -388,7 +415,12 @@ public class CreateTransitRouterRouteTableRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

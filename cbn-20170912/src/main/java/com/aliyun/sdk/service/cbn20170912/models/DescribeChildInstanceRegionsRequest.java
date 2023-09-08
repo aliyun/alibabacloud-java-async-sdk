@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeChildInstanceRegionsRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -34,6 +38,7 @@ public class DescribeChildInstanceRegionsRequest extends Request {
 
     private DescribeChildInstanceRegionsRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.productType = builder.productType;
@@ -52,6 +57,13 @@ public class DescribeChildInstanceRegionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -90,6 +102,7 @@ public class DescribeChildInstanceRegionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeChildInstanceRegionsRequest, Builder> {
+        private String acceptLanguage; 
         private String ownerAccount; 
         private Long ownerId; 
         private String productType; 
@@ -102,12 +115,22 @@ public class DescribeChildInstanceRegionsRequest extends Request {
 
         private Builder(DescribeChildInstanceRegionsRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.productType = request.productType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * OwnerAccount.

@@ -156,7 +156,7 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -165,7 +165,7 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance that is attached to the CEN instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -174,7 +174,10 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The region ID of the network instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -183,7 +186,12 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **CCN**: Cloud Connect Network (CCN) instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

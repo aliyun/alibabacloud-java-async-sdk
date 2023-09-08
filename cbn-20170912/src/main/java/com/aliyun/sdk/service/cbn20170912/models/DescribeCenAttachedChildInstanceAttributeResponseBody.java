@@ -146,7 +146,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         private String status; 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -154,7 +154,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceAttachTime.
+         * The time when the network instance was attached to the CEN instance.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
          */
         public Builder childInstanceAttachTime(String childInstanceAttachTime) {
             this.childInstanceAttachTime = childInstanceAttachTime;
@@ -162,7 +165,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceAttributes.
+         * The details about the network instance.
          */
         public Builder childInstanceAttributes(ChildInstanceAttributes childInstanceAttributes) {
             this.childInstanceAttributes = childInstanceAttributes;
@@ -170,7 +173,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.childInstanceId = childInstanceId;
@@ -178,7 +181,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceName.
+         * The name of the network instance.
          */
         public Builder childInstanceName(String childInstanceName) {
             this.childInstanceName = childInstanceName;
@@ -186,7 +189,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceOwnerId.
+         * The ID of the Alibaba Cloud account to which the network instance belongs.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.childInstanceOwnerId = childInstanceOwnerId;
@@ -194,7 +197,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The region ID of the network instance.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
@@ -202,7 +205,12 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
+         * *   **CCN**: CCN instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
@@ -210,7 +218,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +226,12 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Status.
+         * Indicates whether the network instance is attached to the CEN instance.
+         * <p>
+         * 
+         * *   **Attaching**: The network instance is being attached to the CEN instance.
+         * *   **Attached**: The network instance is attached to the CEN instance.
+         * *   **Detaching**: The network instance is being detached from the CEN instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -270,7 +283,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             private String ipv6Isp; 
 
             /**
-             * Ipv6CidrBlock.
+             * The IPv6 CIDR block of the VPC.
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -278,7 +291,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * Ipv6Isp.
+             * The type of the IPv6 CIDR block. Valid values:
+             * <p>
+             * 
+             * * **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
+             * * **ChinaMobile:** China Mobile (single line)
+             * * **ChinaUnicom:** China Unicom (single line)
+             * * **ChinaTelecom:** China Telecom (single line)
+             * 
+             * > If your Alibaba Cloud account has the required permissions to activate single-ISP bandwidth, you can set Ipv6Isp to ChinaTelecom, ChinaUnicom, or ChinaMobile.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -437,7 +458,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             private SecondaryCidrBlocks secondaryCidrBlocks; 
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block of the VPC.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -445,7 +466,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * Ipv6CidrBlock.
+             * The IPv6 CIDR block of the VPC.
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -453,7 +474,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * Ipv6CidrBlocks.
+             * The information about the IPv6 CIDR blocks of the VPC.
              */
             public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
                 this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -461,7 +482,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * SecondaryCidrBlocks.
+             * The secondary IPv4 CIDR block of the VPC.
              */
             public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
                 this.secondaryCidrBlocks = secondaryCidrBlocks;

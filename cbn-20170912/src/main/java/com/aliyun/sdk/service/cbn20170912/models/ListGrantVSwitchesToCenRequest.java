@@ -185,7 +185,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -212,7 +212,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +221,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +230,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the VPC.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +260,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -266,7 +269,13 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
+         * <p>
+         * 
+         * *   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.
+         * *   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.
+         * 
+         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

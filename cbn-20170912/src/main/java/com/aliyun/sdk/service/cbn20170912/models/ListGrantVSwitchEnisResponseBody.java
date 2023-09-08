@@ -86,7 +86,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * GrantVSwitchEnis.
+         * The information about the ENI.
          */
         public Builder grantVSwitchEnis(java.util.List < GrantVSwitchEnis> grantVSwitchEnis) {
             this.grantVSwitchEnis = grantVSwitchEnis;
@@ -94,7 +94,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The total number of entries returned.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
+         * <p>
+         * 
+         * > If MaxResults and NextToken are sued to query results by page, ignore this parameter.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +233,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Description.
+             * The ENI description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +241,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ENI ID.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -246,7 +249,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceName.
+             * The ENI name.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -254,7 +257,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryIpAddress.
+             * The primary private IPv4 address of the ENI.
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -262,7 +265,13 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterFlag.
+             * Indicates whether the ENI is created by a transit router. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * ENIs that are created by transit routers cannot be used as multicast sources or members.
              */
             public Builder transitRouterFlag(Boolean transitRouterFlag) {
                 this.transitRouterFlag = transitRouterFlag;
@@ -270,7 +279,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -278,7 +287,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -152,7 +152,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeCenInterRegionBandwidthLimits**.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -179,7 +179,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * The connected areas.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,10 +188,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * The ID of the local region.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +215,10 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * TrRegionId.
+         * The region ID of the transit router.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder trRegionId(String trRegionId) {
             this.putQueryParameter("TrRegionId", trRegionId);

@@ -86,7 +86,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         private java.util.List < VSwitches> vSwitches; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitches.
+         * The list of vSwitches.
          */
         public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
             this.vSwitches = vSwitches;
@@ -194,7 +194,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -202,7 +202,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -210,7 +210,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the vSwitch belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -218,7 +218,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone to which the vSwitch belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

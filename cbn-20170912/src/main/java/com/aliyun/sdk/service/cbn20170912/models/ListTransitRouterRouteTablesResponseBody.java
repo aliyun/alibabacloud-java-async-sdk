@@ -165,8 +165,8 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
              * Indicates whether ECMP routing is enabled. Valid values:
              * <p>
              * 
-             * *   **disable**: ECMP routing is disabled. If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-             * *   **enable**: ECMP routing is enabled. If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **disable** If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **enable** If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;
@@ -387,7 +387,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Enterprise Edition transit router is deployed.
+             * The region ID of the Enterprise Edition transit router.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -403,7 +403,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -411,7 +411,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * The transit router ID.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -446,9 +446,9 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
              * The status of the route table. Valid values:
              * <p>
              * 
-             * *   **Creating**: The route table is being created.
-             * *   **Deleting**: The route table is being deleted.
-             * *   **Active**: The route table is available.
+             * *   **Creating**
+             * *   **Deleting**
+             * *   **Active**
              */
             public Builder transitRouterRouteTableStatus(String transitRouterRouteTableStatus) {
                 this.transitRouterRouteTableStatus = transitRouterRouteTableStatus;
@@ -456,11 +456,11 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route table. Valid value:
+             * The type of the route table. Valid values:
              * <p>
              * 
-             * *   **Custom**: a custom route table
-             * *   **System**: the default route table
+             * *   **Custom**
+             * *   **System**
              */
             public Builder transitRouterRouteTableType(String transitRouterRouteTableType) {
                 this.transitRouterRouteTableType = transitRouterRouteTableType;
