@@ -70,7 +70,7 @@ public class DeleteAlertContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the alert contact.
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -79,7 +79,7 @@ public class DeleteAlertContactRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

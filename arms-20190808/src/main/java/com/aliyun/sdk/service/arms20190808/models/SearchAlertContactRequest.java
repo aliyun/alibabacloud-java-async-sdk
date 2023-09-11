@@ -139,7 +139,7 @@ public class SearchAlertContactRequest extends Request {
         } 
 
         /**
-         * ContactIds.
+         * The ID of the alert contact.
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -148,7 +148,7 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * The name of the alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -157,7 +157,7 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -166,7 +166,7 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address of the alert contact.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -175,7 +175,7 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +184,7 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * Phone.
+         * The mobile number of the alert contact.
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -193,7 +193,7 @@ public class SearchAlertContactRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Set the value to `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -70,7 +70,7 @@ public class DescribeDispatchRuleRequest extends Request {
         } 
 
         /**
-         * The value of the tag.
+         * The ID of the dispatch policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -79,7 +79,7 @@ public class DescribeDispatchRuleRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to DescribeDispatchRule.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -86,7 +86,13 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of entries returned per page.
+         * The HTTP status code returned for the request. Valid values:
+         * <p>
+         * 
+         * *   2XX: The request was successful.
+         * *   3XX: A redirection message was returned.
+         * *   4XX: The request was invalid.
+         * *   5XX: A server error occurred.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +100,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The struct returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +108,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +116,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,11 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +216,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             private String total; 
 
             /**
-             * Completed.
+             * Is completed.
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -214,7 +224,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The data entries.
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -222,7 +232,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number of the returned page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -230,7 +240,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -238,7 +248,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of returned entries.
              */
             public Builder total(String total) {
                 this.total = total;

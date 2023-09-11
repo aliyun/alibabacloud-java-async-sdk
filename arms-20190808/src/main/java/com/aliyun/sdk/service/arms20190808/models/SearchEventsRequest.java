@@ -181,7 +181,7 @@ public class SearchEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -190,16 +190,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
-         */
-        public Builder alertType(Integer alertType) {
-            this.putQueryParameter("AlertType", alertType);
-            this.alertType = alertType;
-            return this;
-        }
-
-        /**
-         * The type of the alert rule. This parameter is not returned. Valid values:
+         * The type of the alert rule. Valid values:
          * <p>
          * 
          * *   `1`: custom alert rules to monitor drill-down data sets
@@ -211,49 +202,9 @@ public class SearchEventsRequest extends Request {
          * *   `8`: Tracing Analysis alert rules
          * *   `101`: Prometheus alert rules
          */
-        public Builder appType(String appType) {
-            this.putQueryParameter("AppType", appType);
-            this.appType = appType;
-            return this;
-        }
-
-        /**
-         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:
-         * <p>
-         * 
-         * *   `1`: The event is triggered.
-         * *   `0`: The event is not triggered.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The timestamp when the event occurred.
-         */
-        public Builder isTrigger(Integer isTrigger) {
-            this.putQueryParameter("IsTrigger", isTrigger);
-            this.isTrigger = isTrigger;
-            return this;
-        }
-
-        /**
-         * The information about the alert events.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder alertType(Integer alertType) {
+            this.putQueryParameter("AlertType", alertType);
+            this.alertType = alertType;
             return this;
         }
 
@@ -264,9 +215,27 @@ public class SearchEventsRequest extends Request {
          * *   `TRACE`: application monitoring
          * *   `RETCODE`: frontend monitoring
          */
-        public Builder pid(String pid) {
-            this.putQueryParameter("Pid", pid);
-            this.pid = pid;
+        public Builder appType(String appType) {
+            this.putQueryParameter("AppType", appType);
+            this.appType = appType;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Default value: `1`.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -277,6 +246,33 @@ public class SearchEventsRequest extends Request {
          * *   `1`: The event is triggered.
          * *   `0`: The event is not triggered.
          */
+        public Builder isTrigger(Integer isTrigger) {
+            this.putQueryParameter("IsTrigger", isTrigger);
+            this.isTrigger = isTrigger;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Default value: `10`.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The process identifier (PID) of the application that is associated with the alert rule.
+         */
+        public Builder pid(String pid) {
+            this.putQueryParameter("Pid", pid);
+            this.pid = pid;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
+         */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
@@ -284,7 +280,7 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

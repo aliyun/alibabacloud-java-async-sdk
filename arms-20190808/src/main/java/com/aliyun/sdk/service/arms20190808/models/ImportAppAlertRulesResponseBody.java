@@ -50,7 +50,7 @@ public class ImportAppAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The ID of the alert rule.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ImportAppAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

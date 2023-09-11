@@ -741,7 +741,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the filter condition.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1289,7 +1289,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

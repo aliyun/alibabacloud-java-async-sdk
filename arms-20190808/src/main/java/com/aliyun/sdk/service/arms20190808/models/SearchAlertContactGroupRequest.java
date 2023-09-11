@@ -125,7 +125,7 @@ public class SearchAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupIds.
+         * The ID of the alert contact group. You can query multiple alert contact groups at a time. Separate multiple group IDs with commas (,).
          */
         public Builder contactGroupIds(String contactGroupIds) {
             this.putQueryParameter("ContactGroupIds", contactGroupIds);
@@ -134,7 +134,7 @@ public class SearchAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactGroupName.
+         * The name of the alert contact group.
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -143,7 +143,7 @@ public class SearchAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * The ID of the alert contact. You can call the SearchAlertContact operation to query the contact IDs. For more information, see [SearchAlertContact](~~130703~~).
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -152,7 +152,7 @@ public class SearchAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * The name of the alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -161,7 +161,7 @@ public class SearchAlertContactGroupRequest extends Request {
         }
 
         /**
-         * IsDetail.
+         * Specifies whether to return all alert contacts in the queried alert contact group. By default, not all alert contacts are returned.
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -170,7 +170,7 @@ public class SearchAlertContactGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Default value: `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

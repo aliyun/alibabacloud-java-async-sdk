@@ -145,7 +145,7 @@ public class GetAppApiByPageRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -154,7 +154,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to `GetAppApiByPage`.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +163,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The time interval between the data shards to be queried. Unit: milliseconds. Minimum value: 60000.
+         * The time interval between the data shards to be queried. Unit: milliseconds. Minimum value: 60000. Maximum value: 2147483647.
          */
         public Builder intervalMills(Integer intervalMills) {
             this.putQueryParameter("IntervalMills", intervalMills);
@@ -172,7 +172,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The process identifier (PID) of the application. For information about how to obtain a PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
          */
         public Builder pId(String pId) {
             this.putQueryParameter("PId", pId);
@@ -181,7 +181,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The message returned.
+         * The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +190,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,13 +199,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
-         * 
-         * *   2XX: The request is successful.
-         * *   3XX: A redirection message is returned.
-         * *   4XX: The request is invalid.
-         * *   5XX: A server error occurs.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

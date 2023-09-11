@@ -50,7 +50,11 @@ public class UpdateWebhookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * The result returned. Valid values:
+         * <p>
+         * 
+         * *   `true`: The modification is successful.
+         * *   `false`: The modification fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class UpdateWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

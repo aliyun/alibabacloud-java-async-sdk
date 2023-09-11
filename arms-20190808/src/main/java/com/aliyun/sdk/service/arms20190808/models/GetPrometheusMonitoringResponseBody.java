@@ -186,7 +186,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Prometheus实例ID。
+             * Prometheus Instance ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -218,7 +218,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring configuration. Valid values: ServiceMonitor, PodMonitor, CustomJob, and Probe.
+             * The type of the monitoring configuration. Valid values: serviceMonitor, podMonitor, customJob, and probe.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -16,6 +16,10 @@ public class QueryPromInstallStatusResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private QueryPromInstallStatusResponseBody body;
@@ -23,6 +27,7 @@ public class QueryPromInstallStatusResponse extends Response {
     private QueryPromInstallStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class QueryPromInstallStatusResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public QueryPromInstallStatusResponseBody getBody() {
@@ -52,6 +64,8 @@ public class QueryPromInstallStatusResponse extends Response {
     public interface Builder extends Response.Builder<QueryPromInstallStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(QueryPromInstallStatusResponseBody body);
 
@@ -64,6 +78,7 @@ public class QueryPromInstallStatusResponse extends Response {
             extends Response.BuilderImpl<QueryPromInstallStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private QueryPromInstallStatusResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class QueryPromInstallStatusResponse extends Response {
         private BuilderImpl(QueryPromInstallStatusResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class QueryPromInstallStatusResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

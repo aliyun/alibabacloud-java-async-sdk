@@ -172,7 +172,7 @@ public class UpdateWebhookRequest extends Request {
         } 
 
         /**
-         * Body.
+         * The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -181,7 +181,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * The ID of the webhook alert contact. You can call the **SearchAlertContact** operation to obtain the ID.
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -190,7 +190,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * The name of the webhook alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -199,7 +199,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * HttpHeaders.
+         * The HTTP request headers.
          */
         public Builder httpHeaders(String httpHeaders) {
             this.putQueryParameter("HttpHeaders", httpHeaders);
@@ -208,7 +208,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * HttpParams.
+         * The parameters in the HTTP request.
          */
         public Builder httpParams(String httpParams) {
             this.putQueryParameter("HttpParams", httpParams);
@@ -217,7 +217,11 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * Method.
+         * The HTTP request method. Valid values:
+         * <p>
+         * 
+         * *   `Get`
+         * *   `Post`
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -226,7 +230,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * RecoverBody.
+         * The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
          */
         public Builder recoverBody(String recoverBody) {
             this.putQueryParameter("RecoverBody", recoverBody);
@@ -235,7 +239,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +248,7 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * Url.
+         * The URL of the HTTP request method.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

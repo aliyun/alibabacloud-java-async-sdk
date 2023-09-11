@@ -50,7 +50,11 @@ public class DeleteIMRobotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the call was successful.
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class DeleteIMRobotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to find logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

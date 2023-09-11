@@ -140,7 +140,7 @@ public class UpdateAlertContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the alert contact to be updated. You can call the SearchAlertContact operation to query the contact ID. For more information, see [SearchAlertContact](~~130703~~).
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -149,7 +149,7 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * The new name of the alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -158,7 +158,10 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * DingRobotWebhookUrl.
+         * The new webhook URL of the DingTalk chatbot. For more information, see [Configure a DingTalk chatbot to send alert notifications](~~106247~~). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.
          */
         public Builder dingRobotWebhookUrl(String dingRobotWebhookUrl) {
             this.putQueryParameter("DingRobotWebhookUrl", dingRobotWebhookUrl);
@@ -167,7 +170,10 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * Email.
+         * The new email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -176,7 +182,10 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * PhoneNum.
+         * The new mobile phone number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -185,7 +194,7 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Set the value to `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +203,11 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * SystemNoc.
+         * Specifies whether the alert contact receives system notifications. Valid values:
+         * <p>
+         * 
+         * *   `true`: The alert contact receives system notifications.
+         * *   `false`: The alert contact does not receive system notifications.
          */
         public Builder systemNoc(Boolean systemNoc) {
             this.putQueryParameter("SystemNoc", systemNoc);

@@ -209,11 +209,17 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("AppName")
         private String appName;
 
+        @NameInMap("ClusterId")
+        private String clusterId;
+
         @NameInMap("CreateTime")
         private Long createTime;
 
         @NameInMap("Labels")
         private java.util.List < String > labels;
+
+        @NameInMap("Namespace")
+        private String namespace;
 
         @NameInMap("Pid")
         private String pid;
@@ -242,11 +248,19 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("UserId")
         private String userId;
 
+        @NameInMap("WorkloadKind")
+        private String workloadKind;
+
+        @NameInMap("WorkloadName")
+        private String workloadName;
+
         private TraceApps(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.clusterId = builder.clusterId;
             this.createTime = builder.createTime;
             this.labels = builder.labels;
+            this.namespace = builder.namespace;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -256,6 +270,8 @@ public class ListTraceAppsResponseBody extends TeaModel {
             this.type = builder.type;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
+            this.workloadKind = builder.workloadKind;
+            this.workloadName = builder.workloadName;
         }
 
         public static Builder builder() {
@@ -281,6 +297,13 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
          * @return createTime
          */
         public Long getCreateTime() {
@@ -292,6 +315,13 @@ public class ListTraceAppsResponseBody extends TeaModel {
          */
         public java.util.List < String > getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
         }
 
         /**
@@ -357,11 +387,27 @@ public class ListTraceAppsResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return workloadKind
+         */
+        public String getWorkloadKind() {
+            return this.workloadKind;
+        }
+
+        /**
+         * @return workloadName
+         */
+        public String getWorkloadName() {
+            return this.workloadName;
+        }
+
         public static final class Builder {
             private Long appId; 
             private String appName; 
+            private String clusterId; 
             private Long createTime; 
             private java.util.List < String > labels; 
+            private String namespace; 
             private String pid; 
             private String regionId; 
             private String resourceGroupId; 
@@ -371,6 +417,8 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String type; 
             private Long updateTime; 
             private String userId; 
+            private String workloadKind; 
+            private String workloadName; 
 
             /**
              * The application ID.
@@ -389,6 +437,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
              * The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
@@ -401,6 +457,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -481,6 +545,22 @@ public class ListTraceAppsResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * WorkloadKind.
+             */
+            public Builder workloadKind(String workloadKind) {
+                this.workloadKind = workloadKind;
+                return this;
+            }
+
+            /**
+             * WorkloadName.
+             */
+            public Builder workloadName(String workloadName) {
+                this.workloadName = workloadName;
                 return this;
             }
 

@@ -126,7 +126,7 @@ public class DescribeContactGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact.
+         * The name of the alert contact group.
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -135,7 +135,7 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * The ID of the alert contact group.
          */
         public Builder groupIds(String groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -144,7 +144,11 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * IsDetail.
+         * Specifies whether to return all the alert contacts in the queried alert contact group. Valid values:
+         * <p>
+         * 
+         * *   `false`
+         * *   `true`
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -153,7 +157,7 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the alert contact group.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -162,7 +166,7 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +175,7 @@ public class DescribeContactGroupsRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of alert contact groups displayed on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

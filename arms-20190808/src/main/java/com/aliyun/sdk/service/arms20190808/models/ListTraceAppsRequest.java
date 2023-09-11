@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTraceAppsRequest extends Request {
     @Query
+    @NameInMap("AppType")
+    private String appType;
+
+    @Query
     @NameInMap("Region")
     private String region;
 
@@ -31,6 +35,7 @@ public class ListTraceAppsRequest extends Request {
 
     private ListTraceAppsRequest(Builder builder) {
         super(builder);
+        this.appType = builder.appType;
         this.region = builder.region;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -48,6 +53,13 @@ public class ListTraceAppsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appType
+     */
+    public String getAppType() {
+        return this.appType;
     }
 
     /**
@@ -79,6 +91,7 @@ public class ListTraceAppsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTraceAppsRequest, Builder> {
+        private String appType; 
         private String region; 
         private String regionId; 
         private String resourceGroupId; 
@@ -90,11 +103,21 @@ public class ListTraceAppsRequest extends Request {
 
         private Builder(ListTraceAppsRequest request) {
             super(request);
+            this.appType = request.appType;
             this.region = request.region;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
+
+        /**
+         * AppType.
+         */
+        public Builder appType(String appType) {
+            this.putQueryParameter("AppType", appType);
+            this.appType = appType;
+            return this;
+        }
 
         /**
          * The region ID.

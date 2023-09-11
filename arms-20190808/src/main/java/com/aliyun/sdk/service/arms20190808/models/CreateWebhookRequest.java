@@ -157,7 +157,7 @@ public class CreateWebhookRequest extends Request {
         } 
 
         /**
-         * Body.
+         * The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -166,7 +166,7 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * The name of the contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -175,7 +175,7 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * HttpHeaders.
+         * The HTTP request header.
          */
         public Builder httpHeaders(String httpHeaders) {
             this.putQueryParameter("HttpHeaders", httpHeaders);
@@ -184,7 +184,7 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * HttpParams.
+         * The parameters in the HTTP request.
          */
         public Builder httpParams(String httpParams) {
             this.putQueryParameter("HttpParams", httpParams);
@@ -193,7 +193,11 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * Method.
+         * The HTTP request method.
+         * <p>
+         * 
+         * *   `Get`
+         * *   `Post`
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -202,7 +206,7 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * RecoverBody.
+         * The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
          */
         public Builder recoverBody(String recoverBody) {
             this.putQueryParameter("RecoverBody", recoverBody);
@@ -211,7 +215,7 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +224,7 @@ public class CreateWebhookRequest extends Request {
         }
 
         /**
-         * Url.
+         * The URL of the request **method**.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

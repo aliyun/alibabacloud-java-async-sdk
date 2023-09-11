@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EnableMetricResponseBody} extends {@link TeaModel}
+ * {@link DeleteAppListResponseBody} extends {@link TeaModel}
  *
- * <p>EnableMetricResponseBody</p>
+ * <p>DeleteAppListResponseBody</p>
  */
-public class EnableMetricResponseBody extends TeaModel {
+public class DeleteAppListResponseBody extends TeaModel {
     @NameInMap("Code")
     private Long code;
 
@@ -27,7 +27,7 @@ public class EnableMetricResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private EnableMetricResponseBody(Builder builder) {
+    private DeleteAppListResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,7 +39,7 @@ public class EnableMetricResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static EnableMetricResponseBody create() {
+    public static DeleteAppListResponseBody create() {
         return builder().build();
     }
 
@@ -86,13 +86,7 @@ public class EnableMetricResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
-         * 
-         * *   2XX: The request is successful.
-         * *   3XX: A redirection message is returned.
-         * *   4XX: The request is invalid.
-         * *   5XX: A server error occurs.
+         * The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -100,7 +94,7 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The returned message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -108,7 +102,7 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message returned when the request parameters are invalid.
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +110,7 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,19 +118,19 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the specified applications are deleted. Valid values:
          * <p>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * *   `true`: The applications are deleted.
+         * *   `false`: The applications failed to be deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public EnableMetricResponseBody build() {
-            return new EnableMetricResponseBody(this);
+        public DeleteAppListResponseBody build() {
+            return new DeleteAppListResponseBody(this);
         } 
 
     } 

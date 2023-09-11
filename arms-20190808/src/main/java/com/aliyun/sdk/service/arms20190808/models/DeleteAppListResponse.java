@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListScenarioResponse} extends {@link TeaModel}
+ * {@link DeleteAppListResponse} extends {@link TeaModel}
  *
- * <p>ListScenarioResponse</p>
+ * <p>DeleteAppListResponse</p>
  */
-public class ListScenarioResponse extends Response {
+public class DeleteAppListResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ListScenarioResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListScenarioResponseBody body;
+    private DeleteAppListResponseBody body;
 
-    private ListScenarioResponse(BuilderImpl builder) {
+    private DeleteAppListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListScenarioResponse create() {
+    public static DeleteAppListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ListScenarioResponse extends Response {
     /**
      * @return body
      */
-    public ListScenarioResponseBody getBody() {
+    public DeleteAppListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListScenarioResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteAppListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListScenarioResponseBody body);
+        Builder body(DeleteAppListResponseBody body);
 
         @Override
-        ListScenarioResponse build();
+        DeleteAppListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListScenarioResponse, Builder>
+            extends Response.BuilderImpl<DeleteAppListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListScenarioResponseBody body; 
+        private DeleteAppListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListScenarioResponse response) {
+        private BuilderImpl(DeleteAppListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ListScenarioResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListScenarioResponseBody body) {
+        public Builder body(DeleteAppListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListScenarioResponse build() {
-            return new ListScenarioResponse(this);
+        public DeleteAppListResponse build() {
+            return new DeleteAppListResponse(this);
         } 
 
     } 

@@ -195,7 +195,7 @@ public class SearchAlertRulesRequest extends Request {
         } 
 
         /**
-         * AlertRuleId.
+         * The id of AlertRule.
          */
         public Builder alertRuleId(String alertRuleId) {
             this.putQueryParameter("AlertRuleId", alertRuleId);
@@ -253,7 +253,7 @@ public class SearchAlertRulesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

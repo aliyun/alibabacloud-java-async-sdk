@@ -84,7 +84,7 @@ public class EnableMetricRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * DropMetric.
+         * Enable metric name.
          */
         public Builder dropMetric(String dropMetric) {
             this.putQueryParameter("DropMetric", dropMetric);
@@ -102,7 +102,7 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

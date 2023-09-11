@@ -50,7 +50,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The collection of dispatch rules.
+         * The struct returned.
          */
         public Builder dispatchRule(DispatchRule dispatchRule) {
             this.dispatchRule = dispatchRule;
@@ -58,7 +58,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the dispatch policy.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private Long repeatInterval; 
 
             /**
-             * The struct returned.
+             * The ID of the group.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -154,7 +154,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the dispatch rule.
+             * The grouping interval.
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -162,7 +162,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about groups.
+             * The waiting time for grouping.
              */
             public Builder groupWaitTime(Long groupWaitTime) {
                 this.groupWaitTime = groupWaitTime;
@@ -170,7 +170,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the information about a dispatch policy.
+             * The grouping fields.
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -178,7 +178,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatInterval.
+             * The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -243,7 +243,17 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag of the dispatch rule. Valid values:
+             * <p>
+             * 
+             * *   `_aliyun_arms_userid`: user ID
+             * *   `_aliyun_arms_involvedObject_kind`: type of the associated object
+             * *   `_aliyun_arms_involvedObject_id`: ID of the associated object
+             * *   `_aliyun_arms_involvedObject_name`: name of the associated object
+             * *   `_aliyun_arms_alert_name`: alert name
+             * *   `_aliyun_arms_alert_rule_id`: alert rule ID
+             * *   `_aliyun_arms_alert_type`: alert type
+             * *   `_aliyun_arms_alert_level`: alert severity
              */
             public Builder key(String key) {
                 this.key = key;
@@ -251,7 +261,11 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The operator used in the dispatch rule. Valid values:
+             * <p>
+             * 
+             * *   `eq`: equals to.
+             * *   `re`: matches a regular expression.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -259,7 +273,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -300,7 +314,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List < LabelMatchExpressions> labelMatchExpressions; 
 
             /**
-             * LabelMatchExpressions.
+             * The collection of conditions of the dispatch rule.
              */
             public Builder labelMatchExpressions(java.util.List < LabelMatchExpressions> labelMatchExpressions) {
                 this.labelMatchExpressions = labelMatchExpressions;
@@ -341,7 +355,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups; 
 
             /**
-             * LabelMatchExpressionGroups.
+             * The collection of dispatch rules.
              */
             public Builder labelMatchExpressionGroups(java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups) {
                 this.labelMatchExpressionGroups = labelMatchExpressionGroups;
@@ -406,7 +420,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String notifyType; 
 
             /**
-             * Name.
+             * The name of the contact or contact group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +428,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyObjectId.
+             * The ID of the contact or contact group.
              */
             public Builder notifyObjectId(String notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -422,7 +436,11 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyType.
+             * The type of the alert contact. Valid values:
+             * <p>
+             * 
+             * - `CONTACT`: contact
+             * - `CONTACT_GROUP`: contact group
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -475,7 +493,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List < NotifyObjects> notifyObjects; 
 
             /**
-             * NotifyChannels.
+             * The notification method Array.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -483,7 +501,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyObjects.
+             * The collection of alert contacts.
              */
             public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
@@ -608,7 +626,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DispatchType.
+             * Alarm handling method.
+             * <p>
+             * 
+             * CREATE_ALERT: Generate an alert.
+             * 
+             * DISCARD_ALERT: Discard the alarm event, that is, no alarm.
              */
             public Builder dispatchType(String dispatchType) {
                 this.dispatchType = dispatchType;
@@ -616,7 +639,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The information about groups.
              */
             public Builder groupRules(java.util.List < GroupRules> groupRules) {
                 this.groupRules = groupRules;
@@ -624,7 +647,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IsRecover.
+             * Whether to send recovered alerts.
+             * <p>
+             * true: send.
+             * false: do not send.
              */
             public Builder isRecover(Boolean isRecover) {
                 this.isRecover = isRecover;
@@ -632,7 +658,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LabelMatchExpressionGrid.
+             * The information about the dispatch rule.
              */
             public Builder labelMatchExpressionGrid(LabelMatchExpressionGrid labelMatchExpressionGrid) {
                 this.labelMatchExpressionGrid = labelMatchExpressionGrid;
@@ -640,7 +666,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The grouping interval.
+             * The name of the dispatch policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -648,7 +674,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyRules.
+             * The collection of notification methods.
              */
             public Builder notifyRules(java.util.List < NotifyRules> notifyRules) {
                 this.notifyRules = notifyRules;
@@ -656,7 +682,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting time for grouping.
+             * The ID of the dispatch rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -664,7 +690,11 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The grouping fields.
+             * Indicates whether the dispatch policy is enabled. Valid values: 
+             * <p>
+             * 
+             * - `true`: enabled
+             * - `false`: disabled
              */
             public Builder state(String state) {
                 this.state = state;

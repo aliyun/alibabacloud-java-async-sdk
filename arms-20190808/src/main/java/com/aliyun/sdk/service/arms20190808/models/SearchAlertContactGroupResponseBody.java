@@ -50,7 +50,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContactGroups.
+         * The information about the alert contact groups.
          */
         public Builder contactGroups(java.util.List < ContactGroups> contactGroups) {
             this.contactGroups = contactGroups;
@@ -58,7 +58,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * ContactId.
+             * The ID of the alert contact.
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -202,7 +202,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * The name of the alert contact.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -210,7 +210,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -218,7 +218,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DingRobot.
+             * The webhook URL of the DingTalk chatbot.
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -226,7 +226,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the alert contact.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -234,7 +234,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The mobile number of the alert contact.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -242,7 +242,11 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SystemNoc.
+             * Indicates whether the alert contact receives system notifications. Valid values:
+             * <p>
+             * 
+             * *   true: receives system notifications.
+             * *   false: does not receive system notifications.
              */
             public Builder systemNoc(Boolean systemNoc) {
                 this.systemNoc = systemNoc;
@@ -250,7 +254,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -258,7 +262,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -359,7 +363,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * ContactGroupId.
+             * The ID of the alert contact group.
              */
             public Builder contactGroupId(Long contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -367,7 +371,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroupName.
+             * The name of the alert contact group.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -375,7 +379,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Contacts.
+             * The alert contact list.
              */
             public Builder contacts(java.util.List < Contacts> contacts) {
                 this.contacts = contacts;
@@ -383,7 +387,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -391,7 +395,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -399,7 +403,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

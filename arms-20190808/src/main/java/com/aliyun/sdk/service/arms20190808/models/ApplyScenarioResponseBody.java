@@ -50,7 +50,7 @@ public class ApplyScenarioResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ApplyScenarioResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The code of the business monitoring job, which is the coloring sign.
          */
         public Builder result(String result) {
             this.result = result;

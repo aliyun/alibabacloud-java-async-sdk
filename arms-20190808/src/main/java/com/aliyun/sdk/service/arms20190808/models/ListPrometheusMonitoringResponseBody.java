@@ -186,7 +186,7 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Prometheus实例ID。
+             * Prometheus Instance ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

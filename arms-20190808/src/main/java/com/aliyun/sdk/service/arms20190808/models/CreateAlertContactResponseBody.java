@@ -50,7 +50,7 @@ public class CreateAlertContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContactId.
+         * The ID of the alert contact.
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -58,7 +58,7 @@ public class CreateAlertContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -152,8 +152,8 @@ public class CreatePrometheusMonitoringRequest extends Request {
         /**
          * The type of the monitoring configuration. 
          * <p>
-         * Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. 
-         * Valid values for a Prometheus instance for ECS: CustomJob and Probe.
+         * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
+         * Valid values for a Prometheus instance for ECS: customJob and probe.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -198,7 +198,7 @@ public class ApplyScenarioRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -207,7 +207,7 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Config.
+         * The configuration of the business monitoring job. The value is a JSON string. For more information about this parameter, see the following additional information about the **Config** parameter.
          */
         public Builder config(java.util.Map < String, ? > config) {
             String configShrink = shrink(config, "Config", "json");
@@ -217,7 +217,7 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the business monitoring job.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -226,7 +226,7 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +235,13 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * The scenario where you want to use the business monitoring job. Valid values:
+         * <p>
+         * 
+         * *   `USER-DEFINED`: user-defined. This is the default value.
+         * *   `EDAS-ROLLOUT`: application release in Enterprise Distributed Application Service (EDAS)
+         * *   `OAM-ROLLOUT`: application release based on Open Application Model (OAM)
+         * *   `MSC-CANARY`: canary release based on Microservice Engine (MSE)
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -244,7 +250,7 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Sign.
+         * The code of the business monitoring job. This parameter is not required when you create a business monitoring job. However, this parameter is required when you update a business monitoring job.
          */
         public Builder sign(String sign) {
             this.putQueryParameter("Sign", sign);
@@ -253,7 +259,11 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * SnDump.
+         * Specifies whether to record business parameters to the trace marked with the coloring sign.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`: This is the default value.
          */
         public Builder snDump(Boolean snDump) {
             this.putQueryParameter("SnDump", snDump);
@@ -262,7 +272,11 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * SnForce.
+         * Specifies whether traffic in the trace marked with the coloring sign is all collected.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`: This is the default value.
          */
         public Builder snForce(Boolean snForce) {
             this.putQueryParameter("SnForce", snForce);
@@ -271,7 +285,11 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * SnStat.
+         * Specifies whether to count traffic based on the coloring sign.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`: This is the default value.
          */
         public Builder snStat(Boolean snStat) {
             this.putQueryParameter("SnStat", snStat);
@@ -280,7 +298,11 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * SnTransfer.
+         * Specifies whether the coloring sign is transparently passed down to downstream application nodes in the trace.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`: This is the default value.
          */
         public Builder snTransfer(Boolean snTransfer) {
             this.putQueryParameter("SnTransfer", snTransfer);
@@ -289,7 +311,11 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * UpdateOption.
+         * Specifies whether the operation is an update operation.
+         * <p>
+         * 
+         * *   `true`: update
+         * *   `false`: insert
          */
         public Builder updateOption(Boolean updateOption) {
             this.putQueryParameter("UpdateOption", updateOption);

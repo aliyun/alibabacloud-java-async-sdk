@@ -151,7 +151,11 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         }
 
         /**
-         * The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, and CustomJob. Valid value for a Prometheus instance for ECS: CustomJob. The status of Probe cannot be modified.
+         * The type of the monitoring configuration. 
+         * <p>
+         * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, and customJob. 
+         * Valid value for a Prometheus instance for ECS: customJob. 
+         * The status of probe cannot be modified.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

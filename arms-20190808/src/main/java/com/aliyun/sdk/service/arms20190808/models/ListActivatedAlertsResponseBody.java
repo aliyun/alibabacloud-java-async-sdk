@@ -50,7 +50,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Page.
+         * The struct returned.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -58,7 +58,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * RuleId.
+             * The ID of the notification policy.
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -118,7 +118,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the notification policy.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -339,7 +339,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AlertId.
+             * The ID of the alert rule.
              */
             public Builder alertId(String alertId) {
                 this.alertId = alertId;
@@ -347,7 +347,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The name of the alert rule.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -355,7 +355,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The type of the alert.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -363,7 +363,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of times that the alert event was received.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -371,7 +371,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the alert rule was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -379,7 +379,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRules.
+             * The notification policies.
              */
             public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
                 this.dispatchRules = dispatchRules;
@@ -387,7 +387,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * EndsAt.
+             * The timestamp when the alert was ended.
              */
             public Builder endsAt(Long endsAt) {
                 this.endsAt = endsAt;
@@ -395,7 +395,12 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpandFields.
+             * The extended fields that indicate the following tags:
+             * <p>
+             * 
+             * *   The tags that are carried in the metrics of the alert rule expression.
+             * *   The tags that are created based on the alert rule.
+             * *   The default tags of Application Real-Time Monitoring Service (ARMS).
              */
             public Builder expandFields(java.util.Map < String, ? > expandFields) {
                 this.expandFields = expandFields;
@@ -403,7 +408,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationName.
+             * The name of the object that is associated with the alert.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -411,7 +416,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationType.
+             * The type of the service integration that generated the alert.
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -419,7 +424,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * InvolvedObjectKind.
+             * The type of the object that is associated with the alert.
              */
             public Builder involvedObjectKind(String involvedObjectKind) {
                 this.involvedObjectKind = involvedObjectKind;
@@ -427,7 +432,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * InvolvedObjectName.
+             * The name of the service integration that generated the alert.
              */
             public Builder involvedObjectName(String involvedObjectName) {
                 this.involvedObjectName = involvedObjectName;
@@ -435,7 +440,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The description of the alert.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -443,7 +448,13 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The level of the alert. Valid values:
+             * <p>
+             * 
+             * *   `critical`
+             * *   `error`
+             * *   `warn`
+             * *   `page`
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -451,7 +462,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * StartsAt.
+             * The timestamp when the alert was generated.
              */
             public Builder startsAt(Long startsAt) {
                 this.startsAt = startsAt;
@@ -459,7 +470,13 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the alert. Valid values:
+             * <p>
+             * 
+             * *   `Active`
+             * *   `Inhibited`
+             * *   `Silenced`
+             * *   `Resolved`
              */
             public Builder status(String status) {
                 this.status = status;
@@ -536,7 +553,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Alerts.
+             * The alerts that have been triggered.
              */
             public Builder alerts(java.util.List < Alerts> alerts) {
                 this.alerts = alerts;
@@ -544,7 +561,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number of the returned page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -552,7 +569,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -560,7 +577,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -96,7 +96,7 @@ public class QueryAppMetadataRequest extends Request {
         } 
 
         /**
-         * MetaIds.
+         * The array of meta Ids.
          */
         public Builder metaIds(String metaIds) {
             this.putQueryParameter("MetaIds", metaIds);
@@ -105,7 +105,7 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * MetaType.
+         * The mata type.
          */
         public Builder metaType(String metaType) {
             this.putQueryParameter("MetaType", metaType);
@@ -114,7 +114,10 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The ID of the application.
+         * <p>
+         * 
+         * Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is eb4zdose6v%409781be0f44d\*\*\*\*, you must replace %40 with an at sign (@) to obtain eb4zdose6v@9781be0f44d\*\*\*\*.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -123,7 +126,7 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

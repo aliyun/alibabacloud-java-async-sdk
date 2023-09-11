@@ -1061,7 +1061,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertWays.
+             * Sending method of alarm notification.
              */
             public Builder alertWays(java.util.List < String > alertWays) {
                 this.alertWays = alertWays;
@@ -1157,7 +1157,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

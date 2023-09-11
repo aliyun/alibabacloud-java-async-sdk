@@ -99,7 +99,7 @@ public class ListActivatedAlertsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: `1`.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -108,7 +108,7 @@ public class ListActivatedAlertsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter condition in the `{"key":"value"}`format. You must specify the `key` and `value` of the filter condition.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -117,7 +117,7 @@ public class ListActivatedAlertsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: `10`.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,7 +126,7 @@ public class ListActivatedAlertsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

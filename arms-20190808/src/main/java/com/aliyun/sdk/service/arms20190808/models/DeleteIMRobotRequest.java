@@ -55,7 +55,7 @@ public class DeleteIMRobotRequest extends Request {
         } 
 
         /**
-         * RobotId.
+         * The ID of the IM chatbot.
          */
         public Builder robotId(Long robotId) {
             this.putQueryParameter("RobotId", robotId);

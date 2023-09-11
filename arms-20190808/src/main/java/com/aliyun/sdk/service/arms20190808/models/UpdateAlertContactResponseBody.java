@@ -50,7 +50,11 @@ public class UpdateAlertContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the alert contact was updated. Valid values:
+         * <p>
+         * 
+         * *   true: The alert contact was updated.
+         * *   false: The alert contact failed to be updated.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class UpdateAlertContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned message.
          */
         public Builder data(String data) {
             this.data = data;

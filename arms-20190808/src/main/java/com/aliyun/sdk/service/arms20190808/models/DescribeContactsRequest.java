@@ -154,7 +154,7 @@ public class DescribeContactsRequest extends Request {
         } 
 
         /**
-         * ContactIds.
+         * The ID of the alert contact that you want to query. Separate multiple contact IDs with spaces.
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -163,7 +163,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * Indicates whether the email address was verified.
+         * The name of the alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -172,7 +172,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address of the alert contact.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -181,7 +181,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -190,7 +190,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The ID of the alert contact.
+         * The mobile number of the alert contact.
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -199,7 +199,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +208,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of alert contacts to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -217,7 +217,7 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * Specifies whether to return redundant information.
          */
         public Builder verbose(String verbose) {
             this.putQueryParameter("Verbose", verbose);

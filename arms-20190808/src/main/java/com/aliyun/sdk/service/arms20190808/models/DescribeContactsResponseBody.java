@@ -50,7 +50,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The objects that were returned.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             private Long reissueSendNotice; 
 
             /**
-             * ArmsContactId.
+             * The ID of the alert contact.
              */
             public Builder armsContactId(Long armsContactId) {
                 this.armsContactId = armsContactId;
@@ -190,7 +190,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * The ID of the alert contact.
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -198,7 +198,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * The name of the alert contact.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -206,7 +206,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the alert contact.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -214,7 +214,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * IsEmailVerify.
+             * Indicates whether the email address was verified.
              */
             public Builder isEmailVerify(Boolean isEmailVerify) {
                 this.isEmailVerify = isEmailVerify;
@@ -222,7 +222,11 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * IsVerify.
+             * Indicates whether the mobile number was verified. Valid values:
+             * <p>
+             * 
+             * *   `false`: no
+             * *   `true`: yes
              */
             public Builder isVerify(Boolean isVerify) {
                 this.isVerify = isVerify;
@@ -230,7 +234,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The mobile number of the alert contact.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -238,7 +242,13 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ReissueSendNotice.
+             * The operation that you want to perform if phone calls fail to be answered. Valid values:
+             * <p>
+             * 
+             * *   0: No operation is performed.
+             * *   1: A phone call is made again.
+             * *   2: A text message is sent.
+             * *   3 (default value): The global default value is used.
              */
             public Builder reissueSendNotice(Long reissueSendNotice) {
                 this.reissueSendNotice = reissueSendNotice;
@@ -315,7 +325,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * AlertContacts.
+             * The alert contacts.
              */
             public Builder alertContacts(java.util.List < AlertContacts> alertContacts) {
                 this.alertContacts = alertContacts;
@@ -323,7 +333,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -331,7 +341,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of alert contacts returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -339,7 +349,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of alert contacts.
              */
             public Builder total(Long total) {
                 this.total = total;

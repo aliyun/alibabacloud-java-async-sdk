@@ -139,7 +139,7 @@ public class CreateAlertContactRequest extends Request {
         } 
 
         /**
-         * ContactName.
+         * The name of the alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -148,7 +148,10 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * DingRobotWebhookUrl.
+         * The webhook URL of the DingTalk chatbot. For more information about how to obtain the URL, see [Configure a DingTalk chatbot to send alert notifications](https://www.alibabacloud.com/help/zh/doc-detail/106247.htm). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+         * <p>
+         * 
+         * >  Enter `alert` in the custom keyword field of DingTalk chatbot security settings.
          */
         public Builder dingRobotWebhookUrl(String dingRobotWebhookUrl) {
             this.putQueryParameter("DingRobotWebhookUrl", dingRobotWebhookUrl);
@@ -157,7 +160,7 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -166,7 +169,7 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * PhoneNum.
+         * The mobile number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -175,7 +178,7 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Set the value to `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +187,7 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -193,7 +196,11 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * SystemNoc.
+         * Specifies whether the alert contact receives system notifications. Valid values:
+         * <p>
+         * 
+         * *   `true`: The alert contact receives system notifications.
+         * *   `false`: The alert contact does not receive system notifications.
          */
         public Builder systemNoc(Boolean systemNoc) {
             this.putQueryParameter("SystemNoc", systemNoc);

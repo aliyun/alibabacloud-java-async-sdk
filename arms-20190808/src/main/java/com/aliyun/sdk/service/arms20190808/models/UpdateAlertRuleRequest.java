@@ -113,7 +113,7 @@ public class UpdateAlertRuleRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * The ID of the alert rule.
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -122,7 +122,7 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * ContactGroupIds.
+         * The IDs of the alert contact groups. The value must be a JSON array.
          */
         public Builder contactGroupIds(String contactGroupIds) {
             this.putQueryParameter("ContactGroupIds", contactGroupIds);
@@ -131,7 +131,11 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * IsAutoStart.
+         * Specifies whether to enable the alert rule after it is created. Default value: `false`.
+         * <p>
+         * 
+         * *   `true`: enables the alert rule.
+         * *   `false`: disables the alert rule.
          */
         public Builder isAutoStart(Boolean isAutoStart) {
             this.putQueryParameter("IsAutoStart", isAutoStart);
@@ -140,7 +144,7 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +153,7 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * TemplageAlertConfig.
+         * The configurations of the alert template based on which you want to create an alert rule. The value must be a JSON string. You must set at least one of the **TemplateAlertId** and **TemplageAlertConfig** parameters. If you set both parameters, the **TemplateAlertId** parameter prevails. For more information about the TemplageAlertConfig parameter, see the following **additional information about the TemplageAlertConfig parameter**.
          */
         public Builder templageAlertConfig(String templageAlertConfig) {
             this.putQueryParameter("TemplageAlertConfig", templageAlertConfig);

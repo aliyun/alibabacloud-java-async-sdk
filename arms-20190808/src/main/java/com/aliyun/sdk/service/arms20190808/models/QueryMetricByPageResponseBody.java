@@ -216,7 +216,11 @@ public class QueryMetricByPageResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Completed.
+             * Whether the paging query ends.
+             * <p>
+             * 
+             * true: end.
+             * false: Need to continue pagination (continue to query after CurrentPage+1).
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;

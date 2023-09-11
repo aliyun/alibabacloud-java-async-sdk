@@ -99,7 +99,7 @@ public class UpdateAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupId.
+         * The ID of the alert contact group.
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putQueryParameter("ContactGroupId", contactGroupId);
@@ -108,7 +108,7 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactGroupName.
+         * The name of the alert contact group.
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -117,7 +117,7 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactIds.
+         * The ID of the alert contact.
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -126,7 +126,7 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

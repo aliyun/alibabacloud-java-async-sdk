@@ -86,7 +86,13 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned for the request. Valid values:
+         * <p>
+         * 
+         * *   2XX: The request is successful.
+         * *   3XX: A redirection message is returned.
+         * *   4XX: The request is invalid.
+         * *   5XX: A server error occurs.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +100,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
@@ -102,7 +108,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -110,7 +116,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,11 @@ public class QueryAppMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

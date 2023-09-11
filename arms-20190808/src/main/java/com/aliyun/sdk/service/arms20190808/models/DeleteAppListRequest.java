@@ -7,24 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopAlertRequest} extends {@link RequestModel}
+ * {@link DeleteAppListRequest} extends {@link RequestModel}
  *
- * <p>StopAlertRequest</p>
+ * <p>DeleteAppListRequest</p>
  */
-public class StopAlertRequest extends Request {
+public class DeleteAppListRequest extends Request {
     @Query
-    @NameInMap("AlertId")
-    @Validation(required = true)
-    private String alertId;
+    @NameInMap("Pids")
+    private java.util.List < String > pids;
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private StopAlertRequest(Builder builder) {
+    private DeleteAppListRequest(Builder builder) {
         super(builder);
-        this.alertId = builder.alertId;
+        this.pids = builder.pids;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +30,7 @@ public class StopAlertRequest extends Request {
         return new Builder();
     }
 
-    public static StopAlertRequest create() {
+    public static DeleteAppListRequest create() {
         return builder().build();
     }
 
@@ -42,10 +40,10 @@ public class StopAlertRequest extends Request {
     }
 
     /**
-     * @return alertId
+     * @return pids
      */
-    public String getAlertId() {
-        return this.alertId;
+    public java.util.List < String > getPids() {
+        return this.pids;
     }
 
     /**
@@ -55,31 +53,31 @@ public class StopAlertRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<StopAlertRequest, Builder> {
-        private String alertId; 
+    public static final class Builder extends Request.Builder<DeleteAppListRequest, Builder> {
+        private java.util.List < String > pids; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(StopAlertRequest request) {
+        private Builder(DeleteAppListRequest request) {
             super(request);
-            this.alertId = request.alertId;
+            this.pids = request.pids;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the alert rule.
+         * The PIDs of the applications monitored by ARMS Application Monitoring.
          */
-        public Builder alertId(String alertId) {
-            this.putQueryParameter("AlertId", alertId);
-            this.alertId = alertId;
+        public Builder pids(java.util.List < String > pids) {
+            this.putQueryParameter("Pids", pids);
+            this.pids = pids;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -88,8 +86,8 @@ public class StopAlertRequest extends Request {
         }
 
         @Override
-        public StopAlertRequest build() {
-            return new StopAlertRequest(this);
+        public DeleteAppListRequest build() {
+            return new DeleteAppListRequest(this);
         } 
 
     } 

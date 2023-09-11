@@ -50,7 +50,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The objects that were returned.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * ArmsContactId.
+             * The ID of the alert contact.
              */
             public Builder armsContactId(Long armsContactId) {
                 this.armsContactId = armsContactId;
@@ -154,7 +154,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * The ID of the alert contact.
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -162,7 +162,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * The name of the alert contact.
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -170,7 +170,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the alert contact.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -178,7 +178,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The mobile number of the alert contact.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -255,7 +255,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private java.util.List < Contacts> contacts; 
 
             /**
-             * ArmsContactGroupId.
+             * The ID of the alert contact group.
              */
             public Builder armsContactGroupId(Long armsContactGroupId) {
                 this.armsContactGroupId = armsContactGroupId;
@@ -263,7 +263,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroupId.
+             * The ID of the alert contact group.
              */
             public Builder contactGroupId(Float contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -271,7 +271,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroupName.
+             * The name of the alert contact group.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -279,7 +279,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Contacts.
+             * The contact information. If the **IsDetail** parameter is set to `false`, no **contact** information is displayed.
              */
             public Builder contacts(java.util.List < Contacts> contacts) {
                 this.contacts = contacts;
@@ -356,7 +356,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * AlertContactGroups.
+             * The name of the alert contact group.
              */
             public Builder alertContactGroups(java.util.List < AlertContactGroups> alertContactGroups) {
                 this.alertContactGroups = alertContactGroups;
@@ -364,7 +364,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -372,7 +372,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of alert contact groups displayed on each page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -380,7 +380,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of alert contact groups.
              */
             public Builder total(Long total) {
                 this.total = total;

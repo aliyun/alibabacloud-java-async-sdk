@@ -98,7 +98,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * RetcodeAppDataBean.
+         * The return detail.
          */
         public Builder retcodeAppDataBean(RetcodeAppDataBean retcodeAppDataBean) {
             this.retcodeAppDataBean = retcodeAppDataBean;
@@ -138,7 +138,11 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +202,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -316,7 +320,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             private RetcodeAppDataBeanTags tags; 
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -332,7 +336,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
+             * <p>
+             * 
+             * If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -340,7 +347,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(RetcodeAppDataBeanTags tags) {
                 this.tags = tags;
