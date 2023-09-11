@@ -16,6 +16,10 @@ public class CreateSAMLProviderResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateSAMLProviderResponseBody body;
@@ -23,6 +27,7 @@ public class CreateSAMLProviderResponse extends Response {
     private CreateSAMLProviderResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateSAMLProviderResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateSAMLProviderResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateSAMLProviderResponse extends Response {
     public interface Builder extends Response.Builder<CreateSAMLProviderResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateSAMLProviderResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateSAMLProviderResponse extends Response {
             extends Response.BuilderImpl<CreateSAMLProviderResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateSAMLProviderResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateSAMLProviderResponse extends Response {
         private BuilderImpl(CreateSAMLProviderResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateSAMLProviderResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

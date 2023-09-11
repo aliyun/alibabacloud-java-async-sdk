@@ -50,7 +50,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application.
+         * The configuration information about the application.
          */
         public Builder application(Application application) {
             this.application = application;
@@ -200,7 +200,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private PredefinedScopes predefinedScopes; 
 
             /**
-             * An array consisting of the information about the permissions that are granted on the application.
+             * The information about the permissions that are granted on the application.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;

@@ -50,7 +50,7 @@ public class GetGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the RAM user group.
+         * The information about the RAM user group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +58,7 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

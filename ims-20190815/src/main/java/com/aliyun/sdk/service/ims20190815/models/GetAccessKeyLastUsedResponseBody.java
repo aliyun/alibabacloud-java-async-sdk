@@ -118,7 +118,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud service that was last accessed.
+             * The Alibaba Cloud service that was last accessed by using the AccessKey pair.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

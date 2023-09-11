@@ -18,12 +18,20 @@ public class GetCredentialReportResponseBody extends TeaModel {
     @NameInMap("GeneratedTime")
     private String generatedTime;
 
+    @NameInMap("IsTruncated")
+    private String isTruncated;
+
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private GetCredentialReportResponseBody(Builder builder) {
         this.content = builder.content;
         this.generatedTime = builder.generatedTime;
+        this.isTruncated = builder.isTruncated;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
     }
 
@@ -50,6 +58,20 @@ public class GetCredentialReportResponseBody extends TeaModel {
     }
 
     /**
+     * @return isTruncated
+     */
+    public String getIsTruncated() {
+        return this.isTruncated;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -59,6 +81,8 @@ public class GetCredentialReportResponseBody extends TeaModel {
     public static final class Builder {
         private String content; 
         private String generatedTime; 
+        private String isTruncated; 
+        private String nextToken; 
         private String requestId; 
 
         /**
@@ -81,7 +105,23 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * IsTruncated.
+         */
+        public Builder isTruncated(String isTruncated) {
+            this.isTruncated = isTruncated;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

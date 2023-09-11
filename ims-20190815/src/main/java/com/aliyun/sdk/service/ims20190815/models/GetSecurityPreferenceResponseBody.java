@@ -50,7 +50,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         private SecurityPreference securityPreference; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageAccessKeys; 
 
             /**
-             * Specifies whether RAM users can manage their AccessKey pairs. Valid values:
+             * Indicates whether RAM users can manage their AccessKey pairs. Valid values:
              * <p>
              * 
-             * *   true: yes
-             * *   false: no
+             * *   true
+             * *   false
              */
             public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
                 this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
@@ -203,11 +203,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private String operationForRiskLogin; 
 
             /**
-             * Specifies whether RAM users can change their passwords. Valid values:
+             * Indicates whether RAM users can change their passwords. Valid values:
              * <p>
              * 
-             * *   true: yes
-             * *   false: no
+             * *   true
+             * *   false
              */
             public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
                 this.allowUserToChangePassword = allowUserToChangePassword;
@@ -215,11 +215,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to remember the multi-factor authentication (MFA) devices for seven days. Valid values:
+             * Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:
              * <p>
              * 
-             * *   true: yes
-             * *   false: no
+             * *   true
+             * *   false
              */
             public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
                 this.enableSaveMFATicket = enableSaveMFATicket;
@@ -243,11 +243,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace the EnforceMFAForLogin parameter. The EnforceMFAForLogin parameter is still valid. However, we recommend that you use the MFAOperationForLogin parameter. Valid values:
+             * Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:
              * <p>
              * 
-             * *   mandatory: MFA is required for all RAM users. If you use the EnforceMFAForLogin parameter, set the value to true.
-             * *   independent: User-specific settings are applied. This is the default value. If you use the EnforceMFAForLogin parameter, set the value to false.
+             * *   mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.
+             * *   independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.
              * *   adaptive: MFA is required only for RAM users who initiated unusual logons.
              */
             public Builder MFAOperationForLogin(String MFAOperationForLogin) {
@@ -256,11 +256,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:
+             * Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:
              * <p>
              * 
-             * *   autonomous: yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA. This is the default value.
-             * *   enforceVerify: no.
+             * *   autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.
+             * *   enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.
              */
             public Builder operationForRiskLogin(String operationForRiskLogin) {
                 this.operationForRiskLogin = operationForRiskLogin;
@@ -304,8 +304,8 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
              * Indicates whether RAM users can manage their MFA devices. Valid values:
              * <p>
              * 
-             * *   true: yes
-             * *   false: no
+             * *   true
+             * *   false
              */
             public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
                 this.allowUserToManageMFADevices = allowUserToManageMFADevices;
@@ -346,11 +346,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManagePersonalDingTalk; 
 
             /**
-             * Specifies whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
+             * Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
              * <p>
              * 
-             * *   true: yes
-             * *   false: no
+             * *   true
+             * *   false
              */
             public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
                 this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
@@ -391,7 +391,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private java.util.List < String > verificationTypes; 
 
             /**
-             * The MFA method.
+             * The MFA methods.
              */
             public Builder verificationTypes(java.util.List < String > verificationTypes) {
                 this.verificationTypes = verificationTypes;

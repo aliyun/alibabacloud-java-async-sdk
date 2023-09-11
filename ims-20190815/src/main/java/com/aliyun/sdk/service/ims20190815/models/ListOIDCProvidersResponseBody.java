@@ -94,7 +94,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the OIDC IdP was modified.
+         * The information about the OIDC IdP.
          */
         public Builder OIDCProviders(OIDCProviders OIDCProviders) {
             this.OIDCProviders = OIDCProviders;
@@ -270,7 +270,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).
+             * The ID of the client, If you want to specify multiple client IDs, separate the client IDs with commas (,).
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -318,7 +318,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * IssuanceLimitTime.
+             * The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.
              */
             public Builder issuanceLimitTime(Long issuanceLimitTime) {
                 this.issuanceLimitTime = issuanceLimitTime;

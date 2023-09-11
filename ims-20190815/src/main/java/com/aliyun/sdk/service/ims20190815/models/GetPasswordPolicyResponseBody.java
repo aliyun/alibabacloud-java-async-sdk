@@ -58,7 +58,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of characters in the password.
+             * The minimum required number of characters in a password.
              */
             public Builder minimumPasswordLength(Integer minimumPasswordLength) {
                 this.minimumPasswordLength = minimumPasswordLength;

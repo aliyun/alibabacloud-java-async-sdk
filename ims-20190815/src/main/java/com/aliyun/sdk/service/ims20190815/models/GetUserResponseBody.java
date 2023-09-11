@@ -50,7 +50,7 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -347,7 +347,7 @@ public class GetUserResponseBody extends TeaModel {
              * The email address of the RAM user.
              * <p>
              * 
-             * >  This parameter is valid only on the China site (aliyun.com).
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -366,7 +366,7 @@ public class GetUserResponseBody extends TeaModel {
              * The mobile phone number of the RAM user.
              * <p>
              * 
-             * >  This parameter is valid only on the China site (aliyun.com).
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -374,7 +374,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the RAM user. Valid values:
+             * The source of the RAM user. Valid value:
              * <p>
              * 
              * *   Manual: The RAM user is manually created in the RAM console.
@@ -387,7 +387,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of tags.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
