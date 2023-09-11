@@ -16,6 +16,10 @@ public class ModifyPGHbaConfigResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ModifyPGHbaConfigResponseBody body;
@@ -23,6 +27,7 @@ public class ModifyPGHbaConfigResponse extends Response {
     private ModifyPGHbaConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ModifyPGHbaConfigResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ModifyPGHbaConfigResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ModifyPGHbaConfigResponse extends Response {
     public interface Builder extends Response.Builder<ModifyPGHbaConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ModifyPGHbaConfigResponseBody body);
 
@@ -64,6 +78,7 @@ public class ModifyPGHbaConfigResponse extends Response {
             extends Response.BuilderImpl<ModifyPGHbaConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ModifyPGHbaConfigResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ModifyPGHbaConfigResponse extends Response {
         private BuilderImpl(ModifyPGHbaConfigResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ModifyPGHbaConfigResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

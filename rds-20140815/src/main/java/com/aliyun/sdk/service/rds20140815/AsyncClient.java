@@ -508,11 +508,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBProxyEndpointAddressResponse> deleteDBProxyEndpointAddress(DeleteDBProxyEndpointAddressRequest request);
 
     /**
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The original instance is in the Running state.
-      * *   The instance is a primary instance.
-      * *   The instance runs MySQL, SQL Server, or MariaDB.
-      * > This operation is not supported for instances that run PostgreSQL. You can execute the DROP DATABASE statement to drop a database.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      * ### [](#)References
+      * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Delete a database from an ApsaraDB RDS for MySQL instance](~~96106~~)
+      * *   [Delete a database from an ApsaraDB RDS for PostgreSQL instance](~~96759~~)
+      * *   [Delete a database from an ApsaraDB RDS for SQL Server instance](~~95699~~)
+      * *   [Delete a database from an ApsaraDB RDS for MariaDB instance](~~97137~~)
       *
      */
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
@@ -548,7 +554,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   This operation is available only for ApsaraDB RDS for PostgreSQL instances.
-      * *   A replication slot can be deleted only when SlotStatus is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
+      * *   You can delete a replication slot only when the status of the slot is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
       *
      */
     CompletableFuture<DeleteSlotResponse> deleteSlot(DeleteSlotRequest request);
@@ -1705,20 +1711,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceTDEResponse> modifyDBInstanceTDE(ModifyDBInstanceTDERequest request);
 
     /**
-      * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
-      * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
-      * Before you call this operation, make sure that the following requirements are met:
-      * If the instance runs MySQL, the instance must run one of the following MySQL versions and RDS editions:
-      * *   MySQL 8.0 with a minor engine version of 20191204 or later on RDS Enterprise Edition
-      * *   MySQL 8.0 with a minor engine version of 20190915 or later on RDS High-availability Edition
-      * *   MySQL 5.7 with a minor engine version of 20191128 or later on RDS Enterprise Edition
-      * *   MySQL 5.7 with a minor engine version of 20190925 or later on RDS High-availability Edition
-      * *   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
-      * If the instance runs PostgreSQL, the instance must meet the following requirements:
-      * *   The instance runs PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
-      * *   The instance uses cloud disks.
-      * *   The instance runs RDS High-availability Edition.
-      * *   The instance is a primary instance.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * ### [](#)References
+      * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance](~~197456~~)
+      * *   [Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~)
       *
      */
     CompletableFuture<ModifyDBProxyResponse> modifyDBProxy(ModifyDBProxyRequest request);

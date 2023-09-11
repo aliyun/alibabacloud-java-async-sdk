@@ -102,6 +102,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     private String period;
 
     @Query
+    @NameInMap("Port")
+    private String port;
+
+    @Query
     @NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
@@ -174,6 +178,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -349,6 +354,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     /**
+     * @return port
+     */
+    public String getPort() {
+        return this.port;
+    }
+
+    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
@@ -454,6 +466,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private Long ownerId; 
         private String payType; 
         private String period; 
+        private String port; 
         private String privateIpAddress; 
         private String regionId; 
         private String resourceGroupId; 
@@ -494,6 +507,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.ownerId = request.ownerId;
             this.payType = request.payType;
             this.period = request.period;
+            this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -757,6 +771,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * Port.
+         */
+        public Builder port(String port) {
+            this.putQueryParameter("Port", port);
+            this.port = port;
             return this;
         }
 

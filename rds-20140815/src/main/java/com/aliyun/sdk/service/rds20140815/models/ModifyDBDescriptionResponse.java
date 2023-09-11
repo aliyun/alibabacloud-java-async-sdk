@@ -16,6 +16,10 @@ public class ModifyDBDescriptionResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ModifyDBDescriptionResponseBody body;
@@ -23,6 +27,7 @@ public class ModifyDBDescriptionResponse extends Response {
     private ModifyDBDescriptionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ModifyDBDescriptionResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ModifyDBDescriptionResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ModifyDBDescriptionResponse extends Response {
     public interface Builder extends Response.Builder<ModifyDBDescriptionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ModifyDBDescriptionResponseBody body);
 
@@ -64,6 +78,7 @@ public class ModifyDBDescriptionResponse extends Response {
             extends Response.BuilderImpl<ModifyDBDescriptionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ModifyDBDescriptionResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ModifyDBDescriptionResponse extends Response {
         private BuilderImpl(ModifyDBDescriptionResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ModifyDBDescriptionResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

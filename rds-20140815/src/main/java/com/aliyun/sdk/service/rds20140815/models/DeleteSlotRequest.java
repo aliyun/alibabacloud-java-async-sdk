@@ -181,7 +181,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * 目标实例ID。可调用[DescribeDBInstances](~~26232~~)接口查询。
+         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -208,7 +208,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * 资源组ID，可以为空。
+         * The ID of the resource group. You can leave this parameter empty.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -235,7 +235,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The name of the replication slot.
+         * The name of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the name of the replication slot.
          */
         public Builder slotName(String slotName) {
             this.putQueryParameter("SlotName", slotName);
@@ -244,7 +244,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The status of the replication slot.
+         * The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot.
          * <p>
          * 
          * Valid values:
