@@ -7,29 +7,36 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeCustomRoutingEndpointGroupDestinationsRequest} extends {@link RequestModel}
+ * {@link DescribeLogStoreOfEndpointGroupRequest} extends {@link RequestModel}
  *
- * <p>DescribeCustomRoutingEndpointGroupDestinationsRequest</p>
+ * <p>DescribeLogStoreOfEndpointGroupRequest</p>
  */
-public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Request {
+public class DescribeLogStoreOfEndpointGroupRequest extends Request {
     @Query
-    @NameInMap("DestinationId")
+    @NameInMap("AcceleratorId")
     @Validation(required = true)
-    private String destinationId;
+    private String acceleratorId;
 
     @Query
     @NameInMap("EndpointGroupId")
+    @Validation(required = true)
     private String endpointGroupId;
+
+    @Query
+    @NameInMap("ListenerId")
+    @Validation(required = true)
+    private String listenerId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private DescribeCustomRoutingEndpointGroupDestinationsRequest(Builder builder) {
+    private DescribeLogStoreOfEndpointGroupRequest(Builder builder) {
         super(builder);
-        this.destinationId = builder.destinationId;
+        this.acceleratorId = builder.acceleratorId;
         this.endpointGroupId = builder.endpointGroupId;
+        this.listenerId = builder.listenerId;
         this.regionId = builder.regionId;
     }
 
@@ -37,7 +44,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         return new Builder();
     }
 
-    public static DescribeCustomRoutingEndpointGroupDestinationsRequest create() {
+    public static DescribeLogStoreOfEndpointGroupRequest create() {
         return builder().build();
     }
 
@@ -47,10 +54,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
     }
 
     /**
-     * @return destinationId
+     * @return acceleratorId
      */
-    public String getDestinationId() {
-        return this.destinationId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     /**
@@ -61,34 +68,43 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
     }
 
     /**
+     * @return listenerId
+     */
+    public String getListenerId() {
+        return this.listenerId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeCustomRoutingEndpointGroupDestinationsRequest, Builder> {
-        private String destinationId; 
+    public static final class Builder extends Request.Builder<DescribeLogStoreOfEndpointGroupRequest, Builder> {
+        private String acceleratorId; 
         private String endpointGroupId; 
+        private String listenerId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCustomRoutingEndpointGroupDestinationsRequest request) {
+        private Builder(DescribeLogStoreOfEndpointGroupRequest request) {
             super(request);
-            this.destinationId = request.destinationId;
+            this.acceleratorId = request.acceleratorId;
             this.endpointGroupId = request.endpointGroupId;
+            this.listenerId = request.listenerId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the endpoint group mapping configuration.
+         * The ID of the GA instance.
          */
-        public Builder destinationId(String destinationId) {
-            this.putQueryParameter("DestinationId", destinationId);
-            this.destinationId = destinationId;
+        public Builder acceleratorId(String acceleratorId) {
+            this.putQueryParameter("AcceleratorId", acceleratorId);
+            this.acceleratorId = acceleratorId;
             return this;
         }
 
@@ -102,7 +118,16 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * The ID of the listener.
+         */
+        public Builder listenerId(String listenerId) {
+            this.putQueryParameter("ListenerId", listenerId);
+            this.listenerId = listenerId;
+            return this;
+        }
+
+        /**
+         * The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -111,8 +136,8 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         }
 
         @Override
-        public DescribeCustomRoutingEndpointGroupDestinationsRequest build() {
-            return new DescribeCustomRoutingEndpointGroupDestinationsRequest(this);
+        public DescribeLogStoreOfEndpointGroupRequest build() {
+            return new DescribeLogStoreOfEndpointGroupRequest(this);
         } 
 
     } 

@@ -113,7 +113,7 @@ public class DissociateAclsFromListenerRequest extends Request {
         } 
 
         /**
-         * AclIds.
+         * The ID of the ACL. You can disassociate up to two ACLs from a listener.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);

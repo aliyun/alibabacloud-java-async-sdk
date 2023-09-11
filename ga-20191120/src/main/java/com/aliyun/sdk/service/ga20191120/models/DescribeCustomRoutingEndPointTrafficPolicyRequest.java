@@ -84,7 +84,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the endpoint to which the traffic destination belongs.
+         * The ID of the traffic policy to be queried.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -93,7 +93,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the traffic policy to be queried.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -102,7 +102,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * The operation that you want to perform. Set the value to **DescribeCustomRoutingEndPointTrafficPolicy**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

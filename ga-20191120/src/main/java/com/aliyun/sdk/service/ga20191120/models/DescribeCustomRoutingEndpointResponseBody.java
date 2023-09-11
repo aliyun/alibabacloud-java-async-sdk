@@ -221,7 +221,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
          * The service ID to which the managed instance belongs.
          * <p>
          * 
-         * >  Valid only when the ServiceManaged parameter is True.。
+         * >  Valid only when the ServiceManaged parameter is True.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -229,7 +229,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Is it a managed instance. Value：
+         * Is it a managed instance. Valid values:
          * <p>
          * 
          * - true
@@ -249,7 +249,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the endpoint .
+         * The status of the endpoint.
          */
         public Builder state(String state) {
             this.state = state;
@@ -337,7 +337,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name，Value：
+             * Managed policy action name, Valid values:
              * <p>
              * 
              * - Create
@@ -353,7 +353,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type，Value：
+             * Sub resource type, Valid values:
              * <p>
              * 
              * - Listener
@@ -372,12 +372,12 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed，Value：
+             * Is the managed policy action managed, Valid values:
              * <p>
              * 
-             * - true：The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance。
+             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
              * 
-             * - false：The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

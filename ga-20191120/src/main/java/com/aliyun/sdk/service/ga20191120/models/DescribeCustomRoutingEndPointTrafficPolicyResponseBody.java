@@ -182,7 +182,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         private String state; 
 
         /**
-         * The ID of the GA instance to which the endpoint belongs.
+         * The ID of the request.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -190,7 +190,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The IP address of the traffic policy.
+         * The ID of the traffic policy.
          */
         public Builder address(String address) {
             this.address = address;
@@ -198,7 +198,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The name of the vSwitch to which the traffic policy belongs.
+         * The ID of the endpoint to which the traffic policy belongs.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -206,7 +206,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the endpoint group to which the endpoint belongs.
+         * The ID of the listener to which the endpoint belongs.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -214,7 +214,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the endpoint to which the traffic policy belongs.
+         * The ID of the endpoint group to which the endpoint belongs.
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -222,7 +222,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the listener to which the endpoint belongs.
+         * The ID of the GA instance to which the endpoint belongs.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -230,7 +230,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the traffic policy.
+         * The name of the vSwitch to which the traffic policy belongs.
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -238,7 +238,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The port range of the traffic policy.
+         * The IP address of the traffic policy.
          */
         public Builder portRanges(java.util.List < PortRanges> portRanges) {
             this.portRanges = portRanges;
@@ -246,7 +246,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the request.
+         * The ID of the endpoint to which the traffic destination belongs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +256,8 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         /**
          * The service ID to which the managed instance belongs.
          * <p>
-         * > Valid only when the **ServiceManaged** parameter is **True**.。
+         * 
+         * >  Valid only when the ServiceManaged parameter is True.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -264,12 +265,11 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * Is it a managed instance. Value：
+         * Is it a managed instance. Valid values:
          * <p>
          * 
-         * - **true**
-         * 
-         * - **false**
+         * - true
+         * - false
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -343,7 +343,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             private Integer toPort; 
 
             /**
-             * The first port of the port range.
+             * The port range of the traffic destination.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -351,7 +351,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * The last port of the port range.
+             * The first port of the port range.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -416,14 +416,14 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name，Value：
+             * Managed policy action name, Valid values:
              * <p>
-             * - **Create**
-             * - **Update**
-             * - **Delete**
-             * - **Associate**
-             * - **UserUnmanaged**
-             * - **CreateChild**
+             * - Create
+             * - Update
+             * - Delete
+             * - Associate
+             * - UserUnmanaged
+             * - CreateChild
              */
             public Builder action(String action) {
                 this.action = action;
@@ -431,24 +431,18 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * Sub resource type，Value：
+             * Sub resource type, Valid values:
              * <p>
              * 
-             * - **Listener**
+             * - Listener
+             * - IpSet
+             * - EndpointGroup
+             * - ForwardingRule
+             * - Endpoint
+             * - EndpointGroupDestination
+             * - EndpointPolicy
              * 
-             * - **IpSet**
-             * 
-             * - **EndpointGroup**
-             * 
-             * - **ForwardingRule**
-             * 
-             * - **Endpoint**
-             * 
-             * - **EndpointGroupDestination**
-             * 
-             * - **EndpointPolicy**
-             * 
-             * > Only valid when the **Action** parameter is **CreateChild**.
+             * >Only valid when the Action parameter is CreateChild.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -456,10 +450,12 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * Is the managed policy action managed，Value：
+             * Is the managed policy action managed, Valid values:
              * <p>
-             * - **true**：The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance。
-             * - **false**：The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

@@ -86,7 +86,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * EndpointGroupRegion.
+         * The region ID of the endpoint group.
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.endpointGroupRegion = endpointGroupRegion;
@@ -94,7 +94,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddressCidrBlocks.
+         * The CIDR blocks.
          */
         public Builder ipAddressCidrBlocks(java.util.List < String > ipAddressCidrBlocks) {
             this.ipAddressCidrBlocks = ipAddressCidrBlocks;
@@ -102,7 +102,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the endpoint group belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -118,7 +118,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The status of the endpoint group.
          */
         public Builder state(String state) {
             this.state = state;

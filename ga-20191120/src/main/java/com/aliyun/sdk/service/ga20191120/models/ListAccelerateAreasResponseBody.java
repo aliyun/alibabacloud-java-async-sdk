@@ -50,7 +50,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The acceleration areas.
+         * The information about the areas.
          */
         public Builder areas(java.util.List < Areas> areas) {
             this.areas = areas;
@@ -58,7 +58,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The name of the region.
+             * The region name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -183,7 +183,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             private java.util.List < RegionList> regionList; 
 
             /**
-             * The ID of the acceleration area.
+             * The area ID.
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -191,7 +191,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the acceleration area.
+             * The area name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -199,7 +199,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The list of regions.
+             * The regions in the acceleration area.
              */
             public Builder regionList(java.util.List < RegionList> regionList) {
                 this.regionList = regionList;

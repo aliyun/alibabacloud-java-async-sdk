@@ -50,7 +50,13 @@ public class QueryCrossBorderApprovalStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApprovalStatus.
+         * Cross border permissions of Alibaba Cloud account (main account).
+         * <p>
+         * 
+         * -  UNAPPLIED : No cross-border permission application has been submitted or application records cannot be found.
+         * -  APPLIED : Cross-border permission review in progress.
+         * -  REJECTED : Cross-border permission review failed.
+         * -  PASSED : Cross-border permission review passed.
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
@@ -58,7 +64,7 @@ public class QueryCrossBorderApprovalStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

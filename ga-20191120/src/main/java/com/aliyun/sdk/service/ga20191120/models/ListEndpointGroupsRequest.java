@@ -178,7 +178,11 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * Specifies whether the access logging feature is enabled. Default value: off. Valid values:
+         * <p>
+         * 
+         * *   **on**: The access logging feature is enabled.
+         * *   **off**: The access logging feature is disabled.
          */
         public Builder accessLogSwitch(String accessLogSwitch) {
             this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
@@ -187,11 +191,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The protocol that is used to monitor latency. Valid values:
-         * <p>
-         * 
-         * *   **icmp**: ICMP
-         * *   **tcp**: TCP
+         * The ID of the endpoint group.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -203,8 +203,8 @@ public class ListEndpointGroupsRequest extends Request {
          * The type of the endpoint group. Valid values:
          * <p>
          * 
-         * *   **default**
-         * *   **virtual**
+         * *   **default**: a default endpoint group
+         * *   **virtual**: a virtual endpoint group
          * *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
          */
         public Builder endpointGroupType(String endpointGroupType) {
@@ -214,7 +214,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -223,7 +223,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -232,7 +232,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,7 +241,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The endpoint port.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,7 +304,12 @@ public class ListEndpointGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the listener.
+             * The tag key of the Endpoint Group. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify up to 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,12 +317,12 @@ public class ListEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The type of the endpoint group. Valid values:
+             * The tag value of the Endpoint Group. The tag value can be an empty string.
              * <p>
              * 
-             * *   **default**: a default endpoint group
-             * *   **virtual**: a virtual endpoint group
-             * *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify up to 20 tag values.
              */
             public Builder value(String value) {
                 this.value = value;

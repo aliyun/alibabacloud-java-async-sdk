@@ -62,7 +62,7 @@ public class DissociateAclsFromListenerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the ACL.
+         * The IDs of the ACL.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.aclIds = aclIds;

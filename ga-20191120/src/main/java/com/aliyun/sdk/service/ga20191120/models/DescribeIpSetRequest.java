@@ -73,7 +73,7 @@ public class DescribeIpSetRequest extends Request {
          * The ID of the acceleration region.
          * <p>
          * 
-         * You can call the [ListIpSets](~~153247~~) operation to query the IDs of acceleration regions of a specified GA instance.
+         * You can call the [ListIpSets](~~153247~~) operation to query IDs of acceleration regions of a specified GA instance.
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);

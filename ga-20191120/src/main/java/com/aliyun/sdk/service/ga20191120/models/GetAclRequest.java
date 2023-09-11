@@ -70,7 +70,7 @@ public class GetAclRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -79,7 +79,7 @@ public class GetAclRequest extends Request {
         }
 
         /**
-         * The ID of the network ACL.
+         * The operation that you want to perform. Set the value to **GetAcl**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

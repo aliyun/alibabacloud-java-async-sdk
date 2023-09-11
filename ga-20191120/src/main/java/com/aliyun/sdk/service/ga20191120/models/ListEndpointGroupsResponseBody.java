@@ -86,7 +86,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the endpoint group.
+         * The configurations of the endpoint group.
          */
         public Builder endpointGroups(java.util.List < EndpointGroups> endpointGroups) {
             this.endpointGroups = endpointGroups;
@@ -94,11 +94,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the client IP address preservation feature is enabled. Valid values:
-         * <p>
-         * 
-         * *   **true**: The client IP address preservation feature is enabled.
-         * *   **false**: The client IP address preservation feature is disabled.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +102,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +110,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The weight of the endpoint.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +118,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -234,7 +230,11 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * EnableClientIPPreservation.
+             * Indicates whether the client IP address preservation feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: The client IP address preservation feature is enabled.
+             * *   **false**: The client IP address preservation feature is disabled.
              */
             public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
                 this.enableClientIPPreservation = enableClientIPPreservation;
@@ -242,7 +242,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * The IP address or domain name of the endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -250,7 +250,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * The ID of the endpoint.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -258,7 +258,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProbePort.
+             * The port that is used to monitor latency.
              */
             public Builder probePort(Integer probePort) {
                 this.probePort = probePort;
@@ -266,7 +266,11 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProbeProtocol.
+             * The protocol that is used to monitor latency. Valid values:
+             * <p>
+             * 
+             * *   **icmp**: ICMP
+             * *   **tcp**: TCP
              */
             public Builder probeProtocol(String probeProtocol) {
                 this.probeProtocol = probeProtocol;
@@ -274,7 +278,16 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
              */
             public Builder type(String type) {
                 this.type = type;
@@ -282,7 +295,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the endpoint.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -335,7 +348,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private Integer listenerPort; 
 
             /**
-             * EndpointPort.
+             * The endpoint port.
              */
             public Builder endpointPort(Integer endpointPort) {
                 this.endpointPort = endpointPort;
@@ -343,7 +356,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerPort.
+             * The listener port.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -408,14 +421,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * 托管策略动作名称，取值：
+             * Managed policy action name, Valid values:
              * <p>
-             * - **Create**：创建实例。
-             * - **Update**：更新当前实例。
-             * - **Delete**：删除当前实例。
-             * - **Associate**：引用/被引用当前实例。
-             * - **UserUnmanaged**：用户解托管实例。
-             * - **CreateChild**：在当前实例下创建子资源。
+             * - Create
+             * - Update
+             * - Delete
+             * - Associate
+             * - UserUnmanaged
+             * - CreateChild
              */
             public Builder action(String action) {
                 this.action = action;
@@ -423,16 +436,17 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 子资源类型，取值：
+             * Sub resource type, Valid values:
              * <p>
-             * - **Listener**：监听资源。
-             * - **IpSet**：加速地域资源。
-             * - **EndpointGroup**：终端节点组资源。
-             * - **ForwardingRule**：转发策略资源。
-             * - **Endpoint**：终端节点资源。
-             * - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
-             * - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
-             * > 仅在**Action**参数为**CreateChild**时有效
+             * 
+             * - Listener
+             * - IpSet
+             * - EndpointGroup
+             * - ForwardingRule
+             * - Endpoint
+             * - EndpointGroupDestination
+             * - EndpointPolicy
+             * >Only valid when the Action parameter is CreateChild.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -440,10 +454,12 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 托管策略动作是否被托管，取值：
+             * Is the managed policy action managed, Valid values:
              * <p>
-             * - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
-             * - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+             * 
+             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -496,7 +512,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -504,7 +520,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -833,7 +849,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private Integer trafficPercentage; 
 
             /**
-             * AcceleratorId.
+             * The ID of the GA instance.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -841,7 +857,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the endpoint group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -849,7 +865,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointConfigurations.
+             * The configurations of the endpoint.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -865,10 +881,58 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The mappings between ports.
+             * The list of endpoint group IP addresses.
              */
             public Builder endpointGroupIpList(java.util.List < String > endpointGroupIpList) {
                 this.endpointGroupIpList = endpointGroupIpList;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the endpoint group is deployed.
+             */
+            public Builder endpointGroupRegion(String endpointGroupRegion) {
+                this.endpointGroupRegion = endpointGroupRegion;
+                return this;
+            }
+
+            /**
+             * The type of the endpoint group. Valid values:
+             * <p>
+             * 
+             * *   **default**: a default endpoint group
+             * *   **virtual**: a virtual endpoint group
+             */
+            public Builder endpointGroupType(String endpointGroupType) {
+                this.endpointGroupType = endpointGroupType;
+                return this;
+            }
+
+            /**
+             * The endpoint group IP addresses to be confirmed after the GA instance is upgraded.
+             */
+            public Builder endpointGroupUnconfirmedIpList(java.util.List < String > endpointGroupUnconfirmedIpList) {
+                this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
+                return this;
+            }
+
+            /**
+             * The protocol that is used by the backend service. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: HTTP
+             * *   **HTTPS**: HTTPS
+             */
+            public Builder endpointRequestProtocol(String endpointRequestProtocol) {
+                this.endpointRequestProtocol = endpointRequestProtocol;
+                return this;
+            }
+
+            /**
+             * The ID of the forwarding rule that is associated with the endpoint group.
+             */
+            public Builder forwardingRuleIds(java.util.List < String > forwardingRuleIds) {
+                this.forwardingRuleIds = forwardingRuleIds;
                 return this;
             }
 
@@ -879,53 +943,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * *   **true**: The health check feature is enabled.
              * *   **false**: The health check feature is disabled.
              */
-            public Builder endpointGroupRegion(String endpointGroupRegion) {
-                this.endpointGroupRegion = endpointGroupRegion;
-                return this;
-            }
-
-            /**
-             * EndpointGroupType.
-             */
-            public Builder endpointGroupType(String endpointGroupType) {
-                this.endpointGroupType = endpointGroupType;
-                return this;
-            }
-
-            /**
-             * The interval at which health checks are performed. Unit: seconds.
-             */
-            public Builder endpointGroupUnconfirmedIpList(java.util.List < String > endpointGroupUnconfirmedIpList) {
-                this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
-                return this;
-            }
-
-            /**
-             * EndpointRequestProtocol.
-             */
-            public Builder endpointRequestProtocol(String endpointRequestProtocol) {
-                this.endpointRequestProtocol = endpointRequestProtocol;
-                return this;
-            }
-
-            /**
-             * ForwardingRuleIds.
-             */
-            public Builder forwardingRuleIds(java.util.List < String > forwardingRuleIds) {
-                this.forwardingRuleIds = forwardingRuleIds;
-                return this;
-            }
-
-            /**
-             * HealthCheckEnabled.
-             */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
                 return this;
             }
 
             /**
-             * HealthCheckIntervalSeconds.
+             * The interval at which health checks are performed. Unit: seconds.
              */
             public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -933,7 +957,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The path to which health check requests are sent.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -941,78 +965,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckPort.
+             * The port that is used for health checks.
              */
             public Builder healthCheckPort(Integer healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
-                return this;
-            }
-
-            /**
-             * HealthCheckProtocol.
-             */
-            public Builder healthCheckProtocol(String healthCheckProtocol) {
-                this.healthCheckProtocol = healthCheckProtocol;
-                return this;
-            }
-
-            /**
-             * ListenerId.
-             */
-            public Builder listenerId(String listenerId) {
-                this.listenerId = listenerId;
-                return this;
-            }
-
-            /**
-             * Name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * PortOverrides.
-             */
-            public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
-                this.portOverrides = portOverrides;
-                return this;
-            }
-
-            /**
-             * 托管实例所属的服务方ID。
-             * <p>
-             * 
-             * > 仅在**ServiceManaged**参数为**True**时有效。
-             */
-            public Builder serviceId(String serviceId) {
-                this.serviceId = serviceId;
-                return this;
-            }
-
-            /**
-             * 是否为托管实例。取值：
-             * <p>
-             * 
-             * - **true**：是托管资实例。
-             * 
-             * - **false**：不是托管实例。
-             */
-            public Builder serviceManaged(Boolean serviceManaged) {
-                this.serviceManaged = serviceManaged;
-                return this;
-            }
-
-            /**
-             * 用户在此托管实例下可执行的动作策略列表。
-             * <p>
-             * 
-             * > 仅在**ServiceManaged**参数为**True**时有效。
-             * > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
-             */
-            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
-                this.serviceManagedInfos = serviceManagedInfos;
                 return this;
             }
 
@@ -1024,13 +980,82 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * *   **http**: HTTP
              * *   **https**: HTTPS
              */
+            public Builder healthCheckProtocol(String healthCheckProtocol) {
+                this.healthCheckProtocol = healthCheckProtocol;
+                return this;
+            }
+
+            /**
+             * The ID of the listener.
+             */
+            public Builder listenerId(String listenerId) {
+                this.listenerId = listenerId;
+                return this;
+            }
+
+            /**
+             * The name of the endpoint group.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The mappings between ports.
+             */
+            public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
+                this.portOverrides = portOverrides;
+                return this;
+            }
+
+            /**
+             * The service ID to which the managed instance belongs.
+             * <p>
+             * 
+             * >  Valid only when the ServiceManaged parameter is True.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * Is it a managed instance. Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
+             */
+            public Builder serviceManaged(Boolean serviceManaged) {
+                this.serviceManaged = serviceManaged;
+                return this;
+            }
+
+            /**
+             * A list of action policies that users can execute on this managed instance.
+             */
+            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+                this.serviceManagedInfos = serviceManagedInfos;
+                return this;
+            }
+
+            /**
+             * The state of the endpoint group. Valid values:
+             * <p>
+             * 
+             * *   **init**: The endpoint group is being initialized.
+             * *   **active**: The endpoint group is running normally.
+             * *   **updating**:The endpoint group is being updated.
+             * *   **deleteing**: The endpoint group is being deleted.
+             */
             public Builder state(String state) {
                 this.state = state;
                 return this;
             }
 
             /**
-             * Tags.
+             * The tags of the endpoint groups.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1038,7 +1063,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdCount.
+             * The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.
              */
             public Builder thresholdCount(Integer thresholdCount) {
                 this.thresholdCount = thresholdCount;
@@ -1046,7 +1071,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercentage.
+             * The weight of the endpoint group when the listener is associated with multiple endpoint groups.
              */
             public Builder trafficPercentage(Integer trafficPercentage) {
                 this.trafficPercentage = trafficPercentage;

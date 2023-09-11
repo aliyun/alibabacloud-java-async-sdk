@@ -50,7 +50,7 @@ public class UpdateAclAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the network ACL.
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -58,7 +58,7 @@ public class UpdateAclAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

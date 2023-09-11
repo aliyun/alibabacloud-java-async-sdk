@@ -149,7 +149,7 @@ public class ListBasicAcceleratorsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -158,7 +158,7 @@ public class ListBasicAcceleratorsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,16 +185,16 @@ public class ListBasicAcceleratorsRequest extends Request {
         }
 
         /**
-         * The status of the basic GA instance. Valid values:
+         * The state of the basic GA instance. Valid values:
          * <p>
          * 
-         * *   **init**: The GA instance is being initialized.
-         * *   **active**: The GA instance is available.
-         * *   **configuring**: The GA instance is being configured.
-         * *   **binding**: The GA instance is being associated.
-         * *   **unbinding**: The GA instance is being disassociated.
-         * *   **deleting**: The GA instance is being deleted.
-         * *   **finacialLocked**: The GA instance is locked due to overdue payments.
+         * *   **init**: The basic GA instance is being initialized.
+         * *   **active**: The basic GA instance is available.
+         * *   **configuring**: The basic GA instance is being configured.
+         * *   **binding**: The basic GA instance is being associated.
+         * *   **unbinding**: The basic GA instance is being disassociated.
+         * *   **deleting**: The basic GA instance is being deleted.
+         * *   **finacialLocked**: The basic GA instance is locked due to overdue payments.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -205,8 +205,7 @@ public class ListBasicAcceleratorsRequest extends Request {
         /**
          * The tags of the basic GA instance.
          * <p>
-         * 
-         * You can specify up to 20 tags.
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -260,7 +259,7 @@ public class ListBasicAcceleratorsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the basic GA instance. The tag key cannot be an empty string.
+             * The tag key of the basic GA resource. The tag key cannot be an empty string.
              * <p>
              * 
              * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.

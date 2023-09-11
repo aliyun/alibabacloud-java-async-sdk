@@ -170,7 +170,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         private Integer toPort; 
 
         /**
-         * The ID of the GA instance.
+         * The ID of the Global Accelerator (GA) instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -213,9 +213,9 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
          * The backend service protocol of the endpoint group.
          * <p>
          * 
-         * *   **tcp**: TCP
-         * *   **udp**: UDP
-         * *   **tcp,udp**: TCP and UDP
+         * *   **TCP**: TCP
+         * *   **UDP**: UDP
+         * *   **TCP,UDP**: TCP and UDP
          */
         public Builder protocols(java.util.List < String > protocols) {
             this.protocols = protocols;
@@ -231,7 +231,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * ServiceId.
+         * The service ID to which the managed instance belongs.
+         * <p>
+         * 
+         * >  Valid only when the ServiceManaged parameter is True.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -239,7 +242,11 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * ServiceManaged.
+         * Is it a managed instance. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -247,7 +254,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * ServiceManagedInfos.
+         * A list of action policies that users can execute on this managed instance.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -255,7 +262,13 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * State.
+         * The status of the endpoint group mapping configuration.
+         * <p>
+         * 
+         * *   **init**: being initialized.
+         * *   **active**: normal.
+         * *   **updating**: being updated.
+         * *   **deleting**: being deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -327,7 +340,15 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
             private Boolean isManaged; 
 
             /**
-             * Action.
+             * Managed policy action name, Valid values:
+             * <p>
+             * 
+             * - Create
+             * - Update
+             * - Delete
+             * - Associate
+             * - UserUnmanaged
+             * - CreateChild
              */
             public Builder action(String action) {
                 this.action = action;
@@ -335,7 +356,18 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
             }
 
             /**
-             * ChildType.
+             * Sub resource type, Valid values:
+             * <p>
+             * 
+             * - Listener
+             * - IpSet
+             * - EndpointGroup
+             * - ForwardingRule
+             * - Endpoint
+             * - EndpointGroupDestination
+             * - EndpointPolicy
+             * 
+             * >Only valid when the Action parameter is CreateChild.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -343,7 +375,12 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
             }
 
             /**
-             * IsManaged.
+             * Is the managed policy action managed, Valid values:
+             * <p>
+             * 
+             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

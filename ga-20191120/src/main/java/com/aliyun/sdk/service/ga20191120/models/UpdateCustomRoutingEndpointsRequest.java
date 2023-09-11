@@ -113,7 +113,7 @@ public class UpdateCustomRoutingEndpointsRequest extends Request {
         }
 
         /**
-         * EndpointConfigurations.
+         * The configurations of the endpoint.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
@@ -269,7 +269,14 @@ public class UpdateCustomRoutingEndpointsRequest extends Request {
             }
 
             /**
-             * PortRanges.
+             * The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
+             * <p>
+             * 
+             * If you leave this parameter empty, traffic is forwarded to all destination ports.
+             * 
+             * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
+             * 
+             * You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 port ranges for each destination.
              */
             public Builder portRanges(java.util.List < PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -345,7 +352,7 @@ public class UpdateCustomRoutingEndpointsRequest extends Request {
             }
 
             /**
-             * PolicyConfigurations.
+             * The configurations of the policy.
              */
             public Builder policyConfigurations(java.util.List < PolicyConfigurations> policyConfigurations) {
                 this.policyConfigurations = policyConfigurations;

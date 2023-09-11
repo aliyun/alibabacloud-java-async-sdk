@@ -94,7 +94,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         }
 
         /**
-         * The page number.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         }
 
         /**
-         * The number of entries per page.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,15 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             private Boolean isManaged; 
 
             /**
-             * Action.
+             * Managed policy action name, Valid values:
+             * <p>
+             * 
+             * Create
+             * Update
+             * Delete
+             * Associate
+             * UserUnmanaged
+             * CreateChild
              */
             public Builder action(String action) {
                 this.action = action;
@@ -190,16 +198,18 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * 子资源类型，取值：
+             * Sub resource type, Valid values:
              * <p>
-             * - **Listener**：监听资源。
-             * - **IpSet**：加速地域资源。
-             * - **EndpointGroup**：终端节点组资源。
-             * - **ForwardingRule**：转发策略资源。
-             * - **Endpoint**：终端节点资源。
-             * - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
-             * - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
-             * > 仅在**Action**参数为**CreateChild**时有效
+             * 
+             * Listener
+             * IpSet
+             * EndpointGroup
+             * ForwardingRule
+             * Endpoint
+             * EndpointGroupDestination
+             * EndpointPolicy
+             * 
+             * > Only valid when the Action parameter is CreateChild.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -207,10 +217,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * 托管策略动作是否被托管，取值：
+             * Is the managed policy action managed, Valid values:
              * <p>
-             * - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
-             * - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+             * 
+             * - **true**: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - **false**: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -359,7 +371,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             private Integer toPort; 
 
             /**
-             * The GA instance ID.
+             * The ID of the GA instance.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -375,7 +387,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The endpoint group ID.
+             * The ID of the endpoint group.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -391,7 +403,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The listener ID.
+             * The ID of the listener.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -399,12 +411,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The backend service protocols of the endpoint group. Valid values:
+             * The backend service protocol of the endpoint group.
              * <p>
              * 
-             * *   **TCP:** TCP.
-             * *   **UDP:** UDP.
-             * *   **TCP,UDP:** TCP and UDP.
+             * *   **TCP**: TCP
+             * *   **UDP**: UDP
+             * *   **TCP,UDP**: TCP and UDP
              */
             public Builder protocols(java.util.List < String > protocols) {
                 this.protocols = protocols;
@@ -412,9 +424,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * 托管实例所属的服务方ID。
+             * The service ID to which the managed instance belongs.
              * <p>
-             * > 仅在**ServiceManaged**参数为**True**时有效。
+             * 
+             * >  Valid only when the ServiceManaged parameter is True.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -422,12 +435,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * 是否为托管实例。取值：  
+             * Is it a managed instance. Valid values:
              * <p>
              * 
-             * - true：是托管资实例。  
+             * - **true**
              * 
-             * - false：不是托管实例。
+             * - **false**
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -435,10 +448,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * 用户在此托管实例下可执行的动作策略列表。
-             * <p>
-             * > 仅在**ServiceManaged**参数为**True**时有效。
-             * > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+             * A list of action policies that users can execute on this managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;

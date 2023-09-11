@@ -169,7 +169,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         } 
 
         /**
-         * The GA instance ID.
+         * The ID of the GA instance.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -178,7 +178,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The endpoint group ID.
+         * The ID of the endpoint group.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -190,7 +190,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
          * The start port of the backend service port range of the endpoint group.
          * <p>
          * 
-         * Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
+         * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
          */
         public Builder fromPort(Integer fromPort) {
             this.putQueryParameter("FromPort", fromPort);
@@ -199,7 +199,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The listener ID.
+         * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -208,7 +208,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +217,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,9 +229,9 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
          * The backend service protocols of the endpoint group. Valid values:
          * <p>
          * 
-         * *   **TCP:** TCP.
-         * *   **UDP:** UDP.
-         * *   **TCP,UDP:** TCP and UDP.
+         * - **TCP**: TCP.
+         * - **UDP**: UDP.
+         * - **TCP,UDP**: TCP and UDP.
          * 
          * If this parameter is empty, all types of protocols are queried.
          * 
@@ -244,7 +244,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,7 +256,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
          * The end port of the backend service port range of the endpoint group.
          * <p>
          * 
-         * Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
+         * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
          */
         public Builder toPort(Integer toPort) {
             this.putQueryParameter("ToPort", toPort);

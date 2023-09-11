@@ -137,7 +137,10 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * Domains.
+         * The domain name associated with the additional certificate.
+         * <p>
+         * 
+         * You can specify up to 10 domain names in each request.
          */
         public Builder domains(java.util.List < String > domains) {
             this.putQueryParameter("Domains", domains);

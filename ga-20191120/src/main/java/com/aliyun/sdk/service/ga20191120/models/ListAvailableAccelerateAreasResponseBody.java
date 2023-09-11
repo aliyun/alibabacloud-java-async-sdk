@@ -146,7 +146,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             private Boolean supportIpv6; 
 
             /**
-             * ChinaMainland.
+             * Whether China Mainland.
              */
             public Builder chinaMainland(Boolean chinaMainland) {
                 this.chinaMainland = chinaMainland;
@@ -154,7 +154,22 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * IspTypeList.
+             * The line types of EIPs in the acceleration region.
+             * <p>
+             * 
+             * *   **BGP**: BGP (Multi-ISP) lines
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+             * 
+             * If you have the permissions to use single-ISP bandwidth, one of the following values may be returned:
+             * 
+             * *   **ChinaTelecom**: China Telecom (single ISP)
+             * *   **ChinaUnicom**: China Unicom (single ISP)
+             * *   **ChinaMobile**: China Mobile (single ISP)
+             * *   **ChinaTelecom_L2**: China Telecom_L2 (single ISP)
+             * *   **ChinaUnicom_L2**: China Unicom_L2 (single ISP)
+             * *   **ChinaMobile_L2**: China Mobile_L2 (single ISP)
+             * 
+             * > Different acceleration regions support different single-ISP BGP lines.
              */
             public Builder ispTypeList(java.util.List < String > ispTypeList) {
                 this.ispTypeList = ispTypeList;
@@ -178,7 +193,11 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * Ipv6 supported, Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;

@@ -271,9 +271,9 @@ public class UpdateEndpointGroupRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -285,7 +285,7 @@ public class UpdateEndpointGroupRequest extends Request {
          * The description of the endpoint group.
          * <p>
          * 
-         * The description can be up to 256 characters in length and cannot contain `http://` or `https://`.
+         * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -294,7 +294,10 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the endpoint.
+         * The information about the endpoints.
+         * <p>
+         * 
+         * You can specify information for up to 20 endpoints.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
@@ -312,7 +315,7 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the endpoint group is deployed.
+         * The ID of the region where the endpoint group is created.
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);
@@ -330,7 +333,6 @@ public class UpdateEndpointGroupRequest extends Request {
          * > 
          * 
          * *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
-         * 
          * *   For an HTTP listener, the backend service protocol must be HTTP.
          */
         public Builder endpointRequestProtocol(String endpointRequestProtocol) {
@@ -340,11 +342,11 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check feature. Valid values:
+         * Specifies whether to enable the health check feature. Default value: true. Valid values:
          * <p>
          * 
-         * *   **true:** enables the health check feature. This is the default value.
-         * *   **false:** disables the health check feature.
+         * *   **true**: enables the health check feature.
+         * *   **false**: disables the health check feature.
          */
         public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
             this.putQueryParameter("HealthCheckEnabled", healthCheckEnabled);
@@ -353,7 +355,7 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The interval between consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
+         * The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
          */
         public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
             this.putQueryParameter("HealthCheckIntervalSeconds", healthCheckIntervalSeconds);
@@ -532,8 +534,8 @@ public class UpdateEndpointGroupRequest extends Request {
              * Specifies whether to reserve client IP addresses. Default value: false. Valid values:
              * <p>
              * 
-             * *   **true:** reserves client IP addresses.
-             * *   **false:** does not preserve client IP addresses.
+             * *   **true**: reserves client IP addresses.
+             * *   **false**: does not reserve client IP addresses.
              */
             public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
                 this.enableClientIPPreservation = enableClientIPPreservation;
@@ -541,11 +543,11 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to preserve the IP addresses of clients that access the endpoint by using the ProxyProtocol module. Valid values:
+             * Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:
              * <p>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * *   **true**: preserves client IP addresses by using the ProxyProtocol module.
+             * *   **false**: does not preserve client IP addresses by using the ProxyProtocol module.
              */
             public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
                 this.enableProxyProtocol = enableProxyProtocol;
@@ -553,7 +555,7 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The IP address, domain name or instance id according to the type of the endpoint.
+             * The IP address or domain name of the endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -564,20 +566,18 @@ public class UpdateEndpointGroupRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain:** a custom domain name
-             * *   **Ip:** a custom IP address
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud
-             * *   **ECS:** an ECS instance
-             * *   **SLB:** a Server Load Balancer (SLB) instance
-             * *   **ALB:** an Application Load Balancer (ALB) instance
-             * *   **OSS:** an Object Storage Service (OSS) bucket
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
              * 
              * > 
              * 
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
-             * 
+             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
              * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * 
              * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
              * 
              * For more information, see [Service-linked roles](~~178360~~).
@@ -593,7 +593,7 @@ public class UpdateEndpointGroupRequest extends Request {
              * 
              * Valid values: **0** to **255**.
              * 
-             * > If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.
+             * >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -660,7 +660,6 @@ public class UpdateEndpointGroupRequest extends Request {
              * > 
              * 
              * *   Only HTTP and HTTPS listeners support port mappings.
-             * 
              * *   The listener port in a port mapping must be the one used by the current listener.
              */
             public Builder listenerPort(Integer listenerPort) {

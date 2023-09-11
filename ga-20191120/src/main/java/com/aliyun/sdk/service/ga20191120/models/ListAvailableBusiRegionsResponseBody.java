@@ -134,7 +134,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * ChinaMainland.
+             * Whether China Mainland.
              */
             public Builder chinaMainland(Boolean chinaMainland) {
                 this.chinaMainland = chinaMainland;

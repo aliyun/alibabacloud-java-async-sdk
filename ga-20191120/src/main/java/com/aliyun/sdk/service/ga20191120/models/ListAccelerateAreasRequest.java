@@ -55,7 +55,7 @@ public class ListAccelerateAreasRequest extends Request {
         } 
 
         /**
-         * The region ID of the Global Accelerator instance. Set the value to **cn-hangzhou**.
+         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

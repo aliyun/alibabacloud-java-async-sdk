@@ -222,11 +222,11 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * The line type of the elastic IP address (EIP) in the acceleration region.
+         * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
          * <p>
          * 
          * *   **BGP**: BGP (Multi-ISP) lines.
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
          * 
          * If you are allowed to use single-ISP bandwidth, one of the following values is returned:
          * 
@@ -237,7 +237,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
          * *   **ChinaUnicom_L2**: China Unicom (single ISP)\_L2.
          * *   **ChinaMobile_L2**: China Mobile (single ISP)\_L2.
          * 
-         * >  The supported single-ISP line types vary based on the acceleration region.
+         * >  The supported single-ISP type varies with the acceleration region.
          */
         public Builder ispType(String ispType) {
             this.ispType = ispType;
@@ -253,7 +253,10 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The service ID to which the managed instance belongs.
+         * <p>
+         * 
+         * >  Valid only when the ServiceManaged parameter is True.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -261,7 +264,11 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceManaged.
+         * Is it a managed instance. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -269,7 +276,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceManagedInfos.
+         * A list of action policies that users can execute on this managed instance.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -283,7 +290,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
          * *   **init**: The acceleration region is being initialized.
          * *   **active**: The acceleration region is in the running state.
          * *   **updating**: The acceleration region is being configured.
-         * *   **deleting:** The VPN gateway is being deleted.
+         * *   **deleting**: The GA instance is being deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -347,7 +354,15 @@ public class DescribeIpSetResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Action.
+             * Managed policy action name, Valid values:
+             * <p>
+             * 
+             * - Create
+             * - Update
+             * - Delete
+             * - Associate
+             * - UserUnmanaged
+             * - CreateChild
              */
             public Builder action(String action) {
                 this.action = action;
@@ -355,7 +370,18 @@ public class DescribeIpSetResponseBody extends TeaModel {
             }
 
             /**
-             * ChildType.
+             * Sub resource type, Valid values:
+             * <p>
+             * 
+             * - Listener
+             * - IpSet
+             * - EndpointGroup
+             * - ForwardingRule
+             * - Endpoint
+             * - EndpointGroupDestination
+             * - EndpointPolicy
+             * 
+             * >Only valid when the Action parameter is CreateChild.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -363,7 +389,12 @@ public class DescribeIpSetResponseBody extends TeaModel {
             }
 
             /**
-             * IsManaged.
+             * Is the managed policy action managed, Valid values:
+             * <p>
+             * 
+             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

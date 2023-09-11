@@ -170,7 +170,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the bandwidth plan.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of the bandwidth plan.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -423,7 +423,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -449,7 +449,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the bandwidth plans.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

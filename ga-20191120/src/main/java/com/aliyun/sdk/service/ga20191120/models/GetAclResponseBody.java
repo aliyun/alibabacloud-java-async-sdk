@@ -134,10 +134,33 @@ public class GetAclResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * The network ACL entry.
+         * The state of the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **init**: The network ACL is being initialized.
+         * *   **active**: The network ACL is available.
+         * *   **configuring**: The network ACL is being configured.
+         * *   **updating**: The network ACL is being updated.
+         * *   **deleting**: The network ACL is being deleted.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder aclId(String aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+
+        /**
+         * The ID of the GA instance.
+         */
+        public Builder aclName(String aclName) {
+            this.aclName = aclName;
             return this;
         }
 
@@ -148,36 +171,13 @@ public class GetAclResponseBody extends TeaModel {
          * *   **IPv4**
          * *   **IPv6**
          */
-        public Builder aclId(String aclId) {
-            this.aclId = aclId;
-            return this;
-        }
-
-        /**
-         * AclName.
-         */
-        public Builder aclName(String aclName) {
-            this.aclName = aclName;
-            return this;
-        }
-
-        /**
-         * The list of network ACL entries that are returned. A maximum of 20 network ACL entries can be returned.
-         */
         public Builder aclStatus(String aclStatus) {
             this.aclStatus = aclStatus;
             return this;
         }
 
         /**
-         * The state of the network ACL. Valid values:
-         * <p>
-         * 
-         * *   **init**: The network ACL is being initialized.
-         * *   **active**: The network ACL is available.
-         * *   **configuring**: The network ACL is being configured.
-         * *   **updating**: The network ACL is being updated.
-         * *   **deleting**: The network ACL is being deleted.
+         * The ID of the network ACL.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -185,7 +185,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the listener.
+         * The description of the network ACL entry.
          */
         public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
             this.relatedListeners = relatedListeners;
@@ -201,7 +201,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The name of the network ACL.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -209,7 +209,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The ID of the resource group.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -261,7 +261,7 @@ public class GetAclResponseBody extends TeaModel {
             private String entryDescription; 
 
             /**
-             * The description of the network ACL entry.
+             * The list of network ACL entries that are returned. A maximum of 20 network ACL entries can be returned.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -269,7 +269,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The listeners that are associated with the network ACL.
+             * The network ACL entry.
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;
@@ -334,7 +334,11 @@ public class GetAclResponseBody extends TeaModel {
             private String listenerId; 
 
             /**
-             * The name of the network ACL.
+             * The type of the network ACL.
+             * <p>
+             * 
+             * *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the network ACL, the listener does not forward requests.
+             * *   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the network ACL, the listener forwards all requests.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -342,7 +346,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the GA instance.
+             * The ID of the listener.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -350,11 +354,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network ACL.
-             * <p>
-             * 
-             * *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the network ACL, the listener does not forward requests.
-             * *   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the network ACL, the listener forwards all requests.
+             * The listeners that are associated with the network ACL.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -407,7 +407,7 @@ public class GetAclResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tags of the ACL.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +415,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag key
              */
             public Builder value(String value) {
                 this.value = value;

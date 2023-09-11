@@ -137,7 +137,7 @@ public class DetachLogStoreFromEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointGroupIds.
+         * The IDs of endpoint groups.
          */
         public Builder endpointGroupIds(java.util.List < String > endpointGroupIds) {
             this.putQueryParameter("EndpointGroupIds", endpointGroupIds);

@@ -555,6 +555,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeEndpointGroupResponse> describeEndpointGroup(DescribeEndpointGroupRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+      *
+     */
     CompletableFuture<DescribeIpSetResponse> describeIpSet(DescribeIpSetRequest request);
 
     /**
@@ -562,6 +567,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeListenerResponse> describeListener(DescribeListenerRequest request);
+
+    CompletableFuture<DescribeLogStoreOfEndpointGroupResponse> describeLogStoreOfEndpointGroup(DescribeLogStoreOfEndpointGroupRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
@@ -575,6 +582,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachDdosFromAcceleratorResponse> detachDdosFromAccelerator(DetachDdosFromAcceleratorRequest request);
 
     /**
+      * ## Description
       * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
       *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
       *     <!---->
@@ -589,6 +597,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableApplicationMonitorResponse> disableApplicationMonitor(DisableApplicationMonitorRequest request);
 
     /**
+      * ## Description
       * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
       *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -598,6 +607,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DissociateAclsFromListenerResponse> dissociateAclsFromListener(DissociateAclsFromListenerRequest request);
 
     /**
+      * ## Description
       * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
       *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -668,6 +678,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCustomRoutingEndpointGroupDestinationsResponse> listCustomRoutingEndpointGroupDestinations(ListCustomRoutingEndpointGroupDestinationsRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+      *
+     */
     CompletableFuture<ListCustomRoutingEndpointGroupsResponse> listCustomRoutingEndpointGroups(ListCustomRoutingEndpointGroupsRequest request);
 
     CompletableFuture<ListCustomRoutingEndpointTrafficPoliciesResponse> listCustomRoutingEndpointTrafficPolicies(ListCustomRoutingEndpointTrafficPoliciesRequest request);
@@ -686,10 +701,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListEndpointGroupIpAddressCidrBlocksResponse> listEndpointGroupIpAddressCidrBlocks(ListEndpointGroupIpAddressCidrBlocksRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+      *
+     */
     CompletableFuture<ListEndpointGroupsResponse> listEndpointGroups(ListEndpointGroupsRequest request);
 
     /**
-      * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+      * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
       *
      */
     CompletableFuture<ListForwardingRulesResponse> listForwardingRules(ListForwardingRulesRequest request);
@@ -790,6 +810,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateAcceleratorCrossBorderModeResponse> updateAcceleratorCrossBorderMode(UpdateAcceleratorCrossBorderModeRequest request);
 
+    /**
+      * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+      * - **Basic GA instances**:
+      * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+      * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+      * - **Standard GA instances**:
+      * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+      *
+     */
     CompletableFuture<UpdateAcceleratorCrossBorderStatusResponse> updateAcceleratorCrossBorderStatus(UpdateAcceleratorCrossBorderStatusRequest request);
 
     CompletableFuture<UpdateAclAttributeResponse> updateAclAttribute(UpdateAclAttributeRequest request);
@@ -877,6 +906,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCustomRoutingEndpointTrafficPoliciesResponse> updateCustomRoutingEndpointTrafficPolicies(UpdateCustomRoutingEndpointTrafficPoliciesRequest request);
 
     /**
+      * ## Description
       * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
       *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
       *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -900,10 +930,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDomainStateResponse> updateDomainState(UpdateDomainStateRequest request);
 
     /**
+      * ## Description
       * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-      *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-      * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+      * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
       *
      */
     CompletableFuture<UpdateEndpointGroupResponse> updateEndpointGroup(UpdateEndpointGroupRequest request);
@@ -911,10 +942,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEndpointGroupAttributeResponse> updateEndpointGroupAttribute(UpdateEndpointGroupAttributeRequest request);
 
     /**
-      * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-      *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-      * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * ### Description
+      * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+      *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+      * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
      */
     CompletableFuture<UpdateEndpointGroupsResponse> updateEndpointGroups(UpdateEndpointGroupsRequest request);

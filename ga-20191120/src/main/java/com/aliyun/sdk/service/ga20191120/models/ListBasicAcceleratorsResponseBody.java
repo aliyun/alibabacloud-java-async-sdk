@@ -86,7 +86,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The basic GA instances.
+         * The information about basic GA instances.
          */
         public Builder accelerators(java.util.List < Accelerators> accelerators) {
             this.accelerators = accelerators;
@@ -94,7 +94,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -579,7 +579,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the basic bandwidth plan that is associated with the basic GA instance.
+             * Details about the basic bandwidth plan that is associated with the basic GA instance.
              */
             public Builder basicBandwidthPackage(BasicBandwidthPackage basicBandwidthPackage) {
                 this.basicBandwidthPackage = basicBandwidthPackage;
@@ -587,7 +587,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the endpoint group.
+             * The ID of the endpoint group that is associated with the basic GA instance.
              */
             public Builder basicEndpointGroupId(String basicEndpointGroupId) {
                 this.basicEndpointGroupId = basicEndpointGroupId;
@@ -595,7 +595,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the acceleration region.
+             * The ID of the acceleration region where the basic GA instance is deployed.
              */
             public Builder basicIpSetId(String basicIpSetId) {
                 this.basicIpSetId = basicIpSetId;
@@ -614,7 +614,11 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossBorderStatus.
+             * Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder crossBorderStatus(Boolean crossBorderStatus) {
                 this.crossBorderStatus = crossBorderStatus;
@@ -622,10 +626,10 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
+             * Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
              * <p>
              * 
-             * This array is returned only for GA instances that are created on the international site (alibabacloud.com).
+             * This parameter is returned only when you call this operation on the International site (alibabacloud.com).
              */
             public Builder crossDomainBandwidthPackage(CrossDomainBandwidthPackage crossDomainBandwidthPackage) {
                 this.crossDomainBandwidthPackage = crossDomainBandwidthPackage;
@@ -684,16 +688,16 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the basic GA instance.
+             * The state of the basic GA instance.
              * <p>
              * 
-             * *   **init**: The GA instance is being initialized.
-             * *   **active**: The GA instance is available.
-             * *   **configuring**: The GA instance is being configured.
-             * *   **binding**: The GA instance is being associated.
+             * *   **init**: The basic GA instance is being initialized.
+             * *   **active**: The basic GA instance is available.
+             * *   **configuring**: The basic GA instance is being configured.
+             * *   **binding**: The basic GA instance is being associated.
              * *   **unbinding**: The GA instance is being disassociated.
-             * *   **deleting**: The GA instance is being deleted.
-             * *   **finacialLocked**: The GA instance is locked due to overdue payments.
+             * *   **deleting**: The basic GA instance is being deleted.
+             * *   **finacialLocked**: The basic GA instance is locked due to overdue payments.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -709,7 +713,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter.
+             * This parameter is invalid.
              */
             public Builder type(String type) {
                 this.type = type;
