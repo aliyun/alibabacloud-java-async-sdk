@@ -128,10 +128,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -143,7 +143,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.
          * <p>
          * 
-         * >  The end time must be later than the start time. The interval cannot be more than seven days.
+         * > The end time must be later than the start time. The maximum time range that can be specified is seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -164,10 +164,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * The node type. Valid values:
          * <p>
          * 
-         * *   **master**: coordinator node
-         * *   **segment**: compute node
+         * *   **master**: coordinator node.
+         * *   **segment**: compute node.
          * 
-         * >  If you do not specify this parameter, the performance metrics of all nodes are returned.
+         * > If you do not specify this parameter, the performance metrics of all nodes are returned.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -179,12 +179,12 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: `master-10******1,master-10******2`. You can call the [DescribeDBClusterNode](~~390136~~) operation to query the names of nodes.
          * <p>
          * 
-         * The nodes can also be filtered based on their metric values. Valid values:
+         * You can also filter the nodes based on their metric values. Valid values:
          * 
-         * *   **top10**: the 10 nodes that have the highest metric values
-         * *   **top20**: the 20 nodes that have the highest metric values
-         * *   **bottom10**: the 10 nodes that have the lowest metric values
-         * *   **bottom20**: the 20 nodes that have the lowest metric values
+         * *   **top10**: the 10 nodes that have the highest metric values.
+         * *   **top20**: the 20 nodes that have the highest metric values.
+         * *   **bottom10**: the 10 nodes that have the lowest metric values.
+         * *   **bottom20**: the 20 nodes that have the lowest metric values.
          */
         public Builder nodes(String nodes) {
             this.putQueryParameter("Nodes", nodes);
@@ -196,7 +196,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.
          * <p>
          * 
-         * >  You can query monitoring information only within the last 30 days.
+         * > You can query monitoring information only within the last 30 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

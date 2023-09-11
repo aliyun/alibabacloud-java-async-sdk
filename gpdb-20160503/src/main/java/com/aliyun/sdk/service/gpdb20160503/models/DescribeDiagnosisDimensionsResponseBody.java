@@ -62,7 +62,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         private java.util.List < String > userNames; 
 
         /**
-         * The name of the database.
+         * The names of the databases.
          */
         public Builder databases(java.util.List < String > databases) {
             this.databases = databases;
@@ -70,7 +70,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database account.
+         * The names of the database accounts.
          */
         public Builder userNames(java.util.List < String > userNames) {
             this.userNames = userNames;

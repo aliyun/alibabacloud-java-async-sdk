@@ -62,7 +62,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -70,7 +70,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the available resources.
+         * The zone ID.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;

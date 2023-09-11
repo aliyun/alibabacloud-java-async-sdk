@@ -110,7 +110,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -118,7 +118,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +126,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -134,7 +134,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceInfo.
+         * The queried namespace.
          */
         public Builder namespaceInfo(java.util.Map < String, String > namespaceInfo) {
             this.namespaceInfo = namespaceInfo;
@@ -142,7 +142,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -150,7 +150,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

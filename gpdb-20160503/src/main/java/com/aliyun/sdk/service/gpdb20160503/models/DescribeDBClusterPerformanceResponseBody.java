@@ -86,7 +86,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -102,7 +102,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the performance metrics of the instance.
+         * The name of the performance metric. For more information, see [Performance parameters](~~86943~~).
          */
         public Builder performanceKeys(java.util.List < PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -110,7 +110,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

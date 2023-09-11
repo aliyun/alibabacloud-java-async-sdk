@@ -269,7 +269,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -278,7 +281,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * Database.
+         * The name of the database.
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -287,7 +290,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -296,7 +299,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * ExecuteCost.
+         * The execution duration of the SQL statement. Unit: seconds.
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -305,7 +308,11 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * ExecuteState.
+         * The execution state of the SQL statement.
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);
@@ -314,7 +321,13 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the file that contains the query diagnostic information. Valid values:
+         * <p>
+         * 
+         * *   **zh**: simplified Chinese.
+         * *   **en**: English.
+         * *   **ja**: Japanese.
+         * *   **zh-tw**: traditional Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -323,7 +336,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * MaxExecuteCost.
+         * The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
          */
         public Builder maxExecuteCost(String maxExecuteCost) {
             this.putQueryParameter("MaxExecuteCost", maxExecuteCost);
@@ -332,7 +345,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * MinExecuteCost.
+         * The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
          */
         public Builder minExecuteCost(String minExecuteCost) {
             this.putQueryParameter("MinExecuteCost", minExecuteCost);
@@ -341,7 +354,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * OperationClass.
+         * The type of the query language. Example: DQL, DML, or DDL.
          */
         public Builder operationClass(String operationClass) {
             this.putQueryParameter("OperationClass", operationClass);
@@ -350,7 +363,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * The type of the SQL statement. Example: SELECT.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -359,7 +372,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -368,7 +381,14 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -377,7 +397,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * QueryKeywords.
+         * The keywords that are used for query.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -386,7 +406,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * SourceIP.
+         * The source IP address.
          */
         public Builder sourceIP(String sourceIP) {
             this.putQueryParameter("SourceIP", sourceIP);
@@ -395,7 +415,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -404,7 +424,7 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * User.
+         * The name of the database account.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

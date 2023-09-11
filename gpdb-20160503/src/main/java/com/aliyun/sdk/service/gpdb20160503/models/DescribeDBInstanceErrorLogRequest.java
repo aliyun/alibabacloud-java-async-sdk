@@ -181,10 +181,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -202,7 +202,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -220,7 +220,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * One or more keywords that can be used to query error logs.
+         * One or more keywords that are used to query error logs.
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -233,9 +233,9 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
          * <p>
          * 
          * *   **ALL**: queries all error logs.
-         * *   **PANIC**: queries only abnormal-level logs.
-         * *   **FATAL**: queries only critical-level logs.
-         * *   **ERROR**: queries only error-level logs.
+         * *   **PANIC**: queries only abnormal logs.
+         * *   **FATAL**: queries only critical logs.
+         * *   **ERROR**: queries only error logs.
          */
         public Builder logLevel(String logLevel) {
             this.putQueryParameter("LogLevel", logLevel);
@@ -244,7 +244,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,7 +253,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **20**
@@ -269,7 +269,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -278,7 +278,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * The username.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

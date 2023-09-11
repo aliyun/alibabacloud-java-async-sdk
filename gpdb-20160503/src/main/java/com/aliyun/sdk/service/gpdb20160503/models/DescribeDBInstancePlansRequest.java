@@ -139,10 +139,10 @@ public class DescribeDBInstancePlansRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -178,10 +178,10 @@ public class DescribeDBInstancePlansRequest extends Request {
         }
 
         /**
-         * The ID of the plan.
+         * The plan ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the details of plans, including plan IDs.
+         * > You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the information about plans, including plan IDs.
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);

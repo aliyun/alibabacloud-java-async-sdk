@@ -69,10 +69,10 @@ public class DescribeDBClusterNodeRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -84,10 +84,10 @@ public class DescribeDBClusterNodeRequest extends Request {
          * The node type. Valid values:
          * <p>
          * 
-         * *   **master**: coordinator node
-         * *   **segment**: compute node
+         * *   **master**: coordinator node.
+         * *   **segment**: compute node.
          * 
-         * >  If you do not specify this parameter, the information of all nodes is returned.
+         * > If you do not specify this parameter, the information about all nodes is returned.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);

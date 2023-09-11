@@ -50,7 +50,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Records.
+         * The URL that is used to download the file.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

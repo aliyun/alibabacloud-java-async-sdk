@@ -78,7 +78,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information of performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by **Key**. For example, if you set **Key** to **adbpg_status**, only the metric information of **adbpg_status** is returned.
+         * The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by **Key**. For example, if you set **Key** to **adbpg_status**, only the metric information of **adbpg_status** is returned.
          * <p>
          * 
          * For more information about performance parameters, see [Performance parameters](~~86943~~).

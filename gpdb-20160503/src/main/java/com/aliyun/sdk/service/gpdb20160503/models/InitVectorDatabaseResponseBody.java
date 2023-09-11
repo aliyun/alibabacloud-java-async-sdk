@@ -62,7 +62,7 @@ public class InitVectorDatabaseResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Message.
+         * The error message returned if the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -70,7 +70,7 @@ public class InitVectorDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class InitVectorDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **Success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

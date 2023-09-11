@@ -158,7 +158,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -166,7 +166,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Dimension.
+         * The number of vector dimensions.
          */
         public Builder dimension(Integer dimension) {
             this.dimension = dimension;
@@ -174,7 +174,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * FullTextRetrievalFields.
+         * The fields that are used for full-text search. Multiple fields are separated by commas (,).
          */
         public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
             this.fullTextRetrievalFields = fullTextRetrievalFields;
@@ -182,7 +182,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +190,12 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.
+         * <p>
+         * 
+         * **
+         * 
+         * **Warning** Reserved fields such as id, vector, and to_tsvector cannot be used.
          */
         public Builder metadata(java.util.Map < String, String > metadata) {
             this.metadata = metadata;
@@ -198,7 +203,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Distance Metrics。
+         * The distance metrics.
          */
         public Builder metrics(String metrics) {
             this.metrics = metrics;
@@ -206,7 +211,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -214,7 +219,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Parser.
+         * The analyzer that is used for full-text search.
          */
         public Builder parser(String parser) {
             this.parser = parser;
@@ -222,7 +227,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -230,7 +235,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +243,11 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

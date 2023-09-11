@@ -74,7 +74,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of SQL queries.
+         * The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -82,7 +82,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +90,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

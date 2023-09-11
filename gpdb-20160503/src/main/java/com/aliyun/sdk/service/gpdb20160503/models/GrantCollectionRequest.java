@@ -172,7 +172,7 @@ public class GrantCollectionRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the collection.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -181,7 +181,10 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance in reserved storage mode.
+         * <p>
+         * 
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -190,7 +193,7 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * GrantToNamespace.
+         * The name of the namespace to which you want to grant the vector collection permissions.
          */
         public Builder grantToNamespace(String grantToNamespace) {
             this.putQueryParameter("GrantToNamespace", grantToNamespace);
@@ -199,7 +202,12 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * GrantType.
+         * The type of the permissions that you want to grant. Valid values:
+         * <p>
+         * 
+         * *   rw: the read and write permissions.
+         * *   ro: the read-only permission.
+         * *   none: the delete permission.
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("GrantType", grantType);
@@ -208,7 +216,7 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * ManagerAccount.
+         * The name of the manager account that has the rds_superuser permission.
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -217,7 +225,7 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * ManagerAccountPassword.
+         * The password of the manager account.
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -226,7 +234,7 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -244,7 +252,10 @@ public class GrantCollectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

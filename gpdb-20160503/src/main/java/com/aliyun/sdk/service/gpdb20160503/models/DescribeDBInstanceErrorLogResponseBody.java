@@ -74,7 +74,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the error logs.
+         * The content of the error log.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -82,7 +82,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +90,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

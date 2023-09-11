@@ -70,7 +70,7 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the lock-waiting query.
+         * The queried lock-waiting query.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;

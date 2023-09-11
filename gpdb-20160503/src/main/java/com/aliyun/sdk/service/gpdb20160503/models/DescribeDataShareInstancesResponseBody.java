@@ -86,7 +86,13 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Details of the instances.
+         * The state of data sharing. Valid values:
+         * <p>
+         * 
+         * *   **opening**
+         * *   **opened**
+         * *   **closing**
+         * *   **closed**
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +100,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +108,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +116,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

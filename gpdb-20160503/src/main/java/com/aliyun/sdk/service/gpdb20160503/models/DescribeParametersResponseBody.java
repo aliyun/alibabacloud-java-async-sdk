@@ -50,7 +50,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the parameters.
+         * The queried configuration parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -170,7 +170,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The current value of the parameter.
+             * The current value of the configuration parameter.
              */
             public Builder currentValue(String currentValue) {
                 this.currentValue = currentValue;
@@ -190,7 +190,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter can be modified. Valid values:
+             * Indicates whether the configuration parameter can be modified. Valid values:
              * <p>
              * 
              * *   **true**
@@ -202,7 +202,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The valid values of the parameter.
+             * The valid values of the configuration parameter.
              */
             public Builder optionalRange(String optionalRange) {
                 this.optionalRange = optionalRange;
@@ -210,7 +210,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * The description of the configuration parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -218,7 +218,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * The name of the configuration parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -226,7 +226,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * The default value of the configuration parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

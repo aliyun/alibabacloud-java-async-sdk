@@ -122,7 +122,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Collections.
+         * The queried vector collections.
          */
         public Builder collections(Collections collections) {
             this.collections = collections;
@@ -130,7 +130,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The total number of entries returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -138,7 +138,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -146,7 +146,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +154,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -162,7 +162,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -170,7 +170,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,11 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

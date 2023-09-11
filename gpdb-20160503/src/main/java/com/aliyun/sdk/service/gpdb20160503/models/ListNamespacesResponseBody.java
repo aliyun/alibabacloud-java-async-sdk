@@ -110,7 +110,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Count.
+         * The total number of entries returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -118,7 +118,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -126,7 +126,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +134,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Namespaces.
+         * The queried namespaces.
          */
         public Builder namespaces(Namespaces namespaces) {
             this.namespaces = namespaces;
@@ -142,7 +142,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -150,7 +150,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

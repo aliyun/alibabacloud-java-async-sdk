@@ -31,6 +31,14 @@ public class QueryCollectionDataRequest extends Request {
     private String filter;
 
     @Query
+    @NameInMap("IncludeValues")
+    private Boolean includeValues;
+
+    @Query
+    @NameInMap("Metrics")
+    private String metrics;
+
+    @Query
     @NameInMap("Namespace")
     private String namespace;
 
@@ -62,6 +70,8 @@ public class QueryCollectionDataRequest extends Request {
         this.content = builder.content;
         this.DBInstanceId = builder.DBInstanceId;
         this.filter = builder.filter;
+        this.includeValues = builder.includeValues;
+        this.metrics = builder.metrics;
         this.namespace = builder.namespace;
         this.namespacePassword = builder.namespacePassword;
         this.ownerId = builder.ownerId;
@@ -112,6 +122,20 @@ public class QueryCollectionDataRequest extends Request {
     }
 
     /**
+     * @return includeValues
+     */
+    public Boolean getIncludeValues() {
+        return this.includeValues;
+    }
+
+    /**
+     * @return metrics
+     */
+    public String getMetrics() {
+        return this.metrics;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -158,6 +182,8 @@ public class QueryCollectionDataRequest extends Request {
         private String content; 
         private String DBInstanceId; 
         private String filter; 
+        private Boolean includeValues; 
+        private String metrics; 
         private String namespace; 
         private String namespacePassword; 
         private Long ownerId; 
@@ -175,6 +201,8 @@ public class QueryCollectionDataRequest extends Request {
             this.content = request.content;
             this.DBInstanceId = request.DBInstanceId;
             this.filter = request.filter;
+            this.includeValues = request.includeValues;
+            this.metrics = request.metrics;
             this.namespace = request.namespace;
             this.namespacePassword = request.namespacePassword;
             this.ownerId = request.ownerId;
@@ -216,6 +244,24 @@ public class QueryCollectionDataRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * IncludeValues.
+         */
+        public Builder includeValues(Boolean includeValues) {
+            this.putQueryParameter("IncludeValues", includeValues);
+            this.includeValues = includeValues;
+            return this;
+        }
+
+        /**
+         * Metrics.
+         */
+        public Builder metrics(String metrics) {
+            this.putQueryParameter("Metrics", metrics);
+            this.metrics = metrics;
             return this;
         }
 

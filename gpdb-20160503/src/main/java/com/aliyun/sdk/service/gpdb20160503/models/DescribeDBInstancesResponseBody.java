@@ -86,7 +86,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Details of the instance.
+         * The type of the Serverless mode. Valid values:
+         * <p>
+         * 
+         * *   **Manual**: manual scheduling.
+         * *   **Auto**: automatic scheduling.
+         * 
+         * > This parameter is returned only for instances in Serverless mode.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +100,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +108,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +116,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

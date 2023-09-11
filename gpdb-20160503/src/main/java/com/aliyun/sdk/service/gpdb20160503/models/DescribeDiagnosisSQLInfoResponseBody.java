@@ -206,7 +206,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the query.
+         * The query ID.
          */
         public Builder queryID(String queryID) {
             this.queryID = queryID;
@@ -214,7 +214,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the operator.
+         * The information about the operator.
          */
         public Builder queryPlan(String queryPlan) {
             this.queryPlan = queryPlan;
@@ -222,7 +222,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +254,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -265,8 +265,8 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
          * The execution state of the query. Valid values:
          * <p>
          * 
-         * *   **running**: The query is being executed.
-         * *   **finished**: The query execution is complete.
+         * *   **running**
+         * *   **finished**
          */
         public Builder status(String status) {
             this.status = status;
@@ -274,7 +274,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the execution plan.
+         * The information about the execution plan.
          */
         public Builder textPlan(String textPlan) {
             this.textPlan = textPlan;
@@ -282,7 +282,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database account.
+         * The username.
          */
         public Builder user(String user) {
             this.user = user;

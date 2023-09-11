@@ -24,6 +24,9 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalBackupSize")
+    private Long totalBackupSize;
+
     @NameInMap("TotalCount")
     private Integer totalCount;
 
@@ -32,6 +35,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalBackupSize = builder.totalBackupSize;
         this.totalCount = builder.totalCount;
     }
 
@@ -72,6 +76,13 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalBackupSize
+     */
+    public Long getTotalBackupSize() {
+        return this.totalBackupSize;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -83,10 +94,11 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
+        private Long totalBackupSize; 
         private Integer totalCount; 
 
         /**
-         * Details about the backup sets.
+         * The instance ID.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +106,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +114,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of backup sets on the page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +122,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +130,15 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total backup set size. Unit: Byte.
+         */
+        public Builder totalBackupSize(Long totalBackupSize) {
+            this.totalBackupSize = totalBackupSize;
+            return this;
+        }
+
+        /**
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,6 +157,9 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
 
         @NameInMap("BackupEndTimeLocal")
         private String backupEndTimeLocal;
+
+        @NameInMap("BackupMethod")
+        private String backupMethod;
 
         @NameInMap("BackupMode")
         private String backupMode;
@@ -171,6 +194,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.backupEndTime = builder.backupEndTime;
             this.backupEndTimeLocal = builder.backupEndTimeLocal;
+            this.backupMethod = builder.backupMethod;
             this.backupMode = builder.backupMode;
             this.backupSetId = builder.backupSetId;
             this.backupSize = builder.backupSize;
@@ -203,6 +227,13 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
          */
         public String getBackupEndTimeLocal() {
             return this.backupEndTimeLocal;
+        }
+
+        /**
+         * @return backupMethod
+         */
+        public String getBackupMethod() {
+            return this.backupMethod;
         }
 
         /**
@@ -278,6 +309,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         public static final class Builder {
             private String backupEndTime; 
             private String backupEndTimeLocal; 
+            private String backupMethod; 
             private String backupMode; 
             private String backupSetId; 
             private Long backupSize; 
@@ -302,6 +334,19 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
              */
             public Builder backupEndTimeLocal(String backupEndTimeLocal) {
                 this.backupEndTimeLocal = backupEndTimeLocal;
+                return this;
+            }
+
+            /**
+             * The method that is used to generate the backup set. Valid values:
+             * <p>
+             * 
+             * *   **Logical**: logical backup
+             * *   **Physical**: physical backup
+             * *   **Snapshot**: snapshot backup
+             */
+            public Builder backupMethod(String backupMethod) {
+                this.backupMethod = backupMethod;
                 return this;
             }
 

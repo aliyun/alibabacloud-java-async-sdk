@@ -83,7 +83,10 @@ public class DescribeModifyParameterLogRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +95,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -101,7 +104,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

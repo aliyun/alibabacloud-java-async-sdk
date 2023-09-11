@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBInstanceRequest extends Request {
     @Query
+    @NameInMap("BackupId")
+    private String backupId;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -71,6 +75,10 @@ public class CreateDBInstanceRequest extends Request {
     private String instanceSpec;
 
     @Query
+    @NameInMap("MasterCU")
+    private Integer masterCU;
+
+    @Query
     @NameInMap("MasterNodeNum")
     private String masterNodeNum;
 
@@ -125,6 +133,10 @@ public class CreateDBInstanceRequest extends Request {
     private Integer serverlessResource;
 
     @Query
+    @NameInMap("SrcDbInstanceName")
+    private String srcDbInstanceName;
+
+    @Query
     @NameInMap("StorageSize")
     private Long storageSize;
 
@@ -159,6 +171,7 @@ public class CreateDBInstanceRequest extends Request {
 
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
+        this.backupId = builder.backupId;
         this.clientToken = builder.clientToken;
         this.createSampleData = builder.createSampleData;
         this.DBInstanceCategory = builder.DBInstanceCategory;
@@ -173,6 +186,7 @@ public class CreateDBInstanceRequest extends Request {
         this.idleTime = builder.idleTime;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.instanceSpec = builder.instanceSpec;
+        this.masterCU = builder.masterCU;
         this.masterNodeNum = builder.masterNodeNum;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
@@ -186,6 +200,7 @@ public class CreateDBInstanceRequest extends Request {
         this.segStorageType = builder.segStorageType;
         this.serverlessMode = builder.serverlessMode;
         this.serverlessResource = builder.serverlessResource;
+        this.srcDbInstanceName = builder.srcDbInstanceName;
         this.storageSize = builder.storageSize;
         this.storageType = builder.storageType;
         this.tag = builder.tag;
@@ -207,6 +222,13 @@ public class CreateDBInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
     }
 
     /**
@@ -308,6 +330,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return masterCU
+     */
+    public Integer getMasterCU() {
+        return this.masterCU;
+    }
+
+    /**
      * @return masterNodeNum
      */
     public String getMasterNodeNum() {
@@ -399,6 +428,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return srcDbInstanceName
+     */
+    public String getSrcDbInstanceName() {
+        return this.srcDbInstanceName;
+    }
+
+    /**
      * @return storageSize
      */
     public Long getStorageSize() {
@@ -455,6 +491,7 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
+        private String backupId; 
         private String clientToken; 
         private Boolean createSampleData; 
         private String DBInstanceCategory; 
@@ -469,6 +506,7 @@ public class CreateDBInstanceRequest extends Request {
         private Integer idleTime; 
         private String instanceNetworkType; 
         private String instanceSpec; 
+        private Integer masterCU; 
         private String masterNodeNum; 
         private Long ownerId; 
         private String payType; 
@@ -482,6 +520,7 @@ public class CreateDBInstanceRequest extends Request {
         private String segStorageType; 
         private String serverlessMode; 
         private Integer serverlessResource; 
+        private String srcDbInstanceName; 
         private Long storageSize; 
         private String storageType; 
         private java.util.List < Tag> tag; 
@@ -497,6 +536,7 @@ public class CreateDBInstanceRequest extends Request {
 
         private Builder(CreateDBInstanceRequest request) {
             super(request);
+            this.backupId = request.backupId;
             this.clientToken = request.clientToken;
             this.createSampleData = request.createSampleData;
             this.DBInstanceCategory = request.DBInstanceCategory;
@@ -511,6 +551,7 @@ public class CreateDBInstanceRequest extends Request {
             this.idleTime = request.idleTime;
             this.instanceNetworkType = request.instanceNetworkType;
             this.instanceSpec = request.instanceSpec;
+            this.masterCU = request.masterCU;
             this.masterNodeNum = request.masterNodeNum;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
@@ -524,6 +565,7 @@ public class CreateDBInstanceRequest extends Request {
             this.segStorageType = request.segStorageType;
             this.serverlessMode = request.serverlessMode;
             this.serverlessResource = request.serverlessResource;
+            this.srcDbInstanceName = request.srcDbInstanceName;
             this.storageSize = request.storageSize;
             this.storageType = request.storageType;
             this.tag = request.tag;
@@ -533,6 +575,15 @@ public class CreateDBInstanceRequest extends Request {
             this.vectorConfigurationStatus = request.vectorConfigurationStatus;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * BackupId.
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
+            return this;
+        }
 
         /**
          * The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](~~327176~~).
@@ -728,6 +779,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * MasterCU.
+         */
+        public Builder masterCU(Integer masterCU) {
+            this.putQueryParameter("MasterCU", masterCU);
+            this.masterCU = masterCU;
+            return this;
+        }
+
+        /**
          * The number of coordinator nodes. Valid values: 1 and 2.
          * <p>
          * 
@@ -752,11 +812,14 @@ public class CreateDBInstanceRequest extends Request {
          * The billing method of the instance. Valid values:
          * <p>
          * 
-         * - **Postpaid**: pay-as-you-go.
-         * - **Prepaid**: subscription.
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
+         * 
          * > 
-         * - If you do not specify this parameter, Postpaid is used.
-         * - You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.
+         * 
+         * *   If you do not specify this parameter, Postpaid is used.
+         * 
+         * *   You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -821,12 +884,15 @@ public class CreateDBInstanceRequest extends Request {
          * The performance level of ESSDs. Valid values:
          * <p>
          * 
-         * - **pl0**
-         * - **pl1**
-         * - **pl2**
+         * *   **pl0**
+         * *   **pl1**
+         * *   **pl2**
+         * 
          * > 
-         * - This parameter takes effect only when SegStorageType is set to cloud_essd.
-         * - If you do not specify this parameter, pl1 is used.
+         * 
+         * *   This parameter takes effect only when SegStorageType is set to cloud_essd.
+         * 
+         * *   If you do not specify this parameter, pl1 is used.
          */
         public Builder segDiskPerformanceLevel(String segDiskPerformanceLevel) {
             this.putQueryParameter("SegDiskPerformanceLevel", segDiskPerformanceLevel);
@@ -886,6 +952,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder serverlessResource(Integer serverlessResource) {
             this.putQueryParameter("ServerlessResource", serverlessResource);
             this.serverlessResource = serverlessResource;
+            return this;
+        }
+
+        /**
+         * SrcDbInstanceName.
+         */
+        public Builder srcDbInstanceName(String srcDbInstanceName) {
+            this.putQueryParameter("SrcDbInstanceName", srcDbInstanceName);
+            this.srcDbInstanceName = srcDbInstanceName;
             return this;
         }
 

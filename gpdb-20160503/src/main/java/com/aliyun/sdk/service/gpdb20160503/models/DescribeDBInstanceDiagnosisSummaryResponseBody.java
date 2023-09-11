@@ -98,7 +98,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Details of instance nodes.
+         * The group ID.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -106,7 +106,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * State statistics of the coordinator node.
+         * The state information about the coordinator node.
          */
         public Builder masterStatusInfo(MasterStatusInfo masterStatusInfo) {
             this.masterStatusInfo = masterStatusInfo;
@@ -114,7 +114,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * State statistics of compute nodes.
+         * The state information about compute nodes.
          */
         public Builder segmentStatusInfo(SegmentStatusInfo segmentStatusInfo) {
             this.segmentStatusInfo = segmentStatusInfo;

@@ -223,12 +223,7 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * The edition of the instance. Separate multiple values with commas (,). Valid values:
-         * <p>
-         * 
-         * *   **basic**: Basic Edition
-         * *   **highavailability**: High-availability Edition
-         * *   **finance**: Enterprise Edition
+         * The edition of the instance. Separate multiple values with commas (,).
          */
         public Builder DBInstanceCategories(java.util.List < String > DBInstanceCategories) {
             String DBInstanceCategoriesShrink = shrink(DBInstanceCategories, "DBInstanceCategories", "simple");
@@ -247,7 +242,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. Separate multiple IDs with commas (,).
+         * The instance ID. Separate multiple values with commas (,).
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -256,12 +251,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The resource type of the instance. Separate multiple values with commas (,). Valid values:
-         * <p>
-         * 
-         * *   **serverless**: Serverless mode
-         * *   **storageelastic**: elastic storage mode
-         * *   **classic**: reserved storage mode
+         * The resource type of the instance. Separate multiple values with commas (,).
          */
         public Builder DBInstanceModes(java.util.List < String > DBInstanceModes) {
             String DBInstanceModesShrink = shrink(DBInstanceModes, "DBInstanceModes", "simple");
@@ -271,10 +261,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The state of the instance. Separate multiple values with commas (,). For more information, see [Instance statuses](~~86944~~).
-         * <p>
-         * 
-         * >  The value of this parameter must be in lowercase.
+         * The state of the instance.
          */
         public Builder DBInstanceStatuses(java.util.List < String > DBInstanceStatuses) {
             String DBInstanceStatusesShrink = shrink(DBInstanceStatuses, "DBInstanceStatuses", "simple");
@@ -297,10 +284,10 @@ public class DescribeDBInstancesRequest extends Request {
          * The network type of the instance. Valid values:
          * <p>
          * 
-         * *   **VPC**
-         * *   **Classic**
+         * *   **VPC**: virtual private cloud (VPC).
+         * *   **Classic**: classic network.
          * 
-         * >  If you do not specify this parameter, instances of both network types are returned.
+         * > If you do not specify this parameter, instances of all network types are returned.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -318,7 +305,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,7 +314,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **30**
@@ -343,10 +330,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * The region ID.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -364,7 +351,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tag value.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

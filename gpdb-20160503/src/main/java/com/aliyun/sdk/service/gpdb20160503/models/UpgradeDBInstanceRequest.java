@@ -258,7 +258,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -270,7 +270,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * The specifications of each compute node. For information about the supported specifications, see [Instance specifications](~~35406~~).
          * <p>
          * 
-         * >  This parameter is available only for instances in elastic storage mode.
+         * > This parameter is available only for instances in elastic storage mode.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -282,7 +282,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * The number of coordinator nodes. Valid values: 1 and 2.
          * <p>
          * 
-         * >  This parameter is available only on the China site (aliyun.com).
+         * > This parameter is available only for China site (aliyun.com).
          */
         public Builder masterNodeNum(String masterNodeNum) {
             this.putQueryParameter("MasterNodeNum", masterNodeNum);
@@ -312,7 +312,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * The region ID of the instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -321,7 +321,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -347,9 +347,9 @@ public class UpgradeDBInstanceRequest extends Request {
          * The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.
          * <p>
          * 
-         * *   Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments
-         * *   Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments
-         * *   Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments
+         * *   Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments.
+         * *   Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments.
+         * *   Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments.
          */
         public Builder segNodeNum(String segNodeNum) {
             this.putQueryParameter("SegNodeNum", segNodeNum);
@@ -370,7 +370,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.
          * <p>
          * 
-         * >  This parameter is available only for instances in elastic storage mode.
+         * > This parameter is available only for instances in elastic storage mode.
          */
         public Builder storageSize(String storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -387,10 +387,13 @@ public class UpgradeDBInstanceRequest extends Request {
          * *   **2**: changes the number of coordinator nodes.
          * *   **3**: changes the disk storage type and ESSD performance level of the instance.
          * 
-         * > *   The supported changes to compute node configurations vary based on the instance resource type. For more information, see the "[Precautions](~~50956~~)" section of the Change compute node configurations topic.
-         * > *   After you specify a change type, only the corresponding parameters take effect. For example, if you set **UpgradeType** to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.
-         * > *   The number of coordinator nodes can be changed only on the China site (aliyun.com).
-         * > *   The disk storage type can be changed only from ultra disks to ESSDs.
+         * > 
+         * 
+         * *   The supported changes to compute node configurations vary based on the instance resource type. For more information, see the "[Usage notes](~~50956~~)" section of the Change compute node configurations topic.
+         * 
+         * *   After you specify a change type, only the corresponding parameters take effect. For example, if you set **UpgradeType** to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.
+         * *   The number of coordinator nodes can be changed only on the China site (aliyun.com).
+         * *   The disk storage type can be changed only from ultra disks to ESSDs.
          */
         public Builder upgradeType(Long upgradeType) {
             this.putQueryParameter("UpgradeType", upgradeType);

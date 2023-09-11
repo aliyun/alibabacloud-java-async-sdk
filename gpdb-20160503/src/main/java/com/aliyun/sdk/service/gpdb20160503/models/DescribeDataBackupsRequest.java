@@ -171,7 +171,10 @@ public class DescribeDataBackupsRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set. If you specify the BackupId parameter, the details of the backup set are returned.
+         * The ID of the backup set. If you specify BackupId, the details of the backup set are returned.
+         * <p>
+         * 
+         * > You can call the [DescribeDataBackups](~~210093~~) operation to query the information about all backup sets of an instance, including backup set IDs.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -183,10 +186,10 @@ public class DescribeDataBackupsRequest extends Request {
          * The backup mode. Valid values:
          * <p>
          * 
-         * *   Automated: automatic backup
-         * *   Manual: manual backup
+         * *   Automated
+         * *   Manual
          * 
-         * If you do not specify this parameter, the records of the backup sets in all modes are returned.
+         * If you do not specify this parameter, all backup sets are returned.
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -195,13 +198,13 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * The status of the backup set. Valid values:
+         * The state of the backup set. Valid values:
          * <p>
          * 
-         * *   Success: The backup is complete.
-         * *   Failed: The backup task fails.
+         * *   Success
+         * *   Failed
          * 
-         * If you do not specify this parameter, the records of the backup sets in all states are returned.
+         * If you do not specify this parameter, all backup sets are returned.
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -210,7 +213,10 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -219,13 +225,13 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * The type of the backup. Valid values:
+         * The backup type. Valid values:
          * <p>
          * 
-         * *   DATA: full backup
-         * *   RESTOREPOI: point-in-time backup
+         * *   **DATA**: full backup.
+         * *   **RESTOREPOI**: point-in-time recovery backup.
          * 
-         * If you do not specify this parameter, the records of the full backup set are returned.
+         * If you do not specify this parameter, the backup sets of full backup are returned.
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -243,7 +249,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is larger than 0. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -252,7 +258,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   30

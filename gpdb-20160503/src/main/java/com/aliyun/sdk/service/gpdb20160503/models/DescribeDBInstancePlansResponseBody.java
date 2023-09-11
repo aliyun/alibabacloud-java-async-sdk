@@ -110,10 +110,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The error message returned.
+         * The error message.
          * <p>
          * 
-         * This parameter is returned only when the operation fails.
+         * This parameter is returned only if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the plans.
+         * The instance ID.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -129,7 +129,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -137,7 +137,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -145,7 +145,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,10 +153,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the operation.
+         * Indicates whether the request was successful.
          * <p>
          * 
-         * If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.
+         * If the request was successful, **success** is returned. If the request failed, this parameter is not returned.
          */
         public Builder status(String status) {
             this.status = status;
@@ -164,7 +164,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;

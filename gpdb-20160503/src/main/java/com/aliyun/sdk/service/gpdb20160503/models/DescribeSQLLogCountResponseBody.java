@@ -86,7 +86,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -102,7 +102,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the audit logs of the instance.
+         * The name of the instance.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -110,7 +110,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

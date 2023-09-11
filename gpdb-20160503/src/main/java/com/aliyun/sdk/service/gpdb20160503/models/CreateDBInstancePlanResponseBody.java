@@ -86,7 +86,7 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -97,7 +97,7 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
          * The error message.
          * <p>
          * 
-         * This parameter is returned only if the operation fails.
+         * This parameter is returned only if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -105,7 +105,7 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the plan.
+         * The plan ID.
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -113,7 +113,7 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,10 +121,10 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the operation.
+         * Indicates whether the request was successful.
          * <p>
          * 
-         * If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.
+         * If the request was successful, **success** is returned. If the request failed, this parameter is not returned.
          */
         public Builder status(String status) {
             this.status = status;

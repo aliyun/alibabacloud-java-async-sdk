@@ -85,10 +85,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -106,10 +106,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * The ID of the query. It is a unique identifier of the query.
+         * The query ID. It is a unique identifier of the query.
          * <p>
          * 
-         * >  You can call the [DescribeDiagnosisRecords](~~450511~~) operation to query the query ID.
+         * > You can call the [DescribeDiagnosisRecords](~~450511~~) operation to obtain query IDs.
          */
         public Builder queryID(String queryID) {
             this.putQueryParameter("QueryID", queryID);

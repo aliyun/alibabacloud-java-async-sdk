@@ -50,7 +50,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the parameter reconfiguration logs.
+         * Indicates whether the modification takes effect.
          */
         public Builder changelogs(java.util.List < Changelogs> changelogs) {
             this.changelogs = changelogs;
@@ -58,7 +58,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

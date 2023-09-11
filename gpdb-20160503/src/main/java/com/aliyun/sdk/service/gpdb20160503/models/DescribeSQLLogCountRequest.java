@@ -225,10 +225,10 @@ public class DescribeSQLLogCountRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -246,10 +246,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          * <p>
          * 
-         * >  The end time must be later than the start time. Their interval cannot be more than seven days.
+         * > The end time must be later than the start time. The maximum time range that can be specified is seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -258,7 +258,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The execution duration of the query. Unit: seconds.
+         * The execution duration of the SQL statement. Unit: seconds.
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -267,7 +267,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The execution state of the query. Valid values:
+         * The execution state of the SQL statement. Valid values:
          * <p>
          * 
          * *   **success**
@@ -280,7 +280,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The maximum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.
+         * The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
          */
         public Builder maxExecuteCost(String maxExecuteCost) {
             this.putQueryParameter("MaxExecuteCost", maxExecuteCost);
@@ -289,7 +289,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The minimum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.
+         * The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
          */
         public Builder minExecuteCost(String minExecuteCost) {
             this.putQueryParameter("MinExecuteCost", minExecuteCost);
@@ -317,9 +317,12 @@ public class DescribeSQLLogCountRequest extends Request {
          * The type of the SQL statement.
          * <p>
          * 
-         * > *   If the **OperationClass** parameter is specified, the **OperationType** value must belong to the corresponding query language. For example, if the **OperationClass** value is **DQL**, the **OperationType** value must be a **DQL** SQL statement such as **SELECT**.
-         * >*   If the **OperationClass** parameter is not specified, the **OperationType** value can be an SQL statement of all query languages.
-         * >*   If neither of the **OperationClass** and **OperationType** parameters is specified, all types of SQL statements are returned.
+         * > 
+         * 
+         * *   If **OperationClass** is specified, the value of **OperationType** must belong to the corresponding query language. For example, if **OperationClass** is set to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.
+         * 
+         * *   If **OperationClass** is not specified, the value of **OperationType** can be an SQL statement of any query language.
+         * *   If **OperationClass** and **OperationType** are not specified, all types of SQL statements are returned.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -328,7 +331,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The keywords used to query.
+         * The keywords that are used to query audit logs.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -346,7 +349,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -355,7 +358,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The username that is used to log on to the database.
+         * The name of the database account that is used to connect to the database.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

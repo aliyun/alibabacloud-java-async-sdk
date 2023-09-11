@@ -100,7 +100,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * The new endpoint of the instance.
+         * The endpoint prefix of the instance.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -109,7 +109,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The original endpoint of the instance.
+         * The current endpoint of the instance.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -118,7 +118,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -127,7 +127,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The new port number of the instance.
+         * The port number. Example: 5432.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

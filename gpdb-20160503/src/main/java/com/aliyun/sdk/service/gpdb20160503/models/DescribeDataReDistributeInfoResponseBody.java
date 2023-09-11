@@ -50,7 +50,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataReDistributeInfo.
+         * The data redistribution information.
          */
         public Builder dataReDistributeInfo(DataReDistributeInfo dataReDistributeInfo) {
             this.dataReDistributeInfo = dataReDistributeInfo;
@@ -58,7 +58,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * The execution information. If an error occurs, the error message is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -166,7 +166,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of data redistribution. Unit: %.
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -174,7 +174,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RemainTime.
+             * The estimated remaining time for data redistribution.
              */
             public Builder remainTime(String remainTime) {
                 this.remainTime = remainTime;
@@ -182,7 +182,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * This parameter is not supported.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -190,7 +190,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of data redistribution.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +198,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The execution type. The value **immediate** is returned, indicating immediate execution.
              */
             public Builder type(String type) {
                 this.type = type;

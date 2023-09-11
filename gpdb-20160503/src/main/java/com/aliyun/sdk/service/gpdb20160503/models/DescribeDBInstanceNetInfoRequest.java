@@ -69,7 +69,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         } 
 
         /**
-         * ConnectionString.
+         * The endpoint that is used to connect to the instance.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the information about all endpoints of the instance is returned.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -78,10 +81,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
