@@ -112,7 +112,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 下一个查询开始Token
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +148,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -202,7 +202,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +210,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

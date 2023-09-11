@@ -126,6 +126,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CertificatePublicKeyVerifyResponse> certificatePublicKeyVerify(CertificatePublicKeyVerifyRequest request);
 
+    CompletableFuture<ConnectKmsInstanceResponse> connectKmsInstance(ConnectKmsInstanceRequest request);
+
     /**
       * *   Each alias can be bound to only one CMK at a time.
       * *   The aliases of CMKs in the same region must be unique.
@@ -134,12 +136,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
 
+    CompletableFuture<CreateApplicationAccessPointResponse> createApplicationAccessPoint(CreateApplicationAccessPointRequest request);
+
     /**
       * To create a certificate, you must specify the type of the asymmetric key. Certificates Manager generates a private key and returns a certificate signing request (CSR). Submit the CSR in the Privacy Enhanced Mail (PEM) format to a certificate authority (CA) to obtain the formal certificate and certificate chain. Then, call the [UploadCertificate](~~212136~~) operation to import the certificate into Certificates Manager.
       * In this example, a certificate is created and the CSR is obtained.
       *
      */
     CompletableFuture<CreateCertificateResponse> createCertificate(CreateCertificateRequest request);
+
+    CompletableFuture<CreateClientKeyResponse> createClientKey(CreateClientKeyRequest request);
 
     /**
       * Creates a customer master key (CMK).
@@ -157,6 +163,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateKeyVersionResponse> createKeyVersion(CreateKeyVersionRequest request);
 
+    CompletableFuture<CreateNetworkRuleResponse> createNetworkRule(CreateNetworkRuleRequest request);
+
+    CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
+
     /**
       * The name of the secret.
       * The value must be 1 to 64 characters in length and can contain letters, digits, underscores (\\_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:
@@ -171,12 +181,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request);
 
+    CompletableFuture<DeleteApplicationAccessPointResponse> deleteApplicationAccessPoint(DeleteApplicationAccessPointRequest request);
+
     /**
       * After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
       * In this example, the certificate whose ID is `9a28de48-8d8b-484d-a766-dec4****` and its private key and certificate chain are deleted.
       *
      */
     CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request);
+
+    CompletableFuture<DeleteClientKeyResponse> deleteClientKey(DeleteClientKeyRequest request);
 
     /**
       * This operation does not delete the CMK that is created by using the key material.
@@ -186,6 +200,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteKeyMaterialResponse> deleteKeyMaterial(DeleteKeyMaterialRequest request);
 
+    CompletableFuture<DeleteNetworkRuleResponse> deleteNetworkRule(DeleteNetworkRuleRequest request);
+
+    CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
+
     /**
       * If you call this operation without specifying a recovery period, the deleted secret can be recovered within 30 days.
       * If you specify a recovery period, the deleted secret can be recovered within the recovery period. You can also forcibly delete a secret. A forcibly deleted secret cannot be recovered.
@@ -194,6 +212,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
     CompletableFuture<DescribeAccountKmsStatusResponse> describeAccountKmsStatus(DescribeAccountKmsStatusRequest request);
+
+    CompletableFuture<DescribeApplicationAccessPointResponse> describeApplicationAccessPoint(DescribeApplicationAccessPointRequest request);
 
     /**
       * In this example, the information about the certificate whose ID is `9a28de48-8d8b-484d-a766-dec4****` is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.
@@ -212,6 +232,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeKeyVersionResponse> describeKeyVersion(DescribeKeyVersionRequest request);
+
+    CompletableFuture<DescribeNetworkRuleResponse> describeNetworkRule(DescribeNetworkRuleRequest request);
+
+    CompletableFuture<DescribePolicyResponse> describePolicy(DescribePolicyRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
@@ -286,6 +310,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetCertificateResponse> getCertificate(GetCertificateRequest request);
 
+    CompletableFuture<GetClientKeyResponse> getClientKey(GetClientKeyRequest request);
+
+    CompletableFuture<GetKmsInstanceResponse> getKmsInstance(GetKmsInstanceRequest request);
+
     /**
       * The returned parameters can be used to call the [ImportKeyMaterial](https://www.alibabacloud.com/help/en/key-management-service/latest/importkeymaterial) operation.
       * - You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.
@@ -333,9 +361,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAliasesByKeyIdResponse> listAliasesByKeyId(ListAliasesByKeyIdRequest request);
 
+    CompletableFuture<ListApplicationAccessPointsResponse> listApplicationAccessPoints(ListApplicationAccessPointsRequest request);
+
+    CompletableFuture<ListClientKeysResponse> listClientKeys(ListClientKeysRequest request);
+
     CompletableFuture<ListKeyVersionsResponse> listKeyVersions(ListKeyVersionsRequest request);
 
     CompletableFuture<ListKeysResponse> listKeys(ListKeysRequest request);
+
+    CompletableFuture<ListKmsInstancesResponse> listKmsInstances(ListKmsInstancesRequest request);
+
+    CompletableFuture<ListNetworkRulesResponse> listNetworkRules(ListNetworkRulesRequest request);
+
+    CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
 
     /**
       * Request format: KeyId="string"
@@ -446,6 +484,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request);
 
+    CompletableFuture<UpdateApplicationAccessPointResponse> updateApplicationAccessPoint(UpdateApplicationAccessPointRequest request);
+
     /**
       * In this example, the status of the certificate whose ID is `9a28de48-8d8b-484d-a766-dec4****` is updated to INACTIVE.
       *
@@ -457,6 +497,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UpdateKeyDescriptionResponse> updateKeyDescription(UpdateKeyDescriptionRequest request);
+
+    CompletableFuture<UpdateKmsInstanceBindVpcResponse> updateKmsInstanceBindVpc(UpdateKmsInstanceBindVpcRequest request);
+
+    CompletableFuture<UpdateNetworkRuleResponse> updateNetworkRule(UpdateNetworkRuleRequest request);
+
+    CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
 
     /**
       * When automatic key rotation is enabled, KMS automatically creates a key version after the preset rotation period arrives. In addition, KMS sets the new key version as the primary key version.

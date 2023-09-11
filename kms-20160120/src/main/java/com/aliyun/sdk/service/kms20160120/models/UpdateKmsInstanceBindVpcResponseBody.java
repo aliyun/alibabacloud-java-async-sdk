@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TagResourcesResponseBody} extends {@link TeaModel}
+ * {@link UpdateKmsInstanceBindVpcResponseBody} extends {@link TeaModel}
  *
- * <p>TagResourcesResponseBody</p>
+ * <p>UpdateKmsInstanceBindVpcResponseBody</p>
  */
-public class TagResourcesResponseBody extends TeaModel {
+public class UpdateKmsInstanceBindVpcResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private TagResourcesResponseBody(Builder builder) {
+    private UpdateKmsInstanceBindVpcResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static TagResourcesResponseBody create() {
+    public static UpdateKmsInstanceBindVpcResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class TagResourcesResponseBody extends TeaModel {
             return this;
         }
 
-        public TagResourcesResponseBody build() {
-            return new TagResourcesResponseBody(this);
+        public UpdateKmsInstanceBindVpcResponseBody build() {
+            return new UpdateKmsInstanceBindVpcResponseBody(this);
         } 
 
     } 

@@ -113,7 +113,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * 是否全部删除，只针对TagKey.N为空时有效。 取值范围： true  false True False  默认是 false
+         * All.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -122,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID，最多50个子项
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,7 +140,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +149,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 标签键，最多20个子项
+         * TagKey.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);
