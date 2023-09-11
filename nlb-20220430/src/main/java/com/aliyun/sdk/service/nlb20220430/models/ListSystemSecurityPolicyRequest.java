@@ -1,0 +1,75 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.nlb20220430.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListSystemSecurityPolicyRequest} extends {@link RequestModel}
+ *
+ * <p>ListSystemSecurityPolicyRequest</p>
+ */
+public class ListSystemSecurityPolicyRequest extends Request {
+    @Body
+    @NameInMap("RegionId")
+    private String regionId;
+
+    private ListSystemSecurityPolicyRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListSystemSecurityPolicyRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public static final class Builder extends Request.Builder<ListSystemSecurityPolicyRequest, Builder> {
+        private String regionId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListSystemSecurityPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+        } 
+
+        /**
+         * The region ID of the NLB instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putBodyParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        @Override
+        public ListSystemSecurityPolicyRequest build() {
+            return new ListSystemSecurityPolicyRequest(this);
+        } 
+
+    } 
+
+}
