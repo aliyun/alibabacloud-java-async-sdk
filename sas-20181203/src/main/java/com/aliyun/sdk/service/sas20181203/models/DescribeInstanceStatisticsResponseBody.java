@@ -90,6 +90,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("AgentlessVulSca")
         private Integer agentlessVulSca;
 
+        @NameInMap("AgentlessVulSys")
+        private Integer agentlessVulSys;
+
         @NameInMap("AppNum")
         private Integer appNum;
 
@@ -136,6 +139,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             this.agentlessMalicious = builder.agentlessMalicious;
             this.agentlessVulCve = builder.agentlessVulCve;
             this.agentlessVulSca = builder.agentlessVulSca;
+            this.agentlessVulSys = builder.agentlessVulSys;
             this.appNum = builder.appNum;
             this.cmsNum = builder.cmsNum;
             this.cspmNum = builder.cspmNum;
@@ -199,6 +203,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
          */
         public Integer getAgentlessVulSca() {
             return this.agentlessVulSca;
+        }
+
+        /**
+         * @return agentlessVulSys
+         */
+        public Integer getAgentlessVulSys() {
+            return this.agentlessVulSys;
         }
 
         /**
@@ -299,6 +310,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer agentlessMalicious; 
             private Integer agentlessVulCve; 
             private Integer agentlessVulSca; 
+            private Integer agentlessVulSys; 
             private Integer appNum; 
             private Integer cmsNum; 
             private Integer cspmNum; 
@@ -358,6 +370,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              */
             public Builder agentlessVulSca(Integer agentlessVulSca) {
                 this.agentlessVulSca = agentlessVulSca;
+                return this;
+            }
+
+            /**
+             * AgentlessVulSys.
+             */
+            public Builder agentlessVulSys(Integer agentlessVulSys) {
+                this.agentlessVulSys = agentlessVulSys;
                 return this;
             }
 

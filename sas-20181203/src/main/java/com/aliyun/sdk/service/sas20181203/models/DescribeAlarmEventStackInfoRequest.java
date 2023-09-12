@@ -142,8 +142,8 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
          * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -152,7 +152,10 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

@@ -42,6 +42,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
     private String maliciousMd5;
 
     @Query
+    @NameInMap("MaliciousType")
+    private String maliciousType;
+
+    @Query
     @NameInMap("PageSize")
     @Validation(required = true)
     private String pageSize;
@@ -63,6 +67,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         this.lang = builder.lang;
         this.levels = builder.levels;
         this.maliciousMd5 = builder.maliciousMd5;
+        this.maliciousType = builder.maliciousType;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.uuid = builder.uuid;
@@ -131,6 +136,13 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
     }
 
     /**
+     * @return maliciousType
+     */
+    public String getMaliciousType() {
+        return this.maliciousType;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -159,6 +171,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         private String lang; 
         private String levels; 
         private String maliciousMd5; 
+        private String maliciousType; 
         private String pageSize; 
         private String remark; 
         private String uuid; 
@@ -176,6 +189,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
             this.lang = request.lang;
             this.levels = request.levels;
             this.maliciousMd5 = request.maliciousMd5;
+            this.maliciousType = request.maliciousType;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.uuid = request.uuid;
@@ -257,6 +271,15 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         public Builder maliciousMd5(String maliciousMd5) {
             this.putQueryParameter("MaliciousMd5", maliciousMd5);
             this.maliciousMd5 = maliciousMd5;
+            return this;
+        }
+
+        /**
+         * MaliciousType.
+         */
+        public Builder maliciousType(String maliciousType) {
+            this.putQueryParameter("MaliciousType", maliciousType);
+            this.maliciousType = maliciousType;
             return this;
         }
 

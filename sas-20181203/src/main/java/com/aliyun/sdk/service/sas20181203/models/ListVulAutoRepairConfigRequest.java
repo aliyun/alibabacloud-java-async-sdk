@@ -115,7 +115,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

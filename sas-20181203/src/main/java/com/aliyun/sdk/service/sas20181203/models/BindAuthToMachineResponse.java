@@ -16,6 +16,10 @@ public class BindAuthToMachineResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private BindAuthToMachineResponseBody body;
@@ -23,6 +27,7 @@ public class BindAuthToMachineResponse extends Response {
     private BindAuthToMachineResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class BindAuthToMachineResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public BindAuthToMachineResponseBody getBody() {
@@ -52,6 +64,8 @@ public class BindAuthToMachineResponse extends Response {
     public interface Builder extends Response.Builder<BindAuthToMachineResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(BindAuthToMachineResponseBody body);
 
@@ -64,6 +78,7 @@ public class BindAuthToMachineResponse extends Response {
             extends Response.BuilderImpl<BindAuthToMachineResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private BindAuthToMachineResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class BindAuthToMachineResponse extends Response {
         private BuilderImpl(BindAuthToMachineResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class BindAuthToMachineResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

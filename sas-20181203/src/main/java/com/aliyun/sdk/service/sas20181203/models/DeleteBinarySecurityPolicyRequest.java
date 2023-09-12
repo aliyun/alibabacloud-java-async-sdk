@@ -82,7 +82,7 @@ public class DeleteBinarySecurityPolicyRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the binary security policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,7 +100,7 @@ public class DeleteBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

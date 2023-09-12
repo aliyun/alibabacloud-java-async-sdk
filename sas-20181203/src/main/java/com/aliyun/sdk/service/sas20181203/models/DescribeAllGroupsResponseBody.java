@@ -62,7 +62,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Count.
+         * The total number of server groups.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Groups.
+         * The grouping information about the servers.
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -78,7 +78,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,11 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * GroupFlag.
+             * The type of the server group. Valid values:
+             * <p>
+             * 
+             * *   **0**: default group
+             * *   **1**: other groups
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -150,7 +154,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the server group.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -158,7 +162,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the server group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

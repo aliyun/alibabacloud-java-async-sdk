@@ -62,7 +62,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CheckItems.
+         * The check items.
          */
         public Builder checkItems(java.util.List < CheckItems> checkItems) {
             this.checkItems = checkItems;
@@ -70,7 +70,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * DefaultValue.
+             * The default value of the check item. The value is a string.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -174,7 +174,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +182,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The display name of the check item.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -190,7 +190,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * TypeDefine.
+             * The type of the check item. The value is a JSON string.
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;
@@ -198,7 +198,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The specified value of the check item. The value is a string.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -251,7 +251,10 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Type.
+             * The type of the description of the check item. Valid value:
+             * <p>
+             * 
+             * *   **text**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -259,7 +262,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The content of the description for the check item when the Type parameter is text.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -396,7 +399,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String vendor; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -404,7 +407,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * CheckShowName.
+             * The name of the check item.
              */
             public Builder checkShowName(String checkShowName) {
                 this.checkShowName = checkShowName;
@@ -412,7 +415,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * CustomConfigs.
+             * The check items.
              */
             public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
                 this.customConfigs = customConfigs;
@@ -420,7 +423,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the check item.
              */
             public Builder description(Description description) {
                 this.description = description;
@@ -428,7 +431,34 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSubType.
+             * The asset subtype of the cloud service. Valid value:
+             * <p>
+             * 
+             * *   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:
+             * 
+             *     *   **INSTANCE**
+             *     *   **DISK**
+             *     *   **SECURITY_GROUP**
+             * 
+             * *   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:
+             * 
+             *     *   **REPOSITORY_ENTERPRISE**
+             *     *   **REPOSITORY_PERSON**
+             * 
+             * *   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:
+             * 
+             *     *   **ALIAS**
+             *     *   **USER**
+             *     *   **POLICY**
+             *     *   **GROUP**
+             * 
+             * *   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:
+             * 
+             *     *   **DOMAIN**
+             * 
+             * *   If **InstanceType** is set to other values, this parameter supports the following valid values:
+             * 
+             *     *   **INSTANCE**
              */
             public Builder instanceSubType(String instanceSubType) {
                 this.instanceSubType = instanceSubType;
@@ -436,7 +466,31 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The asset type of the cloud service. Valid value:
+             * <p>
+             * 
+             * *   **ECS**: Elastic Compute Service (ECS)
+             * *   **SLB**: Server Load Balancer (SLB)
+             * *   **RDS**: ApsaraDB RDS
+             * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
+             * *   **KVSTORE**: ApsaraDB for Redis (Redis)
+             * *   **ACR**: Container Registry
+             * *   **CSK**: Container Service for Kubernetes (ACK)
+             * *   **VPC**: Virtual Private Cloud (VPC)
+             * *   **ACTIONTRAIL**: ActionTrail
+             * *   **CDN**: Alibaba Cloud CDN (CDN)
+             * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
+             * *   **RDC**: Apsara Devops
+             * *   **RAM**: Resource Access Management (RAM)
+             * *   **DDOS**: Anti-DDoS
+             * *   **WAF**: Web Application Firewall (WAF)
+             * *   **OSS**: Object Storage Service (OSS)
+             * *   **POLARDB**: PolarDB
+             * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
+             * *   **MSE**: Microservices Engine (MSE)
+             * *   **NAS**: Apsara File Storage NAS (NAS)
+             * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
+             * *   **EIP**: Elastic IP Address (EIP)
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -444,7 +498,12 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level of the check item. Valid value:
+             * <p>
+             * 
+             * *   **HIGH**
+             * *   **MEDIUM**
+             * *   **LOW**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -452,7 +511,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * SectionIds.
+             * The IDs of the sections associated with the check items.
              */
             public Builder sectionIds(java.util.List < Long > sectionIds) {
                 this.sectionIds = sectionIds;
@@ -460,7 +519,14 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The type of the cloud asset. Valid value:
+             * <p>
+             * 
+             * *   **0**: an asset provided by Alibaba Cloud
+             * *   **1**: a third-party cloud asset
+             * *   **2**: an asset in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a simple application server
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -537,7 +603,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -545,7 +611,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -553,7 +619,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -561,7 +627,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

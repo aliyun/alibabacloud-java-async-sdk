@@ -16,6 +16,10 @@ public class GetInterceptionTargetDetailResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GetInterceptionTargetDetailResponseBody body;
@@ -23,6 +27,7 @@ public class GetInterceptionTargetDetailResponse extends Response {
     private GetInterceptionTargetDetailResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GetInterceptionTargetDetailResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetInterceptionTargetDetailResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GetInterceptionTargetDetailResponse extends Response {
     public interface Builder extends Response.Builder<GetInterceptionTargetDetailResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetInterceptionTargetDetailResponseBody body);
 
@@ -64,6 +78,7 @@ public class GetInterceptionTargetDetailResponse extends Response {
             extends Response.BuilderImpl<GetInterceptionTargetDetailResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetInterceptionTargetDetailResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GetInterceptionTargetDetailResponse extends Response {
         private BuilderImpl(GetInterceptionTargetDetailResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GetInterceptionTargetDetailResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

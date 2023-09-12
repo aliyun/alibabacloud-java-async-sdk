@@ -16,6 +16,10 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeOnceTaskLeafRecordPageResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
     private DescribeOnceTaskLeafRecordPageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeOnceTaskLeafRecordPageResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
     public interface Builder extends Response.Builder<DescribeOnceTaskLeafRecordPageResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeOnceTaskLeafRecordPageResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
             extends Response.BuilderImpl<DescribeOnceTaskLeafRecordPageResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeOnceTaskLeafRecordPageResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
         private BuilderImpl(DescribeOnceTaskLeafRecordPageResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeOnceTaskLeafRecordPageResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

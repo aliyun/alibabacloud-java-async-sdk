@@ -246,9 +246,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The time when the baseline check based on the baseline check policy ends. 
-         * <p>
-         * Format is hh:mm:ss.
+         * The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -318,7 +316,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The time when the baseline check based on the baseline check policy starts. Format is hh:mm:ss.
+         * The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

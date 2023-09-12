@@ -313,6 +313,9 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         @NameInMap("MaliciousName")
         private String maliciousName;
 
+        @NameInMap("MaliciousType")
+        private String maliciousType;
+
         @NameInMap("Notes")
         private java.util.List < Notes> notes;
 
@@ -351,6 +354,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             this.level = builder.level;
             this.maliciousMd5 = builder.maliciousMd5;
             this.maliciousName = builder.maliciousName;
+            this.maliciousType = builder.maliciousType;
             this.notes = builder.notes;
             this.operateResult = builder.operateResult;
             this.operateTimestamp = builder.operateTimestamp;
@@ -461,6 +465,13 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return maliciousType
+         */
+        public String getMaliciousType() {
+            return this.maliciousType;
+        }
+
+        /**
          * @return notes
          */
         public java.util.List < Notes> getNotes() {
@@ -530,6 +541,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String level; 
             private String maliciousMd5; 
             private String maliciousName; 
+            private String maliciousType; 
             private java.util.List < Notes> notes; 
             private String operateResult; 
             private String operateTimestamp; 
@@ -645,6 +657,14 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
              */
             public Builder maliciousName(String maliciousName) {
                 this.maliciousName = maliciousName;
+                return this;
+            }
+
+            /**
+             * MaliciousType.
+             */
+            public Builder maliciousType(String maliciousType) {
+                this.maliciousType = maliciousType;
                 return this;
             }
 

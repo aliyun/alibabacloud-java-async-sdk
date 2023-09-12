@@ -143,8 +143,8 @@ public class OperationSuspEventsRequest extends Request {
          * 
          * *   **deal**: quarantines the source file of the malicious process.
          * *   **ignore**: ignores the alerts.
-         * *   **mark\_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.
-         * *   **rm\_mark\_mis_info**: cancels marking the alerts as false positives by removing the alerts from the whitelist.
+         * *   **mark_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.
+         * *   **rm_mark_mis_info**: cancels false positives by removing the alerts from the whitelist.
          * *   **offline_handled**: marks the alerts as handled.
          */
         public Builder operation(String operation) {
@@ -180,7 +180,7 @@ public class OperationSuspEventsRequest extends Request {
          * The IDs of alert events.
          * <p>
          * 
-         * >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
+         * > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
          */
         public Builder suspiciousEventIds(String suspiciousEventIds) {
             this.putQueryParameter("SuspiciousEventIds", suspiciousEventIds);

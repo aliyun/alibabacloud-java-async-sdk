@@ -78,7 +78,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the restoration tasks.
+         * The details about the restoration task.
          */
         public Builder restoreJobs(java.util.List < RestoreJobs> restoreJobs) {
             this.restoreJobs = restoreJobs;
@@ -687,7 +687,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The size of backup data. Unit: bytes.
+             * The size of the backup file. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -711,7 +711,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware agent that is used to restore data.
+             * The ID of the anti-ransomware agent that is used to perform the restoration task.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -815,7 +815,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
+             * The directory in which the restored file is stored. The value is the directory that you specify for protection when you create the anti-ransomware policy
              */
             public Builder includes(String includes) {
                 this.includes = includes;
@@ -855,7 +855,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of files that are backed up.
+             * The number of files that are restored.
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -863,7 +863,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files that you want to restore.
+             * The total number of files that need to be restored.
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -871,7 +871,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -887,7 +887,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * The request ID.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -947,7 +947,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the source file that you want to restore.
+             * The restored content.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -963,7 +963,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The speed of data restoration. Unit: byte/s.
+             * The speed at which data is restored. Unit: byte/s.
              */
             public Builder speed(Long speed) {
                 this.speed = speed;
@@ -980,7 +980,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
              * *   **CANCELING**: The task is being canceled.
              * *   **CANCELED**: The task is canceled.
              * *   **PARTIAL_COMPLETE**: The task is partially successful.
-             * *   **CREATED**: The task is created but is not run.
+             * *   **CREATED**: The task was created but is not run.
              * *   **EXPIRED**: The task is not updated.
              * *   **QUEUED**: The task is waiting to be run.
              * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.

@@ -298,7 +298,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * The display name of the image that is used for the honeypot.
+             * The display name of the image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -306,7 +306,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image that is used for the honeypot.
+             * The ID of the image.
              */
             public Builder honeypotImageId(String honeypotImageId) {
                 this.honeypotImageId = honeypotImageId;
@@ -322,7 +322,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image that is used for the honeypot.
+             * The type of the image.
              */
             public Builder honeypotImageType(String honeypotImageType) {
                 this.honeypotImageType = honeypotImageType;
@@ -330,7 +330,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image that is used for the honeypot.
+             * The version of the image.
              */
             public Builder honeypotImageVersion(String honeypotImageVersion) {
                 this.honeypotImageVersion = honeypotImageVersion;
@@ -338,7 +338,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is supported by the honeypot. The value is in the JSON format. The value contains the following fields:
+             * The port that is supported by the honeypot. The value is in the JSON format. Valid values:
              * <p>
              * 
              * *   **log_type**: the log type

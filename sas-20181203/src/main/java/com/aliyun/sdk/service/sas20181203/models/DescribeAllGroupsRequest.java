@@ -54,7 +54,11 @@ public class DescribeAllGroupsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The natural language of the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

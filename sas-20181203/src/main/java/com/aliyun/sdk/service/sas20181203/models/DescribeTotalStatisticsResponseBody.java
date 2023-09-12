@@ -362,7 +362,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of fixed baseline risks.
+         * The total number of fixed baseline risk items. This parameter is deprecated.
          */
         public Builder healthdealedTotal(Integer healthdealedTotal) {
             this.healthdealedTotal = healthdealedTotal;
@@ -370,7 +370,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baselines whose risk level is high.
+         * The number of baseline risk items whose severity is high.
          */
         public Builder healthhighTotal(Integer healthhighTotal) {
             this.healthhighTotal = healthhighTotal;
@@ -378,7 +378,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baseline risks whose risk level is low.
+         * The number of baseline risk items whose severity is low.
          */
         public Builder healthlowTotal(Integer healthlowTotal) {
             this.healthlowTotal = healthlowTotal;
@@ -386,7 +386,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baseline risks whose risk level is medium.
+         * The number of baseline risk items whose severity is medium.
          */
         public Builder healthmediumTotal(Integer healthmediumTotal) {
             this.healthmediumTotal = healthmediumTotal;
@@ -394,7 +394,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * The number of baseline risk items whose severity is urgent. This parameter is deprecated.
          */
         public Builder healthseriousTotal(Integer healthseriousTotal) {
             this.healthseriousTotal = healthseriousTotal;
@@ -417,11 +417,11 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Security Center agent is online. Valid values:
+         * Indicates whether the agent is online. Valid values:
          * <p>
          * 
-         * *   **true**: The service is online.
-         * *   **false**: The service is offline.
+         * *   **true**
+         * *   **false**
          */
         public Builder online(Boolean online) {
             this.online = online;
@@ -469,7 +469,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * This parameter is deprecated. This parameter is deprecated.
          */
         public Builder suspicioushighTotal(Integer suspicioushighTotal) {
             this.suspicioushighTotal = suspicioushighTotal;
@@ -541,7 +541,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unfixed vulnerabilities whose severity level is medium.
+         * The number of unfixed vulnerabilities whose severity level is low.
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;
