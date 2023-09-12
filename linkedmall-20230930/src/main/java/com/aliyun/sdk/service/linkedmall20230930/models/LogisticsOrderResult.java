@@ -1,0 +1,174 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.linkedmall20230930.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link LogisticsOrderResult} extends {@link TeaModel}
+ *
+ * <p>LogisticsOrderResult</p>
+ */
+public class LogisticsOrderResult extends TeaModel {
+    @NameInMap("dataProvider")
+    private String dataProvider;
+
+    @NameInMap("dataProviderTitle")
+    private String dataProviderTitle;
+
+    @NameInMap("goods")
+    private java.util.List < Good > goods;
+
+    @NameInMap("logisticsCompanyCode")
+    private String logisticsCompanyCode;
+
+    @NameInMap("logisticsCompanyName")
+    private String logisticsCompanyName;
+
+    @NameInMap("logisticsDetailList")
+    private java.util.List < LogisticsDetail > logisticsDetailList;
+
+    @NameInMap("mailNo")
+    private String mailNo;
+
+    private LogisticsOrderResult(Builder builder) {
+        this.dataProvider = builder.dataProvider;
+        this.dataProviderTitle = builder.dataProviderTitle;
+        this.goods = builder.goods;
+        this.logisticsCompanyCode = builder.logisticsCompanyCode;
+        this.logisticsCompanyName = builder.logisticsCompanyName;
+        this.logisticsDetailList = builder.logisticsDetailList;
+        this.mailNo = builder.mailNo;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static LogisticsOrderResult create() {
+        return builder().build();
+    }
+
+    /**
+     * @return dataProvider
+     */
+    public String getDataProvider() {
+        return this.dataProvider;
+    }
+
+    /**
+     * @return dataProviderTitle
+     */
+    public String getDataProviderTitle() {
+        return this.dataProviderTitle;
+    }
+
+    /**
+     * @return goods
+     */
+    public java.util.List < Good > getGoods() {
+        return this.goods;
+    }
+
+    /**
+     * @return logisticsCompanyCode
+     */
+    public String getLogisticsCompanyCode() {
+        return this.logisticsCompanyCode;
+    }
+
+    /**
+     * @return logisticsCompanyName
+     */
+    public String getLogisticsCompanyName() {
+        return this.logisticsCompanyName;
+    }
+
+    /**
+     * @return logisticsDetailList
+     */
+    public java.util.List < LogisticsDetail > getLogisticsDetailList() {
+        return this.logisticsDetailList;
+    }
+
+    /**
+     * @return mailNo
+     */
+    public String getMailNo() {
+        return this.mailNo;
+    }
+
+    public static final class Builder {
+        private String dataProvider; 
+        private String dataProviderTitle; 
+        private java.util.List < Good > goods; 
+        private String logisticsCompanyCode; 
+        private String logisticsCompanyName; 
+        private java.util.List < LogisticsDetail > logisticsDetailList; 
+        private String mailNo; 
+
+        /**
+         * dataProvider.
+         */
+        public Builder dataProvider(String dataProvider) {
+            this.dataProvider = dataProvider;
+            return this;
+        }
+
+        /**
+         * dataProviderTitle.
+         */
+        public Builder dataProviderTitle(String dataProviderTitle) {
+            this.dataProviderTitle = dataProviderTitle;
+            return this;
+        }
+
+        /**
+         * goods.
+         */
+        public Builder goods(java.util.List < Good > goods) {
+            this.goods = goods;
+            return this;
+        }
+
+        /**
+         * logisticsCompanyCode.
+         */
+        public Builder logisticsCompanyCode(String logisticsCompanyCode) {
+            this.logisticsCompanyCode = logisticsCompanyCode;
+            return this;
+        }
+
+        /**
+         * logisticsCompanyName.
+         */
+        public Builder logisticsCompanyName(String logisticsCompanyName) {
+            this.logisticsCompanyName = logisticsCompanyName;
+            return this;
+        }
+
+        /**
+         * logisticsDetailList.
+         */
+        public Builder logisticsDetailList(java.util.List < LogisticsDetail > logisticsDetailList) {
+            this.logisticsDetailList = logisticsDetailList;
+            return this;
+        }
+
+        /**
+         * mailNo.
+         */
+        public Builder mailNo(String mailNo) {
+            this.mailNo = mailNo;
+            return this;
+        }
+
+        public LogisticsOrderResult build() {
+            return new LogisticsOrderResult(this);
+        } 
+
+    } 
+
+}

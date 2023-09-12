@@ -1,0 +1,116 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.linkedmall20230930.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link OrderPageQuery} extends {@link TeaModel}
+ *
+ * <p>OrderPageQuery</p>
+ */
+public class OrderPageQuery extends TeaModel {
+    @NameInMap("orderIdList")
+    private java.util.List < String > orderIdList;
+
+    @NameInMap("pageNumber")
+    @Validation(required = true)
+    private Integer pageNumber;
+
+    @NameInMap("pageSize")
+    @Validation(required = true)
+    private Integer pageSize;
+
+    @NameInMap("purchaseOrderId")
+    private String purchaseOrderId;
+
+    private OrderPageQuery(Builder builder) {
+        this.orderIdList = builder.orderIdList;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.purchaseOrderId = builder.purchaseOrderId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static OrderPageQuery create() {
+        return builder().build();
+    }
+
+    /**
+     * @return orderIdList
+     */
+    public java.util.List < String > getOrderIdList() {
+        return this.orderIdList;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return purchaseOrderId
+     */
+    public String getPurchaseOrderId() {
+        return this.purchaseOrderId;
+    }
+
+    public static final class Builder {
+        private java.util.List < String > orderIdList; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String purchaseOrderId; 
+
+        /**
+         * orderIdList.
+         */
+        public Builder orderIdList(java.util.List < String > orderIdList) {
+            this.orderIdList = orderIdList;
+            return this;
+        }
+
+        /**
+         * pageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * purchaseOrderId.
+         */
+        public Builder purchaseOrderId(String purchaseOrderId) {
+            this.purchaseOrderId = purchaseOrderId;
+            return this;
+        }
+
+        public OrderPageQuery build() {
+            return new OrderPageQuery(this);
+        } 
+
+    } 
+
+}

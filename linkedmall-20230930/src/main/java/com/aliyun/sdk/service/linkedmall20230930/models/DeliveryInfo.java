@@ -1,0 +1,114 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.linkedmall20230930.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeliveryInfo} extends {@link TeaModel}
+ *
+ * <p>DeliveryInfo</p>
+ */
+public class DeliveryInfo extends TeaModel {
+    @NameInMap("displayName")
+    private String displayName;
+
+    @NameInMap("id")
+    private String id;
+
+    @NameInMap("postFee")
+    private Long postFee;
+
+    @NameInMap("serviceType")
+    private Long serviceType;
+
+    private DeliveryInfo(Builder builder) {
+        this.displayName = builder.displayName;
+        this.id = builder.id;
+        this.postFee = builder.postFee;
+        this.serviceType = builder.serviceType;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeliveryInfo create() {
+        return builder().build();
+    }
+
+    /**
+     * @return displayName
+     */
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * @return postFee
+     */
+    public Long getPostFee() {
+        return this.postFee;
+    }
+
+    /**
+     * @return serviceType
+     */
+    public Long getServiceType() {
+        return this.serviceType;
+    }
+
+    public static final class Builder {
+        private String displayName; 
+        private String id; 
+        private Long postFee; 
+        private Long serviceType; 
+
+        /**
+         * displayName.
+         */
+        public Builder displayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * id.
+         */
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * postFee.
+         */
+        public Builder postFee(Long postFee) {
+            this.postFee = postFee;
+            return this;
+        }
+
+        /**
+         * serviceType.
+         */
+        public Builder serviceType(Long serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+
+        public DeliveryInfo build() {
+            return new DeliveryInfo(this);
+        } 
+
+    } 
+
+}
