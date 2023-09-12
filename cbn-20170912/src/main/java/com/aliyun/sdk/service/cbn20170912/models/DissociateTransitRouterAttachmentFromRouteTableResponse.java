@@ -16,6 +16,10 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DissociateTransitRouterAttachmentFromRouteTableResponseBody body;
@@ -23,6 +27,7 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
     private DissociateTransitRouterAttachmentFromRouteTableResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DissociateTransitRouterAttachmentFromRouteTableResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
     public interface Builder extends Response.Builder<DissociateTransitRouterAttachmentFromRouteTableResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DissociateTransitRouterAttachmentFromRouteTableResponseBody body);
 
@@ -64,6 +78,7 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
             extends Response.BuilderImpl<DissociateTransitRouterAttachmentFromRouteTableResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DissociateTransitRouterAttachmentFromRouteTableResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
         private BuilderImpl(DissociateTransitRouterAttachmentFromRouteTableResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DissociateTransitRouterAttachmentFromRouteTableResponse extends Res
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
