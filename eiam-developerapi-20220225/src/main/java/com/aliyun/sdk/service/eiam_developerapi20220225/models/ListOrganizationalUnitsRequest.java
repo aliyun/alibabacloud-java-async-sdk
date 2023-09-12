@@ -151,7 +151,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -160,7 +160,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -169,7 +169,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -178,7 +178,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 页码，默认1
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -187,7 +187,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 单页大小，默认20
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -196,7 +196,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 父机构ID
+         * parentId.
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("parentId", parentId);

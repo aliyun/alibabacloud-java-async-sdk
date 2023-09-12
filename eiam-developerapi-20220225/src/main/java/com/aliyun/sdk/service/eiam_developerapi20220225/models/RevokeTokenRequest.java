@@ -150,7 +150,7 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -159,7 +159,7 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -186,7 +186,7 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * 撤销的token
+         * token.
          */
         public Builder token(String token) {
             this.putQueryParameter("token", token);
@@ -195,7 +195,7 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * token类型
+         * token_type_hint.
          */
         public Builder tokenTypeHint(String tokenTypeHint) {
             this.putQueryParameter("token_type_hint", tokenTypeHint);

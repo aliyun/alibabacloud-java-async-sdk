@@ -38,7 +38,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         private java.util.List < String > organizationalUnitIds; 
 
         /**
-         * 机构ID列表
+         * organizationalUnitIds.
          */
         public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;

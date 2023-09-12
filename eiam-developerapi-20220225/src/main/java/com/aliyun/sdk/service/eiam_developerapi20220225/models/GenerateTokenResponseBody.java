@@ -106,7 +106,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 过期时间
+         * expires_at.
          */
         public Builder expiresAt(Long expiresAt) {
             this.expiresAt = expiresAt;
@@ -114,7 +114,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 有效时长，单位秒
+         * expires_in.
          */
         public Builder expiresIn(Long expiresIn) {
             this.expiresIn = expiresIn;
@@ -138,7 +138,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * token类型，包含Basic,Bearer
+         * token_type.
          */
         public Builder tokenType(String tokenType) {
             this.tokenType = tokenType;

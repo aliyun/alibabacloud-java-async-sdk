@@ -110,7 +110,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         private String verificationUriComplete; 
 
         /**
-         * 设备验证码
+         * device_code.
          */
         public Builder deviceCode(String deviceCode) {
             this.deviceCode = deviceCode;
@@ -118,7 +118,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * 过期时间
+         * expires_at.
          */
         public Builder expiresAt(Long expiresAt) {
             this.expiresAt = expiresAt;
@@ -126,7 +126,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * device_code和user_code的有效时长，单位秒
+         * expires_in.
          */
         public Builder expiresIn(Long expiresIn) {
             this.expiresIn = expiresIn;
@@ -134,7 +134,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * 请求token节点的超时时间，单位秒
+         * interval.
          */
         public Builder interval(Long interval) {
             this.interval = interval;
@@ -142,7 +142,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * 终端用户验证码
+         * user_code.
          */
         public Builder userCode(String userCode) {
             this.userCode = userCode;
@@ -150,7 +150,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * 验证URI
+         * verification_uri.
          */
         public Builder verificationUri(String verificationUri) {
             this.verificationUri = verificationUri;
@@ -158,7 +158,7 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * 包含user_code的完整验证URI
+         * verification_uri_complete.
          */
         public Builder verificationUriComplete(String verificationUriComplete) {
             this.verificationUriComplete = verificationUriComplete;

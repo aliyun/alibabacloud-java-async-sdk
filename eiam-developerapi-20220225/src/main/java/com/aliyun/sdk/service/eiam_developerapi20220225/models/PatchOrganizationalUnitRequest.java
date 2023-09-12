@@ -151,7 +151,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -160,7 +160,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -169,7 +169,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构ID
+         * organizationalUnitId.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putPathParameter("organizationalUnitId", organizationalUnitId);
@@ -178,7 +178,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -187,7 +187,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -196,7 +196,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构名称
+         * organizationalUnitName.
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putBodyParameter("organizationalUnitName", organizationalUnitName);

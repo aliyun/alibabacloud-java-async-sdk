@@ -123,7 +123,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -132,7 +132,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -141,7 +141,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构ID
+         * organizationalUnitId.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putPathParameter("organizationalUnitId", organizationalUnitId);
@@ -150,7 +150,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);

@@ -166,7 +166,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -175,7 +175,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -184,7 +184,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -193,7 +193,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -202,7 +202,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构外部ID
+         * organizationalUnitExternalId.
          */
         public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
             this.putBodyParameter("organizationalUnitExternalId", organizationalUnitExternalId);
@@ -211,7 +211,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构名称
+         * organizationalUnitName.
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putBodyParameter("organizationalUnitName", organizationalUnitName);
@@ -220,7 +220,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 父机构ID
+         * parentId.
          */
         public Builder parentId(String parentId) {
             this.putBodyParameter("parentId", parentId);

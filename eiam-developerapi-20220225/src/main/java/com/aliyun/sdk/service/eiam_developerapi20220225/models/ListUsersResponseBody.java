@@ -58,7 +58,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 记录总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -326,7 +326,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 账户过期时间, 毫秒时间
+             * accountExpireTime.
              */
             public Builder accountExpireTime(Long accountExpireTime) {
                 this.accountExpireTime = accountExpireTime;
@@ -334,7 +334,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间, 毫秒时间
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -342,7 +342,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账号描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,7 +350,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 显示名
+             * displayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -358,7 +358,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -366,7 +366,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱是否验证
+             * emailVerified.
              */
             public Builder emailVerified(Boolean emailVerified) {
                 this.emailVerified = emailVerified;
@@ -374,7 +374,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * instanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -382,7 +382,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 锁定过期时间, 毫秒时间
+             * lockExpireTime.
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
@@ -398,7 +398,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * phoneNumber.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -406,7 +406,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号是否验证
+             * phoneNumberVerified.
              */
             public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
                 this.phoneNumberVerified = phoneNumberVerified;
@@ -414,7 +414,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
+             * phoneRegion.
              */
             public Builder phoneRegion(String phoneRegion) {
                 this.phoneRegion = phoneRegion;
@@ -430,7 +430,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户状态, enabled:启用,disabled:禁用
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +438,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次更新时间, 毫秒时间
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -446,7 +446,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 外部ID
+             * userExternalId.
              */
             public Builder userExternalId(String userExternalId) {
                 this.userExternalId = userExternalId;
@@ -454,7 +454,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户ID
+             * userId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -462,7 +462,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 来源ID
+             * userSourceId.
              */
             public Builder userSourceId(String userSourceId) {
                 this.userSourceId = userSourceId;
@@ -470,7 +470,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
+             * userSourceType.
              */
             public Builder userSourceType(String userSourceType) {
                 this.userSourceType = userSourceType;
@@ -478,7 +478,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 账户名
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;

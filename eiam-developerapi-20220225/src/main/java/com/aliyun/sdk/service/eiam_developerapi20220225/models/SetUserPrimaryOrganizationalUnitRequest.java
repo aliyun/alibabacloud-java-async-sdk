@@ -138,7 +138,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 实例ID。
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -147,7 +147,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -156,7 +156,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * userId.
          */
         public Builder userId(String userId) {
             this.putPathParameter("userId", userId);
@@ -165,10 +165,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 认证信息。
-         * <p>
-         * 格式:Bearer ${access_token}。
-         * 示例：Bearer ATxxxx。
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -177,7 +174,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 主组织ID。
+         * organizationalUnitId.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putBodyParameter("organizationalUnitId", organizationalUnitId);

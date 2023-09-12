@@ -235,7 +235,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 实例ID。
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -244,7 +244,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -253,7 +253,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 账户ID
+         * userId.
          */
         public Builder userId(String userId) {
             this.putPathParameter("userId", userId);
@@ -262,10 +262,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 认证信息。
-         * <p>
-         * 格式:Bearer ${access_token}。
-         * 示例：Bearer ATxxxx。
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -274,7 +271,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 扩展字段列表
+         * customFields.
          */
         public Builder customFields(java.util.List < CustomFields> customFields) {
             this.putBodyParameter("customFields", customFields);
@@ -283,7 +280,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 账户展示名
+         * displayName.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -292,7 +289,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 邮箱
+         * email.
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -301,7 +298,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 邮箱是否验证，邮箱若设置此字段必须设置，无特殊业务可直接设置为true
+         * emailVerified.
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putBodyParameter("emailVerified", emailVerified);
@@ -310,7 +307,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 手机号
+         * phoneNumber.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("phoneNumber", phoneNumber);
@@ -319,7 +316,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 手机号是否验证，手机号若设置此字段必须设置，无特殊业务可直接设置为true
+         * phoneNumberVerified.
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putBodyParameter("phoneNumberVerified", phoneNumberVerified);
@@ -328,7 +325,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +, 手机号若设置，此参数必填
+         * phoneRegion.
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putBodyParameter("phoneRegion", phoneRegion);
@@ -337,7 +334,7 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * 账户名
+         * username.
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);
@@ -416,7 +413,7 @@ public class PatchUserRequest extends Request {
             private String operator; 
 
             /**
-             * 扩展字段标识
+             * fieldName.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -424,7 +421,7 @@ public class PatchUserRequest extends Request {
             }
 
             /**
-             * 扩展字段值
+             * fieldValue.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

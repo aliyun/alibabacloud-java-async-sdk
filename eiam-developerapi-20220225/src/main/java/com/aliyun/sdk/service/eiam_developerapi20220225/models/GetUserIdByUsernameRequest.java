@@ -123,7 +123,7 @@ public class GetUserIdByUsernameRequest extends Request {
         }
 
         /**
-         * 实例ID。
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -132,7 +132,7 @@ public class GetUserIdByUsernameRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -141,10 +141,7 @@ public class GetUserIdByUsernameRequest extends Request {
         }
 
         /**
-         * 认证信息。
-         * <p>
-         * 格式:Bearer ${access_token}。
-         * 示例：Bearer ATxxxx。
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -153,7 +150,7 @@ public class GetUserIdByUsernameRequest extends Request {
         }
 
         /**
-         * 账户名。
+         * username.
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

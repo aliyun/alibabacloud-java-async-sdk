@@ -314,7 +314,7 @@ public class GetUserResponseBody extends TeaModel {
         private String username; 
 
         /**
-         * 账户过期时间, 毫秒时间
+         * accountExpireTime.
          */
         public Builder accountExpireTime(Long accountExpireTime) {
             this.accountExpireTime = accountExpireTime;
@@ -322,7 +322,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间, 毫秒时间
+         * createTime.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -330,7 +330,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户扩展字段列表
+         * customFields.
          */
         public Builder customFields(java.util.List < CustomFields> customFields) {
             this.customFields = customFields;
@@ -338,7 +338,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账号描述
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -346,7 +346,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 显示名
+         * displayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -354,7 +354,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 邮箱
+         * email.
          */
         public Builder email(String email) {
             this.email = email;
@@ -362,7 +362,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 邮箱是否验证
+         * emailVerified.
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.emailVerified = emailVerified;
@@ -370,7 +370,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户所属组列表
+         * 账户所属组列表。
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -378,7 +378,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -386,7 +386,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 锁定过期时间, 毫秒时间
+         * lockExpireTime.
          */
         public Builder lockExpireTime(Long lockExpireTime) {
             this.lockExpireTime = lockExpireTime;
@@ -394,7 +394,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户所属组织列表
+         * organizationalUnits.
          */
         public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -402,7 +402,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 密码是否已设置
+         * passwordSet.
          */
         public Builder passwordSet(Boolean passwordSet) {
             this.passwordSet = passwordSet;
@@ -410,7 +410,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 手机号
+         * phoneNumber.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
@@ -418,7 +418,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 手机号是否验证
+         * phoneNumberVerified.
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.phoneNumberVerified = phoneNumberVerified;
@@ -426,7 +426,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
+         * phoneRegion.
          */
         public Builder phoneRegion(String phoneRegion) {
             this.phoneRegion = phoneRegion;
@@ -434,7 +434,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户主机构ID
+         * primaryOrganizationalUnitId.
          */
         public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
             this.primaryOrganizationalUnitId = primaryOrganizationalUnitId;
@@ -450,7 +450,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户状态, enabled:启用,disabled:禁用
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -458,7 +458,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 最近一次更新时间, 毫秒时间
+         * updateTime.
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;
@@ -466,7 +466,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 外部ID
+         * userExternalId.
          */
         public Builder userExternalId(String userExternalId) {
             this.userExternalId = userExternalId;
@@ -474,7 +474,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户ID
+         * userId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -482,7 +482,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 来源ID
+         * userSourceId.
          */
         public Builder userSourceId(String userSourceId) {
             this.userSourceId = userSourceId;
@@ -490,7 +490,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
+         * userSourceType.
          */
         public Builder userSourceType(String userSourceType) {
             this.userSourceType = userSourceType;
@@ -498,7 +498,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * 账户名
+         * username.
          */
         public Builder username(String username) {
             this.username = username;
@@ -550,7 +550,7 @@ public class GetUserResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * 字段标识
+             * fieldName.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -558,7 +558,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 字段数据值
+             * fieldValue.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -704,7 +704,7 @@ public class GetUserResponseBody extends TeaModel {
             private Boolean primary; 
 
             /**
-             * 机构ID
+             * organizationalUnitId.
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -712,7 +712,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 机构名称
+             * organizationalUnitName.
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;
@@ -720,7 +720,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 是否主机构
+             * primary.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;

@@ -38,7 +38,7 @@ public class GetUserIdByUsernameResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * 账户ID。
+         * userId.
          */
         public Builder userId(String userId) {
             this.userId = userId;

@@ -262,7 +262,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -271,7 +271,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -298,7 +298,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * code码
+         * code.
          */
         public Builder code(String code) {
             this.putQueryParameter("code", code);
@@ -307,7 +307,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 验证code
+         * code_verifier.
          */
         public Builder codeVerifier(String codeVerifier) {
             this.putQueryParameter("code_verifier", codeVerifier);
@@ -316,7 +316,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 设备码
+         * device_code.
          */
         public Builder deviceCode(String deviceCode) {
             this.putQueryParameter("device_code", deviceCode);
@@ -325,7 +325,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 排除的tag
+         * exclusive_tag.
          */
         public Builder exclusiveTag(String exclusiveTag) {
             this.putQueryParameter("exclusive_tag", exclusiveTag);
@@ -334,7 +334,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 授权类型
+         * grant_type.
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("grant_type", grantType);
@@ -343,7 +343,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 密码
+         * password.
          */
         public Builder password(String password) {
             this.putQueryParameter("password", password);
@@ -352,7 +352,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 重定向URI
+         * redirect_uri.
          */
         public Builder redirectUri(String redirectUri) {
             this.putQueryParameter("redirect_uri", redirectUri);
@@ -361,7 +361,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 更新token
+         * refresh_token.
          */
         public Builder refreshToken(String refreshToken) {
             this.putQueryParameter("refresh_token", refreshToken);
@@ -370,7 +370,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * scope范围
+         * scope.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
@@ -379,7 +379,7 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * 用户名
+         * username.
          */
         public Builder username(String username) {
             this.putQueryParameter("username", username);

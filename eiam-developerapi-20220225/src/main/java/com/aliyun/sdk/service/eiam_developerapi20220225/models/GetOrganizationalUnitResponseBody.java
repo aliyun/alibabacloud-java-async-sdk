@@ -146,7 +146,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         private Long updateTime; 
 
         /**
-         * 创建时间，毫秒
+         * createTime.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -154,7 +154,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -162,7 +162,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -170,7 +170,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 外部ID
+         * organizationalUnitExternalId.
          */
         public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
             this.organizationalUnitExternalId = organizationalUnitExternalId;
@@ -178,7 +178,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 机构ID
+         * organizationalUnitId.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
@@ -186,7 +186,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 机构名称
+         * organizationalUnitName.
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.organizationalUnitName = organizationalUnitName;
@@ -194,7 +194,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 来源ID
+         * organizationalUnitSourceId.
          */
         public Builder organizationalUnitSourceId(String organizationalUnitSourceId) {
             this.organizationalUnitSourceId = organizationalUnitSourceId;
@@ -202,7 +202,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 来源类型
+         * organizationalUnitSourceType.
          */
         public Builder organizationalUnitSourceType(String organizationalUnitSourceType) {
             this.organizationalUnitSourceType = organizationalUnitSourceType;
@@ -210,7 +210,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 父机构ID
+         * parentId.
          */
         public Builder parentId(String parentId) {
             this.parentId = parentId;
@@ -218,7 +218,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * 最近一次更新时间，毫秒
+         * updateTime.
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

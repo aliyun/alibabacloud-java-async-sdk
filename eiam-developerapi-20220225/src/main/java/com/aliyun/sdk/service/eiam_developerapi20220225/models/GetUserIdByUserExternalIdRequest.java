@@ -153,7 +153,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -162,7 +162,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -171,7 +171,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -180,7 +180,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * 账户外部ID
+         * userExternalId.
          */
         public Builder userExternalId(String userExternalId) {
             this.putBodyParameter("userExternalId", userExternalId);
@@ -189,7 +189,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * 账户来源ID,自建类型(build_in)值为实例ID，非自建类型，为对应企业ID，比如钉钉，对应的corpId
+         * userSourceId.
          */
         public Builder userSourceId(String userSourceId) {
             this.putBodyParameter("userSourceId", userSourceId);
@@ -198,7 +198,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * 账户来源类型, 取值可选范围： build_in(自建), ding_talk(钉钉导入),ad(AD导入),ldap(LDAP导入)
+         * userSourceType.
          */
         public Builder userSourceType(String userSourceType) {
             this.putBodyParameter("userSourceType", userSourceType);

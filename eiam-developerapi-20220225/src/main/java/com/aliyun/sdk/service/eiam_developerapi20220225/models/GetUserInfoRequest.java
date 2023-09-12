@@ -108,7 +108,7 @@ public class GetUserInfoRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -117,7 +117,7 @@ public class GetUserInfoRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * The application ID.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -126,7 +126,7 @@ public class GetUserInfoRequest extends Request {
         }
 
         /**
-         * 认证信息，格式:Bearer access_token
+         * The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);

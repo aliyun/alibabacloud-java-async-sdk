@@ -292,7 +292,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 实例ID。
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -301,7 +301,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -310,10 +310,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 认证信息。
-         * <p>
-         * 格式:Bearer ${access_token}。
-         * 示例：Bearer ATxxxx。
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -322,7 +319,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 扩展字段列表
+         * customFields.
          */
         public Builder customFields(java.util.List < CustomFields> customFields) {
             this.putBodyParameter("customFields", customFields);
@@ -331,7 +328,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -340,7 +337,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户展示名。
+         * displayName.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -349,7 +346,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 邮箱
+         * email.
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -358,7 +355,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 邮箱是否验证，邮箱若设置此字段必须设置，无特殊业务可直接设置为true
+         * emailVerified.
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putBodyParameter("emailVerified", emailVerified);
@@ -367,7 +364,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 密码, 参考密码策略
+         * password.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -376,7 +373,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 密码初始化配置
+         * passwordInitializationConfig.
          */
         public Builder passwordInitializationConfig(PasswordInitializationConfig passwordInitializationConfig) {
             this.putBodyParameter("passwordInitializationConfig", passwordInitializationConfig);
@@ -385,7 +382,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 手机号
+         * phoneNumber.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("phoneNumber", phoneNumber);
@@ -394,7 +391,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 手机号是否验证，手机号若设置此字段必须设置，无特殊业务可直接设置为true
+         * phoneNumberVerified.
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putBodyParameter("phoneNumberVerified", phoneNumberVerified);
@@ -403,7 +400,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +, 手机号若设置，此参数必填
+         * phoneRegion.
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putBodyParameter("phoneRegion", phoneRegion);
@@ -412,7 +409,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户主机构ID
+         * primaryOrganizationalUnitId.
          */
         public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
             this.putBodyParameter("primaryOrganizationalUnitId", primaryOrganizationalUnitId);
@@ -421,7 +418,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户外部ID
+         * userExternalId.
          */
         public Builder userExternalId(String userExternalId) {
             this.putBodyParameter("userExternalId", userExternalId);
@@ -430,7 +427,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 账户名称。
+         * username.
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);
@@ -484,7 +481,7 @@ public class CreateUserRequest extends Request {
             private String fieldValue; 
 
             /**
-             * 扩展字段标识
+             * fieldName.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -492,7 +489,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 扩展字段值
+             * fieldValue.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -569,7 +566,7 @@ public class CreateUserRequest extends Request {
             private java.util.List < String > userNotificationChannels; 
 
             /**
-             * 强制修改密码状态,默认不启用。枚举取值:enabled(开启)、disabled(禁用)
+             * passwordForcedUpdateStatus.
              */
             public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
                 this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
@@ -577,7 +574,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 密码初始化策略优先级，不传不生效。枚举取值:global(全局优先)、custom(自定义优先)
+             * passwordInitializationPolicyPriority.
              */
             public Builder passwordInitializationPolicyPriority(String passwordInitializationPolicyPriority) {
                 this.passwordInitializationPolicyPriority = passwordInitializationPolicyPriority;
@@ -585,7 +582,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 密码初始化方式。枚举取值:random(随机)
+             * passwordInitializationType.
              */
             public Builder passwordInitializationType(String passwordInitializationType) {
                 this.passwordInitializationType = passwordInitializationType;
@@ -593,7 +590,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * 密码通知渠道。枚举取值:email(邮件)、sms(短信)
+             * userNotificationChannels.
              */
             public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
                 this.userNotificationChannels = userNotificationChannels;

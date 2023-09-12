@@ -150,7 +150,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 实例ID。
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -159,7 +159,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -168,10 +168,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 认证信息。
-         * <p>
-         * 格式:Bearer ${access_token}。
-         * 示例：Bearer ATxxxx。
+         * Authorization.
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -180,7 +177,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 机构ID
+         * organizationalUnitId.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("organizationalUnitId", organizationalUnitId);
@@ -189,7 +186,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 页码，默认1
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -198,7 +195,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 单页大小，默认20
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

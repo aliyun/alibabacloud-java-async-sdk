@@ -38,7 +38,7 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         private String organizationalUnitId; 
 
         /**
-         * 机构ID
+         * organizationalUnitId.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;

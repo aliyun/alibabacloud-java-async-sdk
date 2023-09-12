@@ -38,7 +38,7 @@ public class ListOrganizationalUnitParentIdsResponseBody extends TeaModel {
         private java.util.List < String > parentIds; 
 
         /**
-         * 父机构ID列表，顺序层级从上到下
+         * parentIds.
          */
         public Builder parentIds(java.util.List < String > parentIds) {
             this.parentIds = parentIds;

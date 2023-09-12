@@ -107,7 +107,7 @@ public class GenerateDeviceCodeRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -116,7 +116,7 @@ public class GenerateDeviceCodeRequest extends Request {
         }
 
         /**
-         * 应用ID
+         * applicationId.
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -125,7 +125,7 @@ public class GenerateDeviceCodeRequest extends Request {
         }
 
         /**
-         * scope范围
+         * scope.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
