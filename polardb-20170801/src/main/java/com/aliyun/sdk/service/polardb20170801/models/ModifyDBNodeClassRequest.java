@@ -27,6 +27,10 @@ public class ModifyDBNodeClassRequest extends Request {
     private String DBNodeTargetClass;
 
     @Query
+    @NameInMap("DBNodeType")
+    private String DBNodeType;
+
+    @Query
     @NameInMap("ModifyType")
     @Validation(required = true)
     private String modifyType;
@@ -64,6 +68,7 @@ public class ModifyDBNodeClassRequest extends Request {
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeTargetClass = builder.DBNodeTargetClass;
+        this.DBNodeType = builder.DBNodeType;
         this.modifyType = builder.modifyType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -106,6 +111,13 @@ public class ModifyDBNodeClassRequest extends Request {
      */
     public String getDBNodeTargetClass() {
         return this.DBNodeTargetClass;
+    }
+
+    /**
+     * @return DBNodeType
+     */
+    public String getDBNodeType() {
+        return this.DBNodeType;
     }
 
     /**
@@ -168,6 +180,7 @@ public class ModifyDBNodeClassRequest extends Request {
         private String clientToken; 
         private String DBClusterId; 
         private String DBNodeTargetClass; 
+        private String DBNodeType; 
         private String modifyType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -186,6 +199,7 @@ public class ModifyDBNodeClassRequest extends Request {
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeTargetClass = request.DBNodeTargetClass;
+            this.DBNodeType = request.DBNodeType;
             this.modifyType = request.modifyType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -220,6 +234,15 @@ public class ModifyDBNodeClassRequest extends Request {
         public Builder DBNodeTargetClass(String DBNodeTargetClass) {
             this.putQueryParameter("DBNodeTargetClass", DBNodeTargetClass);
             this.DBNodeTargetClass = DBNodeTargetClass;
+            return this;
+        }
+
+        /**
+         * DBNodeType.
+         */
+        public Builder DBNodeType(String DBNodeType) {
+            this.putQueryParameter("DBNodeType", DBNodeType);
+            this.DBNodeType = DBNodeType;
             return this;
         }
 

@@ -15,6 +15,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("AiType")
     private String aiType;
 
+    @NameInMap("Architecture")
+    private String architecture;
+
     @NameInMap("BlktagTotal")
     private Long blktagTotal;
 
@@ -77,6 +80,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     @NameInMap("HasCompleteStandbyRes")
     private Boolean hasCompleteStandbyRes;
+
+    @NameInMap("HotStandbyCluster")
+    private String hotStandbyCluster;
 
     @NameInMap("InodeTotal")
     private Long inodeTotal;
@@ -167,6 +173,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     private DescribeDBClusterAttributeResponseBody(Builder builder) {
         this.aiType = builder.aiType;
+        this.architecture = builder.architecture;
         this.blktagTotal = builder.blktagTotal;
         this.blktagUsed = builder.blktagUsed;
         this.category = builder.category;
@@ -188,6 +195,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
         this.hasCompleteStandbyRes = builder.hasCompleteStandbyRes;
+        this.hotStandbyCluster = builder.hotStandbyCluster;
         this.inodeTotal = builder.inodeTotal;
         this.inodeUsed = builder.inodeUsed;
         this.isLatestVersion = builder.isLatestVersion;
@@ -232,6 +240,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getAiType() {
         return this.aiType;
+    }
+
+    /**
+     * @return architecture
+     */
+    public String getArchitecture() {
+        return this.architecture;
     }
 
     /**
@@ -379,6 +394,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public Boolean getHasCompleteStandbyRes() {
         return this.hasCompleteStandbyRes;
+    }
+
+    /**
+     * @return hotStandbyCluster
+     */
+    public String getHotStandbyCluster() {
+        return this.hotStandbyCluster;
     }
 
     /**
@@ -586,6 +608,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String aiType; 
+        private String architecture; 
         private Long blktagTotal; 
         private Long blktagUsed; 
         private String category; 
@@ -607,6 +630,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String expireTime; 
         private String expired; 
         private Boolean hasCompleteStandbyRes; 
+        private String hotStandbyCluster; 
         private Long inodeTotal; 
         private Long inodeUsed; 
         private Boolean isLatestVersion; 
@@ -646,6 +670,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder aiType(String aiType) {
             this.aiType = aiType;
+            return this;
+        }
+
+        /**
+         * Architecture.
+         */
+        public Builder architecture(String architecture) {
+            this.architecture = architecture;
             return this;
         }
 
@@ -842,6 +874,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder hasCompleteStandbyRes(Boolean hasCompleteStandbyRes) {
             this.hasCompleteStandbyRes = hasCompleteStandbyRes;
+            return this;
+        }
+
+        /**
+         * HotStandbyCluster.
+         */
+        public Builder hotStandbyCluster(String hotStandbyCluster) {
+            this.hotStandbyCluster = hotStandbyCluster;
             return this;
         }
 
