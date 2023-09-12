@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateSwimLaneGroupRequest extends Request {
     @Body
+    @NameInMap("FallbackTarget")
+    private String fallbackTarget;
+
+    @Body
     @NameInMap("GroupName")
     private String groupName;
 
@@ -27,6 +31,7 @@ public class UpdateSwimLaneGroupRequest extends Request {
 
     private UpdateSwimLaneGroupRequest(Builder builder) {
         super(builder);
+        this.fallbackTarget = builder.fallbackTarget;
         this.groupName = builder.groupName;
         this.serviceMeshId = builder.serviceMeshId;
         this.servicesList = builder.servicesList;
@@ -43,6 +48,13 @@ public class UpdateSwimLaneGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return fallbackTarget
+     */
+    public String getFallbackTarget() {
+        return this.fallbackTarget;
     }
 
     /**
@@ -67,6 +79,7 @@ public class UpdateSwimLaneGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateSwimLaneGroupRequest, Builder> {
+        private String fallbackTarget; 
         private String groupName; 
         private String serviceMeshId; 
         private String servicesList; 
@@ -77,10 +90,20 @@ public class UpdateSwimLaneGroupRequest extends Request {
 
         private Builder(UpdateSwimLaneGroupRequest request) {
             super(request);
+            this.fallbackTarget = request.fallbackTarget;
             this.groupName = request.groupName;
             this.serviceMeshId = request.serviceMeshId;
             this.servicesList = request.servicesList;
         } 
+
+        /**
+         * FallbackTarget.
+         */
+        public Builder fallbackTarget(String fallbackTarget) {
+            this.putBodyParameter("FallbackTarget", fallbackTarget);
+            this.fallbackTarget = fallbackTarget;
+            return this;
+        }
 
         /**
          * The name of the lane group.

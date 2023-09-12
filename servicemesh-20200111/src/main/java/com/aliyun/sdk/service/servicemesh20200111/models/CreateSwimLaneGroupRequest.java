@@ -28,6 +28,14 @@ public class CreateSwimLaneGroupRequest extends Request {
     private String ingressType;
 
     @Body
+    @NameInMap("IsPermissive")
+    private Boolean isPermissive;
+
+    @Body
+    @NameInMap("RouteHeader")
+    private String routeHeader;
+
+    @Body
     @NameInMap("ServiceMeshId")
     @Validation(required = true)
     private String serviceMeshId;
@@ -37,13 +45,20 @@ public class CreateSwimLaneGroupRequest extends Request {
     @Validation(required = true)
     private String servicesList;
 
+    @Body
+    @NameInMap("TraceHeader")
+    private String traceHeader;
+
     private CreateSwimLaneGroupRequest(Builder builder) {
         super(builder);
         this.groupName = builder.groupName;
         this.ingressGatewayName = builder.ingressGatewayName;
         this.ingressType = builder.ingressType;
+        this.isPermissive = builder.isPermissive;
+        this.routeHeader = builder.routeHeader;
         this.serviceMeshId = builder.serviceMeshId;
         this.servicesList = builder.servicesList;
+        this.traceHeader = builder.traceHeader;
     }
 
     public static Builder builder() {
@@ -81,6 +96,20 @@ public class CreateSwimLaneGroupRequest extends Request {
     }
 
     /**
+     * @return isPermissive
+     */
+    public Boolean getIsPermissive() {
+        return this.isPermissive;
+    }
+
+    /**
+     * @return routeHeader
+     */
+    public String getRouteHeader() {
+        return this.routeHeader;
+    }
+
+    /**
      * @return serviceMeshId
      */
     public String getServiceMeshId() {
@@ -94,12 +123,22 @@ public class CreateSwimLaneGroupRequest extends Request {
         return this.servicesList;
     }
 
+    /**
+     * @return traceHeader
+     */
+    public String getTraceHeader() {
+        return this.traceHeader;
+    }
+
     public static final class Builder extends Request.Builder<CreateSwimLaneGroupRequest, Builder> {
         private String groupName; 
         private String ingressGatewayName; 
         private String ingressType; 
+        private Boolean isPermissive; 
+        private String routeHeader; 
         private String serviceMeshId; 
         private String servicesList; 
+        private String traceHeader; 
 
         private Builder() {
             super();
@@ -110,8 +149,11 @@ public class CreateSwimLaneGroupRequest extends Request {
             this.groupName = request.groupName;
             this.ingressGatewayName = request.ingressGatewayName;
             this.ingressType = request.ingressType;
+            this.isPermissive = request.isPermissive;
+            this.routeHeader = request.routeHeader;
             this.serviceMeshId = request.serviceMeshId;
             this.servicesList = request.servicesList;
+            this.traceHeader = request.traceHeader;
         } 
 
         /**
@@ -142,6 +184,24 @@ public class CreateSwimLaneGroupRequest extends Request {
         }
 
         /**
+         * IsPermissive.
+         */
+        public Builder isPermissive(Boolean isPermissive) {
+            this.putBodyParameter("IsPermissive", isPermissive);
+            this.isPermissive = isPermissive;
+            return this;
+        }
+
+        /**
+         * RouteHeader.
+         */
+        public Builder routeHeader(String routeHeader) {
+            this.putBodyParameter("RouteHeader", routeHeader);
+            this.routeHeader = routeHeader;
+            return this;
+        }
+
+        /**
          * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
@@ -156,6 +216,15 @@ public class CreateSwimLaneGroupRequest extends Request {
         public Builder servicesList(String servicesList) {
             this.putBodyParameter("ServicesList", servicesList);
             this.servicesList = servicesList;
+            return this;
+        }
+
+        /**
+         * TraceHeader.
+         */
+        public Builder traceHeader(String traceHeader) {
+            this.putBodyParameter("TraceHeader", traceHeader);
+            this.traceHeader = traceHeader;
             return this;
         }
 
