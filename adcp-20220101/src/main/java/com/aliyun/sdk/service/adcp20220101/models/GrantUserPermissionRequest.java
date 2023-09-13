@@ -137,7 +137,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * IsRamRole.
+         * The entity to which the permissions are granted. A value of `true` indicates that the permissions are granted to a RAM user. A value of `false` indicates that the permissions are granted to a RAM role.
          */
         public Builder isRamRole(Boolean isRamRole) {
             this.putQueryParameter("IsRamRole", isRamRole);
@@ -155,7 +155,37 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * The predefined role that you want to assign. Valid values:
+         * <p>
+         * 
+         * *   admin: the administrator role.
+         * *   dev: the developer role.
+         * 
+         * Enumerated values:
+         * 
+         * *   arms-admin
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   dev
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   admin
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -173,7 +203,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the RAM user or RAM role.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

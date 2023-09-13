@@ -29,6 +29,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     private Boolean argoCDHAEnabled;
 
     @Query
+    @NameInMap("ArgoEventsEnabled")
+    private Boolean argoEventsEnabled;
+
+    @Query
     @NameInMap("ArgoServerEnabled")
     private Boolean argoServerEnabled;
 
@@ -83,6 +87,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.apiServerEipId = builder.apiServerEipId;
         this.argoCDEnabled = builder.argoCDEnabled;
         this.argoCDHAEnabled = builder.argoCDHAEnabled;
+        this.argoEventsEnabled = builder.argoEventsEnabled;
         this.argoServerEnabled = builder.argoServerEnabled;
         this.auditLogEnabled = builder.auditLogEnabled;
         this.clusterId = builder.clusterId;
@@ -136,6 +141,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
      */
     public Boolean getArgoCDHAEnabled() {
         return this.argoCDHAEnabled;
+    }
+
+    /**
+     * @return argoEventsEnabled
+     */
+    public Boolean getArgoEventsEnabled() {
+        return this.argoEventsEnabled;
     }
 
     /**
@@ -227,6 +239,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private String apiServerEipId; 
         private Boolean argoCDEnabled; 
         private Boolean argoCDHAEnabled; 
+        private Boolean argoEventsEnabled; 
         private Boolean argoServerEnabled; 
         private Boolean auditLogEnabled; 
         private String clusterId; 
@@ -250,6 +263,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.apiServerEipId = request.apiServerEipId;
             this.argoCDEnabled = request.argoCDEnabled;
             this.argoCDHAEnabled = request.argoCDHAEnabled;
+            this.argoEventsEnabled = request.argoEventsEnabled;
             this.argoServerEnabled = request.argoServerEnabled;
             this.auditLogEnabled = request.auditLogEnabled;
             this.clusterId = request.clusterId;
@@ -298,6 +312,15 @@ public class UpdateHubClusterFeatureRequest extends Request {
         public Builder argoCDHAEnabled(Boolean argoCDHAEnabled) {
             this.putQueryParameter("ArgoCDHAEnabled", argoCDHAEnabled);
             this.argoCDHAEnabled = argoCDHAEnabled;
+            return this;
+        }
+
+        /**
+         * ArgoEventsEnabled.
+         */
+        public Builder argoEventsEnabled(Boolean argoEventsEnabled) {
+            this.putQueryParameter("ArgoEventsEnabled", argoEventsEnabled);
+            this.argoEventsEnabled = argoEventsEnabled;
             return this;
         }
 
