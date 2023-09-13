@@ -36,6 +36,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateApplicationClientSecretResponse> createApplicationClientSecret(CreateApplicationClientSecretRequest request);
 
+    CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
+
+    CompletableFuture<CreateDomainProxyTokenResponse> createDomainProxyToken(CreateDomainProxyTokenRequest request);
+
     CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request);
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
@@ -53,6 +57,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
     CompletableFuture<DeleteApplicationClientSecretResponse> deleteApplicationClientSecret(DeleteApplicationClientSecretRequest request);
+
+    CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
+
+    CompletableFuture<DeleteDomainProxyTokenResponse> deleteDomainProxyToken(DeleteDomainProxyTokenRequest request);
 
     CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request);
 
@@ -82,6 +90,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableApplicationSsoResponse> disableApplicationSso(DisableApplicationSsoRequest request);
 
+    CompletableFuture<DisableDomainProxyTokenResponse> disableDomainProxyToken(DisableDomainProxyTokenRequest request);
+
+    CompletableFuture<DisableInitDomainAutoRedirectResponse> disableInitDomainAutoRedirect(DisableInitDomainAutoRedirectRequest request);
+
     CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request);
 
     CompletableFuture<EnableApplicationResponse> enableApplication(EnableApplicationRequest request);
@@ -94,6 +106,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableApplicationSsoResponse> enableApplicationSso(EnableApplicationSsoRequest request);
 
+    CompletableFuture<EnableDomainProxyTokenResponse> enableDomainProxyToken(EnableDomainProxyTokenRequest request);
+
+    CompletableFuture<EnableInitDomainAutoRedirectResponse> enableInitDomainAutoRedirect(EnableInitDomainAutoRedirectRequest request);
+
     CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
 
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
@@ -105,6 +121,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationProvisioningScopeResponse> getApplicationProvisioningScope(GetApplicationProvisioningScopeRequest request);
 
     CompletableFuture<GetApplicationSsoConfigResponse> getApplicationSsoConfig(GetApplicationSsoConfigRequest request);
+
+    CompletableFuture<GetDomainResponse> getDomain(GetDomainRequest request);
+
+    CompletableFuture<GetDomainDnsChallengeResponse> getDomainDnsChallenge(GetDomainDnsChallengeRequest request);
 
     CompletableFuture<GetForgetPasswordConfigurationResponse> getForgetPasswordConfiguration(GetForgetPasswordConfigurationRequest request);
 
@@ -140,6 +160,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListApplicationsForUserResponse> listApplicationsForUser(ListApplicationsForUserRequest request);
 
+    CompletableFuture<ListDomainProxyTokensResponse> listDomainProxyTokens(ListDomainProxyTokensRequest request);
+
+    CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
+
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
     CompletableFuture<ListGroupsForApplicationResponse> listGroupsForApplication(ListGroupsForApplicationRequest request);
@@ -172,6 +196,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ObtainApplicationClientSecretResponse> obtainApplicationClientSecret(ObtainApplicationClientSecretRequest request);
 
+    CompletableFuture<ObtainDomainProxyTokenResponse> obtainDomainProxyToken(ObtainDomainProxyTokenRequest request);
+
     CompletableFuture<RemoveUserFromOrganizationalUnitsResponse> removeUserFromOrganizationalUnits(RemoveUserFromOrganizationalUnitsRequest request);
 
     CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request);
@@ -193,6 +219,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SetApplicationSsoConfigResponse> setApplicationSsoConfig(SetApplicationSsoConfigRequest request);
+
+    CompletableFuture<SetDefaultDomainResponse> setDefaultDomain(SetDefaultDomainRequest request);
 
     CompletableFuture<SetForgetPasswordConfigurationResponse> setForgetPasswordConfiguration(SetForgetPasswordConfigurationRequest request);
 
