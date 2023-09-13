@@ -173,34 +173,34 @@ public class GetTrackListResponseBody extends TeaModel {
 
     public static class Stat extends TeaModel {
         @NameInMap("CreateTime")
-        private String createTime;
+        private Long createTime;
 
         @NameInMap("RcptClickCount")
-        private String rcptClickCount;
+        private Long rcptClickCount;
 
         @NameInMap("RcptClickRate")
         private String rcptClickRate;
 
         @NameInMap("RcptOpenCount")
-        private String rcptOpenCount;
+        private Long rcptOpenCount;
 
         @NameInMap("RcptOpenRate")
         private String rcptOpenRate;
 
         @NameInMap("RcptUniqueClickCount")
-        private String rcptUniqueClickCount;
+        private Long rcptUniqueClickCount;
 
         @NameInMap("RcptUniqueClickRate")
         private String rcptUniqueClickRate;
 
         @NameInMap("RcptUniqueOpenCount")
-        private String rcptUniqueOpenCount;
+        private Long rcptUniqueOpenCount;
 
         @NameInMap("RcptUniqueOpenRate")
         private String rcptUniqueOpenRate;
 
         @NameInMap("TotalNumber")
-        private String totalNumber;
+        private Long totalNumber;
 
         private Stat(Builder builder) {
             this.createTime = builder.createTime;
@@ -226,14 +226,14 @@ public class GetTrackListResponseBody extends TeaModel {
         /**
          * @return createTime
          */
-        public String getCreateTime() {
+        public Long getCreateTime() {
             return this.createTime;
         }
 
         /**
          * @return rcptClickCount
          */
-        public String getRcptClickCount() {
+        public Long getRcptClickCount() {
             return this.rcptClickCount;
         }
 
@@ -247,7 +247,7 @@ public class GetTrackListResponseBody extends TeaModel {
         /**
          * @return rcptOpenCount
          */
-        public String getRcptOpenCount() {
+        public Long getRcptOpenCount() {
             return this.rcptOpenCount;
         }
 
@@ -261,7 +261,7 @@ public class GetTrackListResponseBody extends TeaModel {
         /**
          * @return rcptUniqueClickCount
          */
-        public String getRcptUniqueClickCount() {
+        public Long getRcptUniqueClickCount() {
             return this.rcptUniqueClickCount;
         }
 
@@ -275,7 +275,7 @@ public class GetTrackListResponseBody extends TeaModel {
         /**
          * @return rcptUniqueOpenCount
          */
-        public String getRcptUniqueOpenCount() {
+        public Long getRcptUniqueOpenCount() {
             return this.rcptUniqueOpenCount;
         }
 
@@ -289,26 +289,26 @@ public class GetTrackListResponseBody extends TeaModel {
         /**
          * @return totalNumber
          */
-        public String getTotalNumber() {
+        public Long getTotalNumber() {
             return this.totalNumber;
         }
 
         public static final class Builder {
-            private String createTime; 
-            private String rcptClickCount; 
+            private Long createTime; 
+            private Long rcptClickCount; 
             private String rcptClickRate; 
-            private String rcptOpenCount; 
+            private Long rcptOpenCount; 
             private String rcptOpenRate; 
-            private String rcptUniqueClickCount; 
+            private Long rcptUniqueClickCount; 
             private String rcptUniqueClickRate; 
-            private String rcptUniqueOpenCount; 
+            private Long rcptUniqueOpenCount; 
             private String rcptUniqueOpenRate; 
-            private String totalNumber; 
+            private Long totalNumber; 
 
             /**
              * CreateTime.
              */
-            public Builder createTime(String createTime) {
+            public Builder createTime(Long createTime) {
                 this.createTime = createTime;
                 return this;
             }
@@ -316,7 +316,7 @@ public class GetTrackListResponseBody extends TeaModel {
             /**
              * RcptClickCount.
              */
-            public Builder rcptClickCount(String rcptClickCount) {
+            public Builder rcptClickCount(Long rcptClickCount) {
                 this.rcptClickCount = rcptClickCount;
                 return this;
             }
@@ -332,7 +332,7 @@ public class GetTrackListResponseBody extends TeaModel {
             /**
              * RcptOpenCount.
              */
-            public Builder rcptOpenCount(String rcptOpenCount) {
+            public Builder rcptOpenCount(Long rcptOpenCount) {
                 this.rcptOpenCount = rcptOpenCount;
                 return this;
             }
@@ -348,7 +348,7 @@ public class GetTrackListResponseBody extends TeaModel {
             /**
              * RcptUniqueClickCount.
              */
-            public Builder rcptUniqueClickCount(String rcptUniqueClickCount) {
+            public Builder rcptUniqueClickCount(Long rcptUniqueClickCount) {
                 this.rcptUniqueClickCount = rcptUniqueClickCount;
                 return this;
             }
@@ -364,7 +364,7 @@ public class GetTrackListResponseBody extends TeaModel {
             /**
              * RcptUniqueOpenCount.
              */
-            public Builder rcptUniqueOpenCount(String rcptUniqueOpenCount) {
+            public Builder rcptUniqueOpenCount(Long rcptUniqueOpenCount) {
                 this.rcptUniqueOpenCount = rcptUniqueOpenCount;
                 return this;
             }
@@ -380,7 +380,7 @@ public class GetTrackListResponseBody extends TeaModel {
             /**
              * TotalNumber.
              */
-            public Builder totalNumber(String totalNumber) {
+            public Builder totalNumber(Long totalNumber) {
                 this.totalNumber = totalNumber;
                 return this;
             }

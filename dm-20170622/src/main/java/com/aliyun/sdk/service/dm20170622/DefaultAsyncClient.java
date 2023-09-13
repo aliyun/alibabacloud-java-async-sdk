@@ -291,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<GetMailAddressMsgCallBackUrlResponse> getMailAddressMsgCallBackUrl(GetMailAddressMsgCallBackUrlRequest request) {
         try {

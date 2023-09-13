@@ -27,6 +27,15 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DefaultDomain")
     private String defaultDomain;
 
+    @NameInMap("DkimAuthStatus")
+    private String dkimAuthStatus;
+
+    @NameInMap("DkimPublicKey")
+    private String dkimPublicKey;
+
+    @NameInMap("DkimRR")
+    private String dkimRR;
+
     @NameInMap("DnsMx")
     private String dnsMx;
 
@@ -48,6 +57,9 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DomainType")
     private String domainType;
 
+    @NameInMap("HostRecord")
+    private String hostRecord;
+
     @NameInMap("IcpStatus")
     private String icpStatus;
 
@@ -66,6 +78,9 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("SpfRecord")
     private String spfRecord;
 
+    @NameInMap("SpfRecordV2")
+    private String spfRecordV2;
+
     @NameInMap("TlDomainName")
     private String tlDomainName;
 
@@ -78,6 +93,9 @@ public class DescDomainResponseBody extends TeaModel {
         this.cnameRecord = builder.cnameRecord;
         this.createTime = builder.createTime;
         this.defaultDomain = builder.defaultDomain;
+        this.dkimAuthStatus = builder.dkimAuthStatus;
+        this.dkimPublicKey = builder.dkimPublicKey;
+        this.dkimRR = builder.dkimRR;
         this.dnsMx = builder.dnsMx;
         this.dnsSpf = builder.dnsSpf;
         this.dnsTxt = builder.dnsTxt;
@@ -85,12 +103,14 @@ public class DescDomainResponseBody extends TeaModel {
         this.domainName = builder.domainName;
         this.domainStatus = builder.domainStatus;
         this.domainType = builder.domainType;
+        this.hostRecord = builder.hostRecord;
         this.icpStatus = builder.icpStatus;
         this.mxAuthStatus = builder.mxAuthStatus;
         this.mxRecord = builder.mxRecord;
         this.requestId = builder.requestId;
         this.spfAuthStatus = builder.spfAuthStatus;
         this.spfRecord = builder.spfRecord;
+        this.spfRecordV2 = builder.spfRecordV2;
         this.tlDomainName = builder.tlDomainName;
         this.tracefRecord = builder.tracefRecord;
     }
@@ -136,6 +156,27 @@ public class DescDomainResponseBody extends TeaModel {
      */
     public String getDefaultDomain() {
         return this.defaultDomain;
+    }
+
+    /**
+     * @return dkimAuthStatus
+     */
+    public String getDkimAuthStatus() {
+        return this.dkimAuthStatus;
+    }
+
+    /**
+     * @return dkimPublicKey
+     */
+    public String getDkimPublicKey() {
+        return this.dkimPublicKey;
+    }
+
+    /**
+     * @return dkimRR
+     */
+    public String getDkimRR() {
+        return this.dkimRR;
     }
 
     /**
@@ -188,6 +229,13 @@ public class DescDomainResponseBody extends TeaModel {
     }
 
     /**
+     * @return hostRecord
+     */
+    public String getHostRecord() {
+        return this.hostRecord;
+    }
+
+    /**
      * @return icpStatus
      */
     public String getIcpStatus() {
@@ -230,6 +278,13 @@ public class DescDomainResponseBody extends TeaModel {
     }
 
     /**
+     * @return spfRecordV2
+     */
+    public String getSpfRecordV2() {
+        return this.spfRecordV2;
+    }
+
+    /**
      * @return tlDomainName
      */
     public String getTlDomainName() {
@@ -249,6 +304,9 @@ public class DescDomainResponseBody extends TeaModel {
         private String cnameRecord; 
         private String createTime; 
         private String defaultDomain; 
+        private String dkimAuthStatus; 
+        private String dkimPublicKey; 
+        private String dkimRR; 
         private String dnsMx; 
         private String dnsSpf; 
         private String dnsTxt; 
@@ -256,12 +314,14 @@ public class DescDomainResponseBody extends TeaModel {
         private String domainName; 
         private String domainStatus; 
         private String domainType; 
+        private String hostRecord; 
         private String icpStatus; 
         private String mxAuthStatus; 
         private String mxRecord; 
         private String requestId; 
         private String spfAuthStatus; 
         private String spfRecord; 
+        private String spfRecordV2; 
         private String tlDomainName; 
         private String tracefRecord; 
 
@@ -302,6 +362,30 @@ public class DescDomainResponseBody extends TeaModel {
          */
         public Builder defaultDomain(String defaultDomain) {
             this.defaultDomain = defaultDomain;
+            return this;
+        }
+
+        /**
+         * DkimAuthStatus.
+         */
+        public Builder dkimAuthStatus(String dkimAuthStatus) {
+            this.dkimAuthStatus = dkimAuthStatus;
+            return this;
+        }
+
+        /**
+         * DkimPublicKey.
+         */
+        public Builder dkimPublicKey(String dkimPublicKey) {
+            this.dkimPublicKey = dkimPublicKey;
+            return this;
+        }
+
+        /**
+         * DkimRR.
+         */
+        public Builder dkimRR(String dkimRR) {
+            this.dkimRR = dkimRR;
             return this;
         }
 
@@ -362,6 +446,14 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
+         * HostRecord.
+         */
+        public Builder hostRecord(String hostRecord) {
+            this.hostRecord = hostRecord;
+            return this;
+        }
+
+        /**
          * IcpStatus.
          */
         public Builder icpStatus(String icpStatus) {
@@ -406,6 +498,14 @@ public class DescDomainResponseBody extends TeaModel {
          */
         public Builder spfRecord(String spfRecord) {
             this.spfRecord = spfRecord;
+            return this;
+        }
+
+        /**
+         * SpfRecordV2.
+         */
+        public Builder spfRecordV2(String spfRecordV2) {
+            this.spfRecordV2 = spfRecordV2;
             return this;
         }
 

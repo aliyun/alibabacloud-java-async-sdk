@@ -54,6 +54,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAccountListResponse> getAccountList(GetAccountListRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetMailAddressMsgCallBackUrlResponse> getMailAddressMsgCallBackUrl(GetMailAddressMsgCallBackUrlRequest request);
 
     CompletableFuture<GetTrackListResponse> getTrackList(GetTrackListRequest request);
