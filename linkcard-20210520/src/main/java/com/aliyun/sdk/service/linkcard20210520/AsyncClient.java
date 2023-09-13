@@ -68,6 +68,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResumeSingleCardResponse> resumeSingleCard(ResumeSingleCardRequest request);
 
+    CompletableFuture<SendMessageResponse> sendMessage(SendMessageRequest request);
+
     CompletableFuture<SetCardStopRuleResponse> setCardStopRule(SetCardStopRuleRequest request);
 
     CompletableFuture<StopSingleCardResponse> stopSingleCard(StopSingleCardRequest request);

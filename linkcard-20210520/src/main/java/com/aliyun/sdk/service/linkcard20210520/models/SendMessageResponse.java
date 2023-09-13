@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AddDirectionalGroupResponse} extends {@link TeaModel}
+ * {@link SendMessageResponse} extends {@link TeaModel}
  *
- * <p>AddDirectionalGroupResponse</p>
+ * <p>SendMessageResponse</p>
  */
-public class AddDirectionalGroupResponse extends Response {
+public class SendMessageResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class AddDirectionalGroupResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private AddDirectionalGroupResponseBody body;
+    private SendMessageResponseBody body;
 
-    private AddDirectionalGroupResponse(BuilderImpl builder) {
+    private SendMessageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AddDirectionalGroupResponse create() {
+    public static SendMessageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class AddDirectionalGroupResponse extends Response {
     /**
      * @return body
      */
-    public AddDirectionalGroupResponseBody getBody() {
+    public SendMessageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AddDirectionalGroupResponse, Builder> {
+    public interface Builder extends Response.Builder<SendMessageResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AddDirectionalGroupResponseBody body);
+        Builder body(SendMessageResponseBody body);
 
         @Override
-        AddDirectionalGroupResponse build();
+        SendMessageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AddDirectionalGroupResponse, Builder>
+            extends Response.BuilderImpl<SendMessageResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AddDirectionalGroupResponseBody body; 
+        private SendMessageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AddDirectionalGroupResponse response) {
+        private BuilderImpl(SendMessageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class AddDirectionalGroupResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AddDirectionalGroupResponseBody body) {
+        public Builder body(SendMessageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AddDirectionalGroupResponse build() {
-            return new AddDirectionalGroupResponse(this);
+        public SendMessageResponse build() {
+            return new SendMessageResponse(this);
         } 
 
     } 
