@@ -86,7 +86,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * PatternDetails.
+         * Indicates whether the execution of the SQL pattern can be blocked. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * > Only SELECT and INSERT statements can be blocked.
          */
         public Builder patternDetails(java.util.List < PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
@@ -110,7 +116,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

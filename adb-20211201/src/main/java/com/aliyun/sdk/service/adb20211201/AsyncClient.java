@@ -20,9 +20,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request);
 
+    CompletableFuture<AttachUserENIResponse> attachUserENI(AttachUserENIRequest request);
+
     CompletableFuture<BindAccountResponse> bindAccount(BindAccountRequest request);
 
+    CompletableFuture<BindDBResourceGroupWithUserResponse> bindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request);
+
     CompletableFuture<CheckBindRamUserResponse> checkBindRamUser(CheckBindRamUserRequest request);
+
+    CompletableFuture<CheckSampleDataSetResponse> checkSampleDataSet(CheckSampleDataSetRequest request);
 
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
@@ -89,6 +95,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request);
 
+    CompletableFuture<DescribeDBClusterStatusResponse> describeDBClusterStatus(DescribeDBClusterStatusRequest request);
+
     CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request);
 
     CompletableFuture<DescribeDBResourceGroupResponse> describeDBResourceGroup(DescribeDBResourceGroupRequest request);
@@ -130,6 +138,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTableAccessCountResponse> describeTableAccessCount(DescribeTableAccessCountRequest request);
 
     CompletableFuture<DescribeTablesResponse> describeTables(DescribeTablesRequest request);
+
+    CompletableFuture<DescribeUserQuotaResponse> describeUserQuota(DescribeUserQuotaRequest request);
+
+    CompletableFuture<DetachUserENIResponse> detachUserENI(DetachUserENIRequest request);
 
     CompletableFuture<DisableElasticPlanResponse> disableElasticPlan(DisableElasticPlanRequest request);
 
@@ -240,6 +252,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSparkLogAnalyzeTaskResponse> submitSparkLogAnalyzeTask(SubmitSparkLogAnalyzeTaskRequest request);
 
     CompletableFuture<UnbindAccountResponse> unbindAccount(UnbindAccountRequest request);
+
+    CompletableFuture<UnbindDBResourceGroupWithUserResponse> unbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request);
 
     CompletableFuture<UpdateSparkTemplateFileResponse> updateSparkTemplateFile(UpdateSparkTemplateFileRequest request);
 

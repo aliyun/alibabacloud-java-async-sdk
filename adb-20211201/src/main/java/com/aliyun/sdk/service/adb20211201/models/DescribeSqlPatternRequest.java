@@ -40,7 +40,6 @@ public class DescribeSqlPatternRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     @Query
@@ -155,7 +154,10 @@ public class DescribeSqlPatternRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +166,36 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"Pattern","Type":"Asc"}]`. Parameters:
+         * <p>
+         * 
+         * *   `Field` specifies the field by which to sort the query results. Valid values:
+         * 
+         *     *   `Pattern`: the SQL pattern.
+         *     *   `AccessIP`: the IP address of the client.
+         *     *   `User`: the username.
+         *     *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.
+         *     *   `AvgPeakMemory`: the average peak memory usage of the SQL pattern within the time range to query. Unit: KB.
+         *     *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query. Unit: KB.
+         *     *   `AvgCpuTime`: the average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
+         *     *   `MaxCpuTime`: the maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.
+         *     *   `AvgStageCount`: the average number of stages.
+         *     *   `MaxStageCount`: the maximum number of stages.
+         *     *   `AvgTaskCount`: the average number of tasks.
+         *     *   `MaxTaskCount`: the maximum number of tasks.
+         *     *   `AvgScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.
+         *     *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.
+         * 
+         * *   `Type` specifies the sorting order. Valid values:
+         * 
+         *     *   `Asc`: ascending order.
+         *     *   `Desc`: descending order.
+         * 
+         * > 
+         * 
+         * *   If you do not specify this parameter, query results are sorted in ascending order of `Pattern`.
+         * 
+         * *   If you want to sort query results by `AccessIP`, you must set the `Type` parameter to `accessip`. If you want to sort query results by `User`, you must leave the `Type` parameter empty or set it to `user`.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -173,7 +204,7 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,7 +213,13 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **10** (default)
+         * *   **30**
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,7 +228,7 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +237,10 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * SqlPattern.
+         * The keyword that is used for the query.
+         * <p>
+         * 
+         * > If you do not specify this parameter, all SQL patterns of the AnalyticDB for MySQL cluster within the time period specified by `StartTime` are returned.
          */
         public Builder sqlPattern(String sqlPattern) {
             this.putQueryParameter("SqlPattern", sqlPattern);
@@ -209,7 +249,10 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd format. The time must be in UTC.
+         * <p>
+         * 
+         * > Only data within the last 30 days can be queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -218,7 +261,13 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * Type.
+         * The dimension by which to aggregate the SQL patterns. Valid values:
+         * <p>
+         * 
+         * *   `user`: aggregates the SQL patterns by user.
+         * *   `accessip`: aggregates the SQL patterns by client IP address.
+         * 
+         * > If you do not specify this parameter, the SQL patterns are aggregated by `user`.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

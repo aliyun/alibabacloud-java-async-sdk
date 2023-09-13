@@ -27,7 +27,6 @@ public class DescribeDiagnosisRecordsRequest extends Request {
 
     @Query
     @NameInMap("EndTime")
-    @Validation(required = true)
     private String endTime;
 
     @Query
@@ -72,7 +71,6 @@ public class DescribeDiagnosisRecordsRequest extends Request {
 
     @Query
     @NameInMap("QueryCondition")
-    @Validation(required = true)
     private String queryCondition;
 
     @Query
@@ -86,7 +84,6 @@ public class DescribeDiagnosisRecordsRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     @Query

@@ -36,7 +36,6 @@ public class DescribeTableAccessCountRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     @Query

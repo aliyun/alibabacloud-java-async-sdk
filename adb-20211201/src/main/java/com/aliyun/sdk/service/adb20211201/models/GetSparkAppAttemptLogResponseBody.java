@@ -72,6 +72,9 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AppId")
+        private String appId;
+
         @NameInMap("DBClusterId")
         private String DBClusterId;
 
@@ -82,6 +85,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         private String message;
 
         private Data(Builder builder) {
+            this.appId = builder.appId;
             this.DBClusterId = builder.DBClusterId;
             this.logContent = builder.logContent;
             this.message = builder.message;
@@ -93,6 +97,13 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -117,9 +128,18 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private String DBClusterId; 
             private String logContent; 
             private String message; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * The ID of the Data Lakehouse Edition (V3.0) cluster.

@@ -19,12 +19,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
 
     @Query
     @NameInMap("EndTime")
-    @Validation(required = true)
     private String endTime;
 
     @Query
     @NameInMap("Key")
-    @Validation(required = true)
     private String key;
 
     @Query
@@ -38,7 +36,6 @@ public class DescribeDBClusterPerformanceRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     private DescribeDBClusterPerformanceRequest(Builder builder) {
