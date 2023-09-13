@@ -39,6 +39,9 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     @NameInMap("Receivers")
     private Integer receivers;
 
+    @NameInMap("RemainFreeQuota")
+    private Integer remainFreeQuota;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -70,6 +73,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         this.monthQuota = builder.monthQuota;
         this.quotaLevel = builder.quotaLevel;
         this.receivers = builder.receivers;
+        this.remainFreeQuota = builder.remainFreeQuota;
         this.requestId = builder.requestId;
         this.smsRecord = builder.smsRecord;
         this.smsSign = builder.smsSign;
@@ -151,6 +155,13 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     }
 
     /**
+     * @return remainFreeQuota
+     */
+    public Integer getRemainFreeQuota() {
+        return this.remainFreeQuota;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -209,6 +220,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         private Integer monthQuota; 
         private Integer quotaLevel; 
         private Integer receivers; 
+        private Integer remainFreeQuota; 
         private String requestId; 
         private Integer smsRecord; 
         private Integer smsSign; 
@@ -286,6 +298,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
          */
         public Builder receivers(Integer receivers) {
             this.receivers = receivers;
+            return this;
+        }
+
+        /**
+         * RemainFreeQuota.
+         */
+        public Builder remainFreeQuota(Integer remainFreeQuota) {
+            this.remainFreeQuota = remainFreeQuota;
             return this;
         }
 
