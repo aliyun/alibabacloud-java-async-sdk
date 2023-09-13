@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.eventbridge20200401.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.eventbridge.models.*;
+
+/**
+ * {@link PauseEventStreamingRequest} extends {@link RequestModel}
+ *
+ * <p>PauseEventStreamingRequest</p>
+ */
+public class PauseEventStreamingRequest extends Request {
+    @Body
+    @NameInMap("EventStreamingName")
+    @Validation(required = true)
+    private String eventStreamingName;
+
+    private PauseEventStreamingRequest(Builder builder) {
+        super(builder);
+        this.eventStreamingName = builder.eventStreamingName;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static PauseEventStreamingRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return eventStreamingName
+     */
+    public String getEventStreamingName() {
+        return this.eventStreamingName;
+    }
+
+    public static final class Builder extends Request.Builder<PauseEventStreamingRequest, Builder> {
+        private String eventStreamingName; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(PauseEventStreamingRequest request) {
+            super(request);
+            this.eventStreamingName = request.eventStreamingName;
+        } 
+
+        /**
+         * The name of the event stream that you want to stop.
+         */
+        public Builder eventStreamingName(String eventStreamingName) {
+            this.putBodyParameter("EventStreamingName", eventStreamingName);
+            this.eventStreamingName = eventStreamingName;
+            return this;
+        }
+
+        @Override
+        public PauseEventStreamingRequest build() {
+            return new PauseEventStreamingRequest(this);
+        } 
+
+    } 
+
+}
