@@ -192,6 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAppMessageQueueRouteResponse> getAppMessageQueueRoute(GetAppMessageQueueRouteRequest request);
 
+    CompletableFuture<GetApplicationInstanceListResponse> getApplicationInstanceList(GetApplicationInstanceListRequest request);
+
     CompletableFuture<GetApplicationListResponse> getApplicationList(GetApplicationListRequest request);
 
     /**

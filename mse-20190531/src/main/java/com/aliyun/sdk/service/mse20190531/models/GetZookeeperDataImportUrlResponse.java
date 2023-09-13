@@ -16,6 +16,10 @@ public class GetZookeeperDataImportUrlResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GetZookeeperDataImportUrlResponseBody body;
@@ -23,6 +27,7 @@ public class GetZookeeperDataImportUrlResponse extends Response {
     private GetZookeeperDataImportUrlResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GetZookeeperDataImportUrlResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetZookeeperDataImportUrlResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GetZookeeperDataImportUrlResponse extends Response {
     public interface Builder extends Response.Builder<GetZookeeperDataImportUrlResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetZookeeperDataImportUrlResponseBody body);
 
@@ -64,6 +78,7 @@ public class GetZookeeperDataImportUrlResponse extends Response {
             extends Response.BuilderImpl<GetZookeeperDataImportUrlResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetZookeeperDataImportUrlResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GetZookeeperDataImportUrlResponse extends Response {
         private BuilderImpl(GetZookeeperDataImportUrlResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GetZookeeperDataImportUrlResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

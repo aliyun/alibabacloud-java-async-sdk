@@ -7,17 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetServiceListPageRequest} extends {@link RequestModel}
+ * {@link GetApplicationInstanceListRequest} extends {@link RequestModel}
  *
- * <p>GetServiceListPageRequest</p>
+ * <p>GetApplicationInstanceListRequest</p>
  */
-public class GetServiceListPageRequest extends Request {
+public class GetApplicationInstanceListRequest extends Request {
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
     @Query
     @NameInMap("AppId")
+    @Deprecated
     private String appId;
 
     @Query
@@ -26,53 +27,45 @@ public class GetServiceListPageRequest extends Request {
     private String appName;
 
     @Query
-    @NameInMap("Ip")
-    private String ip;
-
-    @Query
     @NameInMap("Namespace")
     @Validation(maxLength = 64)
     private String namespace;
 
     @Query
     @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @Validation(required = true)
+    private String pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    private Integer pageSize;
+    @Validation(required = true)
+    private String pageSize;
 
     @Query
     @NameInMap("Region")
     private String region;
 
     @Query
-    @NameInMap("ServiceName")
-    private String serviceName;
+    @NameInMap("Tag")
+    private String tag;
 
-    @Query
-    @NameInMap("ServiceType")
-    private String serviceType;
-
-    private GetServiceListPageRequest(Builder builder) {
+    private GetApplicationInstanceListRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.appName = builder.appName;
-        this.ip = builder.ip;
         this.namespace = builder.namespace;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
-        this.serviceName = builder.serviceName;
-        this.serviceType = builder.serviceType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetServiceListPageRequest create() {
+    public static GetApplicationInstanceListRequest create() {
         return builder().build();
     }
 
@@ -103,13 +96,6 @@ public class GetServiceListPageRequest extends Request {
     }
 
     /**
-     * @return ip
-     */
-    public String getIp() {
-        return this.ip;
-    }
-
-    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -119,14 +105,14 @@ public class GetServiceListPageRequest extends Request {
     /**
      * @return pageNumber
      */
-    public Integer getPageNumber() {
+    public String getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Integer getPageSize() {
+    public String getPageSize() {
         return this.pageSize;
     }
 
@@ -138,47 +124,36 @@ public class GetServiceListPageRequest extends Request {
     }
 
     /**
-     * @return serviceName
+     * @return tag
      */
-    public String getServiceName() {
-        return this.serviceName;
+    public String getTag() {
+        return this.tag;
     }
 
-    /**
-     * @return serviceType
-     */
-    public String getServiceType() {
-        return this.serviceType;
-    }
-
-    public static final class Builder extends Request.Builder<GetServiceListPageRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetApplicationInstanceListRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
         private String appName; 
-        private String ip; 
         private String namespace; 
-        private Integer pageNumber; 
-        private Integer pageSize; 
+        private String pageNumber; 
+        private String pageSize; 
         private String region; 
-        private String serviceName; 
-        private String serviceType; 
+        private String tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetServiceListPageRequest request) {
+        private Builder(GetApplicationInstanceListRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.appName = request.appName;
-            this.ip = request.ip;
             this.namespace = request.namespace;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
-            this.serviceName = request.serviceName;
-            this.serviceType = request.serviceType;
+            this.tag = request.tag;
         } 
 
         /**
@@ -209,15 +184,6 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * Ip.
-         */
-        public Builder ip(String ip) {
-            this.putQueryParameter("Ip", ip);
-            this.ip = ip;
-            return this;
-        }
-
-        /**
          * Namespace.
          */
         public Builder namespace(String namespace) {
@@ -229,7 +195,7 @@ public class GetServiceListPageRequest extends Request {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(Integer pageNumber) {
+        public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -238,7 +204,7 @@ public class GetServiceListPageRequest extends Request {
         /**
          * PageSize.
          */
-        public Builder pageSize(Integer pageSize) {
+        public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
@@ -254,26 +220,17 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * Tag.
          */
-        public Builder serviceName(String serviceName) {
-            this.putQueryParameter("ServiceName", serviceName);
-            this.serviceName = serviceName;
-            return this;
-        }
-
-        /**
-         * ServiceType.
-         */
-        public Builder serviceType(String serviceType) {
-            this.putQueryParameter("ServiceType", serviceType);
-            this.serviceType = serviceType;
+        public Builder tag(String tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
         @Override
-        public GetServiceListPageRequest build() {
-            return new GetServiceListPageRequest(this);
+        public GetApplicationInstanceListRequest build() {
+            return new GetApplicationInstanceListRequest(this);
         } 
 
     } 

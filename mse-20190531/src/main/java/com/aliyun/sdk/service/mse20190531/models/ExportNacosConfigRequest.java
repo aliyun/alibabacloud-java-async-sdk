@@ -190,7 +190,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * DataIds.
+         * The configuration group name and the ID of the data that you want to export. Separate multiple configurations with comma (,).
          */
         public Builder dataIds(String dataIds) {
             this.putQueryParameter("DataIds", dataIds);

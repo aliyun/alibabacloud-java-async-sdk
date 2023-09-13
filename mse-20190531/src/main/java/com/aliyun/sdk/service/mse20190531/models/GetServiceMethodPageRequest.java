@@ -38,6 +38,11 @@ public class GetServiceMethodPageRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(maximum = 65536, minimum = 1)
     private Integer pageNumber;
@@ -79,6 +84,7 @@ public class GetServiceMethodPageRequest extends Request {
         this.ip = builder.ip;
         this.methodController = builder.methodController;
         this.name = builder.name;
+        this.namespace = builder.namespace;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.path = builder.path;
@@ -145,6 +151,13 @@ public class GetServiceMethodPageRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -207,6 +220,7 @@ public class GetServiceMethodPageRequest extends Request {
         private String ip; 
         private String methodController; 
         private String name; 
+        private String namespace; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String path; 
@@ -228,6 +242,7 @@ public class GetServiceMethodPageRequest extends Request {
             this.ip = request.ip;
             this.methodController = request.methodController;
             this.name = request.name;
+            this.namespace = request.namespace;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.path = request.path;
@@ -289,6 +304,15 @@ public class GetServiceMethodPageRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

@@ -16,6 +16,10 @@ public class ListSecurityGroupRuleResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ListSecurityGroupRuleResponseBody body;
@@ -23,6 +27,7 @@ public class ListSecurityGroupRuleResponse extends Response {
     private ListSecurityGroupRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ListSecurityGroupRuleResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListSecurityGroupRuleResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ListSecurityGroupRuleResponse extends Response {
     public interface Builder extends Response.Builder<ListSecurityGroupRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListSecurityGroupRuleResponseBody body);
 
@@ -64,6 +78,7 @@ public class ListSecurityGroupRuleResponse extends Response {
             extends Response.BuilderImpl<ListSecurityGroupRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListSecurityGroupRuleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ListSecurityGroupRuleResponse extends Response {
         private BuilderImpl(ListSecurityGroupRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ListSecurityGroupRuleResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

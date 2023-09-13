@@ -16,6 +16,10 @@ public class CreateCircuitBreakerRuleResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateCircuitBreakerRuleResponseBody body;
@@ -23,6 +27,7 @@ public class CreateCircuitBreakerRuleResponse extends Response {
     private CreateCircuitBreakerRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateCircuitBreakerRuleResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateCircuitBreakerRuleResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateCircuitBreakerRuleResponse extends Response {
     public interface Builder extends Response.Builder<CreateCircuitBreakerRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateCircuitBreakerRuleResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateCircuitBreakerRuleResponse extends Response {
             extends Response.BuilderImpl<CreateCircuitBreakerRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateCircuitBreakerRuleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateCircuitBreakerRuleResponse extends Response {
         private BuilderImpl(CreateCircuitBreakerRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateCircuitBreakerRuleResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

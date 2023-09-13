@@ -16,6 +16,10 @@ public class GetNacosConfigResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GetNacosConfigResponseBody body;
@@ -23,6 +27,7 @@ public class GetNacosConfigResponse extends Response {
     private GetNacosConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GetNacosConfigResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetNacosConfigResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GetNacosConfigResponse extends Response {
     public interface Builder extends Response.Builder<GetNacosConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetNacosConfigResponseBody body);
 
@@ -64,6 +78,7 @@ public class GetNacosConfigResponse extends Response {
             extends Response.BuilderImpl<GetNacosConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetNacosConfigResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GetNacosConfigResponse extends Response {
         private BuilderImpl(GetNacosConfigResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GetNacosConfigResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

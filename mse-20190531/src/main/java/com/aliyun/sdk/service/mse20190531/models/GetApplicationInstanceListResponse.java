@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteGatewayDomainResponse} extends {@link TeaModel}
+ * {@link GetApplicationInstanceListResponse} extends {@link TeaModel}
  *
- * <p>DeleteGatewayDomainResponse</p>
+ * <p>GetApplicationInstanceListResponse</p>
  */
-public class DeleteGatewayDomainResponse extends Response {
+public class GetApplicationInstanceListResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DeleteGatewayDomainResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteGatewayDomainResponseBody body;
+    private GetApplicationInstanceListResponseBody body;
 
-    private DeleteGatewayDomainResponse(BuilderImpl builder) {
+    private GetApplicationInstanceListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteGatewayDomainResponse create() {
+    public static GetApplicationInstanceListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DeleteGatewayDomainResponse extends Response {
     /**
      * @return body
      */
-    public DeleteGatewayDomainResponseBody getBody() {
+    public GetApplicationInstanceListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteGatewayDomainResponse, Builder> {
+    public interface Builder extends Response.Builder<GetApplicationInstanceListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteGatewayDomainResponseBody body);
+        Builder body(GetApplicationInstanceListResponseBody body);
 
         @Override
-        DeleteGatewayDomainResponse build();
+        GetApplicationInstanceListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteGatewayDomainResponse, Builder>
+            extends Response.BuilderImpl<GetApplicationInstanceListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteGatewayDomainResponseBody body; 
+        private GetApplicationInstanceListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteGatewayDomainResponse response) {
+        private BuilderImpl(GetApplicationInstanceListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DeleteGatewayDomainResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteGatewayDomainResponseBody body) {
+        public Builder body(GetApplicationInstanceListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteGatewayDomainResponse build() {
-            return new DeleteGatewayDomainResponse(this);
+        public GetApplicationInstanceListResponse build() {
+            return new GetApplicationInstanceListResponse(this);
         } 
 
     } 
