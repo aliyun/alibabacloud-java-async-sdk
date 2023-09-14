@@ -101,17 +101,23 @@ public class UpdateListenerLogConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateListenerLogConfigRequest response) {
-            super(response);
-            this.accessLogRecordCustomizedHeadersEnabled = response.accessLogRecordCustomizedHeadersEnabled;
-            this.accessLogTracingConfig = response.accessLogTracingConfig;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.listenerId = response.listenerId;
+        private Builder(UpdateListenerLogConfigRequest request) {
+            super(request);
+            this.accessLogRecordCustomizedHeadersEnabled = request.accessLogRecordCustomizedHeadersEnabled;
+            this.accessLogTracingConfig = request.accessLogTracingConfig;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.listenerId = request.listenerId;
         } 
 
         /**
-         * 是否开启携带自定义Header
+         * Specifies whether to record custom headers in the access log. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
+         * 
+         * > You can set this parameter to **true** only if the access log feature is enabled by specifying **AccessLogEnabled**.
          */
         public Builder accessLogRecordCustomizedHeadersEnabled(Boolean accessLogRecordCustomizedHeadersEnabled) {
             this.putQueryParameter("AccessLogRecordCustomizedHeadersEnabled", accessLogRecordCustomizedHeadersEnabled);
@@ -120,7 +126,7 @@ public class UpdateListenerLogConfigRequest extends Request {
         }
 
         /**
-         * 访问日志xtrace字段相关的配置
+         * The configuration information about the Xtrace feature.
          */
         public Builder accessLogTracingConfig(AccessLogTracingConfig accessLogTracingConfig) {
             this.putQueryParameter("AccessLogTracingConfig", accessLogTracingConfig);
@@ -129,7 +135,12 @@ public class UpdateListenerLogConfigRequest extends Request {
         }
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -138,7 +149,11 @@ public class UpdateListenerLogConfigRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**: (default): performs a dry run and performs the actual request. If the request passes the dry run, a **2xx HTTP** status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -147,7 +162,7 @@ public class UpdateListenerLogConfigRequest extends Request {
         }
 
         /**
-         * 监听标识
+         * The ID of the Application Load Balancer (ALB) listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -214,7 +229,13 @@ public class UpdateListenerLogConfigRequest extends Request {
             private String tracingType; 
 
             /**
-             * Xtrace功能状态
+             * Specifies whether to enable the Xtrace feature. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > You can set this parameter to **true** only if the access log feature is enabled by specifying **AccessLogEnabled**.
              */
             public Builder tracingEnabled(Boolean tracingEnabled) {
                 this.tracingEnabled = tracingEnabled;
@@ -222,7 +243,12 @@ public class UpdateListenerLogConfigRequest extends Request {
             }
 
             /**
-             * xtrace的采样率
+             * The sampling rate of the Xtrace feature.
+             * <p>
+             * 
+             * Valid values: **1 to 10000**.
+             * 
+             * > This parameter takes effect only if you set **TracingEnabled** to **true**.
              */
             public Builder tracingSample(Integer tracingSample) {
                 this.tracingSample = tracingSample;
@@ -230,7 +256,10 @@ public class UpdateListenerLogConfigRequest extends Request {
             }
 
             /**
-             * xtrace的类型
+             * The type of Xtrace. Set the value to **Zipkin**.
+             * <p>
+             * 
+             * > This parameter takes effect only if you set **TracingEnabled** to **true**.
              */
             public Builder tracingType(String tracingType) {
                 this.tracingType = tracingType;

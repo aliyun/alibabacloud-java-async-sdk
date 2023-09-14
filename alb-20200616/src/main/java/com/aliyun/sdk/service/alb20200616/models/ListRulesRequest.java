@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRulesRequest extends Request {
     @Query
+    @NameInMap("Direction")
+    private String direction;
+
+    @Query
     @NameInMap("ListenerIds")
     private java.util.List < String > listenerIds;
 
@@ -32,13 +36,19 @@ public class ListRulesRequest extends Request {
     @NameInMap("RuleIds")
     private java.util.List < String > ruleIds;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private ListRulesRequest(Builder builder) {
         super(builder);
+        this.direction = builder.direction;
         this.listenerIds = builder.listenerIds;
         this.loadBalancerIds = builder.loadBalancerIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ruleIds = builder.ruleIds;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -52,6 +62,13 @@ public class ListRulesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
     }
 
     /**
@@ -89,28 +106,54 @@ public class ListRulesRequest extends Request {
         return this.ruleIds;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListRulesRequest, Builder> {
+        private String direction; 
         private java.util.List < String > listenerIds; 
         private java.util.List < String > loadBalancerIds; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List < String > ruleIds; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListRulesRequest response) {
-            super(response);
-            this.listenerIds = response.listenerIds;
-            this.loadBalancerIds = response.loadBalancerIds;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ruleIds = response.ruleIds;
+        private Builder(ListRulesRequest request) {
+            super(request);
+            this.direction = request.direction;
+            this.listenerIds = request.listenerIds;
+            this.loadBalancerIds = request.loadBalancerIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ruleIds = request.ruleIds;
+            this.tag = request.tag;
         } 
 
         /**
-         * 监听ID列表
+         * The direction to which the forwarding rule is applied. Valid values:
+         * <p>
+         * 
+         * *   **Request** (default): The forwarding rule is applied to the client requests received by ALB.
+         * *   **Response**: The forwarding rule is applied to the responses returned by backend servers.
+         * 
+         * > You cannot set this parameter to Response if you use basic ALB instances.
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
+            return this;
+        }
+
+        /**
+         * The listener IDs.
          */
         public Builder listenerIds(java.util.List < String > listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
@@ -119,7 +162,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * 实例ID列表
+         * The Application Load Balancer (ALB) instance IDs.
          */
         public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -128,7 +171,14 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * 本次读取的最大数据记录数量，此参数为可选参数，取值1-100，用户传入为空时，默认为20。
+         * The maximum number of entries to return.
+         * <p>
+         * 
+         * Valid values: **1 to 100**.
+         * 
+         * Default value: **20**. If you do not specify this parameter, the default value is used.
+         * 
+         * > This parameter is optional.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -137,7 +187,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * 用来标记当前开始读取的位置，置空表示从头开始。
+         * The starting point of the current query. If you do not specify this parameter, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -146,11 +196,20 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * 转发规则ID列表，N最大支持20
+         * The forwarding rules.
          */
         public Builder ruleIds(java.util.List < String > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -161,4 +220,65 @@ public class ListRulesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

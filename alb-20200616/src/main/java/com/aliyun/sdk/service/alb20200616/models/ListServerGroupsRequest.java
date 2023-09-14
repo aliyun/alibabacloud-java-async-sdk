@@ -127,19 +127,19 @@ public class ListServerGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListServerGroupsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.resourceGroupId = response.resourceGroupId;
-            this.serverGroupIds = response.serverGroupIds;
-            this.serverGroupNames = response.serverGroupNames;
-            this.tag = response.tag;
-            this.vpcId = response.vpcId;
+        private Builder(ListServerGroupsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
+            this.serverGroupIds = request.serverGroupIds;
+            this.serverGroupNames = request.serverGroupNames;
+            this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * 查询数量
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,7 +148,11 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,7 +161,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * The ID of the resource group to which the server group belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -166,7 +170,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * 服务器组Id列表
+         * The server group IDs.
          */
         public Builder serverGroupIds(java.util.List < String > serverGroupIds) {
             this.putQueryParameter("ServerGroupIds", serverGroupIds);
@@ -175,7 +179,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * 服务器组名称
+         * The names of the server groups to be queried. You can specify at most 10 server group names.
          */
         public Builder serverGroupNames(java.util.List < String > serverGroupNames) {
             this.putQueryParameter("ServerGroupNames", serverGroupNames);
@@ -184,7 +188,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * Tag列表
+         * The tags that are added to the server group. You can specify up to 10 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -193,7 +197,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * VpcId
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -247,7 +251,10 @@ public class ListServerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The tag key. You can specify up to 10 tag keys.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +262,10 @@ public class ListServerGroupsRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The tag value. You can specify up to 10 tag values.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

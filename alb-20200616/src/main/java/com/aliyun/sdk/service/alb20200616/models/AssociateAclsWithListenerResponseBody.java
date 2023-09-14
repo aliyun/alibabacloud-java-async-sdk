@@ -50,7 +50,7 @@ public class AssociateAclsWithListenerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 异步任务id
+         * The synchronous task ID.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class AssociateAclsWithListenerResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

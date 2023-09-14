@@ -86,7 +86,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 服务器组
+         * The backend server groups.
          */
         public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
             this.serverGroups = serverGroups;
@@ -118,7 +122,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +294,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
 
             /**
-             * 状态码
+             * The HTTP status codes that indicate whether the backend server passes the health check.
              */
             public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -298,7 +302,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 端口
+             * The backend port that is used for health checks. Valid values: **0** to **65535**.
+             * <p>
+             * 
+             * A value of **0** indicates that the port on a backend server is used for health checks.
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -306,7 +313,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否启用健康检查
+             * Indicates whether the health check feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -314,7 +325,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 域名
+             * The domain name that is used for health checks. The domain name must meet the following requirements:
+             * <p>
+             * 
+             * *   The domain name must be 1 to 80 characters in length.
+             * *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
+             * *   It must contain at least one period (.) but cannot start or end with a period (.).
+             * *   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).
+             * *   The domain name cannot start or end with a hyphen (-).
+             * 
+             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -322,7 +342,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 版本
+             * The HTTP version that is used for health checks.
+             * <p>
+             * 
+             * Valid values: **HTTP1.0** and **HTTP1.1**.
+             * 
+             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -330,7 +355,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 间隔时间
+             * The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -338,7 +363,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 方法
+             * The method that you want to use for the health check. Valid values:
+             * <p>
+             * 
+             * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
+             * *   **POST**: gRPC health checks automatically use the POST method.
+             * *   **HEAD**: HTTP health checks automatically use the HEAD method.
+             * 
+             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -346,7 +378,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * uri
+             * The path that is used for health checks.
+             * <p>
+             * 
+             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -354,7 +389,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 协议
+             * The protocol that is used for health checks. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
+             * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -362,7 +402,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 超时时间
+             * The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -370,7 +410,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 健康阈值
+             * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -378,7 +418,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 不健康阈值
+             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -455,7 +495,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String stickySessionType; 
 
             /**
-             * Cookie
+             * The cookie that is configured on the server.
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -463,7 +503,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cookie超时时间
+             * The timeout period of a cookie. Unit: seconds. Valid values: **1** to **86400**.
+             * <p>
+             * 
+             * > This parameter takes effect only when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -471,7 +514,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启会话保持
+             * Specifies whether to enable session persistence. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder stickySessionEnabled(Boolean stickySessionEnabled) {
                 this.stickySessionEnabled = stickySessionEnabled;
@@ -479,7 +526,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 会话保持类型
+             * The method that is used to handle a cookie. Valid values:
+             * <p>
+             * 
+             * *   **Insert**: inserts a cookie.
+             * 
+             * ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.
+             * 
+             * *   **Server**: rewrites a cookie.
+             * 
+             * When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -532,7 +588,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 标签键
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -540,7 +596,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -554,9 +610,73 @@ public class ListServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class UchConfig extends TeaModel {
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("Value")
+        private String value;
+
+        private UchConfig(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UchConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public UchConfig build() {
+                return new UchConfig(this);
+            } 
+
+        } 
+
+    }
     public static class ServerGroups extends TeaModel {
         @NameInMap("ConfigManagedEnabled")
         private Boolean configManagedEnabled;
+
+        @NameInMap("CreateTime")
+        private String createTime;
 
         @NameInMap("HealthCheckConfig")
         private HealthCheckConfig healthCheckConfig;
@@ -597,6 +717,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
 
+        @NameInMap("UchConfig")
+        private UchConfig uchConfig;
+
         @NameInMap("UpstreamKeepaliveEnabled")
         private Boolean upstreamKeepaliveEnabled;
 
@@ -605,6 +728,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         private ServerGroups(Builder builder) {
             this.configManagedEnabled = builder.configManagedEnabled;
+            this.createTime = builder.createTime;
             this.healthCheckConfig = builder.healthCheckConfig;
             this.ipv6Enabled = builder.ipv6Enabled;
             this.protocol = builder.protocol;
@@ -618,6 +742,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.serviceName = builder.serviceName;
             this.stickySessionConfig = builder.stickySessionConfig;
             this.tags = builder.tags;
+            this.uchConfig = builder.uchConfig;
             this.upstreamKeepaliveEnabled = builder.upstreamKeepaliveEnabled;
             this.vpcId = builder.vpcId;
         }
@@ -635,6 +760,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public Boolean getConfigManagedEnabled() {
             return this.configManagedEnabled;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -729,6 +861,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return uchConfig
+         */
+        public UchConfig getUchConfig() {
+            return this.uchConfig;
+        }
+
+        /**
          * @return upstreamKeepaliveEnabled
          */
         public Boolean getUpstreamKeepaliveEnabled() {
@@ -744,6 +883,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean configManagedEnabled; 
+            private String createTime; 
             private HealthCheckConfig healthCheckConfig; 
             private Boolean ipv6Enabled; 
             private String protocol; 
@@ -757,11 +897,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String serviceName; 
             private StickySessionConfig stickySessionConfig; 
             private java.util.List < Tags> tags; 
+            private UchConfig uchConfig; 
             private Boolean upstreamKeepaliveEnabled; 
             private String vpcId; 
 
             /**
-             * 是否开启配置管理
+             * Indicates whether configuration management is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder configManagedEnabled(Boolean configManagedEnabled) {
                 this.configManagedEnabled = configManagedEnabled;
@@ -769,7 +914,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 健康检查配置
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The health check configurations.
              */
             public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
                 this.healthCheckConfig = healthCheckConfig;
@@ -777,7 +930,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持Ipv6
+             * Indicates whether IPv6 is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder ipv6Enabled(Boolean ipv6Enabled) {
                 this.ipv6Enabled = ipv6Enabled;
@@ -785,7 +942,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组协议
+             * The backend protocol. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: allows you to associate an HTTPS, HTTP, or QUIC listener with the server group.
+             * *   **HTTPS**: allows you to associate HTTPS listeners with backend servers.
+             * *   **GRPC**: allows you to associate an HTTPS or QUIC listener with the server group.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -793,7 +955,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组id
+             * The ID of the resource group to which the resource belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -801,7 +963,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 调度策略
+             * The scheduling algorithm. Valid values:
+             * <p>
+             * 
+             * *   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.
+             * *   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.
+             * *   **Sch**: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.
              */
             public Builder scheduler(String scheduler) {
                 this.scheduler = scheduler;
@@ -809,7 +976,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组内服务器数量
+             * The number of backend servers in the server group.
              */
             public Builder serverCount(Integer serverCount) {
                 this.serverCount = serverCount;
@@ -817,7 +984,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组Id
+             * The server group ID.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -825,7 +992,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组名称
+             * The server group name.
              */
             public Builder serverGroupName(String serverGroupName) {
                 this.serverGroupName = serverGroupName;
@@ -833,7 +1000,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组状态
+             * The status of the server group. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Available**
+             * *   **Configuring**
              */
             public Builder serverGroupStatus(String serverGroupStatus) {
                 this.serverGroupStatus = serverGroupStatus;
@@ -841,7 +1013,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组类型
+             * The type of server group. Valid values:
+             * <p>
+             * 
+             * *   **Instance**
+             * *   **Ip**
+             * *   **Fc**
              */
             public Builder serverGroupType(String serverGroupType) {
                 this.serverGroupType = serverGroupType;
@@ -849,7 +1026,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器名称
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -857,7 +1034,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 会话保持配置
+             * The configuration of session persistence.
              */
             public Builder stickySessionConfig(StickySessionConfig stickySessionConfig) {
                 this.stickySessionConfig = stickySessionConfig;
@@ -865,7 +1042,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签列表
+             * The tags that are added to the server group.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -873,7 +1050,19 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启后端长链接
+             * UchConfig.
+             */
+            public Builder uchConfig(UchConfig uchConfig) {
+                this.uchConfig = uchConfig;
+                return this;
+            }
+
+            /**
+             * Indicates whether persistent TCP connections are enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder upstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
                 this.upstreamKeepaliveEnabled = upstreamKeepaliveEnabled;
@@ -881,7 +1070,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组所在VpcId
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

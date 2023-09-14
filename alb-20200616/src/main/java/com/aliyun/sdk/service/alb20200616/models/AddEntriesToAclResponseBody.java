@@ -50,7 +50,7 @@ public class AddEntriesToAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * job
+         * The asynchronous task ID.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class AddEntriesToAclResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

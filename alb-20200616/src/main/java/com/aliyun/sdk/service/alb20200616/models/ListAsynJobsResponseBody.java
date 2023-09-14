@@ -86,7 +86,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 任务列表
+         * The tasks.
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -94,7 +94,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries per page.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数	
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +270,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * openapi名称
+             * The name of the operation.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -274,7 +278,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务开始时间戳
+             * The timestamp that indicates the start time of the task. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -282,7 +289,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 如果Status为失败，则为错误码
+             * If the value of **Status** is Failed, an error code is returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -290,7 +297,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 如果Status为失败，则为错误信息
+             * If the value of **Status** is Failed, an error message is returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -298,7 +305,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * The task ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -306,7 +313,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务结束时间戳
+             * The timestamp that indicates the end time of the task. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -314,7 +324,12 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 操作类型
+             * The type of the operation. Valid values:
+             * <p>
+             * 
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -322,7 +337,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的资源实例ID
+             * The associated resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -330,7 +345,15 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的资源类型
+             * The type of the associated resource. Valid values:
+             * <p>
+             * 
+             * *   **loadbalancer**: an ALB instance
+             * *   **listener**: a listener
+             * *   **rule**: a forwarding rule
+             * *   **acl**: an ACL
+             * *   **securitypolicy**: a security policy
+             * *   **servergroup**: a server group
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -338,7 +361,12 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **Succeeded**
+             * *   **Failed**
+             * *   **Processing**
              */
             public Builder status(String status) {
                 this.status = status;

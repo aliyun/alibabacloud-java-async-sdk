@@ -48,13 +48,18 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**
-         * 语言
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * *   **ja**: Japanese
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

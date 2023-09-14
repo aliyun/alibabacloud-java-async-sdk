@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetHealthCheckTemplateAttributeRequest extends Request {
     @Query
     @NameInMap("HealthCheckTemplateId")
+    @Validation(required = true)
     private String healthCheckTemplateId;
 
     private GetHealthCheckTemplateAttributeRequest(Builder builder) {
@@ -48,13 +49,13 @@ public class GetHealthCheckTemplateAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetHealthCheckTemplateAttributeRequest response) {
-            super(response);
-            this.healthCheckTemplateId = response.healthCheckTemplateId;
+        private Builder(GetHealthCheckTemplateAttributeRequest request) {
+            super(request);
+            this.healthCheckTemplateId = request.healthCheckTemplateId;
         } 
 
         /**
-         * 健康检查模板Id
+         * The ID of the health check template.
          */
         public Builder healthCheckTemplateId(String healthCheckTemplateId) {
             this.putQueryParameter("HealthCheckTemplateId", healthCheckTemplateId);

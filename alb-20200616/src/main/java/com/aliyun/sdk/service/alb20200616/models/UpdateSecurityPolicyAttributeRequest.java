@@ -114,18 +114,18 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSecurityPolicyAttributeRequest response) {
-            super(response);
-            this.ciphers = response.ciphers;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.securityPolicyId = response.securityPolicyId;
-            this.securityPolicyName = response.securityPolicyName;
-            this.TLSVersions = response.TLSVersions;
+        private Builder(UpdateSecurityPolicyAttributeRequest request) {
+            super(request);
+            this.ciphers = request.ciphers;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.securityPolicyId = request.securityPolicyId;
+            this.securityPolicyName = request.securityPolicyName;
+            this.TLSVersions = request.TLSVersions;
         } 
 
         /**
-         * 加密套件
+         * The supported cipher suites.
          */
         public Builder ciphers(java.util.List < String > ciphers) {
             this.putQueryParameter("Ciphers", ciphers);
@@ -134,7 +134,12 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,7 +148,11 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -152,7 +161,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * 安全策略id
+         * The security policy ID.
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putQueryParameter("SecurityPolicyId", securityPolicyId);
@@ -161,7 +170,10 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * 安全策略名称
+         * The name of the security policy.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder securityPolicyName(String securityPolicyName) {
             this.putQueryParameter("SecurityPolicyName", securityPolicyName);
@@ -170,7 +182,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         }
 
         /**
-         * TLS版本
+         * The supported TLS protocol versions.
          */
         public Builder TLSVersions(java.util.List < String > TLSVersions) {
             this.putQueryParameter("TLSVersions", TLSVersions);

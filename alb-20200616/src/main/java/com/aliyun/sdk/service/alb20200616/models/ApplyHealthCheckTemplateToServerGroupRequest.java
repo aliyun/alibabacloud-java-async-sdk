@@ -89,16 +89,21 @@ public class ApplyHealthCheckTemplateToServerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyHealthCheckTemplateToServerGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.healthCheckTemplateId = response.healthCheckTemplateId;
-            this.serverGroupId = response.serverGroupId;
+        private Builder(ApplyHealthCheckTemplateToServerGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.healthCheckTemplateId = request.healthCheckTemplateId;
+            this.serverGroupId = request.serverGroupId;
         } 
 
         /**
-         * 幂等Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +112,11 @@ public class ApplyHealthCheckTemplateToServerGroupRequest extends Request {
         }
 
         /**
-         * dryRun
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -116,7 +125,7 @@ public class ApplyHealthCheckTemplateToServerGroupRequest extends Request {
         }
 
         /**
-         * 健康检查模板Id
+         * The template ID.
          */
         public Builder healthCheckTemplateId(String healthCheckTemplateId) {
             this.putQueryParameter("HealthCheckTemplateId", healthCheckTemplateId);
@@ -125,7 +134,7 @@ public class ApplyHealthCheckTemplateToServerGroupRequest extends Request {
         }
 
         /**
-         * 服务器组Id
+         * The server group ID.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);

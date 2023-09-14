@@ -103,17 +103,17 @@ public class AssociateAclsWithListenerRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateAclsWithListenerRequest response) {
-            super(response);
-            this.aclIds = response.aclIds;
-            this.aclType = response.aclType;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.listenerId = response.listenerId;
+        private Builder(AssociateAclsWithListenerRequest request) {
+            super(request);
+            this.aclIds = request.aclIds;
+            this.aclType = request.aclType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.listenerId = request.listenerId;
         } 
 
         /**
-         * 访问控制策略Id
+         * The ACL IDs. You can specify up to three IDs in each call.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);
@@ -122,7 +122,11 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * 绑定类型
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. The whitelist applies to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are added to the whitelist are forwarded by the listener. If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.
+         * *   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. The blacklist applies to scenarios in which you want to block access from specific IP addresses to an application. If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -131,7 +135,12 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +149,11 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * 预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -149,7 +162,7 @@ public class AssociateAclsWithListenerRequest extends Request {
         }
 
         /**
-         * 监听Id
+         * The listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);

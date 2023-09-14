@@ -75,15 +75,20 @@ public class DeleteRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRuleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ruleId = response.ruleId;
+        private Builder(DeleteRuleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ruleId = request.ruleId;
         } 
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +97,11 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: sends the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, the `HTTP_2xx` status code is returned and the operation is performed. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -101,7 +110,7 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * 转发规则标识
+         * The ID of the forwarding rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

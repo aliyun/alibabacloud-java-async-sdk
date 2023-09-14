@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZonesRequest</p>
  */
 public class DescribeZonesRequest extends Request {
+    @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
     private DescribeZonesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
     }
 
     public static Builder builder() {
@@ -29,15 +34,38 @@ public class DescribeZonesRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
     public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
+        private String acceptLanguage; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
+
+        /**
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * *   **ja**: Japanese
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         @Override
         public DescribeZonesRequest build() {

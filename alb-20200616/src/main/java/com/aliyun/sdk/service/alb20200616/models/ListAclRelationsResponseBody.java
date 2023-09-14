@@ -50,7 +50,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 访问控制列表
+         * The ACLs and the associated listeners.
          */
         public Builder aclRelations(java.util.List < AclRelations> aclRelations) {
             this.aclRelations = aclRelations;
@@ -58,7 +58,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 监听ID
+             * The listener ID.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -154,7 +154,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 监听端口
+             * The listener port.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -162,7 +162,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 监听协议
+             * The listener protocol.
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -170,7 +170,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the Server Load Balancer (SLB) instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -178,7 +178,12 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联状态
+             * The association status between the ACL and the listener. Valid values:
+             * <p>
+             * 
+             * *   **Associating**
+             * *   **Associated**
+             * *   **Dissociating**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -231,7 +236,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             private java.util.List < RelatedListeners> relatedListeners; 
 
             /**
-             * 访问控制策略id
+             * ACL ID
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -239,7 +244,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的监听
+             * The listeners that are associated with the ACL.
              */
             public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
                 this.relatedListeners = relatedListeners;

@@ -77,15 +77,18 @@ public class MoveResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveResourceGroupRequest response) {
-            super(response);
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
+        private Builder(MoveResourceGroupRequest request) {
+            super(request);
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * 资源组id
+         * The ID of the resource group to which you want to move the resource.
+         * <p>
+         * 
+         * > You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~)
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -94,7 +97,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * 指定资源Id
+         * The resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -103,7 +106,13 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **loadbalancer**: Application Load Balancer (ALB) instance
+         * *   **acl**: access control list (ACL)
+         * *   **securitypolicy**: security policy
+         * *   **servergroup**: server group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

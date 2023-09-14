@@ -86,7 +86,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 健康检查模板
+         * The health check templates.
          */
         public Builder healthCheckTemplates(java.util.List < HealthCheckTemplates> healthCheckTemplates) {
             this.healthCheckTemplates = healthCheckTemplates;
@@ -94,7 +94,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value of **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +135,67 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class HealthCheckTemplates extends TeaModel {
         @NameInMap("HealthCheckCodes")
         private java.util.List < String > healthCheckCodes;
@@ -168,6 +233,9 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         @NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("UnhealthyThreshold")
         private Integer unhealthyThreshold;
 
@@ -184,6 +252,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             this.healthCheckTemplateName = builder.healthCheckTemplateName;
             this.healthCheckTimeout = builder.healthCheckTimeout;
             this.healthyThreshold = builder.healthyThreshold;
+            this.tags = builder.tags;
             this.unhealthyThreshold = builder.unhealthyThreshold;
         }
 
@@ -280,6 +349,13 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return unhealthyThreshold
          */
         public Integer getUnhealthyThreshold() {
@@ -299,10 +375,11 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             private String healthCheckTemplateName; 
             private Integer healthCheckTimeout; 
             private Integer healthyThreshold; 
+            private java.util.List < Tags> tags; 
             private Integer unhealthyThreshold; 
 
             /**
-             * 状态码
+             * The status code.
              */
             public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -310,7 +387,12 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 端口
+             * The port that is used for health checks.
+             * <p>
+             * 
+             * Valid values: \*\* 0 to 65535\*\*.
+             * 
+             * Default value: **0**. If you set the value to 0, the port of a backend server is used for health checks.
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -318,7 +400,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 域名
+             * The domain name that is used for health checks. Valid values:
+             * <p>
+             * 
+             * **$SERVER_IP** (default): the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) uses the private IP addresses of backend servers for health checks.
+             * 
+             * **domain**: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).
+             * 
+             * > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -326,7 +415,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 版本
+             * The HTTP version that is used for health checks.
+             * <p>
+             * 
+             * Valid values: **HTTP 1.0** and **HTTP 1.1**.
+             * 
+             * Default value: **HTTP 1.1**.
+             * 
+             * > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -334,7 +430,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 间隔时间
+             * The interval at which health checks are performed. Unit: seconds. Valid values: **1 to 50**. Default value: **2**.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -342,7 +438,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 方法
+             * The method that you want to use for the health check. Valid values:
+             * <p>
+             * 
+             * *   **HEAD**: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.
+             * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
+             * *   **POST**: gRPC health checks automatically use the POST method.
+             * 
+             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -350,7 +453,10 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * uri
+             * The URL that is used for health checks.
+             * <p>
+             * 
+             * The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -358,7 +464,12 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 协议
+             * The protocol that you want to use for health checks. Valid values:
+             * <p>
+             * 
+             * *   **HTTP** (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
+             * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -366,7 +477,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 健康检查模板Id
+             * The ID of the health check template.
              */
             public Builder healthCheckTemplateId(String healthCheckTemplateId) {
                 this.healthCheckTemplateId = healthCheckTemplateId;
@@ -374,7 +485,10 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * The name of the health check template.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder healthCheckTemplateName(String healthCheckTemplateName) {
                 this.healthCheckTemplateName = healthCheckTemplateName;
@@ -382,7 +496,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 超时时间
+             * The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the server fails the health check.
+             * <p>
+             * 
+             * Valid values: **1 to 300**. Unit: seconds.
+             * 
+             * Default value: **5**.
+             * 
+             * > If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -390,7 +511,12 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 健康阈值
+             * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
+             * <p>
+             * 
+             * Valid values: **2 to 10**.
+             * 
+             * Default value: **3**.
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -398,7 +524,20 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 不健康阈值
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+             * <p>
+             * 
+             * Valid values: **2 to 10**.
+             * 
+             * Default value: **3**.
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;

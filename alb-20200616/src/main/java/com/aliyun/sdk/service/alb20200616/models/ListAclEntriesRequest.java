@@ -76,15 +76,15 @@ public class ListAclEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAclEntriesRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListAclEntriesRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * 访问控制策略Id
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -93,7 +93,7 @@ public class ListAclEntriesRequest extends Request {
         }
 
         /**
-         * 查询数量
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -102,7 +102,11 @@ public class ListAclEntriesRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

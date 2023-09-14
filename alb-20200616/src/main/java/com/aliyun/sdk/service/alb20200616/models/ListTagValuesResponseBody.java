@@ -86,7 +86,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * 标签值列表
+         * The tag values.
          */
         public Builder tagValues(java.util.List < String > tagValues) {
             this.tagValues = tagValues;
@@ -118,7 +122,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

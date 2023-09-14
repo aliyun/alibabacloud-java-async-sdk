@@ -88,16 +88,20 @@ public class GetListenerHealthStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetListenerHealthStatusRequest response) {
-            super(response);
-            this.includeRule = response.includeRule;
-            this.listenerId = response.listenerId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(GetListenerHealthStatusRequest request) {
+            super(request);
+            this.includeRule = request.includeRule;
+            this.listenerId = request.listenerId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * 是否包含转发规则健康检查结果
+         * Specifies whether to return the health check results of forwarding rules. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder includeRule(Boolean includeRule) {
             this.putQueryParameter("IncludeRule", includeRule);
@@ -106,7 +110,7 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * 监听Id
+         * The listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -115,7 +119,7 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **30**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -124,7 +128,11 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

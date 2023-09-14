@@ -50,7 +50,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         private java.util.List < SecrityPolicyRelations> secrityPolicyRelations; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * 安全策略关联关系
+         * The security policies and the listeners that are associated with the security policies.
          */
         public Builder secrityPolicyRelations(java.util.List < SecrityPolicyRelations> secrityPolicyRelations) {
             this.secrityPolicyRelations = secrityPolicyRelations;
@@ -134,7 +134,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             private String loadBalancerId; 
 
             /**
-             * 监听id
+             * The listener ID.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -142,7 +142,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 监听端口
+             * The listener port.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -150,7 +150,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 监听协议
+             * The listener protocol.
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -158,7 +158,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例id
+             * The Server Load Balancer (SLB) instance ID.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -211,7 +211,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             private String securityPolicyId; 
 
             /**
-             * 关联的监听列表
+             * The listeners that are associated with the security policy.
              */
             public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
                 this.relatedListeners = relatedListeners;
@@ -219,7 +219,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * 安全策略id
+             * The security policy ID.
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;

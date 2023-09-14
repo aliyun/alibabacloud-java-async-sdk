@@ -102,17 +102,22 @@ public class ListTagKeysRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagKeysRequest response) {
-            super(response);
-            this.category = response.category;
-            this.keyword = response.keyword;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.resourceType = response.resourceType;
+        private Builder(ListTagKeysRequest request) {
+            super(request);
+            this.category = request.category;
+            this.keyword = request.keyword;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * 标签类型
+         * The type of the tag.
+         * <p>
+         * 
+         * Valid values: **Custom**, **System**, and **All**.
+         * 
+         * Default value: **All**.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -121,7 +126,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * 具体的标签Key
+         * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -130,7 +135,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * 查询数量
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -139,7 +144,11 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +157,13 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **acl**: an access control list (ACL)
+         * *   **loadbalancer**: an Application Load Balancer (ALB) instance
+         * *   **securitypolicy**: a security policy
+         * *   **servergroup**: a server group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

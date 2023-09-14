@@ -86,7 +86,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * 标签Key列表
+         * The tag keys.
          */
         public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -118,7 +122,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +174,12 @@ public class ListTagKeysResponseBody extends TeaModel {
             private String tagKey; 
 
             /**
-             * 标签类型
+             * The type of the tag.
+             * <p>
+             * 
+             * Valid values: **Custom**, **System**, and **All**.
+             * 
+             * Default value: **All**.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -178,7 +187,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * 标签Key
+             * The tag that matches all filter conditions.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

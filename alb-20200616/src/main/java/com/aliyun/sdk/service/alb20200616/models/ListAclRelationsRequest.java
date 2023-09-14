@@ -49,13 +49,13 @@ public class ListAclRelationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAclRelationsRequest response) {
-            super(response);
-            this.aclIds = response.aclIds;
+        private Builder(ListAclRelationsRequest request) {
+            super(request);
+            this.aclIds = request.aclIds;
         } 
 
         /**
-         * 访问控制策略Id
+         * The ACL IDs.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);

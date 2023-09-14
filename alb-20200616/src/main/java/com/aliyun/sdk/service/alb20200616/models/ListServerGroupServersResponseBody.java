@@ -86,7 +86,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次查询返回记录数量
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * 后端服务器
+         * A list of backend servers.
          */
         public Builder servers(java.util.List < Servers> servers) {
             this.servers = servers;
@@ -118,7 +122,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,6 +141,9 @@ public class ListServerGroupServersResponseBody extends TeaModel {
 
         @NameInMap("Port")
         private Integer port;
+
+        @NameInMap("RemoteIpEnabled")
+        private Boolean remoteIpEnabled;
 
         @NameInMap("ServerGroupId")
         private String serverGroupId;
@@ -159,6 +166,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         private Servers(Builder builder) {
             this.description = builder.description;
             this.port = builder.port;
+            this.remoteIpEnabled = builder.remoteIpEnabled;
             this.serverGroupId = builder.serverGroupId;
             this.serverId = builder.serverId;
             this.serverIp = builder.serverIp;
@@ -187,6 +195,13 @@ public class ListServerGroupServersResponseBody extends TeaModel {
          */
         public Integer getPort() {
             return this.port;
+        }
+
+        /**
+         * @return remoteIpEnabled
+         */
+        public Boolean getRemoteIpEnabled() {
+            return this.remoteIpEnabled;
         }
 
         /**
@@ -234,6 +249,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private Integer port; 
+            private Boolean remoteIpEnabled; 
             private String serverGroupId; 
             private String serverId; 
             private String serverIp; 
@@ -242,7 +258,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * 描述信息
+             * The description of the backend server.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +266,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 端口
+             * The port used by the backend server. Valid values: **1** to **65535**.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -258,7 +274,19 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组id
+             * Indicates whether the remote IP address feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder remoteIpEnabled(Boolean remoteIpEnabled) {
+                this.remoteIpEnabled = remoteIpEnabled;
+                return this;
+            }
+
+            /**
+             * The ID of the server group.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -266,7 +294,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器id
+             * The ID of the backend server.
+             * <p>
+             * 
+             * > If **ServerType** is set to **Fc**, **ServerId** is the ARN of a function.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -274,7 +305,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器ip
+             * The IP address in inclusive ENI mode.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -282,7 +313,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 后端服务器类型
+             * The type of the backend server.
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -290,7 +321,13 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * The status of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **Adding**
+             * *   **Available**
+             * *   **Configuring**
+             * *   **Removing**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +335,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * 权重
+             * The weight of the backend server. An ECS instance with a higher weight receives more requests.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

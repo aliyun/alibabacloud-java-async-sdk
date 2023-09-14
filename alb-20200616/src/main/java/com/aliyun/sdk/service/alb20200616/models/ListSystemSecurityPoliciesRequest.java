@@ -35,8 +35,8 @@ public class ListSystemSecurityPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListSystemSecurityPoliciesRequest response) {
-            super(response);
+        private Builder(ListSystemSecurityPoliciesRequest request) {
+            super(request);
         } 
 
         @Override

@@ -89,16 +89,16 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
             super();
         } 
 
-        private Builder(DissociateAdditionalCertificatesFromListenerRequest response) {
-            super(response);
-            this.certificates = response.certificates;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.listenerId = response.listenerId;
+        private Builder(DissociateAdditionalCertificatesFromListenerRequest request) {
+            super(request);
+            this.certificates = request.certificates;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.listenerId = request.listenerId;
         } 
 
         /**
-         * 证书列表
+         * The additional certificates.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
@@ -107,7 +107,12 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * 幂等Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -116,7 +121,11 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * dryRun
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a **2xx HTTP** status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -125,7 +134,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         }
 
         /**
-         * 监听Id
+         * The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -168,7 +177,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
             private String certificateId; 
 
             /**
-             * 证书Id
+             * The certificate ID. Only server certificates are supported. You can specify up to 20 IDs.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;

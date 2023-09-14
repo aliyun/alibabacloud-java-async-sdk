@@ -86,7 +86,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 访问控制列表
+         * The ACL entries.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -94,7 +94,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +186,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 描述信息
+             * The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +194,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * IP条目
+             * The CIDR block of the ACL entry.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -198,7 +202,12 @@ public class ListAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * The status of the ACL entry. Valid values:
+             * <p>
+             * 
+             * *   **Adding**
+             * *   **Available**
+             * *   **Removing**
              */
             public Builder status(String status) {
                 this.status = status;

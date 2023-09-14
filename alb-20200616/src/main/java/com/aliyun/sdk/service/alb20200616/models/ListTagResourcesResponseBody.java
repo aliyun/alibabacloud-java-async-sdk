@@ -24,15 +24,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("TagResources")
     private java.util.List < TagResources> tagResources;
 
-    @NameInMap("TotalCount")
-    private Integer totalCount;
-
     private ListTagResourcesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.tagResources = builder.tagResources;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -71,22 +67,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.tagResources;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < TagResources> tagResources; 
-        private Integer totalCount; 
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +82,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,18 +102,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 标签值列表
+         * The tags that match the specified keys and values.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
-            return this;
-        }
-
-        /**
-         * 总记录数
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
             return this;
         }
 
@@ -194,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 资源ID
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -202,7 +186,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   **acl**: an ACL
+             * *   **loadbalancer**: an ALB instance
+             * *   **securitypolicy**: a security policy
+             * *   **servergroup**: a server group
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -210,7 +200,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签Key
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -218,7 +208,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签Value
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

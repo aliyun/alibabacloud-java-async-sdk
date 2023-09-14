@@ -45,6 +45,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     @NameInMap("StickySessionConfig")
     private StickySessionConfig stickySessionConfig;
 
+    @Query
+    @NameInMap("UchConfig")
+    private UchConfig uchConfig;
+
     private UpdateServerGroupAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -55,6 +59,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         this.serverGroupName = builder.serverGroupName;
         this.serviceName = builder.serviceName;
         this.stickySessionConfig = builder.stickySessionConfig;
+        this.uchConfig = builder.uchConfig;
     }
 
     public static Builder builder() {
@@ -126,6 +131,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
         return this.stickySessionConfig;
     }
 
+    /**
+     * @return uchConfig
+     */
+    public UchConfig getUchConfig() {
+        return this.uchConfig;
+    }
+
     public static final class Builder extends Request.Builder<UpdateServerGroupAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
@@ -135,25 +147,32 @@ public class UpdateServerGroupAttributeRequest extends Request {
         private String serverGroupName; 
         private String serviceName; 
         private StickySessionConfig stickySessionConfig; 
+        private UchConfig uchConfig; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateServerGroupAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.healthCheckConfig = response.healthCheckConfig;
-            this.scheduler = response.scheduler;
-            this.serverGroupId = response.serverGroupId;
-            this.serverGroupName = response.serverGroupName;
-            this.serviceName = response.serviceName;
-            this.stickySessionConfig = response.stickySessionConfig;
+        private Builder(UpdateServerGroupAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.healthCheckConfig = request.healthCheckConfig;
+            this.scheduler = request.scheduler;
+            this.serverGroupId = request.serverGroupId;
+            this.serverGroupName = request.serverGroupName;
+            this.serviceName = request.serviceName;
+            this.stickySessionConfig = request.stickySessionConfig;
+            this.uchConfig = request.uchConfig;
         } 
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +181,11 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx` HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -171,7 +194,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * 健康检查配置
+         * The configuration of health checks.
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
@@ -180,7 +203,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * 调度策略
+         * The scheduling algorithm. Valid values:
+         * <p>
+         * 
+         * *   **Wrr**: the weighted round robin algorithm. Backend servers that have higher weights receive more requests than those that have lower weights.
+         * *   **Wlc**: the weighted least connections algorithm. Requests are distributed based on the weights and the number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.
+         * *   **Sch**: the consistent hashing algorithm. Requests from the same source IP address are distributed to the same backend server.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -189,7 +217,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * 服务器组Id
+         * The server group ID.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -198,7 +226,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * Acl名称
+         * The server group name.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder serverGroupName(String serverGroupName) {
             this.putQueryParameter("ServerGroupName", serverGroupName);
@@ -207,7 +238,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * 服务器名称
+         * This parameter is available only if the ALB Ingress controller is used. In this case, set this parameter to the name of the `Kubernetes Service` that is associated with the server group.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -216,11 +247,20 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * 会话保持配置
+         * The configuration of session persistence.
          */
         public Builder stickySessionConfig(StickySessionConfig stickySessionConfig) {
             this.putQueryParameter("StickySessionConfig", stickySessionConfig);
             this.stickySessionConfig = stickySessionConfig;
+            return this;
+        }
+
+        /**
+         * UchConfig.
+         */
+        public Builder uchConfig(UchConfig uchConfig) {
+            this.putQueryParameter("UchConfig", uchConfig);
+            this.uchConfig = uchConfig;
             return this;
         }
 
@@ -395,7 +435,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private Integer unhealthyThreshold; 
 
             /**
-             * 健康检查正常的状态码
+             * The HTTP status codes that are used to determine whether the backend server passes the health check.
              */
             public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -403,7 +443,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查端口
+             * The port that you want to use for health checks on backend servers.
+             * <p>
+             * 
+             * Valid values: **0** to **65535**.
+             * 
+             * If you set the value to **0**, the ports of backend servers are used for health checks.
+             * 
+             * > This parameter takes effect when the **HealthCheckEnabled** parameter is set to **true**.
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -411,7 +458,11 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 是否启用健康检查
+             * Specifies whether to enable the health check feature. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -419,7 +470,16 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查域名
+             * The domain name that is used for health checks. The domain name must meet the following requirements:
+             * <p>
+             * 
+             * *   The domain name must be 1 to 80 characters in length.
+             * *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
+             * *   It must contain at least one period (.) but cannot start or end with a period (.).
+             * *   The rightmost field of the domain name can contain only letters and cannot contain digits or hyphens (-).
+             * *   Other fields cannot start or end with a hyphen (-).
+             * 
+             * > This parameter takes effect when the **HealthCheckEnabled** parameter is set to true and the **HealthCheckProtocol** parameter is set to **HTTP**.
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -427,7 +487,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查HTTP协议版本
+             * The version of HTTP that is used for health checks. Valid values:
+             * <p>
+             * 
+             * *   **HTTP1.0**
+             * *   **HTTP1.1**
+             * 
+             * > This parameter takes effect when the **HealthCheckEnabled** parameter is set to true and the **HealthCheckProtocol** parameter is set to **HTTP**.
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -435,7 +501,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查间隔
+             * The interval at which health checks are performed. Unit: seconds.
+             * <p>
+             * 
+             * Valid values: **1** to **50**.
+             * 
+             * > This parameter takes effect when the **HealthCheckEnabled** parameter is set to **true**.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -443,7 +514,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查方法
+             * The method that you want to use for the health check. Valid values:
+             * <p>
+             * 
+             * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
+             * *   **POST**: gRPC health checks automatically use the POST method.
+             * *   **HEAD**: HTTP health checks automatically use the HEAD method.
+             * 
+             * > This parameter takes effect when the **HealthCheckEnabled** parameter is set to true and the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -451,7 +529,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查Path
+             * The path that is used for health checks.
+             * <p>
+             * 
+             * The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The path must start with a forward slash (`/`).
+             * 
+             * > This parameter takes effect when the **HealthCheckEnabled** parameter is set to **true** and the **HealthCheckProtocol** parameter is set to **HTTP**.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -459,7 +542,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查协议类型
+             * The protocol that you want to use for health checks. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
+             * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -467,7 +555,16 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查超时时间
+             * Specify the timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.
+             * <p>
+             * 
+             * Valid values: **1** to **300**.
+             * 
+             * > 
+             * 
+             * *   If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.
+             * 
+             * *   This parameter takes effect when the **HealthCheckEnabled** parameter is set to **true**.
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -475,7 +572,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查成功判定阈值
+             * The number of times that an unhealthy backend server must consecutively pass health checks before it can be declared healthy (from **fail** to **success**).
+             * <p>
+             * 
+             * Valid values: **2** to **10**.
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -483,7 +583,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 健康检查不成功判定阈值
+             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+             * <p>
+             * 
+             * Valid values: **2** to **10**.
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -561,7 +664,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private String stickySessionType; 
 
             /**
-             * 服务器上配置的Cookie
+             * The cookie to be configured on the server.
+             * <p>
+             * 
+             * The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).
+             * 
+             * > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Server**.
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -569,7 +677,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 服务器上配置的Cookie
+             * The timeout period of a cookie. Unit: seconds.
+             * <p>
+             * 
+             * Valid values: **1** to **86400**.
+             * 
+             * > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -577,7 +690,11 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 是否启用会话保持
+             * Specifies whether to enable session persistence. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder stickySessionEnabled(Boolean stickySessionEnabled) {
                 this.stickySessionEnabled = stickySessionEnabled;
@@ -585,7 +702,18 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * 会话保持类型
+             * The method that is used to handle a cookie. Valid values:
+             * <p>
+             * 
+             * *   **Insert**: inserts a cookie.
+             * 
+             * ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.
+             * 
+             * *   **Server**: rewrites a cookie.
+             * 
+             * When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
+             * 
+             * > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** for the server group.
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -594,6 +722,69 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
             public StickySessionConfig build() {
                 return new StickySessionConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class UchConfig extends TeaModel {
+        @NameInMap("Type")
+        @Validation(required = true)
+        private String type;
+
+        @NameInMap("Value")
+        @Validation(required = true)
+        private String value;
+
+        private UchConfig(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UchConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public UchConfig build() {
+                return new UchConfig(this);
             } 
 
         } 

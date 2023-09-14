@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UnTagResourcesRequest extends Request {
     @Query
+    @NameInMap("All")
+    private Boolean all;
+
+    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -32,6 +36,7 @@ public class UnTagResourcesRequest extends Request {
 
     private UnTagResourcesRequest(Builder builder) {
         super(builder);
+        this.all = builder.all;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -49,6 +54,13 @@ public class UnTagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return all
+     */
+    public Boolean getAll() {
+        return this.all;
     }
 
     /**
@@ -80,6 +92,7 @@ public class UnTagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnTagResourcesRequest, Builder> {
+        private Boolean all; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < Tag> tag; 
@@ -89,16 +102,30 @@ public class UnTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UnTagResourcesRequest response) {
-            super(response);
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
-            this.tagKey = response.tagKey;
+        private Builder(UnTagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * 资源实例Id
+         * Specifies whether to remove all tags from the specified resource. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         */
+        public Builder all(Boolean all) {
+            this.putQueryParameter("All", all);
+            this.all = all;
+            return this;
+        }
+
+        /**
+         * The IDs of the resources from which you want to remove tags.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -107,7 +134,13 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **acl**: an access control list (ACL)
+         * *   **loadbalancer**: an Application Load Balancer (ALB) instance
+         * *   **securitypolicy**: a security policy
+         * *   **servergroup**: a server group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -116,7 +149,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表
+         * The tags that you want to remove.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -125,7 +158,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签键列表
+         * The keys of the tags that you want to remove.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -179,7 +212,7 @@ public class UnTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of the tag that you want to remove. The key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +220,7 @@ public class UnTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of the tag that you want to remove. The value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

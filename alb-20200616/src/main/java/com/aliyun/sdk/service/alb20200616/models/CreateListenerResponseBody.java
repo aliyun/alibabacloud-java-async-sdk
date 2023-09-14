@@ -62,7 +62,7 @@ public class CreateListenerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 异步任务Id
+         * The asynchronous task ID.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +70,7 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * 监听标识
+         * The listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -78,7 +78,7 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

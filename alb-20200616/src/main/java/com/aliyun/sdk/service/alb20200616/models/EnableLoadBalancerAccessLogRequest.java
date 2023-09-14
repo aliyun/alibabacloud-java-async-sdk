@@ -103,17 +103,20 @@ public class EnableLoadBalancerAccessLogRequest extends Request {
             super();
         } 
 
-        private Builder(EnableLoadBalancerAccessLogRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.loadBalancerId = response.loadBalancerId;
-            this.logProject = response.logProject;
-            this.logStore = response.logStore;
+        private Builder(EnableLoadBalancerAccessLogRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.loadBalancerId = request.loadBalancerId;
+            this.logProject = request.logProject;
+            this.logStore = request.logStore;
         } 
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +125,7 @@ public class EnableLoadBalancerAccessLogRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -131,7 +134,7 @@ public class EnableLoadBalancerAccessLogRequest extends Request {
         }
 
         /**
-         * 实例id
+         * The ALB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -140,7 +143,7 @@ public class EnableLoadBalancerAccessLogRequest extends Request {
         }
 
         /**
-         * 日志Project
+         * The project to which the access log is shipped.
          */
         public Builder logProject(String logProject) {
             this.putQueryParameter("LogProject", logProject);
@@ -149,7 +152,7 @@ public class EnableLoadBalancerAccessLogRequest extends Request {
         }
 
         /**
-         * 日志Store
+         * The Logstore to which the access log is shipped.
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);

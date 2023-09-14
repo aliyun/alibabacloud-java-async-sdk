@@ -89,16 +89,16 @@ public class ListListenerCertificatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListListenerCertificatesRequest response) {
-            super(response);
-            this.certificateType = response.certificateType;
-            this.listenerId = response.listenerId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListListenerCertificatesRequest request) {
+            super(request);
+            this.certificateType = request.certificateType;
+            this.listenerId = request.listenerId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * 证书类型
+         * The type of the certificate. Valid values: **Ca** and **Server**.
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -107,7 +107,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * 监听Id
+         * The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -116,7 +116,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * 查询数量
+         * The maximum number of entries to return. Valid values: **1 to 100**. If you do not specify this parameter, the default value **20** is used.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,7 +125,11 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

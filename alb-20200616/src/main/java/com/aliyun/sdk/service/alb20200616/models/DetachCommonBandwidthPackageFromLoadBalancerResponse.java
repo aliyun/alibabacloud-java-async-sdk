@@ -16,6 +16,10 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DetachCommonBandwidthPackageFromLoadBalancerResponseBody body;
@@ -23,6 +27,7 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
     private DetachCommonBandwidthPackageFromLoadBalancerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DetachCommonBandwidthPackageFromLoadBalancerResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
     public interface Builder extends Response.Builder<DetachCommonBandwidthPackageFromLoadBalancerResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DetachCommonBandwidthPackageFromLoadBalancerResponseBody body);
 
@@ -64,6 +78,7 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
             extends Response.BuilderImpl<DetachCommonBandwidthPackageFromLoadBalancerResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DetachCommonBandwidthPackageFromLoadBalancerResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
         private BuilderImpl(DetachCommonBandwidthPackageFromLoadBalancerResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponse extends Respon
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

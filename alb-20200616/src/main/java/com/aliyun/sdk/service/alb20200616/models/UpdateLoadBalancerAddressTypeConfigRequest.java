@@ -102,17 +102,21 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLoadBalancerAddressTypeConfigRequest response) {
-            super(response);
-            this.addressType = response.addressType;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.loadBalancerId = response.loadBalancerId;
-            this.zoneMappings = response.zoneMappings;
+        private Builder(UpdateLoadBalancerAddressTypeConfigRequest request) {
+            super(request);
+            this.addressType = request.addressType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.loadBalancerId = request.loadBalancerId;
+            this.zoneMappings = request.zoneMappings;
         } 
 
         /**
-         * 目标网络类型
+         * The new network type. Valid values:
+         * <p>
+         * 
+         * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
+         * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the virtual private cloud (VPC) where the ALB instance is deployed.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -121,7 +125,12 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         }
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -130,7 +139,11 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         }
 
         /**
-         * 是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -139,7 +152,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         }
 
         /**
-         * 实例id
+         * The ALB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -148,7 +161,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         }
 
         /**
-         * 可用区及交换机映射列表
+         * The zones and the vSwitches. You must specify at least two zones.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -214,7 +227,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             private String zoneId; 
 
             /**
-             * 弹性公网IP
+             * The ID of an EIP instance. You can specify up to 10 zone IDs.
+             * <p>
+             * 
+             * > This parameter is required if you want to change the network type from internal-facing to Internet-facing.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -222,7 +238,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             }
 
             /**
-             * 交换机标识
+             * The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -230,7 +246,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             }
 
             /**
-             * 可用区
+             * The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.
+             * <p>
+             * 
+             * You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

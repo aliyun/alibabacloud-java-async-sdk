@@ -191,24 +191,28 @@ public class ListLoadBalancersRequest extends Request {
             super();
         } 
 
-        private Builder(ListLoadBalancersRequest response) {
-            super(response);
-            this.addressType = response.addressType;
-            this.loadBalancerBussinessStatus = response.loadBalancerBussinessStatus;
-            this.loadBalancerIds = response.loadBalancerIds;
-            this.loadBalancerNames = response.loadBalancerNames;
-            this.loadBalancerStatus = response.loadBalancerStatus;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.payType = response.payType;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tag = response.tag;
-            this.vpcIds = response.vpcIds;
-            this.zoneId = response.zoneId;
+        private Builder(ListLoadBalancersRequest request) {
+            super(request);
+            this.addressType = request.addressType;
+            this.loadBalancerBussinessStatus = request.loadBalancerBussinessStatus;
+            this.loadBalancerIds = request.loadBalancerIds;
+            this.loadBalancerNames = request.loadBalancerNames;
+            this.loadBalancerStatus = request.loadBalancerStatus;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.payType = request.payType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
+            this.vpcIds = request.vpcIds;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * 负载均衡的地址类型
+         * The network type. Valid values:
+         * <p>
+         * 
+         * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
+         * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -217,7 +221,11 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 实例业务状态
+         * The service status of the ALB instance. Valid values:
+         * <p>
+         * 
+         * *   **Abnormal**
+         * *   **Normal**
          */
         public Builder loadBalancerBussinessStatus(String loadBalancerBussinessStatus) {
             this.putQueryParameter("LoadBalancerBussinessStatus", loadBalancerBussinessStatus);
@@ -226,7 +234,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 实例ID列表，N最大支持20
+         * The instance IDs. You can specify at most 20 ALB instance IDs.
          */
         public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -235,7 +243,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 实例Name列表，N最大支持10
+         * The names of the instances. You can specify at most 10 names.
          */
         public Builder loadBalancerNames(java.util.List < String > loadBalancerNames) {
             this.putQueryParameter("LoadBalancerNames", loadBalancerNames);
@@ -244,7 +252,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 实例状态
+         * The status of the ALB instance. Valid values:
+         * <p>
+         * 
+         * *   **Inactive**: The ALB instance is disabled. The listeners do not forward traffic.
+         * *   **Active**: The ALB instance is running.
+         * *   **Provisioning**: The ALB instance is being created.
+         * *   **Configuring**: The ALB instance is being modified.
+         * *   **CreateFailed**: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -253,7 +268,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 本次读取的最大数据记录数量，此参数为可选参数，取值1-100，用户传入为空时，默认为20。
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -262,7 +277,11 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 用来标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -271,7 +290,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 付费类型
+         * The billing method of the ALB instance. Set the value to
+         * <p>
+         * 
+         * **PostPay**, which specifies the pay-as-you-go billing method. This is the default value.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -280,7 +302,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,7 +311,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * tag列表
+         * The tags added to the ALB instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -298,7 +320,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * vpcId列表
+         * The ID of the virtual private cloud (VPC) to which the ALB instance belongs. You can specify at most 10 IDs.
          */
         public Builder vpcIds(java.util.List < String > vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);
@@ -307,7 +329,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * 可用区ID
+         * The ID of the zone where the ALB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeZones](~~189196~~) operation to query zones.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -361,7 +386,10 @@ public class ListLoadBalancersRequest extends Request {
             private String value; 
 
             /**
-             * 实例的标签键
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -369,7 +397,10 @@ public class ListLoadBalancersRequest extends Request {
             }
 
             /**
-             * 实例的标签值
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

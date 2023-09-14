@@ -103,17 +103,17 @@ public class ReplaceServersInServerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ReplaceServersInServerGroupRequest response) {
-            super(response);
-            this.addedServers = response.addedServers;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.removedServers = response.removedServers;
-            this.serverGroupId = response.serverGroupId;
+        private Builder(ReplaceServersInServerGroupRequest request) {
+            super(request);
+            this.addedServers = request.addedServers;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.removedServers = request.removedServers;
+            this.serverGroupId = request.serverGroupId;
         } 
 
         /**
-         * 待添加后端服务器
+         * The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.
          */
         public Builder addedServers(java.util.List < AddedServers> addedServers) {
             this.putQueryParameter("AddedServers", addedServers);
@@ -122,7 +122,12 @@ public class ReplaceServersInServerGroupRequest extends Request {
         }
 
         /**
-         * 幂等Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -131,7 +136,11 @@ public class ReplaceServersInServerGroupRequest extends Request {
         }
 
         /**
-         * dryRun
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx` HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,7 +149,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
         }
 
         /**
-         * 待删除后端服务器
+         * The backend servers that you want to remove.
          */
         public Builder removedServers(java.util.List < RemovedServers> removedServers) {
             this.putQueryParameter("RemovedServers", removedServers);
@@ -149,7 +158,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
         }
 
         /**
-         * 后端服务器Id
+         * The ID of the server group.
+         * <p>
+         * 
+         * > You cannot perform this operation on a server group of the Function type.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -252,7 +264,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
             private Integer weight; 
 
             /**
-             * 描述信息
+             * The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -260,7 +272,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端端口号
+             * The port used by the server group. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -268,7 +280,13 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器id
+             * The ID of the backend server. You can specify up to 40 server IDs in each call.
+             * <p>
+             * 
+             * *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
+             * *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
+             * 
+             * > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -276,7 +294,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器ip
+             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -284,7 +302,12 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器类型
+             * The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:
+             * <p>
+             * 
+             * *   **Ecs**
+             * *   **Eni**
+             * *   **Eci**
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -292,7 +315,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器权重
+             * The weight of the backend server that you want to add to the server group. You can specify up to 40 backend servers in each call.
+             * <p>
+             * 
+             * Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -370,7 +396,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
             private String serverType; 
 
             /**
-             * 端口
+             * The port that is used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -378,7 +404,13 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器id
+             * The ID of the backend server. You can specify up to 40 server IDs in each call.
+             * <p>
+             * 
+             * *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
+             * *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
+             * 
+             * > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -386,7 +418,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器ip
+             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -394,7 +426,12 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器类型
+             * The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:
+             * <p>
+             * 
+             * *   **Ecs**
+             * *   **Eni**
+             * *   **Eci**
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;

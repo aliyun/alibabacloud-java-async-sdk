@@ -89,16 +89,21 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLoadBalancerZonesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.loadBalancerId = response.loadBalancerId;
-            this.zoneMappings = response.zoneMappings;
+        private Builder(UpdateLoadBalancerZonesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.loadBalancerId = request.loadBalancerId;
+            this.zoneMappings = request.zoneMappings;
         } 
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +112,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -116,7 +125,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * 实例id
+         * The ID of the ALB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -125,7 +134,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * 可用区及交换机映射列表
+         * The zones and the vSwitches. You must specify at least two zones. The specified zones overwrite the existing configurations.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -181,7 +190,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             private String zoneId; 
 
             /**
-             * 交换机标识
+             * The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -189,7 +198,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * 可用区
+             * The name of the zone. You can call the [DescribeZones](~~189196~~) operation to query the zones. You can specify up to 10 zone IDs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

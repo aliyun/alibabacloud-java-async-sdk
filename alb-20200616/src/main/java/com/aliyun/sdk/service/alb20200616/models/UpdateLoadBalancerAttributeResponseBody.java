@@ -50,7 +50,7 @@ public class UpdateLoadBalancerAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 异步任务id
+         * The ID of the synchronous task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class UpdateLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

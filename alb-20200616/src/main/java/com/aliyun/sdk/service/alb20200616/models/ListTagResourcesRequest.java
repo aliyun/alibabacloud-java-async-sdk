@@ -102,17 +102,17 @@ public class ListTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * 查询数量
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +121,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +134,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源实例Id
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +143,13 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **acl**: an access control list (ACL)
+         * *   **loadbalancer**: an Application Load Balancer (ALB) instance
+         * *   **securitypolicy**: a security policy
+         * *   **servergroup**: a server group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +158,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -202,7 +212,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +220,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

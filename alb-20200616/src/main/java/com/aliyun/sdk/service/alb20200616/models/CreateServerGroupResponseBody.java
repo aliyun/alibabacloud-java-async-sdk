@@ -62,7 +62,7 @@ public class CreateServerGroupResponseBody extends TeaModel {
         private String serverGroupId; 
 
         /**
-         * 异步任务Id
+         * The ID of the asynchronous job.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +70,7 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 服务器组id
+         * The ID of the server group.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.serverGroupId = serverGroupId;

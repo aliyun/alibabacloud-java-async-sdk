@@ -50,7 +50,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         private java.util.List < SecurityPolicies> securityPolicies; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * 安全策略
+         * The security policies.
          */
         public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
@@ -122,7 +122,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             private java.util.List < String > TLSVersions; 
 
             /**
-             * 加密套件
+             * The supported encryption algorithms.
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -130,7 +130,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 安全策略Id
+             * The ID of the security policy.
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -138,7 +138,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 协议版本
+             * The TLS versions that are supported.
              */
             public Builder TLSVersions(java.util.List < String > TLSVersions) {
                 this.TLSVersions = TLSVersions;

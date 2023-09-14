@@ -50,7 +50,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 负载均衡实例标识
+         * The ID of the ALB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -58,7 +58,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

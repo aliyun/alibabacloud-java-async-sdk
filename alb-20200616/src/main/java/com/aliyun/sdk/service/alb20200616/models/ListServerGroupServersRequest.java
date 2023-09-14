@@ -101,17 +101,17 @@ public class ListServerGroupServersRequest extends Request {
             super();
         } 
 
-        private Builder(ListServerGroupServersRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.serverGroupId = response.serverGroupId;
-            this.serverIds = response.serverIds;
-            this.tag = response.tag;
+        private Builder(ListServerGroupServersRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.serverGroupId = request.serverGroupId;
+            this.serverIds = request.serverIds;
+            this.tag = request.tag;
         } 
 
         /**
-         * 查询数量
+         * The maximum number of entries to return. Valid values: **1** to **100**. If you do not specify a value, the default value **20** is used.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +120,11 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +133,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * 服务器组id
+         * The server group ID.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -138,7 +142,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * ServerIds.
+         * The IDs of the servers.
          */
         public Builder serverIds(java.util.List < String > serverIds) {
             this.putQueryParameter("ServerIds", serverIds);
@@ -147,7 +151,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are added to the server group. You can specify up to 10 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -201,7 +205,10 @@ public class ListServerGroupServersRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The tag key. You can specify up to 10 tag keys.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +216,10 @@ public class ListServerGroupServersRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The tag value. You can specify up to 10 tag values.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

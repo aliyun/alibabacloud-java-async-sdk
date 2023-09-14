@@ -89,16 +89,21 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateServerGroupServersAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.serverGroupId = response.serverGroupId;
-            this.servers = response.servers;
+        private Builder(UpdateServerGroupServersAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.serverGroupId = request.serverGroupId;
+            this.servers = request.servers;
         } 
 
         /**
-         * 幂等Token
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The value of **RequestId** for each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +112,11 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
         }
 
         /**
-         * dryRun
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -116,7 +125,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
         }
 
         /**
-         * 后端服务器Id
+         * The server group ID.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -125,7 +134,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
         }
 
         /**
-         * 后端服务器
+         * The backend servers that you want to add to the server group. You can specify up to 40 servers in each call.
          */
         public Builder servers(java.util.List < Servers> servers) {
             this.putQueryParameter("Servers", servers);
@@ -229,7 +238,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             private Integer weight; 
 
             /**
-             * 后端服务器描述
+             * The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +246,10 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * 后端端口号
+             * The port used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+             * <p>
+             * 
+             * > You do not need to set this parameter if **ServerType** is set to **Fc**.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -245,7 +257,12 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * 后端服务器id
+             * The ID of the backend server. You can specify up to 40 server IDs in each call.
+             * <p>
+             * 
+             * *   If **ServerType** is set to **Ecs**, **Eni**, or **Eci**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance.
+             * *   If **ServerType** is set to **Ip**, set the ServerId parameter to an IP address.
+             * *   If **ServerType** is set to **Fc**, set the ServerId parameter to the Alibaba Cloud Resource Name (ARN) of a function.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -253,7 +270,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * 后端服务器ip
+             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -261,7 +278,14 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * 后端服务器类型
+             * The type of the backend server. You can specify at most 40 servers in each call. Valid values:
+             * <p>
+             * 
+             * *   **Ecs**
+             * *   **Eni**
+             * *   **Eci**
+             * *   **Ip**
+             * *   **Fc**
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -269,7 +293,10 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * 后端服务器权重
+             * The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server. You can specify at most 40 servers in each call.
+             * <p>
+             * 
+             * > You do not need to set this parameter if **ServerType** is set to **Fc**.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

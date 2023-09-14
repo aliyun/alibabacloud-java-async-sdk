@@ -29,12 +29,17 @@ public class ListHealthCheckTemplatesRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private ListHealthCheckTemplatesRequest(Builder builder) {
         super(builder);
         this.healthCheckTemplateIds = builder.healthCheckTemplateIds;
         this.healthCheckTemplateNames = builder.healthCheckTemplateNames;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -78,26 +83,35 @@ public class ListHealthCheckTemplatesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListHealthCheckTemplatesRequest, Builder> {
         private java.util.List < String > healthCheckTemplateIds; 
         private java.util.List < String > healthCheckTemplateNames; 
         private Integer maxResults; 
         private String nextToken; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListHealthCheckTemplatesRequest response) {
-            super(response);
-            this.healthCheckTemplateIds = response.healthCheckTemplateIds;
-            this.healthCheckTemplateNames = response.healthCheckTemplateNames;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListHealthCheckTemplatesRequest request) {
+            super(request);
+            this.healthCheckTemplateIds = request.healthCheckTemplateIds;
+            this.healthCheckTemplateNames = request.healthCheckTemplateNames;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.tag = request.tag;
         } 
 
         /**
-         * 健康检查模板ID列表
+         * The IDs of health check templates.
          */
         public Builder healthCheckTemplateIds(java.util.List < String > healthCheckTemplateIds) {
             this.putQueryParameter("HealthCheckTemplateIds", healthCheckTemplateIds);
@@ -106,7 +120,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * 健康检查模板名称列表
+         * The health check templates.
          */
         public Builder healthCheckTemplateNames(java.util.List < String > healthCheckTemplateNames) {
             this.putQueryParameter("HealthCheckTemplateNames", healthCheckTemplateNames);
@@ -115,7 +129,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * 查询数量
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -124,11 +138,24 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * 分页查询标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -139,4 +166,65 @@ public class ListHealthCheckTemplatesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

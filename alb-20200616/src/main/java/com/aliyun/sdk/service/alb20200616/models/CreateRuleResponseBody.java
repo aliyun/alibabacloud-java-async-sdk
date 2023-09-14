@@ -62,7 +62,7 @@ public class CreateRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * 异步任务Id
+         * The ID of the asynchronous task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +70,7 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 转发规则标识
+         * The forwarding rule ID.
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

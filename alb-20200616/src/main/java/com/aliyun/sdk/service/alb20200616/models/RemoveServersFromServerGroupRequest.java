@@ -89,16 +89,21 @@ public class RemoveServersFromServerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveServersFromServerGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.serverGroupId = response.serverGroupId;
-            this.servers = response.servers;
+        private Builder(RemoveServersFromServerGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.serverGroupId = request.serverGroupId;
+            this.servers = request.servers;
         } 
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +112,11 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -116,7 +125,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * 后端服务器Id
+         * The server group ID.
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -125,7 +134,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * 后端服务器
+         * The backend servers that you want to remove from the server group. You can specify up to 40 backend servers in each call.
          */
         public Builder servers(java.util.List < Servers> servers) {
             this.putQueryParameter("Servers", servers);
@@ -205,7 +214,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
             private String serverType; 
 
             /**
-             * 后端端口号
+             * The port that is used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+             * <p>
+             * 
+             * > This parameter is required if the **ServerType** parameter is set to **Ecs**, **Eni**, **Eci**, or **Ip**.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -213,7 +225,14 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器id
+             * The backend server ID. You can specify up to 40 server IDs in each call.
+             * <p>
+             * 
+             * *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
+             * *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
+             * *   If the server group type is **Fc**, set the ServerId parameter to the ARN of a function specified in the server group.
+             * 
+             * > You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -221,7 +240,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器ip
+             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -229,7 +248,14 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * 后端服务器类型
+             * The type of the backend server. You can specify at most 40 servers in each call. Valid values:
+             * <p>
+             * 
+             * *   **Ecs**
+             * *   **Eni**
+             * *   **Eci**
+             * *   **Ip**
+             * *   **Fc**
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;

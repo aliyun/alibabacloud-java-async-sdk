@@ -74,7 +74,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private java.util.List < RuleHealthStatus> ruleHealthStatus; 
 
         /**
-         * 监听健康检查结果
+         * The health check status of the server groups that are associated with the listener.
          */
         public Builder listenerHealthStatus(java.util.List < ListenerHealthStatus> listenerHealthStatus) {
             this.listenerHealthStatus = listenerHealthStatus;
@@ -82,7 +82,11 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 下一页标识
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 转发规则健康检查结果
+         * The health check status of the forwarding rules.
          */
         public Builder ruleHealthStatus(java.util.List < RuleHealthStatus> ruleHealthStatus) {
             this.ruleHealthStatus = ruleHealthStatus;
@@ -162,7 +166,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String reasonCode; 
 
             /**
-             * 后端实际的返回码信息
+             * The HTTP status code returned from the server, for example, **302**.
+             * <p>
+             * 
+             * > A value is returned only if `ReasonCode` is set to **RESPONSE_MISMATCH**.
              */
             public Builder actualResponse(String actualResponse) {
                 this.actualResponse = actualResponse;
@@ -170,7 +177,12 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 用户预期的后端返回码信息
+             * The HTTP status code returned after backend servers pass health checks.
+             * <p>
+             * 
+             * Valid values: **HTTP\_2xx**, **HTTP\_3xx**, **HTTP\_4xx**, and **HTTP\_5xx**. Multiple status codes are separated by commas (,).
+             * 
+             * > This value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -178,7 +190,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 失败reasonCode
+             * The reason why the value of **Status** is Unhealthy. Only HTTP and HTTPS listeners support this parameter.
+             * <p>
+             * 
+             * *   **CONNECT_TIMEOUT**: ALB failed to connect to the backend server within the specified period of time.
+             * *   **CONNECT_FAILED**: ALB failed to connect to the backend server.
+             * *   **RECV_RESPONSE_FAILED**: ALB failed to receive a response from the backend server.
+             * *   **RECV_RESPONSE_TIMEOUT**: ALB failed to receive a response from the backend server within the specified period of time.
+             * *   **SEND_REQUEST_FAILED**: ALB failed to send a request to the backend server.
+             * *   **SEND_REQUEST_TIMEOUT**: ALB failed to send a request to the backend server within the specified period of time.
+             * *   **RESPONSE_FORMAT_ERROR**: The format of the response from the backend server is invalid.
+             * *   **RESPONSE_FORMAT_ERROR**: The HTTP status code returned from the backend server is not the expected one.
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -267,7 +289,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 后端服务器端口
+             * The backend port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -275,7 +297,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status为非正常状态时的详细异常原因
+             * The cause of the abnormal state.
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -283,7 +305,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 后端服务器id
+             * The ID of the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -291,7 +313,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 后端服务器Ip
+             * The IP address of the backend server.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -299,7 +321,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 健康检查状态
+             * The status of the health check. Valid values: Valid values:
+             * <p>
+             * 
+             * *   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.
+             * *   **Unhealthy**: indicates that the backend server consecutively fails health checks.
+             * *   **Unused**: indicates that the weight of the backend server is 0.
+             * *   **Unavailable**: indicates that health checks are disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -376,7 +404,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String serverGroupId; 
 
             /**
-             * 服务器组使用类型
+             * The action specified for the server group.
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -384,7 +412,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 健康检查开启/关闭
+             * Indicates whether health checks are enabled. If **on** is returned, it indicates that health checks are enabled.
              */
             public Builder healthCheckEnabled(String healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -392,7 +420,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 处于非正常状态的后端服务器
+             * A list of unhealthy backend servers.
              */
             public Builder nonNormalServers(java.util.List < NonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
@@ -400,7 +428,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组ID
+             * The ID of the server group that is associated with the listener.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -477,7 +505,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private java.util.List < ServerGroupInfos> serverGroupInfos; 
 
             /**
-             * 监听Id
+             * The listener ID.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -485,7 +513,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 监听的端口号
+             * The listener port.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -493,7 +521,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 监听的协议
+             * The listener protocol.
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -501,7 +529,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组健康检查结果
+             * The information about the server groups.
              */
             public Builder serverGroupInfos(java.util.List < ServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;
@@ -566,7 +594,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String reasonCode; 
 
             /**
-             * 后端实际的返回码信息
+             * The HTTP status code returned from the server, for example, **302**.
+             * <p>
+             * 
+             * > A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.
              */
             public Builder actualResponse(String actualResponse) {
                 this.actualResponse = actualResponse;
@@ -574,7 +605,12 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 用户预期的后端返回码信息
+             * The HTTP status code returned after backend servers pass health checks.
+             * <p>
+             * 
+             * Valid values: **HTTP\_2xx**, **HTTP\_3xx**, **HTTP\_4xx**, and **HTTP\_5xx**. Multiple status codes are separated by commas (,).
+             * 
+             * > A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -582,7 +618,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 失败reasonCode
+             * The reason why the value of **Status** is Unhealthy. Only HTTP and HTTPS listeners support this parameter.
+             * <p>
+             * 
+             * *   **CONNECT_TIMEOUT**: ALB failed to connect to the backend server within the specified period of time.
+             * *   **CONNECT_FAILED**: ALB failed to connect to the backend server.
+             * *   **RECV_RESPONSE_FAILED**: ALB failed to receive a response from the backend server.
+             * *   **RECV_RESPONSE_TIMEOUT**: ALB failed to receive a response from the backend server within the specified period of time.
+             * *   **SEND_REQUEST_FAILED**: ALB failed to send a request to the backend server.
+             * *   **SEND_REQUEST_TIMEOUT**: ALB failed to send a request to the backend server within the specified period of time.
+             * *   **RESPONSE_FORMAT_ERROR**: The format of the response from the backend server is invalid.
+             * *   **RESPONSE_FORMAT_ERROR**: The HTTP status code returned from the backend server is not the expected one.
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -671,7 +717,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 后端服务器端口
+             * The backend port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -679,7 +725,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status为非正常状态时的详细异常原因
+             * The cause of the abnormal state.
              */
             public Builder reason(NonNormalServersReason reason) {
                 this.reason = reason;
@@ -687,7 +733,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 后端服务器Id
+             * The ID of the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -695,7 +741,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 后端服务器ID
+             * The IP address of the server group.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -703,7 +749,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 健康检查状态
+             * The status of the health check. Valid values: Valid values:
+             * <p>
+             * 
+             * *   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.
+             * *   **Unhealthy**: indicates that the backend server consecutively fails health checks.
+             * *   **Unused**: indicates that the weight of the backend server is 0.
+             * *   **Unavailable**: indicates that health checks are disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -780,7 +832,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String serverGroupId; 
 
             /**
-             * 服务器组使用类型
+             * The action specified for the server group.
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -788,7 +840,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 健康检查开启/关闭
+             * Indicates whether health checks are enabled. If **on** is returned, it indicates that health checks are enabled.
              */
             public Builder healthCheckEnabled(String healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -796,7 +848,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 处于非正常状态的后端服务器
+             * A list of unhealthy backend servers.
              */
             public Builder nonNormalServers(java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
@@ -804,7 +856,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组ID
+             * The ID of the server group that is associated with the listener.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -857,7 +909,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos; 
 
             /**
-             * 转发规则ID
+             * The ID of the forwarding rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -865,7 +917,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 服务器组健康检查结果
+             * The server groups.
              */
             public Builder serverGroupInfos(java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;

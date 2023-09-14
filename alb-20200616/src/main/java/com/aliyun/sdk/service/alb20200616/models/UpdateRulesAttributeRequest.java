@@ -75,15 +75,20 @@ public class UpdateRulesAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRulesAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.rules = response.rules;
+        private Builder(UpdateRulesAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.rules = request.rules;
         } 
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +97,11 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         /**
-         * 是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -101,7 +110,7 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         /**
-         * 转发规则列表
+         * The forwarding rules. You can specify up to 10 forwarding rules in each request.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.putQueryParameter("Rules", rules);
@@ -116,6 +125,154 @@ public class UpdateRulesAttributeRequest extends Request {
 
     } 
 
+    public static class CorsConfig extends TeaModel {
+        @NameInMap("AllowCredentials")
+        private String allowCredentials;
+
+        @NameInMap("AllowHeaders")
+        private java.util.List < String > allowHeaders;
+
+        @NameInMap("AllowMethods")
+        private java.util.List < String > allowMethods;
+
+        @NameInMap("AllowOrigin")
+        private java.util.List < String > allowOrigin;
+
+        @NameInMap("ExposeHeaders")
+        private java.util.List < String > exposeHeaders;
+
+        @NameInMap("MaxAge")
+        private Long maxAge;
+
+        private CorsConfig(Builder builder) {
+            this.allowCredentials = builder.allowCredentials;
+            this.allowHeaders = builder.allowHeaders;
+            this.allowMethods = builder.allowMethods;
+            this.allowOrigin = builder.allowOrigin;
+            this.exposeHeaders = builder.exposeHeaders;
+            this.maxAge = builder.maxAge;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CorsConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowCredentials
+         */
+        public String getAllowCredentials() {
+            return this.allowCredentials;
+        }
+
+        /**
+         * @return allowHeaders
+         */
+        public java.util.List < String > getAllowHeaders() {
+            return this.allowHeaders;
+        }
+
+        /**
+         * @return allowMethods
+         */
+        public java.util.List < String > getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        /**
+         * @return allowOrigin
+         */
+        public java.util.List < String > getAllowOrigin() {
+            return this.allowOrigin;
+        }
+
+        /**
+         * @return exposeHeaders
+         */
+        public java.util.List < String > getExposeHeaders() {
+            return this.exposeHeaders;
+        }
+
+        /**
+         * @return maxAge
+         */
+        public Long getMaxAge() {
+            return this.maxAge;
+        }
+
+        public static final class Builder {
+            private String allowCredentials; 
+            private java.util.List < String > allowHeaders; 
+            private java.util.List < String > allowMethods; 
+            private java.util.List < String > allowOrigin; 
+            private java.util.List < String > exposeHeaders; 
+            private Long maxAge; 
+
+            /**
+             * Specifies whether credentials can be carried in CORS requests. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
+             */
+            public Builder allowCredentials(String allowCredentials) {
+                this.allowCredentials = allowCredentials;
+                return this;
+            }
+
+            /**
+             * The allowed headers for CORS requests.
+             */
+            public Builder allowHeaders(java.util.List < String > allowHeaders) {
+                this.allowHeaders = allowHeaders;
+                return this;
+            }
+
+            /**
+             * The allowed HTTP methods for CORS requests.
+             */
+            public Builder allowMethods(java.util.List < String > allowMethods) {
+                this.allowMethods = allowMethods;
+                return this;
+            }
+
+            /**
+             * The allowed origins of CORS requests.
+             */
+            public Builder allowOrigin(java.util.List < String > allowOrigin) {
+                this.allowOrigin = allowOrigin;
+                return this;
+            }
+
+            /**
+             * The headers that can be exposed.
+             */
+            public Builder exposeHeaders(java.util.List < String > exposeHeaders) {
+                this.exposeHeaders = exposeHeaders;
+                return this;
+            }
+
+            /**
+             * The maximum cache time of preflight requests in the browser. Unit: seconds.
+             * <p>
+             * 
+             * Valid values: **-1** to **172800**.
+             */
+            public Builder maxAge(Long maxAge) {
+                this.maxAge = maxAge;
+                return this;
+            }
+
+            public CorsConfig build() {
+                return new CorsConfig(this);
+            } 
+
+        } 
+
+    }
     public static class FixedResponseConfig extends TeaModel {
         @NameInMap("Content")
         private String content;
@@ -167,7 +324,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private String httpCode; 
 
             /**
-             * 内容
+             * The content of the custom response. The content can be up to 1 KB in size, and can contain only ASCII characters.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -175,7 +332,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 内容类型
+             * The format of the response.
+             * <p>
+             * 
+             * Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -183,7 +343,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HTTP响应码
+             * The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -236,7 +396,11 @@ public class UpdateRulesAttributeRequest extends Request {
             private Integer timeout; 
 
             /**
-             * 是否开启会话保持
+             * Specifies whether to enable session persistence. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -244,7 +408,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 超时时间
+             * The timeout period of sessions. Unit: seconds. Valid values: **1** to **86400**.
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -297,7 +461,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private Integer weight; 
 
             /**
-             * 服务器组标识
+             * The server group to which requests are forwarded.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -305,7 +469,11 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 权重
+             * The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: **0** to **100**.
+             * <p>
+             * 
+             * *   If only one destination server group exists and you do not specify a weight, the default value **100** is used.
+             * *   If more than one destination server group exists, you must specify weights.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -358,7 +526,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * 服务器组之间会话保持
+             * The configuration of session persistence for server groups.
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -366,7 +534,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发到的目的服务器组列表
+             * The server groups to which requests are forwarded.
              */
             public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -443,7 +611,11 @@ public class UpdateRulesAttributeRequest extends Request {
             private String valueType; 
 
             /**
-             * 是否覆盖请求中的值
+             * Specifies whether to overwrite the request header. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder coverEnabled(Boolean coverEnabled) {
                 this.coverEnabled = coverEnabled;
@@ -451,7 +623,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HTTP标头
+             * The key of the header to be inserted. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The key specified in `InsertHeader` must be unique.
+             * <p>
+             * 
+             * > You cannot use the following header keys (case-insensitive): `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te, host`, `cookie`, `remoteip`, and `authority`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -459,7 +634,20 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HTTP标头内容
+             * The value of the header to be inserted.
+             * <p>
+             * 
+             * *   If **ValueType** is set to **SystemDefined**, you can specify one of the following header values:
+             * 
+             *     *   **ClientSrcPort**: the client port.
+             *     *   **ClientSrcIp**: the client IP address.
+             *     *   **Protocol**: the request protocol (HTTP or HTTPS).
+             *     *   **SLBId**: the ALB instance ID.
+             *     *   **SLBPort**: the listener port.
+             * 
+             * *   If **ValueType** is set to **UserDefined**, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\*) and question marks (?) as wildcards. The value cannot start or end with a space character.
+             * 
+             * *   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).
              */
             public Builder value(String value) {
                 this.value = value;
@@ -467,7 +655,12 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 取值类型
+             * The type of the header. Valid values:
+             * <p>
+             * 
+             * *   **UserDefined**: a user-defined header
+             * *   **ReferenceHeader**: a header that is referenced from a request header.
+             * *   **SystemDefined**: a system-defined header.
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -568,7 +761,15 @@ public class UpdateRulesAttributeRequest extends Request {
             private String query; 
 
             /**
-             * 要跳转的主机地址
+             * The hostname to which requests are forwarded.
+             * <p>
+             * 
+             * Take note of the following rules when you specify a hostname:
+             * 
+             * *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following special characters: - . \* = ~ \_ + \ ^ ! $ & | ( ) \[ ] ?.
+             * *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
+             * *   The rightmost domain label can contain only letters, asterisks (*), and question marks (?), and cannot contain digits or hyphens (-). The leftmost `domain label` can contain asterisks (*).
+             * *   The domain labels cannot start or end with a hyphen (-). You can specify asterisks (∗) and question marks (?) anywhere in a domain label.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -576,7 +777,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 跳转方式
+             * The redirect type. Valid values: **301**, **302**, **303**, **307**, and **308**.
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -584,7 +785,15 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 要跳转的路径
+             * The path to which requests are redirected.
+             * <p>
+             * 
+             * *   **${path}** (default): You can reference \*\*${host}**, **${protocol}** and **${port}\*\*. Each variable can be used only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
+             * 
+             * *   A custom value that meets the following requirements:
+             * 
+             *     *   The custom value must be 1 to 128 characters in length. You can use asterisks (\*) and question marks (?) as wildcards.
+             *     *   The custom value can contain letters, digits, and the following special characters: `$ - _ . + / & ~ @ : \" * ?`. The custom value must start with a forward slash (/) and cannot contain the following characters: `" % # ; ! ( ) [ ] ^ , "`.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -592,7 +801,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 要跳转的端口
+             * The port to which requests are forwarded.
+             * <p>
+             * 
+             * Valid values: **1** to **63335**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -600,7 +812,12 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 要跳转的协议
+             * The redirect protocol.
+             * <p>
+             * 
+             * Valid values: **HTTP** and **HTTPS**.
+             * 
+             * > HTTPS listeners support only HTTP to HTTPS redirection.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -608,7 +825,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 要跳转的查询字符串
+             * The query string to which requests are forwarded.
+             * <p>
+             * 
+             * The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -649,7 +869,12 @@ public class UpdateRulesAttributeRequest extends Request {
             private String key; 
 
             /**
-             * HTTP标头键
+             * The key of the header.
+             * <p>
+             * 
+             * *   The key must be 1 to 40 characters in length.
+             * *   It can contain letters, digits, hyphens (-), and underscores (\_).
+             * *   Cookie and Host are not supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -714,7 +939,15 @@ public class UpdateRulesAttributeRequest extends Request {
             private String query; 
 
             /**
-             * 主机名
+             * The hostname to which requests are forwarded.
+             * <p>
+             * 
+             * Take note of the following rules when you specify a hostname:
+             * 
+             * *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following special characters: - . \* = ~ \_ + \ ^ ! $ & | ( ) \[ ] ?.
+             * *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
+             * *   The rightmost domain label can contain only letters, asterisks (*), and question marks (?), and cannot contain digits or hyphens (-). The leftmost `domain label` can contain asterisks (*).
+             * *   The domain labels cannot start or end with a hyphen (-). You can specify asterisks (∗) and question marks (?) anywhere in a domain label.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -722,7 +955,15 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 路径
+             * The path to which requests are forwarded.
+             * <p>
+             * 
+             * *   **${path}** (default): You can reference \*\*${host}**, **${protocol}** and **${port}\*\*. Each variable can be used only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
+             * 
+             * *   A custom value that meets the following requirements:
+             * 
+             *     *   The custom value must be 1 to 128 characters in length. You can use asterisks (\*) and question marks (?) as wildcards.
+             *     *   The custom value can contain letters, digits, and the following special characters: `$ - _ . + / & ~ @ : \" * ?`. The custom value must start with a forward slash (/) and cannot contain the following characters: `" % # ; ! ( ) [ ] ^ , "`.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -730,7 +971,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 查询
+             * The query string to which requests are forwarded.
+             * <p>
+             * 
+             * The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -745,10 +989,14 @@ public class UpdateRulesAttributeRequest extends Request {
 
     }
     public static class TrafficLimitConfig extends TeaModel {
+        @NameInMap("PerIpQps")
+        private Integer perIpQps;
+
         @NameInMap("QPS")
         private Integer QPS;
 
         private TrafficLimitConfig(Builder builder) {
+            this.perIpQps = builder.perIpQps;
             this.QPS = builder.QPS;
         }
 
@@ -761,6 +1009,13 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         /**
+         * @return perIpQps
+         */
+        public Integer getPerIpQps() {
+            return this.perIpQps;
+        }
+
+        /**
          * @return QPS
          */
         public Integer getQPS() {
@@ -768,10 +1023,22 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer perIpQps; 
             private Integer QPS; 
 
             /**
-             * QPS.
+             * The QPS per IP address. Valid values: **1** to **100000**.
+             * <p>
+             * 
+             * > If you specify this parameter and QPS, the value of PerIpQps must be smaller than the value of QPS.
+             */
+            public Builder perIpQps(Integer perIpQps) {
+                this.perIpQps = perIpQps;
+                return this;
+            }
+
+            /**
+             * The number of queries per second (QPS). Valid values: **1** to **100000**.
              */
             public Builder QPS(Integer QPS) {
                 this.QPS = QPS;
@@ -812,7 +1079,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private String serverGroupId; 
 
             /**
-             * 服务器组标识
+             * The server group ID.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -853,7 +1120,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
 
             /**
-             * 转发到的目的服务器组列表
+             * The server groups to which traffic is mirrored.
              */
             public Builder serverGroupTuples(java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -906,7 +1173,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private String targetType; 
 
             /**
-             * 镜像至服务器组
+             * The configuration of the server group to which traffic is mirrored.
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
@@ -914,7 +1181,11 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 镜像目标类型
+             * The type of destination to which network traffic is mirrored. Valid values:
+             * <p>
+             * 
+             * *   **ForwardGroupMirror**: a server group
+             * *   **SlsMirror**: Log Service
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -929,6 +1200,9 @@ public class UpdateRulesAttributeRequest extends Request {
 
     }
     public static class RuleActions extends TeaModel {
+        @NameInMap("CorsConfig")
+        private CorsConfig corsConfig;
+
         @NameInMap("FixedResponseConfig")
         private FixedResponseConfig fixedResponseConfig;
 
@@ -962,6 +1236,7 @@ public class UpdateRulesAttributeRequest extends Request {
         private String type;
 
         private RuleActions(Builder builder) {
+            this.corsConfig = builder.corsConfig;
             this.fixedResponseConfig = builder.fixedResponseConfig;
             this.forwardGroupConfig = builder.forwardGroupConfig;
             this.insertHeaderConfig = builder.insertHeaderConfig;
@@ -980,6 +1255,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         public static RuleActions create() {
             return builder().build();
+        }
+
+        /**
+         * @return corsConfig
+         */
+        public CorsConfig getCorsConfig() {
+            return this.corsConfig;
         }
 
         /**
@@ -1053,6 +1335,7 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private CorsConfig corsConfig; 
             private FixedResponseConfig fixedResponseConfig; 
             private ForwardGroupConfig forwardGroupConfig; 
             private InsertHeaderConfig insertHeaderConfig; 
@@ -1065,7 +1348,15 @@ public class UpdateRulesAttributeRequest extends Request {
             private String type; 
 
             /**
-             * 返回固定内容动作配置
+             * The CORS configuration.
+             */
+            public Builder corsConfig(CorsConfig corsConfig) {
+                this.corsConfig = corsConfig;
+                return this;
+            }
+
+            /**
+             * The configuration of the action to return a custom response. You can specify the configurations of up to 20 actions to return a custom response.
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1073,7 +1364,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发组动作配置
+             * The configuration of the action to forward requests to server groups. You can specify the configurations of up to 20 actions to forward requests to server groups.
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1081,7 +1372,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 插入头部动作配置
+             * The configuration of the action to insert a header. You can specify the configurations of up to 20 actions to insert a header.
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1089,7 +1380,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 优先级
+             * The priority of the action. Valid values: **1** to **50000**. A lower value specifies a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot be left empty. The priority of each action within a forwarding rule must be unique. You can specify priorities for up to 20 actions.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -1097,7 +1388,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 重定向动作配置
+             * The configuration of the redirect action. You can specify the configurations of up to 20 redirect actions.
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
@@ -1105,7 +1396,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 去除HTTP标头
+             * The action to remove an HTTP header. You can specify the configurations of up to 20 actions to remove an HTTP header.
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1113,7 +1404,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 内部重定向动作配置
+             * The configuration of the rewrite action. You can specify the configurations of up to 20 rewrite actions.
              */
             public Builder rewriteConfig(RewriteConfig rewriteConfig) {
                 this.rewriteConfig = rewriteConfig;
@@ -1121,7 +1412,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 流量限速
+             * The configuration of traffic throttling. You can add up to 20 configuration records.
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1129,7 +1420,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 流量镜像
+             * The configuration of traffic mirroring. You can add up to 20 configuration records.
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1137,7 +1428,16 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发规则动作类型
+             * The type of the forwarding rule. You can specify up to seven types. Valid values:
+             * <p>
+             * 
+             * *   **Host**: Requests are distributed based on hosts.
+             * *   **Path**: Requests are distributed based on paths.
+             * *   **Header**: Requests are distributed based on HTTP headers.
+             * *   **QueryString**: Requests are distributed based on query strings.
+             * *   **Method**: Requests are distributed based on request methods.
+             * *   **Cookie**: Requests are distributed based on cookies.
+             * *   **SourceIp**: Requests are distributed based on source IP addresses.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1190,7 +1490,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private String value; 
 
             /**
-             * Cookie条件键
+             * The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1198,7 +1498,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Cookie条件值
+             * The value of the cookie. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the value cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1239,7 +1539,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < Values> values; 
 
             /**
-             * Cookie键值对列表
+             * The cookies.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -1292,7 +1592,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * HTTP标头键
+             * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). Cookie and Host are not supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1300,7 +1600,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HTTP标头值列表
+             * The values of the header.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1341,7 +1641,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * 主机名列表
+             * The hostnames.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1382,7 +1682,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * HTTP请求方法列表
+             * The HTTP request methods.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1423,7 +1723,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * 路径条件列表
+             * The paths.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1476,7 +1776,10 @@ public class UpdateRulesAttributeRequest extends Request {
             private String value; 
 
             /**
-             * 查询字符串条件键
+             * They key of the query string.
+             * <p>
+             * 
+             * The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1484,7 +1787,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 查询字符串条件值
+             * The value of the query string.
+             * <p>
+             * 
+             * The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1525,7 +1831,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < QueryStringConfigValues> values; 
 
             /**
-             * 查询字符串条件键值对列表
+             * The key-value pairs of the query strings.
              */
             public Builder values(java.util.List < QueryStringConfigValues> values) {
                 this.values = values;
@@ -1578,7 +1884,12 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * 返回HTTP标头键
+             * The key of the header.
+             * <p>
+             * 
+             * *   The key must be 1 to 40 characters in length.
+             * *   It can contain letters, digits, hyphens (-), and underscores (\_).
+             * *   Cookie and Host are not supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1586,7 +1897,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 返回HTTP标头值
+             * The values of the header.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1627,7 +1938,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * 返回状态码条件
+             * The match conditions.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1668,7 +1979,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * 返回状态码条件
+             * The source IP addresses based on which user traffic is matched.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1817,7 +2128,7 @@ public class UpdateRulesAttributeRequest extends Request {
             private String type; 
 
             /**
-             * Cookie条件配置
+             * The match conditions for cookies. You can add up to 20 match conditions.
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -1825,7 +2136,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HTTP标头条件配置
+             * The match conditions for HTTP headers. You can specify up to 20 match conditions.
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -1833,7 +2144,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 主机名条件配置
+             * The match conditions for hostnames. You can specify up to 20 match conditions.
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -1841,7 +2152,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HTTP请求方法条件配置
+             * The match conditions for HTTP request methods. Valid values of N: **1** to **20**.
              */
             public Builder methodConfig(MethodConfig methodConfig) {
                 this.methodConfig = methodConfig;
@@ -1849,7 +2160,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 查询字符串条件配置
+             * The match conditions for query strings. You can specify up to 20 match conditions.
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -1857,7 +2168,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 查询字符串条件配置
+             * The match conditions for query strings. You can specify up to 20 match conditions.
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
@@ -1865,7 +2176,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 返回HTTP标头
+             * The configuration of the HTTP response header. You can specify the configurations of up to 20 HTTP response header.
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -1873,7 +2184,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 返回状态码条件
+             * The match conditions for response status codes. This parameter is required and takes effect when **Type** is set to **ResponseStatusCode**. You can specify up to 20 match conditions.
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -1881,7 +2192,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 基于源IP业务流量匹配
+             * The configuration of the source IP addresses based on which user traffic is matched. You can specify up to 20 configuration records.
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -1889,7 +2200,23 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 条件类型
+             * The type of action specified in the forwarding rule. You can specify up to 11 types of actions. Valid values:
+             * <p>
+             * 
+             * *   **ForwardGroup**: forwards a request to multiple vServer groups.
+             * *   **Redirect**: redirects a request.
+             * *   **FixedResponse**: returns a custom response.
+             * *   **Rewrite**: rewrites a request.
+             * *   **InsertHeader**: inserts a header.
+             * *   **RemoveHeaderConfig**: deletes a header.
+             * *   **TrafficLimitConfig**: throttles network traffic.
+             * *   **TrafficMirrorConfig**: mirrors traffic.
+             * *   **CorsConfig**: forwards requests based on CORS.
+             * 
+             * The following action types are supported:
+             * 
+             * *   **FinalType**: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify a **ForwardGroup**, **Redirect**, or **FixedResponse** action as the FinalType action.
+             * *   **ExtType**: the action or the actions to be performed before the **FinalType** action. A forwarding rule can contain one or more **ExtType** actions. To specify an ExtType action, you must specify a **FinalType** action. You can specify multiple **InsertHeader** actions or one **Rewrite** action.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1979,7 +2306,10 @@ public class UpdateRulesAttributeRequest extends Request {
             private String ruleName; 
 
             /**
-             * 转发规则优先级
+             * The priority of the forwarding rule. Valid values: **1 to 10000**. A lower value specifies a higher priority. You can specify priorities for up to 20 forwarding rules.
+             * <p>
+             * 
+             * > The priority of each forwarding rule added to a listener must be unique.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1987,7 +2317,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发规则动作
+             * The actions of the forwarding rule.
              */
             public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
@@ -1995,7 +2325,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发规则条件
+             * The match conditions of the forwarding rule.
              */
             public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
@@ -2003,7 +2333,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发规则ID
+             * The forwarding rule ID. You can specify up to 20 IDs.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2011,7 +2341,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * 转发规则名称
+             * The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. You can specify names for up to 20 forwarding rules.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

@@ -86,7 +86,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 监听SSL证书列表
+         * The certificates.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.certificates = certificates;
@@ -94,7 +94,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次查询返回记录数量
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +198,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 证书Id
+             * The certificate ID. Only server certificates are supported.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -202,7 +206,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * 证书类型
+             * The type of the certificate.
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -210,7 +214,11 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为默认证书
+             * Indicates whether the certificate is the default certificate of the listener. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -218,7 +226,12 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * 证书状态
+             * Indicates whether the certificate is associated with the listener. Valid values:
+             * <p>
+             * 
+             * *   **Associating**
+             * *   **Associated**
+             * *   **Diassociating**
              */
             public Builder status(String status) {
                 this.status = status;

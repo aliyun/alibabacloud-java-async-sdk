@@ -74,7 +74,6 @@ public class CreateListenerRequest extends Request {
 
     @Query
     @NameInMap("RequestTimeout")
-    @Validation(maximum = 180, minimum = 1)
     private Integer requestTimeout;
 
     @Query
@@ -82,8 +81,12 @@ public class CreateListenerRequest extends Request {
     private String securityPolicyId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("XForwardedForConfig")
-    private XForwardedForConfig XForwardedForConfig;
+    private XForwardedForConfig xForwardedForConfig;
 
     private CreateListenerRequest(Builder builder) {
         super(builder);
@@ -103,7 +106,8 @@ public class CreateListenerRequest extends Request {
         this.quicConfig = builder.quicConfig;
         this.requestTimeout = builder.requestTimeout;
         this.securityPolicyId = builder.securityPolicyId;
-        this.XForwardedForConfig = builder.XForwardedForConfig;
+        this.tag = builder.tag;
+        this.xForwardedForConfig = builder.xForwardedForConfig;
     }
 
     public static Builder builder() {
@@ -232,10 +236,17 @@ public class CreateListenerRequest extends Request {
     }
 
     /**
-     * @return XForwardedForConfig
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return xForwardedForConfig
      */
     public XForwardedForConfig getXForwardedForConfig() {
-        return this.XForwardedForConfig;
+        return this.xForwardedForConfig;
     }
 
     public static final class Builder extends Request.Builder<CreateListenerRequest, Builder> {
@@ -255,35 +266,37 @@ public class CreateListenerRequest extends Request {
         private QuicConfig quicConfig; 
         private Integer requestTimeout; 
         private String securityPolicyId; 
-        private XForwardedForConfig XForwardedForConfig; 
+        private java.util.List < Tag> tag; 
+        private XForwardedForConfig xForwardedForConfig; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateListenerRequest response) {
-            super(response);
-            this.caCertificates = response.caCertificates;
-            this.caEnabled = response.caEnabled;
-            this.certificates = response.certificates;
-            this.clientToken = response.clientToken;
-            this.defaultActions = response.defaultActions;
-            this.dryRun = response.dryRun;
-            this.gzipEnabled = response.gzipEnabled;
-            this.http2Enabled = response.http2Enabled;
-            this.idleTimeout = response.idleTimeout;
-            this.listenerDescription = response.listenerDescription;
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.quicConfig = response.quicConfig;
-            this.requestTimeout = response.requestTimeout;
-            this.securityPolicyId = response.securityPolicyId;
-            this.XForwardedForConfig = response.XForwardedForConfig;
+        private Builder(CreateListenerRequest request) {
+            super(request);
+            this.caCertificates = request.caCertificates;
+            this.caEnabled = request.caEnabled;
+            this.certificates = request.certificates;
+            this.clientToken = request.clientToken;
+            this.defaultActions = request.defaultActions;
+            this.dryRun = request.dryRun;
+            this.gzipEnabled = request.gzipEnabled;
+            this.http2Enabled = request.http2Enabled;
+            this.idleTimeout = request.idleTimeout;
+            this.listenerDescription = request.listenerDescription;
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.quicConfig = request.quicConfig;
+            this.requestTimeout = request.requestTimeout;
+            this.securityPolicyId = request.securityPolicyId;
+            this.tag = request.tag;
+            this.xForwardedForConfig = request.xForwardedForConfig;
         } 
 
         /**
-         * 监听默认CA证书列表，N当前取值范围为1
+         * A list of certificates.
          */
         public Builder caCertificates(java.util.List < CaCertificates> caCertificates) {
             this.putQueryParameter("CaCertificates", caCertificates);
@@ -292,7 +305,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 是否开启双向认证
+         * Specifies whether to enable mutual authentication. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default):
          */
         public Builder caEnabled(Boolean caEnabled) {
             this.putQueryParameter("CaEnabled", caEnabled);
@@ -301,7 +318,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 监听默认服务器证书列表，N当前取值范围为1
+         * A list of certificates.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
@@ -310,7 +327,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 幂等标识
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -319,7 +341,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 监听默认动作
+         * The actions of the forwarding rule.
          */
         public Builder defaultActions(java.util.List < DefaultActions> defaultActions) {
             this.putQueryParameter("DefaultActions", defaultActions);
@@ -328,7 +350,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         *  是否只预检此次请求
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -337,7 +363,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 是否开启Gzip压缩
+         * Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:
+         * <p>
+         * 
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder gzipEnabled(Boolean gzipEnabled) {
             this.putQueryParameter("GzipEnabled", gzipEnabled);
@@ -346,7 +376,13 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 是否开启HTTP/2特性
+         * Specifies whether to enable `HTTP/2`. Valid values:
+         * <p>
+         * 
+         * *   **true** (default)
+         * *   **false**
+         * 
+         * > This parameter is available only when you create an HTTPS listener.
          */
         public Builder http2Enabled(Boolean http2Enabled) {
             this.putQueryParameter("Http2Enabled", http2Enabled);
@@ -355,7 +391,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 连接空闲超时时间
+         * The timeout period of an idle connection. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **1 to 60**.
+         * 
+         * Default value: **15**.
+         * 
+         * If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -364,7 +407,10 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 监听描述
+         * The name of the listener.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). Regular expressions are supported.
          */
         public Builder listenerDescription(String listenerDescription) {
             this.putQueryParameter("ListenerDescription", listenerDescription);
@@ -373,7 +419,10 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 监听端口
+         * The frontend port that is used by the ALB instance.
+         * <p>
+         * 
+         * Valid values: **1 to 65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -382,7 +431,10 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 监听协议
+         * The listener protocol.
+         * <p>
+         * 
+         * Valid values: **HTTP**, **HTTPS**, and **QUIC**.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -391,7 +443,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 负载均衡标识
+         * The ALB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -400,7 +452,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * HTTPS启用QUIC时相关属性
+         * Selects a QUIC listener and associates it with the HTTPS listener of the ALB instance.
          */
         public Builder quicConfig(QuicConfig quicConfig) {
             this.putQueryParameter("QuicConfig", quicConfig);
@@ -409,7 +461,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 请求超时时间
+         * The timeout period of a request. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **1 to 180**.
+         * 
+         * Default value: **60**.
+         * 
+         * If no response is received from the backend server during the request timeout period, ALB sends an `HTTP 504` error code to the client.
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -418,7 +477,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * 安全策略
+         * The ID of the security policy. System and custom security policies are supported.
+         * <p>
+         * 
+         * Default value: **tls_cipher_policy\_1\_0** (system security policy).
+         * 
+         * > This parameter is available only when you create an HTTPS listener.
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putQueryParameter("SecurityPolicyId", securityPolicyId);
@@ -427,11 +491,20 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * XForward字段相关的配置
+         * Tag.
          */
-        public Builder XForwardedForConfig(XForwardedForConfig XForwardedForConfig) {
-            this.putQueryParameter("XForwardedForConfig", XForwardedForConfig);
-            this.XForwardedForConfig = XForwardedForConfig;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The configuration of the XForward header.
+         */
+        public Builder xForwardedForConfig(XForwardedForConfig xForwardedForConfig) {
+            this.putQueryParameter("XForwardedForConfig", xForwardedForConfig);
+            this.xForwardedForConfig = xForwardedForConfig;
             return this;
         }
 
@@ -490,7 +563,10 @@ public class CreateListenerRequest extends Request {
             private String certificateId; 
 
             /**
-             * 正式标识
+             * The ID of the certificate. Only server certificates are supported. You can specify a maximum of 20 certificate IDs.
+             * <p>
+             * 
+             * > This parameter is required if **ListenerProtocol** is set to **HTTPS** or **QUIC**.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -532,7 +608,7 @@ public class CreateListenerRequest extends Request {
             private String serverGroupId; 
 
             /**
-             * 服务器组ID
+             * The ID of the server group to which requests are forwarded.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -574,7 +650,7 @@ public class CreateListenerRequest extends Request {
             private java.util.List < ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * 服务器组列表
+             * The server group to which requests are forwarded.
              */
             public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -629,7 +705,7 @@ public class CreateListenerRequest extends Request {
             private String type; 
 
             /**
-             * 转发组
+             * Specifies the configurations of the forwarding action. You can specify a maximum of 20 configurations.
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -637,7 +713,10 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * 动作类型
+             * The type of the action. You can specify only one action type.
+             * <p>
+             * 
+             * Set the value to **ForwardGroup** to forward requests to multiple vServer groups.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -690,7 +769,10 @@ public class CreateListenerRequest extends Request {
             private Boolean quicUpgradeEnabled; 
 
             /**
-             * 需要关联的QUIC监听ID，HTTPS监听时有效，QuicUpgradeEnabled为true时必选
+             * The ID of the QUIC listener that you want to associate with the HTTPS listener. Only HTTPS listeners support this parameter. This parameter is required when **QuicUpgradeEnabled** is set to **true**.
+             * <p>
+             * 
+             * > You must add the HTTPS listener and the QUIC listener to the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.
              */
             public Builder quicListenerId(String quicListenerId) {
                 this.quicListenerId = quicListenerId;
@@ -698,7 +780,13 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * 是否开启quic升级，HTTPS监听时有效
+             * Specifies whether to enable QUIC upgrade. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
             public Builder quicUpgradeEnabled(Boolean quicUpgradeEnabled) {
                 this.quicUpgradeEnabled = quicUpgradeEnabled;
@@ -712,60 +800,129 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
     public static class XForwardedForConfig extends TeaModel {
         @NameInMap("XForwardedForClientCertClientVerifyAlias")
-        private String XForwardedForClientCertClientVerifyAlias;
+        private String xForwardedForClientCertClientVerifyAlias;
 
         @NameInMap("XForwardedForClientCertClientVerifyEnabled")
-        private Boolean XForwardedForClientCertClientVerifyEnabled;
+        private Boolean xForwardedForClientCertClientVerifyEnabled;
 
         @NameInMap("XForwardedForClientCertFingerprintAlias")
-        private String XForwardedForClientCertFingerprintAlias;
+        private String xForwardedForClientCertFingerprintAlias;
 
         @NameInMap("XForwardedForClientCertFingerprintEnabled")
-        private Boolean XForwardedForClientCertFingerprintEnabled;
+        private Boolean xForwardedForClientCertFingerprintEnabled;
 
         @NameInMap("XForwardedForClientCertIssuerDNAlias")
-        private String XForwardedForClientCertIssuerDNAlias;
+        private String xForwardedForClientCertIssuerDNAlias;
 
         @NameInMap("XForwardedForClientCertIssuerDNEnabled")
-        private Boolean XForwardedForClientCertIssuerDNEnabled;
+        private Boolean xForwardedForClientCertIssuerDNEnabled;
 
         @NameInMap("XForwardedForClientCertSubjectDNAlias")
-        private String XForwardedForClientCertSubjectDNAlias;
+        private String xForwardedForClientCertSubjectDNAlias;
 
         @NameInMap("XForwardedForClientCertSubjectDNEnabled")
-        private Boolean XForwardedForClientCertSubjectDNEnabled;
+        private Boolean xForwardedForClientCertSubjectDNEnabled;
+
+        @NameInMap("XForwardedForClientSourceIpsEnabled")
+        private Boolean xForwardedForClientSourceIpsEnabled;
+
+        @NameInMap("XForwardedForClientSourceIpsTrusted")
+        private String xForwardedForClientSourceIpsTrusted;
 
         @NameInMap("XForwardedForClientSrcPortEnabled")
-        private Boolean XForwardedForClientSrcPortEnabled;
+        private Boolean xForwardedForClientSrcPortEnabled;
 
         @NameInMap("XForwardedForEnabled")
-        private Boolean XForwardedForEnabled;
+        private Boolean xForwardedForEnabled;
 
         @NameInMap("XForwardedForProtoEnabled")
-        private Boolean XForwardedForProtoEnabled;
+        private Boolean xForwardedForProtoEnabled;
 
         @NameInMap("XForwardedForSLBIdEnabled")
-        private Boolean XForwardedForSLBIdEnabled;
+        private Boolean xForwardedForSLBIdEnabled;
 
         @NameInMap("XForwardedForSLBPortEnabled")
-        private Boolean XForwardedForSLBPortEnabled;
+        private Boolean xForwardedForSLBPortEnabled;
 
         private XForwardedForConfig(Builder builder) {
-            this.XForwardedForClientCertClientVerifyAlias = builder.XForwardedForClientCertClientVerifyAlias;
-            this.XForwardedForClientCertClientVerifyEnabled = builder.XForwardedForClientCertClientVerifyEnabled;
-            this.XForwardedForClientCertFingerprintAlias = builder.XForwardedForClientCertFingerprintAlias;
-            this.XForwardedForClientCertFingerprintEnabled = builder.XForwardedForClientCertFingerprintEnabled;
-            this.XForwardedForClientCertIssuerDNAlias = builder.XForwardedForClientCertIssuerDNAlias;
-            this.XForwardedForClientCertIssuerDNEnabled = builder.XForwardedForClientCertIssuerDNEnabled;
-            this.XForwardedForClientCertSubjectDNAlias = builder.XForwardedForClientCertSubjectDNAlias;
-            this.XForwardedForClientCertSubjectDNEnabled = builder.XForwardedForClientCertSubjectDNEnabled;
-            this.XForwardedForClientSrcPortEnabled = builder.XForwardedForClientSrcPortEnabled;
-            this.XForwardedForEnabled = builder.XForwardedForEnabled;
-            this.XForwardedForProtoEnabled = builder.XForwardedForProtoEnabled;
-            this.XForwardedForSLBIdEnabled = builder.XForwardedForSLBIdEnabled;
-            this.XForwardedForSLBPortEnabled = builder.XForwardedForSLBPortEnabled;
+            this.xForwardedForClientCertClientVerifyAlias = builder.xForwardedForClientCertClientVerifyAlias;
+            this.xForwardedForClientCertClientVerifyEnabled = builder.xForwardedForClientCertClientVerifyEnabled;
+            this.xForwardedForClientCertFingerprintAlias = builder.xForwardedForClientCertFingerprintAlias;
+            this.xForwardedForClientCertFingerprintEnabled = builder.xForwardedForClientCertFingerprintEnabled;
+            this.xForwardedForClientCertIssuerDNAlias = builder.xForwardedForClientCertIssuerDNAlias;
+            this.xForwardedForClientCertIssuerDNEnabled = builder.xForwardedForClientCertIssuerDNEnabled;
+            this.xForwardedForClientCertSubjectDNAlias = builder.xForwardedForClientCertSubjectDNAlias;
+            this.xForwardedForClientCertSubjectDNEnabled = builder.xForwardedForClientCertSubjectDNEnabled;
+            this.xForwardedForClientSourceIpsEnabled = builder.xForwardedForClientSourceIpsEnabled;
+            this.xForwardedForClientSourceIpsTrusted = builder.xForwardedForClientSourceIpsTrusted;
+            this.xForwardedForClientSrcPortEnabled = builder.xForwardedForClientSrcPortEnabled;
+            this.xForwardedForEnabled = builder.xForwardedForEnabled;
+            this.xForwardedForProtoEnabled = builder.xForwardedForProtoEnabled;
+            this.xForwardedForSLBIdEnabled = builder.xForwardedForSLBIdEnabled;
+            this.xForwardedForSLBPortEnabled = builder.xForwardedForSLBPortEnabled;
         }
 
         public static Builder builder() {
@@ -777,212 +934,327 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * @return XForwardedForClientCertClientVerifyAlias
+         * @return xForwardedForClientCertClientVerifyAlias
          */
         public String getXForwardedForClientCertClientVerifyAlias() {
-            return this.XForwardedForClientCertClientVerifyAlias;
+            return this.xForwardedForClientCertClientVerifyAlias;
         }
 
         /**
-         * @return XForwardedForClientCertClientVerifyEnabled
+         * @return xForwardedForClientCertClientVerifyEnabled
          */
         public Boolean getXForwardedForClientCertClientVerifyEnabled() {
-            return this.XForwardedForClientCertClientVerifyEnabled;
+            return this.xForwardedForClientCertClientVerifyEnabled;
         }
 
         /**
-         * @return XForwardedForClientCertFingerprintAlias
+         * @return xForwardedForClientCertFingerprintAlias
          */
         public String getXForwardedForClientCertFingerprintAlias() {
-            return this.XForwardedForClientCertFingerprintAlias;
+            return this.xForwardedForClientCertFingerprintAlias;
         }
 
         /**
-         * @return XForwardedForClientCertFingerprintEnabled
+         * @return xForwardedForClientCertFingerprintEnabled
          */
         public Boolean getXForwardedForClientCertFingerprintEnabled() {
-            return this.XForwardedForClientCertFingerprintEnabled;
+            return this.xForwardedForClientCertFingerprintEnabled;
         }
 
         /**
-         * @return XForwardedForClientCertIssuerDNAlias
+         * @return xForwardedForClientCertIssuerDNAlias
          */
         public String getXForwardedForClientCertIssuerDNAlias() {
-            return this.XForwardedForClientCertIssuerDNAlias;
+            return this.xForwardedForClientCertIssuerDNAlias;
         }
 
         /**
-         * @return XForwardedForClientCertIssuerDNEnabled
+         * @return xForwardedForClientCertIssuerDNEnabled
          */
         public Boolean getXForwardedForClientCertIssuerDNEnabled() {
-            return this.XForwardedForClientCertIssuerDNEnabled;
+            return this.xForwardedForClientCertIssuerDNEnabled;
         }
 
         /**
-         * @return XForwardedForClientCertSubjectDNAlias
+         * @return xForwardedForClientCertSubjectDNAlias
          */
         public String getXForwardedForClientCertSubjectDNAlias() {
-            return this.XForwardedForClientCertSubjectDNAlias;
+            return this.xForwardedForClientCertSubjectDNAlias;
         }
 
         /**
-         * @return XForwardedForClientCertSubjectDNEnabled
+         * @return xForwardedForClientCertSubjectDNEnabled
          */
         public Boolean getXForwardedForClientCertSubjectDNEnabled() {
-            return this.XForwardedForClientCertSubjectDNEnabled;
+            return this.xForwardedForClientCertSubjectDNEnabled;
         }
 
         /**
-         * @return XForwardedForClientSrcPortEnabled
+         * @return xForwardedForClientSourceIpsEnabled
+         */
+        public Boolean getXForwardedForClientSourceIpsEnabled() {
+            return this.xForwardedForClientSourceIpsEnabled;
+        }
+
+        /**
+         * @return xForwardedForClientSourceIpsTrusted
+         */
+        public String getXForwardedForClientSourceIpsTrusted() {
+            return this.xForwardedForClientSourceIpsTrusted;
+        }
+
+        /**
+         * @return xForwardedForClientSrcPortEnabled
          */
         public Boolean getXForwardedForClientSrcPortEnabled() {
-            return this.XForwardedForClientSrcPortEnabled;
+            return this.xForwardedForClientSrcPortEnabled;
         }
 
         /**
-         * @return XForwardedForEnabled
+         * @return xForwardedForEnabled
          */
         public Boolean getXForwardedForEnabled() {
-            return this.XForwardedForEnabled;
+            return this.xForwardedForEnabled;
         }
 
         /**
-         * @return XForwardedForProtoEnabled
+         * @return xForwardedForProtoEnabled
          */
         public Boolean getXForwardedForProtoEnabled() {
-            return this.XForwardedForProtoEnabled;
+            return this.xForwardedForProtoEnabled;
         }
 
         /**
-         * @return XForwardedForSLBIdEnabled
+         * @return xForwardedForSLBIdEnabled
          */
         public Boolean getXForwardedForSLBIdEnabled() {
-            return this.XForwardedForSLBIdEnabled;
+            return this.xForwardedForSLBIdEnabled;
         }
 
         /**
-         * @return XForwardedForSLBPortEnabled
+         * @return xForwardedForSLBPortEnabled
          */
         public Boolean getXForwardedForSLBPortEnabled() {
-            return this.XForwardedForSLBPortEnabled;
+            return this.xForwardedForSLBPortEnabled;
         }
 
         public static final class Builder {
-            private String XForwardedForClientCertClientVerifyAlias; 
-            private Boolean XForwardedForClientCertClientVerifyEnabled; 
-            private String XForwardedForClientCertFingerprintAlias; 
-            private Boolean XForwardedForClientCertFingerprintEnabled; 
-            private String XForwardedForClientCertIssuerDNAlias; 
-            private Boolean XForwardedForClientCertIssuerDNEnabled; 
-            private String XForwardedForClientCertSubjectDNAlias; 
-            private Boolean XForwardedForClientCertSubjectDNEnabled; 
-            private Boolean XForwardedForClientSrcPortEnabled; 
-            private Boolean XForwardedForEnabled; 
-            private Boolean XForwardedForProtoEnabled; 
-            private Boolean XForwardedForSLBIdEnabled; 
-            private Boolean XForwardedForSLBPortEnabled; 
+            private String xForwardedForClientCertClientVerifyAlias; 
+            private Boolean xForwardedForClientCertClientVerifyEnabled; 
+            private String xForwardedForClientCertFingerprintAlias; 
+            private Boolean xForwardedForClientCertFingerprintEnabled; 
+            private String xForwardedForClientCertIssuerDNAlias; 
+            private Boolean xForwardedForClientCertIssuerDNEnabled; 
+            private String xForwardedForClientCertSubjectDNAlias; 
+            private Boolean xForwardedForClientCertSubjectDNEnabled; 
+            private Boolean xForwardedForClientSourceIpsEnabled; 
+            private String xForwardedForClientSourceIpsTrusted; 
+            private Boolean xForwardedForClientSrcPortEnabled; 
+            private Boolean xForwardedForEnabled; 
+            private Boolean xForwardedForProtoEnabled; 
+            private Boolean xForwardedForSLBIdEnabled; 
+            private Boolean xForwardedForSLBPortEnabled; 
 
             /**
-             * 自定义HEADER头名称，只有当XForwardedForClientCertClientVerifyEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
+             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.
+             * <p>
+             * 
+             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertClientVerifyAlias(String XForwardedForClientCertClientVerifyAlias) {
-                this.XForwardedForClientCertClientVerifyAlias = XForwardedForClientCertClientVerifyAlias;
+            public Builder xForwardedForClientCertClientVerifyAlias(String xForwardedForClientCertClientVerifyAlias) {
+                this.xForwardedForClientCertClientVerifyAlias = xForwardedForClientCertClientVerifyAlias;
                 return this;
             }
 
             /**
-             * 是否通过X-Forwarded-Clientcert-clientverify  头字段获取对访问负载均衡实例客户端证书的校验结果。HTTPS监听有效。
+             * Specifies whether to use the `X-Forwarded-Clientcert-clientverify` header to retrieve the verification result of the client certificate. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertClientVerifyEnabled(Boolean XForwardedForClientCertClientVerifyEnabled) {
-                this.XForwardedForClientCertClientVerifyEnabled = XForwardedForClientCertClientVerifyEnabled;
+            public Builder xForwardedForClientCertClientVerifyEnabled(Boolean xForwardedForClientCertClientVerifyEnabled) {
+                this.xForwardedForClientCertClientVerifyEnabled = xForwardedForClientCertClientVerifyEnabled;
                 return this;
             }
 
             /**
-             * 自定义HEADER头名称，只有当XForwardedForClientCertFingerprintEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
+             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.
+             * <p>
+             * 
+             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertFingerprintAlias(String XForwardedForClientCertFingerprintAlias) {
-                this.XForwardedForClientCertFingerprintAlias = XForwardedForClientCertFingerprintAlias;
+            public Builder xForwardedForClientCertFingerprintAlias(String xForwardedForClientCertFingerprintAlias) {
+                this.xForwardedForClientCertFingerprintAlias = xForwardedForClientCertFingerprintAlias;
                 return this;
             }
 
             /**
-             * 是否通过X-Forwarded-Clientcert-fingerprint 头字段获取访问负载均衡实例客户端证书的指纹取值，HTTPS监听有效。
+             * Specifies whether to use the `X-Forwarded-Clientcert-fingerprint` header to retrieve the fingerprint of the client certificate. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertFingerprintEnabled(Boolean XForwardedForClientCertFingerprintEnabled) {
-                this.XForwardedForClientCertFingerprintEnabled = XForwardedForClientCertFingerprintEnabled;
+            public Builder xForwardedForClientCertFingerprintEnabled(Boolean xForwardedForClientCertFingerprintEnabled) {
+                this.xForwardedForClientCertFingerprintEnabled = xForwardedForClientCertFingerprintEnabled;
                 return this;
             }
 
             /**
-             * 自定义HEADER头名称，只有当XForwardedForClientCertIssuerDNEnabled的值为‘On’的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
+             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.
+             * <p>
+             * 
+             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertIssuerDNAlias(String XForwardedForClientCertIssuerDNAlias) {
-                this.XForwardedForClientCertIssuerDNAlias = XForwardedForClientCertIssuerDNAlias;
+            public Builder xForwardedForClientCertIssuerDNAlias(String xForwardedForClientCertIssuerDNAlias) {
+                this.xForwardedForClientCertIssuerDNAlias = xForwardedForClientCertIssuerDNAlias;
                 return this;
             }
 
             /**
-             * 是否通过 X-Forwarded-Clientcert-issuerdn 头字段获取访问负载均衡实例客户端证书的发行者信息。HTTPS监听有效。
+             * Specifies whether to use the `X-Forwarded-Clientcert-issuerdn` header to retrieve information about the authority that issues the client certificate. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertIssuerDNEnabled(Boolean XForwardedForClientCertIssuerDNEnabled) {
-                this.XForwardedForClientCertIssuerDNEnabled = XForwardedForClientCertIssuerDNEnabled;
+            public Builder xForwardedForClientCertIssuerDNEnabled(Boolean xForwardedForClientCertIssuerDNEnabled) {
+                this.xForwardedForClientCertIssuerDNEnabled = xForwardedForClientCertIssuerDNEnabled;
                 return this;
             }
 
             /**
-             * 自定义HEADER头名称，只有当XForwardedForClientCertSubjectDNEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
+             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.
+             * <p>
+             * 
+             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertSubjectDNAlias(String XForwardedForClientCertSubjectDNAlias) {
-                this.XForwardedForClientCertSubjectDNAlias = XForwardedForClientCertSubjectDNAlias;
+            public Builder xForwardedForClientCertSubjectDNAlias(String xForwardedForClientCertSubjectDNAlias) {
+                this.xForwardedForClientCertSubjectDNAlias = xForwardedForClientCertSubjectDNAlias;
                 return this;
             }
 
             /**
-             * 是否通过X-Forwarded-Clientcert-subjectdn  头字段获取访问负载均衡实例客户端证书的所有者信息。HTTPS监听有效。
+             * Specifies whether to use the `X-Forwarded-Clientcert-subjectdn` header to retrieve information about the owner of the client certificate. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTPS listener.
              */
-            public Builder XForwardedForClientCertSubjectDNEnabled(Boolean XForwardedForClientCertSubjectDNEnabled) {
-                this.XForwardedForClientCertSubjectDNEnabled = XForwardedForClientCertSubjectDNEnabled;
+            public Builder xForwardedForClientCertSubjectDNEnabled(Boolean xForwardedForClientCertSubjectDNEnabled) {
+                this.xForwardedForClientCertSubjectDNEnabled = xForwardedForClientCertSubjectDNEnabled;
                 return this;
             }
 
             /**
-             * 是否通过X-Forwarded-Client-Port 头字段获取访问负载均衡实例客户端的端口。HTTPS监听有效。
+             * Specifies whether to use the `X-Forwarded-Client-Ip` header to obtain the source IP address of the ALB instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener. The feature specified by this parameter is unavailable by default. To use the feature, contact your account manager.
              */
-            public Builder XForwardedForClientSrcPortEnabled(Boolean XForwardedForClientSrcPortEnabled) {
-                this.XForwardedForClientSrcPortEnabled = XForwardedForClientSrcPortEnabled;
+            public Builder xForwardedForClientSourceIpsEnabled(Boolean xForwardedForClientSourceIpsEnabled) {
+                this.xForwardedForClientSourceIpsEnabled = xForwardedForClientSourceIpsEnabled;
                 return this;
             }
 
             /**
-             * 是否开启通过X-Forwarded-For头字段获取来访者真实 IP
+             * The trusted proxy IP address.
+             * <p>
+             * 
+             * ALB traverses `X-Forwarded-For` backward and selects the first IP address that is not in the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.
              */
-            public Builder XForwardedForEnabled(Boolean XForwardedForEnabled) {
-                this.XForwardedForEnabled = XForwardedForEnabled;
+            public Builder xForwardedForClientSourceIpsTrusted(String xForwardedForClientSourceIpsTrusted) {
+                this.xForwardedForClientSourceIpsTrusted = xForwardedForClientSourceIpsTrusted;
                 return this;
             }
 
             /**
-             * 是否通过X-Forwarded-Proto头字段获取负载均衡实例的监听协议。
+             * Specifies whether to use the `X-Forwarded-Client-Port` header to retrieve the client port. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTP or HTTPS listener.
              */
-            public Builder XForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
-                this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            public Builder xForwardedForClientSrcPortEnabled(Boolean xForwardedForClientSrcPortEnabled) {
+                this.xForwardedForClientSrcPortEnabled = xForwardedForClientSrcPortEnabled;
                 return this;
             }
 
             /**
-             * 是否通过SLB-ID头字段获取负载均衡实例ID。
+             * Specifies whether to use the `X-Forwarded-For` header to retrieve client IP addresses. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
+             * 
+             * > This parameter is available only when you create an HTTP or HTTPS listener.
              */
-            public Builder XForwardedForSLBIdEnabled(Boolean XForwardedForSLBIdEnabled) {
-                this.XForwardedForSLBIdEnabled = XForwardedForSLBIdEnabled;
+            public Builder xForwardedForEnabled(Boolean xForwardedForEnabled) {
+                this.xForwardedForEnabled = xForwardedForEnabled;
                 return this;
             }
 
             /**
-             * 是否通过X-Forwarded-Port 头字段获取负载均衡实例的监听端口。HTTPS监听有效。
+             * Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
              */
-            public Builder XForwardedForSLBPortEnabled(Boolean XForwardedForSLBPortEnabled) {
-                this.XForwardedForSLBPortEnabled = XForwardedForSLBPortEnabled;
+            public Builder xForwardedForProtoEnabled(Boolean xForwardedForProtoEnabled) {
+                this.xForwardedForProtoEnabled = xForwardedForProtoEnabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             */
+            public Builder xForwardedForSLBIdEnabled(Boolean xForwardedForSLBIdEnabled) {
+                this.xForwardedForSLBIdEnabled = xForwardedForSLBIdEnabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to use the `X-Forwarded-Port` header to retrieve the listener port of the ALB instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
+             * 
+             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             */
+            public Builder xForwardedForSLBPortEnabled(Boolean xForwardedForSLBPortEnabled) {
+                this.xForwardedForSLBPortEnabled = xForwardedForSLBPortEnabled;
                 return this;
             }
 

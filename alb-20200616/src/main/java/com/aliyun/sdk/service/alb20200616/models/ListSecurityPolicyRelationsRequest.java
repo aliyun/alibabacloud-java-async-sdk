@@ -49,13 +49,13 @@ public class ListSecurityPolicyRelationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecurityPolicyRelationsRequest response) {
-            super(response);
-            this.securityPolicyIds = response.securityPolicyIds;
+        private Builder(ListSecurityPolicyRelationsRequest request) {
+            super(request);
+            this.securityPolicyIds = request.securityPolicyIds;
         } 
 
         /**
-         * 安全策略id
+         * The security policy IDs. You can specify up to five IDs.
          */
         public Builder securityPolicyIds(java.util.List < String > securityPolicyIds) {
             this.putQueryParameter("SecurityPolicyIds", securityPolicyIds);

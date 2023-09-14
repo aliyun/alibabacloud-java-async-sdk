@@ -49,13 +49,13 @@ public class GetListenerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetListenerAttributeRequest response) {
-            super(response);
-            this.listenerId = response.listenerId;
+        private Builder(GetListenerAttributeRequest request) {
+            super(request);
+            this.listenerId = request.listenerId;
         } 
 
         /**
-         * 监听标识
+         * The listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);

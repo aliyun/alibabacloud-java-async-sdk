@@ -139,20 +139,20 @@ public class ListAsynJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAsynJobsRequest response) {
-            super(response);
-            this.apiName = response.apiName;
-            this.beginTime = response.beginTime;
-            this.endTime = response.endTime;
-            this.jobIds = response.jobIds;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
+        private Builder(ListAsynJobsRequest request) {
+            super(request);
+            this.apiName = request.apiName;
+            this.beginTime = request.beginTime;
+            this.endTime = request.endTime;
+            this.jobIds = request.jobIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * 操作接口名
+         * The name of the operation.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -161,7 +161,7 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 任务过滤时间范围-开始时间
+         * The start time of the task. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -170,7 +170,7 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 任务过滤时间范围-结束时间
+         * The end time of the task. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +179,7 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 任务ID列表
+         * The asynchronous task IDs.
          */
         public Builder jobIds(java.util.List < String > jobIds) {
             this.putQueryParameter("JobIds", jobIds);
@@ -188,7 +188,7 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 本次读取的最大数据记录数量
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -197,7 +197,11 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 下一个查询开始Token
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -206,7 +210,7 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 资源实例ID列表
+         * The resource IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -215,7 +219,15 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * 资源类型类型
+         * The type of the associated resource. Valid values:
+         * <p>
+         * 
+         * *   **loadbalancer**: an Application Load Balancer (ALB) instance
+         * *   **listener**: a listener
+         * *   **rule**: a forwarding rule
+         * *   **acl**: an access control list (ACL)
+         * *   **securitypolicy**: a security policy
+         * *   **servergroup**: a server group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -86,7 +86,7 @@ public class ListAclsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 访问控制列表
+         * The ACLs.
          */
         public Builder acls(java.util.List < Acls> acls) {
             this.acls = acls;
@@ -94,7 +94,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次查询返回记录数量
+         * The maximum number of ACLs returned. This parameter is optional. Valid values: **1** to **100**. If this parameter is not specified, the default value **20** is returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +135,67 @@ public class ListAclsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Acls extends TeaModel {
         @NameInMap("AclId")
         private String aclId;
@@ -147,8 +212,14 @@ public class ListAclsResponseBody extends TeaModel {
         @NameInMap("ConfigManagedEnabled")
         private Boolean configManagedEnabled;
 
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private Acls(Builder builder) {
             this.aclId = builder.aclId;
@@ -156,7 +227,9 @@ public class ListAclsResponseBody extends TeaModel {
             this.aclStatus = builder.aclStatus;
             this.addressIPVersion = builder.addressIPVersion;
             this.configManagedEnabled = builder.configManagedEnabled;
+            this.createTime = builder.createTime;
             this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -203,10 +276,24 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -215,10 +302,12 @@ public class ListAclsResponseBody extends TeaModel {
             private String aclStatus; 
             private String addressIPVersion; 
             private Boolean configManagedEnabled; 
+            private String createTime; 
             private String resourceGroupId; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * 访问控制策略id
+             * The ACL ID.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -226,7 +315,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * 访问控制策略名称
+             * The ACL name.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -234,7 +323,12 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * The status of the ACL. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Available**
+             * *   **Configuring**
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -242,7 +336,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * IP版本
+             * The IP version. Only **IPv4** may be returned.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -250,7 +344,11 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置管理
+             * Indicates whether configuration management is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder configManagedEnabled(Boolean configManagedEnabled) {
                 this.configManagedEnabled = configManagedEnabled;
@@ -258,10 +356,26 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

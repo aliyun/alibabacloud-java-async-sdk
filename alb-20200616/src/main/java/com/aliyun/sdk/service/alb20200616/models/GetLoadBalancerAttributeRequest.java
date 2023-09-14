@@ -49,13 +49,13 @@ public class GetLoadBalancerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetLoadBalancerAttributeRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
+        private Builder(GetLoadBalancerAttributeRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
         } 
 
         /**
-         * 实例标识
+         * The ALB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

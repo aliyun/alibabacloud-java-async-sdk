@@ -86,7 +86,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次查询返回记录数量
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页查询标识
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * 安全策略
+         * The supported security policies.
          */
         public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
@@ -118,7 +122,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录数
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,9 +135,73 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class SecurityPolicies extends TeaModel {
         @NameInMap("Ciphers")
         private java.util.List < String > ciphers;
+
+        @NameInMap("CreateTime")
+        private String createTime;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -150,13 +218,18 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         @NameInMap("TLSVersions")
         private java.util.List < String > TLSVersions;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private SecurityPolicies(Builder builder) {
             this.ciphers = builder.ciphers;
+            this.createTime = builder.createTime;
             this.resourceGroupId = builder.resourceGroupId;
             this.securityPolicyId = builder.securityPolicyId;
             this.securityPolicyName = builder.securityPolicyName;
             this.securityPolicyStatus = builder.securityPolicyStatus;
             this.TLSVersions = builder.TLSVersions;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -172,6 +245,13 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
          */
         public java.util.List < String > getCiphers() {
             return this.ciphers;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -209,16 +289,25 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             return this.TLSVersions;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private java.util.List < String > ciphers; 
+            private String createTime; 
             private String resourceGroupId; 
             private String securityPolicyId; 
             private String securityPolicyName; 
             private String securityPolicyStatus; 
             private java.util.List < String > TLSVersions; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * 加密套件
+             * The supported cipher suites.
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -226,7 +315,15 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组id
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -234,7 +331,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 安全策略id
+             * The security policy ID.
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -242,7 +339,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 安全策略名称
+             * The name of the security policy.
              */
             public Builder securityPolicyName(String securityPolicyName) {
                 this.securityPolicyName = securityPolicyName;
@@ -250,7 +347,11 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * The status of the security policy. Valid values:
+             * <p>
+             * 
+             * *   **Configuring**
+             * *   **Available**
              */
             public Builder securityPolicyStatus(String securityPolicyStatus) {
                 this.securityPolicyStatus = securityPolicyStatus;
@@ -258,10 +359,18 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TLS策略
+             * The supported TLS protocol versions.
              */
             public Builder TLSVersions(java.util.List < String > TLSVersions) {
                 this.TLSVersions = TLSVersions;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

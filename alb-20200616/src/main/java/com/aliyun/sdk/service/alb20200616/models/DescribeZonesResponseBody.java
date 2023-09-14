@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * 可用区列表
+         * The zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -110,7 +110,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * 可用区名称
+             * The name of the zone.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区id
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

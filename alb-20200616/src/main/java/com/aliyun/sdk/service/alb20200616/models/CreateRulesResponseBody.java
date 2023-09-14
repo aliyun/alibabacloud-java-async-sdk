@@ -62,7 +62,7 @@ public class CreateRulesResponseBody extends TeaModel {
         private java.util.List < RuleIds> ruleIds; 
 
         /**
-         * 异步任务Id
+         * The ID of the asynchronous task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +70,7 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,10 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 转发规则标识列表
+         * The priority of the forwarding rule. Valid values: **1 to 10000**. A lower value specifies a higher priority.
+         * <p>
+         * 
+         * > The priorities of the forwarding rules created for the same listener is unique.
          */
         public Builder ruleIds(java.util.List < RuleIds> ruleIds) {
             this.ruleIds = ruleIds;
@@ -130,7 +133,7 @@ public class CreateRulesResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * 转发规则优先级
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -138,7 +141,7 @@ public class CreateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 转发规则标识
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
