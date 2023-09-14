@@ -16,6 +16,10 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeDcdnSecSpecInfoResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
     private DescribeDcdnSecSpecInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeDcdnSecSpecInfoResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
     public interface Builder extends Response.Builder<DescribeDcdnSecSpecInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeDcdnSecSpecInfoResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
             extends Response.BuilderImpl<DescribeDcdnSecSpecInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeDcdnSecSpecInfoResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
         private BuilderImpl(DescribeDcdnSecSpecInfoResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeDcdnSecSpecInfoResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

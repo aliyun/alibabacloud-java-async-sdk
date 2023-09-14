@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartDcdnDomainResponse} extends {@link TeaModel}
+ * {@link DeleteDcdnUserConfigResponse} extends {@link TeaModel}
  *
- * <p>StartDcdnDomainResponse</p>
+ * <p>DeleteDcdnUserConfigResponse</p>
  */
-public class StartDcdnDomainResponse extends Response {
+public class DeleteDcdnUserConfigResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class StartDcdnDomainResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private StartDcdnDomainResponseBody body;
+    private DeleteDcdnUserConfigResponseBody body;
 
-    private StartDcdnDomainResponse(BuilderImpl builder) {
+    private DeleteDcdnUserConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StartDcdnDomainResponse create() {
+    public static DeleteDcdnUserConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class StartDcdnDomainResponse extends Response {
     /**
      * @return body
      */
-    public StartDcdnDomainResponseBody getBody() {
+    public DeleteDcdnUserConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StartDcdnDomainResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteDcdnUserConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StartDcdnDomainResponseBody body);
+        Builder body(DeleteDcdnUserConfigResponseBody body);
 
         @Override
-        StartDcdnDomainResponse build();
+        DeleteDcdnUserConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StartDcdnDomainResponse, Builder>
+            extends Response.BuilderImpl<DeleteDcdnUserConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private StartDcdnDomainResponseBody body; 
+        private DeleteDcdnUserConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StartDcdnDomainResponse response) {
+        private BuilderImpl(DeleteDcdnUserConfigResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class StartDcdnDomainResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StartDcdnDomainResponseBody body) {
+        public Builder body(DeleteDcdnUserConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StartDcdnDomainResponse build() {
-            return new StartDcdnDomainResponse(this);
+        public DeleteDcdnUserConfigResponse build() {
+            return new DeleteDcdnUserConfigResponse(this);
         } 
 
     } 

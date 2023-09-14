@@ -16,6 +16,10 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeDcdnWafGeoInfoResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
     private DescribeDcdnWafGeoInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeDcdnWafGeoInfoResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
     public interface Builder extends Response.Builder<DescribeDcdnWafGeoInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeDcdnWafGeoInfoResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
             extends Response.BuilderImpl<DescribeDcdnWafGeoInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeDcdnWafGeoInfoResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
         private BuilderImpl(DescribeDcdnWafGeoInfoResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeDcdnWafGeoInfoResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

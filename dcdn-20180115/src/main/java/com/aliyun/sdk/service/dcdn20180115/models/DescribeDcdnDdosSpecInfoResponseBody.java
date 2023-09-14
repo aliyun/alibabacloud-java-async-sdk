@@ -21,6 +21,9 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     @NameInMap("Enable")
     private String enable;
 
+    @NameInMap("IsSpecialPort")
+    private String isSpecialPort;
+
     @NameInMap("ProtectedArea")
     private String protectedArea;
 
@@ -37,6 +40,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         this.bandwidthLimit = builder.bandwidthLimit;
         this.edition = builder.edition;
         this.enable = builder.enable;
+        this.isSpecialPort = builder.isSpecialPort;
         this.protectedArea = builder.protectedArea;
         this.qpsLimit = builder.qpsLimit;
         this.requestId = builder.requestId;
@@ -73,6 +77,13 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return isSpecialPort
+     */
+    public String getIsSpecialPort() {
+        return this.isSpecialPort;
+    }
+
+    /**
      * @return protectedArea
      */
     public String getProtectedArea() {
@@ -104,6 +115,7 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
         private String bandwidthLimit; 
         private String edition; 
         private String enable; 
+        private String isSpecialPort; 
         private String protectedArea; 
         private String qpsLimit; 
         private String requestId; 
@@ -130,6 +142,14 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
          */
         public Builder enable(String enable) {
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * IsSpecialPort.
+         */
+        public Builder isSpecialPort(String isSpecialPort) {
+            this.isSpecialPort = isSpecialPort;
             return this;
         }
 

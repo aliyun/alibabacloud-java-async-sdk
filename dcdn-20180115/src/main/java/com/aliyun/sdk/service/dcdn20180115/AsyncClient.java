@@ -236,6 +236,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteDcdnSubTaskResponse> deleteDcdnSubTask(DeleteDcdnSubTaskRequest request);
 
+    CompletableFuture<DeleteDcdnUserConfigResponse> deleteDcdnUserConfig(DeleteDcdnUserConfigRequest request);
+
     CompletableFuture<DeleteDcdnWafGroupResponse> deleteDcdnWafGroup(DeleteDcdnWafGroupRequest request);
 
     /**

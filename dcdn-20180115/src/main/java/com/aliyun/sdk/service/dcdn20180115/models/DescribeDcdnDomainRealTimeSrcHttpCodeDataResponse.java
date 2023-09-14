@@ -16,6 +16,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
     private DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
     public interface Builder extends Response.Builder<DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
             extends Response.BuilderImpl<DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
         private BuilderImpl(DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse extends Response 
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
