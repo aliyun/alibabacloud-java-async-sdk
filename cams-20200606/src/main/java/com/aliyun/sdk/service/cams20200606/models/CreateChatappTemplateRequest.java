@@ -201,7 +201,7 @@ public class CreateChatappTemplateRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only if TemplateType is set to WHATSAPP.
+         * Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only when TemplateType is set to WHATSAPP.
          */
         public Builder allowCategoryChange(Boolean allowCategoryChange) {
             this.putBodyParameter("AllowCategoryChange", allowCategoryChange);
@@ -239,7 +239,7 @@ public class CreateChatappTemplateRequest extends Request {
          * The components of the message template.
          * <p>
          * 
-         * > If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the value of Type is BODY or FOOTER, the Text sub-parameter of the Components parameter is empty.
+         * > If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter is empty.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -249,7 +249,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * The space ID of the user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -258,7 +258,10 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * CustWabaId.
+         * The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+         * <p>
+         * 
+         * > CustWabaId is an obsolete parameter. Use CustSpaceId instead.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -277,7 +280,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * IsvCode.
+         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -286,7 +289,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -295,7 +298,10 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * MessageSendTtlSeconds.
+         * Validity period of authentication template message sending in WhatsApp
+         * <p>
+         * 
+         * > This attribute requires providing waba in advance to Alibaba operators to open the whitelist, otherwise it will result in template submission failure
          */
         public Builder messageSendTtlSeconds(Integer messageSendTtlSeconds) {
             this.putBodyParameter("MessageSendTtlSeconds", messageSendTtlSeconds);
@@ -304,7 +310,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the message template.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -313,7 +319,12 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the message template.
+         * <p>
+         * 
+         * *   **WHATSAPP**
+         * *   **VIBER**
+         * *   LINE: the Line message template. This type of message template will be released later.
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);
@@ -452,7 +463,7 @@ public class CreateChatappTemplateRequest extends Request {
             private String urlType; 
 
             /**
-             * The text of the one-tap autofill button. AutofillText is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.
+             * The text of the one-tap autofill button. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
              */
             public Builder autofillText(String autofillText) {
                 this.autofillText = autofillText;
@@ -460,7 +471,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The unsubscribe button in a WhatsApp marketing template. This parameter is valid if Category is set to MARKETING in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY. After you tap this button and customers configure the feature for unsubscribing from a WhatsApp marketing template in the ChatAPP console, subsequent marketing messages are not sent to you.
+             * The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.
              */
             public Builder isOptOut(Boolean isOptOut) {
                 this.isOptOut = isOptOut;
@@ -468,7 +479,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The package name of the app. PackageName is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.
+             * The app package name that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -476,7 +487,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The phone number. This parameter is valid only if the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.
+             * The phone number. This parameter is valid only when the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -484,7 +495,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The hash value of the app signing key. SignatureHash is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.
+             * The app signing key hash that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
              */
             public Builder signatureHash(String signatureHash) {
                 this.signatureHash = signatureHash;
@@ -509,10 +520,15 @@ public class CreateChatappTemplateRequest extends Request {
              * *   **COPY_CODE**: the copy code button if Category is set to AUTHENTICATION
              * *   **ONE_TAP**: the one-tap autofill button if Category is set to AUTHENTICATION
              * 
-             * > - In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.
-             * > - You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.
-             * > -  If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the terminal. It indicates that you must manually copy the verification code.
-             * > - You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
+             * > 
+             * 
+             * *   In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.
+             * 
+             * *   If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the device. The value indicates that you must manually copy the verification code.
+             * 
+             * *   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -520,7 +536,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The URL to be accessed when you click the URL button.
+             * The URL to which you are redirected when you click the URL button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -707,7 +723,7 @@ public class CreateChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * The prompt message indicating that the verification code must be kept secret. This parameter is valid if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Components parameter is set to BODY. The prompt message is displayed in the BODY component.
+             * The note indicating that customers cannot share verification codes with others. The note is displayed in the message body. This parameter is valid if Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to BODY in a WhatsApp message template.
              */
             public Builder addSecretRecommendation(Boolean addSecretRecommendation) {
                 this.addSecretRecommendation = addSecretRecommendation;
@@ -731,7 +747,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The validity period of the verification code in a WhatsApp message template. Unit: minutes. This parameter is valid if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Components parameter is set to FOOTER. The value of CodeExpirationMinutes is displayed in the FOOTER component.
+             * The validity period of the verification code in the WhatsApp authentication template. Unit: minutes. This parameter is valid only when Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to FOOTER in a WhatsApp message template. The validity period of the verification code is displayed in the footer.
              */
             public Builder codeExpirationMinutes(Integer codeExpirationMinutes) {
                 this.codeExpirationMinutes = codeExpirationMinutes;
@@ -739,7 +755,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The length of the video in the Viber message template. Valid values: 0 to 600. Unit: seconds.
+             * The length of the video in the Viber message template. Unit: seconds. Valid values: 0 to 600.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -803,9 +819,14 @@ public class CreateChatappTemplateRequest extends Request {
              * *   **HEADER**
              * *   **FOOTER**
              * *   **BUTTONS**
-             * > - The following limits apply to components in WhatsApp message templates: A **BODY** component cannot exceed 1,024 characters in length. A **HEADER** or **FOOTER** component cannot exceed 60 characters in length.
-             * > - **FOOTER** components are not supported in Viber message templates.
-             * > - In a Viber message template, a media resource, such as an image, a video, or a document, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a terminal.
+             * 
+             * > 
+             * 
+             * *   In WhatsApp message templates, a **BODY** component cannot exceed 1,024 characters in length, and a **HEADER** or **FOOTER** component cannot exceed 60 characters in length.
+             * 
+             * *   **FOOTER** components are not supported in Viber message templates.
+             * 
+             * *   In a Viber message template, media resources, such as images, videos, or documents, are placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -816,7 +837,7 @@ public class CreateChatappTemplateRequest extends Request {
              * The URL of the media resource.
              * <p>
              * 
-             * > We recommend that the resolution of the image in the Viber message template is 800 × 800.
+             * > We recommend that the resolution of the image is 800 × 800 in a Viber message template.
              */
             public Builder url(String url) {
                 this.url = url;

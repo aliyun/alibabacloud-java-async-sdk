@@ -86,7 +86,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +94,11 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +106,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +114,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +122,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +174,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * TemplateCode.
+             * The code of the message template.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -178,7 +182,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the message template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

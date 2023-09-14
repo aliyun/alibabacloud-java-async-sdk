@@ -127,7 +127,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -136,7 +136,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * CustWabaId.
+         * The ID of the WhatsApp account that you registered.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -145,7 +145,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * IsvCode.
+         * The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -154,11 +154,20 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * The code of the message template.
+         */
+        public Builder templateCode(String templateCode) {
+            this.putQueryParameter("TemplateCode", templateCode);
+            this.templateCode = templateCode;
             return this;
         }
 
@@ -169,15 +178,6 @@ public class GetChatappTemplateDetailRequest extends Request {
          * *   **WHATSAPP**
          * *   **VIBER**
          * *   LINE (developing)
-         */
-        public Builder templateCode(String templateCode) {
-            this.putQueryParameter("TemplateCode", templateCode);
-            this.templateCode = templateCode;
-            return this;
-        }
-
-        /**
-         * TemplateType.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

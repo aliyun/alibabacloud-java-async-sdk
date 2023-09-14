@@ -165,6 +165,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         @NameInMap("Language")
         private String language;
 
+        @NameInMap("Reason")
+        private String reason;
+
         @NameInMap("TemplateCode")
         private String templateCode;
 
@@ -178,6 +181,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             this.auditStatus = builder.auditStatus;
             this.category = builder.category;
             this.language = builder.language;
+            this.reason = builder.reason;
             this.templateCode = builder.templateCode;
             this.templateName = builder.templateName;
             this.templateType = builder.templateType;
@@ -213,6 +217,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
          * @return templateCode
          */
         public String getTemplateCode() {
@@ -237,6 +248,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             private String auditStatus; 
             private String category; 
             private String language; 
+            private String reason; 
             private String templateCode; 
             private String templateName; 
             private String templateType; 
@@ -273,6 +285,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 

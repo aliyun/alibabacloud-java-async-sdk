@@ -94,7 +94,11 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * *   Example: OK. This value indicates that the request is successful.
+         * *   Other codes indicate that the request fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +106,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +114,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +122,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -419,7 +423,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The phone number. This parameter is valid only if the returned value of the Type parameter is **PHONE_NUMBER**.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -435,7 +439,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The display name of the button.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -443,7 +447,20 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the button. Valid values:
+             * <p>
+             * 
+             * *   **PHONE_NUMBER**: a phone call button
+             * *   **URL**: a URL button
+             * *   **QUICK_REPLY**: a quick reply button
+             * 
+             * > 
+             * 
+             * *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+             * 
+             * *   You can add only one button to a Viber message template, and the button must be a URL button.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -451,7 +468,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL to be accessed when you click the URL button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -459,7 +476,11 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UrlType.
+             * The type of the URL. Valid values:
+             * <p>
+             * 
+             * *   **static**: a static URL
+             * *   **dynamic**: a dynamic URL
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -689,7 +710,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Buttons.
+             * This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -697,7 +718,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Caption.
+             * The description of the file.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -713,7 +734,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The length of the video in the Viber message template. Valid values: 0 to 600. Unit: seconds.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -721,7 +742,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -729,7 +750,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * The type of the file attached in the Viber message template.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -737,7 +758,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * The type of the media resources that are included in the message.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -777,7 +798,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The text of the message that you want to send.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -785,7 +806,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbUrl.
+             * The thumbnail URL of the video in the Viber message template.
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -793,7 +814,25 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the component. Valid values:
+             * <p>
+             * 
+             * *   **BODY**
+             * *   **HEADER**
+             * *   **FOOTER**
+             * *   **BUTTONS**
+             * 
+             * > 
+             * 
+             * *   The following limits apply to components in WhatsApp message templates: A component of the **BODY** type cannot exceed 1,024 characters. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+             * 
+             * > 
+             * 
+             * *   **FOOTER** components are not supported in Viber message templates.
+             * 
+             * > 
+             * 
+             * *   In a Viber message template, a media resource, such as an image, a video, or a file, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -801,7 +840,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL of the material.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -841,6 +880,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("QualityScore")
         private String qualityScore;
 
+        @NameInMap("Reason")
+        private String reason;
+
         @NameInMap("TemplateCode")
         private String templateCode;
 
@@ -856,6 +898,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.messageSendTtlSeconds = builder.messageSendTtlSeconds;
             this.name = builder.name;
             this.qualityScore = builder.qualityScore;
+            this.reason = builder.reason;
             this.templateCode = builder.templateCode;
             this.templateType = builder.templateType;
         }
@@ -925,6 +968,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
          * @return templateCode
          */
         public String getTemplateCode() {
@@ -947,11 +997,18 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private Integer messageSendTtlSeconds; 
             private String name; 
             private String qualityScore; 
+            private String reason; 
             private String templateCode; 
             private String templateType; 
 
             /**
-             * AuditStatus.
+             * The review status of the message template. Valid values:
+             * <p>
+             * 
+             * *   **pass**: The message template is approved.
+             * *   **fail**: The message template is rejected.
+             * *   **auditing**: The message template is being reviewed.
+             * *   **unaudit**: The review is suspended.
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -959,7 +1016,26 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * The category of the template when the returned value of TemplateType is WHATSAPP. Valid values:
+             * <p>
+             * 
+             * *   **UTILITY**: a transactional template
+             * *   **MARKETING**: a marketing template
+             * *   **AUTHENTICATION**: an identity authentication template
+             * 
+             * The category of the template when the returned value of the TemplateType parameter is VIBER. Valid values:
+             * 
+             * *   **text**: a template that contains only text
+             * *   **image**: a template that contains only images
+             * *   **text_image_button**: a template that contains text, images, and buttons
+             * *   **text_button**: a template that contains text and buttons
+             * *   **document**: a template that contains only files
+             * *   **video**: a template that contains only videos
+             * *   **text_video**: a template that contains text and videos
+             * *   **text_video_button**: a template that contains text, videos, and buttons
+             * *   **text_image**: a template that contains text and images
+             * 
+             * > If Category is set to text_video_button, users cannot open a web page by clicking the button. Users can open only the video in the message. In this case, you do not need to specify the Url parameter for the URL button in the template.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -967,7 +1043,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Components.
+             * The components of the message template.
              */
             public Builder components(java.util.List < Components> components) {
                 this.components = components;
@@ -975,7 +1051,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Example.
+             * The examples of variables.
              */
             public Builder example(java.util.Map < String, String > example) {
                 this.example = example;
@@ -983,7 +1059,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
              */
             public Builder language(String language) {
                 this.language = language;
@@ -991,7 +1067,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MessageSendTtlSeconds.
+             * Whatsapp中Authentication类型模板发送消息时的消息有效期
              */
             public Builder messageSendTtlSeconds(Integer messageSendTtlSeconds) {
                 this.messageSendTtlSeconds = messageSendTtlSeconds;
@@ -999,7 +1075,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the message template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1007,7 +1083,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QualityScore.
+             * 模板质量
              */
             public Builder qualityScore(String qualityScore) {
                 this.qualityScore = qualityScore;
@@ -1015,7 +1091,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * The code of the message template.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -1023,7 +1107,12 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the message template. Valid values:
+             * <p>
+             * 
+             * *   **WHATSAPP**
+             * *   **VIBER**
+             * *   LINE (developing)
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
