@@ -1,0 +1,258 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.emr20210320.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ComponentInstanceSelector} extends {@link TeaModel}
+ *
+ * <p>ComponentInstanceSelector</p>
+ */
+public class ComponentInstanceSelector extends TeaModel {
+    @NameInMap("ApplicationName")
+    private String applicationName;
+
+    @NameInMap("ComponentInstances")
+    private java.util.List < ComponentInstances> componentInstances;
+
+    @NameInMap("Components")
+    private java.util.List < Components> components;
+
+    @NameInMap("RunActionScope")
+    private String runActionScope;
+
+    private ComponentInstanceSelector(Builder builder) {
+        this.applicationName = builder.applicationName;
+        this.componentInstances = builder.componentInstances;
+        this.components = builder.components;
+        this.runActionScope = builder.runActionScope;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ComponentInstanceSelector create() {
+        return builder().build();
+    }
+
+    /**
+     * @return applicationName
+     */
+    public String getApplicationName() {
+        return this.applicationName;
+    }
+
+    /**
+     * @return componentInstances
+     */
+    public java.util.List < ComponentInstances> getComponentInstances() {
+        return this.componentInstances;
+    }
+
+    /**
+     * @return components
+     */
+    public java.util.List < Components> getComponents() {
+        return this.components;
+    }
+
+    /**
+     * @return runActionScope
+     */
+    public String getRunActionScope() {
+        return this.runActionScope;
+    }
+
+    public static final class Builder {
+        private String applicationName; 
+        private java.util.List < ComponentInstances> componentInstances; 
+        private java.util.List < Components> components; 
+        private String runActionScope; 
+
+        /**
+         * 应用名称。
+         */
+        public Builder applicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * 组件实例列表。actionScope为COPONENT_INSTANCE时使用。
+         */
+        public Builder componentInstances(java.util.List < ComponentInstances> componentInstances) {
+            this.componentInstances = componentInstances;
+            return this;
+        }
+
+        /**
+         * 组件列表。
+         * <p>
+         * actionScope为COPONENT时使用。
+         */
+        public Builder components(java.util.List < Components> components) {
+            this.components = components;
+            return this;
+        }
+
+        /**
+         * 执行范围。
+         */
+        public Builder runActionScope(String runActionScope) {
+            this.runActionScope = runActionScope;
+            return this;
+        }
+
+        public ComponentInstanceSelector build() {
+            return new ComponentInstanceSelector(this);
+        } 
+
+    } 
+
+    public static class ComponentInstances extends TeaModel {
+        @NameInMap("ApplicationName")
+        private String applicationName;
+
+        @NameInMap("ComponentName")
+        private String componentName;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        private ComponentInstances(Builder builder) {
+            this.applicationName = builder.applicationName;
+            this.componentName = builder.componentName;
+            this.nodeId = builder.nodeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComponentInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applicationName
+         */
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        /**
+         * @return componentName
+         */
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public static final class Builder {
+            private String applicationName; 
+            private String componentName; 
+            private String nodeId; 
+
+            /**
+             * 应用名称。
+             */
+            public Builder applicationName(String applicationName) {
+                this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * 组件名称。
+             */
+            public Builder componentName(String componentName) {
+                this.componentName = componentName;
+                return this;
+            }
+
+            /**
+             * 节点ID。
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            public ComponentInstances build() {
+                return new ComponentInstances(this);
+            } 
+
+        } 
+
+    }
+    public static class Components extends TeaModel {
+        @NameInMap("ApplicationName")
+        private String applicationName;
+
+        @NameInMap("ComponentName")
+        private String componentName;
+
+        private Components(Builder builder) {
+            this.applicationName = builder.applicationName;
+            this.componentName = builder.componentName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applicationName
+         */
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        /**
+         * @return componentName
+         */
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        public static final class Builder {
+            private String applicationName; 
+            private String componentName; 
+
+            /**
+             * 应用名称。
+             */
+            public Builder applicationName(String applicationName) {
+                this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * 组件名称。
+             */
+            public Builder componentName(String componentName) {
+                this.componentName = componentName;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
+}
