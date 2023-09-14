@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.csas20230120.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetUserDeviceRequest} extends {@link RequestModel}
+ *
+ * <p>GetUserDeviceRequest</p>
+ */
+public class GetUserDeviceRequest extends Request {
+    @Query
+    @NameInMap("DeviceTag")
+    @Validation(required = true)
+    private String deviceTag;
+
+    private GetUserDeviceRequest(Builder builder) {
+        super(builder);
+        this.deviceTag = builder.deviceTag;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetUserDeviceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return deviceTag
+     */
+    public String getDeviceTag() {
+        return this.deviceTag;
+    }
+
+    public static final class Builder extends Request.Builder<GetUserDeviceRequest, Builder> {
+        private String deviceTag; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetUserDeviceRequest request) {
+            super(request);
+            this.deviceTag = request.deviceTag;
+        } 
+
+        /**
+         * DeviceTag.
+         */
+        public Builder deviceTag(String deviceTag) {
+            this.putQueryParameter("DeviceTag", deviceTag);
+            this.deviceTag = deviceTag;
+            return this;
+        }
+
+        @Override
+        public GetUserDeviceRequest build() {
+            return new GetUserDeviceRequest(this);
+        } 
+
+    } 
+
+}
