@@ -328,7 +328,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * PID。
+             * PID.
              */
             public Builder pid(String pid) {
                 this.pid = pid;

@@ -30,6 +30,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     private String alertName;
 
     @Body
+    @NameInMap("AlertPiplines")
+    private String alertPiplines;
+
+    @Body
     @NameInMap("AlertRuleContent")
     private String alertRuleContent;
 
@@ -53,6 +57,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     @Body
     @NameInMap("ClusterId")
     private String clusterId;
+
+    @Body
+    @NameInMap("DataConfig")
+    private String dataConfig;
 
     @Body
     @NameInMap("Duration")
@@ -87,6 +95,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     private String metricsType;
 
     @Body
+    @NameInMap("Notice")
+    private String notice;
+
+    @Body
     @NameInMap("NotifyStrategy")
     private String notifyStrategy;
 
@@ -113,12 +125,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.alertGroup = builder.alertGroup;
         this.alertId = builder.alertId;
         this.alertName = builder.alertName;
+        this.alertPiplines = builder.alertPiplines;
         this.alertRuleContent = builder.alertRuleContent;
         this.alertStatus = builder.alertStatus;
         this.alertType = builder.alertType;
         this.annotations = builder.annotations;
         this.autoAddNewApplication = builder.autoAddNewApplication;
         this.clusterId = builder.clusterId;
+        this.dataConfig = builder.dataConfig;
         this.duration = builder.duration;
         this.filters = builder.filters;
         this.labels = builder.labels;
@@ -127,6 +141,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.message = builder.message;
         this.metricsKey = builder.metricsKey;
         this.metricsType = builder.metricsType;
+        this.notice = builder.notice;
         this.notifyStrategy = builder.notifyStrategy;
         this.pids = builder.pids;
         this.promQL = builder.promQL;
@@ -176,6 +191,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     }
 
     /**
+     * @return alertPiplines
+     */
+    public String getAlertPiplines() {
+        return this.alertPiplines;
+    }
+
+    /**
      * @return alertRuleContent
      */
     public String getAlertRuleContent() {
@@ -215,6 +237,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return dataConfig
+     */
+    public String getDataConfig() {
+        return this.dataConfig;
     }
 
     /**
@@ -274,6 +303,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     }
 
     /**
+     * @return notice
+     */
+    public String getNotice() {
+        return this.notice;
+    }
+
+    /**
      * @return notifyStrategy
      */
     public String getNotifyStrategy() {
@@ -313,12 +349,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private Long alertGroup; 
         private Long alertId; 
         private String alertName; 
+        private String alertPiplines; 
         private String alertRuleContent; 
         private String alertStatus; 
         private String alertType; 
         private String annotations; 
         private Boolean autoAddNewApplication; 
         private String clusterId; 
+        private String dataConfig; 
         private Long duration; 
         private String filters; 
         private String labels; 
@@ -327,6 +365,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String message; 
         private String metricsKey; 
         private String metricsType; 
+        private String notice; 
         private String notifyStrategy; 
         private String pids; 
         private String promQL; 
@@ -343,12 +382,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.alertGroup = request.alertGroup;
             this.alertId = request.alertId;
             this.alertName = request.alertName;
+            this.alertPiplines = request.alertPiplines;
             this.alertRuleContent = request.alertRuleContent;
             this.alertStatus = request.alertStatus;
             this.alertType = request.alertType;
             this.annotations = request.annotations;
             this.autoAddNewApplication = request.autoAddNewApplication;
             this.clusterId = request.clusterId;
+            this.dataConfig = request.dataConfig;
             this.duration = request.duration;
             this.filters = request.filters;
             this.labels = request.labels;
@@ -357,6 +398,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.message = request.message;
             this.metricsKey = request.metricsKey;
             this.metricsType = request.metricsType;
+            this.notice = request.notice;
             this.notifyStrategy = request.notifyStrategy;
             this.pids = request.pids;
             this.promQL = request.promQL;
@@ -410,6 +452,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public Builder alertName(String alertName) {
             this.putBodyParameter("AlertName", alertName);
             this.alertName = alertName;
+            return this;
+        }
+
+        /**
+         * AlertPiplines.
+         */
+        public Builder alertPiplines(String alertPiplines) {
+            this.putBodyParameter("AlertPiplines", alertPiplines);
+            this.alertPiplines = alertPiplines;
             return this;
         }
 
@@ -507,6 +558,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
+         * DataConfig.
+         */
+        public Builder dataConfig(String dataConfig) {
+            this.putBodyParameter("DataConfig", dataConfig);
+            this.dataConfig = dataConfig;
+            return this;
+        }
+
+        /**
          * The duration of the Prometheus alert rule. Unit: minutes.
          */
         public Builder duration(Long duration) {
@@ -600,6 +660,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public Builder metricsType(String metricsType) {
             this.putBodyParameter("MetricsType", metricsType);
             this.metricsType = metricsType;
+            return this;
+        }
+
+        /**
+         * Notice.
+         */
+        public Builder notice(String notice) {
+            this.putBodyParameter("Notice", notice);
+            this.notice = notice;
             return this;
         }
 
