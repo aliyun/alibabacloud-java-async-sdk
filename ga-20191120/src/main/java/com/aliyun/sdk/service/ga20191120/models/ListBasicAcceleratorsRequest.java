@@ -203,9 +203,7 @@ public class ListBasicAcceleratorsRequest extends Request {
         }
 
         /**
-         * The tags of the basic GA instance.
-         * <p>
-         * You can specify at most 20 tags in each call.
+         * The tags of the GA instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -259,7 +257,7 @@ public class ListBasicAcceleratorsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the basic GA resource. The tag key cannot be an empty string.
+             * The key of tag N of the basic GA instance. The tag key cannot be an empty string.
              * <p>
              * 
              * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
@@ -272,7 +270,7 @@ public class ListBasicAcceleratorsRequest extends Request {
             }
 
             /**
-             * The tag value of the basic GA instance. The tag value cannot be an empty string.
+             * The value of tag N of the basic GA instance. The tag value can be an empty string.
              * <p>
              * 
              * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.

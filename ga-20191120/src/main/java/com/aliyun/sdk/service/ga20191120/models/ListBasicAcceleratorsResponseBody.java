@@ -94,7 +94,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -614,7 +614,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:
+             * Indicates whether cross-border acceleration is enabled for the GA instance. Valid values:
              * <p>
              * 
              * *   **true**

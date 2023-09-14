@@ -242,7 +242,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * The ID of the GA instance.
+         * The GA instance ID.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -250,13 +250,13 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the logs.
+         * Indicates the status of the binding between the Log Service project and the endpoint group. Valid values:
          * <p>
          * 
-         * *   **on**: associated
-         * *   **off**: not associated
-         * *   **binding**: being associated
-         * *   **unbinding**: being disassociated
+         * *   **on:** The endpoint group is bound to the Log Service project.
+         * *   **off:** The endpoint group is not bound to the Log Service project.
+         * *   **binding:** The endpoint group is being bound to the Log Service project.
+         * *   **unbinding:** The endpoint group is being unbound from the Log Service project.
          */
         public Builder accessLogSwitch(String accessLogSwitch) {
             this.accessLogSwitch = accessLogSwitch;
@@ -272,11 +272,11 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether access logging is enabled.
+         * Indicates whether the access log feature is enabled. Valid values:
          * <p>
          * 
-         * *   **on**: enabled
-         * *   **off**: disabled
+         * *   **true**
+         * *   **false**
          */
         public Builder enableAccessLog(Boolean enableAccessLog) {
             this.enableAccessLog = enableAccessLog;
@@ -284,7 +284,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint group.
+         * The endpoint group ID.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -292,7 +292,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The list of endpoint group IP addresses.
+         * The endpoint group IP addresses.
          */
         public Builder endpointGroupIpList(java.util.List < String > endpointGroupIpList) {
             this.endpointGroupIpList = endpointGroupIpList;
@@ -300,7 +300,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the endpoint group is created.
+         * The region ID of the endpoint group.
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.endpointGroupRegion = endpointGroupRegion;
@@ -308,7 +308,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint group IP addresses to be confirmed after the GA instance is upgraded.
+         * The endpoint group IP addresses that need to be confirmed after the GA instance is upgraded.
          */
         public Builder endpointGroupUnconfirmedIpList(java.util.List < String > endpointGroupUnconfirmedIpList) {
             this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
@@ -316,7 +316,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the custom routing listener.
+         * The custom routing listener ID.
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -332,7 +332,7 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -340,10 +340,9 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID to which the managed instance belongs.
+         * 托管实例所属的服务方ID。
          * <p>
-         * 
-         * >  Valid only when the ServiceManaged parameter is True.
+         * > 仅在**ServiceManaged**参数为**True**时有效。
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -351,11 +350,12 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Is it a managed instance. Value:
+         * 是否为托管实例。取值：
          * <p>
          * 
-         * - true
-         * - false
+         * - **true**：是托管实例。
+         * 
+         * - **false**：不是托管实例。
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -363,7 +363,11 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * A list of action policies that users can execute on this managed instance.
+         * 用户在此托管实例下可执行的动作策略列表。
+         * <p>
+         * 
+         * > 仅在**ServiceManaged**参数为**True**时有效。
+         * > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -395,13 +399,13 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the endpoint group.
+         * The status of the endpoint group. Valid values:
          * <p>
          * 
-         * *   **init**: being initialized
-         * *   **active**: running as expected
-         * *   **updating**: being updated
-         * *   **deleting**: being deleted
+         * *   **init:** The endpoint group is being initialized.
+         * *   **active:** The endpoint group is running normally.
+         * *   **updating:** The endpoint group is being updated.
+         * *   **deleting:** The ACL is being deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -465,15 +469,14 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name, Valid values:
+             * 托管策略动作名称，取值：
              * <p>
-             * 
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * - **Create**：创建实例。
+             * - **Update**：更新当前实例。
+             * - **Delete**：删除当前实例。
+             * - **Associate**：引用/被引用当前实例。
+             * - **UserUnmanaged**：用户解托管实例。
+             * - **CreateChild**：在当前实例下创建子资源。
              */
             public Builder action(String action) {
                 this.action = action;
@@ -481,18 +484,16 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type, Valid values:
+             * 子资源类型，取值：
              * <p>
-             * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
-             * 
-             * >Only valid when the Action parameter is CreateChild.
+             * - **Listener**：监听资源。
+             * - **IpSet**：加速地域资源。
+             * - **EndpointGroup**：终端节点组资源。
+             * - **ForwardingRule**：转发策略资源。
+             * - **Endpoint**：终端节点资源。
+             * - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
+             * - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
+             * > 仅在**Action**参数为**CreateChild**时有效
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -500,12 +501,10 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * 托管策略动作是否被托管，取值：
              * <p>
-             * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
+             * - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

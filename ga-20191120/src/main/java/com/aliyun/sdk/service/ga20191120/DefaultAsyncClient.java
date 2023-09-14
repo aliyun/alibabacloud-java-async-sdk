@@ -2727,7 +2727,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
       * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
       *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
@@ -2870,6 +2869,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+      * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+      * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+      *     **
+      *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+      *
+     */
     @Override
     public CompletableFuture<UpdateServiceManagedControlResponse> updateServiceManagedControl(UpdateServiceManagedControlRequest request) {
         try {

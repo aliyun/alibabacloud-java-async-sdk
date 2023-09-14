@@ -330,10 +330,8 @@ public class UpdateEndpointGroupRequest extends Request {
          * *   **HTTP**
          * *   **HTTPS**
          * 
-         * > 
-         * 
-         * *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
-         * *   For an HTTP listener, the backend service protocol must be HTTP.
+         * > *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
+         * > *   For an HTTP listener, the backend service protocol must be HTTP.
          */
         public Builder endpointRequestProtocol(String endpointRequestProtocol) {
             this.putQueryParameter("EndpointRequestProtocol", endpointRequestProtocol);
@@ -464,6 +462,9 @@ public class UpdateEndpointGroupRequest extends Request {
         @Validation(required = true)
         private String endpoint;
 
+        @NameInMap("SubAddress")
+        private String subAddress;
+
         @NameInMap("Type")
         @Validation(required = true)
         private String type;
@@ -476,6 +477,7 @@ public class UpdateEndpointGroupRequest extends Request {
             this.enableClientIPPreservation = builder.enableClientIPPreservation;
             this.enableProxyProtocol = builder.enableProxyProtocol;
             this.endpoint = builder.endpoint;
+            this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -510,6 +512,13 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
+         * @return subAddress
+         */
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -527,6 +536,7 @@ public class UpdateEndpointGroupRequest extends Request {
             private Boolean enableClientIPPreservation; 
             private Boolean enableProxyProtocol; 
             private String endpoint; 
+            private String subAddress; 
             private String type; 
             private Integer weight; 
 
@@ -563,6 +573,14 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
+             * SubAddress.
+             */
+            public Builder subAddress(String subAddress) {
+                this.subAddress = subAddress;
+                return this;
+            }
+
+            /**
              * The type of the endpoint. Valid values:
              * <p>
              * 
@@ -574,11 +592,9 @@ public class UpdateEndpointGroupRequest extends Request {
              * *   **ALB**: an Application Load Balancer (ALB) instance
              * *   **OSS**: an Object Storage Service (OSS) bucket
              * 
-             * > 
-             * 
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * > *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * > *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
              * 
              * For more information, see [Service-linked roles](~~178360~~).
              */
@@ -657,10 +673,8 @@ public class UpdateEndpointGroupRequest extends Request {
              * The listener port that is mapped to the endpoint port.
              * <p>
              * 
-             * > 
-             * 
-             * *   Only HTTP and HTTPS listeners support port mappings.
-             * *   The listener port in a port mapping must be the one used by the current listener.
+             * > *   Only HTTP and HTTPS listeners support port mappings.
+             * > *   The listener port in a port mapping must be the one used by the current listener.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;

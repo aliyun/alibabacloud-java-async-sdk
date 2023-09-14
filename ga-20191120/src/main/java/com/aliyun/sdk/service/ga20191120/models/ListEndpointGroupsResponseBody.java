@@ -147,6 +147,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("ProbeProtocol")
         private String probeProtocol;
 
+        @NameInMap("SubAddress")
+        private String subAddress;
+
         @NameInMap("Type")
         private String type;
 
@@ -159,6 +162,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             this.endpointId = builder.endpointId;
             this.probePort = builder.probePort;
             this.probeProtocol = builder.probeProtocol;
+            this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -207,6 +211,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return subAddress
+         */
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -226,6 +237,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private String endpointId; 
             private Integer probePort; 
             private String probeProtocol; 
+            private String subAddress; 
             private String type; 
             private Integer weight; 
 
@@ -274,6 +286,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              */
             public Builder probeProtocol(String probeProtocol) {
                 this.probeProtocol = probeProtocol;
+                return this;
+            }
+
+            /**
+             * SubAddress.
+             */
+            public Builder subAddress(String subAddress) {
+                this.subAddress = subAddress;
                 return this;
             }
 

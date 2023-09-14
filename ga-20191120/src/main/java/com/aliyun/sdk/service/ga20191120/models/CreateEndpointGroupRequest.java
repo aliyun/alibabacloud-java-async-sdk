@@ -346,7 +346,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the endpoint.
+         * The configurations of endpoints in the endpoint group.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
@@ -538,6 +538,9 @@ public class CreateEndpointGroupRequest extends Request {
         @Validation(required = true)
         private String endpoint;
 
+        @NameInMap("SubAddress")
+        private String subAddress;
+
         @NameInMap("Type")
         @Validation(required = true)
         private String type;
@@ -550,6 +553,7 @@ public class CreateEndpointGroupRequest extends Request {
             this.enableClientIPPreservation = builder.enableClientIPPreservation;
             this.enableProxyProtocol = builder.enableProxyProtocol;
             this.endpoint = builder.endpoint;
+            this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -584,6 +588,13 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
+         * @return subAddress
+         */
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -601,15 +612,16 @@ public class CreateEndpointGroupRequest extends Request {
             private Boolean enableClientIPPreservation; 
             private Boolean enableProxyProtocol; 
             private String endpoint; 
+            private String subAddress; 
             private String type; 
             private Integer weight; 
 
             /**
-             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Default value: false. Valid values:
+             * Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:
              * <p>
              * 
-             * *   **true**: preserves client IP addresses by using the TOA module.
-             * *   **false**: does not preserve client IP addresses by using the TOA module.
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
                 this.enableClientIPPreservation = enableClientIPPreservation;
@@ -617,11 +629,11 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:
+             * Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
              * <p>
              * 
-             * *   **true**: preserves client IP addresses by using the ProxyProtocol module.
-             * *   **false**: does not preserve client IP addresses by using the ProxyProtocol module.
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
                 this.enableProxyProtocol = enableProxyProtocol;
@@ -629,7 +641,7 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The IP address, domain name or instance id according to the type of the endpoint.
+             * Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -637,23 +649,30 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
+             * SubAddress.
+             */
+            public Builder subAddress(String subAddress) {
+                this.subAddress = subAddress;
+                return this;
+            }
+
+            /**
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain**: a custom domain name
-             * *   **Ip**: a custom IP address
-             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
-             * *   **ECS**: an Elastic Compute Service (ECS) instance
-             * *   **SLB**: a Server Load Balancer (SLB) instance
-             * *   **ALB**: an Application Load Balancer (ALB) instance
-             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * *   **Domain:** a custom domain name.
+             * *   **Ip:** a custom IP address.
+             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+             * *   **ECS:** an Elastic Compute Service (ECS) instance.
+             * *   **SLB:** a Server Load Balancer (SLB) instance.
+             * *   **ALB:** an Application Load Balancer (ALB) instance.
+             * *   **OSS:** an Object Storage Service (OSS) bucket.
              * 
-             * > 
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
              * 
-             *     For more information, see [Service-linked roles](~~178360~~).
+             * For more information, see [Service linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -666,7 +685,7 @@ public class CreateEndpointGroupRequest extends Request {
              * 
              * Valid values: **0** to **255**.
              * 
-             * >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
+             * >  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

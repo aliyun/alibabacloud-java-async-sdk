@@ -593,9 +593,10 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 托管实例所属的服务方ID。
+         * The service ID to which the managed instance belongs.
          * <p>
-         * > 仅在**ServiceManaged**参数为**True**时有效。
+         * 
+         * >  Valid only when the ServiceManaged parameter is True.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -603,12 +604,11 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 是否为托管实例。取值：
+         * Is it a managed instance. Value:
          * <p>
          * 
-         * - **true**：是托管实例。
-         * 
-         * - **false**：不是托管实例。
+         * - true
+         * - false
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -616,11 +616,11 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 用户在此托管实例下可执行的动作策略列表。
+         * A list of action policies that users can execute on this managed instance.
          * <p>
          * 
-         * > 仅在**ServiceManaged**参数为**True**时有效。
-         * > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+         * > Valid only when the ServiceManaged parameter is True.
+         * >* When an instance is hosted, user operations on the instance are restricted and some operations are prohibited.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -711,6 +711,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         @NameInMap("ProbeProtocol")
         private String probeProtocol;
 
+        @NameInMap("SubAddress")
+        private String subAddress;
+
         @NameInMap("Type")
         private String type;
 
@@ -723,6 +726,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             this.endpoint = builder.endpoint;
             this.probePort = builder.probePort;
             this.probeProtocol = builder.probeProtocol;
+            this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -771,6 +775,13 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return subAddress
+         */
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -790,6 +801,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             private String endpoint; 
             private Integer probePort; 
             private String probeProtocol; 
+            private String subAddress; 
             private String type; 
             private Integer weight; 
 
@@ -838,6 +850,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
              */
             public Builder probeProtocol(String probeProtocol) {
                 this.probeProtocol = probeProtocol;
+                return this;
+            }
+
+            /**
+             * SubAddress.
+             */
+            public Builder subAddress(String subAddress) {
+                this.subAddress = subAddress;
                 return this;
             }
 
@@ -985,14 +1005,15 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * 托管策略动作名称，取值：
+             * Managed policy action name, Valid values:
              * <p>
-             * - **Create**：创建实例。
-             * - **Update**：更新当前实例。
-             * - **Delete**：删除当前实例。
-             * - **Associate**：引用/被引用当前实例。
-             * - **UserUnmanaged**：用户解托管实例。
-             * - **CreateChild**：在当前实例下创建子资源。
+             * 
+             * - Create
+             * - Update
+             * - Delete
+             * - Associate
+             * - UserUnmanaged
+             * - CreateChild
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1000,24 +1021,18 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 子资源类型，取值：
+             * Sub resource type, Valid values:
              * <p>
              * 
-             * - **Listener**：监听资源。
+             * - Listener
+             * - IpSet
+             * - EndpointGroup
+             * - ForwardingRule
+             * - Endpoint
+             * - EndpointGroupDestination
+             * - EndpointPolicy
              * 
-             * - **IpSet**：加速地域资源。
-             * 
-             * - **EndpointGroup**：终端节点组资源。
-             * 
-             * - **ForwardingRule**：转发策略资源。
-             * 
-             * - **Endpoint**：终端节点资源。
-             * 
-             * - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
-             * 
-             * - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
-             * 
-             * > 仅在**Action**参数为**CreateChild**时有效。
+             * >Only valid when the Action parameter is CreateChild.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -1025,10 +1040,12 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 托管策略动作是否被托管，取值：
+             * Is the managed policy action managed, Valid values:
              * <p>
-             * - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
-             * - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+             * 
+             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

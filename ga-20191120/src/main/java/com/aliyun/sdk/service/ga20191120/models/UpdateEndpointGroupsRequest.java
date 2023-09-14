@@ -178,6 +178,9 @@ public class UpdateEndpointGroupsRequest extends Request {
         @Validation(required = true)
         private String endpoint;
 
+        @NameInMap("SubAddress")
+        private String subAddress;
+
         @NameInMap("Type")
         @Validation(required = true)
         private String type;
@@ -188,6 +191,7 @@ public class UpdateEndpointGroupsRequest extends Request {
 
         private EndpointConfigurations(Builder builder) {
             this.endpoint = builder.endpoint;
+            this.subAddress = builder.subAddress;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -208,6 +212,13 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
+         * @return subAddress
+         */
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -223,6 +234,7 @@ public class UpdateEndpointGroupsRequest extends Request {
 
         public static final class Builder {
             private String endpoint; 
+            private String subAddress; 
             private String type; 
             private Long weight; 
 
@@ -231,6 +243,14 @@ public class UpdateEndpointGroupsRequest extends Request {
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * SubAddress.
+             */
+            public Builder subAddress(String subAddress) {
+                this.subAddress = subAddress;
                 return this;
             }
 
