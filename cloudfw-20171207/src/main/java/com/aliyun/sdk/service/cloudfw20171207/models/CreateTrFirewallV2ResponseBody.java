@@ -50,7 +50,7 @@ public class CreateTrFirewallV2ResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.firewallId = firewallId;
@@ -58,7 +58,7 @@ public class CreateTrFirewallV2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

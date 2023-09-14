@@ -104,6 +104,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationName")
         private String applicationName;
 
+        @NameInMap("ApplicationNameList")
+        private java.util.List < String > applicationNameList;
+
         @NameInMap("Description")
         private String description;
 
@@ -131,11 +134,17 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         private String destinationType;
 
+        @NameInMap("HitLastTime")
+        private Long hitLastTime;
+
         @NameInMap("HitTimes")
-        private Integer hitTimes;
+        private Long hitTimes;
 
         @NameInMap("MemberUid")
         private String memberUid;
+
+        @NameInMap("ModifyTime")
+        private Long modifyTime;
 
         @NameInMap("Order")
         private Integer order;
@@ -163,6 +172,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             this.aclUuid = builder.aclUuid;
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
+            this.applicationNameList = builder.applicationNameList;
             this.description = builder.description;
             this.destPort = builder.destPort;
             this.destPortGroup = builder.destPortGroup;
@@ -172,8 +182,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             this.destinationGroupCidrs = builder.destinationGroupCidrs;
             this.destinationGroupType = builder.destinationGroupType;
             this.destinationType = builder.destinationType;
+            this.hitLastTime = builder.hitLastTime;
             this.hitTimes = builder.hitTimes;
             this.memberUid = builder.memberUid;
+            this.modifyTime = builder.modifyTime;
             this.order = builder.order;
             this.proto = builder.proto;
             this.release = builder.release;
@@ -217,6 +229,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          */
         public String getApplicationName() {
             return this.applicationName;
+        }
+
+        /**
+         * @return applicationNameList
+         */
+        public java.util.List < String > getApplicationNameList() {
+            return this.applicationNameList;
         }
 
         /**
@@ -283,9 +302,16 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return hitLastTime
+         */
+        public Long getHitLastTime() {
+            return this.hitLastTime;
+        }
+
+        /**
          * @return hitTimes
          */
-        public Integer getHitTimes() {
+        public Long getHitTimes() {
             return this.hitTimes;
         }
 
@@ -294,6 +320,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          */
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        /**
+         * @return modifyTime
+         */
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         /**
@@ -350,6 +383,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             private String aclUuid; 
             private String applicationId; 
             private String applicationName; 
+            private java.util.List < String > applicationNameList; 
             private String description; 
             private String destPort; 
             private String destPortGroup; 
@@ -359,8 +393,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             private java.util.List < String > destinationGroupCidrs; 
             private String destinationGroupType; 
             private String destinationType; 
-            private Integer hitTimes; 
+            private Long hitLastTime; 
+            private Long hitTimes; 
             private String memberUid; 
+            private Long modifyTime; 
             private Integer order; 
             private String proto; 
             private String release; 
@@ -419,6 +455,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * ApplicationNameList.
+             */
+            public Builder applicationNameList(java.util.List < String > applicationNameList) {
+                this.applicationNameList = applicationNameList;
                 return this;
             }
 
@@ -513,9 +557,17 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * HitLastTime.
+             */
+            public Builder hitLastTime(Long hitLastTime) {
+                this.hitLastTime = hitLastTime;
+                return this;
+            }
+
+            /**
              * The number of hits for the access control policy.
              */
-            public Builder hitTimes(Integer hitTimes) {
+            public Builder hitTimes(Long hitTimes) {
                 this.hitTimes = hitTimes;
                 return this;
             }
@@ -525,6 +577,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
+                return this;
+            }
+
+            /**
+             * ModifyTime.
+             */
+            public Builder modifyTime(Long modifyTime) {
+                this.modifyTime = modifyTime;
                 return this;
             }
 

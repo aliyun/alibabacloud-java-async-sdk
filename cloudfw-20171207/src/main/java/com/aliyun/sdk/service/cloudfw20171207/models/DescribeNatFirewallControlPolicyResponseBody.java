@@ -62,7 +62,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Policys.
+         * The information about the access control policies.
          */
         public Builder policys(java.util.List < Policys> policys) {
             this.policys = policys;
@@ -70,7 +70,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -442,7 +442,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             private String spreadCnt; 
 
             /**
-             * AclAction.
+             * The action that Cloud Firewall performs on the traffic. Valid values:
+             * <p>
+             * 
+             * *   **accept**: allows the traffic.
+             * *   **drop**: denies the traffic.
+             * *   **log**: monitors the traffic.
              */
             public Builder aclAction(String aclAction) {
                 this.aclAction = aclAction;
@@ -450,7 +455,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AclUuid.
+             * The UUID of the access control policy.
              */
             public Builder aclUuid(String aclUuid) {
                 this.aclUuid = aclUuid;
@@ -458,7 +463,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationNameList.
+             * The application names.
              */
             public Builder applicationNameList(java.util.List < String > applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -466,7 +471,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time at which the access control policy was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -474,7 +479,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the access control policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -482,7 +487,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestPort.
+             * The destination port in the access control policy.
              */
             public Builder destPort(String destPort) {
                 this.destPort = destPort;
@@ -490,7 +495,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestPortGroup.
+             * The name of the destination port address book in the access control policy.
              */
             public Builder destPortGroup(String destPortGroup) {
                 this.destPortGroup = destPortGroup;
@@ -498,7 +503,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestPortGroupPorts.
+             * The ports in the destination port address book.
              */
             public Builder destPortGroupPorts(java.util.List < String > destPortGroupPorts) {
                 this.destPortGroupPorts = destPortGroupPorts;
@@ -506,7 +511,11 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestPortType.
+             * The type of the destination port in the access control policy. Valid values:
+             * <p>
+             * 
+             * *   **port**: port
+             * *   **group**: port address book
              */
             public Builder destPortType(String destPortType) {
                 this.destPortType = destPortType;
@@ -514,7 +523,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * The destination address in the access control policy. The value of this parameter varies based on the value of the DestinationType parameter. Valid values:
+             * <p>
+             * 
+             * *   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.
+             * *   If **DestinationType** is set to **domain**, the value of Destination is a domain name. Example: aliyuncs.com.
+             * *   If **DestinationType** is set to **group**, the value of Destination is the name of an address book. Example: db_group.
+             * *   If **DestinationType** is set to **location**, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -522,7 +537,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationGroupCidrs.
+             * The CIDR blocks in the destination address book.
              */
             public Builder destinationGroupCidrs(java.util.List < String > destinationGroupCidrs) {
                 this.destinationGroupCidrs = destinationGroupCidrs;
@@ -530,7 +545,11 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationGroupType.
+             * The type of the destination address book in the access control policy. Valid values:
+             * <p>
+             * 
+             * *   **ip**: an address book that includes one or more CIDR blocks
+             * *   **domain**: an address book that includes one or more domain names
              */
             public Builder destinationGroupType(String destinationGroupType) {
                 this.destinationGroupType = destinationGroupType;
@@ -538,7 +557,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationType.
+             * The type of the destination address in the access control policy. Valid values:
+             * <p>
+             * 
+             * *   **net**: CIDR block
+             * *   **group**: address book
+             * *   **domain**: domain name
+             * *   **location**
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -546,7 +571,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DnsResult.
+             * The DNS resolution result.
              */
             public Builder dnsResult(String dnsResult) {
                 this.dnsResult = dnsResult;
@@ -554,7 +579,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DnsResultTime.
+             * The time of the DNS resolution result. The value is a timestamp. Unit: seconds.
              */
             public Builder dnsResultTime(Long dnsResultTime) {
                 this.dnsResultTime = dnsResultTime;
@@ -562,7 +587,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DomainResolveType.
+             * The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+             * <p>
+             * 
+             * *   **1**: Fully qualified domain name (FQDN)-based
+             * *   **2**: Domain Name System (DNS)-based
+             * *   **3**: FQDN and DNS-based
              */
             public Builder domainResolveType(Integer domainResolveType) {
                 this.domainResolveType = domainResolveType;
@@ -570,7 +600,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HitLastTime.
+             * The times when the access control policy was last hit. The value is a timestamp. Unit: seconds.
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -578,7 +608,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HitTimes.
+             * The number of hits for the access control policy.
              */
             public Builder hitTimes(Integer hitTimes) {
                 this.hitTimes = hitTimes;
@@ -586,7 +616,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time at which the access control policy was modified.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -594,7 +624,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -602,7 +632,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Order.
+             * The priority of the access control policy.
+             * <p>
+             * 
+             * The priority value starts from 1. A smaller priority value indicates a higher priority.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -610,7 +643,13 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Proto.
+             * The type of the protocol in the access control policy. Valid values:
+             * <p>
+             * 
+             * *   **ANY**
+             * *   **TCP**
+             * *   **UDP**
+             * *   **ICMP**
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -618,7 +657,11 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Release.
+             * Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder release(String release) {
                 this.release = release;
@@ -626,7 +669,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source address in the access control policy. Valid values:
+             * <p>
+             * 
+             * *   If **SourceType** is set to `net`, the value of Source is a CIDR block. Example: 192.0.XX.XX/24.
+             * *   If **SourceType** is set to `group`, the value of Source is the name of an address book. Example: db_group.
+             * *   If **SourceType** is set to `location`, the value of Source is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].
              */
             public Builder source(String source) {
                 this.source = source;
@@ -634,7 +682,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceGroupCidrs.
+             * The CIDR blocks in the source address book.
              */
             public Builder sourceGroupCidrs(java.util.List < String > sourceGroupCidrs) {
                 this.sourceGroupCidrs = sourceGroupCidrs;
@@ -642,7 +690,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceGroupType.
+             * The type of the source address book in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.
              */
             public Builder sourceGroupType(String sourceGroupType) {
                 this.sourceGroupType = sourceGroupType;
@@ -650,7 +698,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the source address book in the access control policy. Valid values:
+             * <p>
+             * 
+             * *   **net**: CIDR block
+             * *   **group**: address book
+             * *   **location**: location
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -658,7 +711,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SpreadCnt.
+             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated based on the following formula: Quota that is consumed by an access control policy = Number of source CIDR blocks × Number of destination CIDR blocks, regions, or resolved domain names × *Number of applications* × Number of ports.
              */
             public Builder spreadCnt(String spreadCnt) {
                 this.spreadCnt = spreadCnt;

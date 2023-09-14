@@ -273,7 +273,12 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * AclAction.
+         * The action that Cloud Firewall performs on the traffic. Valid values:
+         * <p>
+         * 
+         * *   **accept**: allows the traffic.
+         * *   **drop**: denies the traffic.
+         * *   **log**: monitors the traffic.
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -282,7 +287,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * AclUuid.
+         * The UUID of the access control policy.
+         * <p>
+         * 
+         * To modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -291,7 +299,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationNameList.
+         * The name of the application.
          */
         public Builder applicationNameList(java.util.List < String > applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
@@ -300,7 +308,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the access control policy. Fuzzy match is supported.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the descriptions of all policies are queried.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -309,7 +320,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPort.
+         * The destination port in the access control policy.
+         * <p>
+         * 
+         * > If **DestPortType** is set to `port`, you must specify this parameter.
          */
         public Builder destPort(String destPort) {
             this.putQueryParameter("DestPort", destPort);
@@ -318,7 +332,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPortGroup.
+         * The name of the destination port address book in the access control policy.
          */
         public Builder destPortGroup(String destPortGroup) {
             this.putQueryParameter("DestPortGroup", destPortGroup);
@@ -327,7 +341,11 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPortType.
+         * The type of the destination port in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **port**: port
+         * *   **group**: port address book
          */
         public Builder destPortType(String destPortType) {
             this.putQueryParameter("DestPortType", destPortType);
@@ -336,7 +354,13 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Destination.
+         * The destination address in the access control policy.
+         * <p>
+         * 
+         * *   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.3.4/24
+         * *   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group
+         * *   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com
+         * *   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -345,7 +369,13 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * The type of the destination address in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **net**: CIDR block
+         * *   **group**: address book
+         * *   **domain**: domain name
+         * *   **location**
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -354,7 +384,12 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DomainResolveType.
+         * The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+         * <p>
+         * 
+         * *   **0**: Fully qualified domain name (FQDN)-based resolution
+         * *   **1**: Domain Name System (DNS)-based dynamic resolution
+         * *   **2**: FQDN and DNS-based dynamic resolution
          */
         public Builder domainResolveType(String domainResolveType) {
             this.putQueryParameter("DomainResolveType", domainResolveType);
@@ -363,7 +398,11 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -372,7 +411,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -381,7 +420,15 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Proto.
+         * The protocol type supported by the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **ANY**
+         * *   **TCP**
+         * *   **UDP**
+         * *   **ICMP**
+         * 
+         * > The value **ANY** indicates all types of protocols.
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -390,7 +437,11 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Release.
+         * The status of the access control policy. Valid values:
+         * <p>
+         * 
+         * *   true: enabled
+         * *   false: disabled
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -399,7 +450,18 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   If **SourceType** is set to `net`, the value of Source is a CIDR block.
+         * 
+         *     Example: 10.2.4.0/24
+         * 
+         * *   If **SourceType** is set to `group`, the value of this parameter is an address book.
+         * 
+         *     Example: db_group
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -408,7 +470,13 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the source address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **net**: CIDR block
+         * *   **group**: address book
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

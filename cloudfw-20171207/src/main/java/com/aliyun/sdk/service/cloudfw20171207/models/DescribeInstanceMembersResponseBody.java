@@ -62,7 +62,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the member in Cloud Firewall.
+         * The information about the member.
          */
         public Builder members(java.util.List < Members> members) {
             this.members = members;
@@ -78,7 +78,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,10 +178,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             private Integer modifyTime; 
 
             /**
-             * The time when the member was added to Cloud Firewall.
-             * <p>
-             * 
-             * >  The value is a UNIX timestamp. Unit: seconds.
+             * The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.
              */
             public Builder createTime(Integer createTime) {
                 this.createTime = createTime;
@@ -189,7 +186,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the member in Cloud Firewall.
+             * The remarks of the member.
              */
             public Builder memberDesc(String memberDesc) {
                 this.memberDesc = memberDesc;
@@ -197,7 +194,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member in Cloud Firewall.
+             * The name of the member.
              */
             public Builder memberDisplayName(String memberDisplayName) {
                 this.memberDisplayName = memberDisplayName;
@@ -205,7 +202,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member in Cloud Firewall. Valid values:
+             * The status of the member. Valid values:
              * <p>
              * 
              * *   **normal**
@@ -217,7 +214,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member in Cloud Firewall.
+             * The UID of the member.
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;
@@ -225,10 +222,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member in Cloud Firewall was last modified.
-             * <p>
-             * 
-             * >  The value is a UNIX timestamp. Unit: seconds.
+             * The time when the member was last modified. The value is a timestamp. Unit: seconds.
              */
             public Builder modifyTime(Integer modifyTime) {
                 this.modifyTime = modifyTime;
@@ -293,7 +287,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the current page.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -301,7 +295,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -309,7 +303,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the members in Cloud Firewall.
+             * The total number of the members.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

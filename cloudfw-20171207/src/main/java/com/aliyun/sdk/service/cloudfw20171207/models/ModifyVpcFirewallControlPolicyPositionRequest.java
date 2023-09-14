@@ -112,7 +112,10 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         } 
 
         /**
-         * AclUuid.
+         * The UUID of the access control policy.
+         * <p>
+         * 
+         * If you want to modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the [DescribeVpcFirewallControlPolicy](~~159758~~) operation to query the UUID.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -121,13 +124,13 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. 
+         * The language of the content within the request and the response.
          * <p>
          * 
          * Valid values:
          * 
-         * - **zh**: Chinese (default)
-         * - **en**: English
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,6 +149,9 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
 
         /**
          * The original priority of the access control policy.
+         * <p>
+         * 
+         * > This parameter is not recommended. We recommend that you use the AclUuid parameter to specify the policy that you want to modify.
          */
         public Builder oldOrder(String oldOrder) {
             this.putQueryParameter("OldOrder", oldOrder);
@@ -154,17 +160,18 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The ID of the policy group to which the access control policy belongs. You can call the DescribeVpcFirewallAclGroupList operation to query the ID.  
+         * The ID of the group to which the access control policy belongs. You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.
          * <p>
          * 
          * Valid values:
          * 
-         * - If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.  
+         * *   If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.
          * 
-         * Example: cen-ervw0g12b5jbw****
-         * - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.  
+         *     Example: cen-ervw0g12b5jbw\*\*\*\*
          * 
-         * Example: vfw-a42bbb7b887148c9****
+         * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
+         * 
+         *     Example: vfw-a42bbb7b887148c9\*\*\*\*
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

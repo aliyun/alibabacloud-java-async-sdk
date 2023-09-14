@@ -68,7 +68,7 @@ public class DescribeTrFirewallsV2DetailRequest extends Request {
         } 
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -77,7 +77,11 @@ public class DescribeTrFirewallsV2DetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

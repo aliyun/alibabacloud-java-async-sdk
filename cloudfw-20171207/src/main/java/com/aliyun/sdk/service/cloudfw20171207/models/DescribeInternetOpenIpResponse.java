@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTrFirewallsV2RouteListResponse} extends {@link TeaModel}
+ * {@link DescribeInternetOpenIpResponse} extends {@link TeaModel}
  *
- * <p>DescribeTrFirewallsV2RouteListResponse</p>
+ * <p>DescribeInternetOpenIpResponse</p>
  */
-public class DescribeTrFirewallsV2RouteListResponse extends Response {
+public class DescribeInternetOpenIpResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DescribeTrFirewallsV2RouteListResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeTrFirewallsV2RouteListResponseBody body;
+    private DescribeInternetOpenIpResponseBody body;
 
-    private DescribeTrFirewallsV2RouteListResponse(BuilderImpl builder) {
+    private DescribeInternetOpenIpResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeTrFirewallsV2RouteListResponse create() {
+    public static DescribeInternetOpenIpResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DescribeTrFirewallsV2RouteListResponse extends Response {
     /**
      * @return body
      */
-    public DescribeTrFirewallsV2RouteListResponseBody getBody() {
+    public DescribeInternetOpenIpResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeTrFirewallsV2RouteListResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeInternetOpenIpResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeTrFirewallsV2RouteListResponseBody body);
+        Builder body(DescribeInternetOpenIpResponseBody body);
 
         @Override
-        DescribeTrFirewallsV2RouteListResponse build();
+        DescribeInternetOpenIpResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeTrFirewallsV2RouteListResponse, Builder>
+            extends Response.BuilderImpl<DescribeInternetOpenIpResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeTrFirewallsV2RouteListResponseBody body; 
+        private DescribeInternetOpenIpResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeTrFirewallsV2RouteListResponse response) {
+        private BuilderImpl(DescribeInternetOpenIpResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DescribeTrFirewallsV2RouteListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeTrFirewallsV2RouteListResponseBody body) {
+        public Builder body(DescribeInternetOpenIpResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeTrFirewallsV2RouteListResponse build() {
-            return new DescribeTrFirewallsV2RouteListResponse(this);
+        public DescribeInternetOpenIpResponse build() {
+            return new DescribeInternetOpenIpResponse(this);
         } 
 
     } 

@@ -19,8 +19,11 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
 
     @Query
     @NameInMap("ApplicationName")
-    @Validation(required = true)
     private String applicationName;
+
+    @Query
+    @NameInMap("ApplicationNameList")
+    private java.util.List < String > applicationNameList;
 
     @Query
     @NameInMap("Description")
@@ -90,6 +93,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         super(builder);
         this.aclAction = builder.aclAction;
         this.applicationName = builder.applicationName;
+        this.applicationNameList = builder.applicationNameList;
         this.description = builder.description;
         this.destPort = builder.destPort;
         this.destPortGroup = builder.destPortGroup;
@@ -131,6 +135,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
      */
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    /**
+     * @return applicationNameList
+     */
+    public java.util.List < String > getApplicationNameList() {
+        return this.applicationNameList;
     }
 
     /**
@@ -234,6 +245,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateVpcFirewallControlPolicyRequest, Builder> {
         private String aclAction; 
         private String applicationName; 
+        private java.util.List < String > applicationNameList; 
         private String description; 
         private String destPort; 
         private String destPortGroup; 
@@ -257,6 +269,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
             super(request);
             this.aclAction = request.aclAction;
             this.applicationName = request.applicationName;
+            this.applicationNameList = request.applicationNameList;
             this.description = request.description;
             this.destPort = request.destPort;
             this.destPortGroup = request.destPortGroup;
@@ -310,6 +323,15 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
             this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * ApplicationNameList.
+         */
+        public Builder applicationNameList(java.util.List < String > applicationNameList) {
+            this.putQueryParameter("ApplicationNameList", applicationNameList);
+            this.applicationNameList = applicationNameList;
             return this;
         }
 

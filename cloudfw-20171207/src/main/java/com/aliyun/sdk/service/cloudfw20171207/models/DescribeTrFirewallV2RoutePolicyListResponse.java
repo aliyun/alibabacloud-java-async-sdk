@@ -16,6 +16,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeTrFirewallV2RoutePolicyListResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
     private DescribeTrFirewallV2RoutePolicyListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeTrFirewallV2RoutePolicyListResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
     public interface Builder extends Response.Builder<DescribeTrFirewallV2RoutePolicyListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeTrFirewallV2RoutePolicyListResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
             extends Response.BuilderImpl<DescribeTrFirewallV2RoutePolicyListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeTrFirewallV2RoutePolicyListResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
         private BuilderImpl(DescribeTrFirewallV2RoutePolicyListResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeTrFirewallV2RoutePolicyListResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

@@ -107,10 +107,8 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * The IP version of the asset that is protected by Cloud Firewall.
+         * The IP version of the asset that is protected by Cloud Firewall. Valid values:
          * <p>
-         * 
-         * Valid values:
          * 
          * *   **4**: IPv4 (default)
          * *   **6**: IPv6
@@ -122,7 +120,7 @@ public class DescribeDomainResolveRequest extends Request {
         }
 
         /**
-         * The natural language of the response.
+         * The language of the content within the response.
          * <p>
          * 
          * Valid values:

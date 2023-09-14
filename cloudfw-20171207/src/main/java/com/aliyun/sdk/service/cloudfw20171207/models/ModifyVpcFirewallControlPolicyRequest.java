@@ -24,8 +24,11 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
     @Query
     @NameInMap("ApplicationName")
-    @Validation(required = true)
     private String applicationName;
+
+    @Query
+    @NameInMap("ApplicationNameList")
+    private java.util.List < String > applicationNameList;
 
     @Query
     @NameInMap("Description")
@@ -87,6 +90,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         this.aclAction = builder.aclAction;
         this.aclUuid = builder.aclUuid;
         this.applicationName = builder.applicationName;
+        this.applicationNameList = builder.applicationNameList;
         this.description = builder.description;
         this.destPort = builder.destPort;
         this.destPortGroup = builder.destPortGroup;
@@ -133,6 +137,13 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
      */
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    /**
+     * @return applicationNameList
+     */
+    public java.util.List < String > getApplicationNameList() {
+        return this.applicationNameList;
     }
 
     /**
@@ -223,6 +234,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         private String aclAction; 
         private String aclUuid; 
         private String applicationName; 
+        private java.util.List < String > applicationNameList; 
         private String description; 
         private String destPort; 
         private String destPortGroup; 
@@ -245,6 +257,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
             this.aclAction = request.aclAction;
             this.aclUuid = request.aclUuid;
             this.applicationName = request.applicationName;
+            this.applicationNameList = request.applicationNameList;
             this.description = request.description;
             this.destPort = request.destPort;
             this.destPortGroup = request.destPortGroup;
@@ -313,6 +326,15 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
             this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * ApplicationNameList.
+         */
+        public Builder applicationNameList(java.util.List < String > applicationNameList) {
+            this.putQueryParameter("ApplicationNameList", applicationNameList);
+            this.applicationNameList = applicationNameList;
             return this;
         }
 

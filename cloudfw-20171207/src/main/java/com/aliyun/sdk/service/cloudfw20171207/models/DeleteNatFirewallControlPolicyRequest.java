@@ -98,7 +98,10 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * AclUuid.
+         * The UUID of the access control policy.
+         * <p>
+         * 
+         * To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -107,7 +110,12 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the traffic to which the access control policy applies.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -116,7 +124,11 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,7 +137,7 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

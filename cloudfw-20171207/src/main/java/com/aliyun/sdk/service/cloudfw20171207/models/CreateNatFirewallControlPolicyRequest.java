@@ -301,7 +301,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * AclAction.
+         * The action that Cloud Firewall performs on the traffic.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **accept**: allows the traffic.
+         * *   **drop**: denies the traffic.
+         * *   **log**: monitors the traffic.
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -310,7 +317,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationNameList.
+         * The application types supported by the access control policy.
          */
         public Builder applicationNameList(java.util.List < String > applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
@@ -319,7 +326,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the access control policy.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -328,7 +335,18 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPort.
+         * The destination port in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   If Proto is set to ICMP, DestPort is automatically left empty.
+         * 
+         * > If Proto is set to ICMP, access control does not take effect on the destination port.
+         * 
+         * *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.
+         * 
+         * > If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.
+         * 
+         * *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.
          */
         public Builder destPort(String destPort) {
             this.putQueryParameter("DestPort", destPort);
@@ -337,7 +355,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPortGroup.
+         * The name of the destination port address book in the access control policy.
+         * <p>
+         * 
+         * > If DestPortType is set to group, you must specify the name of the destination port address book.
          */
         public Builder destPortGroup(String destPortGroup) {
             this.putQueryParameter("DestPortGroup", destPortGroup);
@@ -346,7 +367,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPortType.
+         * The type of the destination port in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **port**: port
+         * *   **group**: port address book
          */
         public Builder destPortType(String destPortType) {
             this.putQueryParameter("DestPortType", destPortType);
@@ -355,7 +380,26 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Destination.
+         * The destination address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   If DestinationType is set to net, the value of this parameter is a CIDR block.
+         * 
+         *     Example: 1.2.XX.XX/24
+         * 
+         * *   If DestinationType is set to group, the value of this parameter is an address book.
+         * 
+         *     Example: db_group
+         * 
+         * *   If DestinationType is set to domain, the value of this parameter is a domain name.
+         * 
+         *     Example: \*.aliyuncs.com
+         * 
+         * *   If DestinationType is set to location, the value of this parameter is a location.
+         * 
+         *     Example: \["BJ11", "ZB"]
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -364,7 +408,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * The type of the destination address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **net**: CIDR block
+         * *   **group**: address book
+         * *   **domain**: domain name
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -373,7 +424,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the traffic to which the access control policy applies. Valid values:
+         * <p>
+         * 
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -382,7 +436,12 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DomainResolveType.
+         * The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+         * <p>
+         * 
+         * *   **0**: Fully qualified domain name (FQDN)-based resolution
+         * *   **1**: Domain Name System (DNS)-based dynamic resolution
+         * *   **2**: FQDN and DNS-based dynamic resolution
          */
         public Builder domainResolveType(Integer domainResolveType) {
             this.putQueryParameter("DomainResolveType", domainResolveType);
@@ -391,7 +450,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version supported by the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **4**: IPv4 (default)
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -400,7 +462,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -409,7 +477,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -418,7 +486,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * NewOrder.
+         * The new priority of the access control policy.
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -427,7 +495,15 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Proto.
+         * The protocol type in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ANY: all types of protocols
+         * *   TCP
+         * *   UDP
+         * *   ICMP
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -436,7 +512,11 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Release.
+         * Specifies whether to enable the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -445,7 +525,18 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   If **SourceType** is set to `net`, the value of Source is a CIDR block.
+         * 
+         *     Example: 10.2.4.0/24
+         * 
+         * *   If **SourceType** is set to `group`, the value of this parameter must be an address book name.
+         * 
+         *     Example: db_group
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -454,7 +545,13 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the source address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **net**: source CIDR block
+         * *   **group**: source address book
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

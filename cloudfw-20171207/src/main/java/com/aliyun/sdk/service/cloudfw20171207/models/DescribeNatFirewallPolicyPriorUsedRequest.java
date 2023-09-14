@@ -97,7 +97,12 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The direction of the traffic to which the access control policy applies.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -106,7 +111,10 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version supported by the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **4**: IPv4 (default)
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -115,7 +123,11 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +136,7 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

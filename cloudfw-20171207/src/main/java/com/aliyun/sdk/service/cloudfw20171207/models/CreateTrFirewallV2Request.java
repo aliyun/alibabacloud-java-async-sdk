@@ -222,7 +222,7 @@ public class CreateTrFirewallV2Request extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -231,7 +231,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallDescription.
+         * The description of the firewall.
          */
         public Builder firewallDescription(String firewallDescription) {
             this.putQueryParameter("FirewallDescription", firewallDescription);
@@ -240,7 +240,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallName.
+         * The name of the firewall.
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
@@ -249,7 +249,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallSubnetCidr.
+         * The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.
          */
         public Builder firewallSubnetCidr(String firewallSubnetCidr) {
             this.putQueryParameter("FirewallSubnetCidr", firewallSubnetCidr);
@@ -258,7 +258,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallVpcCidr.
+         * The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.
          */
         public Builder firewallVpcCidr(String firewallVpcCidr) {
             this.putQueryParameter("FirewallVpcCidr", firewallVpcCidr);
@@ -267,7 +267,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallVpcId.
+         * The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.
          */
         public Builder firewallVpcId(String firewallVpcId) {
             this.putQueryParameter("FirewallVpcId", firewallVpcId);
@@ -276,7 +276,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallVswitchId.
+         * The ID of the vSwitch that is used to create the ENI in manual mode.
          */
         public Builder firewallVswitchId(String firewallVswitchId) {
             this.putQueryParameter("FirewallVswitchId", firewallVswitchId);
@@ -285,7 +285,11 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -294,7 +298,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * RegionNo.
+         * The region ID of the route router.
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -303,7 +307,11 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * RouteMode.
+         * The routing mode of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   **managed**: automatic mode
+         * *   **manual**: manual mode
          */
         public Builder routeMode(String routeMode) {
             this.putQueryParameter("RouteMode", routeMode);
@@ -312,7 +320,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentMasterCidr.
+         * The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
          */
         public Builder trAttachmentMasterCidr(String trAttachmentMasterCidr) {
             this.putQueryParameter("TrAttachmentMasterCidr", trAttachmentMasterCidr);
@@ -321,7 +329,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentSlaveCidr.
+         * The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
          */
         public Builder trAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
             this.putQueryParameter("TrAttachmentSlaveCidr", trAttachmentSlaveCidr);
@@ -330,7 +338,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

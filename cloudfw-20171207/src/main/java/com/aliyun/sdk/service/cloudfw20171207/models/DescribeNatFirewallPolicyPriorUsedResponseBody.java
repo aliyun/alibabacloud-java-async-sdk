@@ -62,7 +62,7 @@ public class DescribeNatFirewallPolicyPriorUsedResponseBody extends TeaModel {
         private Integer start; 
 
         /**
-         * End.
+         * The lowest priority for the access control policy.
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -70,7 +70,7 @@ public class DescribeNatFirewallPolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeNatFirewallPolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * Start.
+         * The highest priority for the access control policy.
          */
         public Builder start(Integer start) {
             this.start = start;

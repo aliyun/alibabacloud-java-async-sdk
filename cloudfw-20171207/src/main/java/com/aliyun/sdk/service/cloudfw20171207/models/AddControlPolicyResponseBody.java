@@ -50,7 +50,7 @@ public class AddControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the access control policy that is created on the Internet firewall.
+         * AclUuid.
          */
         public Builder aclUuid(String aclUuid) {
             this.aclUuid = aclUuid;
@@ -58,7 +58,7 @@ public class AddControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

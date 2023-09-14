@@ -230,7 +230,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         private String transitRouterId; 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -238,7 +238,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallDescription.
+         * The description of the VPC firewall.
          */
         public Builder firewallDescription(String firewallDescription) {
             this.firewallDescription = firewallDescription;
@@ -246,7 +246,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallEniId.
+         * The ID of the Elastic Network Interface (ENI) with which the VPC firewall is associated.
          */
         public Builder firewallEniId(String firewallEniId) {
             this.firewallEniId = firewallEniId;
@@ -254,7 +254,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallEniVpcId.
+         * The ID of the VPC to which the ENI is attached.
          */
         public Builder firewallEniVpcId(String firewallEniVpcId) {
             this.firewallEniVpcId = firewallEniVpcId;
@@ -262,7 +262,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallEniVswitchId.
+         * The ID of the vSwitch with which the ENI is associated.
          */
         public Builder firewallEniVswitchId(String firewallEniVswitchId) {
             this.firewallEniVswitchId = firewallEniVswitchId;
@@ -270,7 +270,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.firewallId = firewallId;
@@ -278,7 +278,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallName.
+         * The name of the VPC firewall.
          */
         public Builder firewallName(String firewallName) {
             this.firewallName = firewallName;
@@ -286,7 +286,12 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallStatus.
+         * The status of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   Creating
+         * *   Deleting
+         * *   Ready
          */
         public Builder firewallStatus(String firewallStatus) {
             this.firewallStatus = firewallStatus;
@@ -302,7 +307,18 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallSwitchStatus.
+         * The status of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   **opened**: The VPC firewall is enabled.
+         * *   **closed**: The VPC firewall is disabled.
+         * *   **notconfigured**: The VPC firewall is not created.
+         * *   **configured**: The VPC firewall is created but is not enabled.
+         * *   **creating**: The VPC firewall is being created.
+         * *   **opening**: The VPC firewall is being enabled.
+         * *   **deleting**: The VPC firewall is being deleted.
+         * 
+         * > If you do not specify this parameter, VPC firewalls in all states are queried.
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.firewallSwitchStatus = firewallSwitchStatus;
@@ -318,7 +334,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * RegionNo.
+         * The region ID of the transit router.
          */
         public Builder regionNo(String regionNo) {
             this.regionNo = regionNo;
@@ -326,7 +342,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -334,7 +350,11 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * RouteMode.
+         * The routing mode of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   **managed**: automatic mode
+         * *   **manual**: manual mode
          */
         public Builder routeMode(String routeMode) {
             this.routeMode = routeMode;
@@ -358,7 +378,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.transitRouterId = transitRouterId;

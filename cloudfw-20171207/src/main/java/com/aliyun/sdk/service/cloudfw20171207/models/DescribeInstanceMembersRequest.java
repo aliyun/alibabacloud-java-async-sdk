@@ -110,10 +110,7 @@ public class DescribeInstanceMembersRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -122,7 +119,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The remarks of the member in Cloud Firewall. The length is 1 ~ 256 characters.
+         * The remarks of the member. The remarks must be 1 to 256 characters in length.
          */
         public Builder memberDesc(String memberDesc) {
             this.putQueryParameter("MemberDesc", memberDesc);
@@ -131,7 +128,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The name of the member in Cloud Firewall.
+         * The name of the member.
          */
         public Builder memberDisplayName(String memberDisplayName) {
             this.putQueryParameter("MemberDisplayName", memberDisplayName);
@@ -140,7 +137,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The unique identifier (UID) of the member in Cloud Firewall.
+         * The UID of the member.
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -149,7 +146,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Default value: **20**.

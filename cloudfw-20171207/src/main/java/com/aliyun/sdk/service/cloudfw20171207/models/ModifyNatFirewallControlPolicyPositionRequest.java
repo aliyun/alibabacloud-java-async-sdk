@@ -98,7 +98,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         } 
 
         /**
-         * AclUuid.
+         * The UUID of the access control policy.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -107,7 +107,11 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +120,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -125,7 +129,12 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * NewOrder.
+         * The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.
+         * <p>
+         * 
+         * > Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.
+         * 
+         * Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.
          */
         public Builder newOrder(Integer newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
