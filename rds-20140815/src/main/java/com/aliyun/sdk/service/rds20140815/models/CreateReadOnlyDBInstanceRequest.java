@@ -775,7 +775,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * Port.
+         * Supports initializing the port when creating a read-only instance on the RDS MySQL master instance. Valid values: **1000 to 65534**.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

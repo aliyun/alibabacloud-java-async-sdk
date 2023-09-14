@@ -74,10 +74,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * The details of the TDE status at the database level.
+         * The TDE status at the database level.
          * <p>
          * 
-         * > For the instances that run SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.
+         * >  If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -93,7 +93,11 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * TDEMode.
+         * The key method for instance level TDE encryption, with values:
+         * <p>
+         * - **Aliyun_Generate_Key**
+         * - **Customer_Provided_Key**
+         * - **Unknown**
          */
         public Builder TDEMode(String TDEMode) {
             this.TDEMode = TDEMode;
@@ -101,7 +105,11 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * The TDE status at the instance level. Valid values: **Enabled and Disabled**.
+         * The TDE status of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Enabled**
+         * *   **Disabled**
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;
@@ -161,7 +169,11 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             }
 
             /**
-             * The TDE status at the database level. Valid values: **Enabled and Disabled**.
+             * The TDE status at the database level. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**
+             * *   **Disabled**
              */
             public Builder TDEStatus(String TDEStatus) {
                 this.TDEStatus = TDEStatus;

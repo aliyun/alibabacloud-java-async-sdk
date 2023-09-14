@@ -7,19 +7,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RestoreDdrTableResponseBody} extends {@link TeaModel}
+ * {@link CreateOrderForCreateDBNodesResponseBody} extends {@link TeaModel}
  *
- * <p>RestoreDdrTableResponseBody</p>
+ * <p>CreateOrderForCreateDBNodesResponseBody</p>
  */
-public class RestoreDdrTableResponseBody extends TeaModel {
+public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     private String DBInstanceId;
+
+    @NameInMap("OrderId")
+    private Long orderId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private RestoreDdrTableResponseBody(Builder builder) {
+    private CreateOrderForCreateDBNodesResponseBody(Builder builder) {
         this.DBInstanceId = builder.DBInstanceId;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -27,7 +31,7 @@ public class RestoreDdrTableResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RestoreDdrTableResponseBody create() {
+    public static CreateOrderForCreateDBNodesResponseBody create() {
         return builder().build();
     }
 
@@ -39,6 +43,13 @@ public class RestoreDdrTableResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,10 +58,11 @@ public class RestoreDdrTableResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceId; 
+        private Long orderId; 
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -58,15 +70,23 @@ public class RestoreDdrTableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * OrderId.
+         */
+        public Builder orderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RestoreDdrTableResponseBody build() {
-            return new RestoreDdrTableResponseBody(this);
+        public CreateOrderForCreateDBNodesResponseBody build() {
+            return new CreateOrderForCreateDBNodesResponseBody(this);
         } 
 
     } 

@@ -241,7 +241,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * SubReplayLag.
+             * The current Replication Slot corresponds to the specific delay of the logical subscription of the subscriber, in seconds (s)
              */
             public Builder subReplayLag(String subReplayLag) {
                 this.subReplayLag = subReplayLag;

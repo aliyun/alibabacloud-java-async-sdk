@@ -7,20 +7,30 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GrantOperatorPermissionRequest} extends {@link RequestModel}
+ * {@link ModifyDatabaseConfigRequest} extends {@link RequestModel}
  *
- * <p>GrantOperatorPermissionRequest</p>
+ * <p>ModifyDatabaseConfigRequest</p>
  */
-public class GrantOperatorPermissionRequest extends Request {
+public class ModifyDatabaseConfigRequest extends Request {
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     private String DBInstanceId;
 
     @Query
-    @NameInMap("ExpiredTime")
+    @NameInMap("DBName")
     @Validation(required = true)
-    private String expiredTime;
+    private String DBName;
+
+    @Query
+    @NameInMap("DatabasePropertyName")
+    @Validation(required = true)
+    private String databasePropertyName;
+
+    @Query
+    @NameInMap("DatabasePropertyValue")
+    @Validation(required = true)
+    private String databasePropertyValue;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -31,11 +41,6 @@ public class GrantOperatorPermissionRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("Privileges")
-    @Validation(required = true)
-    private String privileges;
-
-    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -43,13 +48,14 @@ public class GrantOperatorPermissionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private GrantOperatorPermissionRequest(Builder builder) {
+    private ModifyDatabaseConfigRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
-        this.expiredTime = builder.expiredTime;
+        this.DBName = builder.DBName;
+        this.databasePropertyName = builder.databasePropertyName;
+        this.databasePropertyValue = builder.databasePropertyValue;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.privileges = builder.privileges;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -58,7 +64,7 @@ public class GrantOperatorPermissionRequest extends Request {
         return new Builder();
     }
 
-    public static GrantOperatorPermissionRequest create() {
+    public static ModifyDatabaseConfigRequest create() {
         return builder().build();
     }
 
@@ -75,10 +81,24 @@ public class GrantOperatorPermissionRequest extends Request {
     }
 
     /**
-     * @return expiredTime
+     * @return DBName
      */
-    public String getExpiredTime() {
-        return this.expiredTime;
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
+     * @return databasePropertyName
+     */
+    public String getDatabasePropertyName() {
+        return this.databasePropertyName;
+    }
+
+    /**
+     * @return databasePropertyValue
+     */
+    public String getDatabasePropertyValue() {
+        return this.databasePropertyValue;
     }
 
     /**
@@ -96,13 +116,6 @@ public class GrantOperatorPermissionRequest extends Request {
     }
 
     /**
-     * @return privileges
-     */
-    public String getPrivileges() {
-        return this.privileges;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -116,12 +129,13 @@ public class GrantOperatorPermissionRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<GrantOperatorPermissionRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyDatabaseConfigRequest, Builder> {
         private String DBInstanceId; 
-        private String expiredTime; 
+        private String DBName; 
+        private String databasePropertyName; 
+        private String databasePropertyValue; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String privileges; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -129,19 +143,20 @@ public class GrantOperatorPermissionRequest extends Request {
             super();
         } 
 
-        private Builder(GrantOperatorPermissionRequest request) {
+        private Builder(ModifyDatabaseConfigRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
-            this.expiredTime = request.expiredTime;
+            this.DBName = request.DBName;
+            this.databasePropertyName = request.databasePropertyName;
+            this.databasePropertyValue = request.databasePropertyValue;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.privileges = request.privileges;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -150,11 +165,29 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * The time when the permissions of the service account expire. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The name of the database.
          */
-        public Builder expiredTime(String expiredTime) {
-            this.putQueryParameter("ExpiredTime", expiredTime);
-            this.expiredTime = expiredTime;
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
+            return this;
+        }
+
+        /**
+         * The name of the database property expected to be modified.
+         */
+        public Builder databasePropertyName(String databasePropertyName) {
+            this.putQueryParameter("DatabasePropertyName", databasePropertyName);
+            this.databasePropertyName = databasePropertyName;
+            return this;
+        }
+
+        /**
+         * The database property value that is expected to be modified.
+         */
+        public Builder databasePropertyValue(String databasePropertyValue) {
+            this.putQueryParameter("DatabasePropertyValue", databasePropertyValue);
+            this.databasePropertyValue = databasePropertyValue;
             return this;
         }
 
@@ -177,19 +210,6 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * The permissions that you want to grant to the service account. Valid values:
-         * <p>
-         * 
-         * - **Control**: the configuration permissions, which allow you to view and modify the configuration of the instance.
-         * - **Data**: the data permissions, which allow you to view the schemas, indexes, and SQL statements of the instance.
-         */
-        public Builder privileges(String privileges) {
-            this.putQueryParameter("Privileges", privileges);
-            this.privileges = privileges;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -208,8 +228,8 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         @Override
-        public GrantOperatorPermissionRequest build() {
-            return new GrantOperatorPermissionRequest(this);
+        public ModifyDatabaseConfigRequest build() {
+            return new ModifyDatabaseConfigRequest(this);
         } 
 
     } 

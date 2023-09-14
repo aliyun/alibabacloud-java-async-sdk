@@ -325,7 +325,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireStatus.
+             * 内核版本过期状态：vaild-有效；expired-过期
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
