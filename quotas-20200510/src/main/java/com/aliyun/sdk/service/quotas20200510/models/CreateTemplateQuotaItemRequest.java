@@ -190,7 +190,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
          * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
          * <p>
          * 
-         * > If you do not specify this parameter, the quota takes effect immediately.
+         * > If you leave this parameter empty, the quota takes effect immediately.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putBodyParameter("EffectiveTime", effectiveTime);
@@ -215,7 +215,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
          * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
          * <p>
          * 
-         * > If the value of this parameter is empty, no end time is specified.
+         * > If you leave this parameter empty, no end time is specified.
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -258,11 +258,12 @@ public class CreateTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
+         * The quota type. Valid values:
          * <p>
          * 
          * *   CommonQuota: general quota
-         * *   WhiteListLabel: whitelist quota
+         * *   WhiteListLabel: privilege
+         * *   FlowControl: API rate limit
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -316,7 +317,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
             private String value; 
 
             /**
-             * The dimension keys.
+             * The key of the dimension.
              * <p>
              * 
              * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
@@ -329,7 +330,7 @@ public class CreateTemplateQuotaItemRequest extends Request {
             }
 
             /**
-             * The dimension values.
+             * The value of the dimension.
              * <p>
              * 
              * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.

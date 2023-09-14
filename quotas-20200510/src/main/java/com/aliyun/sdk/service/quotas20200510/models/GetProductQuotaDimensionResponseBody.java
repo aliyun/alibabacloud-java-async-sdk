@@ -50,7 +50,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the quota dimension.
+         * The details of the quota dimension.
          */
         public Builder quotaDimension(QuotaDimension quotaDimension) {
             this.quotaDimension = quotaDimension;
@@ -110,7 +110,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the dimension value.
+             * The name of the quota dimension value.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension value.
+             * The quota dimension value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -207,7 +207,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The quota dimensions that are supported by the cloud service.
+             * The quota dimensions on which the quota dimension that you want to query is dependent.
              */
             public Builder dependentDimensions(java.util.List < String > dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
@@ -215,13 +215,13 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension key. Valid values:
+             * The key of the quota dimension. Valid values:
              * <p>
              * 
-             * *   regionId: region ID
-             * *   zoneId: zone ID
-             * *   chargeType: billing method
-             * *   networkType: network type
+             * *   regionId: the region ID.
+             * *   zoneId: the zone ID.
+             * *   chargeType: the billing method.
+             * *   networkType: the network type.
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -229,7 +229,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the dimension value.
+             * The details of the quota dimension value.
              */
             public Builder dimensionValueDetail(java.util.List < DimensionValueDetail> dimensionValueDetail) {
                 this.dimensionValueDetail = dimensionValueDetail;
@@ -237,7 +237,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension values.
+             * The values of the quota dimension.
              */
             public Builder dimensionValues(java.util.List < String > dimensionValues) {
                 this.dimensionValues = dimensionValues;
@@ -245,7 +245,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dimension.
+             * The name of the quota dimension.
              */
             public Builder name(String name) {
                 this.name = name;

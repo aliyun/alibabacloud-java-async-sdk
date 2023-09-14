@@ -50,7 +50,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the quota.
+         * The details of the quotas.
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -210,10 +210,12 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the quota. 
+             * The unit of the new quota value.
              * <p>
              * 
-             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is Number of security groups.
+             * **
+             * 
+             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -256,6 +258,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
 
         @NameInMap("ApplicableType")
         private String applicableType;
+
+        @NameInMap("ApplyReasonTips")
+        private String applyReasonTips;
 
         @NameInMap("Consumable")
         private Boolean consumable;
@@ -315,6 +320,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             this.adjustable = builder.adjustable;
             this.applicableRange = builder.applicableRange;
             this.applicableType = builder.applicableType;
+            this.applyReasonTips = builder.applyReasonTips;
             this.consumable = builder.consumable;
             this.dimensions = builder.dimensions;
             this.effectiveTime = builder.effectiveTime;
@@ -362,6 +368,13 @@ public class GetProductQuotaResponseBody extends TeaModel {
          */
         public String getApplicableType() {
             return this.applicableType;
+        }
+
+        /**
+         * @return applyReasonTips
+         */
+        public String getApplyReasonTips() {
+            return this.applyReasonTips;
         }
 
         /**
@@ -494,6 +507,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             private Boolean adjustable; 
             private java.util.List < Float > applicableRange; 
             private String applicableType; 
+            private String applyReasonTips; 
             private Boolean consumable; 
             private java.util.Map < String, ? > dimensions; 
             private String effectiveTime; 
@@ -526,7 +540,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The range of the quota value, for example, `[802,10000]`.
+             * The range of the quota value.
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -546,6 +560,14 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
+             * ApplyReasonTips.
+             */
+            public Builder applyReasonTips(String applyReasonTips) {
+                this.applyReasonTips = applyReasonTips;
+                return this;
+            }
+
+            /**
              * Indicates whether the system shows the used value of the quota. Valid values:
              * <p>
              * 
@@ -558,7 +580,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimensions. Format: `{"regionId":"Region"}`.
+             * The quota dimension. Format: `{"regionId":"Region"}`.
              */
             public Builder dimensions(java.util.Map < String, ? > dimensions) {
                 this.dimensions = dimensions;
@@ -566,7 +588,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * The start time of the validity period of the quota. Specify the value in UTC.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -574,7 +596,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The end time of the validity period of the quota. Specify the value in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -614,7 +636,12 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaCategory.
+             * The type of the quota. Valid values:
+             * <p>
+             * 
+             * *   CommonQuota: general quota
+             * *   FlowControl: API rate limit
+             * *   WhiteListLabel: whitelist quota
              */
             public Builder quotaCategory(String quotaCategory) {
                 this.quotaCategory = quotaCategory;
@@ -630,7 +657,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the quota.
+             * The details of the quotas.
              */
             public Builder quotaItems(java.util.List < QuotaItems> quotaItems) {
                 this.quotaItems = quotaItems;
@@ -649,8 +676,8 @@ public class GetProductQuotaResponseBody extends TeaModel {
              * The type of the quota. Valid values:
              * <p>
              * 
-             * - privilege
-             * - normal (default value)
+             * *   privilege
+             * *   normal (default value)
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -658,10 +685,12 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the quota.
+             * The unit of the new quota value.
              * <p>
              * 
-             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+             * **
+             * 
+             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -669,11 +698,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The range of the quota value that can be requested for the current quota item. When you configure a quota template, you can use the range as a reference.  
-             * <p>
-             * 
-             * - If the value of the ApplicableType parameter is continuous and the value of the ApplicableRange parameter is [802,1000], the quota value ranges from 802 to 1,000.
-             * - If the value of the ApplicableType parameter is discontinuous and the value of the ApplicableRange parameter is [10,20,50,100], the quota value is 10, 20, 50, or 100.
+             * The range of the quota value.
              */
             public Builder supportedRange(java.util.List < Float > supportedRange) {
                 this.supportedRange = supportedRange;

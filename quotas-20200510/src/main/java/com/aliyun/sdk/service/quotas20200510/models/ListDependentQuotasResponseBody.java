@@ -50,7 +50,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of quotas on which the specified quota depends.
+         * The quotas on which the specified quota depends.
          */
         public Builder quotas(java.util.List < Quotas> quotas) {
             this.quotas = quotas;
@@ -58,7 +58,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             private java.util.List < String > dimensionValues; 
 
             /**
-             * The dimension of a quota on which the specified quota depends.
+             * DependentDimension.
              */
             public Builder dependentDimension(java.util.List < String > dependentDimension) {
                 this.dependentDimension = dependentDimension;
@@ -130,7 +130,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension key.
+             * The key of the quota dimension.
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -138,7 +138,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension values.
+             * DimensionValues.
              */
             public Builder dimensionValues(java.util.List < String > dimensionValues) {
                 this.dimensionValues = dimensionValues;
@@ -215,7 +215,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             private Float scale; 
 
             /**
-             * The dimensions of a quota on which the specified quota depends.
+             * The dimensions of the quotas on which the specified quota depends.
              */
             public Builder dimensions(java.util.List < Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -223,7 +223,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the cloud service name.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -231,7 +231,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota.
+             * The quota ID.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;

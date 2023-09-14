@@ -86,7 +86,7 @@ public class ListProductsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of records returned for the query.
+         * The maximum number of records that are returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
+         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the cloud service.
+         * The information of the Alibaba Cloud service.
          */
         public Builder productInfo(java.util.List < ProductInfo> productInfo) {
             this.productInfo = productInfo;
@@ -118,7 +118,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records returned for the query.
+         * The total number of records that are returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,11 +266,11 @@ public class ListProductsResponseBody extends TeaModel {
             private String whiteListLabelQuotaSupport; 
 
             /**
-             * Indicates whether the cloud service supports general quotas. Valid values:
+             * Indicates whether the Alibaba Cloud service supports general quotas. Valid values:
              * <p>
              * 
-             * *   support: The cloud service supports general quotas.
-             * *   unsupport: The cloud service does not support general quotas.
+             * *   support: The Alibaba Cloud service supports general quotas.
+             * *   unsupport: The Alibaba Cloud service does not support general quotas.
              */
             public Builder commonQuotaSupport(String commonQuotaSupport) {
                 this.commonQuotaSupport = commonQuotaSupport;
@@ -278,7 +278,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud service supports dynamic quota adjustment. Valid values:
+             * Indicates whether the Alibaba Cloud service supports dynamic quota adjustment. Valid values:
              * <p>
              * 
              * *   true
@@ -290,11 +290,11 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud service supports API rate limits. Valid values:
+             * Indicates whether the Alibaba Cloud service supports API rate limits. Valid values:
              * <p>
              * 
-             * *   support: The cloud service supports API rate limits.
-             * *   unsupport: The cloud service does not support API rate limits.
+             * *   support: The Alibaba Cloud service supports API rate limits.
+             * *   unsupport: The Alibaba Cloud service does not support API rate limits.
              */
             public Builder flowControlSupport(String flowControlSupport) {
                 this.flowControlSupport = flowControlSupport;
@@ -302,7 +302,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the cloud service name.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -310,7 +310,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service.
+             * The name of the Alibaba Cloud service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -318,7 +318,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service.
+             * The English name of the Alibaba Cloud service.
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -342,7 +342,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service category.
+             * The English name of the service category.
              */
             public Builder secondCategoryNameEn(String secondCategoryNameEn) {
                 this.secondCategoryNameEn = secondCategoryNameEn;
@@ -350,7 +350,11 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteListLabelQuotaSupport.
+             * Indicates whether the Alibaba Cloud service supports whitelist quotas. Valid values:
+             * <p>
+             * 
+             * *   support: The Alibaba Cloud service supports whitelist quotas.
+             * *   unsupport: The Alibaba Cloud service does not support whitelist quotas.
              */
             public Builder whiteListLabelQuotaSupport(String whiteListLabelQuotaSupport) {
                 this.whiteListLabelQuotaSupport = whiteListLabelQuotaSupport;

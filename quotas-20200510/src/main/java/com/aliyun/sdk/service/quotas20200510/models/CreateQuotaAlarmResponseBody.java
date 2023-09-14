@@ -50,7 +50,7 @@ public class CreateQuotaAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the alert.
+         * AlarmId.
          */
         public Builder alarmId(String alarmId) {
             this.alarmId = alarmId;
@@ -58,7 +58,7 @@ public class CreateQuotaAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

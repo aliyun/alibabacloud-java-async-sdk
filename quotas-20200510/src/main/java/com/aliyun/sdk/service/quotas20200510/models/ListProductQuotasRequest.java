@@ -253,7 +253,7 @@ public class ListProductQuotasRequest extends Request {
          * The type of the quota. Valid values:
          * <p>
          * 
-         * *   CommonQuota: general quota
+         * *   CommonQuota (default value): general quota
          * *   FlowControl: API rate limit
          * *   WhiteListLabel: whitelist quota
          */

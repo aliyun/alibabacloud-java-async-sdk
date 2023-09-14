@@ -83,7 +83,7 @@ public class GetProductQuotaDimensionRequest extends Request {
         } 
 
         /**
-         * The dimension details that are supported by the cloud service.
+         * The information about quota dimensions.
          */
         public Builder dependentDimensions(java.util.List < DependentDimensions> dependentDimensions) {
             this.putBodyParameter("DependentDimensions", dependentDimensions);
@@ -92,7 +92,7 @@ public class GetProductQuotaDimensionRequest extends Request {
         }
 
         /**
-         * The dimension key.
+         * The key of the quota dimension.
          */
         public Builder dimensionKey(String dimensionKey) {
             this.putBodyParameter("DimensionKey", dimensionKey);
@@ -101,10 +101,10 @@ public class GetProductQuotaDimensionRequest extends Request {
         }
 
         /**
-         * The abbreviation of the cloud service name.
+         * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -158,10 +158,10 @@ public class GetProductQuotaDimensionRequest extends Request {
             private String value; 
 
             /**
-             * The dimension keys that are supported by the cloud service.
+             * The key of the quota dimension on which the quota dimension that you want to query is dependent.
              * <p>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+             * > The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -169,10 +169,10 @@ public class GetProductQuotaDimensionRequest extends Request {
             }
 
             /**
-             * The dimension values that are supported by the cloud service.
+             * The value of the quota dimension on which the quota dimension that you want to query is dependent.
              * <p>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+             * > The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

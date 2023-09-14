@@ -84,10 +84,7 @@ public class ListProductDimensionGroupsRequest extends Request {
         } 
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
-         * 
-         * Valid values: 1 to 200. Default value: 30.
+         * The maximum number of records that can be returned for the query. Valid values: 1 to 200. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -108,7 +105,7 @@ public class ListProductDimensionGroupsRequest extends Request {
          * The service code.
          * <p>
          * 
-         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

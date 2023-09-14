@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTemplateQuotaItemResponse} extends {@link TeaModel}
+ * {@link CreateQuotaApplicationsForTemplateResponse} extends {@link TeaModel}
  *
- * <p>DeleteTemplateQuotaItemResponse</p>
+ * <p>CreateQuotaApplicationsForTemplateResponse</p>
  */
-public class DeleteTemplateQuotaItemResponse extends Response {
+public class CreateQuotaApplicationsForTemplateResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DeleteTemplateQuotaItemResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteTemplateQuotaItemResponseBody body;
+    private CreateQuotaApplicationsForTemplateResponseBody body;
 
-    private DeleteTemplateQuotaItemResponse(BuilderImpl builder) {
+    private CreateQuotaApplicationsForTemplateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteTemplateQuotaItemResponse create() {
+    public static CreateQuotaApplicationsForTemplateResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DeleteTemplateQuotaItemResponse extends Response {
     /**
      * @return body
      */
-    public DeleteTemplateQuotaItemResponseBody getBody() {
+    public CreateQuotaApplicationsForTemplateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteTemplateQuotaItemResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateQuotaApplicationsForTemplateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteTemplateQuotaItemResponseBody body);
+        Builder body(CreateQuotaApplicationsForTemplateResponseBody body);
 
         @Override
-        DeleteTemplateQuotaItemResponse build();
+        CreateQuotaApplicationsForTemplateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteTemplateQuotaItemResponse, Builder>
+            extends Response.BuilderImpl<CreateQuotaApplicationsForTemplateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteTemplateQuotaItemResponseBody body; 
+        private CreateQuotaApplicationsForTemplateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteTemplateQuotaItemResponse response) {
+        private BuilderImpl(CreateQuotaApplicationsForTemplateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DeleteTemplateQuotaItemResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteTemplateQuotaItemResponseBody body) {
+        public Builder body(CreateQuotaApplicationsForTemplateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteTemplateQuotaItemResponse build() {
-            return new DeleteTemplateQuotaItemResponse(this);
+        public CreateQuotaApplicationsForTemplateResponse build() {
+            return new CreateQuotaApplicationsForTemplateResponse(this);
         } 
 
     } 

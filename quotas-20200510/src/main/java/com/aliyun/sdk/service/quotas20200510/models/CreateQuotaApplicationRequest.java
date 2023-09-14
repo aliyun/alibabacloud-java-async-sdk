@@ -274,8 +274,8 @@ public class CreateQuotaApplicationRequest extends Request {
          * Specifies whether to send a notification about the application result. Valid values:
          * <p>
          * 
-         * *   0 (default value): no
-         * *   3: yes
+         * *   0 (default value): sends a notification about the application result.
+         * *   3: A notification about the application result is sent.
          */
         public Builder noticeType(Integer noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -308,7 +308,7 @@ public class CreateQuotaApplicationRequest extends Request {
          * The type of the quota.
          * <p>
          * 
-         * *   CommonQuota: general quota
+         * *   CommonQuota (default value): general quota
          * *   FlowControl: API rate limit
          * *   WhiteListLabel: whitelist quota
          */
@@ -376,7 +376,7 @@ public class CreateQuotaApplicationRequest extends Request {
             private String value; 
 
             /**
-             * The dimension keys.
+             * The key of the dimension.
              * <p>
              * 
              * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
@@ -389,7 +389,7 @@ public class CreateQuotaApplicationRequest extends Request {
             }
 
             /**
-             * The dimension values.
+             * The value of the dimension.
              * <p>
              * 
              * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.

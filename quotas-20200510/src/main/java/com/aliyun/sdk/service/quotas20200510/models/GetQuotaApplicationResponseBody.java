@@ -322,7 +322,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The quota for which you apply.
+             * The expected value of the quota.
              */
             public Builder desireValue(Integer desireValue) {
                 this.desireValue = desireValue;
@@ -330,7 +330,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimensions.
+             * The dimension.
              * <p>
              * 
              * Format: `{"regionId":"Region"}`.
@@ -341,7 +341,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota took effect.
+             * The time when the new quota value takes effect.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -349,7 +349,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota expired.
+             * The time when the new quota expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -357,7 +357,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Valid values:
+             * The method of that is used to send alert notifications. Valid values:
              * <p>
              * 
              * *   0: Quota Center does not send a notification.
@@ -370,7 +370,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the cloud service name.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -410,7 +410,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the quota.
+             * The unit of the new quota value.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -431,7 +431,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
              * 
              * *   Disagree: The application is rejected.
              * *   Agree: The application is approved.
-             * *   Process: The application is pending approval.
+             * *   Process: The application is being reviewed.
              * *   Cancel: The application is closed.
              */
             public Builder status(String status) {

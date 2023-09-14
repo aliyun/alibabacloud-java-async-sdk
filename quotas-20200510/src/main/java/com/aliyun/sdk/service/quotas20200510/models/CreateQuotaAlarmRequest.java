@@ -156,7 +156,7 @@ public class CreateQuotaAlarmRequest extends Request {
         } 
 
         /**
-         * The name of the quota alert.
+         * AlarmName.
          */
         public Builder alarmName(String alarmName) {
             this.putBodyParameter("AlarmName", alarmName);
@@ -165,10 +165,7 @@ public class CreateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The abbreviation of the cloud service name.
-         * <p>
-         * 
-         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * ProductCode.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -177,7 +174,7 @@ public class CreateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * QuotaActionCode.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -195,13 +192,7 @@ public class CreateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The numeric value of the alert threshold. The value must meet the following requirements:
-         * <p>
-         * 
-         * *   If the `ThresholdType` parameter is set to `used` and the used quota is greater than or equal to a specified value, you receive an alert. The alert threshold must be greater than the current used quota.
-         * *   If the `ThresholdType` parameter is set to `usable` and the available quota is less than or equal to a specified value, you received an alert. The alert threshold must be less than the current available quota.
-         * 
-         * >  You must set one of the Threshold and ThresholdPercent parameters.
+         * Threshold.
          */
         public Builder threshold(Float threshold) {
             this.putBodyParameter("Threshold", threshold);
@@ -210,13 +201,7 @@ public class CreateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The percentage of the alert threshold. Valid values:
-         * <p>
-         * 
-         * *   If the `ThresholdType` parameter is set to `used` and the percentage of the used quota in the total quota is greater than or equal to a specified value, you receive an alert. Value range: (50%, 100%].
-         * *   If the `ThresholdType` parameter is set to `usable` and the percentage of the available quota in the total quota is less than or equal to a specified value, you receive an alert. Value range: (0%, 50%].
-         * 
-         * >  You must set one of the Threshold and ThresholdPercent parameters.
+         * ThresholdPercent.
          */
         public Builder thresholdPercent(Float thresholdPercent) {
             this.putBodyParameter("ThresholdPercent", thresholdPercent);
@@ -225,11 +210,7 @@ public class CreateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The type of the quota alert. Valid values:
-         * <p>
-         * 
-         * *   used: The alert is created for the used quota.
-         * *   usable: The alert is created for the available quota.
+         * ThresholdType.
          */
         public Builder thresholdType(String thresholdType) {
             this.putBodyParameter("ThresholdType", thresholdType);
@@ -238,7 +219,7 @@ public class CreateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The webhook URL. Quota Center sends the alert notification to a specified URL by using an HTTP POST request.
+         * WebHook.
          */
         public Builder webHook(String webHook) {
             this.putBodyParameter("WebHook", webHook);
@@ -292,12 +273,7 @@ public class CreateQuotaAlarmRequest extends Request {
             private String value; 
 
             /**
-             * The dimension keys.
-             * <p>
-             * 
-             * The value range of N changes based on the number of dimensions that are supported by the related cloud service.
-             * 
-             * >  If you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess, this parameter is required.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -305,12 +281,7 @@ public class CreateQuotaAlarmRequest extends Request {
             }
 
             /**
-             * The dimension values.
-             * <p>
-             * 
-             * The value range of N changes based on the number of dimensions that are supported by the related cloud service.
-             * 
-             * >  If you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess, this parameter is required.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

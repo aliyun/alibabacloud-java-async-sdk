@@ -282,7 +282,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The quota dimensions.
+         * The quota dimension.
          */
         public Builder dimension(java.util.Map < String, ? > dimension) {
             this.dimension = dimension;

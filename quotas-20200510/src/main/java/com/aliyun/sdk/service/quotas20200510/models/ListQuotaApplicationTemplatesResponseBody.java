@@ -86,7 +86,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The maximum number of records that are returned for the query.
+         * The maximum number of records returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -105,7 +105,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The quota templates that are returned.
+         * The returned quota templates.
          */
         public Builder quotaApplicationTemplates(java.util.List < QuotaApplicationTemplates> quotaApplicationTemplates) {
             this.quotaApplicationTemplates = quotaApplicationTemplates;
@@ -113,7 +113,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +121,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that are returned for the query.
+         * The total number of records returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +134,74 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
     } 
 
+    public static class Period extends TeaModel {
+        @NameInMap("PeriodUnit")
+        private String periodUnit;
+
+        @NameInMap("PeriodValue")
+        private Integer periodValue;
+
+        private Period(Builder builder) {
+            this.periodUnit = builder.periodUnit;
+            this.periodValue = builder.periodValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Period create() {
+            return builder().build();
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return periodValue
+         */
+        public Integer getPeriodValue() {
+            return this.periodValue;
+        }
+
+        public static final class Builder {
+            private String periodUnit; 
+            private Integer periodValue; 
+
+            /**
+             * The unit of the calculation cycle. Valid values:
+             * <p>
+             * 
+             * *   second
+             * *   minute
+             * *   hour
+             * *   day
+             * *   week
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * The value of the calculation cycle.
+             */
+            public Builder periodValue(Integer periodValue) {
+                this.periodValue = periodValue;
+                return this;
+            }
+
+            public Period build() {
+                return new Period(this);
+            } 
+
+        } 
+
+    }
     public static class QuotaApplicationTemplates extends TeaModel {
         @NameInMap("ApplicableRange")
         private java.util.List < Float > applicableRange;
@@ -162,6 +230,9 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         @NameInMap("NoticeType")
         private Integer noticeType;
 
+        @NameInMap("Period")
+        private Period period;
+
         @NameInMap("ProductCode")
         private String productCode;
 
@@ -187,6 +258,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.id = builder.id;
             this.noticeType = builder.noticeType;
+            this.period = builder.period;
             this.productCode = builder.productCode;
             this.quotaActionCode = builder.quotaActionCode;
             this.quotaCategory = builder.quotaCategory;
@@ -266,6 +338,13 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return period
+         */
+        public Period getPeriod() {
+            return this.period;
+        }
+
+        /**
          * @return productCode
          */
         public String getProductCode() {
@@ -310,6 +389,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             private String expireTime; 
             private String id; 
             private Integer noticeType; 
+            private Period period; 
             private String productCode; 
             private String quotaActionCode; 
             private String quotaCategory; 
@@ -317,7 +397,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             private String quotaName; 
 
             /**
-             * None
+             * N/A
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -356,7 +436,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 配额生效的UTC时间。
+             * The start time of the validity period of the quota. The value is displayed in UTC.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -376,7 +456,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 配额失效的UTC时间。
+             * The end time of the validity period of the quota. The value is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -404,6 +484,14 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * The calculation cycle of the quota.
+             */
+            public Builder period(Period period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
              * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
@@ -420,10 +508,11 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 配额类型。
+             * The type of the quota.
              * <p>
-             * - CommonQuota：通用配额。
-             * - WhiteListLabel：权益配额。
+             * 
+             * *   CommonQuota: general quota
+             * *   WhiteListLabel: privilege
              */
             public Builder quotaCategory(String quotaCategory) {
                 this.quotaCategory = quotaCategory;

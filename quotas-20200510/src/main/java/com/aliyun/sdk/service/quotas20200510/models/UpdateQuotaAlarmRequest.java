@@ -148,10 +148,10 @@ public class UpdateQuotaAlarmRequest extends Request {
          * The numeric value of the alert threshold. Valid values:
          * <p>
          * 
-         * *   If the `ThresholdType` parameter is set to `used` and the used quota is greater than or equal to a specified value, you receive alert notifications. The alert threshold must be greater than the current used quota.
-         * *   If the `ThresholdType` parameter is set to `usable` and the available quota is less than or equal to a specified value, you receive alert notifications. The alert threshold must be less than the current available quota.
+         * *   If you set the `ThresholdType` parameter to `used`, you will receive an alert notification when the used quota is greater than or equal to the preset alert threshold. The alert threshold must be greater than the current used quota.
+         * *   If you set the `ThresholdType` parameter to `usable`, you will receive an alert notification when the available quota is less than or equal to the preset alert threshold. The alert threshold must be less than the current available quota.
          * 
-         * >  You must set one of the Threshold and ThresholdPercent parameters.
+         * > You must set one of the Threshold and ThresholdPercent parameters.
          */
         public Builder threshold(Float threshold) {
             this.putBodyParameter("Threshold", threshold);
@@ -163,10 +163,10 @@ public class UpdateQuotaAlarmRequest extends Request {
          * The percentage of the alert threshold. Valid values:
          * <p>
          * 
-         * *   If the `ThresholdType` parameter is set to `used` and the percentage of the used quota in the total quota is greater than or equal to a specified value, you receive alert notifications. Value range: (50%, 100%].
-         * *   If the `ThresholdType` parameter is set to `usable` and the percentage of the available quota in the total quota is less than or equal to a specified value, you receive alert notifications. Value range: (0%, 50%].
+         * *   If you set the `ThresholdType` parameter to `used`, you will receive an alert notification when the used quota is greater than or equal to the preset percentage of the alert threshold. Value range: (50%, 100%].
+         * *   If you set the `ThresholdType` parameter to `usable`, you will receive an alert notification when the available quota is less than or equal to the preset percentage of the alert threshold. Value range: (0%, 50%].
          * 
-         * >  You must set one of the Threshold and ThresholdPercent parameters.
+         * > You must set one of the Threshold and ThresholdPercent parameters.
          */
         public Builder thresholdPercent(Float thresholdPercent) {
             this.putBodyParameter("ThresholdPercent", thresholdPercent);
@@ -188,7 +188,7 @@ public class UpdateQuotaAlarmRequest extends Request {
         }
 
         /**
-         * The webhook URL. Quota Center sends the alert notification to a specified URL by using an HTTP POST request.
+         * The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.
          */
         public Builder webHook(String webHook) {
             this.putBodyParameter("WebHook", webHook);

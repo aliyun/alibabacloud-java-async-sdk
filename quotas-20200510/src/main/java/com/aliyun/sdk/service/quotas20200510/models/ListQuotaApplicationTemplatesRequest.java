@@ -168,7 +168,7 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
          * The token that marks the position from which you want to start the query.
          * <p>
          * 
-         * > An empty value indicates that the query starts from the beginning.
+         * > If you leave this parameter empty, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -198,10 +198,12 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
         }
 
         /**
-         * 配额种类。取值：
+         * The type of the quota. Valid values:
          * <p>
-         * - CommonQuota：通用配额。
-         * - WhiteListLabel：权益配额。
+         * 
+         * *   CommonQuota: general quota
+         * *   WhiteListLabel: privilege
+         * *   FlowControl: API rate limit
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

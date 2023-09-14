@@ -118,11 +118,11 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the quota template. Valid values:
+             * The state of the quota template. Valid values:
              * <p>
              * 
-             * *   \-1: disabled
-             * *   1: enabled
+             * *   \-1: The quota template is disabled.
+             * *   1: The quota template is enabled.
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;

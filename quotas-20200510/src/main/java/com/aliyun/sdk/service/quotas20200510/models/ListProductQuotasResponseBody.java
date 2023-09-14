@@ -275,7 +275,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
              * 
              * **
              * 
-             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -318,6 +318,9 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
         @NameInMap("ApplicableType")
         private String applicableType;
+
+        @NameInMap("ApplyReasonTips")
+        private String applyReasonTips;
 
         @NameInMap("Consumable")
         private Boolean consumable;
@@ -377,6 +380,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             this.adjustable = builder.adjustable;
             this.applicableRange = builder.applicableRange;
             this.applicableType = builder.applicableType;
+            this.applyReasonTips = builder.applyReasonTips;
             this.consumable = builder.consumable;
             this.dimensions = builder.dimensions;
             this.effectiveTime = builder.effectiveTime;
@@ -424,6 +428,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
          */
         public String getApplicableType() {
             return this.applicableType;
+        }
+
+        /**
+         * @return applyReasonTips
+         */
+        public String getApplyReasonTips() {
+            return this.applyReasonTips;
         }
 
         /**
@@ -556,6 +567,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             private Boolean adjustable; 
             private java.util.List < Float > applicableRange; 
             private String applicableType; 
+            private String applyReasonTips; 
             private Boolean consumable; 
             private java.util.Map < String, ? > dimensions; 
             private String effectiveTime; 
@@ -588,7 +600,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * None.
+             * None
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -608,6 +620,14 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
+             * ApplyReasonTips.
+             */
+            public Builder applyReasonTips(String applyReasonTips) {
+                this.applyReasonTips = applyReasonTips;
+                return this;
+            }
+
+            /**
              * Indicates whether the system shows the used value of the quota. Valid values:
              * <p>
              * 
@@ -620,7 +640,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimensions. Format: `{"regionId":"Region"}`.
+             * The quota dimension. Format: `{"regionId":"Region"}`.
              */
             public Builder dimensions(java.util.Map < String, ? > dimensions) {
                 this.dimensions = dimensions;
@@ -628,7 +648,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the validity period of the quota. The value is displayed in UTC.
+             * The start time of the validity period of the quota. Specify the value in UTC.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -636,7 +656,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the validity period of the quota. The value is displayed in UTC.
+             * The end time of the validity period of the quota. Specify the value in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -738,7 +758,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * None.
+             * None
              */
             public Builder supportedRange(java.util.List < Float > supportedRange) {
                 this.supportedRange = supportedRange;

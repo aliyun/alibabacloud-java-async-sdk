@@ -94,7 +94,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The maximum number of records that are returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -194,7 +194,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
             private String productCode; 
 
             /**
-             * The keys of the dimension group.
+             * The key of the dimension group.
              */
             public Builder dimensionKeys(java.util.List < String > dimensionKeys) {
                 this.dimensionKeys = dimensionKeys;

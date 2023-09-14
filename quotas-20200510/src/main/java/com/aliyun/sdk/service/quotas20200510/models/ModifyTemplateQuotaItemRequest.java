@@ -181,7 +181,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         } 
 
         /**
-         * The requested value of the quota.
+         * DesireValue.
          */
         public Builder desireValue(Float desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -190,7 +190,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The quota dimensions.
+         * Dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -199,10 +199,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-         * <p>
-         * 
-         * > If you do not specify this parameter, the quota takes effect immediately.
+         * EffectiveTime.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putBodyParameter("EffectiveTime", effectiveTime);
@@ -211,11 +208,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The language of the quota alert notification. Valid values:
-         * <p>
-         * 
-         * *   zh (default value): Chinese
-         * *   en: English
+         * EnvLanguage.
          */
         public Builder envLanguage(String envLanguage) {
             this.putBodyParameter("EnvLanguage", envLanguage);
@@ -224,10 +217,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-         * <p>
-         * 
-         * > If the value of this parameter is empty, no end time is specified.
+         * ExpireTime.
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -236,7 +226,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The ID of the quota template. For more information about how to obtain the ID of a quota template, see [ListQuotaApplicationTemplates](~~450403~~).
+         * Id.
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -245,11 +235,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to send a notification about the application result. Valid values:
-         * <p>
-         * 
-         * *   0 (default value): no
-         * *   3: yes
+         * NoticeType.
          */
         public Builder noticeType(Long noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -258,10 +244,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
-         * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * ProductCode.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -270,7 +253,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * QuotaActionCode.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -279,11 +262,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
-         * <p>
-         * 
-         * *   CommonQuota: general quota
-         * *   WhiteListLabel: whitelist quota
+         * QuotaCategory.
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putQueryParameter("QuotaCategory", quotaCategory);
@@ -337,12 +316,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
             private String value; 
 
             /**
-             * The dimension keys.
-             * <p>
-             * 
-             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,12 +324,7 @@ public class ModifyTemplateQuotaItemRequest extends Request {
             }
 
             /**
-             * The dimension values.
-             * <p>
-             * 
-             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

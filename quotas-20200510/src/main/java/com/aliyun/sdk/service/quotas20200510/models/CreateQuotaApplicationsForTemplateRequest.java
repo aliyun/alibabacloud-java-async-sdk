@@ -7,27 +7,40 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListQuotaApplicationsRequest} extends {@link RequestModel}
+ * {@link CreateQuotaApplicationsForTemplateRequest} extends {@link RequestModel}
  *
- * <p>ListQuotaApplicationsRequest</p>
+ * <p>CreateQuotaApplicationsForTemplateRequest</p>
  */
-public class ListQuotaApplicationsRequest extends Request {
+public class CreateQuotaApplicationsForTemplateRequest extends Request {
+    @Body
+    @NameInMap("AliyunUids")
+    @Validation(required = true)
+    private java.util.List < String > aliyunUids;
+
+    @Body
+    @NameInMap("DesireValue")
+    @Validation(required = true)
+    private Double desireValue;
+
     @Body
     @NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
     @Body
-    @NameInMap("KeyWord")
-    private String keyWord;
+    @NameInMap("EffectiveTime")
+    private String effectiveTime;
 
     @Body
-    @NameInMap("MaxResults")
-    @Validation(maximum = 200)
-    private Integer maxResults;
+    @NameInMap("EnvLanguage")
+    private String envLanguage;
 
     @Body
-    @NameInMap("NextToken")
-    private String nextToken;
+    @NameInMap("ExpireTime")
+    private String expireTime;
+
+    @Body
+    @NameInMap("NoticeType")
+    private Integer noticeType;
 
     @Body
     @NameInMap("ProductCode")
@@ -36,39 +49,59 @@ public class ListQuotaApplicationsRequest extends Request {
 
     @Body
     @NameInMap("QuotaActionCode")
+    @Validation(required = true)
     private String quotaActionCode;
 
     @Body
     @NameInMap("QuotaCategory")
+    @Validation(required = true)
     private String quotaCategory;
 
     @Body
-    @NameInMap("Status")
-    private String status;
+    @NameInMap("Reason")
+    @Validation(required = true)
+    private String reason;
 
-    private ListQuotaApplicationsRequest(Builder builder) {
+    private CreateQuotaApplicationsForTemplateRequest(Builder builder) {
         super(builder);
+        this.aliyunUids = builder.aliyunUids;
+        this.desireValue = builder.desireValue;
         this.dimensions = builder.dimensions;
-        this.keyWord = builder.keyWord;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
+        this.effectiveTime = builder.effectiveTime;
+        this.envLanguage = builder.envLanguage;
+        this.expireTime = builder.expireTime;
+        this.noticeType = builder.noticeType;
         this.productCode = builder.productCode;
         this.quotaActionCode = builder.quotaActionCode;
         this.quotaCategory = builder.quotaCategory;
-        this.status = builder.status;
+        this.reason = builder.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListQuotaApplicationsRequest create() {
+    public static CreateQuotaApplicationsForTemplateRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aliyunUids
+     */
+    public java.util.List < String > getAliyunUids() {
+        return this.aliyunUids;
+    }
+
+    /**
+     * @return desireValue
+     */
+    public Double getDesireValue() {
+        return this.desireValue;
     }
 
     /**
@@ -79,24 +112,31 @@ public class ListQuotaApplicationsRequest extends Request {
     }
 
     /**
-     * @return keyWord
+     * @return effectiveTime
      */
-    public String getKeyWord() {
-        return this.keyWord;
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     /**
-     * @return maxResults
+     * @return envLanguage
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getEnvLanguage() {
+        return this.envLanguage;
     }
 
     /**
-     * @return nextToken
+     * @return expireTime
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    /**
+     * @return noticeType
+     */
+    public Integer getNoticeType() {
+        return this.noticeType;
     }
 
     /**
@@ -121,40 +161,64 @@ public class ListQuotaApplicationsRequest extends Request {
     }
 
     /**
-     * @return status
+     * @return reason
      */
-    public String getStatus() {
-        return this.status;
+    public String getReason() {
+        return this.reason;
     }
 
-    public static final class Builder extends Request.Builder<ListQuotaApplicationsRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateQuotaApplicationsForTemplateRequest, Builder> {
+        private java.util.List < String > aliyunUids; 
+        private Double desireValue; 
         private java.util.List < Dimensions> dimensions; 
-        private String keyWord; 
-        private Integer maxResults; 
-        private String nextToken; 
+        private String effectiveTime; 
+        private String envLanguage; 
+        private String expireTime; 
+        private Integer noticeType; 
         private String productCode; 
         private String quotaActionCode; 
         private String quotaCategory; 
-        private String status; 
+        private String reason; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListQuotaApplicationsRequest request) {
+        private Builder(CreateQuotaApplicationsForTemplateRequest request) {
             super(request);
+            this.aliyunUids = request.aliyunUids;
+            this.desireValue = request.desireValue;
             this.dimensions = request.dimensions;
-            this.keyWord = request.keyWord;
-            this.maxResults = request.maxResults;
-            this.nextToken = request.nextToken;
+            this.effectiveTime = request.effectiveTime;
+            this.envLanguage = request.envLanguage;
+            this.expireTime = request.expireTime;
+            this.noticeType = request.noticeType;
             this.productCode = request.productCode;
             this.quotaActionCode = request.quotaActionCode;
             this.quotaCategory = request.quotaCategory;
-            this.status = request.status;
+            this.reason = request.reason;
         } 
 
         /**
-         * The quota dimensions.
+         * AliyunUids.
+         */
+        public Builder aliyunUids(java.util.List < String > aliyunUids) {
+            this.putBodyParameter("AliyunUids", aliyunUids);
+            this.aliyunUids = aliyunUids;
+            return this;
+        }
+
+        /**
+         * DesireValue.
+         */
+        public Builder desireValue(Double desireValue) {
+            this.putBodyParameter("DesireValue", desireValue);
+            this.desireValue = desireValue;
+            return this;
+        }
+
+        /**
+         * Dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -163,40 +227,43 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The keyword that you want to use to search for the application.
+         * EffectiveTime.
          */
-        public Builder keyWord(String keyWord) {
-            this.putBodyParameter("KeyWord", keyWord);
-            this.keyWord = keyWord;
+        public Builder effectiveTime(String effectiveTime) {
+            this.putBodyParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
             return this;
         }
 
         /**
-         * The maximum number of records that can be returned for the query.
-         * <p>
-         * 
-         * Valid values: 1 to 200. Default value: 30.
+         * EnvLanguage.
          */
-        public Builder maxResults(Integer maxResults) {
-            this.putBodyParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
+        public Builder envLanguage(String envLanguage) {
+            this.putBodyParameter("EnvLanguage", envLanguage);
+            this.envLanguage = envLanguage;
             return this;
         }
 
         /**
-         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+         * ExpireTime.
          */
-        public Builder nextToken(String nextToken) {
-            this.putBodyParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
+        public Builder expireTime(String expireTime) {
+            this.putBodyParameter("ExpireTime", expireTime);
+            this.expireTime = expireTime;
             return this;
         }
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
-         * <p>
-         * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * NoticeType.
+         */
+        public Builder noticeType(Integer noticeType) {
+            this.putBodyParameter("NoticeType", noticeType);
+            this.noticeType = noticeType;
+            return this;
+        }
+
+        /**
+         * ProductCode.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -205,7 +272,7 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * QuotaActionCode.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -214,12 +281,7 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The type of the quota. Valid values:
-         * <p>
-         * 
-         * *   CommonQuota: general quota
-         * *   FlowControl: API rate limit
-         * *   WhiteListLabel: whitelist quota
+         * QuotaCategory.
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -228,23 +290,17 @@ public class ListQuotaApplicationsRequest extends Request {
         }
 
         /**
-         * The status of the application. Valid values:
-         * <p>
-         * 
-         * *   Disagree: rejects the application.
-         * *   Agree: approves the application.
-         * *   Process: reviews the application.
-         * *   Cancel: cancels the application.
+         * Reason.
          */
-        public Builder status(String status) {
-            this.putBodyParameter("Status", status);
-            this.status = status;
+        public Builder reason(String reason) {
+            this.putBodyParameter("Reason", reason);
+            this.reason = reason;
             return this;
         }
 
         @Override
-        public ListQuotaApplicationsRequest build() {
-            return new ListQuotaApplicationsRequest(this);
+        public CreateQuotaApplicationsForTemplateRequest build() {
+            return new CreateQuotaApplicationsForTemplateRequest(this);
         } 
 
     } 
@@ -288,10 +344,7 @@ public class ListQuotaApplicationsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the dimension.
-             * <p>
-             * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,10 +352,7 @@ public class ListQuotaApplicationsRequest extends Request {
             }
 
             /**
-             * The value of the dimension.
-             * <p>
-             * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

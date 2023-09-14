@@ -97,7 +97,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
          * The token that marks the position at which the query ends.
          * <p>
          * 
-         * >  If an empty value is returned, all data is queried.
+         * > An empty value indicates that all data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -329,7 +329,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             private String webHook; 
 
             /**
-             * The ID of the quota alert.
+             * The ID of the alert.
              */
             public Builder alarmId(String alarmId) {
                 this.alarmId = alarmId;
@@ -337,7 +337,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the quota alert.
+             * The name of the alert event.
              */
             public Builder alarmName(String alarmName) {
                 this.alarmName = alarmName;
@@ -365,11 +365,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Valid values:
-             * <p>
-             * 
-             * *   sms: SMS messages
-             * *   email: emails
+             * NotifyChannels.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -377,7 +373,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact. Valid value: accountContact.
+             * The alert contact. The value is accountContact.
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -385,7 +381,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the cloud service name.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

@@ -94,7 +94,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of records returned for the query.
+         * The maximum number of records that are returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
+         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -118,7 +118,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records returned for the query.
+         * The total number of records that are returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -270,11 +270,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The notification methods of the quota alert. Valid values:
-             * <p>
-             * 
-             * *   sms: short messages
-             * *   email: emails
+             * NotifyChannels.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -290,7 +286,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the cloud service name.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

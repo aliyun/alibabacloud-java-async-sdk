@@ -86,7 +86,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of records returned for the query.
+         * The maximum number of records that are returned for the query.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that marks the position where the query ends. An empty value indicates that all the data is returned.
+         * The token that marks the position at which the query ends. An empty value indicates that all data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The quota dimensions.
+         * The information about quota dimensions.
          */
         public Builder quotaDimensions(java.util.List < QuotaDimensions> quotaDimensions) {
             this.quotaDimensions = quotaDimensions;
@@ -118,7 +118,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records returned for the query.
+         * The total number of records that are returned for the query.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the dimension value.
+             * The name of the quota dimension value.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension value.
+             * The quota dimension value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -279,7 +279,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private Boolean requisite; 
 
             /**
-             * The quota dimensions that are supported by the cloud service.
+             * DependentDimensions.
              */
             public Builder dependentDimensions(java.util.List < String > dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
@@ -287,13 +287,13 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension key. Valid values:
+             * The key of the quota dimension. Valid values:
              * <p>
              * 
-             * *   RegionId: the region ID
-             * *   zoneId: the zone ID
-             * *   chargeType: the billing method
-             * *   networkType: the network type
+             * *   regionId: the region ID.
+             * *   zoneId: the zone ID.
+             * *   chargeType: the billing method.
+             * *   networkType: the network type.
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -301,7 +301,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the dimension value.
+             * The details of the quota dimension value.
              */
             public Builder dimensionValueDetail(java.util.List < DimensionValueDetail> dimensionValueDetail) {
                 this.dimensionValueDetail = dimensionValueDetail;
@@ -309,7 +309,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the dimension values.
+             * DimensionValues.
              */
             public Builder dimensionValues(java.util.List < String > dimensionValues) {
                 this.dimensionValues = dimensionValues;

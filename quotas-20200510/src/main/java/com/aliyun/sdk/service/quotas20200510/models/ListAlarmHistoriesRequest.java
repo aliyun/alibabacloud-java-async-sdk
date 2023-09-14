@@ -133,7 +133,7 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The keyword that is used to execute the query.
+         * The keyword that is used for the query.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -142,7 +142,7 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The maximum number of records to be returned for the query.
+         * The maximum number of records that can be returned for the query.
          * <p>
          * 
          * Valid values: 1 to 200. Default value: 30.
@@ -154,7 +154,7 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
+         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -163,10 +163,10 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The abbreviation of the cloud service name.
+         * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * >  For more information about the Alibaba Cloud services that support Quota Center, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -175,7 +175,7 @@ public class ListAlarmHistoriesRequest extends Request {
         }
 
         /**
-         * The start of the time range to query.
+         * The beginning of the time range to query.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

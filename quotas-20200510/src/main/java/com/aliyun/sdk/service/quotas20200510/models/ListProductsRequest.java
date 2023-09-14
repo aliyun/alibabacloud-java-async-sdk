@@ -69,7 +69,7 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * The maximum number of records to be returned for the query.
+         * The maximum number of records that can be returned for the query.
          * <p>
          * 
          * Valid values: 1 to 200. Default value: 30.
@@ -81,7 +81,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
+         * The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

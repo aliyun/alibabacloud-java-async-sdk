@@ -125,7 +125,7 @@ public class ListQuotaAlarmsRequest extends Request {
         } 
 
         /**
-         * The name of the quota alert.
+         * The name of the alert.
          */
         public Builder alarmName(String alarmName) {
             this.putBodyParameter("AlarmName", alarmName);
@@ -134,7 +134,7 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The maximum number of records that you want to return for the query.
+         * The maximum number of records that can be returned for the query.
          * <p>
          * 
          * Valid values: 1 to 200. Default value: 30.
@@ -149,7 +149,7 @@ public class ListQuotaAlarmsRequest extends Request {
          * The token that marks the position from which you want to start the query.
          * <p>
          * 
-         * >  An empty value indicates that the query starts from the beginning.
+         * > An empty value indicates that the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -158,10 +158,10 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The abbreviation of the cloud service name.
+         * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -171,6 +171,9 @@ public class ListQuotaAlarmsRequest extends Request {
 
         /**
          * The ID of the quota.
+         * <p>
+         * 
+         * > The `ProductCode` parameter is required if you specify this parameter.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -179,7 +182,7 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * QuotaDimensions.
+         * The quota dimensions.
          */
         public Builder quotaDimensions(java.util.List < QuotaDimensions> quotaDimensions) {
             this.putBodyParameter("QuotaDimensions", quotaDimensions);
@@ -233,10 +236,10 @@ public class ListQuotaAlarmsRequest extends Request {
             private String value; 
 
             /**
-             * The dimension keys.
+             * The key of the dimension.
              * <p>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -244,10 +247,10 @@ public class ListQuotaAlarmsRequest extends Request {
             }
 
             /**
-             * The dimension values.
+             * The value of the dimension.
              * <p>
              * 
-             * >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;
