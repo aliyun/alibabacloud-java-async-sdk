@@ -16,6 +16,10 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ModifyIPv6TranslatorAttributeResponseBody body;
@@ -23,6 +27,7 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
     private ModifyIPv6TranslatorAttributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ModifyIPv6TranslatorAttributeResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
     public interface Builder extends Response.Builder<ModifyIPv6TranslatorAttributeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ModifyIPv6TranslatorAttributeResponseBody body);
 
@@ -64,6 +78,7 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
             extends Response.BuilderImpl<ModifyIPv6TranslatorAttributeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ModifyIPv6TranslatorAttributeResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
         private BuilderImpl(ModifyIPv6TranslatorAttributeResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ModifyIPv6TranslatorAttributeResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

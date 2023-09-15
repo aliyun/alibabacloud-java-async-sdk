@@ -16,6 +16,10 @@ public class GrantInstanceToVbrResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GrantInstanceToVbrResponseBody body;
@@ -23,6 +27,7 @@ public class GrantInstanceToVbrResponse extends Response {
     private GrantInstanceToVbrResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GrantInstanceToVbrResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GrantInstanceToVbrResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GrantInstanceToVbrResponse extends Response {
     public interface Builder extends Response.Builder<GrantInstanceToVbrResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GrantInstanceToVbrResponseBody body);
 
@@ -64,6 +78,7 @@ public class GrantInstanceToVbrResponse extends Response {
             extends Response.BuilderImpl<GrantInstanceToVbrResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GrantInstanceToVbrResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GrantInstanceToVbrResponse extends Response {
         private BuilderImpl(GrantInstanceToVbrResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GrantInstanceToVbrResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

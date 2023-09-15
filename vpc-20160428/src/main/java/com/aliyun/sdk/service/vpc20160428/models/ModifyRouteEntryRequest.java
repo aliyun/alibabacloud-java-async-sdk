@@ -17,6 +17,14 @@ public class ModifyRouteEntryRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("NewNextHopId")
+    private String newNextHopId;
+
+    @Query
+    @NameInMap("NewNextHopType")
+    private String newNextHopType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -49,6 +57,8 @@ public class ModifyRouteEntryRequest extends Request {
     private ModifyRouteEntryRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.newNextHopId = builder.newNextHopId;
+        this.newNextHopType = builder.newNextHopType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -76,6 +86,20 @@ public class ModifyRouteEntryRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return newNextHopId
+     */
+    public String getNewNextHopId() {
+        return this.newNextHopId;
+    }
+
+    /**
+     * @return newNextHopType
+     */
+    public String getNewNextHopType() {
+        return this.newNextHopType;
     }
 
     /**
@@ -129,6 +153,8 @@ public class ModifyRouteEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyRouteEntryRequest, Builder> {
         private String description; 
+        private String newNextHopId; 
+        private String newNextHopType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -144,6 +170,8 @@ public class ModifyRouteEntryRequest extends Request {
         private Builder(ModifyRouteEntryRequest request) {
             super(request);
             this.description = request.description;
+            this.newNextHopId = request.newNextHopId;
+            this.newNextHopType = request.newNextHopType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -162,6 +190,24 @@ public class ModifyRouteEntryRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * NewNextHopId.
+         */
+        public Builder newNextHopId(String newNextHopId) {
+            this.putQueryParameter("NewNextHopId", newNextHopId);
+            this.newNextHopId = newNextHopId;
+            return this;
+        }
+
+        /**
+         * NewNextHopType.
+         */
+        public Builder newNextHopType(String newNextHopType) {
+            this.putQueryParameter("NewNextHopType", newNextHopType);
+            this.newNextHopType = newNextHopType;
             return this;
         }
 

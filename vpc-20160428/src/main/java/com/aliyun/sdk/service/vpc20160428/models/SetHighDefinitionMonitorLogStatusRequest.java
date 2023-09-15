@@ -203,7 +203,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The name of the project of Log Service.
+         * The name of the Simple Log Service (SLS) project.
          */
         public Builder logProject(String logProject) {
             this.putQueryParameter("LogProject", logProject);
@@ -212,7 +212,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The name of the Logstore of Log Service.
+         * The name of the Logstore.
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -239,7 +239,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance is deployed.
+         * The region ID of the instance.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -272,8 +272,8 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
          * The status of fine-grained monitoring. Valid values:
          * <p>
          * 
-         * *   **ON**: enables fine-grained monitoring.
-         * *   **OFF**: disables fine-grained monitoring.
+         * *   **ON**
+         * *   **OFF**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

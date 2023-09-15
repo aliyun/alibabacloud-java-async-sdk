@@ -141,7 +141,7 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP bandwidth plan.
+         * The ID of the Internet Shared Bandwidth instance.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -150,7 +150,7 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the EIP that is associated with the EIP bandwidth plan.
+         * The ID of the EIP that is associated with the Internet Shared Bandwidth instance.
          */
         public Builder eipId(String eipId) {
             this.putQueryParameter("EipId", eipId);
@@ -177,7 +177,7 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The region ID of the EIP bandwidth plan. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

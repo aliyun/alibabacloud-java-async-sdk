@@ -209,7 +209,7 @@ public class UnassociateEipAddressRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,8 +221,8 @@ public class UnassociateEipAddressRequest extends Request {
          * Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:
          * <p>
          * 
-         * *   **false** (default): does not disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.
-         * *   **true**: disassociates the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -283,10 +283,7 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the EIP belongs.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -16,6 +16,10 @@ public class CreateRouteEntriesResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateRouteEntriesResponseBody body;
@@ -23,6 +27,7 @@ public class CreateRouteEntriesResponse extends Response {
     private CreateRouteEntriesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateRouteEntriesResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateRouteEntriesResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateRouteEntriesResponse extends Response {
     public interface Builder extends Response.Builder<CreateRouteEntriesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateRouteEntriesResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateRouteEntriesResponse extends Response {
             extends Response.BuilderImpl<CreateRouteEntriesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateRouteEntriesResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateRouteEntriesResponse extends Response {
         private BuilderImpl(CreateRouteEntriesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateRouteEntriesResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
