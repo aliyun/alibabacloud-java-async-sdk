@@ -61,10 +61,10 @@ public class QueryDomainSuffixRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDomainSuffixRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryDomainSuffixRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

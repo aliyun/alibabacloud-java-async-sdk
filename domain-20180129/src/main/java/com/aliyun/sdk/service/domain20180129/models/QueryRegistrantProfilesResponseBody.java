@@ -204,6 +204,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("CredentialNo")
+        private String credentialNo;
+
+        @NameInMap("CredentialType")
+        private String credentialType;
+
         @NameInMap("DefaultRegistrantProfile")
         private Boolean defaultRegistrantProfile;
 
@@ -269,6 +275,8 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             this.city = builder.city;
             this.country = builder.country;
             this.createTime = builder.createTime;
+            this.credentialNo = builder.credentialNo;
+            this.credentialType = builder.credentialType;
             this.defaultRegistrantProfile = builder.defaultRegistrantProfile;
             this.email = builder.email;
             this.emailVerificationStatus = builder.emailVerificationStatus;
@@ -325,6 +333,20 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return credentialNo
+         */
+        public String getCredentialNo() {
+            return this.credentialNo;
+        }
+
+        /**
+         * @return credentialType
+         */
+        public String getCredentialType() {
+            return this.credentialType;
         }
 
         /**
@@ -472,6 +494,8 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             private String city; 
             private String country; 
             private String createTime; 
+            private String credentialNo; 
+            private String credentialType; 
             private Boolean defaultRegistrantProfile; 
             private String email; 
             private Integer emailVerificationStatus; 
@@ -522,6 +546,22 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CredentialNo.
+             */
+            public Builder credentialNo(String credentialNo) {
+                this.credentialNo = credentialNo;
+                return this;
+            }
+
+            /**
+             * CredentialType.
+             */
+            public Builder credentialType(String credentialType) {
+                this.credentialType = credentialType;
                 return this;
             }
 

@@ -75,11 +75,11 @@ public class QueryTransferInByInstanceIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTransferInByInstanceIdRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTransferInByInstanceIdRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

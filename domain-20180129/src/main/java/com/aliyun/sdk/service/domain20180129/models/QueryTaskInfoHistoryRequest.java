@@ -127,15 +127,15 @@ public class QueryTaskInfoHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskInfoHistoryRequest response) {
-            super(response);
-            this.beginCreateTime = response.beginCreateTime;
-            this.createTimeCursor = response.createTimeCursor;
-            this.endCreateTime = response.endCreateTime;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.taskNoCursor = response.taskNoCursor;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTaskInfoHistoryRequest request) {
+            super(request);
+            this.beginCreateTime = request.beginCreateTime;
+            this.createTimeCursor = request.createTimeCursor;
+            this.endCreateTime = request.endCreateTime;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.taskNoCursor = request.taskNoCursor;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

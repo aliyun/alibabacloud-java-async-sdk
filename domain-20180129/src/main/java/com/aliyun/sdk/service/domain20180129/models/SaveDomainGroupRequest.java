@@ -87,12 +87,12 @@ public class SaveDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(SaveDomainGroupRequest response) {
-            super(response);
-            this.domainGroupId = response.domainGroupId;
-            this.domainGroupName = response.domainGroupName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveDomainGroupRequest request) {
+            super(request);
+            this.domainGroupId = request.domainGroupId;
+            this.domainGroupName = request.domainGroupName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

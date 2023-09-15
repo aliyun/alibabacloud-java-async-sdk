@@ -116,14 +116,14 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest ext
             super();
         } 
 
-        private Builder(SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest response) {
-            super(response);
-            this.contactType = response.contactType;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.registrantProfileId = response.registrantProfileId;
-            this.transferOutProhibited = response.transferOutProhibited;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest request) {
+            super(request);
+            this.contactType = request.contactType;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.registrantProfileId = request.registrantProfileId;
+            this.transferOutProhibited = request.transferOutProhibited;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

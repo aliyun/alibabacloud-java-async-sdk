@@ -89,12 +89,12 @@ public class CancelQualificationVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(CancelQualificationVerificationRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.qualificationType = response.qualificationType;
-            this.userClientIp = response.userClientIp;
+        private Builder(CancelQualificationVerificationRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.qualificationType = request.qualificationType;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

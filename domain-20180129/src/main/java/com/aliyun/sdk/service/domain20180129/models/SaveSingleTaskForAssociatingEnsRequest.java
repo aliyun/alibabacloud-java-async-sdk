@@ -89,12 +89,12 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForAssociatingEnsRequest response) {
-            super(response);
-            this.address = response.address;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForAssociatingEnsRequest request) {
+            super(request);
+            this.address = request.address;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

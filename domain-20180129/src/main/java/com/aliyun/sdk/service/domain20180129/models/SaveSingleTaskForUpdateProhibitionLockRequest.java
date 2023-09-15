@@ -89,12 +89,12 @@ public class SaveSingleTaskForUpdateProhibitionLockRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForUpdateProhibitionLockRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.status = response.status;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForUpdateProhibitionLockRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.status = request.status;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

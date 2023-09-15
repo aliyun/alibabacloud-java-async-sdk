@@ -75,11 +75,11 @@ public class DeleteRegistrantProfileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRegistrantProfileRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.registrantProfileId = response.registrantProfileId;
-            this.userClientIp = response.userClientIp;
+        private Builder(DeleteRegistrantProfileRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.registrantProfileId = request.registrantProfileId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

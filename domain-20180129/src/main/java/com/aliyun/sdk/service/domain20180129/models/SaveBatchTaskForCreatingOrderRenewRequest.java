@@ -127,15 +127,15 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchTaskForCreatingOrderRenewRequest response) {
-            super(response);
-            this.couponNo = response.couponNo;
-            this.lang = response.lang;
-            this.orderRenewParam = response.orderRenewParam;
-            this.promotionNo = response.promotionNo;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchTaskForCreatingOrderRenewRequest request) {
+            super(request);
+            this.couponNo = request.couponNo;
+            this.lang = request.lang;
+            this.orderRenewParam = request.orderRenewParam;
+            this.promotionNo = request.promotionNo;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class SaveSingleTaskForQueryingTransferAuthorizationCodeRequest extends R
             super();
         } 
 
-        private Builder(SaveSingleTaskForQueryingTransferAuthorizationCodeRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForQueryingTransferAuthorizationCodeRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

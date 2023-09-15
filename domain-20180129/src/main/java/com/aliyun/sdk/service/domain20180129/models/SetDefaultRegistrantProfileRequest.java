@@ -62,10 +62,10 @@ public class SetDefaultRegistrantProfileRequest extends Request {
             super();
         } 
 
-        private Builder(SetDefaultRegistrantProfileRequest response) {
-            super(response);
-            this.registrantProfileId = response.registrantProfileId;
-            this.userClientIp = response.userClientIp;
+        private Builder(SetDefaultRegistrantProfileRequest request) {
+            super(request);
+            this.registrantProfileId = request.registrantProfileId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

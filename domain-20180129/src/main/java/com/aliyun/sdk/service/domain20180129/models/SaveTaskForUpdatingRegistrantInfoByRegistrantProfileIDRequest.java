@@ -103,13 +103,13 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
             super();
         } 
 
-        private Builder(SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.registrantProfileId = response.registrantProfileId;
-            this.transferOutProhibited = response.transferOutProhibited;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.registrantProfileId = request.registrantProfileId;
+            this.transferOutProhibited = request.transferOutProhibited;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

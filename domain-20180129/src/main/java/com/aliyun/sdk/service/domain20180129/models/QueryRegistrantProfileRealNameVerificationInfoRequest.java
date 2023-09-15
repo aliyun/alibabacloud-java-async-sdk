@@ -88,12 +88,12 @@ public class QueryRegistrantProfileRealNameVerificationInfoRequest extends Reque
             super();
         } 
 
-        private Builder(QueryRegistrantProfileRealNameVerificationInfoRequest response) {
-            super(response);
-            this.fetchImage = response.fetchImage;
-            this.lang = response.lang;
-            this.registrantProfileId = response.registrantProfileId;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryRegistrantProfileRealNameVerificationInfoRequest request) {
+            super(request);
+            this.fetchImage = request.fetchImage;
+            this.lang = request.lang;
+            this.registrantProfileId = request.registrantProfileId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

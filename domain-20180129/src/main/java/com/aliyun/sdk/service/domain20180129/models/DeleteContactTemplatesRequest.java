@@ -62,10 +62,10 @@ public class DeleteContactTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteContactTemplatesRequest response) {
-            super(response);
-            this.registrantProfileIds = response.registrantProfileIds;
-            this.userClientIp = response.userClientIp;
+        private Builder(DeleteContactTemplatesRequest request) {
+            super(request);
+            this.registrantProfileIds = request.registrantProfileIds;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

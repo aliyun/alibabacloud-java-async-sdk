@@ -103,13 +103,13 @@ public class QueryFailingReasonListForQualificationRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFailingReasonListForQualificationRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.limit = response.limit;
-            this.qualificationType = response.qualificationType;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryFailingReasonListForQualificationRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.limit = request.limit;
+            this.qualificationType = request.qualificationType;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

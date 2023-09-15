@@ -129,15 +129,15 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForUpdatingContactInfoRequest response) {
-            super(response);
-            this.addTransferLock = response.addTransferLock;
-            this.contactType = response.contactType;
-            this.domainName = response.domainName;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.registrantProfileId = response.registrantProfileId;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForUpdatingContactInfoRequest request) {
+            super(request);
+            this.addTransferLock = request.addTransferLock;
+            this.contactType = request.contactType;
+            this.domainName = request.domainName;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.registrantProfileId = request.registrantProfileId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

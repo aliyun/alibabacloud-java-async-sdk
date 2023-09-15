@@ -75,11 +75,11 @@ public class EmailVerifiedRequest extends Request {
             super();
         } 
 
-        private Builder(EmailVerifiedRequest response) {
-            super(response);
-            this.email = response.email;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(EmailVerifiedRequest request) {
+            super(request);
+            this.email = request.email;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

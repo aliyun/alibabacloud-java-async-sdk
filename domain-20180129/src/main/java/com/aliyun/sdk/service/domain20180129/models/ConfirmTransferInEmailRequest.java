@@ -89,12 +89,12 @@ public class ConfirmTransferInEmailRequest extends Request {
             super();
         } 
 
-        private Builder(ConfirmTransferInEmailRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.email = response.email;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(ConfirmTransferInEmailRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.email = request.email;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

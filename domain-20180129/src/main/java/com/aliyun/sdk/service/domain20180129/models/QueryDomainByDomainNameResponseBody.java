@@ -15,6 +15,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("DnsList")
     private DnsList dnsList;
 
+    @NameInMap("DomainGroupId")
+    private Long domainGroupId;
+
+    @NameInMap("DomainGroupName")
+    private String domainGroupName;
+
     @NameInMap("DomainName")
     private String domainName;
 
@@ -23,6 +29,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     @NameInMap("DomainNameVerificationStatus")
     private String domainNameVerificationStatus;
+
+    @NameInMap("DomainStatus")
+    private String domainStatus;
+
+    @NameInMap("DomainType")
+    private String domainType;
 
     @NameInMap("Email")
     private String email;
@@ -33,11 +45,17 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("EmailVerificationStatus")
     private Integer emailVerificationStatus;
 
+    @NameInMap("ExpirationCurrDateDiff")
+    private Integer expirationCurrDateDiff;
+
     @NameInMap("ExpirationDate")
     private String expirationDate;
 
     @NameInMap("ExpirationDateLong")
     private Long expirationDateLong;
+
+    @NameInMap("ExpirationDateStatus")
+    private String expirationDateStatus;
 
     @NameInMap("InstanceId")
     private String instanceId;
@@ -66,8 +84,17 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("RegistrationDateLong")
     private Long registrationDateLong;
 
+    @NameInMap("Remark")
+    private String remark;
+
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @NameInMap("Tag")
+    private Tag tag;
 
     @NameInMap("TransferOutStatus")
     private String transferOutStatus;
@@ -89,14 +116,20 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     private QueryDomainByDomainNameResponseBody(Builder builder) {
         this.dnsList = builder.dnsList;
+        this.domainGroupId = builder.domainGroupId;
+        this.domainGroupName = builder.domainGroupName;
         this.domainName = builder.domainName;
         this.domainNameProxyService = builder.domainNameProxyService;
         this.domainNameVerificationStatus = builder.domainNameVerificationStatus;
+        this.domainStatus = builder.domainStatus;
+        this.domainType = builder.domainType;
         this.email = builder.email;
         this.emailVerificationClientHold = builder.emailVerificationClientHold;
         this.emailVerificationStatus = builder.emailVerificationStatus;
+        this.expirationCurrDateDiff = builder.expirationCurrDateDiff;
         this.expirationDate = builder.expirationDate;
         this.expirationDateLong = builder.expirationDateLong;
+        this.expirationDateStatus = builder.expirationDateStatus;
         this.instanceId = builder.instanceId;
         this.premium = builder.premium;
         this.realNameStatus = builder.realNameStatus;
@@ -106,7 +139,10 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         this.registrantUpdatingStatus = builder.registrantUpdatingStatus;
         this.registrationDate = builder.registrationDate;
         this.registrationDateLong = builder.registrationDateLong;
+        this.remark = builder.remark;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.transferOutStatus = builder.transferOutStatus;
         this.transferProhibitionLock = builder.transferProhibitionLock;
         this.updateProhibitionLock = builder.updateProhibitionLock;
@@ -131,6 +167,20 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return domainGroupId
+     */
+    public Long getDomainGroupId() {
+        return this.domainGroupId;
+    }
+
+    /**
+     * @return domainGroupName
+     */
+    public String getDomainGroupName() {
+        return this.domainGroupName;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
@@ -149,6 +199,20 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
      */
     public String getDomainNameVerificationStatus() {
         return this.domainNameVerificationStatus;
+    }
+
+    /**
+     * @return domainStatus
+     */
+    public String getDomainStatus() {
+        return this.domainStatus;
+    }
+
+    /**
+     * @return domainType
+     */
+    public String getDomainType() {
+        return this.domainType;
     }
 
     /**
@@ -173,6 +237,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return expirationCurrDateDiff
+     */
+    public Integer getExpirationCurrDateDiff() {
+        return this.expirationCurrDateDiff;
+    }
+
+    /**
      * @return expirationDate
      */
     public String getExpirationDate() {
@@ -184,6 +255,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
      */
     public Long getExpirationDateLong() {
         return this.expirationDateLong;
+    }
+
+    /**
+     * @return expirationDateStatus
+     */
+    public String getExpirationDateStatus() {
+        return this.expirationDateStatus;
     }
 
     /**
@@ -250,10 +328,31 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tag
+     */
+    public Tag getTag() {
+        return this.tag;
     }
 
     /**
@@ -300,14 +399,20 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     public static final class Builder {
         private DnsList dnsList; 
+        private Long domainGroupId; 
+        private String domainGroupName; 
         private String domainName; 
         private Boolean domainNameProxyService; 
         private String domainNameVerificationStatus; 
+        private String domainStatus; 
+        private String domainType; 
         private String email; 
         private Boolean emailVerificationClientHold; 
         private Integer emailVerificationStatus; 
+        private Integer expirationCurrDateDiff; 
         private String expirationDate; 
         private Long expirationDateLong; 
+        private String expirationDateStatus; 
         private String instanceId; 
         private Boolean premium; 
         private String realNameStatus; 
@@ -317,7 +422,10 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         private String registrantUpdatingStatus; 
         private String registrationDate; 
         private Long registrationDateLong; 
+        private String remark; 
         private String requestId; 
+        private String resourceGroupId; 
+        private Tag tag; 
         private String transferOutStatus; 
         private String transferProhibitionLock; 
         private String updateProhibitionLock; 
@@ -330,6 +438,22 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
          */
         public Builder dnsList(DnsList dnsList) {
             this.dnsList = dnsList;
+            return this;
+        }
+
+        /**
+         * DomainGroupId.
+         */
+        public Builder domainGroupId(Long domainGroupId) {
+            this.domainGroupId = domainGroupId;
+            return this;
+        }
+
+        /**
+         * DomainGroupName.
+         */
+        public Builder domainGroupName(String domainGroupName) {
+            this.domainGroupName = domainGroupName;
             return this;
         }
 
@@ -358,6 +482,22 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
+         * DomainStatus.
+         */
+        public Builder domainStatus(String domainStatus) {
+            this.domainStatus = domainStatus;
+            return this;
+        }
+
+        /**
+         * DomainType.
+         */
+        public Builder domainType(String domainType) {
+            this.domainType = domainType;
+            return this;
+        }
+
+        /**
          * Email.
          */
         public Builder email(String email) {
@@ -382,6 +522,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
+         * ExpirationCurrDateDiff.
+         */
+        public Builder expirationCurrDateDiff(Integer expirationCurrDateDiff) {
+            this.expirationCurrDateDiff = expirationCurrDateDiff;
+            return this;
+        }
+
+        /**
          * ExpirationDate.
          */
         public Builder expirationDate(String expirationDate) {
@@ -394,6 +542,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
          */
         public Builder expirationDateLong(Long expirationDateLong) {
             this.expirationDateLong = expirationDateLong;
+            return this;
+        }
+
+        /**
+         * ExpirationDateStatus.
+         */
+        public Builder expirationDateStatus(String expirationDateStatus) {
+            this.expirationDateStatus = expirationDateStatus;
             return this;
         }
 
@@ -470,10 +626,34 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(Tag tag) {
+            this.tag = tag;
             return this;
         }
 
@@ -567,6 +747,108 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
             public DnsList build() {
                 return new DnsList(this);
+            } 
+
+        } 
+
+    }
+    public static class TagTag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Vaue")
+        private String vaue;
+
+        private TagTag(Builder builder) {
+            this.key = builder.key;
+            this.vaue = builder.vaue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return vaue
+         */
+        public String getVaue() {
+            return this.vaue;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String vaue; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Vaue.
+             */
+            public Builder vaue(String vaue) {
+                this.vaue = vaue;
+                return this;
+            }
+
+            public TagTag build() {
+                return new TagTag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < TagTag> tag;
+
+        private Tag(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < TagTag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < TagTag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < TagTag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

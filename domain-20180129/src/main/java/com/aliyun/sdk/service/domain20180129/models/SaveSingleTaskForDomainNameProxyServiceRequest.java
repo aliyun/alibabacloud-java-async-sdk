@@ -89,12 +89,12 @@ public class SaveSingleTaskForDomainNameProxyServiceRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForDomainNameProxyServiceRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.status = response.status;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForDomainNameProxyServiceRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.status = request.status;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

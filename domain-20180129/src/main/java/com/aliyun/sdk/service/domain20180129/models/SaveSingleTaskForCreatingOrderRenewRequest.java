@@ -155,17 +155,17 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForCreatingOrderRenewRequest response) {
-            super(response);
-            this.couponNo = response.couponNo;
-            this.currentExpirationDate = response.currentExpirationDate;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.promotionNo = response.promotionNo;
-            this.subscriptionDuration = response.subscriptionDuration;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForCreatingOrderRenewRequest request) {
+            super(request);
+            this.couponNo = request.couponNo;
+            this.currentExpirationDate = request.currentExpirationDate;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.promotionNo = request.promotionNo;
+            this.subscriptionDuration = request.subscriptionDuration;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

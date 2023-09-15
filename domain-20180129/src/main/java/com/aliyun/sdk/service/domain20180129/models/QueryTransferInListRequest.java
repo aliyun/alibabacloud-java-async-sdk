@@ -141,16 +141,16 @@ public class QueryTransferInListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTransferInListRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.simpleTransferInStatus = response.simpleTransferInStatus;
-            this.submissionEndDate = response.submissionEndDate;
-            this.submissionStartDate = response.submissionStartDate;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTransferInListRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.simpleTransferInStatus = request.simpleTransferInStatus;
+            this.submissionEndDate = request.submissionEndDate;
+            this.submissionStartDate = request.submissionStartDate;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class QueryDomainGroupListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDomainGroupListRequest response) {
-            super(response);
-            this.domainGroupName = response.domainGroupName;
-            this.lang = response.lang;
-            this.showDeletingGroup = response.showDeletingGroup;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryDomainGroupListRequest request) {
+            super(request);
+            this.domainGroupName = request.domainGroupName;
+            this.lang = request.lang;
+            this.showDeletingGroup = request.showDeletingGroup;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

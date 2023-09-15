@@ -75,11 +75,11 @@ public class ResendEmailVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(ResendEmailVerificationRequest response) {
-            super(response);
-            this.email = response.email;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(ResendEmailVerificationRequest request) {
+            super(request);
+            this.email = request.email;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class QueryContactInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryContactInfoRequest response) {
-            super(response);
-            this.contactType = response.contactType;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryContactInfoRequest request) {
+            super(request);
+            this.contactType = request.contactType;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

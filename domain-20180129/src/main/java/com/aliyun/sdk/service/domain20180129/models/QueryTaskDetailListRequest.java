@@ -142,16 +142,16 @@ public class QueryTaskDetailListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskDetailListRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.taskNo = response.taskNo;
-            this.taskStatus = response.taskStatus;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTaskDetailListRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.taskNo = request.taskNo;
+            this.taskStatus = request.taskStatus;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -95,6 +95,10 @@ public class QueryAdvancedDomainListRequest extends Request {
     private Boolean registrationDateSort;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StartExpirationDate")
     private Long startExpirationDate;
 
@@ -109,6 +113,10 @@ public class QueryAdvancedDomainListRequest extends Request {
     @Query
     @NameInMap("Suffixs")
     private String suffixs;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("TradeType")
@@ -140,10 +148,12 @@ public class QueryAdvancedDomainListRequest extends Request {
         this.productDomainType = builder.productDomainType;
         this.productDomainTypeSort = builder.productDomainTypeSort;
         this.registrationDateSort = builder.registrationDateSort;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startExpirationDate = builder.startExpirationDate;
         this.startLength = builder.startLength;
         this.startRegistrationDate = builder.startRegistrationDate;
         this.suffixs = builder.suffixs;
+        this.tag = builder.tag;
         this.tradeType = builder.tradeType;
         this.userClientIp = builder.userClientIp;
     }
@@ -302,6 +312,13 @@ public class QueryAdvancedDomainListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startExpirationDate
      */
     public Long getStartExpirationDate() {
@@ -327,6 +344,13 @@ public class QueryAdvancedDomainListRequest extends Request {
      */
     public String getSuffixs() {
         return this.suffixs;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -364,10 +388,12 @@ public class QueryAdvancedDomainListRequest extends Request {
         private String productDomainType; 
         private Boolean productDomainTypeSort; 
         private Boolean registrationDateSort; 
+        private String resourceGroupId; 
         private Long startExpirationDate; 
         private Integer startLength; 
         private Long startRegistrationDate; 
         private String suffixs; 
+        private java.util.List < Tag> tag; 
         private Integer tradeType; 
         private String userClientIp; 
 
@@ -375,34 +401,36 @@ public class QueryAdvancedDomainListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAdvancedDomainListRequest response) {
-            super(response);
-            this.domainGroupId = response.domainGroupId;
-            this.domainNameSort = response.domainNameSort;
-            this.domainStatus = response.domainStatus;
-            this.endExpirationDate = response.endExpirationDate;
-            this.endLength = response.endLength;
-            this.endRegistrationDate = response.endRegistrationDate;
-            this.excluded = response.excluded;
-            this.excludedPrefix = response.excludedPrefix;
-            this.excludedSuffix = response.excludedSuffix;
-            this.expirationDateSort = response.expirationDateSort;
-            this.form = response.form;
-            this.keyWord = response.keyWord;
-            this.keyWordPrefix = response.keyWordPrefix;
-            this.keyWordSuffix = response.keyWordSuffix;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productDomainType = response.productDomainType;
-            this.productDomainTypeSort = response.productDomainTypeSort;
-            this.registrationDateSort = response.registrationDateSort;
-            this.startExpirationDate = response.startExpirationDate;
-            this.startLength = response.startLength;
-            this.startRegistrationDate = response.startRegistrationDate;
-            this.suffixs = response.suffixs;
-            this.tradeType = response.tradeType;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryAdvancedDomainListRequest request) {
+            super(request);
+            this.domainGroupId = request.domainGroupId;
+            this.domainNameSort = request.domainNameSort;
+            this.domainStatus = request.domainStatus;
+            this.endExpirationDate = request.endExpirationDate;
+            this.endLength = request.endLength;
+            this.endRegistrationDate = request.endRegistrationDate;
+            this.excluded = request.excluded;
+            this.excludedPrefix = request.excludedPrefix;
+            this.excludedSuffix = request.excludedSuffix;
+            this.expirationDateSort = request.expirationDateSort;
+            this.form = request.form;
+            this.keyWord = request.keyWord;
+            this.keyWordPrefix = request.keyWordPrefix;
+            this.keyWordSuffix = request.keyWordSuffix;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productDomainType = request.productDomainType;
+            this.productDomainTypeSort = request.productDomainTypeSort;
+            this.registrationDateSort = request.registrationDateSort;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startExpirationDate = request.startExpirationDate;
+            this.startLength = request.startLength;
+            this.startRegistrationDate = request.startRegistrationDate;
+            this.suffixs = request.suffixs;
+            this.tag = request.tag;
+            this.tradeType = request.tradeType;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**
@@ -586,6 +614,15 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * StartExpirationDate.
          */
         public Builder startExpirationDate(Long startExpirationDate) {
@@ -622,6 +659,15 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * TradeType.
          */
         public Builder tradeType(Integer tradeType) {
@@ -646,4 +692,65 @@ public class QueryAdvancedDomainListRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

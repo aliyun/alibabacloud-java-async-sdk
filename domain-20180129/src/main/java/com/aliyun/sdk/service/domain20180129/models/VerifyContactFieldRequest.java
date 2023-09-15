@@ -295,28 +295,28 @@ public class VerifyContactFieldRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyContactFieldRequest response) {
-            super(response);
-            this.address = response.address;
-            this.city = response.city;
-            this.country = response.country;
-            this.domainName = response.domainName;
-            this.email = response.email;
-            this.lang = response.lang;
-            this.postalCode = response.postalCode;
-            this.province = response.province;
-            this.registrantName = response.registrantName;
-            this.registrantOrganization = response.registrantOrganization;
-            this.registrantType = response.registrantType;
-            this.telArea = response.telArea;
-            this.telExt = response.telExt;
-            this.telephone = response.telephone;
-            this.userClientIp = response.userClientIp;
-            this.zhAddress = response.zhAddress;
-            this.zhCity = response.zhCity;
-            this.zhProvince = response.zhProvince;
-            this.zhRegistrantName = response.zhRegistrantName;
-            this.zhRegistrantOrganization = response.zhRegistrantOrganization;
+        private Builder(VerifyContactFieldRequest request) {
+            super(request);
+            this.address = request.address;
+            this.city = request.city;
+            this.country = request.country;
+            this.domainName = request.domainName;
+            this.email = request.email;
+            this.lang = request.lang;
+            this.postalCode = request.postalCode;
+            this.province = request.province;
+            this.registrantName = request.registrantName;
+            this.registrantOrganization = request.registrantOrganization;
+            this.registrantType = request.registrantType;
+            this.telArea = request.telArea;
+            this.telExt = request.telExt;
+            this.telephone = request.telephone;
+            this.userClientIp = request.userClientIp;
+            this.zhAddress = request.zhAddress;
+            this.zhCity = request.zhCity;
+            this.zhProvince = request.zhProvince;
+            this.zhRegistrantName = request.zhRegistrantName;
+            this.zhRegistrantOrganization = request.zhRegistrantOrganization;
         } 
 
         /**

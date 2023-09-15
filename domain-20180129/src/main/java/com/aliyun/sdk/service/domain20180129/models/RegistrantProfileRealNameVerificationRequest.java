@@ -117,14 +117,14 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(RegistrantProfileRealNameVerificationRequest response) {
-            super(response);
-            this.identityCredential = response.identityCredential;
-            this.identityCredentialNo = response.identityCredentialNo;
-            this.identityCredentialType = response.identityCredentialType;
-            this.lang = response.lang;
-            this.registrantProfileID = response.registrantProfileID;
-            this.userClientIp = response.userClientIp;
+        private Builder(RegistrantProfileRealNameVerificationRequest request) {
+            super(request);
+            this.identityCredential = request.identityCredential;
+            this.identityCredentialNo = request.identityCredentialNo;
+            this.identityCredentialType = request.identityCredentialType;
+            this.lang = request.lang;
+            this.registrantProfileID = request.registrantProfileID;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

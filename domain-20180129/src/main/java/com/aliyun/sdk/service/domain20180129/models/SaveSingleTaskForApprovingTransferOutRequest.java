@@ -75,11 +75,11 @@ public class SaveSingleTaskForApprovingTransferOutRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForApprovingTransferOutRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForApprovingTransferOutRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

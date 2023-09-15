@@ -103,13 +103,13 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
             super();
         } 
 
-        private Builder(SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.registrantProfileId = response.registrantProfileId;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileIDRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.registrantProfileId = request.registrantProfileId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

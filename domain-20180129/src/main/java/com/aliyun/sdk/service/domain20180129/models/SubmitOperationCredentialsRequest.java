@@ -100,13 +100,13 @@ public class SubmitOperationCredentialsRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitOperationCredentialsRequest response) {
-            super(response);
-            this.auditRecordId = response.auditRecordId;
-            this.auditType = response.auditType;
-            this.credentials = response.credentials;
-            this.lang = response.lang;
-            this.regType = response.regType;
+        private Builder(SubmitOperationCredentialsRequest request) {
+            super(request);
+            this.auditRecordId = request.auditRecordId;
+            this.auditType = request.auditType;
+            this.credentials = request.credentials;
+            this.lang = request.lang;
+            this.regType = request.regType;
         } 
 
         /**

@@ -102,13 +102,13 @@ public class SubmitOperationAuditInfoRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitOperationAuditInfoRequest response) {
-            super(response);
-            this.auditInfo = response.auditInfo;
-            this.auditType = response.auditType;
-            this.domainName = response.domainName;
-            this.id = response.id;
-            this.lang = response.lang;
+        private Builder(SubmitOperationAuditInfoRequest request) {
+            super(request);
+            this.auditInfo = request.auditInfo;
+            this.auditType = request.auditType;
+            this.domainName = request.domainName;
+            this.id = request.id;
+            this.lang = request.lang;
         } 
 
         /**

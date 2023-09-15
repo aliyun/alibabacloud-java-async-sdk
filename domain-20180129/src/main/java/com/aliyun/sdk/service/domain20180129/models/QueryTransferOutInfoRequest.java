@@ -75,11 +75,11 @@ public class QueryTransferOutInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTransferOutInfoRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTransferOutInfoRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

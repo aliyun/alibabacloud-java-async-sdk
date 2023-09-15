@@ -89,12 +89,12 @@ public class TransferInReenterTransferAuthorizationCodeRequest extends Request {
             super();
         } 
 
-        private Builder(TransferInReenterTransferAuthorizationCodeRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.transferAuthorizationCode = response.transferAuthorizationCode;
-            this.userClientIp = response.userClientIp;
+        private Builder(TransferInReenterTransferAuthorizationCodeRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.transferAuthorizationCode = request.transferAuthorizationCode;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

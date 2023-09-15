@@ -142,7 +142,7 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * OSS Endpoint。
          */
         public Builder host(String host) {
             this.host = host;

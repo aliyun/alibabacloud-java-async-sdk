@@ -87,12 +87,12 @@ public class SaveBatchDomainRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchDomainRemarkRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.lang = response.lang;
-            this.remark = response.remark;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchDomainRemarkRequest request) {
+            super(request);
+            this.instanceIds = request.instanceIds;
+            this.lang = request.lang;
+            this.remark = request.remark;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -102,13 +102,13 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchTaskForModifyingDomainDnsRequest response) {
-            super(response);
-            this.aliyunDns = response.aliyunDns;
-            this.domainName = response.domainName;
-            this.domainNameServer = response.domainNameServer;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchTaskForModifyingDomainDnsRequest request) {
+            super(request);
+            this.aliyunDns = request.aliyunDns;
+            this.domainName = request.domainName;
+            this.domainNameServer = request.domainNameServer;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

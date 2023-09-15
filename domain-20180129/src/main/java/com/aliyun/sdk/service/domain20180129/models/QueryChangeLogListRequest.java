@@ -128,15 +128,15 @@ public class QueryChangeLogListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryChangeLogListRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryChangeLogListRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

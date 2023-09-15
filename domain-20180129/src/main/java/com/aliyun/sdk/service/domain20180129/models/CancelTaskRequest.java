@@ -75,11 +75,11 @@ public class CancelTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CancelTaskRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.taskNo = response.taskNo;
-            this.userClientIp = response.userClientIp;
+        private Builder(CancelTaskRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.taskNo = request.taskNo;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

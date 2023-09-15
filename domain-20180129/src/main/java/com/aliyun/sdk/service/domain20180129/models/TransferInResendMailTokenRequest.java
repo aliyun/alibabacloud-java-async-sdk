@@ -75,11 +75,11 @@ public class TransferInResendMailTokenRequest extends Request {
             super();
         } 
 
-        private Builder(TransferInResendMailTokenRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(TransferInResendMailTokenRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

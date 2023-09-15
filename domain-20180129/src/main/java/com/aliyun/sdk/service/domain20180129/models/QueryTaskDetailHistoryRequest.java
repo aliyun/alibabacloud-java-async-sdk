@@ -141,16 +141,16 @@ public class QueryTaskDetailHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskDetailHistoryRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.domainNameCursor = response.domainNameCursor;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.taskDetailNoCursor = response.taskDetailNoCursor;
-            this.taskNo = response.taskNo;
-            this.taskStatus = response.taskStatus;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTaskDetailHistoryRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.domainNameCursor = request.domainNameCursor;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.taskDetailNoCursor = request.taskDetailNoCursor;
+            this.taskNo = request.taskNo;
+            this.taskStatus = request.taskStatus;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

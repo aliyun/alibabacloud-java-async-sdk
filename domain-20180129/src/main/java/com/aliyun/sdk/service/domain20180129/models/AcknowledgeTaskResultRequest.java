@@ -75,11 +75,11 @@ public class AcknowledgeTaskResultRequest extends Request {
             super();
         } 
 
-        private Builder(AcknowledgeTaskResultRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.taskDetailNo = response.taskDetailNo;
-            this.userClientIp = response.userClientIp;
+        private Builder(AcknowledgeTaskResultRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.taskDetailNo = request.taskDetailNo;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

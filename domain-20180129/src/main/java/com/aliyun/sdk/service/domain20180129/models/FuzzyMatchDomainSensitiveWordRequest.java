@@ -75,11 +75,11 @@ public class FuzzyMatchDomainSensitiveWordRequest extends Request {
             super();
         } 
 
-        private Builder(FuzzyMatchDomainSensitiveWordRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(FuzzyMatchDomainSensitiveWordRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

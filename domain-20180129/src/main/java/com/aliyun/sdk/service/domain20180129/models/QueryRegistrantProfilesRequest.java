@@ -191,20 +191,20 @@ public class QueryRegistrantProfilesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRegistrantProfilesRequest response) {
-            super(response);
-            this.defaultRegistrantProfile = response.defaultRegistrantProfile;
-            this.email = response.email;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.realNameStatus = response.realNameStatus;
-            this.registrantOrganization = response.registrantOrganization;
-            this.registrantProfileId = response.registrantProfileId;
-            this.registrantProfileType = response.registrantProfileType;
-            this.registrantType = response.registrantType;
-            this.userClientIp = response.userClientIp;
-            this.zhRegistrantOrganization = response.zhRegistrantOrganization;
+        private Builder(QueryRegistrantProfilesRequest request) {
+            super(request);
+            this.defaultRegistrantProfile = request.defaultRegistrantProfile;
+            this.email = request.email;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.realNameStatus = request.realNameStatus;
+            this.registrantOrganization = request.registrantOrganization;
+            this.registrantProfileId = request.registrantProfileId;
+            this.registrantProfileType = request.registrantProfileType;
+            this.registrantType = request.registrantType;
+            this.userClientIp = request.userClientIp;
+            this.zhRegistrantOrganization = request.zhRegistrantOrganization;
         } 
 
         /**

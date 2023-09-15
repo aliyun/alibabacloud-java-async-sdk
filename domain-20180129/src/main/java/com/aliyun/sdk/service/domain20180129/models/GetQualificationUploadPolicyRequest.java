@@ -61,10 +61,10 @@ public class GetQualificationUploadPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualificationUploadPolicyRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(GetQualificationUploadPolicyRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

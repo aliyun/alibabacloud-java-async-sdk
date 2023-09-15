@@ -89,12 +89,12 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends Request
             super();
         } 
 
-        private Builder(QueryFailReasonForDomainRealNameVerificationRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.realNameVerificationAction = response.realNameVerificationAction;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryFailReasonForDomainRealNameVerificationRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.realNameVerificationAction = request.realNameVerificationAction;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

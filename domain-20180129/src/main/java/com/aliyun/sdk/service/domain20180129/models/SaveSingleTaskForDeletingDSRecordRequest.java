@@ -89,12 +89,12 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForDeletingDSRecordRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.keyTag = response.keyTag;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForDeletingDSRecordRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.keyTag = request.keyTag;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

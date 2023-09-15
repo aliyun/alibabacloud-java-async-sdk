@@ -62,10 +62,10 @@ public class QueryOperationAuditInfoDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryOperationAuditInfoDetailRequest response) {
-            super(response);
-            this.auditRecordId = response.auditRecordId;
-            this.lang = response.lang;
+        private Builder(QueryOperationAuditInfoDetailRequest request) {
+            super(request);
+            this.auditRecordId = request.auditRecordId;
+            this.lang = request.lang;
         } 
 
         /**

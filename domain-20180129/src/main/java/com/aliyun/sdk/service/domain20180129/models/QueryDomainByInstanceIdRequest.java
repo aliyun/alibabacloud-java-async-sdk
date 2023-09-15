@@ -75,11 +75,11 @@ public class QueryDomainByInstanceIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDomainByInstanceIdRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryDomainByInstanceIdRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

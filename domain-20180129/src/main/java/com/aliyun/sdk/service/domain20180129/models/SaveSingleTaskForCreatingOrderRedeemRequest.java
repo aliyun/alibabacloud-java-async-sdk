@@ -141,16 +141,16 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForCreatingOrderRedeemRequest response) {
-            super(response);
-            this.couponNo = response.couponNo;
-            this.currentExpirationDate = response.currentExpirationDate;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.promotionNo = response.promotionNo;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForCreatingOrderRedeemRequest request) {
+            super(request);
+            this.couponNo = request.couponNo;
+            this.currentExpirationDate = request.currentExpirationDate;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.promotionNo = request.promotionNo;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

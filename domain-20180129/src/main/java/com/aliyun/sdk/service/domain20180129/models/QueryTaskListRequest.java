@@ -115,14 +115,14 @@ public class QueryTaskListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskListRequest response) {
-            super(response);
-            this.beginCreateTime = response.beginCreateTime;
-            this.endCreateTime = response.endCreateTime;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryTaskListRequest request) {
+            super(request);
+            this.beginCreateTime = request.beginCreateTime;
+            this.endCreateTime = request.endCreateTime;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

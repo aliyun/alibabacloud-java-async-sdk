@@ -89,12 +89,12 @@ public class CheckMaxYearOfServerLockRequest extends Request {
             super();
         } 
 
-        private Builder(CheckMaxYearOfServerLockRequest response) {
-            super(response);
-            this.checkAction = response.checkAction;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(CheckMaxYearOfServerLockRequest request) {
+            super(request);
+            this.checkAction = request.checkAction;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

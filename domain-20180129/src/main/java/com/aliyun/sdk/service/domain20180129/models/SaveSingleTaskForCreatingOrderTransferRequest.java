@@ -168,18 +168,18 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForCreatingOrderTransferRequest response) {
-            super(response);
-            this.authorizationCode = response.authorizationCode;
-            this.couponNo = response.couponNo;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.permitPremiumTransfer = response.permitPremiumTransfer;
-            this.promotionNo = response.promotionNo;
-            this.registrantProfileId = response.registrantProfileId;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForCreatingOrderTransferRequest request) {
+            super(request);
+            this.authorizationCode = request.authorizationCode;
+            this.couponNo = request.couponNo;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.permitPremiumTransfer = request.permitPremiumTransfer;
+            this.promotionNo = request.promotionNo;
+            this.registrantProfileId = request.registrantProfileId;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

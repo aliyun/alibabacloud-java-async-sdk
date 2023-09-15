@@ -113,14 +113,14 @@ public class QueryOperationAuditInfoListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryOperationAuditInfoListRequest response) {
-            super(response);
-            this.auditStatus = response.auditStatus;
-            this.auditType = response.auditType;
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
+        private Builder(QueryOperationAuditInfoListRequest request) {
+            super(request);
+            this.auditStatus = request.auditStatus;
+            this.auditType = request.auditType;
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
 
         /**

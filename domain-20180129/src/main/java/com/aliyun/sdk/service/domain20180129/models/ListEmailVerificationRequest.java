@@ -139,16 +139,16 @@ public class ListEmailVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(ListEmailVerificationRequest response) {
-            super(response);
-            this.beginCreateTime = response.beginCreateTime;
-            this.email = response.email;
-            this.endCreateTime = response.endCreateTime;
-            this.lang = response.lang;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.userClientIp = response.userClientIp;
-            this.verificationStatus = response.verificationStatus;
+        private Builder(ListEmailVerificationRequest request) {
+            super(request);
+            this.beginCreateTime = request.beginCreateTime;
+            this.email = request.email;
+            this.endCreateTime = request.endCreateTime;
+            this.lang = request.lang;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.userClientIp = request.userClientIp;
+            this.verificationStatus = request.verificationStatus;
         } 
 
         /**

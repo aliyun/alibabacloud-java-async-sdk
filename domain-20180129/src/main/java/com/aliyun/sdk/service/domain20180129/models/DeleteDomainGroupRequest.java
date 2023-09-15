@@ -74,11 +74,11 @@ public class DeleteDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainGroupRequest response) {
-            super(response);
-            this.domainGroupId = response.domainGroupId;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(DeleteDomainGroupRequest request) {
+            super(request);
+            this.domainGroupId = request.domainGroupId;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

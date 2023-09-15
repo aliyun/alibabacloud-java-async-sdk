@@ -88,12 +88,12 @@ public class SubmitEmailVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitEmailVerificationRequest response) {
-            super(response);
-            this.email = response.email;
-            this.lang = response.lang;
-            this.sendIfExist = response.sendIfExist;
-            this.userClientIp = response.userClientIp;
+        private Builder(SubmitEmailVerificationRequest request) {
+            super(request);
+            this.email = request.email;
+            this.lang = request.lang;
+            this.sendIfExist = request.sendIfExist;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class CheckProcessingServerLockApplyRequest extends Request {
             super();
         } 
 
-        private Builder(CheckProcessingServerLockApplyRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.feePeriod = response.feePeriod;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(CheckProcessingServerLockApplyRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.feePeriod = request.feePeriod;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

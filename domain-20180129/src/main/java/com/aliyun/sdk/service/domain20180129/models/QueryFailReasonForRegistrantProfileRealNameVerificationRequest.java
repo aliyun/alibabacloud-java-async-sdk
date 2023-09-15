@@ -75,11 +75,11 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest exte
             super();
         } 
 
-        private Builder(QueryFailReasonForRegistrantProfileRealNameVerificationRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.registrantProfileID = response.registrantProfileID;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryFailReasonForRegistrantProfileRealNameVerificationRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.registrantProfileID = request.registrantProfileID;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

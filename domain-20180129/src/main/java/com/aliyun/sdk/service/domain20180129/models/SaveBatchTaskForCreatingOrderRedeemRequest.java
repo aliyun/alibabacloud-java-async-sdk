@@ -127,15 +127,15 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchTaskForCreatingOrderRedeemRequest response) {
-            super(response);
-            this.couponNo = response.couponNo;
-            this.lang = response.lang;
-            this.orderRedeemParam = response.orderRedeemParam;
-            this.promotionNo = response.promotionNo;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchTaskForCreatingOrderRedeemRequest request) {
+            super(request);
+            this.couponNo = request.couponNo;
+            this.lang = request.lang;
+            this.orderRedeemParam = request.orderRedeemParam;
+            this.promotionNo = request.promotionNo;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class QueryDomainRealNameVerificationInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDomainRealNameVerificationInfoRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.fetchImage = response.fetchImage;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryDomainRealNameVerificationInfoRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.fetchImage = request.fetchImage;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

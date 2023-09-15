@@ -129,15 +129,15 @@ public class UpdateDomainToDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDomainToDomainGroupRequest response) {
-            super(response);
-            this.dataSource = response.dataSource;
-            this.domainGroupId = response.domainGroupId;
-            this.domainName = response.domainName;
-            this.fileToUpload = response.fileToUpload;
-            this.lang = response.lang;
-            this.replace = response.replace;
-            this.userClientIp = response.userClientIp;
+        private Builder(UpdateDomainToDomainGroupRequest request) {
+            super(request);
+            this.dataSource = request.dataSource;
+            this.domainGroupId = request.domainGroupId;
+            this.domainName = request.domainName;
+            this.fileToUpload = request.fileToUpload;
+            this.lang = request.lang;
+            this.replace = request.replace;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

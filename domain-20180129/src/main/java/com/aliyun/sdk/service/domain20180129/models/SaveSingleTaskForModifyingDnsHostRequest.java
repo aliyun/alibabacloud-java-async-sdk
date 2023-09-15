@@ -103,13 +103,13 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForModifyingDnsHostRequest response) {
-            super(response);
-            this.dnsName = response.dnsName;
-            this.instanceId = response.instanceId;
-            this.ip = response.ip;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForModifyingDnsHostRequest request) {
+            super(request);
+            this.dnsName = request.dnsName;
+            this.instanceId = request.instanceId;
+            this.ip = request.ip;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

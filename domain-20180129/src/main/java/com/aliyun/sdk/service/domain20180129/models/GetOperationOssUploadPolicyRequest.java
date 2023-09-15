@@ -61,10 +61,10 @@ public class GetOperationOssUploadPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetOperationOssUploadPolicyRequest response) {
-            super(response);
-            this.auditType = response.auditType;
-            this.lang = response.lang;
+        private Builder(GetOperationOssUploadPolicyRequest request) {
+            super(request);
+            this.auditType = request.auditType;
+            this.lang = request.lang;
         } 
 
         /**

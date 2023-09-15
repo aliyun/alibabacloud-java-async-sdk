@@ -192,20 +192,20 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForSaveArtExtensionRequest response) {
-            super(response);
-            this.dateOrPeriod = response.dateOrPeriod;
-            this.dimensions = response.dimensions;
-            this.domainName = response.domainName;
-            this.features = response.features;
-            this.inscriptionsAndMarkings = response.inscriptionsAndMarkings;
-            this.lang = response.lang;
-            this.maker = response.maker;
-            this.materialsAndTechniques = response.materialsAndTechniques;
-            this.objectType = response.objectType;
-            this.reference = response.reference;
-            this.subject = response.subject;
-            this.title = response.title;
+        private Builder(SaveSingleTaskForSaveArtExtensionRequest request) {
+            super(request);
+            this.dateOrPeriod = request.dateOrPeriod;
+            this.dimensions = request.dimensions;
+            this.domainName = request.domainName;
+            this.features = request.features;
+            this.inscriptionsAndMarkings = request.inscriptionsAndMarkings;
+            this.lang = request.lang;
+            this.maker = request.maker;
+            this.materialsAndTechniques = request.materialsAndTechniques;
+            this.objectType = request.objectType;
+            this.reference = request.reference;
+            this.subject = request.subject;
+            this.title = request.title;
         } 
 
         /**

@@ -131,15 +131,15 @@ public class SaveSingleTaskForAddingDSRecordRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForAddingDSRecordRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.digest = response.digest;
-            this.digestType = response.digestType;
-            this.domainName = response.domainName;
-            this.keyTag = response.keyTag;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForAddingDSRecordRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.digest = request.digest;
+            this.digestType = request.digestType;
+            this.domainName = request.domainName;
+            this.keyTag = request.keyTag;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

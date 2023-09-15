@@ -101,13 +101,13 @@ public class CheckDomainRequest extends Request {
             super();
         } 
 
-        private Builder(CheckDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.feeCommand = response.feeCommand;
-            this.feeCurrency = response.feeCurrency;
-            this.feePeriod = response.feePeriod;
-            this.lang = response.lang;
+        private Builder(CheckDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.feeCommand = request.feeCommand;
+            this.feeCurrency = request.feeCurrency;
+            this.feePeriod = request.feePeriod;
+            this.lang = request.lang;
         } 
 
         /**

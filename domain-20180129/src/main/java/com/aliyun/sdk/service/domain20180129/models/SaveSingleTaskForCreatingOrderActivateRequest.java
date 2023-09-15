@@ -90,6 +90,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
     private String registrantType;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SubscriptionDuration")
     private Integer subscriptionDuration;
 
@@ -162,6 +166,7 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         this.registrantOrganization = builder.registrantOrganization;
         this.registrantProfileId = builder.registrantProfileId;
         this.registrantType = builder.registrantType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionDuration = builder.subscriptionDuration;
         this.telArea = builder.telArea;
         this.telExt = builder.telExt;
@@ -324,6 +329,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionDuration
      */
     public Integer getSubscriptionDuration() {
@@ -434,6 +446,7 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         private String registrantOrganization; 
         private Long registrantProfileId; 
         private String registrantType; 
+        private String resourceGroupId; 
         private Integer subscriptionDuration; 
         private String telArea; 
         private String telExt; 
@@ -452,40 +465,41 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForCreatingOrderActivateRequest response) {
-            super(response);
-            this.address = response.address;
-            this.aliyunDns = response.aliyunDns;
-            this.city = response.city;
-            this.country = response.country;
-            this.couponNo = response.couponNo;
-            this.dns1 = response.dns1;
-            this.dns2 = response.dns2;
-            this.domainName = response.domainName;
-            this.email = response.email;
-            this.enableDomainProxy = response.enableDomainProxy;
-            this.lang = response.lang;
-            this.permitPremiumActivation = response.permitPremiumActivation;
-            this.postalCode = response.postalCode;
-            this.promotionNo = response.promotionNo;
-            this.province = response.province;
-            this.registrantName = response.registrantName;
-            this.registrantOrganization = response.registrantOrganization;
-            this.registrantProfileId = response.registrantProfileId;
-            this.registrantType = response.registrantType;
-            this.subscriptionDuration = response.subscriptionDuration;
-            this.telArea = response.telArea;
-            this.telExt = response.telExt;
-            this.telephone = response.telephone;
-            this.trademarkDomainActivation = response.trademarkDomainActivation;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
-            this.zhAddress = response.zhAddress;
-            this.zhCity = response.zhCity;
-            this.zhProvince = response.zhProvince;
-            this.zhRegistrantName = response.zhRegistrantName;
-            this.zhRegistrantOrganization = response.zhRegistrantOrganization;
+        private Builder(SaveSingleTaskForCreatingOrderActivateRequest request) {
+            super(request);
+            this.address = request.address;
+            this.aliyunDns = request.aliyunDns;
+            this.city = request.city;
+            this.country = request.country;
+            this.couponNo = request.couponNo;
+            this.dns1 = request.dns1;
+            this.dns2 = request.dns2;
+            this.domainName = request.domainName;
+            this.email = request.email;
+            this.enableDomainProxy = request.enableDomainProxy;
+            this.lang = request.lang;
+            this.permitPremiumActivation = request.permitPremiumActivation;
+            this.postalCode = request.postalCode;
+            this.promotionNo = request.promotionNo;
+            this.province = request.province;
+            this.registrantName = request.registrantName;
+            this.registrantOrganization = request.registrantOrganization;
+            this.registrantProfileId = request.registrantProfileId;
+            this.registrantType = request.registrantType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.subscriptionDuration = request.subscriptionDuration;
+            this.telArea = request.telArea;
+            this.telExt = request.telExt;
+            this.telephone = request.telephone;
+            this.trademarkDomainActivation = request.trademarkDomainActivation;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
+            this.zhAddress = request.zhAddress;
+            this.zhCity = request.zhCity;
+            this.zhProvince = request.zhProvince;
+            this.zhRegistrantName = request.zhRegistrantName;
+            this.zhRegistrantOrganization = request.zhRegistrantOrganization;
         } 
 
         /**
@@ -656,6 +670,15 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
             this.registrantType = registrantType;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

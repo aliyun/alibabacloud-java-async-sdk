@@ -59,12 +59,20 @@ public class QueryDomainListRequest extends Request {
     private String queryType;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StartExpirationDate")
     private Long startExpirationDate;
 
     @Query
     @NameInMap("StartRegistrationDate")
     private Long startRegistrationDate;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("UserClientIp")
@@ -83,8 +91,10 @@ public class QueryDomainListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.productDomainType = builder.productDomainType;
         this.queryType = builder.queryType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startExpirationDate = builder.startExpirationDate;
         this.startRegistrationDate = builder.startRegistrationDate;
+        this.tag = builder.tag;
         this.userClientIp = builder.userClientIp;
     }
 
@@ -179,6 +189,13 @@ public class QueryDomainListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startExpirationDate
      */
     public Long getStartExpirationDate() {
@@ -190,6 +207,13 @@ public class QueryDomainListRequest extends Request {
      */
     public Long getStartRegistrationDate() {
         return this.startRegistrationDate;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -211,30 +235,34 @@ public class QueryDomainListRequest extends Request {
         private Integer pageSize; 
         private String productDomainType; 
         private String queryType; 
+        private String resourceGroupId; 
         private Long startExpirationDate; 
         private Long startRegistrationDate; 
+        private java.util.List < Tag> tag; 
         private String userClientIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryDomainListRequest response) {
-            super(response);
-            this.domainGroupId = response.domainGroupId;
-            this.domainName = response.domainName;
-            this.endExpirationDate = response.endExpirationDate;
-            this.endRegistrationDate = response.endRegistrationDate;
-            this.lang = response.lang;
-            this.orderByType = response.orderByType;
-            this.orderKeyType = response.orderKeyType;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productDomainType = response.productDomainType;
-            this.queryType = response.queryType;
-            this.startExpirationDate = response.startExpirationDate;
-            this.startRegistrationDate = response.startRegistrationDate;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryDomainListRequest request) {
+            super(request);
+            this.domainGroupId = request.domainGroupId;
+            this.domainName = request.domainName;
+            this.endExpirationDate = request.endExpirationDate;
+            this.endRegistrationDate = request.endRegistrationDate;
+            this.lang = request.lang;
+            this.orderByType = request.orderByType;
+            this.orderKeyType = request.orderKeyType;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productDomainType = request.productDomainType;
+            this.queryType = request.queryType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startExpirationDate = request.startExpirationDate;
+            this.startRegistrationDate = request.startRegistrationDate;
+            this.tag = request.tag;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**
@@ -337,6 +365,15 @@ public class QueryDomainListRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * StartExpirationDate.
          */
         public Builder startExpirationDate(Long startExpirationDate) {
@@ -351,6 +388,15 @@ public class QueryDomainListRequest extends Request {
         public Builder startRegistrationDate(Long startRegistrationDate) {
             this.putQueryParameter("StartRegistrationDate", startRegistrationDate);
             this.startRegistrationDate = startRegistrationDate;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -370,4 +416,65 @@ public class QueryDomainListRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -75,11 +75,11 @@ public class SaveSingleTaskForCancelingTransferOutRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForCancelingTransferOutRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForCancelingTransferOutRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

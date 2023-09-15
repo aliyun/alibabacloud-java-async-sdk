@@ -63,10 +63,10 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchTaskForReserveDropListDomainRequest response) {
-            super(response);
-            this.contactTemplateId = response.contactTemplateId;
-            this.domains = response.domains;
+        private Builder(SaveBatchTaskForReserveDropListDomainRequest request) {
+            super(request);
+            this.contactTemplateId = request.contactTemplateId;
+            this.domains = request.domains;
         } 
 
         /**

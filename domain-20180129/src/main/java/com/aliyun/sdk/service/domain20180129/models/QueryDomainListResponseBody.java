@@ -191,6 +191,108 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class DomainTag extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private DomainTag(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public DomainTag build() {
+                return new DomainTag(this);
+            } 
+
+        } 
+
+    }
     public static class Domain extends TeaModel {
         @NameInMap("DomainAuditStatus")
         private String domainAuditStatus;
@@ -243,6 +345,12 @@ public class QueryDomainListResponseBody extends TeaModel {
         @NameInMap("Remark")
         private String remark;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tag")
+        private DomainTag tag;
+
         private Domain(Builder builder) {
             this.domainAuditStatus = builder.domainAuditStatus;
             this.domainGroupId = builder.domainGroupId;
@@ -261,6 +369,8 @@ public class QueryDomainListResponseBody extends TeaModel {
             this.registrationDate = builder.registrationDate;
             this.registrationDateLong = builder.registrationDateLong;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
@@ -390,6 +500,20 @@ public class QueryDomainListResponseBody extends TeaModel {
             return this.remark;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tag
+         */
+        public DomainTag getTag() {
+            return this.tag;
+        }
+
         public static final class Builder {
             private String domainAuditStatus; 
             private String domainGroupId; 
@@ -408,6 +532,8 @@ public class QueryDomainListResponseBody extends TeaModel {
             private String registrationDate; 
             private Long registrationDateLong; 
             private String remark; 
+            private String resourceGroupId; 
+            private DomainTag tag; 
 
             /**
              * DomainAuditStatus.
@@ -542,6 +668,22 @@ public class QueryDomainListResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(DomainTag tag) {
+                this.tag = tag;
                 return this;
             }
 

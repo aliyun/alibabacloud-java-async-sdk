@@ -127,15 +127,15 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchTaskForCreatingOrderActivateRequest response) {
-            super(response);
-            this.couponNo = response.couponNo;
-            this.lang = response.lang;
-            this.orderActivateParam = response.orderActivateParam;
-            this.promotionNo = response.promotionNo;
-            this.useCoupon = response.useCoupon;
-            this.usePromotion = response.usePromotion;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchTaskForCreatingOrderActivateRequest request) {
+            super(request);
+            this.couponNo = request.couponNo;
+            this.lang = request.lang;
+            this.orderActivateParam = request.orderActivateParam;
+            this.promotionNo = request.promotionNo;
+            this.useCoupon = request.useCoupon;
+            this.usePromotion = request.usePromotion;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**
@@ -257,6 +257,9 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
         @NameInMap("RegistrantType")
         private String registrantType;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SubscriptionDuration")
         private Integer subscriptionDuration;
 
@@ -304,6 +307,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
             this.registrantOrganization = builder.registrantOrganization;
             this.registrantProfileId = builder.registrantProfileId;
             this.registrantType = builder.registrantType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.subscriptionDuration = builder.subscriptionDuration;
             this.telArea = builder.telArea;
             this.telExt = builder.telExt;
@@ -437,6 +441,13 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return subscriptionDuration
          */
         public Integer getSubscriptionDuration() {
@@ -523,6 +534,7 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
             private String registrantOrganization; 
             private Long registrantProfileId; 
             private String registrantType; 
+            private String resourceGroupId; 
             private Integer subscriptionDuration; 
             private String telArea; 
             private String telExt; 
@@ -659,6 +671,14 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
              */
             public Builder registrantType(String registrantType) {
                 this.registrantType = registrantType;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

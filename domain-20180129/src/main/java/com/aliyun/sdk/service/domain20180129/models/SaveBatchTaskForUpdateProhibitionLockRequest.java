@@ -89,12 +89,12 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
             super();
         } 
 
-        private Builder(SaveBatchTaskForUpdateProhibitionLockRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.status = response.status;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveBatchTaskForUpdateProhibitionLockRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.status = request.status;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

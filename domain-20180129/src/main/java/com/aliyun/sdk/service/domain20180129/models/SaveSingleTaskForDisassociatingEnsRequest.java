@@ -75,11 +75,11 @@ public class SaveSingleTaskForDisassociatingEnsRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForDisassociatingEnsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForDisassociatingEnsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -37,6 +37,14 @@ public class ListServerLockRequest extends Request {
     private String lockProductId;
 
     @Query
+    @NameInMap("OrderBy")
+    private String orderBy;
+
+    @Query
+    @NameInMap("OrderByType")
+    private String orderByType;
+
+    @Query
     @NameInMap("PageNum")
     private Integer pageNum;
 
@@ -64,6 +72,8 @@ public class ListServerLockRequest extends Request {
         this.endStartDate = builder.endStartDate;
         this.lang = builder.lang;
         this.lockProductId = builder.lockProductId;
+        this.orderBy = builder.orderBy;
+        this.orderByType = builder.orderByType;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.serverLockStatus = builder.serverLockStatus;
@@ -127,6 +137,20 @@ public class ListServerLockRequest extends Request {
     }
 
     /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
+     * @return orderByType
+     */
+    public String getOrderByType() {
+        return this.orderByType;
+    }
+
+    /**
      * @return pageNum
      */
     public Integer getPageNum() {
@@ -168,6 +192,8 @@ public class ListServerLockRequest extends Request {
         private Long endStartDate; 
         private String lang; 
         private String lockProductId; 
+        private String orderBy; 
+        private String orderByType; 
         private Integer pageNum; 
         private Integer pageSize; 
         private Integer serverLockStatus; 
@@ -178,19 +204,21 @@ public class ListServerLockRequest extends Request {
             super();
         } 
 
-        private Builder(ListServerLockRequest response) {
-            super(response);
-            this.beginStartDate = response.beginStartDate;
-            this.domainName = response.domainName;
-            this.endExpireDate = response.endExpireDate;
-            this.endStartDate = response.endStartDate;
-            this.lang = response.lang;
-            this.lockProductId = response.lockProductId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.serverLockStatus = response.serverLockStatus;
-            this.startExpireDate = response.startExpireDate;
-            this.userClientIp = response.userClientIp;
+        private Builder(ListServerLockRequest request) {
+            super(request);
+            this.beginStartDate = request.beginStartDate;
+            this.domainName = request.domainName;
+            this.endExpireDate = request.endExpireDate;
+            this.endStartDate = request.endStartDate;
+            this.lang = request.lang;
+            this.lockProductId = request.lockProductId;
+            this.orderBy = request.orderBy;
+            this.orderByType = request.orderByType;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.serverLockStatus = request.serverLockStatus;
+            this.startExpireDate = request.startExpireDate;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**
@@ -244,6 +272,24 @@ public class ListServerLockRequest extends Request {
         public Builder lockProductId(String lockProductId) {
             this.putQueryParameter("LockProductId", lockProductId);
             this.lockProductId = lockProductId;
+            return this;
+        }
+
+        /**
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+         * OrderByType.
+         */
+        public Builder orderByType(String orderByType) {
+            this.putQueryParameter("OrderByType", orderByType);
+            this.orderByType = orderByType;
             return this;
         }
 

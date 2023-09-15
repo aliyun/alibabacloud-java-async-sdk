@@ -75,11 +75,11 @@ public class QueryDomainByDomainNameRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDomainByDomainNameRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(QueryDomainByDomainNameRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

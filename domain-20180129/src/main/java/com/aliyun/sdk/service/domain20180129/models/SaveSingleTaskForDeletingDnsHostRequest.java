@@ -89,12 +89,12 @@ public class SaveSingleTaskForDeletingDnsHostRequest extends Request {
             super();
         } 
 
-        private Builder(SaveSingleTaskForDeletingDnsHostRequest response) {
-            super(response);
-            this.dnsName = response.dnsName;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveSingleTaskForDeletingDnsHostRequest request) {
+            super(request);
+            this.dnsName = request.dnsName;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class BatchFuzzyMatchDomainSensitiveWordRequest extends Request {
             super();
         } 
 
-        private Builder(BatchFuzzyMatchDomainSensitiveWordRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(BatchFuzzyMatchDomainSensitiveWordRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

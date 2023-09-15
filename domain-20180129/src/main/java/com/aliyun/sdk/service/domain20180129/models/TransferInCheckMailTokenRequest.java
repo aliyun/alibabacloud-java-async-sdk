@@ -75,11 +75,11 @@ public class TransferInCheckMailTokenRequest extends Request {
             super();
         } 
 
-        private Builder(TransferInCheckMailTokenRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.token = response.token;
-            this.userClientIp = response.userClientIp;
+        private Builder(TransferInCheckMailTokenRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.token = request.token;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class CancelDomainVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(CancelDomainVerificationRequest response) {
-            super(response);
-            this.actionType = response.actionType;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(CancelDomainVerificationRequest request) {
+            super(request);
+            this.actionType = request.actionType;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

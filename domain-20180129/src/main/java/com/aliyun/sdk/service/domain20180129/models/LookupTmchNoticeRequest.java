@@ -75,11 +75,11 @@ public class LookupTmchNoticeRequest extends Request {
             super();
         } 
 
-        private Builder(LookupTmchNoticeRequest response) {
-            super(response);
-            this.claimKey = response.claimKey;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(LookupTmchNoticeRequest request) {
+            super(request);
+            this.claimKey = request.claimKey;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

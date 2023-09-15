@@ -117,14 +117,14 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
             super();
         } 
 
-        private Builder(SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.identityCredential = response.identityCredential;
-            this.identityCredentialNo = response.identityCredentialNo;
-            this.identityCredentialType = response.identityCredentialType;
-            this.lang = response.lang;
-            this.userClientIp = response.userClientIp;
+        private Builder(SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.identityCredential = request.identityCredential;
+            this.identityCredentialNo = request.identityCredentialNo;
+            this.identityCredentialType = request.identityCredentialType;
+            this.lang = request.lang;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

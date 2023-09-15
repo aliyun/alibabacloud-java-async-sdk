@@ -74,6 +74,10 @@ public class ScrollDomainListRequest extends Request {
     private String productDomainType;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ScrollId")
     private String scrollId;
 
@@ -118,6 +122,7 @@ public class ScrollDomainListRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.productDomainType = builder.productDomainType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.scrollId = builder.scrollId;
         this.startExpirationDate = builder.startExpirationDate;
         this.startLength = builder.startLength;
@@ -246,6 +251,13 @@ public class ScrollDomainListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return scrollId
      */
     public String getScrollId() {
@@ -310,6 +322,7 @@ public class ScrollDomainListRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private String productDomainType; 
+        private String resourceGroupId; 
         private String scrollId; 
         private Long startExpirationDate; 
         private Integer startLength; 
@@ -322,30 +335,31 @@ public class ScrollDomainListRequest extends Request {
             super();
         } 
 
-        private Builder(ScrollDomainListRequest response) {
-            super(response);
-            this.domainGroupId = response.domainGroupId;
-            this.domainStatus = response.domainStatus;
-            this.endExpirationDate = response.endExpirationDate;
-            this.endLength = response.endLength;
-            this.endRegistrationDate = response.endRegistrationDate;
-            this.excluded = response.excluded;
-            this.excludedPrefix = response.excludedPrefix;
-            this.excludedSuffix = response.excludedSuffix;
-            this.form = response.form;
-            this.keyWord = response.keyWord;
-            this.keyWordPrefix = response.keyWordPrefix;
-            this.keyWordSuffix = response.keyWordSuffix;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.productDomainType = response.productDomainType;
-            this.scrollId = response.scrollId;
-            this.startExpirationDate = response.startExpirationDate;
-            this.startLength = response.startLength;
-            this.startRegistrationDate = response.startRegistrationDate;
-            this.suffixs = response.suffixs;
-            this.tradeType = response.tradeType;
-            this.userClientIp = response.userClientIp;
+        private Builder(ScrollDomainListRequest request) {
+            super(request);
+            this.domainGroupId = request.domainGroupId;
+            this.domainStatus = request.domainStatus;
+            this.endExpirationDate = request.endExpirationDate;
+            this.endLength = request.endLength;
+            this.endRegistrationDate = request.endRegistrationDate;
+            this.excluded = request.excluded;
+            this.excludedPrefix = request.excludedPrefix;
+            this.excludedSuffix = request.excludedSuffix;
+            this.form = request.form;
+            this.keyWord = request.keyWord;
+            this.keyWordPrefix = request.keyWordPrefix;
+            this.keyWordSuffix = request.keyWordSuffix;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.productDomainType = request.productDomainType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.scrollId = request.scrollId;
+            this.startExpirationDate = request.startExpirationDate;
+            this.startLength = request.startLength;
+            this.startRegistrationDate = request.startRegistrationDate;
+            this.suffixs = request.suffixs;
+            this.tradeType = request.tradeType;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**
@@ -480,6 +494,15 @@ public class ScrollDomainListRequest extends Request {
         public Builder productDomainType(String productDomainType) {
             this.putQueryParameter("ProductDomainType", productDomainType);
             this.productDomainType = productDomainType;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
