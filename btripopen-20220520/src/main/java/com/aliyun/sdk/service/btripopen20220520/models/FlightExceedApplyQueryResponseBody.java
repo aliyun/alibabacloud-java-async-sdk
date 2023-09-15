@@ -152,6 +152,9 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
     } 
 
     public static class ApplyIntentionInfoDo extends TeaModel {
+        @NameInMap("arr_airport_name")
+        private String arrAirportName;
+
         @NameInMap("arr_city")
         private String arrCity;
 
@@ -169,6 +172,9 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
         @NameInMap("cabin_class_str")
         private String cabinClassStr;
+
+        @NameInMap("dep_airport_name")
+        private String depAirportName;
 
         @NameInMap("dep_city")
         private String depCity;
@@ -192,12 +198,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         private Integer type;
 
         private ApplyIntentionInfoDo(Builder builder) {
+            this.arrAirportName = builder.arrAirportName;
             this.arrCity = builder.arrCity;
             this.arrCityName = builder.arrCityName;
             this.arrTime = builder.arrTime;
             this.cabin = builder.cabin;
             this.cabinClass = builder.cabinClass;
             this.cabinClassStr = builder.cabinClassStr;
+            this.depAirportName = builder.depAirportName;
             this.depCity = builder.depCity;
             this.depCityName = builder.depCityName;
             this.depTime = builder.depTime;
@@ -213,6 +221,13 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
         public static ApplyIntentionInfoDo create() {
             return builder().build();
+        }
+
+        /**
+         * @return arrAirportName
+         */
+        public String getArrAirportName() {
+            return this.arrAirportName;
         }
 
         /**
@@ -255,6 +270,13 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
          */
         public String getCabinClassStr() {
             return this.cabinClassStr;
+        }
+
+        /**
+         * @return depAirportName
+         */
+        public String getDepAirportName() {
+            return this.depAirportName;
         }
 
         /**
@@ -307,12 +329,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String arrAirportName; 
             private String arrCity; 
             private String arrCityName; 
             private String arrTime; 
             private String cabin; 
             private Integer cabinClass; 
             private String cabinClassStr; 
+            private String depAirportName; 
             private String depCity; 
             private String depCityName; 
             private String depTime; 
@@ -320,6 +344,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private String flightNo; 
             private Long price; 
             private Integer type; 
+
+            /**
+             * arr_airport_name.
+             */
+            public Builder arrAirportName(String arrAirportName) {
+                this.arrAirportName = arrAirportName;
+                return this;
+            }
 
             /**
              * arr_city.
@@ -366,6 +398,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
              */
             public Builder cabinClassStr(String cabinClassStr) {
                 this.cabinClassStr = cabinClassStr;
+                return this;
+            }
+
+            /**
+             * dep_airport_name.
+             */
+            public Builder depAirportName(String depAirportName) {
+                this.depAirportName = depAirportName;
                 return this;
             }
 
@@ -432,12 +472,296 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    public static class ApplyRecommendFlights extends TeaModel {
+        @NameInMap("arr_airport_name")
+        private String arrAirportName;
+
+        @NameInMap("arr_city_name")
+        private String arrCityName;
+
+        @NameInMap("arr_time")
+        private String arrTime;
+
+        @NameInMap("cabin")
+        private String cabin;
+
+        @NameInMap("cabin_class")
+        private Integer cabinClass;
+
+        @NameInMap("cabin_class_str")
+        private String cabinClassStr;
+
+        @NameInMap("dep_airport_name")
+        private String depAirportName;
+
+        @NameInMap("dep_city_name")
+        private String depCityName;
+
+        @NameInMap("dep_time")
+        private String depTime;
+
+        @NameInMap("discount")
+        private String discount;
+
+        @NameInMap("flight_no")
+        private String flightNo;
+
+        @NameInMap("price")
+        private Long price;
+
+        @NameInMap("transfer_airport_name")
+        private String transferAirportName;
+
+        private ApplyRecommendFlights(Builder builder) {
+            this.arrAirportName = builder.arrAirportName;
+            this.arrCityName = builder.arrCityName;
+            this.arrTime = builder.arrTime;
+            this.cabin = builder.cabin;
+            this.cabinClass = builder.cabinClass;
+            this.cabinClassStr = builder.cabinClassStr;
+            this.depAirportName = builder.depAirportName;
+            this.depCityName = builder.depCityName;
+            this.depTime = builder.depTime;
+            this.discount = builder.discount;
+            this.flightNo = builder.flightNo;
+            this.price = builder.price;
+            this.transferAirportName = builder.transferAirportName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplyRecommendFlights create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arrAirportName
+         */
+        public String getArrAirportName() {
+            return this.arrAirportName;
+        }
+
+        /**
+         * @return arrCityName
+         */
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        /**
+         * @return arrTime
+         */
+        public String getArrTime() {
+            return this.arrTime;
+        }
+
+        /**
+         * @return cabin
+         */
+        public String getCabin() {
+            return this.cabin;
+        }
+
+        /**
+         * @return cabinClass
+         */
+        public Integer getCabinClass() {
+            return this.cabinClass;
+        }
+
+        /**
+         * @return cabinClassStr
+         */
+        public String getCabinClassStr() {
+            return this.cabinClassStr;
+        }
+
+        /**
+         * @return depAirportName
+         */
+        public String getDepAirportName() {
+            return this.depAirportName;
+        }
+
+        /**
+         * @return depCityName
+         */
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        /**
+         * @return depTime
+         */
+        public String getDepTime() {
+            return this.depTime;
+        }
+
+        /**
+         * @return discount
+         */
+        public String getDiscount() {
+            return this.discount;
+        }
+
+        /**
+         * @return flightNo
+         */
+        public String getFlightNo() {
+            return this.flightNo;
+        }
+
+        /**
+         * @return price
+         */
+        public Long getPrice() {
+            return this.price;
+        }
+
+        /**
+         * @return transferAirportName
+         */
+        public String getTransferAirportName() {
+            return this.transferAirportName;
+        }
+
+        public static final class Builder {
+            private String arrAirportName; 
+            private String arrCityName; 
+            private String arrTime; 
+            private String cabin; 
+            private Integer cabinClass; 
+            private String cabinClassStr; 
+            private String depAirportName; 
+            private String depCityName; 
+            private String depTime; 
+            private String discount; 
+            private String flightNo; 
+            private Long price; 
+            private String transferAirportName; 
+
+            /**
+             * arr_airport_name.
+             */
+            public Builder arrAirportName(String arrAirportName) {
+                this.arrAirportName = arrAirportName;
+                return this;
+            }
+
+            /**
+             * arr_city_name.
+             */
+            public Builder arrCityName(String arrCityName) {
+                this.arrCityName = arrCityName;
+                return this;
+            }
+
+            /**
+             * arr_time.
+             */
+            public Builder arrTime(String arrTime) {
+                this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * cabin.
+             */
+            public Builder cabin(String cabin) {
+                this.cabin = cabin;
+                return this;
+            }
+
+            /**
+             * cabin_class.
+             */
+            public Builder cabinClass(Integer cabinClass) {
+                this.cabinClass = cabinClass;
+                return this;
+            }
+
+            /**
+             * cabin_class_str.
+             */
+            public Builder cabinClassStr(String cabinClassStr) {
+                this.cabinClassStr = cabinClassStr;
+                return this;
+            }
+
+            /**
+             * dep_airport_name.
+             */
+            public Builder depAirportName(String depAirportName) {
+                this.depAirportName = depAirportName;
+                return this;
+            }
+
+            /**
+             * dep_city_name.
+             */
+            public Builder depCityName(String depCityName) {
+                this.depCityName = depCityName;
+                return this;
+            }
+
+            /**
+             * dep_time.
+             */
+            public Builder depTime(String depTime) {
+                this.depTime = depTime;
+                return this;
+            }
+
+            /**
+             * discount.
+             */
+            public Builder discount(String discount) {
+                this.discount = discount;
+                return this;
+            }
+
+            /**
+             * flight_no.
+             */
+            public Builder flightNo(String flightNo) {
+                this.flightNo = flightNo;
+                return this;
+            }
+
+            /**
+             * price.
+             */
+            public Builder price(Long price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
+             * transfer_airport_name.
+             */
+            public Builder transferAirportName(String transferAirportName) {
+                this.transferAirportName = transferAirportName;
+                return this;
+            }
+
+            public ApplyRecommendFlights build() {
+                return new ApplyRecommendFlights(this);
+            } 
+
+        } 
+
+    }
     public static class Module extends TeaModel {
         @NameInMap("apply_id")
         private Long applyId;
 
         @NameInMap("apply_intention_info_do")
         private ApplyIntentionInfoDo applyIntentionInfoDo;
+
+        @NameInMap("apply_recommend_flights")
+        private ApplyRecommendFlights applyRecommendFlights;
 
         @NameInMap("btrip_cause")
         private String btripCause;
@@ -472,6 +796,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.applyIntentionInfoDo = builder.applyIntentionInfoDo;
+            this.applyRecommendFlights = builder.applyRecommendFlights;
             this.btripCause = builder.btripCause;
             this.corpId = builder.corpId;
             this.exceedReason = builder.exceedReason;
@@ -504,6 +829,13 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
          */
         public ApplyIntentionInfoDo getApplyIntentionInfoDo() {
             return this.applyIntentionInfoDo;
+        }
+
+        /**
+         * @return applyRecommendFlights
+         */
+        public ApplyRecommendFlights getApplyRecommendFlights() {
+            return this.applyRecommendFlights;
         }
 
         /**
@@ -579,6 +911,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long applyId; 
             private ApplyIntentionInfoDo applyIntentionInfoDo; 
+            private ApplyRecommendFlights applyRecommendFlights; 
             private String btripCause; 
             private String corpId; 
             private String exceedReason; 
@@ -603,6 +936,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
              */
             public Builder applyIntentionInfoDo(ApplyIntentionInfoDo applyIntentionInfoDo) {
                 this.applyIntentionInfoDo = applyIntentionInfoDo;
+                return this;
+            }
+
+            /**
+             * apply_recommend_flights.
+             */
+            public Builder applyRecommendFlights(ApplyRecommendFlights applyRecommendFlights) {
+                this.applyRecommendFlights = applyRecommendFlights;
                 return this;
             }
 

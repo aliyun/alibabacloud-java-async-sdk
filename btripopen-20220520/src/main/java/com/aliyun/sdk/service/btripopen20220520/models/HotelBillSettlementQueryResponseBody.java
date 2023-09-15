@@ -233,6 +233,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fees")
         private Double fees;
 
+        @NameInMap("fines")
+        private Double fines;
+
         @NameInMap("fu_point_fee")
         private Double fuPointFee;
 
@@ -244,6 +247,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_title")
         private String invoiceTitle;
+
+        @NameInMap("is_early_departure")
+        private String isEarlyDeparture;
 
         @NameInMap("is_negotiation")
         private String isNegotiation;
@@ -369,10 +375,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.departmentId = builder.departmentId;
             this.feeType = builder.feeType;
             this.fees = builder.fees;
+            this.fines = builder.fines;
             this.fuPointFee = builder.fuPointFee;
             this.hotelName = builder.hotelName;
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
+            this.isEarlyDeparture = builder.isEarlyDeparture;
             this.isNegotiation = builder.isNegotiation;
             this.isShareStr = builder.isShareStr;
             this.nights = builder.nights;
@@ -605,6 +613,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return fines
+         */
+        public Double getFines() {
+            return this.fines;
+        }
+
+        /**
          * @return fuPointFee
          */
         public Double getFuPointFee() {
@@ -630,6 +645,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        /**
+         * @return isEarlyDeparture
+         */
+        public String getIsEarlyDeparture() {
+            return this.isEarlyDeparture;
         }
 
         /**
@@ -884,10 +906,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String departmentId; 
             private String feeType; 
             private Double fees; 
+            private Double fines; 
             private Double fuPointFee; 
             private String hotelName; 
             private String index; 
             private String invoiceTitle; 
+            private String isEarlyDeparture; 
             private String isNegotiation; 
             private String isShareStr; 
             private Integer nights; 
@@ -1138,6 +1162,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * fines.
+             */
+            public Builder fines(Double fines) {
+                this.fines = fines;
+                return this;
+            }
+
+            /**
              * fu_point_fee.
              */
             public Builder fuPointFee(Double fuPointFee) {
@@ -1166,6 +1198,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * is_early_departure.
+             */
+            public Builder isEarlyDeparture(String isEarlyDeparture) {
+                this.isEarlyDeparture = isEarlyDeparture;
                 return this;
             }
 

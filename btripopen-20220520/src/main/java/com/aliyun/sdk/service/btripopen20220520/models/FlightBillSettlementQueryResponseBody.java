@@ -338,6 +338,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("refund_fee")
         private Double refundFee;
 
+        @NameInMap("refund_result")
+        private String refundResult;
+
         @NameInMap("refund_upgrade_cost")
         private Double refundUpgradeCost;
 
@@ -455,6 +458,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.refundFee = builder.refundFee;
+            this.refundResult = builder.refundResult;
             this.refundUpgradeCost = builder.refundUpgradeCost;
             this.remark = builder.remark;
             this.repeatRefund = builder.repeatRefund;
@@ -918,6 +922,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return refundResult
+         */
+        public String getRefundResult() {
+            return this.refundResult;
+        }
+
+        /**
          * @return refundUpgradeCost
          */
         public Double getRefundUpgradeCost() {
@@ -1106,6 +1117,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String projectCode; 
             private String projectName; 
             private Double refundFee; 
+            private String refundResult; 
             private Double refundUpgradeCost; 
             private String remark; 
             private String repeatRefund; 
@@ -1618,6 +1630,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
+                return this;
+            }
+
+            /**
+             * refund_result.
+             */
+            public Builder refundResult(String refundResult) {
+                this.refundResult = refundResult;
                 return this;
             }
 

@@ -2459,6 +2459,87 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    public static class SegmentOpenTicketList extends TeaModel {
+        @NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @NameInMap("open_ticket_status")
+        private Integer openTicketStatus;
+
+        @NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        private SegmentOpenTicketList(Builder builder) {
+            this.journeyIndex = builder.journeyIndex;
+            this.openTicketStatus = builder.openTicketStatus;
+            this.segmentIndex = builder.segmentIndex;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SegmentOpenTicketList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
+         * @return openTicketStatus
+         */
+        public Integer getOpenTicketStatus() {
+            return this.openTicketStatus;
+        }
+
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        public static final class Builder {
+            private Integer journeyIndex; 
+            private Integer openTicketStatus; 
+            private Integer segmentIndex; 
+
+            /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
+             * open_ticket_status.
+             */
+            public Builder openTicketStatus(Integer openTicketStatus) {
+                this.openTicketStatus = openTicketStatus;
+                return this;
+            }
+
+            /**
+             * segmentIndex
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            public SegmentOpenTicketList build() {
+                return new SegmentOpenTicketList(this);
+            } 
+
+        } 
+
+    }
     public static class Tickets extends TeaModel {
         @NameInMap("channel")
         private String channel;
@@ -2471,6 +2552,9 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
 
         @NameInMap("pcc")
         private String pcc;
+
+        @NameInMap("segment_open_ticket_list")
+        private java.util.List < SegmentOpenTicketList> segmentOpenTicketList;
 
         @NameInMap("ticket_auth_memo")
         private String ticketAuthMemo;
@@ -2492,6 +2576,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             this.journeyTitle = builder.journeyTitle;
             this.openTicketStatus = builder.openTicketStatus;
             this.pcc = builder.pcc;
+            this.segmentOpenTicketList = builder.segmentOpenTicketList;
             this.ticketAuthMemo = builder.ticketAuthMemo;
             this.ticketAuthStatus = builder.ticketAuthStatus;
             this.ticketNo = builder.ticketNo;
@@ -2536,6 +2621,13 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return segmentOpenTicketList
+         */
+        public java.util.List < SegmentOpenTicketList> getSegmentOpenTicketList() {
+            return this.segmentOpenTicketList;
+        }
+
+        /**
          * @return ticketAuthMemo
          */
         public String getTicketAuthMemo() {
@@ -2575,6 +2667,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String journeyTitle; 
             private String openTicketStatus; 
             private String pcc; 
+            private java.util.List < SegmentOpenTicketList> segmentOpenTicketList; 
             private String ticketAuthMemo; 
             private Integer ticketAuthStatus; 
             private String ticketNo; 
@@ -2610,6 +2703,14 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
              */
             public Builder pcc(String pcc) {
                 this.pcc = pcc;
+                return this;
+            }
+
+            /**
+             * segment_open_ticket_list.
+             */
+            public Builder segmentOpenTicketList(java.util.List < SegmentOpenTicketList> segmentOpenTicketList) {
+                this.segmentOpenTicketList = segmentOpenTicketList;
                 return this;
             }
 

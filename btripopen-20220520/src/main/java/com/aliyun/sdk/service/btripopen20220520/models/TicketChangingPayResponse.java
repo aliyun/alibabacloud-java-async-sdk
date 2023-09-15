@@ -16,6 +16,10 @@ public class TicketChangingPayResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private TicketChangingPayResponseBody body;
@@ -23,6 +27,7 @@ public class TicketChangingPayResponse extends Response {
     private TicketChangingPayResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class TicketChangingPayResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public TicketChangingPayResponseBody getBody() {
@@ -52,6 +64,8 @@ public class TicketChangingPayResponse extends Response {
     public interface Builder extends Response.Builder<TicketChangingPayResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(TicketChangingPayResponseBody body);
 
@@ -64,6 +78,7 @@ public class TicketChangingPayResponse extends Response {
             extends Response.BuilderImpl<TicketChangingPayResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private TicketChangingPayResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class TicketChangingPayResponse extends Response {
         private BuilderImpl(TicketChangingPayResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class TicketChangingPayResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
