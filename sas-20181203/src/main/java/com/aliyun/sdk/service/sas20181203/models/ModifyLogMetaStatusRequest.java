@@ -23,7 +23,6 @@ public class ModifyLogMetaStatusRequest extends Request {
 
     @Query
     @NameInMap("Project")
-    @Validation(required = true)
     private String project;
 
     @Query

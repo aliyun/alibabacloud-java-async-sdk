@@ -146,7 +146,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         private Integer vulnerability; 
 
         /**
-         * BaselineCheckCount.
+         * The number of baseline checks.
          */
         public Builder baselineCheckCount(Integer baselineCheckCount) {
             this.baselineCheckCount = baselineCheckCount;
@@ -154,7 +154,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * CveVulCount.
+         * The number of system vulnerabilities.
          */
         public Builder cveVulCount(Integer cveVulCount) {
             this.cveVulCount = cveVulCount;
@@ -162,7 +162,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * LastTaskTime.
+         * The timestamp generated when the last detection is performed.
          */
         public Builder lastTaskTime(Long lastTaskTime) {
             this.lastTaskTime = lastTaskTime;
@@ -170,7 +170,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * MaliciousFile.
+         * The number of malicious files.
          */
         public Builder maliciousFile(Integer maliciousFile) {
             this.maliciousFile = maliciousFile;
@@ -178,7 +178,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * RiskMachine.
+         * The number of risky hosts.
          */
         public Builder riskMachine(Integer riskMachine) {
             this.riskMachine = riskMachine;
@@ -194,7 +194,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * ScaVulCount.
+         * The number of application vulnerabilities.
          */
         public Builder scaVulCount(Integer scaVulCount) {
             this.scaVulCount = scaVulCount;
@@ -202,7 +202,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * ScanMachine.
+         * The number of hosts that are scanned.
          */
         public Builder scanMachine(Integer scanMachine) {
             this.scanMachine = scanMachine;
@@ -210,7 +210,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * SysVulCount.
+         * The number of windows system vulnerabilities.
          */
         public Builder sysVulCount(String sysVulCount) {
             this.sysVulCount = sysVulCount;
@@ -218,7 +218,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * Vulnerability.
+         * The number of vulnerabilities.
          */
         public Builder vulnerability(Integer vulnerability) {
             this.vulnerability = vulnerability;
