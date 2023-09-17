@@ -18,7 +18,7 @@ public class LogItem extends TeaModel {
 
     @NameInMap("Time")
     @Validation(required = true)
-    private Long time;
+    private Integer time;
 
     private LogItem(Builder builder) {
         this.contents = builder.contents;
@@ -43,13 +43,13 @@ public class LogItem extends TeaModel {
     /**
      * @return time
      */
-    public Long getTime() {
+    public Integer getTime() {
         return this.time;
     }
 
     public static final class Builder {
         private java.util.List < LogContent > contents; 
-        private Long time; 
+        private Integer time; 
 
         /**
          * Contents.
@@ -62,7 +62,7 @@ public class LogItem extends TeaModel {
         /**
          * Time.
          */
-        public Builder time(Long time) {
+        public Builder time(Integer time) {
             this.time = time;
             return this;
         }

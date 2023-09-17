@@ -24,6 +24,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ConsumerGroupHeartBeatResponse> consumerGroupHeartBeat(ConsumerGroupHeartBeatRequest request);
 
+    CompletableFuture<CreateAnnotationDataSetResponse> createAnnotationDataSet(CreateAnnotationDataSetRequest request);
+
+    CompletableFuture<CreateAnnotationLabelResponse> createAnnotationLabel(CreateAnnotationLabelRequest request);
+
     CompletableFuture<CreateConfigResponse> createConfig(CreateConfigRequest request);
 
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
@@ -38,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLoggingResponse> createLogging(CreateLoggingRequest request);
 
+    CompletableFuture<CreateLogtailPipelineConfigResponse> createLogtailPipelineConfig(CreateLogtailPipelineConfigRequest request);
+
     CompletableFuture<CreateMachineGroupResponse> createMachineGroup(CreateMachineGroupRequest request);
 
     CompletableFuture<CreateOdpsShipperResponse> createOdpsShipper(CreateOdpsShipperRequest request);
@@ -51,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRdsExternalStoreResponse> createRdsExternalStore(CreateRdsExternalStoreRequest request);
 
     CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request);
+
+    CompletableFuture<DeleteAnnotationDataResponse> deleteAnnotationData(DeleteAnnotationDataRequest request);
+
+    CompletableFuture<DeleteAnnotationDataSetResponse> deleteAnnotationDataSet(DeleteAnnotationDataSetRequest request);
+
+    CompletableFuture<DeleteAnnotationLabelResponse> deleteAnnotationLabel(DeleteAnnotationLabelRequest request);
 
     CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
 
@@ -68,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLoggingResponse> deleteLogging(DeleteLoggingRequest request);
 
+    CompletableFuture<DeleteLogtailPipelineConfigResponse> deleteLogtailPipelineConfig(DeleteLogtailPipelineConfigRequest request);
+
     CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request);
 
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
@@ -77,6 +91,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSavedSearchResponse> deleteSavedSearch(DeleteSavedSearchRequest request);
 
     CompletableFuture<DeleteShipperResponse> deleteShipper(DeleteShipperRequest request);
+
+    CompletableFuture<GetAnnotationDataResponse> getAnnotationData(GetAnnotationDataRequest request);
+
+    CompletableFuture<GetAnnotationDataSetResponse> getAnnotationDataSet(GetAnnotationDataSetRequest request);
+
+    CompletableFuture<GetAnnotationLabelResponse> getAnnotationLabel(GetAnnotationLabelRequest request);
 
     CompletableFuture<GetAppliedConfigsResponse> getAppliedConfigs(GetAppliedConfigsRequest request);
 
@@ -108,6 +128,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLogsV2Response> getLogsV2(GetLogsV2Request request);
 
+    CompletableFuture<GetLogtailPipelineConfigResponse> getLogtailPipelineConfig(GetLogtailPipelineConfigRequest request);
+
     CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request);
 
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
@@ -120,6 +142,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetShipperStatusResponse> getShipperStatus(GetShipperStatusRequest request);
 
+    CompletableFuture<ListAnnotationDataResponse> listAnnotationData(ListAnnotationDataRequest request);
+
+    CompletableFuture<ListAnnotationDataSetsResponse> listAnnotationDataSets(ListAnnotationDataSetsRequest request);
+
+    CompletableFuture<ListAnnotationLabelsResponse> listAnnotationLabels(ListAnnotationLabelsRequest request);
+
     CompletableFuture<ListConfigResponse> listConfig(ListConfigRequest request);
 
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
@@ -131,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExternalStoreResponse> listExternalStore(ListExternalStoreRequest request);
 
     CompletableFuture<ListLogStoresResponse> listLogStores(ListLogStoresRequest request);
+
+    CompletableFuture<ListLogtailPipelineConfigResponse> listLogtailPipelineConfig(ListLogtailPipelineConfigRequest request);
 
     CompletableFuture<ListMachineGroupResponse> listMachineGroup(ListMachineGroupRequest request);
 
@@ -148,9 +178,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PullDataResponse> pullData(PullDataRequest request);
 
+    CompletableFuture<PutAnnotationDataResponse> putAnnotationData(PutAnnotationDataRequest request);
+
     CompletableFuture<PutProjectPolicyResponse> putProjectPolicy(PutProjectPolicyRequest request);
 
     CompletableFuture<PutWebtrackingResponse> putWebtracking(PutWebtrackingRequest request);
+
+    CompletableFuture<QueryMLServiceResultsResponse> queryMLServiceResults(QueryMLServiceResultsRequest request);
 
     CompletableFuture<RemoveConfigFromMachineGroupResponse> removeConfigFromMachineGroup(RemoveConfigFromMachineGroupRequest request);
 
@@ -159,6 +193,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdateAnnotationDataSetResponse> updateAnnotationDataSet(UpdateAnnotationDataSetRequest request);
+
+    CompletableFuture<UpdateAnnotationLabelResponse> updateAnnotationLabel(UpdateAnnotationLabelRequest request);
 
     CompletableFuture<UpdateConfigResponse> updateConfig(UpdateConfigRequest request);
 
@@ -171,6 +209,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLogStoreResponse> updateLogStore(UpdateLogStoreRequest request);
 
     CompletableFuture<UpdateLoggingResponse> updateLogging(UpdateLoggingRequest request);
+
+    CompletableFuture<UpdateLogtailPipelineConfigResponse> updateLogtailPipelineConfig(UpdateLogtailPipelineConfigRequest request);
 
     CompletableFuture<UpdateMachineGroupResponse> updateMachineGroup(UpdateMachineGroupRequest request);
 

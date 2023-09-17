@@ -14,16 +14,17 @@ import com.aliyun.sdk.gateway.sls.models.*;
 public class LogGroup extends TeaModel {
     @NameInMap("LogTags")
     @Validation(required = true)
-    private LogTag logTags;
+    private java.util.List < LogTag > logTags;
 
     @NameInMap("Logs")
     @Validation(required = true)
-    private LogItem logs;
+    private java.util.List < LogItem > logs;
 
     @NameInMap("Source")
     private String source;
 
     @NameInMap("Topic")
+    @Validation(required = true)
     private String topic;
 
     private LogGroup(Builder builder) {
@@ -44,14 +45,14 @@ public class LogGroup extends TeaModel {
     /**
      * @return logTags
      */
-    public LogTag getLogTags() {
+    public java.util.List < LogTag > getLogTags() {
         return this.logTags;
     }
 
     /**
      * @return logs
      */
-    public LogItem getLogs() {
+    public java.util.List < LogItem > getLogs() {
         return this.logs;
     }
 
@@ -70,15 +71,15 @@ public class LogGroup extends TeaModel {
     }
 
     public static final class Builder {
-        private LogTag logTags; 
-        private LogItem logs; 
+        private java.util.List < LogTag > logTags; 
+        private java.util.List < LogItem > logs; 
         private String source; 
         private String topic; 
 
         /**
          * LogTags.
          */
-        public Builder logTags(LogTag logTags) {
+        public Builder logTags(java.util.List < LogTag > logTags) {
             this.logTags = logTags;
             return this;
         }
@@ -86,7 +87,7 @@ public class LogGroup extends TeaModel {
         /**
          * Logs.
          */
-        public Builder logs(LogItem logs) {
+        public Builder logs(java.util.List < LogItem > logs) {
             this.logs = logs;
             return this;
         }

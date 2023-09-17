@@ -16,9 +16,14 @@ public class CreateLoggingResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     private CreateLoggingResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
     }
 
     public static CreateLoggingResponse create() {
@@ -37,9 +42,18 @@ public class CreateLoggingResponse extends Response {
         return this.headers;
     }
 
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
     public interface Builder extends Response.Builder<CreateLoggingResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         @Override
         CreateLoggingResponse build();
@@ -50,6 +64,7 @@ public class CreateLoggingResponse extends Response {
             extends Response.BuilderImpl<CreateLoggingResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
 
         private BuilderImpl() {
             super();
@@ -58,6 +73,7 @@ public class CreateLoggingResponse extends Response {
         private BuilderImpl(CreateLoggingResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
         } 
 
         /**
@@ -66,6 +82,15 @@ public class CreateLoggingResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
