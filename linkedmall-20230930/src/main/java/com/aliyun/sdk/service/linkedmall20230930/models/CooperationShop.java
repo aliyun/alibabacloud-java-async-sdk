@@ -12,10 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CooperationShop</p>
  */
 public class CooperationShop extends TeaModel {
-    @NameInMap("CooperationCompanyId")
+    @NameInMap("cooperationCompanyId")
     private String cooperationCompanyId;
 
-    @NameInMap("CooperationShopId")
+    @NameInMap("cooperationShopId")
     private String cooperationShopId;
 
     @NameInMap("shopId")
@@ -62,7 +62,7 @@ public class CooperationShop extends TeaModel {
         private String shopId; 
 
         /**
-         * CooperationCompanyId.
+         * cooperationCompanyId.
          */
         public Builder cooperationCompanyId(String cooperationCompanyId) {
             this.cooperationCompanyId = cooperationCompanyId;
@@ -70,7 +70,7 @@ public class CooperationShop extends TeaModel {
         }
 
         /**
-         * CooperationShopId.
+         * cooperationShopId.
          */
         public Builder cooperationShopId(String cooperationShopId) {
             this.cooperationShopId = cooperationShopId;
