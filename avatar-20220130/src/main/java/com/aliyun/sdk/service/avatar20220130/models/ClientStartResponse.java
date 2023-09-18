@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryVideoTaskInfoResponse} extends {@link TeaModel}
+ * {@link ClientStartResponse} extends {@link TeaModel}
  *
- * <p>QueryVideoTaskInfoResponse</p>
+ * <p>ClientStartResponse</p>
  */
-public class QueryVideoTaskInfoResponse extends Response {
+public class ClientStartResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class QueryVideoTaskInfoResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private QueryVideoTaskInfoResponseBody body;
+    private ClientStartResponseBody body;
 
-    private QueryVideoTaskInfoResponse(BuilderImpl builder) {
+    private ClientStartResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryVideoTaskInfoResponse create() {
+    public static ClientStartResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class QueryVideoTaskInfoResponse extends Response {
     /**
      * @return body
      */
-    public QueryVideoTaskInfoResponseBody getBody() {
+    public ClientStartResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryVideoTaskInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<ClientStartResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryVideoTaskInfoResponseBody body);
+        Builder body(ClientStartResponseBody body);
 
         @Override
-        QueryVideoTaskInfoResponse build();
+        ClientStartResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryVideoTaskInfoResponse, Builder>
+            extends Response.BuilderImpl<ClientStartResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private QueryVideoTaskInfoResponseBody body; 
+        private ClientStartResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryVideoTaskInfoResponse response) {
+        private BuilderImpl(ClientStartResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class QueryVideoTaskInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryVideoTaskInfoResponseBody body) {
+        public Builder body(ClientStartResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryVideoTaskInfoResponse build() {
-            return new QueryVideoTaskInfoResponse(this);
+        public ClientStartResponse build() {
+            return new ClientStartResponse(this);
         } 
 
     } 

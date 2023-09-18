@@ -20,6 +20,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelVideoTaskResponse> cancelVideoTask(CancelVideoTaskRequest request);
 
+    CompletableFuture<ClientAuthResponse> clientAuth(ClientAuthRequest request);
+
+    CompletableFuture<ClientStartResponse> clientStart(ClientStartRequest request);
+
     CompletableFuture<CloseTimedResetOperateResponse> closeTimedResetOperate(CloseTimedResetOperateRequest request);
 
     CompletableFuture<Create2dAvatarResponse> create2dAvatar(Create2dAvatarRequest request);
@@ -41,6 +45,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTimedResetOperateStatusResponse> queryTimedResetOperateStatus(QueryTimedResetOperateStatusRequest request);
 
     CompletableFuture<QueryVideoTaskInfoResponse> queryVideoTaskInfo(QueryVideoTaskInfoRequest request);
+
+    CompletableFuture<Render3dAvatarResponse> render3dAvatar(Render3dAvatarRequest request);
 
     CompletableFuture<SendCommandResponse> sendCommand(SendCommandRequest request);
 
