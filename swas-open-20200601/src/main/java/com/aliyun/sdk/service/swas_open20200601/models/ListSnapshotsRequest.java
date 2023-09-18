@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSnapshotsRequest extends Request {
     @Query
+    @NameInMap("AcsProduct")
+    private String acsProduct;
+
+    @Query
     @NameInMap("DiskId")
     private String diskId;
 
@@ -45,6 +49,7 @@ public class ListSnapshotsRequest extends Request {
 
     private ListSnapshotsRequest(Builder builder) {
         super(builder);
+        this.acsProduct = builder.acsProduct;
         this.diskId = builder.diskId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
@@ -65,6 +70,13 @@ public class ListSnapshotsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acsProduct
+     */
+    public String getAcsProduct() {
+        return this.acsProduct;
     }
 
     /**
@@ -117,6 +129,7 @@ public class ListSnapshotsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSnapshotsRequest, Builder> {
+        private String acsProduct; 
         private String diskId; 
         private String instanceId; 
         private Integer pageNumber; 
@@ -131,6 +144,7 @@ public class ListSnapshotsRequest extends Request {
 
         private Builder(ListSnapshotsRequest request) {
             super(request);
+            this.acsProduct = request.acsProduct;
             this.diskId = request.diskId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
@@ -139,6 +153,15 @@ public class ListSnapshotsRequest extends Request {
             this.snapshotIds = request.snapshotIds;
             this.sourceDiskType = request.sourceDiskType;
         } 
+
+        /**
+         * AcsProduct.
+         */
+        public Builder acsProduct(String acsProduct) {
+            this.putQueryParameter("AcsProduct", acsProduct);
+            this.acsProduct = acsProduct;
+            return this;
+        }
 
         /**
          * The disk ID.
