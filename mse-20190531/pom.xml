@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-mse20190531</artifactId>
-  <version>5.0.2</version>
+  <version>5.0.3</version>
   <packaging>jar</packaging>
   <name>alibabacloud-mse20190531</name>
   <description>Alibaba Cloud mse (20190531) Async SDK for Java

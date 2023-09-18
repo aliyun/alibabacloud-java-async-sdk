@@ -33,13 +33,11 @@ public class GetApplicationInstanceListRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
-    private String pageNumber;
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
-    private String pageSize;
+    private Integer pageSize;
 
     @Query
     @NameInMap("Region")
@@ -105,14 +103,14 @@ public class GetApplicationInstanceListRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -135,8 +133,8 @@ public class GetApplicationInstanceListRequest extends Request {
         private String appId; 
         private String appName; 
         private String namespace; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String region; 
         private String tag; 
 
@@ -195,7 +193,7 @@ public class GetApplicationInstanceListRequest extends Request {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -204,7 +202,7 @@ public class GetApplicationInstanceListRequest extends Request {
         /**
          * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
