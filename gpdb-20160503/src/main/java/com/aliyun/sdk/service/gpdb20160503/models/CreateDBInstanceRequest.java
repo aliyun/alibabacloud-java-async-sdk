@@ -42,6 +42,7 @@ public class CreateDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("DBInstanceMode")
+    @Validation(required = true)
     private String DBInstanceMode;
 
     @Query
@@ -577,7 +578,10 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set.
+         * <p>
+         * 
+         * >  You can call the [DescribeDataBackups](~~210093~~) operation to query the IDs of all backup sets in the instance.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -598,10 +602,10 @@ public class CreateDBInstanceRequest extends Request {
          * Specifies whether to load a sample dataset after the instance is created. Valid values:
          * <p>
          * 
-         * - **true**
-         * - **false**
+         * *   **true**
+         * *   **false**
          * 
-         * If you do not specify this parameter, no sample dataset is loaded.
+         * >  If you do not specify this parameter, no sample dataset is loaded.
          */
         public Builder createSampleData(Boolean createSampleData) {
             this.putQueryParameter("CreateSampleData", createSampleData);
@@ -735,12 +739,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Set the value to VPC.
+         * The network type of the instance. Set the value to **VPC**.
          * <p>
          * 
          * > 
-         * - Only the Virtual Private Cloud (VPC) type is supported.
-         * - If you do not specify this parameter, VPC is used.
+         * 
+         * *   Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.
+         * 
+         * *   If you do not specify this parameter, VPC is used.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -779,7 +785,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * MasterCU.
+         * The amount of coordinator node resources. Valid values:
+         * <p>
+         * 
+         * *   2 CU
+         * *   4 CU
+         * *   8 CU
+         * *   16 CU
+         * *   32 CU
+         * 
+         * >  You are charged for coordinator node resources of more than 8 CUs.
          */
         public Builder masterCU(Integer masterCU) {
             this.putQueryParameter("MasterCU", masterCU);
@@ -842,7 +857,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The private IP address of the instance.
+         * This parameter is no longer used.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -956,7 +971,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SrcDbInstanceName.
+         * The ID of the source instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder srcDbInstanceName(String srcDbInstanceName) {
             this.putQueryParameter("SrcDbInstanceName", srcDbInstanceName);
@@ -965,10 +983,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: GB. Valid values: 50 to 4000.
+         * The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.
          * <p>
          * 
-         * > This parameter must be specified when you create an instance in elastic storage mode.
+         * >  This parameter must be specified when you create an instance in elastic storage mode.
          */
         public Builder storageSize(Long storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -1013,8 +1031,10 @@ public class CreateDBInstanceRequest extends Request {
          * <p>
          * 
          * > 
-         * - This parameter must be specified.
-         * - The region where the VPC resides must be the same as the region that is specified by RegionId.
+         * 
+         * *   **This parameter** must be specified.
+         * 
+         * *   The region where the **VPC** resides must be the same as the region that is specified by **RegionId**.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -1027,8 +1047,10 @@ public class CreateDBInstanceRequest extends Request {
          * <p>
          * 
          * > 
-         * - This parameter must be specified.
-         * - The zone where the vSwitch resides must be the same as the zone that is specified by ZoneId.
+         * 
+         * *   **This parameter** must be specified.
+         * 
+         * *   The zone where the **vSwitch** resides must be the same as the zone that is specified by **ZoneId**.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1037,15 +1059,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable vector engine optimization. Valid values:
+         * Specifies whether to enable vector search engine optimization. Valid values:
          * <p>
          * 
-         * - **enabled**
-         * - **disabled** (default)
+         * *   **enabled**
+         * *   **disabled** (default)
          * 
          * > 
-         * - We recommend that you do not enable vector engine optimization in mainstream analysis and real-time data warehousing scenarios.
-         * - We recommend that you enable vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
+         * 
+         * *   We recommend that you **do not enable** vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.
+         * 
+         * *   We recommend that you **enable** vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
          */
         public Builder vectorConfigurationStatus(String vectorConfigurationStatus) {
             this.putQueryParameter("VectorConfigurationStatus", vectorConfigurationStatus);

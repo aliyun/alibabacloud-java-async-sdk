@@ -27,10 +27,12 @@ public class ModifyBackupPolicyRequest extends Request {
 
     @Query
     @NameInMap("PreferredBackupPeriod")
+    @Validation(required = true)
     private String preferredBackupPeriod;
 
     @Query
     @NameInMap("PreferredBackupTime")
+    @Validation(required = true)
     private String preferredBackupTime;
 
     @Query

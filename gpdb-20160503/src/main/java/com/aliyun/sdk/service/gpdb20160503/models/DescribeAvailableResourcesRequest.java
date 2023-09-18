@@ -112,7 +112,7 @@ public class DescribeAvailableResourcesRequest extends Request {
          * The zone ID.
          * <p>
          * 
-         * > You can call the [DescribeRegions](~~86912~~)operation to query the most recent zone list.
+         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -240,9 +240,11 @@ public class TagResourcesRequest extends Request {
 
     public static class Tag extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         private String key;
 
         @NameInMap("Value")
+        @Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
