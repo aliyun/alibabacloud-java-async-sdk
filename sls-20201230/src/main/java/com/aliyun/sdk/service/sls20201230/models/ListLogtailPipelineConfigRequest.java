@@ -22,8 +22,8 @@ public class ListLogtailPipelineConfigRequest extends Request {
     private String configName;
 
     @Query
-    @NameInMap("logstore")
-    private String logstore;
+    @NameInMap("logstoreName")
+    private String logstoreName;
 
     @Query
     @NameInMap("offset")
@@ -38,7 +38,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         super(builder);
         this.project = builder.project;
         this.configName = builder.configName;
-        this.logstore = builder.logstore;
+        this.logstoreName = builder.logstoreName;
         this.offset = builder.offset;
         this.size = builder.size;
     }
@@ -71,10 +71,10 @@ public class ListLogtailPipelineConfigRequest extends Request {
     }
 
     /**
-     * @return logstore
+     * @return logstoreName
      */
-    public String getLogstore() {
-        return this.logstore;
+    public String getLogstoreName() {
+        return this.logstoreName;
     }
 
     /**
@@ -94,7 +94,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ListLogtailPipelineConfigRequest, Builder> {
         private String project; 
         private String configName; 
-        private String logstore; 
+        private String logstoreName; 
         private Long offset; 
         private Long size; 
 
@@ -106,7 +106,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
             super(request);
             this.project = request.project;
             this.configName = request.configName;
-            this.logstore = request.logstore;
+            this.logstoreName = request.logstoreName;
             this.offset = request.offset;
             this.size = request.size;
         } 
@@ -130,11 +130,11 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * logstore.
+         * logstoreName.
          */
-        public Builder logstore(String logstore) {
-            this.putQueryParameter("logstore", logstore);
-            this.logstore = logstore;
+        public Builder logstoreName(String logstoreName) {
+            this.putQueryParameter("logstoreName", logstoreName);
+            this.logstoreName = logstoreName;
             return this;
         }
 
