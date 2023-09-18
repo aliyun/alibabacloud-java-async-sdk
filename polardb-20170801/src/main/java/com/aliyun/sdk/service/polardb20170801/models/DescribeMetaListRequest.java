@@ -47,6 +47,10 @@ public class DescribeMetaListRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionCode")
+    private String regionCode;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -72,6 +76,7 @@ public class DescribeMetaListRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionCode = builder.regionCode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
@@ -148,6 +153,13 @@ public class DescribeMetaListRequest extends Request {
     }
 
     /**
+     * @return regionCode
+     */
+    public String getRegionCode() {
+        return this.regionCode;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -184,6 +196,7 @@ public class DescribeMetaListRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionCode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
@@ -203,6 +216,7 @@ public class DescribeMetaListRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionCode = request.regionCode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
@@ -300,6 +314,15 @@ public class DescribeMetaListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionCode.
+         */
+        public Builder regionCode(String regionCode) {
+            this.putQueryParameter("RegionCode", regionCode);
+            this.regionCode = regionCode;
             return this;
         }
 
