@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ShopPageDataResult</p>
  */
 public class ShopPageDataResult extends TeaModel {
-    @NameInMap("channelSupplierId")
-    private String channelSupplierId;
+    @NameInMap("cooperationShops")
+    private java.util.List < CooperationShop > cooperationShops;
 
     @NameInMap("endDate")
     private String endDate;
+
+    @NameInMap("purchaserId")
+    private String purchaserId;
 
     @NameInMap("shopId")
     private String shopId;
@@ -34,8 +37,9 @@ public class ShopPageDataResult extends TeaModel {
     private String status;
 
     private ShopPageDataResult(Builder builder) {
-        this.channelSupplierId = builder.channelSupplierId;
+        this.cooperationShops = builder.cooperationShops;
         this.endDate = builder.endDate;
+        this.purchaserId = builder.purchaserId;
         this.shopId = builder.shopId;
         this.shopName = builder.shopName;
         this.shopType = builder.shopType;
@@ -52,10 +56,10 @@ public class ShopPageDataResult extends TeaModel {
     }
 
     /**
-     * @return channelSupplierId
+     * @return cooperationShops
      */
-    public String getChannelSupplierId() {
-        return this.channelSupplierId;
+    public java.util.List < CooperationShop > getCooperationShops() {
+        return this.cooperationShops;
     }
 
     /**
@@ -63,6 +67,13 @@ public class ShopPageDataResult extends TeaModel {
      */
     public String getEndDate() {
         return this.endDate;
+    }
+
+    /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
     }
 
     /**
@@ -101,8 +112,9 @@ public class ShopPageDataResult extends TeaModel {
     }
 
     public static final class Builder {
-        private String channelSupplierId; 
+        private java.util.List < CooperationShop > cooperationShops; 
         private String endDate; 
+        private String purchaserId; 
         private String shopId; 
         private String shopName; 
         private String shopType; 
@@ -110,10 +122,10 @@ public class ShopPageDataResult extends TeaModel {
         private String status; 
 
         /**
-         * channelSupplierId.
+         * cooperationShops.
          */
-        public Builder channelSupplierId(String channelSupplierId) {
-            this.channelSupplierId = channelSupplierId;
+        public Builder cooperationShops(java.util.List < CooperationShop > cooperationShops) {
+            this.cooperationShops = cooperationShops;
             return this;
         }
 
@@ -122,6 +134,14 @@ public class ShopPageDataResult extends TeaModel {
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * purchaserId.
+         */
+        public Builder purchaserId(String purchaserId) {
+            this.purchaserId = purchaserId;
             return this;
         }
 

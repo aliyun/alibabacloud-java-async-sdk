@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListShopsResponse} extends {@link TeaModel}
+ * {@link ListSelectionSkuSaleInfosResponse} extends {@link TeaModel}
  *
- * <p>ListShopsResponse</p>
+ * <p>ListSelectionSkuSaleInfosResponse</p>
  */
-public class ListShopsResponse extends Response {
+public class ListSelectionSkuSaleInfosResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ListShopsResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ShopPageResult body;
+    private SkuSaleInfoListResult body;
 
-    private ListShopsResponse(BuilderImpl builder) {
+    private ListSelectionSkuSaleInfosResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListShopsResponse create() {
+    public static ListSelectionSkuSaleInfosResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ListShopsResponse extends Response {
     /**
      * @return body
      */
-    public ShopPageResult getBody() {
+    public SkuSaleInfoListResult getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListShopsResponse, Builder> {
+    public interface Builder extends Response.Builder<ListSelectionSkuSaleInfosResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ShopPageResult body);
+        Builder body(SkuSaleInfoListResult body);
 
         @Override
-        ListShopsResponse build();
+        ListSelectionSkuSaleInfosResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListShopsResponse, Builder>
+            extends Response.BuilderImpl<ListSelectionSkuSaleInfosResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ShopPageResult body; 
+        private SkuSaleInfoListResult body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListShopsResponse response) {
+        private BuilderImpl(ListSelectionSkuSaleInfosResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ListShopsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ShopPageResult body) {
+        public Builder body(SkuSaleInfoListResult body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListShopsResponse build() {
-            return new ListShopsResponse(this);
+        public ListSelectionSkuSaleInfosResponse build() {
+            return new ListSelectionSkuSaleInfosResponse(this);
         } 
 
     } 

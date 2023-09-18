@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListProductSaleInfosResponse} extends {@link TeaModel}
+ * {@link GetSelectionProductSaleInfoResponse} extends {@link TeaModel}
  *
- * <p>ListProductSaleInfosResponse</p>
+ * <p>GetSelectionProductSaleInfoResponse</p>
  */
-public class ListProductSaleInfosResponse extends Response {
+public class GetSelectionProductSaleInfoResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ListProductSaleInfosResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ProductSaleInfoListResult body;
+    private ProductSaleInfo body;
 
-    private ListProductSaleInfosResponse(BuilderImpl builder) {
+    private GetSelectionProductSaleInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListProductSaleInfosResponse create() {
+    public static GetSelectionProductSaleInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ListProductSaleInfosResponse extends Response {
     /**
      * @return body
      */
-    public ProductSaleInfoListResult getBody() {
+    public ProductSaleInfo getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListProductSaleInfosResponse, Builder> {
+    public interface Builder extends Response.Builder<GetSelectionProductSaleInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ProductSaleInfoListResult body);
+        Builder body(ProductSaleInfo body);
 
         @Override
-        ListProductSaleInfosResponse build();
+        GetSelectionProductSaleInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListProductSaleInfosResponse, Builder>
+            extends Response.BuilderImpl<GetSelectionProductSaleInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ProductSaleInfoListResult body; 
+        private ProductSaleInfo body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListProductSaleInfosResponse response) {
+        private BuilderImpl(GetSelectionProductSaleInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ListProductSaleInfosResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ProductSaleInfoListResult body) {
+        public Builder body(ProductSaleInfo body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListProductSaleInfosResponse build() {
-            return new ListProductSaleInfosResponse(this);
+        public GetSelectionProductSaleInfoResponse build() {
+            return new GetSelectionProductSaleInfoResponse(this);
         } 
 
     } 

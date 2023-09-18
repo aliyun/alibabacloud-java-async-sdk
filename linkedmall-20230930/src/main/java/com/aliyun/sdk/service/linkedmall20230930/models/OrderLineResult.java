@@ -27,14 +27,14 @@ public class OrderLineResult extends TeaModel {
     @NameInMap("orderLineStatus")
     private String orderLineStatus;
 
+    @NameInMap("payFee")
+    private Long payFee;
+
     @NameInMap("productId")
     private String productId;
 
     @NameInMap("productPic")
     private String productPic;
-
-    @NameInMap("productPrice")
-    private java.util.List < ProductPrice > productPrice;
 
     @NameInMap("productTitle")
     private String productTitle;
@@ -51,9 +51,9 @@ public class OrderLineResult extends TeaModel {
         this.orderId = builder.orderId;
         this.orderLineId = builder.orderLineId;
         this.orderLineStatus = builder.orderLineStatus;
+        this.payFee = builder.payFee;
         this.productId = builder.productId;
         this.productPic = builder.productPic;
-        this.productPrice = builder.productPrice;
         this.productTitle = builder.productTitle;
         this.skuId = builder.skuId;
         this.skuTitle = builder.skuTitle;
@@ -103,6 +103,13 @@ public class OrderLineResult extends TeaModel {
     }
 
     /**
+     * @return payFee
+     */
+    public Long getPayFee() {
+        return this.payFee;
+    }
+
+    /**
      * @return productId
      */
     public String getProductId() {
@@ -114,13 +121,6 @@ public class OrderLineResult extends TeaModel {
      */
     public String getProductPic() {
         return this.productPic;
-    }
-
-    /**
-     * @return productPrice
-     */
-    public java.util.List < ProductPrice > getProductPrice() {
-        return this.productPrice;
     }
 
     /**
@@ -150,9 +150,9 @@ public class OrderLineResult extends TeaModel {
         private String orderId; 
         private String orderLineId; 
         private String orderLineStatus; 
+        private Long payFee; 
         private String productId; 
         private String productPic; 
-        private java.util.List < ProductPrice > productPrice; 
         private String productTitle; 
         private String skuId; 
         private String skuTitle; 
@@ -198,6 +198,14 @@ public class OrderLineResult extends TeaModel {
         }
 
         /**
+         * payFee.
+         */
+        public Builder payFee(Long payFee) {
+            this.payFee = payFee;
+            return this;
+        }
+
+        /**
          * productId.
          */
         public Builder productId(String productId) {
@@ -210,14 +218,6 @@ public class OrderLineResult extends TeaModel {
          */
         public Builder productPic(String productPic) {
             this.productPic = productPic;
-            return this;
-        }
-
-        /**
-         * productPrice.
-         */
-        public Builder productPrice(java.util.List < ProductPrice > productPrice) {
-            this.productPrice = productPrice;
             return this;
         }
 

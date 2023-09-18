@@ -7,16 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListProductsRequest} extends {@link RequestModel}
+ * {@link ListSelectionProductsRequest} extends {@link RequestModel}
  *
- * <p>ListProductsRequest</p>
+ * <p>ListSelectionProductsRequest</p>
  */
-public class ListProductsRequest extends Request {
-    @Query
-    @NameInMap("distributorShopId")
-    @Validation(required = true)
-    private String distributorShopId;
-
+public class ListSelectionProductsRequest extends Request {
     @Query
     @NameInMap("pageNumber")
     @Validation(required = true)
@@ -27,31 +22,29 @@ public class ListProductsRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    private ListProductsRequest(Builder builder) {
+    @Query
+    @NameInMap("purchaserId")
+    @Validation(required = true)
+    private String purchaserId;
+
+    private ListSelectionProductsRequest(Builder builder) {
         super(builder);
-        this.distributorShopId = builder.distributorShopId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.purchaserId = builder.purchaserId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListProductsRequest create() {
+    public static ListSelectionProductsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return distributorShopId
-     */
-    public String getDistributorShopId() {
-        return this.distributorShopId;
     }
 
     /**
@@ -68,30 +61,28 @@ public class ListProductsRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder<ListProductsRequest, Builder> {
-        private String distributorShopId; 
+    /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
+    public static final class Builder extends Request.Builder<ListSelectionProductsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String purchaserId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListProductsRequest request) {
+        private Builder(ListSelectionProductsRequest request) {
             super(request);
-            this.distributorShopId = request.distributorShopId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.purchaserId = request.purchaserId;
         } 
-
-        /**
-         * distributorShopId.
-         */
-        public Builder distributorShopId(String distributorShopId) {
-            this.putQueryParameter("distributorShopId", distributorShopId);
-            this.distributorShopId = distributorShopId;
-            return this;
-        }
 
         /**
          * pageNumber.
@@ -111,9 +102,18 @@ public class ListProductsRequest extends Request {
             return this;
         }
 
+        /**
+         * purchaserId.
+         */
+        public Builder purchaserId(String purchaserId) {
+            this.putQueryParameter("purchaserId", purchaserId);
+            this.purchaserId = purchaserId;
+            return this;
+        }
+
         @Override
-        public ListProductsRequest build() {
-            return new ListProductsRequest(this);
+        public ListSelectionProductsRequest build() {
+            return new ListSelectionProductsRequest(this);
         } 
 
     } 

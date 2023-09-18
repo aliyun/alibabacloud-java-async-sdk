@@ -7,37 +7,37 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetProductRequest} extends {@link RequestModel}
+ * {@link GetSelectionProductSaleInfoRequest} extends {@link RequestModel}
  *
- * <p>GetProductRequest</p>
+ * <p>GetSelectionProductSaleInfoRequest</p>
  */
-public class GetProductRequest extends Request {
+public class GetSelectionProductSaleInfoRequest extends Request {
     @Path
     @NameInMap("productId")
     @Validation(required = true)
     private String productId;
 
     @Query
-    @NameInMap("distributorShopId")
-    @Validation(required = true)
-    private String distributorShopId;
-
-    @Query
     @NameInMap("divisionCode")
     private String divisionCode;
 
-    private GetProductRequest(Builder builder) {
+    @Query
+    @NameInMap("purchaserId")
+    @Validation(required = true)
+    private String purchaserId;
+
+    private GetSelectionProductSaleInfoRequest(Builder builder) {
         super(builder);
         this.productId = builder.productId;
-        this.distributorShopId = builder.distributorShopId;
         this.divisionCode = builder.divisionCode;
+        this.purchaserId = builder.purchaserId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetProductRequest create() {
+    public static GetSelectionProductSaleInfoRequest create() {
         return builder().build();
     }
 
@@ -54,33 +54,33 @@ public class GetProductRequest extends Request {
     }
 
     /**
-     * @return distributorShopId
-     */
-    public String getDistributorShopId() {
-        return this.distributorShopId;
-    }
-
-    /**
      * @return divisionCode
      */
     public String getDivisionCode() {
         return this.divisionCode;
     }
 
-    public static final class Builder extends Request.Builder<GetProductRequest, Builder> {
+    /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
+    public static final class Builder extends Request.Builder<GetSelectionProductSaleInfoRequest, Builder> {
         private String productId; 
-        private String distributorShopId; 
         private String divisionCode; 
+        private String purchaserId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetProductRequest request) {
+        private Builder(GetSelectionProductSaleInfoRequest request) {
             super(request);
             this.productId = request.productId;
-            this.distributorShopId = request.distributorShopId;
             this.divisionCode = request.divisionCode;
+            this.purchaserId = request.purchaserId;
         } 
 
         /**
@@ -93,15 +93,6 @@ public class GetProductRequest extends Request {
         }
 
         /**
-         * distributorShopId.
-         */
-        public Builder distributorShopId(String distributorShopId) {
-            this.putQueryParameter("distributorShopId", distributorShopId);
-            this.distributorShopId = distributorShopId;
-            return this;
-        }
-
-        /**
          * divisionCode.
          */
         public Builder divisionCode(String divisionCode) {
@@ -110,9 +101,18 @@ public class GetProductRequest extends Request {
             return this;
         }
 
+        /**
+         * purchaserId.
+         */
+        public Builder purchaserId(String purchaserId) {
+            this.putQueryParameter("purchaserId", purchaserId);
+            this.purchaserId = purchaserId;
+            return this;
+        }
+
         @Override
-        public GetProductRequest build() {
-            return new GetProductRequest(this);
+        public GetSelectionProductSaleInfoRequest build() {
+            return new GetSelectionProductSaleInfoRequest(this);
         } 
 
     } 

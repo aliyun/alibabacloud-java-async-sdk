@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListProductsResponse} extends {@link TeaModel}
+ * {@link ListSelectionProductsResponse} extends {@link TeaModel}
  *
- * <p>ListProductsResponse</p>
+ * <p>ListSelectionProductsResponse</p>
  */
-public class ListProductsResponse extends Response {
+public class ListSelectionProductsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -24,14 +24,14 @@ public class ListProductsResponse extends Response {
     @Validation(required = true)
     private ProductPageResult body;
 
-    private ListProductsResponse(BuilderImpl builder) {
+    private ListSelectionProductsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListProductsResponse create() {
+    public static ListSelectionProductsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -61,7 +61,7 @@ public class ListProductsResponse extends Response {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListProductsResponse, Builder> {
+    public interface Builder extends Response.Builder<ListSelectionProductsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
@@ -70,12 +70,12 @@ public class ListProductsResponse extends Response {
         Builder body(ProductPageResult body);
 
         @Override
-        ListProductsResponse build();
+        ListSelectionProductsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListProductsResponse, Builder>
+            extends Response.BuilderImpl<ListSelectionProductsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
@@ -85,7 +85,7 @@ public class ListProductsResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(ListProductsResponse response) {
+        private BuilderImpl(ListSelectionProductsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -120,8 +120,8 @@ public class ListProductsResponse extends Response {
         }
 
         @Override
-        public ListProductsResponse build() {
-            return new ListProductsResponse(this);
+        public ListSelectionProductsResponse build() {
+            return new ListSelectionProductsResponse(this);
         } 
 
     } 

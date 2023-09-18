@@ -98,7 +98,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CancelRefundOrderResponse> cancelRefundOrder(CancelRefundOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/{disputeId}/commands/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/{disputeId}/commands/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelRefundOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -112,7 +112,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ConfirmDisburseResponse> confirmDisburse(ConfirmDisburseRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ConfirmDisburse").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/confirmDisburse").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ConfirmDisburse").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/confirmDisburse").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfirmDisburseResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -126,7 +126,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateGoodsShippingNoticeResponse> createGoodsShippingNotice(CreateGoodsShippingNoticeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGoodsShippingNotice").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/command/createGoodsShippingNotice").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGoodsShippingNotice").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/command/createGoodsShippingNotice").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGoodsShippingNoticeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -140,7 +140,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreatePurchaseOrderResponse> createPurchaseOrder(CreatePurchaseOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePurchaseOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePurchaseOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePurchaseOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -154,7 +154,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateRefundOrderResponse> createRefundOrder(CreateRefundOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRefundOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -168,7 +168,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetOrderResponse> getOrder(GetOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOrder").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/{orderId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOrder").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/{orderId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -179,38 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<GetProductResponse> getProduct(GetProductRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetProduct").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/{productId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetProductResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetProductResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetProductSaleInfoResponse> getProductSaleInfo(GetProductSaleInfoRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetProductSaleInfo").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/{productId}/saleInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetProductSaleInfoResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetProductSaleInfoResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<GetPurchaseOrderStatusResponse> getPurchaseOrderStatus(GetPurchaseOrderStatusRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPurchaseOrderStatus").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/{purchaseOrderId}/status").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPurchaseOrderStatus").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/{purchaseOrderId}/status").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPurchaseOrderStatusResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -221,10 +193,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetPurchaserShopResponse> getPurchaserShop(GetPurchaserShopRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPurchaserShop").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops/{purchaserId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPurchaserShopResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPurchaserShopResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetRefundOrderResponse> getRefundOrder(GetRefundOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRefundOrder").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/{disputeId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRefundOrder").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/{disputeId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRefundOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -235,14 +221,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<GetShopResponse> getShop(GetShopRequest request) {
+    public CompletableFuture<GetSelectionProductResponse> getSelectionProduct(GetSelectionProductRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetShop").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops/{shopId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetShopResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSelectionProduct").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/{productId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSelectionProductResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<GetShopResponse> future = new CompletableFuture<>();
+            CompletableFuture<GetSelectionProductResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetSelectionProductSaleInfoResponse> getSelectionProductSaleInfo(GetSelectionProductSaleInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSelectionProductSaleInfo").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/{productId}/saleInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSelectionProductSaleInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSelectionProductSaleInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -252,7 +252,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListLogisticsOrdersResponse> listLogisticsOrders(ListLogisticsOrdersRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLogisticsOrders").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/{orderId}/logisticsOrders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLogisticsOrders").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/{orderId}/logisticsOrders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLogisticsOrdersResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -263,70 +263,56 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<ListProductGeneralBillsResponse> listProductGeneralBills(ListProductGeneralBillsRequest request) {
+    public CompletableFuture<ListPurchaserShopsResponse> listPurchaserShops(ListPurchaserShopsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProductGeneralBills").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/productGeneralBills").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProductGeneralBillsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPurchaserShops").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPurchaserShopsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListProductGeneralBillsResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListPurchaserShopsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     @Override
-    public CompletableFuture<ListProductSaleInfosResponse> listProductSaleInfos(ListProductSaleInfosRequest request) {
+    public CompletableFuture<ListSelectionProductSaleInfosResponse> listSelectionProductSaleInfos(ListSelectionProductSaleInfosRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProductSaleInfos").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/saleInfo/commands/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProductSaleInfosResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSelectionProductSaleInfos").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/saleInfo/commands/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSelectionProductSaleInfosResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListProductSaleInfosResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListSelectionProductSaleInfosResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     @Override
-    public CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request) {
+    public CompletableFuture<ListSelectionProductsResponse> listSelectionProducts(ListSelectionProductsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProducts").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/products").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProductsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSelectionProducts").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSelectionProductsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListProductsResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListSelectionProductsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     @Override
-    public CompletableFuture<ListShopsResponse> listShops(ListShopsRequest request) {
+    public CompletableFuture<ListSelectionSkuSaleInfosResponse> listSelectionSkuSaleInfos(ListSelectionSkuSaleInfosRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListShops").setMethod(HttpMethod.GET).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListShopsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSelectionSkuSaleInfos").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/skus/saleInfo/commands/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSelectionSkuSaleInfosResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListShopsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListSkuSaleInfosResponse> listSkuSaleInfos(ListSkuSaleInfosRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSkuSaleInfos").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/skus/saleInfo/commands/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSkuSaleInfosResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListSkuSaleInfosResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListSelectionSkuSaleInfosResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -336,7 +322,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<QueryChildDivisionCodeResponse> queryChildDivisionCode(QueryChildDivisionCodeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryChildDivisionCode").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/division/commands/queryChildDivisionCode").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryChildDivisionCode").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/division/commands/queryChildDivisionCode").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryChildDivisionCodeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -350,7 +336,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<QueryOrdersResponse> queryOrders(QueryOrdersRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryOrders").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryOrders").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryOrdersResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -364,7 +350,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<RenderPurchaseOrderResponse> renderPurchaseOrder(RenderPurchaseOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RenderPurchaseOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/commands/render").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RenderPurchaseOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/commands/render").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenderPurchaseOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -378,7 +364,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<RenderRefundOrderResponse> renderRefundOrder(RenderRefundOrderRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RenderRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/commands/render").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RenderRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/commands/render").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenderRefundOrderResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

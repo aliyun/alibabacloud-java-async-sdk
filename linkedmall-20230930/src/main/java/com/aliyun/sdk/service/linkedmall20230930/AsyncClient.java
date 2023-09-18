@@ -30,27 +30,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOrderResponse> getOrder(GetOrderRequest request);
 
-    CompletableFuture<GetProductResponse> getProduct(GetProductRequest request);
-
-    CompletableFuture<GetProductSaleInfoResponse> getProductSaleInfo(GetProductSaleInfoRequest request);
-
     CompletableFuture<GetPurchaseOrderStatusResponse> getPurchaseOrderStatus(GetPurchaseOrderStatusRequest request);
+
+    CompletableFuture<GetPurchaserShopResponse> getPurchaserShop(GetPurchaserShopRequest request);
 
     CompletableFuture<GetRefundOrderResponse> getRefundOrder(GetRefundOrderRequest request);
 
-    CompletableFuture<GetShopResponse> getShop(GetShopRequest request);
+    CompletableFuture<GetSelectionProductResponse> getSelectionProduct(GetSelectionProductRequest request);
+
+    CompletableFuture<GetSelectionProductSaleInfoResponse> getSelectionProductSaleInfo(GetSelectionProductSaleInfoRequest request);
 
     CompletableFuture<ListLogisticsOrdersResponse> listLogisticsOrders(ListLogisticsOrdersRequest request);
 
-    CompletableFuture<ListProductGeneralBillsResponse> listProductGeneralBills(ListProductGeneralBillsRequest request);
+    CompletableFuture<ListPurchaserShopsResponse> listPurchaserShops(ListPurchaserShopsRequest request);
 
-    CompletableFuture<ListProductSaleInfosResponse> listProductSaleInfos(ListProductSaleInfosRequest request);
+    CompletableFuture<ListSelectionProductSaleInfosResponse> listSelectionProductSaleInfos(ListSelectionProductSaleInfosRequest request);
 
-    CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
+    CompletableFuture<ListSelectionProductsResponse> listSelectionProducts(ListSelectionProductsRequest request);
 
-    CompletableFuture<ListShopsResponse> listShops(ListShopsRequest request);
-
-    CompletableFuture<ListSkuSaleInfosResponse> listSkuSaleInfos(ListSkuSaleInfosRequest request);
+    CompletableFuture<ListSelectionSkuSaleInfosResponse> listSelectionSkuSaleInfos(ListSelectionSkuSaleInfosRequest request);
 
     CompletableFuture<QueryChildDivisionCodeResponse> queryChildDivisionCode(QueryChildDivisionCodeRequest request);
 

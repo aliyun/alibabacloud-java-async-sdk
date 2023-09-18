@@ -33,11 +33,11 @@ public class OrderProductResult extends TeaModel {
     @NameInMap("productTitle")
     private String productTitle;
 
+    @NameInMap("purchaserId")
+    private String purchaserId;
+
     @NameInMap("quantity")
     private Integer quantity;
-
-    @NameInMap("shopId")
-    private String shopId;
 
     @NameInMap("skuId")
     private String skuId;
@@ -53,8 +53,8 @@ public class OrderProductResult extends TeaModel {
         this.productId = builder.productId;
         this.productPicUrl = builder.productPicUrl;
         this.productTitle = builder.productTitle;
+        this.purchaserId = builder.purchaserId;
         this.quantity = builder.quantity;
-        this.shopId = builder.shopId;
         this.skuId = builder.skuId;
         this.skuTitle = builder.skuTitle;
     }
@@ -117,17 +117,17 @@ public class OrderProductResult extends TeaModel {
     }
 
     /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
+    /**
      * @return quantity
      */
     public Integer getQuantity() {
         return this.quantity;
-    }
-
-    /**
-     * @return shopId
-     */
-    public String getShopId() {
-        return this.shopId;
     }
 
     /**
@@ -152,8 +152,8 @@ public class OrderProductResult extends TeaModel {
         private String productId; 
         private String productPicUrl; 
         private String productTitle; 
+        private String purchaserId; 
         private Integer quantity; 
-        private String shopId; 
         private String skuId; 
         private String skuTitle; 
 
@@ -214,18 +214,18 @@ public class OrderProductResult extends TeaModel {
         }
 
         /**
-         * quantity.
+         * purchaserId.
          */
-        public Builder quantity(Integer quantity) {
-            this.quantity = quantity;
+        public Builder purchaserId(String purchaserId) {
+            this.purchaserId = purchaserId;
             return this;
         }
 
         /**
-         * shopId.
+         * quantity.
          */
-        public Builder shopId(String shopId) {
-            this.shopId = shopId;
+        public Builder quantity(Integer quantity) {
+            this.quantity = quantity;
             return this;
         }
 

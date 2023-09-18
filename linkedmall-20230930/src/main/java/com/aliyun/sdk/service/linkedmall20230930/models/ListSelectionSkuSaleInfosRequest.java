@@ -7,17 +7,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListProductGeneralBillsRequest} extends {@link RequestModel}
+ * {@link ListSelectionSkuSaleInfosRequest} extends {@link RequestModel}
  *
- * <p>ListProductGeneralBillsRequest</p>
+ * <p>ListSelectionSkuSaleInfosRequest</p>
  */
-public class ListProductGeneralBillsRequest extends Request {
+public class ListSelectionSkuSaleInfosRequest extends Request {
     @Body
     @NameInMap("body")
     @Validation(required = true)
-    private GeneralBillPageQuery body;
+    private SkuSaleInfoListQuery body;
 
-    private ListProductGeneralBillsRequest(Builder builder) {
+    private ListSelectionSkuSaleInfosRequest(Builder builder) {
         super(builder);
         this.body = builder.body;
     }
@@ -26,7 +26,7 @@ public class ListProductGeneralBillsRequest extends Request {
         return new Builder();
     }
 
-    public static ListProductGeneralBillsRequest create() {
+    public static ListSelectionSkuSaleInfosRequest create() {
         return builder().build();
     }
 
@@ -38,18 +38,18 @@ public class ListProductGeneralBillsRequest extends Request {
     /**
      * @return body
      */
-    public GeneralBillPageQuery getBody() {
+    public SkuSaleInfoListQuery getBody() {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<ListProductGeneralBillsRequest, Builder> {
-        private GeneralBillPageQuery body; 
+    public static final class Builder extends Request.Builder<ListSelectionSkuSaleInfosRequest, Builder> {
+        private SkuSaleInfoListQuery body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListProductGeneralBillsRequest request) {
+        private Builder(ListSelectionSkuSaleInfosRequest request) {
             super(request);
             this.body = request.body;
         } 
@@ -57,15 +57,15 @@ public class ListProductGeneralBillsRequest extends Request {
         /**
          * body.
          */
-        public Builder body(GeneralBillPageQuery body) {
+        public Builder body(SkuSaleInfoListQuery body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         @Override
-        public ListProductGeneralBillsRequest build() {
-            return new ListProductGeneralBillsRequest(this);
+        public ListSelectionSkuSaleInfosRequest build() {
+            return new ListSelectionSkuSaleInfosRequest(this);
         } 
 
     } 

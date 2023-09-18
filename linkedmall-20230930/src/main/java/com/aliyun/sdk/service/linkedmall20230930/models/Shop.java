@@ -12,14 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Shop</p>
  */
 public class Shop extends TeaModel {
-    @NameInMap("channelSupplierId")
-    private String channelSupplierId;
+    @NameInMap("cooperationShops")
+    private java.util.List < CooperationShop > cooperationShops;
 
     @NameInMap("distributorId")
     private String distributorId;
 
     @NameInMap("endDate")
     private String endDate;
+
+    @NameInMap("purchaserId")
+    private String purchaserId;
+
+    @NameInMap("requestId")
+    private String requestId;
 
     @NameInMap("shopId")
     private String shopId;
@@ -37,9 +43,11 @@ public class Shop extends TeaModel {
     private String status;
 
     private Shop(Builder builder) {
-        this.channelSupplierId = builder.channelSupplierId;
+        this.cooperationShops = builder.cooperationShops;
         this.distributorId = builder.distributorId;
         this.endDate = builder.endDate;
+        this.purchaserId = builder.purchaserId;
+        this.requestId = builder.requestId;
         this.shopId = builder.shopId;
         this.shopName = builder.shopName;
         this.shopType = builder.shopType;
@@ -56,10 +64,10 @@ public class Shop extends TeaModel {
     }
 
     /**
-     * @return channelSupplierId
+     * @return cooperationShops
      */
-    public String getChannelSupplierId() {
-        return this.channelSupplierId;
+    public java.util.List < CooperationShop > getCooperationShops() {
+        return this.cooperationShops;
     }
 
     /**
@@ -74,6 +82,20 @@ public class Shop extends TeaModel {
      */
     public String getEndDate() {
         return this.endDate;
+    }
+
+    /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -112,9 +134,11 @@ public class Shop extends TeaModel {
     }
 
     public static final class Builder {
-        private String channelSupplierId; 
+        private java.util.List < CooperationShop > cooperationShops; 
         private String distributorId; 
         private String endDate; 
+        private String purchaserId; 
+        private String requestId; 
         private String shopId; 
         private String shopName; 
         private String shopType; 
@@ -122,10 +146,10 @@ public class Shop extends TeaModel {
         private String status; 
 
         /**
-         * channelSupplierId.
+         * cooperationShops.
          */
-        public Builder channelSupplierId(String channelSupplierId) {
-            this.channelSupplierId = channelSupplierId;
+        public Builder cooperationShops(java.util.List < CooperationShop > cooperationShops) {
+            this.cooperationShops = cooperationShops;
             return this;
         }
 
@@ -142,6 +166,22 @@ public class Shop extends TeaModel {
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * purchaserId.
+         */
+        public Builder purchaserId(String purchaserId) {
+            this.purchaserId = purchaserId;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

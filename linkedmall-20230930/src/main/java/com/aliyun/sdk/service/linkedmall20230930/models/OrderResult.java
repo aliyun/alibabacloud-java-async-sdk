@@ -22,7 +22,7 @@ public class OrderResult extends TeaModel {
     private String logisticsStatus;
 
     @NameInMap("orderAmount")
-    private String orderAmount;
+    private Long orderAmount;
 
     @NameInMap("orderId")
     private String orderId;
@@ -79,7 +79,7 @@ public class OrderResult extends TeaModel {
     /**
      * @return orderAmount
      */
-    public String getOrderAmount() {
+    public Long getOrderAmount() {
         return this.orderAmount;
     }
 
@@ -115,7 +115,7 @@ public class OrderResult extends TeaModel {
         private String createDate; 
         private String distributorId; 
         private String logisticsStatus; 
-        private String orderAmount; 
+        private Long orderAmount; 
         private String orderId; 
         private java.util.List < OrderLineResult > orderLineList; 
         private String orderStatus; 
@@ -148,7 +148,7 @@ public class OrderResult extends TeaModel {
         /**
          * orderAmount.
          */
-        public Builder orderAmount(String orderAmount) {
+        public Builder orderAmount(Long orderAmount) {
             this.orderAmount = orderAmount;
             return this;
         }

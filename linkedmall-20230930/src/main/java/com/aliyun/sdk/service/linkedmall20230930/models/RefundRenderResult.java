@@ -15,9 +15,6 @@ public class RefundRenderResult extends TeaModel {
     @NameInMap("bizClaimType")
     private Integer bizClaimType;
 
-    @NameInMap("mainOrderRefund")
-    private Boolean mainOrderRefund;
-
     @NameInMap("maxRefundFeeData")
     private DistributionMaxRefundFee maxRefundFeeData;
 
@@ -32,7 +29,6 @@ public class RefundRenderResult extends TeaModel {
 
     private RefundRenderResult(Builder builder) {
         this.bizClaimType = builder.bizClaimType;
-        this.mainOrderRefund = builder.mainOrderRefund;
         this.maxRefundFeeData = builder.maxRefundFeeData;
         this.orderLineId = builder.orderLineId;
         this.refundReasonList = builder.refundReasonList;
@@ -52,13 +48,6 @@ public class RefundRenderResult extends TeaModel {
      */
     public Integer getBizClaimType() {
         return this.bizClaimType;
-    }
-
-    /**
-     * @return mainOrderRefund
-     */
-    public Boolean getMainOrderRefund() {
-        return this.mainOrderRefund;
     }
 
     /**
@@ -91,7 +80,6 @@ public class RefundRenderResult extends TeaModel {
 
     public static final class Builder {
         private Integer bizClaimType; 
-        private Boolean mainOrderRefund; 
         private DistributionMaxRefundFee maxRefundFeeData; 
         private String orderLineId; 
         private java.util.List < RefundReason > refundReasonList; 
@@ -102,14 +90,6 @@ public class RefundRenderResult extends TeaModel {
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.bizClaimType = bizClaimType;
-            return this;
-        }
-
-        /**
-         * mainOrderRefund.
-         */
-        public Builder mainOrderRefund(Boolean mainOrderRefund) {
-            this.mainOrderRefund = mainOrderRefund;
             return this;
         }
 

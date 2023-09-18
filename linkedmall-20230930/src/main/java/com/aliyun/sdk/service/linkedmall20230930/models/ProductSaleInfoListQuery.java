@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProductSaleInfoListQuery</p>
  */
 public class ProductSaleInfoListQuery extends TeaModel {
-    @NameInMap("distributorShopId")
-    @Validation(required = true)
-    private String distributorShopId;
-
     @NameInMap("divisionCode")
     private String divisionCode;
 
@@ -23,10 +19,14 @@ public class ProductSaleInfoListQuery extends TeaModel {
     @Validation(required = true)
     private java.util.List < String > productIds;
 
+    @NameInMap("purchaserId")
+    @Validation(required = true)
+    private String purchaserId;
+
     private ProductSaleInfoListQuery(Builder builder) {
-        this.distributorShopId = builder.distributorShopId;
         this.divisionCode = builder.divisionCode;
         this.productIds = builder.productIds;
+        this.purchaserId = builder.purchaserId;
     }
 
     public static Builder builder() {
@@ -35,13 +35,6 @@ public class ProductSaleInfoListQuery extends TeaModel {
 
     public static ProductSaleInfoListQuery create() {
         return builder().build();
-    }
-
-    /**
-     * @return distributorShopId
-     */
-    public String getDistributorShopId() {
-        return this.distributorShopId;
     }
 
     /**
@@ -58,18 +51,17 @@ public class ProductSaleInfoListQuery extends TeaModel {
         return this.productIds;
     }
 
+    /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
     public static final class Builder {
-        private String distributorShopId; 
         private String divisionCode; 
         private java.util.List < String > productIds; 
-
-        /**
-         * distributorShopId.
-         */
-        public Builder distributorShopId(String distributorShopId) {
-            this.distributorShopId = distributorShopId;
-            return this;
-        }
+        private String purchaserId; 
 
         /**
          * divisionCode.
@@ -84,6 +76,14 @@ public class ProductSaleInfoListQuery extends TeaModel {
          */
         public Builder productIds(java.util.List < String > productIds) {
             this.productIds = productIds;
+            return this;
+        }
+
+        /**
+         * purchaserId.
+         */
+        public Builder purchaserId(String purchaserId) {
+            this.purchaserId = purchaserId;
             return this;
         }
 

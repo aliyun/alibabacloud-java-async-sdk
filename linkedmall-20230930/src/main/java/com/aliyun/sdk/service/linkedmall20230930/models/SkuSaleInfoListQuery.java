@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SkuSaleInfoListQuery</p>
  */
 public class SkuSaleInfoListQuery extends TeaModel {
-    @NameInMap("distributorShopId")
-    @Validation(required = true)
-    private String distributorShopId;
-
     @NameInMap("divisionCode")
     private String divisionCode;
+
+    @NameInMap("purchaserId")
+    @Validation(required = true)
+    private String purchaserId;
 
     @NameInMap("skuQueryParams")
     @Validation(required = true)
     private java.util.List < SkuQueryParam > skuQueryParams;
 
     private SkuSaleInfoListQuery(Builder builder) {
-        this.distributorShopId = builder.distributorShopId;
         this.divisionCode = builder.divisionCode;
+        this.purchaserId = builder.purchaserId;
         this.skuQueryParams = builder.skuQueryParams;
     }
 
@@ -38,17 +38,17 @@ public class SkuSaleInfoListQuery extends TeaModel {
     }
 
     /**
-     * @return distributorShopId
-     */
-    public String getDistributorShopId() {
-        return this.distributorShopId;
-    }
-
-    /**
      * @return divisionCode
      */
     public String getDivisionCode() {
         return this.divisionCode;
+    }
+
+    /**
+     * @return purchaserId
+     */
+    public String getPurchaserId() {
+        return this.purchaserId;
     }
 
     /**
@@ -59,23 +59,23 @@ public class SkuSaleInfoListQuery extends TeaModel {
     }
 
     public static final class Builder {
-        private String distributorShopId; 
         private String divisionCode; 
+        private String purchaserId; 
         private java.util.List < SkuQueryParam > skuQueryParams; 
-
-        /**
-         * distributorShopId.
-         */
-        public Builder distributorShopId(String distributorShopId) {
-            this.distributorShopId = distributorShopId;
-            return this;
-        }
 
         /**
          * divisionCode.
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
+            return this;
+        }
+
+        /**
+         * purchaserId.
+         */
+        public Builder purchaserId(String purchaserId) {
+            this.purchaserId = purchaserId;
             return this;
         }
 

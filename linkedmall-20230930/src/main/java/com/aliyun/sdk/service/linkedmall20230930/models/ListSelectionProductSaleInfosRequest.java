@@ -7,17 +7,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListSkuSaleInfosRequest} extends {@link RequestModel}
+ * {@link ListSelectionProductSaleInfosRequest} extends {@link RequestModel}
  *
- * <p>ListSkuSaleInfosRequest</p>
+ * <p>ListSelectionProductSaleInfosRequest</p>
  */
-public class ListSkuSaleInfosRequest extends Request {
+public class ListSelectionProductSaleInfosRequest extends Request {
     @Body
     @NameInMap("body")
     @Validation(required = true)
-    private SkuSaleInfoListQuery body;
+    private ProductSaleInfoListQuery body;
 
-    private ListSkuSaleInfosRequest(Builder builder) {
+    private ListSelectionProductSaleInfosRequest(Builder builder) {
         super(builder);
         this.body = builder.body;
     }
@@ -26,7 +26,7 @@ public class ListSkuSaleInfosRequest extends Request {
         return new Builder();
     }
 
-    public static ListSkuSaleInfosRequest create() {
+    public static ListSelectionProductSaleInfosRequest create() {
         return builder().build();
     }
 
@@ -38,18 +38,18 @@ public class ListSkuSaleInfosRequest extends Request {
     /**
      * @return body
      */
-    public SkuSaleInfoListQuery getBody() {
+    public ProductSaleInfoListQuery getBody() {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<ListSkuSaleInfosRequest, Builder> {
-        private SkuSaleInfoListQuery body; 
+    public static final class Builder extends Request.Builder<ListSelectionProductSaleInfosRequest, Builder> {
+        private ProductSaleInfoListQuery body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListSkuSaleInfosRequest request) {
+        private Builder(ListSelectionProductSaleInfosRequest request) {
             super(request);
             this.body = request.body;
         } 
@@ -57,15 +57,15 @@ public class ListSkuSaleInfosRequest extends Request {
         /**
          * body.
          */
-        public Builder body(SkuSaleInfoListQuery body) {
+        public Builder body(ProductSaleInfoListQuery body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         @Override
-        public ListSkuSaleInfosRequest build() {
-            return new ListSkuSaleInfosRequest(this);
+        public ListSelectionProductSaleInfosRequest build() {
+            return new ListSelectionProductSaleInfosRequest(this);
         } 
 
     } 

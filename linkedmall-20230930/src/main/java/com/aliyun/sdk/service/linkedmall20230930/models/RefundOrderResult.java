@@ -18,9 +18,6 @@ public class RefundOrderResult extends TeaModel {
     @NameInMap("disputeStatus")
     private Integer disputeStatus;
 
-    @NameInMap("disputeType")
-    private Integer disputeType;
-
     @NameInMap("orderLineId")
     private String orderLineId;
 
@@ -30,7 +27,6 @@ public class RefundOrderResult extends TeaModel {
     private RefundOrderResult(Builder builder) {
         this.disputeId = builder.disputeId;
         this.disputeStatus = builder.disputeStatus;
-        this.disputeType = builder.disputeType;
         this.orderLineId = builder.orderLineId;
         this.requestId = builder.requestId;
     }
@@ -58,13 +54,6 @@ public class RefundOrderResult extends TeaModel {
     }
 
     /**
-     * @return disputeType
-     */
-    public Integer getDisputeType() {
-        return this.disputeType;
-    }
-
-    /**
      * @return orderLineId
      */
     public String getOrderLineId() {
@@ -81,7 +70,6 @@ public class RefundOrderResult extends TeaModel {
     public static final class Builder {
         private String disputeId; 
         private Integer disputeStatus; 
-        private Integer disputeType; 
         private String orderLineId; 
         private String requestId; 
 
@@ -98,14 +86,6 @@ public class RefundOrderResult extends TeaModel {
          */
         public Builder disputeStatus(Integer disputeStatus) {
             this.disputeStatus = disputeStatus;
-            return this;
-        }
-
-        /**
-         * disputeType.
-         */
-        public Builder disputeType(Integer disputeType) {
-            this.disputeType = disputeType;
             return this;
         }
 
