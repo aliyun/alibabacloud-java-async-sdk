@@ -16,6 +16,10 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ModifySecurityGroupEgressRuleResponseBody body;
@@ -23,6 +27,7 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
     private ModifySecurityGroupEgressRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ModifySecurityGroupEgressRuleResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
     public interface Builder extends Response.Builder<ModifySecurityGroupEgressRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ModifySecurityGroupEgressRuleResponseBody body);
 
@@ -64,6 +78,7 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
             extends Response.BuilderImpl<ModifySecurityGroupEgressRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ModifySecurityGroupEgressRuleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
         private BuilderImpl(ModifySecurityGroupEgressRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ModifySecurityGroupEgressRuleResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

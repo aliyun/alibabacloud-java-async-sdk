@@ -197,6 +197,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class Snapshot extends TeaModel {
+        @NameInMap("Available")
+        private Boolean available;
+
         @NameInMap("InstantAccess")
         private Boolean instantAccess;
 
@@ -219,6 +222,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         private Tags tags;
 
         private Snapshot(Builder builder) {
+            this.available = builder.available;
             this.instantAccess = builder.instantAccess;
             this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
             this.progress = builder.progress;
@@ -234,6 +238,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
         public static Snapshot create() {
             return builder().build();
+        }
+
+        /**
+         * @return available
+         */
+        public Boolean getAvailable() {
+            return this.available;
         }
 
         /**
@@ -286,6 +297,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean available; 
             private Boolean instantAccess; 
             private Integer instantAccessRetentionDays; 
             private String progress; 
@@ -293,6 +305,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String sourceDiskId; 
             private String sourceDiskType; 
             private Tags tags; 
+
+            /**
+             * Available.
+             */
+            public Builder available(Boolean available) {
+                this.available = available;
+                return this;
+            }
 
             /**
              * Indicates whether the instant access feature was enabled. Valid values:

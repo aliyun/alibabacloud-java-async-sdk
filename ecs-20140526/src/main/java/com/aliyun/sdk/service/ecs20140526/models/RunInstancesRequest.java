@@ -1222,7 +1222,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment for instance creation. Valid values:
+         * <p>
+         * 
+         * - true: The payment is automatically completed.true: The payment is automatically completed.
+         *   >Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+         * 
+         * - false: An order is generated but no payment is made.
+         *   >When `InstanceChargeType` is set to `PostPaid`, `AutoPay` cannot be set to `false`.
+         * 
+         * Default value: true.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);

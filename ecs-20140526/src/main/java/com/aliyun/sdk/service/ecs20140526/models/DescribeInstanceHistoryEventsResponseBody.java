@@ -761,7 +761,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseResult.
+             * The response result of the event. Valid values:
+             * <p>
+             * 
+             * - true: The event was handled.
+             * - false: The event failed to be handled.
              */
             public Builder responseResult(String responseResult) {
                 this.responseResult = responseResult;

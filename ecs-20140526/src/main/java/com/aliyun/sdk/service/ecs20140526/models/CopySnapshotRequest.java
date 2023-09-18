@@ -255,7 +255,7 @@ public class CopySnapshotRequest extends Request {
         } 
 
         /**
-         * > This parameter is currently in invitational preview and unavailable for public use.
+         * >This parameter is currently in invitational preview and unavailable for public use.
          */
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
@@ -264,7 +264,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The region ID of the new snapshot.
+         * The ID of the destination region to which to copy the source snapshot.
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -273,7 +273,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
          * <p>
          * 
          * This parameter is empty by default.
@@ -285,7 +285,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The name of the new snapshot. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
+         * The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
          * <p>
          * 
          * This parameter is empty by default.
@@ -297,7 +297,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * DestinationStorageLocationArn.
+         * > This parameter is not publicly available.
          */
         public Builder destinationStorageLocationArn(String destinationStorageLocationArn) {
             this.putQueryParameter("DestinationStorageLocationArn", destinationStorageLocationArn);
@@ -306,11 +306,11 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the disk. Valid values:
+         * Specifies whether to encrypt the new snapshot. Valid values:
          * <p>
          * 
-         * *   true: encrypts the disk.
-         * *   false: does not encrypt the disk.
+         * *   true
+         * *   false
          * 
          * Default value: false.
          */
@@ -321,7 +321,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The customer master keys (CMK) managed by Key Management Service (KMS) in the destination region.
+         * The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -339,7 +339,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -348,7 +348,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable.
+         * This parameter is not publicly available.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -462,7 +462,7 @@ public class CopySnapshotRequest extends Request {
             private String rolearn; 
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -470,7 +470,7 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -478,7 +478,7 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -531,7 +531,7 @@ public class CopySnapshotRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the new snapshot. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain http:// or https://.[](http://https://。)
+             * The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -539,7 +539,7 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the new snapshot. The tag value can be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.
+             * The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

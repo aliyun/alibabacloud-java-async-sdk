@@ -254,6 +254,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Snapshot extends TeaModel {
+        @NameInMap("Available")
+        private Boolean available;
+
         @NameInMap("Category")
         private String category;
 
@@ -333,6 +336,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String usage;
 
         private Snapshot(Builder builder) {
+            this.available = builder.available;
             this.category = builder.category;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
@@ -367,6 +371,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         public static Snapshot create() {
             return builder().build();
+        }
+
+        /**
+         * @return available
+         */
+        public Boolean getAvailable() {
+            return this.available;
         }
 
         /**
@@ -552,6 +563,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean available; 
             private String category; 
             private String creationTime; 
             private String description; 
@@ -578,6 +590,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String usage; 
+
+            /**
+             * Available.
+             */
+            public Builder available(Boolean available) {
+                this.available = available;
+                return this;
+            }
 
             /**
              * The type of the snapshot.

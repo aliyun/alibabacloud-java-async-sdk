@@ -17,6 +17,10 @@ public class StartTerminalSessionRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("CommandLine")
+    private String commandLine;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private java.util.List < String > instanceId;
@@ -46,9 +50,14 @@ public class StartTerminalSessionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("TargetServer")
+    private String targetServer;
+
     private StartTerminalSessionRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.commandLine = builder.commandLine;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -56,6 +65,7 @@ public class StartTerminalSessionRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.targetServer = builder.targetServer;
     }
 
     public static Builder builder() {
@@ -76,6 +86,13 @@ public class StartTerminalSessionRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return commandLine
+     */
+    public String getCommandLine() {
+        return this.commandLine;
     }
 
     /**
@@ -127,8 +144,16 @@ public class StartTerminalSessionRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return targetServer
+     */
+    public String getTargetServer() {
+        return this.targetServer;
+    }
+
     public static final class Builder extends Request.Builder<StartTerminalSessionRequest, Builder> {
         private String sourceRegionId; 
+        private String commandLine; 
         private java.util.List < String > instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -136,6 +161,7 @@ public class StartTerminalSessionRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String targetServer; 
 
         private Builder() {
             super();
@@ -144,6 +170,7 @@ public class StartTerminalSessionRequest extends Request {
         private Builder(StartTerminalSessionRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.commandLine = request.commandLine;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -151,6 +178,7 @@ public class StartTerminalSessionRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.targetServer = request.targetServer;
         } 
 
         /**
@@ -159,6 +187,18 @@ public class StartTerminalSessionRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.
+         * <p>
+         * 
+         * >If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.
+         */
+        public Builder commandLine(String commandLine) {
+            this.putQueryParameter("CommandLine", commandLine);
+            this.commandLine = commandLine;
             return this;
         }
 
@@ -225,6 +265,18 @@ public class StartTerminalSessionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * The IP address of the instance.
+         * <p>
+         * 
+         * >If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.
+         */
+        public Builder targetServer(String targetServer) {
+            this.putQueryParameter("TargetServer", targetServer);
+            this.targetServer = targetServer;
             return this;
         }
 

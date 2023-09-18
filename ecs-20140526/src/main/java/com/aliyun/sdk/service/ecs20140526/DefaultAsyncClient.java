@@ -710,9 +710,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-      * *   Encrypted snapshots cannot be copied.
-      * *   Local snapshots cannot be copied.
+      * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+      * - Encrypted snapshots cannot be copied.
+      * - Local snapshots cannot be copied.
       *
      */
     @Override

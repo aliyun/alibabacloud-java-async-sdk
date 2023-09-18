@@ -742,7 +742,15 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
+         * 
+         * Default value: false.
+         * 
+         * >This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);

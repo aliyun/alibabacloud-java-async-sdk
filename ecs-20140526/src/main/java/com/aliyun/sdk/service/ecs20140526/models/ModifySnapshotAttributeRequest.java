@@ -41,6 +41,10 @@ public class ModifySnapshotAttributeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("RetentionDays")
+    private Integer retentionDays;
+
+    @Query
     @NameInMap("SnapshotId")
     @Validation(required = true)
     private String snapshotId;
@@ -58,6 +62,7 @@ public class ModifySnapshotAttributeRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.retentionDays = builder.retentionDays;
         this.snapshotId = builder.snapshotId;
         this.snapshotName = builder.snapshotName;
     }
@@ -125,6 +130,13 @@ public class ModifySnapshotAttributeRequest extends Request {
     }
 
     /**
+     * @return retentionDays
+     */
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -146,6 +158,7 @@ public class ModifySnapshotAttributeRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer retentionDays; 
         private String snapshotId; 
         private String snapshotName; 
 
@@ -162,6 +175,7 @@ public class ModifySnapshotAttributeRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.retentionDays = request.retentionDays;
             this.snapshotId = request.snapshotId;
             this.snapshotName = request.snapshotName;
         } 
@@ -232,6 +246,15 @@ public class ModifySnapshotAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RetentionDays.
+         */
+        public Builder retentionDays(Integer retentionDays) {
+            this.putQueryParameter("RetentionDays", retentionDays);
+            this.retentionDays = retentionDays;
             return this;
         }
 
