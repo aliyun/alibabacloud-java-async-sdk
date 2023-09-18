@@ -37,6 +37,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     private Boolean preserveClientIpEnabled;
 
     @Body
+    @NameInMap("QuicVersion")
+    private String quicVersion;
+
+    @Body
     @NameInMap("RegionId")
     private String regionId;
 
@@ -61,6 +65,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
         this.preserveClientIpEnabled = builder.preserveClientIpEnabled;
+        this.quicVersion = builder.quicVersion;
         this.regionId = builder.regionId;
         this.scheduler = builder.scheduler;
         this.serverGroupId = builder.serverGroupId;
@@ -123,6 +128,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return quicVersion
+     */
+    public String getQuicVersion() {
+        return this.quicVersion;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -157,6 +169,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
         private Boolean preserveClientIpEnabled; 
+        private String quicVersion; 
         private String regionId; 
         private String scheduler; 
         private String serverGroupId; 
@@ -174,6 +187,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
             this.preserveClientIpEnabled = request.preserveClientIpEnabled;
+            this.quicVersion = request.quicVersion;
             this.regionId = request.regionId;
             this.scheduler = request.scheduler;
             this.serverGroupId = request.serverGroupId;
@@ -248,6 +262,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         public Builder preserveClientIpEnabled(Boolean preserveClientIpEnabled) {
             this.putBodyParameter("PreserveClientIpEnabled", preserveClientIpEnabled);
             this.preserveClientIpEnabled = preserveClientIpEnabled;
+            return this;
+        }
+
+        /**
+         * QuicVersion.
+         */
+        public Builder quicVersion(String quicVersion) {
+            this.putBodyParameter("QuicVersion", quicVersion);
+            this.quicVersion = quicVersion;
             return this;
         }
 

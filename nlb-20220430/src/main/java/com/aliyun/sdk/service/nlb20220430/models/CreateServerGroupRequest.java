@@ -50,6 +50,10 @@ public class CreateServerGroupRequest extends Request {
     private String protocol;
 
     @Body
+    @NameInMap("QuicVersion")
+    private String quicVersion;
+
+    @Body
     @NameInMap("RegionId")
     private String regionId;
 
@@ -90,6 +94,7 @@ public class CreateServerGroupRequest extends Request {
         this.healthCheckConfig = builder.healthCheckConfig;
         this.preserveClientIpEnabled = builder.preserveClientIpEnabled;
         this.protocol = builder.protocol;
+        this.quicVersion = builder.quicVersion;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.scheduler = builder.scheduler;
@@ -176,6 +181,13 @@ public class CreateServerGroupRequest extends Request {
     }
 
     /**
+     * @return quicVersion
+     */
+    public String getQuicVersion() {
+        return this.quicVersion;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -234,6 +246,7 @@ public class CreateServerGroupRequest extends Request {
         private HealthCheckConfig healthCheckConfig; 
         private Boolean preserveClientIpEnabled; 
         private String protocol; 
+        private String quicVersion; 
         private String regionId; 
         private String resourceGroupId; 
         private String scheduler; 
@@ -257,6 +270,7 @@ public class CreateServerGroupRequest extends Request {
             this.healthCheckConfig = request.healthCheckConfig;
             this.preserveClientIpEnabled = request.preserveClientIpEnabled;
             this.protocol = request.protocol;
+            this.quicVersion = request.quicVersion;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.scheduler = request.scheduler;
@@ -374,6 +388,15 @@ public class CreateServerGroupRequest extends Request {
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
             this.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * QuicVersion.
+         */
+        public Builder quicVersion(String quicVersion) {
+            this.putBodyParameter("QuicVersion", quicVersion);
+            this.quicVersion = quicVersion;
             return this;
         }
 
