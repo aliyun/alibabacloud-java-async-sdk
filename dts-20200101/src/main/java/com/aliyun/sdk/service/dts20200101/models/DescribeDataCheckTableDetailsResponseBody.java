@@ -178,7 +178,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code. This parameter will be removed in the future.
+         * The dynamic error code. This parameter will be discontinued in the future.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -186,10 +186,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the value of **ErrMessage**.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
          * <p>
          * 
-         * >  For example, if the return value of **ErrMessage** is **The Value of Input Parameter %s is not valid** and the return value of **DynamicMessage** is **Type**, the specified value of **Type** is invalid.
+         * > For example, if the returned value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -221,7 +221,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -229,7 +229,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -253,7 +253,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of data verification results.
+         * The details of the data verification result.
          */
         public Builder tableDetails(java.util.List < TableDetails> tableDetails) {
             this.tableDetails = tableDetails;
@@ -437,7 +437,13 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * 任务运行出错时，返回报错信息的错误编码。
+             * <p>
+             * 
+             * - **1**：无主键表数量超过限制。
+             * - **2**：差异数据超过300行。
+             * - **3**：待查询的表不存在。
+             * - **4**：查询数据的SQL语法错误。
              */
             public Builder errorCode(Integer errorCode) {
                 this.errorCode = errorCode;
@@ -453,7 +459,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The auto-increment primary key that is used to identify the data in a verification result.
+             * The auto-increment primary key that is used to identify a data record in a verification result.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -477,12 +483,12 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the data verification task. Valid values:
+             * The status of the data verification result. Valid values:
              * <p>
              * 
              * *   **0**: The data verification task was complete.
-             * *   **2**: The data verification task was being initialized.
-             * *   **3**: The data verification task was in progress.
+             * *   **2**: The data verification task was initialized.
+             * *   **3**: The data verification task was running.
              * *   **5**: The data verification task failed.
              */
             public Builder status(String status) {

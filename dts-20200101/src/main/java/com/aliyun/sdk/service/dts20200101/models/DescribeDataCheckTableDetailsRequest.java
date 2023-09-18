@@ -187,7 +187,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -196,7 +196,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +205,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * The name of the schema whose data is verified in the source database.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -214,11 +214,11 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The status of data verification results. Valid values:
+         * The status of the data verification result. Valid values:
          * <p>
          * 
-         * *   **-1** (default): all states.
-         * *   **6**: inconsistent data detected in tables.
+         * *   **-1** (default): All status.
+         * *   **6**: Inconsistent data detected in the table.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

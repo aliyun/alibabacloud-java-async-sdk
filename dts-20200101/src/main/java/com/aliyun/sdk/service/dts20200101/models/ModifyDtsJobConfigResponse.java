@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDtsJobPasswordResponse} extends {@link TeaModel}
+ * {@link ModifyDtsJobConfigResponse} extends {@link TeaModel}
  *
- * <p>ModifyDtsJobPasswordResponse</p>
+ * <p>ModifyDtsJobConfigResponse</p>
  */
-public class ModifyDtsJobPasswordResponse extends Response {
+public class ModifyDtsJobConfigResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ModifyDtsJobPasswordResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ModifyDtsJobPasswordResponseBody body;
+    private ModifyDtsJobConfigResponseBody body;
 
-    private ModifyDtsJobPasswordResponse(BuilderImpl builder) {
+    private ModifyDtsJobConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ModifyDtsJobPasswordResponse create() {
+    public static ModifyDtsJobConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ModifyDtsJobPasswordResponse extends Response {
     /**
      * @return body
      */
-    public ModifyDtsJobPasswordResponseBody getBody() {
+    public ModifyDtsJobConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyDtsJobPasswordResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyDtsJobConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ModifyDtsJobPasswordResponseBody body);
+        Builder body(ModifyDtsJobConfigResponseBody body);
 
         @Override
-        ModifyDtsJobPasswordResponse build();
+        ModifyDtsJobConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyDtsJobPasswordResponse, Builder>
+            extends Response.BuilderImpl<ModifyDtsJobConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ModifyDtsJobPasswordResponseBody body; 
+        private ModifyDtsJobConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyDtsJobPasswordResponse response) {
+        private BuilderImpl(ModifyDtsJobConfigResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ModifyDtsJobPasswordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyDtsJobPasswordResponseBody body) {
+        public Builder body(ModifyDtsJobConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyDtsJobPasswordResponse build() {
-            return new ModifyDtsJobPasswordResponse(this);
+        public ModifyDtsJobConfigResponse build() {
+            return new ModifyDtsJobConfigResponse(this);
         } 
 
     } 
