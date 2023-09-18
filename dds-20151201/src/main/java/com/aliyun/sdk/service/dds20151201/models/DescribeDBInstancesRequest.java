@@ -449,12 +449,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. Valid values:
+         * The name of the instance. The name must meet the following requirements:
          * <p>
          * 
          * *   The name must start with a letter.
-         * *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-         * *   The name must be 2 to 256 characters in length.
+         * *   It can contain digits, letters, underscores (\_), and hyphens (-).
+         * *   It must be 2 to 256 characters in length.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -463,7 +463,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -481,7 +481,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The architecture of the instance. Default value: replicate. Valid values:
+         * The architecture of the instance. Valid values:
          * <p>
          * 
          * *   **sharding**: sharded cluster instance
@@ -494,12 +494,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Used to filter standard instances or test instances
+         * The type of the node in the instance. This parameter is used to filter standard or test instance.
          * <p>
          * 
-         * 1. Single node instance and dbfs instance: customized
-         * 2. Standard instance (replicaset and shard cluster): standard
-         * 3. Default (showing all instances): default
+         * 1.  Valid value for a standalone or DBFS instance.
+         * 2.  Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard
+         * 3.  Valid value when all instances are displayed: default
          */
         public Builder DBNodeType(String DBNodeType) {
             this.putQueryParameter("DBNodeType", DBNodeType);
@@ -520,11 +520,11 @@ public class DescribeDBInstancesRequest extends Request {
          * The database engine version of the instance. Valid values:
          * <p>
          * 
-         * * **5.0**
-         * * **4.4**
-         * * **4.2**
-         * * **4.0**
-         * * **3.4**
+         * *   **5.0**
+         * *   **4.4**
+         * *   **4.2**
+         * *   **4.0**
+         * *   **3.4**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -545,8 +545,8 @@ public class DescribeDBInstancesRequest extends Request {
          * Specifies whether the instance has expired. Valid values:
          * <p>
          * 
-         * *   **true**: The instance has expired.
-         * *   **false**: The instance has not expired.
+         * *   **true**
+         * *   **false**
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -558,8 +558,8 @@ public class DescribeDBInstancesRequest extends Request {
          * The network type of the instance. Valid values:
          * <p>
          * 
-         * *   **Classic**: classic network
-         * *   **VPC**: Virtual Private Cloud (VPC)
+         * *   **Classic**
+         * *   **VPC**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -595,10 +595,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
+         * The number of entries to return on each page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -668,7 +668,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The tags of instances.
+         * The tags of the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -677,7 +677,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The vSwitch ID of the instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -686,7 +686,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The VPC ID of the instance.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -749,12 +749,12 @@ public class DescribeDBInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the instance. Valid values of N: **1** to **20**.
+             * The tag key of the instance. Valid values of N: **1** to **20**.
              * <p>
              * 
              * *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * *   The key can be up to 64 characters in length.
-             * *   The key cannot be an empty string.
+             * *   It can be up to 64 characters in length.
+             * *   It cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -762,12 +762,12 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the instance. Valid values of N: **1** to **20**.
+             * The tag value of the instance. Valid values of N: **1** to **20**.
              * <p>
              * 
              * *   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              * *   The value can be up to 128 characters in length.
-             * *   The value can be an empty string.
+             * *   It can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

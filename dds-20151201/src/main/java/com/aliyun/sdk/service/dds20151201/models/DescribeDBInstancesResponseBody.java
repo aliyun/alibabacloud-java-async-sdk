@@ -86,7 +86,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the instances.
+         * The details of the instances.
          */
         public Builder DBInstances(DBInstances DBInstances) {
             this.DBInstances = DBInstances;
@@ -94,7 +94,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -454,7 +454,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the resource.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -462,7 +462,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -868,10 +868,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The I/O throughput consumed by the instance.
+             * The read and write throughput consumed by the instance.
              * <p>
              * 
-             * >  This parameter is returned when the instance is a serverless instance.
+             * > This parameter is returned when the instance is a serverless instance.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -915,7 +915,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -923,7 +923,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. For more information, see [Instance states](~~63870~~).
+             * The status of the instance. For more information, see [Instance states](~~63870~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -939,7 +939,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The architecture of the instance.
+             * The architecture of the instance. Valid values:
              * <p>
              * 
              * *   **sharding**: sharded cluster instance
@@ -951,11 +951,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
+             * The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
-             * > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+             * > 
+             * 
+             * *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.
+             * 
+             * *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -1019,6 +1022,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * > 
              * 
              * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * 
              * *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
@@ -1031,7 +1035,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **0**: physical machine
-             * *   **1**: Elastic Compute Service (ECS) instance
+             * *   **1**: ECS instance
              * *   **2**: Docker cluster
              * *   **18**: Kubernetes cluster
              */
@@ -1065,10 +1069,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the mongos nodes.
+             * The details of the mongos nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * > This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder mongosList(MongosList mongosList) {
                 this.mongosList = mongosList;
@@ -1079,8 +1083,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**: classic network
-             * *   **VPC**: VPC
+             * *   **Classic**
+             * *   **VPC**
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1099,7 +1103,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The number of nodes in the instance.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a replica set instance.
+             * > This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicationFactor(String replicationFactor) {
                 this.replicationFactor = replicationFactor;
@@ -1140,6 +1144,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * > 
              * 
              * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * 
              * *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
@@ -1148,10 +1153,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the shard nodes.
+             * The details of the shard nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * > This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
@@ -1171,7 +1176,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the resource tags.
+             * The details of the resource tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1182,8 +1187,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * Indicates whether password-free access within a VPC is enabled. Valid values:
              * <p>
              * 
-             * - **Open**: Password-free access is enabled.
-             * - **Close**: Password-free access is disabled.
+             * *   **Open**: Password-free access is enabled.
+             * *   **Close**: Password-free access is disabled.
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;

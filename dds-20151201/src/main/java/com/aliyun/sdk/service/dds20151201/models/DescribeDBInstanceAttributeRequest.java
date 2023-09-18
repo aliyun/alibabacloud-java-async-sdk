@@ -190,11 +190,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is deleted. Valid values:
-         * <p>
-         * 
-         * *   **false**: queries details about running instances.
-         * *   **true**: queries details about deleted instances.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -203,10 +199,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
-         * <p>
-         * 
-         * > This parameter is available only if you use the China site (aliyun.com).
+         * The database engine of the instance. Set the value to **MongoDB**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -215,7 +208,11 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to delete the instance. Valid values:
+         * <p>
+         * 
+         * *   **false**: queries the details of running instances.
+         * *   **true**: queries the details of deleted instances.
          */
         public Builder isDelete(Boolean isDelete) {
             this.putQueryParameter("IsDelete", isDelete);
@@ -242,7 +239,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Details of the instance.
+         * The ID of the resource group. For more information, see [View the basic information of a resource group](~~151181~~).
+         * <p>
+         * 
+         * > This parameter is available only if you use the China site (aliyun.com).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
