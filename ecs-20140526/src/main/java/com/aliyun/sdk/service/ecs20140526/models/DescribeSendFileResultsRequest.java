@@ -21,6 +21,10 @@ public class DescribeSendFileResultsRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("InvocationStatus")
+    private String invocationStatus;
+
+    @Query
     @NameInMap("InvokeId")
     private String invokeId;
 
@@ -69,6 +73,7 @@ public class DescribeSendFileResultsRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
+        this.invocationStatus = builder.invocationStatus;
         this.invokeId = builder.invokeId;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
@@ -107,6 +112,13 @@ public class DescribeSendFileResultsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return invocationStatus
+     */
+    public String getInvocationStatus() {
+        return this.invocationStatus;
     }
 
     /**
@@ -189,6 +201,7 @@ public class DescribeSendFileResultsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSendFileResultsRequest, Builder> {
         private String sourceRegionId; 
         private String instanceId; 
+        private String invocationStatus; 
         private String invokeId; 
         private String name; 
         private String ownerAccount; 
@@ -209,6 +222,7 @@ public class DescribeSendFileResultsRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
+            this.invocationStatus = request.invocationStatus;
             this.invokeId = request.invokeId;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
@@ -237,6 +251,15 @@ public class DescribeSendFileResultsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InvocationStatus.
+         */
+        public Builder invocationStatus(String invocationStatus) {
+            this.putQueryParameter("InvocationStatus", invocationStatus);
+            this.invocationStatus = invocationStatus;
             return this;
         }
 
