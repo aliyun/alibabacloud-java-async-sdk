@@ -83,8 +83,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request);
 
     /**
-      * ## Precautions
-      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * ### Precautions
+      * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
       * *   The default resource group USER_DEFAULT cannot be deleted.
       *
      */
@@ -160,8 +160,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request);
 
     /**
-      * ## Precautions
-      * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
       *
      */
     CompletableFuture<DescribeDBResourceGroupResponse> describeDBResourceGroup(DescribeDBResourceGroupRequest request);
@@ -193,7 +193,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeElasticDailyPlanResponse> describeElasticDailyPlan(DescribeElasticDailyPlanRequest request);
 
     /**
-      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
       *
      */
     CompletableFuture<DescribeElasticPlanResponse> describeElasticPlan(DescribeElasticPlanRequest request);
@@ -248,6 +249,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeTaskInfoResponse> describeTaskInfo(DescribeTaskInfoRequest request);
 
+    CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
+
     /**
       * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
       *
@@ -257,8 +260,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableAdviceServiceResponse> disableAdviceService(DisableAdviceServiceRequest request);
 
     CompletableFuture<DownloadDiagnosisRecordsResponse> downloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request);
-
-    CompletableFuture<DryRunClusterResponse> dryRunCluster(DryRunClusterRequest request);
 
     CompletableFuture<EnableAdviceServiceResponse> enableAdviceService(EnableAdviceServiceRequest request);
 

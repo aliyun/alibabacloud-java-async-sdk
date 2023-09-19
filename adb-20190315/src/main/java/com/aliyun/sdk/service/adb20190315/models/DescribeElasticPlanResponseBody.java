@@ -50,7 +50,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the scaling plans.
+         * The queried scaling plans.
          */
         public Builder elasticPlanList(java.util.List < ElasticPlanList> elasticPlanList) {
             this.elasticPlanList = elasticPlanList;
@@ -58,7 +58,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             private String weeklyRepeat; 
 
             /**
-             * The number of nodes involved in the scaling plan.
+             * The number of nodes that are involved in the scaling plan.
              * <p>
              * 
              * *   If ElasticPlanType is set to **worker**, a value of 0 or null is returned.
@@ -230,12 +230,12 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan. Default value: executorcombineworker. Valid values:
+             * The type of the scaling plan. Valid values:
              * <p>
              * 
              * *   **worker**: scales only elastic I/O resources.
              * *   **executor**: scales only computing resources.
-             * *   **executorcombineworker**: scales both elastic I/O resources and computing resources by proportion.
+             * *   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.
              */
             public Builder elasticPlanType(String elasticPlanType) {
                 this.elasticPlanType = elasticPlanType;
@@ -243,10 +243,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specifications that can be scaled up by the scaling plan. Default value: 8 Core 64 GB. Valid values:
+             * The resource specifications that can be scaled up by the scaling plan. Valid values:
              * <p>
              * 
-             * *   8 Core 64 GB
+             * *   8 Core 64 GB (default)
              * *   16 Core 64 GB
              * *   32 Core 64 GB
              * *   64 Core 128 GB
@@ -260,11 +260,11 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the scaling plan takes effect. Default value: true. Valid values:
+             * Indicates whether the scaling plan takes effect. Default value: true. Valid values:
              * <p>
              * 
-             * *   **true**: The scaling plan takes effect.
-             * *   **false**: The scaling plan does not take effect.
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -320,7 +320,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The days of the week when you want to execute the scaling plan. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).
+             * The days of the week when the scaling plan was executed. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).
              */
             public Builder weeklyRepeat(String weeklyRepeat) {
                 this.weeklyRepeat = weeklyRepeat;

@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DryRunClusterResponse} extends {@link TeaModel}
+ * {@link DescribeVSwitchesResponse} extends {@link TeaModel}
  *
- * <p>DryRunClusterResponse</p>
+ * <p>DescribeVSwitchesResponse</p>
  */
-public class DryRunClusterResponse extends Response {
+public class DescribeVSwitchesResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private DryRunClusterResponseBody body;
+    private DescribeVSwitchesResponseBody body;
 
-    private DryRunClusterResponse(BuilderImpl builder) {
+    private DescribeVSwitchesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DryRunClusterResponse create() {
+    public static DescribeVSwitchesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class DryRunClusterResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DryRunClusterResponseBody getBody() {
+    public DescribeVSwitchesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DryRunClusterResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeVSwitchesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DryRunClusterResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeVSwitchesResponseBody body);
 
         @Override
-        DryRunClusterResponse build();
+        DescribeVSwitchesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DryRunClusterResponse, Builder>
+            extends Response.BuilderImpl<DescribeVSwitchesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DryRunClusterResponseBody body; 
+        private Integer statusCode; 
+        private DescribeVSwitchesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DryRunClusterResponse response) {
+        private BuilderImpl(DescribeVSwitchesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class DryRunClusterResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DryRunClusterResponseBody body) {
+        public Builder body(DescribeVSwitchesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DryRunClusterResponse build() {
-            return new DryRunClusterResponse(this);
+        public DescribeVSwitchesResponse build() {
+            return new DescribeVSwitchesResponse(this);
         } 
 
     } 

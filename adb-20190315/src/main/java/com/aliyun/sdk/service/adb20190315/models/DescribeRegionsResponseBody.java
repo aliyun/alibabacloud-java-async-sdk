@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of regions.
+         * The queried regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The name of the region.
+             * The zone name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,11 +130,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Virtual Private Cloud (VPC) is available in the zone that you want to select. Valid values:
+             * Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:
              * <p>
              * 
-             * *   **true**: VPC is available.
-             * *   **false**: VPC is unavailable.
+             * *   **true**
+             * *   **false**
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -142,7 +142,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -260,7 +260,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Zones zones; 
 
             /**
-             * The name of the region.
+             * The region name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -276,7 +276,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -284,7 +284,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zones.
+             * The queried zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

@@ -50,7 +50,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The detailed information of the SQL pattern.
+         * The queried SQL pattern.
          */
         public Builder patternDetail(PatternDetail patternDetail) {
             this.patternDetail = patternDetail;
@@ -58,7 +58,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
             private String totalQueryTime; 
 
             /**
-             * The average memory consumption associated with the SQL pattern. Unit: MB.
+             * The average used memory associated with the SQL pattern. Unit: MB.
              */
             public Builder averageMemory(String averageMemory) {
                 this.averageMemory = averageMemory;
@@ -154,7 +154,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The average query time associated with the SQL pattern. Unit: milliseconds.
+             * The average query duration associated with the SQL pattern. Unit: milliseconds.
              */
             public Builder averageQueryTime(String averageQueryTime) {
                 this.averageQueryTime = averageQueryTime;
@@ -162,7 +162,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries performed based on the SQL pattern.
+             * The number of queries.
              */
             public Builder queryCount(Long queryCount) {
                 this.queryCount = queryCount;
@@ -178,7 +178,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The total query time associated with the SQL pattern. Unit: milliseconds.
+             * The total query duration associated with the SQL pattern. Unit: milliseconds.
              */
             public Builder totalQueryTime(String totalQueryTime) {
                 this.totalQueryTime = totalQueryTime;

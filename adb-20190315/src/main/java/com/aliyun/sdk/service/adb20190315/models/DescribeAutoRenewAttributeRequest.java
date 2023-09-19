@@ -168,10 +168,7 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
-         * 
-         * Separate multiple clusters with commas (,).
+         * The cluster ID. Separate multiple clusters with commas (,).
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -198,10 +195,7 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0.
-         * <p>
-         * 
-         * Default value: 1
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,14 +204,14 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   30
          * *   50
          * *   100
          * 
-         * Default value: 30
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

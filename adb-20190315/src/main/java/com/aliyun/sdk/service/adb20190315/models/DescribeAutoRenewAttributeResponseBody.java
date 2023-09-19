@@ -94,7 +94,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,8 +221,8 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
              * Indicates whether auto-renewal is enabled for the cluster. Valid values:
              * <p>
              * 
-             * *   **true**: Auto-renewal is enabled.
-             * *   **false**: Auto-renewal is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -230,7 +230,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -238,7 +238,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal period.
+             * The renewal duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -246,7 +246,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the renewal period. Valid values:
+             * The unit of the renewal duration. Valid values:
              * <p>
              * 
              * *   **Year**

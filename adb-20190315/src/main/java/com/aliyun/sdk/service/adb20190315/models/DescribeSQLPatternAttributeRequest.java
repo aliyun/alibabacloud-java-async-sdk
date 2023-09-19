@@ -129,10 +129,10 @@ public class DescribeSQLPatternAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the detailed information of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -144,7 +144,7 @@ public class DescribeSQLPatternAttributeRequest extends Request {
          * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
          * <p>
          * 
-         * >  The end time must be later than the start time.
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,13 +153,13 @@ public class DescribeSQLPatternAttributeRequest extends Request {
         }
 
         /**
-         * The languages available for file titles and some error messages. Default value: zh. Valid values:
+         * The language of file titles and error messages. Valid values:
          * <p>
          * 
-         * *   **zh**: Simplified Chinese
-         * *   **en**: English
-         * *   **ja**: Japanese
-         * *   **zh-tw**: Traditional Chinese
+         * *   **zh**: simplified Chinese.
+         * *   **en**: English.
+         * *   **ja**: Japanese.
+         * *   **zh-tw**: traditional Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -168,10 +168,10 @@ public class DescribeSQLPatternAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the SQL pattern.
+         * The SQL pattern ID.
          * <p>
          * 
-         * >  You can call the [DescribeSQLPatterns](~~321868~~) operation to query the list of SQL patterns within an AnalyticDB for MySQL cluster for a specific period of time, including SQL pattern IDs.
+         * > You can call the [DescribeSQLPatterns](~~321868~~) operation to query the information about all SQL patterns in an AnalyticDB for MySQL cluster within a period of time, including SQL pattern IDs.
          */
         public Builder patternId(Long patternId) {
             this.putQueryParameter("PatternId", patternId);
@@ -183,7 +183,7 @@ public class DescribeSQLPatternAttributeRequest extends Request {
          * The region ID of the cluster.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +195,7 @@ public class DescribeSQLPatternAttributeRequest extends Request {
          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
          * <p>
          * 
-         * >  Only data generated within the last 15 days can be viewed.
+         * > You can query the data only within the last 15 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

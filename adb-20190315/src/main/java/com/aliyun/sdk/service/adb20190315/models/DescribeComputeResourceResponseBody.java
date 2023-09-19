@@ -50,7 +50,7 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of computing resource specifications.
+         * The queried specifications of computing resources.
          */
         public Builder computeResource(java.util.List < ComputeResource> computeResource) {
             this.computeResource = computeResource;
@@ -58,7 +58,7 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

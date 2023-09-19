@@ -171,7 +171,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
          * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -184,10 +184,9 @@ public class ModifyAutoRenewAttributeRequest extends Request {
          * <p>
          * 
          * *   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.
-         * 
          * *   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.
          * 
-         * > Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
+         * > Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -214,7 +213,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration. Default value: **Month**. Valid values:
+         * The unit of the renewal period. Default value: **Month**. Valid values:
          * <p>
          * 
          * *   **Year**
@@ -230,7 +229,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
          * The region ID of the cluster.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

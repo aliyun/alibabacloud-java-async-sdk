@@ -173,11 +173,8 @@ public class ModifyDBResourcePoolRequest extends Request {
          * *   Each node provides 16 cores and 64 GB memory.
          * *   The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.
          * 
-         * > 
-         * 
-         * *   If you do not specify this parameter, the original value is retained.
-         * 
-         * *   You must specify at least one of the QueryType and NodeNum parameters.
+         * > - If you do not specify this parameter, the original value is retained.
+         * > - You must specify at least one of the QueryType and NodeNum parameters.
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);

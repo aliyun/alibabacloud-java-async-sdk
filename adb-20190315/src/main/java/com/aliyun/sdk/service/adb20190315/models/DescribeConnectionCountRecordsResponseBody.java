@@ -74,7 +74,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         private java.util.List < UserRecords> userRecords; 
 
         /**
-         * Details of the client IP addresses.
+         * The queried client IP addresses.
          */
         public Builder accessIpRecords(java.util.List < AccessIpRecords> accessIpRecords) {
             this.accessIpRecords = accessIpRecords;
@@ -82,7 +82,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -90,7 +90,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the users.
+         * The queried database accounts.
          */
         public Builder userRecords(java.util.List < UserRecords> userRecords) {
             this.userRecords = userRecords;
@@ -150,7 +150,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The IP address of the client used to connect to the cluster.
+             * The IP address of the client.
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -219,7 +219,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user used to connect to the cluster.
+             * The username of the database account.
              */
             public Builder user(String user) {
                 this.user = user;

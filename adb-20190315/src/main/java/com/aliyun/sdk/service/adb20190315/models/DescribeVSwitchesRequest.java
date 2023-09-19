@@ -7,23 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeComputeResourceRequest} extends {@link RequestModel}
+ * {@link DescribeVSwitchesRequest} extends {@link RequestModel}
  *
- * <p>DescribeComputeResourceRequest</p>
+ * <p>DescribeVSwitchesRequest</p>
  */
-public class DescribeComputeResourceRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    private String DBClusterId;
-
-    @Query
-    @NameInMap("DBClusterVersion")
-    private String DBClusterVersion;
-
-    @Query
-    @NameInMap("Migrate")
-    private Boolean migrate;
-
+public class DescribeVSwitchesRequest extends Request {
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -34,7 +22,6 @@ public class DescribeComputeResourceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -46,19 +33,31 @@ public class DescribeComputeResourceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
+
+    @Query
+    @NameInMap("VswId")
+    private String vswId;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
-    private DescribeComputeResourceRequest(Builder builder) {
+    private DescribeVSwitchesRequest(Builder builder) {
         super(builder);
-        this.DBClusterId = builder.DBClusterId;
-        this.DBClusterVersion = builder.DBClusterVersion;
-        this.migrate = builder.migrate;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityToken = builder.securityToken;
+        this.vpcId = builder.vpcId;
+        this.vswId = builder.vswId;
         this.zoneId = builder.zoneId;
     }
 
@@ -66,34 +65,13 @@ public class DescribeComputeResourceRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeComputeResourceRequest create() {
+    public static DescribeVSwitchesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return DBClusterId
-     */
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    /**
-     * @return DBClusterVersion
-     */
-    public String getDBClusterVersion() {
-        return this.DBClusterVersion;
-    }
-
-    /**
-     * @return migrate
-     */
-    public Boolean getMigrate() {
-        return this.migrate;
     }
 
     /**
@@ -132,66 +110,60 @@ public class DescribeComputeResourceRequest extends Request {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return vswId
+     */
+    public String getVswId() {
+        return this.vswId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
         return this.zoneId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeComputeResourceRequest, Builder> {
-        private String DBClusterId; 
-        private String DBClusterVersion; 
-        private Boolean migrate; 
+    public static final class Builder extends Request.Builder<DescribeVSwitchesRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityToken; 
+        private String vpcId; 
+        private String vswId; 
         private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeComputeResourceRequest request) {
+        private Builder(DescribeVSwitchesRequest request) {
             super(request);
-            this.DBClusterId = request.DBClusterId;
-            this.DBClusterVersion = request.DBClusterVersion;
-            this.migrate = request.migrate;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.vpcId = request.vpcId;
+            this.vswId = request.vswId;
             this.zoneId = request.zoneId;
         } 
-
-        /**
-         * DBClusterId.
-         */
-        public Builder DBClusterId(String DBClusterId) {
-            this.putQueryParameter("DBClusterId", DBClusterId);
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
-
-        /**
-         * The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3**.
-         */
-        public Builder DBClusterVersion(String DBClusterVersion) {
-            this.putQueryParameter("DBClusterVersion", DBClusterVersion);
-            this.DBClusterVersion = DBClusterVersion;
-            return this;
-        }
-
-        /**
-         * Migrate.
-         */
-        public Builder migrate(Boolean migrate) {
-            this.putQueryParameter("Migrate", migrate);
-            this.migrate = migrate;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -212,7 +184,7 @@ public class DescribeComputeResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * The region ID.
          * <p>
          * 
          * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
@@ -242,7 +214,37 @@ public class DescribeComputeResourceRequest extends Request {
         }
 
         /**
-         * The zone ID of the cluster.
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * The virtual private cloud (VPC) ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the VPC ID.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * VswId.
+         */
+        public Builder vswId(String vswId) {
+            this.putQueryParameter("VswId", vswId);
+            this.vswId = vswId;
+            return this;
+        }
+
+        /**
+         * The zone ID.
          * <p>
          * 
          * > You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.
@@ -254,8 +256,8 @@ public class DescribeComputeResourceRequest extends Request {
         }
 
         @Override
-        public DescribeComputeResourceRequest build() {
-            return new DescribeComputeResourceRequest(this);
+        public DescribeVSwitchesRequest build() {
+            return new DescribeVSwitchesRequest(this);
         } 
 
     } 

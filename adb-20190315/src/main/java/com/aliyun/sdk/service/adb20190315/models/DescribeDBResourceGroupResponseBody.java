@@ -62,7 +62,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource group.
+         * The queried resource group.
          */
         public Builder groupsInfo(java.util.List < GroupsInfo> groupsInfo) {
             this.groupsInfo = groupsInfo;
@@ -78,7 +78,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,9 +198,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              * <p>
              * 
              * *   **interactive**
-             * *   **batch**
+             * *   **batch** (default)
              * 
-             * >  For more information, see [Query execution modes](~~189502~~).
+             * > For more information, see [Query execution modes](~~189502~~).
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -216,7 +216,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes. Each node consumes 16 cores and 64 GB memory.
+             * The number of nodes. Each node provides 16 cores and 64 GB memory.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;

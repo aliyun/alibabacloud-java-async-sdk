@@ -183,13 +183,13 @@ public class DescribeMaintenanceActionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the details of pending or historical O\&M events. Valid values:
+         * Specifies whether to return the information about pending or historical O\&M events. Valid values:
          * <p>
          * 
-         * *   **0**: returns the details of pending O\&M event.
-         * *   **1**: returns the details of historical O\&M event.
+         * *   **0**: returns the information about pending O\&M event.
+         * *   **1**: returns the information about historical O\&M event.
          * 
-         * If you do not specify this parameter, the details of pending O\&M event are returned.
+         * If you do not specify this parameter, the information about pending O\&M event are returned.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -216,7 +216,7 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +225,7 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
+         * The number of entries per page. Valid values: **30**, **50**, and **100**. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,11 +234,11 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The ID of the region where the O\&M event occurs. Valid values:
+         * The region ID. Valid values:
          * <p>
          * 
-         * *   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including the region IDs.
-         * *   You can also set Region to `all` to view all the O\&M events in all regions. If `Region` is set to `all`, `TaskType` must be set to `all`.
+         * *   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * *   You can also set Region to `all` to query the O\&M events in all regions. If you set `Region` to `all`, you must set `TaskType` to `all`.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -250,7 +250,7 @@ public class DescribeMaintenanceActionRequest extends Request {
          * The ID of the region where the O\&M event occurs.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including the region IDs.
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -280,8 +280,8 @@ public class DescribeMaintenanceActionRequest extends Request {
          * The type of the O\&M event. Valid values:
          * <p>
          * 
-         * *   **rds_apsaradb_upgrade**: indicates database software upgrades.
-         * *   **all**: indicates all the O\&M events in all regions within the current account. If `Region` is set to `all`, `TaskType` must be set to `all`.
+         * *   **rds_apsaradb_upgrade**: database software upgrades.
+         * *   **all**: all the O\&M events in all regions within the current account. If you set `Region` to `all`, you must set `TaskType` to `all`.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -62,11 +62,11 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The message returned for the operation. Valid values:
+         * The returned message.
          * <p>
          * 
-         * *   **Success** is returned if the operation is successful.
-         * *   An error message is returned if the operation fails.
+         * *   If the request was successful, **Success** is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -74,7 +74,7 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -85,8 +85,8 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
          * Indicates whether the suggestion feature is enabled. Valid values:
          * <p>
          * 
-         * *   **True**: The suggestion feature is enabled.
-         * *   **False**: The suggestion feature is disabled.
+         * *   **True**
+         * *   **False**
          */
         public Builder result(Boolean result) {
             this.result = result;

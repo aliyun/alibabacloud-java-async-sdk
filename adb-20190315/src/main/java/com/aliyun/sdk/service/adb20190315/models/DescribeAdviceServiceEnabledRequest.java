@@ -70,10 +70,10 @@ public class DescribeAdviceServiceEnabledRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -85,7 +85,7 @@ public class DescribeAdviceServiceEnabledRequest extends Request {
          * The region ID of the cluster.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

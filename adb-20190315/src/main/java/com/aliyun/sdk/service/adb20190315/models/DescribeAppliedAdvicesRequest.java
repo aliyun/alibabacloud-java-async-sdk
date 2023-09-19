@@ -140,10 +140,10 @@ public class DescribeAppliedAdvicesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +152,7 @@ public class DescribeAppliedAdvicesRequest extends Request {
         }
 
         /**
-         * The end date of the time range to query. Specify the date in the yyyyMMdd format. The date must be in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyyMMdd format. The time must be in UTC.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,13 +161,13 @@ public class DescribeAppliedAdvicesRequest extends Request {
         }
 
         /**
-         * The display language of the suggestion. Default value: zh. Valid values:
+         * The display language of the suggestion. Valid values:
          * <p>
          * 
-         * *   **zh**: simplified Chinese
-         * *   **en**: English
-         * *   **ja**: Japanese
-         * *   **zh-tw**: traditional Chinese
+         * *   **zh** (default): simplified Chinese.
+         * *   **en**: English.
+         * *   **ja**: Japanese.
+         * *   **zh-tw**: traditional Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -176,7 +176,7 @@ public class DescribeAppliedAdvicesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,10 +185,10 @@ public class DescribeAppliedAdvicesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -202,7 +202,7 @@ public class DescribeAppliedAdvicesRequest extends Request {
          * The region ID of the cluster.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +211,7 @@ public class DescribeAppliedAdvicesRequest extends Request {
         }
 
         /**
-         * The start date of the time range to query. Specify the date in the yyyyMMdd format. The date must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyyMMdd format. The time must be in UTC.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -154,7 +154,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -176,10 +176,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which to retain data backup files. Valid values: 7 to 730.
+         * The number of days for which to retain backup files. Valid values: 7 to 730.
          * <p>
          * 
-         * >  If you leave this parameter empty, the default value 7 is used.
+         * > The default value is 7.
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);

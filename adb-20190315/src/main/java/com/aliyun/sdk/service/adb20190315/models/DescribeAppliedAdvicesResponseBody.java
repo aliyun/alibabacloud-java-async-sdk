@@ -86,7 +86,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Details of the suggestions.
+         * The queried suggestions.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,10 +102,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 30. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -115,7 +115,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +123,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.
+         * The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -307,10 +307,8 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the suggestion execution task.
+             * The state of the suggestion execution task. Valid values:
              * <p>
-             * 
-             * Valid values:
              * 
              * *   **SUCCEED**
              * *   **FAILED**
@@ -321,7 +319,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+             * The page number. Pages start from page 1. Default value: 1.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -329,10 +327,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 30. Valid values:
+             * The number of entries per page. Valid values:
              * <p>
              * 
-             * *   **30**
+             * *   **30** (default)
              * *   **50**
              * *   **100**
              */
@@ -350,7 +348,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement used to apply the suggestion.
+             * The SQL statement that is used to apply the suggestion.
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -358,10 +356,8 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The submission state of the suggestion.
+             * The submission state of the suggestion. Valid values:
              * <p>
-             * 
-             * Valid values:
              * 
              * *   **SUCCEED**
              * *   **FAILED**
@@ -372,7 +368,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the suggestion was submitted. The time follows the yyMMddHHmm format. The time is displayed in UTC.
+             * The time when the suggestion was submitted. The time follows the ISO 8601 standard in the yyMMddHHmm format. The time is displayed in UTC.
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -380,7 +376,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.
+             * The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
