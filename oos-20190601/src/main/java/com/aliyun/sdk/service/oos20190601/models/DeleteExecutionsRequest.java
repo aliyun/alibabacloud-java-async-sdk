@@ -69,7 +69,10 @@ public class DeleteExecutionsRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The execution IDs.
+         * <p>
+         * 
+         * You can specify multiple execution IDs in a JSON array in the format of `["xxxxxxxxx", "yyyyyyyyy", ... "zzzzzzzzz"]`. You can specify up to 100 execution IDs at a time. Separate multiple IDs with commas (,).
          */
         public Builder executionIds(String executionIds) {
             this.putQueryParameter("ExecutionIds", executionIds);
@@ -78,7 +81,7 @@ public class DeleteExecutionsRequest extends Request {
         }
 
         /**
-         * A JSON array that consists of multiple instance IDs. The format of the JSON array is [“xxxxxxxxx”, “yyyyyyyyy”, … “zzzzzzzzz”]. Separate multiple instance IDs with commas (,). A maximum of 100 instance IDs can be specified at a time.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

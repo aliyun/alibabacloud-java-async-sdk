@@ -33,6 +33,14 @@ public class UpdateExecutionRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("Tags")
+    private String tags;
+
     private UpdateExecutionRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -40,6 +48,8 @@ public class UpdateExecutionRequest extends Request {
         this.executionId = builder.executionId;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -90,12 +100,28 @@ public class UpdateExecutionRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<UpdateExecutionRequest, Builder> {
         private String clientToken; 
         private String description; 
         private String executionId; 
         private String parameters; 
         private String regionId; 
+        private String resourceGroupId; 
+        private String tags; 
 
         private Builder() {
             super();
@@ -108,6 +134,8 @@ public class UpdateExecutionRequest extends Request {
             this.executionId = request.executionId;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -120,7 +148,7 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * 执行的描述。
+         * The description of the execution.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -138,7 +166,7 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * A JSON string consisting of a collection of parameters. Default value: {}.
+         * The information about the parameters.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -152,6 +180,24 @@ public class UpdateExecutionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 

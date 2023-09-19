@@ -126,7 +126,7 @@ public class GetSecretParametersByPathRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 10. Default value: 10.
+         * The number of entries per page. Valid values: 1 to 10. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -135,7 +135,7 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -153,11 +153,11 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to return.
+         * Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to be returned.
          * <p>
          * 
-         * *   true: Returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.
-         * *   false: Returns only the /parameter/myparameter parameter.
+         * *   true: returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.
+         * *   false: returns only the /secretParameter/mySecretParameter parameter.
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -166,7 +166,7 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,13 +175,11 @@ public class GetSecretParametersByPathRequest extends Request {
         }
 
         /**
-         * Specifies whether to decrypt the parameter value.
+         * Specifies whether to decrypt the parameter value. Default value: false. Valid values:
          * <p>
          * 
-         * Valid values:
-         * 
          * *   true
-         * *   false (Default)
+         * *   false
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

@@ -41,8 +41,8 @@ public class ListPatchBaselinesRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("ResourceGroupld")
-    private String resourceGroupld;
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ShareType")
@@ -65,7 +65,7 @@ public class ListPatchBaselinesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.operationSystem = builder.operationSystem;
         this.regionId = builder.regionId;
-        this.resourceGroupld = builder.resourceGroupld;
+        this.resourceGroupId = builder.resourceGroupId;
         this.shareType = builder.shareType;
         this.sources = builder.sources;
         this.tags = builder.tags;
@@ -134,10 +134,10 @@ public class ListPatchBaselinesRequest extends Request {
     }
 
     /**
-     * @return resourceGroupld
+     * @return resourceGroupId
      */
-    public String getResourceGroupld() {
-        return this.resourceGroupld;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -169,7 +169,7 @@ public class ListPatchBaselinesRequest extends Request {
         private String nextToken; 
         private String operationSystem; 
         private String regionId; 
-        private String resourceGroupld; 
+        private String resourceGroupId; 
         private String shareType; 
         private java.util.List < String > sources; 
         private java.util.List < Tags> tags; 
@@ -187,14 +187,14 @@ public class ListPatchBaselinesRequest extends Request {
             this.nextToken = request.nextToken;
             this.operationSystem = request.operationSystem;
             this.regionId = request.regionId;
-            this.resourceGroupld = request.resourceGroupld;
+            this.resourceGroupId = request.resourceGroupId;
             this.shareType = request.shareType;
             this.sources = request.sources;
             this.tags = request.tags;
         } 
 
         /**
-         * ApprovedPatches.
+         * The approved patches.
          */
         public Builder approvedPatches(java.util.List < String > approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
@@ -204,7 +204,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * ApprovedPatchesEnableNonSecurity.
+         * Whether the approved patch includes updates other than security.
          */
         public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
             this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
@@ -213,7 +213,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -222,7 +222,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The share type of the patch baseline.
+         * The name of the patch baseline.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -231,7 +231,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -240,7 +240,17 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The type of the operating system. Valid values:
+         * <p>
+         * 
+         * *   Windows
+         * *   Ubuntu
+         * *   CentOS
+         * *   Debian
+         * *   AliyunLinux
+         * *   RedhatEnterpriseLinux
+         * *   Anolis
+         * *   AlmaLinux
          */
         public Builder operationSystem(String operationSystem) {
             this.putQueryParameter("OperationSystem", operationSystem);
@@ -249,16 +259,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
-         * 
-         * *   AliyunLinux
-         * *   Windows
-         * *   Ubuntu
-         * *   Centos
-         * *   Debian
-         * *   RedhatEnterpriseLinux
-         * *   Anolis
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,16 +268,20 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * ResourceGroupld.
+         * ResourceGroupId.
          */
-        public Builder resourceGroupld(String resourceGroupld) {
-            this.putQueryParameter("ResourceGroupld", resourceGroupld);
-            this.resourceGroupld = resourceGroupld;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The share type of the template. Valid values:
+         * <p>
+         * 
+         * *   **Public**
+         * *   **Private**
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -285,7 +290,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The list of patch source configurations.
          */
         public Builder sources(java.util.List < String > sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -295,7 +300,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -350,7 +355,7 @@ public class ListPatchBaselinesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -358,7 +363,7 @@ public class ListPatchBaselinesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -102,7 +102,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The information about the common parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -302,7 +302,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Constraints.
+             * The constraints of the common parameter.
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -310,7 +310,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * The user who created the common parameter.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -318,7 +318,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the common parameter was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -326,7 +326,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the common parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +334,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the common parameter.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +342,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the common parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -350,7 +350,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * The version number of the common parameter.
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -358,7 +358,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the common parameter.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -366,7 +366,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags added to the common parameters.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -374,7 +374,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the common parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -382,7 +382,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the common parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -390,7 +390,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the common parameter was last updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -398,7 +398,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the common parameter.
              */
             public Builder value(String value) {
                 this.value = value;

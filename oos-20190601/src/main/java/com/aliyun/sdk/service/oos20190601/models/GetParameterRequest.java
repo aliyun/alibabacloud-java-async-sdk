@@ -97,7 +97,7 @@ public class GetParameterRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to GetParameter.
+         * The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,7 +106,7 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * The time when the common parameter was updated.
+         * The version number of the common parameter. Valid values: 1 to 100.
          */
         public Builder parameterVersion(Integer parameterVersion) {
             this.putQueryParameter("ParameterVersion", parameterVersion);
@@ -115,7 +115,7 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * The name of the common parameter.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * The user who created the common parameter.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

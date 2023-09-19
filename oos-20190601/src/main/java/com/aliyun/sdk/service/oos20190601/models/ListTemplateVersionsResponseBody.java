@@ -74,7 +74,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private java.util.List < TemplateVersions> templateVersions; 
 
         /**
-         * The maximum number of results on each page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

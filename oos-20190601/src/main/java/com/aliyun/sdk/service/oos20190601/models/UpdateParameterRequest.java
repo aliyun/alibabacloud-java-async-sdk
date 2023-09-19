@@ -126,7 +126,7 @@ public class UpdateParameterRequest extends Request {
         } 
 
         /**
-         * The ID of the common parameter.
+         * The description of the common parameter. The description must be 1 to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +135,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * The data type of the common parameter.
+         * The name of the common parameter. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -144,7 +144,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * The version number of the common parameter.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to UpdateParameter.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -162,7 +162,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * The name of the common parameter.
+         * The tags to be added to common parameter.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -171,7 +171,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * The value of the common parameter. The value must be 1 to 4096 characters in length.
+         * The value of the common parameter. The value must be 1 to 4,096 characters in length.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

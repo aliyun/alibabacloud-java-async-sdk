@@ -74,7 +74,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The applications.
+         * The details of the application.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -242,7 +242,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -250,7 +250,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * A tag of the resource.
+             * The tags added to the application.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;

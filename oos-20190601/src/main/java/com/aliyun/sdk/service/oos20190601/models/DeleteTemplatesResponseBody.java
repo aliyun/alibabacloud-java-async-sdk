@@ -38,7 +38,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Deletes multiple templates.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

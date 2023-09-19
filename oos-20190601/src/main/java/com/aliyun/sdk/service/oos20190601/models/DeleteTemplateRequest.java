@@ -83,7 +83,7 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * You can call this operation to delete a template.
+         * Specifies whether to delete the related executions when a template is deleted.
          */
         public Builder autoDeleteExecutions(Boolean autoDeleteExecutions) {
             this.putQueryParameter("AutoDeleteExecutions", autoDeleteExecutions);
@@ -92,7 +92,7 @@ public class DeleteTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the related executions when a template is deleted.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

@@ -145,7 +145,7 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

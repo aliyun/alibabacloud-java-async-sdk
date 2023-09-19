@@ -113,7 +113,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags. This parameter takes effect only if TagKeys is left empty. Valid values: true and false. Default value: false. TagKeys is required if this parameter is set to false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -122,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete all tags. This parameter takes effect only when the TagKeys parameter is not specified. Valid values: true and false. Default value: false. The TagKeys parameter is required when this parameter is set to false.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +131,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * You can call this operation to delete tags that are attached to one or more resources.
+         * The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.
+         * <p>
+         * 
+         * *   If you set ResourceType to template, specify ResourceIds in the \["TemplateName1","TemplateName2"] format.
+         * *   If you set ResourceType to parameter, specify ResourceIds in the \["Name1","Name2"] format.
+         * *   If you set ResourceType to secretparameter, specify ResourceIds in the \["Name1","Name2"] format.
+         * *   If you set ResourceType to stateconfiguration, specify ResourceIds in the \["StateConfigurationId 1","StateConfigurationId 2"] format.
+         * *   If you set ResourceType to application, specify ResourceIds in the \["Name1","Name2"] format.
          */
         public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
@@ -141,7 +148,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource for which you want to modify the resource group. Valid values:
+         * <p>
+         * 
+         * *   template: template.
+         * *   parameter: parameter.
+         * *   secretparameter: encryption parameter.
+         * *   stateconfiguration: desired-state configuration.
+         * *   application: application.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -150,7 +164,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKeys.
+         * The tag keys. The number of keys ranges from 1 to 20.
          */
         public Builder tagKeys(java.util.Map < String, ? > tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");

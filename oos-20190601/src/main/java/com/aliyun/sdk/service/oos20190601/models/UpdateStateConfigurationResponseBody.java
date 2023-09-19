@@ -50,7 +50,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         private java.util.List < StateConfiguration> stateConfiguration; 
 
         /**
-         * The idempotency token.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The description.
+         * The details of the configuration.
          */
         public Builder stateConfiguration(java.util.List < StateConfiguration> stateConfiguration) {
             this.stateConfiguration = stateConfiguration;
@@ -254,7 +254,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The configuration mode. ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.
+             * The configuration mode. Valid values:
              */
             public Builder configureMode(String configureMode) {
                 this.configureMode = configureMode;
@@ -262,7 +262,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters.
+             * The time when the configuration was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Updates a desired-state configuration.
+             * The description of the desired-state configuration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +278,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The parameters.
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -286,7 +286,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -294,7 +294,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration list.
+             * The CRON expression.
              */
             public Builder scheduleExpression(String scheduleExpression) {
                 this.scheduleExpression = scheduleExpression;
@@ -302,7 +302,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The schedule type.
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -310,7 +310,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The schedule expression.
+             * The ID of the desired-state configuration.
              */
             public Builder stateConfigurationId(String stateConfigurationId) {
                 this.stateConfigurationId = stateConfigurationId;
@@ -318,7 +318,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The tags added to the configuration.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -326,7 +326,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The required resources.
+             * The queried resources.
              */
             public Builder targets(String targets) {
                 this.targets = targets;
@@ -334,7 +334,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The template ID.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -342,7 +342,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desired-state configuration.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -350,7 +350,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * The name of the template version.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -358,7 +358,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the template.
+             * The time when the configuration was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

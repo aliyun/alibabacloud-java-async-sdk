@@ -152,7 +152,7 @@ public class ListStateConfigurationsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return on each page.
+         * The maximum number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -161,7 +161,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The token of the next page.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -170,7 +170,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +179,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -188,7 +188,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The ID of each desired-state configuration.
+         * The ID of the desired-state configuration.
          */
         public Builder stateConfigurationIds(String stateConfigurationIds) {
             this.putQueryParameter("StateConfigurationIds", stateConfigurationIds);
@@ -197,7 +197,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The tag.
+         * The tags to be added to the configuration.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -207,7 +207,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -216,7 +216,7 @@ public class ListStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The version number. If you do not specify this parameter, the system uses the latest version.
+         * The version number of the template. If you do not specify this parameter, the latest version of the template is used.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

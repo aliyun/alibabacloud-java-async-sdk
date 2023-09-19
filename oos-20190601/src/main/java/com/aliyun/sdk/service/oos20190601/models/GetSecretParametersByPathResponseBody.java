@@ -86,7 +86,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the encryption parameter.
+         * The information about the encryption parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -110,7 +110,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -342,7 +342,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey ID.
+             * The ID of the key.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

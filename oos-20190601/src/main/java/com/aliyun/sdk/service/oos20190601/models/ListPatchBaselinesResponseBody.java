@@ -150,7 +150,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * 标签键。
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +158,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * 标签值。
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -200,8 +200,8 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         private String operationSystem;
 
-        @NameInMap("ResourceGroupld")
-        private String resourceGroupld;
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("ShareType")
         private String shareType;
@@ -228,7 +228,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             this.isDefault = builder.isDefault;
             this.name = builder.name;
             this.operationSystem = builder.operationSystem;
-            this.resourceGroupld = builder.resourceGroupld;
+            this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
             this.sources = builder.sources;
             this.tags = builder.tags;
@@ -308,10 +308,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupld
+         * @return resourceGroupId
          */
-        public String getResourceGroupld() {
-            return this.resourceGroupld;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -359,7 +359,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private Boolean isDefault; 
             private String name; 
             private String operationSystem; 
-            private String resourceGroupld; 
+            private String resourceGroupId; 
             private String shareType; 
             private java.util.List < String > sources; 
             private java.util.List < Tags> tags; 
@@ -367,7 +367,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * ApprovedPatches.
+             * 批准补丁的列表。
              */
             public Builder approvedPatches(java.util.List < String > approvedPatches) {
                 this.approvedPatches = approvedPatches;
@@ -375,7 +375,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovedPatchesEnableNonSecurity.
+             * 批准补丁是否包括除安全性之外的更新
              */
             public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
                 this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
@@ -439,10 +439,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupld.
+             * ResourceGroupId.
              */
-            public Builder resourceGroupld(String resourceGroupld) {
-                this.resourceGroupld = resourceGroupld;
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -455,7 +455,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * 补丁源配置列表。
              */
             public Builder sources(java.util.List < String > sources) {
                 this.sources = sources;
@@ -463,7 +463,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * 标签。
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

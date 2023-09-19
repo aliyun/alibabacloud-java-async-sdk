@@ -50,7 +50,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         private StateConfiguration stateConfiguration; 
 
         /**
-         * The configuration mode.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The tag.
+         * The information about the desired-state configuration.
          */
         public Builder stateConfiguration(StateConfiguration stateConfiguration) {
             this.stateConfiguration = stateConfiguration;
@@ -242,7 +242,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             private String templateVersion; 
 
             /**
-             * The parameters.
+             * The configuration mode. Valid values:
              */
             public Builder configureMode(String configureMode) {
                 this.configureMode = configureMode;
@@ -250,7 +250,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The desired-state configuration.
+             * The time when the desired-state configuration was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,7 +258,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * WB502027
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +266,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateStateConfiguration
+             * The parameters.
              */
             public Builder parameters(java.util.Map < String, ? > parameters) {
                 this.parameters = parameters;
@@ -274,7 +274,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -282,7 +282,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The version number. If you do not specify this parameter, the system uses the latest version.
+             * The schedule expression.
              */
             public Builder scheduleExpression(String scheduleExpression) {
                 this.scheduleExpression = scheduleExpression;
@@ -290,7 +290,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Creates a desired-state configuration.
+             * The schedule type.
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -298,7 +298,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 收集Inventory数据
+             * The ID of the desired-state configuration.
              */
             public Builder stateConfigurationId(String stateConfigurationId) {
                 this.stateConfigurationId = stateConfigurationId;
@@ -306,7 +306,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The required resources.
+             * The tags added to the configuration.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -314,7 +314,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 1 hour 或 30 minutes
+             * The queried resources.
              */
             public Builder targets(String targets) {
                 this.targets = targets;
@@ -322,7 +322,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The template ID.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -338,7 +338,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The name of the template version.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;

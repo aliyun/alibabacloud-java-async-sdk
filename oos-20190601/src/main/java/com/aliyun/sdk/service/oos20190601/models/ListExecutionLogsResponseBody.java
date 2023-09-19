@@ -86,7 +86,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The execution logs.
+         * The logs of the execution.
          */
         public Builder executionLogs(java.util.List < ExecutionLogs> executionLogs) {
             this.executionLogs = executionLogs;
@@ -102,7 +102,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -110,7 +110,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -118,7 +118,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The type of the log.
+             * The log type.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -210,7 +210,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution ID of the task.
+             * The task execution ID.
              */
             public Builder taskExecutionId(String taskExecutionId) {
                 this.taskExecutionId = taskExecutionId;

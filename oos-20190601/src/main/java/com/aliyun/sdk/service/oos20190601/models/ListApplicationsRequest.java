@@ -139,6 +139,33 @@ public class ListApplicationsRequest extends Request {
 
         /**
          * The type of the application.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ComputeNest
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Custom
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DingTalk
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);

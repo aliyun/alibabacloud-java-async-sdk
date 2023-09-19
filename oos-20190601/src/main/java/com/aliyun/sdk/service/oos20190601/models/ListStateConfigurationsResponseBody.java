@@ -62,7 +62,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         private java.util.List < StateConfigurations> stateConfigurations; 
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The pagination token that was used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The desired-state configurations.
+         * The information about the desired-state configurations.
          */
         public Builder stateConfigurations(java.util.List < StateConfigurations> stateConfigurations) {
             this.stateConfigurations = stateConfigurations;
@@ -274,7 +274,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The configuration mode.
+             * The configuration mode. Valid values:
              */
             public Builder configureMode(String configureMode) {
                 this.configureMode = configureMode;
@@ -282,7 +282,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the desired-state configuration was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,7 +306,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -338,7 +338,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the auxiliary media asset.
+             * The tags added to the configuration.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -346,7 +346,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The target EMR resource.
+             * The queried resources.
              */
             public Builder targets(String targets) {
                 this.targets = targets;
@@ -354,7 +354,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster template.
+             * The template ID.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -378,7 +378,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration is updated.
+             * The time when the configuration was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

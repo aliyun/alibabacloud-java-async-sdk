@@ -69,7 +69,7 @@ public class DeleteSecretParameterRequest extends Request {
         } 
 
         /**
-         * The name of the encryption parameter. The name can be up to 180 characters in length and can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+         * The name of the encryption parameter. The name must be 1 to 180 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -78,7 +78,7 @@ public class DeleteSecretParameterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

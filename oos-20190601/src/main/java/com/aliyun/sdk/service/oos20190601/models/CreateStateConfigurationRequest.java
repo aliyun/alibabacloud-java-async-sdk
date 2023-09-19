@@ -212,7 +212,7 @@ public class CreateStateConfigurationRequest extends Request {
         } 
 
         /**
-         * The description of the desired-state configuration.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,7 +221,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * 收集Inventory数据
+         * The configuration mode. Valid values: ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.
          */
         public Builder configureMode(String configureMode) {
             this.putQueryParameter("ConfigureMode", configureMode);
@@ -230,14 +230,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The configuration mode.
-         * <p>
-         * 
-         * ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied.
-         * 
-         * ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future.
-         * 
-         * ApplyAndAutoCorrect: The configuration is always applied.
+         * The description of the desired-state configuration.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +239,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of resource group.
+         * The parameters.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -255,7 +248,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the template.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +257,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The type of the schedule. Valid value: rate.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -273,7 +266,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The description.
+         * The schedule expression. The interval between two schedules must be a minimum of 30 minutes.
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.putQueryParameter("ScheduleExpression", scheduleExpression);
@@ -282,7 +275,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The schedule expression.
+         * The schedule type. Set the value to rate.
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -291,7 +284,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * The tags to be added to the configuration.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -301,7 +294,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The schedule expression. The interval between two schedules must be a minimum of 30 minutes.
+         * The resources to be queried.
          */
         public Builder targets(String targets) {
             this.putQueryParameter("Targets", targets);
@@ -310,7 +303,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The version of the template.
+         * The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -319,7 +312,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The required resources.
+         * The version number of the template. If you do not specify this parameter, the latest version of the template is used.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

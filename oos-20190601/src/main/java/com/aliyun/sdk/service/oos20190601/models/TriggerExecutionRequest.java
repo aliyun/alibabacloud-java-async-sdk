@@ -113,7 +113,7 @@ public class TriggerExecutionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +122,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * The message body to be sent to the trigger task.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -131,7 +131,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the event-, alert-, or timer-triggered execution.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -140,7 +140,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * The message body to be sent to the trigger task.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +149,12 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to TriggerExecution.
+         * The type of the trigger. Valid values:
+         * <p>
+         * 
+         * *   Event
+         * *   Alarm
+         * *   Timer
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

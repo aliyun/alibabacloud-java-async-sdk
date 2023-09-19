@@ -38,7 +38,7 @@ public class DeleteTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * You can call this operation to delete a template.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

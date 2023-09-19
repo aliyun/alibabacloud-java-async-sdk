@@ -111,13 +111,11 @@ public class GetInventorySchemaRequest extends Request {
         } 
 
         /**
-         * Specifies whether only to return a combination of specified properties.
+         * Specifies whether to return only properties that support the aggregate feature in the configuration list. Valid values:
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   true: only returns a combination of specified properties
-         * *   false: returns all properties of the component
+         * *   true: only returns properties that support the aggregate feature in the configuration list.
+         * *   false: returns all properties in the configuration list.
          */
         public Builder aggregator(Boolean aggregator) {
             this.putQueryParameter("Aggregator", aggregator);
@@ -126,7 +124,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -135,7 +133,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +142,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +151,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * The name of the component. Valid values:
+         * The configuration list type name. Valid values:
          * <p>
          * 
          * *   ACS:InstanceInformation

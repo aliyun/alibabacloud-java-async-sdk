@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to TagResources.
+         * The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.
+         * <p>
+         * 
+         * *   If you set ResourceType to template, specify ResourceIds in the \["TemplateName1","TemplateName2"] format.
+         * *   If you set ResourceType to parameter, specify ResourceIds in the \["Name1","Name2"] format.
+         * *   If you set ResourceType to secretparameter, specify ResourceIds in the \["Name1","Name2"] format.
+         * *   If you set ResourceType to stateconfiguration, specify ResourceIds in the \["StateConfigurationId 1","StateConfigurationId 2"] format.
+         * *   If you set ResourceType to application, specify ResourceIds in the \["Name1","Name2"] format.
          */
         public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
@@ -119,7 +126,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources. The number of resource IDs ranges from 1 to 50.
+         * The type of the resource for which you want to modify the resource group. Valid values:
+         * <p>
+         * 
+         * *   template: template.
+         * *   parameter: parameter.
+         * *   secretparameter: encryption parameter.
+         * *   stateconfiguration: desired-state configuration.
+         * *   application: application.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -128,7 +142,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

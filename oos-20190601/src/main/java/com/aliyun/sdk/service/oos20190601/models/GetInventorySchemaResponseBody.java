@@ -74,7 +74,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         private java.util.List < Schemas> schemas; 
 
         /**
-         * Max results.
+         * The number of entries per page.
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The pagination token that was used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed configurations of the component.
+         * The detailed configurations of the configuration list.
          */
         public Builder schemas(java.util.List < Schemas> schemas) {
             this.schemas = schemas;
@@ -223,7 +223,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The properties of component.
+             * The properties of the configuration list.
              */
             public Builder attributes(java.util.List < Attributes> attributes) {
                 this.attributes = attributes;
@@ -231,7 +231,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the component.
+             * The name of the configuration list.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -239,7 +239,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the component.
+             * The version of the configuration list.
              */
             public Builder version(String version) {
                 this.version = version;

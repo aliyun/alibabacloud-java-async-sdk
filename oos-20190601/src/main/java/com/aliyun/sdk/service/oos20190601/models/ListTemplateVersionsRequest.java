@@ -111,7 +111,7 @@ public class ListTemplateVersionsRequest extends Request {
         } 
 
         /**
-         * The maximum number of results on each page. Valid values: 10 to 100
+         * The number of entries per page. Valid values: 10 to 100
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +120,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +129,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
