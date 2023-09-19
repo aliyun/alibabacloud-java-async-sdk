@@ -195,6 +195,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("FileFolderId")
         private String fileFolderId;
 
+        @NameInMap("FileId")
+        private Long fileId;
+
         @NameInMap("FileName")
         private String fileName;
 
@@ -236,6 +239,7 @@ public class GetFileResponseBody extends TeaModel {
             this.deletedStatus = builder.deletedStatus;
             this.fileDescription = builder.fileDescription;
             this.fileFolderId = builder.fileFolderId;
+            this.fileId = builder.fileId;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
             this.isMaxCompute = builder.isMaxCompute;
@@ -347,6 +351,13 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileId
+         */
+        public Long getFileId() {
+            return this.fileId;
+        }
+
+        /**
          * @return fileName
          */
         public String getFileName() {
@@ -423,6 +434,7 @@ public class GetFileResponseBody extends TeaModel {
             private String deletedStatus; 
             private String fileDescription; 
             private String fileFolderId; 
+            private Long fileId; 
             private String fileName; 
             private Integer fileType; 
             private Boolean isMaxCompute; 
@@ -550,6 +562,14 @@ public class GetFileResponseBody extends TeaModel {
              */
             public Builder fileFolderId(String fileFolderId) {
                 this.fileFolderId = fileFolderId;
+                return this;
+            }
+
+            /**
+             * FileId.
+             */
+            public Builder fileId(Long fileId) {
+                this.fileId = fileId;
                 return this;
             }
 

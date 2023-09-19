@@ -19,13 +19,17 @@ public class GetProjectRequest extends Request {
 
     @Query
     @NameInMap("ProjectId")
-    @Validation(required = true)
     private Long projectId;
+
+    @Query
+    @NameInMap("ProjectIdentifier")
+    private String projectIdentifier;
 
     private GetProjectRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.projectId = builder.projectId;
+        this.projectIdentifier = builder.projectIdentifier;
     }
 
     public static Builder builder() {
@@ -55,9 +59,17 @@ public class GetProjectRequest extends Request {
         return this.projectId;
     }
 
+    /**
+     * @return projectIdentifier
+     */
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
     public static final class Builder extends Request.Builder<GetProjectRequest, Builder> {
         private String regionId; 
         private Long projectId; 
+        private String projectIdentifier; 
 
         private Builder() {
             super();
@@ -67,6 +79,7 @@ public class GetProjectRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.projectId = request.projectId;
+            this.projectIdentifier = request.projectIdentifier;
         } 
 
         /**
@@ -84,6 +97,15 @@ public class GetProjectRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * ProjectIdentifier.
+         */
+        public Builder projectIdentifier(String projectIdentifier) {
+            this.putQueryParameter("ProjectIdentifier", projectIdentifier);
+            this.projectIdentifier = projectIdentifier;
             return this;
         }
 

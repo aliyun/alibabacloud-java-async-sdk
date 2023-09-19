@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTableLevelResponse} extends {@link TeaModel}
+ * {@link CallbackExtensionResponse} extends {@link TeaModel}
  *
- * <p>ListTableLevelResponse</p>
+ * <p>CallbackExtensionResponse</p>
  */
-public class ListTableLevelResponse extends Response {
+public class CallbackExtensionResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ListTableLevelResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListTableLevelResponseBody body;
+    private CallbackExtensionResponseBody body;
 
-    private ListTableLevelResponse(BuilderImpl builder) {
+    private CallbackExtensionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListTableLevelResponse create() {
+    public static CallbackExtensionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ListTableLevelResponse extends Response {
     /**
      * @return body
      */
-    public ListTableLevelResponseBody getBody() {
+    public CallbackExtensionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTableLevelResponse, Builder> {
+    public interface Builder extends Response.Builder<CallbackExtensionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListTableLevelResponseBody body);
+        Builder body(CallbackExtensionResponseBody body);
 
         @Override
-        ListTableLevelResponse build();
+        CallbackExtensionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTableLevelResponse, Builder>
+            extends Response.BuilderImpl<CallbackExtensionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListTableLevelResponseBody body; 
+        private CallbackExtensionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTableLevelResponse response) {
+        private BuilderImpl(CallbackExtensionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ListTableLevelResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTableLevelResponseBody body) {
+        public Builder body(CallbackExtensionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTableLevelResponse build() {
-            return new ListTableLevelResponse(this);
+        public CallbackExtensionResponse build() {
+            return new CallbackExtensionResponse(this);
         } 
 
     } 
