@@ -16,6 +16,10 @@ public class DeactivateScalingConfigurationResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DeactivateScalingConfigurationResponseBody body;
@@ -23,6 +27,7 @@ public class DeactivateScalingConfigurationResponse extends Response {
     private DeactivateScalingConfigurationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DeactivateScalingConfigurationResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DeactivateScalingConfigurationResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DeactivateScalingConfigurationResponse extends Response {
     public interface Builder extends Response.Builder<DeactivateScalingConfigurationResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DeactivateScalingConfigurationResponseBody body);
 
@@ -64,6 +78,7 @@ public class DeactivateScalingConfigurationResponse extends Response {
             extends Response.BuilderImpl<DeactivateScalingConfigurationResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DeactivateScalingConfigurationResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DeactivateScalingConfigurationResponse extends Response {
         private BuilderImpl(DeactivateScalingConfigurationResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DeactivateScalingConfigurationResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

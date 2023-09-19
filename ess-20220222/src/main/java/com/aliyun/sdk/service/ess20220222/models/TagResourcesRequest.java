@@ -137,7 +137,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +146,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -164,7 +164,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -173,7 +173,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * Details of the tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -239,7 +239,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag that you want to add to the Auto Scaling resource.
+             * <p>
+             * 
+             * You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -247,7 +250,13 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Propagate.
+             * Specifies whether to propagate the tag that you want to add. Valid values:
+             * <p>
+             * 
+             * *   true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.
+             * *   false: does not propagate the tag to any instances.
+             * 
+             * Default value: false.
              */
             public Builder propagate(Boolean propagate) {
                 this.propagate = propagate;
@@ -255,7 +264,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag that you want to add to the Auto Scaling resource.
+             * <p>
+             * 
+             * You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

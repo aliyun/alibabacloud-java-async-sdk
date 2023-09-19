@@ -62,6 +62,10 @@ public class DescribeScalingGroupsRequest extends Request {
     @NameInMap("ScalingGroupNames")
     private java.util.List < String > scalingGroupNames;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private DescribeScalingGroupsRequest(Builder builder) {
         super(builder);
         this.groupType = builder.groupType;
@@ -76,6 +80,7 @@ public class DescribeScalingGroupsRequest extends Request {
         this.scalingGroupIds = builder.scalingGroupIds;
         this.scalingGroupName = builder.scalingGroupName;
         this.scalingGroupNames = builder.scalingGroupNames;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -175,6 +180,13 @@ public class DescribeScalingGroupsRequest extends Request {
         return this.scalingGroupNames;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<DescribeScalingGroupsRequest, Builder> {
         private String groupType; 
         private String ownerAccount; 
@@ -188,6 +200,7 @@ public class DescribeScalingGroupsRequest extends Request {
         private java.util.List < String > scalingGroupIds; 
         private String scalingGroupName; 
         private java.util.List < String > scalingGroupNames; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -207,6 +220,7 @@ public class DescribeScalingGroupsRequest extends Request {
             this.scalingGroupIds = request.scalingGroupIds;
             this.scalingGroupName = request.scalingGroupName;
             this.scalingGroupNames = request.scalingGroupNames;
+            this.tags = request.tags;
         } 
 
         /**
@@ -317,6 +331,15 @@ public class DescribeScalingGroupsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public DescribeScalingGroupsRequest build() {
             return new DescribeScalingGroupsRequest(this);
@@ -324,4 +347,65 @@ public class DescribeScalingGroupsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
