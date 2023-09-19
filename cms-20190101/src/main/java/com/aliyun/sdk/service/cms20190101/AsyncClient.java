@@ -19,9 +19,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to add a tag to an application group whose ID is `7301****`. In this example, the key of the tag is `key1` and the value of the tag is `value1`.
       *
      */
     CompletableFuture<AddTagsResponse> addTags(AddTagsRequest request);
@@ -45,6 +43,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<BatchCreateIntantSiteMonitorResponse> batchCreateIntantSiteMonitor(BatchCreateIntantSiteMonitorRequest request);
 
+    /**
+      * ### [](#)Prerequisites
+      * The `Cursor` information is returned by calling the [Cursor](~~2330730~~) operation.
+      * ### [](#)Description
+      * This topic provides an example on how to export the monitoring data of the `cpu_idle` metric for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`. The `Cursor` information is specified. A maximum of 1,000 data entries can be returned in each response.
+      *
+     */
     CompletableFuture<BatchExportResponse> batchExport(BatchExportRequest request);
 
     CompletableFuture<CreateCmsCallNumOrderResponse> createCmsCallNumOrder(CreateCmsCallNumOrderRequest request);
@@ -70,7 +75,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGroupMonitoringAgentProcessResponse> createGroupMonitoringAgentProcess(CreateGroupMonitoringAgentProcessRequest request);
 
     /**
-      * The ID of the resource for which alerts are triggered.
+      * This topic provides an example on how to create an availability monitoring task named `task1` in an application group named `123456`. The TaskType parameter of the task is set to `HTTP`. After you start the task, the system sends alerts by using the specified email address and DingTalk chatbot.
       *
      */
     CompletableFuture<CreateHostAvailabilityResponse> createHostAvailability(CreateHostAvailabilityRequest request);
@@ -97,15 +102,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHybridMonitorTaskResponse> createHybridMonitorTask(CreateHybridMonitorTaskRequest request);
 
     /**
-      * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+      * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. 
       * This topic provides an example to show how to create an instant test task. The name of the task is `task1`. The tested address is `http://www.aliyun.com`. The test type is `HTTP`. The number of detection points is `1`.
       *
      */
     CompletableFuture<CreateInstantSiteMonitorResponse> createInstantSiteMonitor(CreateInstantSiteMonitorRequest request);
 
     /**
-      * The name of the metric.
-      * Valid values of N: 1 to 10
+      * ### Background information
+      * *   CloudMonitor blocks alert notifications based on the blacklist policies that take effect. To block alert notifications when the value of a metric that belongs to a cloud service reaches the threshold that you specified, add the metric to a blacklist policy.
+      * *   CloudMonitor allows you to create blacklist policies only based on threshold metrics. You cannot create blacklist policies based on system events. For more information about the cloud services and the thresholds of the metrics that are supported by CloudMonitor, see [Appendix 1: Metrics](~~163515~~).
       *
      */
     CompletableFuture<CreateMetricRuleBlackListResponse> createMetricRuleBlackList(CreateMetricRuleBlackListRequest request);
@@ -123,8 +129,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMonitorGroupResponse> createMonitorGroup(CreateMonitorGroupRequest request);
 
     /**
-      * The ID of the region where the resource group resides.
-      * For information about how to obtain the ID of the region where a resource group resides, see [GetResourceGroup](~~158866~~).
+      * This topic provides an example on how to create an application group by using the resource group `CloudMonitor` and the alert contact group `ECS_Group`. The region ID of the resource group is `cn-hangzhou`.
       *
      */
     CompletableFuture<CreateMonitorGroupByResourceGroupIdResponse> createMonitorGroupByResourceGroupId(CreateMonitorGroupByResourceGroupIdRequest request);
@@ -145,13 +150,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMonitoringAgentProcessResponse> createMonitoringAgentProcess(CreateMonitoringAgentProcessRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to create a site monitoring task named `HanZhou_ECS1`. The URL that is monitored by the task is `https://www.aliyun.com` and the type of the task is `HTTPS`.
       *
      */
     CompletableFuture<CreateSiteMonitorResponse> createSiteMonitor(CreateSiteMonitorRequest request);
 
+    /**
+      * ### [](#)Prerequisites
+      * Hybrid Cloud Monitoring is activated. For more information, see [Activate Hybrid Cloud Monitoring](~~250773~~).
+      * ### [](#)Background information
+      * You can call this operation to obtain the Cursor information and then call the [BatchExport](~~2329847~~) operation to export the monitoring data.
+      * ### [](#)Description
+      * This topic provides an example on how to define the monitoring data of a specified metric for a specified cloud service. In this example, the namespace of the cloud service is set to `acs_ecs_dashboard`, the metric is set to `cpu_idle`, the start time is set to `1641627000000`, and the end time is set to `1641645000000`. The number of idle CPU cores on your Elastic Compute Service (ECS) instances is measured every 60 seconds from 15:30:00, January 8, 2022 to 20:30:00, January 8, 2022. The `Cursor` information is returned.
+      *
+     */
     CompletableFuture<CursorResponse> cursor(CursorRequest request);
 
     CompletableFuture<DeleteContactResponse> deleteContact(DeleteContactRequest request);
@@ -183,17 +195,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHybridMonitorNamespaceResponse> deleteHybridMonitorNamespace(DeleteHybridMonitorNamespaceRequest request);
 
     /**
-      * Indicates whether the call is successful. Valid values:
-      * *   true: The call is successful.
-      * *   false: The call fails.
+      * This topic provides an example on how to delete a Logstore group named `Logstore_test`. The response shows that the Logstore group is deleted.
       *
      */
     CompletableFuture<DeleteHybridMonitorSLSGroupResponse> deleteHybridMonitorSLSGroup(DeleteHybridMonitorSLSGroupRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to delete a metric import task whose ID is `36****`. The returned result indicates that the metric import task is deleted.
       *
      */
     CompletableFuture<DeleteHybridMonitorTaskResponse> deleteHybridMonitorTask(DeleteHybridMonitorTaskRequest request);
@@ -238,7 +246,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAlertLogCountResponse> describeAlertLogCount(DescribeAlertLogCountRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeAlertLogHistogram.
+      * This topic provides an example on how to query the number of alert logs for Elastic Compute Service (ECS) based on the `product` dimension.
       *
      */
     CompletableFuture<DescribeAlertLogHistogramResponse> describeAlertLogHistogram(DescribeAlertLogHistogramRequest request);
@@ -284,8 +292,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDynamicTagRuleListResponse> describeDynamicTagRuleList(DescribeDynamicTagRuleListRequest request);
 
     /**
-      * The name of the event-triggered alert rule.
-      * For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
+      * This topic provides an example to show how to query the details of an event-triggered alert rule named `testRule`.
       *
      */
     CompletableFuture<DescribeEventRuleAttributeResponse> describeEventRuleAttribute(DescribeEventRuleAttributeRequest request);
@@ -333,17 +340,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridMonitorNamespaceListResponse> describeHybridMonitorNamespaceList(DescribeHybridMonitorNamespaceListRequest request);
 
     /**
-      * Indicates whether the call is successful. Valid values:
-      * *   true: The call is successful.
-      * *   false: The call fails.
+      * In this example, all Logstore groups within the current account are queried. The response shows that the current account has two Logstore groups: `Logstore_test` and `Logstore_aliyun`.
       *
      */
     CompletableFuture<DescribeHybridMonitorSLSGroupResponse> describeHybridMonitorSLSGroup(DescribeHybridMonitorSLSGroupRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to query all metric import tasks that belong to the current Alibaba Cloud account. The returned result indicates that the current account has only one metric import task. The metric import task is named `aliyun_task`.
       *
      */
     CompletableFuture<DescribeHybridMonitorTaskListResponse> describeHybridMonitorTaskList(DescribeHybridMonitorTaskListRequest request);
@@ -364,9 +367,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMetricDataResponse> describeMetricData(DescribeMetricDataRequest request);
 
     /**
-      * The number of entries to return on each page.
-      * Default value: 1000. This value indicates that a maximum of 1,000 entries of monitoring data can be returned on each page.
-      * >  The maximum value of the Length parameter in a request is 1440.
+      * ### [](#)Limits
+      * Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.
+      * ### [](#)Precautions
+      * The storage duration of the monitoring data of each cloud service is related to the `Period` parameter (statistical period). A larger value of the `Period` parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:
+      * *   If the value of the `Period` parameter is less than 60 seconds, the storage duration is seven days.
+      * *   If the value of the `Period` parameter is 60 seconds, the storage duration is 31 days.
+      * *   If the value of the `Period` parameter is 300 seconds, the storage duration is 91 days.
+      * ### [](#)Description
+      * This topic provides an example on how to query the latest monitoring data of the `CPUUtilization` metric for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`. The returned result indicates that the monitoring data for the instance `i-abcdefgh12****` of the account `123456789876****` is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.
       *
      */
     CompletableFuture<DescribeMetricLastResponse> describeMetricLast(DescribeMetricLastRequest request);
@@ -408,16 +417,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMetricRuleTemplateAttributeResponse> describeMetricRuleTemplateAttribute(DescribeMetricRuleTemplateAttributeRequest request);
 
     /**
-      * The HTTP status code.
-      * >  The status code 200 indicates that the call was successful.
+      * This topic provides an example on how to query alert templates. In this example, the following alert templates are returned in the response: `ECS_Template1` and `ECS_Template2`.
       *
      */
     CompletableFuture<DescribeMetricRuleTemplateListResponse> describeMetricRuleTemplateList(DescribeMetricRuleTemplateListRequest request);
 
     /**
-      * The order in which data is sorted. Valid values:
-      * *   True: sorts data in ascending order.
-      * *   False (default value): sorts data in descending order.
+      * ### [](#)Limits
+      * Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.
+      * ### [](#)Precautions
+      * The storage duration of the monitoring data of each cloud service is related to the `Period` parameter (statistical period). A larger value of the `Period` parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:
+      * *   If the value of the `Period` parameter is less than 60 seconds, the storage duration is seven days.
+      * *   If the value of the `Period` parameter is 60 seconds, the storage duration is 31 days.
+      * *   If the value of the `Period` parameter is 300 seconds, the storage duration is 91 days.
+      * ### [](#)Description
+      * This topic provides an example to show how to query the monitoring data of the `cpu_idle` metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`. The monitoring data is sorted in the descending order based on the `Average` field.
       *
      */
     CompletableFuture<DescribeMetricTopResponse> describeMetricTop(DescribeMetricTopRequest request);
@@ -453,12 +467,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMonitoringAgentProcessesResponse> describeMonitoringAgentProcesses(DescribeMonitoringAgentProcessesRequest request);
 
     /**
-      * The details of the execution error. Valid values:
-      * *   `Command.ErrorCode.Fail.Downlaod.REGIN_ID`: Failed to obtain the region ID.
-      * *   `Command.ErrorCode.Fail.Downlaod.SYSAK`: Failed to download the .rpm package of System Analyse Kit (SysAK).
-      * *   `Command.ErrorCode.Fail.Downlaod.CMON_FILE`: Failed to download the CMON file.
-      * *   `Command.ErrorCode.Fail.Downlaod.BTF`: Failed to start SysAK because the BTF file is not found.
-      * *   `Command.ErrorCode.Fail.Start.SYSAK`: Failed to start SysAK due to an unknown error.
+      * This topic describes how to query the status of the CloudMonitor agent that is installed on the `i-hp3dunahluwajv6f****` instance. The result indicates that the CloudMonitor agent is in the `running` state.
       *
      */
     CompletableFuture<DescribeMonitoringAgentStatusesResponse> describeMonitoringAgentStatuses(DescribeMonitoringAgentStatusesRequest request);
@@ -500,7 +509,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSiteMonitorListResponse> describeSiteMonitorList(DescribeSiteMonitorListRequest request);
 
     /**
-      * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring. For more information, see [Billing of Network Analysis and Monitoring](~~341649~~).
+      * You can create an instant test task only by using the Alibaba Cloud account that you used to enable Network Analysis and Monitoring.
       * This topic provides an example to show how to query the logs of an instant test task whose ID is `afa5c3ce-f944-4363-9edb-ce919a29****`.
       *
      */
@@ -565,9 +574,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyGroupMonitoringAgentProcessResponse> modifyGroupMonitoringAgentProcess(ModifyGroupMonitoringAgentProcessRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to change the name of an availability monitoring task named `12345` in an application group named `123456` to `task2`.
       *
      */
     CompletableFuture<ModifyHostAvailabilityResponse> modifyHostAvailability(ModifyHostAvailabilityRequest request);
@@ -594,7 +601,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyHybridMonitorSLSGroupResponse> modifyHybridMonitorSLSGroup(ModifyHybridMonitorSLSGroupRequest request);
 
     /**
-      * The alias of the extended field that specifies the result of basic operations performed on aggregation results.
+      * This topic provides an example on how to change the collection period of a metric import task whose ID is `36****` to `15` seconds. The task is used to monitor the logs that are imported from Log Service. The returned result indicates that the metric is modified.
       *
      */
     CompletableFuture<ModifyHybridMonitorTaskResponse> modifyHybridMonitorTask(ModifyHybridMonitorTaskRequest request);
@@ -674,17 +681,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutExporterRuleResponse> putExporterRule(PutExporterRuleRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to create an alert rule for the `cpu_total` metric of Elastic Compute Service (ECS) in the `17285****` application group. The ID of the alert rule is `123456`. The name of the alert rule is `Rule_test`. The alert level is `Critical`. The statistical method is `Average`. The alert threshold comparator is `GreaterThanOrEqualToThreshold`. The alert threshold is `90`. The number of alert retries is `3`. The returned result shows that the alert rule is created and the alert rule ID is `123456`.
       *
      */
     CompletableFuture<PutGroupMetricRuleResponse> putGroupMetricRule(PutGroupMetricRuleRequest request);
 
     /**
-      * The tag value of the metric.
-      * Valid values of N: 1 to 100.
-      * >  You must specify a key and a value for a tag at the same time.
+      * # [](#)Prerequisites
+      * Hybrid Cloud Monitoring is activated. For more information, see [Activate Hybrid Cloud Monitoring](~~250773~~).
+      * # [](#)Limits
+      * The size of the monitoring data that you import at a time must be less than or equal to 1 MB.
+      * # [](#)Description
+      * This topic provides an example on how to import the monitoring data of the `CPU_Usage` metric to the `default-aliyun` namespace of Hybrid Cloud Monitoring.
       *
      */
     CompletableFuture<PutHybridMonitorMetricDataResponse> putHybridMonitorMetricData(PutHybridMonitorMetricDataRequest request);
@@ -708,8 +716,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutMonitoringConfigResponse> putMonitoringConfig(PutMonitoringConfigRequest request);
 
     /**
-      * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
-      * >  If an alert is not cleared within the mute period, a new alert notification is sent when the mute period ends.
+      * This topic provides an example to show how to create a threshold-triggered alert rule for the `cpu_total` metric of an Elastic Compute Service (ECS) instance whose ID is `i-uf6j91r34rnwawoo****`. The namespace of ECS is `acs_ecs_dashboard`. The alert contact group of the alert rule is `ECS_Group`. The name of the alert rule is `test123`. The ID of the alert rule is `a151cd6023eacee2f0978e03863cc1697c89508****`. The statistical method for Critical-level alerts is `Average`. The comparison operator for Critical-level alerts is `GreaterThanOrEqualToThreshold`. The threshold for Critical-level alerts is `90`. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is `3`.
       *
      */
     CompletableFuture<PutResourceMetricRuleResponse> putResourceMetricRule(PutResourceMetricRuleRequest request);

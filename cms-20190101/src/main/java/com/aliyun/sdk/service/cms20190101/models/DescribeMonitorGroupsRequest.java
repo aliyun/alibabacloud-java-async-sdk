@@ -372,7 +372,15 @@ public class DescribeMonitorGroupsRequest extends Request {
         }
 
         /**
-         * Types.
+         * The type of the application group. Valid values:
+         * <p>
+         * 
+         * *   custom: a self-managed application group
+         * *   ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster
+         * *   kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster
+         * *   tag: an application group that is automatically created by using tags
+         * *   resMgr: an application group that is created by using resource groups
+         * *   ess: an application group that is synchronized from Auto Scaling (ESS)
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);

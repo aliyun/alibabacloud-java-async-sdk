@@ -70,7 +70,12 @@ public class AddTagsRequest extends Request {
         } 
 
         /**
-         * GroupIds.
+         * The ID of the application group.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20.
+         * 
+         * For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -79,7 +84,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -135,10 +140,14 @@ public class AddTagsRequest extends Request {
             private String value; 
 
             /**
-             * The HTTP status code.
+             * The key of tag N.
              * <p>
              * 
-             * >  The status code 200 indicates that the call was successful.
+             * Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.
+             * 
+             * You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+             * 
+             * > The tag key cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -146,7 +155,14 @@ public class AddTagsRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The value of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.
+             * 
+             * You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+             * 
+             * > The tag value cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
              */
             public Builder value(String value) {
                 this.value = value;

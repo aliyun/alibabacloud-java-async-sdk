@@ -86,7 +86,10 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status information.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance. Separate multiple instance IDs with commas (,).
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +105,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The host status information.
          */
         public Builder nodeStatusList(NodeStatusList nodeStatusList) {
             this.nodeStatusList = nodeStatusList;
@@ -110,13 +113,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of SysOM. Valid values:
-         * <p>
-         * 
-         * *   installing: SysOM is being installed.
-         * *   running: SysOM is running.
-         * *   stopped: SysOM is stopped.
-         * *   uninstalling: SysOM is being uninstalled.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,11 +121,11 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the CloudMonitor agent is automatically installed. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The CloudMonitor agent is automatically installed.
-         * *   false: The CloudMonitor agent is not automatically installed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -252,6 +249,38 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             private String status; 
 
             /**
+             * Indicates whether the CloudMonitor agent is automatically installed. Valid values:
+             * <p>
+             * 
+             * *   true: The CloudMonitor agent is automatically installed.
+             * *   false: The CloudMonitor agent is not automatically installed.
+             */
+            public Builder autoInstall(Boolean autoInstall) {
+                this.autoInstall = autoInstall;
+                return this;
+            }
+
+            /**
+             * The instance ID.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Indicates whether the SysAK monitoring feature is enabled.`` Valid values:
+             * <p>
+             * 
+             * *   `true`: The SysAK monitoring feature is enabled.
+             * *   `false`: the SysAK monitoring feature is disabled.
+             */
+            public Builder osMonitorConfig(String osMonitorConfig) {
+                this.osMonitorConfig = osMonitorConfig;
+                return this;
+            }
+
+            /**
              * The error status of SysOM. Valid values:
              * <p>
              * 
@@ -262,37 +291,20 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
              * *   `uninstall_assist_invalid`: SysOM fails to be uninstalled because the status of Cloud Assistant is invalid.
              * *   `uninstall_assist_command_fail`: SysOM fails to be uninstalled because the uninstallation command fails to run.
              */
-            public Builder autoInstall(Boolean autoInstall) {
-                this.autoInstall = autoInstall;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * OsMonitorConfig.
-             */
-            public Builder osMonitorConfig(String osMonitorConfig) {
-                this.osMonitorConfig = osMonitorConfig;
-                return this;
-            }
-
-            /**
-             * OsMonitorErrorCode.
-             */
             public Builder osMonitorErrorCode(String osMonitorErrorCode) {
                 this.osMonitorErrorCode = osMonitorErrorCode;
                 return this;
             }
 
             /**
-             * OsMonitorErrorDetail.
+             * The details of the execution error. Valid values:
+             * <p>
+             * 
+             * *   `Command.ErrorCode.Fail.Downlaod.REGIN_ID`: Failed to obtain the region ID.
+             * *   `Command.ErrorCode.Fail.Downlaod.SYSAK`: Failed to download the .rpm package of System Analyse Kit (SysAK).
+             * *   `Command.ErrorCode.Fail.Downlaod.CMON_FILE`: Failed to download the CMON file.
+             * *   `Command.ErrorCode.Fail.Downlaod.BTF`: Failed to start SysAK because the BTF file is not found.
+             * *   `Command.ErrorCode.Fail.Start.SYSAK`: Failed to start SysAK due to an unknown error.
              */
             public Builder osMonitorErrorDetail(String osMonitorErrorDetail) {
                 this.osMonitorErrorDetail = osMonitorErrorDetail;
@@ -300,7 +312,13 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The status of SysOM. Valid values:
+             * <p>
+             * 
+             * *   installing: SysOM is being installed.
+             * *   running: SysOM is running.
+             * *   stopped: SysOM is stopped.
+             * *   uninstalling: SysOM is being uninstalled.
              */
             public Builder osMonitorStatus(String osMonitorStatus) {
                 this.osMonitorStatus = osMonitorStatus;
@@ -308,7 +326,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * OsMonitorVersion.
+             * The SysOM version.
              */
             public Builder osMonitorVersion(String osMonitorVersion) {
                 this.osMonitorVersion = osMonitorVersion;

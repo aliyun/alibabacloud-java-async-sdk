@@ -86,10 +86,10 @@ public class RemoveTagsResponseBody extends TeaModel {
         private Tag tag; 
 
         /**
-         * The HTTP status code.
+         * The status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +105,7 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to RemoveTags.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +113,11 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +125,7 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * The deleted tags.
          */
         public Builder tag(Tag tag) {
             this.tag = tag;

@@ -867,6 +867,9 @@ public class NotificationStrategy extends TeaModel {
 
     }
     public static class PushingSetting extends TeaModel {
+        @NameInMap("PushingDataFormat")
+        private String pushingDataFormat;
+
         @NameInMap("Range")
         private String range;
 
@@ -877,6 +880,7 @@ public class NotificationStrategy extends TeaModel {
         private String templateUuid;
 
         private PushingSetting(Builder builder) {
+            this.pushingDataFormat = builder.pushingDataFormat;
             this.range = builder.range;
             this.targetUuids = builder.targetUuids;
             this.templateUuid = builder.templateUuid;
@@ -888,6 +892,13 @@ public class NotificationStrategy extends TeaModel {
 
         public static PushingSetting create() {
             return builder().build();
+        }
+
+        /**
+         * @return pushingDataFormat
+         */
+        public String getPushingDataFormat() {
+            return this.pushingDataFormat;
         }
 
         /**
@@ -912,9 +923,18 @@ public class NotificationStrategy extends TeaModel {
         }
 
         public static final class Builder {
+            private String pushingDataFormat; 
             private String range; 
             private java.util.List < String > targetUuids; 
             private String templateUuid; 
+
+            /**
+             * PushingDataFormat.
+             */
+            public Builder pushingDataFormat(String pushingDataFormat) {
+                this.pushingDataFormat = pushingDataFormat;
+                return this;
+            }
 
             /**
              * Range.

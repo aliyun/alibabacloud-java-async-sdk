@@ -128,7 +128,17 @@ public class CursorRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * > 
+         * 
+         * *   This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.
+         * 
+         * *   If you do not set the end time, the end time is infinite. You can leave this parameter empty in real-time export scenarios.
+         * *   In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the `Period` parameter.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -137,7 +147,7 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * Matchers.
+         * The dimension information of the metric.
          */
         public Builder matchers(java.util.List < Matcher > matchers) {
             String matchersShrink = shrink(matchers, "Matchers", "json");
@@ -147,7 +157,10 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * Metric.
+         * The metric that is used to monitor the cloud service.
+         * <p>
+         * 
+         * For more information about the metrics of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metric(String metric) {
             this.putBodyParameter("Metric", metric);
@@ -156,7 +169,10 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace of the cloud service.
+         * <p>
+         * 
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -165,7 +181,12 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * Period.
+         * The time interval based on which the metric value is measured.
+         * <p>
+         * 
+         * Unit: seconds.
+         * 
+         * >  Generally, the time interval is 60 seconds. For more information about specific values, see the `Period` parameter in [Appendix 1: Metrics](~~163515~~).
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -174,7 +195,12 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.
+         * 
+         * >  In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the `Period` parameter.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

@@ -101,7 +101,9 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * > The status code 200 indicates that the call was successful.
+         * **
+         * 
+         * **Description** The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -125,7 +127,7 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to initiate the next request.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -133,7 +135,7 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,11 +143,11 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

@@ -83,10 +83,7 @@ public class DeleteMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the process.
-         * <p>
-         * 
-         * >  You must specify either the `ProcessId` or the `ProcessName` parameter.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,7 +92,10 @@ public class DeleteMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The process ID.
+         * <p>
+         * 
+         * > You must configure either `ProcessId` or `ProcessName`.
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -104,10 +104,10 @@ public class DeleteMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The process name.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * > You must configure either `ProcessId` or `ProcessName`.
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);

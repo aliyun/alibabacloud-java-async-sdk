@@ -86,14 +86,10 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The effective scope of the blacklist policy. Valid values:
+         * The status code.
          * <p>
          * 
-         * *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
-         * 
-         * *   GROUP: The blacklist policy takes effect only for the specified application group. This is the default value.
-         * 
-         *     For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +97,7 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the blacklist policy.
          */
         public Builder id(String id) {
             this.id = id;
@@ -109,7 +105,7 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +113,7 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,7 +121,11 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

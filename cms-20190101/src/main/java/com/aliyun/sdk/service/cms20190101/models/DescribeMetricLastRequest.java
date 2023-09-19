@@ -168,12 +168,12 @@ public class DescribeMetricLastRequest extends Request {
         } 
 
         /**
-         * The dimensions that specify the resources whose monitoring data you want to query.
+         * The monitoring dimensions of the specified resource.
          * <p>
          * 
-         * Set the value to a collection of key-value pairs. A typical key-value pair is `instanceId:i-2ze2d6j5uhg20x47****`.
+         * Set the value to a collection of `key:value` pairs. Example: `{"userId":"120886317861****"}` or `{"instanceId":"i-2ze2d6j5uhg20x47****"}`.
          * 
-         * >  You can query a maximum of 50 instances in a single request.
+         * >  You can query a maximum of 50 instances in each request.
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -182,7 +182,12 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The end of the time range to query monitoring data.
+         * <p>
+         * 
+         * *   For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.
+         * *   For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.
+         * *   For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -191,7 +196,7 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The start of the time range to query monitoring data.
+         * The expression that is used to calculate the query results in real time.
          */
         public Builder express(String express) {
             this.putQueryParameter("Express", express);
@@ -200,10 +205,12 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service. Format: acs_service name.
+         * The number of entries per page.
          * <p>
          * 
-         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * Default value: 1000. This value indicates that a maximum of 1,000 entries of monitoring data can be returned on each page.
+         * 
+         * >  The maximum value of the Length parameter for each request is 1440.
          */
         public Builder length(String length) {
             this.putQueryParameter("Length", length);
@@ -212,10 +219,10 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The metric that is used to monitor the cloud service.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * For more information about metric names, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -224,11 +231,10 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The paging token.
+         * The namespace of the cloud service.
          * <p>
          * 
-         * *   If the number of results exceeds the maximum number of entries allowed on a single page, a paging token is returned.
-         * *   This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -237,7 +243,11 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The expression that is used to calculate the query results in real time.
+         * The pagination token.
+         * <p>
+         * 
+         * *   If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.
+         * *   This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -246,7 +256,16 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeMetricLast**.
+         * The statistical period of the monitoring data.
+         * <p>
+         * 
+         * Valid values: 15, 60, 900, and 3600.
+         * 
+         * Unit: seconds.
+         * 
+         * > 
+         * 
+         * *   If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported. The statistical period of metrics (`MetricName`) varies for each cloud service. The statistical period of metrics is displayed in the `MinPeriods` column on the **Metrics** page for each cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -255,12 +274,7 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * The end of the time range to query monitoring data.
-         * <p>
-         * 
-         * *   For second-level data, the start time is obtained by comparing the time that is specified by the startTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.
-         * *   For minute-level data, the start time is obtained by comparing the time that is specified by the startTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.
-         * *   For hour-level data, the start time is obtained by comparing the time that is specified by the startTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.
+         * The start of the time range to query monitoring data.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

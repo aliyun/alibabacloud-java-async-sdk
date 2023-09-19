@@ -96,10 +96,7 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1. Default value: 1.
+         * The keyword that is used to search for Logstore groups.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -108,10 +105,10 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The timestamp that was generated when the Logstore group was created.
+         * The page number.
          * <p>
          * 
-         * Unit: milliseconds.
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -120,10 +117,10 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The number of entries per page.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * Minimum value: 1. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -132,7 +129,7 @@ public class DescribeHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeHybridMonitorSLSGroup**.
+         * The name of the Logstore group.
          */
         public Builder SLSGroupName(String SLSGroupName) {
             this.putQueryParameter("SLSGroupName", SLSGroupName);

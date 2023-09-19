@@ -86,7 +86,10 @@ public class CursorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class CursorResponseBody extends TeaModel {
         }
 
         /**
-         * Cursor.
+         * Cursor is used as an input parameter for data export in the [BatchExport](~~2329847~~) operation.
          */
         public Builder cursor(String cursor) {
             this.cursor = cursor;
@@ -102,7 +105,7 @@ public class CursorResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class CursorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class CursorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

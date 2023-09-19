@@ -70,7 +70,7 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         } 
 
         /**
-         * The ID of the message resource. Valid values of N: 1 to 5.
+         * The ID of the alert rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -79,7 +79,7 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * TargetIds.
+         * The resource IDs.
          */
         public Builder targetIds(java.util.List < String > targetIds) {
             this.putQueryParameter("TargetIds", targetIds);

@@ -122,7 +122,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,11 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the logs that are imported from Log Service.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request was successful, the value `successful` is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +145,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The method that is used to aggregate on-premises log data.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +153,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The conditions that are used to match the instances in the application group.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +161,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The alias of the extended field that indicates the result of basic operations that are performed on aggregation results.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,15 +169,11 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period during which the CloudMonitor agent collects host monitoring data. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   0
-         * *   15
-         * *   30
-         * *   60
-         * 
-         * Unit: seconds.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -178,7 +181,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the metric import task.
+         * The metric import tasks.
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.taskList = taskList;
@@ -186,17 +189,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The method that is used to filter logs imported from Log Service. Valid values:
-         * <p>
-         * 
-         * *   `contain`: contains
-         * *   `notContain`: does not contain
-         * *   `>`: greater than
-         * *   `<`: less than
-         * *   `=`: equal to
-         * *   `! =`: not equal to
-         * *   `>=`: greater than or equal to
-         * *   `<=`: less than or equal to
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -248,7 +241,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * The tag key.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -256,10 +249,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
-             * <p>
-             * 
-             * Minimum value: 1. Default value: 10.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -324,7 +314,15 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The extended fields that indicate the results of basic operations that are performed on aggregation results.
+             * The method that is used to match the instance name. Valid values:
+             * <p>
+             * 
+             * *   startWith: starts with a prefix
+             * *   endWith: ends with a suffix
+             * *   all: matches all
+             * *   equals: equals
+             * *   contains: contains
+             * *   notContains: does not contain
              */
             public Builder function(String function) {
                 this.function = function;
@@ -332,10 +330,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.
-             * <p>
-             * 
-             * Pages start from page 1. Default value: 1.
+             * The instance name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +338,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The keyword that corresponds to the instance name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -396,7 +391,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String express; 
 
             /**
-             * Alias.
+             * The alias of the extended field that indicates the result of basic operations that are performed on aggregation results.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -404,7 +399,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Express.
+             * The extended field that indicates the result of basic operations that are performed on aggregation results.
              */
             public Builder express(String express) {
                 this.express = express;
@@ -469,7 +464,17 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The value of the tag.
+             * The method that is used to filter logs imported from Log Service. Valid values:
+             * <p>
+             * 
+             * *   `contain`: contains
+             * *   `notContain`: does not contain
+             * *   `>`: greater than
+             * *   `<`: less than
+             * *   `=`: equal to
+             * *   `! =`: not equal to
+             * *   `>=`: greater than or equal to
+             * *   `<=`: less than or equal to
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -477,7 +482,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring data. Valid values: Spring, Tomcat, Nginx, Tengine, JVM, Redis, and MySQL.
+             * The name of the key that is used to filter logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -485,7 +490,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The value of the key that is used to filter logs imported from Log Service.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -538,7 +543,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String relation; 
 
             /**
-             * The extended field that indicates the result of basic operations that are performed on aggregation results.
+             * The conditions that are used to filter logs imported from Log Service.
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -546,10 +551,11 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member account.
+             * The relationship between multiple filter conditions. Valid values:
              * <p>
              * 
-             * >  This parameter is required only if you call this operation to delete metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
+             * *   and (default): Logs are processed only if all filter conditions are met.
+             * *   or: Logs are processed if one of the filter conditions is met.
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -602,7 +608,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String SLSKeyName; 
 
             /**
-             * The ID of the request.
+             * The alias of the aggregation result.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -610,7 +616,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the aggregation result.
+             * The name of the key that is used to aggregate logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -699,7 +705,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String SLSKeyName; 
 
             /**
-             * The ID of the request.
+             * The alias of the aggregation result.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -707,7 +713,20 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The extended fields that indicate the results of basic operations that are performed on aggregation results.
+             * The function that is used to aggregate log data within a statistical period. Valid values:
+             * <p>
+             * 
+             * *   count: counts the number.
+             * *   sum: calculates the total value.
+             * *   avg: calculates the average value.
+             * *   max: calculates the maximum value.
+             * *   min: calculates the minimum value.
+             * *   value: collects samples within the statistical period.
+             * *   countps: calculates the average number of the specified field per second by using the following formula: Counted number of the specified field/Total number of seconds within the statistical period.
+             * *   sumps: calculates the average number of the specified field per second by using the following formula: Total value of the specified field/Total number of seconds within the statistical period.
+             * *   distinct: counts the number of logs where the specified field appears within the statistical period.
+             * *   distribution: counts the number of logs that meet a specified condition within the statistical period.
+             * *   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -715,7 +734,11 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Parameter1.
+             * The value of the function that is used to aggregate logs imported from Log Service.
+             * <p>
+             * 
+             * *   If the `Function` parameter is set to `distribution`, this parameter indicates the lower limit of the statistical interval. For example, 200 indicates that the number of HTTP requests whose status code is 2XX is calculated.
+             * *   If the `Function` parameter is set to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.
              */
             public Builder parameter1(String parameter1) {
                 this.parameter1 = parameter1;
@@ -723,7 +746,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Parameter2.
+             * The value of the function that is used to aggregate logs imported from Log Service.
+             * <p>
+             * 
+             * > This parameter is returned only if the `Function` parameter is set to `distribution`. This parameter indicates the upper limit of the statistical interval. For example, 299 indicates that the number of HTTP requests whose status code is 2XX is calculated.
              */
             public Builder parameter2(String parameter2) {
                 this.parameter2 = parameter2;
@@ -731,7 +757,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the aggregation result.
+             * The name of the key that is used to aggregate logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -808,7 +834,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private java.util.List < Statistics> statistics; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The extended fields that indicate the results of basic operations that are performed on aggregation results.
              */
             public Builder express(java.util.List < Express> express) {
                 this.express = express;
@@ -816,7 +842,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.
+             * The conditions that are used to filter logs imported from Log Service.
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -824,7 +850,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The sample on-premises log.
+             * The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.
              */
             public Builder groupBy(java.util.List < GroupBy> groupBy) {
                 this.groupBy = groupBy;
@@ -832,7 +858,7 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The methods that are used to aggregate logs imported from Log Service.
              */
             public Builder statistics(java.util.List < Statistics> statistics) {
                 this.statistics = statistics;
@@ -1185,18 +1211,151 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             private String YARMConfig; 
 
             /**
-             * The method that is used to match the instance name. Valid values:
-             * <p>
-             * 
-             * *   startWith: starts with a prefix
-             * *   endWith: ends with a suffix
-             * *   all: includes all
-             * *   equals: equals
-             * *   contains: contains
-             * *   notContains: excludes
+             * The tags of the metric import task.
              */
             public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
                 this.attachLabels = attachLabels;
+                return this;
+            }
+
+            /**
+             * The interval at which the CloudMonitor agent collects host monitoring data. Valid values:
+             * <p>
+             * 
+             * *   15
+             * *   30
+             * *   60
+             * 
+             * Unit: seconds.
+             */
+            public Builder collectInterval(Integer collectInterval) {
+                this.collectInterval = collectInterval;
+                return this;
+            }
+
+            /**
+             * The URL of the destination from which the CloudMonitor agent collects host monitoring data.
+             */
+            public Builder collectTargetEndpoint(String collectTargetEndpoint) {
+                this.collectTargetEndpoint = collectTargetEndpoint;
+                return this;
+            }
+
+            /**
+             * The relative path from which the CloudMonitor agent collects monitoring data.
+             */
+            public Builder collectTargetPath(String collectTargetPath) {
+                this.collectTargetPath = collectTargetPath;
+                return this;
+            }
+
+            /**
+             * The type of the monitoring data. Valid values: Spring, Tomcat, Nginx, Tengine, JVM, Redis, and MySQL.
+             */
+            public Builder collectTargetType(String collectTargetType) {
+                this.collectTargetType = collectTargetType;
+                return this;
+            }
+
+            /**
+             * The timeout period during which the CloudMonitor agent collects host monitoring data. Valid values:
+             * <p>
+             * 
+             * *   0
+             * *   15
+             * *   30
+             * *   60
+             * 
+             * Unit: seconds.
+             */
+            public Builder collectTimout(Integer collectTimout) {
+                this.collectTimout = collectTimout;
+                return this;
+            }
+
+            /**
+             * The timestamp when the metric import task was created.
+             * <p>
+             * 
+             * Unit: milliseconds.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The description of the metric import task.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The additional information of the instance.
+             */
+            public Builder extraInfo(String extraInfo) {
+                this.extraInfo = extraInfo;
+                return this;
+            }
+
+            /**
+             * The ID of the application group.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * The instances where monitoring data is collected in batches.
+             */
+            public Builder instances(java.util.List < String > instances) {
+                this.instances = instances;
+                return this;
+            }
+
+            /**
+             * LogFilePath.
+             */
+            public Builder logFilePath(String logFilePath) {
+                this.logFilePath = logFilePath;
+                return this;
+            }
+
+            /**
+             * The method that is used to aggregate on-premises log data.
+             */
+            public Builder logProcess(String logProcess) {
+                this.logProcess = logProcess;
+                return this;
+            }
+
+            /**
+             * The sample on-premises log.
+             */
+            public Builder logSample(String logSample) {
+                this.logSample = logSample;
+                return this;
+            }
+
+            /**
+             * The result that is returned after on-premises log data is split based on the specified matching mode.
+             * <p>
+             * 
+             * > The matching modes of on-premises log data include full regex mode, delimiter mode, and JSON mode.
+             */
+            public Builder logSplit(String logSplit) {
+                this.logSplit = logSplit;
+                return this;
+            }
+
+            /**
+             * The conditions that are used to match the instances in the application group.
+             */
+            public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
+                this.matchExpress = matchExpress;
                 return this;
             }
 
@@ -1207,62 +1366,16 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
              * *   or
              * *   and
              */
-            public Builder collectInterval(Integer collectInterval) {
-                this.collectInterval = collectInterval;
+            public Builder matchExpressRelation(String matchExpressRelation) {
+                this.matchExpressRelation = matchExpressRelation;
                 return this;
             }
 
             /**
-             * The number of entries returned per page.
+             * The namespace to which the host belongs.
              */
-            public Builder collectTargetEndpoint(String collectTargetEndpoint) {
-                this.collectTargetEndpoint = collectTargetEndpoint;
-                return this;
-            }
-
-            /**
-             * The conditions that are used to filter logs imported from Log Service.
-             */
-            public Builder collectTargetPath(String collectTargetPath) {
-                this.collectTargetPath = collectTargetPath;
-                return this;
-            }
-
-            /**
-             * The ID of the application group.
-             */
-            public Builder collectTargetType(String collectTargetType) {
-                this.collectTargetType = collectTargetType;
-                return this;
-            }
-
-            /**
-             * The name of the namespace.
-             * <p>
-             * 
-             * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
-             */
-            public Builder collectTimout(Integer collectTimout) {
-                this.collectTimout = collectTimout;
-                return this;
-            }
-
-            /**
-             * The metric import tasks.
-             */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The result that is returned after on-premises log data is split based on the specified matching mode.
-             * <p>
-             * 
-             * >  The matching modes of on-premises log data include full regex mode, delimiter mode, and JSON mode.
-             */
-            public Builder description(String description) {
-                this.description = description;
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -1270,47 +1383,57 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
              * The network type of the host. Valid values:
              * <p>
              * 
-             * *   `vpc`: a virtual private cloud (VPC)
-             * *   `Internet`: Internet
+             * *   `vpc`
+             * *   `Internet`
              */
-            public Builder extraInfo(String extraInfo) {
-                this.extraInfo = extraInfo;
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * The configurations of the logs that are imported from Log Service.
+             */
+            public Builder SLSProcess(String SLSProcess) {
+                this.SLSProcess = SLSProcess;
+                return this;
+            }
+
+            /**
+             * The configurations of the logs that are imported from Log Service.
+             * <p>
+             * 
+             * > This parameter is returned only if the `TaskType` parameter is set to `aliyun_sls`.
+             */
+            public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
+                this.SLSProcessConfig = SLSProcessConfig;
+                return this;
+            }
+
+            /**
+             * The ID of the member account.
+             * <p>
+             * 
+             * > This parameter is displayed only when you call this operation by using a management account.
+             */
+            public Builder targetUserId(String targetUserId) {
+                this.targetUserId = targetUserId;
+                return this;
+            }
+
+            /**
+             * The ID of the metric import task.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 
             /**
              * The name of the metric import task.
              */
-            public Builder groupId(String groupId) {
-                this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * The name of the key that is used to filter logs imported from Log Service.
-             */
-            public Builder instances(java.util.List < String > instances) {
-                this.instances = instances;
-                return this;
-            }
-
-            /**
-             * The relationship between multiple filter conditions. Valid values:
-             * <p>
-             * 
-             * *   and (default value): Logs are processed only if all filter conditions are met.
-             * *   or: Logs are processed if one of the filter conditions is met.
-             */
-            public Builder logFilePath(String logFilePath) {
-                this.logFilePath = logFilePath;
-                return this;
-            }
-
-            /**
-             * The description of the metric import task.
-             */
-            public Builder logProcess(String logProcess) {
-                this.logProcess = logProcess;
+            public Builder taskName(String taskName) {
+                this.taskName = taskName;
                 return this;
             }
 
@@ -1321,115 +1444,13 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
              * *   aliyun_fc: metric import tasks for Alibaba Cloud services
              * *   aliyun_sls: metrics for logs imported from Log Service
              */
-            public Builder logSample(String logSample) {
-                this.logSample = logSample;
-                return this;
-            }
-
-            /**
-             * The total number of returned entries.
-             */
-            public Builder logSplit(String logSplit) {
-                this.logSplit = logSplit;
-                return this;
-            }
-
-            /**
-             * The returned message.
-             * <p>
-             * 
-             * *   If the call is successful, the value `successful` is returned.
-             * *   If the call fails, an error message is returned.
-             */
-            public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
-                this.matchExpress = matchExpress;
-                return this;
-            }
-
-            /**
-             * The URL of the destination from which the CloudMonitor agent collects host monitoring data.
-             */
-            public Builder matchExpressRelation(String matchExpressRelation) {
-                this.matchExpressRelation = matchExpressRelation;
-                return this;
-            }
-
-            /**
-             * The relative path from which the CloudMonitor agent collects monitoring data.
-             */
-            public Builder namespace(String namespace) {
-                this.namespace = namespace;
-                return this;
-            }
-
-            /**
-             * The keyword that corresponds to the instance name.
-             */
-            public Builder networkType(String networkType) {
-                this.networkType = networkType;
-                return this;
-            }
-
-            /**
-             * Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:
-             * <p>
-             * 
-             * *   true (default value): includes metric import tasks for Alibaba Cloud services.
-             * *   false: excludes metric import tasks for Alibaba Cloud services.
-             */
-            public Builder SLSProcess(String SLSProcess) {
-                this.SLSProcess = SLSProcess;
-                return this;
-            }
-
-            /**
-             * The key of the tag.
-             */
-            public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
-                this.SLSProcessConfig = SLSProcessConfig;
-                return this;
-            }
-
-            /**
-             * The ID of the metric import task.
-             */
-            public Builder targetUserId(String targetUserId) {
-                this.targetUserId = targetUserId;
-                return this;
-            }
-
-            /**
-             * The configurations of the logs that are imported from Log Service.
-             * <p>
-             * 
-             * >  This parameter is returned only if the `TaskType` parameter is set to `aliyun_sls`.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
-                return this;
-            }
-
-            /**
-             * The region where the host resides.
-             */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
                 return this;
             }
 
             /**
-             * The ID of the member account.
-             * <p>
-             * 
-             * >  This parameter is returned only if you call this operation by using a management account.
+             * The region where the host resides.
              */
             public Builder uploadRegion(String uploadRegion) {
                 this.uploadRegion = uploadRegion;
@@ -1437,10 +1458,11 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
              * <p>
              * 
-             * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+             * *   namespace: the namespace of the Alibaba Cloud service.
+             * *   metric_list: the metrics of the Alibaba Cloud service.
              */
             public Builder YARMConfig(String YARMConfig) {
                 this.YARMConfig = YARMConfig;

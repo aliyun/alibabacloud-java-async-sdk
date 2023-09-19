@@ -124,10 +124,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * The namespace of the cloud service.
-         * <p>
-         * 
-         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * The dimensions that specify the resources whose monitoring data you want to query.
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -136,10 +133,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -148,7 +142,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The resources that are monitored.
+         * The namespace of the cloud service.
+         * <p>
+         * 
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -157,10 +154,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The timestamp when the last alert was triggered for the resource based on the alert rule.
+         * The page number.
          * <p>
          * 
-         * Unit: milliseconds.
+         * Default value: 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -169,7 +166,10 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeAlertingMetricRuleResources**.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,15 +178,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The operator that is used to compare the metric value with the threshold. Valid values:
-         * <p>
-         * 
-         * *   `>=`
-         * *   `=`
-         * *   `<=`
-         * *   `>`
-         * *   `<`
-         * *   `!=`
+         * The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

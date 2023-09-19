@@ -86,7 +86,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * Datapoints.
+         * The monitoring data.
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -102,7 +105,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring data.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * The statistical period of the monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.
          */
         public Builder period(String period) {
             this.period = period;
@@ -118,7 +121,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

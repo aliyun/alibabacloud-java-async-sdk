@@ -74,7 +74,10 @@ public class DeleteMonitoringAgentProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteMonitoringAgentProcess**.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class DeleteMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class DeleteMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,11 @@ public class DeleteMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

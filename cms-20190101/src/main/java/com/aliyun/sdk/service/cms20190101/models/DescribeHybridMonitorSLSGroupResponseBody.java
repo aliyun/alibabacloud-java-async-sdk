@@ -122,7 +122,10 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The error message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the Logstore group.
+         * The queried Logstore groups.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -138,10 +141,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that was generated when the Logstore group was modified.
-         * <p>
-         * 
-         * Unit: milliseconds.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +149,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -157,7 +157,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -165,7 +165,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Logstore group.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +173,11 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The keyword that is used to search for Logstore groups.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -181,7 +185,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -257,7 +261,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             private String SLSUserId; 
 
             /**
-             * The name of the Logstore group.
+             * The Logstore.
              */
             public Builder SLSLogstore(String SLSLogstore) {
                 this.SLSLogstore = SLSLogstore;
@@ -265,10 +269,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member account.
-             * <p>
-             * 
-             * >  This parameter is returned only when you call API operations by using a management account.
+             * The Simple Log Service project.
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -276,7 +277,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The Logstore.
+             * The region ID.
              */
             public Builder SLSRegion(String SLSRegion) {
                 this.SLSRegion = SLSRegion;
@@ -284,7 +285,10 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The member ID.
+             * <p>
+             * 
+             * **Description** This parameter is returned when you call the operation by using an administrative account.
              */
             public Builder SLSUserId(String SLSUserId) {
                 this.SLSUserId = SLSUserId;
@@ -373,7 +377,10 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The number of entries returned per page.
+             * The time when the Logstore group was created.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -381,7 +388,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service project.
+             * The configurations of the Logstore group.
              */
             public Builder SLSGroupConfig(java.util.List < SLSGroupConfig> SLSGroupConfig) {
                 this.SLSGroupConfig = SLSGroupConfig;
@@ -389,7 +396,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the Logstore group.
+             * The description of the Logstore group.
              */
             public Builder SLSGroupDescription(String SLSGroupDescription) {
                 this.SLSGroupDescription = SLSGroupDescription;
@@ -397,7 +404,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The name of the Logstore group.
              */
             public Builder SLSGroupName(String SLSGroupName) {
                 this.SLSGroupName = SLSGroupName;
@@ -405,7 +412,10 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The time when the Logstore group was modified.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

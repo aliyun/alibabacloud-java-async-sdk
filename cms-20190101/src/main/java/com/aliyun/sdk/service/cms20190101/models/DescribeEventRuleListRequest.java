@@ -17,6 +17,10 @@ public class DescribeEventRuleListRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("IsEnable")
+    private Boolean isEnable;
+
+    @Query
     @NameInMap("NamePrefix")
     private String namePrefix;
 
@@ -31,6 +35,7 @@ public class DescribeEventRuleListRequest extends Request {
     private DescribeEventRuleListRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
+        this.isEnable = builder.isEnable;
         this.namePrefix = builder.namePrefix;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -57,6 +62,13 @@ public class DescribeEventRuleListRequest extends Request {
     }
 
     /**
+     * @return isEnable
+     */
+    public Boolean getIsEnable() {
+        return this.isEnable;
+    }
+
+    /**
      * @return namePrefix
      */
     public String getNamePrefix() {
@@ -79,6 +91,7 @@ public class DescribeEventRuleListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeEventRuleListRequest, Builder> {
         private String groupId; 
+        private Boolean isEnable; 
         private String namePrefix; 
         private String pageNumber; 
         private String pageSize; 
@@ -90,6 +103,7 @@ public class DescribeEventRuleListRequest extends Request {
         private Builder(DescribeEventRuleListRequest request) {
             super(request);
             this.groupId = request.groupId;
+            this.isEnable = request.isEnable;
             this.namePrefix = request.namePrefix;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -101,6 +115,15 @@ public class DescribeEventRuleListRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * IsEnable.
+         */
+        public Builder isEnable(Boolean isEnable) {
+            this.putQueryParameter("IsEnable", isEnable);
+            this.isEnable = isEnable;
             return this;
         }
 

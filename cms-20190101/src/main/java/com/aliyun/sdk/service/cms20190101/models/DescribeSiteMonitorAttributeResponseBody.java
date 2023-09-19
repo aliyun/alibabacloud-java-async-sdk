@@ -1000,6 +1000,395 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class BlockedUrlList extends TeaModel {
+        @NameInMap("blocked_url_list")
+        private java.util.List < String > blockedUrlList;
+
+        private BlockedUrlList(Builder builder) {
+            this.blockedUrlList = builder.blockedUrlList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BlockedUrlList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return blockedUrlList
+         */
+        public java.util.List < String > getBlockedUrlList() {
+            return this.blockedUrlList;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > blockedUrlList; 
+
+            /**
+             * blocked_url_list.
+             */
+            public Builder blockedUrlList(java.util.List < String > blockedUrlList) {
+                this.blockedUrlList = blockedUrlList;
+                return this;
+            }
+
+            public BlockedUrlList build() {
+                return new BlockedUrlList(this);
+            } 
+
+        } 
+
+    }
+    public static class BrowserHeaders extends TeaModel {
+        @NameInMap("browser_headers")
+        private java.util.List < java.util.Map<String, ?>> browserHeaders;
+
+        private BrowserHeaders(Builder builder) {
+            this.browserHeaders = builder.browserHeaders;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BrowserHeaders create() {
+            return builder().build();
+        }
+
+        /**
+         * @return browserHeaders
+         */
+        public java.util.List < java.util.Map<String, ?>> getBrowserHeaders() {
+            return this.browserHeaders;
+        }
+
+        public static final class Builder {
+            private java.util.List < java.util.Map<String, ?>> browserHeaders; 
+
+            /**
+             * browser_headers.
+             */
+            public Builder browserHeaders(java.util.List < java.util.Map<String, ?>> browserHeaders) {
+                this.browserHeaders = browserHeaders;
+                return this;
+            }
+
+            public BrowserHeaders build() {
+                return new BrowserHeaders(this);
+            } 
+
+        } 
+
+    }
+    public static class BrowserHosts extends TeaModel {
+        @NameInMap("browser_hosts")
+        private java.util.List < String > browserHosts;
+
+        private BrowserHosts(Builder builder) {
+            this.browserHosts = builder.browserHosts;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BrowserHosts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return browserHosts
+         */
+        public java.util.List < String > getBrowserHosts() {
+            return this.browserHosts;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > browserHosts; 
+
+            /**
+             * browser_hosts.
+             */
+            public Builder browserHosts(java.util.List < String > browserHosts) {
+                this.browserHosts = browserHosts;
+                return this;
+            }
+
+            public BrowserHosts build() {
+                return new BrowserHosts(this);
+            } 
+
+        } 
+
+    }
+    public static class BrowserInfo extends TeaModel {
+        @NameInMap("browser")
+        private String browser;
+
+        @NameInMap("device")
+        private String device;
+
+        private BrowserInfo(Builder builder) {
+            this.browser = builder.browser;
+            this.device = builder.device;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BrowserInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return browser
+         */
+        public String getBrowser() {
+            return this.browser;
+        }
+
+        /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        public static final class Builder {
+            private String browser; 
+            private String device; 
+
+            /**
+             * browser.
+             */
+            public Builder browser(String browser) {
+                this.browser = browser;
+                return this;
+            }
+
+            /**
+             * device.
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            public BrowserInfo build() {
+                return new BrowserInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class OptionJsonBrowserInfo extends TeaModel {
+        @NameInMap("browser_info")
+        private java.util.List < BrowserInfo> browserInfo;
+
+        private OptionJsonBrowserInfo(Builder builder) {
+            this.browserInfo = builder.browserInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionJsonBrowserInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return browserInfo
+         */
+        public java.util.List < BrowserInfo> getBrowserInfo() {
+            return this.browserInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < BrowserInfo> browserInfo; 
+
+            /**
+             * browser_info.
+             */
+            public Builder browserInfo(java.util.List < BrowserInfo> browserInfo) {
+                this.browserInfo = browserInfo;
+                return this;
+            }
+
+            public OptionJsonBrowserInfo build() {
+                return new OptionJsonBrowserInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class ExpectExistString extends TeaModel {
+        @NameInMap("expect_exist_string")
+        private java.util.List < String > expectExistString;
+
+        private ExpectExistString(Builder builder) {
+            this.expectExistString = builder.expectExistString;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpectExistString create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectExistString
+         */
+        public java.util.List < String > getExpectExistString() {
+            return this.expectExistString;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > expectExistString; 
+
+            /**
+             * expect_exist_string.
+             */
+            public Builder expectExistString(java.util.List < String > expectExistString) {
+                this.expectExistString = expectExistString;
+                return this;
+            }
+
+            public ExpectExistString build() {
+                return new ExpectExistString(this);
+            } 
+
+        } 
+
+    }
+    public static class ExpectNonExistString extends TeaModel {
+        @NameInMap("expect_non_exist_string")
+        private java.util.List < String > expectNonExistString;
+
+        private ExpectNonExistString(Builder builder) {
+            this.expectNonExistString = builder.expectNonExistString;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpectNonExistString create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expectNonExistString
+         */
+        public java.util.List < String > getExpectNonExistString() {
+            return this.expectNonExistString;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > expectNonExistString; 
+
+            /**
+             * expect_non_exist_string.
+             */
+            public Builder expectNonExistString(java.util.List < String > expectNonExistString) {
+                this.expectNonExistString = expectNonExistString;
+                return this;
+            }
+
+            public ExpectNonExistString build() {
+                return new ExpectNonExistString(this);
+            } 
+
+        } 
+
+    }
+    public static class TrafficHijackElementBlacklist extends TeaModel {
+        @NameInMap("traffic_hijack_element_blacklist")
+        private java.util.List < String > trafficHijackElementBlacklist;
+
+        private TrafficHijackElementBlacklist(Builder builder) {
+            this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TrafficHijackElementBlacklist create() {
+            return builder().build();
+        }
+
+        /**
+         * @return trafficHijackElementBlacklist
+         */
+        public java.util.List < String > getTrafficHijackElementBlacklist() {
+            return this.trafficHijackElementBlacklist;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > trafficHijackElementBlacklist; 
+
+            /**
+             * traffic_hijack_element_blacklist.
+             */
+            public Builder trafficHijackElementBlacklist(java.util.List < String > trafficHijackElementBlacklist) {
+                this.trafficHijackElementBlacklist = trafficHijackElementBlacklist;
+                return this;
+            }
+
+            public TrafficHijackElementBlacklist build() {
+                return new TrafficHijackElementBlacklist(this);
+            } 
+
+        } 
+
+    }
+    public static class TrafficHijackElementWhitelist extends TeaModel {
+        @NameInMap("traffic_hijack_element_whitelist")
+        private java.util.List < String > trafficHijackElementWhitelist;
+
+        private TrafficHijackElementWhitelist(Builder builder) {
+            this.trafficHijackElementWhitelist = builder.trafficHijackElementWhitelist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TrafficHijackElementWhitelist create() {
+            return builder().build();
+        }
+
+        /**
+         * @return trafficHijackElementWhitelist
+         */
+        public java.util.List < String > getTrafficHijackElementWhitelist() {
+            return this.trafficHijackElementWhitelist;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > trafficHijackElementWhitelist; 
+
+            /**
+             * traffic_hijack_element_whitelist.
+             */
+            public Builder trafficHijackElementWhitelist(java.util.List < String > trafficHijackElementWhitelist) {
+                this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
+                return this;
+            }
+
+            public TrafficHijackElementWhitelist build() {
+                return new TrafficHijackElementWhitelist(this);
+            } 
+
+        } 
+
+    }
     public static class OptionJson extends TeaModel {
         @NameInMap("assertions")
         private OptionJsonAssertions assertions;
@@ -1009,6 +1398,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @NameInMap("authentication")
         private Integer authentication;
+
+        @NameInMap("blocked_url_list")
+        private BlockedUrlList blockedUrlList;
+
+        @NameInMap("browser_headers")
+        private BrowserHeaders browserHeaders;
+
+        @NameInMap("browser_hosts")
+        private BrowserHosts browserHosts;
+
+        @NameInMap("browser_info")
+        private OptionJsonBrowserInfo browserInfo;
+
+        @NameInMap("browser_insecure")
+        private Boolean browserInsecure;
+
+        @NameInMap("browser_task_version")
+        private String browserTaskVersion;
 
         @NameInMap("cookie")
         private String cookie;
@@ -1030,6 +1437,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @NameInMap("dns_type")
         private String dnsType;
+
+        @NameInMap("expect_exist_string")
+        private ExpectExistString expectExistString;
+
+        @NameInMap("expect_non_exist_string")
+        private ExpectNonExistString expectNonExistString;
 
         @NameInMap("expect_value")
         private String expectValue;
@@ -1058,6 +1471,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("ping_num")
         private Integer pingNum;
 
+        @NameInMap("ping_port")
+        private Integer pingPort;
+
+        @NameInMap("ping_type")
+        private String pingType;
+
         @NameInMap("port")
         private Integer port;
 
@@ -1079,16 +1498,37 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("retry_delay")
         private Integer retryDelay;
 
+        @NameInMap("strict_mode")
+        private Boolean strictMode;
+
         @NameInMap("time_out")
         private Long timeOut;
 
+        @NameInMap("traffic_hijack_element_blacklist")
+        private TrafficHijackElementBlacklist trafficHijackElementBlacklist;
+
+        @NameInMap("traffic_hijack_element_count")
+        private Integer trafficHijackElementCount;
+
+        @NameInMap("traffic_hijack_element_whitelist")
+        private TrafficHijackElementWhitelist trafficHijackElementWhitelist;
+
         @NameInMap("username")
         private String username;
+
+        @NameInMap("waitTime_after_completion")
+        private Integer waitTimeAfterCompletion;
 
         private OptionJson(Builder builder) {
             this.assertions = builder.assertions;
             this.attempts = builder.attempts;
             this.authentication = builder.authentication;
+            this.blockedUrlList = builder.blockedUrlList;
+            this.browserHeaders = builder.browserHeaders;
+            this.browserHosts = builder.browserHosts;
+            this.browserInfo = builder.browserInfo;
+            this.browserInsecure = builder.browserInsecure;
+            this.browserTaskVersion = builder.browserTaskVersion;
             this.cookie = builder.cookie;
             this.diagnosisMtr = builder.diagnosisMtr;
             this.diagnosisPing = builder.diagnosisPing;
@@ -1096,6 +1536,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.dnsMatchRule = builder.dnsMatchRule;
             this.dnsServer = builder.dnsServer;
             this.dnsType = builder.dnsType;
+            this.expectExistString = builder.expectExistString;
+            this.expectNonExistString = builder.expectNonExistString;
             this.expectValue = builder.expectValue;
             this.failureRate = builder.failureRate;
             this.header = builder.header;
@@ -1105,6 +1547,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.minTlsVersion = builder.minTlsVersion;
             this.password = builder.password;
             this.pingNum = builder.pingNum;
+            this.pingPort = builder.pingPort;
+            this.pingType = builder.pingType;
             this.port = builder.port;
             this.protocol = builder.protocol;
             this.requestContent = builder.requestContent;
@@ -1112,8 +1556,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.responseContent = builder.responseContent;
             this.responseFormat = builder.responseFormat;
             this.retryDelay = builder.retryDelay;
+            this.strictMode = builder.strictMode;
             this.timeOut = builder.timeOut;
+            this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
+            this.trafficHijackElementCount = builder.trafficHijackElementCount;
+            this.trafficHijackElementWhitelist = builder.trafficHijackElementWhitelist;
             this.username = builder.username;
+            this.waitTimeAfterCompletion = builder.waitTimeAfterCompletion;
         }
 
         public static Builder builder() {
@@ -1143,6 +1592,48 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public Integer getAuthentication() {
             return this.authentication;
+        }
+
+        /**
+         * @return blockedUrlList
+         */
+        public BlockedUrlList getBlockedUrlList() {
+            return this.blockedUrlList;
+        }
+
+        /**
+         * @return browserHeaders
+         */
+        public BrowserHeaders getBrowserHeaders() {
+            return this.browserHeaders;
+        }
+
+        /**
+         * @return browserHosts
+         */
+        public BrowserHosts getBrowserHosts() {
+            return this.browserHosts;
+        }
+
+        /**
+         * @return browserInfo
+         */
+        public OptionJsonBrowserInfo getBrowserInfo() {
+            return this.browserInfo;
+        }
+
+        /**
+         * @return browserInsecure
+         */
+        public Boolean getBrowserInsecure() {
+            return this.browserInsecure;
+        }
+
+        /**
+         * @return browserTaskVersion
+         */
+        public String getBrowserTaskVersion() {
+            return this.browserTaskVersion;
         }
 
         /**
@@ -1192,6 +1683,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getDnsType() {
             return this.dnsType;
+        }
+
+        /**
+         * @return expectExistString
+         */
+        public ExpectExistString getExpectExistString() {
+            return this.expectExistString;
+        }
+
+        /**
+         * @return expectNonExistString
+         */
+        public ExpectNonExistString getExpectNonExistString() {
+            return this.expectNonExistString;
         }
 
         /**
@@ -1258,6 +1763,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return pingPort
+         */
+        public Integer getPingPort() {
+            return this.pingPort;
+        }
+
+        /**
+         * @return pingType
+         */
+        public String getPingType() {
+            return this.pingType;
+        }
+
+        /**
          * @return port
          */
         public Integer getPort() {
@@ -1307,10 +1826,38 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return strictMode
+         */
+        public Boolean getStrictMode() {
+            return this.strictMode;
+        }
+
+        /**
          * @return timeOut
          */
         public Long getTimeOut() {
             return this.timeOut;
+        }
+
+        /**
+         * @return trafficHijackElementBlacklist
+         */
+        public TrafficHijackElementBlacklist getTrafficHijackElementBlacklist() {
+            return this.trafficHijackElementBlacklist;
+        }
+
+        /**
+         * @return trafficHijackElementCount
+         */
+        public Integer getTrafficHijackElementCount() {
+            return this.trafficHijackElementCount;
+        }
+
+        /**
+         * @return trafficHijackElementWhitelist
+         */
+        public TrafficHijackElementWhitelist getTrafficHijackElementWhitelist() {
+            return this.trafficHijackElementWhitelist;
         }
 
         /**
@@ -1320,10 +1867,23 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.username;
         }
 
+        /**
+         * @return waitTimeAfterCompletion
+         */
+        public Integer getWaitTimeAfterCompletion() {
+            return this.waitTimeAfterCompletion;
+        }
+
         public static final class Builder {
             private OptionJsonAssertions assertions; 
             private Long attempts; 
             private Integer authentication; 
+            private BlockedUrlList blockedUrlList; 
+            private BrowserHeaders browserHeaders; 
+            private BrowserHosts browserHosts; 
+            private OptionJsonBrowserInfo browserInfo; 
+            private Boolean browserInsecure; 
+            private String browserTaskVersion; 
             private String cookie; 
             private Boolean diagnosisMtr; 
             private Boolean diagnosisPing; 
@@ -1331,6 +1891,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String dnsMatchRule; 
             private String dnsServer; 
             private String dnsType; 
+            private ExpectExistString expectExistString; 
+            private ExpectNonExistString expectNonExistString; 
             private String expectValue; 
             private Float failureRate; 
             private String header; 
@@ -1340,6 +1902,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String minTlsVersion; 
             private String password; 
             private Integer pingNum; 
+            private Integer pingPort; 
+            private String pingType; 
             private Integer port; 
             private String protocol; 
             private String requestContent; 
@@ -1347,8 +1911,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String responseContent; 
             private String responseFormat; 
             private Integer retryDelay; 
+            private Boolean strictMode; 
             private Long timeOut; 
+            private TrafficHijackElementBlacklist trafficHijackElementBlacklist; 
+            private Integer trafficHijackElementCount; 
+            private TrafficHijackElementWhitelist trafficHijackElementWhitelist; 
             private String username; 
+            private Integer waitTimeAfterCompletion; 
 
             /**
              * assertions.
@@ -1371,6 +1940,54 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder authentication(Integer authentication) {
                 this.authentication = authentication;
+                return this;
+            }
+
+            /**
+             * blocked_url_list.
+             */
+            public Builder blockedUrlList(BlockedUrlList blockedUrlList) {
+                this.blockedUrlList = blockedUrlList;
+                return this;
+            }
+
+            /**
+             * browser_headers.
+             */
+            public Builder browserHeaders(BrowserHeaders browserHeaders) {
+                this.browserHeaders = browserHeaders;
+                return this;
+            }
+
+            /**
+             * browser_hosts.
+             */
+            public Builder browserHosts(BrowserHosts browserHosts) {
+                this.browserHosts = browserHosts;
+                return this;
+            }
+
+            /**
+             * browser_info.
+             */
+            public Builder browserInfo(OptionJsonBrowserInfo browserInfo) {
+                this.browserInfo = browserInfo;
+                return this;
+            }
+
+            /**
+             * browser_insecure.
+             */
+            public Builder browserInsecure(Boolean browserInsecure) {
+                this.browserInsecure = browserInsecure;
+                return this;
+            }
+
+            /**
+             * browser_task_version.
+             */
+            public Builder browserTaskVersion(String browserTaskVersion) {
+                this.browserTaskVersion = browserTaskVersion;
                 return this;
             }
 
@@ -1427,6 +2044,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;
+                return this;
+            }
+
+            /**
+             * expect_exist_string.
+             */
+            public Builder expectExistString(ExpectExistString expectExistString) {
+                this.expectExistString = expectExistString;
+                return this;
+            }
+
+            /**
+             * expect_non_exist_string.
+             */
+            public Builder expectNonExistString(ExpectNonExistString expectNonExistString) {
+                this.expectNonExistString = expectNonExistString;
                 return this;
             }
 
@@ -1503,6 +2136,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * ping_port.
+             */
+            public Builder pingPort(Integer pingPort) {
+                this.pingPort = pingPort;
+                return this;
+            }
+
+            /**
+             * ping_type.
+             */
+            public Builder pingType(String pingType) {
+                this.pingType = pingType;
+                return this;
+            }
+
+            /**
              * port.
              */
             public Builder port(Integer port) {
@@ -1559,6 +2208,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * strict_mode.
+             */
+            public Builder strictMode(Boolean strictMode) {
+                this.strictMode = strictMode;
+                return this;
+            }
+
+            /**
              * time_out.
              */
             public Builder timeOut(Long timeOut) {
@@ -1567,10 +2224,42 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * traffic_hijack_element_blacklist.
+             */
+            public Builder trafficHijackElementBlacklist(TrafficHijackElementBlacklist trafficHijackElementBlacklist) {
+                this.trafficHijackElementBlacklist = trafficHijackElementBlacklist;
+                return this;
+            }
+
+            /**
+             * traffic_hijack_element_count.
+             */
+            public Builder trafficHijackElementCount(Integer trafficHijackElementCount) {
+                this.trafficHijackElementCount = trafficHijackElementCount;
+                return this;
+            }
+
+            /**
+             * traffic_hijack_element_whitelist.
+             */
+            public Builder trafficHijackElementWhitelist(TrafficHijackElementWhitelist trafficHijackElementWhitelist) {
+                this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
+                return this;
+            }
+
+            /**
              * username.
              */
             public Builder username(String username) {
                 this.username = username;
+                return this;
+            }
+
+            /**
+             * waitTime_after_completion.
+             */
+            public Builder waitTimeAfterCompletion(Integer waitTimeAfterCompletion) {
+                this.waitTimeAfterCompletion = waitTimeAfterCompletion;
                 return this;
             }
 

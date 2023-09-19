@@ -86,11 +86,10 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * The HTTP status code.
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -98,7 +97,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the event-triggered alert rule.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -106,11 +105,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the event. Valid values:
-         * <p>
-         * 
-         * *   SYSTEM: system event
-         * *   CUSTOM: custom event
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +113,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the event-triggered alert rule.
+         * The details of the event-triggered alert rule.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -126,7 +121,11 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the event-triggered alert rule.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,6 +174,108 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
             public EventTypeList build() {
                 return new EventTypeList(this);
+            } 
+
+        } 
+
+    }
+    public static class Keywords extends TeaModel {
+        @NameInMap("keyword")
+        private java.util.List < String > keyword;
+
+        private Keywords(Builder builder) {
+            this.keyword = builder.keyword;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Keywords create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyword
+         */
+        public java.util.List < String > getKeyword() {
+            return this.keyword;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > keyword; 
+
+            /**
+             * keyword.
+             */
+            public Builder keyword(java.util.List < String > keyword) {
+                this.keyword = keyword;
+                return this;
+            }
+
+            public Keywords build() {
+                return new Keywords(this);
+            } 
+
+        } 
+
+    }
+    public static class KeywordFilterObj extends TeaModel {
+        @NameInMap("Keywords")
+        private Keywords keywords;
+
+        @NameInMap("Relation")
+        private String relation;
+
+        private KeywordFilterObj(Builder builder) {
+            this.keywords = builder.keywords;
+            this.relation = builder.relation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KeywordFilterObj create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keywords
+         */
+        public Keywords getKeywords() {
+            return this.keywords;
+        }
+
+        /**
+         * @return relation
+         */
+        public String getRelation() {
+            return this.relation;
+        }
+
+        public static final class Builder {
+            private Keywords keywords; 
+            private String relation; 
+
+            /**
+             * Keywords.
+             */
+            public Builder keywords(Keywords keywords) {
+                this.keywords = keywords;
+                return this;
+            }
+
+            /**
+             * Relation.
+             */
+            public Builder relation(String relation) {
+                this.relation = relation;
+                return this;
+            }
+
+            public KeywordFilterObj build() {
+                return new KeywordFilterObj(this);
             } 
 
         } 
@@ -307,6 +408,9 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         @NameInMap("EventTypeList")
         private EventTypeList eventTypeList;
 
+        @NameInMap("KeywordFilterObj")
+        private KeywordFilterObj keywordFilterObj;
+
         @NameInMap("LevelList")
         private LevelList levelList;
 
@@ -316,14 +420,19 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         @NameInMap("Product")
         private String product;
 
+        @NameInMap("SQLFilter")
+        private String SQLFilter;
+
         @NameInMap("StatusList")
         private StatusList statusList;
 
         private EventPattern(Builder builder) {
             this.eventTypeList = builder.eventTypeList;
+            this.keywordFilterObj = builder.keywordFilterObj;
             this.levelList = builder.levelList;
             this.nameList = builder.nameList;
             this.product = builder.product;
+            this.SQLFilter = builder.SQLFilter;
             this.statusList = builder.statusList;
         }
 
@@ -340,6 +449,13 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
          */
         public EventTypeList getEventTypeList() {
             return this.eventTypeList;
+        }
+
+        /**
+         * @return keywordFilterObj
+         */
+        public KeywordFilterObj getKeywordFilterObj() {
+            return this.keywordFilterObj;
         }
 
         /**
@@ -364,6 +480,13 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return SQLFilter
+         */
+        public String getSQLFilter() {
+            return this.SQLFilter;
+        }
+
+        /**
          * @return statusList
          */
         public StatusList getStatusList() {
@@ -372,13 +495,15 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private EventTypeList eventTypeList; 
+            private KeywordFilterObj keywordFilterObj; 
             private LevelList levelList; 
             private NameList nameList; 
             private String product; 
+            private String SQLFilter; 
             private StatusList statusList; 
 
             /**
-             * EventTypeList.
+             * The types of the event-triggered alert rules.
              */
             public Builder eventTypeList(EventTypeList eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -386,7 +511,15 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * This topic provides an example on how to query the details of an event-triggered alert rule named `testRule`.
+             * KeywordFilterObj.
+             */
+            public Builder keywordFilterObj(KeywordFilterObj keywordFilterObj) {
+                this.keywordFilterObj = keywordFilterObj;
+                return this;
+            }
+
+            /**
+             * LevelList.
              */
             public Builder levelList(LevelList levelList) {
                 this.levelList = levelList;
@@ -402,7 +535,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * The name of the cloud service.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -410,7 +543,15 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * SQLFilter.
+             */
+            public Builder SQLFilter(String SQLFilter) {
+                this.SQLFilter = SQLFilter;
+                return this;
+            }
+
+            /**
+             * StatusList.
              */
             public Builder statusList(StatusList statusList) {
                 this.statusList = statusList;
@@ -511,11 +652,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The status of the event-triggered alert rule. Valid values:
-             * <p>
-             * 
-             * *   ENABLED: enabled
-             * *   DISABLED: disabled
+             * The description of the event-triggered alert rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -523,7 +660,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event.
+             * The event pattern. This parameter specifies the trigger conditions of an event.
              */
             public Builder eventPattern(EventPattern eventPattern) {
                 this.eventPattern = eventPattern;
@@ -531,7 +668,11 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The type of the event. Valid values: Valid values:
+             * <p>
+             * 
+             * *   SYSTEM: system event
+             * *   CUSTOM: custom event
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -539,7 +680,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service.
+             * The ID of the application group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -547,7 +688,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The event pattern. This parameter specifies the trigger conditions of an event.
+             * The name of the event-triggered alert rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -555,12 +696,11 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the event-triggered alert rule. Valid values:
+             * The status of the event-triggered alert rule. Valid values:
              * <p>
              * 
-             * *   CRITICAL: critical
-             * *   WARN: warning
-             * *   INFO: information
+             * *   ENABLED
+             * *   DISABLED
              */
             public Builder state(String state) {
                 this.state = state;

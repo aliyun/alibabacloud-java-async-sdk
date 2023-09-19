@@ -167,7 +167,7 @@ public class ModifySiteMonitorRequest extends Request {
         } 
 
         /**
-         * The ID of the site monitoring task.
+         * The URL or IP address that is monitored by the task.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -176,7 +176,7 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The returned message.
+         * The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -185,7 +185,7 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * CustomSchedule.
+         * The custom detection period. You can only select a time period from Monday to Sunday for detection.
          */
         public Builder customSchedule(String customSchedule) {
             this.putQueryParameter("CustomSchedule", customSchedule);
@@ -194,10 +194,7 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The interval at which detection requests are sent. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -206,7 +203,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+         * The unit of the metric.
+         * <p>
+         * 
+         * Unit: milliseconds.
          */
         public Builder intervalUnit(String intervalUnit) {
             this.putQueryParameter("IntervalUnit", intervalUnit);
@@ -215,7 +215,10 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifySiteMonitor.
+         * The information of the detection points. The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the `city` field indicate Beijing, Hangzhou, and Qingdao.
+         * <p>
+         * 
+         * > You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see [DescribeSiteMonitorISPCityList](~~115045~~). If you leave this parameter empty, the system randomly selects three detection points.
          */
         public Builder ispCities(String ispCities) {
             this.putQueryParameter("IspCities", ispCities);
@@ -224,10 +227,7 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The detection points. The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the `city` field indicate Beijing, Hangzhou, and Qingdao.
-         * <p>
-         * 
-         * >  You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see [DescribeSiteMonitorISPCityList](~~115045~~). If you leave this parameter empty, the system randomly selects three detection points.
+         * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
          */
         public Builder optionsJson(String optionsJson) {
             this.putQueryParameter("OptionsJson", optionsJson);
@@ -236,7 +236,7 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+         * The ID of the site monitoring task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -245,7 +245,7 @@ public class ModifySiteMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see [DescribeMetricRuleList](~~114941~~).
+         * The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

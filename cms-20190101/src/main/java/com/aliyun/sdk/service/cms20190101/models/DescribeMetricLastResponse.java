@@ -16,6 +16,10 @@ public class DescribeMetricLastResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeMetricLastResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeMetricLastResponse extends Response {
     private DescribeMetricLastResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeMetricLastResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeMetricLastResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeMetricLastResponse extends Response {
     public interface Builder extends Response.Builder<DescribeMetricLastResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeMetricLastResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeMetricLastResponse extends Response {
             extends Response.BuilderImpl<DescribeMetricLastResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeMetricLastResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeMetricLastResponse extends Response {
         private BuilderImpl(DescribeMetricLastResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeMetricLastResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

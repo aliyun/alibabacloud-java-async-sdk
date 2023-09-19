@@ -110,7 +110,10 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Queries the latest monitoring data of a metric.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +121,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The monitoring data.
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -126,7 +129,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,10 +137,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which the monitoring data is queried.
-         * <p>
-         * 
-         * Unit: seconds.
+         * The pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -145,7 +145,10 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * The time interval.
+         * <p>
+         * 
+         * Unit: seconds.
          */
         public Builder period(String period) {
             this.period = period;
@@ -153,7 +156,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +164,11 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring data.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

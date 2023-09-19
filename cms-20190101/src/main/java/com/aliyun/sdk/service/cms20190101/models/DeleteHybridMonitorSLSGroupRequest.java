@@ -55,7 +55,10 @@ public class DeleteHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The name of the Logstore group.
+         * <p>
+         * 
+         * For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).
          */
         public Builder SLSGroupName(String SLSGroupName) {
             this.putQueryParameter("SLSGroupName", SLSGroupName);

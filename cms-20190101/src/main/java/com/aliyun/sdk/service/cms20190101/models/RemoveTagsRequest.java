@@ -70,7 +70,7 @@ public class RemoveTagsRequest extends Request {
         } 
 
         /**
-         * GroupIds.
+         * The IDs of the application groups.
          */
         public Builder groupIds(java.util.List < String > groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -79,7 +79,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -135,11 +135,10 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * Indicates whether the call was successful. Valid values:
+             * The tag key.
              * <p>
              * 
-             * *   true: The call was successful.
-             * *   false: The call failed.
+             * > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -147,10 +146,10 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              * <p>
              * 
-             * >  The `Tag.N.Key` and `Tag.N.Value` parameters must be used in pairs.
+             * > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
              */
             public Builder value(String value) {
                 this.value = value;

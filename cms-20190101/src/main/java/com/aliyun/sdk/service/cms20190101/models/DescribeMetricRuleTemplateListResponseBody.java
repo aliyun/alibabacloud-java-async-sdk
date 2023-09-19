@@ -98,10 +98,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The timestamp when the alert template was applied to the application group.
+         * The status code.
          * <p>
          * 
-         * Unit: milliseconds.
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -109,7 +109,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The list of alert templates.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,7 +125,11 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The keyword of the alert template name.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +137,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the alert template.
+         * The queried alert templates.
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -141,11 +145,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The sorting basis. Default value: gmtCreate. Valid values:
-         * <p>
-         * 
-         * *   gmtMotified: Sorts alert templates by modification time.
-         * *   gmtCreate: Sorts alert templates by creation time.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -209,7 +209,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * ApplyTime.
+             * The timestamp when the alert template was applied to the application group.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder applyTime(Long applyTime) {
                 this.applyTime = applyTime;
@@ -217,7 +220,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The ID of the application group.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -225,7 +228,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the application group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -379,7 +382,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The ID of the request.
+             * The history of applying the alert templates to application groups.
              */
             public Builder applyHistories(ApplyHistories applyHistories) {
                 this.applyHistories = applyHistories;
@@ -387,11 +390,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The order in which you want to sort alert templates. Default value: true. Valid values:
-             * <p>
-             * 
-             * *   true: ascending order
-             * *   false: descending order
+             * The description of the alert template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -399,7 +398,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The timestamp when the alert template was created.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -407,10 +409,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.
+             * The timestamp when the alert template was modified.
              * <p>
              * 
-             * Default value: 1
+             * Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -418,7 +420,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The application history of the alert template.
+             * The name of the alert template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -426,7 +428,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert template.
+             * The version of the alert template.
+             * <p>
+             * 
+             * Default value: 0.
              */
             public Builder restVersion(Long restVersion) {
                 this.restVersion = restVersion;
@@ -434,7 +439,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert template.
+             * The ID of the alert template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

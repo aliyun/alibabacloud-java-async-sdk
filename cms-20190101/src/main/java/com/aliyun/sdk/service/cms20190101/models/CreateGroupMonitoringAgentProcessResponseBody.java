@@ -105,7 +105,7 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +113,7 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Resource.
+         * The group process information.
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -165,7 +165,7 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String groupProcessId; 
 
             /**
-             * GroupProcessId.
+             * The ID of the group process.
              */
             public Builder groupProcessId(String groupProcessId) {
                 this.groupProcessId = groupProcessId;

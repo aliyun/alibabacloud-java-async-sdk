@@ -264,10 +264,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         } 
 
         /**
-         * The name of the metric.
-         * <p>
-         * 
-         * >  For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * The alert contact group.
          */
         public Builder contactGroup(String contactGroup) {
             this.putQueryParameter("ContactGroup", contactGroup);
@@ -276,7 +273,16 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The end timestamp of the alert logs to be queried.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * > 
+         * 
+         * *   You can query only the alert logs within the last year.
+         * 
+         * *   The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -285,7 +291,14 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
+         * <p>
+         * 
+         * *   `product`: aggregates data by cloud service.
+         * *   `level`: aggregates data by alert level.
+         * *   `groupId`: aggregates data by application group.
+         * *   `contactGroup`: aggregates data by alert contact group.
+         * *   `product,metricName`: aggregates data both by cloud service and by metric.
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -294,10 +307,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
-         * 
-         * >  For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -306,10 +316,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The HTTP status code 200 indicates a success.
+         * The statistical period of alert logs. Unit: minutes.
          */
         public Builder lastMin(String lastMin) {
             this.putQueryParameter("LastMin", lastMin);
@@ -318,7 +325,11 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The alert group.
+         * The severity level and notification methods of the alert. Valid values:
+         * <p>
+         * 
+         * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
+         * *   OK: No alert is generated.
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -327,14 +338,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The dimension based on which data is aggregated. This parameter is similar to the Group By clause of SQL statements. Valid values:
+         * The metric name.
          * <p>
          * 
-         * *   `product`: aggregates data by cloud service.
-         * *   `level`: aggregates data by alert level.
-         * *   `groupId`: aggregates data by application group.
-         * *   `contactGroup`: aggregates data by alert group.
-         * *   `product,metricName`: aggregates data both by cloud service and by metric.
+         * >  For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -343,16 +350,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The status of the alert. Valid values:
+         * The namespace of the Alibaba Cloud service.
          * <p>
          * 
-         * *   0: The alert is triggered or cleared.
-         * *   1: The alert is generated not during the effective period.
-         * *   2: The alert is muted and not triggered in a specified period.
-         * *   3: The host is restarting.
-         * *   4: Notifications are not sent for the alert.
-         * 
-         * When the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
+         * >  For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -361,7 +362,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The keyword based on which the alert logs to be queried are searched.
+         * The page number.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -370,7 +374,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -379,11 +386,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The level and notification method of the alert. Valid values:
-         * <p>
-         * 
-         * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-         * *   OK: No alert is generated.
+         * The abbreviation of the Alibaba Cloud service name.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -392,7 +395,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The statistical period of alert logs. Unit: minutes.
+         * The name of the alert rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -401,7 +404,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The abbreviation of the service name.
+         * The keyword that is used to query alert logs.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -410,7 +413,16 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
+         * The alert status. Valid values:
+         * <p>
+         * 
+         * *   0: The alert is triggered or cleared.
+         * *   1: The alert is ineffective.
+         * *   2: The alert is muted and not triggered in a specified period.
+         * *   3: The host is restarting.
+         * *   4: No alert notification is sent.
+         * 
+         * If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
          */
         public Builder sendStatus(String sendStatus) {
             this.putQueryParameter("SendStatus", sendStatus);
@@ -419,7 +431,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * This parameter is deprecated.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -428,7 +440,16 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1
+         * The start timestamp of the alert logs to be queried.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * > 
+         * 
+         * *   You can query only the alert logs within the last year.
+         * 
+         * *   The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

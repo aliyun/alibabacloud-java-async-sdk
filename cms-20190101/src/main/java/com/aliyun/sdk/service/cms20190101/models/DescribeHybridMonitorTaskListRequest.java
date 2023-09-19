@@ -166,7 +166,10 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         } 
 
         /**
-         * The additional information of the instance.
+         * The ID of the application group.
+         * <p>
+         * 
+         * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -175,10 +178,11 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The timestamp when the metric import task was created.
+         * Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:
          * <p>
          * 
-         * Unit: milliseconds.
+         * *   true (default): The returned result includes metric import tasks for Alibaba Cloud services.
+         * *   false: The returned result excludes metric import tasks for Alibaba Cloud services.
          */
         public Builder includeAliyunTask(Boolean includeAliyunTask) {
             this.putQueryParameter("IncludeAliyunTask", includeAliyunTask);
@@ -187,7 +191,7 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The conditions that are used to filter logs imported from Log Service.
+         * The keyword that is used for the search.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -196,11 +200,10 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
+         * The name of the namespace.
          * <p>
          * 
-         * *   namespace: the namespace of the Alibaba Cloud service.
-         * *   metric_list: the metrics of the Alibaba Cloud service.
+         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -209,7 +212,10 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeHybridMonitorTaskList**.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -218,10 +224,10 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The number of entries per page.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * Pages start from page 1. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,11 +236,23 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for metric import tasks.
+         * The ID of the member account.
+         * <p>
+         * 
+         * > This parameter is required only if you use a management account to call this operation to delete the metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);
             this.targetUserId = targetUserId;
+            return this;
+        }
+
+        /**
+         * The ID of the metric import task.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
@@ -244,22 +262,6 @@ public class DescribeHybridMonitorTaskListRequest extends Request {
          * 
          * *   aliyun_fc: metric import tasks for Alibaba Cloud services
          * *   aliyun_sls: metrics for logs imported from Log Service
-         */
-        public Builder taskId(String taskId) {
-            this.putQueryParameter("TaskId", taskId);
-            this.taskId = taskId;
-            return this;
-        }
-
-        /**
-         * The interval at which the CloudMonitor agent collects host monitoring data. Valid values:
-         * <p>
-         * 
-         * *   15
-         * *   30
-         * *   60
-         * 
-         * Unit: seconds.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -126,6 +126,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
 
         /**
          * The ID of the application group.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -160,7 +163,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * The process name.
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -253,10 +256,10 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * 
              * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
              * 
-             *     *   **queues**: queue.
-             *     *   **topics**: topic.
+             *     *   **queues**
+             *     *   **topics**
              * 
-             * *   {Resource name}: the name of the resource.
+             * *   {Resource name}: the resource name.
              * 
              *     *   If the resource type is **queues**, the resource name is the queue name.
              *     *   If the resource type is **topics**, the resource name is the topic name.
@@ -278,7 +281,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * The parameters of the alert callback. Specify the parameters in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -286,12 +289,12 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   INFO: Info
-             * *   WARN: Warn
-             * *   CRITICAL: Critical
+             * *   INFO
+             * *   WARN
+             * *   CRITICAL
              */
             public Builder level(String level) {
                 this.level = level;
@@ -479,12 +482,12 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   critical (default value): Critical
-             * *   Warn
-             * *   Info
+             * *   critical (default)
+             * *   warn
+             * *   info
              * 
              * Valid values of N: 1 to 3.
              */
@@ -505,12 +508,12 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
+             * The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to 1 hour. Default value: 86400, which is equivalent to one day.
              * <p>
              * 
              * Valid values of N: 1 to 3.
              * 
-             * > Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
+             * >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -523,7 +526,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * 
              * Valid values of N: 1 to 3.
              * 
-             * > Set the value to Average.
+             * >  Set the value to Average.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -555,7 +558,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * 
              * Valid values of N: 1 to 3.
              * 
-             * > An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.
+             * >  An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.
              */
             public Builder times(String times) {
                 this.times = times;

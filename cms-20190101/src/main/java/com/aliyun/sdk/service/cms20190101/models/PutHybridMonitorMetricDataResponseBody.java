@@ -62,10 +62,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the invalid parameters.
+         * The HTTP status code.
          * <p>
          * 
-         * If the request parameters that you set are invalid, the details of the invalid parameters are displayed.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -73,7 +73,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The details of invalid parameters.
+         * <p>
+         * 
+         * If a request parameter is invalid, the details of the invalid parameter are returned.
          */
         public Builder errorDetail(java.util.List < ErrorDetail> errorDetail) {
             this.errorDetail = errorDetail;
@@ -81,7 +84,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +136,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
             private Long index; 
 
             /**
-             * ErrorMessage.
+             * The error message of the invalid parameter.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -141,7 +144,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The position of the error message in the array.
              */
             public Builder index(Long index) {
                 this.index = index;

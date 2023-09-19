@@ -183,12 +183,12 @@ public class DescribeMetricTopRequest extends Request {
         } 
 
         /**
-         * The dimensions that specify the resources whose monitoring data you want to query.
+         * The monitoring dimensions of the specified resource.
          * <p>
          * 
-         * Set the value to a collection of key-value pairs. A typical key-value pair is `instanceId:i-2ze2d6j5uhg20x47****`.
+         * Set the value to a collection of `key:value` pairs. Example: `{"userId":"120886317861****"}` or `{"instanceId":"i-2ze2d6j5uhg20x47****"}`.
          * 
-         * >  You can query a maximum of 50 instances in a single request.
+         * >  You can query a maximum of 50 instances in each request.
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -197,30 +197,12 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * The error message.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The statistical period of the monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.
-         */
-        public Builder express(String express) {
-            this.putQueryParameter("Express", express);
-            this.express = express;
-            return this;
-        }
-
-        /**
-         * The start of the time range to query monitoring data.
+         * The end of the time range to query monitoring data.
          * <p>
          * 
          * *   If the `StartTime` and `EndTime` parameters are not specified, the monitoring data of the last statistical period is queried.``
          * 
-         * *   If the `StartTime` and `EndTime` parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.```` The following examples demonstrate how to determine the period in which monitoring data is queried:
+         * *   If the `StartTime` and `EndTime` parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.````
          * 
          *     *   If you set the `Period` parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.
          *     *   If you set the `Period` parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.
@@ -229,12 +211,35 @@ public class DescribeMetricTopRequest extends Request {
          * The following formats are supported:
          * 
          * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
+         * *   Time format: YYYY-MM-DDThh:mm:ssZ
          * 
-         * > 
+         * >  We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The expression that is used to compute the query results in real time.
+         * <p>
          * 
-         * *   You must set the `StartTime` parameter to a point in time that is later than 00:00:00 Thursday, January 1, 1970. Otherwise, this parameter is invalid.
-         * *   We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         * >  Only the `groupby` expression is supported. This expression is similar to the GROUP BY statement used in databases.
+         */
+        public Builder express(String express) {
+            this.putQueryParameter("Express", express);
+            this.express = express;
+            return this;
+        }
+
+        /**
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
+         * 
+         * >  The maximum value of the Length parameter in a request is 1440.
          */
         public Builder length(String length) {
             this.putQueryParameter("Length", length);
@@ -243,7 +248,10 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeMetricTop**.
+         * The metric that is used to monitor the cloud service.
+         * <p>
+         * 
+         * For more information about metric names, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -252,14 +260,41 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The namespace of the cloud service.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * The order in which data is sorted. Valid values:
+         * <p>
+         * 
+         * *   True: sorts data in ascending order.
+         * *   False (default): sorts data in descending order.
+         */
+        public Builder orderDesc(String orderDesc) {
+            this.putQueryParameter("OrderDesc", orderDesc);
+            this.orderDesc = orderDesc;
+            return this;
+        }
+
+        /**
+         * The field based on which data is sorted. Valid values:
+         * <p>
+         * 
+         * *   Average
+         * *   Minimum
+         * *   Maximum
+         */
+        public Builder orderby(String orderby) {
+            this.putQueryParameter("Orderby", orderby);
+            this.orderby = orderby;
             return this;
         }
 
@@ -274,35 +309,8 @@ public class DescribeMetricTopRequest extends Request {
          * > 
          * 
          * *   If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported.
-         * *   Statistical periods vary based on metrics that are specified by `MetricName`. For more information, see [Appendix 1: Metrics](~~163515~~).
-         */
-        public Builder orderDesc(String orderDesc) {
-            this.putQueryParameter("OrderDesc", orderDesc);
-            this.orderDesc = orderDesc;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
          * 
-         * Default value: 10.
-         * 
-         * >  The maximum value of the Length parameter in a request is 1440.
-         */
-        public Builder orderby(String orderby) {
-            this.putQueryParameter("Orderby", orderby);
-            this.orderby = orderby;
-            return this;
-        }
-
-        /**
-         * The field based on which data is sorted. Valid values:
-         * <p>
-         * 
-         * *   Average: the average value
-         * *   Minimum: the minimum value
-         * *   Maximum: the maximum value
+         * *   Statistical periods vary based on the metrics that are specified by `MetricName`. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -311,12 +319,12 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * The end of the time range to query monitoring data.
+         * The start of the time range to query monitoring data.
          * <p>
          * 
          * *   If the `StartTime` and `EndTime` parameters are not specified, the monitoring data of the last statistical period is queried.``
          * 
-         * *   If the `StartTime` and `EndTime` parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.```` The following examples demonstrate how to determine the period in which monitoring data is queried:
+         * *   If the `StartTime` and `EndTime` parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.````
          * 
          *     *   If you set the `Period` parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.
          *     *   If you set the `Period` parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.
@@ -325,9 +333,13 @@ public class DescribeMetricTopRequest extends Request {
          * The following formats are supported:
          * 
          * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
+         * *   Time format: YYYY-MM-DDThh:mm:ssZ
          * 
-         * >  We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         * > 
+         * 
+         * *   You must set the `StartTime` parameter to a point in time that is later than 00:00:00 Thursday, January 1, 1970. Otherwise, this parameter is invalid.
+         * 
+         * *   We recommend that you use UNIX timestamps to prevent time zone-related issues.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

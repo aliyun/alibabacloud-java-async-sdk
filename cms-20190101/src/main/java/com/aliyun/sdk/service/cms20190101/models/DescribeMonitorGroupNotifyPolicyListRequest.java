@@ -97,10 +97,7 @@ public class DescribeMonitorGroupNotifyPolicyListRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -109,7 +106,7 @@ public class DescribeMonitorGroupNotifyPolicyListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,10 +115,7 @@ public class DescribeMonitorGroupNotifyPolicyListRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the end of the time range to query.
-         * <p>
-         * 
-         * Unit: milliseconds.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +124,10 @@ public class DescribeMonitorGroupNotifyPolicyListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The policy type.
+         * <p>
+         * 
+         * Valid value: PauseNotify.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

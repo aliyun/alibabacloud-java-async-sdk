@@ -188,7 +188,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * AlertConfigEscalationList.
+         * None
          */
         public Builder alertConfigEscalationList(java.util.List < AlertConfigEscalationList> alertConfigEscalationList) {
             this.putQueryParameter("AlertConfigEscalationList", alertConfigEscalationList);
@@ -197,7 +197,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * AlertConfigTargetList.
+         * The information about the resources for which alerts are triggered.
          */
         public Builder alertConfigTargetList(java.util.List < AlertConfigTargetList> alertConfigTargetList) {
             this.putQueryParameter("AlertConfigTargetList", alertConfigTargetList);
@@ -206,14 +206,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:
-         * <p>
-         * 
-         * *   HttpStatus: HTTP status code
-         * *   HttpLatency: HTTP response time
-         * *   TelnetStatus: Telnet status code
-         * *   TelnetLatency: Telnet response time
-         * *   PingLostRate: Ping packet loss rate
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -222,7 +215,10 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * InstanceList.
+         * The ECS instances that are monitored. Valid values of N: 1 to 21.
+         * <p>
+         * 
+         * > This parameter must be specified when `TaskScope` is set to `GROUP_SPEC_INSTANCE`.
          */
         public Builder instanceList(java.util.List < String > instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -231,10 +227,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -243,14 +236,11 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:
+         * The range of instances that are monitored by the availability monitoring task. Valid values:
          * <p>
          * 
-         * *   `>`
-         * *   `>=`
-         * *   `<`
-         * *   `<=`
-         * *   `=`
+         * *   GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.
+         * *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.
          */
         public Builder taskScope(String taskScope) {
             this.putQueryParameter("TaskScope", taskScope);
@@ -259,7 +249,12 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateHostAvailability**.
+         * The monitoring type of the availability monitoring task. Valid values:
+         * <p>
+         * 
+         * *   PING
+         * *   TELNET
+         * *   HTTP
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -350,7 +345,12 @@ public class CreateHostAvailabilityRequest extends Request {
             private String webHook; 
 
             /**
-             * The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+             * The end of the time range during which the alert rule is effective. Valid values: 0 to 23.
+             * <p>
+             * 
+             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
+             * 
+             * > Alert notifications are sent based on the specified threshold only if the alert rule is effective.
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -358,7 +358,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The content of the HTTP POST request.
+             * The alert notification methods. Valid values:
+             * <p>
+             * 
+             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
              */
             public Builder notifyType(Integer notifyType) {
                 this.notifyType = notifyType;
@@ -366,10 +369,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.
-             * <p>
-             * 
-             * >  This parameter is available only for the CloudMonitor agent V3.5.1 or later.
+             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.
              */
             public Builder silenceTime(Integer silenceTime) {
                 this.silenceTime = silenceTime;
@@ -377,16 +377,12 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The method used to calculate metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:
+             * The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.
              * <p>
              * 
-             * *   HttpStatus: Value
-             * *   HttpLatency: Average
-             * *   TelnetStatus: Value
-             * *   TelnetLatency: Average
-             * *   PingLostRate: Average
+             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
              * 
-             * >  The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics, such as the latency and packet loss rate.
+             * > Alert notifications are sent based on the specified threshold only if the alert rule is effective.
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -394,11 +390,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The range of instances that are monitored by the availability monitoring task. Valid values:
-             * <p>
-             * 
-             * *   GROUP: All ECS instances in the application group are monitored.
-             * *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.
+             * The callback URL.
              */
             public Builder webHook(String webHook) {
                 this.webHook = webHook;
@@ -535,7 +527,11 @@ public class CreateHostAvailabilityRequest extends Request {
             private String telnetOrPingHost; 
 
             /**
-             * The ID of the availability monitoring task.
+             * The header of the HTTP request. Format: `Parameter name:Parameter value`. Separate multiple parameters with carriage return characters. Example:
+             * <p>
+             * 
+             *     params1:value1
+             *     params2:value2
              */
             public Builder httpHeader(String httpHeader) {
                 this.httpHeader = httpHeader;
@@ -543,12 +539,14 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The HTTP request method. Valid values:
              * <p>
              * 
-             * *   INFO: information
-             * *   WARN: warning
-             * *   CRITICAL: critical
+             * *   GET
+             * *   POST
+             * *   HEAD
+             * 
+             * > This parameter must be specified when TaskType is set to HTTP.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -556,10 +554,13 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The alert notification methods. Valid values:
+             * The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:
              * <p>
              * 
-             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
+             * *   true: If the HTTP response body includes the alert rule, an alert is triggered.
+             * *   false: If the HTTP response does not include the alert rule, an alert is triggered.
+             * 
+             * > This parameter must be specified when TaskType is set to HTTP.
              */
             public Builder httpNegative(Boolean httpNegative) {
                 this.httpNegative = httpNegative;
@@ -567,7 +568,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The ID of the application group.
+             * The content of the HTTP POST request.
              */
             public Builder httpPostContent(String httpPostContent) {
                 this.httpPostContent = httpPostContent;
@@ -575,10 +576,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The domain name or IP address that you want to monitor.
+             * The character set that is used in the HTTP response.
              * <p>
              * 
-             * >  If the TaskType parameter is set to PING or TELNET, this parameter is required.
+             * > Only UTF-8 is supported.
              */
             public Builder httpResponseCharset(String httpResponseCharset) {
                 this.httpResponseCharset = httpResponseCharset;
@@ -586,7 +587,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.
+             * The response to the HTTP request.
              */
             public Builder httpResponseMatchContent(String httpResponseMatchContent) {
                 this.httpResponseMatchContent = httpResponseMatchContent;
@@ -594,7 +595,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.
+             * The URI that you want to monitor. This parameter must be specified when TaskType is set to HTTP.
              */
             public Builder httpURI(String httpURI) {
                 this.httpURI = httpURI;
@@ -602,14 +603,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The header of the HTTP request. Format: `Parameter name:Parameter value`. Separate multiple parameters with carriage return characters. Example:
+             * The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.
              * <p>
              * 
-             * ```
-             * 
-             * params1:value1
-             * params2:value2
-             * ```
+             * > This parameter is available only for the CloudMonitor agent V3.5.1 or later.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -617,7 +614,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The error message.
+             * The domain name or IP address that you want to monitor.
+             * <p>
+             * 
+             * > This parameter must be specified when TaskType is set to PING or TELNET.
              */
             public Builder telnetOrPingHost(String telnetOrPingHost) {
                 this.telnetOrPingHost = telnetOrPingHost;
@@ -707,10 +707,16 @@ public class CreateHostAvailabilityRequest extends Request {
             private String value; 
 
             /**
-             * The ECS instances that are monitored. Valid values of N: 1 to 21.
+             * The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:
              * <p>
              * 
-             * >  If the `TaskScope` parameter is set to `GROUP_SPEC_INSTANCE`, this parameter is required.
+             * *   HttpStatus: Value
+             * *   HttpLatency: Average
+             * *   TelnetStatus: Value
+             * *   TelnetLatency: Average
+             * *   PingLostRate: Average
+             * 
+             * > The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
@@ -718,10 +724,14 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The character set that is used in the HTTP response.
+             * The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:
              * <p>
              * 
-             * >  Valid value: UTF-8.
+             * *   HttpStatus: HTTP status code
+             * *   HttpLatency: HTTP response time
+             * *   TelnetStatus: Telnet status code
+             * *   TelnetLatency: Telnet response time
+             * *   PingLostRate: Ping packet loss rate
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -729,13 +739,14 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:
+             * The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:
              * <p>
              * 
-             * *   true: If the HTTP response body includes the alert rule, an alert is triggered.
-             * *   false: If the HTTP response does not include the alert rule, an alert is triggered.
-             * 
-             * >  If the TaskType parameter is set to HTTP, this parameter takes effect.
+             * *   `>`
+             * *   `>=`
+             * *   `<`
+             * *   `<=`
+             * *   `=`
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -743,7 +754,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -751,7 +762,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The callback URL.
+             * The alert threshold. Valid values of N: 1 to 21.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -828,7 +839,24 @@ public class CreateHostAvailabilityRequest extends Request {
             private String level; 
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.
+             * The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
+             * <p>
+             * 
+             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * 
+             * *   {userId}: the ID of the Alibaba Cloud account.
+             * 
+             * *   {regionId}: the region ID of the message queue or topic.
+             * 
+             * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
+             * 
+             *     *   **queues**
+             *     *   **topics**
+             * 
+             * *   {Resource name}: the resource name.
+             * 
+             *     *   If the resource type is **queues**, the resource name is the queue name.
+             *     *   If the resource type is **topics**, the resource name is the topic name.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -836,12 +864,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The end of the time period during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
-             * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+             * The ID of the resource for which alerts are triggered.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -849,7 +872,7 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The parameters of the alert callback. The parameters are in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -857,12 +880,12 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The monitoring type of the availability monitoring task. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   PING
-             * *   TELNET
-             * *   HTTP
+             * *   INFO
+             * *   WARN
+             * *   CRITICAL
              */
             public Builder level(String level) {
                 this.level = level;

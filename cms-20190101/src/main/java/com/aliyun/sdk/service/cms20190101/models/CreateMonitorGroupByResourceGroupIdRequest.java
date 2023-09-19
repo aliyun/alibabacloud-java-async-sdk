@@ -128,7 +128,10 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         } 
 
         /**
-         * ContactGroupList.
+         * The alert contact groups. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.
+         * <p>
+         * 
+         * An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~). For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).
          */
         public Builder contactGroupList(java.util.List < String > contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
@@ -137,10 +140,11 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
+         * Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:
          * <p>
          * 
-         * For information about how to obtain the name of a resource group, see [ListResourceGroups](~~158855~~).
+         * *   true: The CloudMonitor agent is automatically installed.
+         * *   false (default): The CloudMonitor agent is not automatically installed.
          */
         public Builder enableInstallAgent(Boolean enableInstallAgent) {
             this.putQueryParameter("EnableInstallAgent", enableInstallAgent);
@@ -149,7 +153,11 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateMonitorGroupByResourceGroupId**.
+         * Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:
+         * <p>
+         * 
+         * *   true: The application group automatically subscribes to event notifications.
+         * *   false (default): The application group does not automatically subscribe to event notifications.
          */
         public Builder enableSubscribeEvent(Boolean enableSubscribeEvent) {
             this.putQueryParameter("EnableSubscribeEvent", enableSubscribeEvent);
@@ -158,7 +166,10 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The ID of the region where the resource group resides.
+         * <p>
+         * 
+         * For information about how to obtain the ID of the region where a resource group resides, see [GetResourceGroup](~~158866~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -167,11 +178,10 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:
+         * The ID of the resource group.
          * <p>
          * 
-         * *   true: The application group automatically subscribes to event notifications.
-         * *   false (default value): The application group does not automatically subscribe to event notifications.
+         * For information about how to obtain the ID of a resource group, see [ListResourceGroups](~~158855~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -180,10 +190,10 @@ public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
         }
 
         /**
-         * The alert contact group. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.
+         * The name of the resource group.
          * <p>
          * 
-         * An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~). For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).
+         * For information about how to obtain the name of a resource group, see [ListResourceGroups](~~158855~~).
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

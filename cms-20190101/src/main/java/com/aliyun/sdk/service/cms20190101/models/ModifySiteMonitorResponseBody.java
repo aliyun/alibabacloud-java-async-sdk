@@ -86,7 +86,10 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The URL or IP address that is monitored by the task.
+         * The HTTP status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The result of modifying the task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +105,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring frequency. Valid values: 1, 5, 15, and 15000. Unit: milliseconds. Default value: 1.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The result of modifying the task.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -158,7 +165,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * count.
+             * The number of site monitoring tasks.
              */
             public Builder count(Integer count) {
                 this.count = count;

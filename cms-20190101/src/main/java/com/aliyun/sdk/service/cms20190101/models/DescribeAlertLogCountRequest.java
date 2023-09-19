@@ -274,7 +274,14 @@ public class DescribeAlertLogCountRequest extends Request {
         }
 
         /**
-         * The statistical period of alert logs. Unit: minutes.
+         * The end timestamp of the alert logs to be queried.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
+         * 
+         * >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -424,7 +431,7 @@ public class DescribeAlertLogCountRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * This parameter is deprecated.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -433,10 +440,14 @@ public class DescribeAlertLogCountRequest extends Request {
         }
 
         /**
-         * The name of the metric.
+         * The start timestamp of the alert logs to be queried.
          * <p>
          * 
-         * > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * Unit: milliseconds.
+         * 
+         * You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
+         * 
+         * >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -86,7 +86,10 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the request.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteMonitorGroupNotifyPolicy**.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +105,7 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The number of affected rows.
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -118,7 +121,11 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

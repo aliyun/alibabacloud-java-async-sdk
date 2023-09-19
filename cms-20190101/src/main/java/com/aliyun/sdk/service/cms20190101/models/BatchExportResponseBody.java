@@ -134,7 +134,7 @@ public class BatchExportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Anchor.
+         * The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.
          */
         public Builder anchor(Long anchor) {
             this.anchor = anchor;
@@ -142,7 +142,10 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -150,7 +153,10 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Cursor.
+         * The Cursor information that is used to call this operation again.
+         * <p>
+         * 
+         * >  If `null` is returned, the monitoring data is exported.
          */
         public Builder cursor(String cursor) {
             this.cursor = cursor;
@@ -158,7 +164,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * DataResults.
+         * The data returned in this call.
          */
         public Builder dataResults(java.util.List < MetricStat > dataResults) {
             this.dataResults = dataResults;
@@ -166,7 +172,11 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * HasNext.
+         * Indicates whether the data has been exported. Valid values:
+         * <p>
+         * 
+         * *   true: Some data is not exported.
+         * *   false: All the data is exported.
          */
         public Builder hasNext(Boolean hasNext) {
             this.hasNext = hasNext;
@@ -174,7 +184,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Length.
+         * The number of data entries returned in this call.
          */
         public Builder length(Integer length) {
             this.length = length;
@@ -182,7 +192,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +200,7 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +208,11 @@ public class BatchExportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

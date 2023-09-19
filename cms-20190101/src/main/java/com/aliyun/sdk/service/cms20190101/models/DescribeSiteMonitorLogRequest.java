@@ -13,8 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSiteMonitorLogRequest extends Request {
     @Query
+    @NameInMap("Browser")
+    private String browser;
+
+    @Query
+    @NameInMap("BrowserInfo")
+    private String browserInfo;
+
+    @Query
     @NameInMap("City")
     private String city;
+
+    @Query
+    @NameInMap("Device")
+    private String device;
 
     @Query
     @NameInMap("EndTime")
@@ -51,7 +63,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
 
     private DescribeSiteMonitorLogRequest(Builder builder) {
         super(builder);
+        this.browser = builder.browser;
+        this.browserInfo = builder.browserInfo;
         this.city = builder.city;
+        this.device = builder.device;
         this.endTime = builder.endTime;
         this.filter = builder.filter;
         this.isp = builder.isp;
@@ -76,10 +91,31 @@ public class DescribeSiteMonitorLogRequest extends Request {
     }
 
     /**
+     * @return browser
+     */
+    public String getBrowser() {
+        return this.browser;
+    }
+
+    /**
+     * @return browserInfo
+     */
+    public String getBrowserInfo() {
+        return this.browserInfo;
+    }
+
+    /**
      * @return city
      */
     public String getCity() {
         return this.city;
+    }
+
+    /**
+     * @return device
+     */
+    public String getDevice() {
+        return this.device;
     }
 
     /**
@@ -139,7 +175,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSiteMonitorLogRequest, Builder> {
+        private String browser; 
+        private String browserInfo; 
         private String city; 
+        private String device; 
         private String endTime; 
         private String filter; 
         private String isp; 
@@ -155,7 +194,10 @@ public class DescribeSiteMonitorLogRequest extends Request {
 
         private Builder(DescribeSiteMonitorLogRequest request) {
             super(request);
+            this.browser = request.browser;
+            this.browserInfo = request.browserInfo;
             this.city = request.city;
+            this.device = request.device;
             this.endTime = request.endTime;
             this.filter = request.filter;
             this.isp = request.isp;
@@ -167,6 +209,24 @@ public class DescribeSiteMonitorLogRequest extends Request {
         } 
 
         /**
+         * 浏览器类型。
+         */
+        public Builder browser(String browser) {
+            this.putQueryParameter("Browser", browser);
+            this.browser = browser;
+            return this;
+        }
+
+        /**
+         * 该参数已废弃，无需关注。
+         */
+        public Builder browserInfo(String browserInfo) {
+            this.putQueryParameter("BrowserInfo", browserInfo);
+            this.browserInfo = browserInfo;
+            return this;
+        }
+
+        /**
          * The city identification code.
          */
         public Builder city(String city) {
@@ -176,13 +236,22 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query data. The following formats are supported:
+         * 设备类型（模拟屏幕大小类型）。
+         */
+        public Builder device(String device) {
+            this.putQueryParameter("Device", device);
+            this.device = device;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. Valid values:
          * <p>
          * 
          * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
          * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
          * 
-         * > We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         * >  We recommend that you use UNIX timestamps to prevent time zone-related issues.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -242,15 +311,16 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * The start of the time range to query data. The following formats are supported:
+         * The start of the time range to query. The following formats are supported:
          * <p>
          * 
          * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
          * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
          * 
          * > 
-         * *   The specified time range includes the end time and excludes the start time. The `start time` must be earlier than the `end time`.
-         * *   We recommend that you use UNIX timestamps to prevent time zone-related issues.
+         * 
+         * *   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\
+         *     We recommend that you use UNIX timestamps to prevent time zone-related issues.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

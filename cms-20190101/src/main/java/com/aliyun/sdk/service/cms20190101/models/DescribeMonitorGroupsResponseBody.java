@@ -630,10 +630,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application group was created.
-             * <p>
-             * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The timestamp when the application group was created. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -641,10 +638,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application group was last modified.
-             * <p>
-             * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The timestamp when the application group was modified. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -684,7 +678,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -708,7 +702,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateIds.
+             * The ID of the template.
              */
             public Builder templateIds(TemplateIds templateIds) {
                 this.templateIds = templateIds;

@@ -86,12 +86,10 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,). Valid values:
+         * The HTTP status code.
          * <p>
          * 
-         * *   Average: the average value
-         * *   Minimum: the minimum value
-         * *   Maximum: the maximum value
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -99,7 +97,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -107,7 +105,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +113,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the request.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -123,7 +121,11 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -163,7 +165,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * RuleId.
+             * The ID of the alert rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

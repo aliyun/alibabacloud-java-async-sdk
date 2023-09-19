@@ -86,7 +86,12 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * **
+         * 
+         * **Description** The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +99,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the message resource that failed to be deleted.
+         * The IDs of the resources that failed to be deleted.
          */
         public Builder failIds(FailIds failIds) {
             this.failIds = failIds;
@@ -102,7 +107,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,11 +115,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +123,11 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The message resources that failed to be deleted.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,7 +208,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
             private TargetIds targetIds; 
 
             /**
-             * Deletes the message resources of an alert rule. This operation supports only Message Service (MNS) resources.
+             * The IDs of the resources that failed to be deleted.
              */
             public Builder targetIds(TargetIds targetIds) {
                 this.targetIds = targetIds;

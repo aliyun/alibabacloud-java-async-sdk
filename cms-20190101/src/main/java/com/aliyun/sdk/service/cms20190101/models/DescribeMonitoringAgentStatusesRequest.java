@@ -68,7 +68,7 @@ public class DescribeMonitoringAgentStatusesRequest extends Request {
         } 
 
         /**
-         * The error message.
+         * The ID of the availability monitoring task.
          */
         public Builder hostAvailabilityTaskId(String hostAvailabilityTaskId) {
             this.putQueryParameter("HostAvailabilityTaskId", hostAvailabilityTaskId);
@@ -77,7 +77,7 @@ public class DescribeMonitoringAgentStatusesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeMonitoringAgentStatuses**.
+         * The instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

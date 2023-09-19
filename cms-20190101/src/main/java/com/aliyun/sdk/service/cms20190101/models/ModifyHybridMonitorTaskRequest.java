@@ -125,7 +125,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         } 
 
         /**
-         * AttachLabels.
+         * The tags of the metric.
          */
         public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
             this.putQueryParameter("AttachLabels", attachLabels);
@@ -134,7 +134,13 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The value of the key that is used to filter logs imported from Log Service.
+         * The collection period of the metric. Valid values:
+         * <p>
+         * 
+         * *   15
+         * *   60
+         * 
+         * Unit: seconds.
          */
         public Builder collectInterval(String collectInterval) {
             this.putQueryParameter("CollectInterval", collectInterval);
@@ -143,7 +149,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyHybridMonitorTask**.
+         * The description of the metric import task.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -152,7 +158,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * None.
+         * The configurations of the logs that are imported from Log Service.
          */
         public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
             this.putQueryParameter("SLSProcessConfig", SLSProcessConfig);
@@ -161,7 +167,10 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The tag value of the metric.
+         * The ID of the metric import task.
+         * <p>
+         * 
+         * For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -170,10 +179,10 @@ public class ModifyHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the metric import task.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -227,7 +236,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The alias of the aggregation result.
+             * The tag key of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -235,7 +244,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The error message.
+             * The tag value of the metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -288,13 +297,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String express; 
 
             /**
-             * The interval at which metrics are collected. Valid values:
-             * <p>
-             * 
-             * *   15
-             * *   60
-             * 
-             * Unit: seconds.
+             * The alias of the extended field that specifies the result of basic operations performed on aggregation results.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -302,7 +305,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to filter logs imported from Log Service.
+             * The extended field that specifies the result of basic operations performed on aggregation results.
              */
             public Builder express(String express) {
                 this.express = express;
@@ -367,14 +370,6 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The extended field that specifies the result of basic operations performed on aggregation results.
-             */
-            public Builder operator(String operator) {
-                this.operator = operator;
-                return this;
-            }
-
-            /**
              * The method that is used to filter logs imported from Log Service. Valid values:
              * <p>
              * 
@@ -387,16 +382,21 @@ public class ModifyHybridMonitorTaskRequest extends Request {
              * *   `>=`: greater than or equal to
              * *   `<=`: less than or equal to
              */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * The name of the key that is used to filter logs imported from Log Service.
+             */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
                 return this;
             }
 
             /**
-             * The name of the metric import task.
-             * <p>
-             * 
-             * For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).
+             * The value of the key that is used to filter logs imported from Log Service.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -449,7 +449,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String relation; 
 
             /**
-             * The conditions that are used to filter logs imported from Log Service.
+             * None
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -457,10 +457,11 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The ID of the metric import task.
+             * The relationship between multiple filter conditions. Valid values:
              * <p>
              * 
-             * For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).
+             * *   and (default): Logs are processed only if all filter conditions are met.
+             * *   or: Logs are processed if one of the filter conditions is met.
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -513,11 +514,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
 
             /**
-             * The relationship between multiple filter conditions. Valid values:
-             * <p>
-             * 
-             * *   and (default value): Logs are processed only if all filter conditions are met.
-             * *   or: Logs are processed if one of the filter conditions is met.
+             * The alias of the aggregation result.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -525,7 +522,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The tag key of the metric.
+             * The name of the key that is used to aggregate logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -614,11 +611,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
 
             /**
-             * The relationship between multiple filter conditions. Valid values:
-             * <p>
-             * 
-             * *   and (default value): Logs are processed only if all filter conditions are met.
-             * *   or: Logs are processed if one of the filter conditions is met.
+             * The alias of the aggregation result.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -626,7 +619,20 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Function.
+             * The function that is used to aggregate the log data of a statistical period. Valid values:
+             * <p>
+             * 
+             * *   count: counts the number.
+             * *   sum: calculates the total value.
+             * *   avg: calculates the average value.
+             * *   max: calculates the maximum value.
+             * *   min: calculates the minimum value.
+             * *   value: collects samples within the statistical period.
+             * *   countps: calculates the counted number of the specified field divided by the total number of seconds within the statistical period.
+             * *   sumps: calculates the total value of the specified field divided by the total number of seconds within the statistical period.
+             * *   distinct: counts the number of logs where the specified field appears within the statistical period.
+             * *   distribution: counts the number of logs that meet a specified condition within the statistical period.
+             * *   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -634,7 +640,11 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Parameter1.
+             * The value of the function that is used to aggregate logs imported from Log Service.
+             * <p>
+             * 
+             * *   If the `Function` parameter is set to `distribution`, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.
+             * *   If you set the `Function` parameter to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.
              */
             public Builder parameter1(String parameter1) {
                 this.parameter1 = parameter1;
@@ -642,7 +652,10 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Parameter2.
+             * The value of the function that is used to aggregate logs imported from Log Service.
+             * <p>
+             * 
+             * > This parameter must be specified when `Function` is set to `distribution`. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.
              */
             public Builder parameter2(String parameter2) {
                 this.parameter2 = parameter2;
@@ -650,7 +663,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The tag key of the metric.
+             * The name of the key that is used to aggregate logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -727,7 +740,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             private java.util.List < Statistics> statistics; 
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * The extended fields that specify the results of basic operations performed on aggregation results.
              */
             public Builder express(java.util.List < Express> express) {
                 this.express = express;
@@ -735,7 +748,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The configurations of the logs that are imported from Log Service.
+             * The conditions that are used to filter logs imported from Log Service.
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -743,7 +756,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The description of the metric import task.
+             * The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.
              */
             public Builder groupBy(java.util.List < GroupBy> groupBy) {
                 this.groupBy = groupBy;
@@ -751,7 +764,7 @@ public class ModifyHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * None
              */
             public Builder statistics(java.util.List < Statistics> statistics) {
                 this.statistics = statistics;

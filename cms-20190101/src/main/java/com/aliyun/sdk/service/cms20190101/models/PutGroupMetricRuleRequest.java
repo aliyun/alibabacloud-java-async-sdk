@@ -320,7 +320,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **PutGroupMetricRule**.
+         * The abbreviation of the cloud service name.
+         * <p>
+         * 
+         * For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -329,11 +332,7 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
-         * 
-         * *   When you create an alert rule for the application group, enter the ID of the alert rule.
-         * *   When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * The alert contact group.
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -342,7 +341,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The first-level dimension of the alert rule in the application group.
+         * <p>
+         * 
+         * Set the value to a set of key-value pairs, for example, `userId:120886317861****` or `instanceId:i-m5e1qg6uo38rztr4****`.
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -351,14 +353,20 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
-         * <p>
-         * 
-         * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * The time period during which the alert rule is effective.
          */
         public Builder effectiveInterval(String effectiveInterval) {
             this.putQueryParameter("EffectiveInterval", effectiveInterval);
             this.effectiveInterval = effectiveInterval;
+            return this;
+        }
+
+        /**
+         * The subject of the alert notification email.
+         */
+        public Builder emailSubject(String emailSubject) {
+            this.putQueryParameter("EmailSubject", emailSubject);
+            this.emailSubject = emailSubject;
             return this;
         }
 
@@ -370,18 +378,6 @@ public class PutGroupMetricRuleRequest extends Request {
          * 
          * If the first-level dimension of the alert rule is `instanceId:i-m5e1qg6uo38rztr4****`, its second-level dimension is the `/dev/xvda:d-m5e6yphgzn3aprwu****` disk in the instance.
          */
-        public Builder emailSubject(String emailSubject) {
-            this.putQueryParameter("EmailSubject", emailSubject);
-            this.emailSubject = emailSubject;
-            return this;
-        }
-
-        /**
-         * The name of the metric.
-         * <p>
-         * 
-         * For information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
-         */
         public Builder extraDimensionJson(String extraDimensionJson) {
             this.putQueryParameter("ExtraDimensionJson", extraDimensionJson);
             this.extraDimensionJson = extraDimensionJson;
@@ -389,12 +385,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,). Valid values:
+         * The application group ID.
          * <p>
          * 
-         * *   Average: the average value
-         * *   Minimum: the minimum value
-         * *   Maximum: the maximum value
+         * For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -403,10 +397,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The callback URL.
+         * The interval at which CloudMonitor checks whether the alert rule is triggered. Unit: seconds.
          * <p>
          * 
-         * The callback URL must be accessible over the Internet. CloudMonitor sends a POST request to push an alert notification to the callback URL that you specify. Only HTTP requests are supported.
+         * >  We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -415,7 +409,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * Labels.
+         * The tags of the alert rule.
+         * <p>
+         * 
+         * The specified tag is contained in alert notifications.
          */
         public Builder labels(java.util.List < Labels> labels) {
             this.putQueryParameter("Labels", labels);
@@ -424,20 +421,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The comparison operator that is used to compare the metric value with the threshold. Valid values:
+         * The metric name.
          * <p>
          * 
-         * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-         * *   GreaterThanThreshold: greater than the threshold
-         * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-         * *   LessThanThreshold: less than the threshold
-         * *   NotEqualToThreshold: not equal to the threshold
-         * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-         * *   LessThanYesterday: less than the metric value at the same time yesterday
-         * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-         * *   LessThanLastWeek: less than the metric value at the same time last week
-         * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-         * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+         * For more information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -446,7 +433,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The threshold for Critical-level alerts.
+         * The namespace of the cloud service.
+         * <p>
+         * 
+         * For more information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -455,7 +445,12 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.
+         * The method that is used to handle alerts when no monitoring data is found. Valid values:
+         * <p>
+         * 
+         * *   KEEP_LAST_STATE (default): No operation is performed.
+         * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
+         * *   OK: The status is considered normal.
          */
         public Builder noDataPolicy(String noDataPolicy) {
             this.putQueryParameter("NoDataPolicy", noDataPolicy);
@@ -464,7 +459,7 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The threshold for Info-level alerts.
+         * The time period during which the alert rule is ineffective.
          */
         public Builder noEffectiveInterval(String noEffectiveInterval) {
             this.putQueryParameter("NoEffectiveInterval", noEffectiveInterval);
@@ -473,7 +468,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The threshold for Warn-level alerts.
+         * The aggregation period of the metric data.
+         * <p>
+         * 
+         * Set the `Period` parameter to an integral multiple of 60. Unit: seconds. Default value: 300.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -482,10 +480,11 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The ID of the alert rule.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * *   When you create an alert rule for the application group, enter the ID of the alert rule.
+         * *   When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -494,10 +493,11 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
+         * The name of the alert rule.
          * <p>
          * 
-         * For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+         * *   When you create an alert rule for the application group, enter the name of the alert rule.
+         * *   When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For more information about how to obtain the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -506,7 +506,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.
+         * The mute period during which new alerts are not sent even if the trigger conditions are met.
+         * <p>
+         * 
+         * Unit: seconds. Default value: 86400.
          */
         public Builder silenceTime(Integer silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);
@@ -515,10 +518,10 @@ public class PutGroupMetricRuleRequest extends Request {
         }
 
         /**
-         * The aggregation period of the metric data.
+         * The callback URL.
          * <p>
          * 
-         * Set the `Period` parameter to an integral multiple of 60. Unit: seconds. Default value: 300.
+         * The callback URL must be accessible over the Internet. CloudMonitor sends a POST request to push an alert notification to the callback URL that you specify. Only HTTP requests are supported.
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);
@@ -596,7 +599,20 @@ public class PutGroupMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.
+             * The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:
+             * <p>
+             * 
+             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+             * *   GreaterThanThreshold: greater than the threshold
+             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
+             * *   LessThanThreshold: less than the threshold
+             * *   NotEqualToThreshold: not equal to the threshold
+             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+             * *   LessThanYesterday: less than the metric value at the same time yesterday
+             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
+             * *   LessThanLastWeek: less than the metric value at the same time last week
+             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -604,10 +620,10 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The interval at which the alert rule is executed. Unit: seconds.
+             * The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,).
              * <p>
              * 
-             * >  We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.
+             * The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -615,136 +631,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The name of the cloud service. Valid values:
-             * <p>
-             * 
-             * *   PolarDB: PolarDB
-             * *   NewBGPDDoS: Anti-DDoS Pro
-             * *   IoTDevice: IoT Platform
-             * *   DRDS: PolarDB-X
-             * *   VS: Video Surveillance System
-             * *   AMQP: Alibaba Cloud Message Queue for AMQP
-             * *   ADS: AnalyticDB
-             * *   APIGateway: API Gateway
-             * *   InternetSharedBandwidth: EIP Bandwidth Plan
-             * *   CDN: Alibaba Cloud Content Delivery Network (CDN)
-             * *   CEN: Cloud Enterprise Network (CEN)
-             * *   DCDN: Dynamic Route for CDN (DCDN)
-             * *   DDoS: Anti-DDoS
-             * *   ECS: Elastic Compute Service (ECS)
-             * *   DirectMail: Direct Mail
-             * *   Elasticsearch: Elasticsearch
-             * *   EMR: E-MapReduce (EMR)
-             * *   ESS: Auto Scaling
-             * *   FunctionCompute: Function Compute
-             * *   RealtimeCompute: Realtime Compute for Apache Flink
-             * *   GlobalAcceleration: Global Accelerator (GA)
-             * *   Hbase: ApsaraDB for HBase
-             * *   TSDB: Time Series Database (TSDB)
-             * *   IPv6trans: IPv6 Translation Service
-             * *   Kafka: Message Queue for Apache Kafka
-             * *   Kubernetes: Container Service for Kubernetes (ACK)
-             * *   KVstore: ApsaraDB for Redis
-             * *   MNS: Message Service (MNS)
-             * *   MongoDB: ApsaraDB for MongoDB
-             * *   MQ: Message Queue
-             * *   NAT: NAT Gateway
-             * *   OpenAd: Open Ad
-             * *   OpenSearch: Open Search
-             * *   OSS: Object Storage Service (OSS)
-             * *   PCDN: P2P CDN
-             * *   petadata: HybridDB for MySQL
-             * *   RDS: ApsaraDB RDS
-             * *   SCDN: Secure CDN
-             * *   SLB: Server Load Balancer (SLB)
-             * *   SLS: Log Service
-             * *   VideoLive: ApsaraVideo Live
-             * *   VOD: ApsaraVideo VOD
-             * *   EIP: Elastic IP Address (EIP)
-             * *   VPN: VPN Gateway
-             * *   AIRec: Artificial Intelligence Recommendation (AIRec)
-             * *   GPDB: AnalyticDB for PostgreSQL
-             * *   DBS: Database Backup (DBS)
-             * *   SAG: Smart Access Gateway (SAG)
-             * *   Memcache: ApsaraDB for Memcache
-             * *   IOT_EDGE: Link IoT Edge
-             * *   OCS: ApsaraDB for Memcache (previous version)
-             * *   VPC: Express Connect
-             * *   EHPC: Elastic High Performance Computing (E-HPC)
-             * *   MPS: ApsaraVideo Media Processing (MPS)
-             * *   ENS: Edge Node Service (ENS)
-             * *   MaxCompute_Prepay: MaxCompute
-             * *   IoT_Kubernetes: Edge Application Hosting
-             * *   CMS: CloudMonitor
-             * *   batchcomputenew: Batch Compute
-             * *   HBaseUE: ApsaraDB for HBase Performance-enhanced Edition
-             * *   UIS: Ultimate Internet Service (UIS)
-             * *   nls: Intelligent Speech Interaction
-             * *   ots: Tablestore
-             * *   NAS: Apsara File Storage NAS
-             * *   ECI: Elastic Container Instance (ECI)
-             * *   OpenAPI: OpenAPI Explorer
-             * *   pvtzpost: Alibaba Cloud DNS PrivateZone
-             * *   blinkonk8s: Flink on Kubernetes
-             * *   FunctionFlow: Serverless Workflow (SWF)
-             * *   SMC: Server Migration Center (SMC)
-             * *   ddosbgp: Anti-DDoS Origin
-             * *   baas: Blockchain as a Service
-             * *   privatelink: PrivateLink
-             * *   cds: ApsaraDB for Cassandra
-             * *   DDH: Dedicated Host
-             * *   RocketMQ: Message Queue for Apache RocketMQ
-             * *   ECC: Express Cloud Connect (ECC)
-             * *   hbaseserverless: ApsaraDB for HBase Serverless Edition
-             * *   mns_tmp: Message Service
-             * *   hdr: Hybrid Disaster Recovery (HDR)
-             * *   hbr: Hybrid Backup Recovery (HBR)
-             * *   ADB: AnalyticDB for MySQL V3.0
-             * *   tag: Tag Service
-             * *   GDB: Graph Database
-             * *   WAF: Web Application Firewall (WAF)
-             * *   hcs_sgw: Cloud Storage Gateway (CSG)
-             * *   ipv6gateway: IPv6 Gateway
-             * *   RDS_SAR: ApsaraDB Exclusive Host Group
-             * *   learn: Machine Learning Platform for AI
-             * *   ROS: Resource Orchestration Service (ROS)
-             * *   OOS: Operation Orchestration Service (OOS)
-             * *   bds: Data Synchronization for HBase
-             * *   cfw: Cloud Firewall
-             * *   ddosDip: Anti-DDoS Premium
-             * *   datahub: DataHub
-             * *   hologres: Hologres
-             * *   ExpressConnect: Express Connect
-             * *   dbfs: Database File System (DBFS)
-             * *   clickhouse: ApsaraDB for ClickHouse
-             * *   k8s: Container Service for Kubernetes (ACK)
-             * *   DTS: Data Transmission Service (DTS)
-             * *   AnycastEIP: Anycast Elastic IP Address
-             * *   Lindorm: Lindorm
-             * *   config: Cloud Config
-             * *   spark: Databricks DataInsight (DDI)
-             * *   serverless: Serverless App Engine (SAE)
-             * *   alb: Application Load Balancer (ALB)
-             * *   oceanbase: ApsaraDB for OceanBase
-             * *   KMS: Key Management Service (KMS)
-             * *   lvwang: Content Moderation
-             * *   LinkVisual: LinkVisual
-             * *   tair: ApsaraDB for Redis Enhanced Edition (Tair)
-             * *   dlf: Data Lake Formation (DLF)
-             * *   networkmonitor: Site Monitoring
-             * *   pnc: Physical Network Change
-             * *   AIS: Alibaba Cloud Infrastructure
-             * *   cloudgame: Cloud Gaming Platform
-             * *   RTC: Real-Time Communication
-             * *   cloudbox: CloudBox
-             * *   actiontrail: ActionTrail
-             * *   cc: Cloud Connector
-             * *   disk: Elastic Block Storage (EBS)
-             * *   easygene: Genomics Computing Platform
-             * *   cloudphone: Elastic Cloud Phone
-             * *   BMS: Bare Metal Management Service
-             * *   swas: Simple Application Server
-             * *   AvailabilityMonitoring: Availability Monitoring of CloudMonitor
+             * The threshold for Critical-level alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -752,10 +639,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The first-level dimension of the alert rule in the application group.
-             * <p>
-             * 
-             * Set the value to a set of key-value pairs, for example, `userId:120886317861****` or `instanceId:i-m5e1qg6uo38rztr4****`.
+             * The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -832,7 +716,20 @@ public class PutGroupMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The time period during which the alert rule is effective.
+             * The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:
+             * <p>
+             * 
+             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+             * *   GreaterThanThreshold: greater than the threshold
+             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
+             * *   LessThanThreshold: less than the threshold
+             * *   NotEqualToThreshold: not equal to the threshold
+             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+             * *   LessThanYesterday: less than the metric value at the same time yesterday
+             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
+             * *   LessThanLastWeek: less than the metric value at the same time last week
+             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -840,10 +737,10 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met.
+             * The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,).
              * <p>
              * 
-             * Unit: seconds. Default value: 86400.
+             * The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -851,7 +748,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The alert contact group.
+             * The threshold for Info-level alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -859,12 +756,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,). Valid values:
-             * <p>
-             * 
-             * *   Average: the average value
-             * *   Minimum: the minimum value
-             * *   Maximum: the maximum value
+             * The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -941,15 +833,7 @@ public class PutGroupMetricRuleRequest extends Request {
             private Integer times; 
 
             /**
-             * The tag value of the alert rule.
-             */
-            public Builder comparisonOperator(String comparisonOperator) {
-                this.comparisonOperator = comparisonOperator;
-                return this;
-            }
-
-            /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
+             * The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -964,18 +848,24 @@ public class PutGroupMetricRuleRequest extends Request {
              * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
              * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
+                return this;
+            }
+
+            /**
+             * The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,).
+             * <p>
+             * 
+             * The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
+             */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
                 return this;
             }
 
             /**
-             * The method that is used to handle alerts when no monitoring data is found. Valid values:
-             * <p>
-             * 
-             * *   KEEP_LAST_STATE (default value): No operation is performed.
-             * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
-             * *   OK: The status is considered normal.
+             * The threshold for Warn-level alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -983,7 +873,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The tag key of the alert rule.
+             * The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -1120,11 +1010,7 @@ public class PutGroupMetricRuleRequest extends Request {
             private String value; 
 
             /**
-             * The name of the alert rule.
-             * <p>
-             * 
-             * *   When you create an alert rule for the application group, enter the name of the alert rule.
-             * *   When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For information about how to obtain the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+             * The tag key of the alert rule.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1132,7 +1018,7 @@ public class PutGroupMetricRuleRequest extends Request {
             }
 
             /**
-             * The ID of the alert rule.
+             * The tag value of the alert rule.
              */
             public Builder value(String value) {
                 this.value = value;

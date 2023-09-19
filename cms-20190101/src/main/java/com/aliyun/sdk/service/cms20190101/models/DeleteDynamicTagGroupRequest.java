@@ -55,7 +55,10 @@ public class DeleteDynamicTagGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the tag rule.
+         * <p>
+         * 
+         * For information about how to obtain the ID of a tag rule, see [DescribeDynamicTagRuleList](~~150126~~).
          */
         public Builder dynamicTagRuleId(String dynamicTagRuleId) {
             this.putQueryParameter("DynamicTagRuleId", dynamicTagRuleId);

@@ -194,10 +194,10 @@ public class DescribeMetricRuleListRequest extends Request {
         }
 
         /**
-         * The dimensions of the alert rule. The dimensions specify the resources for which you want to query monitoring data.
+         * The monitoring dimensions of the specified resource.
          * <p>
          * 
-         * Set the value to a set of key-value pairs, for example, `userId:120886317861****` or `i-2ze2d6j5uhg20x47****`.
+         * Set the value to a collection of `key:value` pairs. Example: `{"userId":"120886317861****"}` or `{"instanceId":"i-2ze2d6j5uhg20x47****"}`.
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);

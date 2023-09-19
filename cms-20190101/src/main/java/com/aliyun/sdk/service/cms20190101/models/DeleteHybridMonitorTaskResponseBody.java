@@ -74,7 +74,10 @@ public class DeleteHybridMonitorTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteHybridMonitorTask**.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class DeleteHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class DeleteHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,11 @@ public class DeleteHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

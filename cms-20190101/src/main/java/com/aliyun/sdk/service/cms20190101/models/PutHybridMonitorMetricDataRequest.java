@@ -70,7 +70,10 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         } 
 
         /**
-         * MetricList.
+         * The monitoring data.
+         * <p>
+         * 
+         * Valid values of N: 1 to 100.
          */
         public Builder metricList(java.util.List < MetricList> metricList) {
             this.putQueryParameter("MetricList", metricList);
@@ -79,10 +82,10 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the namespace.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -136,7 +139,14 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             private String value; 
 
             /**
-             * The position of the error message in the array.
+             * The tag key of the metric.
+             * <p>
+             * 
+             * Valid values of N: 1 to 100.
+             * 
+             * The key can contain letters, digits, and underscores (*). The key must start with a letter or an underscore (*).
+             * 
+             * >  You must specify both the Key and Value parameters.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -144,10 +154,12 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The name of the namespace.
+             * The tag value of the metric.
              * <p>
              * 
-             * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+             * Valid values of N: 1 to 100.
+             * 
+             * >  You must specify both the Key and Value parameters.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -226,7 +238,10 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             private String value; 
 
             /**
-             * Labels.
+             * The tags of the metric.
+             * <p>
+             * 
+             * Valid values of N: 1 to 100.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -234,10 +249,28 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **PutHybridMonitorMetricData**.
+             * The metric name.
+             * <p>
+             * 
+             * Valid values of N: 1 to 100.
+             * 
+             * The name can contain letters, digits, and underscores (\_). The name must start with a letter.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * The timestamp when the monitoring data is imported.
+             * <p>
+             * 
+             * Valid values of N: 1 to 100.
+             * 
+             * Unit: milliseconds. By default, the current timestamp is used.
+             */
+            public Builder ts(Long ts) {
+                this.ts = ts;
                 return this;
             }
 
@@ -247,22 +280,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
              * 
              * Valid values of N: 1 to 100.
              * 
-             * The value is an integer or a floating-point number.
-             */
-            public Builder ts(Long ts) {
-                this.ts = ts;
-                return this;
-            }
-
-            /**
-             * The tag key of the metric.
-             * <p>
-             * 
-             * Valid values of N: 1 to 100.
-             * 
-             * The key can contain letters, digits, and underscores (\_). The key must start with a letter or an underscore (\_).
-             * 
-             * >  You must specify a key and a value for a tag at the same time.
+             * The value must be an integer or a floating-point number.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -86,7 +86,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The end timestamp of queried alert logs in an interval. Unit: seconds.
+         * The number of alert logs that were generated during each interval of a time period.
          */
         public Builder alertLogHistogramList(java.util.List < AlertLogHistogramList> alertLogHistogramList) {
             this.alertLogHistogramList = alertLogHistogramList;
@@ -94,7 +94,10 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The response code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,11 +105,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +113,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the number of alert logs that were generated during each interval of a time period.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +121,11 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The start timestamp of queried alert logs in an interval. Unit: seconds.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +189,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             private Long to; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The number of alert logs.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -194,7 +197,10 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert logs.
+             * The start timestamp of the queried alert logs.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -202,7 +208,10 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * This topic provides an example on how to query the number of alert logs of Elastic Compute Service (ECS) from the cloud service dimension.
+             * The end timestamp of the queried alert logs.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder to(Long to) {
                 this.to = to;

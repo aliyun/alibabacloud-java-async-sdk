@@ -69,10 +69,7 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -81,7 +78,10 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The policy type.
+         * <p>
+         * 
+         * Valid value: PauseNotify.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

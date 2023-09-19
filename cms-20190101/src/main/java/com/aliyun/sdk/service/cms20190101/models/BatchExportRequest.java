@@ -114,7 +114,11 @@ public class BatchExportRequest extends Request {
         } 
 
         /**
-         * Cursor.
+         * When you call this operation to export data, you must specify the `Cursor` parameter. You can obtain the value of the `Cursor` parameter by using one of the following methods:
+         * <p>
+         * 
+         * *   When you call this operation for the first time, you must call the Cursor operation to obtain the `Cursor` value. For more information, see [Cursor](~~2330730~~).
+         * *   When you call this operation again, you can obtain the `Cursor` value from the returned data of the last call.
          */
         public Builder cursor(String cursor) {
             this.putBodyParameter("Cursor", cursor);
@@ -123,7 +127,10 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * Length.
+         * The maximum number of data entries that can be returned in each response.
+         * <p>
+         * 
+         * Valid values: 1 to 10000.
          */
         public Builder length(Integer length) {
             this.putBodyParameter("Length", length);
@@ -132,7 +139,12 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * Measurements.
+         * The statistical methods used to customize the returned data. By default, the measurements based on all statistical methods are returned.
+         * <p>
+         * 
+         * For example, the `cpu_idle` metric of ECS (`acs_ecs_dashboard`) has three statistical methods: `Average`, `Maximum`, and `Minimum`. If you want to return only the measurements based on the `Average` and `Maximum` statistical methods, set this parameter to `["Average", "Maximum"]`.
+         * 
+         * The statistical methods of metrics are displayed in the `Statistics` column on the Metrics page of each cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder measurements(java.util.List < String > measurements) {
             String measurementsShrink = shrink(measurements, "Measurements", "json");
@@ -142,7 +154,12 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * Metric.
+         * The metric that is used to monitor the cloud service.
+         * <p>
+         * 
+         * For more information about the metrics of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * 
+         * >  The value of this parameter must be the same as the value of the request parameter `Metric` in the Cursor operation.
          */
         public Builder metric(String metric) {
             this.putBodyParameter("Metric", metric);
@@ -151,7 +168,12 @@ public class BatchExportRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace of the cloud service.
+         * <p>
+         * 
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * 
+         * >  The value of this parameter must be the same as the value of the request parameter `Namespace` in the Cursor operation.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);

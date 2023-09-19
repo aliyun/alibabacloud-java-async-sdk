@@ -69,7 +69,10 @@ public class DescribeEventRuleAttributeRequest extends Request {
         } 
 
         /**
-         * The error message.
+         * The name of the event-triggered alert rule.
+         * <p>
+         * 
+         * For more information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -78,7 +81,12 @@ public class DescribeEventRuleAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The mute period during which new alerts are not sent even if the trigger conditions are met.
+         * <p>
+         * 
+         * Unit: seconds. Default value: 86400, which indicates one day.
+         * 
+         * >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
          */
         public Builder silenceTime(String silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);

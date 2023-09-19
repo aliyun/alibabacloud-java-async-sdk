@@ -155,10 +155,7 @@ public class CreateSiteMonitorRequest extends Request {
         } 
 
         /**
-         * The name of the site monitoring task.
-         * <p>
-         * 
-         * The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+         * The URL or IP address that is monitored by the task.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -167,11 +164,10 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:
+         * The ID of the alert rule.
          * <p>
          * 
-         * *   true
-         * *   false
+         * For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -180,7 +176,7 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * CustomSchedule.
+         * The custom detection period. You can only select a time period from Monday to Sunday for detection.
          */
         public Builder customSchedule(String customSchedule) {
             this.putQueryParameter("CustomSchedule", customSchedule);
@@ -189,7 +185,12 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateSiteMonitor**.
+         * The interval at which detection requests are sent.
+         * <p>
+         * 
+         * Valid values: 1, 5, 15, 30, and 60. Unit: minutes.
+         * 
+         * Default value: 1.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -212,7 +213,7 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * The returned message.
+         * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
          */
         public Builder optionsJson(String optionsJson) {
             this.putQueryParameter("OptionsJson", optionsJson);
@@ -221,10 +222,10 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the site monitoring task.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -233,10 +234,10 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
+         * The type of the site monitoring task.
          * <p>
          * 
-         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

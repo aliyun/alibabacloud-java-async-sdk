@@ -152,7 +152,11 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         } 
 
         /**
-         * The name of the alert template.
+         * Specifies whether to display the history of applying the alert templates to application groups. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder history(Boolean history) {
             this.putQueryParameter("History", history);
@@ -161,7 +165,7 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * The keyword of the alert template name.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -170,7 +174,7 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The name of the alert template.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -179,10 +183,11 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The version of the alert template.
+         * The sorting order. Valid values:
          * <p>
          * 
-         * Default value: 0.
+         * *   true (default): ascending order
+         * *   false: descending order
          */
         public Builder order(Boolean order) {
             this.putQueryParameter("Order", order);
@@ -191,10 +196,11 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The timestamp when the alert template was created.
+         * The sorting basis. Valid values:
          * <p>
          * 
-         * Unit: milliseconds.
+         * *   gmtMotified: sorts alert templates by modification time
+         * *   gmtCreate (default): sorts alert templates by creation time
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -203,7 +209,10 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The page number.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,11 +221,7 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * Specifies whether to display the application history of the alert templates. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +230,7 @@ public class DescribeMetricRuleTemplateListRequest extends Request {
         }
 
         /**
-         * The name of the alert template.
+         * The ID of the alert template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

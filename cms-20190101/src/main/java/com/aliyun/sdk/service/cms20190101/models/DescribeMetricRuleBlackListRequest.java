@@ -198,7 +198,10 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the instances in the blacklist policy.
+         * <p>
+         * 
+         * Valid values of N: 0 to 10.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -207,7 +210,11 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * IsEnable.
+         * The status of the blacklist policy. Valid values:
+         * <p>
+         * 
+         * *   true: The blacklist policy is enabled.
+         * *   false: The blacklist policy is disabled.
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -216,7 +223,10 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the blacklist policy.
+         * <p>
+         * 
+         * This parameter supports fuzzy match.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -267,7 +277,11 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * The effective scope of the blacklist policy. Valid values:
+         * <p>
+         * 
+         * *   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.
+         * *   GROUP: The blacklist policy takes effect only within the specified application group.
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
