@@ -74,7 +74,7 @@ public class SubmitConvertImageToPdfJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class SubmitConvertImageToPdfJobResponseBody extends TeaModel {
         }
 
         /**
-         * 错误提示
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class SubmitConvertImageToPdfJobResponseBody extends TeaModel {
         }
 
         /**
-         * 请求唯一 ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class SubmitConvertImageToPdfJobResponseBody extends TeaModel {
             private String id; 
 
             /**
-             * 业务id
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;

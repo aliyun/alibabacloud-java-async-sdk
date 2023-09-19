@@ -98,7 +98,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,9 +106,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         }
 
         /**
-         * 操作是否完成
-         * <p>
-         * True：当前Job已经执行完成。 False：当前Job还在执行中。
+         * Completed.
          */
         public Builder completed(Boolean completed) {
             this.completed = completed;
@@ -124,7 +122,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         }
 
         /**
-         * 错误提示
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +130,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         }
 
         /**
-         * 请求唯一 ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,9 +138,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         }
 
         /**
-         * 操作完成后的状态
-         * <p>
-         * Success：成功 Fail：失败 * Cancel：被服务端主动取消
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

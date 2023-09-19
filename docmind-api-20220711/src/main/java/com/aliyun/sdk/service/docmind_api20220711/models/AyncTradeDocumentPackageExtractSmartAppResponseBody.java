@@ -7,22 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDocStructureResultResponseBody} extends {@link TeaModel}
+ * {@link AyncTradeDocumentPackageExtractSmartAppResponseBody} extends {@link TeaModel}
  *
- * <p>GetDocStructureResultResponseBody</p>
+ * <p>AyncTradeDocumentPackageExtractSmartAppResponseBody</p>
  */
-public class GetDocStructureResultResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
+public class AyncTradeDocumentPackageExtractSmartAppResponseBody extends TeaModel {
     @NameInMap("Completed")
     private Boolean completed;
 
-    @NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    @NameInMap("CreateTime")
+    private String createTime;
 
-    @NameInMap("Message")
-    private String message;
+    @NameInMap("Data")
+    private Object data;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -30,28 +27,24 @@ public class GetDocStructureResultResponseBody extends TeaModel {
     @NameInMap("Status")
     private String status;
 
-    private GetDocStructureResultResponseBody(Builder builder) {
-        this.code = builder.code;
+    @NameInMap("Success")
+    private Boolean success;
+
+    private AyncTradeDocumentPackageExtractSmartAppResponseBody(Builder builder) {
         this.completed = builder.completed;
+        this.createTime = builder.createTime;
         this.data = builder.data;
-        this.message = builder.message;
         this.requestId = builder.requestId;
         this.status = builder.status;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDocStructureResultResponseBody create() {
+    public static AyncTradeDocumentPackageExtractSmartAppResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
     }
 
     /**
@@ -62,17 +55,17 @@ public class GetDocStructureResultResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
+     * @return createTime
      */
-    public java.util.Map < String, ? > getData() {
-        return this.data;
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     /**
-     * @return message
+     * @return data
      */
-    public String getMessage() {
-        return this.message;
+    public Object getData() {
+        return this.data;
     }
 
     /**
@@ -89,21 +82,20 @@ public class GetDocStructureResultResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
-        private String code; 
         private Boolean completed; 
-        private java.util.Map < String, ? > data; 
-        private String message; 
+        private String createTime; 
+        private Object data; 
         private String requestId; 
         private String status; 
-
-        /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
+        private Boolean success; 
 
         /**
          * Completed.
@@ -114,18 +106,18 @@ public class GetDocStructureResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * CreateTime.
          */
-        public Builder data(java.util.Map < String, ? > data) {
-            this.data = data;
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
 
         /**
-         * Message.
+         * Data.
          */
-        public Builder message(String message) {
-            this.message = message;
+        public Builder data(Object data) {
+            this.data = data;
             return this;
         }
 
@@ -145,8 +137,16 @@ public class GetDocStructureResultResponseBody extends TeaModel {
             return this;
         }
 
-        public GetDocStructureResultResponseBody build() {
-            return new GetDocStructureResultResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public AyncTradeDocumentPackageExtractSmartAppResponseBody build() {
+            return new AyncTradeDocumentPackageExtractSmartAppResponseBody(this);
         } 
 
     } 

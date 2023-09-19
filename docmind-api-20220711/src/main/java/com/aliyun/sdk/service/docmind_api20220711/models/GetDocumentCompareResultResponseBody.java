@@ -98,7 +98,7 @@ public class GetDocumentCompareResultResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +122,7 @@ public class GetDocumentCompareResultResponseBody extends TeaModel {
         }
 
         /**
-         * 错误提示
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetDocumentCompareResultResponseBody extends TeaModel {
         }
 
         /**
-         * 请求唯一 ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -96,7 +96,7 @@ public class SubmitDocumentCompareJobRequest extends Request {
         } 
 
         /**
-         * 待对比文件名称
+         * CompareFileName.
          */
         public Builder compareFileName(String compareFileName) {
             this.putQueryParameter("CompareFileName", compareFileName);
@@ -105,7 +105,7 @@ public class SubmitDocumentCompareJobRequest extends Request {
         }
 
         /**
-         * 待对比文件的url
+         * CompareFileUrl.
          */
         public Builder compareFileUrl(String compareFileUrl) {
             this.putQueryParameter("CompareFileUrl", compareFileUrl);
@@ -114,7 +114,7 @@ public class SubmitDocumentCompareJobRequest extends Request {
         }
 
         /**
-         * 源文件名称
+         * OriginFileName.
          */
         public Builder originFileName(String originFileName) {
             this.putQueryParameter("OriginFileName", originFileName);
@@ -123,7 +123,7 @@ public class SubmitDocumentCompareJobRequest extends Request {
         }
 
         /**
-         * 源文件url地址
+         * OriginFileUrl.
          */
         public Builder originFileUrl(String originFileUrl) {
             this.putQueryParameter("OriginFileUrl", originFileUrl);

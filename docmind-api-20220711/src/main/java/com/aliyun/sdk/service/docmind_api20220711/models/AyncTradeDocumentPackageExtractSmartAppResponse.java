@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDocStructureResultResponse} extends {@link TeaModel}
+ * {@link AyncTradeDocumentPackageExtractSmartAppResponse} extends {@link TeaModel}
  *
- * <p>GetDocStructureResultResponse</p>
+ * <p>AyncTradeDocumentPackageExtractSmartAppResponse</p>
  */
-public class GetDocStructureResultResponse extends Response {
+public class AyncTradeDocumentPackageExtractSmartAppResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class GetDocStructureResultResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetDocStructureResultResponseBody body;
+    private AyncTradeDocumentPackageExtractSmartAppResponseBody body;
 
-    private GetDocStructureResultResponse(BuilderImpl builder) {
+    private AyncTradeDocumentPackageExtractSmartAppResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetDocStructureResultResponse create() {
+    public static AyncTradeDocumentPackageExtractSmartAppResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class GetDocStructureResultResponse extends Response {
     /**
      * @return body
      */
-    public GetDocStructureResultResponseBody getBody() {
+    public AyncTradeDocumentPackageExtractSmartAppResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetDocStructureResultResponse, Builder> {
+    public interface Builder extends Response.Builder<AyncTradeDocumentPackageExtractSmartAppResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetDocStructureResultResponseBody body);
+        Builder body(AyncTradeDocumentPackageExtractSmartAppResponseBody body);
 
         @Override
-        GetDocStructureResultResponse build();
+        AyncTradeDocumentPackageExtractSmartAppResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetDocStructureResultResponse, Builder>
+            extends Response.BuilderImpl<AyncTradeDocumentPackageExtractSmartAppResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetDocStructureResultResponseBody body; 
+        private AyncTradeDocumentPackageExtractSmartAppResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetDocStructureResultResponse response) {
+        private BuilderImpl(AyncTradeDocumentPackageExtractSmartAppResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class GetDocStructureResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetDocStructureResultResponseBody body) {
+        public Builder body(AyncTradeDocumentPackageExtractSmartAppResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetDocStructureResultResponse build() {
-            return new GetDocStructureResultResponse(this);
+        public AyncTradeDocumentPackageExtractSmartAppResponse build() {
+            return new AyncTradeDocumentPackageExtractSmartAppResponse(this);
         } 
 
     } 

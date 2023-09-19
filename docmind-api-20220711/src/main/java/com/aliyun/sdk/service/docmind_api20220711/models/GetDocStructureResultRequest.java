@@ -54,7 +54,7 @@ public class GetDocStructureResultRequest extends Request {
         } 
 
         /**
-         * 业务id
+         * Id.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

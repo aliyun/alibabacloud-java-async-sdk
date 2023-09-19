@@ -100,7 +100,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,7 +124,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         }
 
         /**
-         * 错误提示
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +132,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         }
 
         /**
-         * 请求唯一 ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +240,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
             }
 
             /**
-             * url地址
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;

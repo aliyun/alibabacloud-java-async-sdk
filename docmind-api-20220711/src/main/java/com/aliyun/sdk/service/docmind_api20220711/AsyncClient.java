@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AyncTradeDocumentPackageExtractSmartAppResponse> ayncTradeDocumentPackageExtractSmartApp(AyncTradeDocumentPackageExtractSmartAppRequest request);
+
     CompletableFuture<GetDocStructureResultResponse> getDocStructureResult(GetDocStructureResultRequest request);
 
     CompletableFuture<GetDocumentCompareResultResponse> getDocumentCompareResult(GetDocumentCompareResultRequest request);

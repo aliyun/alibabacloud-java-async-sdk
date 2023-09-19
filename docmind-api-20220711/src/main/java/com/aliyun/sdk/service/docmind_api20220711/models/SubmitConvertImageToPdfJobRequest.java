@@ -82,9 +82,7 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
         } 
 
         /**
-         * 图片扩展名。与imageName二选一
-         * <p>
-         * 支持类型:JPG、JPEG、PNG、BMP、GIF
+         * ImageNameExtension.
          */
         public Builder imageNameExtension(String imageNameExtension) {
             this.putQueryParameter("ImageNameExtension", imageNameExtension);
@@ -93,7 +91,7 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
         }
 
         /**
-         * 图片名称。文件名称需包含后缀。与imageNameExtension二选一
+         * ImageNames.
          */
         public Builder imageNames(java.util.List < String > imageNames) {
             String imageNamesShrink = shrink(imageNames, "ImageNames", "simple");
@@ -103,7 +101,7 @@ public class SubmitConvertImageToPdfJobRequest extends Request {
         }
 
         /**
-         * 图片url地址.最多支持30个url地址
+         * ImageUrls.
          */
         public Builder imageUrls(java.util.List < String > imageUrls) {
             String imageUrlsShrink = shrink(imageUrls, "ImageUrls", "simple");
