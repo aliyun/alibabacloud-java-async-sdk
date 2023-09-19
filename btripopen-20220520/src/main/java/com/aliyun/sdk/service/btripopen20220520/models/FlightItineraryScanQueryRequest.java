@@ -26,6 +26,10 @@ public class FlightItineraryScanQueryRequest extends Request {
     private Long invoiceSubTaskId;
 
     @Query
+    @NameInMap("itinerary_num")
+    private String itineraryNum;
+
+    @Query
     @NameInMap("page_no")
     private Integer pageNo;
 
@@ -33,6 +37,10 @@ public class FlightItineraryScanQueryRequest extends Request {
     @NameInMap("page_size")
     @Validation(maximum = 100)
     private Integer pageSize;
+
+    @Query
+    @NameInMap("ticket_no")
+    private String ticketNo;
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
@@ -43,8 +51,10 @@ public class FlightItineraryScanQueryRequest extends Request {
         this.billDate = builder.billDate;
         this.billId = builder.billId;
         this.invoiceSubTaskId = builder.invoiceSubTaskId;
+        this.itineraryNum = builder.itineraryNum;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.ticketNo = builder.ticketNo;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
@@ -83,6 +93,13 @@ public class FlightItineraryScanQueryRequest extends Request {
     }
 
     /**
+     * @return itineraryNum
+     */
+    public String getItineraryNum() {
+        return this.itineraryNum;
+    }
+
+    /**
      * @return pageNo
      */
     public Integer getPageNo() {
@@ -97,6 +114,13 @@ public class FlightItineraryScanQueryRequest extends Request {
     }
 
     /**
+     * @return ticketNo
+     */
+    public String getTicketNo() {
+        return this.ticketNo;
+    }
+
+    /**
      * @return xAcsBtripSoCorpToken
      */
     public String getXAcsBtripSoCorpToken() {
@@ -107,8 +131,10 @@ public class FlightItineraryScanQueryRequest extends Request {
         private String billDate; 
         private Long billId; 
         private Long invoiceSubTaskId; 
+        private String itineraryNum; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String ticketNo; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -120,8 +146,10 @@ public class FlightItineraryScanQueryRequest extends Request {
             this.billDate = request.billDate;
             this.billId = request.billId;
             this.invoiceSubTaskId = request.invoiceSubTaskId;
+            this.itineraryNum = request.itineraryNum;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.ticketNo = request.ticketNo;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
@@ -153,6 +181,15 @@ public class FlightItineraryScanQueryRequest extends Request {
         }
 
         /**
+         * itinerary_num.
+         */
+        public Builder itineraryNum(String itineraryNum) {
+            this.putQueryParameter("itinerary_num", itineraryNum);
+            this.itineraryNum = itineraryNum;
+            return this;
+        }
+
+        /**
          * page_no.
          */
         public Builder pageNo(Integer pageNo) {
@@ -167,6 +204,15 @@ public class FlightItineraryScanQueryRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ticket_no.
+         */
+        public Builder ticketNo(String ticketNo) {
+            this.putQueryParameter("ticket_no", ticketNo);
+            this.ticketNo = ticketNo;
             return this;
         }
 

@@ -151,6 +151,188 @@ public class HotelSearchResponseBody extends TeaModel {
 
     } 
 
+    public static class DiscountDetail extends TeaModel {
+        @NameInMap("label_name")
+        private java.util.List < String > labelName;
+
+        @NameInMap("money_desc")
+        private String moneyDesc;
+
+        private DiscountDetail(Builder builder) {
+            this.labelName = builder.labelName;
+            this.moneyDesc = builder.moneyDesc;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiscountDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelName
+         */
+        public java.util.List < String > getLabelName() {
+            return this.labelName;
+        }
+
+        /**
+         * @return moneyDesc
+         */
+        public String getMoneyDesc() {
+            return this.moneyDesc;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > labelName; 
+            private String moneyDesc; 
+
+            /**
+             * label_name.
+             */
+            public Builder labelName(java.util.List < String > labelName) {
+                this.labelName = labelName;
+                return this;
+            }
+
+            /**
+             * money_desc.
+             */
+            public Builder moneyDesc(String moneyDesc) {
+                this.moneyDesc = moneyDesc;
+                return this;
+            }
+
+            public DiscountDetail build() {
+                return new DiscountDetail(this);
+            } 
+
+        } 
+
+    }
+    public static class DiscountDesc extends TeaModel {
+        @NameInMap("cash_reduce_total")
+        private String cashReduceTotal;
+
+        @NameInMap("dinamic_label")
+        private String dinamicLabel;
+
+        @NameInMap("discount_detail")
+        private java.util.List < DiscountDetail> discountDetail;
+
+        @NameInMap("sub_title")
+        private String subTitle;
+
+        @NameInMap("title")
+        private String title;
+
+        private DiscountDesc(Builder builder) {
+            this.cashReduceTotal = builder.cashReduceTotal;
+            this.dinamicLabel = builder.dinamicLabel;
+            this.discountDetail = builder.discountDetail;
+            this.subTitle = builder.subTitle;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiscountDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cashReduceTotal
+         */
+        public String getCashReduceTotal() {
+            return this.cashReduceTotal;
+        }
+
+        /**
+         * @return dinamicLabel
+         */
+        public String getDinamicLabel() {
+            return this.dinamicLabel;
+        }
+
+        /**
+         * @return discountDetail
+         */
+        public java.util.List < DiscountDetail> getDiscountDetail() {
+            return this.discountDetail;
+        }
+
+        /**
+         * @return subTitle
+         */
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String cashReduceTotal; 
+            private String dinamicLabel; 
+            private java.util.List < DiscountDetail> discountDetail; 
+            private String subTitle; 
+            private String title; 
+
+            /**
+             * cash_reduce_total.
+             */
+            public Builder cashReduceTotal(String cashReduceTotal) {
+                this.cashReduceTotal = cashReduceTotal;
+                return this;
+            }
+
+            /**
+             * dinamic_label.
+             */
+            public Builder dinamicLabel(String dinamicLabel) {
+                this.dinamicLabel = dinamicLabel;
+                return this;
+            }
+
+            /**
+             * discount_detail.
+             */
+            public Builder discountDetail(java.util.List < DiscountDetail> discountDetail) {
+                this.discountDetail = discountDetail;
+                return this;
+            }
+
+            /**
+             * sub_title.
+             */
+            public Builder subTitle(String subTitle) {
+                this.subTitle = subTitle;
+                return this;
+            }
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public DiscountDesc build() {
+                return new DiscountDesc(this);
+            } 
+
+        } 
+
+    }
     public static class Items extends TeaModel {
         @NameInMap("brand_name")
         private String brandName;
@@ -160,6 +342,9 @@ public class HotelSearchResponseBody extends TeaModel {
 
         @NameInMap("city_code")
         private String cityCode;
+
+        @NameInMap("discount_desc")
+        private DiscountDesc discountDesc;
 
         @NameInMap("distance")
         private Integer distance;
@@ -210,6 +395,7 @@ public class HotelSearchResponseBody extends TeaModel {
             this.brandName = builder.brandName;
             this.btandCode = builder.btandCode;
             this.cityCode = builder.cityCode;
+            this.discountDesc = builder.discountDesc;
             this.distance = builder.distance;
             this.districtCode = builder.districtCode;
             this.hotelAddress = builder.hotelAddress;
@@ -254,6 +440,13 @@ public class HotelSearchResponseBody extends TeaModel {
          */
         public String getCityCode() {
             return this.cityCode;
+        }
+
+        /**
+         * @return discountDesc
+         */
+        public DiscountDesc getDiscountDesc() {
+            return this.discountDesc;
         }
 
         /**
@@ -365,6 +558,7 @@ public class HotelSearchResponseBody extends TeaModel {
             private String brandName; 
             private String btandCode; 
             private String cityCode; 
+            private DiscountDesc discountDesc; 
             private Integer distance; 
             private String districtCode; 
             private String hotelAddress; 
@@ -402,6 +596,14 @@ public class HotelSearchResponseBody extends TeaModel {
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * discount_desc.
+             */
+            public Builder discountDesc(DiscountDesc discountDesc) {
+                this.discountDesc = discountDesc;
                 return this;
             }
 

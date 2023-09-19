@@ -34,6 +34,14 @@ public class TrainTicketScanQueryRequest extends Request {
     @Validation(maximum = 100)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("serial_number")
+    private String serialNumber;
+
+    @Query
+    @NameInMap("ticket_no")
+    private String ticketNo;
+
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
@@ -45,6 +53,8 @@ public class TrainTicketScanQueryRequest extends Request {
         this.invoiceSubTaskId = builder.invoiceSubTaskId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.serialNumber = builder.serialNumber;
+        this.ticketNo = builder.ticketNo;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
@@ -97,6 +107,20 @@ public class TrainTicketScanQueryRequest extends Request {
     }
 
     /**
+     * @return serialNumber
+     */
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
+    /**
+     * @return ticketNo
+     */
+    public String getTicketNo() {
+        return this.ticketNo;
+    }
+
+    /**
      * @return xAcsBtripSoCorpToken
      */
     public String getXAcsBtripSoCorpToken() {
@@ -109,6 +133,8 @@ public class TrainTicketScanQueryRequest extends Request {
         private Long invoiceSubTaskId; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String serialNumber; 
+        private String ticketNo; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -122,6 +148,8 @@ public class TrainTicketScanQueryRequest extends Request {
             this.invoiceSubTaskId = request.invoiceSubTaskId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.serialNumber = request.serialNumber;
+            this.ticketNo = request.ticketNo;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
@@ -167,6 +195,24 @@ public class TrainTicketScanQueryRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * serial_number.
+         */
+        public Builder serialNumber(String serialNumber) {
+            this.putQueryParameter("serial_number", serialNumber);
+            this.serialNumber = serialNumber;
+            return this;
+        }
+
+        /**
+         * ticket_no.
+         */
+        public Builder ticketNo(String ticketNo) {
+            this.putQueryParameter("ticket_no", ticketNo);
+            this.ticketNo = ticketNo;
             return this;
         }
 
