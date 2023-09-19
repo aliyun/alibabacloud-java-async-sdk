@@ -217,13 +217,25 @@ public class GatewayOption extends TeaModel {
         @NameInMap("Sample")
         private Long sample;
 
+        @NameInMap("ServiceId")
+        private Long serviceId;
+
+        @NameInMap("ServicePort")
+        private String servicePort;
+
         @NameInMap("TraceEnabled")
         @Validation(required = true)
         private Boolean traceEnabled;
 
+        @NameInMap("TraceType")
+        private String traceType;
+
         private TraceDetails(Builder builder) {
             this.sample = builder.sample;
+            this.serviceId = builder.serviceId;
+            this.servicePort = builder.servicePort;
             this.traceEnabled = builder.traceEnabled;
+            this.traceType = builder.traceType;
         }
 
         public static Builder builder() {
@@ -242,15 +254,39 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
+         * @return serviceId
+         */
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return servicePort
+         */
+        public String getServicePort() {
+            return this.servicePort;
+        }
+
+        /**
          * @return traceEnabled
          */
         public Boolean getTraceEnabled() {
             return this.traceEnabled;
         }
 
+        /**
+         * @return traceType
+         */
+        public String getTraceType() {
+            return this.traceType;
+        }
+
         public static final class Builder {
             private Long sample; 
+            private Long serviceId; 
+            private String servicePort; 
             private Boolean traceEnabled; 
+            private String traceType; 
 
             /**
              * Sample.
@@ -261,10 +297,34 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
+             * ServiceId.
+             */
+            public Builder serviceId(Long serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServicePort.
+             */
+            public Builder servicePort(String servicePort) {
+                this.servicePort = servicePort;
+                return this;
+            }
+
+            /**
              * TraceEnabled.
              */
             public Builder traceEnabled(Boolean traceEnabled) {
                 this.traceEnabled = traceEnabled;
+                return this;
+            }
+
+            /**
+             * TraceType.
+             */
+            public Builder traceType(String traceType) {
+                this.traceType = traceType;
                 return this;
             }
 
