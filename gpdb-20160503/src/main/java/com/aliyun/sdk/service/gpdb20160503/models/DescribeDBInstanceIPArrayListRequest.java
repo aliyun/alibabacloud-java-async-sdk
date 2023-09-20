@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBInstanceIPArrayListRequest extends Request {
     @Query
+    @NameInMap("DBInstanceIPArrayName")
+    private String DBInstanceIPArrayName;
+
+    @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     private String DBInstanceId;
@@ -23,6 +27,7 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
 
     private DescribeDBInstanceIPArrayListRequest(Builder builder) {
         super(builder);
+        this.DBInstanceIPArrayName = builder.DBInstanceIPArrayName;
         this.DBInstanceId = builder.DBInstanceId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -41,6 +46,13 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
     }
 
     /**
+     * @return DBInstanceIPArrayName
+     */
+    public String getDBInstanceIPArrayName() {
+        return this.DBInstanceIPArrayName;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -55,6 +67,7 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBInstanceIPArrayListRequest, Builder> {
+        private String DBInstanceIPArrayName; 
         private String DBInstanceId; 
         private String resourceGroupId; 
 
@@ -64,9 +77,19 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
 
         private Builder(DescribeDBInstanceIPArrayListRequest request) {
             super(request);
+            this.DBInstanceIPArrayName = request.DBInstanceIPArrayName;
             this.DBInstanceId = request.DBInstanceId;
             this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * DBInstanceIPArrayName.
+         */
+        public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
+            this.putQueryParameter("DBInstanceIPArrayName", DBInstanceIPArrayName);
+            this.DBInstanceIPArrayName = DBInstanceIPArrayName;
+            return this;
+        }
 
         /**
          * The instance ID.
