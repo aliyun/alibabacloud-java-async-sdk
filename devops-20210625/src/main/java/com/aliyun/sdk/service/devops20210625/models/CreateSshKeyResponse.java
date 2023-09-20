@@ -16,6 +16,10 @@ public class CreateSshKeyResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateSshKeyResponseBody body;
@@ -23,6 +27,7 @@ public class CreateSshKeyResponse extends Response {
     private CreateSshKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateSshKeyResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateSshKeyResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateSshKeyResponse extends Response {
     public interface Builder extends Response.Builder<CreateSshKeyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateSshKeyResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateSshKeyResponse extends Response {
             extends Response.BuilderImpl<CreateSshKeyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateSshKeyResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateSshKeyResponse extends Response {
         private BuilderImpl(CreateSshKeyResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateSshKeyResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

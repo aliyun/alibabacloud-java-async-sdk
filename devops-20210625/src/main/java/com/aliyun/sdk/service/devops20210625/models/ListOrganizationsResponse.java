@@ -16,6 +16,10 @@ public class ListOrganizationsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ListOrganizationsResponseBody body;
@@ -23,6 +27,7 @@ public class ListOrganizationsResponse extends Response {
     private ListOrganizationsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ListOrganizationsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListOrganizationsResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ListOrganizationsResponse extends Response {
     public interface Builder extends Response.Builder<ListOrganizationsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListOrganizationsResponseBody body);
 
@@ -64,6 +78,7 @@ public class ListOrganizationsResponse extends Response {
             extends Response.BuilderImpl<ListOrganizationsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListOrganizationsResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ListOrganizationsResponse extends Response {
         private BuilderImpl(ListOrganizationsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ListOrganizationsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

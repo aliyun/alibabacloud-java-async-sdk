@@ -16,6 +16,10 @@ public class RefusePipelineValidateResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private RefusePipelineValidateResponseBody body;
@@ -23,6 +27,7 @@ public class RefusePipelineValidateResponse extends Response {
     private RefusePipelineValidateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class RefusePipelineValidateResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public RefusePipelineValidateResponseBody getBody() {
@@ -52,6 +64,8 @@ public class RefusePipelineValidateResponse extends Response {
     public interface Builder extends Response.Builder<RefusePipelineValidateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(RefusePipelineValidateResponseBody body);
 
@@ -64,6 +78,7 @@ public class RefusePipelineValidateResponse extends Response {
             extends Response.BuilderImpl<RefusePipelineValidateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private RefusePipelineValidateResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class RefusePipelineValidateResponse extends Response {
         private BuilderImpl(RefusePipelineValidateResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class RefusePipelineValidateResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

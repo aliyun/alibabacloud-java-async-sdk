@@ -16,6 +16,10 @@ public class GetSearchCodePreviewResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GetSearchCodePreviewResponseBody body;
@@ -23,6 +27,7 @@ public class GetSearchCodePreviewResponse extends Response {
     private GetSearchCodePreviewResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GetSearchCodePreviewResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetSearchCodePreviewResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GetSearchCodePreviewResponse extends Response {
     public interface Builder extends Response.Builder<GetSearchCodePreviewResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetSearchCodePreviewResponseBody body);
 
@@ -64,6 +78,7 @@ public class GetSearchCodePreviewResponse extends Response {
             extends Response.BuilderImpl<GetSearchCodePreviewResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetSearchCodePreviewResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GetSearchCodePreviewResponse extends Response {
         private BuilderImpl(GetSearchCodePreviewResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GetSearchCodePreviewResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

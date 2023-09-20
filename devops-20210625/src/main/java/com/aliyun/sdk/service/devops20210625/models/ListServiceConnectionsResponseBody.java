@@ -147,12 +147,16 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         @NameInMap("type")
         private String type;
 
+        @NameInMap("uuid")
+        private String uuid;
+
         private ServiceConnections(Builder builder) {
             this.createTime = builder.createTime;
             this.id = builder.id;
             this.name = builder.name;
             this.ownerAccountId = builder.ownerAccountId;
             this.type = builder.type;
+            this.uuid = builder.uuid;
         }
 
         public static Builder builder() {
@@ -198,12 +202,20 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
         public static final class Builder {
             private Long createTime; 
             private Long id; 
             private String name; 
             private Long ownerAccountId; 
             private String type; 
+            private String uuid; 
 
             /**
              * createTime.
@@ -242,6 +254,14 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * uuid.
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
                 return this;
             }
 
