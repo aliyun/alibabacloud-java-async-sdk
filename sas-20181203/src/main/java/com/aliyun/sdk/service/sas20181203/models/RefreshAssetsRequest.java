@@ -24,11 +24,16 @@ public class RefreshAssetsRequest extends Request {
     @NameInMap("CloudAssetType")
     private Integer cloudAssetType;
 
+    @Query
+    @NameInMap("Vendor")
+    private Integer vendor;
+
     private RefreshAssetsRequest(Builder builder) {
         super(builder);
         this.assetType = builder.assetType;
         this.cloudAssetSubType = builder.cloudAssetSubType;
         this.cloudAssetType = builder.cloudAssetType;
+        this.vendor = builder.vendor;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class RefreshAssetsRequest extends Request {
         return this.cloudAssetType;
     }
 
+    /**
+     * @return vendor
+     */
+    public Integer getVendor() {
+        return this.vendor;
+    }
+
     public static final class Builder extends Request.Builder<RefreshAssetsRequest, Builder> {
         private String assetType; 
         private Integer cloudAssetSubType; 
         private Integer cloudAssetType; 
+        private Integer vendor; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class RefreshAssetsRequest extends Request {
             this.assetType = request.assetType;
             this.cloudAssetSubType = request.cloudAssetSubType;
             this.cloudAssetType = request.cloudAssetType;
+            this.vendor = request.vendor;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class RefreshAssetsRequest extends Request {
         public Builder cloudAssetType(Integer cloudAssetType) {
             this.putQueryParameter("CloudAssetType", cloudAssetType);
             this.cloudAssetType = cloudAssetType;
+            return this;
+        }
+
+        /**
+         * Vendor.
+         */
+        public Builder vendor(Integer vendor) {
+            this.putQueryParameter("Vendor", vendor);
+            this.vendor = vendor;
             return this;
         }
 

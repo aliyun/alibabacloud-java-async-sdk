@@ -208,9 +208,13 @@ public class ListCloudAssetInstancesRequest extends Request {
         @NameInMap("AssetType")
         private Integer assetType;
 
+        @NameInMap("Vendor")
+        private Integer vendor;
+
         private CloudAssetTypes(Builder builder) {
             this.assetSubType = builder.assetSubType;
             this.assetType = builder.assetType;
+            this.vendor = builder.vendor;
         }
 
         public static Builder builder() {
@@ -235,9 +239,17 @@ public class ListCloudAssetInstancesRequest extends Request {
             return this.assetType;
         }
 
+        /**
+         * @return vendor
+         */
+        public Integer getVendor() {
+            return this.vendor;
+        }
+
         public static final class Builder {
             private Integer assetSubType; 
             private Integer assetType; 
+            private Integer vendor; 
 
             /**
              * The subtype of the cloud asset.
@@ -258,6 +270,14 @@ public class ListCloudAssetInstancesRequest extends Request {
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
+                return this;
+            }
+
+            /**
+             * Vendor.
+             */
+            public Builder vendor(Integer vendor) {
+                this.vendor = vendor;
                 return this;
             }
 

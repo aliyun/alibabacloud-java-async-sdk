@@ -84,11 +84,15 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         @NameInMap("InstanceRiskCount")
         private Integer instanceRiskCount;
 
+        @NameInMap("Vendor")
+        private Integer vendor;
+
         private CloudAssetSummaryMetas(Builder builder) {
             this.assetSubType = builder.assetSubType;
             this.assetType = builder.assetType;
             this.instanceCount = builder.instanceCount;
             this.instanceRiskCount = builder.instanceRiskCount;
+            this.vendor = builder.vendor;
         }
 
         public static Builder builder() {
@@ -127,11 +131,19 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             return this.instanceRiskCount;
         }
 
+        /**
+         * @return vendor
+         */
+        public Integer getVendor() {
+            return this.vendor;
+        }
+
         public static final class Builder {
             private Integer assetSubType; 
             private Integer assetType; 
             private Integer instanceCount; 
             private Integer instanceRiskCount; 
+            private Integer vendor; 
 
             /**
              * AssetSubType.
@@ -162,6 +174,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
              */
             public Builder instanceRiskCount(Integer instanceRiskCount) {
                 this.instanceRiskCount = instanceRiskCount;
+                return this;
+            }
+
+            /**
+             * Vendor.
+             */
+            public Builder vendor(Integer vendor) {
+                this.vendor = vendor;
                 return this;
             }
 
