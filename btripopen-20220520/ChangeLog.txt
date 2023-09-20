@@ -1,3 +1,6 @@
+2023-09-20 Version: 1.1.24
+- Generated java-async 2022-05-20 for btripOpen.
+
 2023-09-19 Version: 1.1.23
 - Generated java-async 2022-05-20 for btripOpen.
 

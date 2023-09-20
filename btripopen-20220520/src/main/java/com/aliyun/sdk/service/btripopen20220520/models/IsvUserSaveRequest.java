@@ -230,6 +230,9 @@ public class IsvUserSaveRequest extends Request {
         @NameInMap("gender")
         private String gender;
 
+        @NameInMap("is_admin")
+        private Boolean isAdmin;
+
         @NameInMap("job_no")
         private String jobNo;
 
@@ -271,6 +274,7 @@ public class IsvUserSaveRequest extends Request {
             this.departId = builder.departId;
             this.email = builder.email;
             this.gender = builder.gender;
+            this.isAdmin = builder.isAdmin;
             this.jobNo = builder.jobNo;
             this.leaveStatus = builder.leaveStatus;
             this.managerUserId = builder.managerUserId;
@@ -325,6 +329,13 @@ public class IsvUserSaveRequest extends Request {
          */
         public String getGender() {
             return this.gender;
+        }
+
+        /**
+         * @return isAdmin
+         */
+        public Boolean getIsAdmin() {
+            return this.isAdmin;
         }
 
         /**
@@ -410,6 +421,7 @@ public class IsvUserSaveRequest extends Request {
             private Long departId; 
             private String email; 
             private String gender; 
+            private Boolean isAdmin; 
             private String jobNo; 
             private Integer leaveStatus; 
             private String managerUserId; 
@@ -459,6 +471,14 @@ public class IsvUserSaveRequest extends Request {
              */
             public Builder gender(String gender) {
                 this.gender = gender;
+                return this;
+            }
+
+            /**
+             * is_admin.
+             */
+            public Builder isAdmin(Boolean isAdmin) {
+                this.isAdmin = isAdmin;
                 return this;
             }
 
