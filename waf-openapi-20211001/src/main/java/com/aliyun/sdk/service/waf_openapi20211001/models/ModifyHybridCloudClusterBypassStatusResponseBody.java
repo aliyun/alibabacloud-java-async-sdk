@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDefenseRuleResponseBody} extends {@link TeaModel}
+ * {@link ModifyHybridCloudClusterBypassStatusResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDefenseRuleResponseBody</p>
+ * <p>ModifyHybridCloudClusterBypassStatusResponseBody</p>
  */
-public class ModifyDefenseRuleResponseBody extends TeaModel {
+public class ModifyHybridCloudClusterBypassStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDefenseRuleResponseBody(Builder builder) {
+    private ModifyHybridCloudClusterBypassStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class ModifyDefenseRuleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDefenseRuleResponseBody create() {
+    public static ModifyHybridCloudClusterBypassStatusResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class ModifyDefenseRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDefenseRuleResponseBody build() {
-            return new ModifyDefenseRuleResponseBody(this);
+        public ModifyHybridCloudClusterBypassStatusResponseBody build() {
+            return new ModifyHybridCloudClusterBypassStatusResponseBody(this);
         } 
 
     } 

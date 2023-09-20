@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDefenseTemplateResponse} extends {@link TeaModel}
+ * {@link ModifyHybridCloudClusterBypassStatusResponse} extends {@link TeaModel}
  *
- * <p>DescribeDefenseTemplateResponse</p>
+ * <p>ModifyHybridCloudClusterBypassStatusResponse</p>
  */
-public class DescribeDefenseTemplateResponse extends Response {
+public class ModifyHybridCloudClusterBypassStatusResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DescribeDefenseTemplateResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeDefenseTemplateResponseBody body;
+    private ModifyHybridCloudClusterBypassStatusResponseBody body;
 
-    private DescribeDefenseTemplateResponse(BuilderImpl builder) {
+    private ModifyHybridCloudClusterBypassStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeDefenseTemplateResponse create() {
+    public static ModifyHybridCloudClusterBypassStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DescribeDefenseTemplateResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDefenseTemplateResponseBody getBody() {
+    public ModifyHybridCloudClusterBypassStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDefenseTemplateResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyHybridCloudClusterBypassStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeDefenseTemplateResponseBody body);
+        Builder body(ModifyHybridCloudClusterBypassStatusResponseBody body);
 
         @Override
-        DescribeDefenseTemplateResponse build();
+        ModifyHybridCloudClusterBypassStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDefenseTemplateResponse, Builder>
+            extends Response.BuilderImpl<ModifyHybridCloudClusterBypassStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeDefenseTemplateResponseBody body; 
+        private ModifyHybridCloudClusterBypassStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDefenseTemplateResponse response) {
+        private BuilderImpl(ModifyHybridCloudClusterBypassStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DescribeDefenseTemplateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDefenseTemplateResponseBody body) {
+        public Builder body(ModifyHybridCloudClusterBypassStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDefenseTemplateResponse build() {
-            return new DescribeDefenseTemplateResponse(this);
+        public ModifyHybridCloudClusterBypassStatusResponse build() {
+            return new ModifyHybridCloudClusterBypassStatusResponse(this);
         } 
 
     } 

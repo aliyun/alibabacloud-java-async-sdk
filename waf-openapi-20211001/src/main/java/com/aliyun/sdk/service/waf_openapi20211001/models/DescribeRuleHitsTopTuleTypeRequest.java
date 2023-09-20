@@ -112,7 +112,7 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
         } 
 
         /**
-         * cn-hangzhou
+         * The end point of the time period for which to query. Unit: seconds. If you do not specify this parameter, the current time is used.
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -121,29 +121,14 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The array of the top 10 protection modules that are matched.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The result of the request.
-         */
-        public Builder resource(String resource) {
-            this.putQueryParameter("Resource", resource);
-            this.resource = resource;
             return this;
         }
 
@@ -153,6 +138,24 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
          * 
          * *   **cn-hangzhou**: the Chinese mainland.
          * *   **ap-southeast-1**: outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The protected object.
+         */
+        public Builder resource(String resource) {
+            this.putQueryParameter("Resource", resource);
+            this.resource = resource;
+            return this;
+        }
+
+        /**
+         * The start point of the time period for which to query. Unit: seconds.
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

@@ -167,7 +167,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the hybrid cloud cluster.
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -176,7 +176,11 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * ClusterProxyType.
+         * The type of proxy cluster that is used. Valid values:
+         * <p>
+         * 
+         * *   **service**: service-based traffic mirroring.
+         * *   **cname**: reverse proxy.
          */
         public Builder clusterProxyType(String clusterProxyType) {
             this.putQueryParameter("ClusterProxyType", clusterProxyType);
@@ -185,7 +189,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the hybrid cloud node group that you want to query.
          */
         public Builder groupName(Integer groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -194,7 +198,13 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * GroupType.
+         * The type of the node group. Valid values:
+         * <p>
+         * 
+         * *   **protect**
+         * *   **control**
+         * *   **storage**
+         * *   **controlStorage**
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -203,7 +213,10 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +225,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +234,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +243,11 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the WAF instance. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +256,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

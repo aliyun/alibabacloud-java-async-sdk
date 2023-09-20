@@ -58,7 +58,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the protection rule template.
+         * The information about the template.
          */
         public Builder template(Template template) {
             this.template = template;
@@ -74,6 +74,9 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
     public static class Template extends TeaModel {
         @NameInMap("DefenseScene")
         private String defenseScene;
+
+        @NameInMap("DefenseSubScene")
+        private String defenseSubScene;
 
         @NameInMap("Description")
         private String description;
@@ -98,6 +101,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
 
         private Template(Builder builder) {
             this.defenseScene = builder.defenseScene;
+            this.defenseSubScene = builder.defenseSubScene;
             this.description = builder.description;
             this.gmtModified = builder.gmtModified;
             this.templateId = builder.templateId;
@@ -120,6 +124,13 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
          */
         public String getDefenseScene() {
             return this.defenseScene;
+        }
+
+        /**
+         * @return defenseSubScene
+         */
+        public String getDefenseSubScene() {
+            return this.defenseSubScene;
         }
 
         /**
@@ -173,6 +184,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String defenseScene; 
+            private String defenseSubScene; 
             private String description; 
             private Long gmtModified; 
             private Long templateId; 
@@ -182,10 +194,18 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.
+             * The scenario in which the template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
+                return this;
+            }
+
+            /**
+             * DefenseSubScene.
+             */
+            public Builder defenseSubScene(String defenseSubScene) {
+                this.defenseSubScene = defenseSubScene;
                 return this;
             }
 

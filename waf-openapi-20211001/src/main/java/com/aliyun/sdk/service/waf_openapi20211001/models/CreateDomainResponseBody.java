@@ -50,7 +50,7 @@ public class CreateDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * $.parameters[3].schema.example
+         * The information about the domain name.
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -58,7 +58,7 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * $.parameters[3].schema.description
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateDomainResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * $.parameters[3].schema.enumValueTitles
+             * The CNAME that is assigned by WAF to the domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -118,7 +118,7 @@ public class CreateDomainResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[4].schema.properties.Backends.items.description
+             * The domain name that you added to WAF.
              */
             public Builder domain(String domain) {
                 this.domain = domain;

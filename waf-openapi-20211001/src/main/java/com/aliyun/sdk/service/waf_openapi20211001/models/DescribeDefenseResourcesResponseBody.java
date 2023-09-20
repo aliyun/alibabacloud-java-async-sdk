@@ -92,6 +92,15 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resources extends TeaModel {
+        @NameInMap("AcwCookieStatus")
+        private Integer acwCookieStatus;
+
+        @NameInMap("AcwSecureStatus")
+        private Integer acwSecureStatus;
+
+        @NameInMap("AcwV3SecureStatus")
+        private Integer acwV3SecureStatus;
+
         @NameInMap("CustomHeaders")
         private java.util.List < String > customHeaders;
 
@@ -129,6 +138,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         private Integer xffStatus;
 
         private Resources(Builder builder) {
+            this.acwCookieStatus = builder.acwCookieStatus;
+            this.acwSecureStatus = builder.acwSecureStatus;
+            this.acwV3SecureStatus = builder.acwV3SecureStatus;
             this.customHeaders = builder.customHeaders;
             this.description = builder.description;
             this.detail = builder.detail;
@@ -149,6 +161,27 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
         public static Resources create() {
             return builder().build();
+        }
+
+        /**
+         * @return acwCookieStatus
+         */
+        public Integer getAcwCookieStatus() {
+            return this.acwCookieStatus;
+        }
+
+        /**
+         * @return acwSecureStatus
+         */
+        public Integer getAcwSecureStatus() {
+            return this.acwSecureStatus;
+        }
+
+        /**
+         * @return acwV3SecureStatus
+         */
+        public Integer getAcwV3SecureStatus() {
+            return this.acwV3SecureStatus;
         }
 
         /**
@@ -236,6 +269,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer acwCookieStatus; 
+            private Integer acwSecureStatus; 
+            private Integer acwV3SecureStatus; 
             private java.util.List < String > customHeaders; 
             private String description; 
             private java.util.Map < String, ? > detail; 
@@ -248,6 +284,45 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private String resourceManagerResourceGroupId; 
             private String resourceOrigin; 
             private Integer xffStatus; 
+
+            /**
+             * 跟踪cookie开关状态。
+             * <p>
+             * 
+             * - **0**：表示关闭。
+             * 
+             * - **1**：表示开启。
+             */
+            public Builder acwCookieStatus(Integer acwCookieStatus) {
+                this.acwCookieStatus = acwCookieStatus;
+                return this;
+            }
+
+            /**
+             * 跟踪cookie的secure属性状态。
+             * <p>
+             * 
+             * - **0**：表示关闭。
+             * 
+             * - **1**：表示开启。
+             */
+            public Builder acwSecureStatus(Integer acwSecureStatus) {
+                this.acwSecureStatus = acwSecureStatus;
+                return this;
+            }
+
+            /**
+             * 滑块cookie的secure属性状态。
+             * <p>
+             * 
+             * - **0**：表示关闭。
+             * 
+             * - **1**：表示开启。
+             */
+            public Builder acwV3SecureStatus(Integer acwV3SecureStatus) {
+                this.acwV3SecureStatus = acwV3SecureStatus;
+                return this;
+            }
 
             /**
              * An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.

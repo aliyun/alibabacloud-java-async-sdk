@@ -134,7 +134,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * CertDetail.
+         * The details of the SSL certificate.
          */
         public Builder certDetail(CertDetail certDetail) {
             this.certDetail = certDetail;
@@ -142,7 +142,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Cname.
+         * The CNAME that is assigned by WAF to the domain name.
          */
         public Builder cname(String cname) {
             this.cname = cname;
@@ -150,7 +150,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 域名
+         * The domain name.
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -158,7 +158,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 监听配置
+         * The configurations of the listeners.
          */
         public Builder listen(Listen listen) {
             this.listen = listen;
@@ -166,7 +166,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 转发配置
+         * The configurations of the forwarding rule.
          */
         public Builder redirect(Redirect redirect) {
             this.redirect = redirect;
@@ -174,7 +174,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -198,7 +198,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 状态
+         * The status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **1:** The domain name is in a normal state.
+         * *   **2:** The domain name is being created.
+         * *   **3:** The domain name is being modified.
+         * *   **4:** The domain name is being released.
+         * *   **5:** WAF no longer forwards traffic of the domain name.
          */
         public Builder status(Long status) {
             this.status = status;
@@ -298,7 +305,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * CommonName.
+             * The domain name of your website.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -306,7 +313,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -314,7 +321,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the SSL certificate.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -322,7 +329,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the SSL certificate.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +337,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Sans.
+             * All domain names that are bound to the certificate.
              */
             public Builder sans(java.util.List < String > sans) {
                 this.sans = sans;
@@ -338,7 +345,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -571,7 +578,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private java.util.List < String > xffHeaders; 
 
             /**
-             * 证书ID
+             * The ID of the certificate.
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -579,7 +586,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CipherSuite.
+             * The type of the cipher suites. Valid values:
+             * <p>
+             * 
+             * *   **1:** all cipher suites.
+             * *   **2:** strong cipher suites.
+             * *   **99:** custom cipher suites.
              */
             public Builder cipherSuite(Long cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -587,7 +599,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomCiphers.
+             * An array of custom cipher suites.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -595,7 +607,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持TLS1.3
+             * Indicates whether TLS 1.3 is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** TLS 1.3 is supported.
+             * *   **false:** TLS 1.3 is not supported.
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -603,7 +619,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启独享IP
+             * Indicates whether an exclusive IP address is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true:** An exclusive IP address is enabled for the domain name.
+             * *   **false:** No exclusive IP addresses are enabled for the domain name.
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -611,7 +631,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FocusHttps.
+             * Indicates whether HTTP to HTTPS redirection is enabled for the domain name. Valid values:
+             * <p>
+             * 
+             * *   **true:** HTTP to HTTPS redirection is enabled.
+             * *   **false:** HTTP to HTTPS redirection is disabled.
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
@@ -619,7 +643,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启HTTP2
+             * Indicates whether HTTP/2 is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true:** HTTP/2 is enabled.
+             * *   **false:** HTTP/2 is disabled.
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -627,7 +655,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HTTP端口
+             * An array of HTTP listener ports.
              */
             public Builder httpPorts(java.util.List < Long > httpPorts) {
                 this.httpPorts = httpPorts;
@@ -635,7 +663,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HTTPS端口
+             * An array of HTTPS listener ports.
              */
             public Builder httpsPorts(java.util.List < Long > httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -643,7 +671,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启IPv6
+             * Indicates whether IPv6 is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true:** IPv6 is enabled.
+             * *   **false:** IPv6 is disabled.
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;
@@ -651,7 +683,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 防护资源
+             * The type of protection resource that is used. Valid values:
+             * <p>
+             * 
+             * *   **share:** shared cluster.
+             * *   **gslb:** shared cluster-based intelligent load balancing.
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
@@ -683,7 +719,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TLS版本
+             * The version of the Transport Layer Security (TLS) protocol. Valid values:
+             * <p>
+             * 
+             * *   **tlsv1**
+             * *   **tlsv1.1**
+             * *   **tlsv1.2**
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -691,7 +732,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * XffHeaderMode.
+             * The method that WAF uses to obtain the actual IP address of a client. Valid values:
+             * <p>
+             * 
+             * *   **0:** No Layer 7 proxies are deployed in front of WAF.
+             * *   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.
+             * *   **2:** WAF reads the value of a custom header field as the actual IP address of the client.
              */
             public Builder xffHeaderMode(Long xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -699,7 +745,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * XffHeaders.
+             * An array of custom header fields that are used to obtain the actual IP address of a client.
              */
             public Builder xffHeaders(java.util.List < String > xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -740,7 +786,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * Backend.
+             * The back-to-origin IP address or domain name.
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -793,7 +839,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the custom header field.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -801,7 +847,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the custom header field.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -986,7 +1032,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Integer writeTimeout; 
 
             /**
-             * Backends.
+             * An array of addresses of origin servers.
              */
             public Builder backends(java.util.List < Backends> backends) {
                 this.backends = backends;
@@ -994,7 +1040,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectTimeout.
+             * The timeout period of the connection. Unit: seconds. Valid values: 5 to 120.
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -1002,7 +1048,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FocusHttpBackend.
+             * Indicates whether HTTPS to HTTP redirection is enabled for back-to-origin requests of the domain name. Valid values:
+             * <p>
+             * 
+             * *   **true:** HTTPS to HTTP redirection for back-to-origin requests of the domain name is enabled.
+             * *   **false:** HTTPS to HTTP redirection for back-to-origin requests of the domain name is disabled.
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -1010,7 +1060,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Keepalive.
+             * Indicates whether the persistent connection feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true:** The persistent connection feature is enabled. This is the default value.
+             * *   **false:** The persistent connection feature is disabled.
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -1018,7 +1072,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveRequests.
+             * The number of reused persistent connections. Valid values: 60 to 1000.
+             * <p>
+             * 
+             * >  This parameter specifies the number of reused persistent connections when you enable the persistent connection feature.
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -1026,7 +1083,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveTimeout.
+             * The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -1034,7 +1094,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 负载均衡算法
+             * The load balancing algorithm that is used when WAF forwards requests to the origin server. Valid values:
+             * <p>
+             * 
+             * *   **ip_hash:** the IP hash algorithm.
+             * *   **roundRobin:** the round-robin algorithm.
+             * *   **leastTime:** the least response time algorithm.
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -1042,7 +1107,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReadTimeout.
+             * The read timeout period. Unit: seconds. Valid values: 5 to 1800.
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -1050,7 +1115,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHeaders.
+             * An array of key-value pairs that are used to mark the requests that pass through the WAF instance.
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1058,7 +1123,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Retry.
+             * Indicates whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:
+             * <p>
+             * 
+             * *   **true:** WAF retries to forward requests. This is the default value.
+             * *   **false:** WAF does not retry to forward requests.
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -1066,7 +1135,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SNI
+             * Indicates whether origin Server Name Indication (SNI) is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true:** Origin SNI is enabled.
+             * *   **false:** Origin SNI is disabled. This is the default value.
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -1074,7 +1147,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SniHost.
+             * The value of the custom SNI field.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -1082,7 +1155,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WriteTimeout.
+             * The write timeout period. Unit: seconds. Valid values: 5 to 1800.
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
@@ -1183,7 +1256,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * CommonName.
+             * The domain name of your website.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -1191,7 +1264,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1199,7 +1272,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the SSL certificate.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1207,7 +1280,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the SSL certificate.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1215,7 +1288,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Sans.
+             * All domain names that are bound to the certificate.
              */
             public Builder sans(java.util.List < String > sans) {
                 this.sans = sans;
@@ -1223,7 +1296,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

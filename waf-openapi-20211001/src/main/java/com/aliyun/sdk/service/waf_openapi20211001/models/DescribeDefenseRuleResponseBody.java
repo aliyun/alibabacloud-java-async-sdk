@@ -58,7 +58,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the protection rule. The value of this parameter is a string that contains multiple parameters in the JSON format.
+         * The configurations of the protection rule. The value is a JSON string that contains multiple parameters.
          */
         public Builder rule(Rule rule) {
             this.rule = rule;
@@ -182,7 +182,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The details of the protection rule. The value of this parameter is a string that contains multiple parameters in the JSON format. For more information, see the "**Protection rule parameters**" section in the [CreateDefenseRule](~~ID~~) topic.
+             * The details of the protection rule. The value is a JSON string that contains multiple parameters. For more information, see the "**Protection rule parameters**" section of the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -202,7 +202,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.
+             * The scenario in which the protection rule is used. For more information, see the description of **DefenseScene** in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;

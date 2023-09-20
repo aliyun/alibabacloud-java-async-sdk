@@ -50,7 +50,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType; 
 
         /**
-         * The number of requests that match the rules of the protection module.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of rules. For details, see the description of **RuleType** in [DescribeRuleHitsTopRuleId](~~DescribeRuleHitsTopRuleId~~).
+         * The top 10 protection modules that are matched.
          */
         public Builder ruleHitsTopTuleType(java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType) {
             this.ruleHitsTopTuleType = ruleHitsTopTuleType;
@@ -110,7 +110,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * Count.
+             * The number of requests that match protection rules.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,17 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.
+             * <p>
+             * 
+             * *   **waf:** basic protection rules.
+             * *   **blacklist:** IP address blacklist rules.
+             * *   **custom:** custom rules.
+             * *   **antiscan:** scan protection rules.
+             * *   **cc_system:** HTTP flood protection rules.
+             * *   **region_block:** region blacklist rules.
+             * *   **scene:** bot management rules.
+             * *   **dlp:** data leakage prevention rules.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

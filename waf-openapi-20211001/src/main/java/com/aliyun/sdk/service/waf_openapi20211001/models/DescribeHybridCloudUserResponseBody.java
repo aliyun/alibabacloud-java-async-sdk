@@ -50,7 +50,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         private UserInfo userInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         }
 
         /**
-         * UserInfo.
+         * The information about the ports that can be used by a hybrid cloud cluster.
          */
         public Builder userInfo(UserInfo userInfo) {
             this.userInfo = userInfo;
@@ -110,7 +110,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
             private String httpsPorts; 
 
             /**
-             * HttpPorts.
+             * The HTTP ports. The value is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.
              */
             public Builder httpPorts(String httpPorts) {
                 this.httpPorts = httpPorts;
@@ -118,7 +118,7 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPorts.
+             * The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.
              */
             public Builder httpsPorts(String httpsPorts) {
                 this.httpsPorts = httpsPorts;

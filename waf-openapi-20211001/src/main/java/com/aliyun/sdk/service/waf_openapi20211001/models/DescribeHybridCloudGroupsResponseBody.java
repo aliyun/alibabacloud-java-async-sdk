@@ -62,7 +62,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Groups.
+         * The hybrid cloud node groups.
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -70,7 +70,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the hybrid cloud node group.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -262,7 +262,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the hybrid cloud node group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,7 +270,13 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the hybrid cloud node group. Valid values:
+             * <p>
+             * 
+             * *   **protect**
+             * *   **control**
+             * *   **storage**
+             * *   **controlStorage**
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -278,7 +284,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalanceIp.
+             * The IP address of the server for load balancing.
              */
             public Builder loadBalanceIp(String loadBalanceIp) {
                 this.loadBalanceIp = loadBalanceIp;
@@ -286,7 +292,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LocationId.
+             * The ID of the protection node.
              */
             public Builder locationId(Long locationId) {
                 this.locationId = locationId;
@@ -302,7 +308,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The port that is used by the hybrid cloud cluster. The value of this parameter is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.
              */
             public Builder ports(String ports) {
                 this.ports = ports;
@@ -318,7 +324,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description of the hybrid cloud node group.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

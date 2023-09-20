@@ -112,7 +112,7 @@ public class DescribeVisitUasRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -121,7 +121,10 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +142,7 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The protected object.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -148,7 +151,7 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The beginning of the time range to query. Unit: seconds.
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

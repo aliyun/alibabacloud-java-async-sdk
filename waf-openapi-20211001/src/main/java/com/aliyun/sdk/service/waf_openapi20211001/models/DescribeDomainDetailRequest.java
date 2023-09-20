@@ -98,7 +98,7 @@ public class DescribeDomainDetailRequest extends Request {
         } 
 
         /**
-         * 域名
+         * The domain name that you want to query.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -107,7 +107,10 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +119,11 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +132,7 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The value of this parameter is specified by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

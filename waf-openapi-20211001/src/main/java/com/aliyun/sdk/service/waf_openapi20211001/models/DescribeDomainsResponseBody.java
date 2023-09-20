@@ -62,7 +62,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Domains.
+         * The domain names that are added to WAF in CNAME record mode.
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.domains = domains;
@@ -118,7 +118,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * Backend.
+             * The HTTP address of the origin server.
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -159,7 +159,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * Backend.
+             * The HTTPS address of the origin server.
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -212,7 +212,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private java.util.List < Https> https; 
 
             /**
-             * Http.
+             * The HTTP addresses of the origin server.
              */
             public Builder http(java.util.List < Http> http) {
                 this.http = http;
@@ -220,7 +220,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Https.
+             * The HTTPS addresses of the origin server.
              */
             public Builder https(java.util.List < Https> https) {
                 this.https = https;
@@ -273,7 +273,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private java.util.List < Long > https; 
 
             /**
-             * Http.
+             * The HTTP listener ports.
              */
             public Builder http(java.util.List < Long > http) {
                 this.http = http;
@@ -281,7 +281,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Https.
+             * The HTTPS listener ports.
              */
             public Builder https(java.util.List < Long > https) {
                 this.https = https;
@@ -382,7 +382,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Backeds.
+             * The back-to-origin settings.
              */
             public Builder backeds(Backeds backeds) {
                 this.backeds = backeds;
@@ -390,7 +390,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CNAME
+             * The CNAME assigned by WAF to the domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -398,7 +398,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * 域名
+             * The domain name that is added to WAF in CNAME record mode.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -406,7 +406,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ListenPorts.
+             * The configurations of the listeners.
              */
             public Builder listenPorts(ListenPorts listenPorts) {
                 this.listenPorts = listenPorts;
@@ -414,7 +414,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * 阿里云资源组ID。
+             * The ID of the resource group.
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -422,7 +422,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * 域名状态
+             * The status of the domain name. Valid values:
+             * <p>
+             * 
+             * *   **1:** The domain name is in a normal state.
+             * *   **2:** The domain name is being created.
+             * *   **3:** The domain name is being modified.
+             * *   **4:** The domain name is being released.
+             * *   **5:** WAF no longer forwards traffic that is sent to the domain name.
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -157,7 +157,11 @@ public class CreateDomainRequest extends Request {
         } 
 
         /**
-         * $.parameters[3].schema.properties.ExclusiveIp.description
+         * The mode in which you want to add the domain name to WAF. Valid values:
+         * <p>
+         * 
+         * *   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.
+         * *   **hybrid_cloud_cname:** adds the domain name to WAF in hybrid cloud reverse proxy mode.
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -166,7 +170,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.properties.Http2Enabled.description
+         * The domain name that you want to add to WAF.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -175,7 +179,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.properties.HttpPorts.enumValueTitles
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -184,7 +191,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.properties.Http2Enabled.example
+         * The configurations of the listeners.
          */
         public Builder listen(Listen listen) {
             String listenShrink = shrink(listen, "Listen", "json");
@@ -194,7 +201,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.properties.CustomCiphers.enumValueTitles
+         * The configurations of the forwarding rule.
          */
         public Builder redirect(Redirect redirect) {
             String redirectShrink = shrink(redirect, "Redirect", "json");
@@ -204,7 +211,11 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.properties.ProtectionResource.enumValueTitles
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: the Chinese mainland
+         * *   **ap-southeast-1**: outside the Chinese mainland
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +224,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -222,7 +233,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.properties.ExclusiveIp.example
+         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -456,7 +467,7 @@ public class CreateDomainRequest extends Request {
             private java.util.List < String > xffHeaders; 
 
             /**
-             * $.parameters[3].schema.properties.TLSVersion.example
+             * The ID of the certificate that you want to add. This parameter is available only if you specify **HttpsPorts**.
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -464,7 +475,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.EnableTLSv3.example
+             * The type of cipher suite that you want to add. This parameter is available only if you specify **HttpsPorts**. Valid values:
+             * <p>
+             * 
+             * *   **1:** all cipher suites.
+             * *   **2:** strong cipher suites. You can select this value only if you set **TLSVersion** to **tlsv1.2**.
+             * *   **99:** custom cipher suites.
              */
             public Builder cipherSuite(Integer cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -472,7 +488,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.EnableTLSv3.enumValueTitles
+             * The custom cipher suites.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -480,7 +496,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.EnableTLSv3.description
+             * Specifies whether to support TLS 1.3. This parameter is available only if you specify **HttpsPorts**. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -488,7 +508,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.example
+             * Specifies whether to enable an exclusive IP address. This parameter is available only if you set **IPv6Enabled** to **false** and **ProtectionResource** to **share**. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -496,7 +520,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CipherSuite.example
+             * Specifies whether to enable the HTTP to HTTPS redirection feature. This parameter is available only if you specify HttpsPorts and leave HttpPorts empty. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
@@ -504,7 +532,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.TLSVersion.description
+             * Specifies whether to enable HTTP/2. This parameter is available only if you specify **HttpsPorts**. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   **false** (default)
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -512,7 +544,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CertId.example
+             * The HTTP listener port.
              */
             public Builder httpPorts(java.util.List < Integer > httpPorts) {
                 this.httpPorts = httpPorts;
@@ -520,7 +552,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.Http2Enabled.enumValueTitles
+             * The HTTPS listener port.
              */
             public Builder httpsPorts(java.util.List < Integer > httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -528,7 +560,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.items.enumValueTitles
+             * Specifies whether to enable IPv6. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;
@@ -536,7 +572,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.description
+             * The type of the protection resource. Valid values:
+             * <p>
+             * 
+             * *   **share:** shared cluster. This is the default value.
+             * *   **gslb:** shared cluster-based intelligent load balancing.
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
@@ -544,7 +584,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * SM2AccessOnly.
+             * Specifies whether to allow access only from SM certificate-based clients. This parameter is available only if you set SM2Enabled to true.
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder sM2AccessOnly(Boolean sM2AccessOnly) {
                 this.sM2AccessOnly = sM2AccessOnly;
@@ -552,7 +596,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * SM2CertId.
+             * The ID of the SM certificate that you want to add. This parameter is available only if you set SM2Enabled to true.
              */
             public Builder sM2CertId(String sM2CertId) {
                 this.sM2CertId = sM2CertId;
@@ -560,7 +604,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * SM2Enabled.
+             * Specifies whether to enable the SM certificate.
              */
             public Builder sM2Enabled(Boolean sM2Enabled) {
                 this.sM2Enabled = sM2Enabled;
@@ -568,7 +612,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.TLSVersion.enumValueTitles
+             * The version of the Transport Layer Security (TLS) protocol. This parameter is available only if you specify **HttpsPorts**. Valid values:
+             * <p>
+             * 
+             * *   **tlsv1**
+             * *   **tlsv1.1**
+             * *   **tlsv1.2**
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -576,7 +625,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CipherSuite.enumValueTitles
+             * The method that you want WAF to use to obtain the actual IP address of a client. Valid values:
+             * <p>
+             * 
+             * *   **0:** No Layer 7 proxies are deployed in front of WAF. This is the default value.
+             * *   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the IP address of the client.
+             * *   **2:** WAF reads the value of a custom header field as the IP address of the client.
              */
             public Builder xffHeaderMode(Integer xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -584,7 +638,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.items.description
+             * The custom header field that you want WAF to use to obtain the IP address of a client.
              */
             public Builder xffHeaders(java.util.List < String > xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -637,7 +691,7 @@ public class CreateDomainRequest extends Request {
             private String value; 
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.items.enumValueTitles
+             * The key of the custom header field.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -645,7 +699,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.description
+             * The value of the custom header field.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -860,7 +914,7 @@ public class CreateDomainRequest extends Request {
             private Integer writeTimeout; 
 
             /**
-             * $.parameters[3].schema.properties.FocusHttps.description
+             * The back-to-origin IP addresses or domain names.
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
@@ -868,12 +922,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * 是否开启公共云容灾。取值：
+             * Specifies whether to enable the public cloud disaster recovery feature. Valid values:
              * <p>
              * 
-             * - **true**：表示开启公共云容灾。
-             * 
-             * - **false**（默认）：表示不开启公共云容灾。
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder cnameEnabled(Boolean cnameEnabled) {
                 this.cnameEnabled = cnameEnabled;
@@ -881,7 +934,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.example
+             * The connection timeout period. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -889,7 +942,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaderMode.description
+             * Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests. This parameter is available only if you specify **HttpsPorts**. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -897,7 +954,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.IPv6Enabled.example
+             * Specifies whether to enable the persistent connection feature. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -905,7 +966,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.ProtectionResource.description
+             * The number of reused persistent connections. Valid values: 60 to 1000.
+             * <p>
+             * 
+             * > This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -913,7 +977,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.ProtectionResource.example
+             * The timeout period of persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.
+             * <p>
+             * 
+             * > This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -921,7 +988,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.FocusHttps.enumValueTitles
+             * The load balancing algorithm that you want WAF to use to forward requests to the origin server. Valid values:
+             * <p>
+             * 
+             * *   **iphash**
+             * *   **roundRobin**
+             * *   **leastTime**. You can select this value only if you set **ProtectionResource** to **gslb**.
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -929,7 +1001,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.enumValueTitles
+             * The read timeout period. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -937,7 +1009,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.items.description
+             * The key-value pairs that you want to use to mark the requests that pass through the WAF instance.
+             * <p>
+             * 
+             * WAF adds the key-value pairs to the request headers. This way, the requests that pass through WAF are identified.
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -945,7 +1020,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.IPv6Enabled.enumValueTitles
+             * Specifies whether WAF retries to forward requests when the requests fail to be forwarded to the origin server. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -953,13 +1032,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * 混合云转发规则。使用JSON数组转化的字符串格式表示。JSON数组中的每个元素是一个结构体，包含以下字段：
+             * The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. Set this parameter to a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
              * <p>
-             * - **rs**：Array类型 | 表示回源IP地址或者回源CNAME列表
              * 
-             * - **location**：String类型 | 表示防护节点名称
-             * 
-             * - **locationId**：Long类型 | 表示防护节点ID
+             * *   **rs:** The back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.
+             * *   **location:** The name of the protection node. The value must be of the STRING type.
+             * *   **locationId:** The ID of the protection node. The value must be of the LONG type.
              */
             public Builder routingRules(String routingRules) {
                 this.routingRules = routingRules;
@@ -967,7 +1045,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaderMode.example
+             * Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only if you specify **HttpsPorts**. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -975,7 +1057,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaderMode.enumValueTitles
+             * The value of the custom SNI field. If you do not specify this parameter, the value of the **Host** field in the request header is used. If you want WAF to use an SNI field value that is different from the value of the Host field in back-to-origin requests, you can specify a custom value for the SNI field.
+             * <p>
+             * 
+             * > This parameter is available only if you set **SniEnabled** to **true**.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -983,7 +1068,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.IPv6Enabled.description
+             * The write timeout period. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;

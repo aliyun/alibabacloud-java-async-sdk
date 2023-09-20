@@ -213,7 +213,11 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +226,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -231,7 +235,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * 请求源IP。无需填写，系统自动获取。
+         * The source IP address. The value of this parameter is specified by the system.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -240,7 +244,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * 资源的标签，最多支持20个子项。
+         * The tag of the resource. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -294,7 +298,7 @@ public class DescribeDomainsRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +306,7 @@ public class DescribeDomainsRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

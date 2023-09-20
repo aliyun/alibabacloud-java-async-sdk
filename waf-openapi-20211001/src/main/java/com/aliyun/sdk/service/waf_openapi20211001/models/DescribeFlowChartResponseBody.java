@@ -50,7 +50,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The array of the traffic statistics.
+         * The traffic statistics.
          */
         public Builder flowChart(java.util.List < FlowChart> flowChart) {
             this.flowChart = flowChart;
@@ -123,11 +123,20 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         private Long outBytes;
 
+        @NameInMap("RatelimitBlockSum")
+        private Long ratelimitBlockSum;
+
+        @NameInMap("RatelimitReportSum")
+        private Long ratelimitReportSum;
+
         @NameInMap("RegionBlockBlocksSum")
         private Long regionBlockBlocksSum;
 
         @NameInMap("RegionBlockReportsSum")
         private Long regionBlockReportsSum;
+
+        @NameInMap("RobotCount")
+        private Long robotCount;
 
         @NameInMap("WafBlockSum")
         private Long wafBlockSum;
@@ -153,8 +162,11 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             this.index = builder.index;
             this.maxPv = builder.maxPv;
             this.outBytes = builder.outBytes;
+            this.ratelimitBlockSum = builder.ratelimitBlockSum;
+            this.ratelimitReportSum = builder.ratelimitReportSum;
             this.regionBlockBlocksSum = builder.regionBlockBlocksSum;
             this.regionBlockReportsSum = builder.regionBlockReportsSum;
+            this.robotCount = builder.robotCount;
             this.wafBlockSum = builder.wafBlockSum;
             this.wafReportSum = builder.wafReportSum;
         }
@@ -287,6 +299,20 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         }
 
         /**
+         * @return ratelimitBlockSum
+         */
+        public Long getRatelimitBlockSum() {
+            return this.ratelimitBlockSum;
+        }
+
+        /**
+         * @return ratelimitReportSum
+         */
+        public Long getRatelimitReportSum() {
+            return this.ratelimitReportSum;
+        }
+
+        /**
          * @return regionBlockBlocksSum
          */
         public Long getRegionBlockBlocksSum() {
@@ -298,6 +324,13 @@ public class DescribeFlowChartResponseBody extends TeaModel {
          */
         public Long getRegionBlockReportsSum() {
             return this.regionBlockReportsSum;
+        }
+
+        /**
+         * @return robotCount
+         */
+        public Long getRobotCount() {
+            return this.robotCount;
         }
 
         /**
@@ -332,8 +365,11 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             private Long index; 
             private Long maxPv; 
             private Long outBytes; 
+            private Long ratelimitBlockSum; 
+            private Long ratelimitReportSum; 
             private Long regionBlockBlocksSum; 
             private Long regionBlockReportsSum; 
+            private Long robotCount; 
             private Long wafBlockSum; 
             private String wafReportSum; 
 
@@ -394,7 +430,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are monitored by the IP address blacklist module.
+             * The number of requests that are monitored by IP address blacklist rules.
              */
             public Builder blacklistReportsSum(Long blacklistReportsSum) {
                 this.blacklistReportsSum = blacklistReportsSum;
@@ -402,7 +438,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are blocked by HTTP flood protection rules created by the user.
+             * The number of requests that are blocked by custom HTTP flood protection rules.
              */
             public Builder ccCustomBlockSum(Long ccCustomBlockSum) {
                 this.ccCustomBlockSum = ccCustomBlockSum;
@@ -410,7 +446,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are monitored by HTTP flood protection rules created by the user.
+             * The number of requests that are monitored by custom HTTP flood protection rules.
              */
             public Builder ccCustomReportsSum(Long ccCustomReportsSum) {
                 this.ccCustomReportsSum = ccCustomReportsSum;
@@ -474,6 +510,22 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             }
 
             /**
+             * RatelimitBlockSum.
+             */
+            public Builder ratelimitBlockSum(Long ratelimitBlockSum) {
+                this.ratelimitBlockSum = ratelimitBlockSum;
+                return this;
+            }
+
+            /**
+             * RatelimitReportSum.
+             */
+            public Builder ratelimitReportSum(Long ratelimitReportSum) {
+                this.ratelimitReportSum = ratelimitReportSum;
+                return this;
+            }
+
+            /**
              * The number of requests that are blocked by region blacklist rules.
              */
             public Builder regionBlockBlocksSum(Long regionBlockBlocksSum) {
@@ -490,6 +542,14 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             }
 
             /**
+             * RobotCount.
+             */
+            public Builder robotCount(Long robotCount) {
+                this.robotCount = robotCount;
+                return this;
+            }
+
+            /**
              * The number of requests that are blocked by basic protection rules.
              */
             public Builder wafBlockSum(Long wafBlockSum) {
@@ -498,7 +558,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             }
 
             /**
-             * The number of request that are monitored by basic protection rules.
+             * The number of requests that are monitored by basic protection rules.
              */
             public Builder wafReportSum(String wafReportSum) {
                 this.wafReportSum = wafReportSum;

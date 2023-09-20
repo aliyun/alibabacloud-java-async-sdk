@@ -168,7 +168,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         } 
 
         /**
-         * 回源地址
+         * The back-to-origin IP address or domain name.
          */
         public Builder backend(String backend) {
             this.putQueryParameter("Backend", backend);
@@ -177,7 +177,11 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * CnameEnabled.
+         * Specifies whether the public cloud disaster recovery feature is enabled for the domain name. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder cnameEnabled(Boolean cnameEnabled) {
             this.putQueryParameter("CnameEnabled", cnameEnabled);
@@ -186,7 +190,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * 域名
+         * The domain name that you want to query.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -195,7 +199,10 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -204,7 +211,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -213,7 +220,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -222,7 +229,11 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the WAF instance. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +242,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -240,7 +251,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system specifies this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
