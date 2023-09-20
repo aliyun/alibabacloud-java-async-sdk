@@ -17,6 +17,10 @@ public class ImportServicesRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("FcAlias")
+    private String fcAlias;
+
+    @Query
     @NameInMap("FcServiceName")
     private String fcServiceName;
 
@@ -43,6 +47,7 @@ public class ImportServicesRequest extends Request {
     private ImportServicesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.fcAlias = builder.fcAlias;
         this.fcServiceName = builder.fcServiceName;
         this.fcVersion = builder.fcVersion;
         this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -69,6 +74,13 @@ public class ImportServicesRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return fcAlias
+     */
+    public String getFcAlias() {
+        return this.fcAlias;
     }
 
     /**
@@ -115,6 +127,7 @@ public class ImportServicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportServicesRequest, Builder> {
         private String acceptLanguage; 
+        private String fcAlias; 
         private String fcServiceName; 
         private String fcVersion; 
         private String gatewayUniqueId; 
@@ -129,6 +142,7 @@ public class ImportServicesRequest extends Request {
         private Builder(ImportServicesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.fcAlias = request.fcAlias;
             this.fcServiceName = request.fcServiceName;
             this.fcVersion = request.fcVersion;
             this.gatewayUniqueId = request.gatewayUniqueId;
@@ -147,6 +161,15 @@ public class ImportServicesRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * FcAlias.
+         */
+        public Builder fcAlias(String fcAlias) {
+            this.putQueryParameter("FcAlias", fcAlias);
+            this.fcAlias = fcAlias;
             return this;
         }
 
