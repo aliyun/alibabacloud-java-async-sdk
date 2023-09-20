@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RemoveMfaDeviceResponse} extends {@link TeaModel}
+ * {@link GetManagerInfoByAuthCodeResponse} extends {@link TeaModel}
  *
- * <p>RemoveMfaDeviceResponse</p>
+ * <p>GetManagerInfoByAuthCodeResponse</p>
  */
-public class RemoveMfaDeviceResponse extends Response {
+public class GetManagerInfoByAuthCodeResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class RemoveMfaDeviceResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private RemoveMfaDeviceResponseBody body;
+    private GetManagerInfoByAuthCodeResponseBody body;
 
-    private RemoveMfaDeviceResponse(BuilderImpl builder) {
+    private GetManagerInfoByAuthCodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RemoveMfaDeviceResponse create() {
+    public static GetManagerInfoByAuthCodeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class RemoveMfaDeviceResponse extends Response {
     /**
      * @return body
      */
-    public RemoveMfaDeviceResponseBody getBody() {
+    public GetManagerInfoByAuthCodeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RemoveMfaDeviceResponse, Builder> {
+    public interface Builder extends Response.Builder<GetManagerInfoByAuthCodeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RemoveMfaDeviceResponseBody body);
+        Builder body(GetManagerInfoByAuthCodeResponseBody body);
 
         @Override
-        RemoveMfaDeviceResponse build();
+        GetManagerInfoByAuthCodeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RemoveMfaDeviceResponse, Builder>
+            extends Response.BuilderImpl<GetManagerInfoByAuthCodeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RemoveMfaDeviceResponseBody body; 
+        private GetManagerInfoByAuthCodeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RemoveMfaDeviceResponse response) {
+        private BuilderImpl(GetManagerInfoByAuthCodeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class RemoveMfaDeviceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RemoveMfaDeviceResponseBody body) {
+        public Builder body(GetManagerInfoByAuthCodeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RemoveMfaDeviceResponse build() {
-            return new RemoveMfaDeviceResponse(this);
+        public GetManagerInfoByAuthCodeResponse build() {
+            return new GetManagerInfoByAuthCodeResponse(this);
         } 
 
     } 

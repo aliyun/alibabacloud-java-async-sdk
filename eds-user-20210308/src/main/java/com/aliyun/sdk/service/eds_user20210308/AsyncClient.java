@@ -46,6 +46,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FilterUsersResponse> filterUsers(FilterUsersRequest request);
 
+    CompletableFuture<GetManagerInfoByAuthCodeResponse> getManagerInfoByAuthCode(GetManagerInfoByAuthCodeRequest request);
+
     CompletableFuture<ListPropertyResponse> listProperty(ListPropertyRequest request);
 
     CompletableFuture<ListPropertyValueResponse> listPropertyValue(ListPropertyValueRequest request);

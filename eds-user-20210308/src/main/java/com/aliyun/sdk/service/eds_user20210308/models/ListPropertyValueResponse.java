@@ -16,6 +16,10 @@ public class ListPropertyValueResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ListPropertyValueResponseBody body;
@@ -23,6 +27,7 @@ public class ListPropertyValueResponse extends Response {
     private ListPropertyValueResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ListPropertyValueResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListPropertyValueResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ListPropertyValueResponse extends Response {
     public interface Builder extends Response.Builder<ListPropertyValueResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListPropertyValueResponseBody body);
 
@@ -64,6 +78,7 @@ public class ListPropertyValueResponse extends Response {
             extends Response.BuilderImpl<ListPropertyValueResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListPropertyValueResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ListPropertyValueResponse extends Response {
         private BuilderImpl(ListPropertyValueResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ListPropertyValueResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
