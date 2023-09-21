@@ -26,11 +26,16 @@ public class ReprotectDiskReplicaPairRequest extends Request {
     @Validation(required = true)
     private String replicaPairId;
 
+    @Query
+    @NameInMap("ReverseReplicate")
+    private Boolean reverseReplicate;
+
     private ReprotectDiskReplicaPairRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
         this.replicaPairId = builder.replicaPairId;
+        this.reverseReplicate = builder.reverseReplicate;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class ReprotectDiskReplicaPairRequest extends Request {
         return this.replicaPairId;
     }
 
+    /**
+     * @return reverseReplicate
+     */
+    public Boolean getReverseReplicate() {
+        return this.reverseReplicate;
+    }
+
     public static final class Builder extends Request.Builder<ReprotectDiskReplicaPairRequest, Builder> {
         private String clientToken; 
         private String regionId; 
         private String replicaPairId; 
+        private Boolean reverseReplicate; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class ReprotectDiskReplicaPairRequest extends Request {
             this.clientToken = request.clientToken;
             this.regionId = request.regionId;
             this.replicaPairId = request.replicaPairId;
+            this.reverseReplicate = request.reverseReplicate;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class ReprotectDiskReplicaPairRequest extends Request {
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);
             this.replicaPairId = replicaPairId;
+            return this;
+        }
+
+        /**
+         * 反向复制开关：false代表恢复原方向，true代表反向复制。默认值是true。
+         */
+        public Builder reverseReplicate(Boolean reverseReplicate) {
+            this.putQueryParameter("ReverseReplicate", reverseReplicate);
+            this.reverseReplicate = reverseReplicate;
             return this;
         }
 

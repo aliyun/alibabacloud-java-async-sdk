@@ -26,11 +26,16 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
     @Validation(required = true)
     private String replicaGroupId;
 
+    @Query
+    @NameInMap("ReverseReplicate")
+    private Boolean reverseReplicate;
+
     private ReprotectDiskReplicaGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
         this.replicaGroupId = builder.replicaGroupId;
+        this.reverseReplicate = builder.reverseReplicate;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         return this.replicaGroupId;
     }
 
+    /**
+     * @return reverseReplicate
+     */
+    public Boolean getReverseReplicate() {
+        return this.reverseReplicate;
+    }
+
     public static final class Builder extends Request.Builder<ReprotectDiskReplicaGroupRequest, Builder> {
         private String clientToken; 
         private String regionId; 
         private String replicaGroupId; 
+        private Boolean reverseReplicate; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
             this.clientToken = request.clientToken;
             this.regionId = request.regionId;
             this.replicaGroupId = request.replicaGroupId;
+            this.reverseReplicate = request.reverseReplicate;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);
             this.replicaGroupId = replicaGroupId;
+            return this;
+        }
+
+        /**
+         * ReverseReplicate.
+         */
+        public Builder reverseReplicate(Boolean reverseReplicate) {
+            this.putQueryParameter("ReverseReplicate", reverseReplicate);
+            this.reverseReplicate = reverseReplicate;
             return this;
         }
 

@@ -16,6 +16,10 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeDedicatedBlockStorageClusterDisksResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
     private DescribeDedicatedBlockStorageClusterDisksResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeDedicatedBlockStorageClusterDisksResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
     public interface Builder extends Response.Builder<DescribeDedicatedBlockStorageClusterDisksResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeDedicatedBlockStorageClusterDisksResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
             extends Response.BuilderImpl<DescribeDedicatedBlockStorageClusterDisksResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeDedicatedBlockStorageClusterDisksResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
         private BuilderImpl(DescribeDedicatedBlockStorageClusterDisksResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponse extends Response 
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
