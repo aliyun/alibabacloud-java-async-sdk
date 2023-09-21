@@ -50,7 +50,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pages that are returned.
+         * The returned pages.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -122,7 +122,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private java.util.List < String > groupingFields; 
 
             /**
-             * The time interval for grouping. Unit: seconds. Default value: 30.
+             * The time interval of grouping. Unit: seconds. Default value: 30.
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -139,6 +139,10 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
             /**
              * The fields that are used to group events.
+             * <p>
+             * 
+             * *   If this parameter is not returned, all alert notifications are sent to the alert contacts that belong to the `alertname` group. By default, this parameter is not returned.
+             * *   If this parameter is returned, alerts with the same fields are sent to the alert contacts in one notification.
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -214,12 +218,12 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * The logical operator of the matching condition. Valid values:
              * <p>
              * 
-             * *   `eq`: equal to.
-             * *   `neq`: not equal to.
-             * *   `in`: contains.
-             * *   `nin`: does not contain.
-             * *   `re`: regular expression match.
-             * *   `nre`: regular expression mismatch.
+             * *   `eq`: equal to
+             * *   `neq`: not equal to
+             * *   `in`: contains
+             * *   `nin`: does not contain
+             * *   `re`: regular expression match
+             * *   `nre`: regular expression mismatch
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -268,7 +272,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * The alert event matching conditions.
+             * The matching conditions.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -345,7 +349,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private String notifyObjectType; 
 
             /**
-             * 通知对象为联系人时单独的联系方式
+             * The notification methods specified for a contact.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -353,7 +357,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the contact.
+             * The ID of the notification object.
              */
             public Builder notifyObjectId(Long notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -361,7 +365,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact.
+             * The name of the notification object.
              */
             public Builder notifyObjectName(String notifyObjectName) {
                 this.notifyObjectName = notifyObjectName;
@@ -369,13 +373,13 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the contact. Valid values: 
+             * The type of the notification object. Valid values:
              * <p>
              * 
-             * - CONTACT: an individual contact
-             * - CONTACT_GROUP: a contact group
-             * - DING_ROBOT: an instant messaging (IM) robot
-             * - CONTACT_SCHEDULE: a person on duty based on an established schedule
+             * *   CONTACT: an individual contact
+             * *   CONTACT_GROUP: a contact group
+             * *   DING_ROBOT: an instant messaging (IM) chatbot
+             * *   CONTACT_SCHEDULE: a person on duty based on an established schedule
              */
             public Builder notifyObjectType(String notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -452,7 +456,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private String notifyStartTime; 
 
             /**
-             * The notification method.
+             * The notification methods.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -468,7 +472,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The contacts.
+             * The notification objects.
              */
             public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
@@ -645,7 +649,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert notification sent by an IM robot.
+             * The content of the alert notification sent by an IM chatbot.
              */
             public Builder robotContent(String robotContent) {
                 this.robotContent = robotContent;
@@ -850,7 +854,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private Boolean sendRecoverMessage; 
 
             /**
-             * DirectedMode.
+             * Indicates whether simple mode is enabled.
              */
             public Builder directedMode(Boolean directedMode) {
                 this.directedMode = directedMode;
@@ -858,7 +862,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the escalation rule.
+             * The ID of the escalation policy.
              */
             public Builder escalationPolicyId(Long escalationPolicyId) {
                 this.escalationPolicyId = escalationPolicyId;
@@ -890,7 +894,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The alert event matching rules.
+             * The matching rules for alert events.
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -922,11 +926,11 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system repeatedly sends notifications for a long-lasting unresolved alert. Default value: true. Valid values:  
+             * Indicates whether the system resends notifications for a long-lasting unresolved alert. Valid values:
              * <p>
              * 
-             * - `true`: The system repeatedly sends notifications for a long-lasting unresolved alert at a specified time interval.
-             * - `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
+             * *   `true` (default): The system resends notifications for a long-lasting unresolved alert at a specified time interval.
+             * *   `false`: The system resends notifications for a long-lasting unresolved alert based on an escalation policy.
              */
             public Builder repeat(Boolean repeat) {
                 this.repeat = repeat;
@@ -934,7 +938,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval at which notifications are sent for a long-lasting unresolved alert. Unit: seconds.
+             * The time interval at which notifications are resent for a long-lasting unresolved alert. Unit: seconds.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -942,11 +946,11 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. The system notifies contacts when the alert status changes to Resolved.  
+             * Indicates whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. The system sends a notification to the alert contacts when the alert status changes to Resolved.
              * <p>
              * 
-             * - `true`: The system sends a notification. This is the default value.
-             * - `false`: The system does not send a notification.
+             * *   `true` (default): The system sends a notification.
+             * *   `false`: The system does not send a notification.
              */
             public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
                 this.sendRecoverMessage = sendRecoverMessage;
@@ -1023,7 +1027,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The information about the notification policies.
+             * The queried notification policies.
              */
             public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
                 this.notificationPolicies = notificationPolicies;

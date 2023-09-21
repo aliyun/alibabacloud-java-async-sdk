@@ -857,7 +857,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private Boolean sendRecoverMessage; 
 
             /**
-             * DirectedMode.
+             * 极简模式
              */
             public Builder directedMode(Boolean directedMode) {
                 this.directedMode = directedMode;

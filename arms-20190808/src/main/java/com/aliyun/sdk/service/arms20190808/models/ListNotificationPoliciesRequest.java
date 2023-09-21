@@ -140,7 +140,7 @@ public class ListNotificationPoliciesRequest extends Request {
         } 
 
         /**
-         * DirectedMode.
+         * Specifies whether to enable simple mode.
          */
         public Builder directedMode(Boolean directedMode) {
             this.putQueryParameter("DirectedMode", directedMode);

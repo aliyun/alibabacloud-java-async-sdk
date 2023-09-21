@@ -984,6 +984,15 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         @NameInMap("TransmissionSize")
         private Long transmissionSize;
 
+        @NameInMap("ValidateKeywords")
+        private String validateKeywords;
+
+        @NameInMap("VerifyWay")
+        private Integer verifyWay;
+
+        @NameInMap("WhiteList")
+        private String whiteList;
+
         private FileDownload(Builder builder) {
             this.connectionTimeout = builder.connectionTimeout;
             this.customHeaderContent = builder.customHeaderContent;
@@ -1000,6 +1009,9 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             this.redirection = builder.redirection;
             this.targetUrl = builder.targetUrl;
             this.transmissionSize = builder.transmissionSize;
+            this.validateKeywords = builder.validateKeywords;
+            this.verifyWay = builder.verifyWay;
+            this.whiteList = builder.whiteList;
         }
 
         public static Builder builder() {
@@ -1115,6 +1127,27 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             return this.transmissionSize;
         }
 
+        /**
+         * @return validateKeywords
+         */
+        public String getValidateKeywords() {
+            return this.validateKeywords;
+        }
+
+        /**
+         * @return verifyWay
+         */
+        public Integer getVerifyWay() {
+            return this.verifyWay;
+        }
+
+        /**
+         * @return whiteList
+         */
+        public String getWhiteList() {
+            return this.whiteList;
+        }
+
         public static final class Builder {
             private Long connectionTimeout; 
             private java.util.Map < String, String > customHeaderContent; 
@@ -1131,6 +1164,9 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Integer redirection; 
             private String targetUrl; 
             private Long transmissionSize; 
+            private String validateKeywords; 
+            private Integer verifyWay; 
+            private String whiteList; 
 
             /**
              * ConnectionTimeout.
@@ -1249,6 +1285,30 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              */
             public Builder transmissionSize(Long transmissionSize) {
                 this.transmissionSize = transmissionSize;
+                return this;
+            }
+
+            /**
+             * ValidateKeywords.
+             */
+            public Builder validateKeywords(String validateKeywords) {
+                this.validateKeywords = validateKeywords;
+                return this;
+            }
+
+            /**
+             * VerifyWay.
+             */
+            public Builder verifyWay(Integer verifyWay) {
+                this.verifyWay = verifyWay;
+                return this;
+            }
+
+            /**
+             * WhiteList.
+             */
+            public Builder whiteList(String whiteList) {
+                this.whiteList = whiteList;
                 return this;
             }
 
@@ -1772,20 +1832,35 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         @NameInMap("CustomHeaderContent")
         private java.util.Map < String, String > customHeaderContent;
 
+        @NameInMap("DNSHijackWhitelist")
+        private String DNSHijackWhitelist;
+
         @NameInMap("DisableCache")
         private Integer disableCache;
 
         @NameInMap("DisableCompression")
         private Integer disableCompression;
 
+        @NameInMap("ElementBlacklist")
+        private String elementBlacklist;
+
         @NameInMap("FilterInvalidIP")
         private Integer filterInvalidIP;
+
+        @NameInMap("FlowHijackJumpTimes")
+        private Integer flowHijackJumpTimes;
+
+        @NameInMap("FlowHijackLogo")
+        private String flowHijackLogo;
 
         @NameInMap("IgnoreCertificateError")
         private Integer ignoreCertificateError;
 
         @NameInMap("MonitorTimeout")
         private Long monitorTimeout;
+
+        @NameInMap("PageTamper")
+        private String pageTamper;
 
         @NameInMap("Redirection")
         private Integer redirection;
@@ -1796,6 +1871,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         @NameInMap("TargetUrl")
         private String targetUrl;
 
+        @NameInMap("VerifyStringBlacklist")
+        private String verifyStringBlacklist;
+
+        @NameInMap("VerifyStringWhitelist")
+        private String verifyStringWhitelist;
+
         @NameInMap("WaitCompletionTime")
         private Long waitCompletionTime;
 
@@ -1803,14 +1884,21 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             this.automaticScrolling = builder.automaticScrolling;
             this.customHeader = builder.customHeader;
             this.customHeaderContent = builder.customHeaderContent;
+            this.DNSHijackWhitelist = builder.DNSHijackWhitelist;
             this.disableCache = builder.disableCache;
             this.disableCompression = builder.disableCompression;
+            this.elementBlacklist = builder.elementBlacklist;
             this.filterInvalidIP = builder.filterInvalidIP;
+            this.flowHijackJumpTimes = builder.flowHijackJumpTimes;
+            this.flowHijackLogo = builder.flowHijackLogo;
             this.ignoreCertificateError = builder.ignoreCertificateError;
             this.monitorTimeout = builder.monitorTimeout;
+            this.pageTamper = builder.pageTamper;
             this.redirection = builder.redirection;
             this.slowElementThreshold = builder.slowElementThreshold;
             this.targetUrl = builder.targetUrl;
+            this.verifyStringBlacklist = builder.verifyStringBlacklist;
+            this.verifyStringWhitelist = builder.verifyStringWhitelist;
             this.waitCompletionTime = builder.waitCompletionTime;
         }
 
@@ -1844,6 +1932,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return DNSHijackWhitelist
+         */
+        public String getDNSHijackWhitelist() {
+            return this.DNSHijackWhitelist;
+        }
+
+        /**
          * @return disableCache
          */
         public Integer getDisableCache() {
@@ -1858,10 +1953,31 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return elementBlacklist
+         */
+        public String getElementBlacklist() {
+            return this.elementBlacklist;
+        }
+
+        /**
          * @return filterInvalidIP
          */
         public Integer getFilterInvalidIP() {
             return this.filterInvalidIP;
+        }
+
+        /**
+         * @return flowHijackJumpTimes
+         */
+        public Integer getFlowHijackJumpTimes() {
+            return this.flowHijackJumpTimes;
+        }
+
+        /**
+         * @return flowHijackLogo
+         */
+        public String getFlowHijackLogo() {
+            return this.flowHijackLogo;
         }
 
         /**
@@ -1876,6 +1992,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
          */
         public Long getMonitorTimeout() {
             return this.monitorTimeout;
+        }
+
+        /**
+         * @return pageTamper
+         */
+        public String getPageTamper() {
+            return this.pageTamper;
         }
 
         /**
@@ -1900,6 +2023,20 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return verifyStringBlacklist
+         */
+        public String getVerifyStringBlacklist() {
+            return this.verifyStringBlacklist;
+        }
+
+        /**
+         * @return verifyStringWhitelist
+         */
+        public String getVerifyStringWhitelist() {
+            return this.verifyStringWhitelist;
+        }
+
+        /**
          * @return waitCompletionTime
          */
         public Long getWaitCompletionTime() {
@@ -1910,14 +2047,21 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Integer automaticScrolling; 
             private Integer customHeader; 
             private java.util.Map < String, String > customHeaderContent; 
+            private String DNSHijackWhitelist; 
             private Integer disableCache; 
             private Integer disableCompression; 
+            private String elementBlacklist; 
             private Integer filterInvalidIP; 
+            private Integer flowHijackJumpTimes; 
+            private String flowHijackLogo; 
             private Integer ignoreCertificateError; 
             private Long monitorTimeout; 
+            private String pageTamper; 
             private Integer redirection; 
             private Long slowElementThreshold; 
             private String targetUrl; 
+            private String verifyStringBlacklist; 
+            private String verifyStringWhitelist; 
             private Long waitCompletionTime; 
 
             /**
@@ -1945,6 +2089,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
+             * DNSHijackWhitelist.
+             */
+            public Builder DNSHijackWhitelist(String DNSHijackWhitelist) {
+                this.DNSHijackWhitelist = DNSHijackWhitelist;
+                return this;
+            }
+
+            /**
              * DisableCache.
              */
             public Builder disableCache(Integer disableCache) {
@@ -1961,10 +2113,34 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
+             * ElementBlacklist.
+             */
+            public Builder elementBlacklist(String elementBlacklist) {
+                this.elementBlacklist = elementBlacklist;
+                return this;
+            }
+
+            /**
              * FilterInvalidIP.
              */
             public Builder filterInvalidIP(Integer filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
+                return this;
+            }
+
+            /**
+             * FlowHijackJumpTimes.
+             */
+            public Builder flowHijackJumpTimes(Integer flowHijackJumpTimes) {
+                this.flowHijackJumpTimes = flowHijackJumpTimes;
+                return this;
+            }
+
+            /**
+             * FlowHijackLogo.
+             */
+            public Builder flowHijackLogo(String flowHijackLogo) {
+                this.flowHijackLogo = flowHijackLogo;
                 return this;
             }
 
@@ -1981,6 +2157,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
+                return this;
+            }
+
+            /**
+             * PageTamper.
+             */
+            public Builder pageTamper(String pageTamper) {
+                this.pageTamper = pageTamper;
                 return this;
             }
 
@@ -2005,6 +2189,22 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
+                return this;
+            }
+
+            /**
+             * VerifyStringBlacklist.
+             */
+            public Builder verifyStringBlacklist(String verifyStringBlacklist) {
+                this.verifyStringBlacklist = verifyStringBlacklist;
+                return this;
+            }
+
+            /**
+             * VerifyStringWhitelist.
+             */
+            public Builder verifyStringWhitelist(String verifyStringWhitelist) {
+                this.verifyStringWhitelist = verifyStringWhitelist;
                 return this;
             }
 

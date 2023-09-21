@@ -980,6 +980,15 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         @NameInMap("TransmissionSize")
         private Long transmissionSize;
 
+        @NameInMap("ValidateKeywords")
+        private String validateKeywords;
+
+        @NameInMap("VerifyWay")
+        private Integer verifyWay;
+
+        @NameInMap("WhiteList")
+        private String whiteList;
+
         private FileDownload(Builder builder) {
             this.connectionTimeout = builder.connectionTimeout;
             this.customHeaderContent = builder.customHeaderContent;
@@ -996,6 +1005,9 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             this.redirection = builder.redirection;
             this.targetUrl = builder.targetUrl;
             this.transmissionSize = builder.transmissionSize;
+            this.validateKeywords = builder.validateKeywords;
+            this.verifyWay = builder.verifyWay;
+            this.whiteList = builder.whiteList;
         }
 
         public static Builder builder() {
@@ -1111,6 +1123,27 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             return this.transmissionSize;
         }
 
+        /**
+         * @return validateKeywords
+         */
+        public String getValidateKeywords() {
+            return this.validateKeywords;
+        }
+
+        /**
+         * @return verifyWay
+         */
+        public Integer getVerifyWay() {
+            return this.verifyWay;
+        }
+
+        /**
+         * @return whiteList
+         */
+        public String getWhiteList() {
+            return this.whiteList;
+        }
+
         public static final class Builder {
             private Long connectionTimeout; 
             private java.util.Map < String, String > customHeaderContent; 
@@ -1127,6 +1160,9 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer redirection; 
             private String targetUrl; 
             private Long transmissionSize; 
+            private String validateKeywords; 
+            private Integer verifyWay; 
+            private String whiteList; 
 
             /**
              * ConnectionTimeout.
@@ -1245,6 +1281,30 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              */
             public Builder transmissionSize(Long transmissionSize) {
                 this.transmissionSize = transmissionSize;
+                return this;
+            }
+
+            /**
+             * ValidateKeywords.
+             */
+            public Builder validateKeywords(String validateKeywords) {
+                this.validateKeywords = validateKeywords;
+                return this;
+            }
+
+            /**
+             * VerifyWay.
+             */
+            public Builder verifyWay(Integer verifyWay) {
+                this.verifyWay = verifyWay;
+                return this;
+            }
+
+            /**
+             * WhiteList.
+             */
+            public Builder whiteList(String whiteList) {
+                this.whiteList = whiteList;
                 return this;
             }
 
@@ -1741,6 +1801,167 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    public static class Stream extends TeaModel {
+        @NameInMap("CustomHeaderContent")
+        private java.util.Map < String, String > customHeaderContent;
+
+        @NameInMap("PlayerType")
+        private Integer playerType;
+
+        @NameInMap("StreamAddressType")
+        private Integer streamAddressType;
+
+        @NameInMap("StreamMonitorTimeout")
+        private Integer streamMonitorTimeout;
+
+        @NameInMap("StreamType")
+        private Integer streamType;
+
+        @NameInMap("TargetUrl")
+        private String targetUrl;
+
+        @NameInMap("WhiteList")
+        private String whiteList;
+
+        private Stream(Builder builder) {
+            this.customHeaderContent = builder.customHeaderContent;
+            this.playerType = builder.playerType;
+            this.streamAddressType = builder.streamAddressType;
+            this.streamMonitorTimeout = builder.streamMonitorTimeout;
+            this.streamType = builder.streamType;
+            this.targetUrl = builder.targetUrl;
+            this.whiteList = builder.whiteList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Stream create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customHeaderContent
+         */
+        public java.util.Map < String, String > getCustomHeaderContent() {
+            return this.customHeaderContent;
+        }
+
+        /**
+         * @return playerType
+         */
+        public Integer getPlayerType() {
+            return this.playerType;
+        }
+
+        /**
+         * @return streamAddressType
+         */
+        public Integer getStreamAddressType() {
+            return this.streamAddressType;
+        }
+
+        /**
+         * @return streamMonitorTimeout
+         */
+        public Integer getStreamMonitorTimeout() {
+            return this.streamMonitorTimeout;
+        }
+
+        /**
+         * @return streamType
+         */
+        public Integer getStreamType() {
+            return this.streamType;
+        }
+
+        /**
+         * @return targetUrl
+         */
+        public String getTargetUrl() {
+            return this.targetUrl;
+        }
+
+        /**
+         * @return whiteList
+         */
+        public String getWhiteList() {
+            return this.whiteList;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > customHeaderContent; 
+            private Integer playerType; 
+            private Integer streamAddressType; 
+            private Integer streamMonitorTimeout; 
+            private Integer streamType; 
+            private String targetUrl; 
+            private String whiteList; 
+
+            /**
+             * CustomHeaderContent.
+             */
+            public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
+                this.customHeaderContent = customHeaderContent;
+                return this;
+            }
+
+            /**
+             * PlayerType.
+             */
+            public Builder playerType(Integer playerType) {
+                this.playerType = playerType;
+                return this;
+            }
+
+            /**
+             * StreamAddressType.
+             */
+            public Builder streamAddressType(Integer streamAddressType) {
+                this.streamAddressType = streamAddressType;
+                return this;
+            }
+
+            /**
+             * StreamMonitorTimeout.
+             */
+            public Builder streamMonitorTimeout(Integer streamMonitorTimeout) {
+                this.streamMonitorTimeout = streamMonitorTimeout;
+                return this;
+            }
+
+            /**
+             * StreamType.
+             */
+            public Builder streamType(Integer streamType) {
+                this.streamType = streamType;
+                return this;
+            }
+
+            /**
+             * TargetUrl.
+             */
+            public Builder targetUrl(String targetUrl) {
+                this.targetUrl = targetUrl;
+                return this;
+            }
+
+            /**
+             * WhiteList.
+             */
+            public Builder whiteList(String whiteList) {
+                this.whiteList = whiteList;
+                return this;
+            }
+
+            public Stream build() {
+                return new Stream(this);
+            } 
+
+        } 
+
+    }
     public static class Website extends TeaModel {
         @NameInMap("AutomaticScrolling")
         private Integer automaticScrolling;
@@ -1751,20 +1972,35 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         @NameInMap("CustomHeaderContent")
         private java.util.Map < String, String > customHeaderContent;
 
+        @NameInMap("DNSHijackWhitelist")
+        private String DNSHijackWhitelist;
+
         @NameInMap("DisableCache")
         private Integer disableCache;
 
         @NameInMap("DisableCompression")
         private Integer disableCompression;
 
+        @NameInMap("ElementBlacklist")
+        private String elementBlacklist;
+
         @NameInMap("FilterInvalidIP")
         private Integer filterInvalidIP;
+
+        @NameInMap("FlowHijackJumpTimes")
+        private Integer flowHijackJumpTimes;
+
+        @NameInMap("FlowHijackLogo")
+        private String flowHijackLogo;
 
         @NameInMap("IgnoreCertificateError")
         private Integer ignoreCertificateError;
 
         @NameInMap("MonitorTimeout")
         private Long monitorTimeout;
+
+        @NameInMap("PageTamper")
+        private String pageTamper;
 
         @NameInMap("Redirection")
         private Integer redirection;
@@ -1776,6 +2012,12 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         @Validation(required = true)
         private String targetUrl;
 
+        @NameInMap("VerifyStringBlacklist")
+        private String verifyStringBlacklist;
+
+        @NameInMap("VerifyStringWhitelist")
+        private String verifyStringWhitelist;
+
         @NameInMap("WaitCompletionTime")
         private Long waitCompletionTime;
 
@@ -1783,14 +2025,21 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             this.automaticScrolling = builder.automaticScrolling;
             this.customHeader = builder.customHeader;
             this.customHeaderContent = builder.customHeaderContent;
+            this.DNSHijackWhitelist = builder.DNSHijackWhitelist;
             this.disableCache = builder.disableCache;
             this.disableCompression = builder.disableCompression;
+            this.elementBlacklist = builder.elementBlacklist;
             this.filterInvalidIP = builder.filterInvalidIP;
+            this.flowHijackJumpTimes = builder.flowHijackJumpTimes;
+            this.flowHijackLogo = builder.flowHijackLogo;
             this.ignoreCertificateError = builder.ignoreCertificateError;
             this.monitorTimeout = builder.monitorTimeout;
+            this.pageTamper = builder.pageTamper;
             this.redirection = builder.redirection;
             this.slowElementThreshold = builder.slowElementThreshold;
             this.targetUrl = builder.targetUrl;
+            this.verifyStringBlacklist = builder.verifyStringBlacklist;
+            this.verifyStringWhitelist = builder.verifyStringWhitelist;
             this.waitCompletionTime = builder.waitCompletionTime;
         }
 
@@ -1824,6 +2073,13 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return DNSHijackWhitelist
+         */
+        public String getDNSHijackWhitelist() {
+            return this.DNSHijackWhitelist;
+        }
+
+        /**
          * @return disableCache
          */
         public Integer getDisableCache() {
@@ -1838,10 +2094,31 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return elementBlacklist
+         */
+        public String getElementBlacklist() {
+            return this.elementBlacklist;
+        }
+
+        /**
          * @return filterInvalidIP
          */
         public Integer getFilterInvalidIP() {
             return this.filterInvalidIP;
+        }
+
+        /**
+         * @return flowHijackJumpTimes
+         */
+        public Integer getFlowHijackJumpTimes() {
+            return this.flowHijackJumpTimes;
+        }
+
+        /**
+         * @return flowHijackLogo
+         */
+        public String getFlowHijackLogo() {
+            return this.flowHijackLogo;
         }
 
         /**
@@ -1856,6 +2133,13 @@ public class CreateTimingSyntheticTaskRequest extends Request {
          */
         public Long getMonitorTimeout() {
             return this.monitorTimeout;
+        }
+
+        /**
+         * @return pageTamper
+         */
+        public String getPageTamper() {
+            return this.pageTamper;
         }
 
         /**
@@ -1880,6 +2164,20 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return verifyStringBlacklist
+         */
+        public String getVerifyStringBlacklist() {
+            return this.verifyStringBlacklist;
+        }
+
+        /**
+         * @return verifyStringWhitelist
+         */
+        public String getVerifyStringWhitelist() {
+            return this.verifyStringWhitelist;
+        }
+
+        /**
          * @return waitCompletionTime
          */
         public Long getWaitCompletionTime() {
@@ -1890,14 +2188,21 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer automaticScrolling; 
             private Integer customHeader; 
             private java.util.Map < String, String > customHeaderContent; 
+            private String DNSHijackWhitelist; 
             private Integer disableCache; 
             private Integer disableCompression; 
+            private String elementBlacklist; 
             private Integer filterInvalidIP; 
+            private Integer flowHijackJumpTimes; 
+            private String flowHijackLogo; 
             private Integer ignoreCertificateError; 
             private Long monitorTimeout; 
+            private String pageTamper; 
             private Integer redirection; 
             private Long slowElementThreshold; 
             private String targetUrl; 
+            private String verifyStringBlacklist; 
+            private String verifyStringWhitelist; 
             private Long waitCompletionTime; 
 
             /**
@@ -1925,6 +2230,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
+             * DNSHijackWhitelist.
+             */
+            public Builder DNSHijackWhitelist(String DNSHijackWhitelist) {
+                this.DNSHijackWhitelist = DNSHijackWhitelist;
+                return this;
+            }
+
+            /**
              * DisableCache.
              */
             public Builder disableCache(Integer disableCache) {
@@ -1941,10 +2254,34 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
+             * ElementBlacklist.
+             */
+            public Builder elementBlacklist(String elementBlacklist) {
+                this.elementBlacklist = elementBlacklist;
+                return this;
+            }
+
+            /**
              * FilterInvalidIP.
              */
             public Builder filterInvalidIP(Integer filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
+                return this;
+            }
+
+            /**
+             * FlowHijackJumpTimes.
+             */
+            public Builder flowHijackJumpTimes(Integer flowHijackJumpTimes) {
+                this.flowHijackJumpTimes = flowHijackJumpTimes;
+                return this;
+            }
+
+            /**
+             * FlowHijackLogo.
+             */
+            public Builder flowHijackLogo(String flowHijackLogo) {
+                this.flowHijackLogo = flowHijackLogo;
                 return this;
             }
 
@@ -1961,6 +2298,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
+                return this;
+            }
+
+            /**
+             * PageTamper.
+             */
+            public Builder pageTamper(String pageTamper) {
+                this.pageTamper = pageTamper;
                 return this;
             }
 
@@ -1985,6 +2330,22 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
+                return this;
+            }
+
+            /**
+             * VerifyStringBlacklist.
+             */
+            public Builder verifyStringBlacklist(String verifyStringBlacklist) {
+                this.verifyStringBlacklist = verifyStringBlacklist;
+                return this;
+            }
+
+            /**
+             * VerifyStringWhitelist.
+             */
+            public Builder verifyStringWhitelist(String verifyStringWhitelist) {
+                this.verifyStringWhitelist = verifyStringWhitelist;
                 return this;
             }
 
@@ -2019,6 +2380,9 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         @NameInMap("NetTCP")
         private NetTCP netTCP;
 
+        @NameInMap("Stream")
+        private Stream stream;
+
         @NameInMap("Website")
         private Website website;
 
@@ -2028,6 +2392,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             this.netDNS = builder.netDNS;
             this.netICMP = builder.netICMP;
             this.netTCP = builder.netTCP;
+            this.stream = builder.stream;
             this.website = builder.website;
         }
 
@@ -2075,6 +2440,13 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return stream
+         */
+        public Stream getStream() {
+            return this.stream;
+        }
+
+        /**
          * @return website
          */
         public Website getWebsite() {
@@ -2087,6 +2459,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private NetDNS netDNS; 
             private NetICMP netICMP; 
             private NetTCP netTCP; 
+            private Stream stream; 
             private Website website; 
 
             /**
@@ -2126,6 +2499,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              */
             public Builder netTCP(NetTCP netTCP) {
                 this.netTCP = netTCP;
+                return this;
+            }
+
+            /**
+             * Stream.
+             */
+            public Builder stream(Stream stream) {
+                this.stream = stream;
                 return this;
             }
 

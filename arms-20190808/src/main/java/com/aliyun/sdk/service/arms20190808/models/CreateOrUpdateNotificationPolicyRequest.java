@@ -224,7 +224,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         } 
 
         /**
-         * DirectedMode.
+         * Specifies whether to enable simple mode.
          */
         public Builder directedMode(Boolean directedMode) {
             this.putBodyParameter("DirectedMode", directedMode);
