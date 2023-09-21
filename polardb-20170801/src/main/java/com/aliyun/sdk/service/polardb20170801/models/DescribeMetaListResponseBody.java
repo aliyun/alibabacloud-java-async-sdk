@@ -110,7 +110,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;

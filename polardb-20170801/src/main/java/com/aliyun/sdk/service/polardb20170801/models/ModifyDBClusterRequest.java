@@ -51,7 +51,7 @@ public class ModifyDBClusterRequest extends Request {
 
     @Query
     @NameInMap("StorageUpperBound")
-    @Validation(maximum = 32000, minimum = 20)
+    @Validation(maximum = 64000, minimum = 20)
     private Long storageUpperBound;
 
     private ModifyDBClusterRequest(Builder builder) {

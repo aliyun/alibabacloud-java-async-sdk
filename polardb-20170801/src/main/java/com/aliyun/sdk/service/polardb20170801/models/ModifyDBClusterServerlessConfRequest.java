@@ -22,12 +22,24 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("FromTimeService")
+    private Boolean fromTimeService;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("PlannedEndTime")
+    private String plannedEndTime;
+
+    @Query
+    @NameInMap("PlannedStartTime")
+    private String plannedStartTime;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -61,8 +73,11 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         super(builder);
         this.allowShutDown = builder.allowShutDown;
         this.DBClusterId = builder.DBClusterId;
+        this.fromTimeService = builder.fromTimeService;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.plannedEndTime = builder.plannedEndTime;
+        this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scaleMax = builder.scaleMax;
@@ -100,6 +115,13 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     }
 
     /**
+     * @return fromTimeService
+     */
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -111,6 +133,20 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return plannedEndTime
+     */
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    /**
+     * @return plannedStartTime
+     */
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     /**
@@ -165,8 +201,11 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBClusterServerlessConfRequest, Builder> {
         private String allowShutDown; 
         private String DBClusterId; 
+        private Boolean fromTimeService; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String plannedEndTime; 
+        private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scaleMax; 
@@ -183,8 +222,11 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
             super(request);
             this.allowShutDown = request.allowShutDown;
             this.DBClusterId = request.DBClusterId;
+            this.fromTimeService = request.fromTimeService;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scaleMax = request.scaleMax;
@@ -217,6 +259,15 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
+         * FromTimeService.
+         */
+        public Builder fromTimeService(Boolean fromTimeService) {
+            this.putQueryParameter("FromTimeService", fromTimeService);
+            this.fromTimeService = fromTimeService;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -231,6 +282,24 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PlannedEndTime.
+         */
+        public Builder plannedEndTime(String plannedEndTime) {
+            this.putQueryParameter("PlannedEndTime", plannedEndTime);
+            this.plannedEndTime = plannedEndTime;
+            return this;
+        }
+
+        /**
+         * PlannedStartTime.
+         */
+        public Builder plannedStartTime(String plannedStartTime) {
+            this.putQueryParameter("PlannedStartTime", plannedStartTime);
+            this.plannedStartTime = plannedStartTime;
             return this;
         }
 
