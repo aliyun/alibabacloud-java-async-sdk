@@ -98,7 +98,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * AccessDeniedDetail.
+         * 访问被拒绝详细信息。
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -289,7 +289,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * 模板审核被拒的原因
              */
             public Builder reason(String reason) {
                 this.reason = reason;

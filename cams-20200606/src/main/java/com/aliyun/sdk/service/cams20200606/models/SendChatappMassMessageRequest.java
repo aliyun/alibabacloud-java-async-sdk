@@ -40,6 +40,10 @@ public class SendChatappMassMessageRequest extends Request {
     private String fallBackId;
 
     @Body
+    @NameInMap("FallBackRule")
+    private String fallBackRule;
+
+    @Body
     @NameInMap("From")
     @Validation(required = true)
     private String from;
@@ -87,6 +91,7 @@ public class SendChatappMassMessageRequest extends Request {
         this.fallBackContent = builder.fallBackContent;
         this.fallBackDuration = builder.fallBackDuration;
         this.fallBackId = builder.fallBackId;
+        this.fallBackRule = builder.fallBackRule;
         this.from = builder.from;
         this.isvCode = builder.isvCode;
         this.label = builder.label;
@@ -151,6 +156,13 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public String getFallBackId() {
         return this.fallBackId;
+    }
+
+    /**
+     * @return fallBackRule
+     */
+    public String getFallBackRule() {
+        return this.fallBackRule;
     }
 
     /**
@@ -223,6 +235,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String fallBackContent; 
         private Integer fallBackDuration; 
         private String fallBackId; 
+        private String fallBackRule; 
         private String from; 
         private String isvCode; 
         private String label; 
@@ -245,6 +258,7 @@ public class SendChatappMassMessageRequest extends Request {
             this.fallBackContent = request.fallBackContent;
             this.fallBackDuration = request.fallBackDuration;
             this.fallBackId = request.fallBackId;
+            this.fallBackRule = request.fallBackRule;
             this.from = request.from;
             this.isvCode = request.isvCode;
             this.label = request.label;
@@ -307,6 +321,15 @@ public class SendChatappMassMessageRequest extends Request {
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
             this.fallBackId = fallBackId;
+            return this;
+        }
+
+        /**
+         * FallBackRule.
+         */
+        public Builder fallBackRule(String fallBackRule) {
+            this.putBodyParameter("FallBackRule", fallBackRule);
+            this.fallBackRule = fallBackRule;
             return this;
         }
 

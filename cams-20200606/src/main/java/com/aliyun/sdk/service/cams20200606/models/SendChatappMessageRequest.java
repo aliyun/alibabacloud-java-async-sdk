@@ -48,6 +48,10 @@ public class SendChatappMessageRequest extends Request {
     private String fallBackId;
 
     @Body
+    @NameInMap("FallBackRule")
+    private String fallBackRule;
+
+    @Body
     @NameInMap("From")
     @Validation(required = true)
     private String from;
@@ -120,6 +124,7 @@ public class SendChatappMessageRequest extends Request {
         this.fallBackContent = builder.fallBackContent;
         this.fallBackDuration = builder.fallBackDuration;
         this.fallBackId = builder.fallBackId;
+        this.fallBackRule = builder.fallBackRule;
         this.from = builder.from;
         this.isvCode = builder.isvCode;
         this.label = builder.label;
@@ -204,6 +209,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getFallBackId() {
         return this.fallBackId;
+    }
+
+    /**
+     * @return fallBackRule
+     */
+    public String getFallBackRule() {
+        return this.fallBackRule;
     }
 
     /**
@@ -320,6 +332,7 @@ public class SendChatappMessageRequest extends Request {
         private String fallBackContent; 
         private Integer fallBackDuration; 
         private String fallBackId; 
+        private String fallBackRule; 
         private String from; 
         private String isvCode; 
         private String label; 
@@ -350,6 +363,7 @@ public class SendChatappMessageRequest extends Request {
             this.fallBackContent = request.fallBackContent;
             this.fallBackDuration = request.fallBackDuration;
             this.fallBackId = request.fallBackId;
+            this.fallBackRule = request.fallBackRule;
             this.from = request.from;
             this.isvCode = request.isvCode;
             this.label = request.label;
@@ -452,7 +466,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 消息在指定时间内未返回回执回落
+         * FallBackDuration.
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putBodyParameter("FallBackDuration", fallBackDuration);
@@ -466,6 +480,15 @@ public class SendChatappMessageRequest extends Request {
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
             this.fallBackId = fallBackId;
+            return this;
+        }
+
+        /**
+         * FallBackRule.
+         */
+        public Builder fallBackRule(String fallBackRule) {
+            this.putBodyParameter("FallBackRule", fallBackRule);
+            this.fallBackRule = fallBackRule;
             return this;
         }
 
@@ -556,7 +579,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * ProductAction.
+         * The information about the products included in the WhatsApp catalog message or multi-product message (MPM).
          */
         public Builder productAction(ProductAction productAction) {
             String productActionShrink = shrink(productAction, "ProductAction", "json");
@@ -676,7 +699,7 @@ public class SendChatappMessageRequest extends Request {
             private String productRetailerId; 
 
             /**
-             * ProductRetailerId.
+             * The retailer ID of the product.
              */
             public Builder productRetailerId(String productRetailerId) {
                 this.productRetailerId = productRetailerId;
@@ -729,7 +752,7 @@ public class SendChatappMessageRequest extends Request {
             private String title; 
 
             /**
-             * ProductItems.
+             * The products.
              */
             public Builder productItems(java.util.List < ProductItems> productItems) {
                 this.productItems = productItems;
@@ -737,7 +760,7 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * Title.
+             * The name of the category.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -790,7 +813,7 @@ public class SendChatappMessageRequest extends Request {
             private String thumbnailProductRetailerId; 
 
             /**
-             * Sections.
+             * The products. Up to 30 products can be added. The products can be divided into up to 10 categories.
              */
             public Builder sections(java.util.List < Sections> sections) {
                 this.sections = sections;
@@ -798,7 +821,7 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * ThumbnailProductRetailerId.
+             * The retailer ID of the product.
              */
             public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
                 this.thumbnailProductRetailerId = thumbnailProductRetailerId;
