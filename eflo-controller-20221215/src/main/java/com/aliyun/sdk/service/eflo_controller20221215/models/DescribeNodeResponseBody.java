@@ -27,6 +27,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("Hostname")
     private String hostname;
 
+    @NameInMap("HpnZone")
+    private String hpnZone;
+
     @NameInMap("ImageId")
     private String imageId;
 
@@ -66,6 +69,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.expiredTime = builder.expiredTime;
         this.hostname = builder.hostname;
+        this.hpnZone = builder.hpnZone;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
         this.machineType = builder.machineType;
@@ -120,6 +124,13 @@ public class DescribeNodeResponseBody extends TeaModel {
      */
     public String getHostname() {
         return this.hostname;
+    }
+
+    /**
+     * @return hpnZone
+     */
+    public String getHpnZone() {
+        return this.hpnZone;
     }
 
     /**
@@ -205,6 +216,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String createTime; 
         private String expiredTime; 
         private String hostname; 
+        private String hpnZone; 
         private String imageId; 
         private String imageName; 
         private String machineType; 
@@ -218,7 +230,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -226,7 +238,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 集群名称
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -234,7 +246,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -242,7 +254,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 过期时间
+         * ExpiredTime.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -250,7 +262,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 主机名
+         * Hostname.
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -258,7 +270,15 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 镜像id
+         * HpnZone.
+         */
+        public Builder hpnZone(String hpnZone) {
+            this.hpnZone = hpnZone;
+            return this;
+        }
+
+        /**
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -274,7 +294,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 机型
+         * MachineType.
          */
         public Builder machineType(String machineType) {
             this.machineType = machineType;
@@ -282,7 +302,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 网络信息
+         * Networks.
          */
         public Builder networks(java.util.List < Networks> networks) {
             this.networks = networks;
@@ -290,7 +310,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 节点组id
+         * NodeGroupId.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -298,7 +318,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 节点组名称
+         * NodeGroupName.
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -306,7 +326,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 节点id
+         * NodeId.
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -314,7 +334,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 节点状态
+         * OperatingState.
          */
         public Builder operatingState(String operatingState) {
             this.operatingState = operatingState;
@@ -322,7 +342,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -330,7 +350,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 机器唯一标识
+         * Sn.
          */
         public Builder sn(String sn) {
             this.sn = sn;
@@ -338,7 +358,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 可用区id
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -414,7 +434,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             private String vpdId; 
 
             /**
-             * 网卡端口信息
+             * BondName.
              */
             public Builder bondName(String bondName) {
                 this.bondName = bondName;
@@ -422,7 +442,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 机器ip
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -430,7 +450,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 集群子网id
+             * SubnetId.
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
@@ -438,7 +458,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * 集群网络id
+             * VpdId.
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

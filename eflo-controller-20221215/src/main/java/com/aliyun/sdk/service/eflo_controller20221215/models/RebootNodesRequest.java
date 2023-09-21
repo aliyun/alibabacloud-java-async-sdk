@@ -105,7 +105,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -114,7 +114,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * 是否允许跳过失败节点，默认值为Flase
+         * IgnoreFailedNodeTasks.
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -123,7 +123,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * 节点列表
+         * Nodes.
          */
         public Builder nodes(java.util.List < String > nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");

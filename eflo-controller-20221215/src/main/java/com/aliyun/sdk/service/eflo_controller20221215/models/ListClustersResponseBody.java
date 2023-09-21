@@ -62,7 +62,7 @@ public class ListClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 集群信息
+         * Clusters.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -70,7 +70,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * 本次调用返回的查询凭证值。
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +110,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("HpnZone")
+        private String hpnZone;
+
         @NameInMap("NodeCount")
         private Long nodeCount;
 
@@ -128,6 +131,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         private String updateTime;
 
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private Clusters(Builder builder) {
             this.clusterDescription = builder.clusterDescription;
             this.clusterId = builder.clusterId;
@@ -135,12 +141,14 @@ public class ListClustersResponseBody extends TeaModel {
             this.clusterType = builder.clusterType;
             this.components = builder.components;
             this.createTime = builder.createTime;
+            this.hpnZone = builder.hpnZone;
             this.nodeCount = builder.nodeCount;
             this.nodeGroupCount = builder.nodeGroupCount;
             this.operatingState = builder.operatingState;
             this.resourceGroupId = builder.resourceGroupId;
             this.taskId = builder.taskId;
             this.updateTime = builder.updateTime;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -194,6 +202,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return hpnZone
+         */
+        public String getHpnZone() {
+            return this.hpnZone;
+        }
+
+        /**
          * @return nodeCount
          */
         public Long getNodeCount() {
@@ -235,6 +250,13 @@ public class ListClustersResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String clusterDescription; 
             private String clusterId; 
@@ -242,15 +264,17 @@ public class ListClustersResponseBody extends TeaModel {
             private String clusterType; 
             private Object components; 
             private String createTime; 
+            private String hpnZone; 
             private Long nodeCount; 
             private Long nodeGroupCount; 
             private String operatingState; 
             private String resourceGroupId; 
             private String taskId; 
             private String updateTime; 
+            private String vpcId; 
 
             /**
-             * 集群描述
+             * ClusterDescription.
              */
             public Builder clusterDescription(String clusterDescription) {
                 this.clusterDescription = clusterDescription;
@@ -258,7 +282,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 集群id
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -266,7 +290,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 集群name
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -274,7 +298,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 集群类型
+             * ClusterType.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -282,7 +306,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 组件信息
+             * Components.
              */
             public Builder components(Object components) {
                 this.components = components;
@@ -290,7 +314,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +322,15 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 节点数量
+             * HpnZone.
+             */
+            public Builder hpnZone(String hpnZone) {
+                this.hpnZone = hpnZone;
+                return this;
+            }
+
+            /**
+             * NodeCount.
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -306,7 +338,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组数量
+             * NodeGroupCount.
              */
             public Builder nodeGroupCount(Long nodeGroupCount) {
                 this.nodeGroupCount = nodeGroupCount;
@@ -314,7 +346,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 集群状态
+             * OperatingState.
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -322,7 +354,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组id
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -330,7 +362,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -338,10 +370,18 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

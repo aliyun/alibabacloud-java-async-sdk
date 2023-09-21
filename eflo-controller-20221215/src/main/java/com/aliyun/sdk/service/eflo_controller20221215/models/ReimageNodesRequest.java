@@ -28,12 +28,17 @@ public class ReimageNodesRequest extends Request {
     @NameInMap("Nodes")
     private java.util.List < Nodes> nodes;
 
+    @Body
+    @NameInMap("UserData")
+    private String userData;
+
     private ReimageNodesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
         this.ignoreFailedNodeTasks = builder.ignoreFailedNodeTasks;
         this.nodes = builder.nodes;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class ReimageNodesRequest extends Request {
         return this.nodes;
     }
 
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
     public static final class Builder extends Request.Builder<ReimageNodesRequest, Builder> {
         private String regionId; 
         private String clusterId; 
         private Boolean ignoreFailedNodeTasks; 
         private java.util.List < Nodes> nodes; 
+        private String userData; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class ReimageNodesRequest extends Request {
             this.clusterId = request.clusterId;
             this.ignoreFailedNodeTasks = request.ignoreFailedNodeTasks;
             this.nodes = request.nodes;
+            this.userData = request.userData;
         } 
 
         /**
@@ -105,7 +119,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -114,7 +128,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * 是否允许跳过失败节点，默认值为Flase
+         * IgnoreFailedNodeTasks.
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -123,12 +137,21 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * 节点列表
+         * Nodes.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
             this.putBodyParameter("Nodes", nodesShrink);
             this.nodes = nodes;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putBodyParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 
@@ -202,7 +225,7 @@ public class ReimageNodesRequest extends Request {
             private String nodeId; 
 
             /**
-             * 主机名
+             * Hostname.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -210,7 +233,7 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * 系统镜像id
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -218,7 +241,7 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * 登录密码
+             * LoginPassword.
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -226,7 +249,7 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * 节点id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

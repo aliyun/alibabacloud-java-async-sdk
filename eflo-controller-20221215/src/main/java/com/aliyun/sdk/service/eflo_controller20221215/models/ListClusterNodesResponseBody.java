@@ -62,7 +62,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 本次调用返回的查询凭证值。
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * 节点列表
+         * Nodes.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -78,7 +78,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,6 +202,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("Hostname")
         private String hostname;
 
+        @NameInMap("HpnZone")
+        private String hpnZone;
+
         @NameInMap("ImageId")
         private String imageId;
 
@@ -233,6 +236,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.expiredTime = builder.expiredTime;
             this.hostname = builder.hostname;
+            this.hpnZone = builder.hpnZone;
             this.imageId = builder.imageId;
             this.machineType = builder.machineType;
             this.networks = builder.networks;
@@ -271,6 +275,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
          */
         public String getHostname() {
             return this.hostname;
+        }
+
+        /**
+         * @return hpnZone
+         */
+        public String getHpnZone() {
+            return this.hpnZone;
         }
 
         /**
@@ -340,6 +351,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String createTime; 
             private String expiredTime; 
             private String hostname; 
+            private String hpnZone; 
             private String imageId; 
             private String machineType; 
             private java.util.List < Networks> networks; 
@@ -351,7 +363,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -359,7 +371,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 机器过期时间
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -367,7 +379,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 主机名
+             * Hostname.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -375,7 +387,15 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 系统镜像id
+             * HpnZone.
+             */
+            public Builder hpnZone(String hpnZone) {
+                this.hpnZone = hpnZone;
+                return this;
+            }
+
+            /**
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -383,7 +403,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 机型
+             * MachineType.
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -399,7 +419,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组id
+             * NodeGroupId.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -407,7 +427,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组名称
+             * NodeGroupName.
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -415,7 +435,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -423,7 +443,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点状态
+             * OperatingState.
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -431,7 +451,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 机器sn
+             * Sn.
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -439,7 +459,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区id
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

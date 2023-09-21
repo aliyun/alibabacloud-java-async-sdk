@@ -17,6 +17,10 @@ public class ListFreeNodesRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("HpnZone")
+    private String hpnZone;
+
+    @Body
     @NameInMap("MachineType")
     private String machineType;
 
@@ -31,6 +35,7 @@ public class ListFreeNodesRequest extends Request {
     private ListFreeNodesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.hpnZone = builder.hpnZone;
         this.machineType = builder.machineType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -57,6 +62,13 @@ public class ListFreeNodesRequest extends Request {
     }
 
     /**
+     * @return hpnZone
+     */
+    public String getHpnZone() {
+        return this.hpnZone;
+    }
+
+    /**
      * @return machineType
      */
     public String getMachineType() {
@@ -79,6 +91,7 @@ public class ListFreeNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListFreeNodesRequest, Builder> {
         private String regionId; 
+        private String hpnZone; 
         private String machineType; 
         private Long maxResults; 
         private String nextToken; 
@@ -90,6 +103,7 @@ public class ListFreeNodesRequest extends Request {
         private Builder(ListFreeNodesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.hpnZone = request.hpnZone;
             this.machineType = request.machineType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -105,7 +119,16 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * 机型
+         * HpnZone.
+         */
+        public Builder hpnZone(String hpnZone) {
+            this.putBodyParameter("HpnZone", hpnZone);
+            this.hpnZone = hpnZone;
+            return this;
+        }
+
+        /**
+         * MachineType.
          */
         public Builder machineType(String machineType) {
             this.putBodyParameter("MachineType", machineType);
@@ -114,14 +137,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * 分页查询时每页行数。最大值为100。
-         * <p>
-         * 
-         * 默认值：
-         * 
-         * •当不设置值或设置的值小于20时，默认值为20。
-         * 
-         * •当设置的值大于100时，默认值为100。
+         * MaxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -130,7 +146,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token），取值为上一次API调用返回的 NextToken 参数值。
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

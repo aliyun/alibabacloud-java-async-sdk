@@ -77,12 +77,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * 根据汉语、英语筛选返回结果。更多信息，请参见RFC7231。取值范围：
-         * <p>
-         * 
-         * zh-CN
-         * en-US
-         * 默认值：zh-CN
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);

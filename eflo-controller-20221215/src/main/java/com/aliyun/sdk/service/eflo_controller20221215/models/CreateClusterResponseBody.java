@@ -62,7 +62,7 @@ public class CreateClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +70,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 任务id
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

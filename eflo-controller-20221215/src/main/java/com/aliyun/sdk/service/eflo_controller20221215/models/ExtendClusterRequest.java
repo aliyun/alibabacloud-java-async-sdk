@@ -133,7 +133,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -142,7 +142,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * 是否允许跳过失败节点，默认值为Flase
+         * IgnoreFailedNodeTasks.
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -161,7 +161,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * 节点组
+         * NodeGroups.
          */
         public Builder nodeGroups(java.util.List < NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -644,10 +644,18 @@ public class ExtendClusterRequest extends Request {
         @NameInMap("NodeId")
         private String nodeId;
 
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private Nodes(Builder builder) {
             this.hostname = builder.hostname;
             this.loginPassword = builder.loginPassword;
             this.nodeId = builder.nodeId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -679,13 +687,29 @@ public class ExtendClusterRequest extends Request {
             return this.nodeId;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String hostname; 
             private String loginPassword; 
             private String nodeId; 
+            private String vSwitchId; 
+            private String vpcId; 
 
             /**
-             * 主机名
+             * Hostname.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -693,7 +717,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * 登录密码
+             * LoginPassword.
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -701,10 +725,26 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * 节点id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -722,9 +762,13 @@ public class ExtendClusterRequest extends Request {
         @NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
+        @NameInMap("UserData")
+        private String userData;
+
         private NodeGroups(Builder builder) {
             this.nodeGroupId = builder.nodeGroupId;
             this.nodes = builder.nodes;
+            this.userData = builder.userData;
         }
 
         public static Builder builder() {
@@ -749,12 +793,20 @@ public class ExtendClusterRequest extends Request {
             return this.nodes;
         }
 
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
         public static final class Builder {
             private String nodeGroupId; 
             private java.util.List < Nodes> nodes; 
+            private String userData; 
 
             /**
-             * 节点组id
+             * NodeGroupId.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -762,10 +814,18 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * 节点列表
+             * Nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
                 return this;
             }
 

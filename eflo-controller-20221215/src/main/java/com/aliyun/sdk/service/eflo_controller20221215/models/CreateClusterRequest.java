@@ -33,12 +33,20 @@ public class CreateClusterRequest extends Request {
     private java.util.List < Components> components;
 
     @Body
+    @NameInMap("HpnZone")
+    private String hpnZone;
+
+    @Body
     @NameInMap("IgnoreFailedNodeTasks")
     private Boolean ignoreFailedNodeTasks;
 
     @Body
     @NameInMap("Networks")
     private Networks networks;
+
+    @Body
+    @NameInMap("NimizVSwitches")
+    private java.util.List < String > nimizVSwitches;
 
     @Body
     @NameInMap("NodeGroups")
@@ -59,8 +67,10 @@ public class CreateClusterRequest extends Request {
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
         this.components = builder.components;
+        this.hpnZone = builder.hpnZone;
         this.ignoreFailedNodeTasks = builder.ignoreFailedNodeTasks;
         this.networks = builder.networks;
+        this.nimizVSwitches = builder.nimizVSwitches;
         this.nodeGroups = builder.nodeGroups;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
@@ -115,6 +125,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return hpnZone
+     */
+    public String getHpnZone() {
+        return this.hpnZone;
+    }
+
+    /**
      * @return ignoreFailedNodeTasks
      */
     public Boolean getIgnoreFailedNodeTasks() {
@@ -126,6 +143,13 @@ public class CreateClusterRequest extends Request {
      */
     public Networks getNetworks() {
         return this.networks;
+    }
+
+    /**
+     * @return nimizVSwitches
+     */
+    public java.util.List < String > getNimizVSwitches() {
+        return this.nimizVSwitches;
     }
 
     /**
@@ -155,8 +179,10 @@ public class CreateClusterRequest extends Request {
         private String clusterName; 
         private String clusterType; 
         private java.util.List < Components> components; 
+        private String hpnZone; 
         private Boolean ignoreFailedNodeTasks; 
         private Networks networks; 
+        private java.util.List < String > nimizVSwitches; 
         private java.util.List < NodeGroups> nodeGroups; 
         private String resourceGroupId; 
         private java.util.List < Tag> tag; 
@@ -172,8 +198,10 @@ public class CreateClusterRequest extends Request {
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
             this.components = request.components;
+            this.hpnZone = request.hpnZone;
             this.ignoreFailedNodeTasks = request.ignoreFailedNodeTasks;
             this.networks = request.networks;
+            this.nimizVSwitches = request.nimizVSwitches;
             this.nodeGroups = request.nodeGroups;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
@@ -189,7 +217,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群描述
+         * ClusterDescription.
          */
         public Builder clusterDescription(String clusterDescription) {
             this.putBodyParameter("ClusterDescription", clusterDescription);
@@ -198,7 +226,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群名称
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -207,7 +235,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群类型
+         * ClusterType.
          */
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("ClusterType", clusterType);
@@ -216,7 +244,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 组件（软件实例）
+         * Components.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -226,7 +254,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 是否允许跳过失败节点，默认值为Flase
+         * HpnZone.
+         */
+        public Builder hpnZone(String hpnZone) {
+            this.putBodyParameter("HpnZone", hpnZone);
+            this.hpnZone = hpnZone;
+            return this;
+        }
+
+        /**
+         * IgnoreFailedNodeTasks.
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -235,7 +272,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 网络信息
+         * Networks.
          */
         public Builder networks(Networks networks) {
             String networksShrink = shrink(networks, "Networks", "json");
@@ -245,7 +282,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点组列表
+         * NimizVSwitches.
+         */
+        public Builder nimizVSwitches(java.util.List < String > nimizVSwitches) {
+            String nimizVSwitchesShrink = shrink(nimizVSwitches, "NimizVSwitches", "json");
+            this.putBodyParameter("NimizVSwitches", nimizVSwitchesShrink);
+            this.nimizVSwitches = nimizVSwitches;
+            return this;
+        }
+
+        /**
+         * NodeGroups.
          */
         public Builder nodeGroups(java.util.List < NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -255,7 +302,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 资源组id
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -264,7 +311,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 资源标签
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -326,9 +373,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 节点池配置， 并用于建立节点组和节点池的对应关系。 当
-             * <p>
-             * ComponentType=”ACKEdge“时必填，其他为空。
+             * NodeUnits.
              */
             public Builder nodeUnits(java.util.List < ? > nodeUnits) {
                 this.nodeUnits = nodeUnits;
@@ -381,7 +426,7 @@ public class CreateClusterRequest extends Request {
             private String componentType; 
 
             /**
-             * 组件配置
+             * ComponentConfig.
              */
             public Builder componentConfig(ComponentConfig componentConfig) {
                 this.componentConfig = componentConfig;
@@ -389,9 +434,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 组件类型：  "ACKEdge"(ACK边缘集群)
-             * <p>
-             * "ARMS"（ARMS监控）
+             * ComponentType.
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -903,7 +946,7 @@ public class CreateClusterRequest extends Request {
             private String zoneId; 
 
             /**
-             * 子网cidr
+             * SubnetCidr.
              */
             public Builder subnetCidr(String subnetCidr) {
                 this.subnetCidr = subnetCidr;
@@ -911,7 +954,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 子网类型
+             * SubnetType.
              */
             public Builder subnetType(String subnetType) {
                 this.subnetType = subnetType;
@@ -919,7 +962,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 可用区id
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1032,7 +1075,7 @@ public class CreateClusterRequest extends Request {
             private java.util.List < VpdSubnets> vpdSubnets; 
 
             /**
-             * 云企业网id
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -1040,7 +1083,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 云链cidr
+             * CloudLinkCidr.
              */
             public Builder cloudLinkCidr(String cloudLinkCidr) {
                 this.cloudLinkCidr = cloudLinkCidr;
@@ -1048,7 +1091,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 云链id
+             * CloudLinkId.
              */
             public Builder cloudLinkId(String cloudLinkId) {
                 this.cloudLinkId = cloudLinkId;
@@ -1056,7 +1099,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 专有网络
+             * MonitorVpcId.
              */
             public Builder monitorVpcId(String monitorVpcId) {
                 this.monitorVpcId = monitorVpcId;
@@ -1064,7 +1107,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 专有网络交换机
+             * MonitorVswitchId.
              */
             public Builder monitorVswitchId(String monitorVswitchId) {
                 this.monitorVswitchId = monitorVswitchId;
@@ -1072,7 +1115,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 集群网段
+             * VpdCidr.
              */
             public Builder vpdCidr(String vpdCidr) {
                 this.vpdCidr = vpdCidr;
@@ -1080,7 +1123,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * vpd子网信息
+             * VpdSubnets.
              */
             public Builder vpdSubnets(java.util.List < VpdSubnets> vpdSubnets) {
                 this.vpdSubnets = vpdSubnets;
@@ -1246,10 +1289,18 @@ public class CreateClusterRequest extends Request {
         @NameInMap("NodeId")
         private String nodeId;
 
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private Nodes(Builder builder) {
             this.hostname = builder.hostname;
             this.loginPassword = builder.loginPassword;
             this.nodeId = builder.nodeId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -1281,13 +1332,29 @@ public class CreateClusterRequest extends Request {
             return this.nodeId;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String hostname; 
             private String loginPassword; 
             private String nodeId; 
+            private String vSwitchId; 
+            private String vpcId; 
 
             /**
-             * 主机名
+             * Hostname.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -1295,7 +1362,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 登录密码
+             * LoginPassword.
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1303,10 +1370,26 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 节点id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -1333,6 +1416,9 @@ public class CreateClusterRequest extends Request {
         @NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
+        @NameInMap("UserData")
+        private String userData;
+
         @NameInMap("ZoneId")
         private String zoneId;
 
@@ -1342,6 +1428,7 @@ public class CreateClusterRequest extends Request {
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
             this.nodes = builder.nodes;
+            this.userData = builder.userData;
             this.zoneId = builder.zoneId;
         }
 
@@ -1389,6 +1476,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -1401,10 +1495,11 @@ public class CreateClusterRequest extends Request {
             private String nodeGroupDescription; 
             private String nodeGroupName; 
             private java.util.List < Nodes> nodes; 
+            private String userData; 
             private String zoneId; 
 
             /**
-             * 系统镜像id
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1412,7 +1507,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 机型
+             * MachineType.
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -1420,7 +1515,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 节点组描述
+             * NodeGroupDescription.
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -1428,7 +1523,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 节点组名称
+             * NodeGroupName.
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -1436,7 +1531,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 节点列表
+             * Nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -1444,7 +1539,15 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 可用区id
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
+                return this;
+            }
+
+            /**
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1497,7 +1600,7 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * 键
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1505,7 +1608,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

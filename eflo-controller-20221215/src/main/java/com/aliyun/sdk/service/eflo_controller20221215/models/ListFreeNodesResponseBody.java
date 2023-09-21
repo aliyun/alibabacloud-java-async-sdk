@@ -62,7 +62,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 本次调用返回的查询凭证值。
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
-         * 节点列表
+         * Nodes.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -78,7 +78,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,6 +98,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @NameInMap("HpnZone")
+        private String hpnZone;
+
         @NameInMap("MachineType")
         private String machineType;
 
@@ -113,6 +116,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         private Nodes(Builder builder) {
             this.createTime = builder.createTime;
             this.expiredTime = builder.expiredTime;
+            this.hpnZone = builder.hpnZone;
             this.machineType = builder.machineType;
             this.nodeId = builder.nodeId;
             this.sn = builder.sn;
@@ -139,6 +143,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
          */
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        /**
+         * @return hpnZone
+         */
+        public String getHpnZone() {
+            return this.hpnZone;
         }
 
         /**
@@ -172,13 +183,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String expiredTime; 
+            private String hpnZone; 
             private String machineType; 
             private String nodeId; 
             private String sn; 
             private String zoneId; 
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -186,7 +198,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 机器过期时间
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -194,7 +206,15 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 机型
+             * HpnZone.
+             */
+            public Builder hpnZone(String hpnZone) {
+                this.hpnZone = hpnZone;
+                return this;
+            }
+
+            /**
+             * MachineType.
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -202,7 +222,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -210,7 +230,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 机器sn
+             * Sn.
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -218,7 +238,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区id
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

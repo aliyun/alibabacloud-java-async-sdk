@@ -105,7 +105,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -114,7 +114,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * 是否允许跳过失败节点，默认值为Flase
+         * IgnoreFailedNodeTasks.
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -123,7 +123,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * 节点组信息
+         * NodeGroups.
          */
         public Builder nodeGroups(java.util.List < NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -166,7 +166,7 @@ public class ShrinkClusterRequest extends Request {
             private String nodeId; 
 
             /**
-             * 节点id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -219,7 +219,7 @@ public class ShrinkClusterRequest extends Request {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * 节点组id
+             * NodeGroupId.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -227,7 +227,7 @@ public class ShrinkClusterRequest extends Request {
             }
 
             /**
-             * 节点列表
+             * Nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

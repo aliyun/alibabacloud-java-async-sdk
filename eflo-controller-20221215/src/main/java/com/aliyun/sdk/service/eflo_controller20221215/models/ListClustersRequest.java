@@ -105,14 +105,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * 分页查询时每页行数。最大值为100。
-         * <p>
-         * 
-         * 默认值：
-         * 
-         * •当不设置值或设置的值小于20时，默认值为20。
-         * 
-         * •当设置的值大于100时，默认值为100。
+         * MaxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -121,7 +114,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token），取值为上一次API调用返回的 NextToken 参数值。
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -130,7 +123,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * 资源组id
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

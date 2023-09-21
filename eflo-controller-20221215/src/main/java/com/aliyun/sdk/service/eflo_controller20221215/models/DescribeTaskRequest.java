@@ -78,7 +78,7 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * 任务id
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

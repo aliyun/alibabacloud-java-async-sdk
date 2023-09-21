@@ -122,7 +122,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 地域Id
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +140,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

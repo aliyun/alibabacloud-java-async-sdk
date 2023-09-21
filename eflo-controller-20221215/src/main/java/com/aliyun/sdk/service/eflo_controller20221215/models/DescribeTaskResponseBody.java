@@ -146,7 +146,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * 集群id
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -154,7 +154,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 集群名称
+         * ClusterName.
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -162,7 +162,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 开始时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -170,7 +170,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务失败信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -178,7 +178,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 节点ID列表
+         * NodeIds.
          */
         public Builder nodeIds(java.util.List < String > nodeIds) {
             this.nodeIds = nodeIds;
@@ -186,7 +186,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 执行步骤
+         * Steps.
          */
         public Builder steps(java.util.List < Steps> steps) {
             this.steps = steps;
@@ -202,7 +202,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务状态:waiting_to_run(等待执行)，running(执行)，execution_fail(执行失败)，execution_success（执行成功）
+         * TaskState.
          */
         public Builder taskState(String taskState) {
             this.taskState = taskState;
@@ -210,7 +210,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务类型
+         * TaskType.
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -218,7 +218,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 更新时间
+         * UpdateTime.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -318,7 +318,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -326,7 +326,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 子任务失败信息
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -334,7 +334,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -342,7 +342,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务执行状态
+             * TaskState.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -350,7 +350,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务类型
+             * TaskType.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -358,7 +358,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -483,7 +483,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 步骤失败信息
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -491,7 +491,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 阶段标记
+             * StageTag.
              */
             public Builder stageTag(String stageTag) {
                 this.stageTag = stageTag;
@@ -499,7 +499,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -507,7 +507,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤名称
+             * StepName.
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -515,7 +515,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤执行状态
+             * StepState.
              */
             public Builder stepState(String stepState) {
                 this.stepState = stepState;
@@ -523,7 +523,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 步骤类型
+             * StepType.
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
@@ -531,7 +531,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 子任务
+             * SubTasks.
              */
             public Builder subTasks(java.util.List < SubTasks> subTasks) {
                 this.subTasks = subTasks;
@@ -539,7 +539,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

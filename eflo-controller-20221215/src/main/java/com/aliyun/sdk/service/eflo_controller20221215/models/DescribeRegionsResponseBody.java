@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * 区域名称
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * 区域id
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
