@@ -16,6 +16,10 @@ public class UpdateTaskFlowRelationsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private UpdateTaskFlowRelationsResponseBody body;
@@ -23,6 +27,7 @@ public class UpdateTaskFlowRelationsResponse extends Response {
     private UpdateTaskFlowRelationsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class UpdateTaskFlowRelationsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public UpdateTaskFlowRelationsResponseBody getBody() {
@@ -52,6 +64,8 @@ public class UpdateTaskFlowRelationsResponse extends Response {
     public interface Builder extends Response.Builder<UpdateTaskFlowRelationsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(UpdateTaskFlowRelationsResponseBody body);
 
@@ -64,6 +78,7 @@ public class UpdateTaskFlowRelationsResponse extends Response {
             extends Response.BuilderImpl<UpdateTaskFlowRelationsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private UpdateTaskFlowRelationsResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class UpdateTaskFlowRelationsResponse extends Response {
         private BuilderImpl(UpdateTaskFlowRelationsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class UpdateTaskFlowRelationsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

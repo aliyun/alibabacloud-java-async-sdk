@@ -16,6 +16,10 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GetStructSyncExecSqlDetailResponseBody body;
@@ -23,6 +27,7 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
     private GetStructSyncExecSqlDetailResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetStructSyncExecSqlDetailResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
     public interface Builder extends Response.Builder<GetStructSyncExecSqlDetailResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetStructSyncExecSqlDetailResponseBody body);
 
@@ -64,6 +78,7 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
             extends Response.BuilderImpl<GetStructSyncExecSqlDetailResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetStructSyncExecSqlDetailResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
         private BuilderImpl(GetStructSyncExecSqlDetailResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GetStructSyncExecSqlDetailResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

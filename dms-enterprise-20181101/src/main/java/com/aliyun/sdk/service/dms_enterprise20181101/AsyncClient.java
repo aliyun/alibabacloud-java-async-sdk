@@ -54,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeColumnSecLevelResponse> changeColumnSecLevel(ChangeColumnSecLevelRequest request);
 
+    CompletableFuture<ChangeColumnSecurityLevelResponse> changeColumnSecurityLevel(ChangeColumnSecurityLevelRequest request);
+
     /**
       * Usage notes:
       * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
@@ -126,6 +128,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request);
+
+    CompletableFuture<CreateProcCorrectOrderResponse> createProcCorrectOrder(CreateProcCorrectOrderRequest request);
 
     /**
       * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
@@ -262,6 +266,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GetAuthorityTemplateItemResponse> getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request);
+
+    CompletableFuture<GetClassificationTemplateResponse> getClassificationTemplate(GetClassificationTemplateRequest request);
 
     CompletableFuture<GetDBTaskSQLJobLogResponse> getDBTaskSQLJobLog(GetDBTaskSQLJobLogRequest request);
 
@@ -511,6 +517,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSensitiveColumnsDetailResponse> listSensitiveColumnsDetail(ListSensitiveColumnsDetailRequest request);
 
     CompletableFuture<ListSensitiveDataAuditLogResponse> listSensitiveDataAuditLog(ListSensitiveDataAuditLogRequest request);
+
+    CompletableFuture<ListSensitivityLevelResponse> listSensitivityLevel(ListSensitivityLevelRequest request);
 
     CompletableFuture<ListStandardGroupsResponse> listStandardGroups(ListStandardGroupsRequest request);
 
