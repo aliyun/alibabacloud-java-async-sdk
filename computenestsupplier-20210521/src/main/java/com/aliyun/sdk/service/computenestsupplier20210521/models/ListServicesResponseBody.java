@@ -324,6 +324,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("RelationType")
         private String relationType;
 
+        @NameInMap("ResellApplyStatus")
+        private String resellApplyStatus;
+
         @NameInMap("ResellServiceId")
         private String resellServiceId;
 
@@ -381,6 +384,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("VersionName")
         private String versionName;
 
+        @NameInMap("VirtualInternetService")
+        private String virtualInternetService;
+
         private Services(Builder builder) {
             this.approvalType = builder.approvalType;
             this.artifactId = builder.artifactId;
@@ -392,6 +398,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.latestResellSourceServiceVersion = builder.latestResellSourceServiceVersion;
             this.publishTime = builder.publishTime;
             this.relationType = builder.relationType;
+            this.resellApplyStatus = builder.resellApplyStatus;
             this.resellServiceId = builder.resellServiceId;
             this.resourceGroupId = builder.resourceGroupId;
             this.serviceId = builder.serviceId;
@@ -411,6 +418,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.updateTime = builder.updateTime;
             this.version = builder.version;
             this.versionName = builder.versionName;
+            this.virtualInternetService = builder.virtualInternetService;
         }
 
         public static Builder builder() {
@@ -489,6 +497,13 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getRelationType() {
             return this.relationType;
+        }
+
+        /**
+         * @return resellApplyStatus
+         */
+        public String getResellApplyStatus() {
+            return this.resellApplyStatus;
         }
 
         /**
@@ -624,6 +639,13 @@ public class ListServicesResponseBody extends TeaModel {
             return this.versionName;
         }
 
+        /**
+         * @return virtualInternetService
+         */
+        public String getVirtualInternetService() {
+            return this.virtualInternetService;
+        }
+
         public static final class Builder {
             private String approvalType; 
             private String artifactId; 
@@ -635,6 +657,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String latestResellSourceServiceVersion; 
             private String publishTime; 
             private String relationType; 
+            private String resellApplyStatus; 
             private String resellServiceId; 
             private String resourceGroupId; 
             private String serviceId; 
@@ -654,6 +677,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String updateTime; 
             private String version; 
             private String versionName; 
+            private String virtualInternetService; 
 
             /**
              * ApprovalType.
@@ -732,6 +756,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
+                return this;
+            }
+
+            /**
+             * ResellApplyStatus.
+             */
+            public Builder resellApplyStatus(String resellApplyStatus) {
+                this.resellApplyStatus = resellApplyStatus;
                 return this;
             }
 
@@ -884,6 +916,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
+                return this;
+            }
+
+            /**
+             * VirtualInternetService.
+             */
+            public Builder virtualInternetService(String virtualInternetService) {
+                this.virtualInternetService = virtualInternetService;
                 return this;
             }
 

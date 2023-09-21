@@ -131,6 +131,67 @@ public class ListArtifactsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Artifacts extends TeaModel {
         @NameInMap("ArtifactId")
         private String artifactId;
@@ -150,8 +211,14 @@ public class ListArtifactsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private Artifacts(Builder builder) {
             this.artifactId = builder.artifactId;
@@ -160,7 +227,9 @@ public class ListArtifactsResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.maxVersion = builder.maxVersion;
             this.name = builder.name;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -214,10 +283,24 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -227,7 +310,9 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String gmtModified; 
             private String maxVersion; 
             private String name; 
+            private String resourceGroupId; 
             private String status; 
+            private java.util.List < Tags> tags; 
 
             /**
              * ArtifactId.
@@ -278,10 +363,26 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

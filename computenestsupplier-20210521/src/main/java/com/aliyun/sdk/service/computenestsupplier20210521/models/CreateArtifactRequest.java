@@ -35,8 +35,16 @@ public class CreateArtifactRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SupportRegionIds")
     private java.util.List < String > supportRegionIds;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("VersionName")
@@ -50,7 +58,9 @@ public class CreateArtifactRequest extends Request {
         this.artifactType = builder.artifactType;
         this.description = builder.description;
         this.name = builder.name;
+        this.resourceGroupId = builder.resourceGroupId;
         this.supportRegionIds = builder.supportRegionIds;
+        this.tag = builder.tag;
         this.versionName = builder.versionName;
     }
 
@@ -103,10 +113,24 @@ public class CreateArtifactRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return supportRegionIds
      */
     public java.util.List < String > getSupportRegionIds() {
         return this.supportRegionIds;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -122,7 +146,9 @@ public class CreateArtifactRequest extends Request {
         private String artifactType; 
         private String description; 
         private String name; 
+        private String resourceGroupId; 
         private java.util.List < String > supportRegionIds; 
+        private java.util.List < Tag> tag; 
         private String versionName; 
 
         private Builder() {
@@ -136,7 +162,9 @@ public class CreateArtifactRequest extends Request {
             this.artifactType = request.artifactType;
             this.description = request.description;
             this.name = request.name;
+            this.resourceGroupId = request.resourceGroupId;
             this.supportRegionIds = request.supportRegionIds;
+            this.tag = request.tag;
             this.versionName = request.versionName;
         } 
 
@@ -187,11 +215,29 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * SupportRegionIds.
          */
         public Builder supportRegionIds(java.util.List < String > supportRegionIds) {
             this.putQueryParameter("SupportRegionIds", supportRegionIds);
             this.supportRegionIds = supportRegionIds;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -427,6 +473,67 @@ public class CreateArtifactRequest extends Request {
 
             public ArtifactProperty build() {
                 return new ArtifactProperty(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

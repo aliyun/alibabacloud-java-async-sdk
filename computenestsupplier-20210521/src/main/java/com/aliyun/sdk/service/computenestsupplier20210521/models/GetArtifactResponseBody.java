@@ -42,11 +42,17 @@ public class GetArtifactResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Status")
     private String status;
 
     @NameInMap("SupportRegionIds")
     private String supportRegionIds;
+
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @NameInMap("VersionName")
     private String versionName;
@@ -62,8 +68,10 @@ public class GetArtifactResponseBody extends TeaModel {
         this.name = builder.name;
         this.progress = builder.progress;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.supportRegionIds = builder.supportRegionIds;
+        this.tags = builder.tags;
         this.versionName = builder.versionName;
     }
 
@@ -146,6 +154,13 @@ public class GetArtifactResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -157,6 +172,13 @@ public class GetArtifactResponseBody extends TeaModel {
      */
     public String getSupportRegionIds() {
         return this.supportRegionIds;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -177,8 +199,10 @@ public class GetArtifactResponseBody extends TeaModel {
         private String name; 
         private String progress; 
         private String requestId; 
+        private String resourceGroupId; 
         private String status; 
         private String supportRegionIds; 
+        private java.util.List < Tags> tags; 
         private String versionName; 
 
         /**
@@ -262,6 +286,14 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * Status.
          */
         public Builder status(String status) {
@@ -274,6 +306,14 @@ public class GetArtifactResponseBody extends TeaModel {
          */
         public Builder supportRegionIds(String supportRegionIds) {
             this.supportRegionIds = supportRegionIds;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -291,4 +331,65 @@ public class GetArtifactResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

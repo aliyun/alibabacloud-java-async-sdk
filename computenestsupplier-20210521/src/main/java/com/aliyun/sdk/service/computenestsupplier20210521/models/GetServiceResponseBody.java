@@ -78,6 +78,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Resellable")
+    private Boolean resellable;
+
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -150,6 +153,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("VersionName")
     private String versionName;
 
+    @NameInMap("VirtualInternetService")
+    private String virtualInternetService;
+
     private GetServiceResponseBody(Builder builder) {
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
@@ -173,6 +179,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.publishTime = builder.publishTime;
         this.registrationId = builder.registrationId;
         this.requestId = builder.requestId;
+        this.resellable = builder.resellable;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceDocUrl = builder.serviceDocUrl;
         this.serviceId = builder.serviceId;
@@ -197,6 +204,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.upgradeMetadata = builder.upgradeMetadata;
         this.version = builder.version;
         this.versionName = builder.versionName;
+        this.virtualInternetService = builder.virtualInternetService;
     }
 
     public static Builder builder() {
@@ -359,6 +367,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return resellable
+     */
+    public Boolean getResellable() {
+        return this.resellable;
     }
 
     /**
@@ -529,6 +544,13 @@ public class GetServiceResponseBody extends TeaModel {
         return this.versionName;
     }
 
+    /**
+     * @return virtualInternetService
+     */
+    public String getVirtualInternetService() {
+        return this.virtualInternetService;
+    }
+
     public static final class Builder {
         private String alarmMetadata; 
         private String approvalType; 
@@ -552,6 +574,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String publishTime; 
         private String registrationId; 
         private String requestId; 
+        private Boolean resellable; 
         private String resourceGroupId; 
         private String serviceDocUrl; 
         private String serviceId; 
@@ -576,6 +599,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String upgradeMetadata; 
         private String version; 
         private String versionName; 
+        private String virtualInternetService; 
 
         /**
          * AlarmMetadata.
@@ -750,6 +774,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Resellable.
+         */
+        public Builder resellable(Boolean resellable) {
+            this.resellable = resellable;
             return this;
         }
 
@@ -942,6 +974,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
+            return this;
+        }
+
+        /**
+         * VirtualInternetService.
+         */
+        public Builder virtualInternetService(String virtualInternetService) {
+            this.virtualInternetService = virtualInternetService;
             return this;
         }
 

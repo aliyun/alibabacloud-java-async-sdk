@@ -63,6 +63,10 @@ public class CreateServiceRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Resellable")
+    private Boolean resellable;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -124,6 +128,7 @@ public class CreateServiceRequest extends Request {
         this.operationMetadata = builder.operationMetadata;
         this.policyNames = builder.policyNames;
         this.regionId = builder.regionId;
+        this.resellable = builder.resellable;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceId = builder.serviceId;
         this.serviceInfo = builder.serviceInfo;
@@ -236,6 +241,13 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return resellable
+     */
+    public Boolean getResellable() {
+        return this.resellable;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -332,6 +344,7 @@ public class CreateServiceRequest extends Request {
         private String operationMetadata; 
         private String policyNames; 
         private String regionId; 
+        private Boolean resellable; 
         private String resourceGroupId; 
         private String serviceId; 
         private java.util.List < ServiceInfo> serviceInfo; 
@@ -363,6 +376,7 @@ public class CreateServiceRequest extends Request {
             this.operationMetadata = request.operationMetadata;
             this.policyNames = request.policyNames;
             this.regionId = request.regionId;
+            this.resellable = request.resellable;
             this.resourceGroupId = request.resourceGroupId;
             this.serviceId = request.serviceId;
             this.serviceInfo = request.serviceInfo;
@@ -482,6 +496,15 @@ public class CreateServiceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Resellable.
+         */
+        public Builder resellable(Boolean resellable) {
+            this.putQueryParameter("Resellable", resellable);
+            this.resellable = resellable;
             return this;
         }
 

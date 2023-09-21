@@ -135,6 +135,18 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         @NameInMap("Company")
         private String company;
 
+        @NameInMap("ContactEmail")
+        private String contactEmail;
+
+        @NameInMap("ContactNumber")
+        private String contactNumber;
+
+        @NameInMap("ContactPerson")
+        private String contactPerson;
+
+        @NameInMap("ContactPersonTitle")
+        private String contactPersonTitle;
+
         @NameInMap("Country")
         private String country;
 
@@ -147,8 +159,26 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ProductBusiness")
+        private String productBusiness;
+
+        @NameInMap("ProductDeliveryTypes")
+        private String productDeliveryTypes;
+
+        @NameInMap("ProductSellTypes")
+        private String productSellTypes;
+
         @NameInMap("Source")
         private String source;
+
+        @NameInMap("SupplierDesc")
+        private String supplierDesc;
+
+        @NameInMap("SupplierName")
+        private String supplierName;
+
+        @NameInMap("SupplierUrl")
+        private String supplierUrl;
 
         @NameInMap("Telephone")
         private String telephone;
@@ -158,11 +188,21 @@ public class ListServiceUsagesResponseBody extends TeaModel {
 
         private UserInformation(Builder builder) {
             this.company = builder.company;
+            this.contactEmail = builder.contactEmail;
+            this.contactNumber = builder.contactNumber;
+            this.contactPerson = builder.contactPerson;
+            this.contactPersonTitle = builder.contactPersonTitle;
             this.country = builder.country;
             this.emailAddress = builder.emailAddress;
             this.industry = builder.industry;
             this.name = builder.name;
+            this.productBusiness = builder.productBusiness;
+            this.productDeliveryTypes = builder.productDeliveryTypes;
+            this.productSellTypes = builder.productSellTypes;
             this.source = builder.source;
+            this.supplierDesc = builder.supplierDesc;
+            this.supplierName = builder.supplierName;
+            this.supplierUrl = builder.supplierUrl;
             this.telephone = builder.telephone;
             this.title = builder.title;
         }
@@ -180,6 +220,34 @@ public class ListServiceUsagesResponseBody extends TeaModel {
          */
         public String getCompany() {
             return this.company;
+        }
+
+        /**
+         * @return contactEmail
+         */
+        public String getContactEmail() {
+            return this.contactEmail;
+        }
+
+        /**
+         * @return contactNumber
+         */
+        public String getContactNumber() {
+            return this.contactNumber;
+        }
+
+        /**
+         * @return contactPerson
+         */
+        public String getContactPerson() {
+            return this.contactPerson;
+        }
+
+        /**
+         * @return contactPersonTitle
+         */
+        public String getContactPersonTitle() {
+            return this.contactPersonTitle;
         }
 
         /**
@@ -211,10 +279,52 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return productBusiness
+         */
+        public String getProductBusiness() {
+            return this.productBusiness;
+        }
+
+        /**
+         * @return productDeliveryTypes
+         */
+        public String getProductDeliveryTypes() {
+            return this.productDeliveryTypes;
+        }
+
+        /**
+         * @return productSellTypes
+         */
+        public String getProductSellTypes() {
+            return this.productSellTypes;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
             return this.source;
+        }
+
+        /**
+         * @return supplierDesc
+         */
+        public String getSupplierDesc() {
+            return this.supplierDesc;
+        }
+
+        /**
+         * @return supplierName
+         */
+        public String getSupplierName() {
+            return this.supplierName;
+        }
+
+        /**
+         * @return supplierUrl
+         */
+        public String getSupplierUrl() {
+            return this.supplierUrl;
         }
 
         /**
@@ -233,11 +343,21 @@ public class ListServiceUsagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String company; 
+            private String contactEmail; 
+            private String contactNumber; 
+            private String contactPerson; 
+            private String contactPersonTitle; 
             private String country; 
             private String emailAddress; 
             private String industry; 
             private String name; 
+            private String productBusiness; 
+            private String productDeliveryTypes; 
+            private String productSellTypes; 
             private String source; 
+            private String supplierDesc; 
+            private String supplierName; 
+            private String supplierUrl; 
             private String telephone; 
             private String title; 
 
@@ -246,6 +366,38 @@ public class ListServiceUsagesResponseBody extends TeaModel {
              */
             public Builder company(String company) {
                 this.company = company;
+                return this;
+            }
+
+            /**
+             * ContactEmail.
+             */
+            public Builder contactEmail(String contactEmail) {
+                this.contactEmail = contactEmail;
+                return this;
+            }
+
+            /**
+             * ContactNumber.
+             */
+            public Builder contactNumber(String contactNumber) {
+                this.contactNumber = contactNumber;
+                return this;
+            }
+
+            /**
+             * ContactPerson.
+             */
+            public Builder contactPerson(String contactPerson) {
+                this.contactPerson = contactPerson;
+                return this;
+            }
+
+            /**
+             * ContactPersonTitle.
+             */
+            public Builder contactPersonTitle(String contactPersonTitle) {
+                this.contactPersonTitle = contactPersonTitle;
                 return this;
             }
 
@@ -282,10 +434,58 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
+             * ProductBusiness.
+             */
+            public Builder productBusiness(String productBusiness) {
+                this.productBusiness = productBusiness;
+                return this;
+            }
+
+            /**
+             * ProductDeliveryTypes.
+             */
+            public Builder productDeliveryTypes(String productDeliveryTypes) {
+                this.productDeliveryTypes = productDeliveryTypes;
+                return this;
+            }
+
+            /**
+             * ProductSellTypes.
+             */
+            public Builder productSellTypes(String productSellTypes) {
+                this.productSellTypes = productSellTypes;
+                return this;
+            }
+
+            /**
              * Source.
              */
             public Builder source(String source) {
                 this.source = source;
+                return this;
+            }
+
+            /**
+             * SupplierDesc.
+             */
+            public Builder supplierDesc(String supplierDesc) {
+                this.supplierDesc = supplierDesc;
+                return this;
+            }
+
+            /**
+             * SupplierName.
+             */
+            public Builder supplierName(String supplierName) {
+                this.supplierName = supplierName;
+                return this;
+            }
+
+            /**
+             * SupplierUrl.
+             */
+            public Builder supplierUrl(String supplierUrl) {
+                this.supplierUrl = supplierUrl;
                 return this;
             }
 
