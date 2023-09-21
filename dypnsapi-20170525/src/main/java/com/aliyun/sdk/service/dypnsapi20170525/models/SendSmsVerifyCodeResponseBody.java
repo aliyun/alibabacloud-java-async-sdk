@@ -7,11 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link VerifyWithFusionAuthTokenResponseBody} extends {@link TeaModel}
+ * {@link SendSmsVerifyCodeResponseBody} extends {@link TeaModel}
  *
- * <p>VerifyWithFusionAuthTokenResponseBody</p>
+ * <p>SendSmsVerifyCodeResponseBody</p>
  */
-public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
+public class SendSmsVerifyCodeResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -21,17 +24,14 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     @NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Success")
     private Boolean success;
 
-    private VerifyWithFusionAuthTokenResponseBody(Builder builder) {
+    private SendSmsVerifyCodeResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.model = builder.model;
-        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -39,8 +39,15 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static VerifyWithFusionAuthTokenResponseBody create() {
+    public static SendSmsVerifyCodeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -65,13 +72,6 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -79,11 +79,19 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private Model model; 
-        private String requestId; 
         private Boolean success; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
@@ -110,14 +118,6 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
          * Success.
          */
         public Builder success(Boolean success) {
@@ -125,26 +125,30 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             return this;
         }
 
-        public VerifyWithFusionAuthTokenResponseBody build() {
-            return new VerifyWithFusionAuthTokenResponseBody(this);
+        public SendSmsVerifyCodeResponseBody build() {
+            return new SendSmsVerifyCodeResponseBody(this);
         } 
 
     } 
 
     public static class Model extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private String phoneNumber;
+        @NameInMap("BizId")
+        private String bizId;
 
-        @NameInMap("PhoneScore")
-        private Long phoneScore;
+        @NameInMap("OutId")
+        private String outId;
 
-        @NameInMap("VerifyResult")
-        private String verifyResult;
+        @NameInMap("RequestId")
+        private String requestId;
+
+        @NameInMap("VerifyCode")
+        private String verifyCode;
 
         private Model(Builder builder) {
-            this.phoneNumber = builder.phoneNumber;
-            this.phoneScore = builder.phoneScore;
-            this.verifyResult = builder.verifyResult;
+            this.bizId = builder.bizId;
+            this.outId = builder.outId;
+            this.requestId = builder.requestId;
+            this.verifyCode = builder.verifyCode;
         }
 
         public static Builder builder() {
@@ -156,52 +160,68 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * @return phoneNumber
+         * @return bizId
          */
-        public String getPhoneNumber() {
-            return this.phoneNumber;
+        public String getBizId() {
+            return this.bizId;
         }
 
         /**
-         * @return phoneScore
+         * @return outId
          */
-        public Long getPhoneScore() {
-            return this.phoneScore;
+        public String getOutId() {
+            return this.outId;
         }
 
         /**
-         * @return verifyResult
+         * @return requestId
          */
-        public String getVerifyResult() {
-            return this.verifyResult;
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        /**
+         * @return verifyCode
+         */
+        public String getVerifyCode() {
+            return this.verifyCode;
         }
 
         public static final class Builder {
-            private String phoneNumber; 
-            private Long phoneScore; 
-            private String verifyResult; 
+            private String bizId; 
+            private String outId; 
+            private String requestId; 
+            private String verifyCode; 
 
             /**
-             * PhoneNumber.
+             * BizId.
              */
-            public Builder phoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
                 return this;
             }
 
             /**
-             * PhoneScore.
+             * OutId.
              */
-            public Builder phoneScore(Long phoneScore) {
-                this.phoneScore = phoneScore;
+            public Builder outId(String outId) {
+                this.outId = outId;
                 return this;
             }
 
             /**
-             * VerifyResult.
+             * RequestId.
              */
-            public Builder verifyResult(String verifyResult) {
-                this.verifyResult = verifyResult;
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * VerifyCode.
+             */
+            public Builder verifyCode(String verifyCode) {
+                this.verifyCode = verifyCode;
                 return this;
             }
 

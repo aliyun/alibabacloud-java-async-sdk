@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteVerifySchemeResponse} extends {@link TeaModel}
+ * {@link CheckSmsVerifyCodeResponse} extends {@link TeaModel}
  *
- * <p>DeleteVerifySchemeResponse</p>
+ * <p>CheckSmsVerifyCodeResponse</p>
  */
-public class DeleteVerifySchemeResponse extends Response {
+public class CheckSmsVerifyCodeResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DeleteVerifySchemeResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteVerifySchemeResponseBody body;
+    private CheckSmsVerifyCodeResponseBody body;
 
-    private DeleteVerifySchemeResponse(BuilderImpl builder) {
+    private CheckSmsVerifyCodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteVerifySchemeResponse create() {
+    public static CheckSmsVerifyCodeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DeleteVerifySchemeResponse extends Response {
     /**
      * @return body
      */
-    public DeleteVerifySchemeResponseBody getBody() {
+    public CheckSmsVerifyCodeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteVerifySchemeResponse, Builder> {
+    public interface Builder extends Response.Builder<CheckSmsVerifyCodeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteVerifySchemeResponseBody body);
+        Builder body(CheckSmsVerifyCodeResponseBody body);
 
         @Override
-        DeleteVerifySchemeResponse build();
+        CheckSmsVerifyCodeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteVerifySchemeResponse, Builder>
+            extends Response.BuilderImpl<CheckSmsVerifyCodeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteVerifySchemeResponseBody body; 
+        private CheckSmsVerifyCodeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteVerifySchemeResponse response) {
+        private BuilderImpl(CheckSmsVerifyCodeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DeleteVerifySchemeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteVerifySchemeResponseBody body) {
+        public Builder body(CheckSmsVerifyCodeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteVerifySchemeResponse build() {
-            return new DeleteVerifySchemeResponse(this);
+        public CheckSmsVerifyCodeResponse build() {
+            return new CheckSmsVerifyCodeResponse(this);
         } 
 
     } 

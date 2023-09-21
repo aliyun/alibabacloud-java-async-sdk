@@ -169,7 +169,7 @@ public class GetFusionAuthTokenRequest extends Request {
         } 
 
         /**
-         * Platform为iOS时必须传入，App的bundleId信息。
+         * BundleId.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -178,7 +178,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * Token有效时长，单位是秒，最小值900，最大值43200。
+         * DurationSeconds.
          */
         public Builder durationSeconds(Long durationSeconds) {
             this.putQueryParameter("DurationSeconds", durationSeconds);
@@ -196,7 +196,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * Platform为Android时必须传入，App的包名信息。
+         * PackageName.
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -205,7 +205,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * Platform为Android时必须传入，App的包签名信息。
+         * PackageSign.
          */
         public Builder packageSign(String packageSign) {
             this.putQueryParameter("PackageSign", packageSign);
@@ -214,7 +214,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * 平台，Android或者iOS。
+         * Platform.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -241,7 +241,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * 方案Code。
+         * SchemeCode.
          */
         public Builder schemeCode(String schemeCode) {
             this.putQueryParameter("SchemeCode", schemeCode);

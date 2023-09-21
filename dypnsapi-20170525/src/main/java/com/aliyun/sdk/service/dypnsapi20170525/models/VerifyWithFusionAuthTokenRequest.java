@@ -124,7 +124,7 @@ public class VerifyWithFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * 统一认证Token，由客户端SDK返回。
+         * VerifyToken.
          */
         public Builder verifyToken(String verifyToken) {
             this.putQueryParameter("VerifyToken", verifyToken);

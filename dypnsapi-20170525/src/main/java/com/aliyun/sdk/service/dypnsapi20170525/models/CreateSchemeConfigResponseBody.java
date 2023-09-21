@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link VerifyWithFusionAuthTokenResponseBody} extends {@link TeaModel}
+ * {@link CreateSchemeConfigResponseBody} extends {@link TeaModel}
  *
- * <p>VerifyWithFusionAuthTokenResponseBody</p>
+ * <p>CreateSchemeConfigResponseBody</p>
  */
-public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
+public class CreateSchemeConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -27,7 +27,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private VerifyWithFusionAuthTokenResponseBody(Builder builder) {
+    private CreateSchemeConfigResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.model = builder.model;
@@ -39,7 +39,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static VerifyWithFusionAuthTokenResponseBody create() {
+    public static CreateSchemeConfigResponseBody create() {
         return builder().build();
     }
 
@@ -125,26 +125,18 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             return this;
         }
 
-        public VerifyWithFusionAuthTokenResponseBody build() {
-            return new VerifyWithFusionAuthTokenResponseBody(this);
+        public CreateSchemeConfigResponseBody build() {
+            return new CreateSchemeConfigResponseBody(this);
         } 
 
     } 
 
     public static class Model extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private String phoneNumber;
-
-        @NameInMap("PhoneScore")
-        private Long phoneScore;
-
-        @NameInMap("VerifyResult")
-        private String verifyResult;
+        @NameInMap("SchemeCode")
+        private String schemeCode;
 
         private Model(Builder builder) {
-            this.phoneNumber = builder.phoneNumber;
-            this.phoneScore = builder.phoneScore;
-            this.verifyResult = builder.verifyResult;
+            this.schemeCode = builder.schemeCode;
         }
 
         public static Builder builder() {
@@ -156,52 +148,20 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * @return phoneNumber
+         * @return schemeCode
          */
-        public String getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-        /**
-         * @return phoneScore
-         */
-        public Long getPhoneScore() {
-            return this.phoneScore;
-        }
-
-        /**
-         * @return verifyResult
-         */
-        public String getVerifyResult() {
-            return this.verifyResult;
+        public String getSchemeCode() {
+            return this.schemeCode;
         }
 
         public static final class Builder {
-            private String phoneNumber; 
-            private Long phoneScore; 
-            private String verifyResult; 
+            private String schemeCode; 
 
             /**
-             * PhoneNumber.
+             * SchemeCode.
              */
-            public Builder phoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
-                return this;
-            }
-
-            /**
-             * PhoneScore.
-             */
-            public Builder phoneScore(Long phoneScore) {
-                this.phoneScore = phoneScore;
-                return this;
-            }
-
-            /**
-             * VerifyResult.
-             */
-            public Builder verifyResult(String verifyResult) {
-                this.verifyResult = verifyResult;
+            public Builder schemeCode(String schemeCode) {
+                this.schemeCode = schemeCode;
                 return this;
             }
 

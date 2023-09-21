@@ -7,11 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link VerifyWithFusionAuthTokenResponseBody} extends {@link TeaModel}
+ * {@link CheckSmsVerifyCodeResponseBody} extends {@link TeaModel}
  *
- * <p>VerifyWithFusionAuthTokenResponseBody</p>
+ * <p>CheckSmsVerifyCodeResponseBody</p>
  */
-public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
+public class CheckSmsVerifyCodeResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -21,17 +24,14 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     @NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Success")
     private Boolean success;
 
-    private VerifyWithFusionAuthTokenResponseBody(Builder builder) {
+    private CheckSmsVerifyCodeResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.model = builder.model;
-        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -39,8 +39,15 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static VerifyWithFusionAuthTokenResponseBody create() {
+    public static CheckSmsVerifyCodeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -65,13 +72,6 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -79,11 +79,19 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private Model model; 
-        private String requestId; 
         private Boolean success; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
@@ -110,14 +118,6 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
          * Success.
          */
         public Builder success(Boolean success) {
@@ -125,25 +125,21 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             return this;
         }
 
-        public VerifyWithFusionAuthTokenResponseBody build() {
-            return new VerifyWithFusionAuthTokenResponseBody(this);
+        public CheckSmsVerifyCodeResponseBody build() {
+            return new CheckSmsVerifyCodeResponseBody(this);
         } 
 
     } 
 
     public static class Model extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private String phoneNumber;
-
-        @NameInMap("PhoneScore")
-        private Long phoneScore;
+        @NameInMap("OutId")
+        private String outId;
 
         @NameInMap("VerifyResult")
         private String verifyResult;
 
         private Model(Builder builder) {
-            this.phoneNumber = builder.phoneNumber;
-            this.phoneScore = builder.phoneScore;
+            this.outId = builder.outId;
             this.verifyResult = builder.verifyResult;
         }
 
@@ -156,17 +152,10 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * @return phoneNumber
+         * @return outId
          */
-        public String getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-        /**
-         * @return phoneScore
-         */
-        public Long getPhoneScore() {
-            return this.phoneScore;
+        public String getOutId() {
+            return this.outId;
         }
 
         /**
@@ -177,23 +166,14 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String phoneNumber; 
-            private Long phoneScore; 
+            private String outId; 
             private String verifyResult; 
 
             /**
-             * PhoneNumber.
+             * OutId.
              */
-            public Builder phoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
-                return this;
-            }
-
-            /**
-             * PhoneScore.
-             */
-            public Builder phoneScore(Long phoneScore) {
-                this.phoneScore = phoneScore;
+            public Builder outId(String outId) {
+                this.outId = outId;
                 return this;
             }
 
