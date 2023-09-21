@@ -21,6 +21,10 @@ public class ExportVulRequest extends Request {
     private String attachTypes;
 
     @Query
+    @NameInMap("CveId")
+    private String cveId;
+
+    @Query
     @NameInMap("Dealed")
     private String dealed;
 
@@ -57,6 +61,7 @@ public class ExportVulRequest extends Request {
         super(builder);
         this.aliasName = builder.aliasName;
         this.attachTypes = builder.attachTypes;
+        this.cveId = builder.cveId;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
         this.lang = builder.lang;
@@ -92,6 +97,13 @@ public class ExportVulRequest extends Request {
      */
     public String getAttachTypes() {
         return this.attachTypes;
+    }
+
+    /**
+     * @return cveId
+     */
+    public String getCveId() {
+        return this.cveId;
     }
 
     /**
@@ -153,6 +165,7 @@ public class ExportVulRequest extends Request {
     public static final class Builder extends Request.Builder<ExportVulRequest, Builder> {
         private String aliasName; 
         private String attachTypes; 
+        private String cveId; 
         private String dealed; 
         private String groupId; 
         private String lang; 
@@ -170,6 +183,7 @@ public class ExportVulRequest extends Request {
             super(request);
             this.aliasName = request.aliasName;
             this.attachTypes = request.attachTypes;
+            this.cveId = request.cveId;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
             this.lang = request.lang;
@@ -198,6 +212,15 @@ public class ExportVulRequest extends Request {
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
             this.attachTypes = attachTypes;
+            return this;
+        }
+
+        /**
+         * CveId.
+         */
+        public Builder cveId(String cveId) {
+            this.putQueryParameter("CveId", cveId);
+            this.cveId = cveId;
             return this;
         }
 

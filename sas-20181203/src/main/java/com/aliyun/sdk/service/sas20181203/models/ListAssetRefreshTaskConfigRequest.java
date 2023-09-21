@@ -13,12 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAssetRefreshTaskConfigRequest extends Request {
     @Query
+    @NameInMap("RefreshConfigType")
+    private Integer refreshConfigType;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("TargetId")
+    private Long targetId;
+
     private ListAssetRefreshTaskConfigRequest(Builder builder) {
         super(builder);
+        this.refreshConfigType = builder.refreshConfigType;
         this.regionId = builder.regionId;
+        this.targetId = builder.targetId;
     }
 
     public static Builder builder() {
@@ -35,14 +45,30 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
     }
 
     /**
+     * @return refreshConfigType
+     */
+    public Integer getRefreshConfigType() {
+        return this.refreshConfigType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return targetId
+     */
+    public Long getTargetId() {
+        return this.targetId;
+    }
+
     public static final class Builder extends Request.Builder<ListAssetRefreshTaskConfigRequest, Builder> {
+        private Integer refreshConfigType; 
         private String regionId; 
+        private Long targetId; 
 
         private Builder() {
             super();
@@ -50,8 +76,19 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
 
         private Builder(ListAssetRefreshTaskConfigRequest request) {
             super(request);
+            this.refreshConfigType = request.refreshConfigType;
             this.regionId = request.regionId;
+            this.targetId = request.targetId;
         } 
+
+        /**
+         * RefreshConfigType.
+         */
+        public Builder refreshConfigType(Integer refreshConfigType) {
+            this.putQueryParameter("RefreshConfigType", refreshConfigType);
+            this.refreshConfigType = refreshConfigType;
+            return this;
+        }
 
         /**
          * The region where the Security Center instance is deployed.
@@ -59,6 +96,15 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TargetId.
+         */
+        public Builder targetId(Long targetId) {
+            this.putQueryParameter("TargetId", targetId);
+            this.targetId = targetId;
             return this;
         }
 

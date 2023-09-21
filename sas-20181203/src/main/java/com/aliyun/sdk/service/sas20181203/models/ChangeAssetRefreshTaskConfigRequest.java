@@ -93,18 +93,26 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
     } 
 
     public static class AssetRefreshConfigs extends TeaModel {
+        @NameInMap("RefreshConfigType")
+        private Integer refreshConfigType;
+
         @NameInMap("SchedulePeriod")
         private Integer schedulePeriod;
 
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("TargetId")
+        private Long targetId;
+
         @NameInMap("Vendor")
         private Integer vendor;
 
         private AssetRefreshConfigs(Builder builder) {
+            this.refreshConfigType = builder.refreshConfigType;
             this.schedulePeriod = builder.schedulePeriod;
             this.status = builder.status;
+            this.targetId = builder.targetId;
             this.vendor = builder.vendor;
         }
 
@@ -114,6 +122,13 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
 
         public static AssetRefreshConfigs create() {
             return builder().build();
+        }
+
+        /**
+         * @return refreshConfigType
+         */
+        public Integer getRefreshConfigType() {
+            return this.refreshConfigType;
         }
 
         /**
@@ -131,6 +146,13 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
+         * @return targetId
+         */
+        public Long getTargetId() {
+            return this.targetId;
+        }
+
+        /**
          * @return vendor
          */
         public Integer getVendor() {
@@ -138,9 +160,19 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer refreshConfigType; 
             private Integer schedulePeriod; 
             private Integer status; 
+            private Long targetId; 
             private Integer vendor; 
+
+            /**
+             * RefreshConfigType.
+             */
+            public Builder refreshConfigType(Integer refreshConfigType) {
+                this.refreshConfigType = refreshConfigType;
+                return this;
+            }
 
             /**
              * The interval at which assets are synchronized. Unit: minutes. Valid values:
@@ -167,6 +199,14 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(Long targetId) {
+                this.targetId = targetId;
                 return this;
             }
 

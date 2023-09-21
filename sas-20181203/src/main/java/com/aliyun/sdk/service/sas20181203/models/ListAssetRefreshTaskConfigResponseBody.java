@@ -72,6 +72,9 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
     } 
 
     public static class AssetRefreshConfig extends TeaModel {
+        @NameInMap("RefreshConfigType")
+        private Integer refreshConfigType;
+
         @NameInMap("SchedulePeriod")
         private Integer schedulePeriod;
 
@@ -82,6 +85,7 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
         private Integer vendor;
 
         private AssetRefreshConfig(Builder builder) {
+            this.refreshConfigType = builder.refreshConfigType;
             this.schedulePeriod = builder.schedulePeriod;
             this.status = builder.status;
             this.vendor = builder.vendor;
@@ -93,6 +97,13 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
 
         public static AssetRefreshConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return refreshConfigType
+         */
+        public Integer getRefreshConfigType() {
+            return this.refreshConfigType;
         }
 
         /**
@@ -117,9 +128,18 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer refreshConfigType; 
             private Integer schedulePeriod; 
             private Integer status; 
             private Integer vendor; 
+
+            /**
+             * RefreshConfigType.
+             */
+            public Builder refreshConfigType(Integer refreshConfigType) {
+                this.refreshConfigType = refreshConfigType;
+                return this;
+            }
 
             /**
              * The synchronization cycle. Valid values:
