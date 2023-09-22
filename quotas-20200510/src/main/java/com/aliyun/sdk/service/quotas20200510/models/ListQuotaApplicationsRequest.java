@@ -31,7 +31,6 @@ public class ListQuotaApplicationsRequest extends Request {
 
     @Body
     @NameInMap("ProductCode")
-    @Validation(required = true)
     private String productCode;
 
     @Body
