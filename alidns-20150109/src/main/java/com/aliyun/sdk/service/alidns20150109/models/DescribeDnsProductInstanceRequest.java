@@ -83,7 +83,7 @@ public class DescribeDnsProductInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the **DescribeDomainInfo** operation to obtain the instance ID.
+         * The instance ID. You can call the **DescribeDomainInfo** operation to obtain the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class DescribeDnsProductInstanceRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

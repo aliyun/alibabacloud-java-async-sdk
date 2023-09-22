@@ -99,7 +99,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         } 
 
         /**
-         * 幂等token
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

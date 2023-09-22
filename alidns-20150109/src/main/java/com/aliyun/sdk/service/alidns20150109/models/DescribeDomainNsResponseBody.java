@@ -98,7 +98,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AllAliDns.
+         * Indicates whether all the name servers are Alibaba Cloud DNS servers.
          */
         public Builder allAliDns(Boolean allAliDns) {
             this.allAliDns = allAliDns;
@@ -114,7 +114,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * DnsServers.
+         * The DNS server names configured for the domain name.
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -122,7 +122,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * ExpectDnsServers.
+         * The DNS server names assigned by Alibaba Cloud DNS.
          */
         public Builder expectDnsServers(ExpectDnsServers expectDnsServers) {
             this.expectDnsServers = expectDnsServers;
@@ -130,7 +130,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * IncludeAliDns.
+         * Indicates whether the name servers include Alibaba Cloud DNS servers.
          */
         public Builder includeAliDns(Boolean includeAliDns) {
             this.includeAliDns = includeAliDns;
@@ -138,7 +138,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

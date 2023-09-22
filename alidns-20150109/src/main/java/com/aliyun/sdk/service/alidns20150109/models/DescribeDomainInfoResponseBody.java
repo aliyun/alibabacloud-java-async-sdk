@@ -75,6 +75,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("SlaveDns")
     private Boolean slaveDns;
 
+    @NameInMap("SubDomain")
+    private Boolean subDomain;
+
     @NameInMap("VersionCode")
     private String versionCode;
 
@@ -103,6 +106,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.slaveDns = builder.slaveDns;
+        this.subDomain = builder.subDomain;
         this.versionCode = builder.versionCode;
         this.versionName = builder.versionName;
     }
@@ -263,6 +267,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return subDomain
+     */
+    public Boolean getSubDomain() {
+        return this.subDomain;
+    }
+
+    /**
      * @return versionCode
      */
     public String getVersionCode() {
@@ -298,6 +309,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private Boolean slaveDns; 
+        private Boolean subDomain; 
         private String versionCode; 
         private String versionName; 
 
@@ -466,6 +478,14 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
          */
         public Builder slaveDns(Boolean slaveDns) {
             this.slaveDns = slaveDns;
+            return this;
+        }
+
+        /**
+         * SubDomain.
+         */
+        public Builder subDomain(Boolean subDomain) {
+            this.subDomain = subDomain;
             return this;
         }
 

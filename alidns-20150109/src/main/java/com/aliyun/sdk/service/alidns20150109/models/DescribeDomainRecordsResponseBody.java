@@ -132,6 +132,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     } 
 
     public static class Record extends TeaModel {
+        @NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
         @NameInMap("DomainName")
         private String domainName;
 
@@ -162,6 +165,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("UpdateTimestamp")
+        private Long updateTimestamp;
+
         @NameInMap("Value")
         private String value;
 
@@ -169,6 +175,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         private Integer weight;
 
         private Record(Builder builder) {
+            this.createTimestamp = builder.createTimestamp;
             this.domainName = builder.domainName;
             this.line = builder.line;
             this.locked = builder.locked;
@@ -179,6 +186,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             this.status = builder.status;
             this.TTL = builder.TTL;
             this.type = builder.type;
+            this.updateTimestamp = builder.updateTimestamp;
             this.value = builder.value;
             this.weight = builder.weight;
         }
@@ -189,6 +197,13 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
 
         public static Record create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         /**
@@ -262,6 +277,13 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTimestamp
+         */
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -276,6 +298,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long createTimestamp; 
             private String domainName; 
             private String line; 
             private Boolean locked; 
@@ -286,8 +309,17 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             private String status; 
             private Long TTL; 
             private String type; 
+            private Long updateTimestamp; 
             private String value; 
             private Integer weight; 
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
+                return this;
+            }
 
             /**
              * The domain name to which the DNS record belongs.
@@ -366,6 +398,14 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * UpdateTimestamp.
+             */
+            public Builder updateTimestamp(Long updateTimestamp) {
+                this.updateTimestamp = updateTimestamp;
                 return this;
             }
 

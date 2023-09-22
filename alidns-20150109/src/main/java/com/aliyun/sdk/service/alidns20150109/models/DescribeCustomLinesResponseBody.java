@@ -98,7 +98,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The list of custom lines.
+         * CustomLines.
          */
         public Builder customLines(java.util.List < CustomLines> customLines) {
             this.customLines = customLines;
@@ -106,7 +106,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries that were returned on each page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of custom lines.
+         * TotalItems.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of pages that were returned.
+         * TotalPages.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -202,7 +202,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the custom line.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +210,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the custom line.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -218,7 +218,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom line.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

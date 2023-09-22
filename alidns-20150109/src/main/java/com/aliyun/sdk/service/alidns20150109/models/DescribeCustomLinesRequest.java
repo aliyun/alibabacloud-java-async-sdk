@@ -97,7 +97,7 @@ public class DescribeCustomLinesRequest extends Request {
         } 
 
         /**
-         * The domain name for which the custom lines to be queried are configured.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,7 +106,7 @@ public class DescribeCustomLinesRequest extends Request {
         }
 
         /**
-         * The language type.
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +115,7 @@ public class DescribeCustomLinesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +124,7 @@ public class DescribeCustomLinesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

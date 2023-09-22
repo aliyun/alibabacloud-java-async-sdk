@@ -157,7 +157,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDnsProductInstanceResponse> describeDnsProductInstance(DescribeDnsProductInstanceRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
+      * The number of the page to return. Pages start from page **1**. Default value: **1**.
       *
      */
     CompletableFuture<DescribeDnsProductInstancesResponse> describeDnsProductInstances(DescribeDnsProductInstancesRequest request);
@@ -186,6 +186,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainLogsResponse> describeDomainLogs(DescribeDomainLogsRequest request);
 
+    /**
+      * > This operation queries the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
+      *
+     */
     CompletableFuture<DescribeDomainNsResponse> describeDomainNs(DescribeDomainNsRequest request);
 
     CompletableFuture<DescribeDomainRecordInfoResponse> describeDomainRecordInfo(DescribeDomainRecordInfoRequest request);

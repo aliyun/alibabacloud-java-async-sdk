@@ -155,7 +155,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         } 
 
         /**
-         * CacheTtlMax.
+         * The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.
          */
         public Builder cacheTtlMax(Integer cacheTtlMax) {
             this.putQueryParameter("CacheTtlMax", cacheTtlMax);
@@ -164,7 +164,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * CacheTtlMin.
+         * The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.
          */
         public Builder cacheTtlMin(Integer cacheTtlMin) {
             this.putQueryParameter("CacheTtlMin", cacheTtlMin);
@@ -173,7 +173,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -182,7 +182,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID of the cache-accelerated domain name.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +191,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -200,7 +200,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * SourceDnsServer.
+         * The origin DNS servers. A maximum of 10 origin DNS servers are supported.
          */
         public Builder sourceDnsServer(java.util.List < SourceDnsServer> sourceDnsServer) {
             this.putQueryParameter("SourceDnsServer", sourceDnsServer);
@@ -209,7 +209,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * SourceEdns.
+         * Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.
          */
         public Builder sourceEdns(String sourceEdns) {
             this.putQueryParameter("SourceEdns", sourceEdns);
@@ -218,7 +218,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * SourceProtocol.
+         * The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.
          */
         public Builder sourceProtocol(String sourceProtocol) {
             this.putQueryParameter("SourceProtocol", sourceProtocol);
@@ -272,7 +272,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
             private String port; 
 
             /**
-             * Host.
+             * The domain name or IP address of the origin DNS server.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -280,7 +280,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port of the origin DNS server.
              */
             public Builder port(String port) {
                 this.port = port;

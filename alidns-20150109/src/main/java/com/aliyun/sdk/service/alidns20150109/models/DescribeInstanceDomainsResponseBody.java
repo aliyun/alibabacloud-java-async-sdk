@@ -98,7 +98,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The domain names that are bound to the instance.
+         * InstanceDomains.
          */
         public Builder instanceDomains(java.util.List < InstanceDomains> instanceDomains) {
             this.instanceDomains = instanceDomains;
@@ -106,7 +106,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalItems.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * TotalPages.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -202,7 +202,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * The time when the domain name was bound with the instance.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +210,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates when the domain name was bound with the instance.
+             * CreateTimestamp.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -218,7 +218,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
