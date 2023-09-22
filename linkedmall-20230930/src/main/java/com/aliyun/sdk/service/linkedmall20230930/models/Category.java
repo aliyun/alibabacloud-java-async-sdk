@@ -15,8 +15,8 @@ public class Category extends TeaModel {
     @NameInMap("categoryId")
     private Long categoryId;
 
-    @NameInMap("leaf")
-    private Boolean leaf;
+    @NameInMap("isLeaf")
+    private Boolean isLeaf;
 
     @NameInMap("level")
     private Integer level;
@@ -29,7 +29,7 @@ public class Category extends TeaModel {
 
     private Category(Builder builder) {
         this.categoryId = builder.categoryId;
-        this.leaf = builder.leaf;
+        this.isLeaf = builder.isLeaf;
         this.level = builder.level;
         this.name = builder.name;
         this.parentId = builder.parentId;
@@ -51,10 +51,10 @@ public class Category extends TeaModel {
     }
 
     /**
-     * @return leaf
+     * @return isLeaf
      */
-    public Boolean getLeaf() {
-        return this.leaf;
+    public Boolean getIsLeaf() {
+        return this.isLeaf;
     }
 
     /**
@@ -80,7 +80,7 @@ public class Category extends TeaModel {
 
     public static final class Builder {
         private Long categoryId; 
-        private Boolean leaf; 
+        private Boolean isLeaf; 
         private Integer level; 
         private String name; 
         private Long parentId; 
@@ -94,10 +94,10 @@ public class Category extends TeaModel {
         }
 
         /**
-         * leaf.
+         * isLeaf.
          */
-        public Builder leaf(Boolean leaf) {
-            this.leaf = leaf;
+        public Builder isLeaf(Boolean isLeaf) {
+            this.isLeaf = isLeaf;
             return this;
         }
 

@@ -63,6 +63,9 @@ public class RefundResult extends TeaModel {
     @NameInMap("refunderZipCode")
     private String refunderZipCode;
 
+    @NameInMap("requestId")
+    private String requestId;
+
     @NameInMap("returnGoodLogisticsStatus")
     private Integer returnGoodLogisticsStatus;
 
@@ -93,6 +96,7 @@ public class RefundResult extends TeaModel {
         this.refunderName = builder.refunderName;
         this.refunderTel = builder.refunderTel;
         this.refunderZipCode = builder.refunderZipCode;
+        this.requestId = builder.requestId;
         this.returnGoodLogisticsStatus = builder.returnGoodLogisticsStatus;
         this.sellerAgreeMsg = builder.sellerAgreeMsg;
         this.sellerRefuseAgreementMessage = builder.sellerRefuseAgreementMessage;
@@ -227,6 +231,13 @@ public class RefundResult extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return returnGoodLogisticsStatus
      */
     public Integer getReturnGoodLogisticsStatus() {
@@ -272,6 +283,7 @@ public class RefundResult extends TeaModel {
         private String refunderName; 
         private String refunderTel; 
         private String refunderZipCode; 
+        private String requestId; 
         private Integer returnGoodLogisticsStatus; 
         private String sellerAgreeMsg; 
         private String sellerRefuseAgreementMessage; 
@@ -410,6 +422,14 @@ public class RefundResult extends TeaModel {
          */
         public Builder refunderZipCode(String refunderZipCode) {
             this.refunderZipCode = refunderZipCode;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

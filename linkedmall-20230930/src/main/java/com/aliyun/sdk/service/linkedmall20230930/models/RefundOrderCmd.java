@@ -20,6 +20,7 @@ public class RefundOrderCmd extends TeaModel {
     private String applyReasonTips;
 
     @NameInMap("applyRefundCount")
+    @Validation(required = true)
     private Integer applyRefundCount;
 
     @NameInMap("applyRefundFee")

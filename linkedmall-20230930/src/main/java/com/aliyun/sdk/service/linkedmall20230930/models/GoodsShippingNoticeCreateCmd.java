@@ -18,7 +18,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
 
     @NameInMap("disputeId")
     @Validation(required = true)
-    private Long disputeId;
+    private String disputeId;
 
     @NameInMap("logisticsNo")
     @Validation(required = true)
@@ -48,7 +48,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
     /**
      * @return disputeId
      */
-    public Long getDisputeId() {
+    public String getDisputeId() {
         return this.disputeId;
     }
 
@@ -61,7 +61,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
 
     public static final class Builder {
         private String cpCode; 
-        private Long disputeId; 
+        private String disputeId; 
         private String logisticsNo; 
 
         /**
@@ -75,7 +75,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
         /**
          * disputeId.
          */
-        public Builder disputeId(Long disputeId) {
+        public Builder disputeId(String disputeId) {
             this.disputeId = disputeId;
             return this;
         }

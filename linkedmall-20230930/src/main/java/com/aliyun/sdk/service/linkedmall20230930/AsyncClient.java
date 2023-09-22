@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSelectionProductSaleInfoResponse> getSelectionProductSaleInfo(GetSelectionProductSaleInfoRequest request);
 
+    CompletableFuture<ListCategoriesResponse> listCategories(ListCategoriesRequest request);
+
     CompletableFuture<ListLogisticsOrdersResponse> listLogisticsOrders(ListLogisticsOrdersRequest request);
 
     CompletableFuture<ListPurchaserShopsResponse> listPurchaserShops(ListPurchaserShopsRequest request);
