@@ -91,12 +91,143 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     } 
 
+    public static class Groups extends TeaModel {
+        @NameInMap("GroupId")
+        private String groupId;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        private Groups(Builder builder) {
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Groups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public static final class Builder {
+            private String groupId; 
+            private String groupName; 
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            public Groups build() {
+                return new Groups(this);
+            } 
+
+        } 
+
+    }
+    public static class Orgs extends TeaModel {
+        @NameInMap("OrgId")
+        private String orgId;
+
+        @NameInMap("OrgName")
+        private String orgName;
+
+        private Orgs(Builder builder) {
+            this.orgId = builder.orgId;
+            this.orgName = builder.orgName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Orgs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return orgId
+         */
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        /**
+         * @return orgName
+         */
+        public String getOrgName() {
+            return this.orgName;
+        }
+
+        public static final class Builder {
+            private String orgId; 
+            private String orgName; 
+
+            /**
+             * OrgId.
+             */
+            public Builder orgId(String orgId) {
+                this.orgId = orgId;
+                return this;
+            }
+
+            /**
+             * OrgName.
+             */
+            public Builder orgName(String orgName) {
+                this.orgName = orgName;
+                return this;
+            }
+
+            public Orgs build() {
+                return new Orgs(this);
+            } 
+
+        } 
+
+    }
     public static class Users extends TeaModel {
+        @NameInMap("Address")
+        private String address;
+
+        @NameInMap("Avatar")
+        private String avatar;
+
         @NameInMap("Email")
         private String email;
 
         @NameInMap("EndUserId")
         private String endUserId;
+
+        @NameInMap("Groups")
+        private java.util.List < Groups> groups;
 
         @NameInMap("Id")
         private Long id;
@@ -104,11 +235,17 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("IsTenantManager")
         private Boolean isTenantManager;
 
+        @NameInMap("JobNumber")
+        private String jobNumber;
+
         @NameInMap("NickName")
         private String nickName;
 
         @NameInMap("OrgId")
         private String orgId;
+
+        @NameInMap("Orgs")
+        private java.util.List < Orgs> orgs;
 
         @NameInMap("OwnerType")
         private String ownerType;
@@ -126,12 +263,17 @@ public class DescribeUsersResponseBody extends TeaModel {
         private String wyId;
 
         private Users(Builder builder) {
+            this.address = builder.address;
+            this.avatar = builder.avatar;
             this.email = builder.email;
             this.endUserId = builder.endUserId;
+            this.groups = builder.groups;
             this.id = builder.id;
             this.isTenantManager = builder.isTenantManager;
+            this.jobNumber = builder.jobNumber;
             this.nickName = builder.nickName;
             this.orgId = builder.orgId;
+            this.orgs = builder.orgs;
             this.ownerType = builder.ownerType;
             this.phone = builder.phone;
             this.remark = builder.remark;
@@ -145,6 +287,20 @@ public class DescribeUsersResponseBody extends TeaModel {
 
         public static Users create() {
             return builder().build();
+        }
+
+        /**
+         * @return address
+         */
+        public String getAddress() {
+            return this.address;
+        }
+
+        /**
+         * @return avatar
+         */
+        public String getAvatar() {
+            return this.avatar;
         }
 
         /**
@@ -162,6 +318,13 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return groups
+         */
+        public java.util.List < Groups> getGroups() {
+            return this.groups;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -176,6 +339,13 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobNumber
+         */
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
+        /**
          * @return nickName
          */
         public String getNickName() {
@@ -187,6 +357,13 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         public String getOrgId() {
             return this.orgId;
+        }
+
+        /**
+         * @return orgs
+         */
+        public java.util.List < Orgs> getOrgs() {
+            return this.orgs;
         }
 
         /**
@@ -225,17 +402,38 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String address; 
+            private String avatar; 
             private String email; 
             private String endUserId; 
+            private java.util.List < Groups> groups; 
             private Long id; 
             private Boolean isTenantManager; 
+            private String jobNumber; 
             private String nickName; 
             private String orgId; 
+            private java.util.List < Orgs> orgs; 
             private String ownerType; 
             private String phone; 
             private String remark; 
             private Long status; 
             private String wyId; 
+
+            /**
+             * Address.
+             */
+            public Builder address(String address) {
+                this.address = address;
+                return this;
+            }
+
+            /**
+             * Avatar.
+             */
+            public Builder avatar(String avatar) {
+                this.avatar = avatar;
+                return this;
+            }
 
             /**
              * The email address.
@@ -250,6 +448,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * Groups.
+             */
+            public Builder groups(java.util.List < Groups> groups) {
+                this.groups = groups;
                 return this;
             }
 
@@ -270,6 +476,14 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
+             * JobNumber.
+             */
+            public Builder jobNumber(String jobNumber) {
+                this.jobNumber = jobNumber;
+                return this;
+            }
+
+            /**
              * The nickname of the user.
              */
             public Builder nickName(String nickName) {
@@ -282,6 +496,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
+                return this;
+            }
+
+            /**
+             * Orgs.
+             */
+            public Builder orgs(java.util.List < Orgs> orgs) {
+                this.orgs = orgs;
                 return this;
             }
 

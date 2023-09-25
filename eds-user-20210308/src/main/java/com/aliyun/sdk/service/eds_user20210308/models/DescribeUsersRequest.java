@@ -24,6 +24,10 @@ public class DescribeUsersRequest extends Request {
     @NameInMap("Filter")
     private String filter;
 
+    @Body
+    @NameInMap("GroupId")
+    private String groupId;
+
     @Query
     @NameInMap("MaxResults")
     @Validation(maximum = 500, minimum = 1)
@@ -42,6 +46,7 @@ public class DescribeUsersRequest extends Request {
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
+        this.groupId = builder.groupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgId = builder.orgId;
@@ -82,6 +87,13 @@ public class DescribeUsersRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return maxResults
      */
     public Long getMaxResults() {
@@ -106,6 +118,7 @@ public class DescribeUsersRequest extends Request {
         private java.util.List < String > endUserIds; 
         private java.util.List < String > excludeEndUserIds; 
         private String filter; 
+        private String groupId; 
         private Long maxResults; 
         private String nextToken; 
         private String orgId; 
@@ -119,6 +132,7 @@ public class DescribeUsersRequest extends Request {
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
+            this.groupId = request.groupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgId = request.orgId;
@@ -148,6 +162,15 @@ public class DescribeUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putBodyParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 
