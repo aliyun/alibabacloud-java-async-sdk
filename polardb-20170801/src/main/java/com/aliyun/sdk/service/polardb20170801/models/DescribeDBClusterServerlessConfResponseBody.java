@@ -21,6 +21,12 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ScaleApRoNumMax")
+    private String scaleApRoNumMax;
+
+    @NameInMap("ScaleApRoNumMin")
+    private String scaleApRoNumMin;
+
     @NameInMap("ScaleMax")
     private String scaleMax;
 
@@ -36,15 +42,21 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("SecondsUntilAutoPause")
     private String secondsUntilAutoPause;
 
+    @NameInMap("Switchs")
+    private String switchs;
+
     private DescribeDBClusterServerlessConfResponseBody(Builder builder) {
         this.allowShutDown = builder.allowShutDown;
         this.DBClusterId = builder.DBClusterId;
         this.requestId = builder.requestId;
+        this.scaleApRoNumMax = builder.scaleApRoNumMax;
+        this.scaleApRoNumMin = builder.scaleApRoNumMin;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
         this.scaleRoNumMax = builder.scaleRoNumMax;
         this.scaleRoNumMin = builder.scaleRoNumMin;
         this.secondsUntilAutoPause = builder.secondsUntilAutoPause;
+        this.switchs = builder.switchs;
     }
 
     public static Builder builder() {
@@ -74,6 +86,20 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return scaleApRoNumMax
+     */
+    public String getScaleApRoNumMax() {
+        return this.scaleApRoNumMax;
+    }
+
+    /**
+     * @return scaleApRoNumMin
+     */
+    public String getScaleApRoNumMin() {
+        return this.scaleApRoNumMin;
     }
 
     /**
@@ -111,15 +137,25 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         return this.secondsUntilAutoPause;
     }
 
+    /**
+     * @return switchs
+     */
+    public String getSwitchs() {
+        return this.switchs;
+    }
+
     public static final class Builder {
         private String allowShutDown; 
         private String DBClusterId; 
         private String requestId; 
+        private String scaleApRoNumMax; 
+        private String scaleApRoNumMin; 
         private String scaleMax; 
         private String scaleMin; 
         private String scaleRoNumMax; 
         private String scaleRoNumMin; 
         private String secondsUntilAutoPause; 
+        private String switchs; 
 
         /**
          * Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:
@@ -146,6 +182,22 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ScaleApRoNumMax.
+         */
+        public Builder scaleApRoNumMax(String scaleApRoNumMax) {
+            this.scaleApRoNumMax = scaleApRoNumMax;
+            return this;
+        }
+
+        /**
+         * ScaleApRoNumMin.
+         */
+        public Builder scaleApRoNumMin(String scaleApRoNumMin) {
+            this.scaleApRoNumMin = scaleApRoNumMin;
             return this;
         }
 
@@ -186,6 +238,14 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;
+            return this;
+        }
+
+        /**
+         * Switchs.
+         */
+        public Builder switchs(String switchs) {
+            this.switchs = switchs;
             return this;
         }
 

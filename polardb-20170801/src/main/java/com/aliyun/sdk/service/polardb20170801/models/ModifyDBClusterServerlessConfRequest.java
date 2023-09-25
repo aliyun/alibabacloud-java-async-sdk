@@ -50,6 +50,14 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ScaleApRoNumMax")
+    private String scaleApRoNumMax;
+
+    @Query
+    @NameInMap("ScaleApRoNumMin")
+    private String scaleApRoNumMin;
+
+    @Query
     @NameInMap("ScaleMax")
     private String scaleMax;
 
@@ -80,6 +88,8 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleApRoNumMax = builder.scaleApRoNumMax;
+        this.scaleApRoNumMin = builder.scaleApRoNumMin;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
         this.scaleRoNumMax = builder.scaleRoNumMax;
@@ -164,6 +174,20 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
     }
 
     /**
+     * @return scaleApRoNumMax
+     */
+    public String getScaleApRoNumMax() {
+        return this.scaleApRoNumMax;
+    }
+
+    /**
+     * @return scaleApRoNumMin
+     */
+    public String getScaleApRoNumMin() {
+        return this.scaleApRoNumMin;
+    }
+
+    /**
      * @return scaleMax
      */
     public String getScaleMax() {
@@ -208,6 +232,8 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String scaleApRoNumMax; 
+        private String scaleApRoNumMin; 
         private String scaleMax; 
         private String scaleMin; 
         private String scaleRoNumMax; 
@@ -229,6 +255,8 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleApRoNumMax = request.scaleApRoNumMax;
+            this.scaleApRoNumMin = request.scaleApRoNumMin;
             this.scaleMax = request.scaleMax;
             this.scaleMin = request.scaleMin;
             this.scaleRoNumMax = request.scaleRoNumMax;
@@ -318,6 +346,24 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ScaleApRoNumMax.
+         */
+        public Builder scaleApRoNumMax(String scaleApRoNumMax) {
+            this.putQueryParameter("ScaleApRoNumMax", scaleApRoNumMax);
+            this.scaleApRoNumMax = scaleApRoNumMax;
+            return this;
+        }
+
+        /**
+         * ScaleApRoNumMin.
+         */
+        public Builder scaleApRoNumMin(String scaleApRoNumMin) {
+            this.putQueryParameter("ScaleApRoNumMin", scaleApRoNumMin);
+            this.scaleApRoNumMin = scaleApRoNumMin;
             return this;
         }
 
