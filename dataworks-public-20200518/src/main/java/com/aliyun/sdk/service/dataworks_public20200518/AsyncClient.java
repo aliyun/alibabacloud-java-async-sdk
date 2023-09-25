@@ -52,6 +52,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
 
+    CompletableFuture<CreateDIAlarmRuleResponse> createDIAlarmRule(CreateDIAlarmRuleRequest request);
+
+    CompletableFuture<CreateDIJobResponse> createDIJob(CreateDIJobRequest request);
+
     /**
       * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
       *
@@ -133,6 +137,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
 
+    CompletableFuture<DeleteDIAlarmRuleResponse> deleteDIAlarmRule(DeleteDIAlarmRuleRequest request);
+
+    CompletableFuture<DeleteDIJobResponse> deleteDIJob(DeleteDIJobRequest request);
+
     CompletableFuture<DeleteDISyncTaskResponse> deleteDISyncTask(DeleteDISyncTaskRequest request);
 
     CompletableFuture<DeleteDataServiceApiResponse> deleteDataServiceApi(DeleteDataServiceApiRequest request);
@@ -210,6 +218,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBusinessResponse> getBusiness(GetBusinessRequest request);
 
     CompletableFuture<GetDDLJobStatusResponse> getDDLJobStatus(GetDDLJobStatusRequest request);
+
+    CompletableFuture<GetDIAlarmRuleResponse> getDIAlarmRule(GetDIAlarmRuleRequest request);
+
+    CompletableFuture<GetDIJobResponse> getDIJob(GetDIJobRequest request);
 
     CompletableFuture<GetDISyncInstanceInfoResponse> getDISyncInstanceInfo(GetDISyncInstanceInfoRequest request);
 
@@ -433,6 +445,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
 
+    CompletableFuture<ListDIAlarmRulesResponse> listDIAlarmRules(ListDIAlarmRulesRequest request);
+
+    CompletableFuture<ListDIJobsResponse> listDIJobs(ListDIJobsRequest request);
+
     /**
       * DataWorks allows you to set the default global configuration for only the processing rules of DDL messages in sync solutions. After you configure the **processing rules of DDL messages** in sync solutions, the configuration is set as the default global configuration and applies to all real-time sync nodes. You can also modify the **processing rules of DDL messages** based on your business requirements. For more information, see [Sync solutions](~~199008~~).
       *
@@ -633,9 +649,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetSuccessInstanceResponse> setSuccessInstance(SetSuccessInstanceRequest request);
 
+    CompletableFuture<StartDIJobResponse> startDIJob(StartDIJobRequest request);
+
     CompletableFuture<StartDISyncInstanceResponse> startDISyncInstance(StartDISyncInstanceRequest request);
 
     CompletableFuture<StartMigrationResponse> startMigration(StartMigrationRequest request);
+
+    CompletableFuture<StopDIJobResponse> stopDIJob(StopDIJobRequest request);
 
     CompletableFuture<StopDISyncInstanceResponse> stopDISyncInstance(StopDISyncInstanceRequest request);
 
@@ -668,6 +688,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request);
+
+    CompletableFuture<UpdateDIAlarmRuleResponse> updateDIAlarmRule(UpdateDIAlarmRuleRequest request);
+
+    CompletableFuture<UpdateDIJobResponse> updateDIJob(UpdateDIJobRequest request);
 
     /**
       * The operation that you want to perform. Set the value to **UpdateDIProjectConfig**.
