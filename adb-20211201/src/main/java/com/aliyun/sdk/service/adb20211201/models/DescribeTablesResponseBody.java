@@ -50,7 +50,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The queried tables.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DBClusterId.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -130,7 +130,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -138,7 +138,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

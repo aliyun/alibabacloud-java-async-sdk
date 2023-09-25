@@ -72,6 +72,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     } 
 
     public static class GroupsInfo extends TeaModel {
+        @NameInMap("ClusterMode")
+        private String clusterMode;
+
+        @NameInMap("ClusterSizeResource")
+        private String clusterSizeResource;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -87,11 +93,20 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("GroupUsers")
         private String groupUsers;
 
+        @NameInMap("MaxClusterCount")
+        private Integer maxClusterCount;
+
         @NameInMap("MaxComputeResource")
         private String maxComputeResource;
 
+        @NameInMap("MinClusterCount")
+        private Integer minClusterCount;
+
         @NameInMap("MinComputeResource")
         private String minComputeResource;
+
+        @NameInMap("RunningClusterCount")
+        private Integer runningClusterCount;
 
         @NameInMap("Status")
         private String status;
@@ -100,13 +115,18 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String updateTime;
 
         private GroupsInfo(Builder builder) {
+            this.clusterMode = builder.clusterMode;
+            this.clusterSizeResource = builder.clusterSizeResource;
             this.createTime = builder.createTime;
             this.elasticMinComputeResource = builder.elasticMinComputeResource;
             this.groupName = builder.groupName;
             this.groupType = builder.groupType;
             this.groupUsers = builder.groupUsers;
+            this.maxClusterCount = builder.maxClusterCount;
             this.maxComputeResource = builder.maxComputeResource;
+            this.minClusterCount = builder.minClusterCount;
             this.minComputeResource = builder.minComputeResource;
+            this.runningClusterCount = builder.runningClusterCount;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
         }
@@ -117,6 +137,20 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         public static GroupsInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterMode
+         */
+        public String getClusterMode() {
+            return this.clusterMode;
+        }
+
+        /**
+         * @return clusterSizeResource
+         */
+        public String getClusterSizeResource() {
+            return this.clusterSizeResource;
         }
 
         /**
@@ -155,6 +189,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxClusterCount
+         */
+        public Integer getMaxClusterCount() {
+            return this.maxClusterCount;
+        }
+
+        /**
          * @return maxComputeResource
          */
         public String getMaxComputeResource() {
@@ -162,10 +203,24 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return minClusterCount
+         */
+        public Integer getMinClusterCount() {
+            return this.minClusterCount;
+        }
+
+        /**
          * @return minComputeResource
          */
         public String getMinComputeResource() {
             return this.minComputeResource;
+        }
+
+        /**
+         * @return runningClusterCount
+         */
+        public Integer getRunningClusterCount() {
+            return this.runningClusterCount;
         }
 
         /**
@@ -183,15 +238,36 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterMode; 
+            private String clusterSizeResource; 
             private String createTime; 
             private String elasticMinComputeResource; 
             private String groupName; 
             private String groupType; 
             private String groupUsers; 
+            private Integer maxClusterCount; 
             private String maxComputeResource; 
+            private Integer minClusterCount; 
             private String minComputeResource; 
+            private Integer runningClusterCount; 
             private String status; 
             private String updateTime; 
+
+            /**
+             * ClusterMode.
+             */
+            public Builder clusterMode(String clusterMode) {
+                this.clusterMode = clusterMode;
+                return this;
+            }
+
+            /**
+             * ClusterSizeResource.
+             */
+            public Builder clusterSizeResource(String clusterSizeResource) {
+                this.clusterSizeResource = clusterSizeResource;
+                return this;
+            }
 
             /**
              * The time when the resource group was created. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
@@ -240,6 +316,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * MaxClusterCount.
+             */
+            public Builder maxClusterCount(Integer maxClusterCount) {
+                this.maxClusterCount = maxClusterCount;
+                return this;
+            }
+
+            /**
              * The maximum amount of reserved computing resources. Unit: ACU.
              */
             public Builder maxComputeResource(String maxComputeResource) {
@@ -248,10 +332,26 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * MinClusterCount.
+             */
+            public Builder minClusterCount(Integer minClusterCount) {
+                this.minClusterCount = minClusterCount;
+                return this;
+            }
+
+            /**
              * The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
+                return this;
+            }
+
+            /**
+             * RunningClusterCount.
+             */
+            public Builder runningClusterCount(Integer runningClusterCount) {
+                this.runningClusterCount = runningClusterCount;
                 return this;
             }
 

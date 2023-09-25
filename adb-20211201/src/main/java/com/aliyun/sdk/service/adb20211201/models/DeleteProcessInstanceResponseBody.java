@@ -74,7 +74,11 @@ public class DeleteProcessInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates whether the workflow instance is deleted. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -82,7 +86,11 @@ public class DeleteProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. Valid values:
+         * <p>
+         * 
+         * *   If the request was successful, **Success** is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +98,7 @@ public class DeleteProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +106,11 @@ public class DeleteProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

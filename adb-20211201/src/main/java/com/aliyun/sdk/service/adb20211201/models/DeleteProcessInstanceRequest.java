@@ -100,7 +100,10 @@ public class DeleteProcessInstanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the Data Lakehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -109,7 +112,7 @@ public class DeleteProcessInstanceRequest extends Request {
         }
 
         /**
-         * ProcessInstanceId.
+         * The ID of the workflow instance.
          */
         public Builder processInstanceId(Long processInstanceId) {
             this.putQueryParameter("ProcessInstanceId", processInstanceId);
@@ -118,7 +121,7 @@ public class DeleteProcessInstanceRequest extends Request {
         }
 
         /**
-         * ProjectCode.
+         * The project ID, which is the unique identifier of the project.
          */
         public Builder projectCode(Long projectCode) {
             this.putQueryParameter("ProjectCode", projectCode);
@@ -127,7 +130,7 @@ public class DeleteProcessInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

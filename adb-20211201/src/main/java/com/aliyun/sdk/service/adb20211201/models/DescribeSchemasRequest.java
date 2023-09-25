@@ -70,7 +70,7 @@ public class DescribeSchemasRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -79,7 +79,7 @@ public class DescribeSchemasRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The queried columns.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,11 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AutoIncrementColumn.
+             * Indicates whether the column is an auto-increment column. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -178,7 +182,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -186,7 +190,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -194,7 +198,11 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * Indicates whether the column is the primary key of the table. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -202,7 +210,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -210,7 +218,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -218,7 +226,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the column.
              */
             public Builder type(String type) {
                 this.type = type;
