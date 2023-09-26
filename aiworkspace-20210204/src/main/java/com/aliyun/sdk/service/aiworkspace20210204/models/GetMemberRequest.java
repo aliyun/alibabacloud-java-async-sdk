@@ -18,13 +18,17 @@ public class GetMemberRequest extends Request {
     private String workspaceId;
 
     @Query
+    @NameInMap("MemberId")
+    private String memberId;
+
+    @Query
     @NameInMap("UserId")
-    @Validation(required = true)
     private String userId;
 
     private GetMemberRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.memberId = builder.memberId;
         this.userId = builder.userId;
     }
 
@@ -49,6 +53,13 @@ public class GetMemberRequest extends Request {
     }
 
     /**
+     * @return memberId
+     */
+    public String getMemberId() {
+        return this.memberId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -57,6 +68,7 @@ public class GetMemberRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetMemberRequest, Builder> {
         private String workspaceId; 
+        private String memberId; 
         private String userId; 
 
         private Builder() {
@@ -66,6 +78,7 @@ public class GetMemberRequest extends Request {
         private Builder(GetMemberRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.memberId = request.memberId;
             this.userId = request.userId;
         } 
 
@@ -75,6 +88,15 @@ public class GetMemberRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * MemberId.
+         */
+        public Builder memberId(String memberId) {
+            this.putQueryParameter("MemberId", memberId);
+            this.memberId = memberId;
             return this;
         }
 
