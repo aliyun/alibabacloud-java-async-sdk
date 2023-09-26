@@ -333,6 +333,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableDBClusterServerlessResponse> disableDBClusterServerless(DisableDBClusterServerlessRequest request);
 
+    CompletableFuture<EnableDBClusterServerlessResponse> enableDBClusterServerless(EnableDBClusterServerlessRequest request);
+
     CompletableFuture<EnableFirewallRulesResponse> enableFirewallRules(EnableFirewallRulesRequest request);
 
     CompletableFuture<EvaluateRegionResourceResponse> evaluateRegionResource(EvaluateRegionResourceRequest request);
