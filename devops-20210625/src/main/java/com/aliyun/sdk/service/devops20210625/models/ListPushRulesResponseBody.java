@@ -1,0 +1,356 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.devops20210625.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListPushRulesResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListPushRulesResponseBody</p>
+ */
+public class ListPushRulesResponseBody extends TeaModel {
+    @NameInMap("errorCode")
+    private String errorCode;
+
+    @NameInMap("errorMessage")
+    private String errorMessage;
+
+    @NameInMap("requestId")
+    private String requestId;
+
+    @NameInMap("result")
+    private java.util.List < Result> result;
+
+    @NameInMap("success")
+    private Boolean success;
+
+    @NameInMap("total")
+    private Long total;
+
+    private ListPushRulesResponseBody(Builder builder) {
+        this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
+        this.requestId = builder.requestId;
+        this.result = builder.result;
+        this.success = builder.success;
+        this.total = builder.total;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListPushRulesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return result
+     */
+    public java.util.List < Result> getResult() {
+        return this.result;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return total
+     */
+    public Long getTotal() {
+        return this.total;
+    }
+
+    public static final class Builder {
+        private String errorCode; 
+        private String errorMessage; 
+        private String requestId; 
+        private java.util.List < Result> result; 
+        private Boolean success; 
+        private Long total; 
+
+        /**
+         * errorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * errorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * result.
+         */
+        public Builder result(java.util.List < Result> result) {
+            this.result = result;
+            return this;
+        }
+
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * total.
+         */
+        public Builder total(Long total) {
+            this.total = total;
+            return this;
+        }
+
+        public ListPushRulesResponseBody build() {
+            return new ListPushRulesResponseBody(this);
+        } 
+
+    } 
+
+    public static class RuleInfos extends TeaModel {
+        @NameInMap("checkerName")
+        private String checkerName;
+
+        @NameInMap("checkerType")
+        private String checkerType;
+
+        @NameInMap("extraMessage")
+        private String extraMessage;
+
+        @NameInMap("fileRuleRegexes")
+        private java.util.List < String > fileRuleRegexes;
+
+        private RuleInfos(Builder builder) {
+            this.checkerName = builder.checkerName;
+            this.checkerType = builder.checkerType;
+            this.extraMessage = builder.extraMessage;
+            this.fileRuleRegexes = builder.fileRuleRegexes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RuleInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkerName
+         */
+        public String getCheckerName() {
+            return this.checkerName;
+        }
+
+        /**
+         * @return checkerType
+         */
+        public String getCheckerType() {
+            return this.checkerType;
+        }
+
+        /**
+         * @return extraMessage
+         */
+        public String getExtraMessage() {
+            return this.extraMessage;
+        }
+
+        /**
+         * @return fileRuleRegexes
+         */
+        public java.util.List < String > getFileRuleRegexes() {
+            return this.fileRuleRegexes;
+        }
+
+        public static final class Builder {
+            private String checkerName; 
+            private String checkerType; 
+            private String extraMessage; 
+            private java.util.List < String > fileRuleRegexes; 
+
+            /**
+             * checkerName.
+             */
+            public Builder checkerName(String checkerName) {
+                this.checkerName = checkerName;
+                return this;
+            }
+
+            /**
+             * checkerType.
+             */
+            public Builder checkerType(String checkerType) {
+                this.checkerType = checkerType;
+                return this;
+            }
+
+            /**
+             * extraMessage.
+             */
+            public Builder extraMessage(String extraMessage) {
+                this.extraMessage = extraMessage;
+                return this;
+            }
+
+            /**
+             * fileRuleRegexes.
+             */
+            public Builder fileRuleRegexes(java.util.List < String > fileRuleRegexes) {
+                this.fileRuleRegexes = fileRuleRegexes;
+                return this;
+            }
+
+            public RuleInfos build() {
+                return new RuleInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class Result extends TeaModel {
+        @NameInMap("gmtCreate")
+        private String gmtCreate;
+
+        @NameInMap("gmtModified")
+        private String gmtModified;
+
+        @NameInMap("id")
+        private Long id;
+
+        @NameInMap("ruleInfos")
+        private java.util.List < RuleInfos> ruleInfos;
+
+        private Result(Builder builder) {
+            this.gmtCreate = builder.gmtCreate;
+            this.gmtModified = builder.gmtModified;
+            this.id = builder.id;
+            this.ruleInfos = builder.ruleInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return ruleInfos
+         */
+        public java.util.List < RuleInfos> getRuleInfos() {
+            return this.ruleInfos;
+        }
+
+        public static final class Builder {
+            private String gmtCreate; 
+            private String gmtModified; 
+            private Long id; 
+            private java.util.List < RuleInfos> ruleInfos; 
+
+            /**
+             * gmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * gmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * ruleInfos.
+             */
+            public Builder ruleInfos(java.util.List < RuleInfos> ruleInfos) {
+                this.ruleInfos = ruleInfos;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+}

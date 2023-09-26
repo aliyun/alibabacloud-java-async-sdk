@@ -52,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateProtectdBranchResponse> createProtectdBranch(CreateProtectdBranchRequest request);
 
+    CompletableFuture<CreatePushRuleResponse> createPushRule(CreatePushRuleRequest request);
+
     CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
 
     CompletableFuture<CreateRepositoryGroupResponse> createRepositoryGroup(CreateRepositoryGroupRequest request);
@@ -110,6 +112,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteProtectedBranchResponse> deleteProtectedBranch(DeleteProtectedBranchRequest request);
 
+    CompletableFuture<DeletePushRuleResponse> deletePushRule(DeletePushRuleRequest request);
+
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
 
     CompletableFuture<DeleteRepositoryGroupResponse> deleteRepositoryGroup(DeleteRepositoryGroupRequest request);
@@ -150,6 +154,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFlowTagGroupResponse> getFlowTagGroup(GetFlowTagGroupRequest request);
 
+    CompletableFuture<GetGroupByPathResponse> getGroupByPath(GetGroupByPathRequest request);
+
     CompletableFuture<GetGroupDetailResponse> getGroupDetail(GetGroupDetailRequest request);
 
     CompletableFuture<GetHostGroupResponse> getHostGroup(GetHostGroupRequest request);
@@ -173,6 +179,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectInfoResponse> getProjectInfo(GetProjectInfoRequest request);
 
     CompletableFuture<GetProjectMemberResponse> getProjectMember(GetProjectMemberRequest request);
+
+    CompletableFuture<GetPushRuleResponse> getPushRule(GetPushRuleRequest request);
 
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
@@ -249,6 +257,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     CompletableFuture<ListProtectedBranchesResponse> listProtectedBranches(ListProtectedBranchesRequest request);
+
+    CompletableFuture<ListPushRulesResponse> listPushRules(ListPushRulesRequest request);
 
     CompletableFuture<ListRepositoriesResponse> listRepositories(ListRepositoriesRequest request);
 
@@ -373,6 +383,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateProtectedBranchesResponse> updateProtectedBranches(UpdateProtectedBranchesRequest request);
 
     CompletableFuture<UpdatePushReviewOnOffResponse> updatePushReviewOnOff(UpdatePushReviewOnOffRequest request);
+
+    CompletableFuture<UpdatePushRuleResponse> updatePushRule(UpdatePushRuleRequest request);
 
     CompletableFuture<UpdateRepositoryResponse> updateRepository(UpdateRepositoryRequest request);
 
