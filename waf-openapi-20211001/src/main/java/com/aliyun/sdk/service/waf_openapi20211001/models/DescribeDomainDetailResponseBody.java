@@ -190,7 +190,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SM2CertDetail.
+         * The information about the SM certificate.
          */
         public Builder sM2CertDetail(SM2CertDetail sM2CertDetail) {
             this.sM2CertDetail = sM2CertDetail;
@@ -786,7 +786,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * The back-to-origin IP address or domain name.
+             * The IP address or domain name of the origin server.
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -1264,7 +1264,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
+             * The end of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1296,7 +1296,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
+             * The beginning of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

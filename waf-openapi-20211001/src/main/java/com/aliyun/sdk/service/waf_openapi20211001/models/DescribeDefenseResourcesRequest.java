@@ -226,7 +226,7 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * The tag of the resource. You can specify up to 20 tags.
+         * The tags of the resources that you want to query. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

@@ -70,7 +70,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array of protected objects.
+         * The protected objects.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -286,12 +286,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private Integer xffStatus; 
 
             /**
-             * 跟踪cookie开关状态。
+             * The status of the tracking cookie.
              * <p>
              * 
-             * - **0**：表示关闭。
-             * 
-             * - **1**：表示开启。
+             * *   **0:** disabled.
+             * *   **1:** enabled.
              */
             public Builder acwCookieStatus(Integer acwCookieStatus) {
                 this.acwCookieStatus = acwCookieStatus;
@@ -299,12 +298,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 跟踪cookie的secure属性状态。
+             * The status of the secure attribute of the tracking cookie.
              * <p>
              * 
-             * - **0**：表示关闭。
-             * 
-             * - **1**：表示开启。
+             * *   **0:** disabled.
+             * *   **1:** enabled.
              */
             public Builder acwSecureStatus(Integer acwSecureStatus) {
                 this.acwSecureStatus = acwSecureStatus;
@@ -312,12 +310,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 滑块cookie的secure属性状态。
+             * The status of the secure attribute of the slider verification cookie.
              * <p>
              * 
-             * - **0**：表示关闭。
-             * 
-             * - **1**：表示开启。
+             * *   **0:** disabled.
+             * *   **1:** enabled.
              */
             public Builder acwV3SecureStatus(Integer acwV3SecureStatus) {
                 this.acwV3SecureStatus = acwV3SecureStatus;
@@ -325,7 +322,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.
+             * The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP address in the XFF header is the originating IP address of the client.
              */
             public Builder customHeaders(java.util.List < String > customHeaders) {
                 this.customHeaders = customHeaders;
@@ -341,7 +338,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the protected object. Different key-value pairs in a map indicate different properties of the protected object.
+             * The details of the protected object. Different key-value pairs in a map indicate different properties of the protected object.
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;

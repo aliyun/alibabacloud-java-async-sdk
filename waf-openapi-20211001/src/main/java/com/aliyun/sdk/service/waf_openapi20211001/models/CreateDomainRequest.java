@@ -488,7 +488,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The custom cipher suites.
+             * The custom cipher suites that you want to add.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -520,7 +520,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the HTTP to HTTPS redirection feature. This parameter is available only if you specify HttpsPorts and leave HttpPorts empty. Valid values:
+             * Specifies whether to enable HTTP to HTTPS redirection. This parameter is available only if you specify HttpsPorts and leave HttpPorts empty. Valid values:
              * <p>
              * 
              * *   **true**
@@ -575,7 +575,7 @@ public class CreateDomainRequest extends Request {
              * The type of the protection resource. Valid values:
              * <p>
              * 
-             * *   **share:** shared cluster. This is the default value.
+             * *   **share:** a shared cluster. This is the default value.
              * *   **gslb:** shared cluster-based intelligent load balancing.
              */
             public Builder protectionResource(String protectionResource) {
@@ -604,7 +604,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the SM certificate.
+             * Specifies whether to enable the ShangMi (SM) certificate.
              */
             public Builder sM2Enabled(Boolean sM2Enabled) {
                 this.sM2Enabled = sM2Enabled;
@@ -638,7 +638,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The custom header field that you want WAF to use to obtain the IP address of a client.
+             * The custom header field that you want WAF to use to obtain the actual IP address of a client.
              */
             public Builder xffHeaders(java.util.List < String > xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -914,7 +914,7 @@ public class CreateDomainRequest extends Request {
             private Integer writeTimeout; 
 
             /**
-             * The back-to-origin IP addresses or domain names.
+             * The IP addresses or domain names of the origin server.
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
@@ -977,7 +977,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.
+             * The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.
              * <p>
              * 
              * > This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
@@ -1009,10 +1009,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The key-value pairs that you want to use to mark the requests that pass through the WAF instance.
+             * The key-value pairs that you want to use to label the requests that pass through the WAF instance.
              * <p>
              * 
-             * WAF adds the key-value pairs to the request headers. This way, the requests that pass through WAF are identified.
+             * WAF automatically adds the key-value pairs to request headers. This way, the backend service can identify requests that pass through WAF.
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1032,7 +1032,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. Set this parameter to a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+             * The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. Set the value to a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
              * <p>
              * 
              * *   **rs:** The back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.
@@ -1057,10 +1057,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The value of the custom SNI field. If you do not specify this parameter, the value of the **Host** field in the request header is used. If you want WAF to use an SNI field value that is different from the value of the Host field in back-to-origin requests, you can specify a custom value for the SNI field.
+             * The value of the SNI field. If you do not specify this parameter, the **Host** field value in the request header is used. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
              * <p>
              * 
-             * > This parameter is available only if you set **SniEnabled** to **true**.
+             * > You must specify this parameter only if you set **SniEnabled** to **true**.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;

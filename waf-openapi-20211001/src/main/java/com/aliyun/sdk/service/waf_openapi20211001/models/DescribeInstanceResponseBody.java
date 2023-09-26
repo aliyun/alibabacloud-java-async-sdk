@@ -173,10 +173,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
          * Indicates whether the WAF instance has overdue payments. Valid values:
          * <p>
          * 
-         * *   **0:** The WAF instance has overdue payments.
-         * *   **1:** The WAF instance does not have overdue payments.
-         * 
-         * >  This parameter is returned only when the value of the **PayType** parameter is **POSTPAY**.
+         * *   **0**: The WAF instance does not have overdue payments.
+         * *   **1**: The WAF instance has overdue payments.
          */
         public Builder inDebt(String inDebt) {
             this.inDebt = inDebt;
