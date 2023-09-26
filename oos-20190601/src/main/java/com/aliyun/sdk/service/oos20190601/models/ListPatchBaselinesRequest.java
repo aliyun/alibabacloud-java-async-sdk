@@ -204,7 +204,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * Whether the approved patch includes updates other than security.
+         * Specifies whether the approved patch involves updates other than security-related updates.
          */
         public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
             this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
@@ -290,7 +290,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The list of patch source configurations.
+         * The patch source configurations.
          */
         public Builder sources(java.util.List < String > sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -355,7 +355,7 @@ public class ListPatchBaselinesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -363,7 +363,7 @@ public class ListPatchBaselinesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

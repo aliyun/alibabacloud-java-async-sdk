@@ -125,7 +125,7 @@ public class ListOpsItemsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter rules for the component.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -134,7 +134,7 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -143,7 +143,7 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -152,7 +152,7 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +161,7 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * ResourceTags.
+         * The information about resource tags.
          */
         public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
             String resourceTagsShrink = shrink(resourceTags, "ResourceTags", "json");
@@ -171,7 +171,7 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -238,7 +238,7 @@ public class ListOpsItemsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The parameter name of the filter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +246,7 @@ public class ListOpsItemsRequest extends Request {
             }
 
             /**
-             * Operator.
+             * The comparison operator that is used to filter property values.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -254,7 +254,7 @@ public class ListOpsItemsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The parameter values of the filter.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

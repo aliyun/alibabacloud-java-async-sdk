@@ -110,7 +110,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -371,7 +371,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovedPatches.
+             * The approved patches.
              */
             public Builder approvedPatches(java.util.List < String > approvedPatches) {
                 this.approvedPatches = approvedPatches;
@@ -379,7 +379,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovedPatchesEnableNonSecurity.
+             * Indicates whether the approved patch involves updates other than security-related updates.
              */
             public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
                 this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
@@ -443,7 +443,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * RejectedPatches.
+             * The rejected patches.
              */
             public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
                 this.rejectedPatches = rejectedPatches;
@@ -459,7 +459,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -475,7 +475,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * The patch source configurations.
              */
             public Builder sources(java.util.List < String > sources) {
                 this.sources = sources;
@@ -483,7 +483,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

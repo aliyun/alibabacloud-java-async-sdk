@@ -250,7 +250,7 @@ public class UpdateOpsItemRequest extends Request {
         } 
 
         /**
-         * Category.
+         * The category.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -259,7 +259,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -268,7 +268,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * DedupString.
+         * The string to be deduplicated.
          */
         public Builder dedupString(String dedupString) {
             this.putQueryParameter("DedupString", dedupString);
@@ -277,7 +277,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the O\&M item.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -286,7 +286,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * OpsItemId.
+         * The ID of the O\&M item.
          */
         public Builder opsItemId(String opsItemId) {
             this.putQueryParameter("OpsItemId", opsItemId);
@@ -295,7 +295,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -304,7 +304,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -313,7 +313,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -322,7 +322,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The Alibaba Resource Names (ARNs) of the associated resources.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -331,7 +331,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Severity.
+         * The severity level.
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -340,7 +340,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Solutions.
+         * The list of solutions.
          */
         public Builder solutions(String solutions) {
             this.putQueryParameter("Solutions", solutions);
@@ -349,7 +349,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source business.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -358,7 +358,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -367,7 +367,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -377,7 +377,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the O\&M item.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

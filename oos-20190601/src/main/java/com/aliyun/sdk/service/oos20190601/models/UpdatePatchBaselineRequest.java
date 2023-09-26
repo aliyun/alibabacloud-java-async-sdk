@@ -218,7 +218,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * ApprovedPatches.
+         * The approved patches.
          */
         public Builder approvedPatches(java.util.List < String > approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
@@ -228,7 +228,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * ApprovedPatchesEnableNonSecurity.
+         * Indicates whether the approved patch involves updates other than security-related updates.
          */
         public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
             this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
@@ -273,7 +273,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * RejectedPatches.
+         * The rejected patches.
          */
         public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
             String rejectedPatchesShrink = shrink(rejectedPatches, "RejectedPatches", "json");
@@ -292,7 +292,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -301,7 +301,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The patch source configurations.
          */
         public Builder sources(java.util.List < String > sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
@@ -311,7 +311,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -366,7 +366,7 @@ public class UpdatePatchBaselineRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -374,7 +374,7 @@ public class UpdatePatchBaselineRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

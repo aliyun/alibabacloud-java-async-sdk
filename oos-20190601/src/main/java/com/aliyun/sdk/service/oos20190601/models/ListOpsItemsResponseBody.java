@@ -86,7 +86,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * OpsItems.
+         * The list of O\&M items.
          */
         public Builder opsItems(java.util.List < OpsItems> opsItems) {
             this.opsItems = opsItems;
@@ -110,7 +110,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -278,7 +278,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Category.
+             * The category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -286,7 +286,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the O\&M item was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -294,7 +294,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * OpsItemId.
+             * The ID of the O\&M item.
              */
             public Builder opsItemId(String opsItemId) {
                 this.opsItemId = opsItemId;
@@ -302,7 +302,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -310,7 +310,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * The Alibaba Resource Names (ARNs) of the associated resources.
              */
             public Builder resources(java.util.List < String > resources) {
                 this.resources = resources;
@@ -318,7 +318,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -326,7 +326,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source business.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -334,7 +334,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the O\&M item.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -342,7 +342,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -350,7 +350,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the O\&M item.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -358,7 +358,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the O\&M item was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

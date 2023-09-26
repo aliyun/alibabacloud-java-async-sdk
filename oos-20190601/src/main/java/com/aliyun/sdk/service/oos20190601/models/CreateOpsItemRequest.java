@@ -226,7 +226,50 @@ public class CreateOpsItemRequest extends Request {
         } 
 
         /**
-         * Category.
+         * The category.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Availability
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Performance
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Security
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Cost
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Recovery
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -235,7 +278,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -244,7 +287,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * DedupString.
+         * The string to be deduplicated.
          */
         public Builder dedupString(String dedupString) {
             this.putQueryParameter("DedupString", dedupString);
@@ -253,7 +296,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the operation.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -262,7 +305,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority. Valid values: 1 to 5. 1 indicates the highest priority.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -271,7 +314,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -280,7 +323,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,7 +332,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The Alibaba Cloud Resource Names (ARNs) of the associated resources.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -298,7 +341,42 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Severity.
+         * The severity level.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   High
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Low
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Medium
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Critical
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -307,7 +385,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Solutions.
+         * The list of solutions.
          */
         public Builder solutions(String solutions) {
             this.putQueryParameter("Solutions", solutions);
@@ -316,7 +394,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source business.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -325,7 +403,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -335,7 +413,7 @@ public class CreateOpsItemRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the O\&M item.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

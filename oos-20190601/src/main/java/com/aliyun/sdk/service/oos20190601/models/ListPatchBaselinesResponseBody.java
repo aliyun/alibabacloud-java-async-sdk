@@ -74,7 +74,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The type of the operating system.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the patch baseline is set as the default patch baseline.
+         * The patch baselines.
          */
         public Builder patchBaselines(java.util.List < PatchBaselines> patchBaselines) {
             this.patchBaselines = patchBaselines;
@@ -98,7 +98,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the patch baselines.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 标签键。
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +158,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值。
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -367,7 +367,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * 批准补丁的列表。
+             * The approved patches.
              */
             public Builder approvedPatches(java.util.List < String > approvedPatches) {
                 this.approvedPatches = approvedPatches;
@@ -375,7 +375,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * 批准补丁是否包括除安全性之外的更新
+             * Indicates whether the approved patch involves updates other than security-related updates.
              */
             public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
                 this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
@@ -383,7 +383,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the patch baseline.
+             * The user who created the patch baseline.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -391,7 +391,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the patch baseline.
+             * The time when the patch baseline was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -399,7 +399,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last modified the patch baseline.
+             * The description of the patch baseline.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -407,7 +407,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details of patch baselines.
+             * The ID of the patch baseline.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -415,7 +415,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was last modified.
+             * Indicates whether the patch baseline is set as the default patch baseline.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -423,7 +423,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the patch baseline.
+             * The name of the patch baseline.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +431,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the patch baseline.
+             * The type of the operating system.
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -447,7 +447,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details of patch baselines.
+             * The share type of the patch baseline.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -455,7 +455,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * 补丁源配置列表。
+             * The patch source configurations.
              */
             public Builder sources(java.util.List < String > sources) {
                 this.sources = sources;
@@ -463,7 +463,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签。
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -471,7 +471,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was created.
+             * The user who last updated the patch baseline.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -479,7 +479,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the patch baseline.
+             * The time when the patch baseline was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

@@ -58,7 +58,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system.
+             * The operating system.
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -274,7 +274,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
