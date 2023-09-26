@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dataworks_public20200518</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dataworks_public20200518</name>
   <description>Alibaba Cloud dataworks-public (20200518) Async SDK for Java
@@ -41,7 +41,7 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-    <service.version>0.2.3-beta</service.version>
+    <service.version>0.2.4-beta</service.version>
   </properties>
   <dependencies>
     <dependency>
