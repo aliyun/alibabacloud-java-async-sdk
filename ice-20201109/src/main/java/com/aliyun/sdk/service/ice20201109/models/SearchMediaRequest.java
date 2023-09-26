@@ -37,6 +37,10 @@ public class SearchMediaRequest extends Request {
     private String scrollToken;
 
     @Query
+    @NameInMap("SearchLibName")
+    private String searchLibName;
+
+    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -48,6 +52,7 @@ public class SearchMediaRequest extends Request {
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.scrollToken = builder.scrollToken;
+        this.searchLibName = builder.searchLibName;
         this.sortBy = builder.sortBy;
     }
 
@@ -107,6 +112,13 @@ public class SearchMediaRequest extends Request {
     }
 
     /**
+     * @return searchLibName
+     */
+    public String getSearchLibName() {
+        return this.searchLibName;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -120,6 +132,7 @@ public class SearchMediaRequest extends Request {
         private Integer pageNo; 
         private Integer pageSize; 
         private String scrollToken; 
+        private String searchLibName; 
         private String sortBy; 
 
         private Builder() {
@@ -134,6 +147,7 @@ public class SearchMediaRequest extends Request {
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.scrollToken = request.scrollToken;
+            this.searchLibName = request.searchLibName;
             this.sortBy = request.sortBy;
         } 
 
@@ -188,6 +202,15 @@ public class SearchMediaRequest extends Request {
         public Builder scrollToken(String scrollToken) {
             this.putQueryParameter("ScrollToken", scrollToken);
             this.scrollToken = scrollToken;
+            return this;
+        }
+
+        /**
+         * SearchLibName.
+         */
+        public Builder searchLibName(String searchLibName) {
+            this.putQueryParameter("SearchLibName", searchLibName);
+            this.searchLibName = searchLibName;
             return this;
         }
 
