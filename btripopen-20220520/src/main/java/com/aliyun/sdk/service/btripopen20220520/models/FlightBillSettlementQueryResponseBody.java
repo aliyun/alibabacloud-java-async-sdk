@@ -221,6 +221,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("build_fee")
         private Double buildFee;
 
+        @NameInMap("business_trip_result")
+        private String businessTripResult;
+
         @NameInMap("cabin")
         private String cabin;
 
@@ -236,8 +239,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("change_fee")
         private Double changeFee;
 
+        @NameInMap("change_result")
+        private String changeResult;
+
         @NameInMap("corp_pay_order_fee")
         private Double corpPayOrderFee;
+
+        @NameInMap("corp_settle_price")
+        private Double corpSettlePrice;
 
         @NameInMap("cost_center")
         private String costCenter;
@@ -275,6 +284,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("discount")
         private String discount;
 
+        @NameInMap("exceed_reason")
+        private String exceedReason;
+
         @NameInMap("fee_type")
         private String feeType;
 
@@ -284,8 +296,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("index")
         private String index;
 
+        @NameInMap("ins_order_id")
+        private String insOrderId;
+
         @NameInMap("insurance_fee")
         private Double insuranceFee;
+
+        @NameInMap("insurance_number")
+        private String insuranceNumber;
 
         @NameInMap("invoice_title")
         private String invoiceTitle;
@@ -295,6 +313,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("itinerary_price")
         private Double itineraryPrice;
+
+        @NameInMap("mileage")
+        private String mileage;
 
         @NameInMap("most_difference_dept_time")
         private String mostDifferenceDeptTime;
@@ -325,6 +346,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("over_apply_id")
         private String overApplyId;
+
+        @NameInMap("person_settle_price")
+        private Double personSettlePrice;
+
+        @NameInMap("pre_book_tip")
+        private String preBookTip;
 
         @NameInMap("primary_id")
         private Long primaryId;
@@ -380,6 +407,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("ticket_id")
         private String ticketId;
 
+        @NameInMap("trade")
+        private String trade;
+
         @NameInMap("traveler_id")
         private String travelerId;
 
@@ -419,12 +449,15 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.bookerName = builder.bookerName;
             this.btripCouponFee = builder.btripCouponFee;
             this.buildFee = builder.buildFee;
+            this.businessTripResult = builder.businessTripResult;
             this.cabin = builder.cabin;
             this.cabinClass = builder.cabinClass;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.changeFee = builder.changeFee;
+            this.changeResult = builder.changeResult;
             this.corpPayOrderFee = builder.corpPayOrderFee;
+            this.corpSettlePrice = builder.corpSettlePrice;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
@@ -437,13 +470,17 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.deptStation = builder.deptStation;
             this.deptTime = builder.deptTime;
             this.discount = builder.discount;
+            this.exceedReason = builder.exceedReason;
             this.feeType = builder.feeType;
             this.flightNo = builder.flightNo;
             this.index = builder.index;
+            this.insOrderId = builder.insOrderId;
             this.insuranceFee = builder.insuranceFee;
+            this.insuranceNumber = builder.insuranceNumber;
             this.invoiceTitle = builder.invoiceTitle;
             this.itineraryNum = builder.itineraryNum;
             this.itineraryPrice = builder.itineraryPrice;
+            this.mileage = builder.mileage;
             this.mostDifferenceDeptTime = builder.mostDifferenceDeptTime;
             this.mostDifferenceDiscount = builder.mostDifferenceDiscount;
             this.mostDifferenceFlightNo = builder.mostDifferenceFlightNo;
@@ -454,6 +491,8 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.oilFee = builder.oilFee;
             this.orderId = builder.orderId;
             this.overApplyId = builder.overApplyId;
+            this.personSettlePrice = builder.personSettlePrice;
+            this.preBookTip = builder.preBookTip;
             this.primaryId = builder.primaryId;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
@@ -472,6 +511,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
             this.ticketId = builder.ticketId;
+            this.trade = builder.trade;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerName = builder.travelerName;
@@ -649,6 +689,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return businessTripResult
+         */
+        public String getBusinessTripResult() {
+            return this.businessTripResult;
+        }
+
+        /**
          * @return cabin
          */
         public String getCabin() {
@@ -684,10 +731,24 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return changeResult
+         */
+        public String getChangeResult() {
+            return this.changeResult;
+        }
+
+        /**
          * @return corpPayOrderFee
          */
         public Double getCorpPayOrderFee() {
             return this.corpPayOrderFee;
+        }
+
+        /**
+         * @return corpSettlePrice
+         */
+        public Double getCorpSettlePrice() {
+            return this.corpSettlePrice;
         }
 
         /**
@@ -775,6 +836,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return exceedReason
+         */
+        public String getExceedReason() {
+            return this.exceedReason;
+        }
+
+        /**
          * @return feeType
          */
         public String getFeeType() {
@@ -796,10 +864,24 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return insOrderId
+         */
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
+        /**
          * @return insuranceFee
          */
         public Double getInsuranceFee() {
             return this.insuranceFee;
+        }
+
+        /**
+         * @return insuranceNumber
+         */
+        public String getInsuranceNumber() {
+            return this.insuranceNumber;
         }
 
         /**
@@ -821,6 +903,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getItineraryPrice() {
             return this.itineraryPrice;
+        }
+
+        /**
+         * @return mileage
+         */
+        public String getMileage() {
+            return this.mileage;
         }
 
         /**
@@ -891,6 +980,20 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getOverApplyId() {
             return this.overApplyId;
+        }
+
+        /**
+         * @return personSettlePrice
+         */
+        public Double getPersonSettlePrice() {
+            return this.personSettlePrice;
+        }
+
+        /**
+         * @return preBookTip
+         */
+        public String getPreBookTip() {
+            return this.preBookTip;
         }
 
         /**
@@ -1020,6 +1123,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return trade
+         */
+        public String getTrade() {
+            return this.trade;
+        }
+
+        /**
          * @return travelerId
          */
         public String getTravelerId() {
@@ -1078,12 +1188,15 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String bookerName; 
             private Double btripCouponFee; 
             private Double buildFee; 
+            private String businessTripResult; 
             private String cabin; 
             private String cabinClass; 
             private String capitalDirection; 
             private String cascadeDepartment; 
             private Double changeFee; 
+            private String changeResult; 
             private Double corpPayOrderFee; 
+            private Double corpSettlePrice; 
             private String costCenter; 
             private String costCenterNumber; 
             private Double coupon; 
@@ -1096,13 +1209,17 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String deptStation; 
             private String deptTime; 
             private String discount; 
+            private String exceedReason; 
             private String feeType; 
             private String flightNo; 
             private String index; 
+            private String insOrderId; 
             private Double insuranceFee; 
+            private String insuranceNumber; 
             private String invoiceTitle; 
             private String itineraryNum; 
             private Double itineraryPrice; 
+            private String mileage; 
             private String mostDifferenceDeptTime; 
             private String mostDifferenceDiscount; 
             private String mostDifferenceFlightNo; 
@@ -1113,6 +1230,8 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private Double oilFee; 
             private String orderId; 
             private String overApplyId; 
+            private Double personSettlePrice; 
+            private String preBookTip; 
             private Long primaryId; 
             private String projectCode; 
             private String projectName; 
@@ -1131,6 +1250,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String taxRate; 
             private String thirdItineraryId; 
             private String ticketId; 
+            private String trade; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerName; 
@@ -1322,6 +1442,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * business_trip_result.
+             */
+            public Builder businessTripResult(String businessTripResult) {
+                this.businessTripResult = businessTripResult;
+                return this;
+            }
+
+            /**
              * cabin.
              */
             public Builder cabin(String cabin) {
@@ -1362,10 +1490,26 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * change_result.
+             */
+            public Builder changeResult(String changeResult) {
+                this.changeResult = changeResult;
+                return this;
+            }
+
+            /**
              * corp_pay_order_fee.
              */
             public Builder corpPayOrderFee(Double corpPayOrderFee) {
                 this.corpPayOrderFee = corpPayOrderFee;
+                return this;
+            }
+
+            /**
+             * corp_settle_price.
+             */
+            public Builder corpSettlePrice(Double corpSettlePrice) {
+                this.corpSettlePrice = corpSettlePrice;
                 return this;
             }
 
@@ -1466,6 +1610,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * exceed_reason.
+             */
+            public Builder exceedReason(String exceedReason) {
+                this.exceedReason = exceedReason;
+                return this;
+            }
+
+            /**
              * fee_type.
              */
             public Builder feeType(String feeType) {
@@ -1490,10 +1642,26 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * ins_order_id.
+             */
+            public Builder insOrderId(String insOrderId) {
+                this.insOrderId = insOrderId;
+                return this;
+            }
+
+            /**
              * insurance_fee.
              */
             public Builder insuranceFee(Double insuranceFee) {
                 this.insuranceFee = insuranceFee;
+                return this;
+            }
+
+            /**
+             * insurance_number.
+             */
+            public Builder insuranceNumber(String insuranceNumber) {
+                this.insuranceNumber = insuranceNumber;
                 return this;
             }
 
@@ -1518,6 +1686,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder itineraryPrice(Double itineraryPrice) {
                 this.itineraryPrice = itineraryPrice;
+                return this;
+            }
+
+            /**
+             * mileage.
+             */
+            public Builder mileage(String mileage) {
+                this.mileage = mileage;
                 return this;
             }
 
@@ -1598,6 +1774,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
+                return this;
+            }
+
+            /**
+             * person_settle_price.
+             */
+            public Builder personSettlePrice(Double personSettlePrice) {
+                this.personSettlePrice = personSettlePrice;
+                return this;
+            }
+
+            /**
+             * pre_book_tip.
+             */
+            public Builder preBookTip(String preBookTip) {
+                this.preBookTip = preBookTip;
                 return this;
             }
 
@@ -1742,6 +1934,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder ticketId(String ticketId) {
                 this.ticketId = ticketId;
+                return this;
+            }
+
+            /**
+             * trade.
+             */
+            public Builder trade(String trade) {
+                this.trade = trade;
                 return this;
             }
 

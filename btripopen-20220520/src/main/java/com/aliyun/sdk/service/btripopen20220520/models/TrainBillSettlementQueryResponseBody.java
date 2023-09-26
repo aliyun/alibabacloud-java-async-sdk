@@ -176,6 +176,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("arr_city_code")
         private String arrCityCode;
 
+        @NameInMap("arr_city_name")
+        private String arrCityName;
+
         @NameInMap("arr_date")
         private String arrDate;
 
@@ -200,6 +203,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("booker_name")
         private String bookerName;
 
+        @NameInMap("business_trip_result")
+        private String businessTripResult;
+
         @NameInMap("capital_direction")
         private String capitalDirection;
 
@@ -208,6 +214,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("change_fee")
         private Double changeFee;
+
+        @NameInMap("change_result")
+        private String changeResult;
 
         @NameInMap("coach_no")
         private String coachNo;
@@ -224,6 +233,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("dep_city_code")
         private String depCityCode;
 
+        @NameInMap("dep_city_name")
+        private String depCityName;
+
         @NameInMap("department")
         private String department;
 
@@ -239,6 +251,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("dept_time")
         private String deptTime;
 
+        @NameInMap("exceed_reason")
+        private String exceedReason;
+
         @NameInMap("fee_type")
         private String feeType;
 
@@ -247,6 +262,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_title")
         private String invoiceTitle;
+
+        @NameInMap("is_transfer_order")
+        private String isTransferOrder;
 
         @NameInMap("order_id")
         private String orderId;
@@ -269,8 +287,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("refund_fee")
         private Double refundFee;
 
+        @NameInMap("refund_reason")
+        private String refundReason;
+
         @NameInMap("remark")
         private String remark;
+
+        @NameInMap("reserve_mode")
+        private String reserveMode;
 
         @NameInMap("run_time")
         private String runTime;
@@ -308,8 +332,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("third_itinerary_id")
         private String thirdItineraryId;
 
+        @NameInMap("ticket_corp_pay_price")
+        private String ticketCorpPayPrice;
+
         @NameInMap("ticket_no")
         private String ticketNo;
+
+        @NameInMap("ticket_person_pay_price")
+        private String ticketPersonPayPrice;
 
         @NameInMap("ticket_price")
         private Double ticketPrice;
@@ -341,6 +371,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.arrCityCode = builder.arrCityCode;
+            this.arrCityName = builder.arrCityName;
             this.arrDate = builder.arrDate;
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
@@ -349,22 +380,27 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.bookerId = builder.bookerId;
             this.bookerJobNo = builder.bookerJobNo;
             this.bookerName = builder.bookerName;
+            this.businessTripResult = builder.businessTripResult;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.changeFee = builder.changeFee;
+            this.changeResult = builder.changeResult;
             this.coachNo = builder.coachNo;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
             this.depCityCode = builder.depCityCode;
+            this.depCityName = builder.depCityName;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.deptDate = builder.deptDate;
             this.deptStation = builder.deptStation;
             this.deptTime = builder.deptTime;
+            this.exceedReason = builder.exceedReason;
             this.feeType = builder.feeType;
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
+            this.isTransferOrder = builder.isTransferOrder;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
             this.overApplyId = builder.overApplyId;
@@ -372,7 +408,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.refundFee = builder.refundFee;
+            this.refundReason = builder.refundReason;
             this.remark = builder.remark;
+            this.reserveMode = builder.reserveMode;
             this.runTime = builder.runTime;
             this.seatNo = builder.seatNo;
             this.seatType = builder.seatType;
@@ -385,7 +423,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.status = builder.status;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
+            this.ticketCorpPayPrice = builder.ticketCorpPayPrice;
             this.ticketNo = builder.ticketNo;
+            this.ticketPersonPayPrice = builder.ticketPersonPayPrice;
             this.ticketPrice = builder.ticketPrice;
             this.trainNo = builder.trainNo;
             this.trainType = builder.trainType;
@@ -460,6 +500,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return arrCityName
+         */
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        /**
          * @return arrDate
          */
         public String getArrDate() {
@@ -516,6 +563,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return businessTripResult
+         */
+        public String getBusinessTripResult() {
+            return this.businessTripResult;
+        }
+
+        /**
          * @return capitalDirection
          */
         public String getCapitalDirection() {
@@ -534,6 +588,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getChangeFee() {
             return this.changeFee;
+        }
+
+        /**
+         * @return changeResult
+         */
+        public String getChangeResult() {
+            return this.changeResult;
         }
 
         /**
@@ -572,6 +633,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return depCityName
+         */
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        /**
          * @return department
          */
         public String getDepartment() {
@@ -607,6 +675,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return exceedReason
+         */
+        public String getExceedReason() {
+            return this.exceedReason;
+        }
+
+        /**
          * @return feeType
          */
         public String getFeeType() {
@@ -625,6 +700,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        /**
+         * @return isTransferOrder
+         */
+        public String getIsTransferOrder() {
+            return this.isTransferOrder;
         }
 
         /**
@@ -677,10 +759,24 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return refundReason
+         */
+        public String getRefundReason() {
+            return this.refundReason;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
             return this.remark;
+        }
+
+        /**
+         * @return reserveMode
+         */
+        public String getReserveMode() {
+            return this.reserveMode;
         }
 
         /**
@@ -768,10 +864,24 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return ticketCorpPayPrice
+         */
+        public String getTicketCorpPayPrice() {
+            return this.ticketCorpPayPrice;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
             return this.ticketNo;
+        }
+
+        /**
+         * @return ticketPersonPayPrice
+         */
+        public String getTicketPersonPayPrice() {
+            return this.ticketPersonPayPrice;
         }
 
         /**
@@ -832,6 +942,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String applyExtendField; 
             private String applyId; 
             private String arrCityCode; 
+            private String arrCityName; 
             private String arrDate; 
             private String arrStation; 
             private String arrTime; 
@@ -840,22 +951,27 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String bookerId; 
             private String bookerJobNo; 
             private String bookerName; 
+            private String businessTripResult; 
             private String capitalDirection; 
             private String cascadeDepartment; 
             private Double changeFee; 
+            private String changeResult; 
             private String coachNo; 
             private String costCenter; 
             private String costCenterNumber; 
             private Double coupon; 
             private String depCityCode; 
+            private String depCityName; 
             private String department; 
             private String departmentId; 
             private String deptDate; 
             private String deptStation; 
             private String deptTime; 
+            private String exceedReason; 
             private String feeType; 
             private String index; 
             private String invoiceTitle; 
+            private String isTransferOrder; 
             private String orderId; 
             private Double orderPrice; 
             private String overApplyId; 
@@ -863,7 +979,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String projectCode; 
             private String projectName; 
             private Double refundFee; 
+            private String refundReason; 
             private String remark; 
+            private String reserveMode; 
             private String runTime; 
             private String seatNo; 
             private String seatType; 
@@ -876,7 +994,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private Integer status; 
             private String taxRate; 
             private String thirdItineraryId; 
+            private String ticketCorpPayPrice; 
             private String ticketNo; 
+            private String ticketPersonPayPrice; 
             private Double ticketPrice; 
             private String trainNo; 
             private String trainType; 
@@ -950,6 +1070,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * arr_city_name.
+             */
+            public Builder arrCityName(String arrCityName) {
+                this.arrCityName = arrCityName;
+                return this;
+            }
+
+            /**
              * arr_date.
              */
             public Builder arrDate(String arrDate) {
@@ -1014,6 +1142,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * business_trip_result.
+             */
+            public Builder businessTripResult(String businessTripResult) {
+                this.businessTripResult = businessTripResult;
+                return this;
+            }
+
+            /**
              * capital_direction.
              */
             public Builder capitalDirection(String capitalDirection) {
@@ -1034,6 +1170,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;
+                return this;
+            }
+
+            /**
+             * change_result.
+             */
+            public Builder changeResult(String changeResult) {
+                this.changeResult = changeResult;
                 return this;
             }
 
@@ -1078,6 +1222,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * dep_city_name.
+             */
+            public Builder depCityName(String depCityName) {
+                this.depCityName = depCityName;
+                return this;
+            }
+
+            /**
              * department.
              */
             public Builder department(String department) {
@@ -1118,6 +1270,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * exceed_reason.
+             */
+            public Builder exceedReason(String exceedReason) {
+                this.exceedReason = exceedReason;
+                return this;
+            }
+
+            /**
              * fee_type.
              */
             public Builder feeType(String feeType) {
@@ -1138,6 +1298,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * is_transfer_order.
+             */
+            public Builder isTransferOrder(String isTransferOrder) {
+                this.isTransferOrder = isTransferOrder;
                 return this;
             }
 
@@ -1198,10 +1366,26 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * refund_reason.
+             */
+            public Builder refundReason(String refundReason) {
+                this.refundReason = refundReason;
+                return this;
+            }
+
+            /**
              * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * reserve_mode.
+             */
+            public Builder reserveMode(String reserveMode) {
+                this.reserveMode = reserveMode;
                 return this;
             }
 
@@ -1302,10 +1486,26 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * ticket_corp_pay_price.
+             */
+            public Builder ticketCorpPayPrice(String ticketCorpPayPrice) {
+                this.ticketCorpPayPrice = ticketCorpPayPrice;
+                return this;
+            }
+
+            /**
              * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
+                return this;
+            }
+
+            /**
+             * ticket_person_pay_price.
+             */
+            public Builder ticketPersonPayPrice(String ticketPersonPayPrice) {
+                this.ticketPersonPayPrice = ticketPersonPayPrice;
                 return this;
             }
 

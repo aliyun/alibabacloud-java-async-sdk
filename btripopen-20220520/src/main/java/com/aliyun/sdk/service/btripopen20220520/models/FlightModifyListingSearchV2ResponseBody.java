@@ -1614,6 +1614,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_time")
         private String arrTime;
 
+        @NameInMap("cabinClass")
+        private String cabinClass;
+
+        @NameInMap("cabinClassName")
+        private String cabinClassName;
+
         @NameInMap("dep_airport_info")
         private DepAirportInfo depAirportInfo;
 
@@ -1682,6 +1688,8 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             this.arrAirportInfo = builder.arrAirportInfo;
             this.arrCityCode = builder.arrCityCode;
             this.arrTime = builder.arrTime;
+            this.cabinClass = builder.cabinClass;
+            this.cabinClassName = builder.cabinClassName;
             this.depAirportInfo = builder.depAirportInfo;
             this.depCityCode = builder.depCityCode;
             this.depTime = builder.depTime;
@@ -1739,6 +1747,20 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
          */
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        /**
+         * @return cabinClass
+         */
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        /**
+         * @return cabinClassName
+         */
+        public String getCabinClassName() {
+            return this.cabinClassName;
         }
 
         /**
@@ -1893,6 +1915,8 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private ArrAirportInfo arrAirportInfo; 
             private String arrCityCode; 
             private String arrTime; 
+            private String cabinClass; 
+            private String cabinClassName; 
             private DepAirportInfo depAirportInfo; 
             private String depCityCode; 
             private String depTime; 
@@ -1944,6 +1968,22 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * cabinClass.
+             */
+            public Builder cabinClass(String cabinClass) {
+                this.cabinClass = cabinClass;
+                return this;
+            }
+
+            /**
+             * cabinClassName.
+             */
+            public Builder cabinClassName(String cabinClassName) {
+                this.cabinClassName = cabinClassName;
                 return this;
             }
 
@@ -3585,6 +3625,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_time")
         private String arrTime;
 
+        @NameInMap("cabinClass")
+        private String cabinClass;
+
+        @NameInMap("cabinClassName")
+        private String cabinClassName;
+
         @NameInMap("dep_airport_info")
         private TransferFlightListDepAirportInfo depAirportInfo;
 
@@ -3653,6 +3699,8 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             this.arrAirportInfo = builder.arrAirportInfo;
             this.arrCityCode = builder.arrCityCode;
             this.arrTime = builder.arrTime;
+            this.cabinClass = builder.cabinClass;
+            this.cabinClassName = builder.cabinClassName;
             this.depAirportInfo = builder.depAirportInfo;
             this.depCityCode = builder.depCityCode;
             this.depTime = builder.depTime;
@@ -3710,6 +3758,20 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
          */
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        /**
+         * @return cabinClass
+         */
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        /**
+         * @return cabinClassName
+         */
+        public String getCabinClassName() {
+            return this.cabinClassName;
         }
 
         /**
@@ -3864,6 +3926,8 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private TransferFlightListArrAirportInfo arrAirportInfo; 
             private String arrCityCode; 
             private String arrTime; 
+            private String cabinClass; 
+            private String cabinClassName; 
             private TransferFlightListDepAirportInfo depAirportInfo; 
             private String depCityCode; 
             private String depTime; 
@@ -3915,6 +3979,22 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * cabinClass.
+             */
+            public Builder cabinClass(String cabinClass) {
+                this.cabinClass = cabinClass;
+                return this;
+            }
+
+            /**
+             * cabinClassName.
+             */
+            public Builder cabinClassName(String cabinClassName) {
+                this.cabinClassName = cabinClassName;
                 return this;
             }
 

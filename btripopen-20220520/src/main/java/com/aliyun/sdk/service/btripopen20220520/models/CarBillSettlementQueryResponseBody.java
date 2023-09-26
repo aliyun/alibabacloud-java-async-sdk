@@ -251,6 +251,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("dept_time")
         private String deptTime;
 
+        @NameInMap("driver_add_detail")
+        private String driverAddDetail;
+
+        @NameInMap("driver_add_fee")
+        private Double driverAddFee;
+
         @NameInMap("estimate_drive_distance")
         private String estimateDriveDistance;
 
@@ -265,6 +271,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_title")
         private String invoiceTitle;
+
+        @NameInMap("level_name")
+        private String levelName;
 
         @NameInMap("memo")
         private String memo;
@@ -332,6 +341,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("sub_order_id")
         private String subOrderId;
 
+        @NameInMap("supplement_apply_id")
+        private String supplementApplyId;
+
         @NameInMap("tax_rate")
         private String taxRate;
 
@@ -390,11 +402,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.deptDate = builder.deptDate;
             this.deptLocation = builder.deptLocation;
             this.deptTime = builder.deptTime;
+            this.driverAddDetail = builder.driverAddDetail;
+            this.driverAddFee = builder.driverAddFee;
             this.estimateDriveDistance = builder.estimateDriveDistance;
             this.estimatePrice = builder.estimatePrice;
             this.feeType = builder.feeType;
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
+            this.levelName = builder.levelName;
             this.memo = builder.memo;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
@@ -417,6 +432,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.specialReason = builder.specialReason;
             this.status = builder.status;
             this.subOrderId = builder.subOrderId;
+            this.supplementApplyId = builder.supplementApplyId;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
             this.timeType = builder.timeType;
@@ -667,6 +683,20 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return driverAddDetail
+         */
+        public String getDriverAddDetail() {
+            return this.driverAddDetail;
+        }
+
+        /**
+         * @return driverAddFee
+         */
+        public Double getDriverAddFee() {
+            return this.driverAddFee;
+        }
+
+        /**
          * @return estimateDriveDistance
          */
         public String getEstimateDriveDistance() {
@@ -699,6 +729,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        /**
+         * @return levelName
+         */
+        public String getLevelName() {
+            return this.levelName;
         }
 
         /**
@@ -856,6 +893,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return supplementApplyId
+         */
+        public String getSupplementApplyId() {
+            return this.supplementApplyId;
+        }
+
+        /**
          * @return taxRate
          */
         public String getTaxRate() {
@@ -945,11 +989,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String deptDate; 
             private String deptLocation; 
             private String deptTime; 
+            private String driverAddDetail; 
+            private Double driverAddFee; 
             private String estimateDriveDistance; 
             private Double estimatePrice; 
             private String feeType; 
             private String index; 
             private String invoiceTitle; 
+            private String levelName; 
             private String memo; 
             private String orderId; 
             private Double orderPrice; 
@@ -972,6 +1019,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String specialReason; 
             private Integer status; 
             private String subOrderId; 
+            private String supplementApplyId; 
             private String taxRate; 
             private String thirdItineraryId; 
             private String timeType; 
@@ -1246,6 +1294,22 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * driver_add_detail.
+             */
+            public Builder driverAddDetail(String driverAddDetail) {
+                this.driverAddDetail = driverAddDetail;
+                return this;
+            }
+
+            /**
+             * driver_add_fee.
+             */
+            public Builder driverAddFee(Double driverAddFee) {
+                this.driverAddFee = driverAddFee;
+                return this;
+            }
+
+            /**
              * estimate_drive_distance.
              */
             public Builder estimateDriveDistance(String estimateDriveDistance) {
@@ -1282,6 +1346,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * level_name.
+             */
+            public Builder levelName(String levelName) {
+                this.levelName = levelName;
                 return this;
             }
 
@@ -1458,6 +1530,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder subOrderId(String subOrderId) {
                 this.subOrderId = subOrderId;
+                return this;
+            }
+
+            /**
+             * supplement_apply_id.
+             */
+            public Builder supplementApplyId(String supplementApplyId) {
+                this.supplementApplyId = supplementApplyId;
                 return this;
             }
 

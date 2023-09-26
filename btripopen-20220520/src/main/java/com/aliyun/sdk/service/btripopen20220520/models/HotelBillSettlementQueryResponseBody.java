@@ -179,6 +179,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @NameInMap("book_reason")
+        private String bookReason;
+
         @NameInMap("book_time")
         private String bookTime;
 
@@ -190,6 +193,15 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("booker_name")
         private String bookerName;
+
+        @NameInMap("brand_group")
+        private String brandGroup;
+
+        @NameInMap("brand_name")
+        private String brandName;
+
+        @NameInMap("business_trip_result")
+        private String businessTripResult;
 
         @NameInMap("capital_direction")
         private String capitalDirection;
@@ -209,6 +221,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("city_code")
         private String cityCode;
 
+        @NameInMap("city_county")
+        private String cityCounty;
+
+        @NameInMap("city_county_code")
+        private String cityCountyCode;
+
         @NameInMap("corp_refund_fee")
         private Double corpRefundFee;
 
@@ -226,6 +244,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("department_id")
         private String departmentId;
+
+        @NameInMap("exceed_reason")
+        private String exceedReason;
 
         @NameInMap("fee_type")
         private String feeType;
@@ -357,22 +378,29 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.applyId = builder.applyId;
             this.averageNights = builder.averageNights;
             this.billRecordTime = builder.billRecordTime;
+            this.bookReason = builder.bookReason;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
             this.bookerJobNo = builder.bookerJobNo;
             this.bookerName = builder.bookerName;
+            this.brandGroup = builder.brandGroup;
+            this.brandName = builder.brandName;
+            this.businessTripResult = builder.businessTripResult;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.checkInDate = builder.checkInDate;
             this.checkoutDate = builder.checkoutDate;
             this.city = builder.city;
             this.cityCode = builder.cityCode;
+            this.cityCounty = builder.cityCounty;
+            this.cityCountyCode = builder.cityCountyCode;
             this.corpRefundFee = builder.corpRefundFee;
             this.corpTotalFee = builder.corpTotalFee;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
+            this.exceedReason = builder.exceedReason;
             this.feeType = builder.feeType;
             this.fees = builder.fees;
             this.fines = builder.fines;
@@ -487,6 +515,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return bookReason
+         */
+        public String getBookReason() {
+            return this.bookReason;
+        }
+
+        /**
          * @return bookTime
          */
         public String getBookTime() {
@@ -512,6 +547,27 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBookerName() {
             return this.bookerName;
+        }
+
+        /**
+         * @return brandGroup
+         */
+        public String getBrandGroup() {
+            return this.brandGroup;
+        }
+
+        /**
+         * @return brandName
+         */
+        public String getBrandName() {
+            return this.brandName;
+        }
+
+        /**
+         * @return businessTripResult
+         */
+        public String getBusinessTripResult() {
+            return this.businessTripResult;
         }
 
         /**
@@ -557,6 +613,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return cityCounty
+         */
+        public String getCityCounty() {
+            return this.cityCounty;
+        }
+
+        /**
+         * @return cityCountyCode
+         */
+        public String getCityCountyCode() {
+            return this.cityCountyCode;
+        }
+
+        /**
          * @return corpRefundFee
          */
         public Double getCorpRefundFee() {
@@ -596,6 +666,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getDepartmentId() {
             return this.departmentId;
+        }
+
+        /**
+         * @return exceedReason
+         */
+        public String getExceedReason() {
+            return this.exceedReason;
         }
 
         /**
@@ -888,22 +965,29 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String applyId; 
             private String averageNights; 
             private String billRecordTime; 
+            private String bookReason; 
             private String bookTime; 
             private String bookerId; 
             private String bookerJobNo; 
             private String bookerName; 
+            private String brandGroup; 
+            private String brandName; 
+            private String businessTripResult; 
             private String capitalDirection; 
             private String cascadeDepartment; 
             private String checkInDate; 
             private String checkoutDate; 
             private String city; 
             private String cityCode; 
+            private String cityCounty; 
+            private String cityCountyCode; 
             private Double corpRefundFee; 
             private Double corpTotalFee; 
             private String costCenter; 
             private String costCenterNumber; 
             private String department; 
             private String departmentId; 
+            private String exceedReason; 
             private String feeType; 
             private Double fees; 
             private Double fines; 
@@ -1018,6 +1102,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * book_reason.
+             */
+            public Builder bookReason(String bookReason) {
+                this.bookReason = bookReason;
+                return this;
+            }
+
+            /**
              * book_time.
              */
             public Builder bookTime(String bookTime) {
@@ -1046,6 +1138,30 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder bookerName(String bookerName) {
                 this.bookerName = bookerName;
+                return this;
+            }
+
+            /**
+             * brand_group.
+             */
+            public Builder brandGroup(String brandGroup) {
+                this.brandGroup = brandGroup;
+                return this;
+            }
+
+            /**
+             * brand_name.
+             */
+            public Builder brandName(String brandName) {
+                this.brandName = brandName;
+                return this;
+            }
+
+            /**
+             * business_trip_result.
+             */
+            public Builder businessTripResult(String businessTripResult) {
+                this.businessTripResult = businessTripResult;
                 return this;
             }
 
@@ -1098,6 +1214,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * city_county.
+             */
+            public Builder cityCounty(String cityCounty) {
+                this.cityCounty = cityCounty;
+                return this;
+            }
+
+            /**
+             * city_county_code.
+             */
+            public Builder cityCountyCode(String cityCountyCode) {
+                this.cityCountyCode = cityCountyCode;
+                return this;
+            }
+
+            /**
              * corp_refund_fee.
              */
             public Builder corpRefundFee(Double corpRefundFee) {
@@ -1142,6 +1274,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
+                return this;
+            }
+
+            /**
+             * exceed_reason.
+             */
+            public Builder exceedReason(String exceedReason) {
+                this.exceedReason = exceedReason;
                 return this;
             }
 
