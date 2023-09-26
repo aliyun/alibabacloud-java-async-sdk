@@ -106,7 +106,7 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -529,7 +529,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SLB instance.
+             * The state of the SLB instance.
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -577,7 +577,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * The description of the state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -585,7 +585,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * The type of the SLB instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -718,7 +718,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SLB instance.
+             * The state of the SLB instance.
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -758,7 +758,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * The description of the state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -766,7 +766,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * Indicates whether the instance was deployed on the public network or internal network.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1343,7 +1343,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscription gateway expires.
+             * The time when the instance expires.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -1351,7 +1351,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the gateway.
+             * The gateway type.
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -1375,7 +1375,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the gateway was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1383,7 +1383,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * The time when the gateway was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1391,7 +1391,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * The gateway ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1407,7 +1407,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1431,7 +1431,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the instance.
+             * The resource tag.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -1439,7 +1439,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the gateway can be forcefully updated.
+             * Indicates whether the instance was forcefully upgraded.
              */
             public Builder mustUpgrade(Boolean mustUpgrade) {
                 this.mustUpgrade = mustUpgrade;
@@ -1447,7 +1447,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway.
+             * The gateway name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1455,7 +1455,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user.
+             * The user information.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -1463,7 +1463,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The region in which the gateway resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1495,7 +1495,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the Server Load Balancer (SLB) instances.
+             * The details of Server Load Balancer (SLB) instances.
              */
             public Builder slb(java.util.List < Slb> slb) {
                 this.slb = slb;
@@ -1511,21 +1511,21 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The gateway status.
+             * The gateway state. Valid values:
              * <p>
              * 
              * *   0: The gateway is being created.
-             * *   1: The gateway fails to be created.
+             * *   1: The gateway failed to be created.
              * *   2: The gateway is running.
-             * *   3: The gateway is changing.
+             * *   3: The gateway is being changed.
              * *   4: The gateway is scaling down.
              * *   6: The gateway is scaling up.
              * *   8: The gateway is being deleted.
-             * *   9: The gateway is suspended and to be released.
+             * *   9: The gateway is suspended and is to be released.
              * *   10: The gateway is restarting.
              * *   11: The gateway is being rebuilt.
-             * *   12: The gateway is updating.
-             * *   13: The gateway fails to be updated.
+             * *   12: The gateway is being upgraded.
+             * *   13: The gateway failed to be upgraded.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1533,7 +1533,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the status.
+             * The description of the gateway state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -1565,7 +1565,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the gateway can be updated.
+             * Indicates whether the instance was upgraded.
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -1674,7 +1674,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The data entries returned.
+             * The data returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

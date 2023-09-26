@@ -178,7 +178,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -196,7 +196,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The Microservices Engine (MSE) namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

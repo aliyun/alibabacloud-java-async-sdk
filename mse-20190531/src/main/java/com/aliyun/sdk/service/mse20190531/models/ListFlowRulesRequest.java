@@ -177,7 +177,11 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -186,7 +190,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -195,7 +199,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -204,7 +208,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -213,7 +217,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The page number. Default value: 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -222,7 +226,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +235,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The name of the resource.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -240,7 +244,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * ResourceSearchKey.
+         * The keyword that is used for the search.
          */
         public Builder resourceSearchKey(String resourceSearchKey) {
             this.putQueryParameter("ResourceSearchKey", resourceSearchKey);

@@ -142,7 +142,7 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the node.
+         * Indicates whether the subscription was successful.
          */
         public Builder data(Boolean data) {
             this.data = data;

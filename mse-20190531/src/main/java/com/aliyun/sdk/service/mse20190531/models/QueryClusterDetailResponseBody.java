@@ -246,7 +246,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The timestamp when the instance node was created.
+             * The timestamp when the instance was created.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -254,7 +254,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the instance node.
+             * The health status of the instance.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -270,7 +270,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * The IP address of the instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -302,7 +302,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * The zone ID.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

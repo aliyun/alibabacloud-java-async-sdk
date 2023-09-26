@@ -86,7 +86,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -927,7 +927,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EipInstanceId.
+             * 弹性公网IP（EIP）的实例ID
              */
             public Builder eipInstanceId(String eipInstanceId) {
                 this.eipInstanceId = eipInstanceId;
@@ -935,7 +935,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * 到期时间（包年包月）
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -943,7 +943,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectZones.
+             * The zones to which the current cluster can be distributed.
              */
             public Builder expectZones(java.util.List < String > expectZones) {
                 this.expectZones = expectZones;
@@ -1097,7 +1097,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * ENI网络接入的安全组ID
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1105,7 +1105,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupType.
+             * ENI网络接入的安全组类型
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;

@@ -86,7 +86,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the rule.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,26 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -326,7 +345,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -334,7 +353,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -342,7 +361,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the rule is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -350,7 +369,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * HalfOpenBaseAmountPerStep.
+             * The minimum number of requests that can be passed in each step after circuit breaking recovers.
              */
             public Builder halfOpenBaseAmountPerStep(Integer halfOpenBaseAmountPerStep) {
                 this.halfOpenBaseAmountPerStep = halfOpenBaseAmountPerStep;
@@ -358,7 +377,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * HalfOpenRecoveryStepNum.
+             * The number of circuit breaking recovery steps.
              */
             public Builder halfOpenRecoveryStepNum(Integer halfOpenRecoveryStepNum) {
                 this.halfOpenRecoveryStepNum = halfOpenRecoveryStepNum;
@@ -366,7 +385,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -374,7 +393,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAllowedRtMs.
+             * The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
              */
             public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
                 this.maxAllowedRtMs = maxAllowedRtMs;
@@ -382,7 +401,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MinRequestAmount.
+             * The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met.
              */
             public Builder minRequestAmount(Integer minRequestAmount) {
                 this.minRequestAmount = minRequestAmount;
@@ -390,7 +409,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The microservice namespace to which the application belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -398,7 +417,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -406,7 +425,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -414,7 +433,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RetryTimeoutMs.
+             * The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.
              */
             public Builder retryTimeoutMs(Integer retryTimeoutMs) {
                 this.retryTimeoutMs = retryTimeoutMs;
@@ -422,7 +441,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * StatIntervalMs.
+             * The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes.
              */
             public Builder statIntervalMs(Integer statIntervalMs) {
                 this.statIntervalMs = statIntervalMs;
@@ -430,7 +449,34 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * The threshold type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Slow call ratio
+             * 
+             *     <!-- -->
+             * 
+             * *   1
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Abnormal proportion
+             * 
+             *     <!-- -->
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -438,7 +484,7 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

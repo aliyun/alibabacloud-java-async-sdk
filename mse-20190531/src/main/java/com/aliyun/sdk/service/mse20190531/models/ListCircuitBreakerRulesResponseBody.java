@@ -98,7 +98,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the rule.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -358,7 +358,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -366,7 +366,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -374,7 +374,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the rule was enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -382,7 +382,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FallbackObject.
+             * The behavior that was bound to the rule.
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
@@ -390,7 +390,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * HalfOpenBaseAmountPerStep.
+             * The minimum number of requests that can be passed in each step after circuit breaking recovers.
              */
             public Builder halfOpenBaseAmountPerStep(Integer halfOpenBaseAmountPerStep) {
                 this.halfOpenBaseAmountPerStep = halfOpenBaseAmountPerStep;
@@ -398,7 +398,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * HalfOpenRecoveryStepNum.
+             * The number of circuit breaking recovery steps.
              */
             public Builder halfOpenRecoveryStepNum(Integer halfOpenRecoveryStepNum) {
                 this.halfOpenRecoveryStepNum = halfOpenRecoveryStepNum;
@@ -406,7 +406,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAllowedRtMs.
+             * The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
              */
             public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
                 this.maxAllowedRtMs = maxAllowedRtMs;
@@ -414,7 +414,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MinRequestAmount.
+             * The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met.
              */
             public Builder minRequestAmount(Integer minRequestAmount) {
                 this.minRequestAmount = minRequestAmount;
@@ -422,7 +422,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The microservice namespace to which the application belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -430,7 +430,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the cluster resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -438,7 +438,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -446,7 +446,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RetryTimeoutMs.
+             * The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.
              */
             public Builder retryTimeoutMs(Integer retryTimeoutMs) {
                 this.retryTimeoutMs = retryTimeoutMs;
@@ -454,7 +454,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -462,7 +462,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StatIntervalMs.
+             * The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes.
              */
             public Builder statIntervalMs(Integer statIntervalMs) {
                 this.statIntervalMs = statIntervalMs;
@@ -470,7 +470,34 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * The threshold type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     slow call proportion
+             * 
+             *     <!-- -->
+             * 
+             * *   1
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     abnormal proportion
+             * 
+             *     <!-- -->
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -478,7 +505,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -555,7 +582,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -563,7 +590,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -571,7 +598,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The returned result.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -579,7 +606,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of pages.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

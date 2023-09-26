@@ -121,7 +121,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -130,7 +130,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -139,7 +139,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of the rules that you want to delete.
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -149,7 +149,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The microservice namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

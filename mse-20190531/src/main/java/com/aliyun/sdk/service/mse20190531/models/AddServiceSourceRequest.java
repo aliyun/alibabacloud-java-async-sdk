@@ -166,7 +166,12 @@ public class AddServiceSourceRequest extends Request {
         } 
 
         /**
-         * The return value.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh-CN (default): Chinese
+         * *   en-US: English
+         * *   ja: Japanese
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -232,7 +237,11 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Ingress.
+         * The service source.
+         * <p>
+         * 
+         * *   K8S: ACK cluster
+         * *   NACOS: MSE Nacos instance
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -241,7 +250,11 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * The type of the service source.
+         * <p>
+         * 
+         * *   K8S: Container Service for Kubernetes (ACK) cluster
+         * *   NACOS: Nacos instance
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

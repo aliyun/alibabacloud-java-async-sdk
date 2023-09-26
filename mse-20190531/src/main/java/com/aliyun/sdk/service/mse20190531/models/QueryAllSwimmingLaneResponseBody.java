@@ -94,7 +94,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

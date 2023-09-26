@@ -98,7 +98,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -278,7 +278,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Integer unhealthyCheckTimes; 
 
             /**
-             * AppId.
+             * The ID of the application for which Microservices Governance is enabled.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -286,7 +286,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application for which Microservices Governance is enabled.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -294,7 +294,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CheckInternal.
+             * The health check interval. Unit: seconds.
              */
             public Builder checkInternal(Integer checkInternal) {
                 this.checkInternal = checkInternal;
@@ -302,7 +302,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CheckPath.
+             * The path of the health check. This parameter is required only when the CheckType parameter is set to http.
              */
             public Builder checkPath(String checkPath) {
                 this.checkPath = checkPath;
@@ -310,7 +310,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTimeout.
+             * The timeout period of the health check response. Unit: seconds.
              */
             public Builder checkTimeout(Integer checkTimeout) {
                 this.checkTimeout = checkTimeout;
@@ -318,7 +318,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * The type of the health check. Valid values:
+             * <p>
+             * 
+             * *   connection: connection status check
+             * *   tcp: TCP connection check
+             * *   http: HTTP connection check
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -326,7 +331,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HealthyCheckTimes.
+             * The maximum number of health check retries when the instance state changes from unhealthy to healthy.
              */
             public Builder healthyCheckTimes(Integer healthyCheckTimes) {
                 this.healthyCheckTimes = healthyCheckTimes;
@@ -334,7 +339,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the application for which Microservices Governance is enabled.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -342,7 +347,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyCheckTimes.
+             * The maximum number of health check retries when the instance state changes from healthy to unhealthy.
              */
             public Builder unhealthyCheckTimes(Integer unhealthyCheckTimes) {
                 this.unhealthyCheckTimes = unhealthyCheckTimes;
@@ -471,7 +476,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of health check.
+             * The type of the health check.
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -487,7 +492,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -503,7 +508,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.
+             * Indicates whether an end-to-end health check was initiated by the server. This parameter is valid only if the service is not a temporary service.
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -640,7 +645,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * AppDetail.
+             * The information about the associated application for which Microservices Governance is enabled when the Source parameter is set to governance.
              */
             public Builder appDetail(AppDetail appDetail) {
                 this.appDetail = appDetail;
@@ -648,7 +653,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the clusters.
+             * The cluster information.
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -668,7 +673,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact group.
+             * The service group to which the service belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -708,7 +713,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source type of the service. Valid values:
+             * <p>
+             * 
+             * *   console: The service was registered in the console.
+             * *   sdk: The service was registered by using the SDK.
+             * *   governance: The service was registered on Microservices Governance.
              */
             public Builder source(String source) {
                 this.source = source;

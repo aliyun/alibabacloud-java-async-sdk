@@ -119,7 +119,7 @@ public class GetKubernetesSourceRequest extends Request {
         }
 
         /**
-         * IsAll.
+         * Specifies whether to obtain the information about all Kubernetes clusters. If you set the value to false, only the information about unassociated clusters is obtained.
          */
         public Builder isAll(Boolean isAll) {
             this.putQueryParameter("IsAll", isAll);

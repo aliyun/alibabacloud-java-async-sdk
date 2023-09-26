@@ -86,7 +86,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码。
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

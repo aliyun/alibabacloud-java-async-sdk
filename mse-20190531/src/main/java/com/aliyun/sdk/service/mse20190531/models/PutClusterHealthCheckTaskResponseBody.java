@@ -142,7 +142,7 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The data returned.
          */
         public Builder data(Boolean data) {
             this.data = data;

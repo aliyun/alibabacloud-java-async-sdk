@@ -119,7 +119,7 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -128,7 +128,7 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the Microservices Engine (MSE) namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

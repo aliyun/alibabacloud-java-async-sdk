@@ -82,7 +82,7 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the Microservices Engine (MSE) namespace that you want to query.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

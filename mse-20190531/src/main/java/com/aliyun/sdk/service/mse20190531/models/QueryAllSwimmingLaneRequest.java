@@ -106,7 +106,7 @@ public class QueryAllSwimmingLaneRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * The name of the MSE namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

@@ -121,7 +121,11 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -130,7 +134,7 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -139,7 +143,7 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of the rules to be deleted.
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -149,7 +153,7 @@ public class DeleteFlowRulesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The microservice namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

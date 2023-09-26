@@ -18,10 +18,12 @@ public class ExportNacosConfigRequest extends Request {
 
     @Query
     @NameInMap("AppName")
+    @Deprecated
     private String appName;
 
     @Query
     @NameInMap("DataId")
+    @Deprecated
     private String dataId;
 
     @Query
@@ -30,10 +32,12 @@ public class ExportNacosConfigRequest extends Request {
 
     @Query
     @NameInMap("Group")
+    @Deprecated
     private String group;
 
     @Query
     @NameInMap("Ids")
+    @Deprecated
     private String ids;
 
     @Query
@@ -166,7 +170,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The tag of the application.
+         * The application tag.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -181,6 +185,7 @@ public class ExportNacosConfigRequest extends Request {
          * > 
          * 
          * *   Multiple export methods are supported.
+         * 
          * *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
          */
         public Builder dataId(String dataId) {
@@ -190,7 +195,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * The configuration group name and the ID of the data that you want to export. Separate multiple configurations with comma (,).
+         * The configuration group name and the ID of the configuration that you want to export. Separate multiple configurations with comma (,).
          */
         public Builder dataIds(String dataIds) {
             this.putQueryParameter("DataIds", dataIds);

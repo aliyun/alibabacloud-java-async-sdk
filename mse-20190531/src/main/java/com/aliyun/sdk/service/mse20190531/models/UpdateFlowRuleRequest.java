@@ -169,7 +169,11 @@ public class UpdateFlowRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -178,7 +182,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -187,7 +191,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -196,7 +200,34 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * ControlBehavior.
+         * The throttling effect.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   0
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     fast failure
+         * 
+         *     <!-- -->
+         * 
+         * *   2
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     in queue
+         * 
+         *     <!-- -->
          */
         public Builder controlBehavior(Integer controlBehavior) {
             this.putQueryParameter("ControlBehavior", controlBehavior);
@@ -205,7 +236,26 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the rule.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -214,7 +264,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * MaxQueueingTimeMs.
+         * The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.
          */
         public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
             this.putQueryParameter("MaxQueueingTimeMs", maxQueueingTimeMs);
@@ -223,7 +273,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -232,7 +282,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The rule ID.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -241,7 +291,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * The throttling threshold.
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);

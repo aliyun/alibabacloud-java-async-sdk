@@ -106,7 +106,7 @@ public class UpdateGatewayOptionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(GatewayOption data) {
             this.data = data;

@@ -171,8 +171,8 @@ public class CreateMseServiceApplicationRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * *   zh: Chinese.
-         * *   en: English.
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -246,7 +246,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The source.
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

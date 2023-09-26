@@ -290,7 +290,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             private String sans; 
 
             /**
-             * The validation time.
+             * The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
@@ -306,7 +306,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * The time when the certificate took effect. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder beforeDate(String beforeDate) {
                 this.beforeDate = beforeDate;
@@ -338,7 +338,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The validation time.
+             * The time when the certificate expires. This value is a GMT timestamp.
              */
             public Builder gmtAfter(String gmtAfter) {
                 this.gmtAfter = gmtAfter;
@@ -346,7 +346,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * The time when the certificate took effect. This value is a GMT timestamp.
              */
             public Builder gmtBefore(String gmtBefore) {
                 this.gmtBefore = gmtBefore;
@@ -354,7 +354,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * The issuer.
+             * The issuer of the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;

@@ -98,7 +98,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +242,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Group.
+             * The group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -246,7 +250,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The method name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +258,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterTypes.
+             * The types of request parameters.
              */
             public Builder parameterTypes(java.util.List < String > parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -262,7 +266,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnType.
+             * The type of the return value.
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -270,7 +274,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,7 +282,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The method version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -379,7 +383,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * AppIds.
+             * The IDs of applications.
              */
             public Builder appIds(java.util.List < String > appIds) {
                 this.appIds = appIds;
@@ -387,7 +391,11 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * The rule type. Valid values:
+             * <p>
+             * 
+             * *   0: by application
+             * *   1: by namespace
              */
             public Builder authType(Integer authType) {
                 this.authType = authType;
@@ -395,7 +403,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Black.
+             * Indicates whether the rule is a blacklist rule.
              */
             public Builder black(Boolean black) {
                 this.black = black;
@@ -403,7 +411,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNamespaces.
+             * The queried namespaces.
              */
             public Builder k8sNamespaces(java.util.List < String > k8sNamespaces) {
                 this.k8sNamespaces = k8sNamespaces;
@@ -411,7 +419,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The request method.
              */
             public Builder method(Method method) {
                 this.method = method;
@@ -419,7 +427,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The service path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -616,7 +624,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account to which the resource belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -624,7 +632,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -632,7 +640,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -640,7 +648,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthRule.
+             * The content of the service authentication rule.
              */
             public Builder authRule(java.util.List < AuthRule> authRule) {
                 this.authRule = authRule;
@@ -648,7 +656,11 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * The rule type. Valid values:
+             * <p>
+             * 
+             * *   0: by application
+             * *   1: by namespace
              */
             public Builder authType(Integer authType) {
                 this.authType = authType;
@@ -656,7 +668,11 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the rule was enabled or disabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: enabled
+             * *   `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -664,7 +680,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ID。
+             * The rule ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -672,7 +688,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * K8sNamespace.
+             * The namespace.
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -680,7 +696,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the authentication rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -688,7 +704,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The namespace ID.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -696,7 +712,12 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   **SPRING_CLOUD**
+             * *   **DUBBO**
+             * *   **istio**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -704,7 +725,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -712,7 +733,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the application.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -720,7 +741,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -797,7 +818,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -805,7 +826,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -813,7 +834,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The data returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -821,7 +842,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

@@ -254,11 +254,11 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is enabled.
+             * Indicates whether the rule is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * *   `true`: The rule is enabled.
+             * *   `false`: The rule is disabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -298,7 +298,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is deleted.
+             * Indicates whether the routing rule was deleted.
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;

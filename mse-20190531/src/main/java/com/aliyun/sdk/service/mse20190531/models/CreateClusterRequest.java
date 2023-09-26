@@ -369,7 +369,34 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   PREPAY
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     the subscription billing method
+         * 
+         *     <!-- -->
+         * 
+         * *   POSTPAY
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     the pay-as-you-go billing method
+         * 
+         *     <!-- -->
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -456,7 +483,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * EipEnabled.
+         * ConnectionType为`single_eni`时有效，表示是否开启公网访问（弹性公网IP）
          */
         public Builder eipEnabled(Boolean eipEnabled) {
             this.putQueryParameter("EipEnabled", eipEnabled);
@@ -589,7 +616,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * SecurityGroupType.
+         * ConnectionType为`single_eni`时有效，表示实例所在的安全组类型
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);

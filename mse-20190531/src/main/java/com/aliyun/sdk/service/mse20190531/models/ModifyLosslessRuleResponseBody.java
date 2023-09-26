@@ -110,7 +110,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 响应码。
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 返回数据。
+         * Data.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码。
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;

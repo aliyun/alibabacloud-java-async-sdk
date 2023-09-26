@@ -74,7 +74,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The response to the request.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The request information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +210,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -218,7 +218,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -226,7 +226,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifyTime.
+             * The time when the service was last updated.
              */
             public Builder gmtModifyTime(String gmtModifyTime) {
                 this.gmtModifyTime = gmtModifyTime;
@@ -234,7 +234,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The group to which the service belongs.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -242,7 +242,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNum.
+             * The number of service nodes.
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -250,7 +250,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -258,7 +258,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The service version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -335,7 +335,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String totalSize; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -343,7 +343,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -351,7 +351,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The data on the current page.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -359,7 +359,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;

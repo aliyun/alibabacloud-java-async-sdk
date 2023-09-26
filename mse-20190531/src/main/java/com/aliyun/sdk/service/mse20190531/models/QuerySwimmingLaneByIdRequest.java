@@ -106,7 +106,7 @@ public class QuerySwimmingLaneByIdRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * The name of the Microservices Engine (MSE) namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

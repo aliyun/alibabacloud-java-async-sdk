@@ -181,7 +181,7 @@ public class UpdateAuthPolicyRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -190,7 +190,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -199,7 +199,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * AuthRule.
+         * The content of the service authentication rule.
          */
         public Builder authRule(String authRule) {
             this.putQueryParameter("AuthRule", authRule);
@@ -208,7 +208,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the rule.
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -217,7 +217,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Id.
+         * The rule ID.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -226,7 +226,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * K8sNamespace.
+         * The ID of the ACK cluster namespace.
          */
         public Builder k8sNamespace(String k8sNamespace) {
             this.putQueryParameter("K8sNamespace", k8sNamespace);
@@ -235,7 +235,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -244,7 +244,12 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The protocol type. Valid values:
+         * <p>
+         * 
+         * *   **SPRING_CLOUD**
+         * *   **DUBBO**
+         * *   **istio**
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -253,7 +258,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -262,7 +267,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source for application access.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

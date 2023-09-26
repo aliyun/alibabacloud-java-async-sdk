@@ -324,7 +324,11 @@ public class AddGatewayRequest extends Request {
         } 
 
         /**
-         * The data structure.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -333,7 +337,34 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 付费类型。
+         * The billing method.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   PREPAY
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     the subscription billing method
+         * 
+         *     <!-- -->
+         * 
+         * *   POSTPAY
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     the pay-as-you-go billing method
+         * 
+         *     <!-- -->
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -430,7 +461,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 扩展字段。
+         * The extended field.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -479,13 +510,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The node specifications. Valid values:
-         * <p>
-         * 
-         * *   MSE_GTW\_16\_32\_200\_c(16C32G)
-         * *   MSE_GTW\_2\_4\_200\_c(2C4G)
-         * *   MSE_GTW\_4\_8\_200\_c(4C8G)
-         * *   MSE_GTW\_8\_16\_200\_c(8C16G)
+         * The ID of the primary vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -521,7 +546,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 可用区信息。
+         * The details of the zone.
          */
         public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
             String zoneInfoShrink = shrink(zoneInfo, "ZoneInfo", "json");
@@ -637,7 +662,7 @@ public class AddGatewayRequest extends Request {
             private String zoneId; 
 
             /**
-             * 交换机ID。
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -645,7 +670,7 @@ public class AddGatewayRequest extends Request {
             }
 
             /**
-             * 可用区ID。
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

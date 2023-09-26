@@ -98,7 +98,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,34 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The request was successful.
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The request failed.
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +349,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private java.util.Map < String, ? > trafficTags; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -330,7 +357,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -338,7 +365,34 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ControlBehavior.
+             * The throttling effect.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     fast failure
+             * 
+             *     <!-- -->
+             * 
+             * *   2
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     in queue
+             * 
+             *     <!-- -->
              */
             public Builder controlBehavior(Integer controlBehavior) {
                 this.controlBehavior = controlBehavior;
@@ -346,7 +400,26 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the throttling rule was enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -354,7 +427,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FallbackObject.
+             * The throttling behavior.
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
@@ -362,7 +435,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueueingTimeMs.
+             * The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.
              */
             public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
                 this.maxQueueingTimeMs = maxQueueingTimeMs;
@@ -370,7 +443,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * The statistical dimension. The value 1 indicates the number of accepted requests.
              */
             public Builder metricType(Integer metricType) {
                 this.metricType = metricType;
@@ -378,7 +451,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -386,7 +459,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -394,7 +467,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the interface resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -402,7 +475,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -410,7 +483,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * The throttling threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -418,7 +491,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficTags.
+             * A reserved parameter.
              */
             public Builder trafficTags(java.util.Map < String, ? > trafficTags) {
                 this.trafficTags = trafficTags;
@@ -495,7 +568,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -503,7 +576,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -511,7 +584,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The data returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -519,7 +592,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

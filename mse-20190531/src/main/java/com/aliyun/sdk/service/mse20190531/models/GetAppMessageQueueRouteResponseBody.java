@@ -106,7 +106,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;

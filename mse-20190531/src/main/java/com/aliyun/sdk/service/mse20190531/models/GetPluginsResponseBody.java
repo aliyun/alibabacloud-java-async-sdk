@@ -142,7 +142,7 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the plug-in.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -418,76 +418,12 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer wasmLang; 
 
             /**
-             * The name of the plug-in.
-             */
-            public Builder category(Integer category) {
-                this.category = category;
-                return this;
-            }
-
-            /**
-             * \# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne
-             */
-            public Builder configCheck(String configCheck) {
-                this.configCheck = configCheck;
-                return this;
-            }
-
-            /**
-             * The ID of the creator.
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * MaxVersion.
-             */
-            public Builder maxVersion(String maxVersion) {
-                this.maxVersion = maxVersion;
-                return this;
-            }
-
-            /**
-             * Mode.
-             */
-            public Builder mode(Integer mode) {
-                this.mode = mode;
-                return this;
-            }
-
-            /**
-             * The version of the plug-in.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * NewVersionPublishingFlag.
-             */
-            public Builder newVersionPublishingFlag(Boolean newVersionPublishingFlag) {
-                this.newVersionPublishingFlag = newVersionPublishingFlag;
-                return this;
-            }
-
-            /**
-             * The execution priority of the plug-in. A larger value indicates a higher priority.
-             */
-            public Builder phase(Integer phase) {
-                this.phase = phase;
-                return this;
-            }
-
-            /**
              * The type of the plug-in. Valid values:
              * <p>
              * 
              * 0: custom
              * 
-             * 1: permission authorization
+             * 1: permission authentication
              * 
              * 2: security protection
              * 
@@ -497,13 +433,87 @@ public class GetPluginsResponseBody extends TeaModel {
              * 
              * 5: traffic observation
              */
+            public Builder category(Integer category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * The information about the plug-in configuration used for checking.
+             */
+            public Builder configCheck(String configCheck) {
+                this.configCheck = configCheck;
+                return this;
+            }
+
+            /**
+             * The ID of the plug-in.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The latest version of the plug-in.
+             */
+            public Builder maxVersion(String maxVersion) {
+                this.maxVersion = maxVersion;
+                return this;
+            }
+
+            /**
+             * The plug-in language. Valid values:
+             * <p>
+             * 
+             * *   0: the WebAssembly plug-in
+             * *   2: the Lua plug-in
+             */
+            public Builder mode(Integer mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * The name of the plug-in.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Indicates whether the latest version is being released.
+             */
+            public Builder newVersionPublishingFlag(Boolean newVersionPublishingFlag) {
+                this.newVersionPublishingFlag = newVersionPublishingFlag;
+                return this;
+            }
+
+            /**
+             * The execution stage of the plug-in.
+             * <p>
+             * 
+             * *   0: default stage
+             * *   1: authorization stage
+             * *   2: authentication stage
+             * *   3: statistics stage
+             */
+            public Builder phase(Integer phase) {
+                this.phase = phase;
+                return this;
+            }
+
+            /**
+             * The ID of the creator.
+             */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
                 return this;
             }
 
             /**
-             * The information about the plug-in configuration used for checking.
+             * The execution priority of the plug-in. A larger value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -511,7 +521,12 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
+             * The release state of the plug-in. Valid values:
+             * <p>
+             * 
+             * *   0: The plug-in was released.
+             * *   1: The plug-in is being released.
+             * *   2: The plug-in failed to be released.
              */
             public Builder publishState(Integer publishState) {
                 this.publishState = publishState;
@@ -519,7 +534,11 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the plug-in is enabled. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -527,7 +546,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * This is a plug-in.
+             * The summary of the plug-in.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -535,7 +554,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the plug-in.
+             * The version of the plug-in.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -543,11 +562,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is enabled.
-             * <p>
-             * 
-             * *   0: disabled
-             * *   1: enabled
+             * The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
              */
             public Builder wasmFile(String wasmFile) {
                 this.wasmFile = wasmFile;
@@ -555,7 +570,14 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The publish status.
+             * The WebAssembly language. Valid values:
+             * <p>
+             * 
+             * *   0: C++
+             * *   1: TinyGo
+             * *   2: Rust
+             * *   3: AssemblyScript
+             * *   4: Zig
              */
             public Builder wasmLang(Integer wasmLang) {
                 this.wasmLang = wasmLang;

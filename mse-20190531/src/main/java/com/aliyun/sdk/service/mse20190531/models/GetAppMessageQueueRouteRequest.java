@@ -136,7 +136,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -145,7 +145,7 @@ public class GetAppMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the Microservices Engine (MSE) namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

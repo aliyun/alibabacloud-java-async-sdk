@@ -494,7 +494,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the instance.
+             * The alias of the cluster.
              */
             public Builder clusterAliasName(String clusterAliasName) {
                 this.clusterAliasName = clusterAliasName;
@@ -502,7 +502,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -510,7 +510,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+             * The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -518,7 +518,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * The time when the cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -526,7 +526,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * The time when the cluster expires.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -542,7 +542,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instance nodes.
+             * The number of clusters.
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -550,7 +550,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -566,7 +566,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the instance.
+             * The public endpoint.
              */
             public Builder internetDomain(String internetDomain) {
                 this.internetDomain = internetDomain;
@@ -582,7 +582,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the instance.
+             * The internal endpoint.
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
@@ -590,7 +590,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the instance.
+             * The edition of the cluster.
              */
             public Builder mseVersion(String mseVersion) {
                 this.mseVersion = mseVersion;

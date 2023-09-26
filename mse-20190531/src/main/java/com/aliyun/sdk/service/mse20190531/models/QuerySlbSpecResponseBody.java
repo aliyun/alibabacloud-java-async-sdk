@@ -258,7 +258,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * The name of the instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +266,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum connections per second (CPS).
+             * The number of connections per second.
              */
             public Builder newConnectionPerSecond(String newConnectionPerSecond) {
                 this.newConnectionPerSecond = newConnectionPerSecond;
@@ -282,7 +282,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications.
+             * The specification of the instance.
              */
             public Builder spec(String spec) {
                 this.spec = spec;

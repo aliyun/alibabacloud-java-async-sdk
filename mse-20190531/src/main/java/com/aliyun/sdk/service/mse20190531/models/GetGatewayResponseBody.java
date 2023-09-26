@@ -206,7 +206,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * DesiredReplica.
+             * The number of expected replicas.
              */
             public Builder desiredReplica(Integer desiredReplica) {
                 this.desiredReplica = desiredReplica;
@@ -214,7 +214,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of auto scale-out.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -222,7 +222,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of auto scale-out.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -287,7 +287,10 @@ public class GetGatewayResponseBody extends TeaModel {
             private java.util.List < TimePolicyList> timePolicyList; 
 
             /**
-             * ElasticType.
+             * The type of auto scale-out. Valid value:
+             * <p>
+             * 
+             * *   CronHPA: scale-out by time
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -295,7 +298,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReplica.
+             * The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -303,7 +306,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * TimePolicyList.
+             * The policy of scale-out by time.
              */
             public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;
@@ -806,7 +809,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Elastic.
+             * Indicates whether auto scale-out is enabled.
              */
             public Builder elastic(Boolean elastic) {
                 this.elastic = elastic;
@@ -814,7 +817,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticPolicy.
+             * The auto scale-out policy.
              */
             public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
                 this.elasticPolicy = elasticPolicy;
@@ -822,7 +825,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticReplica.
+             * The number of replicas that are automatically scaled out.
              */
             public Builder elasticReplica(Integer elasticReplica) {
                 this.elasticReplica = elasticReplica;
@@ -830,7 +833,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticType.
+             * The type of auto scale-out. Valid value:
+             * <p>
+             * 
+             * *   CronHPA: scale-out by time
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -974,7 +980,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReplica.
+             * The total number of replicas, including the number of replicas that are automatically scaled out.
              */
             public Builder totalReplica(Integer totalReplica) {
                 this.totalReplica = totalReplica;

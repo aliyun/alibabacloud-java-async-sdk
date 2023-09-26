@@ -1175,11 +1175,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether the alert rule is enabled. Valid value:
+             * Indicates whether the alert rule is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: enabled.
-             * *   `false`: disabled.
+             * *   `true`: enabled
+             * *   `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1187,7 +1187,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The rule ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1203,7 +1203,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * The rule name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1227,7 +1227,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The status of the application.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1332,7 +1332,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1340,7 +1340,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 应用所属的MSE命名空间。
+             * The MSE namespace to which the application belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1348,7 +1348,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the rules.
+             * The details of the rule.
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;
@@ -1356,7 +1356,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values: -0: disabled. -1: enabled.
+             * The route state. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder routeStatus(Long routeStatus) {
                 this.routeStatus = routeStatus;
@@ -1449,7 +1453,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * The data returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

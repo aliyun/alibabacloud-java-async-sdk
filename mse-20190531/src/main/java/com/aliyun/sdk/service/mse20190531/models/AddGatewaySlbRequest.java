@@ -271,7 +271,7 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * VServiceList.
+         * The SLB monitoring information.
          */
         public Builder vServiceList(java.util.List < VServiceList> vServiceList) {
             String vServiceListShrink = shrink(vServiceList, "VServiceList", "json");
@@ -350,7 +350,7 @@ public class AddGatewaySlbRequest extends Request {
             private String vServerGroupName; 
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -358,7 +358,11 @@ public class AddGatewaySlbRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -366,7 +370,7 @@ public class AddGatewaySlbRequest extends Request {
             }
 
             /**
-             * The ID of the HTTP virtual service group.
+             * The ID of the virtual server group.
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -374,7 +378,7 @@ public class AddGatewaySlbRequest extends Request {
             }
 
             /**
-             * VServerGroupName.
+             * The name of the virtual server group.
              */
             public Builder vServerGroupName(String vServerGroupName) {
                 this.vServerGroupName = vServerGroupName;

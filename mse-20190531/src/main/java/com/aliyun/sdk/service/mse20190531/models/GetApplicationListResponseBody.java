@@ -74,7 +74,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data structure.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -290,7 +290,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The microservice namespace to which the application belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -298,7 +298,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -322,7 +322,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -415,7 +415,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information.
+             * The data returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

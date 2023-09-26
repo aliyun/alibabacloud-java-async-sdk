@@ -74,7 +74,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -198,7 +198,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The ID of cluster.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -222,7 +222,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the namespace.
+             * The information about the namespace.
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -230,7 +230,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ack-onepilot component was started.
+             * The time when the pilot component was started.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -331,7 +331,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * The details of the data.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

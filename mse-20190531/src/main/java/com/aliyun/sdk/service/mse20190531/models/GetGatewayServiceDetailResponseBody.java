@@ -202,7 +202,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag values.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -323,7 +323,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the service was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -331,7 +331,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * The time when the service was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -347,7 +347,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * The service ID.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -424,7 +424,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -477,7 +477,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The tag.
+             * The tags.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -639,7 +639,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * The type of the service.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -647,7 +647,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

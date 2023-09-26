@@ -142,7 +142,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -418,7 +418,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values: For tracks of the Notify type:
+             * The type of the event. For trajectory of the Notify type:
              * <p>
              * 
              * *   NodeCreated
@@ -456,7 +456,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type. For tracks of the Push type:
+             * The type of the operation. For trajectory of the Push type:
              * <p>
              * 
              * *   Create
@@ -465,7 +465,7 @@ public class ListZkTrackResponseBody extends TeaModel {
              * *   SetAcl
              * *   Multi
              * 
-             * For tracks of the Pull type:
+             * For trajectory of the Pull type:
              * 
              * *   GetData
              * *   GetChild
@@ -485,7 +485,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The result.
+             * The returned result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -501,7 +501,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp (not available).
+             * The timestamp. It is not available.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -509,7 +509,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the track. Valid values:
+             * The type of the trajectory. Valid values:
              * <p>
              * 
              * *   Push
@@ -530,7 +530,7 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the monitoring feature.
+             * Indicates whether the monitoring feature is enabled.
              */
             public Builder watch(Boolean watch) {
                 this.watch = watch;

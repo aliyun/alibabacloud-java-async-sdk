@@ -182,7 +182,7 @@ public class GetServiceListPageRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -191,7 +191,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -200,7 +200,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * AppName.
+         * 应用名字。
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -209,7 +209,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address from which the query is initiated.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -218,7 +218,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the MSE namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -227,7 +227,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,7 +236,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +245,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -254,7 +254,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -263,7 +263,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The service type.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

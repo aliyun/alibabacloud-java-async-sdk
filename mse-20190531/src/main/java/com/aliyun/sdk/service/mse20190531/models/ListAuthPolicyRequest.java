@@ -170,7 +170,7 @@ public class ListAuthPolicyRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese and the value en-US indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -179,7 +179,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -188,7 +188,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the authentication rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -197,7 +197,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the Microservices Engine (MSE) namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -206,7 +206,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +215,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +224,12 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The protocol type. Valid values:
+         * <p>
+         * 
+         * *   **SPRING_CLOUD**
+         * *   **DUBBO**
+         * *   **istio**
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -233,7 +238,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -242,7 +247,7 @@ public class ListAuthPolicyRequest extends Request {
         }
 
         /**
-         * Source.
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

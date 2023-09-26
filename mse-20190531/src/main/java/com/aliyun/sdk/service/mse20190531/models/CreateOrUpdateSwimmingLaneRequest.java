@@ -210,13 +210,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:****
-         * <p>
-         * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English
-         * 
-         * > Default value: **zh-CN**.
+         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -261,7 +255,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * GatewaySwimmingLaneRouteJson.
+         * The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.
          */
         public Builder gatewaySwimmingLaneRouteJson(GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson) {
             String gatewaySwimmingLaneRouteJsonShrink = shrink(gatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
@@ -286,7 +280,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+         * The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -295,7 +289,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The name of the MSE namespace.
+         * The name of the lane.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -496,7 +490,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the MSE namespace.
+             * The name of the lane.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -722,7 +716,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * Cond.
+             * The matching condition. Valid values:
+             * <p>
+             * 
+             * *   PRE: prefix matching
+             * *   EQUAL: exact matching
+             * *   ERGULAR: regular expression matching
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -730,7 +729,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the MSE namespace.
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -738,7 +737,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the parameter. Valid values:
+             * <p>
+             * 
+             * *   header
+             * *   param
              */
             public Builder type(String type) {
                 this.type = type;
@@ -746,7 +749,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -823,7 +826,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private java.util.List < Long > routeIdList; 
 
             /**
-             * Conditions.
+             * The matching conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -831,7 +834,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * GatewayId.
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -839,7 +842,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -847,7 +850,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * RouteIdList.
+             * The route IDs.
              */
             public Builder routeIdList(java.util.List < Long > routeIdList) {
                 this.routeIdList = routeIdList;

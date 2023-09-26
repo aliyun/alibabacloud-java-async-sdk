@@ -106,7 +106,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the node.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -182,7 +182,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The status.
+             * The route status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -391,7 +391,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The expiration time.
+             * The time when the certificate expires.
              */
             public Builder certBeforeDate(String certBeforeDate) {
                 this.certBeforeDate = certBeforeDate;
@@ -399,7 +399,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * The certificate ID.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -407,7 +407,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The route comment (ingress).
+             * The route comment. This parameter is returned only in ingress scenarios.
              */
             public Builder comment(Comment comment) {
                 this.comment = comment;
@@ -415,7 +415,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * The gateway ID.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -423,7 +423,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the domain name was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -431,7 +431,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The time when the domain name was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -452,7 +452,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain ID.
+             * The ID of the domain name.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -484,10 +484,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name. Valid values:
+             * The state of the domain name. Valid values:
              * <p>
              * 
-             * *   0: unpublish
+             * *   0: unpublished
              * *   2: publishing
              * *   3: published
              * *   4: editing
@@ -516,7 +516,11 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * The type of the domain name source. Valid values:
+             * <p>
+             * 
+             * *   Op: console
+             * *   Ingress: MSE Ingress
              */
             public Builder type(String type) {
                 this.type = type;

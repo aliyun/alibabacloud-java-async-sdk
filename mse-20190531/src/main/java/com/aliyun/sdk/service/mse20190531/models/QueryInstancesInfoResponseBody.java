@@ -302,7 +302,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The value of this parameter is a timestamp.
+             * The time when the instance was created. The value of this parameter is a timestamp.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -334,7 +334,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The pod name.
+             * The name of the pod.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -358,7 +358,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * The zone ID.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -366,7 +366,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneDistributed.
+             * Indicates whether all pods in the cluster are distributed in the specified zones.
              */
             public Builder zoneDistributed(Boolean zoneDistributed) {
                 this.zoneDistributed = zoneDistributed;

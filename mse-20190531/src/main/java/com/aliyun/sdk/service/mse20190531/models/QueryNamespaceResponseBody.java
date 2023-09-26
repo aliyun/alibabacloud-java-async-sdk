@@ -86,7 +86,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码。
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -170,7 +170,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Namespace.
+             * The name of the namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -178,7 +178,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which the namespace belongs.
              */
             public Builder region(String region) {
                 this.region = region;
