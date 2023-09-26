@@ -87,6 +87,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateMigrationJobResponse> createMigrationJob(CreateMigrationJobRequest request);
 
+    CompletableFuture<CreateReverseDtsJobResponse> createReverseDtsJob(CreateReverseDtsJobRequest request);
+
     /**
       * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
       *
@@ -338,6 +340,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<StartMigrationJobResponse> startMigrationJob(StartMigrationJobRequest request);
+
+    CompletableFuture<StartReverseWriterResponse> startReverseWriter(StartReverseWriterRequest request);
 
     /**
       * When you call this operation, the change tracking task must be in the NotStarted or Failed state.
