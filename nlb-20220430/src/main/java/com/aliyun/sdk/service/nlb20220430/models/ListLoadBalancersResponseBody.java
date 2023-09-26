@@ -610,7 +610,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIPv4HcStatus.
+             * The health check status of the private IPv4 address.
              */
             public Builder privateIPv4HcStatus(String privateIPv4HcStatus) {
                 this.privateIPv4HcStatus = privateIPv4HcStatus;
@@ -618,7 +618,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIPv6HcStatus.
+             * The health check status of the private IPv6 address.
              */
             public Builder privateIPv6HcStatus(String privateIPv6HcStatus) {
                 this.privateIPv6HcStatus = privateIPv6HcStatus;
@@ -711,13 +711,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration read-only mode is enabled. Valid values:
+             * The state of the task. Valid values:
              * <p>
              * 
-             * *   **NonProtection**: disabled. In this case, **Reason** is not returned. If **Reason** is set, the value is cleared.
-             * *   **ConsoleProtection**: enabled. In this case, **Reason** is returned.
-             * 
-             * >  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+             * *   **Succeeded**: The task is successful.
+             * *   **processing**: The ticket is being executed.
              */
             public Builder status(String status) {
                 this.status = status;

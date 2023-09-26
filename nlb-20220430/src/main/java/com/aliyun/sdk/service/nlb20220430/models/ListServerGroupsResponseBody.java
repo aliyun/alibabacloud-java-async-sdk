@@ -813,7 +813,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * QuicVersion.
+             * The Quic version.
              */
             public Builder quicVersion(String quicVersion) {
                 this.quicVersion = quicVersion;

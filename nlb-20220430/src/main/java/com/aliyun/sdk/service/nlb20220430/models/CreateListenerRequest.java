@@ -604,7 +604,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -658,7 +658,10 @@ public class CreateListenerRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -666,7 +669,10 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>
+             * 
+             * You can add up to 20 tags in each call.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -97,7 +97,12 @@ public class GetLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,7 +111,11 @@ public class GetLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether only to precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request but does not query the listener details. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -115,7 +124,7 @@ public class GetLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the NLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -124,7 +133,10 @@ public class GetLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the NLB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -314,7 +314,11 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         private java.util.List < ZoneMappings> zoneMappings; 
 
         /**
-         * AddressIpVersion.
+         * The protocol version. Valid values:
+         * <p>
+         * 
+         * *   **ipv4**: IPv4
+         * *   **DualStack**: dual stack
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.addressIpVersion = addressIpVersion;
@@ -334,7 +338,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BandwidthPackageId.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -353,7 +357,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the NLB instance was created. This value is a UNIX timestamp.
+         * <p>
+         * 
+         * Unit: milliseconds.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -373,7 +380,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DNSName.
+         * The domain name of the NLB instance.
          */
         public Builder DNSName(String DNSName) {
             this.DNSName = DNSName;
@@ -381,7 +388,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DeletionProtectionConfig.
+         * The configuration of the deletion protection feature.
          */
         public Builder deletionProtectionConfig(DeletionProtectionConfig deletionProtectionConfig) {
             this.deletionProtectionConfig = deletionProtectionConfig;
@@ -455,7 +462,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerType.
+         * The type of the Server Load Balancer (SLB) instance. Set the value to **network**, which specifies NLB.
          */
         public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
@@ -463,7 +470,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ModificationProtectionConfig.
+         * The configuration of the configuration read-only mode.
          */
         public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
             this.modificationProtectionConfig = modificationProtectionConfig;
@@ -487,7 +494,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -495,7 +502,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -591,7 +598,11 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * Enabled.
+             * Specifies whether to enable deletion protection. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false** (default): no
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -599,7 +610,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledTime.
+             * The time when the deletion protection feature was enabled. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -607,7 +618,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -713,7 +724,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * EnabledTime.
+             * The time when the modification protection feature was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -721,7 +732,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+             * <p>
+             * 
+             * >  This parameter takes effect only if the **Status** parameter is set to **ConsoleProtection**.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -729,7 +743,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Specifies whether to enable the configuration read-only mode. Valid values:
+             * <p>
+             * 
+             * *   **NonProtection**: does not enable the configuration read-only mode. You cannot set the **Reason** parameter. If the **Reason** parameter is set, the value is cleared.
+             * *   **ConsoleProtection**: enables the configuration read-only mode. You can set the **Reason** parameter.
+             * 
+             * >  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
              */
             public Builder status(String status) {
                 this.status = status;

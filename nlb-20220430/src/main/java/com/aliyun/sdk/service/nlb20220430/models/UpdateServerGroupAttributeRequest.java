@@ -266,7 +266,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * QuicVersion.
+         * The Quic Version.
          */
         public Builder quicVersion(String quicVersion) {
             this.putBodyParameter("QuicVersion", quicVersion);

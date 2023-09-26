@@ -293,7 +293,15 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ALPN policy.
+         * The ALPN policy. Valid values:
+         * <p>
+         * 
+         * *   **HTTP1Only**: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+         * *   **HTTP2Only**: uses only HTTP 2.0.
+         * *   **HTTP2Optional**: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.
+         * *   **HTTP2Preferred**: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+         * 
+         * > This parameter is required if AlpnEnabled is set to true.
          */
         public Builder alpnPolicy(String alpnPolicy) {
             this.putBodyParameter("AlpnPolicy", alpnPolicy);
@@ -302,7 +310,10 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * CaCertificateIds.
+         * The CA certificates. Only one CA certificate is supported.
+         * <p>
+         * 
+         * >  This parameter takes effect only for listeners that use SSL over TCP.
          */
         public Builder caCertificateIds(java.util.List < String > caCertificateIds) {
             this.putBodyParameter("CaCertificateIds", caCertificateIds);
@@ -324,7 +335,7 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * CertificateIds.
+         * The server certificates.
          */
         public Builder certificateIds(java.util.List < String > certificateIds) {
             this.putBodyParameter("CertificateIds", certificateIds);
@@ -336,9 +347,9 @@ public class UpdateListenerAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);

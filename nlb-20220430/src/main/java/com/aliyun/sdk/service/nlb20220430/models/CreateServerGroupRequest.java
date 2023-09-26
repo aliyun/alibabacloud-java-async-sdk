@@ -392,7 +392,7 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * QuicVersion.
+         * The Quic version.
          */
         public Builder quicVersion(String quicVersion) {
             this.putBodyParameter("QuicVersion", quicVersion);
