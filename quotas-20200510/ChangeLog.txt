@@ -1,3 +1,6 @@
+2023-09-26 Version: 1.0.5
+- Generated java-async 2020-05-10 for quotas.
+
 2023-09-22 Version: 1.0.4
 - Generated java-async 2020-05-10 for quotas.
 
