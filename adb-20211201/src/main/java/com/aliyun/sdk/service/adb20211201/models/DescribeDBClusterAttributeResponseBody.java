@@ -252,6 +252,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("StorageResourceTotal")
         private String storageResourceTotal;
 
+        @NameInMap("SupportedFeatures")
+        private java.util.Map < String, String > supportedFeatures;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -294,6 +297,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.storageResource = builder.storageResource;
             this.storageResourceTotal = builder.storageResourceTotal;
+            this.supportedFeatures = builder.supportedFeatures;
             this.tags = builder.tags;
             this.userENIStatus = builder.userENIStatus;
             this.VPCId = builder.VPCId;
@@ -492,6 +496,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedFeatures
+         */
+        public java.util.Map < String, String > getSupportedFeatures() {
+            return this.supportedFeatures;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -553,6 +564,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String storageResource; 
             private String storageResourceTotal; 
+            private java.util.Map < String, String > supportedFeatures; 
             private Tags tags; 
             private Boolean userENIStatus; 
             private String VPCId; 
@@ -808,6 +820,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder storageResourceTotal(String storageResourceTotal) {
                 this.storageResourceTotal = storageResourceTotal;
+                return this;
+            }
+
+            /**
+             * SupportedFeatures.
+             */
+            public Builder supportedFeatures(java.util.Map < String, String > supportedFeatures) {
+                this.supportedFeatures = supportedFeatures;
                 return this;
             }
 
