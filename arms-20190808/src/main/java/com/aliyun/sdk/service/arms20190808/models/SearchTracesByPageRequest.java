@@ -257,10 +257,11 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * 是否过滤错误的调用链。
+         * Specifies whether to include the traces of abnormal calls.
          * <p>
-         * - `true`：过滤
-         * - `false`（默认）：不过滤
+         * 
+         * *   `true`: No
+         * *   `false` (default): Yes
          */
         public Builder isError(Boolean isError) {
             this.putQueryParameter("IsError", isError);
@@ -363,7 +364,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -484,7 +485,7 @@ public class SearchTracesByPageRequest extends Request {
              * *   traceId: the ID of the trace.
              * *   serverApp: the name of the server application.
              * *   clientApp: the name of the client application.
-             * *   service: the name of the operation.
+             * *   service: the name of the API operation.
              * *   rpc: the type of the call.
              * *   msOfSpan: the duration exceeds a specific value.
              * *   clientIp: the IP address of the client.

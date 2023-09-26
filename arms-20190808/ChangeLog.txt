@@ -1,3 +1,6 @@
+2023-09-26 Version: 3.0.6
+- Generated java-async 2019-08-08 for ARMS.
+
 2023-09-21 Version: 3.0.5
 - Generated java-async 2019-08-08 for ARMS.
 
