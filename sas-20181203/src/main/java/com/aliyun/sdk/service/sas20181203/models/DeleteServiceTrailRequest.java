@@ -54,7 +54,11 @@ public class DeleteServiceTrailRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region in which your Security Center service is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: center.
+         * *   **ap-southeast-1**: Singapore.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -54,7 +54,12 @@ public class DescribeScanTaskStatisticsRequest extends Request {
         } 
 
         /**
-         * Levels.
+         * The severities of the alert events handled by the virus detection task. Separate multiple severities with commas (,). The severities decrease in descending order. Valid values:
+         * <p>
+         * 
+         * *   **serious**
+         * *   **suspicious**
+         * *   **remind**
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);

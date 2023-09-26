@@ -181,7 +181,10 @@ public class ModifyCycleTaskRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the task configuration.
+         * <p>
+         * 
+         * >  You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -190,7 +193,11 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the task. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables the task.
+         * *   **0**: disables the task.
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -199,7 +206,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * FirstDateStr.
+         * The time when the task first started.
          */
         public Builder firstDateStr(Long firstDateStr) {
             this.putQueryParameter("FirstDateStr", firstDateStr);
@@ -208,7 +215,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * IntervalPeriod.
+         * The interval at which the task is run.
          */
         public Builder intervalPeriod(Integer intervalPeriod) {
             this.putQueryParameter("IntervalPeriod", intervalPeriod);
@@ -217,7 +224,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * Param.
+         * The additional information.
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -226,7 +233,11 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the scan interval. Valid values:
+         * <p>
+         * 
+         * *   **day**
+         * *   **hour**
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -235,7 +246,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * TargetEndTime.
+         * The end time of the task. The time must be a time frame.
          */
         public Builder targetEndTime(Integer targetEndTime) {
             this.putQueryParameter("TargetEndTime", targetEndTime);
@@ -244,7 +255,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * TargetStartTime.
+         * The start time of the task. The start time must be a time frame.
          */
         public Builder targetStartTime(Integer targetStartTime) {
             this.putQueryParameter("TargetStartTime", targetStartTime);
@@ -253,7 +264,50 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task. Valid values:
+         * <p>
+         * 
+         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus detection task
+         * *   **IMAGE_SCAN**: image scan task
+         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * 
+         * Valid values:
+         * 
+         * *   VIRUS_VUL_SCHEDULE_SCAN
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     virus detection task
+         * 
+         *     <!-- -->
+         * 
+         * *   IMAGE_SCAN
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     image scan task
+         * 
+         *     <!-- -->
+         * 
+         * *   EMG_VUL_SCHEDULE_SCAN
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     urgent vulnerability scan task
+         * 
+         *     <!-- -->
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -262,7 +316,50 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus detection task
+         * *   **IMAGE_SCAN**: image scan task
+         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * 
+         * Valid values:
+         * 
+         * *   VIRUS_VUL_SCHEDULE_SCAN
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     virus detection task
+         * 
+         *     <!-- -->
+         * 
+         * *   IMAGE_SCAN
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     image scan task
+         * 
+         *     <!-- -->
+         * 
+         * *   EMG_VUL_SCHEDULE_SCAN
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     urgent vulnerability scan task
+         * 
+         *     <!-- -->
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

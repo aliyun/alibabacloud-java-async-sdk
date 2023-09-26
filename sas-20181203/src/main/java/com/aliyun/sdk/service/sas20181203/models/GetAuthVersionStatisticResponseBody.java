@@ -50,7 +50,7 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         private java.util.List < Statistics> statistics; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Statistics.
+         * The statistics about the numbers of assets protected by each edition of Security Center.
          */
         public Builder statistics(java.util.List < Statistics> statistics) {
             this.statistics = statistics;
@@ -110,7 +110,15 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * AuthVersion.
+             * The edition of Security Center. Valid values:
+             * <p>
+             * 
+             * *   **1**: Basic edition (Unauthorized)
+             * *   **6**: Anti-virus edition
+             * *   **5**: Advanced edition
+             * *   **3**: Enterprise edition
+             * *   **7**: Ultimate edition
+             * *   **10**: Value-added Plan edition
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -118,7 +126,7 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of authorized servers.
              */
             public Builder count(Integer count) {
                 this.count = count;

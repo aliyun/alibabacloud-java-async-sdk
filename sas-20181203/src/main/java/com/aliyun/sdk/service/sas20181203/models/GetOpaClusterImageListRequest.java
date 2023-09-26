@@ -96,7 +96,10 @@ public class GetOpaClusterImageListRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the container belongs.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +108,7 @@ public class GetOpaClusterImageListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -114,7 +117,7 @@ public class GetOpaClusterImageListRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -123,7 +126,7 @@ public class GetOpaClusterImageListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

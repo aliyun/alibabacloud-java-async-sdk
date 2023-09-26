@@ -50,7 +50,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the installation command.
+         * The information about the installation commands.
          */
         public Builder installCodes(java.util.List < InstallCodes> installCodes) {
             this.installCodes = installCodes;
@@ -182,7 +182,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private String vendorName; 
 
             /**
-             * The installation verification code for you to manually install the Security Center agent.
+             * The verification code for you to manually install the Security Center agent.
              */
             public Builder captchaCode(String captchaCode) {
                 this.captchaCode = captchaCode;
@@ -190,7 +190,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the installation command expires. Unit: milliseconds.
+             * The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.
              */
             public Builder expiredDate(Long expiredDate) {
                 this.expiredDate = expiredDate;
@@ -217,8 +217,8 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
              * Indicates whether an image is used to install the Security Center agent. Valid values:
              * <p>
              * 
-             * *   **true**: An image is used to install the Security Center agent.
-             * *   **false**: An image is not used to install the Security Center agent.
+             * *   **true**
+             * *   **false**
              */
             public Builder onlyImage(Boolean onlyImage) {
                 this.onlyImage = onlyImage;
@@ -228,8 +228,9 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             /**
              * The operating system of the server. Valid values:
              * <p>
-             * *   **linux**: Linux.
-             * *   **windows**: Windows.
+             * 
+             * *   **linux**
+             * *   **windows**
              */
             public Builder os(String os) {
                 this.os = os;
@@ -237,7 +238,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyCluster.
+             * The name of the proxy cluster.
              */
             public Builder proxyCluster(String proxyCluster) {
                 this.proxyCluster = proxyCluster;

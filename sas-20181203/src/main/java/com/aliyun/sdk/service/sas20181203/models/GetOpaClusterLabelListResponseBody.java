@@ -98,7 +98,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +114,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the tags that are added to containers.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
             private String tagName; 
 
             /**
-             * TagName.
+             * The name of the tag that is added to the container.
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

@@ -50,7 +50,7 @@ public class GetServiceTrailResponseBody extends TeaModel {
         private ServiceTrail serviceTrail; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetServiceTrailResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceTrail.
+         * The configurations of the service trail.
          */
         public Builder serviceTrail(ServiceTrail serviceTrail) {
             this.serviceTrail = serviceTrail;
@@ -122,7 +122,11 @@ public class GetServiceTrailResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * Config.
+             * The status of the service trail. Valid values:
+             * <p>
+             * 
+             * *   **on:**
+             * *   **off:**
              */
             public Builder config(String config) {
                 this.config = config;
@@ -130,7 +134,7 @@ public class GetServiceTrailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp generated when the service trail was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -138,7 +142,7 @@ public class GetServiceTrailResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp generated when the service trail was last updated. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

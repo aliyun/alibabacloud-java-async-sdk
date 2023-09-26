@@ -86,7 +86,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about baselines.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * Alias.
+             * The alias of the baseline.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -202,7 +206,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             }
 
             /**
-             * ClassKey.
+             * The key of the baseline type.
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -210,7 +214,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             }
 
             /**
-             * ItemKey.
+             * The key of the name for the baseline check item.
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -218,7 +222,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             }
 
             /**
-             * NameKey.
+             * The key of the name for the baseline.
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;

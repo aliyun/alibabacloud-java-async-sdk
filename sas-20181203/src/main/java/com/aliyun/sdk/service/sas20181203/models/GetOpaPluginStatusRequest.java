@@ -55,7 +55,10 @@ public class GetOpaPluginStatusRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The cluster IDs.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);

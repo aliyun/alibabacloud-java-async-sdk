@@ -564,6 +564,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("EmgProof")
+        private String emgProof;
+
         @NameInMap("Ip")
         private String ip;
 
@@ -591,6 +594,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("Tag")
         private String tag;
 
+        @NameInMap("Target")
+        private String target;
+
         @NameInMap("cveList")
         private java.util.List < String > cveList;
 
@@ -598,6 +604,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.absolutePath = builder.absolutePath;
             this.aliasName = builder.aliasName;
             this.description = builder.description;
+            this.emgProof = builder.emgProof;
             this.ip = builder.ip;
             this.lastTs = builder.lastTs;
             this.necessity = builder.necessity;
@@ -607,6 +614,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.rpmEntityList = builder.rpmEntityList;
             this.status = builder.status;
             this.tag = builder.tag;
+            this.target = builder.target;
             this.cveList = builder.cveList;
         }
 
@@ -637,6 +645,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return emgProof
+         */
+        public String getEmgProof() {
+            return this.emgProof;
         }
 
         /**
@@ -703,6 +718,13 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        /**
          * @return cveList
          */
         public java.util.List < String > getCveList() {
@@ -713,6 +735,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String absolutePath; 
             private String aliasName; 
             private String description; 
+            private String emgProof; 
             private String ip; 
             private Long lastTs; 
             private Necessity necessity; 
@@ -722,6 +745,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private java.util.List < RpmEntityList> rpmEntityList; 
             private String status; 
             private String tag; 
+            private String target; 
             private java.util.List < String > cveList; 
 
             /**
@@ -745,6 +769,14 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EmgProof.
+             */
+            public Builder emgProof(String emgProof) {
+                this.emgProof = emgProof;
                 return this;
             }
 
@@ -832,6 +864,14 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder tag(String tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * Target.
+             */
+            public Builder target(String target) {
+                this.target = target;
                 return this;
             }
 

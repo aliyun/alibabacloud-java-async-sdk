@@ -110,7 +110,10 @@ public class ListCriteriaStrategyRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -119,7 +122,10 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image.
+         * <p>
+         * 
+         * >  You can call the [GetOpaClusterImageList](~~GetOpaClusterImageList~~) operation to query the names of images.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -128,7 +134,10 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * Label.
+         * The tag that is added to the container.
+         * <p>
+         * 
+         * >  You can call the [GetOpaClusterLabelList](~~GetOpaClusterLabelList~~) operation to query the tags that are added to containers.
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -137,7 +146,10 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace of the cluster.
+         * <p>
+         * 
+         * >  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -146,7 +158,7 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * The name of the rule.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

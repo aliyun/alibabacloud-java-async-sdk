@@ -96,7 +96,10 @@ public class GetOpaClusterLabelListRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the container belongs.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +108,7 @@ public class GetOpaClusterLabelListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -114,7 +117,10 @@ public class GetOpaClusterLabelListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 200. If you leave the PageSize parameter empty, 200 entries are returned by default. Maximum value: 200.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +129,7 @@ public class GetOpaClusterLabelListRequest extends Request {
         }
 
         /**
-         * TagName.
+         * The name of the tag.
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

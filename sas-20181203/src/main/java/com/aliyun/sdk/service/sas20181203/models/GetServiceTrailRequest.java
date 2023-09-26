@@ -54,7 +54,11 @@ public class GetServiceTrailRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides. Valid value:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: center.
+         * *   **ap-southeast-1**: Singapore.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

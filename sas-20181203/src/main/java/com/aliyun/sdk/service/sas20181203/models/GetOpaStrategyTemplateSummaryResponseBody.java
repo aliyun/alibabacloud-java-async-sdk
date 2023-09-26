@@ -86,7 +86,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The usage statistics about the templates provided for rules of the at-risk image blocking type.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * Count.
+             * The number of times that the template is used.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -202,7 +206,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +214,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -218,7 +222,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

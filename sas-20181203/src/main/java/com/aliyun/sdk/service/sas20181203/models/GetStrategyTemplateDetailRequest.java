@@ -54,7 +54,10 @@ public class GetStrategyTemplateDetailRequest extends Request {
         } 
 
         /**
-         * StrategyId.
+         * The ID of the template.
+         * <p>
+         * 
+         * >  You can call the [GetOpaStrategyTemplateSummary](~~GetOpaStrategyTemplateSummary~~) operation to query the IDs of templates.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

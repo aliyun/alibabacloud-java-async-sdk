@@ -86,7 +86,7 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         private Long userNum; 
 
         /**
-         * DealedRiskNum.
+         * The number of risks that are handled for the user.
          */
         public Builder dealedRiskNum(Integer dealedRiskNum) {
             this.dealedRiskNum = dealedRiskNum;
@@ -94,7 +94,7 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * PersonalTaskNum.
+         * The total number of tasks that are created for the user.
          */
         public Builder personalTaskNum(Long personalTaskNum) {
             this.personalTaskNum = personalTaskNum;
@@ -102,7 +102,7 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalTaskNum.
+         * The total number of virus detection tasks.
          */
         public Builder totalTaskNum(Long totalTaskNum) {
             this.totalTaskNum = totalTaskNum;
@@ -118,7 +118,7 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * UserNum.
+         * The number of risks that are detected for the user.
          */
         public Builder userNum(Long userNum) {
             this.userNum = userNum;

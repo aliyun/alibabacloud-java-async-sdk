@@ -62,7 +62,7 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Count.
+         * The number of cleanup configurations.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The asset cleanup configurations.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * CleanDays.
+             * The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.
              */
             public Builder cleanDays(Integer cleanDays) {
                 this.cleanDays = cleanDays;
@@ -150,7 +150,11 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the configuration takes effect. Valid values:
+             * <p>
+             * 
+             * *   **0**: The configuration does not take effect.
+             * *   **1**: The configuration takes effect.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -158,7 +162,10 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of hosts that are cleaned.
+             * <p>
+             * 
+             * *   The value is set to **1**, which indicates hosts whose provider cannot be identified.
              */
             public Builder type(Integer type) {
                 this.type = type;

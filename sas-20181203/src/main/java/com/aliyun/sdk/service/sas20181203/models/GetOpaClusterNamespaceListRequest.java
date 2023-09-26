@@ -96,7 +96,10 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +108,7 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -114,7 +117,7 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         }
 
         /**
-         * NameSpaceName.
+         * The name of the namespace.
          */
         public Builder nameSpaceName(String nameSpaceName) {
             this.putQueryParameter("NameSpaceName", nameSpaceName);
@@ -123,7 +126,7 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

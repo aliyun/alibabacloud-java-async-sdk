@@ -208,10 +208,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         } 
 
         /**
-         * The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.
+         * The search conditions. The value of this parameter is in the JSON format and is case-sensitive.
          * <p>
          * 
-         * > A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
+         * >  You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~149773~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -229,7 +229,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * The importance level of the asset. Valid values:
+         * The importance of the asset. Valid values:
          * <p>
          * 
          * *   **2**: an important asset
@@ -256,11 +256,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * The logical operator that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:
+         * The logical relationship among multiple search conditions. Valid values:
          * <p>
          * 
-         * *   **OR**: The search conditions are evaluated by using a logical **OR**.
-         * *   **AND**: The search conditions are evaluated by using a logical **AND**.
+         * *   **OR**: The logical relationship among search conditions is **OR**.
+         * *   **AND**: The logical relationship among search conditions is **AND**.
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -273,7 +273,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
          * <p>
          * 
          * *   **ecs**: servers
-         * *   **cloud_product**: Alibaba Cloud services
+         * *   **cloud_product**: Alibaba Cloud service
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -282,7 +282,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * 使用NextToken方式下返回的NextToken值。第一次拉取传空。
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -291,11 +291,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:
+         * Specifies whether to internationalize the name of the default group. Valid values:
          * <p>
          * 
-         * *   **true**: The system returns the Chinese name of the default group for the **GroupTrace** response parameter.********
-         * *   **false**: The system returns default for the **GroupTrace** response parameter.
+         * *   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.
+         * *   **false**: The system returns default for the GroupTrace response parameter.
          */
         public Builder noGroupTrace(Boolean noGroupTrace) {
             this.putQueryParameter("NoGroupTrace", noGroupTrace);
@@ -322,7 +322,9 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * 资源目录成员账号主账号ID。
+         * <p>
+         * >调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -331,7 +333,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * UseNextToken.
+         * 是否使用NextToken方式拉取资产列表数据。如果使用此参数TotalCount不再返回。取值：
+         * <p>
+         * 
+         * - **true**：使用NextToken方式
+         * - **false**：不使用NextToken方式
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

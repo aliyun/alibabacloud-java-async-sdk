@@ -86,7 +86,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The IDs and names of the rules.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Id.
+             * The unique identifier of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +182,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the rule.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -86,7 +86,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the template.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The unique identifier of the baseline check item.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -178,7 +182,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the baseline check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +235,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * Item.
+             * The baseline items.
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -239,7 +243,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The severities of the baselines. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -292,7 +301,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The unique identifier of the malicious sample.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -300,7 +309,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the malicious sample.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -353,7 +362,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * Item.
+             * The items on which malicious samples are detected.
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -361,7 +370,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The severities of the malicious samples.
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -414,7 +423,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the vulnerability.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -422,7 +431,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The alias of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -475,7 +484,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * Item.
+             * The items on which vulnerabilities are detected.
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
@@ -483,7 +492,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The severities of the vulnerabilities.
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -548,7 +557,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private Vul vul; 
 
             /**
-             * Baseline.
+             * The configuration of the baseline.
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -556,7 +565,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousFile.
+             * The configuration of the alert rule for the malicious sample.
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -564,7 +573,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Vul.
+             * The configuration of the vulnerability detection rule.
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -761,7 +770,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * AlarmDetail.
+             * The configuration of the rule.
              */
             public Builder alarmDetail(AlarmDetail alarmDetail) {
                 this.alarmDetail = alarmDetail;
@@ -769,7 +778,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -777,7 +786,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -785,7 +794,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -793,7 +802,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The names of images.
              */
             public Builder imageName(java.util.List < String > imageName) {
                 this.imageName = imageName;
@@ -801,7 +810,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The tags that are added to the containers.
              */
             public Builder label(java.util.List < String > label) {
                 this.label = label;
@@ -809,7 +818,11 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousImage.
+             * Indicates whether the rule supports malicious Internet images. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder maliciousImage(Boolean maliciousImage) {
                 this.maliciousImage = maliciousImage;
@@ -817,7 +830,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespaces.
              */
             public Builder namespace(java.util.List < String > namespace) {
                 this.namespace = namespace;
@@ -825,7 +838,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleAction.
+             * The action on requests. Valid values:
+             * <p>
+             * 
+             * *   **1**: trigger alerts
+             * *   **2**: block
+             * *   **3**: allow
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -833,7 +851,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * The ID of the rule.
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -841,7 +859,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * The name of the rule.
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -849,7 +867,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyTemplateId.
+             * The ID of the template.
              */
             public Builder strategyTemplateId(Long strategyTemplateId) {
                 this.strategyTemplateId = strategyTemplateId;
@@ -857,7 +875,11 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UnScanedImage.
+             * Indicates whether the rule supports unscanned images. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder unScanedImage(Boolean unScanedImage) {
                 this.unScanedImage = unScanedImage;
@@ -865,7 +887,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * The whitelists of tags that are added to images.
              */
             public Builder whiteList(java.util.List < String > whiteList) {
                 this.whiteList = whiteList;

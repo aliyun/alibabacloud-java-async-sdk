@@ -98,7 +98,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +114,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The namespaces.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
             private String nameSpaceName; 
 
             /**
-             * NameSpaceName.
+             * The name of the namespace.
              */
             public Builder nameSpaceName(String nameSpaceName) {
                 this.nameSpaceName = nameSpaceName;

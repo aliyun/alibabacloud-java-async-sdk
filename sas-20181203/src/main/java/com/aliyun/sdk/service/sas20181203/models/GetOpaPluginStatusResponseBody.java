@@ -50,7 +50,7 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstallStatus.
+         * The installation status of the components that are required for clusters protected by proactive defense for containers.
          */
         public Builder installStatus(java.util.List < InstallStatus> installStatus) {
             this.installStatus = installStatus;
@@ -58,7 +58,7 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
             private Boolean installStatus; 
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -118,7 +118,11 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstallStatus.
+             * Indicates whether the component is installed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder installStatus(Boolean installStatus) {
                 this.installStatus = installStatus;

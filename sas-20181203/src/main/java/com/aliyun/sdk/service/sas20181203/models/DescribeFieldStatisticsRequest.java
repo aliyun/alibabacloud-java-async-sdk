@@ -82,7 +82,11 @@ public class DescribeFieldStatisticsRequest extends Request {
         } 
 
         /**
-         * The total number of cloud services that are protected by Security Center.
+         * The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: server
+         * *   **cloud_product**: Alibaba Cloud service
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -91,7 +95,7 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * The number of regions to which the servers belong.
+         * The ID of the region in which the asset resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +104,9 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The ID of the primary account of the Resource Directory member account.
+         * <p>
+         * > call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) interface to obtain this parameter.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
