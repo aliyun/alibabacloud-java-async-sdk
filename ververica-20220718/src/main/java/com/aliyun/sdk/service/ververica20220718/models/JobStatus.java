@@ -1,0 +1,94 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ververica20220718.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link JobStatus} extends {@link TeaModel}
+ *
+ * <p>JobStatus</p>
+ */
+public class JobStatus extends TeaModel {
+    @NameInMap("currentJobStatus")
+    private String currentJobStatus;
+
+    @NameInMap("failure")
+    private JobFailure failure;
+
+    @NameInMap("running")
+    private JobStatusRunning running;
+
+    private JobStatus(Builder builder) {
+        this.currentJobStatus = builder.currentJobStatus;
+        this.failure = builder.failure;
+        this.running = builder.running;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static JobStatus create() {
+        return builder().build();
+    }
+
+    /**
+     * @return currentJobStatus
+     */
+    public String getCurrentJobStatus() {
+        return this.currentJobStatus;
+    }
+
+    /**
+     * @return failure
+     */
+    public JobFailure getFailure() {
+        return this.failure;
+    }
+
+    /**
+     * @return running
+     */
+    public JobStatusRunning getRunning() {
+        return this.running;
+    }
+
+    public static final class Builder {
+        private String currentJobStatus; 
+        private JobFailure failure; 
+        private JobStatusRunning running; 
+
+        /**
+         * currentJobStatus.
+         */
+        public Builder currentJobStatus(String currentJobStatus) {
+            this.currentJobStatus = currentJobStatus;
+            return this;
+        }
+
+        /**
+         * failure.
+         */
+        public Builder failure(JobFailure failure) {
+            this.failure = failure;
+            return this;
+        }
+
+        /**
+         * running.
+         */
+        public Builder running(JobStatusRunning running) {
+            this.running = running;
+            return this;
+        }
+
+        public JobStatus build() {
+            return new JobStatus(this);
+        } 
+
+    } 
+
+}

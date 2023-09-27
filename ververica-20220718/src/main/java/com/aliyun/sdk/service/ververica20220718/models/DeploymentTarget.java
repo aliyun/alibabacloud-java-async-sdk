@@ -1,0 +1,74 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ververica20220718.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeploymentTarget} extends {@link TeaModel}
+ *
+ * <p>DeploymentTarget</p>
+ */
+public class DeploymentTarget extends TeaModel {
+    @NameInMap("name")
+    private String name;
+
+    @NameInMap("namespace")
+    private String namespace;
+
+    private DeploymentTarget(Builder builder) {
+        this.name = builder.name;
+        this.namespace = builder.namespace;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeploymentTarget create() {
+        return builder().build();
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public static final class Builder {
+        private String name; 
+        private String namespace; 
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+
+        public DeploymentTarget build() {
+            return new DeploymentTarget(this);
+        } 
+
+    } 
+
+}

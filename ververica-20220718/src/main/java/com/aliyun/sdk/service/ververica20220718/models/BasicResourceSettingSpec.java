@@ -1,0 +1,74 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ververica20220718.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link BasicResourceSettingSpec} extends {@link TeaModel}
+ *
+ * <p>BasicResourceSettingSpec</p>
+ */
+public class BasicResourceSettingSpec extends TeaModel {
+    @NameInMap("cpu")
+    private Double cpu;
+
+    @NameInMap("memory")
+    private String memory;
+
+    private BasicResourceSettingSpec(Builder builder) {
+        this.cpu = builder.cpu;
+        this.memory = builder.memory;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static BasicResourceSettingSpec create() {
+        return builder().build();
+    }
+
+    /**
+     * @return cpu
+     */
+    public Double getCpu() {
+        return this.cpu;
+    }
+
+    /**
+     * @return memory
+     */
+    public String getMemory() {
+        return this.memory;
+    }
+
+    public static final class Builder {
+        private Double cpu; 
+        private String memory; 
+
+        /**
+         * cpu.
+         */
+        public Builder cpu(Double cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * memory.
+         */
+        public Builder memory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+
+        public BasicResourceSettingSpec build() {
+            return new BasicResourceSettingSpec(this);
+        } 
+
+    } 
+
+}
