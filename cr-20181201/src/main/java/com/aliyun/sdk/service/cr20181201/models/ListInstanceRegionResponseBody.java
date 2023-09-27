@@ -74,7 +74,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,11 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +94,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * The list of regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -98,7 +102,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * LocalName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -158,7 +162,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

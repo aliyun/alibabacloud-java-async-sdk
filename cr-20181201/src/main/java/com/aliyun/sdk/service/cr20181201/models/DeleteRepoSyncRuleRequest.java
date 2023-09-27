@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRepoSyncRuleRequest</p>
  */
 public class DeleteRepoSyncRuleRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("SyncRuleId")
@@ -29,8 +29,8 @@ public class DeleteRepoSyncRuleRequest extends Request {
 
     private DeleteRepoSyncRuleRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.syncRuleId = builder.syncRuleId;
     }
 
@@ -48,17 +48,17 @@ public class DeleteRepoSyncRuleRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +69,20 @@ public class DeleteRepoSyncRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRepoSyncRuleRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String syncRuleId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteRepoSyncRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.syncRuleId = response.syncRuleId;
+        private Builder(DeleteRepoSyncRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.syncRuleId = request.syncRuleId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -103,7 +94,16 @@ public class DeleteRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * SyncRuleId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the synchronization rule.
          */
         public Builder syncRuleId(String syncRuleId) {
             this.putQueryParameter("SyncRuleId", syncRuleId);

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepoSyncRuleRequest</p>
  */
 public class ListRepoSyncRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -29,11 +34,6 @@ public class ListRepoSyncRuleRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoName")
     private String repoName;
@@ -48,11 +48,11 @@ public class ListRepoSyncRuleRequest extends Request {
 
     private ListRepoSyncRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.targetInstanceId = builder.targetInstanceId;
         this.targetRegionId = builder.targetRegionId;
@@ -69,6 +69,13 @@ public class ListRepoSyncRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,13 +107,6 @@ public class ListRepoSyncRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoName
      */
     public String getRepoName() {
@@ -128,11 +128,11 @@ public class ListRepoSyncRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRepoSyncRuleRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String namespaceName; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String repoName; 
         private String targetInstanceId; 
         private String targetRegionId; 
@@ -141,53 +141,17 @@ public class ListRepoSyncRuleRequest extends Request {
             super();
         } 
 
-        private Builder(ListRepoSyncRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.targetInstanceId = response.targetInstanceId;
-            this.targetRegionId = response.targetRegionId;
+        private Builder(ListRepoSyncRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.repoName = request.repoName;
+            this.targetInstanceId = request.targetInstanceId;
+            this.targetRegionId = request.targetRegionId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * NamespaceName.
-         */
-        public Builder namespaceName(String namespaceName) {
-            this.putQueryParameter("NamespaceName", namespaceName);
-            this.namespaceName = namespaceName;
-            return this;
-        }
-
-        /**
-         * PageNo.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -199,7 +163,43 @@ public class ListRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the namespace.
+         */
+        public Builder namespaceName(String namespaceName) {
+            this.putQueryParameter("NamespaceName", namespaceName);
+            this.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -208,7 +208,7 @@ public class ListRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * The ID of the destination instance.
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -217,7 +217,7 @@ public class ListRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * The region ID of the destination instance.
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);

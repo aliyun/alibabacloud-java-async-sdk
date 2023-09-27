@@ -42,6 +42,9 @@ public class GetChainResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ScopeExclude")
+    private java.util.List < String > scopeExclude;
+
     @NameInMap("ScopeId")
     private String scopeId;
 
@@ -59,6 +62,7 @@ public class GetChainResponseBody extends TeaModel {
         this.modifiedTime = builder.modifiedTime;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.scopeExclude = builder.scopeExclude;
         this.scopeId = builder.scopeId;
         this.scopeType = builder.scopeType;
     }
@@ -142,6 +146,13 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     /**
+     * @return scopeExclude
+     */
+    public java.util.List < String > getScopeExclude() {
+        return this.scopeExclude;
+    }
+
+    /**
      * @return scopeId
      */
     public String getScopeId() {
@@ -166,6 +177,7 @@ public class GetChainResponseBody extends TeaModel {
         private Long modifiedTime; 
         private String name; 
         private String requestId; 
+        private java.util.List < String > scopeExclude; 
         private String scopeId; 
         private String scopeType; 
 
@@ -250,6 +262,14 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
+         * ScopeExclude.
+         */
+        public Builder scopeExclude(java.util.List < String > scopeExclude) {
+            this.scopeExclude = scopeExclude;
+            return this;
+        }
+
+        /**
          * ScopeId.
          */
         public Builder scopeId(String scopeId) {
@@ -275,20 +295,32 @@ public class GetChainResponseBody extends TeaModel {
         @NameInMap("Action")
         private String action;
 
+        @NameInMap("BaselineList")
+        private String baselineList;
+
         @NameInMap("IssueCount")
         private String issueCount;
 
         @NameInMap("IssueLevel")
         private String issueLevel;
 
+        @NameInMap("IssueList")
+        private String issueList;
+
         @NameInMap("Logic")
         private String logic;
 
+        @NameInMap("MaliciousList")
+        private String maliciousList;
+
         private DenyPolicy(Builder builder) {
             this.action = builder.action;
+            this.baselineList = builder.baselineList;
             this.issueCount = builder.issueCount;
             this.issueLevel = builder.issueLevel;
+            this.issueList = builder.issueList;
             this.logic = builder.logic;
+            this.maliciousList = builder.maliciousList;
         }
 
         public static Builder builder() {
@@ -307,6 +339,13 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
+         * @return baselineList
+         */
+        public String getBaselineList() {
+            return this.baselineList;
+        }
+
+        /**
          * @return issueCount
          */
         public String getIssueCount() {
@@ -321,23 +360,48 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
+         * @return issueList
+         */
+        public String getIssueList() {
+            return this.issueList;
+        }
+
+        /**
          * @return logic
          */
         public String getLogic() {
             return this.logic;
         }
 
+        /**
+         * @return maliciousList
+         */
+        public String getMaliciousList() {
+            return this.maliciousList;
+        }
+
         public static final class Builder {
             private String action; 
+            private String baselineList; 
             private String issueCount; 
             private String issueLevel; 
+            private String issueList; 
             private String logic; 
+            private String maliciousList; 
 
             /**
              * Action.
              */
             public Builder action(String action) {
                 this.action = action;
+                return this;
+            }
+
+            /**
+             * BaselineList.
+             */
+            public Builder baselineList(String baselineList) {
+                this.baselineList = baselineList;
                 return this;
             }
 
@@ -358,10 +422,26 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
+             * IssueList.
+             */
+            public Builder issueList(String issueList) {
+                this.issueList = issueList;
+                return this;
+            }
+
+            /**
              * Logic.
              */
             public Builder logic(String logic) {
                 this.logic = logic;
+                return this;
+            }
+
+            /**
+             * MaliciousList.
+             */
+            public Builder maliciousList(String maliciousList) {
+                this.maliciousList = maliciousList;
                 return this;
             }
 

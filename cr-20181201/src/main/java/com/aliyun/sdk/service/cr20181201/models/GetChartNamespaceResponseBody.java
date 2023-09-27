@@ -39,6 +39,9 @@ public class GetChartNamespaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private GetChartNamespaceResponseBody(Builder builder) {
         this.autoCreateRepo = builder.autoCreateRepo;
         this.code = builder.code;
@@ -49,6 +52,7 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         this.namespaceName = builder.namespaceName;
         this.namespaceStatus = builder.namespaceStatus;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -122,6 +126,13 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private Boolean autoCreateRepo; 
         private String code; 
@@ -132,9 +143,14 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         private String namespaceName; 
         private String namespaceStatus; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
-         * AutoCreateRepo.
+         * Indicates whether a repository was automatically created in the namespace. Valid values:
+         * <p>
+         * 
+         * *   `true`: A repository was automatically created in the namespace.
+         * *   `false`: No repository was automatically created in the namespace.
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.autoCreateRepo = autoCreateRepo;
@@ -142,7 +158,7 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -150,7 +166,11 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultRepoType.
+         * The default repository type. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: a public repository.
+         * *   `PRIVATE`: a private repository.
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.defaultRepoType = defaultRepoType;
@@ -158,7 +178,7 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -166,7 +186,11 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -174,7 +198,7 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -182,7 +206,7 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace.
          */
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = namespaceName;
@@ -190,7 +214,11 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceStatus.
+         * The status of the namespace. Valid values:
+         * <p>
+         * 
+         * *   `NORMAL`: The namespace is normal.
+         * *   `DELETING`: The namespace is being deleted.
          */
         public Builder namespaceStatus(String namespaceStatus) {
             this.namespaceStatus = namespaceStatus;
@@ -198,10 +226,18 @@ public class GetChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

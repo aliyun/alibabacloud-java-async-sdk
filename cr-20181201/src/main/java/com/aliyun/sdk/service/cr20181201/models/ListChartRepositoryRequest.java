@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListChartRepositoryRequest</p>
  */
 public class ListChartRepositoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -24,11 +29,6 @@ public class ListChartRepositoryRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoName")
@@ -44,10 +44,10 @@ public class ListChartRepositoryRequest extends Request {
 
     private ListChartRepositoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
         this.repoStatus = builder.repoStatus;
@@ -64,6 +64,13 @@ public class ListChartRepositoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -88,13 +95,6 @@ public class ListChartRepositoryRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoName
      */
     public String getRepoName() {
@@ -116,10 +116,10 @@ public class ListChartRepositoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListChartRepositoryRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String repoName; 
         private String repoNamespaceName; 
         private String repoStatus; 
@@ -128,43 +128,16 @@ public class ListChartRepositoryRequest extends Request {
             super();
         } 
 
-        private Builder(ListChartRepositoryRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
-            this.repoStatus = response.repoStatus;
+        private Builder(ListChartRepositoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
+            this.repoStatus = request.repoStatus;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * PageNo.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -176,7 +149,34 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -185,7 +185,7 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace to which the repository belongs.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -194,7 +194,12 @@ public class ListChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoStatus.
+         * The status of the chart repositories that you want to query. Valid values:
+         * <p>
+         * 
+         * *   `ALL`: query repositories of all status.
+         * *   `NORMAL`: query normal repositories.
+         * *   `DELETING`: query repositories that are being deleted.
          */
         public Builder repoStatus(String repoStatus) {
             this.putQueryParameter("RepoStatus", repoStatus);

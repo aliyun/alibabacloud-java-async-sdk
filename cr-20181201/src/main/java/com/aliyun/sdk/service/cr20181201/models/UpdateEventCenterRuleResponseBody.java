@@ -62,7 +62,7 @@ public class UpdateEventCenterRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class UpdateEventCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdateEventCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * The ID of the event notification rule.
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

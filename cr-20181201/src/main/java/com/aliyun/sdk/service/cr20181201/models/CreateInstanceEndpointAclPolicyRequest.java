@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceEndpointAclPolicyRequest</p>
  */
 public class CreateInstanceEndpointAclPolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Comment")
     private String comment;
@@ -35,19 +40,14 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
     @NameInMap("ModuleName")
     private String moduleName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private CreateInstanceEndpointAclPolicyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.comment = builder.comment;
         this.endpointType = builder.endpointType;
         this.entry = builder.entry;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -61,6 +61,13 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,37 +105,39 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         return this.moduleName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateInstanceEndpointAclPolicyRequest, Builder> {
+        private String regionId; 
         private String comment; 
         private String endpointType; 
         private String entry; 
         private String instanceId; 
         private String moduleName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateInstanceEndpointAclPolicyRequest response) {
-            super(response);
-            this.comment = response.comment;
-            this.endpointType = response.endpointType;
-            this.entry = response.entry;
-            this.instanceId = response.instanceId;
-            this.moduleName = response.moduleName;
-            this.regionId = response.regionId;
+        private Builder(CreateInstanceEndpointAclPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.comment = request.comment;
+            this.endpointType = request.endpointType;
+            this.entry = request.entry;
+            this.instanceId = request.instanceId;
+            this.moduleName = request.moduleName;
         } 
 
         /**
-         * Comment.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The description.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -137,7 +146,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * EndpointType.
+         * The type of the endpoint. Set the value to Internet.
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -146,7 +155,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * Entry.
+         * The CIDR block that is accessible.
          */
         public Builder entry(String entry) {
             this.putQueryParameter("Entry", entry);
@@ -155,7 +164,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,20 +173,15 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * The name of the module that you want to access. Valid values:
+         * <p>
+         * 
+         * *   `Registry`: the image repository.
+         * *   `Chart`: a Helm chart.
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
             this.moduleName = moduleName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

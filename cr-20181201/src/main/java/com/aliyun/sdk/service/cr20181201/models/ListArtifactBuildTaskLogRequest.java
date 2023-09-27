@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListArtifactBuildTaskLogRequest</p>
  */
 public class ListArtifactBuildTaskLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BuildTaskId")
     @Validation(required = true)
@@ -32,18 +37,13 @@ public class ListArtifactBuildTaskLogRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListArtifactBuildTaskLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.buildTaskId = builder.buildTaskId;
         this.instanceId = builder.instanceId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class ListArtifactBuildTaskLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,35 +94,37 @@ public class ListArtifactBuildTaskLogRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListArtifactBuildTaskLogRequest, Builder> {
+        private String regionId; 
         private String buildTaskId; 
         private String instanceId; 
         private Integer page; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListArtifactBuildTaskLogRequest response) {
-            super(response);
-            this.buildTaskId = response.buildTaskId;
-            this.instanceId = response.instanceId;
-            this.page = response.page;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListArtifactBuildTaskLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.buildTaskId = request.buildTaskId;
+            this.instanceId = request.instanceId;
+            this.page = request.page;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * BuildTaskId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the artifact build task.
          */
         public Builder buildTaskId(String buildTaskId) {
             this.putQueryParameter("BuildTaskId", buildTaskId);
@@ -124,7 +133,7 @@ public class ListArtifactBuildTaskLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Container Registry instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +142,7 @@ public class ListArtifactBuildTaskLogRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -142,20 +151,11 @@ public class ListArtifactBuildTaskLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

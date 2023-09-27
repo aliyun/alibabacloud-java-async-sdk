@@ -45,6 +45,9 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Summary")
     private String summary;
 
@@ -60,6 +63,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         this.repoStatus = builder.repoStatus;
         this.repoType = builder.repoType;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.summary = builder.summary;
     }
 
@@ -149,6 +153,13 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return summary
      */
     public String getSummary() {
@@ -167,10 +178,11 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         private String repoStatus; 
         private String repoType; 
         private String requestId; 
+        private String resourceGroupId; 
         private String summary; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -178,7 +190,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the chart repository was created.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -186,7 +198,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -194,7 +206,11 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -202,7 +218,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * The time when the chart repository was last modified.
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -210,7 +226,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoId.
+         * The ID of the chart repository.
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -218,7 +234,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoName.
+         * The name of the chart repository.
          */
         public Builder repoName(String repoName) {
             this.repoName = repoName;
@@ -226,7 +242,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace to which the chart repository belongs.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.repoNamespaceName = repoNamespaceName;
@@ -234,7 +250,11 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoStatus.
+         * The status of the chart repository. Valid values:
+         * <p>
+         * 
+         * *   `NORMAL`: The repository is normal.
+         * *   `DELETING`: The repository is being deleted.
          */
         public Builder repoStatus(String repoStatus) {
             this.repoStatus = repoStatus;
@@ -242,7 +262,11 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoType.
+         * The type of the chart repository. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: a public repository
+         * *   `PRIVATE`: a private repository
          */
         public Builder repoType(String repoType) {
             this.repoType = repoType;
@@ -250,7 +274,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +282,15 @@ public class GetChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Summary.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The summary about the chart repository.
          */
         public Builder summary(String summary) {
             this.summary = summary;

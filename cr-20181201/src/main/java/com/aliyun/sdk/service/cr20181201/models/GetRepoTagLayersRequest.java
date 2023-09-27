@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepoTagLayersRequest</p>
  */
 public class GetRepoTagLayersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Digest")
     private String digest;
@@ -20,11 +25,6 @@ public class GetRepoTagLayersRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoId")
@@ -38,9 +38,9 @@ public class GetRepoTagLayersRequest extends Request {
 
     private GetRepoTagLayersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.digest = builder.digest;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
         this.tag = builder.tag;
     }
@@ -59,6 +59,13 @@ public class GetRepoTagLayersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return digest
      */
     public String getDigest() {
@@ -70,13 +77,6 @@ public class GetRepoTagLayersRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class GetRepoTagLayersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRepoTagLayersRequest, Builder> {
+        private String regionId; 
         private String digest; 
         private String instanceId; 
-        private String regionId; 
         private String repoId; 
         private String tag; 
 
@@ -104,32 +104,14 @@ public class GetRepoTagLayersRequest extends Request {
             super();
         } 
 
-        private Builder(GetRepoTagLayersRequest response) {
-            super(response);
-            this.digest = response.digest;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.tag = response.tag;
+        private Builder(GetRepoTagLayersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.digest = request.digest;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.tag = request.tag;
         } 
-
-        /**
-         * Digest.
-         */
-        public Builder digest(String digest) {
-            this.putQueryParameter("Digest", digest);
-            this.digest = digest;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -141,7 +123,25 @@ public class GetRepoTagLayersRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The digest of the image.
+         */
+        public Builder digest(String digest) {
+            this.putQueryParameter("Digest", digest);
+            this.digest = digest;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -150,7 +150,7 @@ public class GetRepoTagLayersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the image.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateChainRequest</p>
  */
 public class CreateChainRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ChainConfig")
     private String chainConfig;
@@ -30,11 +35,6 @@ public class CreateChainRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoName")
     private String repoName;
@@ -43,15 +43,20 @@ public class CreateChainRequest extends Request {
     @NameInMap("RepoNamespaceName")
     private String repoNamespaceName;
 
+    @Query
+    @NameInMap("ScopeExclude")
+    private java.util.List < String > scopeExclude;
+
     private CreateChainRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.chainConfig = builder.chainConfig;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
+        this.scopeExclude = builder.scopeExclude;
     }
 
     public static Builder builder() {
@@ -65,6 +70,13 @@ public class CreateChainRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,13 +108,6 @@ public class CreateChainRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoName
      */
     public String getRepoName() {
@@ -116,65 +121,38 @@ public class CreateChainRequest extends Request {
         return this.repoNamespaceName;
     }
 
+    /**
+     * @return scopeExclude
+     */
+    public java.util.List < String > getScopeExclude() {
+        return this.scopeExclude;
+    }
+
     public static final class Builder extends Request.Builder<CreateChainRequest, Builder> {
+        private String regionId; 
         private String chainConfig; 
         private String description; 
         private String instanceId; 
         private String name; 
-        private String regionId; 
         private String repoName; 
         private String repoNamespaceName; 
+        private java.util.List < String > scopeExclude; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateChainRequest response) {
-            super(response);
-            this.chainConfig = response.chainConfig;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
+        private Builder(CreateChainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chainConfig = request.chainConfig;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
+            this.scopeExclude = request.scopeExclude;
         } 
-
-        /**
-         * ChainConfig.
-         */
-        public Builder chainConfig(String chainConfig) {
-            this.putQueryParameter("ChainConfig", chainConfig);
-            this.chainConfig = chainConfig;
-            return this;
-        }
-
-        /**
-         * Description.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -186,7 +164,43 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The configuration of the delivery chain in the JSON format.
+         */
+        public Builder chainConfig(String chainConfig) {
+            this.putQueryParameter("ChainConfig", chainConfig);
+            this.chainConfig = chainConfig;
+            return this;
+        }
+
+        /**
+         * The description of the delivery chain.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the delivery chain.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -195,11 +209,20 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
             this.repoNamespaceName = repoNamespaceName;
+            return this;
+        }
+
+        /**
+         * Repositories in which the delivery chain does not take effect.
+         */
+        public Builder scopeExclude(java.util.List < String > scopeExclude) {
+            this.putQueryParameter("ScopeExclude", scopeExclude);
+            this.scopeExclude = scopeExclude;
             return this;
         }
 

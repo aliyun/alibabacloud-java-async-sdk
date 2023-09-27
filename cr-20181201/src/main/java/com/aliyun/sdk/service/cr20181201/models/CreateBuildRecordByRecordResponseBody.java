@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetChartReleaseContentResponseBody} extends {@link TeaModel}
+ * {@link CreateBuildRecordByRecordResponseBody} extends {@link TeaModel}
  *
- * <p>GetChartReleaseContentResponseBody</p>
+ * <p>CreateBuildRecordByRecordResponseBody</p>
  */
-public class GetChartReleaseContentResponseBody extends TeaModel {
+public class CreateBuildRecordByRecordResponseBody extends TeaModel {
+    @NameInMap("BuildRecordId")
+    private String buildRecordId;
+
     @NameInMap("Code")
     private String code;
-
-    @NameInMap("Content")
-    private String content;
 
     @NameInMap("IsSuccess")
     private Boolean isSuccess;
@@ -24,9 +24,9 @@ public class GetChartReleaseContentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetChartReleaseContentResponseBody(Builder builder) {
+    private CreateBuildRecordByRecordResponseBody(Builder builder) {
+        this.buildRecordId = builder.buildRecordId;
         this.code = builder.code;
-        this.content = builder.content;
         this.isSuccess = builder.isSuccess;
         this.requestId = builder.requestId;
     }
@@ -35,8 +35,15 @@ public class GetChartReleaseContentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetChartReleaseContentResponseBody create() {
+    public static CreateBuildRecordByRecordResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return buildRecordId
+     */
+    public String getBuildRecordId() {
+        return this.buildRecordId;
     }
 
     /**
@@ -44,13 +51,6 @@ public class GetChartReleaseContentResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return content
-     */
-    public String getContent() {
-        return this.content;
     }
 
     /**
@@ -68,24 +68,24 @@ public class GetChartReleaseContentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String buildRecordId; 
         private String code; 
-        private String content; 
         private Boolean isSuccess; 
         private String requestId; 
+
+        /**
+         * BuildRecordId.
+         */
+        public Builder buildRecordId(String buildRecordId) {
+            this.buildRecordId = buildRecordId;
+            return this;
+        }
 
         /**
          * Code.
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * Content.
-         */
-        public Builder content(String content) {
-            this.content = content;
             return this;
         }
 
@@ -105,8 +105,8 @@ public class GetChartReleaseContentResponseBody extends TeaModel {
             return this;
         }
 
-        public GetChartReleaseContentResponseBody build() {
-            return new GetChartReleaseContentResponseBody(this);
+        public CreateBuildRecordByRecordResponseBody build() {
+            return new CreateBuildRecordByRecordResponseBody(this);
         } 
 
     } 

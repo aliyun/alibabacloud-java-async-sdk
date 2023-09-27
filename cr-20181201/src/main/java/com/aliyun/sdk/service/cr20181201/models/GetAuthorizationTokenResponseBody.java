@@ -98,7 +98,12 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         private String tempUsername; 
 
         /**
-         * AuthorizationToken.
+         * The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:
+         * <p>
+         * 
+         * *   If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.
+         * *   If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.
+         * *   You can use an STS token to access only Container Registry instances to which the STS token is scoped.
          */
         public Builder authorizationToken(String authorizationToken) {
             this.authorizationToken = authorizationToken;
@@ -106,7 +111,11 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * Indicates whether the API call is successful.
+         * <p>
+         * 
+         * *   `true`: successful
+         * *   `false`: failed
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +123,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The return value.
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -122,7 +131,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * The username that is used to log on to the Container Registry instance.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -130,7 +139,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The timestamp when the temporary password expires. Unit: milliseconds.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * TempUsername.
+         * The password that is used to log on to the Container Registry instance.
          */
         public Builder tempUsername(String tempUsername) {
             this.tempUsername = tempUsername;

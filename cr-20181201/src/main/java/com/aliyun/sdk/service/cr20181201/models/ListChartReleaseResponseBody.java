@@ -110,7 +110,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * ChartReleases.
+         * The list of chart versions.
          */
         public Builder chartReleases(java.util.List < ChartReleases> chartReleases) {
             this.chartReleases = chartReleases;
@@ -118,7 +118,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +134,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -270,7 +270,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Chart.
+             * The name of the chart version.
              */
             public Builder chart(String chart) {
                 this.chart = chart;
@@ -278,7 +278,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -286,7 +286,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the chart was last modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -294,7 +294,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Release.
+             * The version number of the chart.
              */
             public Builder release(String release) {
                 this.release = release;
@@ -302,7 +302,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the chart repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -310,7 +310,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the chart of the version. Unit: bytes.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -318,7 +318,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the chart.
              */
             public Builder status(String status) {
                 this.status = status;

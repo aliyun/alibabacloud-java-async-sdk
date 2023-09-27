@@ -27,6 +27,9 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     @NameInMap("LinkedVpcs")
     private java.util.List < LinkedVpcs> linkedVpcs;
 
+    @NameInMap("ModuleName")
+    private String moduleName;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -36,6 +39,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         this.enable = builder.enable;
         this.isSuccess = builder.isSuccess;
         this.linkedVpcs = builder.linkedVpcs;
+        this.moduleName = builder.moduleName;
         this.requestId = builder.requestId;
     }
 
@@ -83,6 +87,13 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     }
 
     /**
+     * @return moduleName
+     */
+    public String getModuleName() {
+        return this.moduleName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -95,10 +106,11 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         private Boolean enable; 
         private Boolean isSuccess; 
         private java.util.List < LinkedVpcs> linkedVpcs; 
+        private String moduleName; 
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +126,11 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Enable.
+         * Indicates whether the access control list (ACL) feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   `true`: The ACL feature is enabled.
+         * *   `false`: The ACL feature is disabled.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -122,7 +138,11 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -130,7 +150,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * LinkedVpcs.
+         * The VPCs in which the instance is deployed.
          */
         public Builder linkedVpcs(java.util.List < LinkedVpcs> linkedVpcs) {
             this.linkedVpcs = linkedVpcs;
@@ -138,7 +158,15 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * ModuleName.
+         */
+        public Builder moduleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +254,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * DefaultAccess.
+             * Indicates whether the default ACL is used.
              */
             public Builder defaultAccess(Boolean defaultAccess) {
                 this.defaultAccess = defaultAccess;
@@ -234,7 +262,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -242,7 +270,11 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the VPC. Valid values:
+             * <p>
+             * 
+             * *   `CREATING`: The VPC is being created.
+             * *   `RUNNING`: The VPC is running.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +282,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -258,7 +290,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

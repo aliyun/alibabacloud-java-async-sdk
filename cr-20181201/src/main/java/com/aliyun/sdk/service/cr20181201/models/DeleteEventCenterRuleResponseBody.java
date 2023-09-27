@@ -50,7 +50,7 @@ public class DeleteEventCenterRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -58,7 +58,7 @@ public class DeleteEventCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

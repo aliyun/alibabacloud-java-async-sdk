@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepoTriggerRequest</p>
  */
 public class CreateRepoTriggerRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoId")
@@ -48,8 +48,8 @@ public class CreateRepoTriggerRequest extends Request {
 
     private CreateRepoTriggerRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.triggerName = builder.triggerName;
         this.triggerTag = builder.triggerTag;
@@ -71,17 +71,17 @@ public class CreateRepoTriggerRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -120,8 +120,8 @@ public class CreateRepoTriggerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepoTriggerRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
         private String triggerName; 
         private String triggerTag; 
@@ -132,28 +132,19 @@ public class CreateRepoTriggerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepoTriggerRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.triggerName = response.triggerName;
-            this.triggerTag = response.triggerTag;
-            this.triggerType = response.triggerType;
-            this.triggerUrl = response.triggerUrl;
+        private Builder(CreateRepoTriggerRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.triggerName = request.triggerName;
+            this.triggerTag = request.triggerTag;
+            this.triggerType = request.triggerType;
+            this.triggerUrl = request.triggerUrl;
         } 
 
         /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -162,7 +153,16 @@ public class CreateRepoTriggerRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -171,7 +171,7 @@ public class CreateRepoTriggerRequest extends Request {
         }
 
         /**
-         * TriggerName.
+         * The name of the trigger.
          */
         public Builder triggerName(String triggerName) {
             this.putQueryParameter("TriggerName", triggerName);
@@ -180,7 +180,15 @@ public class CreateRepoTriggerRequest extends Request {
         }
 
         /**
-         * TriggerTag.
+         * The image tag based on which the trigger is set.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If `TriggerType` is set to `ALL`, `TriggerTag` can be set to a string or an array, for example, `*`.
+         * 
+         * *   If `TriggerType` is set to `TAG_LIST`, `TriggerTag` must be set to an array, for example, `[1]`.
+         * *   If `TriggerType` is set to `TAG_REG_EXP`, `TriggerTag` must be set to a string, for example, `*`.
          */
         public Builder triggerTag(String triggerTag) {
             this.putQueryParameter("TriggerTag", triggerTag);
@@ -189,7 +197,12 @@ public class CreateRepoTriggerRequest extends Request {
         }
 
         /**
-         * TriggerType.
+         * The type of the trigger. Valid values:
+         * <p>
+         * 
+         * *   `ALL`: a trigger that supports both tags and regular expressions.
+         * *   `TAG_LIST`: a tag-based trigger.
+         * *   `TAG_REG_EXP`: a regular expression-based trigger.
          */
         public Builder triggerType(String triggerType) {
             this.putQueryParameter("TriggerType", triggerType);
@@ -198,7 +211,7 @@ public class CreateRepoTriggerRequest extends Request {
         }
 
         /**
-         * TriggerUrl.
+         * The URL of the trigger.
          */
         public Builder triggerUrl(String triggerUrl) {
             this.putQueryParameter("TriggerUrl", triggerUrl);

@@ -74,7 +74,7 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,11 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +94,7 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoId.
+         * The ID of the repository.
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -98,7 +102,7 @@ public class CreateChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

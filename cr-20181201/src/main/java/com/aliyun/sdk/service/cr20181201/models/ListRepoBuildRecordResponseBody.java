@@ -110,7 +110,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * BuildRecords.
+         * The list of image building records.
          */
         public Builder buildRecords(java.util.List < BuildRecords> buildRecords) {
             this.buildRecords = buildRecords;
@@ -118,7 +118,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +126,11 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +138,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +146,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +154,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +162,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -234,7 +238,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             private String repoNamespaceName; 
 
             /**
-             * ImageTag.
+             * The tag of the image.
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -242,7 +246,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -250,7 +254,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -258,7 +262,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * The name of the namespace to which the repository belongs.
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -347,7 +351,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * BuildRecordId.
+             * The ID of the image building record.
              */
             public Builder buildRecordId(String buildRecordId) {
                 this.buildRecordId = buildRecordId;
@@ -355,7 +359,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * BuildStatus.
+             * The status of the image building.
              */
             public Builder buildStatus(String buildStatus) {
                 this.buildStatus = buildStatus;
@@ -363,7 +367,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the image building ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -371,7 +375,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The information about the image.
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -379,7 +383,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the image building started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

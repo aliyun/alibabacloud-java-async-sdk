@@ -146,7 +146,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         private String tag; 
 
         /**
-         * Code.
+         * The ID of the image.
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +154,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * Digest.
+         * The size of the image. Unit: Bytes.
          */
         public Builder digest(String digest) {
             this.digest = digest;
@@ -162,7 +162,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * ImageCreate.
+         * crr-tquyps22md8p****
          */
         public Builder imageCreate(Long imageCreate) {
             this.imageCreate = imageCreate;
@@ -178,7 +178,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * ImageSize.
+         * The number of milliseconds that have elapsed since the image was last updated.
          */
         public Builder imageSize(Long imageSize) {
             this.imageSize = imageSize;
@@ -186,7 +186,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * ImageUpdate.
+         * The ID of the request.
          */
         public Builder imageUpdate(Long imageUpdate) {
             this.imageUpdate = imageUpdate;
@@ -194,7 +194,11 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * The status of the image. Valid values:
+         * <p>
+         * 
+         * *   `NORMAL`: The image is normal.
+         * *   `DELETING`: The image is being deleted.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -202,7 +206,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * 1.0
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +214,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The ID of the instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -218,7 +222,7 @@ public class GetRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * The version of the repository.
          */
         public Builder tag(String tag) {
             this.tag = tag;

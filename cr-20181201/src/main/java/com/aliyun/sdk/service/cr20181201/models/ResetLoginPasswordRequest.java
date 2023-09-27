@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetLoginPasswordRequest</p>
  */
 public class ResetLoginPasswordRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class ResetLoginPasswordRequest extends Request {
     @Validation(required = true)
     private String password;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ResetLoginPasswordRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.password = builder.password;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class ResetLoginPasswordRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -61,31 +68,33 @@ public class ResetLoginPasswordRequest extends Request {
         return this.password;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ResetLoginPasswordRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String password; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ResetLoginPasswordRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.password = response.password;
-            this.regionId = response.regionId;
+        private Builder(ResetLoginPasswordRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.password = request.password;
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,20 +103,11 @@ public class ResetLoginPasswordRequest extends Request {
         }
 
         /**
-         * Password.
+         * The new password that you specify to log on to the instance. The password must be 8 to 32 bits in length, and must contain at least two of the following character types: letters, special characters, and digits.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

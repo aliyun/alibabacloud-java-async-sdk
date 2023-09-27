@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListEventCenterRuleNameRequest extends Request {
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     private ListEventCenterRuleNameRequest(Builder builder) {
@@ -48,13 +49,13 @@ public class ListEventCenterRuleNameRequest extends Request {
             super();
         } 
 
-        private Builder(ListEventCenterRuleNameRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(ListEventCenterRuleNameRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

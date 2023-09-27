@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateChainRequest</p>
  */
 public class UpdateChainRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ChainConfig")
     @Validation(required = true)
@@ -36,19 +41,19 @@ public class UpdateChainRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @Query
+    @NameInMap("ScopeExclude")
+    private java.util.List < String > scopeExclude;
 
     private UpdateChainRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.chainConfig = builder.chainConfig;
         this.chainId = builder.chainId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
-        this.regionId = builder.regionId;
+        this.scopeExclude = builder.scopeExclude;
     }
 
     public static Builder builder() {
@@ -62,6 +67,13 @@ public class UpdateChainRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,36 +112,47 @@ public class UpdateChainRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return scopeExclude
      */
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List < String > getScopeExclude() {
+        return this.scopeExclude;
     }
 
     public static final class Builder extends Request.Builder<UpdateChainRequest, Builder> {
+        private String regionId; 
         private String chainConfig; 
         private String chainId; 
         private String description; 
         private String instanceId; 
         private String name; 
-        private String regionId; 
+        private java.util.List < String > scopeExclude; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateChainRequest response) {
-            super(response);
-            this.chainConfig = response.chainConfig;
-            this.chainId = response.chainId;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(UpdateChainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chainConfig = request.chainConfig;
+            this.chainId = request.chainId;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.scopeExclude = request.scopeExclude;
         } 
 
         /**
-         * ChainConfig.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The configuration of the delivery chain in the JSON format.
          */
         public Builder chainConfig(String chainConfig) {
             this.putQueryParameter("ChainConfig", chainConfig);
@@ -138,7 +161,7 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * ChainId.
+         * The ID of the delivery chain.
          */
         public Builder chainId(String chainId) {
             this.putQueryParameter("ChainId", chainId);
@@ -147,7 +170,7 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the delivery chain.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -156,7 +179,7 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +188,7 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the delivery chain.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,11 +197,11 @@ public class UpdateChainRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Repositories in which the delivery chain does not take effect.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder scopeExclude(java.util.List < String > scopeExclude) {
+            this.putQueryParameter("ScopeExclude", scopeExclude);
+            this.scopeExclude = scopeExclude;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepoTagRequest</p>
  */
 public class CreateRepoTagRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("FromTag")
     @Validation(required = true)
@@ -27,11 +32,6 @@ public class CreateRepoTagRequest extends Request {
     @Validation(required = true)
     private String namespaceName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoName")
     @Validation(required = true)
@@ -44,10 +44,10 @@ public class CreateRepoTagRequest extends Request {
 
     private CreateRepoTagRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.fromTag = builder.fromTag;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.toTag = builder.toTag;
     }
@@ -63,6 +63,13 @@ public class CreateRepoTagRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -87,13 +94,6 @@ public class CreateRepoTagRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoName
      */
     public String getRepoName() {
@@ -108,10 +108,10 @@ public class CreateRepoTagRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepoTagRequest, Builder> {
+        private String regionId; 
         private String fromTag; 
         private String instanceId; 
         private String namespaceName; 
-        private String regionId; 
         private String repoName; 
         private String toTag; 
 
@@ -119,42 +119,15 @@ public class CreateRepoTagRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepoTagRequest response) {
-            super(response);
-            this.fromTag = response.fromTag;
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.toTag = response.toTag;
+        private Builder(CreateRepoTagRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.fromTag = request.fromTag;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
+            this.repoName = request.repoName;
+            this.toTag = request.toTag;
         } 
-
-        /**
-         * FromTag.
-         */
-        public Builder fromTag(String fromTag) {
-            this.putQueryParameter("FromTag", fromTag);
-            this.fromTag = fromTag;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * NamespaceName.
-         */
-        public Builder namespaceName(String namespaceName) {
-            this.putQueryParameter("NamespaceName", namespaceName);
-            this.namespaceName = namespaceName;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -166,7 +139,34 @@ public class CreateRepoTagRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The source image tag.
+         */
+        public Builder fromTag(String fromTag) {
+            this.putQueryParameter("FromTag", fromTag);
+            this.fromTag = fromTag;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the namespace.
+         */
+        public Builder namespaceName(String namespaceName) {
+            this.putQueryParameter("NamespaceName", namespaceName);
+            this.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -175,7 +175,7 @@ public class CreateRepoTagRequest extends Request {
         }
 
         /**
-         * ToTag.
+         * The image tag that you want to create.
          */
         public Builder toTag(String toTag) {
             this.putQueryParameter("ToTag", toTag);

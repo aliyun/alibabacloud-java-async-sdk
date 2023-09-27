@@ -74,7 +74,7 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BuildStatus.
+         * The status of the image building.
          */
         public Builder buildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
@@ -82,7 +82,7 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +98,7 @@ public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

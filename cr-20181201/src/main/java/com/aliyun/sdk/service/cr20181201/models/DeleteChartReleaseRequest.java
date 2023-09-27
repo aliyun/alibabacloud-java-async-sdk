@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteChartReleaseRequest</p>
  */
 public class DeleteChartReleaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Chart")
     @Validation(required = true)
@@ -21,11 +26,6 @@ public class DeleteChartReleaseRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("Release")
@@ -44,9 +44,9 @@ public class DeleteChartReleaseRequest extends Request {
 
     private DeleteChartReleaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.chart = builder.chart;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.release = builder.release;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
@@ -66,6 +66,13 @@ public class DeleteChartReleaseRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return chart
      */
     public String getChart() {
@@ -77,13 +84,6 @@ public class DeleteChartReleaseRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -108,9 +108,9 @@ public class DeleteChartReleaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteChartReleaseRequest, Builder> {
+        private String regionId; 
         private String chart; 
         private String instanceId; 
-        private String regionId; 
         private String release; 
         private String repoName; 
         private String repoNamespaceName; 
@@ -119,33 +119,15 @@ public class DeleteChartReleaseRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteChartReleaseRequest response) {
-            super(response);
-            this.chart = response.chart;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.release = response.release;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
+        private Builder(DeleteChartReleaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chart = request.chart;
+            this.instanceId = request.instanceId;
+            this.release = request.release;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
         } 
-
-        /**
-         * Chart.
-         */
-        public Builder chart(String chart) {
-            this.putQueryParameter("Chart", chart);
-            this.chart = chart;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -157,7 +139,25 @@ public class DeleteChartReleaseRequest extends Request {
         }
 
         /**
-         * Release.
+         * The name of the chart.
+         */
+        public Builder chart(String chart) {
+            this.putQueryParameter("Chart", chart);
+            this.chart = chart;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The version of the chart that you want to delete.
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -166,7 +166,7 @@ public class DeleteChartReleaseRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -175,7 +175,7 @@ public class DeleteChartReleaseRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);

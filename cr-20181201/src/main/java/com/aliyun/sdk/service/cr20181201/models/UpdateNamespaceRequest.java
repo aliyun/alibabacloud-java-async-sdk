@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNamespaceRequest</p>
  */
 public class UpdateNamespaceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AutoCreateRepo")
     private Boolean autoCreateRepo;
@@ -30,18 +35,13 @@ public class UpdateNamespaceRequest extends Request {
     @Validation(required = true)
     private String namespaceName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private UpdateNamespaceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoCreateRepo = builder.autoCreateRepo;
         this.defaultRepoType = builder.defaultRepoType;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class UpdateNamespaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,35 +92,37 @@ public class UpdateNamespaceRequest extends Request {
         return this.namespaceName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateNamespaceRequest, Builder> {
+        private String regionId; 
         private Boolean autoCreateRepo; 
         private String defaultRepoType; 
         private String instanceId; 
         private String namespaceName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateNamespaceRequest response) {
-            super(response);
-            this.autoCreateRepo = response.autoCreateRepo;
-            this.defaultRepoType = response.defaultRepoType;
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.regionId = response.regionId;
+        private Builder(UpdateNamespaceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoCreateRepo = request.autoCreateRepo;
+            this.defaultRepoType = request.defaultRepoType;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
         } 
 
         /**
-         * AutoCreateRepo.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to automatically create a repository when an image is pushed to the namespace.
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.putQueryParameter("AutoCreateRepo", autoCreateRepo);
@@ -122,7 +131,11 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * DefaultRepoType.
+         * The default type of the repository. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: The repository is a public repository.
+         * *   `PRIVATE`: The repository is a private repository.
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.putQueryParameter("DefaultRepoType", defaultRepoType);
@@ -131,7 +144,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,20 +153,11 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
             this.namespaceName = namespaceName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -110,7 +110,7 @@ public class ListChainResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Chains.
+         * The list of delivery chains.
          */
         public Builder chains(java.util.List < Chains> chains) {
             this.chains = chains;
@@ -118,7 +118,7 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +134,7 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of delivery chains.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,6 +190,9 @@ public class ListChainResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ScopeExclude")
+        private java.util.List < String > scopeExclude;
+
         @NameInMap("ScopeId")
         private String scopeId;
 
@@ -203,6 +206,7 @@ public class ListChainResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.modifiedTime = builder.modifiedTime;
             this.name = builder.name;
+            this.scopeExclude = builder.scopeExclude;
             this.scopeId = builder.scopeId;
             this.scopeType = builder.scopeType;
         }
@@ -258,6 +262,13 @@ public class ListChainResponseBody extends TeaModel {
         }
 
         /**
+         * @return scopeExclude
+         */
+        public java.util.List < String > getScopeExclude() {
+            return this.scopeExclude;
+        }
+
+        /**
          * @return scopeId
          */
         public String getScopeId() {
@@ -278,11 +289,12 @@ public class ListChainResponseBody extends TeaModel {
             private String instanceId; 
             private Long modifiedTime; 
             private String name; 
+            private java.util.List < String > scopeExclude; 
             private String scopeId; 
             private String scopeType; 
 
             /**
-             * ChainId.
+             * The ID of the delivery chain.
              */
             public Builder chainId(String chainId) {
                 this.chainId = chainId;
@@ -290,7 +302,7 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the delivery chain was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -298,7 +310,7 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the delivery chain.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +318,7 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -314,7 +326,7 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the delivery chain was last modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -322,7 +334,7 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the delivery chain.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +342,15 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeId.
+             * Repositories to which the delivery chain does not apply.
+             */
+            public Builder scopeExclude(java.util.List < String > scopeExclude) {
+                this.scopeExclude = scopeExclude;
+                return this;
+            }
+
+            /**
+             * The ID of the delivery chain scope.
              */
             public Builder scopeId(String scopeId) {
                 this.scopeId = scopeId;
@@ -338,7 +358,7 @@ public class ListChainResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeType.
+             * The type of the delivery chain scope.
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepoTriggerRequest</p>
  */
 public class ListRepoTriggerRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoId")
@@ -29,8 +29,8 @@ public class ListRepoTriggerRequest extends Request {
 
     private ListRepoTriggerRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
     }
 
@@ -48,17 +48,17 @@ public class ListRepoTriggerRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +69,20 @@ public class ListRepoTriggerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRepoTriggerRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListRepoTriggerRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
+        private Builder(ListRepoTriggerRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -103,7 +94,16 @@ public class ListRepoTriggerRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

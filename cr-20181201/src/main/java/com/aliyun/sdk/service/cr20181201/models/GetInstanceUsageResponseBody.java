@@ -158,7 +158,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ChartNamespaceQuota.
+         * The quota of chart namespaces.
          */
         public Builder chartNamespaceQuota(String chartNamespaceQuota) {
             this.chartNamespaceQuota = chartNamespaceQuota;
@@ -166,7 +166,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ChartNamespaceUsage.
+         * The number of chart namespaces that are created in the instance.
          */
         public Builder chartNamespaceUsage(String chartNamespaceUsage) {
             this.chartNamespaceUsage = chartNamespaceUsage;
@@ -174,7 +174,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ChartRepoQuota.
+         * The quota of chart repositories for the instance.
          */
         public Builder chartRepoQuota(String chartRepoQuota) {
             this.chartRepoQuota = chartRepoQuota;
@@ -182,7 +182,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ChartRepoUsage.
+         * The number of chart repositories that are created.
          */
         public Builder chartRepoUsage(String chartRepoUsage) {
             this.chartRepoUsage = chartRepoUsage;
@@ -190,7 +190,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -198,7 +198,11 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -206,7 +210,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceQuota.
+         * The quota of image namespaces for the instance.
          */
         public Builder namespaceQuota(String namespaceQuota) {
             this.namespaceQuota = namespaceQuota;
@@ -214,7 +218,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceUsage.
+         * The number of image namespaces that are created in the instance.
          */
         public Builder namespaceUsage(String namespaceUsage) {
             this.namespaceUsage = namespaceUsage;
@@ -222,7 +226,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RepoQuota.
+         * The quota of image repositories for the instance.
          */
         public Builder repoQuota(String repoQuota) {
             this.repoQuota = repoQuota;
@@ -230,7 +234,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RepoUsage.
+         * The number of image repositories that are created in the instance.
          */
         public Builder repoUsage(String repoUsage) {
             this.repoUsage = repoUsage;
@@ -238,7 +242,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

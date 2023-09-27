@@ -178,6 +178,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InstanceIssue")
+        private String instanceIssue;
+
         @NameInMap("InstanceName")
         private String instanceName;
 
@@ -193,14 +196,19 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         private Instances(Builder builder) {
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
+            this.instanceIssue = builder.instanceIssue;
             this.instanceName = builder.instanceName;
             this.instanceSpecification = builder.instanceSpecification;
             this.instanceStatus = builder.instanceStatus;
             this.modifiedTime = builder.modifiedTime;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
         }
 
         public static Builder builder() {
@@ -223,6 +231,13 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceIssue
+         */
+        public String getInstanceIssue() {
+            return this.instanceIssue;
         }
 
         /**
@@ -260,14 +275,23 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String instanceId; 
+            private String instanceIssue; 
             private String instanceName; 
             private String instanceSpecification; 
             private String instanceStatus; 
             private String modifiedTime; 
             private String regionId; 
+            private String resourceGroupId; 
 
             /**
              * CreateTime.
@@ -282,6 +306,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceIssue.
+             */
+            public Builder instanceIssue(String instanceIssue) {
+                this.instanceIssue = instanceIssue;
                 return this;
             }
 
@@ -322,6 +354,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

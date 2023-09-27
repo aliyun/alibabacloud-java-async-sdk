@@ -12,26 +12,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRepositoryRequest</p>
  */
 public class DeleteRepositoryRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     @Query
-    @NameInMap("RepoId")
+    @NameInMap("InstanceId")
     @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("RepoId")
     private String repoId;
+
+    @Query
+    @NameInMap("RepoName")
+    private String repoName;
+
+    @Query
+    @NameInMap("RepoNamespaceName")
+    private String repoNamespaceName;
 
     private DeleteRepositoryRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
+        this.repoName = builder.repoName;
+        this.repoNamespaceName = builder.repoNamespaceName;
     }
 
     public static Builder builder() {
@@ -48,17 +57,17 @@ public class DeleteRepositoryRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -68,30 +77,39 @@ public class DeleteRepositoryRequest extends Request {
         return this.repoId;
     }
 
+    /**
+     * @return repoName
+     */
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    /**
+     * @return repoNamespaceName
+     */
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteRepositoryRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
+        private String repoName; 
+        private String repoNamespaceName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteRepositoryRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
+        private Builder(DeleteRepositoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -103,11 +121,38 @@ public class DeleteRepositoryRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
             this.repoId = repoId;
+            return this;
+        }
+
+        /**
+         * RepoName.
+         */
+        public Builder repoName(String repoName) {
+            this.putQueryParameter("RepoName", repoName);
+            this.repoName = repoName;
+            return this;
+        }
+
+        /**
+         * RepoNamespaceName.
+         */
+        public Builder repoNamespaceName(String repoNamespaceName) {
+            this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
+            this.repoNamespaceName = repoNamespaceName;
             return this;
         }
 

@@ -12,12 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEventCenterRecordRequest</p>
  */
 public class ListEventCenterRecordRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EventType")
     private String eventType;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -28,21 +33,17 @@ public class ListEventCenterRecordRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RuleId")
     private String ruleId;
 
     private ListEventCenterRecordRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.eventType = builder.eventType;
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.ruleId = builder.ruleId;
     }
 
@@ -57,6 +58,13 @@ public class ListEventCenterRecordRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -88,13 +96,6 @@ public class ListEventCenterRecordRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -102,62 +103,26 @@ public class ListEventCenterRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEventCenterRecordRequest, Builder> {
+        private String regionId; 
         private String eventType; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String ruleId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEventCenterRecordRequest response) {
-            super(response);
-            this.eventType = response.eventType;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.ruleId = response.ruleId;
+        private Builder(ListEventCenterRecordRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.eventType = request.eventType;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.ruleId = request.ruleId;
         } 
-
-        /**
-         * EventType.
-         */
-        public Builder eventType(String eventType) {
-            this.putQueryParameter("EventType", eventType);
-            this.eventType = eventType;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * PageNo.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -169,7 +134,50 @@ public class ListEventCenterRecordRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The type of the event. Valid values:
+         * <p>
+         * 
+         * *   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.
+         * *   `cr:Artifact:SynchronizationCompleted`: The image is replicated.
+         * *   `cr:Artifact:BuildCompleted`: The image is built.
+         * *   `cr:Artifact:ScanCompleted`: The image is scanned.
+         * *   `cr:Artifact:SigningCompleted`: The image is signed.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the event notification rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

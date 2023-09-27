@@ -122,7 +122,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * AclEnable.
+         * Indicates whether the access control list (ACL) feature is enabled.
          */
         public Builder aclEnable(Boolean aclEnable) {
             this.aclEnable = aclEnable;
@@ -130,7 +130,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * AclEntries.
+         * The ACLs.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -138,7 +138,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -146,7 +146,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Domains.
+         * Domain names.
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.domains = domains;
@@ -154,7 +154,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Enable.
+         * Indicates whether the ACL feature is enabled.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -162,7 +162,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -170,7 +170,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -230,7 +230,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             private String entry; 
 
             /**
-             * Comment.
+             * Remarks for public IP address whitelists.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -238,7 +238,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Entry.
+             * The public IP address whitelist.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -291,7 +291,7 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Domain.
+             * The domain name that is used to access the Container Registry Enterprise Edition instance.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -299,7 +299,11 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the domain name. Valid values:
+             * <p>
+             * 
+             * *   `SYSTEM`: a system domain name.
+             * *   `USER`: a user domain name.
              */
             public Builder type(String type) {
                 this.type = type;

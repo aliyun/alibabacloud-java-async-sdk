@@ -7,19 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEnterpriseInstanceResponseBody} extends {@link TeaModel}
+ * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
  *
- * <p>CreateEnterpriseInstanceResponseBody</p>
+ * <p>ChangeResourceGroupResponseBody</p>
  */
-public class CreateEnterpriseInstanceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
-    private String orderId;
-
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateEnterpriseInstanceResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+    private ChangeResourceGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +23,8 @@ public class CreateEnterpriseInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateEnterpriseInstanceResponseBody create() {
+    public static ChangeResourceGroupResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
     }
 
     /**
@@ -46,16 +35,7 @@ public class CreateEnterpriseInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
         private String requestId; 
-
-        /**
-         * OrderId.
-         */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
 
         /**
          * RequestId.
@@ -65,8 +45,8 @@ public class CreateEnterpriseInstanceResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateEnterpriseInstanceResponseBody build() {
-            return new CreateEnterpriseInstanceResponseBody(this);
+        public ChangeResourceGroupResponseBody build() {
+            return new ChangeResourceGroupResponseBody(this);
         } 
 
     } 

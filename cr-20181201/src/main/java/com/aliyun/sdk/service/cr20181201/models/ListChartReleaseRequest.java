@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListChartReleaseRequest</p>
  */
 public class ListChartReleaseRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Chart")
     private String chart;
@@ -29,11 +34,6 @@ public class ListChartReleaseRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoName")
     @Validation(required = true)
@@ -46,11 +46,11 @@ public class ListChartReleaseRequest extends Request {
 
     private ListChartReleaseRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.chart = builder.chart;
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
     }
@@ -66,6 +66,13 @@ public class ListChartReleaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,13 +104,6 @@ public class ListChartReleaseRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoName
      */
     public String getRepoName() {
@@ -118,11 +118,11 @@ public class ListChartReleaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListChartReleaseRequest, Builder> {
+        private String regionId; 
         private String chart; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String repoName; 
         private String repoNamespaceName; 
 
@@ -130,52 +130,16 @@ public class ListChartReleaseRequest extends Request {
             super();
         } 
 
-        private Builder(ListChartReleaseRequest response) {
-            super(response);
-            this.chart = response.chart;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
+        private Builder(ListChartReleaseRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chart = request.chart;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
         } 
-
-        /**
-         * Chart.
-         */
-        public Builder chart(String chart) {
-            this.putQueryParameter("Chart", chart);
-            this.chart = chart;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * PageNo.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -187,7 +151,43 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The chart whose versions you want to query.
+         */
+        public Builder chart(String chart) {
+            this.putQueryParameter("Chart", chart);
+            this.chart = chart;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -196,7 +196,7 @@ public class ListChartReleaseRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);

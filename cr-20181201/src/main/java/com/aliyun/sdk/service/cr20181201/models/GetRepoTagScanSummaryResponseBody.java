@@ -122,7 +122,7 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         private Integer unknownSeverity; 
 
         /**
-         * Code.
+         * The number of medium-severity vulnerabilities.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * HighSeverity.
+         * The number of low-severity vulnerabilities.
          */
         public Builder highSeverity(Integer highSeverity) {
             this.highSeverity = highSeverity;
@@ -138,7 +138,7 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * The number of high-severity vulnerabilities.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -154,7 +154,11 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * MediumSeverity.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder mediumSeverity(Integer mediumSeverity) {
             this.mediumSeverity = mediumSeverity;
@@ -162,7 +166,7 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The total number of vulnerabilities detected on images.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +174,7 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSeverity.
+         * The return value.
          */
         public Builder totalSeverity(Integer totalSeverity) {
             this.totalSeverity = totalSeverity;
@@ -178,7 +182,7 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * UnknownSeverity.
+         * The ID of the request.
          */
         public Builder unknownSeverity(Integer unknownSeverity) {
             this.unknownSeverity = unknownSeverity;

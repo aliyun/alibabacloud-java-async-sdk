@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteChartRepositoryRequest</p>
  */
 public class DeleteChartRepositoryRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoName")
@@ -34,8 +34,8 @@ public class DeleteChartRepositoryRequest extends Request {
 
     private DeleteChartRepositoryRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
     }
@@ -54,17 +54,17 @@ public class DeleteChartRepositoryRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -82,8 +82,8 @@ public class DeleteChartRepositoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteChartRepositoryRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoName; 
         private String repoNamespaceName; 
 
@@ -91,22 +91,13 @@ public class DeleteChartRepositoryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteChartRepositoryRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
+        private Builder(DeleteChartRepositoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -118,7 +109,16 @@ public class DeleteChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -127,7 +127,7 @@ public class DeleteChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace to which the repository belongs.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);

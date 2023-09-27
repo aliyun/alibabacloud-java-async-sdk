@@ -420,6 +420,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("CrossUser")
         private Boolean crossUser;
 
+        @NameInMap("CustomLink")
+        private Boolean customLink;
+
         @NameInMap("ImageFrom")
         private ImageFrom imageFrom;
 
@@ -450,6 +453,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         private SyncTasks(Builder builder) {
             this.createTime = builder.createTime;
             this.crossUser = builder.crossUser;
+            this.customLink = builder.customLink;
             this.imageFrom = builder.imageFrom;
             this.imageTo = builder.imageTo;
             this.modifedTime = builder.modifedTime;
@@ -481,6 +485,13 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
          */
         public Boolean getCrossUser() {
             return this.crossUser;
+        }
+
+        /**
+         * @return customLink
+         */
+        public Boolean getCustomLink() {
+            return this.customLink;
         }
 
         /**
@@ -549,6 +560,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private Boolean crossUser; 
+            private Boolean customLink; 
             private ImageFrom imageFrom; 
             private ImageTo imageTo; 
             private Long modifedTime; 
@@ -572,6 +584,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
              */
             public Builder crossUser(Boolean crossUser) {
                 this.crossUser = crossUser;
+                return this;
+            }
+
+            /**
+             * CustomLink.
+             */
+            public Builder customLink(Boolean customLink) {
+                this.customLink = customLink;
                 return this;
             }
 

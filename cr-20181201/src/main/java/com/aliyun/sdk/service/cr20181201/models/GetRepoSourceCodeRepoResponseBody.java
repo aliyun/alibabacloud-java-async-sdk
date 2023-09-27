@@ -158,7 +158,11 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AutoBuild.
+         * Indicates whether image building is automatically triggered when source code is committed. Valid values:
+         * <p>
+         * 
+         * *   `true`: Image building is automatically triggered when source code is committed.
+         * *   `false`: Image building is not triggered when source code is committed.
          */
         public Builder autoBuild(String autoBuild) {
             this.autoBuild = autoBuild;
@@ -166,7 +170,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +178,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepoDomain.
+         * The address of the source code repository.
          */
         public Builder codeRepoDomain(String codeRepoDomain) {
             this.codeRepoDomain = codeRepoDomain;
@@ -182,7 +186,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepoName.
+         * The name of the source code repository.
          */
         public Builder codeRepoName(String codeRepoName) {
             this.codeRepoName = codeRepoName;
@@ -190,7 +194,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepoNamespaceName.
+         * The namespace to which the source code repository belongs.
          */
         public Builder codeRepoNamespaceName(String codeRepoNamespaceName) {
             this.codeRepoNamespaceName = codeRepoNamespaceName;
@@ -198,7 +202,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepoType.
+         * The type of the code hosting platform. Valid values: `GITHUB`, `GITLAB`, `GITEE`, `CODE`, and `CODEUP`.
          */
         public Builder codeRepoType(String codeRepoType) {
             this.codeRepoType = codeRepoType;
@@ -206,7 +210,11 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * DisableCacheBuild.
+         * Indicates whether build cache is disabled. Valid values:
+         * <p>
+         * 
+         * *   `true`: Build cache is disabled.
+         * *   `false`: Build cache is enabled.
          */
         public Builder disableCacheBuild(String disableCacheBuild) {
             this.disableCacheBuild = disableCacheBuild;
@@ -214,7 +222,11 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the API call is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: successful
+         * *   `false`: failed
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -222,7 +234,11 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * OverseaBuild.
+         * Indicates whether image building is accelerated for servers outside the Chinese mainland. Valid values:
+         * <p>
+         * 
+         * *   `true`: Image building is accelerated for servers outside the Chinese mainland.
+         * *   `false`: Image building is not accelerated for servers outside the Chinese mainland.
          */
         public Builder overseaBuild(String overseaBuild) {
             this.overseaBuild = overseaBuild;
@@ -230,7 +246,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * RepoId.
+         * The ID of the repository.
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -238,7 +254,7 @@ public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

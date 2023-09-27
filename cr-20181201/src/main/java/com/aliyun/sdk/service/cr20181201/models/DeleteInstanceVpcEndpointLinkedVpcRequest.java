@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteInstanceVpcEndpointLinkedVpcRequest</p>
  */
 public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -20,11 +25,6 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
     @Query
     @NameInMap("ModuleName")
     private String moduleName;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("VpcId")
@@ -38,9 +38,9 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
 
     private DeleteInstanceVpcEndpointLinkedVpcRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
-        this.regionId = builder.regionId;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
     }
@@ -59,6 +59,13 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -70,13 +77,6 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
      */
     public String getModuleName() {
         return this.moduleName;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteInstanceVpcEndpointLinkedVpcRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String moduleName; 
-        private String regionId; 
         private String vpcId; 
         private String vswitchId; 
 
@@ -104,32 +104,14 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteInstanceVpcEndpointLinkedVpcRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.moduleName = response.moduleName;
-            this.regionId = response.regionId;
-            this.vpcId = response.vpcId;
-            this.vswitchId = response.vswitchId;
+        private Builder(DeleteInstanceVpcEndpointLinkedVpcRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.moduleName = request.moduleName;
+            this.vpcId = request.vpcId;
+            this.vswitchId = request.vswitchId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * ModuleName.
-         */
-        public Builder moduleName(String moduleName) {
-            this.putQueryParameter("ModuleName", moduleName);
-            this.moduleName = moduleName;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -141,7 +123,29 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the module that you want to access. Valid values:
+         * <p>
+         * 
+         * *   `Registry`: the image repository.
+         * *   `Chart`: a Helm chart.
+         */
+        public Builder moduleName(String moduleName) {
+            this.putQueryParameter("ModuleName", moduleName);
+            this.moduleName = moduleName;
+            return this;
+        }
+
+        /**
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -150,7 +154,7 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * The ID of the vSwitch.
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

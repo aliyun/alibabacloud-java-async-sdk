@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNamespaceRequest</p>
  */
 public class ListNamespaceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -33,19 +38,14 @@ public class ListNamespaceRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListNamespaceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
         this.namespaceStatus = builder.namespaceStatus;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,6 +59,13 @@ public class ListNamespaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,37 +103,39 @@ public class ListNamespaceRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListNamespaceRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String namespaceName; 
         private String namespaceStatus; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListNamespaceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.namespaceStatus = response.namespaceStatus;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListNamespaceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
+            this.namespaceStatus = request.namespaceStatus;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -135,7 +144,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * The number of entries returned per page.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -144,7 +153,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceStatus.
+         * The ID of the namespace.
          */
         public Builder namespaceStatus(String namespaceStatus) {
             this.putQueryParameter("NamespaceStatus", namespaceStatus);
@@ -153,7 +162,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The list of namespaces.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -162,20 +171,11 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

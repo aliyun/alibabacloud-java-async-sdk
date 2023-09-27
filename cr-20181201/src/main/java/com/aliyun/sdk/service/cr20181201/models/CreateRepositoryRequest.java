@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepositoryRequest</p>
  */
 public class CreateRepositoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Detail")
     private String detail;
@@ -20,11 +25,6 @@ public class CreateRepositoryRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoName")
@@ -52,9 +52,9 @@ public class CreateRepositoryRequest extends Request {
 
     private CreateRepositoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.detail = builder.detail;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
         this.repoType = builder.repoType;
@@ -76,6 +76,13 @@ public class CreateRepositoryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return detail
      */
     public String getDetail() {
@@ -87,13 +94,6 @@ public class CreateRepositoryRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -132,9 +132,9 @@ public class CreateRepositoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepositoryRequest, Builder> {
+        private String regionId; 
         private String detail; 
         private String instanceId; 
-        private String regionId; 
         private String repoName; 
         private String repoNamespaceName; 
         private String repoType; 
@@ -145,38 +145,20 @@ public class CreateRepositoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepositoryRequest response) {
-            super(response);
-            this.detail = response.detail;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
-            this.repoType = response.repoType;
-            this.summary = response.summary;
-            this.tagImmutability = response.tagImmutability;
+        private Builder(CreateRepositoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.detail = request.detail;
+            this.instanceId = request.instanceId;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
+            this.repoType = request.repoType;
+            this.summary = request.summary;
+            this.tagImmutability = request.tagImmutability;
         } 
 
         /**
-         * Detail.
-         */
-        public Builder detail(String detail) {
-            this.putQueryParameter("Detail", detail);
-            this.detail = detail;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -185,7 +167,25 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The description of the repository.
+         */
+        public Builder detail(String detail) {
+            this.putQueryParameter("Detail", detail);
+            this.detail = detail;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -194,7 +194,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace to which the image repository belongs.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -203,7 +203,11 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * RepoType.
+         * The type of the repository. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: The repository is a public repository.
+         * *   `PRIVATE`: The repository is a private repository.
          */
         public Builder repoType(String repoType) {
             this.putQueryParameter("RepoType", repoType);
@@ -212,7 +216,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * Summary.
+         * The summary about the repository.
          */
         public Builder summary(String summary) {
             this.putQueryParameter("Summary", summary);
@@ -221,7 +225,11 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * TagImmutability.
+         * Specifies whether to enable the feature of image tag immutability. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables the feature of image tag immutability.
+         * *   `false`: disables the feature of image tag immutability.
          */
         public Builder tagImmutability(Boolean tagImmutability) {
             this.putQueryParameter("TagImmutability", tagImmutability);

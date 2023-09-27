@@ -74,7 +74,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         private java.util.List < Triggers> triggers; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,11 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +94,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * Triggers.
+         * The triggers of the repository.
          */
         public Builder triggers(java.util.List < Triggers> triggers) {
             this.triggers = triggers;
@@ -198,7 +202,11 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             private String triggerUrl; 
 
             /**
-             * RepoEvent.
+             * The type of the event that activates the trigger. Valid values:
+             * <p>
+             * 
+             * *   `BUILD_SUCCESS`: The trigger is activated when an image building task is successful.
+             * *   `BUILD_Fail`: The trigger is activated when an image building task fails.
              */
             public Builder repoEvent(String repoEvent) {
                 this.repoEvent = repoEvent;
@@ -206,7 +214,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerId.
+             * The ID of the trigger.
              */
             public Builder triggerId(String triggerId) {
                 this.triggerId = triggerId;
@@ -214,7 +222,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerName.
+             * The name of the trigger.
              */
             public Builder triggerName(String triggerName) {
                 this.triggerName = triggerName;
@@ -222,7 +230,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerTag.
+             * The image tag based on which the trigger is set.
              */
             public Builder triggerTag(String triggerTag) {
                 this.triggerTag = triggerTag;
@@ -230,7 +238,12 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * The type of the trigger. Valid values:
+             * <p>
+             * 
+             * *   `ALL`: a trigger that supports both tags and regular expressions.
+             * *   `TAG_LISTTAG`: a tag-based trigger.
+             * *   `TAG_REG_EXP`: a regular expression-based trigger.
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -238,7 +251,7 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerUrl.
+             * The URL of the trigger.
              */
             public Builder triggerUrl(String triggerUrl) {
                 this.triggerUrl = triggerUrl;

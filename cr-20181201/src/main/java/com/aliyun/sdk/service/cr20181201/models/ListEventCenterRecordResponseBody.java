@@ -110,7 +110,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +126,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +134,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * The list of historical events.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -150,7 +150,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total entries of historical events.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -342,7 +342,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the event was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +350,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventChannel.
+             * The event notification channel.
              */
             public Builder eventChannel(String eventChannel) {
                 this.eventChannel = eventChannel;
@@ -358,7 +358,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventNotifyId.
+             * The ID of the event notification.
              */
             public Builder eventNotifyId(String eventNotifyId) {
                 this.eventNotifyId = eventNotifyId;
@@ -366,7 +366,12 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventNotifyMethod.
+             * The notification method. Valid values:
+             * <p>
+             * 
+             * *   `http`: The notification is sent over HTTP.
+             * *   `https`: The notification is sent over HTTPS.
+             * *   `dingding`: The notification is sent by using DingTalk.
              */
             public Builder eventNotifyMethod(String eventNotifyMethod) {
                 this.eventNotifyMethod = eventNotifyMethod;
@@ -374,7 +379,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the event.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -382,7 +387,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -390,7 +395,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -398,7 +403,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * The ID of the event record.
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -406,7 +411,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -414,7 +419,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the event notification rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -422,7 +427,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the event notification rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -430,7 +435,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tags.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -438,7 +443,7 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the event was last updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

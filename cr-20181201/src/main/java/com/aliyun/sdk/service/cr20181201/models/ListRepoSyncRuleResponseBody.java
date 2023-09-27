@@ -110,7 +110,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +126,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +134,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SyncRules.
+         * The synchronization rules.
          */
         public Builder syncRules(java.util.List < SyncRules> syncRules) {
             this.syncRules = syncRules;
@@ -158,7 +158,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -390,7 +390,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             private String targetRepoName; 
 
             /**
-             * CreateTime.
+             * The time when the synchronization rule was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,7 +398,13 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CrossUser.
+             * Indicates whether images are synchronized across Alibaba Cloud accounts. Valid values:
+             * <p>
+             * 
+             * *   `true`: Images are synchronized across Alibaba Cloud accounts.
+             * *   `false`: Images are synchronized within the same Alibaba Cloud account.
+             * 
+             * Default value: `false`
              */
             public Builder crossUser(Boolean crossUser) {
                 this.crossUser = crossUser;
@@ -406,7 +412,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LocalInstanceId.
+             * The ID of the source instance.
              */
             public Builder localInstanceId(String localInstanceId) {
                 this.localInstanceId = localInstanceId;
@@ -414,7 +420,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LocalNamespaceName.
+             * The namespace name of the source instance.
              */
             public Builder localNamespaceName(String localNamespaceName) {
                 this.localNamespaceName = localNamespaceName;
@@ -422,7 +428,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LocalRegionId.
+             * The region ID of the source instance.
              */
             public Builder localRegionId(String localRegionId) {
                 this.localRegionId = localRegionId;
@@ -430,7 +436,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LocalRepoName.
+             * The image repository name of the source instance.
              */
             public Builder localRepoName(String localRepoName) {
                 this.localRepoName = localRepoName;
@@ -438,7 +444,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the synchronization rule was last modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -446,7 +452,11 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SyncDirection.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   `FROM`: Images are synchronized from the source instance to the destination instance.
+             * *   `TO`: Images are synchronized from the destination instance to the source instance.
              */
             public Builder syncDirection(String syncDirection) {
                 this.syncDirection = syncDirection;
@@ -454,7 +464,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SyncRuleId.
+             * The ID of the synchronization rule.
              */
             public Builder syncRuleId(String syncRuleId) {
                 this.syncRuleId = syncRuleId;
@@ -462,7 +472,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SyncRuleName.
+             * The name of the synchronization rule.
              */
             public Builder syncRuleName(String syncRuleName) {
                 this.syncRuleName = syncRuleName;
@@ -470,7 +480,11 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SyncScope.
+             * The synchronization scope. Valid values:
+             * <p>
+             * 
+             * *   `NAMESPACE`: synchronizes the image tags in a namespace that meet the synchronization rule.
+             * *   `REPO`: synchronizes the image tags in an image repository that meet the synchronization rule.
              */
             public Builder syncScope(String syncScope) {
                 this.syncScope = syncScope;
@@ -478,7 +492,11 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SyncTrigger.
+             * The policy that is applied to trigger the synchronization rule. Valid values:
+             * <p>
+             * 
+             * *   `INITIATIVE`: The synchronization rule is positively triggered.
+             * *   `PASSIVE`: The synchronization rule is passively triggered.
              */
             public Builder syncTrigger(String syncTrigger) {
                 this.syncTrigger = syncTrigger;
@@ -486,7 +504,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagFilter.
+             * The regular expression that is used to filter image tags.
              */
             public Builder tagFilter(String tagFilter) {
                 this.tagFilter = tagFilter;
@@ -494,7 +512,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceId.
+             * The ID of the destination instance.
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -502,7 +520,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TargetNamespaceName.
+             * The namespace name of the destination instance.
              */
             public Builder targetNamespaceName(String targetNamespaceName) {
                 this.targetNamespaceName = targetNamespaceName;
@@ -510,7 +528,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TargetRegionId.
+             * The region ID of the destination instance.
              */
             public Builder targetRegionId(String targetRegionId) {
                 this.targetRegionId = targetRegionId;
@@ -518,7 +536,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TargetRepoName.
+             * The image repository name of the destination instance.
              */
             public Builder targetRepoName(String targetRepoName) {
                 this.targetRepoName = targetRepoName;

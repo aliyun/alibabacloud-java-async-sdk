@@ -49,9 +49,9 @@ public class GetInstanceCountRequest extends Request {
             super();
         } 
 
-        private Builder(GetInstanceCountRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(GetInstanceCountRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

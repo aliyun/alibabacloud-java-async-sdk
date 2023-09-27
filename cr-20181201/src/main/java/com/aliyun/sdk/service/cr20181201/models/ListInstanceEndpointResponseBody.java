@@ -74,7 +74,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoints.
+         * The endpoints of the instance.
          */
         public Builder endpoints(java.util.List < Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -90,7 +90,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +98,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             private String entry; 
 
             /**
-             * Entry.
+             * Details about the ACL.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -191,7 +191,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -199,7 +199,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * Type
              */
             public Builder type(String type) {
                 this.type = type;
@@ -240,7 +240,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * VpcId.
+             * VPC ID
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -353,7 +353,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AclEnable.
+             * Indicates whether the access control list (ACL) feature is enabled.
              */
             public Builder aclEnable(Boolean aclEnable) {
                 this.aclEnable = aclEnable;
@@ -361,7 +361,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * AclEntries.
+             * The ACL configured for the instance.
              */
             public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
                 this.aclEntries = aclEntries;
@@ -369,7 +369,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Domains.
+             * Domain names.
              */
             public Builder domains(java.util.List < Domains> domains) {
                 this.domains = domains;
@@ -377,7 +377,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the ACL feature is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -385,7 +385,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * The type of the endpoint.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -393,7 +393,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * LinkedVpcs.
+             * The virtual private clouds (VPCs) that are associated with the instance.
              */
             public Builder linkedVpcs(java.util.List < LinkedVpcs> linkedVpcs) {
                 this.linkedVpcs = linkedVpcs;
@@ -401,7 +401,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance.
              */
             public Builder status(String status) {
                 this.status = status;

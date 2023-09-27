@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListChainInstanceRequest</p>
  */
 public class ListChainInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -25,11 +30,6 @@ public class ListChainInstanceRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoName")
     private String repoName;
@@ -40,10 +40,10 @@ public class ListChainInstanceRequest extends Request {
 
     private ListChainInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
     }
@@ -59,6 +59,13 @@ public class ListChainInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -83,13 +90,6 @@ public class ListChainInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoName
      */
     public String getRepoName() {
@@ -104,10 +104,10 @@ public class ListChainInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListChainInstanceRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String repoName; 
         private String repoNamespaceName; 
 
@@ -115,42 +115,15 @@ public class ListChainInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ListChainInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
+        private Builder(ListChainInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * PageNo.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -162,7 +135,34 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The operation that you want to perform. Set this parameter to **ListChainInstance**.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The time when the delivery chain started.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The name of the image repository.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The time when the delivery chain is completed.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -171,7 +171,7 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the delivery chain.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);

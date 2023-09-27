@@ -74,7 +74,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +90,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         }
 
         /**
-         * Manifest.
+         * The information about the image manifest.
          */
         public Builder manifest(Manifest manifest) {
             this.manifest = manifest;
@@ -98,7 +98,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * Digest.
+             * The digest of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -170,7 +170,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * The MIME type of the configuration file.
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -178,7 +178,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * Size
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -219,7 +219,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             private String blobSum; 
 
             /**
-             * BlobSum.
+             * A list of filesystem layer blob sums contained in this image.
              */
             public Builder blobSum(String blobSum) {
                 this.blobSum = blobSum;
@@ -260,7 +260,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             private java.util.Map < String, ? > v1Compatibility; 
 
             /**
-             * V1Compatibility.
+             * The raw V1 compatibility information.
              */
             public Builder v1Compatibility(java.util.Map < String, ? > v1Compatibility) {
                 this.v1Compatibility = v1Compatibility;
@@ -325,7 +325,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * Digest.
+             * The digest of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -333,7 +333,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * The MIME type of the configuration file.
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -406,7 +406,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             private String signature; 
 
             /**
-             * Header.
+             * The header information of the signature.
              */
             public Builder header(java.util.Map < String, ? > header) {
                 this.header = header;
@@ -414,7 +414,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Protected.
+             * The signed protected header.
              */
             public Builder _protected(String _protected) {
                 this._protected = _protected;
@@ -422,7 +422,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * The signature for the image manifest.
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -579,7 +579,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The configuration information.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -587,7 +587,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * FsLayers.
+             * The digest of the referenced filesystem image layer.
              */
             public Builder fsLayers(java.util.List < FsLayers> fsLayers) {
                 this.fsLayers = fsLayers;
@@ -595,7 +595,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * History.
+             * A list of unstructured historical data for V1 compatibility.
              */
             public Builder history(java.util.List < History> history) {
                 this.history = history;
@@ -603,7 +603,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Layers.
+             * The information about image layers.
              */
             public Builder layers(java.util.List < Layers> layers) {
                 this.layers = layers;
@@ -611,7 +611,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * The type.
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -619,7 +619,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -627,7 +627,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaVersion.
+             * The schema version of the manifest.
              */
             public Builder schemaVersion(Integer schemaVersion) {
                 this.schemaVersion = schemaVersion;
@@ -635,7 +635,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Signatures.
+             * The information about signatures.
              */
             public Builder signatures(java.util.List < Signatures> signatures) {
                 this.signatures = signatures;
@@ -643,7 +643,7 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

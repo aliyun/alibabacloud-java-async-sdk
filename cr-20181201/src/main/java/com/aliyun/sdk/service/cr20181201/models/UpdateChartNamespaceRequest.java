@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateChartNamespaceRequest</p>
  */
 public class UpdateChartNamespaceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AutoCreateRepo")
     private Boolean autoCreateRepo;
@@ -30,18 +35,13 @@ public class UpdateChartNamespaceRequest extends Request {
     @Validation(required = true)
     private String namespaceName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private UpdateChartNamespaceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoCreateRepo = builder.autoCreateRepo;
         this.defaultRepoType = builder.defaultRepoType;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +55,13 @@ public class UpdateChartNamespaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,35 +92,41 @@ public class UpdateChartNamespaceRequest extends Request {
         return this.namespaceName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateChartNamespaceRequest, Builder> {
+        private String regionId; 
         private Boolean autoCreateRepo; 
         private String defaultRepoType; 
         private String instanceId; 
         private String namespaceName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateChartNamespaceRequest response) {
-            super(response);
-            this.autoCreateRepo = response.autoCreateRepo;
-            this.defaultRepoType = response.defaultRepoType;
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.regionId = response.regionId;
+        private Builder(UpdateChartNamespaceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoCreateRepo = request.autoCreateRepo;
+            this.defaultRepoType = request.defaultRepoType;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
         } 
 
         /**
-         * AutoCreateRepo.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to automatically create repositories in the namespace. Valid values:
+         * <p>
+         * 
+         * *   `true`: automatically creates repositories in the namespace.
+         * *   `false`: does not automatically create repositories in the namespace.
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.putQueryParameter("AutoCreateRepo", autoCreateRepo);
@@ -122,7 +135,11 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * DefaultRepoType.
+         * The default type of the repository. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: a public repository
+         * *   `PRIVATE`: a private repository
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.putQueryParameter("DefaultRepoType", defaultRepoType);
@@ -131,7 +148,7 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,20 +157,11 @@ public class UpdateChartNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace to which the repository belongs.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
             this.namespaceName = namespaceName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

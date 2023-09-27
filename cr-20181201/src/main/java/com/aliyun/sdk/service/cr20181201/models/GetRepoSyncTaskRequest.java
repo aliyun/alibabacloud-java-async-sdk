@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepoSyncTaskRequest</p>
  */
 public class GetRepoSyncTaskRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("SyncTaskId")
@@ -29,8 +29,8 @@ public class GetRepoSyncTaskRequest extends Request {
 
     private GetRepoSyncTaskRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.syncTaskId = builder.syncTaskId;
     }
 
@@ -48,17 +48,17 @@ public class GetRepoSyncTaskRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +69,20 @@ public class GetRepoSyncTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRepoSyncTaskRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String syncTaskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetRepoSyncTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.syncTaskId = response.syncTaskId;
+        private Builder(GetRepoSyncTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.syncTaskId = request.syncTaskId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -103,7 +94,16 @@ public class GetRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * SyncTaskId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the synchronization task.
          */
         public Builder syncTaskId(String syncTaskId) {
             this.putQueryParameter("SyncTaskId", syncTaskId);

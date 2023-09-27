@@ -16,6 +16,10 @@ public class UpdateRepoTriggerResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private UpdateRepoTriggerResponseBody body;
@@ -23,6 +27,7 @@ public class UpdateRepoTriggerResponse extends Response {
     private UpdateRepoTriggerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class UpdateRepoTriggerResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public UpdateRepoTriggerResponseBody getBody() {
@@ -52,6 +64,8 @@ public class UpdateRepoTriggerResponse extends Response {
     public interface Builder extends Response.Builder<UpdateRepoTriggerResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(UpdateRepoTriggerResponseBody body);
 
@@ -64,6 +78,7 @@ public class UpdateRepoTriggerResponse extends Response {
             extends Response.BuilderImpl<UpdateRepoTriggerResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private UpdateRepoTriggerResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class UpdateRepoTriggerResponse extends Response {
         private BuilderImpl(UpdateRepoTriggerResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class UpdateRepoTriggerResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

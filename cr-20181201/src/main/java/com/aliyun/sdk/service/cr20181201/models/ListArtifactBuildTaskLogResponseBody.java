@@ -86,7 +86,7 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BuildTaskLogs.
+         * The log entries of the artifact build task.
          */
         public Builder buildTaskLogs(java.util.List < BuildTaskLogs> buildTaskLogs) {
             this.buildTaskLogs = buildTaskLogs;
@@ -94,7 +94,7 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +102,11 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the API call is successful.
+         * <p>
+         * 
+         * *   `true`: successful
+         * *   `false`: failed
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -110,7 +114,7 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of log entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +174,7 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * LineNumber.
+             * The row number of the log entry.
              */
             public Builder lineNumber(Integer lineNumber) {
                 this.lineNumber = lineNumber;
@@ -178,7 +182,7 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The content of the log entry.
              */
             public Builder message(String message) {
                 this.message = message;

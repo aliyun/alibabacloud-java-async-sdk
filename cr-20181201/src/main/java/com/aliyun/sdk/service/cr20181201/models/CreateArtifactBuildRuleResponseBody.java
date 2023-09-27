@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetChartReleaseDownloadUrlResponseBody} extends {@link TeaModel}
+ * {@link CreateArtifactBuildRuleResponseBody} extends {@link TeaModel}
  *
- * <p>GetChartReleaseDownloadUrlResponseBody</p>
+ * <p>CreateArtifactBuildRuleResponseBody</p>
  */
-public class GetChartReleaseDownloadUrlResponseBody extends TeaModel {
+public class CreateArtifactBuildRuleResponseBody extends TeaModel {
+    @NameInMap("BuildRuleId")
+    private String buildRuleId;
+
     @NameInMap("Code")
     private String code;
-
-    @NameInMap("DownloadUrl")
-    private String downloadUrl;
 
     @NameInMap("IsSuccess")
     private Boolean isSuccess;
@@ -24,9 +24,9 @@ public class GetChartReleaseDownloadUrlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetChartReleaseDownloadUrlResponseBody(Builder builder) {
+    private CreateArtifactBuildRuleResponseBody(Builder builder) {
+        this.buildRuleId = builder.buildRuleId;
         this.code = builder.code;
-        this.downloadUrl = builder.downloadUrl;
         this.isSuccess = builder.isSuccess;
         this.requestId = builder.requestId;
     }
@@ -35,8 +35,15 @@ public class GetChartReleaseDownloadUrlResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetChartReleaseDownloadUrlResponseBody create() {
+    public static CreateArtifactBuildRuleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return buildRuleId
+     */
+    public String getBuildRuleId() {
+        return this.buildRuleId;
     }
 
     /**
@@ -44,13 +51,6 @@ public class GetChartReleaseDownloadUrlResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return downloadUrl
-     */
-    public String getDownloadUrl() {
-        return this.downloadUrl;
     }
 
     /**
@@ -68,24 +68,24 @@ public class GetChartReleaseDownloadUrlResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String buildRuleId; 
         private String code; 
-        private String downloadUrl; 
         private Boolean isSuccess; 
         private String requestId; 
+
+        /**
+         * BuildRuleId.
+         */
+        public Builder buildRuleId(String buildRuleId) {
+            this.buildRuleId = buildRuleId;
+            return this;
+        }
 
         /**
          * Code.
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * DownloadUrl.
-         */
-        public Builder downloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
             return this;
         }
 
@@ -105,8 +105,8 @@ public class GetChartReleaseDownloadUrlResponseBody extends TeaModel {
             return this;
         }
 
-        public GetChartReleaseDownloadUrlResponseBody build() {
-            return new GetChartReleaseDownloadUrlResponseBody(this);
+        public CreateArtifactBuildRuleResponseBody build() {
+            return new CreateArtifactBuildRuleResponseBody(this);
         } 
 
     } 

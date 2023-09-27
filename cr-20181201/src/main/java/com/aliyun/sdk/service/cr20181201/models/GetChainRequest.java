@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChainRequest</p>
  */
 public class GetChainRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ChainId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class GetChainRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetChainRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.chainId = builder.chainId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetChainRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return chainId
      */
     public String getChainId() {
@@ -61,28 +68,30 @@ public class GetChainRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetChainRequest, Builder> {
+        private String regionId; 
         private String chainId; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetChainRequest response) {
-            super(response);
-            this.chainId = response.chainId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(GetChainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chainId = request.chainId;
+            this.instanceId = request.instanceId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChainId.
@@ -99,15 +108,6 @@ public class GetChainRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

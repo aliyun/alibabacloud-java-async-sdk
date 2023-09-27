@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepoSyncTaskByRuleRequest</p>
  */
 public class CreateRepoSyncTaskByRuleRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoId")
@@ -39,8 +39,8 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
 
     private CreateRepoSyncTaskByRuleRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.syncRuleId = builder.syncRuleId;
         this.tag = builder.tag;
@@ -60,17 +60,17 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -95,8 +95,8 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepoSyncTaskByRuleRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
         private String syncRuleId; 
         private String tag; 
@@ -105,23 +105,14 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepoSyncTaskByRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.syncRuleId = response.syncRuleId;
-            this.tag = response.tag;
+        private Builder(CreateRepoSyncTaskByRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.syncRuleId = request.syncRuleId;
+            this.tag = request.tag;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -133,7 +124,16 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -142,7 +142,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * SyncRuleId.
+         * The ID of the synchronization rule.
          */
         public Builder syncRuleId(String syncRuleId) {
             this.putQueryParameter("SyncRuleId", syncRuleId);
@@ -151,7 +151,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The version of the image to be synchronized.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

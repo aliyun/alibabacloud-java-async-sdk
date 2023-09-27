@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRegionRequest</p>
  */
 public class ListInstanceRegionRequest extends Request {
-    @Query
-    @NameInMap("Lang")
-    private String lang;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
     private ListInstanceRegionRequest(Builder builder) {
         super(builder);
-        this.lang = builder.lang;
         this.regionId = builder.regionId;
+        this.lang = builder.lang;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class ListInstanceRegionRequest extends Request {
     }
 
     /**
-     * @return lang
-     */
-    public String getLang() {
-        return this.lang;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
     public static final class Builder extends Request.Builder<ListInstanceRegionRequest, Builder> {
-        private String lang; 
         private String regionId; 
+        private String lang; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListInstanceRegionRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.regionId = response.regionId;
+        private Builder(ListInstanceRegionRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.lang = request.lang;
         } 
-
-        /**
-         * Lang.
-         */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,15 @@ public class ListInstanceRegionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The language used for response parameters. Set this parameter to `zh-CN`.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

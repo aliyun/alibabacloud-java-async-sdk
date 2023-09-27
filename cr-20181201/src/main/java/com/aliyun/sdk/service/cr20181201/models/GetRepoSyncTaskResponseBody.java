@@ -206,7 +206,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         private String taskTrigger; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -214,7 +214,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CrossUser.
+         * Indicates whether the synchronization task is performed across Alibaba Cloud accounts.
          */
         public Builder crossUser(Boolean crossUser) {
             this.crossUser = crossUser;
@@ -222,7 +222,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ImageFrom.
+         * The source address of the image.
          */
         public Builder imageFrom(ImageFrom imageFrom) {
             this.imageFrom = imageFrom;
@@ -230,7 +230,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ImageTo.
+         * The destination address of the image.
          */
         public Builder imageTo(ImageTo imageTo) {
             this.imageTo = imageTo;
@@ -238,7 +238,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -246,7 +246,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * LayerTasks.
+         * The synchronization tasks for the image layer.
          */
         public Builder layerTasks(java.util.List < LayerTasks> layerTasks) {
             this.layerTasks = layerTasks;
@@ -254,7 +254,11 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The synchronization progress. Valid values:
+         * <p>
+         * 
+         * *   `0`: The synchronization starts or failed.
+         * *   `1`: The synchronization is successful.
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -262,7 +266,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -270,7 +274,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncBatchTaskId.
+         * The ID of the synchronization task in which multiple images are synchronized at a time.
          */
         public Builder syncBatchTaskId(String syncBatchTaskId) {
             this.syncBatchTaskId = syncBatchTaskId;
@@ -278,7 +282,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncRuleId.
+         * The ID of the synchronization rule.
          */
         public Builder syncRuleId(String syncRuleId) {
             this.syncRuleId = syncRuleId;
@@ -286,7 +290,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncTaskId.
+         * The ID of the synchronization task.
          */
         public Builder syncTaskId(String syncTaskId) {
             this.syncTaskId = syncTaskId;
@@ -294,7 +298,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncTransAccelerate.
+         * Indicates whether transfer acceleration is enabled in the synchronization process.
          */
         public Builder syncTransAccelerate(Boolean syncTransAccelerate) {
             this.syncTransAccelerate = syncTransAccelerate;
@@ -302,7 +306,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncedSize.
+         * The size of the image layer that is synchronized. Unit: bytes.
          */
         public Builder syncedSize(Long syncedSize) {
             this.syncedSize = syncedSize;
@@ -310,7 +314,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * The status of the task. Valid values:
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -318,7 +322,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskTrigger.
+         * The policy that is used to trigger the synchronization task.
          */
         public Builder taskTrigger(String taskTrigger) {
             this.taskTrigger = taskTrigger;
@@ -406,7 +410,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             private String repoNamespaceName; 
 
             /**
-             * ImageTag.
+             * The tag of the image.
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -414,7 +418,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -422,7 +426,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -430,7 +434,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -438,7 +442,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * The name of the namespace.
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -527,7 +531,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             private String repoNamespaceName; 
 
             /**
-             * ImageTag.
+             * The tag of the image.
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -535,7 +539,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -543,7 +547,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -551,7 +555,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -559,7 +563,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * The name of the namespace.
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -660,7 +664,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * ArtifactDigest.
+             * The digest of the artifact.
              */
             public Builder artifactDigest(String artifactDigest) {
                 this.artifactDigest = artifactDigest;
@@ -668,7 +672,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The digest of the image layer.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -676,7 +680,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of synchronized image layers.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -684,7 +688,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SyncLayerTaskId.
+             * The ID of the synchronization task for the image layer.
              */
             public Builder syncLayerTaskId(String syncLayerTaskId) {
                 this.syncLayerTaskId = syncLayerTaskId;
@@ -692,7 +696,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SyncedSize.
+             * The size of the image layer that is synchronized.
              */
             public Builder syncedSize(Long syncedSize) {
                 this.syncedSize = syncedSize;
@@ -700,7 +704,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the synchronization task. Valid values:
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

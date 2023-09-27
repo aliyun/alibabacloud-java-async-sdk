@@ -190,6 +190,9 @@ public class ListNamespaceResponseBody extends TeaModel {
         @NameInMap("NamespaceStatus")
         private String namespaceStatus;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         private Namespaces(Builder builder) {
             this.autoCreateRepo = builder.autoCreateRepo;
             this.defaultRepoType = builder.defaultRepoType;
@@ -197,6 +200,7 @@ public class ListNamespaceResponseBody extends TeaModel {
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
             this.namespaceStatus = builder.namespaceStatus;
+            this.resourceGroupId = builder.resourceGroupId;
         }
 
         public static Builder builder() {
@@ -249,6 +253,13 @@ public class ListNamespaceResponseBody extends TeaModel {
             return this.namespaceStatus;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public static final class Builder {
             private Boolean autoCreateRepo; 
             private String defaultRepoType; 
@@ -256,6 +267,7 @@ public class ListNamespaceResponseBody extends TeaModel {
             private String namespaceId; 
             private String namespaceName; 
             private String namespaceStatus; 
+            private String resourceGroupId; 
 
             /**
              * AutoCreateRepo.
@@ -302,6 +314,14 @@ public class ListNamespaceResponseBody extends TeaModel {
              */
             public Builder namespaceStatus(String namespaceStatus) {
                 this.namespaceStatus = namespaceStatus;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceEndpointRequest</p>
  */
 public class GetInstanceEndpointRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("EndpointType")
     @Validation(required = true)
@@ -26,17 +31,12 @@ public class GetInstanceEndpointRequest extends Request {
     @NameInMap("ModuleName")
     private String moduleName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetInstanceEndpointRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endpointType = builder.endpointType;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,6 +50,13 @@ public class GetInstanceEndpointRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,33 +80,35 @@ public class GetInstanceEndpointRequest extends Request {
         return this.moduleName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetInstanceEndpointRequest, Builder> {
+        private String regionId; 
         private String endpointType; 
         private String instanceId; 
         private String moduleName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetInstanceEndpointRequest response) {
-            super(response);
-            this.endpointType = response.endpointType;
-            this.instanceId = response.instanceId;
-            this.moduleName = response.moduleName;
-            this.regionId = response.regionId;
+        private Builder(GetInstanceEndpointRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endpointType = request.endpointType;
+            this.instanceId = request.instanceId;
+            this.moduleName = request.moduleName;
         } 
 
         /**
-         * EndpointType.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The type of the endpoint. Set the value to Internet.
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -108,7 +117,7 @@ public class GetInstanceEndpointRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,20 +126,15 @@ public class GetInstanceEndpointRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * The name of the module that you want to access. Valid values:
+         * <p>
+         * 
+         * *   `Registry`: the image repository.
+         * *   `Chart`: a Helm chart.
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
             this.moduleName = moduleName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

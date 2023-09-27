@@ -122,7 +122,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ChainInstances.
+         * The number of entries to return on each page.
          */
         public Builder chainInstances(java.util.List < ChainInstances> chainInstances) {
             this.chainInstances = chainInstances;
@@ -130,7 +130,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The version of the delivery chain.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The page number of the page to return.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -146,7 +146,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * The execution record of the delivery chain.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -154,7 +154,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * 30
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -162,7 +162,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Indicates whether the operation is successful.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -170,7 +170,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the Container Registry instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The name of the repository.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * ChainId.
+             * The name of the namespace.
              */
             public Builder chainId(String chainId) {
                 this.chainId = chainId;
@@ -250,7 +250,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ChainName.
+             * The number of entries returned on each page.
              */
             public Builder chainName(String chainName) {
                 this.chainName = chainName;
@@ -258,7 +258,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The ID of the request.
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -383,7 +383,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Chain.
+             * The name of the namespace.
              */
             public Builder chain(Chain chain) {
                 this.chain = chain;
@@ -391,7 +391,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ChainInstanceId.
+             * 1
              */
             public Builder chainInstanceId(String chainInstanceId) {
                 this.chainInstanceId = chainInstanceId;
@@ -399,7 +399,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The ID of the Container Registry instance.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -407,7 +407,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The ID of the delivery chain.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -415,7 +415,13 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * The execution result of the delivery chain. Valid values:
+             * <p>
+             * 
+             * *   `SUCCESS`
+             * *   `FAILED`
+             * *   `CANCELED`
+             * *   `DENIED`
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -423,7 +429,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The list of the execution records of delivery chains.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -431,7 +437,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * test-repo
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -439,7 +445,13 @@ public class ListChainInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the delivery chain. Valid values:
+             * <p>
+             * 
+             * *   `RUNNING`
+             * *   `COMPLETE`
+             * *   `CANCELING`
+             * *   `CANCELED`
              */
             public Builder status(String status) {
                 this.status = status;

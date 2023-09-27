@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEventCenterRuleRequest</p>
  */
 public class DeleteEventCenterRuleRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("RuleId")
@@ -26,8 +26,8 @@ public class DeleteEventCenterRuleRequest extends Request {
 
     private DeleteEventCenterRuleRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.ruleId = builder.ruleId;
     }
 
@@ -45,17 +45,17 @@ public class DeleteEventCenterRuleRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -66,29 +66,20 @@ public class DeleteEventCenterRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteEventCenterRuleRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String ruleId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteEventCenterRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.ruleId = response.ruleId;
+        private Builder(DeleteEventCenterRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.ruleId = request.ruleId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -100,7 +91,16 @@ public class DeleteEventCenterRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the event notification rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

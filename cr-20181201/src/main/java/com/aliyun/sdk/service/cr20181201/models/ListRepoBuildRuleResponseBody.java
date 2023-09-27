@@ -110,7 +110,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * BuildRules.
+         * The list of image building rules.
          */
         public Builder buildRules(java.util.List < BuildRules> buildRules) {
             this.buildRules = buildRules;
@@ -118,7 +118,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +126,11 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +138,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +146,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +154,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +162,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +294,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BuildRuleId.
+             * The ID of the image building rule.
              */
             public Builder buildRuleId(String buildRuleId) {
                 this.buildRuleId = buildRuleId;
@@ -298,7 +302,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DockerfileLocation.
+             * The directory of the Dockerfile.
              */
             public Builder dockerfileLocation(String dockerfileLocation) {
                 this.dockerfileLocation = dockerfileLocation;
@@ -306,7 +310,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DockerfileName.
+             * The name of the Dockerfile.
              */
             public Builder dockerfileName(String dockerfileName) {
                 this.dockerfileName = dockerfileName;
@@ -314,7 +318,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTag.
+             * The tag of the image.
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -330,7 +334,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PushName.
+             * The name of the push that triggers the building rule.
              */
             public Builder pushName(String pushName) {
                 this.pushName = pushName;
@@ -338,7 +342,11 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PushType.
+             * The type of the push that triggers the image building rule. Valid values:
+             * <p>
+             * 
+             * *   GIT_BRANCH: branch push
+             * *   GIT_TAG: tag push
              */
             public Builder pushType(String pushType) {
                 this.pushType = pushType;

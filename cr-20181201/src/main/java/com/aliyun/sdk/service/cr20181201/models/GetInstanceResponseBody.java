@@ -21,6 +21,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     private String instanceId;
 
+    @NameInMap("InstanceIssue")
+    private String instanceIssue;
+
     @NameInMap("InstanceName")
     private String instanceName;
 
@@ -39,16 +42,21 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private GetInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.createTime = builder.createTime;
         this.instanceId = builder.instanceId;
+        this.instanceIssue = builder.instanceIssue;
         this.instanceName = builder.instanceName;
         this.instanceSpecification = builder.instanceSpecification;
         this.instanceStatus = builder.instanceStatus;
         this.isSuccess = builder.isSuccess;
         this.modifiedTime = builder.modifiedTime;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -78,6 +86,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return instanceIssue
+     */
+    public String getInstanceIssue() {
+        return this.instanceIssue;
     }
 
     /**
@@ -122,16 +137,25 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private String code; 
         private Long createTime; 
         private String instanceId; 
+        private String instanceIssue; 
         private String instanceName; 
         private String instanceSpecification; 
         private String instanceStatus; 
         private Boolean isSuccess; 
         private Long modifiedTime; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
          * Code.
@@ -154,6 +178,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIssue.
+         */
+        public Builder instanceIssue(String instanceIssue) {
+            this.instanceIssue = instanceIssue;
             return this;
         }
 
@@ -202,6 +234,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

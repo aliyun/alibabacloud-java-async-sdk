@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEventCenterRuleRequest</p>
  */
 public class UpdateEventCenterRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EventChannel")
     private String eventChannel;
@@ -30,15 +34,12 @@ public class UpdateEventCenterRuleRequest extends Request {
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
     @NameInMap("Namespaces")
     private java.util.List < String > namespaces;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("RepoNames")
@@ -50,6 +51,7 @@ public class UpdateEventCenterRuleRequest extends Request {
 
     @Query
     @NameInMap("RuleId")
+    @Validation(required = true)
     private String ruleId;
 
     @Query
@@ -58,13 +60,13 @@ public class UpdateEventCenterRuleRequest extends Request {
 
     private UpdateEventCenterRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.eventChannel = builder.eventChannel;
         this.eventConfig = builder.eventConfig;
         this.eventScope = builder.eventScope;
         this.eventType = builder.eventType;
         this.instanceId = builder.instanceId;
         this.namespaces = builder.namespaces;
-        this.regionId = builder.regionId;
         this.repoNames = builder.repoNames;
         this.repoTagFilterPattern = builder.repoTagFilterPattern;
         this.ruleId = builder.ruleId;
@@ -82,6 +84,13 @@ public class UpdateEventCenterRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -127,13 +136,6 @@ public class UpdateEventCenterRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoNames
      */
     public java.util.List < String > getRepoNames() {
@@ -162,13 +164,13 @@ public class UpdateEventCenterRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateEventCenterRuleRequest, Builder> {
+        private String regionId; 
         private String eventChannel; 
         private String eventConfig; 
         private String eventScope; 
         private String eventType; 
         private String instanceId; 
         private java.util.List < String > namespaces; 
-        private String regionId; 
         private java.util.List < String > repoNames; 
         private String repoTagFilterPattern; 
         private String ruleId; 
@@ -178,74 +180,20 @@ public class UpdateEventCenterRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEventCenterRuleRequest response) {
-            super(response);
-            this.eventChannel = response.eventChannel;
-            this.eventConfig = response.eventConfig;
-            this.eventScope = response.eventScope;
-            this.eventType = response.eventType;
-            this.instanceId = response.instanceId;
-            this.namespaces = response.namespaces;
-            this.regionId = response.regionId;
-            this.repoNames = response.repoNames;
-            this.repoTagFilterPattern = response.repoTagFilterPattern;
-            this.ruleId = response.ruleId;
-            this.ruleName = response.ruleName;
+        private Builder(UpdateEventCenterRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.eventChannel = request.eventChannel;
+            this.eventConfig = request.eventConfig;
+            this.eventScope = request.eventScope;
+            this.eventType = request.eventType;
+            this.instanceId = request.instanceId;
+            this.namespaces = request.namespaces;
+            this.repoNames = request.repoNames;
+            this.repoTagFilterPattern = request.repoTagFilterPattern;
+            this.ruleId = request.ruleId;
+            this.ruleName = request.ruleName;
         } 
-
-        /**
-         * EventChannel.
-         */
-        public Builder eventChannel(String eventChannel) {
-            this.putQueryParameter("EventChannel", eventChannel);
-            this.eventChannel = eventChannel;
-            return this;
-        }
-
-        /**
-         * EventConfig.
-         */
-        public Builder eventConfig(String eventConfig) {
-            this.putQueryParameter("EventConfig", eventConfig);
-            this.eventConfig = eventConfig;
-            return this;
-        }
-
-        /**
-         * EventScope.
-         */
-        public Builder eventScope(String eventScope) {
-            this.putQueryParameter("EventScope", eventScope);
-            this.eventScope = eventScope;
-            return this;
-        }
-
-        /**
-         * EventType.
-         */
-        public Builder eventType(String eventType) {
-            this.putQueryParameter("EventType", eventType);
-            this.eventType = eventType;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Namespaces.
-         */
-        public Builder namespaces(java.util.List < String > namespaces) {
-            this.putQueryParameter("Namespaces", namespaces);
-            this.namespaces = namespaces;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -257,16 +205,86 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * RepoNames.
+         * The event notification channel.
+         */
+        public Builder eventChannel(String eventChannel) {
+            this.putQueryParameter("EventChannel", eventChannel);
+            this.eventChannel = eventChannel;
+            return this;
+        }
+
+        /**
+         * The event configuration.
+         */
+        public Builder eventConfig(String eventConfig) {
+            this.putQueryParameter("EventConfig", eventConfig);
+            this.eventConfig = eventConfig;
+            return this;
+        }
+
+        /**
+         * The event scope. Valid values:
+         * <p>
+         * 
+         * *   `INSTANCE`
+         * *   `NAMESPACE`
+         * *   `REPO`
+         * 
+         * Default value: `INSTANCE`
+         */
+        public Builder eventScope(String eventScope) {
+            this.putQueryParameter("EventScope", eventScope);
+            this.eventScope = eventScope;
+            return this;
+        }
+
+        /**
+         * The type of the event. Valid values:
+         * <p>
+         * 
+         * *   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.
+         * *   `cr:Artifact:SynchronizationCompleted`: The image is replicated.
+         * *   `cr:Artifact:BuildCompleted`: The image is built.
+         * *   `cr:Artifact:ScanCompleted`: The image is scanned.
+         * *   `cr:Artifact:SigningCompleted`: The image is signed.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The namespaces to which the event notification rule applies.
+         */
+        public Builder namespaces(java.util.List < String > namespaces) {
+            String namespacesShrink = shrink(namespaces, "Namespaces", "json");
+            this.putQueryParameter("Namespaces", namespacesShrink);
+            this.namespaces = namespaces;
+            return this;
+        }
+
+        /**
+         * The names of the repositories to which the event notification rule applies.
          */
         public Builder repoNames(java.util.List < String > repoNames) {
-            this.putQueryParameter("RepoNames", repoNames);
+            String repoNamesShrink = shrink(repoNames, "RepoNames", "json");
+            this.putQueryParameter("RepoNames", repoNamesShrink);
             this.repoNames = repoNames;
             return this;
         }
 
         /**
-         * RepoTagFilterPattern.
+         * The regular expression for image tags.
          */
         public Builder repoTagFilterPattern(String repoTagFilterPattern) {
             this.putQueryParameter("RepoTagFilterPattern", repoTagFilterPattern);
@@ -275,7 +293,7 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the event notification rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -284,7 +302,7 @@ public class UpdateEventCenterRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the event notification rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

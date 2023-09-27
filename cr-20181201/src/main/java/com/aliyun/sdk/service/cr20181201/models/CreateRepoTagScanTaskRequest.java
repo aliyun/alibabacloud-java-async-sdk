@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepoTagScanTaskRequest</p>
  */
 public class CreateRepoTagScanTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Digest")
     private String digest;
@@ -20,11 +25,6 @@ public class CreateRepoTagScanTaskRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoId")
@@ -42,9 +42,9 @@ public class CreateRepoTagScanTaskRequest extends Request {
 
     private CreateRepoTagScanTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.digest = builder.digest;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
         this.scanService = builder.scanService;
         this.tag = builder.tag;
@@ -64,6 +64,13 @@ public class CreateRepoTagScanTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return digest
      */
     public String getDigest() {
@@ -75,13 +82,6 @@ public class CreateRepoTagScanTaskRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -106,9 +106,9 @@ public class CreateRepoTagScanTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepoTagScanTaskRequest, Builder> {
+        private String regionId; 
         private String digest; 
         private String instanceId; 
-        private String regionId; 
         private String repoId; 
         private String scanService; 
         private String tag; 
@@ -117,33 +117,15 @@ public class CreateRepoTagScanTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepoTagScanTaskRequest response) {
-            super(response);
-            this.digest = response.digest;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.scanService = response.scanService;
-            this.tag = response.tag;
+        private Builder(CreateRepoTagScanTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.digest = request.digest;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.scanService = request.scanService;
+            this.tag = request.tag;
         } 
-
-        /**
-         * Digest.
-         */
-        public Builder digest(String digest) {
-            this.putQueryParameter("Digest", digest);
-            this.digest = digest;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -155,7 +137,25 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The digest of the image.
+         */
+        public Builder digest(String digest) {
+            this.putQueryParameter("Digest", digest);
+            this.digest = digest;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -164,7 +164,11 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * ScanService.
+         * The type of the scanning engine.
+         * <p>
+         * 
+         * *   `SAS_SCAN_SERVICE`: Security Center scan engine (paid service)
+         * *   `ACR_SCAN_SERVICE`: Container Registry scan engine
          */
         public Builder scanService(String scanService) {
             this.putQueryParameter("ScanService", scanService);
@@ -173,7 +177,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The version of the image.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

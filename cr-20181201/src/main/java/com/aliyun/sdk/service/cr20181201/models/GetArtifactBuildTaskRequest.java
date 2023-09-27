@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetArtifactBuildTaskRequest</p>
  */
 public class GetArtifactBuildTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BuildTaskId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class GetArtifactBuildTaskRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetArtifactBuildTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.buildTaskId = builder.buildTaskId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetArtifactBuildTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return buildTaskId
      */
     public String getBuildTaskId() {
@@ -61,31 +68,33 @@ public class GetArtifactBuildTaskRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetArtifactBuildTaskRequest, Builder> {
+        private String regionId; 
         private String buildTaskId; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetArtifactBuildTaskRequest response) {
-            super(response);
-            this.buildTaskId = response.buildTaskId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(GetArtifactBuildTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.buildTaskId = request.buildTaskId;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * BuildTaskId.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the artifact building task.
          */
         public Builder buildTaskId(String buildTaskId) {
             this.putQueryParameter("BuildTaskId", buildTaskId);
@@ -94,20 +103,11 @@ public class GetArtifactBuildTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

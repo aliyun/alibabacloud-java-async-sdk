@@ -110,7 +110,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +126,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Namespaces.
+         * The namespaces.
          */
         public Builder namespaces(java.util.List < Namespaces> namespaces) {
             this.namespaces = namespaces;
@@ -134,7 +134,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -190,6 +190,9 @@ public class ListChartNamespaceResponseBody extends TeaModel {
         @NameInMap("NamespaceStatus")
         private String namespaceStatus;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         private Namespaces(Builder builder) {
             this.autoCreateRepo = builder.autoCreateRepo;
             this.defaultRepoType = builder.defaultRepoType;
@@ -197,6 +200,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
             this.namespaceStatus = builder.namespaceStatus;
+            this.resourceGroupId = builder.resourceGroupId;
         }
 
         public static Builder builder() {
@@ -249,6 +253,13 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             return this.namespaceStatus;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public static final class Builder {
             private Boolean autoCreateRepo; 
             private String defaultRepoType; 
@@ -256,9 +267,10 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             private String namespaceId; 
             private String namespaceName; 
             private String namespaceStatus; 
+            private String resourceGroupId; 
 
             /**
-             * AutoCreateRepo.
+             * Indicates whether a repository was automatically created when a chart is pushed to the namespace.
              */
             public Builder autoCreateRepo(Boolean autoCreateRepo) {
                 this.autoCreateRepo = autoCreateRepo;
@@ -266,7 +278,11 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultRepoType.
+             * The default repository type. Valid values:
+             * <p>
+             * 
+             * *   `PUBLIC`: a public repository
+             * *   `PRIVATE`: a private repository
              */
             public Builder defaultRepoType(String defaultRepoType) {
                 this.defaultRepoType = defaultRepoType;
@@ -274,7 +290,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -282,7 +298,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -290,7 +306,7 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * The name of the namespace.
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -298,10 +314,22 @@ public class ListChartNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceStatus.
+             * The status of the namespace. Valid values:
+             * <p>
+             * 
+             * *   `NORMAL`: The namespace is normal.
+             * *   `DELETING`: The namespace is being deleted.
              */
             public Builder namespaceStatus(String namespaceStatus) {
                 this.namespaceStatus = namespaceStatus;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRepoBuildRuleRequest</p>
  */
 public class DeleteRepoBuildRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BuildRuleId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class DeleteRepoBuildRuleRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoId")
     @Validation(required = true)
@@ -34,9 +34,9 @@ public class DeleteRepoBuildRuleRequest extends Request {
 
     private DeleteRepoBuildRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.buildRuleId = builder.buildRuleId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
     }
 
@@ -54,6 +54,13 @@ public class DeleteRepoBuildRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return buildRuleId
      */
     public String getBuildRuleId() {
@@ -68,13 +75,6 @@ public class DeleteRepoBuildRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoId
      */
     public String getRepoId() {
@@ -82,40 +82,22 @@ public class DeleteRepoBuildRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRepoBuildRuleRequest, Builder> {
+        private String regionId; 
         private String buildRuleId; 
         private String instanceId; 
-        private String regionId; 
         private String repoId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteRepoBuildRuleRequest response) {
-            super(response);
-            this.buildRuleId = response.buildRuleId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
+        private Builder(DeleteRepoBuildRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.buildRuleId = request.buildRuleId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
         } 
-
-        /**
-         * BuildRuleId.
-         */
-        public Builder buildRuleId(String buildRuleId) {
-            this.putQueryParameter("BuildRuleId", buildRuleId);
-            this.buildRuleId = buildRuleId;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -127,7 +109,25 @@ public class DeleteRepoBuildRuleRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image building rule.
+         */
+        public Builder buildRuleId(String buildRuleId) {
+            this.putQueryParameter("BuildRuleId", buildRuleId);
+            this.buildRuleId = buildRuleId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

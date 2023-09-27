@@ -12,9 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepoTagScanResultRequest</p>
  */
 public class ListRepoTagScanResultRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Digest")
     private String digest;
+
+    @Query
+    @NameInMap("FilterValue")
+    private String filterValue;
 
     @Query
     @NameInMap("InstanceId")
@@ -29,11 +38,6 @@ public class ListRepoTagScanResultRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoId")
     private String repoId;
@@ -43,6 +47,10 @@ public class ListRepoTagScanResultRequest extends Request {
     private String scanTaskId;
 
     @Query
+    @NameInMap("ScanType")
+    private String scanType;
+
+    @Query
     @NameInMap("Severity")
     private String severity;
 
@@ -50,17 +58,24 @@ public class ListRepoTagScanResultRequest extends Request {
     @NameInMap("Tag")
     private String tag;
 
+    @Query
+    @NameInMap("VulQueryKey")
+    private String vulQueryKey;
+
     private ListRepoTagScanResultRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.digest = builder.digest;
+        this.filterValue = builder.filterValue;
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
         this.scanTaskId = builder.scanTaskId;
+        this.scanType = builder.scanType;
         this.severity = builder.severity;
         this.tag = builder.tag;
+        this.vulQueryKey = builder.vulQueryKey;
     }
 
     public static Builder builder() {
@@ -77,10 +92,24 @@ public class ListRepoTagScanResultRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return digest
      */
     public String getDigest() {
         return this.digest;
+    }
+
+    /**
+     * @return filterValue
+     */
+    public String getFilterValue() {
+        return this.filterValue;
     }
 
     /**
@@ -105,13 +134,6 @@ public class ListRepoTagScanResultRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoId
      */
     public String getRepoId() {
@@ -123,6 +145,13 @@ public class ListRepoTagScanResultRequest extends Request {
      */
     public String getScanTaskId() {
         return this.scanTaskId;
+    }
+
+    /**
+     * @return scanType
+     */
+    public String getScanType() {
+        return this.scanType;
     }
 
     /**
@@ -139,69 +168,46 @@ public class ListRepoTagScanResultRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return vulQueryKey
+     */
+    public String getVulQueryKey() {
+        return this.vulQueryKey;
+    }
+
     public static final class Builder extends Request.Builder<ListRepoTagScanResultRequest, Builder> {
+        private String regionId; 
         private String digest; 
+        private String filterValue; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String repoId; 
         private String scanTaskId; 
+        private String scanType; 
         private String severity; 
         private String tag; 
+        private String vulQueryKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListRepoTagScanResultRequest response) {
-            super(response);
-            this.digest = response.digest;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.scanTaskId = response.scanTaskId;
-            this.severity = response.severity;
-            this.tag = response.tag;
+        private Builder(ListRepoTagScanResultRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.digest = request.digest;
+            this.filterValue = request.filterValue;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.repoId = request.repoId;
+            this.scanTaskId = request.scanTaskId;
+            this.scanType = request.scanType;
+            this.severity = request.severity;
+            this.tag = request.tag;
+            this.vulQueryKey = request.vulQueryKey;
         } 
-
-        /**
-         * Digest.
-         */
-        public Builder digest(String digest) {
-            this.putQueryParameter("Digest", digest);
-            this.digest = digest;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * PageNo.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -213,7 +219,52 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The digest of the image.
+         */
+        public Builder digest(String digest) {
+            this.putQueryParameter("Digest", digest);
+            this.digest = digest;
+            return this;
+        }
+
+        /**
+         * The parameter whose value that you want to query. Fox example, if the value is `FixCmd`, only the `FixCmd` parameter is returned.
+         */
+        public Builder filterValue(String filterValue) {
+            this.putQueryParameter("FilterValue", filterValue);
+            this.filterValue = filterValue;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -222,7 +273,7 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * ScanTaskId.
+         * The ID of the security scan task.
          */
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
@@ -231,7 +282,26 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * Severity.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   `cve`: image system vulnerability
+         * *   `sca`: image application vulnerability
+         */
+        public Builder scanType(String scanType) {
+            this.putQueryParameter("ScanType", scanType);
+            this.scanType = scanType;
+            return this;
+        }
+
+        /**
+         * The severity of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   `High`
+         * *   `Medium`
+         * *   `Low`
+         * *   `Unknown`
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -240,11 +310,20 @@ public class ListRepoTagScanResultRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The name of the image tag.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The keyword for fuzzy search used in scanning. The value can be a CVE name.
+         */
+        public Builder vulQueryKey(String vulQueryKey) {
+            this.putQueryParameter("VulQueryKey", vulQueryKey);
+            this.vulQueryKey = vulQueryKey;
             return this;
         }
 

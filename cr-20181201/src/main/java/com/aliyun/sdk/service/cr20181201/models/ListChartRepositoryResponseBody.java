@@ -110,7 +110,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -126,7 +126,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -134,7 +134,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Repositories.
+         * The queried repositories.
          */
         public Builder repositories(java.util.List < Repositories> repositories) {
             this.repositories = repositories;
@@ -150,7 +150,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -196,6 +196,9 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         @NameInMap("RepoType")
         private String repoType;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Summary")
         private String summary;
 
@@ -208,6 +211,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             this.repoNamespaceName = builder.repoNamespaceName;
             this.repoStatus = builder.repoStatus;
             this.repoType = builder.repoType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.summary = builder.summary;
         }
 
@@ -276,6 +280,13 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return summary
          */
         public String getSummary() {
@@ -291,10 +302,11 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             private String repoNamespaceName; 
             private String repoStatus; 
             private String repoType; 
+            private String resourceGroupId; 
             private String summary; 
 
             /**
-             * CreateTime.
+             * The time when the repository was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -302,7 +314,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -310,7 +322,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the repository was last modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -318,7 +330,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -326,7 +338,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -334,7 +346,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * The name of the namespace to which the repository belongs.
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -342,7 +354,11 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoStatus.
+             * The status of the repository. Valid values:
+             * <p>
+             * 
+             * *   `NORMAL`: The repository is normal.
+             * *   `DELETING`: The repository is being deleted.
              */
             public Builder repoStatus(String repoStatus) {
                 this.repoStatus = repoStatus;
@@ -350,7 +366,11 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * The type of the repository. Valid values:
+             * <p>
+             * 
+             * *   `PRIVATE`: a private repository
+             * *   `PUBLIC`: a public repository
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -358,7 +378,15 @@ public class ListChartRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * The ID of the resource group to which the repository belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The summary about the repository.
              */
             public Builder summary(String summary) {
                 this.summary = summary;

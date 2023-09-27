@@ -110,7 +110,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The images.
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -126,7 +126,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +134,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -270,7 +270,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Digest.
+             * The digest of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -278,7 +278,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCreate.
+             * The time when the image was created.
              */
             public Builder imageCreate(String imageCreate) {
                 this.imageCreate = imageCreate;
@@ -286,7 +286,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -294,7 +294,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image.
              */
             public Builder imageSize(Long imageSize) {
                 this.imageSize = imageSize;
@@ -302,7 +302,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUpdate.
+             * The time when the image was last updated.
              */
             public Builder imageUpdate(String imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -310,7 +310,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +318,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

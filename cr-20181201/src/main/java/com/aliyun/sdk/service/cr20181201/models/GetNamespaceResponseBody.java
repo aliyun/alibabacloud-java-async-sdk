@@ -39,6 +39,9 @@ public class GetNamespaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private GetNamespaceResponseBody(Builder builder) {
         this.autoCreateRepo = builder.autoCreateRepo;
         this.code = builder.code;
@@ -49,6 +52,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         this.namespaceName = builder.namespaceName;
         this.namespaceStatus = builder.namespaceStatus;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -122,6 +126,13 @@ public class GetNamespaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private Boolean autoCreateRepo; 
         private String code; 
@@ -132,9 +143,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         private String namespaceName; 
         private String namespaceStatus; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
-         * AutoCreateRepo.
+         * Indicates whether a repository is automatically created when an image is pushed to the namespace.
          */
         public Builder autoCreateRepo(Boolean autoCreateRepo) {
             this.autoCreateRepo = autoCreateRepo;
@@ -142,7 +154,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -150,7 +162,11 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultRepoType.
+         * The default type of the repository. Valid values:
+         * <p>
+         * 
+         * *   PUBLIC: The repository is a public repository.
+         * *   PRIVATE: The repository is a private repository.
          */
         public Builder defaultRepoType(String defaultRepoType) {
             this.defaultRepoType = defaultRepoType;
@@ -158,7 +174,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -166,7 +182,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -174,7 +190,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
@@ -182,7 +198,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace.
          */
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = namespaceName;
@@ -190,7 +206,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceStatus.
+         * The status of the namespace.
          */
         public Builder namespaceStatus(String namespaceStatus) {
             this.namespaceStatus = namespaceStatus;
@@ -198,10 +214,18 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

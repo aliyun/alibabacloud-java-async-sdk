@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepoTagScanStatusRequest</p>
  */
 public class GetRepoTagScanStatusRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Digest")
     private String digest;
@@ -20,11 +25,6 @@ public class GetRepoTagScanStatusRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoId")
@@ -40,9 +40,9 @@ public class GetRepoTagScanStatusRequest extends Request {
 
     private GetRepoTagScanStatusRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.digest = builder.digest;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
         this.scanTaskId = builder.scanTaskId;
         this.tag = builder.tag;
@@ -62,6 +62,13 @@ public class GetRepoTagScanStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return digest
      */
     public String getDigest() {
@@ -73,13 +80,6 @@ public class GetRepoTagScanStatusRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -104,9 +104,9 @@ public class GetRepoTagScanStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRepoTagScanStatusRequest, Builder> {
+        private String regionId; 
         private String digest; 
         private String instanceId; 
-        private String regionId; 
         private String repoId; 
         private String scanTaskId; 
         private String tag; 
@@ -115,15 +115,24 @@ public class GetRepoTagScanStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetRepoTagScanStatusRequest response) {
-            super(response);
-            this.digest = response.digest;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.scanTaskId = response.scanTaskId;
-            this.tag = response.tag;
+        private Builder(GetRepoTagScanStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.digest = request.digest;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.scanTaskId = request.scanTaskId;
+            this.tag = request.tag;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Digest.
@@ -140,15 +149,6 @@ public class GetRepoTagScanStatusRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

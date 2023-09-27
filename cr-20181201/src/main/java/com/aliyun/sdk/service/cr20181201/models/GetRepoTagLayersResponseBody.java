@@ -74,7 +74,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,11 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request is successful.
+         * *   `false`: The request fails.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +94,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         }
 
         /**
-         * Layers.
+         * The queried image layers.
          */
         public Builder layers(java.util.List < Layers> layers) {
             this.layers = layers;
@@ -98,7 +102,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +190,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
             private String layerInstruction; 
 
             /**
-             * BlobDigest.
+             * The digest of a single image layer.
              */
             public Builder blobDigest(String blobDigest) {
                 this.blobDigest = blobDigest;
@@ -194,7 +198,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
             }
 
             /**
-             * BlobSize.
+             * The size of the image layer.
              */
             public Builder blobSize(Long blobSize) {
                 this.blobSize = blobSize;
@@ -202,7 +206,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
             }
 
             /**
-             * LayerCMD.
+             * Operation on the image layer.
              */
             public Builder layerCMD(String layerCMD) {
                 this.layerCMD = layerCMD;
@@ -210,7 +214,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
             }
 
             /**
-             * LayerIndex.
+             * The sequence number of the layer stack.
              */
             public Builder layerIndex(Integer layerIndex) {
                 this.layerIndex = layerIndex;
@@ -218,7 +222,7 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
             }
 
             /**
-             * LayerInstruction.
+             * The command for the image layer.
              */
             public Builder layerInstruction(String layerInstruction) {
                 this.layerInstruction = layerInstruction;

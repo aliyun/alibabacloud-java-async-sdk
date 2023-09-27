@@ -16,6 +16,10 @@ public class DeleteEventCenterRuleResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DeleteEventCenterRuleResponseBody body;
@@ -23,6 +27,7 @@ public class DeleteEventCenterRuleResponse extends Response {
     private DeleteEventCenterRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DeleteEventCenterRuleResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DeleteEventCenterRuleResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DeleteEventCenterRuleResponse extends Response {
     public interface Builder extends Response.Builder<DeleteEventCenterRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DeleteEventCenterRuleResponseBody body);
 
@@ -64,6 +78,7 @@ public class DeleteEventCenterRuleResponse extends Response {
             extends Response.BuilderImpl<DeleteEventCenterRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DeleteEventCenterRuleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DeleteEventCenterRuleResponse extends Response {
         private BuilderImpl(DeleteEventCenterRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DeleteEventCenterRuleResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepoSyncTaskRequest</p>
  */
 public class CreateRepoSyncTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -20,11 +25,6 @@ public class CreateRepoSyncTaskRequest extends Request {
     @Query
     @NameInMap("Override")
     private Boolean override;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoId")
@@ -67,9 +67,9 @@ public class CreateRepoSyncTaskRequest extends Request {
 
     private CreateRepoSyncTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.override = builder.override;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
         this.tag = builder.tag;
         this.targetInstanceId = builder.targetInstanceId;
@@ -94,6 +94,13 @@ public class CreateRepoSyncTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -105,13 +112,6 @@ public class CreateRepoSyncTaskRequest extends Request {
      */
     public Boolean getOverride() {
         return this.override;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -171,9 +171,9 @@ public class CreateRepoSyncTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepoSyncTaskRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Boolean override; 
-        private String regionId; 
         private String repoId; 
         private String tag; 
         private String targetInstanceId; 
@@ -187,20 +187,29 @@ public class CreateRepoSyncTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepoSyncTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.override = response.override;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.tag = response.tag;
-            this.targetInstanceId = response.targetInstanceId;
-            this.targetNamespace = response.targetNamespace;
-            this.targetRegionId = response.targetRegionId;
-            this.targetRepoName = response.targetRepoName;
-            this.targetTag = response.targetTag;
-            this.targetUserId = response.targetUserId;
+        private Builder(CreateRepoSyncTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.override = request.override;
+            this.repoId = request.repoId;
+            this.tag = request.tag;
+            this.targetInstanceId = request.targetInstanceId;
+            this.targetNamespace = request.targetNamespace;
+            this.targetRegionId = request.targetRegionId;
+            this.targetRepoName = request.targetRepoName;
+            this.targetTag = request.targetTag;
+            this.targetUserId = request.targetUserId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -217,15 +226,6 @@ public class CreateRepoSyncTaskRequest extends Request {
         public Builder override(Boolean override) {
             this.putQueryParameter("Override", override);
             this.override = override;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

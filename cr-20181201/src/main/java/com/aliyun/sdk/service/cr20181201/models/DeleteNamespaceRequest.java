@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNamespaceRequest</p>
  */
 public class DeleteNamespaceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class DeleteNamespaceRequest extends Request {
     @Validation(required = true)
     private String namespaceName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private DeleteNamespaceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class DeleteNamespaceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -61,31 +68,33 @@ public class DeleteNamespaceRequest extends Request {
         return this.namespaceName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteNamespaceRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String namespaceName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteNamespaceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.regionId = response.regionId;
+        private Builder(DeleteNamespaceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,20 +103,11 @@ public class DeleteNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
             this.namespaceName = namespaceName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

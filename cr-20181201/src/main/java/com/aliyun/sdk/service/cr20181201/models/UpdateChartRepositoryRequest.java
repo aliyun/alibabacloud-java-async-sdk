@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateChartRepositoryRequest</p>
  */
 public class UpdateChartRepositoryRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoName")
@@ -42,8 +42,8 @@ public class UpdateChartRepositoryRequest extends Request {
 
     private UpdateChartRepositoryRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
         this.repoType = builder.repoType;
@@ -64,17 +64,17 @@ public class UpdateChartRepositoryRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -106,8 +106,8 @@ public class UpdateChartRepositoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateChartRepositoryRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoName; 
         private String repoNamespaceName; 
         private String repoType; 
@@ -117,24 +117,15 @@ public class UpdateChartRepositoryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateChartRepositoryRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
-            this.repoType = response.repoType;
-            this.summary = response.summary;
+        private Builder(UpdateChartRepositoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
+            this.repoType = request.repoType;
+            this.summary = request.summary;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -146,7 +137,16 @@ public class UpdateChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -155,7 +155,7 @@ public class UpdateChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace to which the repository belongs.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -164,7 +164,11 @@ public class UpdateChartRepositoryRequest extends Request {
         }
 
         /**
-         * RepoType.
+         * The type of the repository. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: a public repository.
+         * *   `PRIVATE`: a private repository.
          */
         public Builder repoType(String repoType) {
             this.putQueryParameter("RepoType", repoType);
@@ -173,7 +177,7 @@ public class UpdateChartRepositoryRequest extends Request {
         }
 
         /**
-         * Summary.
+         * The summary of the repository.
          */
         public Builder summary(String summary) {
             this.putQueryParameter("Summary", summary);

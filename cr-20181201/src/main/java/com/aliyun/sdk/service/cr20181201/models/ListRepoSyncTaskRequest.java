@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepoSyncTaskRequest</p>
  */
 public class ListRepoSyncTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -24,11 +29,6 @@ public class ListRepoSyncTaskRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoName")
@@ -48,10 +48,10 @@ public class ListRepoSyncTaskRequest extends Request {
 
     private ListRepoSyncTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.repoNamespaceName = builder.repoNamespaceName;
         this.syncRecordId = builder.syncRecordId;
@@ -69,6 +69,13 @@ public class ListRepoSyncTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,13 +97,6 @@ public class ListRepoSyncTaskRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -128,10 +128,10 @@ public class ListRepoSyncTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRepoSyncTaskRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
         private String repoName; 
         private String repoNamespaceName; 
         private String syncRecordId; 
@@ -141,17 +141,26 @@ public class ListRepoSyncTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListRepoSyncTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.repoNamespaceName = response.repoNamespaceName;
-            this.syncRecordId = response.syncRecordId;
-            this.tag = response.tag;
+        private Builder(ListRepoSyncTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
+            this.syncRecordId = request.syncRecordId;
+            this.tag = request.tag;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -177,15 +186,6 @@ public class ListRepoSyncTaskRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

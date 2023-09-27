@@ -74,7 +74,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         private java.util.List < RuleNames> ruleNames; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +90,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         }
 
         /**
-         * RuleNames.
+         * The list of names of event notification rules.
          */
         public Builder ruleNames(java.util.List < RuleNames> ruleNames) {
             this.ruleNames = ruleNames;
@@ -150,7 +150,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * RuleId.
+             * The ID of the event notification rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -158,7 +158,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the event notification rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

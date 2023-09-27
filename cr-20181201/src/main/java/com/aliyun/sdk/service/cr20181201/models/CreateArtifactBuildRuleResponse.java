@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateRepoSyncTaskByTaskIdResponse} extends {@link TeaModel}
+ * {@link CreateArtifactBuildRuleResponse} extends {@link TeaModel}
  *
- * <p>CreateRepoSyncTaskByTaskIdResponse</p>
+ * <p>CreateArtifactBuildRuleResponse</p>
  */
-public class CreateRepoSyncTaskByTaskIdResponse extends Response {
+public class CreateArtifactBuildRuleResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private CreateRepoSyncTaskByTaskIdResponseBody body;
+    private CreateArtifactBuildRuleResponseBody body;
 
-    private CreateRepoSyncTaskByTaskIdResponse(BuilderImpl builder) {
+    private CreateArtifactBuildRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateRepoSyncTaskByTaskIdResponse create() {
+    public static CreateArtifactBuildRuleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class CreateRepoSyncTaskByTaskIdResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public CreateRepoSyncTaskByTaskIdResponseBody getBody() {
+    public CreateArtifactBuildRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateRepoSyncTaskByTaskIdResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateArtifactBuildRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateRepoSyncTaskByTaskIdResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(CreateArtifactBuildRuleResponseBody body);
 
         @Override
-        CreateRepoSyncTaskByTaskIdResponse build();
+        CreateArtifactBuildRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateRepoSyncTaskByTaskIdResponse, Builder>
+            extends Response.BuilderImpl<CreateArtifactBuildRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateRepoSyncTaskByTaskIdResponseBody body; 
+        private Integer statusCode; 
+        private CreateArtifactBuildRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateRepoSyncTaskByTaskIdResponse response) {
+        private BuilderImpl(CreateArtifactBuildRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class CreateRepoSyncTaskByTaskIdResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(CreateRepoSyncTaskByTaskIdResponseBody body) {
+        public Builder body(CreateArtifactBuildRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateRepoSyncTaskByTaskIdResponse build() {
-            return new CreateRepoSyncTaskByTaskIdResponse(this);
+        public CreateArtifactBuildRuleResponse build() {
+            return new CreateArtifactBuildRuleResponse(this);
         } 
 
     } 

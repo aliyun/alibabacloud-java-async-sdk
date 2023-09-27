@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteRepoSourceCodeRepoResponse} extends {@link TeaModel}
+ * {@link GetArtifactBuildRuleResponse} extends {@link TeaModel}
  *
- * <p>DeleteRepoSourceCodeRepoResponse</p>
+ * <p>GetArtifactBuildRuleResponse</p>
  */
-public class DeleteRepoSourceCodeRepoResponse extends Response {
+public class GetArtifactBuildRuleResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteRepoSourceCodeRepoResponseBody body;
+    private GetArtifactBuildRuleResponseBody body;
 
-    private DeleteRepoSourceCodeRepoResponse(BuilderImpl builder) {
+    private GetArtifactBuildRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteRepoSourceCodeRepoResponse create() {
+    public static GetArtifactBuildRuleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class DeleteRepoSourceCodeRepoResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DeleteRepoSourceCodeRepoResponseBody getBody() {
+    public GetArtifactBuildRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteRepoSourceCodeRepoResponse, Builder> {
+    public interface Builder extends Response.Builder<GetArtifactBuildRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DeleteRepoSourceCodeRepoResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(GetArtifactBuildRuleResponseBody body);
 
         @Override
-        DeleteRepoSourceCodeRepoResponse build();
+        GetArtifactBuildRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteRepoSourceCodeRepoResponse, Builder>
+            extends Response.BuilderImpl<GetArtifactBuildRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteRepoSourceCodeRepoResponseBody body; 
+        private Integer statusCode; 
+        private GetArtifactBuildRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteRepoSourceCodeRepoResponse response) {
+        private BuilderImpl(GetArtifactBuildRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class DeleteRepoSourceCodeRepoResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DeleteRepoSourceCodeRepoResponseBody body) {
+        public Builder body(GetArtifactBuildRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteRepoSourceCodeRepoResponse build() {
-            return new DeleteRepoSourceCodeRepoResponse(this);
+        public GetArtifactBuildRuleResponse build() {
+            return new GetArtifactBuildRuleResponse(this);
         } 
 
     } 

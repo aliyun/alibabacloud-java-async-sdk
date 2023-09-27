@@ -199,6 +199,9 @@ public class ListRepositoryResponseBody extends TeaModel {
         @NameInMap("RepoType")
         private String repoType;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Summary")
         private String summary;
 
@@ -215,6 +218,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             this.repoNamespaceName = builder.repoNamespaceName;
             this.repoStatus = builder.repoStatus;
             this.repoType = builder.repoType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.summary = builder.summary;
             this.tagImmutability = builder.tagImmutability;
         }
@@ -291,6 +295,13 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return summary
          */
         public String getSummary() {
@@ -314,6 +325,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             private String repoNamespaceName; 
             private String repoStatus; 
             private String repoType; 
+            private String resourceGroupId; 
             private String summary; 
             private Boolean tagImmutability; 
 
@@ -386,6 +398,14 @@ public class ListRepositoryResponseBody extends TeaModel {
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

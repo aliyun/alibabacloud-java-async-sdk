@@ -74,7 +74,7 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BuildRecordId.
+         * The ID of the image building record.
          */
         public Builder buildRecordId(String buildRecordId) {
             this.buildRecordId = buildRecordId;
@@ -82,7 +82,7 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +98,7 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

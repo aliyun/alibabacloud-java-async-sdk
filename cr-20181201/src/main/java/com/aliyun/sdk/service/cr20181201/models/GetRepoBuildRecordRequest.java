@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepoBuildRecordRequest</p>
  */
 public class GetRepoBuildRecordRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BuildRecordId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class GetRepoBuildRecordRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private GetRepoBuildRecordRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.buildRecordId = builder.buildRecordId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class GetRepoBuildRecordRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return buildRecordId
      */
     public String getBuildRecordId() {
@@ -61,31 +68,33 @@ public class GetRepoBuildRecordRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetRepoBuildRecordRequest, Builder> {
+        private String regionId; 
         private String buildRecordId; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetRepoBuildRecordRequest response) {
-            super(response);
-            this.buildRecordId = response.buildRecordId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(GetRepoBuildRecordRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.buildRecordId = request.buildRecordId;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * BuildRecordId.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the image building record.
          */
         public Builder buildRecordId(String buildRecordId) {
             this.putQueryParameter("BuildRecordId", buildRecordId);
@@ -94,20 +103,11 @@ public class GetRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

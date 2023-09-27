@@ -110,7 +110,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * BuildRecordLogs.
+         * The log content of the image building record.
          */
         public Builder buildRecordLogs(java.util.List < BuildRecordLogs> buildRecordLogs) {
             this.buildRecordLogs = buildRecordLogs;
@@ -118,7 +118,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +134,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number of the returned page.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +222,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * BuildStage.
+             * The stage of the building that is recorded in the log entry.
              */
             public Builder buildStage(String buildStage) {
                 this.buildStage = buildStage;
@@ -230,7 +230,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
             }
 
             /**
-             * LineNumber.
+             * The line number of the log entry.
              */
             public Builder lineNumber(Integer lineNumber) {
                 this.lineNumber = lineNumber;
@@ -238,7 +238,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The content of the log.
              */
             public Builder message(String message) {
                 this.message = message;

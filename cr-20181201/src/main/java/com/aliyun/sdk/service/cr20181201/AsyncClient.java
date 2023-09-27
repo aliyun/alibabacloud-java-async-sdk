@@ -22,6 +22,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelRepoBuildRecordResponse> cancelRepoBuildRecord(CancelRepoBuildRecordRequest request);
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
+      * The ID of the rule.
+      *
+     */
+    CompletableFuture<CreateArtifactBuildRuleResponse> createArtifactBuildRule(CreateArtifactBuildRuleRequest request);
+
+    CompletableFuture<CreateBuildRecordByRecordResponse> createBuildRecordByRecord(CreateBuildRecordByRecordRequest request);
+
     CompletableFuture<CreateBuildRecordByRuleResponse> createBuildRecordByRule(CreateBuildRecordByRuleRequest request);
 
     CompletableFuture<CreateChainResponse> createChain(CreateChainRequest request);
@@ -30,10 +40,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateChartRepositoryResponse> createChartRepository(CreateChartRepositoryRequest request);
 
-    CompletableFuture<CreateEnterpriseInstanceResponse> createEnterpriseInstance(CreateEnterpriseInstanceRequest request);
-
     CompletableFuture<CreateInstanceEndpointAclPolicyResponse> createInstanceEndpointAclPolicy(CreateInstanceEndpointAclPolicyRequest request);
 
+    /**
+      * The ID of the request.
+      *
+     */
     CompletableFuture<CreateInstanceVpcEndpointLinkedVpcResponse> createInstanceVpcEndpointLinkedVpc(CreateInstanceVpcEndpointLinkedVpcRequest request);
 
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
@@ -48,8 +60,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateRepoSyncTaskByRuleResponse> createRepoSyncTaskByRule(CreateRepoSyncTaskByRuleRequest request);
 
-    CompletableFuture<CreateRepoSyncTaskByTaskIdResponse> createRepoSyncTaskByTaskId(CreateRepoSyncTaskByTaskIdRequest request);
-
     CompletableFuture<CreateRepoTagResponse> createRepoTag(CreateRepoTagRequest request);
 
     CompletableFuture<CreateRepoTagScanTaskResponse> createRepoTagScanTask(CreateRepoTagScanTaskRequest request);
@@ -60,6 +70,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteChainResponse> deleteChain(DeleteChainRequest request);
 
+    /**
+      * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
+      *
+     */
     CompletableFuture<DeleteChartNamespaceResponse> deleteChartNamespace(DeleteChartNamespaceRequest request);
 
     CompletableFuture<DeleteChartReleaseResponse> deleteChartRelease(DeleteChartReleaseRequest request);
@@ -72,11 +86,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteInstanceVpcEndpointLinkedVpcResponse> deleteInstanceVpcEndpointLinkedVpc(DeleteInstanceVpcEndpointLinkedVpcRequest request);
 
+    /**
+      * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
+      *
+     */
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
 
     CompletableFuture<DeleteRepoBuildRuleResponse> deleteRepoBuildRule(DeleteRepoBuildRuleRequest request);
-
-    CompletableFuture<DeleteRepoSourceCodeRepoResponse> deleteRepoSourceCodeRepo(DeleteRepoSourceCodeRepoRequest request);
 
     CompletableFuture<DeleteRepoSyncRuleResponse> deleteRepoSyncRule(DeleteRepoSyncRuleRequest request);
 
@@ -84,19 +100,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRepoTriggerResponse> deleteRepoTrigger(DeleteRepoTriggerRequest request);
 
+    /**
+      * If you delete a repository, all images in the repository are also deleted.
+      *
+     */
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
+
+    CompletableFuture<GetArtifactBuildRuleResponse> getArtifactBuildRule(GetArtifactBuildRuleRequest request);
 
     CompletableFuture<GetArtifactBuildTaskResponse> getArtifactBuildTask(GetArtifactBuildTaskRequest request);
 
+    /**
+      * The ID of the Container Registry instance.
+      *
+     */
     CompletableFuture<GetAuthorizationTokenResponse> getAuthorizationToken(GetAuthorizationTokenRequest request);
 
     CompletableFuture<GetChainResponse> getChain(GetChainRequest request);
 
     CompletableFuture<GetChartNamespaceResponse> getChartNamespace(GetChartNamespaceRequest request);
-
-    CompletableFuture<GetChartReleaseContentResponse> getChartReleaseContent(GetChartReleaseContentRequest request);
-
-    CompletableFuture<GetChartReleaseDownloadUrlResponse> getChartReleaseDownloadUrl(GetChartReleaseDownloadUrlRequest request);
 
     CompletableFuture<GetChartRepositoryResponse> getChartRepository(GetChartRepositoryRequest request);
 
@@ -112,6 +134,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetNamespaceResponse> getNamespace(GetNamespaceRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<GetRepoBuildRecordResponse> getRepoBuildRecord(GetRepoBuildRecordRequest request);
 
     CompletableFuture<GetRepoBuildRecordStatusResponse> getRepoBuildRecordStatus(GetRepoBuildRecordStatusRequest request);
@@ -175,8 +201,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRepositoryResponse> listRepository(ListRepositoryRequest request);
 
     CompletableFuture<ResetLoginPasswordResponse> resetLoginPassword(ResetLoginPasswordRequest request);
-
-    CompletableFuture<RetrySyncTaskResponse> retrySyncTask(RetrySyncTaskRequest request);
 
     CompletableFuture<UpdateChainResponse> updateChain(UpdateChainRequest request);
 

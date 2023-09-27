@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceVpcEndpointLinkedVpcRequest</p>
  */
 public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("EnableCreateDNSRecordInPvzt")
     private Boolean enableCreateDNSRecordInPvzt;
@@ -25,11 +30,6 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
     @NameInMap("ModuleName")
     private String moduleName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("VpcId")
     @Validation(required = true)
@@ -42,10 +42,10 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
 
     private CreateInstanceVpcEndpointLinkedVpcRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.enableCreateDNSRecordInPvzt = builder.enableCreateDNSRecordInPvzt;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
-        this.regionId = builder.regionId;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
     }
@@ -61,6 +61,13 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,13 +92,6 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -106,10 +106,10 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceVpcEndpointLinkedVpcRequest, Builder> {
+        private String regionId; 
         private Boolean enableCreateDNSRecordInPvzt; 
         private String instanceId; 
         private String moduleName; 
-        private String regionId; 
         private String vpcId; 
         private String vswitchId; 
 
@@ -117,15 +117,24 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceVpcEndpointLinkedVpcRequest response) {
-            super(response);
-            this.enableCreateDNSRecordInPvzt = response.enableCreateDNSRecordInPvzt;
-            this.instanceId = response.instanceId;
-            this.moduleName = response.moduleName;
-            this.regionId = response.regionId;
-            this.vpcId = response.vpcId;
-            this.vswitchId = response.vswitchId;
+        private Builder(CreateInstanceVpcEndpointLinkedVpcRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.enableCreateDNSRecordInPvzt = request.enableCreateDNSRecordInPvzt;
+            this.instanceId = request.instanceId;
+            this.moduleName = request.moduleName;
+            this.vpcId = request.vpcId;
+            this.vswitchId = request.vswitchId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EnableCreateDNSRecordInPvzt.
@@ -151,15 +160,6 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
             this.moduleName = moduleName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

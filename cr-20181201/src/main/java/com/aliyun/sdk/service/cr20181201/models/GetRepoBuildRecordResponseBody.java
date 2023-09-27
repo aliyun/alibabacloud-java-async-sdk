@@ -122,7 +122,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * BuildRecordId.
+         * The ID of the image building record.
          */
         public Builder buildRecordId(String buildRecordId) {
             this.buildRecordId = buildRecordId;
@@ -130,7 +130,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the image building was completed.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -146,7 +146,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Image.
+         * The information about the image.
          */
         public Builder image(Image image) {
             this.image = image;
@@ -154,7 +154,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -162,7 +162,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The time when the image building started.
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -178,7 +178,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -242,7 +242,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
             private String repoNamespaceName; 
 
             /**
-             * ImageTag.
+             * The tag of the image.
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -250,7 +250,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -258,7 +258,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * The name of the namespace to which the image repository belongs.
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;

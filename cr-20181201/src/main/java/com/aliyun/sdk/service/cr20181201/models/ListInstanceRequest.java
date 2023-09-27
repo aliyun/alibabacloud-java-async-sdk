@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceName")
     private String instanceName;
@@ -28,18 +33,18 @@ public class ListInstanceRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     private ListInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceName = builder.instanceName;
         this.instanceStatus = builder.instanceStatus;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -53,6 +58,13 @@ public class ListInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,31 +96,42 @@ public class ListInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return resourceGroupId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static final class Builder extends Request.Builder<ListInstanceRequest, Builder> {
+        private String regionId; 
         private String instanceName; 
         private String instanceStatus; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListInstanceRequest response) {
-            super(response);
-            this.instanceName = response.instanceName;
-            this.instanceStatus = response.instanceStatus;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceName = request.instanceName;
+            this.instanceStatus = request.instanceStatus;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceName.
@@ -147,11 +170,11 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * ResourceGroupId.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

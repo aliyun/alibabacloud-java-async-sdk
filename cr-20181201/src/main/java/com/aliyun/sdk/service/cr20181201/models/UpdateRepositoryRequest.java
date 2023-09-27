@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRepositoryRequest</p>
  */
 public class UpdateRepositoryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("Detail")
     private String detail;
@@ -21,15 +26,17 @@ public class UpdateRepositoryRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoId")
-    @Validation(required = true)
     private String repoId;
+
+    @Query
+    @NameInMap("RepoName")
+    private String repoName;
+
+    @Query
+    @NameInMap("RepoNamespaceName")
+    private String repoNamespaceName;
 
     @Query
     @NameInMap("RepoType")
@@ -47,10 +54,12 @@ public class UpdateRepositoryRequest extends Request {
 
     private UpdateRepositoryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.detail = builder.detail;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
+        this.repoName = builder.repoName;
+        this.repoNamespaceName = builder.repoNamespaceName;
         this.repoType = builder.repoType;
         this.summary = builder.summary;
         this.tagImmutability = builder.tagImmutability;
@@ -70,6 +79,13 @@ public class UpdateRepositoryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return detail
      */
     public String getDetail() {
@@ -84,17 +100,24 @@ public class UpdateRepositoryRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoId
      */
     public String getRepoId() {
         return this.repoId;
+    }
+
+    /**
+     * @return repoName
+     */
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    /**
+     * @return repoNamespaceName
+     */
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
     /**
@@ -119,10 +142,12 @@ public class UpdateRepositoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRepositoryRequest, Builder> {
+        private String regionId; 
         private String detail; 
         private String instanceId; 
-        private String regionId; 
         private String repoId; 
+        private String repoName; 
+        private String repoNamespaceName; 
         private String repoType; 
         private String summary; 
         private Boolean tagImmutability; 
@@ -131,16 +156,27 @@ public class UpdateRepositoryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRepositoryRequest response) {
-            super(response);
-            this.detail = response.detail;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.repoType = response.repoType;
-            this.summary = response.summary;
-            this.tagImmutability = response.tagImmutability;
+        private Builder(UpdateRepositoryRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.detail = request.detail;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
+            this.repoType = request.repoType;
+            this.summary = request.summary;
+            this.tagImmutability = request.tagImmutability;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Detail.
@@ -161,20 +197,29 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * RepoId.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
             this.repoId = repoId;
+            return this;
+        }
+
+        /**
+         * RepoName.
+         */
+        public Builder repoName(String repoName) {
+            this.putQueryParameter("RepoName", repoName);
+            this.repoName = repoName;
+            return this;
+        }
+
+        /**
+         * RepoNamespaceName.
+         */
+        public Builder repoNamespaceName(String repoNamespaceName) {
+            this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
+            this.repoNamespaceName = repoNamespaceName;
             return this;
         }
 

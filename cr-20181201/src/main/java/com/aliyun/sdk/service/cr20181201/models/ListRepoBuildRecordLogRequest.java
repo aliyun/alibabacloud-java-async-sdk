@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepoBuildRecordLogRequest</p>
  */
 public class ListRepoBuildRecordLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BuildRecordId")
     @Validation(required = true)
@@ -26,21 +31,16 @@ public class ListRepoBuildRecordLogRequest extends Request {
     @NameInMap("Offset")
     private Integer offset;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoId")
     private String repoId;
 
     private ListRepoBuildRecordLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.buildRecordId = builder.buildRecordId;
         this.instanceId = builder.instanceId;
         this.offset = builder.offset;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
     }
 
@@ -55,6 +55,13 @@ public class ListRepoBuildRecordLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class ListRepoBuildRecordLogRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoId
      */
     public String getRepoId() {
@@ -93,51 +93,24 @@ public class ListRepoBuildRecordLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRepoBuildRecordLogRequest, Builder> {
+        private String regionId; 
         private String buildRecordId; 
         private String instanceId; 
         private Integer offset; 
-        private String regionId; 
         private String repoId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListRepoBuildRecordLogRequest response) {
-            super(response);
-            this.buildRecordId = response.buildRecordId;
-            this.instanceId = response.instanceId;
-            this.offset = response.offset;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
+        private Builder(ListRepoBuildRecordLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.buildRecordId = request.buildRecordId;
+            this.instanceId = request.instanceId;
+            this.offset = request.offset;
+            this.repoId = request.repoId;
         } 
-
-        /**
-         * BuildRecordId.
-         */
-        public Builder buildRecordId(String buildRecordId) {
-            this.putQueryParameter("BuildRecordId", buildRecordId);
-            this.buildRecordId = buildRecordId;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Offset.
-         */
-        public Builder offset(Integer offset) {
-            this.putQueryParameter("Offset", offset);
-            this.offset = offset;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -149,7 +122,34 @@ public class ListRepoBuildRecordLogRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image building record.
+         */
+        public Builder buildRecordId(String buildRecordId) {
+            this.putQueryParameter("BuildRecordId", buildRecordId);
+            this.buildRecordId = buildRecordId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The offset of log lines.
+         */
+        public Builder offset(Integer offset) {
+            this.putQueryParameter("Offset", offset);
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

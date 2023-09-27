@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepoTagRequest</p>
  */
 public class GetRepoTagRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoId")
@@ -34,8 +34,8 @@ public class GetRepoTagRequest extends Request {
 
     private GetRepoTagRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.tag = builder.tag;
     }
@@ -54,17 +54,17 @@ public class GetRepoTagRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -82,8 +82,8 @@ public class GetRepoTagRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRepoTagRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
         private String tag; 
 
@@ -91,22 +91,13 @@ public class GetRepoTagRequest extends Request {
             super();
         } 
 
-        private Builder(GetRepoTagRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.tag = response.tag;
+        private Builder(GetRepoTagRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.tag = request.tag;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -118,7 +109,16 @@ public class GetRepoTagRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The return value of status code.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The operation that you want to perform. Set the value to **GetRepoTag**.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -127,7 +127,7 @@ public class GetRepoTagRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The number of milliseconds that have elapsed since the image was created.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

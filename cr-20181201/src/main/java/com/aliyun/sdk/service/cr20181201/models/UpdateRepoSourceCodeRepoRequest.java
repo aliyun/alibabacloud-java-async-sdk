@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRepoSourceCodeRepoRequest</p>
  */
 public class UpdateRepoSourceCodeRepoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("AutoBuild")
     private String autoBuild;
@@ -48,11 +53,6 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
     @NameInMap("OverseaBuild")
     private String overseaBuild;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoId")
     @Validation(required = true)
@@ -60,6 +60,7 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
 
     private UpdateRepoSourceCodeRepoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoBuild = builder.autoBuild;
         this.codeRepoId = builder.codeRepoId;
         this.codeRepoName = builder.codeRepoName;
@@ -68,7 +69,6 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
         this.disableCacheBuild = builder.disableCacheBuild;
         this.instanceId = builder.instanceId;
         this.overseaBuild = builder.overseaBuild;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
     }
 
@@ -83,6 +83,13 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -142,13 +149,6 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoId
      */
     public String getRepoId() {
@@ -156,6 +156,7 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRepoSourceCodeRepoRequest, Builder> {
+        private String regionId; 
         private String autoBuild; 
         private String codeRepoId; 
         private String codeRepoName; 
@@ -164,98 +165,25 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
         private String disableCacheBuild; 
         private String instanceId; 
         private String overseaBuild; 
-        private String regionId; 
         private String repoId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateRepoSourceCodeRepoRequest response) {
-            super(response);
-            this.autoBuild = response.autoBuild;
-            this.codeRepoId = response.codeRepoId;
-            this.codeRepoName = response.codeRepoName;
-            this.codeRepoNamespaceName = response.codeRepoNamespaceName;
-            this.codeRepoType = response.codeRepoType;
-            this.disableCacheBuild = response.disableCacheBuild;
-            this.instanceId = response.instanceId;
-            this.overseaBuild = response.overseaBuild;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
+        private Builder(UpdateRepoSourceCodeRepoRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoBuild = request.autoBuild;
+            this.codeRepoId = request.codeRepoId;
+            this.codeRepoName = request.codeRepoName;
+            this.codeRepoNamespaceName = request.codeRepoNamespaceName;
+            this.codeRepoType = request.codeRepoType;
+            this.disableCacheBuild = request.disableCacheBuild;
+            this.instanceId = request.instanceId;
+            this.overseaBuild = request.overseaBuild;
+            this.repoId = request.repoId;
         } 
-
-        /**
-         * AutoBuild.
-         */
-        public Builder autoBuild(String autoBuild) {
-            this.putQueryParameter("AutoBuild", autoBuild);
-            this.autoBuild = autoBuild;
-            return this;
-        }
-
-        /**
-         * CodeRepoId.
-         */
-        public Builder codeRepoId(String codeRepoId) {
-            this.putQueryParameter("CodeRepoId", codeRepoId);
-            this.codeRepoId = codeRepoId;
-            return this;
-        }
-
-        /**
-         * CodeRepoName.
-         */
-        public Builder codeRepoName(String codeRepoName) {
-            this.putQueryParameter("CodeRepoName", codeRepoName);
-            this.codeRepoName = codeRepoName;
-            return this;
-        }
-
-        /**
-         * CodeRepoNamespaceName.
-         */
-        public Builder codeRepoNamespaceName(String codeRepoNamespaceName) {
-            this.putQueryParameter("CodeRepoNamespaceName", codeRepoNamespaceName);
-            this.codeRepoNamespaceName = codeRepoNamespaceName;
-            return this;
-        }
-
-        /**
-         * CodeRepoType.
-         */
-        public Builder codeRepoType(String codeRepoType) {
-            this.putQueryParameter("CodeRepoType", codeRepoType);
-            this.codeRepoType = codeRepoType;
-            return this;
-        }
-
-        /**
-         * DisableCacheBuild.
-         */
-        public Builder disableCacheBuild(String disableCacheBuild) {
-            this.putQueryParameter("DisableCacheBuild", disableCacheBuild);
-            this.disableCacheBuild = disableCacheBuild;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * OverseaBuild.
-         */
-        public Builder overseaBuild(String overseaBuild) {
-            this.putQueryParameter("OverseaBuild", overseaBuild);
-            this.overseaBuild = overseaBuild;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -267,7 +195,91 @@ public class UpdateRepoSourceCodeRepoRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * Specifies whether to enable automatic image building when code is committed. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables automatic image building when code is committed.
+         * *   `false`: disables automatic image building when code is committed.
+         */
+        public Builder autoBuild(String autoBuild) {
+            this.putQueryParameter("AutoBuild", autoBuild);
+            this.autoBuild = autoBuild;
+            return this;
+        }
+
+        /**
+         * The ID of the source code repository.
+         */
+        public Builder codeRepoId(String codeRepoId) {
+            this.putQueryParameter("CodeRepoId", codeRepoId);
+            this.codeRepoId = codeRepoId;
+            return this;
+        }
+
+        /**
+         * The name of the source code repository.
+         */
+        public Builder codeRepoName(String codeRepoName) {
+            this.putQueryParameter("CodeRepoName", codeRepoName);
+            this.codeRepoName = codeRepoName;
+            return this;
+        }
+
+        /**
+         * The namespace to which the source code repository belongs.
+         */
+        public Builder codeRepoNamespaceName(String codeRepoNamespaceName) {
+            this.putQueryParameter("CodeRepoNamespaceName", codeRepoNamespaceName);
+            this.codeRepoNamespaceName = codeRepoNamespaceName;
+            return this;
+        }
+
+        /**
+         * The type of the source code hosting platform. Valid values: GITHUB, GITLAB, GITEE, CODE, and CODEUP.
+         */
+        public Builder codeRepoType(String codeRepoType) {
+            this.putQueryParameter("CodeRepoType", codeRepoType);
+            this.codeRepoType = codeRepoType;
+            return this;
+        }
+
+        /**
+         * Specifies whether to disable building caches. Valid values:
+         * <p>
+         * 
+         * *   `true`: disables building caches.
+         * *   `false`: enables building caches.
+         */
+        public Builder disableCacheBuild(String disableCacheBuild) {
+            this.putQueryParameter("DisableCacheBuild", disableCacheBuild);
+            this.disableCacheBuild = disableCacheBuild;
+            return this;
+        }
+
+        /**
+         * The ID of the Container Registry Enterprise Edition instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable Build With Servers Deployed Outside Chinese Mainland. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables Build With Servers Deployed Outside Chinese Mainland.
+         * *   `false`: disables Build With Servers Deployed Outside Chinese Mainland.
+         */
+        public Builder overseaBuild(String overseaBuild) {
+            this.putQueryParameter("OverseaBuild", overseaBuild);
+            this.overseaBuild = overseaBuild;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

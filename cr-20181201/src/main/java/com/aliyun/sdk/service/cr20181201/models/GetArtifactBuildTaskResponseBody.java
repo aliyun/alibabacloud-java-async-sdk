@@ -158,7 +158,11 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         private String taskStatus; 
 
         /**
-         * ArtifactBuildType.
+         * The type of the artifact building task. Valid values:
+         * <p>
+         * 
+         * *   `IMAGE_TO_ACCELERATED_IMAGE`: builds accelerated images for Container Service for Kubernetes (ACK) clusters.
+         * *   `IMAGE_TO_ECI_ACCELERATED_IMAGE`: builds accelerated images for elastic container instances.
          */
         public Builder artifactBuildType(String artifactBuildType) {
             this.artifactBuildType = artifactBuildType;
@@ -166,7 +170,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * BuildTaskId.
+         * The ID of the artifact building task.
          */
         public Builder buildTaskId(String buildTaskId) {
             this.buildTaskId = buildTaskId;
@@ -174,7 +178,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -182,7 +186,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the artifact building task ends.
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -198,7 +202,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -206,7 +210,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +218,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SourceArtifact.
+         * The information about the source artifact.
          */
         public Builder sourceArtifact(SourceArtifact sourceArtifact) {
             this.sourceArtifact = sourceArtifact;
@@ -222,7 +226,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The time when the artifact building task starts.
          */
         public Builder startTime(Integer startTime) {
             this.startTime = startTime;
@@ -230,7 +234,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TargetArtifact.
+         * The artifact that is built in the task.
          */
         public Builder targetArtifact(TargetArtifact targetArtifact) {
             this.targetArtifact = targetArtifact;
@@ -238,7 +242,13 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * The status of the artifact that is built in the task. Valid values:
+         * <p>
+         * 
+         * *   `PENDING`: The artifact is being scheduled.
+         * *   `BUILDING`: The artifact is being built.
+         * *   `SUCCESS`: The artifact is built.
+         * *   `FAILED`: The artifact fails to be built.
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -302,7 +312,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * ArtifactType.
+             * The type of the artifact that is built in the task. The value can only be IMAGE.
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -310,7 +320,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the repository to which the source artifact belongs. The repository can only be an image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -318,7 +328,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the artifact. The artifact can only be an image.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -383,7 +393,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * ArtifactType.
+             * The type of the artifact that is built in the task. The value can only be IMAGE.
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -391,7 +401,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -399,7 +409,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the artifact that is built in the task. The artifact can only be an image.
              */
             public Builder version(String version) {
                 this.version = version;

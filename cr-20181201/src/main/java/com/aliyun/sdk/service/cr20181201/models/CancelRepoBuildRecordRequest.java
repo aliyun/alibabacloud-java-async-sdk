@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelRepoBuildRecordRequest</p>
  */
 public class CancelRepoBuildRecordRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("BuildRecordId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class CancelRepoBuildRecordRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("RepoId")
     @Validation(required = true)
@@ -34,9 +34,9 @@ public class CancelRepoBuildRecordRequest extends Request {
 
     private CancelRepoBuildRecordRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.buildRecordId = builder.buildRecordId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.repoId = builder.repoId;
     }
 
@@ -54,6 +54,13 @@ public class CancelRepoBuildRecordRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return buildRecordId
      */
     public String getBuildRecordId() {
@@ -68,13 +75,6 @@ public class CancelRepoBuildRecordRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return repoId
      */
     public String getRepoId() {
@@ -82,40 +82,22 @@ public class CancelRepoBuildRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelRepoBuildRecordRequest, Builder> {
+        private String regionId; 
         private String buildRecordId; 
         private String instanceId; 
-        private String regionId; 
         private String repoId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CancelRepoBuildRecordRequest response) {
-            super(response);
-            this.buildRecordId = response.buildRecordId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
+        private Builder(CancelRepoBuildRecordRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.buildRecordId = request.buildRecordId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
         } 
-
-        /**
-         * BuildRecordId.
-         */
-        public Builder buildRecordId(String buildRecordId) {
-            this.putQueryParameter("BuildRecordId", buildRecordId);
-            this.buildRecordId = buildRecordId;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -127,7 +109,25 @@ public class CancelRepoBuildRecordRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image building record.
+         */
+        public Builder buildRecordId(String buildRecordId) {
+            this.putQueryParameter("BuildRecordId", buildRecordId);
+            this.buildRecordId = buildRecordId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

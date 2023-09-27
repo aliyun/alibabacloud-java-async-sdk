@@ -51,6 +51,9 @@ public class GetRepositoryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Summary")
     private String summary;
 
@@ -71,6 +74,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         this.repoStatus = builder.repoStatus;
         this.repoType = builder.repoType;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.summary = builder.summary;
         this.tagImmutability = builder.tagImmutability;
     }
@@ -175,6 +179,13 @@ public class GetRepositoryResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return summary
      */
     public String getSummary() {
@@ -202,11 +213,12 @@ public class GetRepositoryResponseBody extends TeaModel {
         private String repoStatus; 
         private String repoType; 
         private String requestId; 
+        private String resourceGroupId; 
         private String summary; 
         private Boolean tagImmutability; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -214,7 +226,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the repository was created.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -222,7 +234,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * The details of the repository.
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -230,7 +242,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -238,7 +250,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -246,7 +258,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * The time when the repository was last modified.
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -254,7 +266,11 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoBuildType.
+         * Indicates how the repository was created. Valid values:
+         * <p>
+         * 
+         * *   `MANUAL`: The repository was manually created.
+         * *   `AUTO`: The repository was automatically created.
          */
         public Builder repoBuildType(String repoBuildType) {
             this.repoBuildType = repoBuildType;
@@ -262,7 +278,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoId.
+         * The ID of the repository.
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -270,7 +286,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoName.
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.repoName = repoName;
@@ -278,7 +294,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.repoNamespaceName = repoNamespaceName;
@@ -286,7 +302,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoStatus.
+         * The status of the repository.
          */
         public Builder repoStatus(String repoStatus) {
             this.repoStatus = repoStatus;
@@ -294,7 +310,11 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoType.
+         * The type of the repository. Valid values:
+         * <p>
+         * 
+         * *   `PUBLIC`: public repository.
+         * *   `PRIVATE`: private repository.
          */
         public Builder repoType(String repoType) {
             this.repoType = repoType;
@@ -302,7 +322,7 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +330,15 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Summary.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The summary of the repository.
          */
         public Builder summary(String summary) {
             this.summary = summary;
@@ -318,7 +346,11 @@ public class GetRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * TagImmutability.
+         * Indicates whether the feature of image tag immutability is enabled. Valid values:
+         * <p>
+         * 
+         * *   `true`: The feature of image tag immutability is enabled.
+         * *   `false`: The feature of image tag immutability is disabled.
          */
         public Builder tagImmutability(Boolean tagImmutability) {
             this.tagImmutability = tagImmutability;

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepoSyncRuleRequest</p>
  */
 public class CreateRepoSyncRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -21,11 +26,6 @@ public class CreateRepoSyncRuleRequest extends Request {
     @NameInMap("NamespaceName")
     @Validation(required = true)
     private String namespaceName;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("RepoName")
@@ -75,9 +75,9 @@ public class CreateRepoSyncRuleRequest extends Request {
 
     private CreateRepoSyncRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
-        this.regionId = builder.regionId;
         this.repoName = builder.repoName;
         this.syncRuleName = builder.syncRuleName;
         this.syncScope = builder.syncScope;
@@ -104,6 +104,13 @@ public class CreateRepoSyncRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -115,13 +122,6 @@ public class CreateRepoSyncRuleRequest extends Request {
      */
     public String getNamespaceName() {
         return this.namespaceName;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -195,9 +195,9 @@ public class CreateRepoSyncRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepoSyncRuleRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String namespaceName; 
-        private String regionId; 
         private String repoName; 
         private String syncRuleName; 
         private String syncScope; 
@@ -213,22 +213,31 @@ public class CreateRepoSyncRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRepoSyncRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.namespaceName = response.namespaceName;
-            this.regionId = response.regionId;
-            this.repoName = response.repoName;
-            this.syncRuleName = response.syncRuleName;
-            this.syncScope = response.syncScope;
-            this.syncTrigger = response.syncTrigger;
-            this.tagFilter = response.tagFilter;
-            this.targetInstanceId = response.targetInstanceId;
-            this.targetNamespaceName = response.targetNamespaceName;
-            this.targetRegionId = response.targetRegionId;
-            this.targetRepoName = response.targetRepoName;
-            this.targetUserId = response.targetUserId;
+        private Builder(CreateRepoSyncRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.namespaceName = request.namespaceName;
+            this.repoName = request.repoName;
+            this.syncRuleName = request.syncRuleName;
+            this.syncScope = request.syncScope;
+            this.syncTrigger = request.syncTrigger;
+            this.tagFilter = request.tagFilter;
+            this.targetInstanceId = request.targetInstanceId;
+            this.targetNamespaceName = request.targetNamespaceName;
+            this.targetRegionId = request.targetRegionId;
+            this.targetRepoName = request.targetRepoName;
+            this.targetUserId = request.targetUserId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -245,15 +254,6 @@ public class CreateRepoSyncRuleRequest extends Request {
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
             this.namespaceName = namespaceName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

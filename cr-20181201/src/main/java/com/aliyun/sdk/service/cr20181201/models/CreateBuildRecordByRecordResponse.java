@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RetrySyncTaskResponse} extends {@link TeaModel}
+ * {@link CreateBuildRecordByRecordResponse} extends {@link TeaModel}
  *
- * <p>RetrySyncTaskResponse</p>
+ * <p>CreateBuildRecordByRecordResponse</p>
  */
-public class RetrySyncTaskResponse extends Response {
+public class CreateBuildRecordByRecordResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private RetrySyncTaskResponseBody body;
+    private CreateBuildRecordByRecordResponseBody body;
 
-    private RetrySyncTaskResponse(BuilderImpl builder) {
+    private CreateBuildRecordByRecordResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RetrySyncTaskResponse create() {
+    public static CreateBuildRecordByRecordResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class RetrySyncTaskResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public RetrySyncTaskResponseBody getBody() {
+    public CreateBuildRecordByRecordResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RetrySyncTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateBuildRecordByRecordResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RetrySyncTaskResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(CreateBuildRecordByRecordResponseBody body);
 
         @Override
-        RetrySyncTaskResponse build();
+        CreateBuildRecordByRecordResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RetrySyncTaskResponse, Builder>
+            extends Response.BuilderImpl<CreateBuildRecordByRecordResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RetrySyncTaskResponseBody body; 
+        private Integer statusCode; 
+        private CreateBuildRecordByRecordResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RetrySyncTaskResponse response) {
+        private BuilderImpl(CreateBuildRecordByRecordResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class RetrySyncTaskResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(RetrySyncTaskResponseBody body) {
+        public Builder body(CreateBuildRecordByRecordResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RetrySyncTaskResponse build() {
-            return new RetrySyncTaskResponse(this);
+        public CreateBuildRecordByRecordResponse build() {
+            return new CreateBuildRecordByRecordResponse(this);
         } 
 
     } 

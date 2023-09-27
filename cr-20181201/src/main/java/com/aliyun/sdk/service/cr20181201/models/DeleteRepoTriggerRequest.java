@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRepoTriggerRequest</p>
  */
 public class DeleteRepoTriggerRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoId")
@@ -34,8 +34,8 @@ public class DeleteRepoTriggerRequest extends Request {
 
     private DeleteRepoTriggerRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.triggerId = builder.triggerId;
     }
@@ -54,17 +54,17 @@ public class DeleteRepoTriggerRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -82,8 +82,8 @@ public class DeleteRepoTriggerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRepoTriggerRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
         private String triggerId; 
 
@@ -91,25 +91,16 @@ public class DeleteRepoTriggerRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRepoTriggerRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.triggerId = response.triggerId;
+        private Builder(DeleteRepoTriggerRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.triggerId = request.triggerId;
         } 
 
         /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -118,7 +109,16 @@ public class DeleteRepoTriggerRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -127,7 +127,7 @@ public class DeleteRepoTriggerRequest extends Request {
         }
 
         /**
-         * TriggerId.
+         * The ID of the trigger.
          */
         public Builder triggerId(String triggerId) {
             this.putQueryParameter("TriggerId", triggerId);

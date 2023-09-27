@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepoTagManifestRequest</p>
  */
 public class GetRepoTagManifestRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("RepoId")
@@ -29,6 +29,7 @@ public class GetRepoTagManifestRequest extends Request {
 
     @Query
     @NameInMap("SchemaVersion")
+    @Validation(required = true)
     private Integer schemaVersion;
 
     @Query
@@ -38,8 +39,8 @@ public class GetRepoTagManifestRequest extends Request {
 
     private GetRepoTagManifestRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.repoId = builder.repoId;
         this.schemaVersion = builder.schemaVersion;
         this.tag = builder.tag;
@@ -59,17 +60,17 @@ public class GetRepoTagManifestRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -94,8 +95,8 @@ public class GetRepoTagManifestRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRepoTagManifestRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String repoId; 
         private Integer schemaVersion; 
         private String tag; 
@@ -104,26 +105,17 @@ public class GetRepoTagManifestRequest extends Request {
             super();
         } 
 
-        private Builder(GetRepoTagManifestRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.schemaVersion = response.schemaVersion;
-            this.tag = response.tag;
+        private Builder(GetRepoTagManifestRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.repoId = request.repoId;
+            this.schemaVersion = request.schemaVersion;
+            this.tag = request.tag;
         } 
 
         /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -132,7 +124,16 @@ public class GetRepoTagManifestRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the repository.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -141,7 +142,7 @@ public class GetRepoTagManifestRequest extends Request {
         }
 
         /**
-         * SchemaVersion.
+         * The schema version of the manifest. Valid values: 1 and 2.
          */
         public Builder schemaVersion(Integer schemaVersion) {
             this.putQueryParameter("SchemaVersion", schemaVersion);
@@ -150,7 +151,7 @@ public class GetRepoTagManifestRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the image.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

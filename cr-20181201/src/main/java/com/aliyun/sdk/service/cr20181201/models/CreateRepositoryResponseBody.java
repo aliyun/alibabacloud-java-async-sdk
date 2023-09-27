@@ -74,7 +74,7 @@ public class CreateRepositoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +90,7 @@ public class CreateRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RepoId.
+         * The ID of the image repository.
          */
         public Builder repoId(String repoId) {
             this.repoId = repoId;
@@ -98,7 +98,7 @@ public class CreateRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -74,7 +74,7 @@ public class CreateRepoTriggerResponseBody extends TeaModel {
         private String triggerId; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -90,7 +90,7 @@ public class CreateRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateRepoTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * TriggerId.
+         * The ID of the trigger.
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
