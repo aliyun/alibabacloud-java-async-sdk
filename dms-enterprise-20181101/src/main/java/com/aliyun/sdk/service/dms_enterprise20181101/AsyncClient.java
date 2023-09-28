@@ -572,6 +572,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PauseDataCorrectSQLJobResponse> pauseDataCorrectSQLJob(PauseDataCorrectSQLJobRequest request);
 
+    CompletableFuture<PreviewWorkflowResponse> previewWorkflow(PreviewWorkflowRequest request);
+
     CompletableFuture<PublishAndDeployTaskFlowResponse> publishAndDeployTaskFlow(PublishAndDeployTaskFlowRequest request);
 
     CompletableFuture<QueryDataTrackResultDownloadStatusResponse> queryDataTrackResultDownloadStatus(QueryDataTrackResultDownloadStatusRequest request);
