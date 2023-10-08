@@ -112,7 +112,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         } 
 
         /**
-         * AdditionalCertificateIds.
+         * The additional certificates. You can associate up to 15 additional certificates with a listener in each request.
          */
         public Builder additionalCertificateIds(java.util.List < String > additionalCertificateIds) {
             this.putBodyParameter("AdditionalCertificateIds", additionalCertificateIds);
@@ -139,7 +139,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
          * <p>
          * 
          * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -148,7 +148,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * The listener ID.
+         * The listener ID. You must specify the ID of a listener that uses SSL over TCP.
          */
         public Builder listenerId(String listenerId) {
             this.putBodyParameter("ListenerId", listenerId);
@@ -157,7 +157,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
+         * The region ID of the Network Load Balancer (NLB) instance.
          * <p>
          * 
          * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.

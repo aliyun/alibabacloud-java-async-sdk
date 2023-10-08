@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddServersToServerGroupResponse> addServersToServerGroup(AddServersToServerGroupRequest request);
 
+    /**
+      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+      * *   If the listener is in the **Associated** state, the additional certificates are associated.
+      *
+     */
     CompletableFuture<AssociateAdditionalCertificatesWithListenerResponse> associateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request);
 
     CompletableFuture<AttachCommonBandwidthPackageToLoadBalancerResponse> attachCommonBandwidthPackageToLoadBalancer(AttachCommonBandwidthPackageToLoadBalancerRequest request);
@@ -73,6 +79,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableLoadBalancerIpv6InternetResponse> disableLoadBalancerIpv6Internet(DisableLoadBalancerIpv6InternetRequest request);
 
+    /**
+      * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+      * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+      *
+     */
     CompletableFuture<DisassociateAdditionalCertificatesWithListenerResponse> disassociateAdditionalCertificatesWithListener(DisassociateAdditionalCertificatesWithListenerRequest request);
 
     CompletableFuture<EnableLoadBalancerIpv6InternetResponse> enableLoadBalancerIpv6Internet(EnableLoadBalancerIpv6InternetRequest request);

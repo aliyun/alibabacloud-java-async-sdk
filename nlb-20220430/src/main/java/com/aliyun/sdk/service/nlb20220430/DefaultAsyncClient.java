@@ -53,6 +53,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+      * *   If the listener is in the **Associated** state, the additional certificates are associated.
+      *
+     */
     @Override
     public CompletableFuture<AssociateAdditionalCertificatesWithListenerResponse> associateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request) {
         try {
@@ -286,6 +292,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+      * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+      *
+     */
     @Override
     public CompletableFuture<DisassociateAdditionalCertificatesWithListenerResponse> disassociateAdditionalCertificatesWithListener(DisassociateAdditionalCertificatesWithListenerRequest request) {
         try {

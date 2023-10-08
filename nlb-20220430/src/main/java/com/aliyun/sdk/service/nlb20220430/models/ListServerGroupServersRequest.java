@@ -146,7 +146,10 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the NLB instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

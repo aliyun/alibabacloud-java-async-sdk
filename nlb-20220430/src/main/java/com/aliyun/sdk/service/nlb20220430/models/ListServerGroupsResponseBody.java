@@ -501,9 +501,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("QuicVersion")
-        private String quicVersion;
-
         @NameInMap("RegionId")
         private String regionId;
 
@@ -546,7 +543,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.healthCheck = builder.healthCheck;
             this.preserveClientIpEnabled = builder.preserveClientIpEnabled;
             this.protocol = builder.protocol;
-            this.quicVersion = builder.quicVersion;
             this.regionId = builder.regionId;
             this.relatedLoadBalancerIds = builder.relatedLoadBalancerIds;
             this.resourceGroupId = builder.resourceGroupId;
@@ -622,13 +618,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public String getProtocol() {
             return this.protocol;
-        }
-
-        /**
-         * @return quicVersion
-         */
-        public String getQuicVersion() {
-            return this.quicVersion;
         }
 
         /**
@@ -717,7 +706,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private HealthCheck healthCheck; 
             private Boolean preserveClientIpEnabled; 
             private String protocol; 
-            private String quicVersion; 
             private String regionId; 
             private java.util.List < String > relatedLoadBalancerIds; 
             private String resourceGroupId; 
@@ -809,14 +797,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
-                return this;
-            }
-
-            /**
-             * The Quic version.
-             */
-            public Builder quicVersion(String quicVersion) {
-                this.quicVersion = quicVersion;
                 return this;
             }
 
