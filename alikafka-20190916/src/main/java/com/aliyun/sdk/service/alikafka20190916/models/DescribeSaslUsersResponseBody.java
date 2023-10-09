@@ -86,7 +86,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * SaslUserList.
+         * The SASL users.
          */
         public Builder saslUserList(SaslUserList saslUserList) {
             this.saslUserList = saslUserList;
@@ -118,7 +118,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * Password.
+             * The password that is used to access the Elasticsearch cluster.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -190,7 +190,13 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The request type. Valid values:
+             * <p>
+             * 
+             * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
+             * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
+             * 
+             * Default value: **plain**.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -198,7 +204,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * The name of the user.
              */
             public Builder username(String username) {
                 this.username = username;

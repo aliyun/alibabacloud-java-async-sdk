@@ -86,7 +86,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * KafkaAclList.
+         * The ACLs.
          */
         public Builder kafkaAclList(KafkaAclList kafkaAclList) {
             this.kafkaAclList = kafkaAclList;
@@ -102,7 +102,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,11 @@ public class DescribeAclsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * AclOperationType.
+             * The type of the operation. Valid values:
+             * <p>
+             * 
+             * *   **Write**
+             * *   **Read**
              */
             public Builder aclOperationType(String aclOperationType) {
                 this.aclOperationType = aclOperationType;
@@ -226,7 +230,11 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AclResourceName.
+             * The name of the resource.
+             * <p>
+             * 
+             * *   The value can be the name of a topic or a consumer group.
+             * *   An asterisk (\*) represents the names of all topics or consumer groups.
              */
             public Builder aclResourceName(String aclResourceName) {
                 this.aclResourceName = aclResourceName;
@@ -234,7 +242,11 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AclResourcePatternType.
+             * The match mode. Valid values:
+             * <p>
+             * 
+             * *   **LITERAL**: full-name match
+             * *   **PREFIXED**: prefix match
              */
             public Builder aclResourcePatternType(String aclResourcePatternType) {
                 this.aclResourcePatternType = aclResourcePatternType;
@@ -242,7 +254,11 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AclResourceType.
+             * The type of the resources to which you want to attach tags. Valid values:
+             * <p>
+             * 
+             * *   **Topic**
+             * *   **Group**
              */
             public Builder aclResourceType(String aclResourceType) {
                 this.aclResourceType = aclResourceType;
@@ -250,7 +266,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -258,7 +274,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * The name of the user.
              */
             public Builder username(String username) {
                 this.username = username;

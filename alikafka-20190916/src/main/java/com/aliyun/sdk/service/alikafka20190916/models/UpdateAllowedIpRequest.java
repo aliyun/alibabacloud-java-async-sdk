@@ -144,7 +144,12 @@ public class UpdateAllowedIpRequest extends Request {
         } 
 
         /**
-         * AllowedListIp.
+         * The IP addresses that you want to manage. You can specify a CIDR block. Example: **192.168.0.0/16**.
+         * <p>
+         * 
+         * *   If the **UpdateType** parameter is set to **add**, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).
+         * *   If the **UpdateType** parameter is set to **delete**, specify only one IP address.
+         * *   Exercise caution when you delete IP addresses.
          */
         public Builder allowedListIp(String allowedListIp) {
             this.putQueryParameter("AllowedListIp", allowedListIp);
@@ -153,7 +158,11 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * AllowedListType.
+         * The type of the whitelist. Valid values:
+         * <p>
+         * 
+         * *   **vpc**: a whitelist for access from a VPC.
+         * *   **internet**: a whitelist for access from the Internet.
          */
         public Builder allowedListType(String allowedListType) {
             this.putQueryParameter("AllowedListType", allowedListType);
@@ -162,7 +171,7 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the whitelist.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -171,7 +180,7 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -180,7 +189,13 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * PortRange.
+         * The port range. Valid values:
+         * <p>
+         * 
+         * *   **9092/9092**: the port range for access from a virtual private cloud (VPC).
+         * *   **9093/9093**: the port range for access from the Internet.
+         * 
+         * The value of this parameter must match the value of the **AllowdedListType** parameter.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -189,7 +204,7 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +213,11 @@ public class UpdateAllowedIpRequest extends Request {
         }
 
         /**
-         * UpdateType.
+         * The type of configuration change. Valid values:
+         * <p>
+         * 
+         * *   **add**
+         * *   **delete**
          */
         public Builder updateType(String updateType) {
             this.putQueryParameter("UpdateType", updateType);

@@ -113,7 +113,12 @@ public class CreateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * ConsumerId.
+         * The name of the consumer group.
+         * <p>
+         * 
+         * *   The value can contain only letters, digits, hyphens (-), and underscores (\_), and the value must contain at least one letter or digit.
+         * *   The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.
+         * *   After a consumer group is created, you cannot change the name of the consumer group.
          */
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -122,7 +127,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +136,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +145,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The description of the consumer group.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -149,7 +154,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -204,7 +209,12 @@ public class CreateConsumerGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N.
+             * <p>
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   You must specify this parameter.
+             * *   The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +222,12 @@ public class CreateConsumerGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
+             * <p>
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   You can leave this parameter empty.
+             * *   The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

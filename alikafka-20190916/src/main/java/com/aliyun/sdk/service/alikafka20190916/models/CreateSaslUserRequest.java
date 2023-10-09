@@ -114,7 +114,7 @@ public class CreateSaslUserRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +123,7 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the SASL user.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -132,7 +132,7 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +141,13 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * Type.
+         * The SASL mechanism. Valid values:
+         * <p>
+         * 
+         * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
+         * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
+         * 
+         * Default value: **plain**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -150,7 +156,7 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * Username.
+         * The name of the SASL user.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

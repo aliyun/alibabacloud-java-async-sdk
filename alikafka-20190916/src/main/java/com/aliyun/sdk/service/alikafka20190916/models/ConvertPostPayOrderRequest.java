@@ -84,7 +84,12 @@ public class ConvertPostPayOrderRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * The subscription duration. Unit: months. Valid values:
+         * <p>
+         * 
+         * *   **1~12**
+         * *   **24**
+         * *   **36**
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -93,7 +98,7 @@ public class ConvertPostPayOrderRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +107,7 @@ public class ConvertPostPayOrderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

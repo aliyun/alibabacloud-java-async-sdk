@@ -100,7 +100,12 @@ public class ModifyPartitionNumRequest extends Request {
         } 
 
         /**
-         * AddPartitionNum.
+         * The number of partitions that you want to add to the topic.
+         * <p>
+         * 
+         * *   The value must be an integer that is greater than 0.
+         * *   To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.
+         * *   The number of total partitions ranges from 1 to 360.
          */
         public Builder addPartitionNum(Integer addPartitionNum) {
             this.putQueryParameter("AddPartitionNum", addPartitionNum);
@@ -109,7 +114,7 @@ public class ModifyPartitionNumRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +123,7 @@ public class ModifyPartitionNumRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +132,7 @@ public class ModifyPartitionNumRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic name.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

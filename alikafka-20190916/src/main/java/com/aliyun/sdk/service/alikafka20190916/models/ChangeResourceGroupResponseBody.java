@@ -86,7 +86,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private Long success; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * NewResourceGroupId.
+         * The ID of the new resource group. You can view the available resource groups in the Resource Management console.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.newResourceGroupId = newResourceGroupId;
@@ -110,7 +110,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Long success) {
             this.success = success;

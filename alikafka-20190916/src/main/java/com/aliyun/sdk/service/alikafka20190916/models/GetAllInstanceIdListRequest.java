@@ -54,7 +54,7 @@ public class GetAllInstanceIdListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the instance. This parameter is reserved.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

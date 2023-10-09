@@ -111,7 +111,7 @@ public class GetTopicListRequest extends Request {
         } 
 
         /**
-         * The name of the topic that you want to query.
+         * The page number of the page to return. Default value: 1.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -120,7 +120,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * The region ID of the instance whose topics you want to query.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +129,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * The number of the returned page.
+         * The number of entries to return on each page. Default value: 10
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +138,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The region ID of the instance to which the topics that you want to query belong.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class GetTopicListRequest extends Request {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * The name of the topic that you want to query.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

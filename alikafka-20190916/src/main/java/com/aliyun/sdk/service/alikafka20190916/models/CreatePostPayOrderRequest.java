@@ -212,7 +212,11 @@ public class CreatePostPayOrderRequest extends Request {
         } 
 
         /**
-         * DeployType.
+         * The deployment mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **4**: deploys the instance that allows access from the Internet and a VPC.
+         * *   **5**: deploys the instance that allows access only from a VPC.
          */
         public Builder deployType(Integer deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -221,7 +225,10 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * DiskSize.
+         * The disk size.
+         * <p>
+         * 
+         * For more information about the valid values, see [Billing](~~84737~~).
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -230,7 +237,11 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * The disk type. Valid values:
+         * <p>
+         * 
+         * *   **0**: ultra disk
+         * *   **1**: standard SSD
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -239,7 +250,11 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * EipMax.
+         * The Internet traffic for the instance.
+         * <p>
+         * 
+         * *   This parameter is required if the **DeployType** parameter is set to **4**.
+         * *   For more information about the valid values, see [Billing](~~84737~~).
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -248,7 +263,11 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * IoMax.
+         * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+         * <p>
+         * 
+         * *   You must specify at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.
+         * *   For more information about the valid values, see [Billing](~~84737~~).
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -257,7 +276,11 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * IoMaxSpec.
+         * The traffic specification of the instance. We recommend that you configure this parameter.
+         * <p>
+         * 
+         * *   You must specify at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.
+         * *   For more information about the valid values, see [Billing](~~84737~~).
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -266,7 +289,12 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * PartitionNum.
+         * The number of partitions. We recommend that you configure this parameter.
+         * <p>
+         * 
+         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+         * *   For more information about the valid values, see [Billing](~~84737~~).
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -275,7 +303,7 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -284,7 +312,10 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -293,7 +324,14 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * The edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **normal**: Standard Edition (High Write)
+         * *   **professional**: Professional Edition (High Write)
+         * *   **professionalForHighRead**: Professional Edition (High Read)
+         * 
+         * For more information about these instance editions, see [Billing](~~84737~~).
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -302,7 +340,7 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -311,7 +349,13 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * TopicQuota.
+         * The number of topics. We recommend that you do not configure this parameter.
+         * <p>
+         * 
+         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
+         * *   For more information about the valid values, see [Billing](~~84737~~).
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);
@@ -366,7 +410,12 @@ public class CreatePostPayOrderRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N.
+             * <p>
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   If this parameter is left empty, the keys of all tags are matched.
+             * *   The tag key must be up to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder key(String key) {
                 this.key = key;
@@ -374,7 +423,12 @@ public class CreatePostPayOrderRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
+             * <p>
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   If you do not specify a tag key, you cannot specify a tag value. If this parameter is not configured, all tag values are matched.
+             * *   The tag value must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

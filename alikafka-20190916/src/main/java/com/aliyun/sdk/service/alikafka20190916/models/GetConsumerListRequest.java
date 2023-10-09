@@ -84,7 +84,7 @@ public class GetConsumerListRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The name of the consumer group. If you do not configure this parameter, all consumer groups are queried.
          */
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -93,7 +93,7 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * The tags of the topic.
+         * The ID of the instance to which the consumer group belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group. If you do not configure this parameter, all consumer groups are queried.
+         * The region ID of the instance to which the consumer group belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

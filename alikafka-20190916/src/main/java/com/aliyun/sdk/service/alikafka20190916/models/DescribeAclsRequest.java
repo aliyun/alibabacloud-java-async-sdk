@@ -129,7 +129,11 @@ public class DescribeAclsRequest extends Request {
         } 
 
         /**
-         * AclResourceName.
+         * The name or ID of the resource.
+         * <p>
+         * 
+         * *   The value can be the name of a topic or a consumer group.
+         * *   You can use an asterisk (\*) to represent the names of all topics or consumer groups.
          */
         public Builder aclResourceName(String aclResourceName) {
             this.putQueryParameter("AclResourceName", aclResourceName);
@@ -138,7 +142,11 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * AclResourcePatternType.
+         * The match mode. Valid values:
+         * <p>
+         * 
+         * *   LITERAL: full-name match
+         * *   PREFIXED: prefix match
          */
         public Builder aclResourcePatternType(String aclResourcePatternType) {
             this.putQueryParameter("AclResourcePatternType", aclResourcePatternType);
@@ -147,7 +155,11 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * AclResourceType.
+         * The resource type. Valid values:
+         * <p>
+         * 
+         * *   **Topic**
+         * *   **Group**
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -156,7 +168,7 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +177,7 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +186,7 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * Username.
+         * The name of the user.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -86,7 +86,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the consumer group.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The consumer groups.
          */
         public Builder consumerList(ConsumerList consumerList) {
             this.consumerList = consumerList;
@@ -102,7 +102,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the tag.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the consumer groups.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -320,7 +320,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * 自动创建的Group
+             * The consumer group that is automatically created by the system.
              */
             public Builder automaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
                 this.automaticallyCreatedGroup = automaticallyCreatedGroup;
@@ -328,7 +328,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the consumer group belongs.
+             * The ID of the consumer group.
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -336,7 +336,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -344,7 +344,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the consumer group.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -352,7 +352,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The description of the consumer group.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -360,7 +360,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

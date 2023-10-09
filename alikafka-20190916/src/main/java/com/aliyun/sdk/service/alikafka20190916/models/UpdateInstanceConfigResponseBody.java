@@ -74,7 +74,7 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request is successful.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,14 +82,7 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ## **Permissions**
-         * <p>
-         * 
-         * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](~~185815~~).
-         * 
-         * |API|Action|Resource|
-         * |---|---|---|
-         * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,15 +90,7 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ### Config parameters
-         * <p>
-         * 
-         * |Parameter|Type|Valid values|Default value|Description|
-         * |---|---|---|---|---|
-         * |enable.vpc\_sasl\_ssl|Boolean|true/false|false|Specifies whether to enable virtual private cloud (VPC) transmission encryption. If VPC transmission encryption is enabled, you must also enable the access control list (ACL) feature.|
-         * |enable.acl|Boolean|true/false|false|Specifies whether to enable the ACL feature.|
-         * |kafka.log.retention.hours|Integer|24~480|72|The retention period of messages. Unit: hours.|
-         * |kafka.message.max.bytes|Integer|1048576~10485760|1048576|The maximum size of a message. Unit: bytes.|
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +98,7 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Modifies the configuration of a Message Queue for Apache Kafka instance.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

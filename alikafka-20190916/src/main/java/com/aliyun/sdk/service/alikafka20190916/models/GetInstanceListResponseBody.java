@@ -94,7 +94,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the instances.
+         * The information about the instance.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -170,7 +170,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -697,7 +697,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The configurations of the instance.
+             * The configurations of the deployed ApsaraMQ for Kafka instance.
              */
             public Builder allConfig(String allConfig) {
                 this.allConfig = allConfig;
@@ -716,8 +716,8 @@ public class GetInstanceListResponseBody extends TeaModel {
              * The type of the network in which the instance is deployed. Valid values:
              * <p>
              * 
-             * *   **4**: the Internet and virtual private clouds (VPCs).
-             * *   **5**: VPCs.
+             * *   **4**: the Internet and VPCs
+             * *   **5**: VPCs
              */
             public Builder deployType(Integer deployType) {
                 this.deployType = deployType;
@@ -725,7 +725,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk.
+             * The disk size of the instance.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -733,7 +733,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Unit: GB. Valid values:
+             * The disk type of the instance. Unit: GB Valid values:
              * <p>
              * 
              * *   **0**: ultra disk
@@ -745,11 +745,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The default endpoint of the instance in domain name mode. The default endpoint of an instance can be in domain name mode or IP address mode.
+             * The default endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
              * <p>
              * 
-             * *   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.
-             * *   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.
+             * *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder domainEndpoint(String domainEndpoint) {
                 this.domainEndpoint = domainEndpoint;
@@ -757,7 +757,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak public traffic allowed for the instance.
+             * The peak Internet traffic allowed for the instance.
              */
             public Builder eipMax(Integer eipMax) {
                 this.eipMax = eipMax;
@@ -765,11 +765,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The default endpoint of the instance in IP address mode. The default endpoint of an instance can be in domain name mode or IP address mode.
+             * The default endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
              * <p>
              * 
-             * *   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.
-             * *   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.
+             * *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -785,7 +785,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -801,7 +801,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * IoMaxSpec.
+             * The traffic specification.
              */
             public Builder ioMaxSpec(String ioMaxSpec) {
                 this.ioMaxSpec = ioMaxSpec;
@@ -825,7 +825,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -853,7 +853,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -861,11 +861,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. The SASL endpoint of an instance can be in domain name mode or IP address mode.
+             * The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
              * <p>
              * 
-             * *   Domain name mode: An SASL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SASL endpoint in this mode is `{Instance domain name}:{Port number}`.
-             * *   IP address mode: An SASL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SASL endpoint in this mode is `{Broker IP address}:{Port number}`.
+             * *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder saslDomainEndpoint(String saslDomainEndpoint) {
                 this.saslDomainEndpoint = saslDomainEndpoint;
@@ -873,11 +873,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The security group of the instance.
+             * The security group to which the instance belongs.
              * <p>
              * 
-             * *   If the instance is deployed in the Message Queue for Apache Kafka console or by calling the [StartInstance](~~157786~~) operation without configuring a security group, no value is returned for this parameter.
-             * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation and a security group is configured, the return value is the configured security group.
+             * *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, the returned value is empty.
+             * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -889,8 +889,16 @@ public class GetInstanceListResponseBody extends TeaModel {
              * <p>
              * 
              * *   **0**: pending
-             * *   **1**: deploying
+             * *   **1**: preparing hardware resources
+             * *   **2**: initializing
+             * *   **3**: starting
              * *   **5**: running
+             * *   **6**: migrating
+             * *   **7**: ready for upgrade
+             * *   **8**: upgrading
+             * *   **9**: ready for changes
+             * *   **10**: released
+             * *   **11**: changing
              * *   **15**: expired
              */
             public Builder serviceStatus(Integer serviceStatus) {
@@ -899,7 +907,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the instance. Valid values:
+             * The instance edition. Valid values:
              * <p>
              * 
              * *   **professional**: Professional Edition (High Write)
@@ -912,11 +920,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The SSL endpoint of the instance in domain name mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.
+             * The SSL endpoint of the instance in domain name mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
              * <p>
              * 
-             * *   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.
-             * *   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.
+             * *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder sslDomainEndpoint(String sslDomainEndpoint) {
                 this.sslDomainEndpoint = sslDomainEndpoint;
@@ -924,11 +932,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.
+             * The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.
              * <p>
              * 
-             * *   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.
-             * *   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.
+             * *   Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder sslEndPoint(String sslEndPoint) {
                 this.sslEndPoint = sslEndPoint;
@@ -936,7 +944,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder standardZoneId(String standardZoneId) {
                 this.standardZoneId = standardZoneId;
@@ -944,7 +952,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the instance.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -960,7 +968,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The upgrade information about the instance.
+             * The upgrade information of the instance.
              */
             public Builder upgradeServiceDetailInfo(UpgradeServiceDetailInfo upgradeServiceDetailInfo) {
                 this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
@@ -968,7 +976,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used groups.
+             * The number of used consumer groups.
              */
             public Builder usedGroupCount(Integer usedGroupCount) {
                 this.usedGroupCount = usedGroupCount;
@@ -992,7 +1000,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID of the instance.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1000,7 +1008,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The ID of the virtual private cloud (VPC) to which the instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1008,7 +1016,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

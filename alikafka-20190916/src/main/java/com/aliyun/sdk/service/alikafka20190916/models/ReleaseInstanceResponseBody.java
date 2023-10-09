@@ -74,7 +74,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

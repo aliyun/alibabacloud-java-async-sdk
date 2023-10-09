@@ -86,7 +86,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The IP address whitelist of the instance.
+         * The IP address whitelist.
          */
         public Builder allowedList(AllowedList allowedList) {
             this.allowedList = allowedList;
@@ -182,7 +182,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             private String portRange; 
 
             /**
-             * The IP address whitelist group.
+             * The group to which the IP address whitelist belongs.
              */
             public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
@@ -190,7 +190,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * AllowedIpList.
+             * The information about the IP address whitelist.
              */
             public Builder allowedIpList(java.util.List < String > allowedIpList) {
                 this.allowedIpList = allowedIpList;
@@ -198,7 +198,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The port range. Valid values:
+             * The port range. Valid value:
              * <p>
              * 
              * **9093/9093**.
@@ -266,7 +266,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             private String portRange; 
 
             /**
-             * The IP address whitelist group.
+             * The group to which the IP address whitelist belongs.
              */
             public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
@@ -274,7 +274,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * AllowedIpList.
+             * The information about the IP address whitelist.
              */
             public Builder allowedIpList(java.util.List < String > allowedIpList) {
                 this.allowedIpList = allowedIpList;
@@ -282,7 +282,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The port range. Valid values:
+             * The port range. Valid value:
              * <p>
              * 
              * **9092/9092**.
@@ -372,7 +372,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist for access from a VPC.
+             * The whitelist for access from a virtual private cloud (VPC).
              */
             public Builder vpcList(java.util.List < VpcList> vpcList) {
                 this.vpcList = vpcList;

@@ -99,7 +99,7 @@ public class DeleteSaslUserRequest extends Request {
         } 
 
         /**
-         * The name of the user.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,20 +108,11 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("Type", type);
-            this.type = type;
             return this;
         }
 
@@ -133,6 +124,15 @@ public class DeleteSaslUserRequest extends Request {
          * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
          * 
          * Default value: **plain**.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * The name of the user.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

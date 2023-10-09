@@ -150,8 +150,8 @@ public class CreateAclRequest extends Request {
          * 
          * *   **Write**: data writes.
          * *   **Read**: data reads.
-         * *   **Describe**: reads of transaction IDs.****
-         * *   **IdempotentWrite**: idempotent data writes to clusters.
+         * *   **Describe**: reads of **transaction IDs**.
+         * *   **IdempotentWrite**: idempotent data writes to **clusters**.
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -173,7 +173,7 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * The mode that is used to match resources. Valid values:
+         * The matching mode. Valid values:
          * <p>
          * 
          * *   **LITERAL**: exact match
@@ -189,10 +189,10 @@ public class CreateAclRequest extends Request {
          * The resource type. Valid values:
          * <p>
          * 
-         * *   **Topic**: specifies topics.
-         * *   **Group**: specifies consumer groups.
-         * *   **Cluster**: specifies instances.
-         * *   **TransactionalId**: specifies transactions.
+         * *   **Topic**: topic
+         * *   **Group**: consumer group
+         * *   **Cluster**: cluster
+         * *   **TransactionalId**: transaction
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);

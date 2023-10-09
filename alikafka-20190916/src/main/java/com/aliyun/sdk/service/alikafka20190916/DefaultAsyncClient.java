@@ -95,6 +95,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+      *
+     */
     @Override
     public CompletableFuture<CreatePostPayOrderResponse> createPostPayOrder(CreatePostPayOrderRequest request) {
         try {
@@ -110,9 +114,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The maximum traffic for the instance. We recommend that you do not configure this parameter.
-      * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
-      * *   For more information about the valid values, see [Billing](~~84737~~).
+      * *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](~~84737~~).
+      * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
       *
      */
     @Override
@@ -144,9 +147,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The description of the topic.
-      * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
-      * *   The description must be 3 to 64 characters in length.
+      * *   Each Alibaba Cloud account can call this operation up to once per second.
+      * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
       *
      */
     @Override
@@ -430,7 +432,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The region ID of the instance.
+      * You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
       *
      */
     @Override
@@ -447,6 +449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to twice per second.
+      *
+     */
     @Override
     public CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request) {
         try {
@@ -503,6 +509,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to reset the consumer offsets of the subscribed topics of a consumer group. You can specify a timestamp or an offset to reset a consumer offset. You can implement the following features by configuring a combination of different parameters:
+      * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
+      * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
+      * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
+      *
+     */
     @Override
     public CompletableFuture<UpdateConsumerOffsetResponse> updateConsumerOffset(UpdateConsumerOffsetRequest request) {
         try {
@@ -518,7 +531,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The region ID of the instance.
+      * ## **Permissions**
+      * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](~~185815~~).
+      * |API|Action|Resource|
+      * |---|---|---|
+      * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
       *
      */
     @Override
@@ -578,9 +595,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The size of the disk.
-      * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
-      * *   For more information about the valid values, see [Billing overview](~~84737~~).
+      * Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](~~84737~~).
       *
      */
     @Override

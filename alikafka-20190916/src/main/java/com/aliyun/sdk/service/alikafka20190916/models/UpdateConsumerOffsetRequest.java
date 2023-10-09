@@ -143,7 +143,12 @@ public class UpdateConsumerOffsetRequest extends Request {
         } 
 
         /**
-         * ConsumerId.
+         * The name of the consumer group.
+         * <p>
+         * 
+         * *   The name can contain letters, digits, hyphens (-), and underscores (\_).
+         * *   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.
+         * *   The name of a consumer group cannot be changed after the consumer group is created.
          */
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -152,7 +157,7 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +166,7 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * Offsets.
+         * If you set resetType to offset, you can use this parameter to reset the consumer offset of each partition of a specific topic in the consumer group.
          */
         public Builder offsets(java.util.List < Offsets> offsets) {
             String offsetsShrink = shrink(offsets, "Offsets", "json");
@@ -171,7 +176,7 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance to which the consumer group belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -180,7 +185,11 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * ResetType.
+         * The method that is used to reset the consumer offsets of the subscribed topics of a consumer group. Valid values:
+         * <p>
+         * 
+         * *   **timestamp** (default)
+         * *   **offset**
          */
         public Builder resetType(String resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -189,7 +198,10 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * Time.
+         * The point in time when message consumption starts. The value of this parameter is a UNIX timestamp. Unit: milliseconds. The value of this parameter must be **less than 0** or **within the retention period of the consumer offset**. This parameter takes effect only if you set resetType to timestamp.
+         * <p>
+         * 
+         * **If you want to reset the consumer offset to the latest offset, specify a value that is less than 0. Recommended value: -1.
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);
@@ -198,7 +210,14 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic name.
+         * <p>
+         * 
+         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.
+         * *   The name of a topic cannot be changed after the topic is created.
+         * 
+         * **If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -252,7 +271,7 @@ public class UpdateConsumerOffsetRequest extends Request {
             private Integer partition; 
 
             /**
-             * Offset.
+             * The consumer offset of the partition.
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -260,7 +279,7 @@ public class UpdateConsumerOffsetRequest extends Request {
             }
 
             /**
-             * Partition.
+             * The partition ID.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;

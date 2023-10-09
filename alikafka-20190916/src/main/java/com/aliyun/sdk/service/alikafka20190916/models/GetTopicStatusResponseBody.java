@@ -86,7 +86,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         private TopicStatus topicStatus; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TopicStatus.
+         * The status information about messages in the topic.
          */
         public Builder topicStatus(TopicStatus topicStatus) {
             this.topicStatus = topicStatus;
@@ -206,7 +206,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * LastUpdateTimestamp.
+             * The last time when the partition was modified.
              */
             public Builder lastUpdateTimestamp(Long lastUpdateTimestamp) {
                 this.lastUpdateTimestamp = lastUpdateTimestamp;
@@ -214,7 +214,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MaxOffset.
+             * The latest offset in the partition of the topic.
              */
             public Builder maxOffset(Long maxOffset) {
                 this.maxOffset = maxOffset;
@@ -222,7 +222,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MinOffset.
+             * The earliest offset in the partition of the topic.
              */
             public Builder minOffset(Long minOffset) {
                 this.minOffset = minOffset;
@@ -230,7 +230,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Partition.
+             * The ID of the partition.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -238,7 +238,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -344,7 +344,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * LastTimeStamp.
+             * The time when the last consumed message was generated.
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -352,7 +352,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OffsetTable.
+             * The information about offsets in the topic.
              */
             public Builder offsetTable(TopicStatusOffsetTable offsetTable) {
                 this.offsetTable = offsetTable;
@@ -360,7 +360,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The number of messages in the topic.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -85,20 +85,11 @@ public class ModifyInstanceNameRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
             return this;
         }
 
@@ -108,6 +99,15 @@ public class ModifyInstanceNameRequest extends Request {
          * 
          * *   The name can contain only letters, digits, hyphens (-), and underscores (\_).
          * *   The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name to 64 characters.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

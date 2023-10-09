@@ -201,11 +201,11 @@ public class GetInstanceListRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is attached to the resource.
+             * The key of the resource tag.
              * <p>
              * 
              * *   If this parameter is left empty, all tag keys are matched.
-             * *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * *   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -213,11 +213,11 @@ public class GetInstanceListRequest extends Request {
             }
 
             /**
-             * The value of the tag that is attached to the resource.
+             * The value of the resource tag.
              * <p>
              * 
-             * *   If the Key parameter is left empty, this parameter must be left empty. If this parameter is left empty, all tag values are matched.
-             * *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * *   This parameter must be left empty if the Key parameter is left empty. If this parameter is left empty, the values of all tags are matched.
+             * *   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

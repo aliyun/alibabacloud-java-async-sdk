@@ -85,7 +85,7 @@ public class DeleteTopicRequest extends Request {
         } 
 
         /**
-         * The name of the topic.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +94,7 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,7 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * The name of the topic.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

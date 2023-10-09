@@ -85,7 +85,7 @@ public class UpdateInstanceConfigRequest extends Request {
         } 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The configuration of the instance that you want to update. The value must be a valid JSON string.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -94,7 +94,7 @@ public class UpdateInstanceConfigRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class UpdateInstanceConfigRequest extends Request {
         }
 
         /**
-         * The message returned.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

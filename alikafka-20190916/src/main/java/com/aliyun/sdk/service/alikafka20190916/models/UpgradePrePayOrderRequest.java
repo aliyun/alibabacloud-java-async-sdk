@@ -183,17 +183,52 @@ public class UpgradePrePayOrderRequest extends Request {
         } 
 
         /**
-         * The number of topics. We recommend that you do not configure this parameter.
+         * The size of the disk.
          * <p>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
+         * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
          * *   For more information about the valid values, see [Billing overview](~~84737~~).
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * The Internet traffic for the instance.
+         * <p>
+         * 
+         * *   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.
+         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * > - If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.
+         * > - If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.
+         */
+        public Builder eipMax(Integer eipMax) {
+            this.putQueryParameter("EipMax", eipMax);
+            this.eipMax = eipMax;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable Internet access for the instance. Valid values:
+         * <p>
+         * 
+         * *   true: enables Internet access.
+         * *   false: disables Internet access.
+         */
+        public Builder eipModel(Boolean eipModel) {
+            this.putQueryParameter("EipModel", eipModel);
+            this.eipModel = eipModel;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -205,40 +240,6 @@ public class UpgradePrePayOrderRequest extends Request {
          * *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.
          * *   For more information about the valid values, see [Billing overview](~~84737~~).
          */
-        public Builder eipMax(Integer eipMax) {
-            this.putQueryParameter("EipMax", eipMax);
-            this.eipMax = eipMax;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder eipModel(Boolean eipModel) {
-            this.putQueryParameter("EipModel", eipModel);
-            this.eipModel = eipModel;
-            return this;
-        }
-
-        /**
-         * The region ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The edition of the instance. Valid values:
-         * <p>
-         * 
-         * *   **normal**: Standard Edition (High Write)
-         * *   **professional**: Professional Edition (High Write)
-         * *   **professionalForHighRead**: Professional Edition (High Read)
-         * 
-         * You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](~~84737~~).
-         */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
             this.ioMax = ioMax;
@@ -246,7 +247,12 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The traffic specification of the instance. We recommend that you configure this parameter.
+         * <p>
+         * 
+         * *   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.
+         * *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.
+         * *   For more information about the valid values, see [Billing overview](~~84737~~).
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -269,7 +275,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +284,14 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The error message returned.
+         * The edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **normal**: Standard Edition (High Write)
+         * *   **professional**: Professional Edition (High Write)
+         * *   **professionalForHighRead**: Professional Edition (High Read)
+         * 
+         * You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](~~84737~~).
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -287,17 +300,13 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * The Internet traffic for the instance.
+         * The number of topics. We recommend that you do not configure this parameter.
          * <p>
          * 
-         * *   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.
+         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
          * *   For more information about the valid values, see [Billing overview](~~84737~~).
-         * 
-         * > 
-         * 
-         * *   If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.
-         * 
-         * *   If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);

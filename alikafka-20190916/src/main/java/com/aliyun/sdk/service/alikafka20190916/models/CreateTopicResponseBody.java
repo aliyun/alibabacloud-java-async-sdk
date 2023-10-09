@@ -74,7 +74,7 @@ public class CreateTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The message returned.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class CreateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +98,7 @@ public class CreateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * *   Each Alibaba Cloud account can call this operation up to once per second.
-         * <p>
-         * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

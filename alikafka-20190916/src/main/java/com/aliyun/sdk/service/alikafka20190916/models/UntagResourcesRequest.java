@@ -113,10 +113,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * *   If you want to configure this parameter, specify at least one tag key and at most 20 tag keys.
-         * <p>
-         * *   If this parameter is not configured and the All parameter is set to true, all tag keys are matched.
-         * *   The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://或者https://。)
+         * Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: **false**.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -125,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources from which you want to detach tags.
+         * The ID of the region in which the resource is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -134,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The IDs of the resources from which you want to detach tags.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -143,14 +140,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Take note of the following rules when you specify a resource ID:
+         * The type of the resources. Valid values:
          * <p>
          * 
-         * *   The resource ID of an instance is the value of the instanceId parameter.
-         * *   The resource ID of a topic is the value of the Kafka_instanceId_topic parameter.
-         * *   The resource ID of a group is the value of the Kafka_instanceId_consumerGroup parameter.
+         * *   **INSTANCE**
+         * *   **TOPIC**
+         * *   **CONSUMERGROUP**
          * 
-         * For example, the resources from which you want to detach tags include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group consumer group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.
+         * >  The value of this parameter is not case-sensitive.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -159,7 +156,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Detaches tags from a specified resource.
+         * The key of the tag that you want to attach to the specified resource.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

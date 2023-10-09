@@ -86,12 +86,7 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of partitions. We recommend that you configure this parameter.
-         * <p>
-         * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -99,7 +94,7 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -107,7 +102,7 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -115,7 +110,7 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Creates a subscription Message Queue for Apache Kafka instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +118,7 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

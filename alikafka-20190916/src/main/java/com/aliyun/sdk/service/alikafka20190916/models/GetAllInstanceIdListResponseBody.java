@@ -86,7 +86,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances that are managed by the Alibaba Cloud account in all the regions.
          */
         public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
             this.instanceIds = instanceIds;
@@ -102,7 +102,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
