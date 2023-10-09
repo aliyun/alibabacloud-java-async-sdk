@@ -66,7 +66,6 @@ public class UpdateDataServiceApiRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     @Body

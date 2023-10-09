@@ -29,7 +29,6 @@ public class SubmitDataServiceApiRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     private SubmitDataServiceApiRequest(Builder builder) {

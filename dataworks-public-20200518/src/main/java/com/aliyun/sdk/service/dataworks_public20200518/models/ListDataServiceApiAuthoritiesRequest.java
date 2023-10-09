@@ -37,7 +37,6 @@ public class ListDataServiceApiAuthoritiesRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     private ListDataServiceApiAuthoritiesRequest(Builder builder) {

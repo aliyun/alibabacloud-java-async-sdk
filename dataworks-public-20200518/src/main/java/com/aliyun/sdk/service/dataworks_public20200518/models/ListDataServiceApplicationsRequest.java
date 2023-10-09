@@ -33,7 +33,6 @@ public class ListDataServiceApplicationsRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     private ListDataServiceApplicationsRequest(Builder builder) {

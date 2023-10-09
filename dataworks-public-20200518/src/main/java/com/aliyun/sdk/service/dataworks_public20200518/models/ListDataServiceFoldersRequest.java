@@ -42,7 +42,7 @@ public class ListDataServiceFoldersRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true, minimum = 1)
+    @Validation(minimum = 1)
     private Long tenantId;
 
     private ListDataServiceFoldersRequest(Builder builder) {

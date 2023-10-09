@@ -29,7 +29,6 @@ public class PublishDataServiceApiRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     private PublishDataServiceApiRequest(Builder builder) {
