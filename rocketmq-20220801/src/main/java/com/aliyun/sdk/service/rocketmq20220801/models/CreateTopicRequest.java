@@ -98,7 +98,7 @@ public class CreateTopicRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance to which the topic belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +107,15 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * 主题名称
+         * The name of the topic. The name is used to identify the topic and is globally unique in the instance.
+         * <p>
+         * 
+         * The following describes the naming conventions of a topic:
+         * 
+         * *   The name can contain letters, digits, underscores (\_), hyphens (-), and percent signs (%).
+         * *   The name must be 1 to 60 characters in length.
+         * 
+         * For information about the characters reserved for the system, see [Limits on parameters](~~440347~~).
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -116,7 +124,17 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * 消息类型
+         * The type of messages in the topic that you want to create.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   TRANSACTION: transactional messages
+         * *   FIFO: ordered messages
+         * *   DELAY: scheduled messages or delayed Message
+         * *   NORMAL: normal messages
+         * 
+         * > The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, the topic can be used to send and receive only ordered messages.
          */
         public Builder messageType(String messageType) {
             this.putBodyParameter("messageType", messageType);
@@ -125,7 +143,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * 备注
+         * The description of the topic that you want to create.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);

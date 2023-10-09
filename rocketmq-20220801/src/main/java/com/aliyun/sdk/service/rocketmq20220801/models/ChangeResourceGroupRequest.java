@@ -14,18 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ChangeResourceGroupRequest extends Request {
     @Query
     @NameInMap("regionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
     @NameInMap("resourceGroupId")
+    @Validation(required = true)
     private String resourceGroupId;
 
     @Query
     @NameInMap("resourceId")
+    @Validation(required = true)
     private String resourceId;
 
     @Query
     @NameInMap("resourceType")
+    @Validation(required = true)
     private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {
@@ -96,7 +100,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * regionId.
+         * The ID of the region in which the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -105,7 +109,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * The ID of the resource group to which the instance is changed.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups) operation to query existing resource groups.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -114,7 +121,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -123,7 +130,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of resource.
+         * <p>
+         * 
+         * Set this parameter to **instance**. The value of this parameter cannot be changed.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

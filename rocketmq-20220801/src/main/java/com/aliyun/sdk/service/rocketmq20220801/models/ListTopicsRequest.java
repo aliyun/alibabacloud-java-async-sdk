@@ -113,7 +113,7 @@ public class ListTopicsRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance that contains the topics.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -122,7 +122,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * 过滤条件
+         * The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -131,7 +131,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * messageTypes.
+         * The message types of the topics.
          */
         public Builder messageTypes(java.util.List < String > messageTypes) {
             String messageTypesShrink = shrink(messageTypes, "messageTypes", "simple");
@@ -141,7 +141,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * 分页页码
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -150,7 +150,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * 分页大小
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

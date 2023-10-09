@@ -111,7 +111,7 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance whose basic information and specifications you want to update.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +120,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 实例名称
+         * The new name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);
@@ -129,7 +129,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 网络信息
+         * The new network information about the instance.
          */
         public Builder networkInfo(NetworkInfo networkInfo) {
             this.putBodyParameter("networkInfo", networkInfo);
@@ -138,7 +138,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 扩展配置
+         * The extended configurations of the instance.
          */
         public Builder productInfo(ProductInfo productInfo) {
             this.putBodyParameter("productInfo", productInfo);
@@ -147,7 +147,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 实例备注
+         * The new remarks on the instance.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -189,7 +189,11 @@ public class UpdateInstanceRequest extends Request {
             private java.util.List < String > ipWhitelist; 
 
             /**
-             * 公网IP白名单列表
+             * The IP address whitelist that allows access to the instance over the Internet.
+             * <p>
+             * 
+             * *   If you do not configure an IP address whitelist, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If you configure an IP address whitelist, only IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
              */
             public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -230,7 +234,7 @@ public class UpdateInstanceRequest extends Request {
             private InternetInfo internetInfo; 
 
             /**
-             * 公网信息
+             * The Internet information about the instance. This parameter takes effect only when the Internet access feature is enabled for the instance.
              */
             public Builder internetInfo(InternetInfo internetInfo) {
                 this.internetInfo = internetInfo;
@@ -295,7 +299,17 @@ public class UpdateInstanceRequest extends Request {
             private Float sendReceiveRatio; 
 
             /**
-             * 自适应弹性伸缩
+             * Specifies whether to enable burst scaling for the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * *   false
+             * 
+             * After you enable burst scaling, the system allows the actual messaging transactions per second (TPS) of the ApsaraMQ for RocketMQ instance to exceed the upper limit of the basic computing specification. You are charged for the extra TPS. For more information, see [Computing fee](~~427237~~).
+             * 
+             * > Only specific types of instances support burst scaling. For more information, see [Instance specifications](~~444715~~).
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -303,7 +317,12 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * 消息保留时长
+             * The retention period of messages. Unit: hours.
+             * <p>
+             * 
+             * For more information about the valid values, see the "Limits on resource quotas" section of the [Usage limits](~~440347~~) topic.
+             * 
+             * The storage of ApsaraMQ for RocketMQ messages is in serverless scaling mode. You are charged based on the actual used storage. You can adjust the storage retention period to reduce storage usage and costs. For more information, see [Storage fees](~~427238~~).
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -311,7 +330,10 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * 消息收发比例
+             * The ratio of the number of messages that you can send to the number of messages that you can receive in the instance.
+             * <p>
+             * 
+             * Value values: 0.25 to 1.
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;

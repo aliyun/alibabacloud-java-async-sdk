@@ -122,7 +122,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The result data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误码
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +290,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 消费组ID
+             * The ID of the consumer group.
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -298,7 +298,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the consumer group was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,7 +306,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -314,7 +314,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -322,7 +322,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * The remarks on the consumer group.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -330,7 +330,38 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 消费组状态
+             * The state of the consumer group.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RUNNING
+             * 
+             *     <!-- -->
+             * 
+             *     : The consumer group is
+             * 
+             *     <!-- -->
+             * 
+             *     running
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   CREATING
+             * 
+             *     <!-- -->
+             * 
+             *     : The consumer group is
+             * 
+             *     <!-- -->
+             * 
+             *     being created
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +369,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * The time when the consumer group was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -415,7 +446,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 分页数据
+             * The paginated data.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -423,7 +454,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 当前页码
+             * The page number of the returned page.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -431,7 +462,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 分页大小
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +470,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * The total number of returned entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

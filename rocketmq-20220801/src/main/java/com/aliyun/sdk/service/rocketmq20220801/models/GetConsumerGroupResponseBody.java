@@ -122,7 +122,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The result data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误码
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +242,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String retryPolicy; 
 
             /**
-             * deadLetterTargetTopic.
+             * The dead-letter topic.
+             * <p>
+             * 
+             * If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).
              */
             public Builder deadLetterTargetTopic(String deadLetterTargetTopic) {
                 this.deadLetterTargetTopic = deadLetterTargetTopic;
@@ -250,7 +253,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 最大重试次数
+             * The maximum number of retries.
              */
             public Builder maxRetryTimes(Integer maxRetryTimes) {
                 this.maxRetryTimes = maxRetryTimes;
@@ -258,7 +261,38 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 重试策略类型
+             * The retry policy.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   FixedRetryPolicy
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Failed messages are retried at a fixed interval
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   DefaultRetryPolicy
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Failed messages are retried at incremental intervals as the number of retries increases
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder retryPolicy(String retryPolicy) {
                 this.retryPolicy = retryPolicy;
@@ -395,7 +429,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 消费重试策略
+             * The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).
              */
             public Builder consumeRetryPolicy(ConsumeRetryPolicy consumeRetryPolicy) {
                 this.consumeRetryPolicy = consumeRetryPolicy;
@@ -403,7 +437,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 消费组ID
+             * The ID of the consumer group.
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -411,7 +445,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the consumer group was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -419,7 +453,34 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 投递顺序性
+             * The message delivery order of the consumer group.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Concurrently
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     concurrent delivery
+             * 
+             *     <!-- -->
+             * 
+             * *   Orderly
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     ordered delivery
+             * 
+             *     <!-- -->
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -427,7 +488,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -435,7 +496,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -443,7 +504,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * The remarks on the consumer group.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -451,7 +512,38 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 消费组状态
+             * The state of the consumer group.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RUNNING
+             * 
+             *     <!-- -->
+             * 
+             *     : The consumer group is
+             * 
+             *     <!-- -->
+             * 
+             *     running
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   CREATING
+             * 
+             *     <!-- -->
+             * 
+             *     : The consumer group is
+             * 
+             *     <!-- -->
+             * 
+             *     being created
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder status(String status) {
                 this.status = status;
@@ -459,7 +551,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * The time when the consumer group was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

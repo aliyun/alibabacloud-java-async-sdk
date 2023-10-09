@@ -7,32 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTopicRequest} extends {@link RequestModel}
+ * {@link ListConsumerGroupSubscriptionsRequest} extends {@link RequestModel}
  *
- * <p>DeleteTopicRequest</p>
+ * <p>ListConsumerGroupSubscriptionsRequest</p>
  */
-public class DeleteTopicRequest extends Request {
+public class ListConsumerGroupSubscriptionsRequest extends Request {
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Path
-    @NameInMap("topicName")
-    @Validation(required = true)
-    private String topicName;
+    @NameInMap("consumerGroupId")
+    private String consumerGroupId;
 
-    private DeleteTopicRequest(Builder builder) {
+    private ListConsumerGroupSubscriptionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.topicName = builder.topicName;
+        this.consumerGroupId = builder.consumerGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteTopicRequest create() {
+    public static ListConsumerGroupSubscriptionsRequest create() {
         return builder().build();
     }
 
@@ -49,28 +48,28 @@ public class DeleteTopicRequest extends Request {
     }
 
     /**
-     * @return topicName
+     * @return consumerGroupId
      */
-    public String getTopicName() {
-        return this.topicName;
+    public String getConsumerGroupId() {
+        return this.consumerGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteTopicRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListConsumerGroupSubscriptionsRequest, Builder> {
         private String instanceId; 
-        private String topicName; 
+        private String consumerGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteTopicRequest request) {
+        private Builder(ListConsumerGroupSubscriptionsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.topicName = request.topicName;
+            this.consumerGroupId = request.consumerGroupId;
         } 
 
         /**
-         * The ID of the instance to which the topic belongs.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,17 +78,17 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * The name of the topic.
+         * The consumer group ID.
          */
-        public Builder topicName(String topicName) {
-            this.putPathParameter("topicName", topicName);
-            this.topicName = topicName;
+        public Builder consumerGroupId(String consumerGroupId) {
+            this.putPathParameter("consumerGroupId", consumerGroupId);
+            this.consumerGroupId = consumerGroupId;
             return this;
         }
 
         @Override
-        public DeleteTopicRequest build() {
-            return new DeleteTopicRequest(this);
+        public ListConsumerGroupSubscriptionsRequest build() {
+            return new ListConsumerGroupSubscriptionsRequest(this);
         } 
 
     } 

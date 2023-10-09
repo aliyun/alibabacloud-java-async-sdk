@@ -70,7 +70,7 @@ public class DeleteConsumerGroupRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance from which you want to delete the consumer group.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * 消费组ID
+         * The ID of the consumer group.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);

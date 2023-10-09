@@ -114,7 +114,7 @@ public class UpdateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance to which the consumer group belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -123,7 +123,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * 消费组ID
+         * The ID of the consumer group.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -132,7 +132,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * 消费重试策略
+         * The new consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).
          */
         public Builder consumeRetryPolicy(ConsumeRetryPolicy consumeRetryPolicy) {
             this.putBodyParameter("consumeRetryPolicy", consumeRetryPolicy);
@@ -141,7 +141,13 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * 投递顺序性
+         * The new message delivery order of the consumer group.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Concurrently: concurrent delivery
+         * *   Orderly: ordered delivery
          */
         public Builder deliveryOrderType(String deliveryOrderType) {
             this.putBodyParameter("deliveryOrderType", deliveryOrderType);
@@ -150,7 +156,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * 备注
+         * The new remarks on the consumer group.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -217,7 +223,10 @@ public class UpdateConsumerGroupRequest extends Request {
             private String retryPolicy; 
 
             /**
-             * deadLetterTargetTopic.
+             * The dead-letter topic.
+             * <p>
+             * 
+             * If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).
              */
             public Builder deadLetterTargetTopic(String deadLetterTargetTopic) {
                 this.deadLetterTargetTopic = deadLetterTargetTopic;
@@ -225,7 +234,7 @@ public class UpdateConsumerGroupRequest extends Request {
             }
 
             /**
-             * 最大重试次数
+             * The maximum number of retries.
              */
             public Builder maxRetryTimes(Integer maxRetryTimes) {
                 this.maxRetryTimes = maxRetryTimes;
@@ -233,7 +242,13 @@ public class UpdateConsumerGroupRequest extends Request {
             }
 
             /**
-             * 重试策略类型
+             * The retry policy. For more information, see [Message retry](~~440356~~).
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   FixedRetryPolicy: Failed messages are retried at a fixed interval.
+             * *   DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.
              */
             public Builder retryPolicy(String retryPolicy) {
                 this.retryPolicy = retryPolicy;

@@ -122,7 +122,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code returned if the call failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误码
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,6 +191,67 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("key")
+        private String key;
+
+        @NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the resource.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the resource.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class List extends TeaModel {
         @NameInMap("commodityCode")
         private String commodityCode;
@@ -240,6 +301,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("subSeriesCode")
         private String subSeriesCode;
 
+        @NameInMap("tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("topicCount")
         private Long topicCount;
 
@@ -266,6 +330,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.subSeriesCode = builder.subSeriesCode;
+            this.tags = builder.tags;
             this.topicCount = builder.topicCount;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
@@ -392,6 +457,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return topicCount
          */
         public Long getTopicCount() {
@@ -429,12 +501,13 @@ public class ListInstancesResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String subSeriesCode; 
+            private java.util.List < Tags> tags; 
             private Long topicCount; 
             private String updateTime; 
             private String userId; 
 
             /**
-             * 商品编码
+             * The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -442,7 +515,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -450,7 +523,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 过期时间
+             * The time when the instance expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -458,7 +531,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 消费组数量
+             * The number of consumer groups that are created on the instance.
              */
             public Builder groupCount(Long groupCount) {
                 this.groupCount = groupCount;
@@ -466,7 +539,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -474,7 +547,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例名称
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -482,7 +555,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型
+             * The billing method of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PayAsYouGo
+             * *   Subscription
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -490,7 +569,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -498,7 +577,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 释放时间
+             * The time when the instance was released.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -506,7 +585,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * The instance description.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -514,7 +593,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -522,7 +601,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 系列编码
+             * The primary edition of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard: Standard Edition
+             * *   ultimate: Enterprise Platinum Edition
+             * *   professional: Professional Edition
              */
             public Builder seriesCode(String seriesCode) {
                 this.seriesCode = seriesCode;
@@ -530,7 +616,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 服务编码
+             * The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -538,7 +624,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 开服时间
+             * The time when the instance was started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -546,7 +632,16 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例状态
+             * The instance status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RELEASED
+             * *   RUNNING
+             * *   STOPPED
+             * *   CHANGING
+             * *   CREATING
              */
             public Builder status(String status) {
                 this.status = status;
@@ -554,7 +649,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 子系列编码
+             * The sub-category edition of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   cluster_ha: Cluster High-availability Edition
+             * *   single_node: Standalone Edition
              */
             public Builder subSeriesCode(String subSeriesCode) {
                 this.subSeriesCode = subSeriesCode;
@@ -562,7 +663,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 主题数量
+             * The resource tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The number of topics that are created on the instance.
              */
             public Builder topicCount(Long topicCount) {
                 this.topicCount = topicCount;
@@ -570,7 +679,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * The time when the instance was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -578,7 +687,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 所属人ID
+             * The ID of the user who owns the instance.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -655,7 +764,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 分页数据
+             * The paginated data.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -663,7 +772,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 当前页码
+             * The page number of the returned page.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -671,7 +780,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 分页大小
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -679,7 +788,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * The total number of returned entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

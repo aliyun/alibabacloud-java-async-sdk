@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetTopicResponseBody} extends {@link TeaModel}
+ * {@link ListConsumerGroupSubscriptionsResponseBody} extends {@link TeaModel}
  *
- * <p>GetTopicResponseBody</p>
+ * <p>ListConsumerGroupSubscriptionsResponseBody</p>
  */
-public class GetTopicResponseBody extends TeaModel {
+public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     @NameInMap("code")
     private String code;
 
     @NameInMap("data")
-    private Data data;
+    private java.util.List < Data> data;
 
     @NameInMap("dynamicCode")
     private String dynamicCode;
@@ -36,7 +36,7 @@ public class GetTopicResponseBody extends TeaModel {
     @NameInMap("success")
     private Boolean success;
 
-    private GetTopicResponseBody(Builder builder) {
+    private ListConsumerGroupSubscriptionsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
@@ -51,7 +51,7 @@ public class GetTopicResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetTopicResponseBody create() {
+    public static ListConsumerGroupSubscriptionsResponseBody create() {
         return builder().build();
     }
 
@@ -65,7 +65,7 @@ public class GetTopicResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -113,7 +113,7 @@ public class GetTopicResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private java.util.List < Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -122,7 +122,7 @@ public class GetTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * The returned error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,15 +130,15 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * The returned data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic error code.
+         * The returned dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * The returned dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The returned HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,53 +178,49 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public GetTopicResponseBody build() {
-            return new GetTopicResponseBody(this);
+        public ListConsumerGroupSubscriptionsResponseBody build() {
+            return new ListConsumerGroupSubscriptionsResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("createTime")
-        private String createTime;
+        @NameInMap("consumerGroupId")
+        private String consumerGroupId;
 
-        @NameInMap("instanceId")
-        private String instanceId;
+        @NameInMap("filterExpression")
+        private String filterExpression;
 
-        @NameInMap("messageType")
-        private String messageType;
+        @NameInMap("filterExpressionType")
+        private String filterExpressionType;
 
-        @NameInMap("regionId")
-        private String regionId;
+        @NameInMap("messageModel")
+        private String messageModel;
 
-        @NameInMap("remark")
-        private String remark;
+        @NameInMap("subscriptionStatus")
+        private String subscriptionStatus;
 
-        @NameInMap("status")
-        private String status;
+        @NameInMap("topicCreated")
+        private Boolean topicCreated;
 
         @NameInMap("topicName")
         private String topicName;
 
-        @NameInMap("updateTime")
-        private String updateTime;
-
         private Data(Builder builder) {
-            this.createTime = builder.createTime;
-            this.instanceId = builder.instanceId;
-            this.messageType = builder.messageType;
-            this.regionId = builder.regionId;
-            this.remark = builder.remark;
-            this.status = builder.status;
+            this.consumerGroupId = builder.consumerGroupId;
+            this.filterExpression = builder.filterExpression;
+            this.filterExpressionType = builder.filterExpressionType;
+            this.messageModel = builder.messageModel;
+            this.subscriptionStatus = builder.subscriptionStatus;
+            this.topicCreated = builder.topicCreated;
             this.topicName = builder.topicName;
-            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -236,45 +232,45 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * @return createTime
+         * @return consumerGroupId
          */
-        public String getCreateTime() {
-            return this.createTime;
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         /**
-         * @return instanceId
+         * @return filterExpression
          */
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getFilterExpression() {
+            return this.filterExpression;
         }
 
         /**
-         * @return messageType
+         * @return filterExpressionType
          */
-        public String getMessageType() {
-            return this.messageType;
+        public String getFilterExpressionType() {
+            return this.filterExpressionType;
         }
 
         /**
-         * @return regionId
+         * @return messageModel
          */
-        public String getRegionId() {
-            return this.regionId;
+        public String getMessageModel() {
+            return this.messageModel;
         }
 
         /**
-         * @return remark
+         * @return subscriptionStatus
          */
-        public String getRemark() {
-            return this.remark;
+        public String getSubscriptionStatus() {
+            return this.subscriptionStatus;
         }
 
         /**
-         * @return status
+         * @return topicCreated
          */
-        public String getStatus() {
-            return this.status;
+        public Boolean getTopicCreated() {
+            return this.topicCreated;
         }
 
         /**
@@ -284,98 +280,68 @@ public class GetTopicResponseBody extends TeaModel {
             return this.topicName;
         }
 
-        /**
-         * @return updateTime
-         */
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
         public static final class Builder {
-            private String createTime; 
-            private String instanceId; 
-            private String messageType; 
-            private String regionId; 
-            private String remark; 
-            private String status; 
+            private String consumerGroupId; 
+            private String filterExpression; 
+            private String filterExpressionType; 
+            private String messageModel; 
+            private String subscriptionStatus; 
+            private Boolean topicCreated; 
             private String topicName; 
-            private String updateTime; 
 
             /**
-             * The time when the topic was created.
+             * The consumer group ID.
              */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
+            public Builder consumerGroupId(String consumerGroupId) {
+                this.consumerGroupId = consumerGroupId;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * The filter expression.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder filterExpression(String filterExpression) {
+                this.filterExpression = filterExpression;
                 return this;
             }
 
             /**
-             * The message type of the topic.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   TRANSACTION: transactional message
-             * *   FIFO: ordered message
-             * *   DELAY: scheduled or delayed message
-             * *   NORMAL: normal message
+             * The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED.
              */
-            public Builder messageType(String messageType) {
-                this.messageType = messageType;
+            public Builder filterExpressionType(String filterExpressionType) {
+                this.filterExpressionType = filterExpressionType;
                 return this;
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * The consumption mode. Valid values: BROADCASTING and CLUSTERING.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder messageModel(String messageModel) {
+                this.messageModel = messageModel;
                 return this;
             }
 
             /**
-             * The remarks on the topic.
+             * The subscription status. Valid values: ONLINE and OFFLINE.
              */
-            public Builder remark(String remark) {
-                this.remark = remark;
+            public Builder subscriptionStatus(String subscriptionStatus) {
+                this.subscriptionStatus = subscriptionStatus;
                 return this;
             }
 
             /**
-             * The state of the topic.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   RUNNING: The topic is running.
-             * *   CREATING: The topic is being created.
+             * Indicates whether the topic is created.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder topicCreated(Boolean topicCreated) {
+                this.topicCreated = topicCreated;
                 return this;
             }
 
             /**
-             * The name of the topic.
+             * The topic to which the consumer group subscribes.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
-                return this;
-            }
-
-            /**
-             * The time when the topic was last updated.
-             */
-            public Builder updateTime(String updateTime) {
-                this.updateTime = updateTime;
                 return this;
             }
 

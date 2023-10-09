@@ -70,7 +70,7 @@ public class GetTopicRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance to which the topic belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class GetTopicRequest extends Request {
         }
 
         /**
-         * 主题名称
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);

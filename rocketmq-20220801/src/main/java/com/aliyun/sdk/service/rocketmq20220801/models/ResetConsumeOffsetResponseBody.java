@@ -7,16 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+ * {@link ResetConsumeOffsetResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateInstanceResponseBody</p>
+ * <p>ResetConsumeOffsetResponseBody</p>
  */
-public class UpdateInstanceResponseBody extends TeaModel {
+public class ResetConsumeOffsetResponseBody extends TeaModel {
     @NameInMap("code")
     private String code;
-
-    @NameInMap("data")
-    private Boolean data;
 
     @NameInMap("dynamicCode")
     private String dynamicCode;
@@ -36,9 +33,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     @NameInMap("success")
     private Boolean success;
 
-    private UpdateInstanceResponseBody(Builder builder) {
+    private ResetConsumeOffsetResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
         this.dynamicMessage = builder.dynamicMessage;
         this.httpStatusCode = builder.httpStatusCode;
@@ -51,7 +47,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateInstanceResponseBody create() {
+    public static ResetConsumeOffsetResponseBody create() {
         return builder().build();
     }
 
@@ -60,13 +56,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public Boolean getData() {
-        return this.data;
     }
 
     /**
@@ -113,7 +102,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Boolean data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -122,7 +110,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * The returned error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,15 +118,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
-         */
-        public Builder data(Boolean data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * The dynamic error code.
+         * The returned dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +126,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * The returned dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +134,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The returned HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +142,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +150,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,15 +158,15 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public UpdateInstanceResponseBody build() {
-            return new UpdateInstanceResponseBody(this);
+        public ResetConsumeOffsetResponseBody build() {
+            return new ResetConsumeOffsetResponseBody(this);
         } 
 
     } 

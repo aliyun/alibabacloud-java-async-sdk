@@ -55,7 +55,7 @@ public class GetInstanceRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance that you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

@@ -122,7 +122,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The result data that is returned.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误码
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

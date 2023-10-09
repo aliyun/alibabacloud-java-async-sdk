@@ -122,7 +122,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code returned if the call failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误码
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 用户名
+             * The username of the instance. If you access a ApsaraMQ for RocketMQ instance over the Internet, you must configure the username and password of the instance in the SDK code for authentication.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -259,7 +259,12 @@ public class GetInstanceResponseBody extends TeaModel {
             private String aclType; 
 
             /**
-             * 访问控制类型
+             * The authentication type of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   default: intelligent authentication
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -396,7 +401,12 @@ public class GetInstanceResponseBody extends TeaModel {
             private Boolean supportAutoScaling; 
 
             /**
-             * 鉴权类型
+             * The authentication type of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   default: intelligent authentication
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -404,7 +414,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自适应弹性伸缩
+             * Specifies whether to enable the elastic TPS feature for the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: enable
+             * *   false: disable
+             * 
+             * This parameter is valid only when the supportAutoScaling parameter is set to enable.
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -412,7 +430,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 公网带宽规格
+             * The Internet bandwidth. Unit: MB/s.
              */
             public Builder flowOutBandwidth(Integer flowOutBandwidth) {
                 this.flowOutBandwidth = flowOutBandwidth;
@@ -420,7 +438,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 公网计费类型
+             * The metering method for Internet usage.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PayByTraffic: pay-by-traffic
+             * *   paybybandwidth: pay-by-bandwidth
+             * *   uninvolved: N/A
              */
             public Builder flowOutType(String flowOutType) {
                 this.flowOutType = flowOutType;
@@ -428,7 +453,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开通公网
+             * Specifies whether to enable the Internet access feature.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   enable
+             * *   disable
+             * 
+             * By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
              */
             public Builder internetSpec(String internetSpec) {
                 this.internetSpec = internetSpec;
@@ -436,7 +469,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 消息保留时长
+             * The retention period of messages. Unit: hours.
+             * <p>
+             * 
+             * For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
+             * 
+             * The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -444,7 +482,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 消息收发计算规格
+             * The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
              */
             public Builder msgProcessSpec(String msgProcessSpec) {
                 this.msgProcessSpec = msgProcessSpec;
@@ -452,7 +490,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 消息收发比例
+             * The ratio between sent messages and received messages in the instance.
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;
@@ -460,7 +498,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持自适应弹性伸缩
+             * Specifies whether the elastic TPS feature is supported by the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: enable
+             * *   false: disable
+             * 
+             * After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
+             * 
+             * > The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](~~444715~~).
              */
             public Builder supportAutoScaling(Boolean supportAutoScaling) {
                 this.supportAutoScaling = supportAutoScaling;
@@ -537,7 +585,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private Double usedCount; 
 
             /**
-             * 免费
+             * The number of topics that are free of charge on the instance.
              */
             public Builder freeCount(Double freeCount) {
                 this.freeCount = freeCount;
@@ -545,7 +593,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 配额名称
+             * The quota name.
+             * <p>
+             * 
+             * Valid value:
+             * 
+             * *   TOPIC_COUNT: the number of topics that can be created on the instance
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -553,7 +606,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 总配额
+             * The total number of topics on the instance.
              */
             public Builder totalCount(Double totalCount) {
                 this.totalCount = totalCount;
@@ -561,7 +614,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 已使用量
+             * The number of used topics on the instance.
              */
             public Builder usedCount(Double usedCount) {
                 this.usedCount = usedCount;
@@ -626,7 +679,34 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.List < String > ipWhitelist; 
 
             /**
-             * 接入点类型
+             * The type of the endpoint that is used to access the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   TCP_VPC
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     VPC endpoint
+             * 
+             *     <!-- -->
+             * 
+             * *   TCP_INTERNET
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     public endpoint
+             * 
+             *     <!-- -->
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -634,7 +714,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 接入点地址
+             * The endpoint that is used to access the instance.
              */
             public Builder endpointUrl(String endpointUrl) {
                 this.endpointUrl = endpointUrl;
@@ -642,7 +722,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ipWhitelist.
+             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
+             * <p>
+             * 
+             * *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+             * 
+             * We recommend that you configure internetInfo.ipWhitelist instead of this parameter.
              */
             public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -719,7 +805,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.List < String > ipWhitelist; 
 
             /**
-             * 公网带宽规格
+             * The Internet bandwidth. Unit: MB/s.
              */
             public Builder flowOutBandwidth(Integer flowOutBandwidth) {
                 this.flowOutBandwidth = flowOutBandwidth;
@@ -727,7 +813,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 公网计费类型
+             * The metering method for Internet usage.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PayByBandwidth: pay-by-bandwidth. If the Internet access feature is enabled, specify this value for the parameter.
+             * *   uninvolved: N/A. If the Internet access feature is not enabled, specify this value for the parameter.
              */
             public Builder flowOutType(String flowOutType) {
                 this.flowOutType = flowOutType;
@@ -735,7 +827,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开通公网
+             * Specifies whether to enable the Internet access feature.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   enable
+             * *   disable
+             * 
+             * By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
              */
             public Builder internetSpec(String internetSpec) {
                 this.internetSpec = internetSpec;
@@ -743,7 +843,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 公网IP白名单列表
+             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker.
+             * <p>
+             * 
+             * *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
              */
             public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -796,7 +900,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 交换机ID
+             * The ID of the vSwitch with which the instance is associated.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -804,7 +908,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 专有网络ID
+             * The ID of the VPC with which the instance is associated.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -869,7 +973,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private VpcInfo vpcInfo; 
 
             /**
-             * 接入点列表
+             * The information about endpoints.
              */
             public Builder endpoints(java.util.List < Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -877,7 +981,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 公网信息
+             * The information about the Internet.
              */
             public Builder internetInfo(InternetInfo internetInfo) {
                 this.internetInfo = internetInfo;
@@ -885,7 +989,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 专有网络信息
+             * The information about the VPC.
              */
             public Builder vpcInfo(VpcInfo vpcInfo) {
                 this.vpcInfo = vpcInfo;
@@ -974,7 +1078,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private Boolean supportAutoScaling; 
 
             /**
-             * 是否开启弹性伸缩
+             * Specifies whether to enable the elastic TPS feature for the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: enable
+             * *   false: disable
+             * 
+             * This parameter is valid only when the supportAutoScaling parameter is set to enable.
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -982,7 +1094,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 消息保留时长
+             * The retention period of messages. Unit: hours.
+             * <p>
+             * 
+             * For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
+             * 
+             * The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -990,7 +1107,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 消息收发规格
+             * The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
              */
             public Builder msgProcessSpec(String msgProcessSpec) {
                 this.msgProcessSpec = msgProcessSpec;
@@ -998,7 +1115,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 消息收发比例
+             * The ratio between sent messages and received messages in the instance.
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;
@@ -1006,7 +1123,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持弹性伸缩
+             * Specifies whether to enable the elastic TPS feature for the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: enable
+             * *   false: disable
+             * 
+             * After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
+             * 
+             * > The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).
              */
             public Builder supportAutoScaling(Boolean supportAutoScaling) {
                 this.supportAutoScaling = supportAutoScaling;
@@ -1071,7 +1198,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String upgradeMethod; 
 
             /**
-             * maintainTime.
+             * The period of upgrade time.
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -1079,7 +1206,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * softwareVersion.
+             * The version of software.
              */
             public Builder softwareVersion(String softwareVersion) {
                 this.softwareVersion = softwareVersion;
@@ -1087,7 +1214,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * upgradeMethod.
+             * The upgrade method.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * - Auto: automatic upgrade
+             * 
+             * - Manual: manual upgrade
              */
             public Builder upgradeMethod(String upgradeMethod) {
                 this.upgradeMethod = upgradeMethod;
@@ -1096,6 +1230,67 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public Software build() {
                 return new Software(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("key")
+        private String key;
+
+        @NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the resource.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the resource.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -1174,6 +1369,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("subSeriesCode")
         private String subSeriesCode;
 
+        @NameInMap("tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("topicCount")
         private Long topicCount;
 
@@ -1208,6 +1406,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.subSeriesCode = builder.subSeriesCode;
+            this.tags = builder.tags;
             this.topicCount = builder.topicCount;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
@@ -1390,6 +1589,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return topicCount
          */
         public Long getTopicCount() {
@@ -1435,12 +1641,13 @@ public class GetInstanceResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String subSeriesCode; 
+            private java.util.List < Tags> tags; 
             private Long topicCount; 
             private String updateTime; 
             private String userId; 
 
             /**
-             * 账号信息
+             * The account information.
              */
             public Builder accountInfo(AccountInfo accountInfo) {
                 this.accountInfo = accountInfo;
@@ -1448,7 +1655,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 访问控制信息
+             * The information about access control.
              */
             public Builder aclInfo(AclInfo aclInfo) {
                 this.aclInfo = aclInfo;
@@ -1456,7 +1663,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BID
+             * The business ID (BID) of the commodity.
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -1464,7 +1671,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 商品编码
+             * The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -1472,7 +1679,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1480,7 +1687,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 过期时间
+             * The time when the instance expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1488,7 +1695,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 扩展配置，不再推荐使用，建议使用产品信息、网络信息中的字段替换
+             * The extended configurations. We recommend you configure the productInfo, internetInfo, or aclInfo parameter instead of this parameter.
              */
             public Builder extConfig(ExtConfig extConfig) {
                 this.extConfig = extConfig;
@@ -1496,7 +1703,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * groupCount.
+             * The number of groups.
              */
             public Builder groupCount(Long groupCount) {
                 this.groupCount = groupCount;
@@ -1504,7 +1711,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1512,7 +1719,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例名称
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1520,7 +1727,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 容量信息
+             * The quotas in the instance.
              */
             public Builder instanceQuotas(java.util.List < InstanceQuotas> instanceQuotas) {
                 this.instanceQuotas = instanceQuotas;
@@ -1528,7 +1735,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网络信息
+             * The network information.
              */
             public Builder networkInfo(NetworkInfo networkInfo) {
                 this.networkInfo = networkInfo;
@@ -1536,7 +1743,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型
+             * The billing method of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PayAsYouGo: pay-as-you-go
+             * *   Subscription
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1544,7 +1757,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 产品信息
+             * The extended configurations of the instance.
              */
             public Builder productInfo(ProductInfo productInfo) {
                 this.productInfo = productInfo;
@@ -1552,7 +1765,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1560,7 +1773,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 释放时间
+             * The time when the instance was released.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -1568,7 +1781,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * The description of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1576,7 +1789,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1584,7 +1797,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 系列编码
+             * The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](~~444722~~).
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard: Standard Edition
+             * *   ultimate: Enterprise Platinum Edition
+             * *   professional: Professional Edition
              */
             public Builder seriesCode(String seriesCode) {
                 this.seriesCode = seriesCode;
@@ -1592,7 +1812,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务编码
+             * The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -1600,7 +1820,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * software.
+             * The instance software information.
              */
             public Builder software(Software software) {
                 this.software = software;
@@ -1608,7 +1828,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 开服时间
+             * The time when the instance was started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1616,7 +1836,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例状态
+             * The status of the instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RELEASED
+             * *   RUNNING
+             * *   STOPPED
+             * *   CHANGING
+             * *   CREATING
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1624,7 +1853,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 子系列编码
+             * The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](~~444722~~).
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   cluster_ha: Cluster High-availability Edition
+             * *   single_node: Standalone Edition
              */
             public Builder subSeriesCode(String subSeriesCode) {
                 this.subSeriesCode = subSeriesCode;
@@ -1632,7 +1867,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * topicCount.
+             * The resource tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The number of topics.
              */
             public Builder topicCount(Long topicCount) {
                 this.topicCount = topicCount;
@@ -1640,7 +1883,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * The time when the instance was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1648,7 +1891,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 所属人ID
+             * The ID of the user who owns the instance.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

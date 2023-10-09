@@ -30,12 +30,17 @@ public class ListInstancesRequest extends Request {
     @NameInMap("resourceGroupId")
     private String resourceGroupId;
 
+    @Query
+    @NameInMap("tags")
+    private String tags;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class ListInstancesRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String filter; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
+        private String tags; 
 
         private Builder() {
             super();
@@ -95,10 +108,11 @@ public class ListInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
-         * 过滤关键字
+         * The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -107,7 +121,12 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 分页页码
+         * The number of the page to return.
+         * <p>
+         * 
+         * Valid values: 1 to 100000000.
+         * 
+         * If the value that you specify for this parameter is less than 1, the system uses 1 as the value. If the value that you specify for this parameter is greater than 100000000, the system uses 100000000 as the value.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -116,7 +135,12 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 分页大小
+         * The number of entries returned on each page.
+         * <p>
+         * 
+         * Value values: 10 to 200.
+         * 
+         * If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -125,11 +149,20 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The tags that are used to filter instances.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 

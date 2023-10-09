@@ -55,7 +55,7 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the ApsaraMQ for RocketMQ instance that you want to delete.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

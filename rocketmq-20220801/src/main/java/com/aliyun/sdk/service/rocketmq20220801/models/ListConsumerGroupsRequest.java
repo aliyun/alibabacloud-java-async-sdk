@@ -99,7 +99,7 @@ public class ListConsumerGroupsRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * The ID of the instance to which the consumer groups belong.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +108,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * 过滤条件
+         * The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -117,7 +117,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * 分页页码
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -126,7 +126,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * 分页大小
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

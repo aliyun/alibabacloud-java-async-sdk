@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTopicResponse} extends {@link TeaModel}
+ * {@link ResetConsumeOffsetResponse} extends {@link TeaModel}
  *
- * <p>DeleteTopicResponse</p>
+ * <p>ResetConsumeOffsetResponse</p>
  */
-public class DeleteTopicResponse extends Response {
+public class ResetConsumeOffsetResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DeleteTopicResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteTopicResponseBody body;
+    private ResetConsumeOffsetResponseBody body;
 
-    private DeleteTopicResponse(BuilderImpl builder) {
+    private ResetConsumeOffsetResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteTopicResponse create() {
+    public static ResetConsumeOffsetResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DeleteTopicResponse extends Response {
     /**
      * @return body
      */
-    public DeleteTopicResponseBody getBody() {
+    public ResetConsumeOffsetResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteTopicResponse, Builder> {
+    public interface Builder extends Response.Builder<ResetConsumeOffsetResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteTopicResponseBody body);
+        Builder body(ResetConsumeOffsetResponseBody body);
 
         @Override
-        DeleteTopicResponse build();
+        ResetConsumeOffsetResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteTopicResponse, Builder>
+            extends Response.BuilderImpl<ResetConsumeOffsetResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteTopicResponseBody body; 
+        private ResetConsumeOffsetResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteTopicResponse response) {
+        private BuilderImpl(ResetConsumeOffsetResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DeleteTopicResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteTopicResponseBody body) {
+        public Builder body(ResetConsumeOffsetResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteTopicResponse build() {
-            return new DeleteTopicResponse(this);
+        public ResetConsumeOffsetResponse build() {
+            return new ResetConsumeOffsetResponse(this);
         } 
 
     } 

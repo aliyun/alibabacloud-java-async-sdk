@@ -122,7 +122,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The error code returned if the call failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * The returned result.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -122,7 +122,7 @@ public class ListTopicsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The result data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误码
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +146,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +154,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +162,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +170,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +302,7 @@ public class ListTopicsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 创建时间
+             * The time when the topic was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -310,7 +310,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -318,7 +318,58 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 消息类型,MessageTypeEnum[UNSPECIFIED,NORMAL(普通),FIFO(顺序),DELAY(延迟),TRANSACTION(事务),UNRECOGNIZED(无法识别),code,desc]
+             * The message type of the topic.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   TRANSACTION
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     transactional message
+             * 
+             *     <!-- -->
+             * 
+             * *   FIFO
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     ordered message
+             * 
+             *     <!-- -->
+             * 
+             * *   DELAY
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     scheduled or delayed message
+             * 
+             *     <!-- -->
+             * 
+             * *   NORMAL
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     normal message
+             * 
+             *     <!-- -->
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -326,7 +377,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -334,7 +385,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * The remarks on the topic.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -342,7 +393,38 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic状态,TopicStatusEnum[CREATING(创建中),RUNNING(运行中),code,desc]
+             * The state of the topic.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RUNNING
+             * 
+             *     <!-- -->
+             * 
+             *     : The topic is
+             * 
+             *     <!-- -->
+             * 
+             *     running
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   CREATING
+             * 
+             *     <!-- -->
+             * 
+             *     : The topic is
+             * 
+             *     <!-- -->
+             * 
+             *     being created
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +432,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic编码
+             * The name of the topic.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -358,7 +440,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * The time when the topic was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -435,7 +517,7 @@ public class ListTopicsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 分页数据
+             * The paginated data.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -443,7 +525,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 当前页码
+             * The page number of the returned page.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -451,7 +533,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 分页大小
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -459,7 +541,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * The total number of returned entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
