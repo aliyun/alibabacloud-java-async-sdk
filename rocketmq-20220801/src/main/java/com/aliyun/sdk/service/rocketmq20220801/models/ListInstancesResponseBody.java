@@ -191,6 +191,47 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class ProductInfo extends TeaModel {
+        @NameInMap("traceOn")
+        private Boolean traceOn;
+
+        private ProductInfo(Builder builder) {
+            this.traceOn = builder.traceOn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProductInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return traceOn
+         */
+        public Boolean getTraceOn() {
+            return this.traceOn;
+        }
+
+        public static final class Builder {
+            private Boolean traceOn; 
+
+            /**
+             * traceOn.
+             */
+            public Builder traceOn(Boolean traceOn) {
+                this.traceOn = traceOn;
+                return this;
+            }
+
+            public ProductInfo build() {
+                return new ProductInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("key")
         private String key;
@@ -274,6 +315,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("paymentType")
         private String paymentType;
 
+        @NameInMap("productInfo")
+        private ProductInfo productInfo;
+
         @NameInMap("regionId")
         private String regionId;
 
@@ -321,6 +365,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.paymentType = builder.paymentType;
+            this.productInfo = builder.productInfo;
             this.regionId = builder.regionId;
             this.releaseTime = builder.releaseTime;
             this.remark = builder.remark;
@@ -391,6 +436,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        /**
+         * @return productInfo
+         */
+        public ProductInfo getProductInfo() {
+            return this.productInfo;
         }
 
         /**
@@ -492,6 +544,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String paymentType; 
+            private ProductInfo productInfo; 
             private String regionId; 
             private String releaseTime; 
             private String remark; 
@@ -565,6 +618,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
+                return this;
+            }
+
+            /**
+             * productInfo.
+             */
+            public Builder productInfo(ProductInfo productInfo) {
+                this.productInfo = productInfo;
                 return this;
             }
 

@@ -258,10 +258,14 @@ public class UpdateInstanceRequest extends Request {
         @NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
+        @NameInMap("traceOn")
+        private Boolean traceOn;
+
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.sendReceiveRatio = builder.sendReceiveRatio;
+            this.traceOn = builder.traceOn;
         }
 
         public static Builder builder() {
@@ -293,10 +297,18 @@ public class UpdateInstanceRequest extends Request {
             return this.sendReceiveRatio;
         }
 
+        /**
+         * @return traceOn
+         */
+        public Boolean getTraceOn() {
+            return this.traceOn;
+        }
+
         public static final class Builder {
             private Boolean autoScaling; 
             private Integer messageRetentionTime; 
             private Float sendReceiveRatio; 
+            private Boolean traceOn; 
 
             /**
              * Specifies whether to enable burst scaling for the instance.
@@ -337,6 +349,14 @@ public class UpdateInstanceRequest extends Request {
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;
+                return this;
+            }
+
+            /**
+             * traceOn.
+             */
+            public Builder traceOn(Boolean traceOn) {
+                this.traceOn = traceOn;
                 return this;
             }
 

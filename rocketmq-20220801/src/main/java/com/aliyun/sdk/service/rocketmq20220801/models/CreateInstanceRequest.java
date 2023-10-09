@@ -21,6 +21,10 @@ public class CreateInstanceRequest extends Request {
     private Integer autoRenewPeriod;
 
     @Body
+    @NameInMap("commodityCode")
+    private String commodityCode;
+
+    @Body
     @NameInMap("instanceName")
     private String instanceName;
 
@@ -77,6 +81,7 @@ public class CreateInstanceRequest extends Request {
         super(builder);
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
+        this.commodityCode = builder.commodityCode;
         this.instanceName = builder.instanceName;
         this.networkInfo = builder.networkInfo;
         this.paymentType = builder.paymentType;
@@ -116,6 +121,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Integer getAutoRenewPeriod() {
         return this.autoRenewPeriod;
+    }
+
+    /**
+     * @return commodityCode
+     */
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     /**
@@ -205,6 +217,7 @@ public class CreateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
+        private String commodityCode; 
         private String instanceName; 
         private NetworkInfo networkInfo; 
         private String paymentType; 
@@ -226,6 +239,7 @@ public class CreateInstanceRequest extends Request {
             super(request);
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
+            this.commodityCode = request.commodityCode;
             this.instanceName = request.instanceName;
             this.networkInfo = request.networkInfo;
             this.paymentType = request.paymentType;
@@ -264,6 +278,15 @@ public class CreateInstanceRequest extends Request {
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putBodyParameter("autoRenewPeriod", autoRenewPeriod);
             this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+
+        /**
+         * commodityCode.
+         */
+        public Builder commodityCode(String commodityCode) {
+            this.putBodyParameter("commodityCode", commodityCode);
+            this.commodityCode = commodityCode;
             return this;
         }
 
@@ -551,6 +574,9 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class VpcInfo extends TeaModel {
+        @NameInMap("securityGroupIds")
+        private String securityGroupIds;
+
         @NameInMap("vSwitchId")
         @Validation(required = true)
         private String vSwitchId;
@@ -560,6 +586,7 @@ public class CreateInstanceRequest extends Request {
         private String vpcId;
 
         private VpcInfo(Builder builder) {
+            this.securityGroupIds = builder.securityGroupIds;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -570,6 +597,13 @@ public class CreateInstanceRequest extends Request {
 
         public static VpcInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public String getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
         /**
@@ -587,8 +621,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         public static final class Builder {
+            private String securityGroupIds; 
             private String vSwitchId; 
             private String vpcId; 
+
+            /**
+             * securityGroupIds.
+             */
+            public Builder securityGroupIds(String securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
 
             /**
              * The ID of the vSwitch with which the instance is associated.
@@ -686,6 +729,12 @@ public class CreateInstanceRequest extends Request {
         @NameInMap("autoScaling")
         private Boolean autoScaling;
 
+        @NameInMap("chargeType")
+        private String chargeType;
+
+        @NameInMap("intranetSpec")
+        private String intranetSpec;
+
         @NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
@@ -698,6 +747,8 @@ public class CreateInstanceRequest extends Request {
 
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
+            this.chargeType = builder.chargeType;
+            this.intranetSpec = builder.intranetSpec;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.msgProcessSpec = builder.msgProcessSpec;
             this.sendReceiveRatio = builder.sendReceiveRatio;
@@ -716,6 +767,20 @@ public class CreateInstanceRequest extends Request {
          */
         public Boolean getAutoScaling() {
             return this.autoScaling;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return intranetSpec
+         */
+        public String getIntranetSpec() {
+            return this.intranetSpec;
         }
 
         /**
@@ -741,6 +806,8 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private Boolean autoScaling; 
+            private String chargeType; 
+            private String intranetSpec; 
             private Integer messageRetentionTime; 
             private String msgProcessSpec; 
             private Float sendReceiveRatio; 
@@ -760,6 +827,22 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
+                return this;
+            }
+
+            /**
+             * chargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * intranetSpec.
+             */
+            public Builder intranetSpec(String intranetSpec) {
+                this.intranetSpec = intranetSpec;
                 return this;
             }
 

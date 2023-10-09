@@ -862,6 +862,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class VpcInfo extends TeaModel {
+        @NameInMap("securityGroupIds")
+        private String securityGroupIds;
+
         @NameInMap("vSwitchId")
         private String vSwitchId;
 
@@ -869,6 +872,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private VpcInfo(Builder builder) {
+            this.securityGroupIds = builder.securityGroupIds;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -879,6 +883,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static VpcInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public String getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
         /**
@@ -896,8 +907,17 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String securityGroupIds; 
             private String vSwitchId; 
             private String vpcId; 
+
+            /**
+             * securityGroupIds.
+             */
+            public Builder securityGroupIds(String securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
 
             /**
              * The ID of the vSwitch with which the instance is associated.
@@ -1019,12 +1039,16 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("supportAutoScaling")
         private Boolean supportAutoScaling;
 
+        @NameInMap("traceOn")
+        private Boolean traceOn;
+
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.msgProcessSpec = builder.msgProcessSpec;
             this.sendReceiveRatio = builder.sendReceiveRatio;
             this.supportAutoScaling = builder.supportAutoScaling;
+            this.traceOn = builder.traceOn;
         }
 
         public static Builder builder() {
@@ -1070,12 +1094,20 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.supportAutoScaling;
         }
 
+        /**
+         * @return traceOn
+         */
+        public Boolean getTraceOn() {
+            return this.traceOn;
+        }
+
         public static final class Builder {
             private Boolean autoScaling; 
             private Integer messageRetentionTime; 
             private String msgProcessSpec; 
             private Float sendReceiveRatio; 
             private Boolean supportAutoScaling; 
+            private Boolean traceOn; 
 
             /**
              * Specifies whether to enable the elastic TPS feature for the instance.
@@ -1137,6 +1169,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder supportAutoScaling(Boolean supportAutoScaling) {
                 this.supportAutoScaling = supportAutoScaling;
+                return this;
+            }
+
+            /**
+             * traceOn.
+             */
+            public Builder traceOn(Boolean traceOn) {
+                this.traceOn = traceOn;
                 return this;
             }
 
