@@ -3234,6 +3234,9 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class NetworkInterface extends TeaModel {
+        @NameInMap("DeleteOnRelease")
+        private Boolean deleteOnRelease;
+
         @NameInMap("Description")
         private String description;
 
@@ -3248,6 +3251,9 @@ public class RunInstancesRequest extends Request {
 
         @NameInMap("NetworkCardIndex")
         private Integer networkCardIndex;
+
+        @NameInMap("NetworkInterfaceId")
+        private String networkInterfaceId;
 
         @NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
@@ -3274,11 +3280,13 @@ public class RunInstancesRequest extends Request {
         private String vSwitchId;
 
         private NetworkInterface(Builder builder) {
+            this.deleteOnRelease = builder.deleteOnRelease;
             this.description = builder.description;
             this.instanceType = builder.instanceType;
             this.ipv6Address = builder.ipv6Address;
             this.ipv6AddressCount = builder.ipv6AddressCount;
             this.networkCardIndex = builder.networkCardIndex;
+            this.networkInterfaceId = builder.networkInterfaceId;
             this.networkInterfaceName = builder.networkInterfaceName;
             this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
             this.primaryIpAddress = builder.primaryIpAddress;
@@ -3295,6 +3303,13 @@ public class RunInstancesRequest extends Request {
 
         public static NetworkInterface create() {
             return builder().build();
+        }
+
+        /**
+         * @return deleteOnRelease
+         */
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         /**
@@ -3330,6 +3345,13 @@ public class RunInstancesRequest extends Request {
          */
         public Integer getNetworkCardIndex() {
             return this.networkCardIndex;
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         /**
@@ -3389,11 +3411,13 @@ public class RunInstancesRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean deleteOnRelease; 
             private String description; 
             private String instanceType; 
             private java.util.List < String > ipv6Address; 
             private Long ipv6AddressCount; 
             private Integer networkCardIndex; 
+            private String networkInterfaceId; 
             private String networkInterfaceName; 
             private String networkInterfaceTrafficMode; 
             private String primaryIpAddress; 
@@ -3402,6 +3426,14 @@ public class RunInstancesRequest extends Request {
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
             private String vSwitchId; 
+
+            /**
+             * DeleteOnRelease.
+             */
+            public Builder deleteOnRelease(Boolean deleteOnRelease) {
+                this.deleteOnRelease = deleteOnRelease;
+                return this;
+            }
 
             /**
              * The description of ENI N.
@@ -3475,6 +3507,14 @@ public class RunInstancesRequest extends Request {
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
                 return this;
             }
 

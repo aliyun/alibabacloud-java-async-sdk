@@ -912,6 +912,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
+        @NameInMap("DeleteOnRelease")
+        private Boolean deleteOnRelease;
+
         @NameInMap("Description")
         private String description;
 
@@ -988,6 +991,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             this.associatedPublicIp = builder.associatedPublicIp;
             this.attachment = builder.attachment;
             this.creationTime = builder.creationTime;
+            this.deleteOnRelease = builder.deleteOnRelease;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
             this.ipv4PrefixSets = builder.ipv4PrefixSets;
@@ -1041,6 +1045,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return deleteOnRelease
+         */
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         /**
@@ -1215,6 +1226,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private AssociatedPublicIp associatedPublicIp; 
             private Attachment attachment; 
             private String creationTime; 
+            private Boolean deleteOnRelease; 
             private String description; 
             private String instanceId; 
             private Ipv4PrefixSets ipv4PrefixSets; 
@@ -1261,6 +1273,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DeleteOnRelease.
+             */
+            public Builder deleteOnRelease(Boolean deleteOnRelease) {
+                this.deleteOnRelease = deleteOnRelease;
                 return this;
             }
 

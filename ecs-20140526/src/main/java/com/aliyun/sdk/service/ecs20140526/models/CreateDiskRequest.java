@@ -99,7 +99,7 @@ public class CreateDiskRequest extends Request {
 
     @Query
     @NameInMap("Size")
-    @Validation(maximum = 65536, minimum = 5)
+    @Validation(maximum = 65536, minimum = 1)
     private Integer size;
 
     @Query

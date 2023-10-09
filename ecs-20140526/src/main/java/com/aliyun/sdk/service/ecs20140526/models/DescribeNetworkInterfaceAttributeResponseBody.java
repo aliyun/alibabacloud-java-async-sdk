@@ -24,6 +24,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("CreationTime")
     private String creationTime;
 
+    @NameInMap("DeleteOnRelease")
+    private Boolean deleteOnRelease;
+
     @NameInMap("Description")
     private String description;
 
@@ -107,6 +110,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         this.attachment = builder.attachment;
         this.bondInterfaceSpecification = builder.bondInterfaceSpecification;
         this.creationTime = builder.creationTime;
+        this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.ipv4PrefixSets = builder.ipv4PrefixSets;
@@ -169,6 +173,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public String getCreationTime() {
         return this.creationTime;
+    }
+
+    /**
+     * @return deleteOnRelease
+     */
+    public Boolean getDeleteOnRelease() {
+        return this.deleteOnRelease;
     }
 
     /**
@@ -358,6 +369,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         private Attachment attachment; 
         private BondInterfaceSpecification bondInterfaceSpecification; 
         private String creationTime; 
+        private Boolean deleteOnRelease; 
         private String description; 
         private String instanceId; 
         private Ipv4PrefixSets ipv4PrefixSets; 
@@ -414,6 +426,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
+            return this;
+        }
+
+        /**
+         * DeleteOnRelease.
+         */
+        public Builder deleteOnRelease(Boolean deleteOnRelease) {
+            this.deleteOnRelease = deleteOnRelease;
             return this;
         }
 

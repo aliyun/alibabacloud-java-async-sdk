@@ -17,6 +17,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("DeleteOnRelease")
+    private Boolean deleteOnRelease;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -61,6 +65,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     private ModifyNetworkInterfaceAttributeRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.networkInterfaceName = builder.networkInterfaceName;
@@ -91,6 +96,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return deleteOnRelease
+     */
+    public Boolean getDeleteOnRelease() {
+        return this.deleteOnRelease;
     }
 
     /**
@@ -165,6 +177,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNetworkInterfaceAttributeRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean deleteOnRelease; 
         private String description; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
@@ -183,6 +196,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private Builder(ModifyNetworkInterfaceAttributeRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.deleteOnRelease = request.deleteOnRelease;
             this.description = request.description;
             this.networkInterfaceId = request.networkInterfaceId;
             this.networkInterfaceName = request.networkInterfaceName;
@@ -201,6 +215,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * DeleteOnRelease.
+         */
+        public Builder deleteOnRelease(Boolean deleteOnRelease) {
+            this.putQueryParameter("DeleteOnRelease", deleteOnRelease);
+            this.deleteOnRelease = deleteOnRelease;
             return this;
         }
 

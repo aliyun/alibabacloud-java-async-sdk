@@ -25,6 +25,10 @@ public class CreateNetworkInterfaceRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DeleteOnRelease")
+    private Boolean deleteOnRelease;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -137,6 +141,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.businessType = builder.businessType;
         this.clientToken = builder.clientToken;
+        this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
         this.instanceType = builder.instanceType;
         this.ipv4Prefix = builder.ipv4Prefix;
@@ -197,6 +202,13 @@ public class CreateNetworkInterfaceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return deleteOnRelease
+     */
+    public Boolean getDeleteOnRelease() {
+        return this.deleteOnRelease;
     }
 
     /**
@@ -385,6 +397,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         private String sourceRegionId; 
         private String businessType; 
         private String clientToken; 
+        private Boolean deleteOnRelease; 
         private String description; 
         private String instanceType; 
         private java.util.List < String > ipv4Prefix; 
@@ -421,6 +434,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.businessType = request.businessType;
             this.clientToken = request.clientToken;
+            this.deleteOnRelease = request.deleteOnRelease;
             this.description = request.description;
             this.instanceType = request.instanceType;
             this.ipv4Prefix = request.ipv4Prefix;
@@ -473,6 +487,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeleteOnRelease.
+         */
+        public Builder deleteOnRelease(Boolean deleteOnRelease) {
+            this.putQueryParameter("DeleteOnRelease", deleteOnRelease);
+            this.deleteOnRelease = deleteOnRelease;
             return this;
         }
 
