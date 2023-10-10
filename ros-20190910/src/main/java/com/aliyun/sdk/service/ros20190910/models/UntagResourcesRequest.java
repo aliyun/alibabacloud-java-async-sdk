@@ -113,11 +113,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resources. This parameter takes effect when the TagKey.N parameter is not specified in the request. Default value: false. Valid values:
+         * Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:
          * <p>
          * 
-         * *   true: removes all tags from the resources.
-         * *   false: removes the specified tags from the resources.
+         * *   true
+         * *   false (default)
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -135,7 +135,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * A list of resource IDs.
+         * The IDs of the resource.
+         * <p>
+         * 
+         * > If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -159,7 +162,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * The tag keys of the resource. You can specify up to 20 tag keys.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

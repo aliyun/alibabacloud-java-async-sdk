@@ -169,7 +169,7 @@ public class GetTemplateRequest extends Request {
          * The ID of the change set.
          * <p>
          * 
-         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -178,13 +178,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the template sharing information. Default value: Disabled. Valid values:
+         * Specifies whether to query the shared information about the template. Valid values:
          * <p>
          * 
          * *   Enabled
-         * *   Disabled
+         * *   Disabled (default)
          * 
-         * >  Only the template owner can query the template sharing information.
+         * > Only the template owner can query the shared information of a template.
          */
         public Builder includePermission(String includePermission) {
             this.putQueryParameter("IncludePermission", includePermission);
@@ -193,13 +193,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about tags. Default value: Disabled. Valid values:
+         * Specifies whether to query the information about tags. Valid values:
          * <p>
          * 
          * *   Enabled
-         * *   Disabled
+         * *   Disabled (default)
          * 
-         * >  This parameter only takes effect when you specify the TemplateId parameter.
+         * > This parameter takes effect only if you specify TemplateId.
          */
         public Builder includeTags(String includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -208,7 +208,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the stack or stack group defined in the template belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +220,7 @@ public class GetTemplateRequest extends Request {
          * The name of the stack group.
          * <p>
          * 
-         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -232,7 +232,7 @@ public class GetTemplateRequest extends Request {
          * The ID of the stack.
          * <p>
          * 
-         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -244,9 +244,9 @@ public class GetTemplateRequest extends Request {
          * The ID of the template.
          * <p>
          * 
-         * This parameter applies to shared and private templates. If the template is a shared template, the value of the TemplateId parameter is the same as the value of the TemplateARN parameter. You can use the template ID to query a shared template.
+         * This parameter applies to shared and private templates. If the template is a shared template, the value of TemplateId is the same as the value of TemplateARN. You can use the template ID to query a shared template.
          * 
-         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
+         * > You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -255,13 +255,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The stage of the template. This parameter only takes effect when you specify the StackId, ChangeSetId, or StackGroupName parameter.
+         * The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.
          * <p>
          * 
-         * Default value: Processed. Valid values:
+         * Valid values:
          * 
-         * *   Processed: returns the processed template that contains transforms.
-         * *   Original: returns the original template that you specify.
+         * *   Processed (default): returns the processed template.
+         * *   Original: returns the original template.
          */
         public Builder templateStage(String templateStage) {
             this.putQueryParameter("TemplateStage", templateStage);
@@ -270,10 +270,9 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter only takes effect when you specify the TemplateId parameter.
+         * The version of the template. This parameter takes effect only if you specify TemplateId.\
          * <p>
-         * 
-         * If the template is a shared template, you can specify this parameter only if you set the VersionOption parameter to AllVersions.
+         * If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see [SetTemplatePermission](~~194768~~).
          * 
          * Valid values: v1 to v100.
          */

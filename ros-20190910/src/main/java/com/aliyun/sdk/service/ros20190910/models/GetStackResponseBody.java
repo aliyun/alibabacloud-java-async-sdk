@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackResponseBody</p>
  */
 public class GetStackResponseBody extends TeaModel {
+    @NameInMap("CheckedStackResourceCount")
+    private Integer checkedStackResourceCount;
+
     @NameInMap("CreateTime")
     private String createTime;
 
@@ -32,6 +35,9 @@ public class GetStackResponseBody extends TeaModel {
 
     @NameInMap("Log")
     private Log log;
+
+    @NameInMap("NotCheckedStackResourceCount")
+    private Integer notCheckedStackResourceCount;
 
     @NameInMap("NotificationURLs")
     private java.util.List < String > notificationURLs;
@@ -118,6 +124,7 @@ public class GetStackResponseBody extends TeaModel {
     private String updateTime;
 
     private GetStackResponseBody(Builder builder) {
+        this.checkedStackResourceCount = builder.checkedStackResourceCount;
         this.createTime = builder.createTime;
         this.deletionProtection = builder.deletionProtection;
         this.description = builder.description;
@@ -125,6 +132,7 @@ public class GetStackResponseBody extends TeaModel {
         this.driftDetectionTime = builder.driftDetectionTime;
         this._interface = builder._interface;
         this.log = builder.log;
+        this.notCheckedStackResourceCount = builder.notCheckedStackResourceCount;
         this.notificationURLs = builder.notificationURLs;
         this.operationInfo = builder.operationInfo;
         this.orderIds = builder.orderIds;
@@ -161,6 +169,13 @@ public class GetStackResponseBody extends TeaModel {
 
     public static GetStackResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return checkedStackResourceCount
+     */
+    public Integer getCheckedStackResourceCount() {
+        return this.checkedStackResourceCount;
     }
 
     /**
@@ -210,6 +225,13 @@ public class GetStackResponseBody extends TeaModel {
      */
     public Log getLog() {
         return this.log;
+    }
+
+    /**
+     * @return notCheckedStackResourceCount
+     */
+    public Integer getNotCheckedStackResourceCount() {
+        return this.notCheckedStackResourceCount;
     }
 
     /**
@@ -409,6 +431,7 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer checkedStackResourceCount; 
         private String createTime; 
         private String deletionProtection; 
         private String description; 
@@ -416,6 +439,7 @@ public class GetStackResponseBody extends TeaModel {
         private String driftDetectionTime; 
         private String _interface; 
         private Log log; 
+        private Integer notCheckedStackResourceCount; 
         private java.util.List < String > notificationURLs; 
         private OperationInfo operationInfo; 
         private java.util.List < String > orderIds; 
@@ -444,6 +468,17 @@ public class GetStackResponseBody extends TeaModel {
         private String templateVersion; 
         private Integer timeoutInMinutes; 
         private String updateTime; 
+
+        /**
+         * The number of resources on which drift detection is performed.
+         * <p>
+         * 
+         * >  This parameter is returned only if the drift detection on the stack is successful.
+         */
+        public Builder checkedStackResourceCount(Integer checkedStackResourceCount) {
+            this.checkedStackResourceCount = checkedStackResourceCount;
+            return this;
+        }
 
         /**
          * The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
@@ -508,6 +543,17 @@ public class GetStackResponseBody extends TeaModel {
          */
         public Builder log(Log log) {
             this.log = log;
+            return this;
+        }
+
+        /**
+         * The number of resources on which drift detection is not performed.
+         * <p>
+         * 
+         * >  This parameter is returned only if the drift detection on the stack is successful.
+         */
+        public Builder notCheckedStackResourceCount(Integer notCheckedStackResourceCount) {
+            this.notCheckedStackResourceCount = notCheckedStackResourceCount;
             return this;
         }
 
@@ -857,7 +903,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The keywords.
+             * The keywords of a resource log.
              */
             public Builder keys(java.util.List < String > keys) {
                 this.keys = keys;
@@ -983,13 +1029,13 @@ public class GetStackResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * The name of a Terraform command that is run. Valid values:
+             * The name of the Terraform command that is run. Valid values:
              * <p>
              * 
-             * - apply
-             * - plan
-             * - destroy
-             * - version
+             * *   apply
+             * *   plan
+             * *   destroy
+             * *   version
              * 
              * For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).
              */
@@ -1010,8 +1056,8 @@ public class GetStackResponseBody extends TeaModel {
              * The output stream. Valid values:
              * <p>
              * 
-             * - stdout: the standard output stream.
-             * - stderr: the standard error stream.
+             * *   stdout: standard output stream
+             * *   stderr: standard error stream
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -1375,7 +1421,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -1383,7 +1429,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

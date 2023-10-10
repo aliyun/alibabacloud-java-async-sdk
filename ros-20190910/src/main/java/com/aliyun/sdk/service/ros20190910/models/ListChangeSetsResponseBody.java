@@ -86,7 +86,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of change sets.
+         * The change sets.
          */
         public Builder changeSets(java.util.List < ChangeSets> changeSets) {
             this.changeSets = changeSets;
@@ -94,7 +94,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried entries.
+         * The total number of change sets returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -326,7 +326,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The region ID of the change set.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -358,7 +358,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the change set is in its current status.
+             * The reason why the change set is in its current state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

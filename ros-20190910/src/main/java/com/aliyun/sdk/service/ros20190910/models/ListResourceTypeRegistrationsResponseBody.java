@@ -74,7 +74,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -82,7 +82,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * Registrations.
+         * The registration records.
          */
         public Builder registrations(java.util.List < Registrations> registrations) {
             this.registrations = registrations;
@@ -90,7 +90,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of registration records.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +210,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * CreateTime.
+             * The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -218,7 +218,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The entity type. Only Module may be returned.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -226,7 +226,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegistrationId.
+             * The ID of the registration record.
              */
             public Builder registrationId(String registrationId) {
                 this.registrationId = registrationId;
@@ -234,7 +234,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -242,7 +242,12 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The registration state. Valid values:
+             * <p>
+             * 
+             * *   IN_PROGRESS
+             * *   COMPLETE
+             * *   FAILED
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +255,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason for the state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -258,7 +263,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The version ID.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

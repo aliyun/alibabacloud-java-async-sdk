@@ -184,10 +184,10 @@ public class UpdateStackInstancesRequest extends Request {
         } 
 
         /**
-         * The IDs of the accounts within which the self-managed permission model is used to deploy stacks. You can specify up to 20 account IDs.
+         * The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.
          * <p>
          * 
-         * >  This parameter is required if you use the self-managed permission model to update the stacks.
+         * > If you want to update stacks in self-managed permission mode, you must specify this parameter.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -197,12 +197,10 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
          * <p>
-         * 
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * The token can contain letters, digits, hyphens (-), and underscores (\_), and cannot exceed 64 characters in length.\
+         * For more information, see [How to ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -211,10 +209,10 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The folders in which the service-managed permission model is used to deploy stacks.
+         * The folders in which you want to deploy stacks in service-managed mode.
          * <p>
          * 
-         * >  This parameter is required if you use the service-managed permission model to update the stacks.
+         * > If you want to update stacks in service-managed permission mode, you must specify this parameter.
          */
         public Builder deploymentTargets(DeploymentTargets deploymentTargets) {
             String deploymentTargetsShrink = shrink(deploymentTargets, "DeploymentTargets", "json");
@@ -224,7 +222,7 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The description of the operation that you want to perform to update the stacks.
+         * The description of the update operation.
          * <p>
          * 
          * The description must be 1 to 256 characters in length.
@@ -236,55 +234,53 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The custom preferences on how Resource Orchestration Service (ROS) updates the stacks.
+         * The preference settings of the update operation.
          * <p>
          * 
-         * The following parameters are included:
+         * The following parameters are available:
+         * -  {"FailureToleranceCount": N}
          * 
-         * *   {"FailureToleranceCount": N}
-         * 
-         *     The number of accounts within which stack operation failures can occur in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region. If the operation is stopped in one region, the operation is no longer performed in other regions.
+         *     The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.
          * 
          *     Valid values of N: 0 to 20.
          * 
-         *     If you do not specify the FailureToleranceCount parameter, the default value 0 is used.
+         *     If you do not specify FailureToleranceCount, 0 is used as the default value.
          * 
-         * *   {"FailureTolerancePercentage": N}
+         * -  {"FailureTolerancePercentage": N}
          * 
-         *     The percentage of the number of accounts within which stack operation failures can occur to the total number of accounts in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region.
+         *     The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.
          * 
          *     Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.
          * 
-         *     If you do not specify a value for the FailureTolerancePercentage parameter, the default value 0 is used.
+         *     If you do not specify FailureTolerancePercentage, 0 is used as the default value.
          * 
-         * *   {"MaxConcurrentCount": N}
+         * -  {"MaxConcurrentCount": N}
          * 
-         *     The maximum number of accounts within which stacks are deployed at the same time in each region.
+         *     The maximum number of accounts within which multiple stacks are deployed at the same time in each region.
          * 
          *     Valid values of N: 1 to 20.
          * 
-         *     If you do not specify the MaxConcurrentCount parameter, the default value 1 is used.
+         *     If you do not specify MaxConcurrentCount, 1 is used as the default value.
          * 
-         * *   {"MaxConcurrentPercentage": N}
+         * - {"MaxConcurrentPercentage": N}
          * 
          *     The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.
          * 
          *     Valid values: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.
          * 
-         *     If you do not specify the MaxConcurrentPercentage parameter, the default value 1 is used.
+         *     If you do not specify MaxConcurrentPercentage, 1 is used as the default value.
          * 
-         * *   {"RegionConcurrencyType": N}
+         * - {"RegionConcurrencyType": N}
          * 
-         *     The mode that you want to use to deploy stacks across regions. Default value: SEQUENTIAL. Valid values:
+         *   The mode that you want to use to deploy stacks across regions. Valid values:
+         *   - SEQUENTIAL (default): deploys stacks in the specified regions one by one in sequence. This way, ROS deploys stacks in only one region at a time. 
          * 
-         *     *   SEQUENTIAL: deploys stacks in each specified region based on the specified sequence of regions. ROS deploys stacks in one region at a time.
-         *     *   PARALLEL: deploys stacks in parallel in all specified regions.
+         *    - PARALLEL: deploys stacks in all the specified regions in parallel. 
          * 
          * Separate multiple parameters with commas (,).
          * 
-         * > 
-         * *   You can specify only one of the MaxConcurrentCount and MaxConcurrentPercentage parameters.
-         * *   You can specify one of the FailureToleranceCount and FailureTolerancePercentage parameters.
+         * > - You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.
+         * > - You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
@@ -294,7 +290,7 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * test
+         * The parameters that are used to override specific parameters.
          */
         public Builder parameterOverrides(java.util.List < ParameterOverrides> parameterOverrides) {
             this.putQueryParameter("ParameterOverrides", parameterOverrides);
@@ -303,7 +299,7 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the stack group belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,7 +308,7 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the regions in which you want to update the stacks. You can specify up to 20 region IDs.
+         * The IDs of the regions where you want to update the stacks. You can specify up to 20 region IDs.
          */
         public Builder regionIds(java.util.List < String > regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
@@ -322,10 +318,9 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The name of the stack group. The name must be unique in a region.
+         * The name of the stack group. The name must be unique within a region.\
          * <p>
-         * 
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -334,7 +329,7 @@ public class UpdateStackInstancesRequest extends Request {
         }
 
         /**
-         * The timeout period for the update operation on the stack.
+         * The timeout period for the update operation.
          * <p>
          * 
          * *   Default value: 60.
@@ -392,10 +387,10 @@ public class UpdateStackInstancesRequest extends Request {
             private java.util.List < String > rdFolderIds; 
 
             /**
-             * The IDs of the members in the resource directory. You can specify up to 20 member IDs.
+             * The IDs of the member accounts in the resource directory. You can specify up to 20 member account IDs.
              * <p>
              * 
-             * >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](~~111624~~).
+             * > To view the member account IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the details of a member](~~111624~~).
              */
             public Builder accountIds(java.util.List < String > accountIds) {
                 this.accountIds = accountIds;
@@ -403,16 +398,7 @@ public class UpdateStackInstancesRequest extends Request {
             }
 
             /**
-             * The IDs of the folders in the resource directory. You can specify up to five folder IDs.
-             * <p>
-             * 
-             * You must specify at least one of the RdFolderIds and AccountIds parameters. The parameters are subject to the following rules:
-             * 
-             * *   If you specify only the RdFolderIds parameter, stacks are deployed within all members in the specified folders. If you select the Root folder, stacks are deployed within all members in the resource directory.
-             * *   If you specify only the AccountIds parameter, stacks are deployed within the specified members.
-             * *   If you specify both parameters, the accounts specified by using the AccountIds parameter must be contained in the folders specified by using the RdFolderIds parameter. In this case, stacks are deployed within the specified members that are contained in the specified folders.
-             * 
-             * >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).
+             * The folder IDs of the resource directory.
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
@@ -467,14 +453,13 @@ public class UpdateStackInstancesRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N that you want to use to override a specific parameter. If you do not specify the name of parameter N, ROS uses the name that you specify when you create the stack group.
+             * The key of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the name that you specified when you created the stack group.
              * <p>
              * 
              * Maximum value of N: 200.
              * 
-             * > 
-             * *   The ParameterOverrides parameter is optional.
-             * *   If you specify the ParameterOverrides parameter, you must specify the ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue parameters.
+             * > -  ParameterOverrides is optional.
+             * > - If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -482,14 +467,13 @@ public class UpdateStackInstancesRequest extends Request {
             }
 
             /**
-             * The value of parameter N that you want to use to override a specific parameter. If you do not specify the name and value of parameter N, ROS uses the name and value that you specify when you create the stack group.
+             * The value of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the value that you specified when you created the stack group.
              * <p>
              * 
              * Maximum value of N: 200.
              * 
-             * > 
-             * *   The ParameterOverrides parameter is optional.
-             * *   If you specify the ParameterOverrides parameter, you must specify the ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue parameters.
+             * > -  ParameterOverrides is optional.
+             * > - If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

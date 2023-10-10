@@ -139,7 +139,7 @@ public class GetServiceProvisionsRequest extends Request {
         } 
 
         /**
-         * The list of parameters.
+         * The parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -148,10 +148,7 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,7 +169,7 @@ public class GetServiceProvisionsRequest extends Request {
          * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
          * <p>
          * 
-         * You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.
+         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -181,10 +178,10 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
+         * The template ID. This parameter applies to shared and private templates.
          * <p>
          * 
-         * You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.
+         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -193,10 +190,10 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
          * <p>
          * 
-         * You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.
+         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -208,7 +205,7 @@ public class GetServiceProvisionsRequest extends Request {
          * The version of the template. If you do not specify this parameter, the latest version is used.
          * <p>
          * 
-         * This parameter takes effect only when the TemplateId parameter is specified.
+         * This parameter takes effect only when TemplateId is specified.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -264,10 +261,10 @@ public class GetServiceProvisionsRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N. If you do not specify the name and the value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.
+             * The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.
              * <p>
              * 
-             * >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.
+             * > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -275,10 +272,10 @@ public class GetServiceProvisionsRequest extends Request {
             }
 
             /**
-             * The value of parameter N.
+             * The value of the parameter.
              * <p>
              * 
-             * >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.
+             * > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -320,7 +317,7 @@ public class GetServiceProvisionsRequest extends Request {
             private String serviceName; 
 
             /**
-             * The name of service N or feature N. Valid values:
+             * The service or feature name. Valid values:
              * <p>
              * 
              * *   AHAS: Application High Availability Service
@@ -332,11 +329,11 @@ public class GetServiceProvisionsRequest extends Request {
              * *   CMS: CloudMonitor
              * *   CR: Container Registry
              * *   CS: Container Service for Kubernetes (ACK)
-             * *   DCDN: Dynamic Route for CDN (DCDN)
+             * *   DCDN: Dynamic Content Delivery Network (DCDN)
              * *   DataHub: DataHub
              * *   DataWorks: DataWorks
              * *   EDAS: Enterprise Distributed Application Service (EDAS)
-             * *   E-HPC: Elastic High Performance Computing (E-HPC)
+             * *   EHPC: Elastic High Performance Computing (E-HPC)
              * *   EMAS: Enterprise Mobile Application Studio (EMAS)
              * *   FC: Function Compute
              * *   FNF: Serverless Workflow (SWF)
@@ -352,12 +349,12 @@ public class GetServiceProvisionsRequest extends Request {
              * *   OTS: Tablestore
              * *   PrivateLink: PrivateLink
              * *   PrivateZone: Alibaba Cloud DNS PrivateZone
-             * *   RocketMQ: Message Queue for Apache RocketMQ
+             * *   RocketMQ: ApsaraMQ for RocketMQ
              * *   SAE: Serverless App Engine (SAE)
              * *   SLS: Log Service
              * *   TrafficMirror: the traffic mirroring feature
              * *   VS: Video Surveillance System
-             * *   Xtrace: Tracing Analysis
+             * *   Xtrace: Managed Service for OpenTelemetry
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

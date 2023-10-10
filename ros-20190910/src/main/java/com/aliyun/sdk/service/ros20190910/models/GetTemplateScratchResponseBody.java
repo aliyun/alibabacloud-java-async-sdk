@@ -485,6 +485,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         @NameInMap("PreferenceParameters")
         private java.util.List < PreferenceParameters> preferenceParameters;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SourceResourceGroup")
         private SourceResourceGroup sourceResourceGroup;
 
@@ -524,6 +527,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             this.failedCode = builder.failedCode;
             this.logicalIdStrategy = builder.logicalIdStrategy;
             this.preferenceParameters = builder.preferenceParameters;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sourceResourceGroup = builder.sourceResourceGroup;
             this.sourceResources = builder.sourceResources;
             this.sourceTag = builder.sourceTag;
@@ -578,6 +582,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
          */
         public java.util.List < PreferenceParameters> getPreferenceParameters() {
             return this.preferenceParameters;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -663,6 +674,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String failedCode; 
             private String logicalIdStrategy; 
             private java.util.List < PreferenceParameters> preferenceParameters; 
+            private String resourceGroupId; 
             private SourceResourceGroup sourceResourceGroup; 
             private java.util.List < SourceResources> sourceResources; 
             private SourceTag sourceTag; 
@@ -723,6 +735,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
+                return this;
+            }
+
+            /**
+             * The ID of the source resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

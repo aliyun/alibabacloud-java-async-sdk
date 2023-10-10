@@ -142,7 +142,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Condition.
+             * The condition that is required for the policy to take effect.
              */
             public Builder condition(java.util.Map < String, ? > condition) {
                 this.condition = condition;
@@ -162,7 +162,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The object that the statement covers. An asterisk (\*) indicates all resources.
+             * The objects that the statement covers. An asterisk (\*) indicates all resources.
              */
             public Builder resource(String resource) {
                 this.resource = resource;

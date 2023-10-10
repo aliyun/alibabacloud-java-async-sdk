@@ -86,7 +86,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of events.
+         * The events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -94,11 +94,9 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number of the returned page.\
          * <p>
-         * 
-         * Pages start from page 1.
-         * 
+         * Pages start from page 1.\
          * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -107,11 +105,9 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries returned per page.\
          * <p>
-         * 
-         * Maximum value: 50.
-         * 
+         * Maximum value: 50.\
          * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
@@ -120,7 +116,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +260,7 @@ public class ListStackEventsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -272,7 +268,7 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * The event ID.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -280,7 +276,7 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the resource that is defined in the template.
+             * The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -304,7 +300,7 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack.
+             * The stack ID.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -312,7 +308,7 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack.
+             * The stack name.
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -328,7 +324,7 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the resource is in its current state.
+             * The reason why the resource is in the current state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

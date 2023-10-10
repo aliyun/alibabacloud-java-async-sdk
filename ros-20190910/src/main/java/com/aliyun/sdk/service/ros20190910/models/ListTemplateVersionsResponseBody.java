@@ -62,7 +62,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private java.util.List < Versions> versions; 
 
         /**
-         * The query token that is returned in this call.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of versions.
+         * The versions.
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -194,7 +194,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.
+             * The template ID. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -213,7 +213,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
              * The version number.
              * <p>
              * 
-             * For a shared template, this parameter is returned only if the VersionOption parameter is set to AllVersions.
+             * For a shared template, this parameter is returned only if VersionOption is set to AllVersions.
              * 
              * Valid values: v1 to v100.
              */

@@ -55,7 +55,7 @@ public class ListResourceTypeVersionsRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

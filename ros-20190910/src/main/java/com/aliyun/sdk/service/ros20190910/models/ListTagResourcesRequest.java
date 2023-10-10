@@ -112,7 +112,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token that determines the start point of the next query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * The IDs of the resources.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -154,7 +154,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the resources. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -208,10 +208,9 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.\
              * <p>
-             * 
-             * The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,9 +218,8 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.\
              * <p>
-             * 
              * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {

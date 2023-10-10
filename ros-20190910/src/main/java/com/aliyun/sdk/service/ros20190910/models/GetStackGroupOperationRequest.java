@@ -70,7 +70,7 @@ public class GetStackGroupOperationRequest extends Request {
         } 
 
         /**
-         * The ID of the operation that you want to query. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation.
+         * The operation ID. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation ID.
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);

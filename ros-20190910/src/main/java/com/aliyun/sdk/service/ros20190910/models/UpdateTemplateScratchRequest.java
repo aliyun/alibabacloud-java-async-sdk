@@ -38,6 +38,10 @@ public class UpdateTemplateScratchRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceResourceGroup")
     private SourceResourceGroup sourceResourceGroup;
 
@@ -62,6 +66,7 @@ public class UpdateTemplateScratchRequest extends Request {
         this.logicalIdStrategy = builder.logicalIdStrategy;
         this.preferenceParameters = builder.preferenceParameters;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceResourceGroup = builder.sourceResourceGroup;
         this.sourceResources = builder.sourceResources;
         this.sourceTag = builder.sourceTag;
@@ -124,6 +129,13 @@ public class UpdateTemplateScratchRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceResourceGroup
      */
     public SourceResourceGroup getSourceResourceGroup() {
@@ -158,6 +170,7 @@ public class UpdateTemplateScratchRequest extends Request {
         private String logicalIdStrategy; 
         private java.util.List < PreferenceParameters> preferenceParameters; 
         private String regionId; 
+        private String resourceGroupId; 
         private SourceResourceGroup sourceResourceGroup; 
         private java.util.List < SourceResources> sourceResources; 
         private SourceTag sourceTag; 
@@ -175,6 +188,7 @@ public class UpdateTemplateScratchRequest extends Request {
             this.logicalIdStrategy = request.logicalIdStrategy;
             this.preferenceParameters = request.preferenceParameters;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.sourceResourceGroup = request.sourceResourceGroup;
             this.sourceResources = request.sourceResources;
             this.sourceTag = request.sourceTag;
@@ -182,7 +196,7 @@ public class UpdateTemplateScratchRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among the different requests. The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          * <p>
          * 
          * For more information, see [How to ensure idempotence](~~134212~~).
@@ -203,13 +217,13 @@ public class UpdateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The execution mode. Default value: Async. Valid values:
+         * The execution mode. Valid values:
          * <p>
          * 
-         * *   Async: asynchronous mode
-         * *   Sync: synchronous mode
+         * *   Async (default)
+         * *   Sync
          * 
-         * >  If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you set ClientToken to prevent the execution from timing out.
+         * > If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.
          */
         public Builder executionMode(String executionMode) {
             this.putQueryParameter("ExecutionMode", executionMode);
@@ -218,10 +232,10 @@ public class UpdateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The generation policy of the logical ID. Default value: LongTypePrefixAndIndexSuffix. Valid values:
+         * The policy based on which the logical ID is generated. Valid values:
          * <p>
          * 
-         * *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
+         * *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
          * *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
          * *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
          */
@@ -232,7 +246,7 @@ public class UpdateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The parameters that are configured in the scenario.
+         * The preference parameters of the scenario.
          */
         public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
             String preferenceParametersShrink = shrink(preferenceParameters, "PreferenceParameters", "json");
@@ -242,7 +256,7 @@ public class UpdateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the scenario is created.
+         * The region ID of the scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
@@ -250,6 +264,15 @@ public class UpdateTemplateScratchRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -264,7 +287,7 @@ public class UpdateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The source resource.
+         * The source resources.
          */
         public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
             String sourceResourcesShrink = shrink(sourceResources, "SourceResources", "json");
@@ -340,14 +363,13 @@ public class UpdateTemplateScratchRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of a request parameter.
+             * The key of the parameter.
              * <p>
              * 
-             * For more information about ParameterKey, see **Additional description of request parameters**.
+             * For more information about the valid values of ParameterKey, see the **Additional information about request parameters** section of this topic.
              * 
-             * > 
-             * *   PreferenceParameters is optional. If you set PreferenceParameters, you must specify both ParameterKey and ParameterValue.
-             * *   If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.
+             * > -  PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
+             * > - If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -355,12 +377,12 @@ public class UpdateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The value of a request parameter. The value of ParameterValue varies based on the value of ParameterKey.
+             * The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.
              * <p>
              * 
-             * For more information about ParameterValue, see **Additional description of request parameters**.
+             * For more information about the valid values of ParameterValue, see the **Additional information about request parameters** section of this topic.
              * 
-             * >  PreferenceParameters is optional. If you set PreferenceParameters, you must specify both ParameterKey and ParameterValue.
+             * > PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -422,10 +444,7 @@ public class UpdateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The filter for resource types. If you specify this parameter, only the resources of the specified types and in the specified resource groups are scanned. If you do not specify this parameter, all the resources in the specified resource groups are scanned.
-             * <p>
-             * 
-             * You can specify up to 20 resource types.
+             * The resource types.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -547,7 +566,7 @@ public class UpdateTemplateScratchRequest extends Request {
              * 
              * If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.
              * 
-             * You can configure up to 10 source tags.
+             * You can add up to 10 source tags.
              */
             public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
                 this.resourceTags = resourceTags;
@@ -555,10 +574,7 @@ public class UpdateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The filter for resource types. If you specify this parameter, only the resources of the specified types and have the specified tags are scanned. If you do not specify this parameter, all resources that have the specified tags are scanned.
-             * <p>
-             * 
-             * You can specify up to 20 resource types.
+             * The resource types.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;

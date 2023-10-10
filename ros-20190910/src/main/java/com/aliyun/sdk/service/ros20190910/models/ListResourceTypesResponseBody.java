@@ -70,7 +70,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceTypeSummaries.
+         * The resource type summaries.
          */
         public Builder resourceTypeSummaries(java.util.List < ResourceTypeSummaries> resourceTypeSummaries) {
             this.resourceTypeSummaries = resourceTypeSummaries;
@@ -214,7 +214,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +222,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersionId.
+             * The ID of the default version.
              */
             public Builder defaultVersionId(String defaultVersionId) {
                 this.defaultVersionId = defaultVersionId;
@@ -230,7 +230,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the resource type.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +238,12 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The entity type. Valid values:
+             * <p>
+             * 
+             * *   Resource: regular resources.
+             * *   DataSource: DataSource resources.
+             * *   Module: modules.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -246,7 +251,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersionId.
+             * The ID of the latest version.
              */
             public Builder latestVersionId(String latestVersionId) {
                 this.latestVersionId = latestVersionId;
@@ -254,7 +259,11 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * The provider of the resource type. Valid values:
+             * <p>
+             * 
+             * *   ROS: The resource type is provided by ROS.
+             * *   Self: The resource type is provided by you.
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -262,7 +271,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -270,7 +279,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVersionCount.
+             * The number of versions.
              */
             public Builder totalVersionCount(Integer totalVersionCount) {
                 this.totalVersionCount = totalVersionCount;
@@ -278,7 +287,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The update time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

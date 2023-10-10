@@ -146,7 +146,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The actual resource properties in JSON format.
+         * The actual JSON-formatted resource properties.
          */
         public Builder actualProperties(String actualProperties) {
             this.actualProperties = actualProperties;
@@ -154,7 +154,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The time at which the resource drift detection operation was initiated.
+         * The time when the resource drift detection was initiated.
          */
         public Builder driftDetectionTime(String driftDetectionTime) {
             this.driftDetectionTime = driftDetectionTime;
@@ -162,7 +162,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The resource properties as defined in the template, in JSON format.
+         * The JSON-formatted resource properties that are defined in the template.
          */
         public Builder expectedProperties(String expectedProperties) {
             this.expectedProperties = expectedProperties;
@@ -170,7 +170,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The logical ID of the resource as defined in the template.
+         * The logical ID of the resource that is defined in the template.
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.logicalResourceId = logicalResourceId;
@@ -186,7 +186,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The property differences of the resource.
+         * The property drifts of the resource.
          */
         public Builder propertyDifferences(java.util.List < PropertyDifferences> propertyDifferences) {
             this.propertyDifferences = propertyDifferences;
@@ -202,10 +202,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The resource drift status. Valid values:
+         * The drift status of the resource. Valid values:
          * <p>
          * 
-         * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource has been deleted.
+         * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
          * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
          * *   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.
          * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
@@ -216,7 +216,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The resource type.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -311,7 +311,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
              * The drift type of the resource property. Valid values:
              * <p>
              * 
-             * *   ADD: The value has been added to a resource property whose data type is Array or List.
+             * *   ADD: The property value has been added to a resource property whose data type was Array or List.
              * *   REMOVE: The property has been deleted from the current resource configuration.
              * *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
              */
@@ -321,7 +321,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
             }
 
             /**
-             * The expected value of the resource property as defined in the template.
+             * The expected value of the resource property that is defined in the template.
              */
             public Builder expectedValue(String expectedValue) {
                 this.expectedValue = expectedValue;

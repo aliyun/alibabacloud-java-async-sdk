@@ -254,7 +254,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The ID of the change set. This parameter is returned only if the ChangeSetId parameter is specified.
+         * The ID of the change set. This parameter is returned only if you specify ChangeSetId.
          */
         public Builder changeSetId(String changeSetId) {
             this.changeSetId = changeSetId;
@@ -262,12 +262,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the template was created. This parameter is returned only if the TemplateId parameter is specified.
+         * The time when the template was created. This parameter is returned only if you specify TemplateId.
          * <p>
          * 
-         * > 
-         * *   If the TemplateVersion parameter is specified, the creation time of the template whose version is specified by using the TemplateVersion parameter is returned.
-         * *   If the TemplateVersion parameter is not specified, the creation time of the template whose version is the default version is returned.
+         * > - If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.
+         * > - If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -275,7 +274,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the template. This parameter is returned only if the TemplateId parameter is specified.
+         * The description of the template. This parameter is returned only if you specify TemplateId.
          */
         public Builder description(String description) {
             this.description = description;
@@ -291,7 +290,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the template belongs. This parameter is returned only if the TemplateId parameter is specified.
+         * The ID of the Alibaba Cloud account to which the template belongs. This parameter is returned only if you specify TemplateId.
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -299,12 +298,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the sharing status of the template. This parameter is returned only if the TemplateId parameter is specified and the IncludePermission parameter is set to Enabled.
+         * Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.
          * <p>
          * 
-         * > 
-         * *   If the TemplateVersion parameter is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.
-         * *   If the TemplateVersion parameter is specified and takes effect, the details of the sharing status of the template whose version is specified by using the TemplateVersion parameter is returned.
+         * > - If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.
+         * > - If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             this.permissions = permissions;
@@ -312,7 +310,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the stack or stack group defined in the template belongs. This parameter is returned only if the StackId, ChangeSetId, or StackGroupName parameter is specified.
+         * The region ID of the stack or stack group that uses the template. This parameter is returned only if you specify StackId, ChangeSetId, or StackGroupName.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -336,13 +334,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The sharing type of the template. This parameter is returned only if the TemplateId parameter is specified.
+         * The sharing type of the template. This parameter is returned only if you specify TemplateId.
          * <p>
          * 
          * Valid values:
          * 
-         * *   Private: The template can be used only by the template owner.
-         * *   Shared: The template is shared with other users.
+         * *   Private: The template belongs to the template owner.
+         * *   Shared: The template is shared by other users.
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
@@ -350,7 +348,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the stack group. This parameter is returned only if the StackGroupName parameter is specified.
+         * The name of the stack group. This parameter is returned only if you specify StackGroupName.
          */
         public Builder stackGroupName(String stackGroupName) {
             this.stackGroupName = stackGroupName;
@@ -358,7 +356,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack. This parameter is returned only if the StackId parameter is specified.
+         * The ID of the stack. This parameter is returned only if you specify StackId.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -374,7 +372,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the template. This parameter is returned only if the TemplateId parameter is specified.
+         * The Alibaba Cloud Resource Name (ARN) of the template. This parameter is returned only if you specify TemplateId.
          */
         public Builder templateARN(String templateARN) {
             this.templateARN = templateARN;
@@ -382,7 +380,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The body of the template.
+         * The content of the template.
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -390,10 +388,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the template. This parameter is returned only if the TemplateId parameter is specified.
+         * The ID of the template. This parameter is returned only if you specify TemplateId.
          * <p>
          * 
-         * If the template is a shared template, the value of this parameter is the same as the value of the TemplateARN parameter.
+         * If the template is a shared template, the value of this parameter is the same as the value of TemplateARN.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -401,12 +399,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the template. This parameter is returned only if the TemplateId parameter is specified.
+         * The name of the template. This parameter is returned only if you specify TemplateId.
          * <p>
          * 
-         * > 
-         * *   If the TemplateVersion parameter is specified, the name of the template whose version is specified by using the TemplateVersion parameter is returned.
-         * *   If the TemplateVersion parameter is not specified, the name of the template whose version is the default version is returned.
+         * > -   If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.
+         * > -  If you not specify TemplateVersion, the name of the template whose version is the default version is returned.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -414,12 +411,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the template. This parameter is returned only if the TemplateId parameter is specified.
+         * The version of the template. This parameter is returned only if you specify TemplateId.\
          * <p>
+         * If TemplateVersion is not specified or does not take effect, the default version is used.
          * 
-         * If the TemplateVersion parameter is not specified or does not take effect, the value of this parameter is the default version of the template.
-         * 
-         * If the template is a shared template, this parameter is returned only if the VersionOption parameter is set to AllVersions.
+         * If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.
          */
         public Builder templateVersion(String templateVersion) {
             this.templateVersion = templateVersion;
@@ -427,12 +423,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the template was last updated. This parameter is returned only if the TemplateId parameter is specified.
+         * The time when the template was last updated. This parameter is returned only if you specify TemplateId.
          * <p>
          * 
-         * > 
-         * *   If the TemplateVersion parameter is specified, the last update time of the template whose version is specified by using the TemplateVersion parameter is returned.
-         * *   If the TemplateVersion parameter is not specified, the last update time of the template whose version is the default version is returned.
+         * > - If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.
+         * > - If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -531,7 +526,7 @@ public class GetTemplateResponseBody extends TeaModel {
              * The sharing option.
              * <p>
              * 
-             * The value is set to ShareToAccounts, which indicates that the template is shared with one or more Alibaba Cloud accounts.
+             * The value ShareToAccounts indicates that the template is shared with one or more Alibaba Cloud accounts.
              */
             public Builder shareOption(String shareOption) {
                 this.shareOption = shareOption;
@@ -539,18 +534,14 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The service that is used for resource sharing.
+             * The service that is used for resource sharing. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.
-             * *   ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.
-             * 
-             * > 
-             * *   The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.
-             * *   The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.
-             * *   The shared resources from the resource directory can overwrite the shared resources from ROS.
+             * - ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.
+             * - ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.
+             * > -  The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.
+             * > -  The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.
+             * > -  The shared resources from the resource directory can overwrite the shared resources from ROS.
              */
             public Builder shareSource(String shareSource) {
                 this.shareSource = shareSource;
@@ -558,7 +549,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the shared template. This parameter is returned only if the ShareOption parameter is set to ShareToAccounts and the VersionOption parameter is set to Specified or Current.
+             * The version of the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts and set VersionOption to Specified or Current.
              * <p>
              * 
              * Valid values: v1 to v100.
@@ -569,14 +560,14 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The version option for the shared template. This parameter is returned only if the ShareOption parameter is set to ShareToAccounts.
+             * The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.
              * <p>
              * 
              * Valid values:
              * 
              * *   AllVersions: All template versions are shared.
-             * *   Latest: Only the latest template version is shared. When the version of the template is updated, ROS updates the shared version to the latest version.
-             * *   Current: Only the default template version when you configure template sharing is shared. When the version of the template is updated, ROS does not update the shared version.
+             * *   Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.
+             * *   Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.
              * *   Specified: Only the specified template version is shared.
              */
             public Builder versionOption(String versionOption) {
@@ -630,7 +621,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key of the template.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -638,7 +629,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value of the template.
              */
             public Builder value(String value) {
                 this.value = value;

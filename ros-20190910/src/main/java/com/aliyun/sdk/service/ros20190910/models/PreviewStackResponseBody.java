@@ -50,7 +50,7 @@ public class PreviewStackResponseBody extends TeaModel {
         private Stack stack; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class PreviewStackResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * The name of the Terraform command. Valid values:
+             * The name of the Terraform command that is run. Valid values:
              * <p>
              * 
              * *   apply
@@ -191,10 +191,10 @@ public class PreviewStackResponseBody extends TeaModel {
             private java.util.List < TerraformLogs> terraformLogs; 
 
             /**
-             * The log that is generated when a Terraform stack is run. This parameter is returned only if the stack is a Terraform stack.
+             * The Terraform logs. This parameter is returned only if the stack is a Terraform stack.
              * <p>
              * 
-             * >  You can use this parameter to preview the logs of a Terraform stack.
+             * > This parameter contains the logs of previewing the stack.
              */
             public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
@@ -404,7 +404,7 @@ public class PreviewStackResponseBody extends TeaModel {
             private java.util.Map < String, ? > stack; 
 
             /**
-             * The type of the resource that belongs to an Alibaba Cloud service.
+             * The resource type of an Alibaba Cloud service.
              */
             public Builder acsResourceType(String acsResourceType) {
                 this.acsResourceType = acsResourceType;
@@ -412,7 +412,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The action that is performed on resources. Valid values:
+             * The action that is performed on the resource. Valid values:
              * <p>
              * 
              * *   Add
@@ -445,7 +445,7 @@ public class PreviewStackResponseBody extends TeaModel {
              * The physical ID of the resource.
              * <p>
              * 
-             * This parameter is returned only if the Action parameter is set to Modify or Remove.
+             * This parameter is returned only if Action is set to Modify or Remove.
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -453,7 +453,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The properties of the resource.
+             * The resource properties.
              */
             public Builder properties(java.util.Map < String, ? > properties) {
                 this.properties = properties;
@@ -468,7 +468,7 @@ public class PreviewStackResponseBody extends TeaModel {
              * *   False: A change is made on the template.
              * *   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.
              * 
-             * >  This parameter is returned only if the Action parameter is set to Modify.
+             * > This parameter is returned only if Action is set to Modify.
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -484,7 +484,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -673,7 +673,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the stack.
+             * The region where the stack resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -689,7 +689,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack.
+             * The stack name.
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -713,7 +713,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period that is allowed to create the stack.
+             * The timeout period for creating the stack.
              * <p>
              * 
              * Unit: minutes.

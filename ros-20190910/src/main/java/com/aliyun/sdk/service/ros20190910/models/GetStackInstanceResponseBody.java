@@ -50,7 +50,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
         private StackInstance stackInstance; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the stack.
+         * The information about the stack.
          */
         public Builder stackInstance(StackInstance stackInstance) {
             this.stackInstance = stackInstance;
@@ -279,7 +279,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The ID of the account to which the stack belongs.
+             * The ID of the destination account to which the stack belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -287,10 +287,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last drift detection was performed on the stack group.
+             * The time when the most recent successful drift detection was performed on the stack group.
              * <p>
              * 
-             * >  This parameter is returned only if drift detection is performed on the stack group.
+             * > This parameter is returned only if drift detection is performed on the stack group.
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -309,7 +309,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
              * The ID of the folder in the resource directory.
              * <p>
              * 
-             * >  This parameter is returned only if the stack group is granted service-managed permissions.
+             * > This parameter is returned only if the stack group is granted service-managed permissions.
              */
             public Builder rdFolderId(String rdFolderId) {
                 this.rdFolderId = rdFolderId;
@@ -317,7 +317,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the stack belongs.
+             * The region ID of the stack.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -325,7 +325,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stack when the last successful drift detection was performed on the stack group.
+             * The state of the stack when the most recent successful drift detection was performed on the stack group.
              * <p>
              * 
              * Valid values:
@@ -334,7 +334,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
              * *   NOT_CHECKED: No successful drift detection is performed on the stack.
              * *   IN_SYNC: The stack is being synchronized.
              * 
-             * >  This parameter is returned only if drift detection is performed on the stack group.
+             * > This parameter is returned only if drift detection is performed on the stack group.
              */
             public Builder stackDriftStatus(String stackDriftStatus) {
                 this.stackDriftStatus = stackDriftStatus;
@@ -358,10 +358,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack.
+             * The stack ID.
              * <p>
              * 
-             * >  This parameter is returned only if the stack is in the CURRENT state.
+             * > This parameter is returned only if the stack is in the CURRENT state.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -374,12 +374,12 @@ public class GetStackInstanceResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   CURRENT: The stack is up to date with the stack group.
+             * *   CURRENT: The stack is up-to-date with the stack group.
              * 
-             * *   OUTDATED: The stack is not up to date with the stack group. Stacks may be in the OUTDATED state due to the following reasons:
+             * *   OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:
              * 
-             *     *   When you call the CreateStackInstances operation to create stacks, the stacks fail to be created.
-             *     *   When you call the UpdateStackInstances or UpdateStackGroup operation to update stacks, the stacks fail to be updated or only specific stacks are updated.
+             *     *   When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.
+             *     *   When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.
              *     *   The creation or update operation is not complete.
              */
             public Builder status(String status) {
@@ -388,10 +388,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the stack is in the OUTDATED state.
+             * The reason why the stack instance is in the OUTDATED state.
              * <p>
              * 
-             * >  This parameter is returned only if the stack is in the OUTDATED state.
+             * > This parameter is returned only if the stack instance is in the OUTDATED state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

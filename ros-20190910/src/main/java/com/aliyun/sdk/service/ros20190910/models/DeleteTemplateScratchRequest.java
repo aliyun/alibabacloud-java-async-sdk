@@ -70,7 +70,7 @@ public class DeleteTemplateScratchRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the scenario is created.
+         * The region ID of the scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.

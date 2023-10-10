@@ -345,6 +345,9 @@ public class ListStacksResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("DeletionProtection")
+        private String deletionProtection;
+
         @NameInMap("DisableRollback")
         private Boolean disableRollback;
 
@@ -398,6 +401,7 @@ public class ListStacksResponseBody extends TeaModel {
 
         private Stacks(Builder builder) {
             this.createTime = builder.createTime;
+            this.deletionProtection = builder.deletionProtection;
             this.disableRollback = builder.disableRollback;
             this.driftDetectionTime = builder.driftDetectionTime;
             this.operationInfo = builder.operationInfo;
@@ -430,6 +434,13 @@ public class ListStacksResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public String getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -553,6 +564,7 @@ public class ListStacksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String deletionProtection; 
             private Boolean disableRollback; 
             private String driftDetectionTime; 
             private OperationInfo operationInfo; 
@@ -576,6 +588,14 @@ public class ListStacksResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(String deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 

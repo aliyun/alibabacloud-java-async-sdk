@@ -562,12 +562,16 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("SourceTagSupported")
         private Boolean sourceTagSupported;
 
+        @NameInMap("SupportedTemplateScratchTypes")
+        private java.util.List < String > supportedTemplateScratchTypes;
+
         private TemplateScratchSupportedResourceTypes(Builder builder) {
             this.resourceType = builder.resourceType;
             this.sourceResourceGroupSupported = builder.sourceResourceGroupSupported;
             this.sourceResourcesSupported = builder.sourceResourcesSupported;
             this.sourceSupported = builder.sourceSupported;
             this.sourceTagSupported = builder.sourceTagSupported;
+            this.supportedTemplateScratchTypes = builder.supportedTemplateScratchTypes;
         }
 
         public static Builder builder() {
@@ -613,12 +617,20 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             return this.sourceTagSupported;
         }
 
+        /**
+         * @return supportedTemplateScratchTypes
+         */
+        public java.util.List < String > getSupportedTemplateScratchTypes() {
+            return this.supportedTemplateScratchTypes;
+        }
+
         public static final class Builder {
             private String resourceType; 
             private Boolean sourceResourceGroupSupported; 
             private Boolean sourceResourcesSupported; 
             private Boolean sourceSupported; 
             private Boolean sourceTagSupported; 
+            private java.util.List < String > supportedTemplateScratchTypes; 
 
             /**
              * The resource type.
@@ -673,6 +685,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
              */
             public Builder sourceTagSupported(Boolean sourceTagSupported) {
                 this.sourceTagSupported = sourceTagSupported;
+                return this;
+            }
+
+            /**
+             * SupportedTemplateScratchTypes.
+             */
+            public Builder supportedTemplateScratchTypes(java.util.List < String > supportedTemplateScratchTypes) {
+                this.supportedTemplateScratchTypes = supportedTemplateScratchTypes;
                 return this;
             }
 

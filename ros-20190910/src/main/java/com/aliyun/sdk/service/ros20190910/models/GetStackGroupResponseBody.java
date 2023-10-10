@@ -58,7 +58,7 @@ public class GetStackGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack group.
+         * Details of the stack group.
          */
         public Builder stackGroup(StackGroup stackGroup) {
             this.stackGroup = stackGroup;
@@ -182,7 +182,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The value of the parameter.
+             * The name of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -190,7 +190,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the stack group.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -726,7 +726,10 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the last drift detection that was performed on the stack group.
+             * The structure that contains the template body.
+             * <p>
+             * 
+             * > We recommend that you use TemplateContent instead of TemplateBody.
              */
             public Builder templateBody(String templateBody) {
                 this.templateBody = templateBody;
@@ -734,7 +737,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateContent.
+             * The JSON-formatted structure that contains the template body. For more information, see [Template syntax](~~28857~~).
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;

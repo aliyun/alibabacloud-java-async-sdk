@@ -84,7 +84,7 @@ public class ListTemplateVersionsRequest extends Request {
         } 
 
         /**
-         * The maximum number of results to be returned in a single call when the NextToken parameter is used for the query.
+         * The maximum number of results to be returned in a single call when NextToken is used for the query.
          * <p>
          * 
          * Valid values: 1 to 100.
@@ -98,7 +98,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value that is returned from the last call.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -107,7 +107,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
+         * The template ID. This parameter applies to shared and private templates.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

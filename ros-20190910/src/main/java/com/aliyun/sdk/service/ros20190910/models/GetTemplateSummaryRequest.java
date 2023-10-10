@@ -192,11 +192,9 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
          * <p>
-         * 
-         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
+         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).\
          * For more information, see [Ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
@@ -206,7 +204,7 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The parameters.
+         * The parameters that are defined in the template.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -215,10 +213,10 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the stack or stack group in the template belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          * <p>
          * 
-         * This parameter takes effect only when you specify the StackId, ChangeSetId, or StackGroupName parameter.
+         * This parameter takes effect only when one of the following parameters are specified: StackId, ChangeSetId, and StackGroupName.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +237,7 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * The stack ID.
          * <p>
          * 
          * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
@@ -251,11 +249,9 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.
+         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
          * <p>
-         * 
-         * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * 
+         * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\
          * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
          */
         public Builder templateBody(String templateBody) {
@@ -265,7 +261,7 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
+         * The template ID. This parameter applies to shared and private templates.
          * <p>
          * 
          * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
@@ -277,10 +273,10 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.
          * <p>
          * 
-         * >  If you do not specify the region of the OSS bucket, the value of the RegionId parameter is used.
+         * > If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
          * 
          * You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
          * 
@@ -293,7 +289,7 @@ public class GetTemplateSummaryRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect when you specify the TemplateId parameter.
+         * The version of the template. This parameter takes effect when TemplateId is specified.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -347,12 +343,12 @@ public class GetTemplateSummaryRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value in the template.
+             * The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are defined in the template.
              * <p>
              * 
              * Maximum value of N: 200.
              * 
-             * >  The Parameters parameter is optional. If you need to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * > The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -365,7 +361,7 @@ public class GetTemplateSummaryRequest extends Request {
              * 
              * Maximum value of N: 200.
              * 
-             * >  The Parameters parameter is optional. If you need to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
+             * > The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

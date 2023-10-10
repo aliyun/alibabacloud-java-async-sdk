@@ -78,7 +78,10 @@ public class GetResourceTypeRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.
+         * <p>
+         * 
+         * > This parameter is supported only for modules.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

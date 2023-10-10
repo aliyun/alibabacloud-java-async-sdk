@@ -134,7 +134,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,10 +142,9 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The resource identifier summaries that describe the resources that you want to import and the properties that are used to identify the resources during the import.
+         * The resource identifier summaries.\
          * <p>
-         * 
-         * For example, VpcId is an identifier property for ALIYUN::ECS::VPC resources.
+         * A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.
          */
         public Builder resourceIdentifierSummaries(java.util.List < ResourceIdentifierSummaries> resourceIdentifierSummaries) {
             this.resourceIdentifierSummaries = resourceIdentifierSummaries;
@@ -225,7 +224,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The logical IDs of all resources of the type that is specified by the ResouceType parameter in the template.
+             * The logical IDs of all resources of the type that is specified by ResouceType in the template.
              */
             public Builder logicalResourceIds(java.util.List < String > logicalResourceIds) {
                 this.logicalResourceIds = logicalResourceIds;
@@ -233,7 +232,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The resource properties. You can use a resource property to identify the resources that you want to manage. For example, VpcId is an identifier property for ALIYUN::ECS::VPC resources.
+             * The resource properties. You can use a resource property to identify the resource that you want to manage. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.
              */
             public Builder resourceIdentifiers(java.util.List < String > resourceIdentifiers) {
                 this.resourceIdentifiers = resourceIdentifiers;
@@ -244,7 +243,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
              * The resource type.
              * <p>
              * 
-             * >  You can import resources of the type that is specified by the ResouceType parameter.
+             * > The resource import feature is supported for the resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

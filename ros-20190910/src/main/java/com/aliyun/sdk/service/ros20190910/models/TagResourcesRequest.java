@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The region ID of the tag that you want to create. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * The IDs of the resources.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,13 +118,13 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to which you want to add the tag. Valid values:
+         * The type of the resource. Valid values:
          * <p>
          * 
          * *   stack: stack
          * *   stackgroup: stack group
          * *   template: template
-         * *   TemplateScratch: scenario
+         * *   templatescratch: scenario
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -133,7 +133,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the resource. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -189,10 +189,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the resource. You can specify up to 20 tag keys.
+             * The tag key of the resource. You can specify up to 20 tag keys.
              * <p>
              * 
-             * The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -200,10 +200,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the resource. You can specify up to 20 tag values.
+             * The tag value of the resource. You can specify up to 20 tag values.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -119,9 +119,6 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
             /**
              * The resource type.
-             * <p>
-             * 
-             * You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -198,7 +195,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * AllowedValues.
+             * The values of the parameter.
              */
             public Builder allowedValues(java.util.List < ? > allowedValues) {
                 this.allowedValues = allowedValues;
@@ -214,7 +211,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The name of the resource that is defined in the template.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -223,9 +220,6 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
             /**
              * The resource type.
-             * <p>
-             * 
-             * You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -298,7 +292,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -490,7 +484,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              * *   NotSupport: The value of this parameter cannot be queried.
              * *   QueryError: This parameter failed to be queried.
              * 
-             * >  If the AllowedValues parameter is not returned, the Behavior and BehaviorReason parameters are returned.
+             * > If AllowedValues is not returned, Behavior and BehaviorReason are returned.
              */
             public Builder behavior(String behavior) {
                 this.behavior = behavior;
@@ -509,7 +503,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              * The values that do not conform to the parameter constraints.
              * <p>
              * 
-             * >  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.
+             * > If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.
              */
             public Builder illegalValueByParameterConstraints(java.util.List < ? > illegalValueByParameterConstraints) {
                 this.illegalValueByParameterConstraints = illegalValueByParameterConstraints;
@@ -520,7 +514,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              * The values that do not match the rules in the template.
              * <p>
              * 
-             * >  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.
+             * > If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.
              */
             public Builder illegalValueByRules(java.util.List < ? > illegalValueByRules) {
                 this.illegalValueByRules = illegalValueByRules;
@@ -528,7 +522,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * The unsupported resources in the template.
+             * The unsupported resource in the template.
              */
             public Builder notSupportResources(java.util.List < NotSupportResources> notSupportResources) {
                 this.notSupportResources = notSupportResources;
@@ -536,7 +530,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalConstraints.
+             * The original constraint information.
              */
             public Builder originalConstraints(java.util.List < OriginalConstraints> originalConstraints) {
                 this.originalConstraints = originalConstraints;
@@ -552,7 +546,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * The error details that are returned if the request fails.
+             * The error that is returned when the request fails.
              */
             public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
                 this.queryErrors = queryErrors;
@@ -560,7 +554,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * The data type of the parameter.
              */
             public Builder type(String type) {
                 this.type = type;

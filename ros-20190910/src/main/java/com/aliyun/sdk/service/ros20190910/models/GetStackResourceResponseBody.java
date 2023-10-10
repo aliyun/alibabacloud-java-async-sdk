@@ -261,7 +261,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleInfo.
+         * The information about the modules from which the resource is created. This parameter is returned only if the resource is created from modules.
          */
         public Builder moduleInfo(ModuleInfo moduleInfo) {
             this.moduleInfo = moduleInfo;
@@ -405,7 +405,12 @@ public class GetStackResourceResponseBody extends TeaModel {
             private String typeHierarchy; 
 
             /**
-             * LogicalIdHierarchy.
+             * The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (`/`).
+             * <p>
+             * 
+             * In the following example, the resource is created from Module B nested within Parent Module A:
+             * 
+             * `moduleA/moduleB`
              */
             public Builder logicalIdHierarchy(String logicalIdHierarchy) {
                 this.logicalIdHierarchy = logicalIdHierarchy;
@@ -413,7 +418,12 @@ public class GetStackResourceResponseBody extends TeaModel {
             }
 
             /**
-             * TypeHierarchy.
+             * The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (`/`).
+             * <p>
+             * 
+             * In the following example, the resource is created from a module of the `MODULE::ROS::Child::Example` type that is nested within a parent module of the `MODULE::ROS::Parent::Example` type:
+             * 
+             * `MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example`
              */
             public Builder typeHierarchy(String typeHierarchy) {
                 this.typeHierarchy = typeHierarchy;

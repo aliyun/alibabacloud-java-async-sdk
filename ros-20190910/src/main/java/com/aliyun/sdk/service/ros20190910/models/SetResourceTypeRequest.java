@@ -97,7 +97,10 @@ public class SetResourceTypeRequest extends Request {
         } 
 
         /**
-         * DefaultVersionId.
+         * The ID of the default version. You can use this parameter to specify the default version of the resource type.
+         * <p>
+         * 
+         * > You can specify only one of the VersionId and DefaultVersionId parameters.
          */
         public Builder defaultVersionId(String defaultVersionId) {
             this.putQueryParameter("DefaultVersionId", defaultVersionId);
@@ -106,7 +109,7 @@ public class SetResourceTypeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the resource type or resource type version. The description can be up to 512 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -115,7 +118,7 @@ public class SetResourceTypeRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -124,7 +127,10 @@ public class SetResourceTypeRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version ID. If you want to modify a version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is modified.
+         * <p>
+         * 
+         * > You can specify only one of the VersionId and DefaultVersionId parameters.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

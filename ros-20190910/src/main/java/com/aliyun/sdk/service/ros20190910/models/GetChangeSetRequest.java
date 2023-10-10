@@ -102,11 +102,11 @@ public class GetChangeSetRequest extends Request {
         }
 
         /**
-         * Specifies whether to show the template. Default value: false. Valid values:
+         * Specifies whether to obtain the template. Valid values:
          * <p>
          * 
-         * *   true: shows the template.
-         * *   false: does not show the template.
+         * *   true
+         * *   false (default)
          */
         public Builder showTemplate(Boolean showTemplate) {
             this.putQueryParameter("ShowTemplate", showTemplate);

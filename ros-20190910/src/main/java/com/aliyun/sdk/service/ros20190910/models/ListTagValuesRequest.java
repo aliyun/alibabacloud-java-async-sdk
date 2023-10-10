@@ -99,7 +99,7 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * The tag key.
+         * The key of the tag.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -108,7 +108,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

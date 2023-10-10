@@ -26,6 +26,10 @@ public class ListTemplateScratchesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Status")
     private String status;
 
@@ -46,6 +50,7 @@ public class ListTemplateScratchesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.tags = builder.tags;
         this.templateScratchId = builder.templateScratchId;
@@ -87,6 +92,13 @@ public class ListTemplateScratchesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -118,6 +130,7 @@ public class ListTemplateScratchesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String status; 
         private java.util.List < Tags> tags; 
         private String templateScratchId; 
@@ -132,6 +145,7 @@ public class ListTemplateScratchesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
             this.tags = request.tags;
             this.templateScratchId = request.templateScratchId;
@@ -144,7 +158,7 @@ public class ListTemplateScratchesRequest extends Request {
          * 
          * Pages start from page 1.
          * 
-         * Default value: 1.
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +181,7 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the scenario is created.
+         * The region ID of the scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
@@ -179,7 +193,16 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The state of the scenario. Valid values:
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The status of the scenario. Valid values:
          * <p>
          * 
          * *   GENERATE_IN_PROGRESS: The scenario is being created.
@@ -193,7 +216,7 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the scenario.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -270,10 +293,10 @@ public class ListTemplateScratchesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the scenario.
+             * The tag key of the scenario.
              * <p>
              * 
-             * >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
+             * > Tags is optional. If you want to specify Tags, you must specify Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +304,7 @@ public class ListTemplateScratchesRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the scenario.
+             * The tag value of the scenario.
              */
             public Builder value(String value) {
                 this.value = value;

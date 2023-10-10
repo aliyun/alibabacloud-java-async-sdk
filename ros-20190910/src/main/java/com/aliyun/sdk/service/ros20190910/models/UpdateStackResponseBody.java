@@ -62,7 +62,7 @@ public class UpdateStackResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The validation result. This parameter is returned only if the DryRun parameter is set to true.
+         * The dry run result. This parameter is returned only if DryRun is set to true.
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -234,12 +234,10 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.
+             * The parameters whose changes cause service interruptions.
              * <p>
-             * 
-             * > 
-             * *   This parameter is supported only for a small number of resource types.
-             * *   This parameter is valid only for changes that are made on ROS stacks.
+             * > - This parameter is supported only for a small number of resource types.
+             * > - This parameter is valid only for updates on ROS stacks.
              */
             public Builder parametersCauseInterruptionIfModified(java.util.List < String > parametersCauseInterruptionIfModified) {
                 this.parametersCauseInterruptionIfModified = parametersCauseInterruptionIfModified;
@@ -247,7 +245,11 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersCauseReplacementIfModified.
+             * The parameters whose changes trigger replacement updates for resources.
+             * <p>
+             * 
+             * > -  This parameter can be returned only if ReplacementOption is set to Enabled.
+             * > -  This parameter is valid only for updates on ROS stacks.
              */
             public Builder parametersCauseReplacementIfModified(java.util.List < String > parametersCauseReplacementIfModified) {
                 this.parametersCauseReplacementIfModified = parametersCauseReplacementIfModified;
@@ -263,12 +265,11 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
+             * The parameters whose changes cause service interruptions under specific conditions.
              * <p>
              * 
-             * > 
-             * *   This parameter is supported only for a small number of resource types.
-             * *   This parameter is valid only for changes that are made on ROS stacks.
+             * > - This parameter is supported only for a small number of resource types.
+             * > -  This parameter is valid only for updates on ROS stacks.
              */
             public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
                 this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
@@ -276,7 +277,11 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyCauseReplacementIfModified.
+             * The parameters whose changes trigger replacement updates for resources under specific conditions.
+             * <p>
+             * 
+             * > - This parameter can be returned only if ReplacementOption is set to Enabled.
+             * > - This parameter is valid only for updates on ROS stacks.
              */
             public Builder parametersConditionallyCauseReplacementIfModified(java.util.List < String > parametersConditionallyCauseReplacementIfModified) {
                 this.parametersConditionallyCauseReplacementIfModified = parametersConditionallyCauseReplacementIfModified;
@@ -300,12 +305,11 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.
+             * The parameters whose changes cause service interruptions under uncertain conditions.
              * <p>
              * 
-             * > 
-             * *   This parameter is supported only for a small number of resource types.
-             * *   This parameter is valid only for changes that are made on ROS stacks.
+             * > - This parameter is supported only for a small number of resource types.
+             * > - This parameter is valid only for updates on ROS stacks.
              */
             public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
                 this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;
@@ -313,7 +317,11 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersUncertainlyCauseReplacementIfModified.
+             * The parameters whose changes trigger replacement updates for resources under uncertain conditions.
+             * <p>
+             * 
+             * > - This parameter can be returned only if ReplacementOption is set to Enabled.
+             * > - This parameter is valid only for updates on ROS stacks.
              */
             public Builder parametersUncertainlyCauseReplacementIfModified(java.util.List < String > parametersUncertainlyCauseReplacementIfModified) {
                 this.parametersUncertainlyCauseReplacementIfModified = parametersUncertainlyCauseReplacementIfModified;

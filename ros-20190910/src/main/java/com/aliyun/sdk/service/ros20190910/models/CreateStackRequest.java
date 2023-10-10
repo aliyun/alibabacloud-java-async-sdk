@@ -362,14 +362,15 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The option for the stack after the stack is created. Valid values:
+         * The creation option for the stack. Valid values:
          * <p>
          * 
-         * *   KeepStackOnCreationComplete (default): retains the stack and its resources after the stack is created. In this case, your stack quota in ROS is consumed.
-         * *   AbandonStackOnCreationComplete: deletes the stack, but retains its resources after the stack is created. In this case, your stack quota in ROS is not consumed. If the stack fails to be created, the stack is retained.
-         * *   AbandonStackOnCreationRollbackComplete: deletes the stack when its resources are rolled back after the stack fails to be created. In this case, your stack quota in ROS is not consumed. In other rollback scenarios, the stack is retained.
+         * *   KeepStackOnCreationComplete (default): After the stack is created, the stack and its resources are retained. The quota for the maximum number of stacks that can be created in ROS is consumed.
+         * *   AbandonStackOnCreationComplete: After the stack is created, the stack is deleted, but its resources are retained. The quota for the maximum number of stacks that can be created in ROS is not consumed. If the stack fails to be created, the stack is retained.
+         * *   AbandonStackOnCreationRollbackComplete: When the resources of the stack are rolled back after the stack fails to be created, the stack is deleted. The quota for the maximum number of stacks that can be created in ROS is not consumed. In other rollback scenarios, the stack is retained.
+         * *   ManuallyPay: When you create the stack, you must manually pay for the subscription resources that are used. The following resource types support manual payment: `ALIYUN::ECS::InstanceGroup`, `ALIYUN::RDS::DBInstance`, `ALIYUN::SLB::LoadBalancer`, `ALIYUN::VPC::EIP`, and `ALIYUN::VPC::VpnGateway`.
          * 
-         * > You can specify only one of CreateOption and CreateOptions.
+         * >  You can specify only one of CreateOption and CreateOptions.
          */
         public Builder createOption(String createOption) {
             this.putQueryParameter("CreateOption", createOption);
@@ -378,7 +379,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * The options for the stack after the stack is created.
+         * The creation options for the stack.
          */
         public Builder createOptions(java.util.List < String > createOptions) {
             this.putQueryParameter("CreateOptions", createOptions);
@@ -458,11 +459,10 @@ public class CreateStackRequest extends Request {
          * 
          * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
          * 
-         * > 
          * 
-         * *   If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
          * 
-         * *   If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.
+         * > -  If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
+         * > -  If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -773,11 +773,8 @@ public class CreateStackRequest extends Request {
              * 
              * Valid values of N: 1 to 20.
              * 
-             * > 
-             * 
-             * *   The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
-             * 
-             * *   The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+             * > - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
+             * > -  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
              */
             public Builder key(String key) {
                 this.key = key;

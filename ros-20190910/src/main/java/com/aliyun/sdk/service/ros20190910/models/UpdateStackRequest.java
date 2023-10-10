@@ -394,7 +394,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * DryRunOptions.
+         * The dry run option in the list format. You can specify only one dry run option.
+         * <p>
+         * 
+         * > This parameter takes effect only when DryRun is set to true.
          */
         public Builder dryRunOptions(java.util.List < String > dryRunOptions) {
             this.putQueryParameter("DryRunOptions", dryRunOptions);
@@ -408,11 +411,10 @@ public class UpdateStackRequest extends Request {
          * 
          * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
          * 
-         * > 
-         * *   If you set this parameter to an integer that is greater than 0, the integer is used.
-         * *   If you set this parameter to 0, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
-         * *   If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
-         * *   If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.
+         * > - If you set this parameter to an integer that is greater than 0, the integer is used.
+         * > -  If you set this parameter to 0, no limit is imposed on Resource Orchestration Service (ROS) stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
+         * > -  If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.
+         * > - If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -762,9 +764,8 @@ public class UpdateStackRequest extends Request {
              * 
              * Valid values of N: 1 to 20.
              * 
-             * > 
-             * *   The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
-             * *   The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
+             * > - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.
+             * > - The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).
              */
             public Builder key(String key) {
                 this.key = key;

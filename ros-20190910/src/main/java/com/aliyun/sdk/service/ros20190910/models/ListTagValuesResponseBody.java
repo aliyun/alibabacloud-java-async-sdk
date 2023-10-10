@@ -62,7 +62,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * The token that is used to start the next query.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

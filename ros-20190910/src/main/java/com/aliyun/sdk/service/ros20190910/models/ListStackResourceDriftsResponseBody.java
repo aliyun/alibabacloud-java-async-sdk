@@ -62,7 +62,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         private java.util.List < ResourceDrifts> resourceDrifts; 
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         }
 
         /**
-         * The property differences of the resource.
+         * The resource drifts.
          */
         public Builder resourceDrifts(java.util.List < ResourceDrifts> resourceDrifts) {
             this.resourceDrifts = resourceDrifts;
@@ -130,7 +130,12 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             private String typeHierarchy; 
 
             /**
-             * LogicalIdHierarchy.
+             * The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (`/`).
+             * <p>
+             * 
+             * In the following example, the resource is created from Module B nested within Parent Module A:
+             * 
+             * `moduleA/moduleB`
              */
             public Builder logicalIdHierarchy(String logicalIdHierarchy) {
                 this.logicalIdHierarchy = logicalIdHierarchy;
@@ -138,7 +143,12 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * TypeHierarchy.
+             * The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (`/`).
+             * <p>
+             * 
+             * In the following example, the resource is created from a module of the `MODULE::ROS::Child::Example` type that is nested within a parent module of the `MODULE::ROS::Parent::Example` type:
+             * 
+             * `MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example`
              */
             public Builder typeHierarchy(String typeHierarchy) {
                 this.typeHierarchy = typeHierarchy;
@@ -215,7 +225,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             private String propertyPath; 
 
             /**
-             * __null__
+             * The actual value of the resource property.
              */
             public Builder actualValue(String actualValue) {
                 this.actualValue = actualValue;
@@ -223,7 +233,12 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * __null__
+             * The drift type of the resource property. Valid values:
+             * <p>
+             * 
+             * *   ADD: The value is added to a resource property whose data type is Array or List.
+             * *   REMOVE: The property is deleted from the current resource configuration.
+             * *   NOT_EQUAL: The current property value differs from the expected value that is defined in the stack template.
              */
             public Builder differenceType(String differenceType) {
                 this.differenceType = differenceType;
@@ -231,7 +246,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * ListStackResourceDrifts
+             * The expected value of the resource property that is defined in the template.
              */
             public Builder expectedValue(String expectedValue) {
                 this.expectedValue = expectedValue;
@@ -239,7 +254,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * __null__
+             * The path of the resource property.
              */
             public Builder propertyPath(String propertyPath) {
                 this.propertyPath = propertyPath;
@@ -388,7 +403,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             private String stackId; 
 
             /**
-             * ActualProperties.
+             * The actual JSON-formatted resource properties.
              */
             public Builder actualProperties(String actualProperties) {
                 this.actualProperties = actualProperties;
@@ -396,7 +411,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected value of the resource property as defined in the template.
+             * The time when the drift detection operation was performed on the resource.
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -404,7 +419,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The query token value returned in this call.
+             * The JSON-formatted resource properties that are defined in the template.
              */
             public Builder expectedProperties(String expectedProperties) {
                 this.expectedProperties = expectedProperties;
@@ -412,7 +427,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The actual value of the resource property.
+             * The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -420,7 +435,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleInfo.
+             * The information about the modules from which the resource was created. This parameter is returned only if the resource is created from modules.
              */
             public Builder moduleInfo(ModuleInfo moduleInfo) {
                 this.moduleInfo = moduleInfo;
@@ -428,7 +443,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the resource property.
+             * The physical ID of the resource.
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -436,7 +451,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts
+             * The property drifts of the resource.
              */
             public Builder propertyDifferences(java.util.List < PropertyDifferences> propertyDifferences) {
                 this.propertyDifferences = propertyDifferences;
@@ -444,7 +459,13 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The drift state of the resource. Valid values:
+             * <p>
+             * 
+             * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
+             * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
+             * *   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.
+             * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
              */
             public Builder resourceDriftStatus(String resourceDriftStatus) {
                 this.resourceDriftStatus = resourceDriftStatus;
@@ -452,7 +473,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The actual resource properties in JSON format.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -460,12 +481,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             }
 
             /**
-             * The drift type of the resource property. Valid values:
-             * <p>
-             * 
-             * *   ADD: The value has been added to a resource property whose data type was Array or List.
-             * *   REMOVE: The property has been deleted from the current resource configuration.
-             * *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
+             * The stack ID.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;

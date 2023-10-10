@@ -163,7 +163,7 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The name of change set.
+         * The name of change set N. Maximum value of N: 5. You can use an asterisk (\*) as a wildcard for fuzzy search.
          */
         public Builder changeSetName(java.util.List < String > changeSetName) {
             this.putQueryParameter("ChangeSetName", changeSetName);
@@ -172,7 +172,15 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The execution status of change set.
+         * The execution status of change set N. Maximum value of N: 5. Valid values:
+         * <p>
+         * 
+         * *   UNAVAILABLE
+         * *   AVAILABLE
+         * *   EXECUTE_IN_PROGRESS
+         * *   EXECUTE_COMPLETE
+         * *   EXECUTE_FAILED
+         * *   OBSOLETE
          */
         public Builder executionStatus(java.util.List < String > executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
@@ -181,11 +189,9 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.\
          * <p>
-         * 
-         * Pages start from page 1.
-         * 
+         * Pages start from page 1.\
          * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
@@ -195,11 +201,9 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.\
          * <p>
-         * 
-         * Valid values: 1 to 50.
-         * 
+         * Valid values: 1 to 50.\
          * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
@@ -227,7 +231,15 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The status of change set.
+         * The status of change set N. Maximum value of N: 5. Valid values:
+         * <p>
+         * 
+         * *   CREATE_PENDING
+         * *   CREATE_IN_PROGRESS
+         * *   CREATE_COMPLETE
+         * *   CREATE_FAILED
+         * *   DELETE_FAILED
+         * *   DELETE_COMPLETE
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);

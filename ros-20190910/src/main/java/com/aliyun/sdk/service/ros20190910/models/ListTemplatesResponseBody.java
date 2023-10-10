@@ -86,9 +86,8 @@ public class ListTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.\
          * <p>
-         * 
          * Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -97,7 +96,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -105,7 +104,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +112,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of templates.
+         * The templates.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -377,7 +376,7 @@ public class ListTemplatesResponseBody extends TeaModel {
              * The sharing type of the template.
              * <p>
              * 
-             * Default value: Private. Valid values:
+             * Valid values:
              * 
              * *   Private: The template belongs to the template owner.
              * *   Shared: The template is shared with other users.
@@ -404,7 +403,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * The template ID.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -412,7 +411,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

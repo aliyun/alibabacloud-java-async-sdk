@@ -69,7 +69,7 @@ public class DeregisterResourceTypeRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -78,7 +78,7 @@ public class DeregisterResourceTypeRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version ID. If you want to delete a version of the resource type, you must specify this parameter.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

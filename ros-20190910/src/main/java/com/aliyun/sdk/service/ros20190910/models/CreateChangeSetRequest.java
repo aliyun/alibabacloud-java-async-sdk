@@ -814,15 +814,12 @@ public class CreateChangeSetRequest extends Request {
     }
     public static class ResourcesToImport extends TeaModel {
         @NameInMap("LogicalResourceId")
-        @Validation(required = true)
         private String logicalResourceId;
 
         @NameInMap("ResourceIdentifier")
-        @Validation(required = true)
         private String resourceIdentifier;
 
         @NameInMap("ResourceType")
-        @Validation(required = true)
         private String resourceType;
 
         private ResourcesToImport(Builder builder) {

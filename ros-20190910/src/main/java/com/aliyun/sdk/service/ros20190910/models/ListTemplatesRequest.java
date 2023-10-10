@@ -138,11 +138,11 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the information about tags. Default value: Disabled. Valid values:
+         * Specifies whether to query the tag information. Valid values:
          * <p>
          * 
          * *   Enabled
-         * *   Disabled
+         * *   Disabled (default)
          */
         public Builder includeTags(String includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -151,11 +151,9 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.\
          * <p>
-         * 
-         * Pages start from page 1.
-         * 
+         * Pages start from page 1.\
          * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
@@ -165,11 +163,9 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.\
          * <p>
-         * 
-         * Valid values: 1 to 50.
-         * 
+         * Valid values: 1 to 50.\
          * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
@@ -179,10 +175,9 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group.\
          * <p>
-         * 
-         * For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+         * For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,9 +189,9 @@ public class ListTemplatesRequest extends Request {
          * The sharing type of the template.
          * <p>
          * 
-         * Default value: Private. Valid values:
+         * Valid values:
          * 
-         * *   Private: The template belongs to the template owner.
+         * *   Private (default): The template belongs to the template owner.
          * *   Shared: The template is shared with other users.
          * *   Official: The template is the shared template of the official version.
          */
@@ -207,7 +202,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -216,10 +211,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the template. This parameter takes effect only when the ShareType parameter is set to Private.
-         * <p>
-         * 
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+         * The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -273,7 +265,7 @@ public class ListTemplatesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. This parameter takes effect only when the ShareType parameter is set to Private.
+             * The key of the tag. This parameter takes effect only when ShareType is set to Private.
              * <p>
              * 
              * You can specify up to 20 tag keys.
@@ -284,7 +276,7 @@ public class ListTemplatesRequest extends Request {
             }
 
             /**
-             * The value of the tag N. This parameter takes effect only when the ShareType parameter is set to Private.
+             * The value of the tag. This parameter takes effect only when ShareType is set to Private.
              * <p>
              * 
              * You can specify up to 20 tag values.

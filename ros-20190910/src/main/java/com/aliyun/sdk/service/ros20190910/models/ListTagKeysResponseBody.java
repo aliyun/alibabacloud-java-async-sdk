@@ -62,7 +62,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of tag keys. Separate multiple tag keys with commas (,).
+         * The tag keys.
          */
         public Builder keys(java.util.List < String > keys) {
             this.keys = keys;
@@ -70,7 +70,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to start the next query.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

@@ -124,7 +124,7 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         } 
 
         /**
-         * EntityType.
+         * The entity type. Set the value to Module.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -133,7 +133,7 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -142,7 +142,7 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 50. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +151,7 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * RegistrationId.
+         * The ID of the registration record.
          */
         public Builder registrationId(String registrationId) {
             this.putQueryParameter("RegistrationId", registrationId);
@@ -160,7 +160,7 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -169,7 +169,12 @@ public class ListResourceTypeRegistrationsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The registration state. Valid values:
+         * <p>
+         * 
+         * *   IN_PROGRESS
+         * *   COMPLETE
+         * *   FAILED
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

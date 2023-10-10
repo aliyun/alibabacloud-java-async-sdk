@@ -82,7 +82,13 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * The array of resource types.
+         * The entity type. Valid values:
+         * <p>
+         * 
+         * *   All: all types of resources.
+         * *   Resource (default): regular resources. For more information, see [Resources](~~28863~~).
+         * *   DataSource: DataSource resources. For more information, see [DataSource resources](~~404753~~).
+         * *   Module: modules.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -91,7 +97,11 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * Provider.
+         * The provider of the resource type. Valid values:
+         * <p>
+         * 
+         * *   ROS (default): The resource type is provided by Resource Orchestration Service (ROS).
+         * *   Self: The resource type is provided by you.
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -100,7 +110,7 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

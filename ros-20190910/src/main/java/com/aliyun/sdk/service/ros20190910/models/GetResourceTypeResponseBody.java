@@ -226,7 +226,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -234,7 +234,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultVersionId.
+         * The default version ID.
+         * <p>
+         * 
+         * > This parameter is returned only if the resource type is queried.
          */
         public Builder defaultVersionId(String defaultVersionId) {
             this.defaultVersionId = defaultVersionId;
@@ -242,7 +245,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the resource type.
          */
         public Builder description(String description) {
             this.description = description;
@@ -250,7 +253,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * EntityType.
+         * The entity type. Valid values:
+         * <p>
+         * 
+         * *   Resource: regular resource. For more information, see [Resources](~~28863~~).
+         * *   DataSource: DataSource resource. For more information, see [DataSource resources](~~404753~~).
+         * *   module: module.
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -258,7 +266,13 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * IsDefaultVersion.
+         * Indicates whether the version is the default version. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * > This parameter is returned only if a specific version of the resource type is queried.
          */
         public Builder isDefaultVersion(Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
@@ -266,7 +280,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * LatestVersionId.
+         * The latest version ID.
+         * <p>
+         * 
+         * > This parameter is returned only if the resource type is queried.
          */
         public Builder latestVersionId(String latestVersionId) {
             this.latestVersionId = latestVersionId;
@@ -286,7 +303,11 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Provider.
+         * The provider of the resource type. Valid values:
+         * <p>
+         * 
+         * *   ROS: The resource type is provided by Resource Orchestration Service (ROS).
+         * *   Self: The resource type is provided by you.
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -334,7 +355,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateBody.
+         * The template content in the module.
+         * <p>
+         * 
+         * > This parameter is returned only if a specific version of the resource type is queried.
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -342,7 +366,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalVersionCount.
+         * The total number of versions.
+         * <p>
+         * 
+         * > This parameter is returned only if the resource type is queried.
          */
         public Builder totalVersionCount(Integer totalVersionCount) {
             this.totalVersionCount = totalVersionCount;
@@ -350,7 +377,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The update time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

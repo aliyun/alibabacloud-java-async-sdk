@@ -267,9 +267,6 @@ public class GetChangeSetResponseBody extends TeaModel {
 
         /**
          * The changes of the change set.
-         * <p>
-         * 
-         * For more information, see [Data structure](~~155988~~).
          */
         public Builder changes(java.util.List < java.util.Map<String, ?>> changes) {
             this.changes = changes;
@@ -277,7 +274,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource was created. The time is displayed in UTC.
+         * The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -293,7 +290,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether rollback was performed.
+         * Indicates whether rollback was performed when the stack failed to be created or updated.
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.disableRollback = disableRollback;
@@ -309,7 +306,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The logs of the change set.
+         * The output logs of the change set.
          */
         public Builder log(Log log) {
             this.log = log;
@@ -325,7 +322,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * The region ID of the change set.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -376,7 +373,7 @@ public class GetChangeSetResponseBody extends TeaModel {
          * The template body of the change set.
          * <p>
          * 
-         * >  This parameter takes effect only when the ShowTemplate parameter is set to true.
+         * > This parameter takes effect only if you set ShowTemplate to true.
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -384,7 +381,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period that is specified for the stack creation or update request.
+         * The timeout period that is specified for the stack creation or update operation.
          */
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = timeoutInMinutes;
@@ -448,7 +445,7 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * The name of the Terraform command. Valid values:
+             * The name of the Terraform command that is run. Valid values:
              * <p>
              * 
              * *   apply
@@ -456,7 +453,7 @@ public class GetChangeSetResponseBody extends TeaModel {
              * *   destroy
              * *   version
              * 
-             * For more information about the Terraform commands, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/commands).
+             * For more information about Terraform commands, see [Command](https://www.terraform.io/cli/commands).
              */
             public Builder command(String command) {
                 this.command = command;
@@ -464,7 +461,7 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the output stream.
+             * The content of the output stream that is returned after the command is run.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -475,8 +472,8 @@ public class GetChangeSetResponseBody extends TeaModel {
              * The output stream. Valid values:
              * <p>
              * 
-             * *   stdout: the standard output stream.
-             * *   stderr: the standard error stream.
+             * *   stdout: standard output stream
+             * *   stderr: standard error stream
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -517,10 +514,10 @@ public class GetChangeSetResponseBody extends TeaModel {
             private java.util.List < TerraformLogs> terraformLogs; 
 
             /**
-             * The logs of the Terraform stack. This parameter is returned only for the change set of a Terraform stack.
+             * The Terraform logs. This parameter is returned only for change sets of Terraform stacks.
              * <p>
              * 
-             * >  This parameter is not returned for change sets that are in the creating state. This parameter indicates the change set creation logs of the Terraform stack.
+             * > This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.
              */
             public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
@@ -573,7 +570,7 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The name of the parameter.
+             * The key of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;

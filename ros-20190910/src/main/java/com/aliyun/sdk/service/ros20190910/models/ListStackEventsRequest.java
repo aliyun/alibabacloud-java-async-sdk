@@ -140,7 +140,7 @@ public class ListStackEventsRequest extends Request {
         } 
 
         /**
-         * The logical ID of the resource that is defined in the template.
+         * The logical IDs of the resources.
          */
         public Builder logicalResourceId(java.util.List < String > logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -149,11 +149,9 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * The number of the page to return.\
          * <p>
-         * 
-         * Pages start from page 1.
-         * 
+         * Pages start from page 1.\
          * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
@@ -163,11 +161,9 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page.
+         * The number of entries to return on each page.\
          * <p>
-         * 
-         * Maximum value: 50.
-         * 
+         * Maximum value: 50.\
          * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
@@ -177,7 +173,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the stack resides. You can call the [DescribeRegions](~~131035~~) operation to query the most recent list of Alibaba Cloud regions.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -186,7 +182,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The list of resource types.
+         * The resource types.
          */
         public Builder resourceType(java.util.List < String > resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -195,7 +191,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * The stack ID.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -204,7 +200,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The state of the resource.
+         * The status of the resource.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);

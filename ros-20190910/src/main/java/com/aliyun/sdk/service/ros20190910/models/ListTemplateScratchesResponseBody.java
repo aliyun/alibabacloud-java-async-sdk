@@ -170,7 +170,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The name of the parameter.
+             * The key of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -239,7 +239,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The filter for resource types.
+             * The resource types.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -300,7 +300,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -361,7 +361,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The filter for resource types.
+             * The resource types.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -452,6 +452,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         @NameInMap("PreferenceParameters")
         private java.util.List < PreferenceParameters> preferenceParameters;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SourceResourceGroup")
         private SourceResourceGroup sourceResourceGroup;
 
@@ -485,6 +488,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             this.failedCode = builder.failedCode;
             this.logicalIdStrategy = builder.logicalIdStrategy;
             this.preferenceParameters = builder.preferenceParameters;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sourceResourceGroup = builder.sourceResourceGroup;
             this.sourceResources = builder.sourceResources;
             this.sourceTag = builder.sourceTag;
@@ -537,6 +541,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
          */
         public java.util.List < PreferenceParameters> getPreferenceParameters() {
             return this.preferenceParameters;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -608,6 +619,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String failedCode; 
             private String logicalIdStrategy; 
             private java.util.List < PreferenceParameters> preferenceParameters; 
+            private String resourceGroupId; 
             private SourceResourceGroup sourceResourceGroup; 
             private java.util.List < SourceResources> sourceResources; 
             private SourceTag sourceTag; 
@@ -641,7 +653,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
              * The status code of the scenario that fails to be created.
              * <p>
              * 
-             * >  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.
+             * > This parameter is returned only if you set Status to GENERATE_FAILED.
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -649,10 +661,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:
+             * The policy based on which the logical ID is generated. Valid values:
              * <p>
              * 
-             * *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
+             * *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
              * *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
              * *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
              */
@@ -662,10 +674,18 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for the scenario.
+             * The preference parameters of the scenario.
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
+                return this;
+            }
+
+            /**
+             * The ID of the source resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -694,7 +714,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scenario.
+             * The status of the scenario.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -705,7 +725,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
              * The reason why the scenario fails to be created.
              * <p>
              * 
-             * >  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.
+             * > This parameter is returned only if you set Status to GENERATE_FAILED.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

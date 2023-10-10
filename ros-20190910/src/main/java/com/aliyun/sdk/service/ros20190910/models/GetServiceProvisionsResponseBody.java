@@ -50,7 +50,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private java.util.List < ServiceProvisions> serviceProvisions; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the service.
+         * The information about the services.
          */
         public Builder serviceProvisions(java.util.List < ServiceProvisions> serviceProvisions) {
             this.serviceProvisions = serviceProvisions;
@@ -150,13 +150,11 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the API operation.
+             * The type of the API operation. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   Open: public API operation
-             * *   Inner: private API operation
+             * *   Open: public
+             * *   Inner: private
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -261,10 +259,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose for which the RAM role is used.
-             * <p>
-             * 
-             * Default value: Default. This value indicates that the RAM role is the default role of the service.
+             * The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -272,7 +267,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role.
+             * The name of the role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -328,7 +323,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
              * The authorization URL of the RAM role.
              * <p>
              * 
-             * >  This parameter is returned if the Created parameter is set to false.
+             * > This parameter is returned if Created is set to false.
              */
             public Builder authorizationURL(String authorizationURL) {
                 this.authorizationURL = authorizationURL;
@@ -461,7 +456,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of Alibaba Cloud services on which the service depends.
+             * The names of the services on which the service that is queried depends.
              */
             public Builder dependentServiceNames(java.util.List < String > dependentServiceNames) {
                 this.dependentServiceNames = dependentServiceNames;
@@ -472,7 +467,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
              * The URL that points to the activation page of the service.
              * <p>
              * 
-             * >  This parameter is returned if the Status parameter is set to Disabled.
+             * > This parameter is returned if Status is set to Disabled.
              */
             public Builder enableURL(String enableURL) {
                 this.enableURL = enableURL;
@@ -480,7 +475,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the RAM role of the service. If this parameter is empty, no RAM role is associated with the service.
+             * The information about the RAM roles of the service. If this parameter is empty, no RAM role is associated with the service.
              */
             public Builder roleProvision(RoleProvision roleProvision) {
                 this.roleProvision = roleProvision;
@@ -488,7 +483,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -512,7 +507,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
              * The reason why the service is in the Disabled or Unknown state.
              * <p>
              * 
-             * >  This parameter is returned if the Status parameter is set to Disabled or Unknown.
+             * > This parameter is returned if Status is set to Disabled or Unknown.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

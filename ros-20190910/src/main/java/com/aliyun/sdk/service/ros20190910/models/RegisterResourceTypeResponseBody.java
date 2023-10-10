@@ -50,7 +50,7 @@ public class RegisterResourceTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegistrationId.
+         * The ID of the registration record. You can call the [ListResourceTypeRegistrations](~~2330740~~) operation to query registration records.
          */
         public Builder registrationId(String registrationId) {
             this.registrationId = registrationId;
@@ -58,7 +58,7 @@ public class RegisterResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

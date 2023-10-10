@@ -98,7 +98,7 @@ public class GenerateTemplateByScratchRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the new node belongs.
+         * The region ID of the new node.
          */
         public Builder provisionRegionId(String provisionRegionId) {
             this.putQueryParameter("ProvisionRegionId", provisionRegionId);
@@ -107,7 +107,7 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the scenario is created.
+         * The region ID of the scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
@@ -131,7 +131,7 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
