@@ -17,6 +17,14 @@ public class SimplePackagePckCertRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("AcsHost")
+    private String acsHost;
+
+    @Query
+    @NameInMap("ClientVpcId")
+    private String clientVpcId;
+
+    @Query
     @NameInMap("cpusvn")
     @Validation(required = true)
     private String cpusvn;
@@ -43,6 +51,8 @@ public class SimplePackagePckCertRequest extends Request {
     private SimplePackagePckCertRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.acsHost = builder.acsHost;
+        this.clientVpcId = builder.clientVpcId;
         this.cpusvn = builder.cpusvn;
         this.encryptedPpid = builder.encryptedPpid;
         this.pceid = builder.pceid;
@@ -68,6 +78,20 @@ public class SimplePackagePckCertRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return acsHost
+     */
+    public String getAcsHost() {
+        return this.acsHost;
+    }
+
+    /**
+     * @return clientVpcId
+     */
+    public String getClientVpcId() {
+        return this.clientVpcId;
     }
 
     /**
@@ -107,6 +131,8 @@ public class SimplePackagePckCertRequest extends Request {
 
     public static final class Builder extends Request.Builder<SimplePackagePckCertRequest, Builder> {
         private String regionId; 
+        private String acsHost; 
+        private String clientVpcId; 
         private String cpusvn; 
         private String encryptedPpid; 
         private String pceid; 
@@ -120,6 +146,8 @@ public class SimplePackagePckCertRequest extends Request {
         private Builder(SimplePackagePckCertRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.acsHost = request.acsHost;
+            this.clientVpcId = request.clientVpcId;
             this.cpusvn = request.cpusvn;
             this.encryptedPpid = request.encryptedPpid;
             this.pceid = request.pceid;
@@ -133,6 +161,24 @@ public class SimplePackagePckCertRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AcsHost.
+         */
+        public Builder acsHost(String acsHost) {
+            this.putQueryParameter("AcsHost", acsHost);
+            this.acsHost = acsHost;
+            return this;
+        }
+
+        /**
+         * ClientVpcId.
+         */
+        public Builder clientVpcId(String clientVpcId) {
+            this.putQueryParameter("ClientVpcId", clientVpcId);
+            this.clientVpcId = clientVpcId;
             return this;
         }
 

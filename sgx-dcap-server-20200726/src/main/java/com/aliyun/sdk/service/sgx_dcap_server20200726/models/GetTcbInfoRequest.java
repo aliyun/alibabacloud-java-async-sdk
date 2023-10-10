@@ -17,6 +17,14 @@ public class GetTcbInfoRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("AcsHost")
+    private String acsHost;
+
+    @Query
+    @NameInMap("ClientVpcId")
+    private String clientVpcId;
+
+    @Query
     @NameInMap("fmspc")
     @Validation(required = true)
     private String fmspc;
@@ -24,6 +32,8 @@ public class GetTcbInfoRequest extends Request {
     private GetTcbInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.acsHost = builder.acsHost;
+        this.clientVpcId = builder.clientVpcId;
         this.fmspc = builder.fmspc;
     }
 
@@ -48,6 +58,20 @@ public class GetTcbInfoRequest extends Request {
     }
 
     /**
+     * @return acsHost
+     */
+    public String getAcsHost() {
+        return this.acsHost;
+    }
+
+    /**
+     * @return clientVpcId
+     */
+    public String getClientVpcId() {
+        return this.clientVpcId;
+    }
+
+    /**
      * @return fmspc
      */
     public String getFmspc() {
@@ -56,6 +80,8 @@ public class GetTcbInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTcbInfoRequest, Builder> {
         private String regionId; 
+        private String acsHost; 
+        private String clientVpcId; 
         private String fmspc; 
 
         private Builder() {
@@ -65,6 +91,8 @@ public class GetTcbInfoRequest extends Request {
         private Builder(GetTcbInfoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.acsHost = request.acsHost;
+            this.clientVpcId = request.clientVpcId;
             this.fmspc = request.fmspc;
         } 
 
@@ -74,6 +102,24 @@ public class GetTcbInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AcsHost.
+         */
+        public Builder acsHost(String acsHost) {
+            this.putQueryParameter("AcsHost", acsHost);
+            this.acsHost = acsHost;
+            return this;
+        }
+
+        /**
+         * ClientVpcId.
+         */
+        public Builder clientVpcId(String clientVpcId) {
+            this.putQueryParameter("ClientVpcId", clientVpcId);
+            this.clientVpcId = clientVpcId;
             return this;
         }
 

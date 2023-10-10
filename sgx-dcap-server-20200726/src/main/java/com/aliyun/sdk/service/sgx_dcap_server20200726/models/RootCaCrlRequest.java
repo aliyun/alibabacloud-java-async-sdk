@@ -16,9 +16,19 @@ public class RootCaCrlRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("AcsHost")
+    private String acsHost;
+
+    @Query
+    @NameInMap("ClientVpcId")
+    private String clientVpcId;
+
     private RootCaCrlRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.acsHost = builder.acsHost;
+        this.clientVpcId = builder.clientVpcId;
     }
 
     public static Builder builder() {
@@ -41,8 +51,24 @@ public class RootCaCrlRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return acsHost
+     */
+    public String getAcsHost() {
+        return this.acsHost;
+    }
+
+    /**
+     * @return clientVpcId
+     */
+    public String getClientVpcId() {
+        return this.clientVpcId;
+    }
+
     public static final class Builder extends Request.Builder<RootCaCrlRequest, Builder> {
         private String regionId; 
+        private String acsHost; 
+        private String clientVpcId; 
 
         private Builder() {
             super();
@@ -51,6 +77,8 @@ public class RootCaCrlRequest extends Request {
         private Builder(RootCaCrlRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.acsHost = request.acsHost;
+            this.clientVpcId = request.clientVpcId;
         } 
 
         /**
@@ -59,6 +87,24 @@ public class RootCaCrlRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AcsHost.
+         */
+        public Builder acsHost(String acsHost) {
+            this.putQueryParameter("AcsHost", acsHost);
+            this.acsHost = acsHost;
+            return this;
+        }
+
+        /**
+         * ClientVpcId.
+         */
+        public Builder clientVpcId(String clientVpcId) {
+            this.putQueryParameter("ClientVpcId", clientVpcId);
+            this.clientVpcId = clientVpcId;
             return this;
         }
 
