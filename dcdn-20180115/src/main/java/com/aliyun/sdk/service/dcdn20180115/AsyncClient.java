@@ -308,6 +308,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDcdnCertificateDetailResponse> describeDcdnCertificateDetail(DescribeDcdnCertificateDetailRequest request);
 
     /**
+      * @deprecated
       * > You can call this operation up to 30 times per second per account.
       *
      */
@@ -1163,6 +1164,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEncryptRoutineUidResponse> describeEncryptRoutineUid(DescribeEncryptRoutineUidRequest request);
 
     CompletableFuture<DescribeHighlightInfoResponse> describeHighlightInfo(DescribeHighlightInfoRequest request);
+
+    CompletableFuture<DescribeKvUsageDataResponse> describeKvUsageData(DescribeKvUsageDataRequest request);
 
     CompletableFuture<DescribeRDDomainConfigResponse> describeRDDomainConfig(DescribeRDDomainConfigRequest request);
 
