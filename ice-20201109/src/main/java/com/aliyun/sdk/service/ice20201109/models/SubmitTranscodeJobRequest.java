@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitTranscodeJobRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("InputGroup")
     @Validation(required = true)
     private java.util.List < InputGroup> inputGroup;
@@ -36,6 +40,7 @@ public class SubmitTranscodeJobRequest extends Request {
 
     private SubmitTranscodeJobRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.inputGroup = builder.inputGroup;
         this.name = builder.name;
         this.outputGroup = builder.outputGroup;
@@ -54,6 +59,13 @@ public class SubmitTranscodeJobRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -92,6 +104,7 @@ public class SubmitTranscodeJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitTranscodeJobRequest, Builder> {
+        private String clientToken; 
         private java.util.List < InputGroup> inputGroup; 
         private String name; 
         private java.util.List < OutputGroup> outputGroup; 
@@ -104,12 +117,22 @@ public class SubmitTranscodeJobRequest extends Request {
 
         private Builder(SubmitTranscodeJobRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.inputGroup = request.inputGroup;
             this.name = request.name;
             this.outputGroup = request.outputGroup;
             this.scheduleConfig = request.scheduleConfig;
             this.userData = request.userData;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * InputGroup.
