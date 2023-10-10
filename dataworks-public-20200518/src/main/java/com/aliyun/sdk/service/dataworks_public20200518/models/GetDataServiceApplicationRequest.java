@@ -29,7 +29,6 @@ public class GetDataServiceApplicationRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     private GetDataServiceApplicationRequest(Builder builder) {

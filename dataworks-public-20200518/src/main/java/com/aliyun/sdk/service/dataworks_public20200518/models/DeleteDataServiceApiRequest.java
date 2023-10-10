@@ -29,7 +29,6 @@ public class DeleteDataServiceApiRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private Long tenantId;
 
     private DeleteDataServiceApiRequest(Builder builder) {
