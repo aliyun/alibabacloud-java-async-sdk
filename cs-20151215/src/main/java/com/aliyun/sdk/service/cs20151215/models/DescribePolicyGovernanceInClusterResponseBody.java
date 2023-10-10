@@ -74,7 +74,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         private Violations violations; 
 
         /**
-         * The audit logs of policies in the cluster.
+         * The audit logs of the policies in the cluster.
          */
         public Builder admitLog(AdmitLog admitLog) {
             this.admitLog = admitLog;
@@ -90,7 +90,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * totalViolations.
+         * Details about the blocking and alerting events that are triggered by policies of different severity levels.
          */
         public Builder totalViolations(TotalViolations totalViolations) {
             this.totalViolations = totalViolations;
@@ -98,7 +98,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * violations.
+         * Details about the blocking and alerting events that are triggered by different policies.
          */
         public Builder violations(Violations violations) {
             this.violations = violations;
@@ -198,7 +198,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String resourceNamespace; 
 
             /**
-             * The ID of the cluster that you want to query.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -206,7 +206,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy.
+             * The policy type.
              */
             public Builder constraintKind(String constraintKind) {
                 this.constraintKind = constraintKind;
@@ -222,7 +222,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceKind(String resourceKind) {
                 this.resourceKind = resourceKind;
@@ -230,7 +230,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -465,7 +465,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * The number of blocking events that are triggered.
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -526,7 +526,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * The number of alerting events that are triggered.
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -579,7 +579,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Warn warn; 
 
             /**
-             * deny.
+             * Details about the blocking events that are triggered by the policies of each severity level.
              */
             public Builder deny(Deny deny) {
                 this.deny = deny;
@@ -587,7 +587,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * warn.
+             * Details about the alerting events that are triggered by the policies of each severity level.
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -664,7 +664,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * policyDescription.
+             * The policy description.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -672,7 +672,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * policyName.
+             * The policy name.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -688,7 +688,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * The total number of blocking events that are triggered by the policy.
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -765,7 +765,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * policyDescription.
+             * The policy description.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -773,7 +773,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * policyName.
+             * The policy name.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -789,7 +789,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * The total number of alerting events that are triggered by the policy.
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -842,7 +842,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private ViolationsWarn warn; 
 
             /**
-             * deny.
+             * Details about the blocking events that are triggered by each policy.
              */
             public Builder deny(ViolationsDeny deny) {
                 this.deny = deny;
@@ -850,7 +850,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * warn.
+             * Details about the alerting events that are triggered by the policies of each severity level.
              */
             public Builder warn(ViolationsWarn warn) {
                 this.warn = warn;

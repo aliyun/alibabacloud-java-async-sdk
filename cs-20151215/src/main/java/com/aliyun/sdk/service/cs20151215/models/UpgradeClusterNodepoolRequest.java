@@ -126,7 +126,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         } 
 
         /**
-         * c106f377e16f34eb1808d6b9362c9\*\*\*\*
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -135,7 +135,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * np31da1b38983f4511b490fc62108a\*\*\*\*
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -144,7 +144,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * image_id.
+         * The ID of the OS image that is used by the nodes.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -153,7 +153,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * kubernetes_version.
+         * The Kubernetes version that is used by the nodes.
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -162,7 +162,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * runtime_type.
+         * The runtime type. Valid values: containerd and docker.
          */
         public Builder runtimeType(String runtimeType) {
             this.putBodyParameter("runtime_type", runtimeType);
@@ -171,7 +171,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * runtime_version.
+         * The version of the container runtime that is used by the nodes.
          */
         public Builder runtimeVersion(String runtimeVersion) {
             this.putBodyParameter("runtime_version", runtimeVersion);

@@ -68,7 +68,7 @@ public class DescribeClusterAddonInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterID.
+         * The ID of the cluster.
          */
         public Builder clusterID(String clusterID) {
             this.putPathParameter("ClusterID", clusterID);
@@ -77,7 +77,7 @@ public class DescribeClusterAddonInstanceRequest extends Request {
         }
 
         /**
-         * AddonName.
+         * The name of the component.
          */
         public Builder addonName(String addonName) {
             this.putPathParameter("AddonName", addonName);

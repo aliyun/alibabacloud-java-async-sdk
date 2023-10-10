@@ -51,7 +51,7 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         private String expiration; 
 
         /**
-         * The content of the KubeConfig file. For more information about the content of the KubeConfig file, see [Configure cluster credentials](~~86494~~).
+         * The cluster kubeconfig file. For more information about the content of the kubeconfig file, see [Configure cluster credentials](~~86494~~).
          */
         public Builder config(String config) {
             this.config = config;
@@ -59,7 +59,7 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         }
 
         /**
-         * The expiration time of the KubeConfig file. The value is the UTC time displayed in RFC3339 format.
+         * The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;

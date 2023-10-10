@@ -69,7 +69,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * customize_config.
+         * The custom configuration.
          */
         public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
@@ -132,7 +132,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The name of the configuration item.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +140,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of the configuration item.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -193,7 +193,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String name; 
 
             /**
-             * configs.
+             * The custom configuration.
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -201,7 +201,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * name.
+             * The name of the component.
              */
             public Builder name(String name) {
                 this.name = name;

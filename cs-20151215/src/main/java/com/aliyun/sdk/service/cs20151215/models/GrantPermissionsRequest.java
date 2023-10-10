@@ -69,7 +69,7 @@ public class GrantPermissionsRequest extends Request {
         } 
 
         /**
-         * uid.
+         * The ID of the RAM user.
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);
@@ -78,7 +78,7 @@ public class GrantPermissionsRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < GrantPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -183,7 +183,10 @@ public class GrantPermissionsRequest extends Request {
             private String roleType; 
 
             /**
-             * cluster.
+             * The ID of the cluster that you want to manage.
+             * <p>
+             * 
+             * *   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -191,7 +194,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * is_custom.
+             * Specifies whether to perform a custom authorization. To perform a custom authorization, set `role_name` to a custom cluster role.
              */
             public Builder isCustom(Boolean isCustom) {
                 this.isCustom = isCustom;
@@ -199,7 +202,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * is_ram_role.
+             * Specifies whether the permissions are granted to a RAM role.
              */
             public Builder isRamRole(Boolean isRamRole) {
                 this.isRamRole = isRamRole;
@@ -207,7 +210,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace to which the permissions are scoped. This parameter is required only if you set role_type to namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -215,7 +218,14 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * role_name.
+             * The predefined role name. Valid values:
+             * <p>
+             * 
+             * *   `admin`: administrator
+             * *   `ops`: O\&M engineer
+             * *   `dev`: developer
+             * *   `restricted`: restricted user
+             * *   The custom cluster role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -223,7 +233,12 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * role_type.
+             * The authorization type. Valid values:
+             * <p>
+             * 
+             * *   `cluster`: indicates that the permissions are scoped to a cluster.
+             * *   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.
+             * *   `all-clusters`: specifies that the permissions are scoped to all clusters.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

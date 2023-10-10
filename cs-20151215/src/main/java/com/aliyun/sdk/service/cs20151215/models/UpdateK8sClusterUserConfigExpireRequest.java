@@ -85,7 +85,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to manage.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,10 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * expire_hour.
+         * The validity period of the kubeconfig file. Unit: hours.
+         * <p>
+         * 
+         * > The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).
          */
         public Builder expireHour(Long expireHour) {
             this.putBodyParameter("expire_hour", expireHour);
@@ -103,7 +106,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * user.
+         * The user ID.
          */
         public Builder user(String user) {
             this.putBodyParameter("user", user);

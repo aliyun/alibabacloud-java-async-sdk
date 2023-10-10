@@ -113,7 +113,7 @@ public class DescribeTriggerRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -122,7 +122,7 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * Name.
+         * The application name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -131,7 +131,7 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +140,15 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of trigger. Valid values:
+         * <p>
+         * 
+         * *   `deployment`: performs actions on Deployments.
+         * *   `application`: performs actions on applications that are deployed in Application Center.
+         * 
+         * Default value: `deployment`.
+         * 
+         * If you do not set this parameter, triggers are not filtered by type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -149,7 +157,12 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * action.
+         * The action that the trigger performs. Set the value to redeploy.
+         * <p>
+         * 
+         * `redeploy`: redeploys the resources specified by `project_id`.
+         * 
+         * If you do not specify this parameter, triggers are not filtered by action.
          */
         public Builder action(String action) {
             this.putQueryParameter("action", action);

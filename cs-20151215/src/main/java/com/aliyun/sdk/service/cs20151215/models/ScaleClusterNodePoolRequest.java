@@ -84,7 +84,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * NodepoolId.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -102,7 +102,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * count.
+         * The number of worker nodes that you want to add. You can add at most 500 nodes in one API call. The maximum number of nodes that can be added is limited by the quota of nodes in the cluster.
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);

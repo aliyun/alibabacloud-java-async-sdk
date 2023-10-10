@@ -70,7 +70,7 @@ public class CancelComponentUpgradeRequest extends Request {
         } 
 
         /**
-         * clusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -79,7 +79,7 @@ public class CancelComponentUpgradeRequest extends Request {
         }
 
         /**
-         * componentId.
+         * The component ID.
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("componentId", componentId);

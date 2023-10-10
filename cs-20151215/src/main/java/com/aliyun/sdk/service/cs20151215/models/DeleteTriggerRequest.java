@@ -70,7 +70,7 @@ public class DeleteTriggerRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -79,7 +79,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * Id.
+         * The trigger ID.
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

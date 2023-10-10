@@ -16,6 +16,10 @@ public class DescribeClusterResourcesResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private java.util.List < DescribeClusterResourcesResponseBody> body;
@@ -23,6 +27,7 @@ public class DescribeClusterResourcesResponse extends Response {
     private DescribeClusterResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeClusterResourcesResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public java.util.List < DescribeClusterResourcesResponseBody> getBody() {
@@ -52,6 +64,8 @@ public class DescribeClusterResourcesResponse extends Response {
     public interface Builder extends Response.Builder<DescribeClusterResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(java.util.List < DescribeClusterResourcesResponseBody> body);
 
@@ -64,6 +78,7 @@ public class DescribeClusterResourcesResponse extends Response {
             extends Response.BuilderImpl<DescribeClusterResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private java.util.List < DescribeClusterResourcesResponseBody> body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeClusterResourcesResponse extends Response {
         private BuilderImpl(DescribeClusterResourcesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeClusterResourcesResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
@@ -200,7 +225,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private Long autoCreate; 
 
             /**
-             * cluster_id.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -208,7 +233,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * created.
+             * The time when the resource was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -216,7 +241,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * instance_id.
+             * The ID of the resource.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -224,7 +249,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * resource_info.
+             * The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](~~133836~~).
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -232,7 +257,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * resource_type.
+             * The type of resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -240,7 +265,17 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * state.
+             * The status of the resource. Valid values:
+             * <p>
+             * 
+             * *   `CREATE_COMPLETE`: The resource is created.
+             * *   `CREATE_FAILED`: The resource failed to be created.
+             * *   `CREATE_IN_PROGRESS`: The resource is being created.
+             * *   `DELETE_FAILED`: The resource failed to be deleted.
+             * *   `DELETE_IN_PROGRESS`: The resource is being deleted.
+             * *   `ROLLBACK_COMPLETE`: The resource is rolled back.
+             * *   `ROLLBACK_FAILED`: The resource failed to be rolled back.
+             * *   `ROLLBACK_IN_PROGRESS`: The resource is being rolled back.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -248,7 +283,11 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * auto_create.
+             * Indicates whether the resource is created by Container Service for Kubernetes (ACK). Valid values:
+             * <p>
+             * 
+             * *   1: The resource is created by ACK.
+             * *   0: The resource is an existing resource.
              */
             public Builder autoCreate(Long autoCreate) {
                 this.autoCreate = autoCreate;

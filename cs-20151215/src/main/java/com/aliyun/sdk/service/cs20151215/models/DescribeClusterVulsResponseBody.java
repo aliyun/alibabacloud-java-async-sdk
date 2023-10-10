@@ -38,7 +38,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         private java.util.List < VulRecords> vulRecords; 
 
         /**
-         * vul_records.
+         * An array of vulnerabilities.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -162,7 +162,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             private String vulType; 
 
             /**
-             * cve_list.
+             * The CVE list.
              */
             public Builder cveList(java.util.List < String > cveList) {
                 this.cveList = cveList;
@@ -170,7 +170,46 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * necessity.
+             * The severity level of the vulnerability.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   nntf
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     low
+             * 
+             *     <!-- -->
+             * 
+             * *   later
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     medium
+             * 
+             *     <!-- -->
+             * 
+             * *   asap
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     high
+             * 
+             *     <!-- -->
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -178,7 +217,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * node_count.
+             * The number of nodes that have the vulnerability.
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -186,7 +225,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * nodepool_id.
+             * The node pool ID.
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -194,7 +233,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * nodepool_name.
+             * The name of the node pool.
              */
             public Builder nodepoolName(String nodepoolName) {
                 this.nodepoolName = nodepoolName;
@@ -202,7 +241,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * vul_alias_name.
+             * The alias of the vulnerability.
              */
             public Builder vulAliasName(String vulAliasName) {
                 this.vulAliasName = vulAliasName;
@@ -210,7 +249,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * vul_name.
+             * The name of the vulnerability.
              */
             public Builder vulName(String vulName) {
                 this.vulName = vulName;
@@ -218,7 +257,82 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * vul_type.
+             * The type of vulnerability.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   app
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     application vulnerabilities
+             * 
+             *     <!-- -->
+             * 
+             * *   sca
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     application vulnerabilities (software component analysis)
+             * 
+             *     <!-- -->
+             * 
+             * *   cve
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Linux vulnerabilities
+             * 
+             *     <!-- -->
+             * 
+             * *   cms
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Web-CMS vulnerabilities
+             * 
+             *     <!-- -->
+             * 
+             * *   sys
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Windows vulnerabilities
+             * 
+             *     <!-- -->
+             * 
+             * *   emg
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     emergency vulnerabilities
+             * 
+             *     <!-- -->
              */
             public Builder vulType(String vulType) {
                 this.vulType = vulType;

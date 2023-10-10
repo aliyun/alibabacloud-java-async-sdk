@@ -74,7 +74,7 @@ public class QuotasValue extends TeaModel {
         private String unit; 
 
         /**
-         * quota.
+         * The value of the quota. If the quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.
          */
         public Builder quota(String quota) {
             this.quota = quota;
@@ -82,7 +82,7 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * operation_code.
+         * The quota code.
          */
         public Builder operationCode(String operationCode) {
             this.operationCode = operationCode;
@@ -90,7 +90,7 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * adjustable.
+         * Indicates whether the quota is adjustable.
          */
         public Builder adjustable(Boolean adjustable) {
             this.adjustable = adjustable;
@@ -98,7 +98,7 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * unit.
+         * The unit.
          */
         public Builder unit(String unit) {
             this.unit = unit;

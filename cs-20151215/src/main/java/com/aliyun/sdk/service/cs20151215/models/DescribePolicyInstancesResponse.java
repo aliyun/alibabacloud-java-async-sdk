@@ -16,6 +16,10 @@ public class DescribePolicyInstancesResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private java.util.List < DescribePolicyInstancesResponseBody> body;
@@ -23,6 +27,7 @@ public class DescribePolicyInstancesResponse extends Response {
     private DescribePolicyInstancesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribePolicyInstancesResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public java.util.List < DescribePolicyInstancesResponseBody> getBody() {
@@ -52,6 +64,8 @@ public class DescribePolicyInstancesResponse extends Response {
     public interface Builder extends Response.Builder<DescribePolicyInstancesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(java.util.List < DescribePolicyInstancesResponseBody> body);
 
@@ -64,6 +78,7 @@ public class DescribePolicyInstancesResponse extends Response {
             extends Response.BuilderImpl<DescribePolicyInstancesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private java.util.List < DescribePolicyInstancesResponseBody> body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribePolicyInstancesResponse extends Response {
         private BuilderImpl(DescribePolicyInstancesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribePolicyInstancesResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
@@ -236,7 +261,7 @@ public class DescribePolicyInstancesResponse extends Response {
             private String policyAction; 
 
             /**
-             * ali_uid.
+             * The UID of the Alibaba Cloud account that is used to deploy the policy instance.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -244,7 +269,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * cluster_id.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -252,7 +277,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * instance_name.
+             * The name of the policy instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -260,7 +285,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_name.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -268,7 +293,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_category.
+             * The type of policy.
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -276,7 +301,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_description.
+             * The description of the policy template.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -284,7 +309,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_parameters.
+             * The parameters of the policy instance.
              */
             public Builder policyParameters(String policyParameters) {
                 this.policyParameters = policyParameters;
@@ -292,7 +317,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_severity.
+             * The severity level of the policy instance.
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;
@@ -300,7 +325,12 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_scope.
+             * The applicable scope of the policy instance.
+             * <p>
+             * 
+             * A value of \* indicates all namespaces in the cluster. This is the default value.
+             * 
+             * Multiple namespaces are separated by commas (,).
              */
             public Builder policyScope(String policyScope) {
                 this.policyScope = policyScope;
@@ -308,7 +338,11 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * policy_action.
+             * The action of the policy. Valid values:
+             * <p>
+             * 
+             * *   `deny`: Deployments that match the policy are denied.
+             * *   `warn`: Alerts are generated for deployments that match the policy.
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;

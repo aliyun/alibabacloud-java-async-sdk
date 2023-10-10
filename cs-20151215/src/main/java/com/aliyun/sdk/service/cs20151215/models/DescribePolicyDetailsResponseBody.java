@@ -162,7 +162,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the policy that is returned.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.name = name;
@@ -182,12 +182,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The severity level of the policy. Valid values:
-         * <p>
-         * 
-         * *   `high`
-         * *   `medium`
-         * *   `low`
+         * The severity level of the policy.
          */
         public Builder severity(String severity) {
             this.severity = severity;

@@ -55,7 +55,7 @@ public class DeleteKubernetesTriggerRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the application trigger.
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

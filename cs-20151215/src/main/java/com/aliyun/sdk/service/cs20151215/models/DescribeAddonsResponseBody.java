@@ -50,7 +50,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         private java.util.Map < String, StandardComponentsValue > standardComponents; 
 
         /**
-         * The details of the returned components.
+         * The list of the returned components.
          */
         public Builder componentGroups(java.util.List < ComponentGroups> componentGroups) {
             this.componentGroups = componentGroups;
@@ -58,7 +58,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * StandardComponents.
+         * Standard components.
          */
         public Builder standardComponents(java.util.Map < String, StandardComponentsValue > standardComponents) {
             this.standardComponents = standardComponents;

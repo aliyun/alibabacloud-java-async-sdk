@@ -54,7 +54,7 @@ public class ScanClusterVulsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

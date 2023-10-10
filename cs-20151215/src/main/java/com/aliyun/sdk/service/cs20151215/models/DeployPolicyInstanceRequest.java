@@ -112,7 +112,7 @@ public class DeployPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * c8155823d057948c69a\*\*\*\*
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -121,7 +121,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * ACKAllowedRepos
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -130,7 +130,11 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * action.
+         * The action of the policy. Valid values:
+         * <p>
+         * 
+         * *   `deny`: Deployments that match the policy are denied.
+         * *   `warn`: Alerts are generated for Deployments that match the policy.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -139,7 +143,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * namespaces.
+         * The applicable scope of the policy instance. If you leave this parameter empty, the policy instance is applicable to all namespaces.
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -148,7 +152,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * parameters.
+         * The parameters of the policy instance.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);

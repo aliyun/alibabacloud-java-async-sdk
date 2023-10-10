@@ -16,6 +16,10 @@ public class DescribeUserPermissionResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private java.util.List < DescribeUserPermissionResponseBody> body;
@@ -23,6 +27,7 @@ public class DescribeUserPermissionResponse extends Response {
     private DescribeUserPermissionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeUserPermissionResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public java.util.List < DescribeUserPermissionResponseBody> getBody() {
@@ -52,6 +64,8 @@ public class DescribeUserPermissionResponse extends Response {
     public interface Builder extends Response.Builder<DescribeUserPermissionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(java.util.List < DescribeUserPermissionResponseBody> body);
 
@@ -64,6 +78,7 @@ public class DescribeUserPermissionResponse extends Response {
             extends Response.BuilderImpl<DescribeUserPermissionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private java.util.List < DescribeUserPermissionResponseBody> body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeUserPermissionResponse extends Response {
         private BuilderImpl(DescribeUserPermissionResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeUserPermissionResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
@@ -188,7 +213,12 @@ public class DescribeUserPermissionResponse extends Response {
             private Long isRamRole; 
 
             /**
-             * resource_id.
+             * The authorization setting. Valid values:
+             * <p>
+             * 
+             * *   `{cluster_id}` is returned if the permissions are scoped to a cluster.
+             * *   `{cluster_id}/{namespace}` is returned if the permissions are scoped to a namespace of a cluster.
+             * *   `all-clusters` is returned if the permissions are scoped to all clusters.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -196,7 +226,12 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * resource_type.
+             * The authorization type. Valid values:
+             * <p>
+             * 
+             * *   `cluster`: indicates that the permissions are scoped to a cluster.
+             * *   `namespace`: indicates that the permissions are scoped to a namespace of a cluster.
+             * *   `console`: indicates that the permissions are scoped to all clusters. This value was displayed only in the console.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -204,7 +239,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * role_name.
+             * The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -212,7 +247,14 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * role_type.
+             * The type of predefined role. Valid values:
+             * <p>
+             * 
+             * *   `admin`: administrator
+             * *   `ops`: O\&M engineer
+             * *   `dev`: developer
+             * *   `restricted`: restricted user
+             * *   `custom`: custom role
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -220,7 +262,11 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * is_owner.
+             * Indicates whether the permissions are granted to the cluster owner.
+             * <p>
+             * 
+             * *   `0`: indicates that the permissions are not granted to the cluster owner.
+             * *   `1`: indicates that the permissions are granted to the cluster owner. The cluster owner is the administrator.
              */
             public Builder isOwner(Long isOwner) {
                 this.isOwner = isOwner;
@@ -228,7 +274,11 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * is_ram_role.
+             * Indicates whether the permissions are granted to the RAM role. Valid values:
+             * <p>
+             * 
+             * *   `0`: indicates that the permissions are not granted to the RAM role.
+             * *   `1`: indicates that the permissions are granted to the RAM role.
              */
             public Builder isRamRole(Long isRamRole) {
                 this.isRamRole = isRamRole;

@@ -97,7 +97,7 @@ public class DeleteClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +106,13 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * keep_slb.
+         * Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.
+         * <p>
+         * 
+         * *   `true`: retains the SLB resources that are created by the cluster.
+         * *   `false`: does not retain the SLB resources that are created by the cluster.
+         * 
+         * Default value: `false`.
          */
         public Builder keepSlb(Boolean keepSlb) {
             this.putQueryParameter("keep_slb", keepSlb);
@@ -115,7 +121,13 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * retain_all_resources.
+         * Specifies whether to retain all resources. If you set the parameter to `true`, the `retain_resources` parameter is ignored.
+         * <p>
+         * 
+         * *   `true`: retains all resources.
+         * *   `false`: does not retain all resources.
+         * 
+         * Default value: `false`.
          */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("retain_all_resources", retainAllResources);
@@ -124,7 +136,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * retain_resources.
+         * The list of resources. To retain resources when you delete a cluster, you need to specify the IDs of the resources to be retained.
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             String retainResourcesShrink = shrink(retainResources, "retain_resources", "json");

@@ -125,7 +125,7 @@ public class DescribeClusterNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -134,7 +134,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * instanceIds.
+         * The IDs of the nodes that you want to query. Separate multiple node IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);
@@ -143,7 +143,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putQueryParameter("nodepool_id", nodepoolId);
@@ -152,7 +152,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -161,7 +164,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -170,7 +176,16 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * state.
+         * The node state that you want to use to filter nodes. Valid values:
+         * <p>
+         * 
+         * *   `all`: query nodes in the following four states.
+         * *   `running`: query nodes in the running state.
+         * *   `removing`: query nodes that are being removed.
+         * *   `initial`: query nodes that are being initialized.
+         * *   `failed`: query nodes that fail to be created.
+         * 
+         * Default value: `all`.
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);

@@ -126,7 +126,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -135,7 +135,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * policy_name.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -144,7 +144,11 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * action.
+         * The action of the policy. Valid values:
+         * <p>
+         * 
+         * *   `deny`: Deployments that match the policy are denied.
+         * *   `warn`: Alerts are generated for deployments that match the policy.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -153,7 +157,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * instance_name.
+         * The ID of the policy instance.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instance_name", instanceName);
@@ -162,7 +166,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * namespaces.
+         * The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -171,7 +175,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * parameters.
+         * The parameters of the policy instance. For more information, see [Predefined security policies of ACK](~~359819~~).
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);

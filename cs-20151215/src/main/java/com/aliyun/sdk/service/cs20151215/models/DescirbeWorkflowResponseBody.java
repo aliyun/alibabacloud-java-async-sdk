@@ -174,7 +174,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the workflow ended.
+         * The end time of the task.
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;

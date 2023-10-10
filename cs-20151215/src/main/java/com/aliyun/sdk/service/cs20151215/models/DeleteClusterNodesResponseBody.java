@@ -62,7 +62,7 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the ACK cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +70,7 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

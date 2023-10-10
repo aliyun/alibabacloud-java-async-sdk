@@ -69,7 +69,7 @@ public class InstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class InstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < InstallClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -146,7 +146,7 @@ public class InstallClusterAddonsRequest extends Request {
             private String version; 
 
             /**
-             * config.
+             * The custom component settings that you want to use. The value is a JSON string.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -154,7 +154,7 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * name.
+             * The component name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * version.
+             * The component version.
+             * <p>
+             * 
+             * >  You can call the [DescribeClusterAddonsVersion](~~197434~~) operation to query the version of a component.
              */
             public Builder version(String version) {
                 this.version = version;

@@ -62,7 +62,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * nodepool_id.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;
@@ -70,7 +70,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -97,7 +97,7 @@ public class DescribeClusterEventsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +106,7 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * page_number.
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -115,7 +115,7 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page. Valid values: 1 to 50. Default value: 50.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -124,7 +124,7 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * task_id.
+         * The ID of the query task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("task_id", taskId);

@@ -69,7 +69,7 @@ public class ModifyClusterTagsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * body.
+         * The data of the labels that you want to modify.
          */
         public Builder body(java.util.List < Tag > body) {
             this.putBodyParameter("body", body);

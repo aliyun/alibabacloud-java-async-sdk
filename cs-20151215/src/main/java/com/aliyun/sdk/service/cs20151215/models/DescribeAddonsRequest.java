@@ -111,7 +111,12 @@ public class DescribeAddonsRequest extends Request {
         } 
 
         /**
-         * cluster_profile.
+         * The type of cluster. Valid values:
+         * <p>
+         * 
+         * *   `Default`: ACK managed cluster
+         * *   `Serverless`: ACK Serverless cluster
+         * *   `Edge`: ACK Edge cluster
          */
         public Builder clusterProfile(String clusterProfile) {
             this.putQueryParameter("cluster_profile", clusterProfile);
@@ -120,7 +125,13 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * cluster_spec.
+         * The edition of the cluster. If you set the cluster type to `ManagedKubernetes`, the following editions are supported:
+         * <p>
+         * 
+         * *   `ack.pro.small`: ACK Pro cluster
+         * *   `ack.standard`: ACK Basic cluster
+         * 
+         * By default, this parameter is left empty. If you leave this parameter empty, clusters are not filtered by edition.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -129,7 +140,13 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * cluster_type.
+         * The type of cluster. Valid values:
+         * <p>
+         * 
+         * *   `Kubernetes`: ACK dedicated cluster
+         * *   `ManagedKubernetes`: ACK managed cluster
+         * *   `Ask`: ACK Serverless cluster
+         * *   `ExternalKubernetes`: registered cluster
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -138,7 +155,7 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * cluster_version.
+         * The cluster version.
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("cluster_version", clusterVersion);
@@ -147,7 +164,7 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * region.
+         * The region ID of the cluster.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

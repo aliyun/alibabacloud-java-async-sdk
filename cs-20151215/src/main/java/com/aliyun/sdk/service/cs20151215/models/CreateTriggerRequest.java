@@ -100,7 +100,7 @@ public class CreateTriggerRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -110,7 +110,10 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * action.
+         * The action that the trigger performs. Set the value to redeploy.
+         * <p>
+         * 
+         * `redeploy`: redeploys the resources specified by `project_id`.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -119,7 +122,12 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * project_id.
+         * The name of the trigger project.
+         * <p>
+         * 
+         * The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`.
+         * 
+         * Example: `default/test-app`.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("project_id", projectId);
@@ -128,7 +136,13 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * type.
+         * The type of trigger. Valid values:
+         * <p>
+         * 
+         * *   `deployment`: performs actions on Deployments.
+         * *   `application`: performs actions on applications that are deployed in Application Center.
+         * 
+         * Default value: `deployment`.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

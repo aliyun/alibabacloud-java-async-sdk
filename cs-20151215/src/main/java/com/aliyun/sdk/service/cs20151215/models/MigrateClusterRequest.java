@@ -83,7 +83,7 @@ public class MigrateClusterRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +92,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * oss_bucket_endpoint.
+         * The endpoint of the OSS bucket.
          */
         public Builder ossBucketEndpoint(String ossBucketEndpoint) {
             this.putBodyParameter("oss_bucket_endpoint", ossBucketEndpoint);
@@ -101,7 +101,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * oss_bucket_name.
+         * The name of the Object Storage Service (OSS) bucket.
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putBodyParameter("oss_bucket_name", ossBucketName);

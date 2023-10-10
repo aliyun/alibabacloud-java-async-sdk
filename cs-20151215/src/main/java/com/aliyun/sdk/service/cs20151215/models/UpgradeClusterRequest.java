@@ -113,7 +113,7 @@ public class UpgradeClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to upgrade.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -122,7 +122,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * component_name.
+         * The name of the component. Set the value to `k8s`.
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -131,7 +131,11 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * master_only.
+         * Specifies whether to upgrade only master nodes. Valid values:
+         * <p>
+         * 
+         * *   true: upgrade only master nodes.
+         * *   false: upgrade master and worker nodes.
          */
         public Builder masterOnly(Boolean masterOnly) {
             this.putBodyParameter("master_only", masterOnly);
@@ -140,7 +144,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * next_version.
+         * The Kubernetes version to which the cluster can be upgraded.
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);
@@ -149,7 +153,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * version.
+         * The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](~~185269~~).
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);

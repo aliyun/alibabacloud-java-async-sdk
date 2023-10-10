@@ -744,6 +744,47 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         } 
 
     }
+    public static class NodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        private KubeletConfig kubeletConfiguration;
+
+        private NodeConfig(Builder builder) {
+            this.kubeletConfiguration = builder.kubeletConfiguration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kubeletConfiguration
+         */
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
+        }
+
+        public static final class Builder {
+            private KubeletConfig kubeletConfiguration; 
+
+            /**
+             * kubelet_configuration.
+             */
+            public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
+                this.kubeletConfiguration = kubeletConfiguration;
+                return this;
+            }
+
+            public NodeConfig build() {
+                return new NodeConfig(this);
+            } 
+
+        } 
+
+    }
     public static class NodepoolInfo extends TeaModel {
         @NameInMap("created")
         private String created;
@@ -2100,6 +2141,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("max_nodes")
         private Long maxNodes;
 
+        @NameInMap("node_config")
+        private NodeConfig nodeConfig;
+
         @NameInMap("nodepool_info")
         private NodepoolInfo nodepoolInfo;
 
@@ -2119,6 +2163,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             this.kubernetesConfig = builder.kubernetesConfig;
             this.management = builder.management;
             this.maxNodes = builder.maxNodes;
+            this.nodeConfig = builder.nodeConfig;
             this.nodepoolInfo = builder.nodepoolInfo;
             this.scalingGroup = builder.scalingGroup;
             this.status = builder.status;
@@ -2176,6 +2221,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeConfig
+         */
+        public NodeConfig getNodeConfig() {
+            return this.nodeConfig;
+        }
+
+        /**
          * @return nodepoolInfo
          */
         public NodepoolInfo getNodepoolInfo() {
@@ -2210,6 +2262,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private KubernetesConfig kubernetesConfig; 
             private Management management; 
             private Long maxNodes; 
+            private NodeConfig nodeConfig; 
             private NodepoolInfo nodepoolInfo; 
             private ScalingGroup scalingGroup; 
             private Status status; 
@@ -2260,6 +2313,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
              */
             public Builder maxNodes(Long maxNodes) {
                 this.maxNodes = maxNodes;
+                return this;
+            }
+
+            /**
+             * node_config.
+             */
+            public Builder nodeConfig(NodeConfig nodeConfig) {
+                this.nodeConfig = nodeConfig;
                 return this;
             }
 

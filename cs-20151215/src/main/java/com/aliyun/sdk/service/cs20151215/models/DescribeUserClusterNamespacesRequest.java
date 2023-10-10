@@ -55,7 +55,7 @@ public class DescribeUserClusterNamespacesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

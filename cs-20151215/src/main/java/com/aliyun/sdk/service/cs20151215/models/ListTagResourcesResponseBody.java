@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token that is used to start the next query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +219,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private java.util.List < TagResource> tagResource; 
 
             /**
-             * The labels of the resource.
+             * The resource and label.
              */
             public Builder tagResource(java.util.List < TagResource> tagResource) {
                 this.tagResource = tagResource;

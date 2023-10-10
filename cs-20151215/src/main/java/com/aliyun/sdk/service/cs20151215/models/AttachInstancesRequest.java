@@ -238,7 +238,7 @@ public class AttachInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -247,7 +247,15 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * cpu_policy.
+         * The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+         * <p>
+         * 
+         * *   `static`: This policy allows pods with specific resource characteristics on the node to be configured with enhanced CPU affinity and exclusivity.
+         * *   `none`: The default CPU affinity is used.
+         * 
+         * Default value: `none`.
+         * 
+         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -256,7 +264,20 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * format_disk.
+         * Specifies whether to store container data and images on data disks. Valid values:
+         * <p>
+         * 
+         * *   `true`: stores container data and images on data disks.
+         * *   `false`: does not store container data or images on data disks.
+         * 
+         * Default value: `false`.
+         * 
+         * How a data disk is mounted:
+         * 
+         * *   If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.
+         * *   If no data disk is attached to the ECS instances, the system does not purchase a new data disk.
+         * 
+         * >  If you choose to store container data and images on data disks and a data disk is already mounted to the ECS instance, the original data on this data disk will be cleared. You can back up the disk to avoid data loss.
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -265,7 +286,14 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * image_id.
+         * The ID of the custom image. If you do not set this parameter, the default system image is used.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you specify a custom image, the custom image is used to deploy the operating systems on the system disks of the nodes.
+         * 
+         * *   This parameter is not supported after you specify `nodepool_id`.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -274,7 +302,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * instances.
+         * The ECS instances to be added.
          */
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
@@ -283,7 +311,15 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * is_edge_worker.
+         * Specifies whether the nodes that you want to add are Edge Node Service (ENS) nodes. Valid values:
+         * <p>
+         * 
+         * *   `true`: The nodes that you want to add are ENS nodes.
+         * *   `false`: The nodes that you want to add are not ENS nodes.
+         * 
+         * Default value: `false`.
+         * 
+         * >  If the nodes that you want to add are ENS nodes, you must set this parameter to `true`. This allows you to identify these nodes.
          */
         public Builder isEdgeWorker(Boolean isEdgeWorker) {
             this.putBodyParameter("is_edge_worker", isEdgeWorker);
@@ -292,7 +328,13 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * keep_instance_name.
+         * Specifies whether to retain the instance name. Valid values:
+         * <p>
+         * 
+         * *   `true`: retains the instance name.
+         * *   `false`: does not retain the instance name.
+         * 
+         * Default value: `true`
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -301,7 +343,10 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * key_pair.
+         * The name of the key pair that is used to log on to the ECS instances. You must set key_pair or `login_password`.
+         * <p>
+         * 
+         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -310,7 +355,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * The node pool ID. If you do not set this parameter, the nodes are added to the default node pool.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -319,7 +364,10 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * password.
+         * The SSH logon password that is used to log on to the ECS instances. You must set login_password or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It cannot contain backslashes (\\) or double quotation marks (").
+         * <p>
+         * 
+         * For security considerations, the password is encrypted during data transfer.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -328,7 +376,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * rds_instances.
+         * A list of ApsaraDB RDS instances.
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -337,7 +385,10 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * runtime.
+         * The container runtime.
+         * <p>
+         * 
+         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -346,7 +397,13 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The labels that you want to add to nodes. You must add labels based on the following rules:
+         * <p>
+         * 
+         * *   Each label is a case-sensitive key-value pair. You can add up to 20 labels.
+         * *   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+         * 
+         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -355,7 +412,10 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * user_data.
+         * User-defined data. For more information, see [Generate user data](~~49121~~).
+         * <p>
+         * 
+         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);

@@ -55,7 +55,10 @@ public class DescribeUserPermissionRequest extends Request {
         } 
 
         /**
-         * uid.
+         * The ID of the RAM user or RAM role.
+         * <p>
+         * 
+         * >  If you want to grant permissions to a RAM role, enter the ID of the RAM role.
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);

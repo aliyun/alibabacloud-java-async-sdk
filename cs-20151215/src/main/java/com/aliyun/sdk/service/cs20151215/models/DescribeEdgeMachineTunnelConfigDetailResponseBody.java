@@ -110,7 +110,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         private String tunnelEndpoint; 
 
         /**
-         * The name of the cloud-native box.
+         * The device name.
          */
         public Builder deviceName(String deviceName) {
             this.deviceName = deviceName;
@@ -126,7 +126,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The product key.
+         * Product Key
          */
         public Builder productKey(String productKey) {
             this.productKey = productKey;
@@ -134,7 +134,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * Request ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The token.
+         * Token
          */
         public Builder token(String token) {
             this.token = token;
@@ -158,7 +158,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * The backend endpoint of the tunnel.
+         * The tunnel endpoint.
          */
         public Builder tunnelEndpoint(String tunnelEndpoint) {
             this.tunnelEndpoint = tunnelEndpoint;

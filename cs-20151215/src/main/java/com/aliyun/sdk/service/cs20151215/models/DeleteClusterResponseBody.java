@@ -38,7 +38,7 @@ public class DeleteClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 任务ID。
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

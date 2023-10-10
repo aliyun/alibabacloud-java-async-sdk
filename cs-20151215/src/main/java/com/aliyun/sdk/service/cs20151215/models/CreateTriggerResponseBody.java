@@ -110,7 +110,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the project.
+         * The name of the trigger project.
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;

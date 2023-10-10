@@ -62,7 +62,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         private java.util.List < Tasks> tasks; 
 
         /**
-         * page_info.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * tasks.
+         * The information about the tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -142,7 +142,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * page_number.
+             * The number of the page returned.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +150,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * code.
+             * The error code returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -219,7 +219,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -320,7 +320,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * created.
+             * The time when the task was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -328,7 +328,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * error.
+             * The error returned for the task.
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -336,7 +336,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The status of the task.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -344,7 +344,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * task_id.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -352,7 +352,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * task_type.
+             * The type of task.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -360,7 +360,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the task was updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

@@ -83,7 +83,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +92,13 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:
+         * <p>
+         * 
+         * *   `true`: obtains the kubeconfig file that is used to connect to the master instance over the internal network.
+         * *   `false`: obtains the kubeconfig file that is used to connect to the master instance over the Internet.
+         * 
+         * Default value: `false`.
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -101,7 +107,10 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * TemporaryDurationMinutes.
+         * The validity period of a temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the `expiration` parameter.
          */
         public Builder temporaryDurationMinutes(Long temporaryDurationMinutes) {
             this.putQueryParameter("TemporaryDurationMinutes", temporaryDurationMinutes);

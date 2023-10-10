@@ -96,7 +96,7 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -105,7 +105,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * page_number.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -114,7 +114,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -123,7 +123,25 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * type.
+         * The event type. Valid values:
+         * <p>
+         * 
+         * *   `cluster_create`: cluster creation.
+         * *   `cluster_scaleout`: cluster scale-out.
+         * *   `cluster_attach`: node addition.
+         * *   `cluster_delete`: cluster deletion.
+         * *   `cluster_upgrade`: cluster upgrades.
+         * *   `cluster_migrate`: cluster migration.
+         * *   `cluster_node_delete`: node removal.
+         * *   `cluster_node_drain`: node draining.
+         * *   `cluster_modify`: cluster modifications.
+         * *   `cluster_configuration_modify`: modifications of control plane configurations.
+         * *   `cluster_addon_install`: component installation.
+         * *   `cluster_addon_upgrade`: component updates.
+         * *   `cluster_addon_uninstall`: component uninstallation.
+         * *   `runtime_upgrade`: runtime updates.
+         * *   `nodepool_upgrade`: node pool upgrades.
+         * *   `nodepool_update`: node pool updates.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

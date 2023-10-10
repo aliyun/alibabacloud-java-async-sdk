@@ -146,7 +146,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String policySeverity; 
 
             /**
-             * The type of the policy. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).
+             * The policy type.
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -162,7 +162,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of policy instances that are deployed. If this parameter is empty, it indicates that no policy instance is deployed from the policy.
+             * The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.
              */
             public Builder policyInstancesCount(Long policyInstancesCount) {
                 this.policyInstancesCount = policyInstancesCount;

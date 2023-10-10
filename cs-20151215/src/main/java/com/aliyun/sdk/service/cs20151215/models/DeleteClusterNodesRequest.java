@@ -98,7 +98,7 @@ public class DeleteClusterNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,13 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * drain_node.
+         * Specifies whether to remove all pods from the nodes that you want to remove. Valid values:
+         * <p>
+         * 
+         * *   `true`: removes all pods from the nodes that you want to remove.
+         * *   `false`: does not remove pods from the nodes that you want to remove.
+         * 
+         * Default value: `false`.
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -116,7 +122,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * nodes.
+         * The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, `cn-hangzhou.192.168.0.70`.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -125,7 +131,15 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * release_node.
+         * Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:
+         * <p>
+         * 
+         * *   `true`: releases the ECS instances.
+         * *   `false`: does not release the ECS instances.
+         * 
+         * Default value: `false`.
+         * 
+         * >  You cannot release subscription ECS instances.
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putBodyParameter("release_node", releaseNode);

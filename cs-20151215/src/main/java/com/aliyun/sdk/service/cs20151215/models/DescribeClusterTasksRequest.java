@@ -54,7 +54,7 @@ public class DescribeClusterTasksRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

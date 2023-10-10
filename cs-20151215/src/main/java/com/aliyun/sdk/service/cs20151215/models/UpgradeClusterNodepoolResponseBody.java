@@ -50,7 +50,7 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

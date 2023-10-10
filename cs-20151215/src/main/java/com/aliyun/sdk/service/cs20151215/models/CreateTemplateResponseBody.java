@@ -38,7 +38,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * The ID of the template.
+         * The ID of the orchestration template.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

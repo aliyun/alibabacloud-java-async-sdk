@@ -70,7 +70,7 @@ public class CancelWorkflowRequest extends Request {
         } 
 
         /**
-         * workflowName.
+         * The name of the workflow that you want to cancel.
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);
@@ -79,7 +79,7 @@ public class CancelWorkflowRequest extends Request {
         }
 
         /**
-         * action.
+         * The operation that you want to perform. Set the value to cancel.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);

@@ -85,7 +85,10 @@ public class CreateEdgeMachineRequest extends Request {
         } 
 
         /**
-         * hostname.
+         * The `hostname` of the cloud-native box.
+         * <p>
+         * 
+         * >  After the cloud-native box is activated, the `hostname` is automatically modified. The `hostname` is prefixed with the model and the prefix is followed by a random string.
          */
         public Builder hostname(String hostname) {
             this.putBodyParameter("hostname", hostname);
@@ -94,7 +97,7 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * model.
+         * The model of the cloud-native box.
          */
         public Builder model(String model) {
             this.putBodyParameter("model", model);
@@ -103,7 +106,7 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * sn.
+         * The serial number of the cloud-native box.
          */
         public Builder sn(String sn) {
             this.putBodyParameter("sn", sn);

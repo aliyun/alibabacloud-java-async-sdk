@@ -83,7 +83,7 @@ public class DescribePolicyInstancesRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +92,7 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * instance_name.
+         * The name of the policy instance that you want to query.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);
@@ -101,7 +101,7 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * policy_name.
+         * The name of the policy that you want to query.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("policy_name", policyName);

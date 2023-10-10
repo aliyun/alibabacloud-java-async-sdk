@@ -69,7 +69,7 @@ public class DeleteEdgeMachineRequest extends Request {
         } 
 
         /**
-         * edge_machineid.
+         * The ID of the cloud-native box.
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -78,7 +78,13 @@ public class DeleteEdgeMachineRequest extends Request {
         }
 
         /**
-         * force.
+         * Specifies whether to forcefully delete the cloud-native box. Valid values:
+         * <p>
+         * 
+         * *   `true`: forcefully deletes the cloud-native box.
+         * *   `false`: does not forcefully delete the cloud-native box.
+         * 
+         * Default value: `false`.
          */
         public Builder force(String force) {
             this.putQueryParameter("force", force);

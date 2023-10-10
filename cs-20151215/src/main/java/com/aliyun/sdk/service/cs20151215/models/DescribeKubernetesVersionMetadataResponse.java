@@ -16,6 +16,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private java.util.List < DescribeKubernetesVersionMetadataResponseBody> body;
@@ -23,6 +27,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     private DescribeKubernetesVersionMetadataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public java.util.List < DescribeKubernetesVersionMetadataResponseBody> getBody() {
@@ -52,6 +64,8 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     public interface Builder extends Response.Builder<DescribeKubernetesVersionMetadataResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(java.util.List < DescribeKubernetesVersionMetadataResponseBody> body);
 
@@ -64,6 +78,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             extends Response.BuilderImpl<DescribeKubernetesVersionMetadataResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private java.util.List < DescribeKubernetesVersionMetadataResponseBody> body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         private BuilderImpl(DescribeKubernetesVersionMetadataResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
@@ -212,7 +237,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String architecture; 
 
             /**
-             * image_id.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -220,7 +245,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * image_name.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -228,7 +253,13 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * platform.
+             * The OS platform. Valid values:
+             * <p>
+             * 
+             * *   `AliyunLinux`
+             * *   `CentOS`
+             * *   `Windows`
+             * *   `WindowsCore`
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -236,7 +267,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * os_version.
+             * The version of the image.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -244,7 +275,18 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * image_type.
+             * The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:
+             * <p>
+             * 
+             * *   `CentOS`
+             * *   `AliyunLinux`
+             * *   `AliyunLinux Qboot`
+             * *   `AliyunLinuxUEFI`
+             * *   `AliyunLinux3`
+             * *   `Windows`
+             * *   `WindowsCore`
+             * *   `AliyunLinux3Arm64`
+             * *   `ContainerOS`
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -252,7 +294,11 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * os_type.
+             * The type of operating system. Examples:
+             * <p>
+             * 
+             * *   `Windows`
+             * *   `Linux`
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -260,7 +306,13 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * image_category.
+             * The type of image. Valid values:
+             * <p>
+             * 
+             * *   `system`: public image
+             * *   `self`: custom image
+             * *   `others`: shared image from other Alibaba Cloud accounts
+             * *   `marketplace`: image from the marketplace
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
@@ -268,7 +320,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * architecture.
+             * The architecture of the image.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -393,7 +445,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private Boolean creatable; 
 
             /**
-             * capabilities.
+             * Features of the queried Kubernetes version.
              */
             public Builder capabilities(java.util.Map < String, ? > capabilities) {
                 this.capabilities = capabilities;
@@ -401,7 +453,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * images.
+             * The OS images that are returned.
              */
             public Builder images(java.util.List < Images> images) {
                 this.images = images;
@@ -409,7 +461,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * meta_data.
+             * The metadata of the Kubernetes version.
              */
             public Builder metaData(java.util.Map < String, ? > metaData) {
                 this.metaData = metaData;
@@ -417,7 +469,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * runtimes.
+             * Details of the supported container runtimes.
              */
             public Builder runtimes(java.util.List < Runtime > runtimes) {
                 this.runtimes = runtimes;
@@ -425,7 +477,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * version.
+             * The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).
              */
             public Builder version(String version) {
                 this.version = version;
@@ -433,7 +485,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * release_date.
+             * The release date of the Kubernetes version.
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -441,7 +493,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * expiration_date.
+             * The expiration date of the Kubernetes version.
              */
             public Builder expirationDate(String expirationDate) {
                 this.expirationDate = expirationDate;
@@ -449,7 +501,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * creatable.
+             * Indicates whether you can create clusters that run the Kubernetes version.
              */
             public Builder creatable(Boolean creatable) {
                 this.creatable = creatable;

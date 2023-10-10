@@ -16,6 +16,10 @@ public class DescribeClusterLogsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private java.util.List < DescribeClusterLogsResponseBody> body;
@@ -23,6 +27,7 @@ public class DescribeClusterLogsResponse extends Response {
     private DescribeClusterLogsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeClusterLogsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public java.util.List < DescribeClusterLogsResponseBody> getBody() {
@@ -52,6 +64,8 @@ public class DescribeClusterLogsResponse extends Response {
     public interface Builder extends Response.Builder<DescribeClusterLogsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(java.util.List < DescribeClusterLogsResponseBody> body);
 
@@ -64,6 +78,7 @@ public class DescribeClusterLogsResponse extends Response {
             extends Response.BuilderImpl<DescribeClusterLogsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private java.util.List < DescribeClusterLogsResponseBody> body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeClusterLogsResponse extends Response {
         private BuilderImpl(DescribeClusterLogsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeClusterLogsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
@@ -176,7 +201,7 @@ public class DescribeClusterLogsResponse extends Response {
             private String updated; 
 
             /**
-             * ID.
+             * The ID of the log entry.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -184,7 +209,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * cluster_id.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -192,7 +217,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * cluster_log.
+             * The log content.
              */
             public Builder clusterLog(String clusterLog) {
                 this.clusterLog = clusterLog;
@@ -200,7 +225,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * created.
+             * The time when the log entry was generated.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -208,7 +233,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * updated.
+             * The time when the log entry was updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

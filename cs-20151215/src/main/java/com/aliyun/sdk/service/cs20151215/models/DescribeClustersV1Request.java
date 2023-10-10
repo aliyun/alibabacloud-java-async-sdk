@@ -138,7 +138,13 @@ public class DescribeClustersV1Request extends Request {
         } 
 
         /**
-         * cluster_spec.
+         * The cluster type, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:
+         * <p>
+         * 
+         * *   `ack.pro.small`: ACK Pro cluster
+         * *   `ack.standard`: ACK Basic cluster
+         * 
+         * By default, this parameter is left empty, which means that ACK clusters are not filtered by this parameter.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -147,7 +153,15 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * cluster_type.
+         * The type of cluster. Valid values:
+         * <p>
+         * 
+         * *   `Kubernetes`: ACK dedicated cluster
+         * *   `ManagedKubernetes`: ACK managed cluster, ACK Serverless cluster, or ACK Edge cluster
+         * *   `Ask`: ACK Serverless cluster
+         * *   `ExternalKubernetes`: registered cluster
+         * 
+         * If you want to query ACK Serverless clusters, specify ManagedKubernetes or Ask based on the value that you specified when you created the ACK Serverless clusters.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -156,7 +170,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * name.
+         * The cluster name.
+         * <p>
+         * 
+         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -165,7 +182,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * page_number.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -174,7 +191,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -183,7 +200,14 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * profile.
+         * The cluster identifier, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:
+         * <p>
+         * 
+         * *   `Default`: ACK managed cluster
+         * *   `Serverless`: ACK Serverless cluster
+         * *   `Edge`: ACK Edge cluster
+         * 
+         * By default, this parameter is left empty, which means that ACK clusters are not filtered by this parameter.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -192,7 +216,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * region_id.
+         * The region ID of the clusters. You can use this parameter to query all clusters in the specified region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);

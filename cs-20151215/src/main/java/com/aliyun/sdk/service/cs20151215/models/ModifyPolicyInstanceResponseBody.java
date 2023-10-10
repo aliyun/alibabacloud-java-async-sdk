@@ -38,7 +38,7 @@ public class ModifyPolicyInstanceResponseBody extends TeaModel {
         private java.util.List < String > instances; 
 
         /**
-         * The policy instance that is updated.
+         * The list of policy instances that are updated.
          */
         public Builder instances(java.util.List < String > instances) {
             this.instances = instances;

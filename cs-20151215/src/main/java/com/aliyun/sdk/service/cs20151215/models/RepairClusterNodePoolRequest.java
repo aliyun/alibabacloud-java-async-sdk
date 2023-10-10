@@ -84,7 +84,7 @@ public class RepairClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,7 +93,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * The ID of the node pool that you want to manage.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -102,7 +102,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * nodes.
+         * The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);

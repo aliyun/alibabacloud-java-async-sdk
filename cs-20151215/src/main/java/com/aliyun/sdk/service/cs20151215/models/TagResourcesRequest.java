@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * region_id.
+         * The region ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resource_ids.
+         * The IDs of the resources that you want to label.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putBodyParameter("resource_ids", resourceIds);
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resource_type.
+         * The type of resource that you want to label. Set the value to `CLUSTER`.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resource_type", resourceType);
@@ -127,7 +127,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Note:
+         * <p>
+         * 
+         * *   A value cannot be empty and can contain up to 128 characters.
+         * *   A key or value must not start with `aliyun` or `acs:`.
+         * *   A key or value must not contain `http://` or `https://`.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);

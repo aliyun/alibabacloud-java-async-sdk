@@ -82,7 +82,10 @@ public class DescribeTemplatesRequest extends Request {
         } 
 
         /**
-         * page_num.
+         * The page number.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("page_num", pageNum);
@@ -91,7 +94,10 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -100,7 +106,13 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * template_type.
+         * The type of template. This parameter can be set to a custom value.
+         * <p>
+         * 
+         * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
+         * *   If you set the parameter to `compose`, the template is not displayed on the Templates page in the console.
+         * 
+         * Default value: `kubernetes`.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("template_type", templateType);

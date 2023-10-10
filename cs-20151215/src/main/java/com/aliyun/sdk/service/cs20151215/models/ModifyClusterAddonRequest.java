@@ -84,7 +84,7 @@ public class ModifyClusterAddonRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,7 +93,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * component_id.
+         * The component ID.
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("component_id", componentId);
@@ -102,7 +102,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * config.
+         * The custom parameter settings that you want to use.
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);

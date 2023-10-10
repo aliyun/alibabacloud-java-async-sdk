@@ -113,7 +113,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * next_token.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -122,7 +122,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * region_id.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -131,7 +131,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resource_ids.
+         * The list of cluster IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
@@ -141,7 +141,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resource_type.
+         * The resource type. Set the value to `CLUSTER`.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -150,7 +150,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The list of labels that you want to query. You can specify at most 20 labels.
          */
         public Builder tags(java.util.List < Tag > tags) {
             String tagsShrink = shrink(tags, "tags", "json");

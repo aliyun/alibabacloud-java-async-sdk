@@ -69,7 +69,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * cf4299b79b3e34226abfdc80a4bda\*\*\*\*
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
-         * body.
+         * The request parameters.
          */
         public Builder body(java.util.List < UpgradeClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -170,7 +170,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             private String version; 
 
             /**
-             * component_name.
+             * The name of the component.
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -178,7 +178,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * config.
+             * The custom component settings that you want to use. The value is a JSON string.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -186,7 +186,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * next_version.
+             * The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -194,7 +194,11 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * policy.
+             * The update policy. Valid values:
+             * <p>
+             * 
+             * *   overwrite
+             * *   canary
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -202,7 +206,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * version.
+             * The current version of the component.
              */
             public Builder version(String version) {
                 this.version = version;

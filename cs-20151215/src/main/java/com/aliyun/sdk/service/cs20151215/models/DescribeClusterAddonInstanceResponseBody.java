@@ -74,7 +74,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * config.
+         * The configuration of the component.
          */
         public Builder config(String config) {
             this.config = config;
@@ -82,7 +82,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * The name of the component.
          */
         public Builder name(String name) {
             this.name = name;
@@ -90,7 +90,16 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * state.
+         * The status of the component. Valid values:
+         * <p>
+         * 
+         * *   initial: The component is being installed.
+         * *   active: The component is installed.
+         * *   unhealthy: The component is in an abnormal state.
+         * *   upgrading: The component is being updated.
+         * *   updating: The component is being modified.
+         * *   deleting: The component is being uninstalled.
+         * *   deleted: The component is deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -98,7 +107,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * The version of the component.
          */
         public Builder version(String version) {
             this.version = version;

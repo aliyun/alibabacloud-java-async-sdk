@@ -50,7 +50,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         private java.util.List < Templates> templates; 
 
         /**
-         * The pagination details.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -58,7 +58,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the templates returned .
+         * The list of returned templates.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -122,7 +122,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -130,7 +130,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -334,7 +334,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the template. By default, the value is the name of the template.
+             * The label of the template. By default, the value is the name of the template.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -342,7 +342,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template content in YAML format.
+             * The template content in the YAML format.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -350,11 +350,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the template. The value can be a custom value.
+             * The type of template. This parameter can be set to a custom value.
              * <p>
              * 
-             * *   If the value is `kubernetes`, it indicates that the template is displayed on the Templates page in the ACK console.
-             * *   If the value is `compose`, it indicates that the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.
+             * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
+             * *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

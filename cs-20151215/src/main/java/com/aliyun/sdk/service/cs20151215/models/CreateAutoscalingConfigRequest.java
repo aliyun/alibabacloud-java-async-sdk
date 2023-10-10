@@ -251,7 +251,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         } 
 
         /**
-         * c0XXXXXXX10
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -260,7 +260,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * cool_down_duration.
+         * The cooldown period. Newly added nodes can be removed in scale-in activities only after the cooldown period ends. Unit: minutes.
          */
         public Builder coolDownDuration(String coolDownDuration) {
             this.putBodyParameter("cool_down_duration", coolDownDuration);
@@ -269,7 +269,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * daemonset_eviction_for_nodes.
+         * Specifies whether to evict DaemonSet pods during scale-in activities. Valid values:
+         * <p>
+         * 
+         * *   `true`: evicts DaemonSet pods.
+         * *   `false`: does not evict DaemonSet pods.
          */
         public Builder daemonsetEvictionForNodes(Boolean daemonsetEvictionForNodes) {
             this.putBodyParameter("daemonset_eviction_for_nodes", daemonsetEvictionForNodes);
@@ -278,7 +282,12 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * expander.
+         * The node pool scale-out policy. Valid values:
+         * <p>
+         * 
+         * *   `least-waste`: the default policy. If multiple node pools meet the requirement, this policy selects the node pool that will have the least idle resources after the scale-out activity is completed.
+         * *   `random`: the random policy. If multiple node pools meet the requirement, this policy selects a random node pool for the scale-out activity.
+         * *   `priority`: the priority-based policy If multiple node pools meet the requirement, this policy selects the node pool with the highest priority for the scale-out activity. The priority setting is stored in the ConfigMap named `cluster-autoscaler-priority-expander` in the kube-system namespace. When a scale-out activity is triggered, the policy obtains the node pool priorities from the ConfigMap based on the node pool IDs and then selects the node pool with the highest priority for the scale-out activity.
          */
         public Builder expander(String expander) {
             this.putBodyParameter("expander", expander);
@@ -287,7 +296,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * gpu_utilization_threshold.
+         * The scale-in threshold of GPU utilization. This threshold specifies the ratio of the GPU resources that are requested by pods to the total GPU resources on the node.
          */
         public Builder gpuUtilizationThreshold(String gpuUtilizationThreshold) {
             this.putBodyParameter("gpu_utilization_threshold", gpuUtilizationThreshold);
@@ -296,7 +305,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * max_graceful_termination_sec.
+         * The maximum amount of time that the cluster autoscaler waits for pods on the nodes to terminate during scale-in activities. Unit: seconds.
          */
         public Builder maxGracefulTerminationSec(Integer maxGracefulTerminationSec) {
             this.putBodyParameter("max_graceful_termination_sec", maxGracefulTerminationSec);
@@ -305,7 +314,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * min_replica_count.
+         * The minimum number of pods that must be guaranteed during scale-in activities.
          */
         public Builder minReplicaCount(Integer minReplicaCount) {
             this.putBodyParameter("min_replica_count", minReplicaCount);
@@ -314,7 +323,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * recycle_node_deletion_enabled.
+         * Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode.
          */
         public Builder recycleNodeDeletionEnabled(Boolean recycleNodeDeletionEnabled) {
             this.putBodyParameter("recycle_node_deletion_enabled", recycleNodeDeletionEnabled);
@@ -323,7 +332,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * scale_down_enabled.
+         * Specifies whether to allow node scale-in activities. Valid values:
+         * <p>
+         * 
+         * *   `true`: allows node scale-in activities.
+         * *   `false`: does not allow node scale-in activities.
          */
         public Builder scaleDownEnabled(Boolean scaleDownEnabled) {
             this.putBodyParameter("scale_down_enabled", scaleDownEnabled);
@@ -332,7 +345,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * scale_up_from_zero.
+         * Specifies whether the cluster autoscaler performs scale-out activities when the number of ready nodes in the cluster is zero.
          */
         public Builder scaleUpFromZero(Boolean scaleUpFromZero) {
             this.putBodyParameter("scale_up_from_zero", scaleUpFromZero);
@@ -341,7 +354,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * scan_interval.
+         * The interval at which the cluster is scanned and evaluated for scaling. Unit: seconds.
          */
         public Builder scanInterval(String scanInterval) {
             this.putBodyParameter("scan_interval", scanInterval);
@@ -350,7 +363,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * skip_nodes_with_local_storage.
+         * Specifies whether to allow the cluster autoscaler to scale in nodes that host pods mounted with local storage (such as EmptyDir volumes or HostPath volumes). Valid values:
+         * <p>
+         * 
+         * *   `true`: does not allow the cluster autoscaler to scale in these nodes.
+         * *   `false`: allows the cluster autoscaler to scale in these nodes.
          */
         public Builder skipNodesWithLocalStorage(Boolean skipNodesWithLocalStorage) {
             this.putBodyParameter("skip_nodes_with_local_storage", skipNodesWithLocalStorage);
@@ -359,7 +376,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * skip_nodes_with_system_pods.
+         * Specifies whether to allow the cluster autoscaler to scale in nodes that host pods in the kube-system namespace, excluding DaemonSet pods and mirror pods. Valid values:
+         * <p>
+         * 
+         * *   `true`: does not allow the cluster autoscaler to scale in these nodes.
+         * *   `false`: allows the cluster autoscaler to scale in these nodes.
          */
         public Builder skipNodesWithSystemPods(Boolean skipNodesWithSystemPods) {
             this.putBodyParameter("skip_nodes_with_system_pods", skipNodesWithSystemPods);
@@ -368,7 +389,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * unneeded_duration.
+         * The waiting time before the auto scaling feature performs a scale-in activity. Only if the resource usage on a node remains below the scale-in threshold within the waiting time, the node is removed after the waiting time ends. Unit: minutes.
          */
         public Builder unneededDuration(String unneededDuration) {
             this.putBodyParameter("unneeded_duration", unneededDuration);
@@ -377,7 +398,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * utilization_threshold.
+         * The scale-in threshold. This threshold specifies the ratio of the resources that are requested by pods to the total resources on the node.
          */
         public Builder utilizationThreshold(String utilizationThreshold) {
             this.putBodyParameter("utilization_threshold", utilizationThreshold);

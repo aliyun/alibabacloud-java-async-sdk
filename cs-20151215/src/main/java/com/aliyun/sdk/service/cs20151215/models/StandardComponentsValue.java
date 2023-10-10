@@ -86,7 +86,7 @@ public class StandardComponentsValue extends TeaModel {
         private Boolean disabled; 
 
         /**
-         * name.
+         * The name of the component.
          */
         public Builder name(String name) {
             this.name = name;
@@ -94,7 +94,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * version.
+         * The version of the component.
          */
         public Builder version(String version) {
             this.version = version;
@@ -102,7 +102,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * description.
+         * The description of the component.
          */
         public Builder description(String description) {
             this.description = description;
@@ -110,7 +110,11 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * required.
+         * Indicates whether the component is a required component. Valid values:
+         * <p>
+         * 
+         * *   `true`: The component is required and must be installed when a cluster is created.
+         * *   `false`: The component is optional. After a cluster is created, you can go to the `Add-ons` page to install the component.
          */
         public Builder required(String required) {
             this.required = required;
@@ -118,7 +122,11 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * disabled.
+         * Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:
+         * <p>
+         * 
+         * *   `true`: disables automatic component installation.
+         * *   `false`: enables automatic component installation.
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;

@@ -94,7 +94,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ACK cluster.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -110,7 +110,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the project.
+         * The name of the trigger project.
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;

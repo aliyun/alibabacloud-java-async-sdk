@@ -50,7 +50,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * events.
+         * The list of events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -58,7 +58,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         }
 
         /**
-         * page_info.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -122,7 +122,34 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * level.
+             * The severity level of the event.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   warning
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   error
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   info
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder level(String level) {
                 this.level = level;
@@ -130,7 +157,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The details of the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +165,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * reason.
+             * The status of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -251,7 +278,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * cluster_id.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -259,7 +286,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * data.
+             * The description of the event.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -267,7 +294,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * event_id.
+             * The event ID.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -275,7 +302,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * The event source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -283,7 +310,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * subject.
+             * The subject related to the event.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -291,7 +318,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * time.
+             * The time when the event started.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -299,7 +326,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of event. Valid values:
              */
             public Builder type(String type) {
                 this.type = type;
@@ -364,7 +391,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * page_number.
+             * The number of the page to return.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -372,7 +399,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * The number of entries per page. Valid values: 1 to 50. Default value: 50.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -380,7 +407,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -58,7 +58,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -130,7 +130,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,7 +138,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ECS instances are successfully added to the ACK cluster.
+             * Indicates whether the ECS instance is successfully added to the ACK cluster.
              */
             public Builder message(String message) {
                 this.message = message;

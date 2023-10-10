@@ -55,7 +55,7 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * The ID of the orchestration template.
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);

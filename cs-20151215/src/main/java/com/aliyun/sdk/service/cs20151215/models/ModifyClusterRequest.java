@@ -18,12 +18,20 @@ public class ModifyClusterRequest extends Request {
     private String clusterId;
 
     @Body
+    @NameInMap("access_control_list")
+    private java.util.List < String > accessControlList;
+
+    @Body
     @NameInMap("api_server_eip")
     private Boolean apiServerEip;
 
     @Body
     @NameInMap("api_server_eip_id")
     private String apiServerEipId;
+
+    @Body
+    @NameInMap("cluster_name")
+    private String clusterName;
 
     @Body
     @NameInMap("deletion_protection")
@@ -35,7 +43,7 @@ public class ModifyClusterRequest extends Request {
 
     @Body
     @NameInMap("ingress_domain_rebinding")
-    private String ingressDomainRebinding;
+    private Boolean ingressDomainRebinding;
 
     @Body
     @NameInMap("ingress_loadbalancer_id")
@@ -56,8 +64,10 @@ public class ModifyClusterRequest extends Request {
     private ModifyClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.accessControlList = builder.accessControlList;
         this.apiServerEip = builder.apiServerEip;
         this.apiServerEipId = builder.apiServerEipId;
+        this.clusterName = builder.clusterName;
         this.deletionProtection = builder.deletionProtection;
         this.enableRrsa = builder.enableRrsa;
         this.ingressDomainRebinding = builder.ingressDomainRebinding;
@@ -88,6 +98,13 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
+     * @return accessControlList
+     */
+    public java.util.List < String > getAccessControlList() {
+        return this.accessControlList;
+    }
+
+    /**
      * @return apiServerEip
      */
     public Boolean getApiServerEip() {
@@ -99,6 +116,13 @@ public class ModifyClusterRequest extends Request {
      */
     public String getApiServerEipId() {
         return this.apiServerEipId;
+    }
+
+    /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     /**
@@ -118,7 +142,7 @@ public class ModifyClusterRequest extends Request {
     /**
      * @return ingressDomainRebinding
      */
-    public String getIngressDomainRebinding() {
+    public Boolean getIngressDomainRebinding() {
         return this.ingressDomainRebinding;
     }
 
@@ -152,11 +176,13 @@ public class ModifyClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyClusterRequest, Builder> {
         private String clusterId; 
+        private java.util.List < String > accessControlList; 
         private Boolean apiServerEip; 
         private String apiServerEipId; 
+        private String clusterName; 
         private Boolean deletionProtection; 
         private Boolean enableRrsa; 
-        private String ingressDomainRebinding; 
+        private Boolean ingressDomainRebinding; 
         private String ingressLoadbalancerId; 
         private Boolean instanceDeletionProtection; 
         private MaintenanceWindow maintenanceWindow; 
@@ -169,8 +195,10 @@ public class ModifyClusterRequest extends Request {
         private Builder(ModifyClusterRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.accessControlList = request.accessControlList;
             this.apiServerEip = request.apiServerEip;
             this.apiServerEipId = request.apiServerEipId;
+            this.clusterName = request.clusterName;
             this.deletionProtection = request.deletionProtection;
             this.enableRrsa = request.enableRrsa;
             this.ingressDomainRebinding = request.ingressDomainRebinding;
@@ -181,7 +209,7 @@ public class ModifyClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -190,7 +218,20 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * api_server_eip.
+         * 注册集群 API Server SLB 访问控制列表。
+         */
+        public Builder accessControlList(java.util.List < String > accessControlList) {
+            this.putBodyParameter("access_control_list", accessControlList);
+            this.accessControlList = accessControlList;
+            return this;
+        }
+
+        /**
+         * Specifies whether to associate an elastic IP address (EIP) with the cluster API server. This enables Internet access for the cluster. Valid values:
+         * <p>
+         * 
+         * *   `true`: associates an EIP with the cluster API server.
+         * *   `false`: does not associate an EIP with the cluster API server.
          */
         public Builder apiServerEip(Boolean apiServerEip) {
             this.putBodyParameter("api_server_eip", apiServerEip);
@@ -199,7 +240,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * api_server_eip_id.
+         * The ID of the EIP that you want to associate with the cluster API server. The parameter takes effect only if `api_server_eip` is set to `true`.
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("api_server_eip_id", apiServerEipId);
@@ -208,7 +249,22 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * deletion_protection.
+         * cluster_name.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putBodyParameter("cluster_name", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable deletion protection for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
+         * *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
+         * 
+         * Default value: `false`.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -217,7 +273,11 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * enable_rrsa.
+         * Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables the RRSA feature.
+         * *   `false`: disables the RRSA feature.
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -226,16 +286,22 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * ingress_domain_rebinding.
+         * Specifies whether to remap the test domain name of the cluster. Valid values:
+         * <p>
+         * 
+         * *   `true`: remaps the test domain name of the cluster.
+         * *   `false`: does not remap the test domain name of the cluster.
+         * 
+         * Default value: `false`.
          */
-        public Builder ingressDomainRebinding(String ingressDomainRebinding) {
+        public Builder ingressDomainRebinding(Boolean ingressDomainRebinding) {
             this.putBodyParameter("ingress_domain_rebinding", ingressDomainRebinding);
             this.ingressDomainRebinding = ingressDomainRebinding;
             return this;
         }
 
         /**
-         * ingress_loadbalancer_id.
+         * The ID of the Server Load Balancer (SLB) instance that is associated with the cluster.
          */
         public Builder ingressLoadbalancerId(String ingressLoadbalancerId) {
             this.putBodyParameter("ingress_loadbalancer_id", ingressLoadbalancerId);
@@ -244,7 +310,13 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * instance_deletion_protection.
+         * Specifies whether to enable deletion protection for the instances in the cluster. If deletion protection is enabled, the instances in the cluster cannot be deleted in the console or by calling the API. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables deletion protection for the instances in the cluster. You cannot delete the instances in the cluster in the console or by calling the API.
+         * *   `false`: disables deletion protection for the instances in the cluster. You can delete the instances in the cluster in the console or by calling the API.
+         * 
+         * Default value: `false`.
          */
         public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
             this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
@@ -253,7 +325,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * maintenance_window.
+         * The maintenance window of the cluster. This parameter takes effect only in ACK Pro clusters.
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -262,7 +334,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * resource_group_id.
+         * The ID of the resource group to which the cluster belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);

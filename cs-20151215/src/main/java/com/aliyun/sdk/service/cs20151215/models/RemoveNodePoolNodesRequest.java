@@ -126,7 +126,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         } 
 
         /**
-         * c23421cfa74454bc8b37163fd19af\*\*\*\*
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -135,7 +135,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * np97de2cfb1ba042398dd8f5504c94\*\*\*\*
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -144,7 +144,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to drain the nodes that you want to remove. Valid values:
+         * <p>
+         * 
+         * *   true: drain the nodes that you want to remove.
+         * *   false: do not drain the nodes that you want to remove.
          */
         public Builder drainNode(Boolean drainNode) {
             this.putQueryParameter("drain_node", drainNode);
@@ -153,7 +157,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * i-bp1c70fqbv1nlu9xxxxx
+         * A list of instances that you want to remove.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instance_ids", "json");
@@ -163,7 +167,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * cn-hangzhou.172.16.xxx.xxx
+         * A list of nodes that you want to remove.
          */
         public Builder nodes(java.util.List < String > nodes) {
             String nodesShrink = shrink(nodes, "nodes", "json");
@@ -173,7 +177,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to release the nodes after they are removed. Valid values:
+         * <p>
+         * 
+         * *   true: release the nodes after they are removed.
+         * *   false: do not release the nodes after they are removed.
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putQueryParameter("release_node", releaseNode);

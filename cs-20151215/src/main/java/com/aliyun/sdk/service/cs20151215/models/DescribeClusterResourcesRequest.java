@@ -55,7 +55,12 @@ public class DescribeClusterResourcesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * For more information about how to query cluster IDs, see [View cluster information](~~89446~~).
+         * 
+         * You can also call the [DescribeClustersV1](~~183905~~) API operation to query all clusters that belong to an Alibaba Cloud account.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

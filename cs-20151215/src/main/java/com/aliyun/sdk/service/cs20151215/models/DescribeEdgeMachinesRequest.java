@@ -124,7 +124,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         } 
 
         /**
-         * hostname.
+         * The `hostname` of the cloud-native box.
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("hostname", hostname);
@@ -133,7 +133,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * life_state.
+         * The lifecycle status.
          */
         public Builder lifeState(String lifeState) {
             this.putQueryParameter("life_state", lifeState);
@@ -142,7 +142,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * model.
+         * The type of cloud-native box.
          */
         public Builder model(String model) {
             this.putQueryParameter("model", model);
@@ -151,7 +151,11 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * online_state.
+         * The status of the cloud-native box. Valid values:
+         * <p>
+         * 
+         * *   `offline`
+         * *   `online`
          */
         public Builder onlineState(String onlineState) {
             this.putQueryParameter("online_state", onlineState);
@@ -160,7 +164,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * page_number.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -169,7 +173,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);

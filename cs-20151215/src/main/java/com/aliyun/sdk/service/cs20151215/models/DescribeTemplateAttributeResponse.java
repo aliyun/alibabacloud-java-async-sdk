@@ -16,6 +16,10 @@ public class DescribeTemplateAttributeResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private java.util.List < DescribeTemplateAttributeResponseBody> body;
@@ -23,6 +27,7 @@ public class DescribeTemplateAttributeResponse extends Response {
     private DescribeTemplateAttributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeTemplateAttributeResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public java.util.List < DescribeTemplateAttributeResponseBody> getBody() {
@@ -52,6 +64,8 @@ public class DescribeTemplateAttributeResponse extends Response {
     public interface Builder extends Response.Builder<DescribeTemplateAttributeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(java.util.List < DescribeTemplateAttributeResponseBody> body);
 
@@ -64,6 +78,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             extends Response.BuilderImpl<DescribeTemplateAttributeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private java.util.List < DescribeTemplateAttributeResponseBody> body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeTemplateAttributeResponse extends Response {
         private BuilderImpl(DescribeTemplateAttributeResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeTemplateAttributeResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
@@ -236,7 +261,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             private String updated; 
 
             /**
-             * id.
+             * The ID of the template. When you update a template, a new template ID is generated.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -244,7 +269,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * acl.
+             * The access control policy of the template.
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -252,7 +277,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -260,7 +285,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * template.
+             * The template content in the YAML format.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -268,7 +293,14 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * template_type.
+             * The type of template. The value can be a custom value.
+             * <p>
+             * 
+             * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
+             * *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.
+             * *   If the value of the parameter is not `kubernetes`, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to `kubernetes`.
+             * 
+             * Default value: `kubernetes`.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -276,7 +308,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +316,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * tags.
+             * The label of the template.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -292,7 +324,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * template_with_hist_id.
+             * The unique ID of the template. The value remains unchanged after the template is updated.
              */
             public Builder templateWithHistId(String templateWithHistId) {
                 this.templateWithHistId = templateWithHistId;
@@ -300,7 +332,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * created.
+             * The time when the template was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -308,7 +340,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * updated.
+             * The time when the template was updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

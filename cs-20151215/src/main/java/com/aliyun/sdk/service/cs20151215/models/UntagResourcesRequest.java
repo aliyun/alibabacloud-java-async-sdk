@@ -114,7 +114,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * all.
+         * Specifies whether to remove all custom labels. This parameter takes effect only when `tag_keys` is left empty. Valid values:
+         * <p>
+         * 
+         * *   `true`: Remove all custom labels.
+         * *   `false`: Do not remove all custom labels.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -123,7 +127,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * region_id.
+         * The region ID of the resources.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -132,7 +136,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resource_ids.
+         * The list of resource IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
@@ -142,7 +146,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resource_type.
+         * The type of resource. Set the value to `CLUSTER`.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -151,7 +155,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * tag_keys.
+         * The list of keys of the labels that you want to remove.
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "tag_keys", "json");

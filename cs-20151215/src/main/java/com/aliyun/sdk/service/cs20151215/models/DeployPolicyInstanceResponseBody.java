@@ -38,7 +38,7 @@ public class DeployPolicyInstanceResponseBody extends TeaModel {
         private java.util.List < String > instances; 
 
         /**
-         * The policy instances that are deployed.
+         * A list of policy instances.
          */
         public Builder instances(java.util.List < String > instances) {
             this.instances = instances;

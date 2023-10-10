@@ -50,7 +50,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         private Page page; 
 
         /**
-         * The details of the nodes that are returned.
+         * The details of the nodes in the cluster.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -58,7 +58,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination details.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -334,7 +334,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that was generated when the node was created.
+             * The error message generated when the node was created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -342,7 +342,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the node.
+             * The expiration date of the node.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -366,7 +366,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance on which the node is deployed. Valid values:
+             * The billing method of the node. Valid values:
              * <p>
              * 
              * *   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
@@ -378,7 +378,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance on which the node is deployed.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -414,7 +414,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node.
+             * The type of the node.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -422,7 +422,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The Elastic Compute Service (ECS) instance family of the node.
+             * The ECS instance family of the node.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -472,7 +472,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node pool.
+             * The node pool ID.
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -488,7 +488,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the preemptible instance. Valid values:
+             * The type of preemptible instance. Valid values:
              * <p>
              * 
              * *   NoSpot: a non-preemptible instance.
@@ -573,7 +573,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -581,7 +581,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

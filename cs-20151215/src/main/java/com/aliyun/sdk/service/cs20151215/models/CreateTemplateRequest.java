@@ -112,7 +112,7 @@ public class CreateTemplateRequest extends Request {
         } 
 
         /**
-         * description.
+         * The description of the template.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -121,7 +121,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the orchestration template.
+         * <p>
+         * 
+         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -130,7 +133,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * tags.
+         * The label of the template.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -139,7 +142,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * template.
+         * The template content in the YAML format.
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -148,7 +151,15 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * template_type.
+         * The type of template. You can set the parameter to a custom value.
+         * <p>
+         * 
+         * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
+         * *   If you set the parameter to `compose`, the template is not displayed in the console.
+         * 
+         * We recommend that you set the parameter to `kubernetes`.
+         * 
+         * Default value: `compose`.
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

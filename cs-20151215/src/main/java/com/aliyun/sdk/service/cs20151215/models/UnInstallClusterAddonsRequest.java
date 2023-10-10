@@ -94,10 +94,14 @@ public class UnInstallClusterAddonsRequest extends Request {
     } 
 
     public static class Addons extends TeaModel {
+        @NameInMap("cleanup_cloud_resources")
+        private Boolean cleanupCloudResources;
+
         @NameInMap("name")
         private String name;
 
         private Addons(Builder builder) {
+            this.cleanupCloudResources = builder.cleanupCloudResources;
             this.name = builder.name;
         }
 
@@ -110,6 +114,13 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
+         * @return cleanupCloudResources
+         */
+        public Boolean getCleanupCloudResources() {
+            return this.cleanupCloudResources;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -117,7 +128,16 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean cleanupCloudResources; 
             private String name; 
+
+            /**
+             * cleanup_cloud_resources.
+             */
+            public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
+                this.cleanupCloudResources = cleanupCloudResources;
+                return this;
+            }
 
             /**
              * name.

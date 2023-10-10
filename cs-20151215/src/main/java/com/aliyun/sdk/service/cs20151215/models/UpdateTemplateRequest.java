@@ -125,7 +125,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * The ID of the template.
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);
@@ -134,7 +134,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the template.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -143,7 +143,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the template.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -152,7 +152,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * tags.
+         * The label of the template.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -161,7 +161,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * template.
+         * The YAML content of the template.
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -170,7 +170,11 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * template_type.
+         * The type of template. This parameter can be set to a custom value.
+         * <p>
+         * 
+         * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
+         * *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

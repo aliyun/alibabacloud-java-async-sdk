@@ -75,7 +75,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         private String logTtl; 
 
         /**
-         * aliuid.
+         * The ID of the Alibaba Cloud account to which the resource belongs.
          */
         public Builder aliuid(String aliuid) {
             this.aliuid = aliuid;
@@ -83,7 +83,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * components.
+         * The control plane components for which log collection is enabled.
          */
         public Builder components(java.util.List < String > components) {
             this.components = components;
@@ -91,7 +91,10 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * log_project.
+         * The name of the Simple Log Service project that you want to use to store the logs of control plane components.
+         * <p>
+         * 
+         * Default value: k8s-log-$Cluster ID.
          */
         public Builder logProject(String logProject) {
             this.logProject = logProject;
@@ -99,7 +102,10 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * log_ttl.
+         * The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.
+         * <p>
+         * 
+         * Default value: 30.
          */
         public Builder logTtl(String logTtl) {
             this.logTtl = logTtl;

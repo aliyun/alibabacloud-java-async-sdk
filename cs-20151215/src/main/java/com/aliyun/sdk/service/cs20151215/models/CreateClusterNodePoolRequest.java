@@ -195,7 +195,7 @@ public class CreateClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -204,7 +204,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * auto_scaling.
+         * The configuration about auto scaling.
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.putBodyParameter("auto_scaling", autoScaling);
@@ -213,7 +213,10 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * count.
+         * This parameter is deprecated. Use the desired_size parameter instead.
+         * <p>
+         * 
+         * The number of nodes in the node pool.
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);
@@ -222,7 +225,10 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * interconnect_config.
+         * This parameter is deprecated.
+         * <p>
+         * 
+         * The configurations of the edge node pool.
          */
         public Builder interconnectConfig(InterconnectConfig interconnectConfig) {
             this.putBodyParameter("interconnect_config", interconnectConfig);
@@ -231,7 +237,12 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * interconnect_mode.
+         * The network type of the edge node pool. This parameter takes effect only when you set the `type` parameter of the node pool to `edge`. Valid values:
+         * <p>
+         * 
+         * *   `basic`: basic
+         * *   `improved`: enhanced
+         * *   `private`: dedicated Only Kubernetes 1.22 and later support this parameter.
          */
         public Builder interconnectMode(String interconnectMode) {
             this.putBodyParameter("interconnect_mode", interconnectMode);
@@ -240,7 +251,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * kubernetes_config.
+         * The configurations about the cluster.
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             this.putBodyParameter("kubernetes_config", kubernetesConfig);
@@ -249,7 +260,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * management.
+         * The configurations about the managed node pool feature.
          */
         public Builder management(Management management) {
             this.putBodyParameter("management", management);
@@ -258,7 +269,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * max_nodes.
+         * The maximum number of nodes that can be created in the edge node pool. You must specify a value that is equal to or larger than 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools of the ess type or default edge node pools.
          */
         public Builder maxNodes(Long maxNodes) {
             this.putBodyParameter("max_nodes", maxNodes);
@@ -267,7 +278,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * nodepool_info.
+         * The configurations of the node pool.
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
             this.putBodyParameter("nodepool_info", nodepoolInfo);
@@ -276,7 +287,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * scaling_group.
+         * The configuration of the scaling group that is used by the node pool.
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.putBodyParameter("scaling_group", scalingGroup);
@@ -285,7 +296,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * tee_config.
+         * The configurations about confidential computing for the cluster.
          */
         public Builder teeConfig(TeeConfig teeConfig) {
             this.putBodyParameter("tee_config", teeConfig);
@@ -402,7 +413,10 @@ public class CreateClusterNodePoolRequest extends Request {
             private String type; 
 
             /**
-             * eip_bandwidth.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The maximum bandwidth of the EIP. Unit: Mbit/s.
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -410,7 +424,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * eip_internet_charge_type.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The metering method of the EIP. Valid values:
+             * 
+             * *   `PayByBandwidth`: pay-by-bandwidth.
+             * *   `PayByTraffic`: pay-by-data-transfer.
+             * 
+             * Default value: `PayByBandwidth`.
              */
             public Builder eipInternetChargeType(String eipInternetChargeType) {
                 this.eipInternetChargeType = eipInternetChargeType;
@@ -418,7 +440,13 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * enable.
+             * Specifies whether to enable auto scaling. Valid values:
+             * <p>
+             * 
+             * *   `true`: enables auto scaling.
+             * *   `false`: disables auto scaling. If you set this parameter to false, other parameters in the `auto_scaling` section do not take effect.
+             * 
+             * Default value: `false`.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -426,7 +454,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * is_bond_eip.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * Specifies whether to associate an elastic IP address (EIP) with the node pool. Valid values:
+             * 
+             * *   `true`: associates an EIP with the node pool.
+             * *   `false`: does not associate an EIP with the node pool.
+             * 
+             * Default value: `false`.
              */
             public Builder isBondEip(Boolean isBondEip) {
                 this.isBondEip = isBondEip;
@@ -434,7 +470,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * max_instances.
+             * The maximum number of Elastic Compute Service (ECS) instances that can be created in a node pool.
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -442,7 +478,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * min_instances.
+             * The minimum number of ECS instances that must be kept in a node pool.
              */
             public Builder minInstances(Long minInstances) {
                 this.minInstances = minInstances;
@@ -450,7 +486,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * type.
+             * The instance types that can be used for the auto scaling of the node pool. Valid values:
+             * <p>
+             * 
+             * *   `cpu`: regular instance.
+             * *   `gpu`: GPU-accelerated instance.
+             * *   `gpushare`: shared GPU-accelerated instance.
+             * *   `spot`: preemptible instance.
+             * 
+             * Default value: `cpu`.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -539,7 +583,10 @@ public class CreateClusterNodePoolRequest extends Request {
             private String improvedPeriod; 
 
             /**
-             * bandwidth.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The bandwidth of the enhanced edge node pool. Unit: Mbit/s.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -547,7 +594,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * ccn_id.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.
              */
             public Builder ccnId(String ccnId) {
                 this.ccnId = ccnId;
@@ -555,7 +605,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * ccn_region_id.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The region to which the CCN instance that is associated with the enhanced edge node pool belongs.
              */
             public Builder ccnRegionId(String ccnRegionId) {
                 this.ccnRegionId = ccnRegionId;
@@ -563,7 +616,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * cen_id.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -571,7 +627,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * improved_period.
+             * This parameter is deprecated.
+             * <p>
+             * 
+             * The subscription duration of the enhanced edge node pool. The duration is measured in months.
              */
             public Builder improvedPeriod(String improvedPeriod) {
                 this.improvedPeriod = improvedPeriod;
@@ -698,7 +757,13 @@ public class CreateClusterNodePoolRequest extends Request {
             private String userData; 
 
             /**
-             * cms_enabled.
+             * Specifies whether to install the CloudMonitor agent on ECS nodes. After the CloudMonitor agent is installed on ECS nodes, you can view monitoring information about the instances in the CloudMonitor console. We recommend that you install the CloudMonitor agent. Valid values:
+             * <p>
+             * 
+             * *   `true`: installs the CloudMonitor agent on ECS nodes.
+             * *   `false`: does not install the CloudMonitor agent on ECS nodes.
+             * 
+             * Default value: `false`.
              */
             public Builder cmsEnabled(Boolean cmsEnabled) {
                 this.cmsEnabled = cmsEnabled;
@@ -706,7 +771,13 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * cpu_policy.
+             * The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+             * <p>
+             * 
+             * *   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.
+             * *   `none`: specifies that the default CPU affinity is used.
+             * 
+             * Default value: `none`.
              */
             public Builder cpuPolicy(String cpuPolicy) {
                 this.cpuPolicy = cpuPolicy;
@@ -714,7 +785,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * labels.
+             * The labels that you want to add to the nodes in the cluster.
              */
             public Builder labels(java.util.List < Tag > labels) {
                 this.labels = labels;
@@ -722,7 +793,13 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * node_name_mode.
+             * A custom node name consists of a prefix, a node IP address, and a suffix.
+             * <p>
+             * 
+             * *   The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-). A custom node name must start and end with a digit or lowercase letter.
+             * *   The node IP address in a custom node name is the private IP address of the node.
+             * 
+             * Set the value in the customized,aliyun,ip,com format. The value consists of four parts that are separated by commas (,). customized and ip are fixed content. aliyun is the prefix and com is the suffix. Example: aliyun.192.168.xxx.xxx.com.
              */
             public Builder nodeNameMode(String nodeNameMode) {
                 this.nodeNameMode = nodeNameMode;
@@ -730,7 +807,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * runtime.
+             * The container runtime.
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -738,7 +815,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * runtime_version.
+             * The version of the container runtime.
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -746,7 +823,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * taints.
+             * The configurations of the taints.
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -754,7 +831,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * user_data.
+             * The user data on the node.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -832,7 +909,11 @@ public class CreateClusterNodePoolRequest extends Request {
             private Long surgePercentage; 
 
             /**
-             * auto_upgrade.
+             * Specifies whether to enable auto upgrade. Valid values:
+             * <p>
+             * 
+             * *   `true`: enables auto update.
+             * *   `false`: disables auto update.
              */
             public Builder autoUpgrade(Boolean autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -840,7 +921,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * max_unavailable.
+             * The maximum number of nodes that can be in the Unschedulable state. Valid values: 1 to 1000.
+             * <p>
+             * 
+             * Default value: 1.
              */
             public Builder maxUnavailable(Long maxUnavailable) {
                 this.maxUnavailable = maxUnavailable;
@@ -848,7 +932,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * surge.
+             * The number of additional nodes.
              */
             public Builder surge(Long surge) {
                 this.surge = surge;
@@ -856,7 +940,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * surge_percentage.
+             * The percentage of additional nodes to the nodes in the node pool. You must set this parameter or `surge`.
              */
             public Builder surgePercentage(Long surgePercentage) {
                 this.surgePercentage = surgePercentage;
@@ -922,7 +1006,11 @@ public class CreateClusterNodePoolRequest extends Request {
             private UpgradeConfig upgradeConfig; 
 
             /**
-             * auto_repair.
+             * Specifies whether to enable auto repair. This parameter takes effect only when you specify `enable=true`.
+             * <p>
+             * 
+             * *   `true`: enables auto repair.
+             * *   `false`: disables auto repair.
              */
             public Builder autoRepair(Boolean autoRepair) {
                 this.autoRepair = autoRepair;
@@ -930,7 +1018,11 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * enable.
+             * Specifies whether to enable the managed node pool feature. Valid values:
+             * <p>
+             * 
+             * *   `true`: enables the managed node pool feature.
+             * *   `false`: disables the managed node pool feature. Other parameters in this section take effect only when you specify enable=true.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -938,7 +1030,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * upgrade_config.
+             * The configurations about auto update. The configurations take effect only when you specify `enable=true`.
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -1004,7 +1096,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String type; 
 
             /**
-             * name.
+             * The name of the node pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1012,7 +1104,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * resource_group_id.
+             * The ID of the resource group to which the node pool belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1020,7 +1112,11 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * type.
+             * The type of node pool. Valid values:
+             * <p>
+             * 
+             * *   `ess`: node pool
+             * *   `edge`: edge node pool
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1073,7 +1169,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String matchCriteria; 
 
             /**
-             * id.
+             * The ID of the private node pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1081,7 +1177,12 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * match_criteria.
+             * The type of private node pool. This parameter specifies the type of private pool that you want to use to create instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. The system selects a private pool to start instances. Valid values:
+             * <p>
+             * 
+             * *   `Open`: specifies an open private pool. The system selects an open private pool to start instances. If no matching open private pools are available, the resources in the public pool are used.
+             * *   `Target`: specifies a private node pool. The system uses the resources of the specified private pool to start instances. If the specified private pool is unavailable, instances cannot be started.
+             * *   `None`: does not use private pools. The resources of private pools are not used to start instances.
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -1134,7 +1235,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String priceLimit; 
 
             /**
-             * instance_type.
+             * The instance type of the preemptible instances.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1142,7 +1243,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * price_limit.
+             * The maximum bid price of a preemptible instance.
+             * <p>
+             * 
+             * Unit: USD/hour.
              */
             public Builder priceLimit(String priceLimit) {
                 this.priceLimit = priceLimit;
@@ -1195,7 +1299,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The key of the label.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1203,7 +1307,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of the label.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1669,7 +1773,13 @@ public class CreateClusterNodePoolRequest extends Request {
             private java.util.List < String > vswitchIds; 
 
             /**
-             * auto_renew.
+             * Specifies whether to enable auto-renewal for nodes in the node pool. This parameter takes effect only when you set `instance_charge_type` to `PrePaid`. Valid values:
+             * <p>
+             * 
+             * *   `true`: enables auto-renewal.
+             * *   `false`: disables auto-renewal.
+             * 
+             * Default value: `true`.
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1677,7 +1787,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * auto_renew_period.
+             * The duration of the auto-renewal. This property takes effect and is required only when you set instance_charge_type to PrePaid and auto_renew to true. If `PeriodUnit=Month` is configured, the valid values are 1, 2, 3, 6, and 12.
+             * <p>
+             * 
+             * Default value: 1.
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1685,7 +1798,11 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * compensate_with_on_demand.
+             * Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect when you set `multi_az_policy` to `COST_OPTIMIZED`. Valid values:
+             * <p>
+             * 
+             * *   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.
+             * *   `false`: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
                 this.compensateWithOnDemand = compensateWithOnDemand;
@@ -1693,7 +1810,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * data_disks.
+             * The configurations of the data disks that are mounted to the nodes in the node pool.
              */
             public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1701,7 +1818,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * deploymentset_id.
+             * The ID of the deployment set.
              */
             public Builder deploymentsetId(String deploymentsetId) {
                 this.deploymentsetId = deploymentsetId;
@@ -1709,7 +1826,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * desired_size.
+             * The expected number of nodes in the node pool.
              */
             public Builder desiredSize(Long desiredSize) {
                 this.desiredSize = desiredSize;
@@ -1717,7 +1834,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * image_id.
+             * The ID of a custom image. By default, the image provided by ACK is used.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1725,7 +1842,17 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * image_type.
+             * The type of OS image. You must set this parameter or `platform`. Valid values:
+             * <p>
+             * 
+             * *   `AliyunLinux`: Alinux2
+             * *   `AliyunLinux3`: Alinux3
+             * *   `AliyunLinux3Arm64`: Alinux3 ARM
+             * *   `AliyunLinuxUEFI`: Alinux2 UEFI
+             * *   `CentOS`: CentOS
+             * *   `Windows`: Windows
+             * *   `WindowsCore`: Windows Core
+             * *   `ContainerOS`: ContainerOS
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -1733,7 +1860,13 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * instance_charge_type.
+             * The billing method of the nodes in the node pool. Valid values:
+             * <p>
+             * 
+             * *   `PrePaid`: the subscription billing method.
+             * *   `PostPaid`: the pay-as-you-go billing method.
+             * 
+             * Default value: `PostPaid`.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1741,7 +1874,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * instance_types.
+             * The instance type of the nodes in the node pool.
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1749,7 +1882,11 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * internet_charge_type.
+             * The metering method of the public IP address. Valid values:
+             * <p>
+             * 
+             * *   PayByBandwidth: pay-by-bandwidth
+             * *   PayByTraffic: pay-by-data-transfer
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1757,7 +1894,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * internet_max_bandwidth_out.
+             * The maximum outbound bandwidth of the public IP address of the node. Unit: Mbit/s. Valid values: 1 to 100.
              */
             public Builder internetMaxBandwidthOut(Long internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1765,7 +1902,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * key_pair.
+             * The name of the key pair. You must set this parameter or the `login_password` parameter.
+             * <p>
+             * 
+             * >  If you create a managed node pool, only `key_pair` is supported.
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
@@ -1773,7 +1913,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * login_password.
+             * The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1781,7 +1921,20 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * multi_az_policy.
+             * The ECS instance scaling policy for a multi-zone scaling group. Valid values:
+             * <p>
+             * 
+             * *   `PRIORITY`: the scaling group is scaled based on the VSwitchIds.N parameter. If an ECS instance cannot be created in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates the ECS instance in the zone where the vSwitch that has the next highest priority resides.
+             * 
+             * *   `COST_OPTIMIZED`: ECS instances are created based on the vCPU unit price in ascending order. Preemptible instances are preferably created when preemptible instance types are specified in the scaling configuration. You can set the `CompensateWithOnDemand` parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient resources.
+             * 
+             *     **
+             * 
+             *     **Note**The `COST_OPTIMIZED` setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.
+             * 
+             * *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call [RebalanceInstances](~~71516~~) of Auto Scaling to balance the instance distribution among zones.
+             * 
+             * Default value: `PRIORITY`.
              */
             public Builder multiAzPolicy(String multiAzPolicy) {
                 this.multiAzPolicy = multiAzPolicy;
@@ -1789,7 +1942,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * on_demand_base_capacity.
+             * The minimum number of pay-as-you-go instances that must be kept in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferably creates pay-as-you-go instances.
              */
             public Builder onDemandBaseCapacity(Long onDemandBaseCapacity) {
                 this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -1797,7 +1950,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * on_demand_percentage_above_base_capacity.
+             * The percentage of pay-as-you-go instances among the extra instances that exceed the number specified by `on_demand_base_capacity`. Valid values: 0 to 100.
              */
             public Builder onDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
                 this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -1805,7 +1958,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * period.
+             * The subscription duration of the nodes in the node pool. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`. If you set `period_unit` to Month, the valid values of `period` are 1, 2, 3, 6, and 12.
+             * <p>
+             * 
+             * Default value: 1.
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1813,7 +1969,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * period_unit.
+             * The billing cycle of the nodes in the node pool. This parameter is required if you set instance_charge_type to `PrePaid`. A value of Month indicates that the billing cycle is measured in months.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -1821,7 +1977,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * platform.
+             * The release version of the operating system. Valid values:
+             * <p>
+             * 
+             * *   `CentOS`
+             * *   `AliyunLinux`
+             * *   `Windows`
+             * *   `WindowsCore`
+             * 
+             * Default value: `AliyunLinux`.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1829,7 +1993,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * private_pool_options.
+             * The configurations of the private node pool.
              */
             public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
                 this.privatePoolOptions = privatePoolOptions;
@@ -1837,7 +2001,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * rds_instances.
+             * A list of ApsaraDB RDS instances.
              */
             public Builder rdsInstances(java.util.List < String > rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -1845,7 +2009,13 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * scaling_policy.
+             * The scaling mode of the scaling group. Valid values:
+             * <p>
+             * 
+             * *   `release`: the standard mode. ECS instances are created and released based on resource usage.
+             * *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances attached with local disks.
+             * 
+             * Default value: `release`.
              */
             public Builder scalingPolicy(String scalingPolicy) {
                 this.scalingPolicy = scalingPolicy;
@@ -1853,7 +2023,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * security_group_id.
+             * Specifies the ID of the security group to which you want to add the node pool. You must set this parameter or `security_group_ids`. We recommend that you set `security_group_ids`.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1861,7 +2031,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * security_group_ids.
+             * The IDs of security groups to which you want to add the node pool. You must set this parameter or `security_group_id`. We recommend that you set `security_group_ids`. If you set both `security_group_id` and `security_group_ids`, `security_group_ids` is used.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1869,7 +2039,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * spot_instance_pools.
+             * The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.
              */
             public Builder spotInstancePools(Long spotInstancePools) {
                 this.spotInstancePools = spotInstancePools;
@@ -1877,7 +2047,11 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * spot_instance_remedy.
+             * Specifies whether to supplement preemptible instances. If this parameter is set to true, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values: Valid values:
+             * <p>
+             * 
+             * *   `true`: enables the supplementation of preemptible instances.
+             * *   `false`: disables the supplementation of preemptible instances.
              */
             public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
                 this.spotInstanceRemedy = spotInstanceRemedy;
@@ -1885,7 +2059,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * spot_price_limit.
+             * The instance type for preemptible instances and the price limit of the instance type.
              */
             public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -1893,7 +2067,14 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * spot_strategy.
+             * The bidding policy for the instance. Valid values:
+             * <p>
+             * 
+             * *   `NoSpot`: non-preemptible instance.
+             * *   `SpotWithPriceLimit`: specifies the highest bid for the preemptible instance.
+             * *   `SpotAsPriceGo`: automatically submits bids based on the up-to-date market price.
+             * 
+             * For more information, see [Preemptible instances](~~165053~~).
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1901,7 +2082,12 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_bursting_enabled.
+             * 节点系统盘是否开启Burst（性能突发）。 取值：
+             * <p>
+             * - true：是。
+             * - false：否。
+             * 
+             * 当`SystemDiskCategory`取值为`cloud_auto`时才支持设置该参数。更多信息，请参见[ESSD AutoPL云盘](~~368372~~)。
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -1909,7 +2095,14 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_category.
+             * The type of system disk. Valid values:
+             * <p>
+             * 
+             * *   `cloud_efficiency`: ultra disk.
+             * *   `cloud_ssd`: standard SSD.
+             * *   `cloud_essd`: enhanced SSD.
+             * 
+             * Default value: `cloud_efficiency`.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1917,7 +2110,13 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_performance_level.
+             * The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.
+             * <p>
+             * 
+             * *   PL0: moderate maximum concurrent I/O performance and low I/O latency
+             * *   PL1: moderate maximum concurrent I/O performance and low I/O latency
+             * *   PL2: high maximum concurrent I/O performance and low I/O latency
+             * *   PL3: ultra-high maximum concurrent I/O performance and ultra-low I/O latency
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -1925,7 +2124,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_provisioned_iops.
+             * 节点系统盘预配置的读写IOPS。可能值：0~min{50,000, 1000\*容量-基准性能}。 基准性能=min{1,800+50\*容量, 50000}。
+             * <p>
+             * 
+             * 当`SystemDiskCategory`取值为`cloud_auto`时才支持设置该参数。更多信息，请参见[ESSD AutoPL云盘](~~368372~~)。
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
@@ -1933,7 +2135,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_size.
+             * The system disk size of a node. Unit: GiB.
+             * <p>
+             * 
+             * Valid values: 40 to 500.
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1941,7 +2146,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * tags.
+             * The labels that you want to add to the ECS instances.
+             * <p>
+             * 
+             * Each key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1949,7 +2157,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * vswitch_ids.
+             * The IDs of vSwitches. You can specify 1 to 20 vSwitches.
+             * <p>
+             * 
+             * >  To ensure high availability, we recommend that you select VSwitches in different zones.
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -1991,7 +2202,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private Boolean teeEnable; 
 
             /**
-             * tee_enable.
+             * Specifies whether to enable confidential computing for the cluster.
              */
             public Builder teeEnable(Boolean teeEnable) {
                 this.teeEnable = teeEnable;
