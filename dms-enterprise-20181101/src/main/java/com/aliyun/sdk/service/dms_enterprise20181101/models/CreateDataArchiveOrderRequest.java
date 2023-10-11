@@ -274,14 +274,74 @@ public class CreateDataArchiveOrderRequest extends Request {
         } 
 
     }
+    public static class Variables extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Pattern")
+        private String pattern;
+
+        private Variables(Builder builder) {
+            this.name = builder.name;
+            this.pattern = builder.pattern;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String pattern; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Pattern.
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
+            } 
+
+        } 
+
+    }
     public static class Param extends TeaModel {
         @NameInMap("ArchiveMethod")
         @Validation(required = true)
         private String archiveMethod;
 
-        @NameInMap("DbSchema")
-        @Validation(required = true)
-        private String dbSchema;
+        @NameInMap("CronStr")
+        private String cronStr;
 
         @NameInMap("Logic")
         private Boolean logic;
@@ -293,9 +353,17 @@ public class CreateDataArchiveOrderRequest extends Request {
         @Validation(required = true)
         private String runMethod;
 
-        @NameInMap("SourceDatabaseId")
+        @NameInMap("SourceCatalogName")
         @Validation(required = true)
-        private Long sourceDatabaseId;
+        private String sourceCatalogName;
+
+        @NameInMap("SourceInstanceName")
+        @Validation(required = true)
+        private String sourceInstanceName;
+
+        @NameInMap("SourceSchemaName")
+        @Validation(required = true)
+        private String sourceSchemaName;
 
         @NameInMap("TableIncludes")
         @Validation(required = true)
@@ -304,23 +372,25 @@ public class CreateDataArchiveOrderRequest extends Request {
         @NameInMap("TableMapping")
         private java.util.List < String > tableMapping;
 
-        @NameInMap("TargetInstanceId")
+        @NameInMap("TargetInstanceHost")
         @Validation(required = true)
-        private String targetInstanceId;
+        private String targetInstanceHost;
 
         @NameInMap("Variables")
-        private java.util.List < String > variables;
+        private java.util.List < Variables> variables;
 
         private Param(Builder builder) {
             this.archiveMethod = builder.archiveMethod;
-            this.dbSchema = builder.dbSchema;
+            this.cronStr = builder.cronStr;
             this.logic = builder.logic;
             this.orderAfter = builder.orderAfter;
             this.runMethod = builder.runMethod;
-            this.sourceDatabaseId = builder.sourceDatabaseId;
+            this.sourceCatalogName = builder.sourceCatalogName;
+            this.sourceInstanceName = builder.sourceInstanceName;
+            this.sourceSchemaName = builder.sourceSchemaName;
             this.tableIncludes = builder.tableIncludes;
             this.tableMapping = builder.tableMapping;
-            this.targetInstanceId = builder.targetInstanceId;
+            this.targetInstanceHost = builder.targetInstanceHost;
             this.variables = builder.variables;
         }
 
@@ -340,10 +410,10 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * @return dbSchema
+         * @return cronStr
          */
-        public String getDbSchema() {
-            return this.dbSchema;
+        public String getCronStr() {
+            return this.cronStr;
         }
 
         /**
@@ -368,10 +438,24 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * @return sourceDatabaseId
+         * @return sourceCatalogName
          */
-        public Long getSourceDatabaseId() {
-            return this.sourceDatabaseId;
+        public String getSourceCatalogName() {
+            return this.sourceCatalogName;
+        }
+
+        /**
+         * @return sourceInstanceName
+         */
+        public String getSourceInstanceName() {
+            return this.sourceInstanceName;
+        }
+
+        /**
+         * @return sourceSchemaName
+         */
+        public String getSourceSchemaName() {
+            return this.sourceSchemaName;
         }
 
         /**
@@ -389,30 +473,32 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * @return targetInstanceId
+         * @return targetInstanceHost
          */
-        public String getTargetInstanceId() {
-            return this.targetInstanceId;
+        public String getTargetInstanceHost() {
+            return this.targetInstanceHost;
         }
 
         /**
          * @return variables
          */
-        public java.util.List < String > getVariables() {
+        public java.util.List < Variables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
             private String archiveMethod; 
-            private String dbSchema; 
+            private String cronStr; 
             private Boolean logic; 
             private java.util.List < String > orderAfter; 
             private String runMethod; 
-            private Long sourceDatabaseId; 
+            private String sourceCatalogName; 
+            private String sourceInstanceName; 
+            private String sourceSchemaName; 
             private java.util.List < TableIncludes> tableIncludes; 
             private java.util.List < String > tableMapping; 
-            private String targetInstanceId; 
-            private java.util.List < String > variables; 
+            private String targetInstanceHost; 
+            private java.util.List < Variables> variables; 
 
             /**
              * ArchiveMethod.
@@ -423,10 +509,10 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * DbSchema.
+             * CronStr.
              */
-            public Builder dbSchema(String dbSchema) {
-                this.dbSchema = dbSchema;
+            public Builder cronStr(String cronStr) {
+                this.cronStr = cronStr;
                 return this;
             }
 
@@ -455,10 +541,26 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * SourceDatabaseId.
+             * SourceCatalogName.
              */
-            public Builder sourceDatabaseId(Long sourceDatabaseId) {
-                this.sourceDatabaseId = sourceDatabaseId;
+            public Builder sourceCatalogName(String sourceCatalogName) {
+                this.sourceCatalogName = sourceCatalogName;
+                return this;
+            }
+
+            /**
+             * SourceInstanceName.
+             */
+            public Builder sourceInstanceName(String sourceInstanceName) {
+                this.sourceInstanceName = sourceInstanceName;
+                return this;
+            }
+
+            /**
+             * SourceSchemaName.
+             */
+            public Builder sourceSchemaName(String sourceSchemaName) {
+                this.sourceSchemaName = sourceSchemaName;
                 return this;
             }
 
@@ -479,17 +581,17 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * TargetInstanceId.
+             * TargetInstanceHost.
              */
-            public Builder targetInstanceId(String targetInstanceId) {
-                this.targetInstanceId = targetInstanceId;
+            public Builder targetInstanceHost(String targetInstanceHost) {
+                this.targetInstanceHost = targetInstanceHost;
                 return this;
             }
 
             /**
              * Variables.
              */
-            public Builder variables(java.util.List < String > variables) {
+            public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;
                 return this;
             }
