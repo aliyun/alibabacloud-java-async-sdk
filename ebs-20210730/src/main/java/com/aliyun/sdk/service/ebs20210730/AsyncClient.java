@@ -40,6 +40,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
+    CompletableFuture<ClearPairDrillResponse> clearPairDrill(ClearPairDrillRequest request);
+
+    CompletableFuture<ClearReplicaGroupDrillResponse> clearReplicaGroupDrill(ClearReplicaGroupDrillRequest request);
+
     /**
       * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
       * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
@@ -153,7 +157,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeLensServiceStatusResponse> describeLensServiceStatus(DescribeLensServiceStatusRequest request);
 
+    CompletableFuture<DescribePairDrillsResponse> describePairDrills(DescribePairDrillsRequest request);
+
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    CompletableFuture<DescribeReplicaGroupDrillsResponse> describeReplicaGroupDrills(DescribeReplicaGroupDrillsRequest request);
 
     /**
       * The operation that you want to perform. Set the value to **FailoverDiskReplicaGroup**.
@@ -233,6 +241,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<StartDiskReplicaPairResponse> startDiskReplicaPair(StartDiskReplicaPairRequest request);
+
+    CompletableFuture<StartPairDrillResponse> startPairDrill(StartPairDrillRequest request);
+
+    CompletableFuture<StartReplicaGroupDrillResponse> startReplicaGroupDrill(StartReplicaGroupDrillRequest request);
 
     /**
       * ## Usage notes
