@@ -260,6 +260,9 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
 
             /**
              * The STS token.
+             * <p>
+             * 
+             * > Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -277,16 +280,28 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         @NameInMap("ClientIds")
         private String clientIds;
 
+        @NameInMap("ExpirationTime")
+        private String expirationTime;
+
+        @NameInMap("IssuanceTime")
+        private String issuanceTime;
+
         @NameInMap("Issuer")
         private String issuer;
 
         @NameInMap("Subject")
         private String subject;
 
+        @NameInMap("VerificationInfo")
+        private String verificationInfo;
+
         private OIDCTokenInfo(Builder builder) {
             this.clientIds = builder.clientIds;
+            this.expirationTime = builder.expirationTime;
+            this.issuanceTime = builder.issuanceTime;
             this.issuer = builder.issuer;
             this.subject = builder.subject;
+            this.verificationInfo = builder.verificationInfo;
         }
 
         public static Builder builder() {
@@ -305,6 +320,20 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
+         * @return expirationTime
+         */
+        public String getExpirationTime() {
+            return this.expirationTime;
+        }
+
+        /**
+         * @return issuanceTime
+         */
+        public String getIssuanceTime() {
+            return this.issuanceTime;
+        }
+
+        /**
          * @return issuer
          */
         public String getIssuer() {
@@ -318,10 +347,20 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             return this.subject;
         }
 
+        /**
+         * @return verificationInfo
+         */
+        public String getVerificationInfo() {
+            return this.verificationInfo;
+        }
+
         public static final class Builder {
             private String clientIds; 
+            private String expirationTime; 
+            private String issuanceTime; 
             private String issuer; 
             private String subject; 
+            private String verificationInfo; 
 
             /**
              * The audience. If multiple audiences are returned, the audiences are separated by commas (,).
@@ -331,6 +370,22 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
+                return this;
+            }
+
+            /**
+             * ExpirationTime.
+             */
+            public Builder expirationTime(String expirationTime) {
+                this.expirationTime = expirationTime;
+                return this;
+            }
+
+            /**
+             * IssuanceTime.
+             */
+            public Builder issuanceTime(String issuanceTime) {
+                this.issuanceTime = issuanceTime;
                 return this;
             }
 
@@ -353,6 +408,14 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
              */
             public Builder subject(String subject) {
                 this.subject = subject;
+                return this;
+            }
+
+            /**
+             * VerificationInfo.
+             */
+            public Builder verificationInfo(String verificationInfo) {
+                this.verificationInfo = verificationInfo;
                 return this;
             }
 

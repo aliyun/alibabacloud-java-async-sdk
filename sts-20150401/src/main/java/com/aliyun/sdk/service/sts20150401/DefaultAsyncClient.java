@@ -104,9 +104,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Prerequisites
-      * - An OIDC token is obtained from an external identity provider (IdP).
-      * - An OIDC IdP is created in the RAM console. For more information, see [Create an OIDC IdP](~~327123~~) or [CreateOIDCProvider](~~327135~~).
-      * - A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
+      * *   An OIDC token is obtained from an external identity provider (IdP).
+      * *   An OIDC IdP is created in the RAM console. For more information, see [Create an OIDC IdP](~~327123~~) or [CreateOIDCProvider](~~327135~~).
+      * *   A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
       *
      */
     @Override
@@ -124,10 +124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Prerequisites
-      * - A SAML response is obtained from an external identity provider (IdP).
-      * - A SAML IdP is created in the RAM console. For more information, see [Create a SAML IdP](~~116083~~) or [CreateSAMLProvider](~~186846~~).
-      * - A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
+      * ###
+      * *   A SAML response is obtained from an external identity provider (IdP).
+      * *   A SAML IdP is created in the RAM console. For more information, see [Create a SAML IdP](~~116083~~) or [CreateSAMLProvider](~~186846~~).
+      * *   A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
       *
      */
     @Override

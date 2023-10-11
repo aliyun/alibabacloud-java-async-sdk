@@ -126,7 +126,12 @@ public class AssumeRoleRequest extends Request {
         }
 
         /**
-         * ExternalId.
+         * The external ID of the RAM role.
+         * <p>
+         * 
+         * This parameter is provided by an external party and is used to prevent the confused deputy problem.
+         * 
+         * The value must be 2 to 1,224 characters in length and can contain letters, digits, and the following special characters: `= , . @ : / - _`. The regular expression for this parameter is `[\w+=,.@:\/-]*`.
          */
         public Builder externalId(String externalId) {
             this.putQueryParameter("ExternalId", externalId);
@@ -142,6 +147,8 @@ public class AssumeRoleRequest extends Request {
          * *   If you do not specify this parameter, the returned STS token has all the permissions of the RAM role.
          * 
          * The value must be 1 to 2,048 characters in length.
+         * 
+         * For more information about policy elements and sample policies, see [Policy elements](~~93738~~) and [Overview of sample policies](~~210969~~).
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -157,7 +164,7 @@ public class AssumeRoleRequest extends Request {
          * 
          * Format: `acs:ram::<account_id>:role/<role_name>`.
          * 
-         * You can view the ARN in the RAM console or by calling operations.
+         * You can view the ARN in the RAM console or by calling operations. The following items describe the validity periods of storage addresses:
          * 
          * *   For more information about how to view the ARN in the RAM console, see [How do I find the ARN of the RAM role?](~~39744~~)
          * *   For more information about how to view the ARN by calling operations, see [ListRoles](~~28713~~) or [GetRole](~~28711~~).
@@ -174,7 +181,7 @@ public class AssumeRoleRequest extends Request {
          * 
          * Set this parameter based on your business requirements. In most cases, you can set this parameter to the identity of the API caller. For example, you can specify a username. You can specify `RoleSessionName` to identify API callers that assume the same RAM role in ActionTrail logs. This allows you to track the users that perform the operations.
          * 
-         * The value must be 2 to 64 characters in length and can contain letters, digits, periods (.), at signs (@), hyphens (-), and underscores (\_).
+         * The value must be 2 to 64 characters in length and can contain letters, digits, and the following special characters: `. @ - _`.
          */
         public Builder roleSessionName(String roleSessionName) {
             this.putQueryParameter("RoleSessionName", roleSessionName);

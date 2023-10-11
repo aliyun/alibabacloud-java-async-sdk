@@ -82,7 +82,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * The access credentials.
+         * The STS credentials.
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -260,6 +260,9 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
 
             /**
              * The STS token.
+             * <p>
+             * 
+             * > Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
