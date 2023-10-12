@@ -86,7 +86,7 @@ public class ListParametersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The information about the common parameter.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -110,7 +110,7 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListParametersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,7 @@ public class ListParametersResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * CreatedBy.
+             * The user who created the common parameter.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -298,7 +298,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the common parameter was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -306,7 +306,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the common parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +314,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The common parameter ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -322,7 +322,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the common parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +330,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * The version number of the common parameter.
              */
             public Builder parameterVersion(String parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -338,7 +338,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -346,7 +346,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the common parameter.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -354,7 +354,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags added to the common parameter.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -362,7 +362,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the common parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -370,7 +370,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the common parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -378,7 +378,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the common parameter was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

@@ -171,6 +171,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("ServiceId")
+        private String serviceId;
+
         @NameInMap("Tags")
         private java.util.Map < String, ? > tags;
 
@@ -184,6 +187,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
+            this.serviceId = builder.serviceId;
             this.tags = builder.tags;
             this.updateDate = builder.updateDate;
         }
@@ -239,6 +243,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.Map < String, ? > getTags() {
@@ -259,6 +270,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String resourceGroupId; 
+            private String serviceId; 
             private java.util.Map < String, ? > tags; 
             private String updateDate; 
 
@@ -307,6 +319,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ServiceId.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
                 return this;
             }
 

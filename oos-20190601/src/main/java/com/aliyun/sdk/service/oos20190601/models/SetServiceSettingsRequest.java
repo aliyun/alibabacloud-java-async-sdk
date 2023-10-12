@@ -138,7 +138,7 @@ public class SetServiceSettingsRequest extends Request {
         } 
 
         /**
-         * DeliveryOssBucketName.
+         * The name of OSS bucket to deliver.
          */
         public Builder deliveryOssBucketName(String deliveryOssBucketName) {
             this.putQueryParameter("DeliveryOssBucketName", deliveryOssBucketName);
@@ -147,7 +147,7 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * DeliveryOssEnabled.
+         * Whether to enable OSS delivery.
          */
         public Builder deliveryOssEnabled(Boolean deliveryOssEnabled) {
             this.putQueryParameter("DeliveryOssEnabled", deliveryOssEnabled);
@@ -156,7 +156,7 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * DeliveryOssKeyPrefix.
+         * The key prefix of OSS to deliver.
          */
         public Builder deliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
             this.putQueryParameter("DeliveryOssKeyPrefix", deliveryOssKeyPrefix);
@@ -165,7 +165,7 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * DeliverySlsEnabled.
+         * Whether to enable SLS delivery.
          */
         public Builder deliverySlsEnabled(Boolean deliverySlsEnabled) {
             this.putQueryParameter("DeliverySlsEnabled", deliverySlsEnabled);
@@ -174,7 +174,7 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * DeliverySlsProjectName.
+         * The name of SLS project to deliver.
          */
         public Builder deliverySlsProjectName(String deliverySlsProjectName) {
             this.putQueryParameter("DeliverySlsProjectName", deliverySlsProjectName);
@@ -183,7 +183,7 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * RdcEnterpriseId.
+         * The id of RDC Enterprise.
          */
         public Builder rdcEnterpriseId(String rdcEnterpriseId) {
             this.putQueryParameter("RdcEnterpriseId", rdcEnterpriseId);
@@ -192,7 +192,7 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

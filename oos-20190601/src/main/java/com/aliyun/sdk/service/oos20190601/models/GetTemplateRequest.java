@@ -83,7 +83,7 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -101,7 +101,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template. The default value is the latest version of the template.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

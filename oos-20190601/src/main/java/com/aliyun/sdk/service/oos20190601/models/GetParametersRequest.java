@@ -69,7 +69,7 @@ public class GetParametersRequest extends Request {
         } 
 
         /**
-         * Names.
+         * The names of the common parameters.
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);
@@ -78,7 +78,7 @@ public class GetParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

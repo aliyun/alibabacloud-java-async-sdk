@@ -125,7 +125,7 @@ public class UpdateApplicationRequest extends Request {
         } 
 
         /**
-         * AlarmConfig.
+         * The configurations of application alerts.
          */
         public Builder alarmConfig(AlarmConfig alarmConfig) {
             String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
@@ -135,7 +135,7 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * DeleteAlarmRulesBeforeUpdate.
+         * Specifies whether to delete existing alert rules before applying the alert template. Default value: false.
          */
         public Builder deleteAlarmRulesBeforeUpdate(Boolean deleteAlarmRulesBeforeUpdate) {
             this.putQueryParameter("DeleteAlarmRulesBeforeUpdate", deleteAlarmRulesBeforeUpdate);
@@ -238,7 +238,7 @@ public class UpdateApplicationRequest extends Request {
             private java.util.List < String > templateIds; 
 
             /**
-             * ContactGroups.
+             * The alert contact groups.
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -246,7 +246,7 @@ public class UpdateApplicationRequest extends Request {
             }
 
             /**
-             * HealthCheckUrl.
+             * The health check URL of the application.
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -254,7 +254,7 @@ public class UpdateApplicationRequest extends Request {
             }
 
             /**
-             * TemplateIds.
+             * The alert templates.
              */
             public Builder templateIds(java.util.List < String > templateIds) {
                 this.templateIds = templateIds;

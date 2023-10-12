@@ -69,7 +69,7 @@ public class CancelExecutionRequest extends Request {
         } 
 
         /**
-         * ExecutionId.
+         * The ID of the execution.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -78,7 +78,7 @@ public class CancelExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

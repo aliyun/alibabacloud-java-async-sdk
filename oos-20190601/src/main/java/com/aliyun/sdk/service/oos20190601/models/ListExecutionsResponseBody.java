@@ -683,7 +683,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTriggerOutputs.
+             * The outputs of last trigger.
              */
             public Builder lastTriggerOutputs(String lastTriggerOutputs) {
                 this.lastTriggerOutputs = lastTriggerOutputs;
@@ -699,7 +699,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTriggerStatusMessage.
+             * The status message of last trigger.
              */
             public Builder lastTriggerStatusMessage(String lastTriggerStatusMessage) {
                 this.lastTriggerStatusMessage = lastTriggerStatusMessage;

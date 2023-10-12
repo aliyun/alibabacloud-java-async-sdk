@@ -283,7 +283,7 @@ public class UpdatePatchBaselineRequest extends Request {
         }
 
         /**
-         * RejectedPatchesAction.
+         * The action of the rejected patch.
          */
         public Builder rejectedPatchesAction(String rejectedPatchesAction) {
             this.putQueryParameter("RejectedPatchesAction", rejectedPatchesAction);

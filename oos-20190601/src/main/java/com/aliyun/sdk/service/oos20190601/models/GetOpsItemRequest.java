@@ -69,7 +69,7 @@ public class GetOpsItemRequest extends Request {
         } 
 
         /**
-         * OpsItemId.
+         * The O\&M item ID.
          */
         public Builder opsItemId(String opsItemId) {
             this.putQueryParameter("OpsItemId", opsItemId);
@@ -78,7 +78,7 @@ public class GetOpsItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

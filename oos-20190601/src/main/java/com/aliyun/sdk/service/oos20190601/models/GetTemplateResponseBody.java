@@ -62,7 +62,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private Template template; 
 
         /**
-         * Content.
+         * The content of the template.
          */
         public Builder content(String content) {
             this.content = content;
@@ -70,7 +70,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * The metadata of the template.
          */
         public Builder template(Template template) {
             this.template = template;
@@ -298,7 +298,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * CreatedBy.
+             * The creator of the template.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -306,7 +306,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the template was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -314,7 +314,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -322,7 +322,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * HasTrigger.
+             * Indicates whether the template was configured with a trigger.
              */
             public Builder hasTrigger(Boolean hasTrigger) {
                 this.hasTrigger = hasTrigger;
@@ -330,7 +330,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Hash.
+             * The SHA-256 value of the template content.
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -338,7 +338,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -346,7 +346,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the template. The share type of a user-created template is **Private**.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -354,7 +354,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -362,7 +362,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateFormat.
+             * The format of the template. The system automatically determines whether the format is JSON or YAML.
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -370,7 +370,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -378,7 +378,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -386,7 +386,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the template.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -394,7 +394,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -402,7 +402,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who last updated the template.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -410,7 +410,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the template was last updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -418,7 +418,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The name of the version of the template.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

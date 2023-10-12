@@ -112,7 +112,7 @@ public class GetParametersByPathRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +121,7 @@ public class GetParametersByPathRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +130,7 @@ public class GetParametersByPathRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -139,7 +139,11 @@ public class GetParametersByPathRequest extends Request {
         }
 
         /**
-         * Recursive.
+         * Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to be returned.
+         * <p>
+         * 
+         * *   true: returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.
+         * *   false: returns only the /secretParameter/mySecretParameter parameter.
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -148,7 +152,7 @@ public class GetParametersByPathRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

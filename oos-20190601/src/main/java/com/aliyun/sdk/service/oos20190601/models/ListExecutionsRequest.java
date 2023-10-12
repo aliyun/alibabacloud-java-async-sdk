@@ -417,7 +417,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the execution.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

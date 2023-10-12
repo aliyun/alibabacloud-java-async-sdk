@@ -68,7 +68,11 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The supported natural language. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -77,7 +81,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

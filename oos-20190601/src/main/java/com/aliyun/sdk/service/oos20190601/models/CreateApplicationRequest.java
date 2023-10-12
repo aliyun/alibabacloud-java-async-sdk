@@ -38,6 +38,10 @@ public class CreateApplicationRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("ServiceId")
+    private String serviceId;
+
+    @Query
     @NameInMap("Tags")
     private java.util.Map < String, ? > tags;
 
@@ -49,6 +53,7 @@ public class CreateApplicationRequest extends Request {
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.serviceId = builder.serviceId;
         this.tags = builder.tags;
     }
 
@@ -108,6 +113,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
      * @return tags
      */
     public java.util.Map < String, ? > getTags() {
@@ -121,6 +133,7 @@ public class CreateApplicationRequest extends Request {
         private String name; 
         private String regionId; 
         private String resourceGroupId; 
+        private String serviceId; 
         private java.util.Map < String, ? > tags; 
 
         private Builder() {
@@ -135,11 +148,12 @@ public class CreateApplicationRequest extends Request {
             this.name = request.name;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.serviceId = request.serviceId;
             this.tags = request.tags;
         } 
 
         /**
-         * AlarmConfig.
+         * The configurations of application alerts.
          */
         public Builder alarmConfig(AlarmConfig alarmConfig) {
             String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
@@ -190,6 +204,15 @@ public class CreateApplicationRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.putQueryParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
             return this;
         }
 
@@ -261,7 +284,7 @@ public class CreateApplicationRequest extends Request {
             private java.util.List < String > templateIds; 
 
             /**
-             * ContactGroups.
+             * The alert contact groups.
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -269,7 +292,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * HealthCheckUrl.
+             * The health check URL of the application.
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -277,7 +300,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * TemplateIds.
+             * The alert templates.
              */
             public Builder templateIds(java.util.List < String > templateIds) {
                 this.templateIds = templateIds;

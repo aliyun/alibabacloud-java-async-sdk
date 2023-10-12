@@ -209,7 +209,7 @@ public class ListParametersRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -218,7 +218,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the common parameter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,7 +227,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -236,7 +236,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -245,7 +245,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Recursive.
+         * Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -254,7 +254,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +263,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -272,7 +272,13 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The share type of the common parameter. Valid values:
+         * <p>
+         * 
+         * *   Public
+         * *   Private
+         * 
+         * Default value: Private.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -281,7 +287,11 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * SortField.
+         * The field used to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   Name
+         * *   CreatedDate
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -290,7 +300,11 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * The order in which the entries are sorted. Valid values:
+         * <p>
+         * 
+         * *   Ascending
+         * *   Descending (Default)
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -299,7 +313,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -309,7 +323,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Type.
+         * The data type of the common parameter.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

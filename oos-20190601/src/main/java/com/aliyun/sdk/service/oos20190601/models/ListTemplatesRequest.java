@@ -429,6 +429,33 @@ public class ListTemplatesRequest extends Request {
 
         /**
          * The type of the template.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Automation
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   State
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Package
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

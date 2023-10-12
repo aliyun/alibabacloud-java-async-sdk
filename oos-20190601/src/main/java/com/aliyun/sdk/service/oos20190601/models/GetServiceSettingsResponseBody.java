@@ -50,7 +50,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         private java.util.List < ServiceSettings> serviceSettings; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceSettings.
+         * The information of service settings.
          */
         public Builder serviceSettings(java.util.List < ServiceSettings> serviceSettings) {
             this.serviceSettings = serviceSettings;
@@ -158,7 +158,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             private String rdcEnterpriseId; 
 
             /**
-             * DeliveryOssBucketName.
+             * The name of OSS bucket to deliver.
              */
             public Builder deliveryOssBucketName(String deliveryOssBucketName) {
                 this.deliveryOssBucketName = deliveryOssBucketName;
@@ -166,7 +166,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryOssEnabled.
+             * Whether to enable OSS delivery.
              */
             public Builder deliveryOssEnabled(Boolean deliveryOssEnabled) {
                 this.deliveryOssEnabled = deliveryOssEnabled;
@@ -174,7 +174,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryOssKeyPrefix.
+             * The key prefix of OSS to deliver.
              */
             public Builder deliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
                 this.deliveryOssKeyPrefix = deliveryOssKeyPrefix;
@@ -182,7 +182,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliverySlsEnabled.
+             * Whether to enable SLS delivery.
              */
             public Builder deliverySlsEnabled(Boolean deliverySlsEnabled) {
                 this.deliverySlsEnabled = deliverySlsEnabled;
@@ -190,7 +190,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliverySlsProjectName.
+             * The name of SLS project to deliver.
              */
             public Builder deliverySlsProjectName(String deliverySlsProjectName) {
                 this.deliverySlsProjectName = deliverySlsProjectName;
@@ -198,7 +198,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * RdcEnterpriseId.
+             * The id of RDC Enterprise.
              */
             public Builder rdcEnterpriseId(String rdcEnterpriseId) {
                 this.rdcEnterpriseId = rdcEnterpriseId;

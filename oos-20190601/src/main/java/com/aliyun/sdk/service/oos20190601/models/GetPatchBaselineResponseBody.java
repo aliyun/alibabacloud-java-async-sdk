@@ -451,7 +451,7 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * RejectedPatchesAction.
+             * The action of the rejected patch.
              */
             public Builder rejectedPatchesAction(String rejectedPatchesAction) {
                 this.rejectedPatchesAction = rejectedPatchesAction;

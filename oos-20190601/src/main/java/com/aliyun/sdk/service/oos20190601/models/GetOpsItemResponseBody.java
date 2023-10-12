@@ -50,7 +50,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OpsItem.
+         * The information about the O\&M item.
          */
         public Builder opsItem(OpsItem opsItem) {
             this.opsItem = opsItem;
@@ -58,7 +58,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,7 +302,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Attributes.
+             * The information about the attributes of the O\&M item.
              */
             public Builder attributes(java.util.Map < String, ? > attributes) {
                 this.attributes = attributes;
@@ -310,7 +310,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * The category of the O\&M item.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -318,7 +318,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * CreateBy.
+             * The user who created the O\&M item.
              */
             public Builder createBy(String createBy) {
                 this.createBy = createBy;
@@ -326,7 +326,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the O\&M item was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -334,7 +334,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * DedupString.
+             * The duplicated string.
              */
             public Builder dedupString(String dedupString) {
                 this.dedupString = dedupString;
@@ -342,7 +342,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,7 +350,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedBy.
+             * The user who modified the O\&M item.
              */
             public Builder lastModifiedBy(String lastModifiedBy) {
                 this.lastModifiedBy = lastModifiedBy;
@@ -358,7 +358,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * OpsItemId.
+             * The O\&M item ID.
              */
             public Builder opsItemId(String opsItemId) {
                 this.opsItemId = opsItemId;
@@ -366,7 +366,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the O\&M item.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -374,7 +374,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -382,7 +382,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * The Alibaba Cloud Resource Names (ARNs) of the associated resources.
              */
             public Builder resources(java.util.List < String > resources) {
                 this.resources = resources;
@@ -390,7 +390,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the O\&M item.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -398,7 +398,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Solutions.
+             * The solutions to the O\&M item.
              */
             public Builder solutions(java.util.List < java.util.Map<String, ?>> solutions) {
                 this.solutions = solutions;
@@ -406,7 +406,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source business of the O\&M item.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -414,7 +414,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the O\&M item.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -422,7 +422,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags attached to the O\&M item.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -430,7 +430,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the O\&M item.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -438,7 +438,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the O\&M item was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

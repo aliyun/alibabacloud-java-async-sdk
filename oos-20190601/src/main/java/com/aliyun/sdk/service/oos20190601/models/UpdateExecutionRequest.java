@@ -184,7 +184,7 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -193,7 +193,7 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the execution.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
