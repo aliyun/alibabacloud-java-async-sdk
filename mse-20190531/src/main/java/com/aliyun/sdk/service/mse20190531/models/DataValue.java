@@ -86,7 +86,7 @@ public class DataValue extends TeaModel {
         private String appId; 
 
         /**
-         * UserId.
+         * The ID of the user to which the application belongs.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -94,7 +94,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region where the application resides.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -102,7 +102,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * The microservice namespace where the application resides.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -110,7 +110,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -118,7 +118,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.appId = appId;

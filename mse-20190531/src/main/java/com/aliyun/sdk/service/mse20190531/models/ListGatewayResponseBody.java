@@ -599,6 +599,87 @@ public class ListGatewayResponseBody extends TeaModel {
         } 
 
     }
+    public static class MaintenancePeriod extends TeaModel {
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("TimeZone")
+        private String timeZone;
+
+        private MaintenancePeriod(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.timeZone = builder.timeZone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MaintenancePeriod create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+            private String timeZone; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TimeZone.
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
+                return this;
+            }
+
+            public MaintenancePeriod build() {
+                return new MaintenancePeriod(this);
+            } 
+
+        } 
+
+    }
     public static class Slb extends TeaModel {
         @NameInMap("GatewaySlbMode")
         private String gatewaySlbMode;
@@ -844,8 +925,14 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         private String latestVersion;
 
+        @NameInMap("MaintenancePeriod")
+        private MaintenancePeriod maintenancePeriod;
+
         @NameInMap("MseTag")
         private String mseTag;
+
+        @NameInMap("MseVersion")
+        private String mseVersion;
 
         @NameInMap("MustUpgrade")
         private Boolean mustUpgrade;
@@ -920,7 +1007,9 @@ public class ListGatewayResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.internetSlb = builder.internetSlb;
             this.latestVersion = builder.latestVersion;
+            this.maintenancePeriod = builder.maintenancePeriod;
             this.mseTag = builder.mseTag;
+            this.mseVersion = builder.mseVersion;
             this.mustUpgrade = builder.mustUpgrade;
             this.name = builder.name;
             this.primaryUser = builder.primaryUser;
@@ -1096,10 +1185,24 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return maintenancePeriod
+         */
+        public MaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
+        }
+
+        /**
          * @return mseTag
          */
         public String getMseTag() {
             return this.mseTag;
+        }
+
+        /**
+         * @return mseVersion
+         */
+        public String getMseVersion() {
+            return this.mseVersion;
         }
 
         /**
@@ -1243,7 +1346,9 @@ public class ListGatewayResponseBody extends TeaModel {
             private String instanceId; 
             private java.util.List < InternetSlb> internetSlb; 
             private String latestVersion; 
+            private MaintenancePeriod maintenancePeriod; 
             private String mseTag; 
+            private String mseVersion; 
             private Boolean mustUpgrade; 
             private String name; 
             private String primaryUser; 
@@ -1431,10 +1536,26 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
+             * MaintenancePeriod.
+             */
+            public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
+                this.maintenancePeriod = maintenancePeriod;
+                return this;
+            }
+
+            /**
              * The resource tag.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
+                return this;
+            }
+
+            /**
+             * MseVersion.
+             */
+            public Builder mseVersion(String mseVersion) {
+                this.mseVersion = mseVersion;
                 return this;
             }
 

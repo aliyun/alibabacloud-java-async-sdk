@@ -320,6 +320,67 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         } 
 
     }
+    public static class MaintenancePeriod extends TeaModel {
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private MaintenancePeriod(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MaintenancePeriod create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public MaintenancePeriod build() {
+                return new MaintenancePeriod(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("AclEntryList")
         private String aclEntryList;
@@ -408,6 +469,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         private String intranetPort;
 
+        @NameInMap("MaintenancePeriod")
+        private MaintenancePeriod maintenancePeriod;
+
         @NameInMap("MemoryCapacity")
         private Long memoryCapacity;
 
@@ -471,6 +535,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             this.intranetAddress = builder.intranetAddress;
             this.intranetDomain = builder.intranetDomain;
             this.intranetPort = builder.intranetPort;
+            this.maintenancePeriod = builder.maintenancePeriod;
             this.memoryCapacity = builder.memoryCapacity;
             this.mseVersion = builder.mseVersion;
             this.netType = builder.netType;
@@ -696,6 +761,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return maintenancePeriod
+         */
+        public MaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
+        }
+
+        /**
          * @return memoryCapacity
          */
         public Long getMemoryCapacity() {
@@ -802,6 +874,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String intranetAddress; 
             private String intranetDomain; 
             private String intranetPort; 
+            private MaintenancePeriod maintenancePeriod; 
             private Long memoryCapacity; 
             private String mseVersion; 
             private String netType; 
@@ -1043,6 +1116,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
              */
             public Builder intranetPort(String intranetPort) {
                 this.intranetPort = intranetPort;
+                return this;
+            }
+
+            /**
+             * MaintenancePeriod.
+             */
+            public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
+                this.maintenancePeriod = maintenancePeriod;
                 return this;
             }
 

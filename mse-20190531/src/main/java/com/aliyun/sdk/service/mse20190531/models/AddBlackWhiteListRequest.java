@@ -211,7 +211,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a whitelist.
+         * The whitelist. Default value: No.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -247,7 +247,12 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * The resource type to which the blacklist or whitelist applies.
+         * The effective scope of the blacklist or whitelist. Valid values:
+         * <p>
+         * 
+         * *   GATEWAY
+         * *   DOMAIN
+         * *   ROUTE
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

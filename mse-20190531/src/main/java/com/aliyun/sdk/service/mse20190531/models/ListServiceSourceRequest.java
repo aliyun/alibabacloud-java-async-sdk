@@ -20,10 +20,15 @@ public class ListServiceSourceRequest extends Request {
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
+    @Query
+    @NameInMap("Source")
+    private String source;
+
     private ListServiceSourceRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class ListServiceSourceRequest extends Request {
         return this.gatewayUniqueId;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<ListServiceSourceRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
+        private String source; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class ListServiceSourceRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.source = request.source;
         } 
 
         /**
@@ -86,6 +100,15 @@ public class ListServiceSourceRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

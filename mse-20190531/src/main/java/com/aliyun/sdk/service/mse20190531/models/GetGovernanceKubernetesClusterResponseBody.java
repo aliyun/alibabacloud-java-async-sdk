@@ -154,7 +154,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * MseNamespace.
+             * The name of the MSE namespace that you want to access.
              */
             public Builder mseNamespace(String mseNamespace) {
                 this.mseNamespace = mseNamespace;
@@ -162,7 +162,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * The name of the namespace in the ACK cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +327,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ack-onepilot component was started.
+             * The time when the pilot component was started.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;

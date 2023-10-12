@@ -256,7 +256,11 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         } 
 
         /**
-         * The language in which the returned results are displayed. Valid values: zh-CN and en-US. The default value is zh-CN, which indicates Chinese. en-US indicates English.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

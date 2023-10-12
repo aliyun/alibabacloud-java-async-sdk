@@ -86,7 +86,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * The data of the tag.
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;

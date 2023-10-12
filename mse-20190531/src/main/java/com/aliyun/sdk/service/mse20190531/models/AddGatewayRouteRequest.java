@@ -291,50 +291,14 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The destination service type.
+         * The type of the destination service. Valid values:
          * <p>
          * 
-         * Enumeration values:
-         * 
-         * *   VersionOriented
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Multiple
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
          * *   Single
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Mock\"\"
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
+         * *   Multiple
+         * *   VersionOriented
+         * *   Mock
          * *   Redirect
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -362,7 +326,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The list of domain IDs.
+         * The domain IDs.
          */
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);

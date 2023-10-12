@@ -142,7 +142,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -329,7 +329,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String routeName; 
 
             /**
-             * The ID of the consumer.
+             * The consumer ID.
              */
             public Builder consumerId(Long consumerId) {
                 this.consumerId = consumerId;
@@ -345,7 +345,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the resource associated with the consumer authentication record was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -353,7 +353,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * The time when the resource associated with the consumer authentication record was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -369,11 +369,11 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource authorization status. Valid values:
+             * The resource authorization state. Valid values:
              * <p>
              * 
-             * *   true: enabled
-             * *   false: disabled
+             * *   true: Resource authorization is enabled.
+             * *   false: Resource authorization is disabled.
              */
             public Builder resourceStatus(Boolean resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -674,7 +674,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the consumer authentication record was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -682,7 +682,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The time when the consumer authentication record was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;

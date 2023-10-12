@@ -532,7 +532,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the protocol. Valid values:
+             * The protocol type.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -572,7 +572,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * The service ID.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -580,7 +580,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of a service.
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -588,7 +588,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * The port number of the service.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -596,7 +596,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * The source type of the service.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -604,7 +604,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of a service.
+             * The service version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -693,7 +693,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String targetServiceName; 
 
             /**
-             * Percentage.
+             * 流量复制比例（%），取值0-100。
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -701,7 +701,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * 目标服务端口。
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -709,7 +709,11 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * 开启状态，取值：
+             * <p>
+             * 
+             * - on：开启
+             * - off：关闭
              */
             public Builder status(String status) {
                 this.status = status;
@@ -717,7 +721,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetServiceId.
+             * 目标服务ID。
              */
             public Builder targetServiceId(Long targetServiceId) {
                 this.targetServiceId = targetServiceId;
@@ -725,7 +729,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetServiceName.
+             * 目标服务名称。
              */
             public Builder targetServiceName(String targetServiceName) {
                 this.targetServiceName = targetServiceName;
@@ -959,7 +963,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type.
+             * The type of the operation.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -1283,7 +1287,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * The route type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1437,7 +1441,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the parameter.
+             * The parameter name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1445,7 +1449,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * The route type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1703,7 +1707,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the protocol. Valid values:
+             * The protocol type.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1711,7 +1715,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which a service belongs.
+             * The name of the group to which the service belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1719,7 +1723,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of a service.
+             * The service name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1743,7 +1747,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of a service.
+             * The service ID.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1751,7 +1755,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of a service.
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1759,7 +1763,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * The port number of the service.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -1767,7 +1771,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of a service.
+             * The source type of the service.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1775,7 +1779,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of a service.
+             * The service version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2373,7 +2377,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FlowMirror.
+             * 流量镜像配置。
              */
             public Builder flowMirror(FlowMirror flowMirror) {
                 this.flowMirror = flowMirror;
@@ -2445,7 +2449,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Policies.
+             * The routing policy in a JSON string.
              */
             public Builder policies(String policies) {
                 this.policies = policies;

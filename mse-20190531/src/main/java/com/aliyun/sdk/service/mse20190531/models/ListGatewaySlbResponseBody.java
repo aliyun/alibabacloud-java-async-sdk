@@ -296,6 +296,9 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("SlbPort")
         private String slbPort;
 
+        @NameInMap("SlbType")
+        private String slbType;
+
         @NameInMap("StatusDesc")
         private String statusDesc;
 
@@ -325,6 +328,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             this.slbId = builder.slbId;
             this.slbIp = builder.slbIp;
             this.slbPort = builder.slbPort;
+            this.slbType = builder.slbType;
             this.statusDesc = builder.statusDesc;
             this.type = builder.type;
             this.vServerGroupId = builder.vServerGroupId;
@@ -432,6 +436,13 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
+         * @return slbType
+         */
+        public String getSlbType() {
+            return this.slbType;
+        }
+
+        /**
          * @return statusDesc
          */
         public String getStatusDesc() {
@@ -480,6 +491,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String slbId; 
             private String slbIp; 
             private String slbPort; 
+            private String slbType; 
             private String statusDesc; 
             private String type; 
             private String vServerGroupId; 
@@ -587,6 +599,14 @@ public class ListGatewaySlbResponseBody extends TeaModel {
              */
             public Builder slbPort(String slbPort) {
                 this.slbPort = slbPort;
+                return this;
+            }
+
+            /**
+             * SlbType.
+             */
+            public Builder slbType(String slbType) {
+                this.slbType = slbType;
                 return this;
             }
 

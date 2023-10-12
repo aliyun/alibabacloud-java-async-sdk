@@ -155,7 +155,7 @@ public class GetApplicationInstanceListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -164,7 +164,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -173,7 +173,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -182,7 +182,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The Microservices Engine (MSE) namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -191,7 +191,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +200,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -209,7 +209,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -218,7 +218,7 @@ public class GetApplicationInstanceListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that you want to add to nodes.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

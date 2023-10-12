@@ -332,32 +332,24 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled.
+             * Indicates whether the rule was enabled.
              * <p>
              * 
-             * Valid values:
+             * Valid value:
              * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
+             * *   true
              * 
              *     <!-- -->
              * 
-             *     enabled
+             *     <!-- -->
              * 
              *     <!-- -->
              * 
-             * *   1
+             * *   false
              * 
              *     <!-- -->
              * 
-             *     :
-             * 
              *     <!-- -->
-             * 
-             *     disabled
              * 
              *     <!-- -->
              */

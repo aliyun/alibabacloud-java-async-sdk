@@ -86,7 +86,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional request information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
          */
         public Builder success(Boolean success) {
             this.success = success;

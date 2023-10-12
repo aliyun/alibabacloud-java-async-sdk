@@ -174,7 +174,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * AuthResourceHeaderList.
+         * The authentication resource headers.
          */
         public Builder authResourceHeaderList(java.util.List < AuthResourceHeaderList> authResourceHeaderList) {
             String authResourceHeaderListShrink = shrink(authResourceHeaderList, "AuthResourceHeaderList", "json");
@@ -202,7 +202,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * IgnoreCase.
+         * Specifies whether the matching is not case-sensitive. Default value: true.
          */
         public Builder ignoreCase(Boolean ignoreCase) {
             this.putQueryParameter("IgnoreCase", ignoreCase);
@@ -211,12 +211,12 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The matching type.
+         * The matching type. Valid values:
          * <p>
          * 
-         * *   exact: exact matching
-         * *   prefix: prefix matching
-         * *   regex: regular expression matching
+         * *   EQUAL
+         * *   PRE
+         * *   ERGULAR
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -291,7 +291,7 @@ public class AddAuthResourceRequest extends Request {
             private String headerValue; 
 
             /**
-             * HeaderKey.
+             * The parameter of the HTTP header.
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;
@@ -299,7 +299,82 @@ public class AddAuthResourceRequest extends Request {
             }
 
             /**
-             * HeaderMethod.
+             * The header matching mode.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SUFFIX
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   EXIST
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PREFIX
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   EQUAL
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   EXCLUDE
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NOT_EQUAL
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NOT_EXIST
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   REGREX
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   INCLUDE
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder headerMethod(String headerMethod) {
                 this.headerMethod = headerMethod;
@@ -307,7 +382,7 @@ public class AddAuthResourceRequest extends Request {
             }
 
             /**
-             * HeaderValue.
+             * The parameter value of the HTTP header.
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;

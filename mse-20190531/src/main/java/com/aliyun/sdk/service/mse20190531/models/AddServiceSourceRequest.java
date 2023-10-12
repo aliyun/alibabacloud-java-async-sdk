@@ -240,7 +240,7 @@ public class AddServiceSourceRequest extends Request {
          * The service source.
          * <p>
          * 
-         * *   K8S: ACK cluster
+         * *   K8s: ACK cluster
          * *   NACOS: MSE Nacos instance
          */
         public Builder source(String source) {
@@ -253,7 +253,7 @@ public class AddServiceSourceRequest extends Request {
          * The type of the service source.
          * <p>
          * 
-         * *   K8S: Container Service for Kubernetes (ACK) cluster
+         * *   K8s: Container Service for Kubernetes (ACK) cluster
          * *   NACOS: Nacos instance
          */
         public Builder type(String type) {

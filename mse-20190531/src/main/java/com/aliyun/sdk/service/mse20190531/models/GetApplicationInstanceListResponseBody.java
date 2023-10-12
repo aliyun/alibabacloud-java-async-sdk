@@ -38,7 +38,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         private Data data; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Tag.
+             * 标签值。
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -143,7 +143,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * Ip.
+             * The node IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -151,7 +151,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The application port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -159,7 +159,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The node tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -236,7 +236,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The page number. Pages start from page 1.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -244,7 +244,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -252,7 +252,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The queried nodes.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -260,7 +260,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of nodes.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

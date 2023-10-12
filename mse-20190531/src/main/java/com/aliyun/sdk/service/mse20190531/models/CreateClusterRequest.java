@@ -470,7 +470,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The disk type. Valid values:
+         * The type of the disk. Valid values:
          * <p>
          * 
          * *   alicloud-disk-ssd
@@ -483,7 +483,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ConnectionType为`single_eni`时有效，表示是否开启公网访问（弹性公网IP）
+         * Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.
          */
         public Builder eipEnabled(Boolean eipEnabled) {
             this.putQueryParameter("EipEnabled", eipEnabled);
@@ -510,7 +510,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * The name of the MSE instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -519,11 +519,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Set this parameter unless otherwise specified. Valid values:
+         * Configure this parameter unless otherwise specified. Valid values:
          * <p>
          * 
          * *   `mse_pro`: Professional Edition
-         * *   `mse_dev`: Developer Edition
+         * *   `mse_dev`: Developer Edition.
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -558,9 +558,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The public bandwidth. Unit: Mbit/s.\
+         * The public bandwidth. Unit: Mbit/s. This parameter is required.\
          * <p>
-         * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
+         * Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
          */
         public Builder pubNetworkFlow(String pubNetworkFlow) {
             this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
@@ -616,7 +616,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ConnectionType为`single_eni`时有效，表示实例所在的安全组类型
+         * The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   enterprise
+         * *   normal
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);

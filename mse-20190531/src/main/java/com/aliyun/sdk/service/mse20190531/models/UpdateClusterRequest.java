@@ -25,6 +25,14 @@ public class UpdateClusterRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MaintenanceEndTime")
+    private String maintenanceEndTime;
+
+    @Query
+    @NameInMap("MaintenanceStartTime")
+    private String maintenanceStartTime;
+
+    @Query
     @NameInMap("RequestPars")
     private String requestPars;
 
@@ -33,6 +41,8 @@ public class UpdateClusterRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterAliasName = builder.clusterAliasName;
         this.instanceId = builder.instanceId;
+        this.maintenanceEndTime = builder.maintenanceEndTime;
+        this.maintenanceStartTime = builder.maintenanceStartTime;
         this.requestPars = builder.requestPars;
     }
 
@@ -71,6 +81,20 @@ public class UpdateClusterRequest extends Request {
     }
 
     /**
+     * @return maintenanceEndTime
+     */
+    public String getMaintenanceEndTime() {
+        return this.maintenanceEndTime;
+    }
+
+    /**
+     * @return maintenanceStartTime
+     */
+    public String getMaintenanceStartTime() {
+        return this.maintenanceStartTime;
+    }
+
+    /**
      * @return requestPars
      */
     public String getRequestPars() {
@@ -81,6 +105,8 @@ public class UpdateClusterRequest extends Request {
         private String acceptLanguage; 
         private String clusterAliasName; 
         private String instanceId; 
+        private String maintenanceEndTime; 
+        private String maintenanceStartTime; 
         private String requestPars; 
 
         private Builder() {
@@ -92,6 +118,8 @@ public class UpdateClusterRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterAliasName = request.clusterAliasName;
             this.instanceId = request.instanceId;
+            this.maintenanceEndTime = request.maintenanceEndTime;
+            this.maintenanceStartTime = request.maintenanceStartTime;
             this.requestPars = request.requestPars;
         } 
 
@@ -123,6 +151,24 @@ public class UpdateClusterRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaintenanceEndTime.
+         */
+        public Builder maintenanceEndTime(String maintenanceEndTime) {
+            this.putQueryParameter("MaintenanceEndTime", maintenanceEndTime);
+            this.maintenanceEndTime = maintenanceEndTime;
+            return this;
+        }
+
+        /**
+         * MaintenanceStartTime.
+         */
+        public Builder maintenanceStartTime(String maintenanceStartTime) {
+            this.putQueryParameter("MaintenanceStartTime", maintenanceStartTime);
+            this.maintenanceStartTime = maintenanceStartTime;
             return this;
         }
 

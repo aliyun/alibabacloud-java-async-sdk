@@ -86,7 +86,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,26 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +285,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -274,7 +293,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -282,7 +301,34 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ControlBehavior.
+             * The throttling effect.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     fast failure
+             * 
+             *     <!-- -->
+             * 
+             * *   2
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     in queue
+             * 
+             *     <!-- -->
              */
             public Builder controlBehavior(Integer controlBehavior) {
                 this.controlBehavior = controlBehavior;
@@ -290,7 +336,26 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the rule is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -298,7 +363,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ID。
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -306,7 +371,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueueingTimeMs.
+             * The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.
              */
             public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
                 this.maxQueueingTimeMs = maxQueueingTimeMs;
@@ -314,7 +379,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -322,7 +387,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -330,7 +395,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the API resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -338,7 +403,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * The throttling threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

@@ -98,7 +98,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -107,7 +107,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the lane group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -116,7 +116,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the MSE namespace that you want to query.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -125,7 +125,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag based on which you want to list applications.
          */
         public Builder tags(java.util.List < String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

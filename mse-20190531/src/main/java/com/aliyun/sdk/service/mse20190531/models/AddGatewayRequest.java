@@ -41,8 +41,16 @@ public class AddGatewayRequest extends Request {
     private String internetSlbSpec;
 
     @Query
+    @NameInMap("MserVersion")
+    private String mserVersion;
+
+    @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("NlbNetworkType")
+    private String nlbNetworkType;
 
     @Query
     @NameInMap("Region")
@@ -51,7 +59,6 @@ public class AddGatewayRequest extends Request {
 
     @Query
     @NameInMap("Replica")
-    @Validation(required = true)
     private Integer replica;
 
     @Query
@@ -68,7 +75,6 @@ public class AddGatewayRequest extends Request {
 
     @Query
     @NameInMap("Spec")
-    @Validation(required = true)
     private String spec;
 
     @Query
@@ -105,7 +111,9 @@ public class AddGatewayRequest extends Request {
         this.enableXtrace = builder.enableXtrace;
         this.enterpriseSecurityGroup = builder.enterpriseSecurityGroup;
         this.internetSlbSpec = builder.internetSlbSpec;
+        this.mserVersion = builder.mserVersion;
         this.name = builder.name;
+        this.nlbNetworkType = builder.nlbNetworkType;
         this.region = builder.region;
         this.replica = builder.replica;
         this.requestPars = builder.requestPars;
@@ -183,10 +191,24 @@ public class AddGatewayRequest extends Request {
     }
 
     /**
+     * @return mserVersion
+     */
+    public String getMserVersion() {
+        return this.mserVersion;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return nlbNetworkType
+     */
+    public String getNlbNetworkType() {
+        return this.nlbNetworkType;
     }
 
     /**
@@ -281,7 +303,9 @@ public class AddGatewayRequest extends Request {
         private Boolean enableXtrace; 
         private Boolean enterpriseSecurityGroup; 
         private String internetSlbSpec; 
+        private String mserVersion; 
         private String name; 
+        private String nlbNetworkType; 
         private String region; 
         private Integer replica; 
         private String requestPars; 
@@ -308,7 +332,9 @@ public class AddGatewayRequest extends Request {
             this.enableXtrace = request.enableXtrace;
             this.enterpriseSecurityGroup = request.enterpriseSecurityGroup;
             this.internetSlbSpec = request.internetSlbSpec;
+            this.mserVersion = request.mserVersion;
             this.name = request.name;
+            this.nlbNetworkType = request.nlbNetworkType;
             this.region = request.region;
             this.replica = request.replica;
             this.requestPars = request.requestPars;
@@ -418,11 +444,36 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
+         * 网关产品类型：
+         * <p>
+         * - mse_pro：传统实例
+         * - mse_serverless：Serverless
+         */
+        public Builder mserVersion(String mserVersion) {
+            this.putQueryParameter("MserVersion", mserVersion);
+            this.mserVersion = mserVersion;
+            return this;
+        }
+
+        /**
          * The ID of the region.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * 购买Serverless实例时指定NLB的网络类型：
+         * <p>
+         * - pubnet：公网
+         * - privatenet：私网
+         * - privatepubnet：公网+私网
+         */
+        public Builder nlbNetworkType(String nlbNetworkType) {
+            this.putQueryParameter("NlbNetworkType", nlbNetworkType);
+            this.nlbNetworkType = nlbNetworkType;
             return this;
         }
 
@@ -483,7 +534,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
+         * <p>
+         * 
+         * *   slb.s1.small
+         * *   slb.s2.small
+         * *   slb.s2.medium
+         * *   slb.s3.small
+         * *   slb.s3.medium
+         * *   slb.s3.large
          */
         public Builder slbSpec(String slbSpec) {
             this.putQueryParameter("SlbSpec", slbSpec);
