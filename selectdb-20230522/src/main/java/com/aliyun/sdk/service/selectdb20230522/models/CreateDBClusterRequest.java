@@ -53,6 +53,10 @@ public class CreateDBClusterRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
     @NameInMap("StorageSize")
     private String storageSize;
 
@@ -84,6 +88,7 @@ public class CreateDBClusterRequest extends Request {
         this.period = builder.period;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.storageSize = builder.storageSize;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
@@ -175,6 +180,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return storageSize
      */
     public String getStorageSize() {
@@ -220,6 +232,7 @@ public class CreateDBClusterRequest extends Request {
         private String period; 
         private String regionId; 
         private String resourceGroupId; 
+        private Long resourceOwnerId; 
         private String storageSize; 
         private String usedTime; 
         private String vSwitchId; 
@@ -242,6 +255,7 @@ public class CreateDBClusterRequest extends Request {
             this.period = request.period;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.storageSize = request.storageSize;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
@@ -336,6 +350,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

@@ -32,12 +32,17 @@ public class ResetAccountPasswordRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private ResetAccountPasswordRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
         this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -81,11 +86,19 @@ public class ResetAccountPasswordRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<ResetAccountPasswordRequest, Builder> {
         private String accountName; 
         private String accountPassword; 
         private String DBInstanceId; 
         private String regionId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -97,6 +110,7 @@ public class ResetAccountPasswordRequest extends Request {
             this.accountPassword = request.accountPassword;
             this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -132,6 +146,15 @@ public class ResetAccountPasswordRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

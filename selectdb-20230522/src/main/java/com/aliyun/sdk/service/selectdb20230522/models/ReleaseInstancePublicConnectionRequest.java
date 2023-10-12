@@ -27,11 +27,16 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private ReleaseInstancePublicConnectionRequest(Builder builder) {
         super(builder);
         this.connectionString = builder.connectionString;
         this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -68,10 +73,18 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<ReleaseInstancePublicConnectionRequest, Builder> {
         private String connectionString; 
         private String DBInstanceId; 
         private String regionId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -82,6 +95,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
             this.connectionString = request.connectionString;
             this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -108,6 +122,15 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

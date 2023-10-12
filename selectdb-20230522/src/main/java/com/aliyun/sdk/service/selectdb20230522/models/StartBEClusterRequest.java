@@ -24,11 +24,16 @@ public class StartBEClusterRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private StartBEClusterRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class StartBEClusterRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<StartBEClusterRequest, Builder> {
         private String DBClusterId; 
         private String DBInstanceId; 
         private String regionId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class StartBEClusterRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class StartBEClusterRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

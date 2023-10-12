@@ -28,12 +28,17 @@ public class DeleteDBClusterRequest extends Request {
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private DeleteDBClusterRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class DeleteDBClusterRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDBClusterRequest, Builder> {
         private String DBClusterId; 
         private String DBInstanceId; 
         private String regionId; 
         private String resourceGroupId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class DeleteDBClusterRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class DeleteDBClusterRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
