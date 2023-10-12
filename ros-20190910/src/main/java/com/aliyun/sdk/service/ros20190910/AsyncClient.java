@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateChangeSetResponse> createChangeSet(CreateChangeSetRequest request);
 
+    CompletableFuture<CreateDiagnosticResponse> createDiagnostic(CreateDiagnosticRequest request);
+
     /**
       * A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).\\
       * When you call the operation, take note of the following limits:
@@ -93,6 +95,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteChangeSetResponse> deleteChangeSet(DeleteChangeSetRequest request);
+
+    CompletableFuture<DeleteDiagnosticResponse> deleteDiagnostic(DeleteDiagnosticRequest request);
 
     CompletableFuture<DeleteStackResponse> deleteStack(DeleteStackRequest request);
 
@@ -163,6 +167,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GetChangeSetResponse> getChangeSet(GetChangeSetRequest request);
+
+    CompletableFuture<GetDiagnosticResponse> getDiagnostic(GetDiagnosticRequest request);
 
     /**
       * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
@@ -312,6 +318,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTemplateSummaryResponse> getTemplateSummary(GetTemplateSummaryRequest request);
 
     CompletableFuture<ListChangeSetsResponse> listChangeSets(ListChangeSetsRequest request);
+
+    CompletableFuture<ListDiagnosticsResponse> listDiagnostics(ListDiagnosticsRequest request);
 
     CompletableFuture<ListResourceTypeRegistrationsResponse> listResourceTypeRegistrations(ListResourceTypeRegistrationsRequest request);
 
