@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsProductInstanceResponseBody</p>
  */
 public class DescribeDnsProductInstanceResponseBody extends TeaModel {
+    @NameInMap("AutoRenewal")
+    private Boolean autoRenewal;
+
     @NameInMap("BindCount")
     private Long bindCount;
 
@@ -118,6 +121,7 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     private String versionName;
 
     private DescribeDnsProductInstanceResponseBody(Builder builder) {
+        this.autoRenewal = builder.autoRenewal;
         this.bindCount = builder.bindCount;
         this.bindDomainCount = builder.bindDomainCount;
         this.bindDomainUsedCount = builder.bindDomainUsedCount;
@@ -161,6 +165,13 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
 
     public static DescribeDnsProductInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return autoRenewal
+     */
+    public Boolean getAutoRenewal() {
+        return this.autoRenewal;
     }
 
     /**
@@ -409,6 +420,7 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean autoRenewal; 
         private Long bindCount; 
         private Long bindDomainCount; 
         private Long bindDomainUsedCount; 
@@ -444,6 +456,14 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         private Long URLForwardCount; 
         private String versionCode; 
         private String versionName; 
+
+        /**
+         * AutoRenewal.
+         */
+        public Builder autoRenewal(Boolean autoRenewal) {
+            this.autoRenewal = autoRenewal;
+            return this;
+        }
 
         /**
          * The number of times that you can change the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.
