@@ -320,7 +320,7 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The timeout period of connection draining. Unit: seconds. Valid values: **10** to **900**.
+         * The timeout period of connection draining. Unit: seconds. Valid values: **0** to **900**.
          */
         public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
             this.putBodyParameter("ConnectionDrainTimeout", connectionDrainTimeout);
