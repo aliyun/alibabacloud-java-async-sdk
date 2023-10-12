@@ -54,6 +54,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     private Boolean enableMesh;
 
     @Query
+    @NameInMap("MSEEnabled")
+    private Boolean MSEEnabled;
+
+    @Query
     @NameInMap("MonitorEnabled")
     private Boolean monitorEnabled;
 
@@ -93,6 +97,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.clusterId = builder.clusterId;
         this.deletionProtection = builder.deletionProtection;
         this.enableMesh = builder.enableMesh;
+        this.MSEEnabled = builder.MSEEnabled;
         this.monitorEnabled = builder.monitorEnabled;
         this.name = builder.name;
         this.priceLimit = builder.priceLimit;
@@ -186,6 +191,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     /**
+     * @return MSEEnabled
+     */
+    public Boolean getMSEEnabled() {
+        return this.MSEEnabled;
+    }
+
+    /**
      * @return monitorEnabled
      */
     public Boolean getMonitorEnabled() {
@@ -245,6 +257,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private String clusterId; 
         private Boolean deletionProtection; 
         private Boolean enableMesh; 
+        private Boolean MSEEnabled; 
         private Boolean monitorEnabled; 
         private String name; 
         private String priceLimit; 
@@ -269,6 +282,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.clusterId = request.clusterId;
             this.deletionProtection = request.deletionProtection;
             this.enableMesh = request.enableMesh;
+            this.MSEEnabled = request.MSEEnabled;
             this.monitorEnabled = request.monitorEnabled;
             this.name = request.name;
             this.priceLimit = request.priceLimit;
@@ -279,7 +293,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         } 
 
         /**
-         * AccessControlList.
+         * The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.
          */
         public Builder accessControlList(java.util.List < String > accessControlList) {
             String accessControlListShrink = shrink(accessControlList, "AccessControlList", "json");
@@ -298,7 +312,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * ArgoCDEnabled.
+         * Specifies whether to enable Argo CD. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder argoCDEnabled(Boolean argoCDEnabled) {
             this.putQueryParameter("ArgoCDEnabled", argoCDEnabled);
@@ -307,7 +325,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * ArgoCDHAEnabled.
+         * Specifies whether to enable high availability for Argo CD. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder argoCDHAEnabled(Boolean argoCDHAEnabled) {
             this.putQueryParameter("ArgoCDHAEnabled", argoCDHAEnabled);
@@ -316,7 +338,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * ArgoEventsEnabled.
+         * Specifies whether to enable ArgoEvents. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder argoEventsEnabled(Boolean argoEventsEnabled) {
             this.putQueryParameter("ArgoEventsEnabled", argoEventsEnabled);
@@ -325,7 +351,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * ArgoServerEnabled.
+         * Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder argoServerEnabled(Boolean argoServerEnabled) {
             this.putQueryParameter("ArgoServerEnabled", argoServerEnabled);
@@ -347,7 +377,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -356,11 +386,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable deletion protection for the cluster. After you enable deletion protection, you cannot delete the master instance in the console or by calling the DeleteHubCluster operation. Valid values:
+         * Specifies whether to enable the deletion protection feature for the cluster. After you enable the deletion protection feature for the cluster, you cannot delete the cluster in the console or by calling the DeleteHubCluster operation. Valid values:
          * <p>
          * 
-         * *   true: enables deletion protection for the cluster.
-         * *   false: disables deletion protection for the cluster. This is the default value.
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -369,10 +401,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Alibaba Cloud Service Mesh (ASM). Valid values:
+         * Specifies whether to enable Service Mesh (ASM). Valid values:
          * <p>
          * 
-         * true: enables ASM. false: disables ASM.
+         * *   true
+         * *   false
          */
         public Builder enableMesh(Boolean enableMesh) {
             this.putQueryParameter("EnableMesh", enableMesh);
@@ -381,7 +414,20 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * MonitorEnabled.
+         * MSEEnabled.
+         */
+        public Builder MSEEnabled(Boolean MSEEnabled) {
+            this.putQueryParameter("MSEEnabled", MSEEnabled);
+            this.MSEEnabled = MSEEnabled;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable the monitoring dashboard feature for the workflow instance. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder monitorEnabled(Boolean monitorEnabled) {
             this.putQueryParameter("MonitorEnabled", monitorEnabled);
@@ -390,7 +436,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
+         * The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -408,7 +454,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * PublicAccessEnabled.
+         * Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
             this.putQueryParameter("PublicAccessEnabled", publicAccessEnabled);
@@ -420,7 +470,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
          * Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:
          * <p>
          * 
-         * *   true: associates an EIP with the API server. You can specify the ApiServerEipId parameter. If you do not specify the ApiServerEipId parameter, the system automatically creates an EIP.
+         * *   true: associates an EIP with the API server. You can specify ApiServerEipId. If you do not specify ApiServerEipId, the system automatically creates an EIP.
          * *   false: disassociates an EIP from the API server.
          */
         public Builder publicApiServerEnabled(Boolean publicApiServerEnabled) {
@@ -430,7 +480,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * VSwitches.
+         * The vSwitches.
          */
         public Builder vSwitches(java.util.List < String > vSwitches) {
             String vSwitchesShrink = shrink(vSwitches, "VSwitches", "json");
@@ -440,7 +490,11 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * WorkflowScheduleMode.
+         * The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   cost-optimized: cost-prioritized scheduling mode.
+         * *   stock-optimized: inventory-prioritized scheduling mode.
          */
         public Builder workflowScheduleMode(String workflowScheduleMode) {
             this.putQueryParameter("WorkflowScheduleMode", workflowScheduleMode);

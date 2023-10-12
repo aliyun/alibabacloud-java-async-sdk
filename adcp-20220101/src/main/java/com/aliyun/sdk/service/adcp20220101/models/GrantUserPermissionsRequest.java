@@ -69,7 +69,7 @@ public class GrantUserPermissionsRequest extends Request {
         } 
 
         /**
-         * Permissions.
+         * The list of permissions that you want to grant to the RAM user.
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");
@@ -79,7 +79,7 @@ public class GrantUserPermissionsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the RAM user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -171,7 +171,10 @@ public class GrantUserPermissionsRequest extends Request {
             private String roleType; 
 
             /**
-             * ClusterId.
+             * The master instance ID.
+             * <p>
+             * 
+             * *   When the role_type parameter is set to all-clusters, set the parameter to an empty string.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -187,7 +190,7 @@ public class GrantUserPermissionsRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the permissions are scoped. By default, this parameter is empty when you set RoleType to cluster.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -195,7 +198,11 @@ public class GrantUserPermissionsRequest extends Request {
             }
 
             /**
-             * RoleName.
+             * The predefined role that you want to assign. Valid values:
+             * <p>
+             * 
+             * *   admin: the administrator role.
+             * *   dev: the developer role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -203,7 +210,12 @@ public class GrantUserPermissionsRequest extends Request {
             }
 
             /**
-             * RoleType.
+             * The authorization type. Valid values:
+             * <p>
+             * 
+             * *   cluster: specifies that the permissions are scoped to a master instance.
+             * *   namespace: specifies that the permissions are scoped to a namespace of a cluster.
+             * *   all-clusters: specifies that the permissions are scoped to all master instances.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
