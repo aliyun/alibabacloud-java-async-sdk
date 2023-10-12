@@ -45,6 +45,9 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     @NameInMap("SilenceTime")
     private Integer silenceTime;
 
+    @NameInMap("State")
+    private String state;
+
     @NameInMap("TaskId")
     private String taskId;
 
@@ -63,6 +66,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.silenceTime = builder.silenceTime;
+        this.state = builder.state;
         this.taskId = builder.taskId;
         this.taskName = builder.taskName;
     }
@@ -153,6 +157,13 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     }
 
     /**
+     * @return state
+     */
+    public String getState() {
+        return this.state;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -178,6 +189,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer silenceTime; 
+        private String state; 
         private String taskId; 
         private String taskName; 
 
@@ -278,6 +290,25 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
          */
         public Builder silenceTime(Integer silenceTime) {
             this.silenceTime = silenceTime;
+            return this;
+        }
+
+        /**
+         * The state of the application monitor task. Valid values:
+         * <p>
+         * 
+         * - **init**
+         * 
+         * - **active**
+         * 
+         * - **updating**
+         * 
+         * - **inactive**
+         * 
+         * - **deleting**
+         */
+        public Builder state(String state) {
+            this.state = state;
             return this;
         }
 

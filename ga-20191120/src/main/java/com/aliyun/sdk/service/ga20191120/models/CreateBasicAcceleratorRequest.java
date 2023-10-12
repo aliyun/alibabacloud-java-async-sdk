@@ -306,10 +306,11 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * The billing method of the basic GA instance. Valid values:
+         * The billing method. Valid values:
          * <p>
-         * - **PREPAY**: subscription. This is the default value.
-         * - **POSTPAY**: pay-as-you-go.
+         * 
+         * *   **PREPAY** (default)
+         * *   **POSTPAY**
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -348,8 +349,8 @@ public class CreateBasicAcceleratorRequest extends Request {
          * The subscription duration of the GA instance.
          * <p>
          * 
-         * *   If you set the **PricingCycle** parameter to **Month**, the valid values for the **Duration** parameter are **1** to **9**.
-         * *   If you set the **PricingCycle** parameter to **Year**, the valid values for the **Duration** parameter are **1** to **3**.
+         * *   If you set **PricingCycle** to **Month**, the valid values for **Duration** are **1** to **9**.
+         * *   If you set **PricingCycle** to **Year**, the valid values for **Duration** are **1** to **3**.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -358,11 +359,11 @@ public class CreateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * The billing cycle of the basic GA instance. Valid values:
+         * The billing cycle. Valid values:
          * <p>
          * 
-         * *   **Month:** billed on a monthly basis.
-         * *   **Year:** billed on an annual basis.
+         * *   **Month**
+         * *   **Year**
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -455,10 +456,10 @@ public class CreateBasicAcceleratorRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the basic GA instance. The tag key cannot be an empty string.
+             * The tag key. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              * 
              * You can specify up to 20 tag keys.
              */
@@ -468,10 +469,10 @@ public class CreateBasicAcceleratorRequest extends Request {
             }
 
             /**
-             * The tag value of the basic GA instance. The tag value cannot be an empty string.
+             * The tag value. The tag value cannot be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              * 
              * You can specify up to 20 tag values.
              */

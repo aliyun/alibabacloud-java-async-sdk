@@ -86,7 +86,7 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Information about the endpoints.
+         * The information about the endpoints.
          */
         public Builder endpoints(java.util.List < Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -182,14 +182,15 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * 托管策略动作名称，取值：
+             * The name of the action performed on the managed instance. Valid values:
              * <p>
-             * - **Create**：创建实例。
-             * - **Update**：更新当前实例。
-             * - **Delete**：删除当前实例。
-             * - **Associate**：引用/被引用当前实例。
-             * - **UserUnmanaged**：用户解托管实例。
-             * - **CreateChild**：在当前实例下创建子资源。
+             * 
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -197,24 +198,18 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 子资源类型，取值：
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - **Listener**：监听资源。
+             * *   **Listener**: listener
+             * *   **IpSet**: acceleration region
+             * *   **EndpointGroup**: endpoint group
+             * *   **ForwardingRule**: forwarding rule
+             * *   **Endpoint**: endpoint
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
              * 
-             * - **IpSet**：加速地域资源。
-             * 
-             * - **EndpointGroup**：终端节点组资源。
-             * 
-             * - **ForwardingRule**：转发策略资源。
-             * 
-             * - **Endpoint**：终端节点资源。
-             * 
-             * - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
-             * 
-             * - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
-             * 
-             * > 仅在**Action**参数为**CreateChild**时有效。
+             * >  This parameter is valid only if **Action** is set to **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -222,10 +217,11 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 托管策略动作是否被托管，取值：
+             * Indicates whether the specified actions are managed. Valid values:
              * <p>
-             * - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
-             * - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+             * 
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed resource.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed resource.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -414,10 +410,10 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 托管实例所属的服务方ID。
+             * The ID of the service that manages the GA instance.
              * <p>
              * 
-             * > 仅在**ServiceManaged**参数为**True**时有效。
+             * >  This parameter is valid only if **ServiceManaged** is set to **True**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -425,12 +421,11 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为托管实例。取值：
+             * Indicates whether the GA instance is managed. Valid values:
              * <p>
              * 
-             * - **true**：是托管资实例。
-             * 
-             * - **false**：不是托管实例。
+             * *   **true**
+             * *   **false**
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -438,11 +433,12 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户在此托管实例下可执行的动作策略列表。
+             * The actions that users can perform on the managed instance.
              * <p>
              * 
-             * > 仅在**ServiceManaged**参数为**True**时有效。
-             * > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+             * >  This parameter is valid only if **ServiceManaged** is set to **True**.
+             * 
+             * *   Users can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
@@ -450,12 +446,12 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The access policy of traffic that is destinated for the endpoint. Valid values:
+             * The access policy of traffic that is destined for the endpoint. Valid values:
              * <p>
              * 
-             * *   **AllowAll:** allows all traffic to the endpoint.
-             * *   **DenyAll:** denies all traffic to the endpoint.
-             * *   **AllowCustom:** allows traffic only to specified destinations.
+             * *   **AllowAll**: allows all traffic to the endpoint.
+             * *   **DenyAll**: denies all traffic to the endpoint.
+             * *   **AllowCustom**: allows traffic only to specified destinations.
              */
             public Builder trafficToEndpointPolicy(String trafficToEndpointPolicy) {
                 this.trafficToEndpointPolicy = trafficToEndpointPolicy;
@@ -466,7 +462,7 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
              * The backend service type of the endpoint.
              * <p>
              * 
-             * **PrivateSubNet** is returned, which indicates a private CIDR block.
+             * Only **PrivateSubNet** may be returned, which indicates a private CIDR block.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -58,7 +58,7 @@ public class UpdateForwardingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UpdateForwardingRulesResponseBody extends TeaModel {
             private String forwardingRuleId; 
 
             /**
-             * The ID of the forwarding rule.
+             * The forwarding rule ID.
              */
             public Builder forwardingRuleId(String forwardingRuleId) {
                 this.forwardingRuleId = forwardingRuleId;

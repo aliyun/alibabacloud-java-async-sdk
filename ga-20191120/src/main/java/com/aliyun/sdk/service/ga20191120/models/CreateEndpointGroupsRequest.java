@@ -276,7 +276,10 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * SubAddress.
+             * The private IP address of the ENI.
+             * <p>
+             * 
+             * > - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -287,24 +290,21 @@ public class CreateEndpointGroupsRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain**: a custom domain name
-             * *   **Ip**: a custom IP address
-             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
-             * *   **ECS**: an Elastic Compute Service (ECS) instance
-             * *   **SLB**: a Server Load Balancer (SLB) instance
-             * *   **ALB**: an Application Load Balancer (ALB) instance
-             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * *   **Domain:** a custom domain name.
+             * *   **Ip:** a custom IP address.
+             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+             * *   **ECS:** Elastic Compute Service (ECS) instance.
+             * *   **SLB:** Server Load Balancer (SLB) instance.
+             * *   **ALB:** Application Load Balancer (ALB) instance.
+             * *   **OSS:** Object Storage Service (OSS) bucket.
+             * *   **ENI:** Elastic Network interface (ENI).
+             * *   **NLB:** Network Load Balancer (NLB) instance.
              * 
-             * You can specify up to 100 endpoint types for an endpoint group.
+             * > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
              * 
-             * > 
-             * 
-             * *   This parameter is required.
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
-             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system creates the service-linked role.
-             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system creates the service-linked role.
-             * 
-             * For more information, see [Service-linked roles](~~178360~~).
+             * For more information, see [Service linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
