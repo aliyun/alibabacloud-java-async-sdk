@@ -398,7 +398,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long webLockAuthCount; 
 
         /**
-         * AgentlessCapacity.
+         * The quota for agentless detection.
+         * <p>
+         * 
+         * >  The agentless detection feature is unavailable for purchase. You can ignore this parameter.
          */
         public Builder agentlessCapacity(Long agentlessCapacity) {
             this.agentlessCapacity = agentlessCapacity;
@@ -449,7 +452,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CspmCapacity.
+         * The quota for configuration assessment. Unit: times/month.
          */
         public Builder cspmCapacity(Long cspmCapacity) {
             this.cspmCapacity = cspmCapacity;
@@ -579,7 +582,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RaspCapacity.
+         * The quota for application protection. Unit: process/month.
          */
         public Builder raspCapacity(Long raspCapacity) {
             this.raspCapacity = raspCapacity;
@@ -683,7 +686,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * VulFixCapacity.
+         * The quota for vulnerability fixing. Unit: times/month.
          */
         public Builder vulFixCapacity(Long vulFixCapacity) {
             this.vulFixCapacity = vulFixCapacity;

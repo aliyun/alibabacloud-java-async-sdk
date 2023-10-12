@@ -215,7 +215,7 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks of the handling operation.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

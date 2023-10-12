@@ -62,7 +62,7 @@ public class GetRulesCountResponseBody extends TeaModel {
         private Long totalUserDefineRuleCount; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class GetRulesCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSystemClientRuleCount.
+         * The total number of system defense rules.
          */
         public Builder totalSystemClientRuleCount(Long totalSystemClientRuleCount) {
             this.totalSystemClientRuleCount = totalSystemClientRuleCount;
@@ -78,7 +78,7 @@ public class GetRulesCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalUserDefineRuleCount.
+         * The total number of custom defense rules.
          */
         public Builder totalUserDefineRuleCount(Long totalUserDefineRuleCount) {
             this.totalUserDefineRuleCount = totalUserDefineRuleCount;

@@ -282,7 +282,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * 使用NextToken方式下返回的NextToken值。第一次拉取传空。
+         * The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -322,9 +322,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * 资源目录成员账号主账号ID。
+         * The Alibaba Cloud account ID of the member in the resource directory.
          * <p>
-         * >调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -333,11 +334,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * 是否使用NextToken方式拉取资产列表数据。如果使用此参数TotalCount不再返回。取值：
+         * Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:
          * <p>
          * 
-         * - **true**：使用NextToken方式
-         * - **false**：不使用NextToken方式
+         * - **true**: The NextToken method is used.
+         * - **false**: The NextToken method is not used.
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

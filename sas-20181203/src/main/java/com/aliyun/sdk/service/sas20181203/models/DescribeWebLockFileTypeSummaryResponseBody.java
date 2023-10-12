@@ -62,7 +62,7 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * List.
+         * An array that consists of events on web tamper proofing returned.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of events on web tamper proofing.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of attempts.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -138,7 +138,23 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the protected file. Valid values:
+             * <p>
+             * 
+             * *   **php**: PHP file
+             * *   **jsp**: JSP file
+             * *   **asp**: ASP file
+             * *   **aspx**: ASPX file
+             * *   **js**: JS file
+             * *   **cgi**: CGI file
+             * *   **html**: HTML file
+             * *   **htm**: HTM file
+             * *   **xml**: XML file
+             * *   **shtml**: SHTML file
+             * *   **shtm**: SHTM file
+             * *   **jpg**: JPG file
+             * *   **gif**: GIF file
+             * *   **png**: PNG file
              */
             public Builder type(String type) {
                 this.type = type;

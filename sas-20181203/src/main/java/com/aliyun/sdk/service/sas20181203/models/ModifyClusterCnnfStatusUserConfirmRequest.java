@@ -81,7 +81,7 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
          * <p>
          * 
          * *   true: yes
-         * *   fasle: no
+         * *   false: no
          */
         public Builder userConfirm(Boolean userConfirm) {
             this.putQueryParameter("UserConfirm", userConfirm);

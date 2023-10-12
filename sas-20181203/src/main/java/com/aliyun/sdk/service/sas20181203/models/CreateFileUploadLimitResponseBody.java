@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateAgentlessScanTaskResponseBody} extends {@link TeaModel}
+ * {@link CreateFileUploadLimitResponseBody} extends {@link TeaModel}
  *
- * <p>CreateAgentlessScanTaskResponseBody</p>
+ * <p>CreateFileUploadLimitResponseBody</p>
  */
-public class CreateAgentlessScanTaskResponseBody extends TeaModel {
+public class CreateFileUploadLimitResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateAgentlessScanTaskResponseBody(Builder builder) {
+    private CreateFileUploadLimitResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class CreateAgentlessScanTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateAgentlessScanTaskResponseBody create() {
+    public static CreateFileUploadLimitResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class CreateAgentlessScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateAgentlessScanTaskResponseBody build() {
-            return new CreateAgentlessScanTaskResponseBody(this);
+        public CreateFileUploadLimitResponseBody build() {
+            return new CreateFileUploadLimitResponseBody(this);
         } 
 
     } 

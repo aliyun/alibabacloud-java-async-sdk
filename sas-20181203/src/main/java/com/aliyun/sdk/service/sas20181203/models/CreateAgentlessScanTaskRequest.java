@@ -111,7 +111,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
         } 
 
         /**
-         * AutoDeleteDays.
+         * The retention period of images. Unit: days.
          */
         public Builder autoDeleteDays(Integer autoDeleteDays) {
             this.putQueryParameter("AutoDeleteDays", autoDeleteDays);
@@ -120,7 +120,11 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * ReleaseAfterScan.
+         * Specifies whether to enable the cost-saving mode. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder releaseAfterScan(Boolean releaseAfterScan) {
             this.putQueryParameter("ReleaseAfterScan", releaseAfterScan);
@@ -129,7 +133,11 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * ScanDataDisk.
+         * Specifies whether to check data disks. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder scanDataDisk(Boolean scanDataDisk) {
             this.putQueryParameter("ScanDataDisk", scanDataDisk);
@@ -138,7 +146,10 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the detection object. Valid values:
+         * <p>
+         * 
+         * *   **2**: image
          */
         public Builder targetType(Integer targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -147,7 +158,10 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of the assets on which you want to run the detection task.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

@@ -104,6 +104,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFileProtectRuleResponse> createFileProtectRule(CreateFileProtectRuleRequest request);
 
+    CompletableFuture<CreateFileUploadLimitResponse> createFileUploadLimit(CreateFileUploadLimitRequest request);
+
     CompletableFuture<CreateHoneypotResponse> createHoneypot(CreateHoneypotRequest request);
 
     CompletableFuture<CreateHoneypotNodeResponse> createHoneypotNode(CreateHoneypotNodeRequest request);
@@ -855,6 +857,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFileProtectRuleResponse> getFileProtectRule(GetFileProtectRuleRequest request);
 
+    CompletableFuture<GetFileUploadLimitResponse> getFileUploadLimit(GetFileUploadLimitRequest request);
+
     CompletableFuture<GetHoneypotAttackStatisticsResponse> getHoneypotAttackStatistics(GetHoneypotAttackStatisticsRequest request);
 
     CompletableFuture<GetHoneypotEventTrendResponse> getHoneypotEventTrend(GetHoneypotEventTrendRequest request);
@@ -876,6 +880,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInterceptionTargetDetailResponse> getInterceptionTargetDetail(GetInterceptionTargetDetailRequest request);
 
     CompletableFuture<GetLastOnceTaskInfoResponse> getLastOnceTaskInfo(GetLastOnceTaskInfoRequest request);
+
+    CompletableFuture<GetLogMetaResponse> getLogMeta(GetLogMetaRequest request);
 
     CompletableFuture<GetModuleConfigResponse> getModuleConfig(GetModuleConfigRequest request);
 
@@ -1323,6 +1329,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFileProtectRemarkResponse> updateFileProtectRemark(UpdateFileProtectRemarkRequest request);
 
     CompletableFuture<UpdateFileProtectRuleResponse> updateFileProtectRule(UpdateFileProtectRuleRequest request);
+
+    CompletableFuture<UpdateFileUploadLimitResponse> updateFileUploadLimit(UpdateFileUploadLimitRequest request);
 
     CompletableFuture<UpdateHoneypotResponse> updateHoneypot(UpdateHoneypotRequest request);
 

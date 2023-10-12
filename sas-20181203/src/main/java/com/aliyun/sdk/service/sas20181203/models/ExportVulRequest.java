@@ -21,6 +21,10 @@ public class ExportVulRequest extends Request {
     private String attachTypes;
 
     @Query
+    @NameInMap("ContainerName")
+    private String containerName;
+
+    @Query
     @NameInMap("CveId")
     private String cveId;
 
@@ -33,12 +37,20 @@ public class ExportVulRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("ImageName")
+    private String imageName;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
     @Query
     @NameInMap("Necessity")
     private String necessity;
+
+    @Query
+    @NameInMap("Path")
+    private String path;
 
     @Query
     @NameInMap("SearchTags")
@@ -61,11 +73,14 @@ public class ExportVulRequest extends Request {
         super(builder);
         this.aliasName = builder.aliasName;
         this.attachTypes = builder.attachTypes;
+        this.containerName = builder.containerName;
         this.cveId = builder.cveId;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
+        this.imageName = builder.imageName;
         this.lang = builder.lang;
         this.necessity = builder.necessity;
+        this.path = builder.path;
         this.searchTags = builder.searchTags;
         this.type = builder.type;
         this.uuids = builder.uuids;
@@ -100,6 +115,13 @@ public class ExportVulRequest extends Request {
     }
 
     /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
+    }
+
+    /**
      * @return cveId
      */
     public String getCveId() {
@@ -121,6 +143,13 @@ public class ExportVulRequest extends Request {
     }
 
     /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -132,6 +161,13 @@ public class ExportVulRequest extends Request {
      */
     public String getNecessity() {
         return this.necessity;
+    }
+
+    /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
     }
 
     /**
@@ -165,11 +201,14 @@ public class ExportVulRequest extends Request {
     public static final class Builder extends Request.Builder<ExportVulRequest, Builder> {
         private String aliasName; 
         private String attachTypes; 
+        private String containerName; 
         private String cveId; 
         private String dealed; 
         private String groupId; 
+        private String imageName; 
         private String lang; 
         private String necessity; 
+        private String path; 
         private String searchTags; 
         private String type; 
         private String uuids; 
@@ -183,11 +222,14 @@ public class ExportVulRequest extends Request {
             super(request);
             this.aliasName = request.aliasName;
             this.attachTypes = request.attachTypes;
+            this.containerName = request.containerName;
             this.cveId = request.cveId;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
+            this.imageName = request.imageName;
             this.lang = request.lang;
             this.necessity = request.necessity;
+            this.path = request.path;
             this.searchTags = request.searchTags;
             this.type = request.type;
             this.uuids = request.uuids;
@@ -212,6 +254,15 @@ public class ExportVulRequest extends Request {
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
             this.attachTypes = attachTypes;
+            return this;
+        }
+
+        /**
+         * ContainerName.
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 
@@ -250,6 +301,15 @@ public class ExportVulRequest extends Request {
         }
 
         /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
+            return this;
+        }
+
+        /**
          * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
@@ -273,6 +333,15 @@ public class ExportVulRequest extends Request {
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
             this.necessity = necessity;
+            return this;
+        }
+
+        /**
+         * Path.
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("Path", path);
+            this.path = path;
             return this;
         }
 

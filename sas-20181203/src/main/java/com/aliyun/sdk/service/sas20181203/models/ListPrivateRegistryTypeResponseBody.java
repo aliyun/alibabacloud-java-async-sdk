@@ -50,7 +50,7 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegistryTypeInfos.
+         * An array that consists of image repository types.
          */
         public Builder registryTypeInfos(java.util.List < RegistryTypeInfos> registryTypeInfos) {
             this.registryTypeInfos = registryTypeInfos;
@@ -58,7 +58,7 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
             private String registryType; 
 
             /**
-             * Count.
+             * The number of image repositories.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,13 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * The name of the image repository type. Valid values:
+             * <p>
+             * 
+             * *   **acr**: Container Registry
+             * *   **harbor**: Harbor
+             * *   **quay**: Quay
+             * *   **CI/CD**: Jenkins
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;

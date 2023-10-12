@@ -41,6 +41,10 @@ public class ExportSuspEventsRequest extends Request {
     private String from;
 
     @Query
+    @NameInMap("Id")
+    private Long id;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -51,6 +55,10 @@ public class ExportSuspEventsRequest extends Request {
     @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("OperateErrorCodeList")
+    private java.util.List < String > operateErrorCodeList;
 
     @Query
     @NameInMap("PageSize")
@@ -84,6 +92,14 @@ public class ExportSuspEventsRequest extends Request {
     @NameInMap("TimeStart")
     private String timeStart;
 
+    @Query
+    @NameInMap("UniqueInfo")
+    private String uniqueInfo;
+
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private ExportSuspEventsRequest(Builder builder) {
         super(builder);
         this.assetsTypeList = builder.assetsTypeList;
@@ -93,9 +109,11 @@ public class ExportSuspEventsRequest extends Request {
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.from = builder.from;
+        this.id = builder.id;
         this.lang = builder.lang;
         this.levels = builder.levels;
         this.name = builder.name;
+        this.operateErrorCodeList = builder.operateErrorCodeList;
         this.pageSize = builder.pageSize;
         this.parentEventTypes = builder.parentEventTypes;
         this.remark = builder.remark;
@@ -104,6 +122,8 @@ public class ExportSuspEventsRequest extends Request {
         this.targetType = builder.targetType;
         this.timeEnd = builder.timeEnd;
         this.timeStart = builder.timeStart;
+        this.uniqueInfo = builder.uniqueInfo;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -169,6 +189,13 @@ public class ExportSuspEventsRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -187,6 +214,13 @@ public class ExportSuspEventsRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return operateErrorCodeList
+     */
+    public java.util.List < String > getOperateErrorCodeList() {
+        return this.operateErrorCodeList;
     }
 
     /**
@@ -245,6 +279,20 @@ public class ExportSuspEventsRequest extends Request {
         return this.timeStart;
     }
 
+    /**
+     * @return uniqueInfo
+     */
+    public String getUniqueInfo() {
+        return this.uniqueInfo;
+    }
+
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<ExportSuspEventsRequest, Builder> {
         private java.util.List < String > assetsTypeList; 
         private String clusterId; 
@@ -253,9 +301,11 @@ public class ExportSuspEventsRequest extends Request {
         private String currentPage; 
         private String dealed; 
         private String from; 
+        private Long id; 
         private String lang; 
         private String levels; 
         private String name; 
+        private java.util.List < String > operateErrorCodeList; 
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
@@ -264,6 +314,8 @@ public class ExportSuspEventsRequest extends Request {
         private String targetType; 
         private String timeEnd; 
         private String timeStart; 
+        private String uniqueInfo; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -278,9 +330,11 @@ public class ExportSuspEventsRequest extends Request {
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.from = request.from;
+            this.id = request.id;
             this.lang = request.lang;
             this.levels = request.levels;
             this.name = request.name;
+            this.operateErrorCodeList = request.operateErrorCodeList;
             this.pageSize = request.pageSize;
             this.parentEventTypes = request.parentEventTypes;
             this.remark = request.remark;
@@ -289,6 +343,8 @@ public class ExportSuspEventsRequest extends Request {
             this.targetType = request.targetType;
             this.timeEnd = request.timeEnd;
             this.timeStart = request.timeStart;
+            this.uniqueInfo = request.uniqueInfo;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -376,6 +432,15 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
          * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
@@ -408,6 +473,15 @@ public class ExportSuspEventsRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * OperateErrorCodeList.
+         */
+        public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
+            this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
+            this.operateErrorCodeList = operateErrorCodeList;
             return this;
         }
 
@@ -521,6 +595,24 @@ public class ExportSuspEventsRequest extends Request {
         public Builder timeStart(String timeStart) {
             this.putQueryParameter("TimeStart", timeStart);
             this.timeStart = timeStart;
+            return this;
+        }
+
+        /**
+         * UniqueInfo.
+         */
+        public Builder uniqueInfo(String uniqueInfo) {
+            this.putQueryParameter("UniqueInfo", uniqueInfo);
+            this.uniqueInfo = uniqueInfo;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

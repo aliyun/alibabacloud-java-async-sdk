@@ -50,7 +50,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Machines.
+         * An array consisting of the servers to which the anti-ransomware policy is applied.
          */
         public Builder machines(java.util.List < Machines> machines) {
             this.machines = machines;
@@ -58,7 +58,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Id.
+             * The ID of the anti-ransomware policy that is applied to the server.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -130,7 +130,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the anti-ransomware policy that is applied to the server.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -138,7 +138,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server to which the anti-ransomware policy is applied.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

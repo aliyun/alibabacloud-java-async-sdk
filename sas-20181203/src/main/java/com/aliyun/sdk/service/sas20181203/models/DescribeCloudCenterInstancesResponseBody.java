@@ -1289,7 +1289,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 使用NextToken方式下返回的NextToken值。
+             * The value of NextToken that is returned when the NextToken method is used.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

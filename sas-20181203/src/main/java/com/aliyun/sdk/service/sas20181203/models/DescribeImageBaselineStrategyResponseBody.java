@@ -58,7 +58,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the baseline check policy.
+         * The information about the baseline check policy.
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
