@@ -49,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
+    CompletableFuture<CreateColdStorageInstanceResponse> createColdStorageInstance(CreateColdStorageInstanceRequest request);
+
     CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request);
 
     CompletableFuture<CreateDBClusterEndpointResponse> createDBClusterEndpoint(CreateDBClusterEndpointRequest request);

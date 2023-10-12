@@ -191,7 +191,7 @@ public class CreateDBClusterRequest extends Request {
 
     @Query
     @NameInMap("StorageSpace")
-    @Validation(maximum = 32000, minimum = 20)
+    @Validation(maximum = 64000, minimum = 20)
     private Long storageSpace;
 
     @Query
@@ -200,7 +200,7 @@ public class CreateDBClusterRequest extends Request {
 
     @Query
     @NameInMap("StorageUpperBound")
-    @Validation(maximum = 32000, minimum = 20)
+    @Validation(maximum = 64000, minimum = 20)
     private Long storageUpperBound;
 
     @Query

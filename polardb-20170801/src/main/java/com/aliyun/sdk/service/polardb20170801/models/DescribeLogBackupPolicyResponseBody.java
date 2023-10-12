@@ -86,11 +86,11 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the log backup feature was enabled. Valid values:
+         * Indicates whether the log backup feature is enabled. Valid values:
          * <p>
          * 
-         * *   0: disabled.
-         * *   1: enabled. By default, the log backup feature is enabled and cannot be disabled.
+         * *   0: The log backup feature is disabled.
+         * *   1: The log backup feature is enabled. By default, the log backup feature is enabled and cannot be disabled.
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -98,7 +98,7 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupAnotherRegionRegion.
+         * The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
          */
         public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
             this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
@@ -106,7 +106,14 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupAnotherRegionRetentionPeriod.
+         * The retention period of cross-region log backups. Valid values:
+         * <p>
+         * 
+         * *   **0**: The cross-region backup feature is disabled.
+         * *   **30 to 7300**: Cross-region log backups are retained for 30 to 7,300 days.
+         * *   **-1**: The log backups are permanently retained.
+         * 
+         * >  When you create a cluster, the default value of this parameter is **0**.
          */
         public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
             this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
@@ -114,11 +121,11 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of the logs. Valid values:
+         * The retention period of the log backups. Valid values:
          * <p>
          * 
-         * *   7 to 7300: The logs are retained for 7 to 7,300 days.
-         * *   \-1: The logs are permanently retained.
+         * *   3 to 7300: The log backups are retained for 3 to 7,300 days.
+         * *   \-1: The log backups are permanently retained.
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -126,7 +133,7 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

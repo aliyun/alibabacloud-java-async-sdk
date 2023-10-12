@@ -105,6 +105,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("PayType")
     private String payType;
 
+    @NameInMap("ProvisionedIops")
+    private String provisionedIops;
+
     @NameInMap("ProxyCpuCores")
     private String proxyCpuCores;
 
@@ -203,6 +206,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.lockMode = builder.lockMode;
         this.maintainTime = builder.maintainTime;
         this.payType = builder.payType;
+        this.provisionedIops = builder.provisionedIops;
         this.proxyCpuCores = builder.proxyCpuCores;
         this.proxyServerlessType = builder.proxyServerlessType;
         this.proxyStandardCpuCores = builder.proxyStandardCpuCores;
@@ -453,6 +457,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return provisionedIops
+     */
+    public String getProvisionedIops() {
+        return this.provisionedIops;
+    }
+
+    /**
      * @return proxyCpuCores
      */
     public String getProxyCpuCores() {
@@ -638,6 +649,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String lockMode; 
         private String maintainTime; 
         private String payType; 
+        private String provisionedIops; 
         private String proxyCpuCores; 
         private String proxyServerlessType; 
         private String proxyStandardCpuCores; 
@@ -955,6 +967,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder payType(String payType) {
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * ProvisionedIops.
+         */
+        public Builder provisionedIops(String provisionedIops) {
+            this.provisionedIops = provisionedIops;
             return this;
         }
 
