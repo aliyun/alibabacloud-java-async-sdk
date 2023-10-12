@@ -110,6 +110,9 @@ public class MassPushRequest extends Request {
         @NameInMap("AndroidExtParameters")
         private String androidExtParameters;
 
+        @NameInMap("AndroidHonorTargetUserType")
+        private Integer androidHonorTargetUserType;
+
         @NameInMap("AndroidHuaweiReceiptId")
         private String androidHuaweiReceiptId;
 
@@ -184,6 +187,9 @@ public class MassPushRequest extends Request {
 
         @NameInMap("AndroidRenderStyle")
         private String androidRenderStyle;
+
+        @NameInMap("AndroidTargetUserType")
+        private Integer androidTargetUserType;
 
         @NameInMap("AndroidVivoPushMode")
         private Integer androidVivoPushMode;
@@ -302,6 +308,7 @@ public class MassPushRequest extends Request {
             this.androidBigPictureUrl = builder.androidBigPictureUrl;
             this.androidBigTitle = builder.androidBigTitle;
             this.androidExtParameters = builder.androidExtParameters;
+            this.androidHonorTargetUserType = builder.androidHonorTargetUserType;
             this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
             this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
             this.androidImageUrl = builder.androidImageUrl;
@@ -327,6 +334,7 @@ public class MassPushRequest extends Request {
             this.androidPopupTitle = builder.androidPopupTitle;
             this.androidRemind = builder.androidRemind;
             this.androidRenderStyle = builder.androidRenderStyle;
+            this.androidTargetUserType = builder.androidTargetUserType;
             this.androidVivoPushMode = builder.androidVivoPushMode;
             this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
             this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
@@ -404,6 +412,13 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidExtParameters() {
             return this.androidExtParameters;
+        }
+
+        /**
+         * @return androidHonorTargetUserType
+         */
+        public Integer getAndroidHonorTargetUserType() {
+            return this.androidHonorTargetUserType;
         }
 
         /**
@@ -579,6 +594,13 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidRenderStyle() {
             return this.androidRenderStyle;
+        }
+
+        /**
+         * @return androidTargetUserType
+         */
+        public Integer getAndroidTargetUserType() {
+            return this.androidTargetUserType;
         }
 
         /**
@@ -825,6 +847,7 @@ public class MassPushRequest extends Request {
             private String androidBigPictureUrl; 
             private String androidBigTitle; 
             private String androidExtParameters; 
+            private Integer androidHonorTargetUserType; 
             private String androidHuaweiReceiptId; 
             private Integer androidHuaweiTargetUserType; 
             private String androidImageUrl; 
@@ -850,6 +873,7 @@ public class MassPushRequest extends Request {
             private String androidPopupTitle; 
             private Boolean androidRemind; 
             private String androidRenderStyle; 
+            private Integer androidTargetUserType; 
             private Integer androidVivoPushMode; 
             private String androidXiaoMiActivity; 
             private String androidXiaoMiNotifyBody; 
@@ -922,6 +946,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidExtParameters(String androidExtParameters) {
                 this.androidExtParameters = androidExtParameters;
+                return this;
+            }
+
+            /**
+             * AndroidHonorTargetUserType.
+             */
+            public Builder androidHonorTargetUserType(Integer androidHonorTargetUserType) {
+                this.androidHonorTargetUserType = androidHonorTargetUserType;
                 return this;
             }
 
@@ -1122,6 +1154,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidRenderStyle(String androidRenderStyle) {
                 this.androidRenderStyle = androidRenderStyle;
+                return this;
+            }
+
+            /**
+             * AndroidTargetUserType.
+             */
+            public Builder androidTargetUserType(Integer androidTargetUserType) {
+                this.androidTargetUserType = androidTargetUserType;
                 return this;
             }
 

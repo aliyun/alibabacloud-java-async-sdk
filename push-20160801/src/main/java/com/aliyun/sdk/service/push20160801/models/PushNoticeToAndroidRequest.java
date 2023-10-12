@@ -31,6 +31,10 @@ public class PushNoticeToAndroidRequest extends Request {
     private String jobKey;
 
     @Query
+    @NameInMap("StoreOffline")
+    private Boolean storeOffline;
+
+    @Query
     @NameInMap("Target")
     @Validation(required = true)
     private String target;
@@ -51,6 +55,7 @@ public class PushNoticeToAndroidRequest extends Request {
         this.body = builder.body;
         this.extParameters = builder.extParameters;
         this.jobKey = builder.jobKey;
+        this.storeOffline = builder.storeOffline;
         this.target = builder.target;
         this.targetValue = builder.targetValue;
         this.title = builder.title;
@@ -98,6 +103,13 @@ public class PushNoticeToAndroidRequest extends Request {
     }
 
     /**
+     * @return storeOffline
+     */
+    public Boolean getStoreOffline() {
+        return this.storeOffline;
+    }
+
+    /**
      * @return target
      */
     public String getTarget() {
@@ -123,6 +135,7 @@ public class PushNoticeToAndroidRequest extends Request {
         private String body; 
         private String extParameters; 
         private String jobKey; 
+        private Boolean storeOffline; 
         private String target; 
         private String targetValue; 
         private String title; 
@@ -137,6 +150,7 @@ public class PushNoticeToAndroidRequest extends Request {
             this.body = request.body;
             this.extParameters = request.extParameters;
             this.jobKey = request.jobKey;
+            this.storeOffline = request.storeOffline;
             this.target = request.target;
             this.targetValue = request.targetValue;
             this.title = request.title;
@@ -175,6 +189,15 @@ public class PushNoticeToAndroidRequest extends Request {
         public Builder jobKey(String jobKey) {
             this.putQueryParameter("JobKey", jobKey);
             this.jobKey = jobKey;
+            return this;
+        }
+
+        /**
+         * StoreOffline.
+         */
+        public Builder storeOffline(Boolean storeOffline) {
+            this.putQueryParameter("StoreOffline", storeOffline);
+            this.storeOffline = storeOffline;
             return this;
         }
 

@@ -78,6 +78,9 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         @NameInMap("Alias")
         private String alias;
 
+        @NameInMap("Brand")
+        private String brand;
+
         @NameInMap("DeviceId")
         private String deviceId;
 
@@ -89,6 +92,9 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
 
         @NameInMap("LastOnlineTime")
         private String lastOnlineTime;
+
+        @NameInMap("Model")
+        private String model;
 
         @NameInMap("Online")
         private Boolean online;
@@ -105,10 +111,12 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         private DeviceInfo(Builder builder) {
             this.account = builder.account;
             this.alias = builder.alias;
+            this.brand = builder.brand;
             this.deviceId = builder.deviceId;
             this.deviceToken = builder.deviceToken;
             this.deviceType = builder.deviceType;
             this.lastOnlineTime = builder.lastOnlineTime;
+            this.model = builder.model;
             this.online = builder.online;
             this.phoneNumber = builder.phoneNumber;
             this.pushEnabled = builder.pushEnabled;
@@ -138,6 +146,13 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return brand
+         */
+        public String getBrand() {
+            return this.brand;
+        }
+
+        /**
          * @return deviceId
          */
         public String getDeviceId() {
@@ -163,6 +178,13 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
          */
         public String getLastOnlineTime() {
             return this.lastOnlineTime;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
         }
 
         /**
@@ -196,10 +218,12 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String account; 
             private String alias; 
+            private String brand; 
             private String deviceId; 
             private String deviceToken; 
             private String deviceType; 
             private String lastOnlineTime; 
+            private String model; 
             private Boolean online; 
             private String phoneNumber; 
             private Boolean pushEnabled; 
@@ -218,6 +242,14 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
              */
             public Builder alias(String alias) {
                 this.alias = alias;
+                return this;
+            }
+
+            /**
+             * Brand.
+             */
+            public Builder brand(String brand) {
+                this.brand = brand;
                 return this;
             }
 
@@ -250,6 +282,14 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
              */
             public Builder lastOnlineTime(String lastOnlineTime) {
                 this.lastOnlineTime = lastOnlineTime;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
                 return this;
             }
 
