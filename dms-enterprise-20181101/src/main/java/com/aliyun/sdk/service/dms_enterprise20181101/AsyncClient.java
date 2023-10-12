@@ -317,6 +317,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDatabaseExportOrderDetailResponse> getDatabaseExportOrderDetail(GetDatabaseExportOrderDetailRequest request);
 
+    CompletableFuture<GetDbExportDownloadURLResponse> getDbExportDownloadURL(GetDbExportDownloadURLRequest request);
+
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
     /**

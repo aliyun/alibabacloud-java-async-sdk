@@ -214,6 +214,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
     }
     public static class OrderBaseInfo extends TeaModel {
+        @NameInMap("AttachmentKey")
+        private String attachmentKey;
+
         @NameInMap("Comment")
         private String comment;
 
@@ -231,6 +234,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
         @NameInMap("OrderId")
         private Long orderId;
+
+        @NameInMap("OriginAttachmentName")
+        private String originAttachmentName;
 
         @NameInMap("PluginType")
         private String pluginType;
@@ -254,12 +260,14 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         private String workflowStatusDesc;
 
         private OrderBaseInfo(Builder builder) {
+            this.attachmentKey = builder.attachmentKey;
             this.comment = builder.comment;
             this.committer = builder.committer;
             this.committerId = builder.committerId;
             this.createTime = builder.createTime;
             this.lastModifyTime = builder.lastModifyTime;
             this.orderId = builder.orderId;
+            this.originAttachmentName = builder.originAttachmentName;
             this.pluginType = builder.pluginType;
             this.relatedUserList = builder.relatedUserList;
             this.relatedUserNickList = builder.relatedUserNickList;
@@ -275,6 +283,13 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
         public static OrderBaseInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachmentKey
+         */
+        public String getAttachmentKey() {
+            return this.attachmentKey;
         }
 
         /**
@@ -317,6 +332,13 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
          */
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        /**
+         * @return originAttachmentName
+         */
+        public String getOriginAttachmentName() {
+            return this.originAttachmentName;
         }
 
         /**
@@ -369,12 +391,14 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attachmentKey; 
             private String comment; 
             private String committer; 
             private Long committerId; 
             private String createTime; 
             private String lastModifyTime; 
             private Long orderId; 
+            private String originAttachmentName; 
             private String pluginType; 
             private RelatedUserList relatedUserList; 
             private RelatedUserNickList relatedUserNickList; 
@@ -382,6 +406,14 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             private String statusDesc; 
             private Long workflowInstanceId; 
             private String workflowStatusDesc; 
+
+            /**
+             * AttachmentKey.
+             */
+            public Builder attachmentKey(String attachmentKey) {
+                this.attachmentKey = attachmentKey;
+                return this;
+            }
 
             /**
              * The remarks of the ticket.
@@ -428,6 +460,14 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * OriginAttachmentName.
+             */
+            public Builder originAttachmentName(String originAttachmentName) {
+                this.originAttachmentName = originAttachmentName;
                 return this;
             }
 
