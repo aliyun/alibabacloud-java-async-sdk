@@ -80,6 +80,7 @@ public class InviteSubAccountRequest extends Request {
         private String creditLine;
 
         @NameInMap("CustomerId")
+        @Validation(required = true)
         private String customerId;
 
         @NameInMap("EmailAddress")

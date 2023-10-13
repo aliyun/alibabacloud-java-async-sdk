@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubscriptionBillResponse} extends {@link TeaModel}
+ * {@link GetDailyBillResponse} extends {@link TeaModel}
  *
- * <p>SubscriptionBillResponse</p>
+ * <p>GetDailyBillResponse</p>
  */
-public class SubscriptionBillResponse extends Response {
+public class GetDailyBillResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class SubscriptionBillResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private SubscriptionBillResponseBody body;
+    private GetDailyBillResponseBody body;
 
-    private SubscriptionBillResponse(BuilderImpl builder) {
+    private GetDailyBillResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SubscriptionBillResponse create() {
+    public static GetDailyBillResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class SubscriptionBillResponse extends Response {
     /**
      * @return body
      */
-    public SubscriptionBillResponseBody getBody() {
+    public GetDailyBillResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SubscriptionBillResponse, Builder> {
+    public interface Builder extends Response.Builder<GetDailyBillResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SubscriptionBillResponseBody body);
+        Builder body(GetDailyBillResponseBody body);
 
         @Override
-        SubscriptionBillResponse build();
+        GetDailyBillResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SubscriptionBillResponse, Builder>
+            extends Response.BuilderImpl<GetDailyBillResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SubscriptionBillResponseBody body; 
+        private GetDailyBillResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SubscriptionBillResponse response) {
+        private BuilderImpl(GetDailyBillResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class SubscriptionBillResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SubscriptionBillResponseBody body) {
+        public Builder body(GetDailyBillResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SubscriptionBillResponse build() {
-            return new SubscriptionBillResponse(this);
+        public GetDailyBillResponse build() {
+            return new GetDailyBillResponse(this);
         } 
 
     } 

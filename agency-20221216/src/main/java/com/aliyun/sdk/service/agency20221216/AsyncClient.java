@@ -27,13 +27,39 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CancelSubscriptionBillResponse> cancelSubscriptionBill(CancelSubscriptionBillRequest request);
 
+    CompletableFuture<CreateCustomerResponse> createCustomer(CreateCustomerRequest request);
+
+    CompletableFuture<DeductOutstandingBalanceResponse> deductOutstandingBalance(DeductOutstandingBalanceRequest request);
+
     CompletableFuture<EditEndUserStatusResponse> editEndUserStatus(EditEndUserStatusRequest request);
 
     CompletableFuture<EditNewBuyStatusResponse> editNewBuyStatus(EditNewBuyStatusRequest request);
 
     CompletableFuture<EditZeroCreditShutdownResponse> editZeroCreditShutdown(EditZeroCreditShutdownRequest request);
 
+    CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request);
+
+    CompletableFuture<GetCreditInfoResponse> getCreditInfo(GetCreditInfoRequest request);
+
+    CompletableFuture<GetDailyBillResponse> getDailyBill(GetDailyBillRequest request);
+
+    CompletableFuture<GetInviteStatusResponse> getInviteStatus(GetInviteStatusRequest request);
+
+    CompletableFuture<GetMonthlyBillResponse> getMonthlyBill(GetMonthlyBillRequest request);
+
+    CompletableFuture<GetUnassociatedCustomerResponse> getUnassociatedCustomer(GetUnassociatedCustomerRequest request);
+
     CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request);
+
+    CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request);
+
+    CompletableFuture<ResendEmailResponse> resendEmail(ResendEmailRequest request);
+
+    CompletableFuture<SetAccountInfoResponse> setAccountInfo(SetAccountInfoRequest request);
+
+    CompletableFuture<SetCreditLineResponse> setCreditLine(SetCreditLineRequest request);
+
+    CompletableFuture<SetWarningThresholdResponse> setWarningThreshold(SetWarningThresholdRequest request);
 
     /**
       * *   Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
