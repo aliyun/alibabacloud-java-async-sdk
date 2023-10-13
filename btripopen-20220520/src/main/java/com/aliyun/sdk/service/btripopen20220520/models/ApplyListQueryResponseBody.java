@@ -381,6 +381,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("project_title")
         private String projectTitle;
 
+        @NameInMap("thirdpart_itinerary_id")
+        private String thirdpartItineraryId;
+
         @NameInMap("traffic_type")
         private Integer trafficType;
 
@@ -397,6 +400,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.trafficType = builder.trafficType;
             this.tripWay = builder.tripWay;
         }
@@ -473,6 +477,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartItineraryId
+         */
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
+        }
+
+        /**
          * @return trafficType
          */
         public Integer getTrafficType() {
@@ -496,6 +507,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private String projectCode; 
             private String projectTitle; 
+            private String thirdpartItineraryId; 
             private Integer trafficType; 
             private Integer tripWay; 
 
@@ -572,6 +584,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
+             * thirdpart_itinerary_id.
+             */
+            public Builder thirdpartItineraryId(String thirdpartItineraryId) {
+                this.thirdpartItineraryId = thirdpartItineraryId;
+                return this;
+            }
+
+            /**
              * traffic_type.
              */
             public Builder trafficType(Integer trafficType) {
@@ -622,6 +642,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("project_title")
         private String projectTitle;
 
+        @NameInMap("thirdpart_itinerary_id")
+        private String thirdpartItineraryId;
+
         @NameInMap("traffic_type")
         private Integer trafficType;
 
@@ -635,6 +658,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.trafficType = builder.trafficType;
         }
 
@@ -710,6 +734,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartItineraryId
+         */
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
+        }
+
+        /**
          * @return trafficType
          */
         public Integer getTrafficType() {
@@ -726,6 +757,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private String projectCode; 
             private String projectTitle; 
+            private String thirdpartItineraryId; 
             private Integer trafficType; 
 
             /**
@@ -797,6 +829,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * thirdpart_itinerary_id.
+             */
+            public Builder thirdpartItineraryId(String thirdpartItineraryId) {
+                this.thirdpartItineraryId = thirdpartItineraryId;
                 return this;
             }
 

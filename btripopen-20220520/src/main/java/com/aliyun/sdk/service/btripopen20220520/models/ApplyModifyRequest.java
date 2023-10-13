@@ -1157,6 +1157,47 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    public static class ItineraryTravelStandard extends TeaModel {
+        @NameInMap("hotel_available_nights_per_day")
+        private Integer hotelAvailableNightsPerDay;
+
+        private ItineraryTravelStandard(Builder builder) {
+            this.hotelAvailableNightsPerDay = builder.hotelAvailableNightsPerDay;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItineraryTravelStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hotelAvailableNightsPerDay
+         */
+        public Integer getHotelAvailableNightsPerDay() {
+            return this.hotelAvailableNightsPerDay;
+        }
+
+        public static final class Builder {
+            private Integer hotelAvailableNightsPerDay; 
+
+            /**
+             * hotel_available_nights_per_day.
+             */
+            public Builder hotelAvailableNightsPerDay(Integer hotelAvailableNightsPerDay) {
+                this.hotelAvailableNightsPerDay = hotelAvailableNightsPerDay;
+                return this;
+            }
+
+            public ItineraryTravelStandard build() {
+                return new ItineraryTravelStandard(this);
+            } 
+
+        } 
+
+    }
     public static class ItineraryList extends TeaModel {
         @NameInMap("arr_city")
         @Validation(required = true)
@@ -1189,6 +1230,9 @@ public class ApplyModifyRequest extends Request {
         @NameInMap("itinerary_id")
         @Validation(required = true)
         private String itineraryId;
+
+        @NameInMap("itinerary_travel_standard")
+        private ItineraryTravelStandard itineraryTravelStandard;
 
         @NameInMap("need_hotel")
         private Boolean needHotel;
@@ -1226,6 +1270,7 @@ public class ApplyModifyRequest extends Request {
             this.depDate = builder.depDate;
             this.invoiceId = builder.invoiceId;
             this.itineraryId = builder.itineraryId;
+            this.itineraryTravelStandard = builder.itineraryTravelStandard;
             this.needHotel = builder.needHotel;
             this.needTraffic = builder.needTraffic;
             this.projectCode = builder.projectCode;
@@ -1308,6 +1353,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return itineraryTravelStandard
+         */
+        public ItineraryTravelStandard getItineraryTravelStandard() {
+            return this.itineraryTravelStandard;
+        }
+
+        /**
          * @return needHotel
          */
         public Boolean getNeedHotel() {
@@ -1373,6 +1425,7 @@ public class ApplyModifyRequest extends Request {
             private String depDate; 
             private Long invoiceId; 
             private String itineraryId; 
+            private ItineraryTravelStandard itineraryTravelStandard; 
             private Boolean needHotel; 
             private Boolean needTraffic; 
             private String projectCode; 
@@ -1455,6 +1508,14 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
+             * itinerary_travel_standard.
+             */
+            public Builder itineraryTravelStandard(ItineraryTravelStandard itineraryTravelStandard) {
+                this.itineraryTravelStandard = itineraryTravelStandard;
+                return this;
+            }
+
+            /**
              * need_hotel.
              */
             public Builder needHotel(Boolean needHotel) {
@@ -1525,6 +1586,47 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    public static class ItinerarySetListItineraryTravelStandard extends TeaModel {
+        @NameInMap("hotel_available_nights_per_day")
+        private Integer hotelAvailableNightsPerDay;
+
+        private ItinerarySetListItineraryTravelStandard(Builder builder) {
+            this.hotelAvailableNightsPerDay = builder.hotelAvailableNightsPerDay;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItinerarySetListItineraryTravelStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hotelAvailableNightsPerDay
+         */
+        public Integer getHotelAvailableNightsPerDay() {
+            return this.hotelAvailableNightsPerDay;
+        }
+
+        public static final class Builder {
+            private Integer hotelAvailableNightsPerDay; 
+
+            /**
+             * hotel_available_nights_per_day.
+             */
+            public Builder hotelAvailableNightsPerDay(Integer hotelAvailableNightsPerDay) {
+                this.hotelAvailableNightsPerDay = hotelAvailableNightsPerDay;
+                return this;
+            }
+
+            public ItinerarySetListItineraryTravelStandard build() {
+                return new ItinerarySetListItineraryTravelStandard(this);
+            } 
+
+        } 
+
+    }
     public static class ItinerarySetList extends TeaModel {
         @NameInMap("arr_date")
         private String arrDate;
@@ -1546,6 +1648,9 @@ public class ApplyModifyRequest extends Request {
 
         @NameInMap("itinerary_id")
         private String itineraryId;
+
+        @NameInMap("itinerary_travel_standard")
+        private ItinerarySetListItineraryTravelStandard itineraryTravelStandard;
 
         @NameInMap("project_code")
         private String projectCode;
@@ -1570,6 +1675,7 @@ public class ApplyModifyRequest extends Request {
             this.depDate = builder.depDate;
             this.invoiceId = builder.invoiceId;
             this.itineraryId = builder.itineraryId;
+            this.itineraryTravelStandard = builder.itineraryTravelStandard;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
             this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
@@ -1635,6 +1741,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return itineraryTravelStandard
+         */
+        public ItinerarySetListItineraryTravelStandard getItineraryTravelStandard() {
+            return this.itineraryTravelStandard;
+        }
+
+        /**
          * @return projectCode
          */
         public String getProjectCode() {
@@ -1677,6 +1790,7 @@ public class ApplyModifyRequest extends Request {
             private String depDate; 
             private Long invoiceId; 
             private String itineraryId; 
+            private ItinerarySetListItineraryTravelStandard itineraryTravelStandard; 
             private String projectCode; 
             private String projectTitle; 
             private String thirdPartInvoiceId; 
@@ -1736,6 +1850,14 @@ public class ApplyModifyRequest extends Request {
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * itinerary_travel_standard.
+             */
+            public Builder itineraryTravelStandard(ItinerarySetListItineraryTravelStandard itineraryTravelStandard) {
+                this.itineraryTravelStandard = itineraryTravelStandard;
                 return this;
             }
 

@@ -161,6 +161,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("fee_type")
         private String feeType;
 
+        @NameInMap("order_id")
+        private String orderId;
+
         @NameInMap("remark")
         private String remark;
 
@@ -180,6 +183,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             this.billSettlementId = builder.billSettlementId;
             this.capitalDirection = builder.capitalDirection;
             this.feeType = builder.feeType;
+            this.orderId = builder.orderId;
             this.remark = builder.remark;
             this.remindTagList = builder.remindTagList;
             this.settlementAmount = builder.settlementAmount;
@@ -214,6 +218,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         public String getFeeType() {
             return this.feeType;
+        }
+
+        /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
         }
 
         /**
@@ -255,6 +266,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private Long billSettlementId; 
             private String capitalDirection; 
             private String feeType; 
+            private String orderId; 
             private String remark; 
             private java.util.List < String > remindTagList; 
             private String settlementAmount; 
@@ -282,6 +294,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder feeType(String feeType) {
                 this.feeType = feeType;
+                return this;
+            }
+
+            /**
+             * order_id.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
                 return this;
             }
 
@@ -765,8 +785,23 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("corp_id")
         private String corpId;
 
+        @NameInMap("cost_center_code")
+        private String costCenterCode;
+
+        @NameInMap("cost_center_name")
+        private String costCenterName;
+
         @NameInMap("expenses")
         private java.util.List < Expenses> expenses;
+
+        @NameInMap("expenses_cover_dept_id")
+        private String expensesCoverDeptId;
+
+        @NameInMap("expenses_cover_dept_name")
+        private String expensesCoverDeptName;
+
+        @NameInMap("expenses_cover_invoice_title")
+        private String expensesCoverInvoiceTitle;
 
         @NameInMap("gmt_create")
         private String gmtCreate;
@@ -785,6 +820,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         @NameInMap("personal_amount")
         private String personalAmount;
+
+        @NameInMap("project_code")
+        private String projectCode;
+
+        @NameInMap("project_name")
+        private String projectName;
 
         @NameInMap("reason")
         private String reason;
@@ -811,13 +852,20 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             this.companyAmount = builder.companyAmount;
             this.companyPayAmount = builder.companyPayAmount;
             this.corpId = builder.corpId;
+            this.costCenterCode = builder.costCenterCode;
+            this.costCenterName = builder.costCenterName;
             this.expenses = builder.expenses;
+            this.expensesCoverDeptId = builder.expensesCoverDeptId;
+            this.expensesCoverDeptName = builder.expensesCoverDeptName;
+            this.expensesCoverInvoiceTitle = builder.expensesCoverInvoiceTitle;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.isDeleted = builder.isDeleted;
             this.itineraries = builder.itineraries;
             this.paymentInfos = builder.paymentInfos;
             this.personalAmount = builder.personalAmount;
+            this.projectCode = builder.projectCode;
+            this.projectName = builder.projectName;
             this.reason = builder.reason;
             this.reimbursementNo = builder.reimbursementNo;
             this.remark = builder.remark;
@@ -857,10 +905,45 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return costCenterCode
+         */
+        public String getCostCenterCode() {
+            return this.costCenterCode;
+        }
+
+        /**
+         * @return costCenterName
+         */
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        /**
          * @return expenses
          */
         public java.util.List < Expenses> getExpenses() {
             return this.expenses;
+        }
+
+        /**
+         * @return expensesCoverDeptId
+         */
+        public String getExpensesCoverDeptId() {
+            return this.expensesCoverDeptId;
+        }
+
+        /**
+         * @return expensesCoverDeptName
+         */
+        public String getExpensesCoverDeptName() {
+            return this.expensesCoverDeptName;
+        }
+
+        /**
+         * @return expensesCoverInvoiceTitle
+         */
+        public String getExpensesCoverInvoiceTitle() {
+            return this.expensesCoverInvoiceTitle;
         }
 
         /**
@@ -903,6 +986,20 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         public String getPersonalAmount() {
             return this.personalAmount;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
         }
 
         /**
@@ -958,13 +1055,20 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String companyAmount; 
             private String companyPayAmount; 
             private String corpId; 
+            private String costCenterCode; 
+            private String costCenterName; 
             private java.util.List < Expenses> expenses; 
+            private String expensesCoverDeptId; 
+            private String expensesCoverDeptName; 
+            private String expensesCoverInvoiceTitle; 
             private String gmtCreate; 
             private String gmtModified; 
             private String isDeleted; 
             private java.util.List < Itineraries> itineraries; 
             private java.util.List < PaymentInfos> paymentInfos; 
             private String personalAmount; 
+            private String projectCode; 
+            private String projectName; 
             private String reason; 
             private String reimbursementNo; 
             private String remark; 
@@ -998,10 +1102,50 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
+             * cost_center_code.
+             */
+            public Builder costCenterCode(String costCenterCode) {
+                this.costCenterCode = costCenterCode;
+                return this;
+            }
+
+            /**
+             * cost_center_name.
+             */
+            public Builder costCenterName(String costCenterName) {
+                this.costCenterName = costCenterName;
+                return this;
+            }
+
+            /**
              * expenses.
              */
             public Builder expenses(java.util.List < Expenses> expenses) {
                 this.expenses = expenses;
+                return this;
+            }
+
+            /**
+             * expenses_cover_dept_id.
+             */
+            public Builder expensesCoverDeptId(String expensesCoverDeptId) {
+                this.expensesCoverDeptId = expensesCoverDeptId;
+                return this;
+            }
+
+            /**
+             * expenses_cover_dept_name.
+             */
+            public Builder expensesCoverDeptName(String expensesCoverDeptName) {
+                this.expensesCoverDeptName = expensesCoverDeptName;
+                return this;
+            }
+
+            /**
+             * expenses_cover_invoice_title.
+             */
+            public Builder expensesCoverInvoiceTitle(String expensesCoverInvoiceTitle) {
+                this.expensesCoverInvoiceTitle = expensesCoverInvoiceTitle;
                 return this;
             }
 
@@ -1050,6 +1194,22 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder personalAmount(String personalAmount) {
                 this.personalAmount = personalAmount;
+                return this;
+            }
+
+            /**
+             * project_code.
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * project_name.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
                 return this;
             }
 
