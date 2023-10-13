@@ -69,7 +69,7 @@ public class GetFunctionCodeRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * Function name
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);

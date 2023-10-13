@@ -20,10 +20,15 @@ public class ListTaggedResourcesRequest extends Request {
     @NameInMap("nextToken")
     private String nextToken;
 
+    @Query
+    @NameInMap("resourceType")
+    private String resourceType;
+
     private ListTaggedResourcesRequest(Builder builder) {
         super(builder);
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class ListTaggedResourcesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<ListTaggedResourcesRequest, Builder> {
         private Integer limit; 
         private String nextToken; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class ListTaggedResourcesRequest extends Request {
             super(request);
             this.limit = request.limit;
             this.nextToken = request.nextToken;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class ListTaggedResourcesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * resourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("resourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

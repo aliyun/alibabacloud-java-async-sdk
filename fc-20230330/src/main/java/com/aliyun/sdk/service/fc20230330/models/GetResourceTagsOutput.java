@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceTagsOutput</p>
  */
 public class GetResourceTagsOutput extends TeaModel {
+    @NameInMap("resouceType")
+    private String resouceType;
+
     @NameInMap("resourceArn")
     private String resourceArn;
 
@@ -19,6 +22,7 @@ public class GetResourceTagsOutput extends TeaModel {
     private java.util.Map < String, String > tags;
 
     private GetResourceTagsOutput(Builder builder) {
+        this.resouceType = builder.resouceType;
         this.resourceArn = builder.resourceArn;
         this.tags = builder.tags;
     }
@@ -29,6 +33,13 @@ public class GetResourceTagsOutput extends TeaModel {
 
     public static GetResourceTagsOutput create() {
         return builder().build();
+    }
+
+    /**
+     * @return resouceType
+     */
+    public String getResouceType() {
+        return this.resouceType;
     }
 
     /**
@@ -46,8 +57,17 @@ public class GetResourceTagsOutput extends TeaModel {
     }
 
     public static final class Builder {
+        private String resouceType; 
         private String resourceArn; 
         private java.util.Map < String, String > tags; 
+
+        /**
+         * resouceType.
+         */
+        public Builder resouceType(String resouceType) {
+            this.resouceType = resouceType;
+            return this;
+        }
 
         /**
          * resourceArn.
