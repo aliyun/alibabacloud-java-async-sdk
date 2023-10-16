@@ -34,6 +34,10 @@ public class ExportConversationDetailsRequest extends Request {
     private java.util.List < String > options;
 
     @Query
+    @NameInMap("Result")
+    private Integer result;
+
+    @Query
     @NameInMap("RoundsLeftRange")
     private Integer roundsLeftRange;
 
@@ -48,6 +52,7 @@ public class ExportConversationDetailsRequest extends Request {
         this.callingNumber = builder.callingNumber;
         this.instanceId = builder.instanceId;
         this.options = builder.options;
+        this.result = builder.result;
         this.roundsLeftRange = builder.roundsLeftRange;
         this.roundsRightRange = builder.roundsRightRange;
     }
@@ -101,6 +106,13 @@ public class ExportConversationDetailsRequest extends Request {
     }
 
     /**
+     * @return result
+     */
+    public Integer getResult() {
+        return this.result;
+    }
+
+    /**
      * @return roundsLeftRange
      */
     public Integer getRoundsLeftRange() {
@@ -120,6 +132,7 @@ public class ExportConversationDetailsRequest extends Request {
         private String callingNumber; 
         private String instanceId; 
         private java.util.List < String > options; 
+        private Integer result; 
         private Integer roundsLeftRange; 
         private Integer roundsRightRange; 
 
@@ -134,6 +147,7 @@ public class ExportConversationDetailsRequest extends Request {
             this.callingNumber = request.callingNumber;
             this.instanceId = request.instanceId;
             this.options = request.options;
+            this.result = request.result;
             this.roundsLeftRange = request.roundsLeftRange;
             this.roundsRightRange = request.roundsRightRange;
         } 
@@ -180,6 +194,15 @@ public class ExportConversationDetailsRequest extends Request {
         public Builder options(java.util.List < String > options) {
             this.putQueryParameter("Options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * Result.
+         */
+        public Builder result(Integer result) {
+            this.putQueryParameter("Result", result);
+            this.result = result;
             return this;
         }
 

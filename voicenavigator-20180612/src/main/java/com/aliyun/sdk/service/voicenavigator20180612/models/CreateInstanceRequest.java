@@ -26,11 +26,26 @@ public class CreateInstanceRequest extends Request {
     @Validation(required = true)
     private String name;
 
+    @Query
+    @NameInMap("NluServiceParamsJson")
+    private String nluServiceParamsJson;
+
+    @Query
+    @NameInMap("UnionInstanceId")
+    private String unionInstanceId;
+
+    @Query
+    @NameInMap("UnionSource")
+    private String unionSource;
+
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.concurrency = builder.concurrency;
         this.description = builder.description;
         this.name = builder.name;
+        this.nluServiceParamsJson = builder.nluServiceParamsJson;
+        this.unionInstanceId = builder.unionInstanceId;
+        this.unionSource = builder.unionSource;
     }
 
     public static Builder builder() {
@@ -67,10 +82,34 @@ public class CreateInstanceRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return nluServiceParamsJson
+     */
+    public String getNluServiceParamsJson() {
+        return this.nluServiceParamsJson;
+    }
+
+    /**
+     * @return unionInstanceId
+     */
+    public String getUnionInstanceId() {
+        return this.unionInstanceId;
+    }
+
+    /**
+     * @return unionSource
+     */
+    public String getUnionSource() {
+        return this.unionSource;
+    }
+
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private Long concurrency; 
         private String description; 
         private String name; 
+        private String nluServiceParamsJson; 
+        private String unionInstanceId; 
+        private String unionSource; 
 
         private Builder() {
             super();
@@ -81,6 +120,9 @@ public class CreateInstanceRequest extends Request {
             this.concurrency = request.concurrency;
             this.description = request.description;
             this.name = request.name;
+            this.nluServiceParamsJson = request.nluServiceParamsJson;
+            this.unionInstanceId = request.unionInstanceId;
+            this.unionSource = request.unionSource;
         } 
 
         /**
@@ -107,6 +149,33 @@ public class CreateInstanceRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NluServiceParamsJson.
+         */
+        public Builder nluServiceParamsJson(String nluServiceParamsJson) {
+            this.putQueryParameter("NluServiceParamsJson", nluServiceParamsJson);
+            this.nluServiceParamsJson = nluServiceParamsJson;
+            return this;
+        }
+
+        /**
+         * UnionInstanceId.
+         */
+        public Builder unionInstanceId(String unionInstanceId) {
+            this.putQueryParameter("UnionInstanceId", unionInstanceId);
+            this.unionInstanceId = unionInstanceId;
+            return this;
+        }
+
+        /**
+         * UnionSource.
+         */
+        public Builder unionSource(String unionSource) {
+            this.putQueryParameter("UnionSource", unionSource);
+            this.unionSource = unionSource;
             return this;
         }
 

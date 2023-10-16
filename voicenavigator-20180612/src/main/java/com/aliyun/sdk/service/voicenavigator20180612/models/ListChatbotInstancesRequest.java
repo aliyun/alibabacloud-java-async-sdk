@@ -17,6 +17,14 @@ public class ListChatbotInstancesRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("NluServiceParamsJson")
+    private String nluServiceParamsJson;
+
+    @Query
+    @NameInMap("NluServiceType")
+    private String nluServiceType;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -25,11 +33,18 @@ public class ListChatbotInstancesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("UnionSource")
+    private String unionSource;
+
     private ListChatbotInstancesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.nluServiceParamsJson = builder.nluServiceParamsJson;
+        this.nluServiceType = builder.nluServiceType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.unionSource = builder.unionSource;
     }
 
     public static Builder builder() {
@@ -53,6 +68,20 @@ public class ListChatbotInstancesRequest extends Request {
     }
 
     /**
+     * @return nluServiceParamsJson
+     */
+    public String getNluServiceParamsJson() {
+        return this.nluServiceParamsJson;
+    }
+
+    /**
+     * @return nluServiceType
+     */
+    public String getNluServiceType() {
+        return this.nluServiceType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -66,10 +95,20 @@ public class ListChatbotInstancesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return unionSource
+     */
+    public String getUnionSource() {
+        return this.unionSource;
+    }
+
     public static final class Builder extends Request.Builder<ListChatbotInstancesRequest, Builder> {
         private String instanceId; 
+        private String nluServiceParamsJson; 
+        private String nluServiceType; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String unionSource; 
 
         private Builder() {
             super();
@@ -78,8 +117,11 @@ public class ListChatbotInstancesRequest extends Request {
         private Builder(ListChatbotInstancesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.nluServiceParamsJson = request.nluServiceParamsJson;
+            this.nluServiceType = request.nluServiceType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.unionSource = request.unionSource;
         } 
 
         /**
@@ -88,6 +130,24 @@ public class ListChatbotInstancesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NluServiceParamsJson.
+         */
+        public Builder nluServiceParamsJson(String nluServiceParamsJson) {
+            this.putQueryParameter("NluServiceParamsJson", nluServiceParamsJson);
+            this.nluServiceParamsJson = nluServiceParamsJson;
+            return this;
+        }
+
+        /**
+         * NluServiceType.
+         */
+        public Builder nluServiceType(String nluServiceType) {
+            this.putQueryParameter("NluServiceType", nluServiceType);
+            this.nluServiceType = nluServiceType;
             return this;
         }
 
@@ -106,6 +166,15 @@ public class ListChatbotInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * UnionSource.
+         */
+        public Builder unionSource(String unionSource) {
+            this.putQueryParameter("UnionSource", unionSource);
+            this.unionSource = unionSource;
             return this;
         }
 

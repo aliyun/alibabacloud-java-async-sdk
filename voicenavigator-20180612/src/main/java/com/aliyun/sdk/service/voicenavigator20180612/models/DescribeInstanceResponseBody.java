@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
+    @NameInMap("AbilityType")
+    private String abilityType;
+
     @NameInMap("ApplicableOperations")
     private java.util.List < String > applicableOperations;
 
@@ -33,13 +36,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Name")
     private String name;
 
+    @NameInMap("NluServiceParamsJson")
+    private String nluServiceParamsJson;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("UnionInstanceId")
+    private String unionInstanceId;
+
+    @NameInMap("UnionSource")
+    private String unionSource;
+
     private DescribeInstanceResponseBody(Builder builder) {
+        this.abilityType = builder.abilityType;
         this.applicableOperations = builder.applicableOperations;
         this.concurrency = builder.concurrency;
         this.description = builder.description;
@@ -47,8 +60,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.modifyTime = builder.modifyTime;
         this.modifyUserName = builder.modifyUserName;
         this.name = builder.name;
+        this.nluServiceParamsJson = builder.nluServiceParamsJson;
         this.requestId = builder.requestId;
         this.status = builder.status;
+        this.unionInstanceId = builder.unionInstanceId;
+        this.unionSource = builder.unionSource;
     }
 
     public static Builder builder() {
@@ -57,6 +73,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static DescribeInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return abilityType
+     */
+    public String getAbilityType() {
+        return this.abilityType;
     }
 
     /**
@@ -109,6 +132,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return nluServiceParamsJson
+     */
+    public String getNluServiceParamsJson() {
+        return this.nluServiceParamsJson;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -122,7 +152,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return unionInstanceId
+     */
+    public String getUnionInstanceId() {
+        return this.unionInstanceId;
+    }
+
+    /**
+     * @return unionSource
+     */
+    public String getUnionSource() {
+        return this.unionSource;
+    }
+
     public static final class Builder {
+        private String abilityType; 
         private java.util.List < String > applicableOperations; 
         private Long concurrency; 
         private String description; 
@@ -130,8 +175,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Long modifyTime; 
         private String modifyUserName; 
         private String name; 
+        private String nluServiceParamsJson; 
         private String requestId; 
         private String status; 
+        private String unionInstanceId; 
+        private String unionSource; 
+
+        /**
+         * AbilityType.
+         */
+        public Builder abilityType(String abilityType) {
+            this.abilityType = abilityType;
+            return this;
+        }
 
         /**
          * ApplicableOperations.
@@ -190,6 +246,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * NluServiceParamsJson.
+         */
+        public Builder nluServiceParamsJson(String nluServiceParamsJson) {
+            this.nluServiceParamsJson = nluServiceParamsJson;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -202,6 +266,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * UnionInstanceId.
+         */
+        public Builder unionInstanceId(String unionInstanceId) {
+            this.unionInstanceId = unionInstanceId;
+            return this;
+        }
+
+        /**
+         * UnionSource.
+         */
+        public Builder unionSource(String unionSource) {
+            this.unionSource = unionSource;
             return this;
         }
 

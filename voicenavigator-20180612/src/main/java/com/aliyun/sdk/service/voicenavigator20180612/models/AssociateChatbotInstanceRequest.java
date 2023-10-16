@@ -26,11 +26,21 @@ public class AssociateChatbotInstanceRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Query
+    @NameInMap("NluServiceParamsJson")
+    private String nluServiceParamsJson;
+
+    @Query
+    @NameInMap("UnionSource")
+    private String unionSource;
+
     private AssociateChatbotInstanceRequest(Builder builder) {
         super(builder);
         this.chatbotInstanceId = builder.chatbotInstanceId;
         this.chatbotName = builder.chatbotName;
         this.instanceId = builder.instanceId;
+        this.nluServiceParamsJson = builder.nluServiceParamsJson;
+        this.unionSource = builder.unionSource;
     }
 
     public static Builder builder() {
@@ -67,10 +77,26 @@ public class AssociateChatbotInstanceRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return nluServiceParamsJson
+     */
+    public String getNluServiceParamsJson() {
+        return this.nluServiceParamsJson;
+    }
+
+    /**
+     * @return unionSource
+     */
+    public String getUnionSource() {
+        return this.unionSource;
+    }
+
     public static final class Builder extends Request.Builder<AssociateChatbotInstanceRequest, Builder> {
         private String chatbotInstanceId; 
         private String chatbotName; 
         private String instanceId; 
+        private String nluServiceParamsJson; 
+        private String unionSource; 
 
         private Builder() {
             super();
@@ -81,6 +107,8 @@ public class AssociateChatbotInstanceRequest extends Request {
             this.chatbotInstanceId = request.chatbotInstanceId;
             this.chatbotName = request.chatbotName;
             this.instanceId = request.instanceId;
+            this.nluServiceParamsJson = request.nluServiceParamsJson;
+            this.unionSource = request.unionSource;
         } 
 
         /**
@@ -107,6 +135,24 @@ public class AssociateChatbotInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NluServiceParamsJson.
+         */
+        public Builder nluServiceParamsJson(String nluServiceParamsJson) {
+            this.putQueryParameter("NluServiceParamsJson", nluServiceParamsJson);
+            this.nluServiceParamsJson = nluServiceParamsJson;
+            return this;
+        }
+
+        /**
+         * UnionSource.
+         */
+        public Builder unionSource(String unionSource) {
+            this.putQueryParameter("UnionSource", unionSource);
+            this.unionSource = unionSource;
             return this;
         }
 

@@ -160,7 +160,7 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * 策略级别，包含 0：系统，1:租户，2：实例
+         * ConfigLevel.
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -169,7 +169,7 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * config_level对应的实体ID
+         * EntryId.
          */
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CollectedNumberRequest extends Request {
     @Query
+    @NameInMap("AdditionalContext")
+    private String additionalContext;
+
+    @Query
     @NameInMap("ConversationId")
     @Validation(required = true)
     private String conversationId;
@@ -32,6 +36,7 @@ public class CollectedNumberRequest extends Request {
 
     private CollectedNumberRequest(Builder builder) {
         super(builder);
+        this.additionalContext = builder.additionalContext;
         this.conversationId = builder.conversationId;
         this.instanceId = builder.instanceId;
         this.instanceOwnerId = builder.instanceOwnerId;
@@ -49,6 +54,13 @@ public class CollectedNumberRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return additionalContext
+     */
+    public String getAdditionalContext() {
+        return this.additionalContext;
     }
 
     /**
@@ -80,6 +92,7 @@ public class CollectedNumberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CollectedNumberRequest, Builder> {
+        private String additionalContext; 
         private String conversationId; 
         private String instanceId; 
         private Long instanceOwnerId; 
@@ -91,11 +104,21 @@ public class CollectedNumberRequest extends Request {
 
         private Builder(CollectedNumberRequest request) {
             super(request);
+            this.additionalContext = request.additionalContext;
             this.conversationId = request.conversationId;
             this.instanceId = request.instanceId;
             this.instanceOwnerId = request.instanceOwnerId;
             this.number = request.number;
         } 
+
+        /**
+         * AdditionalContext.
+         */
+        public Builder additionalContext(String additionalContext) {
+            this.putQueryParameter("AdditionalContext", additionalContext);
+            this.additionalContext = additionalContext;
+            return this;
+        }
 
         /**
          * ConversationId.

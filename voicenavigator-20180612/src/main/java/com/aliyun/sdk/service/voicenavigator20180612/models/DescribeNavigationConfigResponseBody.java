@@ -327,7 +327,7 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IntentTrigger.
+             * ""
              */
             public Builder intentTrigger(String intentTrigger) {
                 this.intentTrigger = intentTrigger;

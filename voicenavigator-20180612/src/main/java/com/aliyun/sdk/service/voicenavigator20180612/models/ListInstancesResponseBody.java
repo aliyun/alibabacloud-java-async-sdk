@@ -138,6 +138,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Concurrency")
         private Long concurrency;
 
+        @NameInMap("CreateTime")
+        private Long createTime;
+
         @NameInMap("Description")
         private String description;
 
@@ -153,18 +156,35 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("NluServiceParamsJson")
+        private String nluServiceParamsJson;
+
+        @NameInMap("Numbers")
+        private java.util.List < String > numbers;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("UnionInstanceId")
+        private String unionInstanceId;
+
+        @NameInMap("UnionSource")
+        private String unionSource;
 
         private Instances(Builder builder) {
             this.applicableOperations = builder.applicableOperations;
             this.concurrency = builder.concurrency;
+            this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
             this.modifyTime = builder.modifyTime;
             this.modifyUserName = builder.modifyUserName;
             this.name = builder.name;
+            this.nluServiceParamsJson = builder.nluServiceParamsJson;
+            this.numbers = builder.numbers;
             this.status = builder.status;
+            this.unionInstanceId = builder.unionInstanceId;
+            this.unionSource = builder.unionSource;
         }
 
         public static Builder builder() {
@@ -187,6 +207,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public Long getConcurrency() {
             return this.concurrency;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -225,21 +252,54 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nluServiceParamsJson
+         */
+        public String getNluServiceParamsJson() {
+            return this.nluServiceParamsJson;
+        }
+
+        /**
+         * @return numbers
+         */
+        public java.util.List < String > getNumbers() {
+            return this.numbers;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
         }
 
+        /**
+         * @return unionInstanceId
+         */
+        public String getUnionInstanceId() {
+            return this.unionInstanceId;
+        }
+
+        /**
+         * @return unionSource
+         */
+        public String getUnionSource() {
+            return this.unionSource;
+        }
+
         public static final class Builder {
             private java.util.List < String > applicableOperations; 
             private Long concurrency; 
+            private Long createTime; 
             private String description; 
             private String instanceId; 
             private Long modifyTime; 
             private String modifyUserName; 
             private String name; 
+            private String nluServiceParamsJson; 
+            private java.util.List < String > numbers; 
             private String status; 
+            private String unionInstanceId; 
+            private String unionSource; 
 
             /**
              * ApplicableOperations.
@@ -254,6 +314,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder concurrency(Long concurrency) {
                 this.concurrency = concurrency;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -298,10 +366,42 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * NluServiceParamsJson.
+             */
+            public Builder nluServiceParamsJson(String nluServiceParamsJson) {
+                this.nluServiceParamsJson = nluServiceParamsJson;
+                return this;
+            }
+
+            /**
+             * Numbers.
+             */
+            public Builder numbers(java.util.List < String > numbers) {
+                this.numbers = numbers;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UnionInstanceId.
+             */
+            public Builder unionInstanceId(String unionInstanceId) {
+                this.unionInstanceId = unionInstanceId;
+                return this;
+            }
+
+            /**
+             * UnionSource.
+             */
+            public Builder unionSource(String unionSource) {
+                this.unionSource = unionSource;
                 return this;
             }
 

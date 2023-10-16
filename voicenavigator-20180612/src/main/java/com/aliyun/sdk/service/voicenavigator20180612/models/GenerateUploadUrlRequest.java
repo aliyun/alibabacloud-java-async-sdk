@@ -430,7 +430,7 @@ public class GenerateUploadUrlRequest extends Request {
         }
 
         /**
-         * voicerobot.manager.dto.enums.EnvironmentType
+         * Environment.
          */
         public Builder environment(Integer environment) {
             this.putBodyParameter("Environment", environment);
