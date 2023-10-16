@@ -82,7 +82,7 @@ public class DescribeCACertificateListRequest extends Request {
         } 
 
         /**
-         * The number of CA certificates to return on each page. Default value: **20**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +91,10 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * The unique identifier of the client certificate or server certificate that you want to revoke.
+         * <p>
+         * 
+         * >  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -100,7 +103,7 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * The object.
+         * The number of CA certificates to return on each page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

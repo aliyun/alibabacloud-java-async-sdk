@@ -82,7 +82,7 @@ public class ListClientCertificateRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +91,10 @@ public class ListClientCertificateRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * The unique identifier of the client certificate or the server certificate that you want to query.
+         * <p>
+         * 
+         * >  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -100,7 +103,7 @@ public class ListClientCertificateRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of certificates to return on each page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

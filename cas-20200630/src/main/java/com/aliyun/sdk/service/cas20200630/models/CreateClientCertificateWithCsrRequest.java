@@ -41,6 +41,10 @@ public class CreateClientCertificateWithCsrRequest extends Request {
     private Integer days;
 
     @Query
+    @NameInMap("EnableCrl")
+    private Long enableCrl;
+
+    @Query
     @NameInMap("Immediately")
     private Integer immediately;
 
@@ -89,6 +93,7 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         this.country = builder.country;
         this.csr = builder.csr;
         this.days = builder.days;
+        this.enableCrl = builder.enableCrl;
         this.immediately = builder.immediately;
         this.locality = builder.locality;
         this.months = builder.months;
@@ -161,6 +166,13 @@ public class CreateClientCertificateWithCsrRequest extends Request {
      */
     public Integer getDays() {
         return this.days;
+    }
+
+    /**
+     * @return enableCrl
+     */
+    public Long getEnableCrl() {
+        return this.enableCrl;
     }
 
     /**
@@ -241,6 +253,7 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         private String country; 
         private String csr; 
         private Integer days; 
+        private Long enableCrl; 
         private Integer immediately; 
         private String locality; 
         private Integer months; 
@@ -265,6 +278,7 @@ public class CreateClientCertificateWithCsrRequest extends Request {
             this.country = request.country;
             this.csr = request.csr;
             this.days = request.days;
+            this.enableCrl = request.enableCrl;
             this.immediately = request.immediately;
             this.locality = request.locality;
             this.months = request.months;
@@ -348,6 +362,15 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);
             this.days = days;
+            return this;
+        }
+
+        /**
+         * EnableCrl.
+         */
+        public Builder enableCrl(Long enableCrl) {
+            this.putQueryParameter("EnableCrl", enableCrl);
+            this.enableCrl = enableCrl;
             return this;
         }
 

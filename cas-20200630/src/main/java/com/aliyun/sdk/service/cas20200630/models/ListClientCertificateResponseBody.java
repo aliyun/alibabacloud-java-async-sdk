@@ -98,7 +98,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * CertificateList.
+         * An array that consists of the details about all client certificates and server certificates.
          */
         public Builder certificateList(java.util.List < CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -106,7 +106,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the current page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +114,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * The total number of pages returned.
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -122,7 +122,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of certificates that are returned per page.
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -138,7 +138,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of client certificates and server certificates that are returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -430,7 +430,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             private String x509Certificate; 
 
             /**
-             * AfterDate.
+             * The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -438,7 +438,12 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Algorithm.
+             * The type of the encryption algorithm of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.
+             * *   **ECC**: the elliptic curve cryptography (ECC) algorithm.
+             * *   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -446,7 +451,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * BeforeDate.
+             * The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -454,7 +459,11 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateType.
+             * The type of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **CLIENT**: client certificate
+             * *   **SERVER**: server certificate
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -462,7 +471,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * The common name of the certificate.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -470,7 +479,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             * <p>
+             * 
+             * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -478,7 +490,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Days.
+             * The validity period of the certificate. Unit: days.
              */
             public Builder days(Integer days) {
                 this.days = days;
@@ -486,7 +498,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Identifier.
+             * The unique identifier of the certificate.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -494,7 +506,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * KeySize.
+             * The key length of the certificate.
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -502,7 +514,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Locality.
+             * The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -510,7 +522,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The MD5 fingerprint of the certificate.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -518,7 +530,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Organization.
+             * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -526,7 +538,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationUnit.
+             * The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.
              */
             public Builder organizationUnit(String organizationUnit) {
                 this.organizationUnit = organizationUnit;
@@ -534,7 +546,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ParentIdentifier.
+             * The unique identifier of the intermediate certificate from which the client certificate is issued.
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -542,7 +554,19 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Sans.
+             * The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.
+             * <p>
+             * 
+             * The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:
+             * 
+             * *   **Type**: the type of the extension. Data type: integer. Valid values:
+             * 
+             *     *   **1**: an email address
+             *     *   **2**: a domain name
+             *     *   **6**: a Uniform Resource Identifier (URI)
+             *     *   **7**: an IP address
+             * 
+             * *   **Value**: the value of the extension. Data type: string.
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -550,7 +574,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * The serial number of the certificate.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -558,7 +582,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Sha2.
+             * The SHA-256 fingerprint of the certificate.
              */
             public Builder sha2(String sha2) {
                 this.sha2 = sha2;
@@ -566,7 +590,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * SignAlgorithm.
+             * The signature algorithm of the certificate.
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -574,7 +598,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -582,7 +606,11 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **ISSUE**: issued
+             * *   **REVOKE**: revoked
              */
             public Builder status(String status) {
                 this.status = status;
@@ -590,7 +618,15 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * SubjectDN.
+             * The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:
+             * <p>
+             * 
+             * *   **C**: the country
+             * *   **O**: the organization
+             * *   **OU**: the department
+             * *   **L**: the city
+             * *   **ST**: the province, municipality, or autonomous region
+             * *   **CN**: the common name
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
@@ -598,7 +634,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * X509Certificate.
+             * The content of the certificate.
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;

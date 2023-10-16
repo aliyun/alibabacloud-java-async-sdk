@@ -27,6 +27,14 @@ public class CreateSubCACertificateRequest extends Request {
     private String countryCode;
 
     @Query
+    @NameInMap("CrlDay")
+    private Integer crlDay;
+
+    @Query
+    @NameInMap("EnableCrl")
+    private Boolean enableCrl;
+
+    @Query
     @NameInMap("ExtendedKeyUsages")
     private java.util.List < String > extendedKeyUsages;
 
@@ -69,6 +77,8 @@ public class CreateSubCACertificateRequest extends Request {
         this.algorithm = builder.algorithm;
         this.commonName = builder.commonName;
         this.countryCode = builder.countryCode;
+        this.crlDay = builder.crlDay;
+        this.enableCrl = builder.enableCrl;
         this.extendedKeyUsages = builder.extendedKeyUsages;
         this.locality = builder.locality;
         this.organization = builder.organization;
@@ -111,6 +121,20 @@ public class CreateSubCACertificateRequest extends Request {
      */
     public String getCountryCode() {
         return this.countryCode;
+    }
+
+    /**
+     * @return crlDay
+     */
+    public Integer getCrlDay() {
+        return this.crlDay;
+    }
+
+    /**
+     * @return enableCrl
+     */
+    public Boolean getEnableCrl() {
+        return this.enableCrl;
     }
 
     /**
@@ -173,6 +197,8 @@ public class CreateSubCACertificateRequest extends Request {
         private String algorithm; 
         private String commonName; 
         private String countryCode; 
+        private Integer crlDay; 
+        private Boolean enableCrl; 
         private java.util.List < String > extendedKeyUsages; 
         private String locality; 
         private String organization; 
@@ -191,6 +217,8 @@ public class CreateSubCACertificateRequest extends Request {
             this.algorithm = request.algorithm;
             this.commonName = request.commonName;
             this.countryCode = request.countryCode;
+            this.crlDay = request.crlDay;
+            this.enableCrl = request.enableCrl;
             this.extendedKeyUsages = request.extendedKeyUsages;
             this.locality = request.locality;
             this.organization = request.organization;
@@ -239,6 +267,24 @@ public class CreateSubCACertificateRequest extends Request {
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
             this.countryCode = countryCode;
+            return this;
+        }
+
+        /**
+         * CrlDay.
+         */
+        public Builder crlDay(Integer crlDay) {
+            this.putQueryParameter("CrlDay", crlDay);
+            this.crlDay = crlDay;
+            return this;
+        }
+
+        /**
+         * EnableCrl.
+         */
+        public Builder enableCrl(Boolean enableCrl) {
+            this.putQueryParameter("EnableCrl", enableCrl);
+            this.enableCrl = enableCrl;
             return this;
         }
 

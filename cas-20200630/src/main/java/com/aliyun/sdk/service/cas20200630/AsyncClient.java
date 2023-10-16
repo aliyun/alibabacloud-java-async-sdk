@@ -96,8 +96,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCACertificateCountResponse> describeCACertificateCount(DescribeCACertificateCountRequest request);
 
     /**
-      * All Alibaba Cloud API operations must include common request parameters.
-      * For more information about sample requests, see the **"Examples"** section of this topic.
+      * You can call the DescribeCACertificateList operation to perform a paged query of the details about all CA certificates that you create. The details include the unique identifier, serial number, user information, and content of each root CA certificate or intermediate CA certificate.
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DescribeCACertificateListResponse> describeCACertificateList(DescribeCACertificateListRequest request);
@@ -133,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetCAInstanceStatusResponse> getCAInstanceStatus(GetCAInstanceStatusRequest request);
 
+    /**
+      * You can call the ListClientCertificate operation to perform a paged query of the details about all client certificates and server certificates that you create. The details include the unique identifier, serial number, user information, content, and status of each certificate.
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<ListClientCertificateResponse> listClientCertificate(ListClientCertificateRequest request);
 
     /**

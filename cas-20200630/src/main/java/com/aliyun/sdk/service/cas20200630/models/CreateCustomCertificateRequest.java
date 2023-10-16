@@ -22,6 +22,10 @@ public class CreateCustomCertificateRequest extends Request {
     private String csr;
 
     @Query
+    @NameInMap("EnableCrl")
+    private Long enableCrl;
+
+    @Query
     @NameInMap("Immediately")
     private Integer immediately;
 
@@ -39,6 +43,7 @@ public class CreateCustomCertificateRequest extends Request {
         super(builder);
         this.apiPassthrough = builder.apiPassthrough;
         this.csr = builder.csr;
+        this.enableCrl = builder.enableCrl;
         this.immediately = builder.immediately;
         this.parentIdentifier = builder.parentIdentifier;
         this.validity = builder.validity;
@@ -72,6 +77,13 @@ public class CreateCustomCertificateRequest extends Request {
     }
 
     /**
+     * @return enableCrl
+     */
+    public Long getEnableCrl() {
+        return this.enableCrl;
+    }
+
+    /**
      * @return immediately
      */
     public Integer getImmediately() {
@@ -95,6 +107,7 @@ public class CreateCustomCertificateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCustomCertificateRequest, Builder> {
         private ApiPassthrough apiPassthrough; 
         private String csr; 
+        private Long enableCrl; 
         private Integer immediately; 
         private String parentIdentifier; 
         private String validity; 
@@ -107,6 +120,7 @@ public class CreateCustomCertificateRequest extends Request {
             super(request);
             this.apiPassthrough = request.apiPassthrough;
             this.csr = request.csr;
+            this.enableCrl = request.enableCrl;
             this.immediately = request.immediately;
             this.parentIdentifier = request.parentIdentifier;
             this.validity = request.validity;
@@ -127,6 +141,15 @@ public class CreateCustomCertificateRequest extends Request {
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
             this.csr = csr;
+            return this;
+        }
+
+        /**
+         * EnableCrl.
+         */
+        public Builder enableCrl(Long enableCrl) {
+            this.putQueryParameter("EnableCrl", enableCrl);
+            this.enableCrl = enableCrl;
             return this;
         }
 
@@ -431,6 +454,9 @@ public class CreateCustomCertificateRequest extends Request {
 
     }
     public static class Extensions extends TeaModel {
+        @NameInMap("Criticals")
+        private java.util.List < String > criticals;
+
         @NameInMap("ExtendedKeyUsages")
         private java.util.List < String > extendedKeyUsages;
 
@@ -441,6 +467,7 @@ public class CreateCustomCertificateRequest extends Request {
         private java.util.List < SubjectAlternativeNames> subjectAlternativeNames;
 
         private Extensions(Builder builder) {
+            this.criticals = builder.criticals;
             this.extendedKeyUsages = builder.extendedKeyUsages;
             this.keyUsage = builder.keyUsage;
             this.subjectAlternativeNames = builder.subjectAlternativeNames;
@@ -452,6 +479,13 @@ public class CreateCustomCertificateRequest extends Request {
 
         public static Extensions create() {
             return builder().build();
+        }
+
+        /**
+         * @return criticals
+         */
+        public java.util.List < String > getCriticals() {
+            return this.criticals;
         }
 
         /**
@@ -476,9 +510,18 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > criticals; 
             private java.util.List < String > extendedKeyUsages; 
             private KeyUsage keyUsage; 
             private java.util.List < SubjectAlternativeNames> subjectAlternativeNames; 
+
+            /**
+             * Criticals.
+             */
+            public Builder criticals(java.util.List < String > criticals) {
+                this.criticals = criticals;
+                return this;
+            }
 
             /**
              * The extended key usage.
@@ -511,13 +554,76 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
     }
+    public static class CustomAttributes extends TeaModel {
+        @NameInMap("ObjectIdentifier")
+        private String objectIdentifier;
+
+        @NameInMap("Value")
+        private String value;
+
+        private CustomAttributes(Builder builder) {
+            this.objectIdentifier = builder.objectIdentifier;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return objectIdentifier
+         */
+        public String getObjectIdentifier() {
+            return this.objectIdentifier;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String objectIdentifier; 
+            private String value; 
+
+            /**
+             * ObjectIdentifier.
+             */
+            public Builder objectIdentifier(String objectIdentifier) {
+                this.objectIdentifier = objectIdentifier;
+                return this;
+            }
+
+            /**
+             * The alias that meets the requirement of a specified type.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public CustomAttributes build() {
+                return new CustomAttributes(this);
+            } 
+
+        } 
+
+    }
     public static class Subject extends TeaModel {
         @NameInMap("CommonName")
-        @Validation(required = true)
         private String commonName;
 
         @NameInMap("Country")
         private String country;
+
+        @NameInMap("CustomAttributes")
+        private java.util.List < CustomAttributes> customAttributes;
 
         @NameInMap("Locality")
         private String locality;
@@ -534,6 +640,7 @@ public class CreateCustomCertificateRequest extends Request {
         private Subject(Builder builder) {
             this.commonName = builder.commonName;
             this.country = builder.country;
+            this.customAttributes = builder.customAttributes;
             this.locality = builder.locality;
             this.organization = builder.organization;
             this.organizationUnit = builder.organizationUnit;
@@ -560,6 +667,13 @@ public class CreateCustomCertificateRequest extends Request {
          */
         public String getCountry() {
             return this.country;
+        }
+
+        /**
+         * @return customAttributes
+         */
+        public java.util.List < CustomAttributes> getCustomAttributes() {
+            return this.customAttributes;
         }
 
         /**
@@ -593,6 +707,7 @@ public class CreateCustomCertificateRequest extends Request {
         public static final class Builder {
             private String commonName; 
             private String country; 
+            private java.util.List < CustomAttributes> customAttributes; 
             private String locality; 
             private String organization; 
             private String organizationUnit; 
@@ -611,6 +726,14 @@ public class CreateCustomCertificateRequest extends Request {
              */
             public Builder country(String country) {
                 this.country = country;
+                return this;
+            }
+
+            /**
+             * CustomAttributes.
+             */
+            public Builder customAttributes(java.util.List < CustomAttributes> customAttributes) {
+                this.customAttributes = customAttributes;
                 return this;
             }
 
@@ -657,11 +780,15 @@ public class CreateCustomCertificateRequest extends Request {
         @NameInMap("Extensions")
         private Extensions extensions;
 
+        @NameInMap("SerialNumber")
+        private String serialNumber;
+
         @NameInMap("Subject")
         private Subject subject;
 
         private ApiPassthrough(Builder builder) {
             this.extensions = builder.extensions;
+            this.serialNumber = builder.serialNumber;
             this.subject = builder.subject;
         }
 
@@ -681,6 +808,13 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
+         * @return serialNumber
+         */
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        /**
          * @return subject
          */
         public Subject getSubject() {
@@ -689,6 +823,7 @@ public class CreateCustomCertificateRequest extends Request {
 
         public static final class Builder {
             private Extensions extensions; 
+            private String serialNumber; 
             private Subject subject; 
 
             /**
@@ -696,6 +831,14 @@ public class CreateCustomCertificateRequest extends Request {
              */
             public Builder extensions(Extensions extensions) {
                 this.extensions = extensions;
+                return this;
+            }
+
+            /**
+             * SerialNumber.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
                 return this;
             }
 

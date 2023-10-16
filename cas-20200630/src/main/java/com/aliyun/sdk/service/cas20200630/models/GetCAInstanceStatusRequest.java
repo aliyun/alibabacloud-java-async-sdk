@@ -13,12 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCAInstanceStatusRequest extends Request {
     @Query
+    @NameInMap("Identifier")
+    private String identifier;
+
+    @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     private GetCAInstanceStatusRequest(Builder builder) {
         super(builder);
+        this.identifier = builder.identifier;
         this.instanceId = builder.instanceId;
     }
 
@@ -36,6 +40,13 @@ public class GetCAInstanceStatusRequest extends Request {
     }
 
     /**
+     * @return identifier
+     */
+    public String getIdentifier() {
+        return this.identifier;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -43,6 +54,7 @@ public class GetCAInstanceStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCAInstanceStatusRequest, Builder> {
+        private String identifier; 
         private String instanceId; 
 
         private Builder() {
@@ -51,8 +63,18 @@ public class GetCAInstanceStatusRequest extends Request {
 
         private Builder(GetCAInstanceStatusRequest request) {
             super(request);
+            this.identifier = request.identifier;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * Identifier.
+         */
+        public Builder identifier(String identifier) {
+            this.putQueryParameter("Identifier", identifier);
+            this.identifier = identifier;
+            return this;
+        }
 
         /**
          * InstanceId.

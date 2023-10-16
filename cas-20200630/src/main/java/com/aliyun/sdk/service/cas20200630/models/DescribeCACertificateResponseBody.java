@@ -101,6 +101,15 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("BeforeDate")
         private Long beforeDate;
 
+        @NameInMap("CertIssuedCount")
+        private Long certIssuedCount;
+
+        @NameInMap("CertRemainingCount")
+        private Long certRemainingCount;
+
+        @NameInMap("CertTotalCount")
+        private Long certTotalCount;
+
         @NameInMap("CertificateType")
         private String certificateType;
 
@@ -165,6 +174,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
             this.beforeDate = builder.beforeDate;
+            this.certIssuedCount = builder.certIssuedCount;
+            this.certRemainingCount = builder.certRemainingCount;
+            this.certTotalCount = builder.certTotalCount;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
@@ -214,6 +226,27 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         public Long getBeforeDate() {
             return this.beforeDate;
+        }
+
+        /**
+         * @return certIssuedCount
+         */
+        public Long getCertIssuedCount() {
+            return this.certIssuedCount;
+        }
+
+        /**
+         * @return certRemainingCount
+         */
+        public Long getCertRemainingCount() {
+            return this.certRemainingCount;
+        }
+
+        /**
+         * @return certTotalCount
+         */
+        public Long getCertTotalCount() {
+            return this.certTotalCount;
         }
 
         /**
@@ -360,6 +393,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private Long afterDate; 
             private String algorithm; 
             private Long beforeDate; 
+            private Long certIssuedCount; 
+            private Long certRemainingCount; 
+            private Long certTotalCount; 
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
@@ -407,6 +443,30 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
+                return this;
+            }
+
+            /**
+             * CertIssuedCount.
+             */
+            public Builder certIssuedCount(Long certIssuedCount) {
+                this.certIssuedCount = certIssuedCount;
+                return this;
+            }
+
+            /**
+             * CertRemainingCount.
+             */
+            public Builder certRemainingCount(Long certRemainingCount) {
+                this.certRemainingCount = certRemainingCount;
+                return this;
+            }
+
+            /**
+             * CertTotalCount.
+             */
+            public Builder certTotalCount(Long certTotalCount) {
+                this.certTotalCount = certTotalCount;
                 return this;
             }
 

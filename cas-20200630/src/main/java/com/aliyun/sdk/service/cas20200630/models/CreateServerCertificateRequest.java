@@ -43,6 +43,10 @@ public class CreateServerCertificateRequest extends Request {
     private String domain;
 
     @Query
+    @NameInMap("EnableCrl")
+    private Long enableCrl;
+
+    @Query
     @NameInMap("Immediately")
     private Integer immediately;
 
@@ -84,6 +88,7 @@ public class CreateServerCertificateRequest extends Request {
         this.country = builder.country;
         this.days = builder.days;
         this.domain = builder.domain;
+        this.enableCrl = builder.enableCrl;
         this.immediately = builder.immediately;
         this.locality = builder.locality;
         this.months = builder.months;
@@ -157,6 +162,13 @@ public class CreateServerCertificateRequest extends Request {
     }
 
     /**
+     * @return enableCrl
+     */
+    public Long getEnableCrl() {
+        return this.enableCrl;
+    }
+
+    /**
      * @return immediately
      */
     public Integer getImmediately() {
@@ -220,6 +232,7 @@ public class CreateServerCertificateRequest extends Request {
         private String country; 
         private Integer days; 
         private String domain; 
+        private Long enableCrl; 
         private Integer immediately; 
         private String locality; 
         private Integer months; 
@@ -242,6 +255,7 @@ public class CreateServerCertificateRequest extends Request {
             this.country = request.country;
             this.days = request.days;
             this.domain = request.domain;
+            this.enableCrl = request.enableCrl;
             this.immediately = request.immediately;
             this.locality = request.locality;
             this.months = request.months;
@@ -323,6 +337,15 @@ public class CreateServerCertificateRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * EnableCrl.
+         */
+        public Builder enableCrl(Long enableCrl) {
+            this.putQueryParameter("EnableCrl", enableCrl);
+            this.enableCrl = enableCrl;
             return this;
         }
 

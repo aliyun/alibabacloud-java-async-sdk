@@ -98,7 +98,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The validity period of the CA certificate. Unit: years.
+         * An array that consists of the details about the CA certificate.
          */
         public Builder certificateList(java.util.List < CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -106,7 +106,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +114,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of CA certificates returned per page.
+         * The number of returned pages.
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -122,7 +122,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of root CA certificates and intermediate CA certificates that are returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the CA certificate.
+         * The number of CA certificates returned per page.
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -138,7 +138,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned pages.
+         * The total number of root CA certificates and intermediate CA certificates that are returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -430,26 +430,10 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             private Integer years; 
 
             /**
-             * The SHA-256 fingerprint of the CA certificate.
+             * The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
-                return this;
-            }
-
-            /**
-             * The name of the province, municipality, or autonomous region in which the organization is located.
-             */
-            public Builder algorithm(String algorithm) {
-                this.algorithm = algorithm;
-                return this;
-            }
-
-            /**
-             * BeforeDate.
-             */
-            public Builder beforeDate(Long beforeDate) {
-                this.beforeDate = beforeDate;
                 return this;
             }
 
@@ -461,91 +445,16 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
              * *   **ECC**: the elliptic curve cryptography (ECC) algorithm.
              * *   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.
              */
-            public Builder certificateType(String certificateType) {
-                this.certificateType = certificateType;
-                return this;
-            }
-
-            /**
-             * The MD5 fingerprint of the CA certificate.
-             */
-            public Builder commonName(String commonName) {
-                this.commonName = commonName;
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
                 return this;
             }
 
             /**
              * The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
              */
-            public Builder countryCode(String countryCode) {
-                this.countryCode = countryCode;
-                return this;
-            }
-
-            /**
-             * This parameter is deprecated.
-             */
-            public Builder identifier(String identifier) {
-                this.identifier = identifier;
-                return this;
-            }
-
-            /**
-             * The content of the CA certificate.
-             */
-            public Builder keySize(Integer keySize) {
-                this.keySize = keySize;
-                return this;
-            }
-
-            /**
-             * The unique identifier of the CA certificate.
-             */
-            public Builder locality(String locality) {
-                this.locality = locality;
-                return this;
-            }
-
-            /**
-             * The code of the country in which the organization is located.
-             * <p>
-             * 
-             * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
-             */
-            public Builder md5(String md5) {
-                this.md5 = md5;
-                return this;
-            }
-
-            /**
-             * Alibaba Cloud Computing Co., Ltd.
-             */
-            public Builder organization(String organization) {
-                this.organization = organization;
-                return this;
-            }
-
-            /**
-             * The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
-             */
-            public Builder organizationUnit(String organizationUnit) {
-                this.organizationUnit = organizationUnit;
-                return this;
-            }
-
-            /**
-             * The name of the city in which the organization is located.
-             */
-            public Builder parentIdentifier(String parentIdentifier) {
-                this.parentIdentifier = parentIdentifier;
-                return this;
-            }
-
-            /**
-             * The key length of the CA certificate.
-             */
-            public Builder sans(String sans) {
-                this.sans = sans;
+            public Builder beforeDate(Long beforeDate) {
+                this.beforeDate = beforeDate;
                 return this;
             }
 
@@ -556,13 +465,107 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
              * *   **ROOT**: root CA certificate
              * *   **SUB_ROOT**: intermediate CA certificate
              */
+            public Builder certificateType(String certificateType) {
+                this.certificateType = certificateType;
+                return this;
+            }
+
+            /**
+             * The common name or abbreviation of the organization that is associated with the CA certificate.
+             */
+            public Builder commonName(String commonName) {
+                this.commonName = commonName;
+                return this;
+            }
+
+            /**
+             * The code of the country in which the organization is located.
+             * <p>
+             * 
+             * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
+             */
+            public Builder countryCode(String countryCode) {
+                this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * The unique identifier of the CA certificate.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * The key length of the CA certificate.
+             */
+            public Builder keySize(Integer keySize) {
+                this.keySize = keySize;
+                return this;
+            }
+
+            /**
+             * The name of the city in which the organization is located.
+             */
+            public Builder locality(String locality) {
+                this.locality = locality;
+                return this;
+            }
+
+            /**
+             * The MD5 fingerprint of the CA certificate.
+             */
+            public Builder md5(String md5) {
+                this.md5 = md5;
+                return this;
+            }
+
+            /**
+             * The name of the organization that is associated with the CA certificate.
+             */
+            public Builder organization(String organization) {
+                this.organization = organization;
+                return this;
+            }
+
+            /**
+             * The name of the department or branch in the organization that is associated with the CA certificate.
+             */
+            public Builder organizationUnit(String organizationUnit) {
+                this.organizationUnit = organizationUnit;
+                return this;
+            }
+
+            /**
+             * The unique identifier of the root CA certificate from which the CA certificate is issued.
+             * <p>
+             * 
+             * >  This parameter is returned only if the value of the **CertificateType** parameter is **SUB_ROOT**. The value SUB_ROOT indicates an intermediate CA certificate.
+             */
+            public Builder parentIdentifier(String parentIdentifier) {
+                this.parentIdentifier = parentIdentifier;
+                return this;
+            }
+
+            /**
+             * This parameter is deprecated.
+             */
+            public Builder sans(String sans) {
+                this.sans = sans;
+                return this;
+            }
+
+            /**
+             * The serial number of the CA certificate.
+             */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
                 return this;
             }
 
             /**
-             * The common name or abbreviation of the organization that is associated with the CA certificate.
+             * The SHA-256 fingerprint of the CA certificate.
              */
             public Builder sha2(String sha2) {
                 this.sha2 = sha2;
@@ -570,7 +573,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the department or branch in the organization that is associated with the CA certificate.
+             * The signature algorithm of the CA certificate.
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -578,7 +581,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organization that is associated with the CA certificate.
+             * The name of the province, municipality, or autonomous region in which the organization is located.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -586,18 +589,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the CA certificate.
+             * The status of the CA certificate. Valid values:
+             * <p>
+             * 
+             * *   **ISSUE**: The CA certificate is issued.
+             * *   **REVOKE**: The CA certificate is revoked.
              */
             public Builder status(String status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun
-             */
-            public Builder subjectDN(String subjectDN) {
-                this.subjectDN = subjectDN;
                 return this;
             }
 
@@ -614,17 +613,21 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
              * 
              * *   **CN**: the common name or abbreviation of the organization
              */
+            public Builder subjectDN(String subjectDN) {
+                this.subjectDN = subjectDN;
+                return this;
+            }
+
+            /**
+             * The content of the CA certificate.
+             */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;
                 return this;
             }
 
             /**
-             * The status of the CA certificate. Valid values:
-             * <p>
-             * 
-             * *   **ISSUE**: The CA certificate is issued.
-             * *   **REVOKE**: The CA certificate is revoked.
+             * The validity period of the CA certificate. Unit: years.
              */
             public Builder years(Integer years) {
                 this.years = years;
