@@ -25,6 +25,14 @@ public class ExportVulRequest extends Request {
     private String containerName;
 
     @Query
+    @NameInMap("CreateTsEnd")
+    private Long createTsEnd;
+
+    @Query
+    @NameInMap("CreateTsStart")
+    private Long createTsStart;
+
+    @Query
     @NameInMap("CveId")
     private String cveId;
 
@@ -74,6 +82,8 @@ public class ExportVulRequest extends Request {
         this.aliasName = builder.aliasName;
         this.attachTypes = builder.attachTypes;
         this.containerName = builder.containerName;
+        this.createTsEnd = builder.createTsEnd;
+        this.createTsStart = builder.createTsStart;
         this.cveId = builder.cveId;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
@@ -119,6 +129,20 @@ public class ExportVulRequest extends Request {
      */
     public String getContainerName() {
         return this.containerName;
+    }
+
+    /**
+     * @return createTsEnd
+     */
+    public Long getCreateTsEnd() {
+        return this.createTsEnd;
+    }
+
+    /**
+     * @return createTsStart
+     */
+    public Long getCreateTsStart() {
+        return this.createTsStart;
     }
 
     /**
@@ -202,6 +226,8 @@ public class ExportVulRequest extends Request {
         private String aliasName; 
         private String attachTypes; 
         private String containerName; 
+        private Long createTsEnd; 
+        private Long createTsStart; 
         private String cveId; 
         private String dealed; 
         private String groupId; 
@@ -223,6 +249,8 @@ public class ExportVulRequest extends Request {
             this.aliasName = request.aliasName;
             this.attachTypes = request.attachTypes;
             this.containerName = request.containerName;
+            this.createTsEnd = request.createTsEnd;
+            this.createTsStart = request.createTsStart;
             this.cveId = request.cveId;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
@@ -263,6 +291,24 @@ public class ExportVulRequest extends Request {
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
             this.containerName = containerName;
+            return this;
+        }
+
+        /**
+         * CreateTsEnd.
+         */
+        public Builder createTsEnd(Long createTsEnd) {
+            this.putQueryParameter("CreateTsEnd", createTsEnd);
+            this.createTsEnd = createTsEnd;
+            return this;
+        }
+
+        /**
+         * CreateTsStart.
+         */
+        public Builder createTsStart(Long createTsStart) {
+            this.putQueryParameter("CreateTsStart", createTsStart);
+            this.createTsStart = createTsStart;
             return this;
         }
 
