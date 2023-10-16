@@ -42,9 +42,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindPrometheusGrafanaInstanceResponse> bindPrometheusGrafanaInstance(BindPrometheusGrafanaInstanceRequest request);
 
+    CompletableFuture<BlockAlarmNotificationResponse> blockAlarmNotification(BlockAlarmNotificationRequest request);
+
+    CompletableFuture<ChangeAlarmSeverityResponse> changeAlarmSeverity(ChangeAlarmSeverityRequest request);
+
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     CompletableFuture<CheckServiceStatusResponse> checkServiceStatus(CheckServiceStatusRequest request);
+
+    CompletableFuture<ClaimAlarmResponse> claimAlarm(ClaimAlarmRequest request);
+
+    CompletableFuture<CloseAlarmResponse> closeAlarm(CloseAlarmRequest request);
 
     /**
       * ****

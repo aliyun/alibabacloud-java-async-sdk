@@ -218,6 +218,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("Labels")
         private java.util.List < String > labels;
 
+        @NameInMap("Language")
+        private String language;
+
         @NameInMap("Namespace")
         private String namespace;
 
@@ -260,6 +263,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             this.clusterId = builder.clusterId;
             this.createTime = builder.createTime;
             this.labels = builder.labels;
+            this.language = builder.language;
             this.namespace = builder.namespace;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
@@ -315,6 +319,13 @@ public class ListTraceAppsResponseBody extends TeaModel {
          */
         public java.util.List < String > getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return language
+         */
+        public String getLanguage() {
+            return this.language;
         }
 
         /**
@@ -407,6 +418,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String clusterId; 
             private Long createTime; 
             private java.util.List < String > labels; 
+            private String language; 
             private String namespace; 
             private String pid; 
             private String regionId; 
@@ -457,6 +469,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * Language.
+             */
+            public Builder language(String language) {
+                this.language = language;
                 return this;
             }
 

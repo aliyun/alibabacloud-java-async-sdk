@@ -1,0 +1,144 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.arms20190808.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link BlockAlarmNotificationRequest} extends {@link RequestModel}
+ *
+ * <p>BlockAlarmNotificationRequest</p>
+ */
+public class BlockAlarmNotificationRequest extends Request {
+    @Query
+    @NameInMap("AlarmId")
+    @Validation(required = true)
+    private Long alarmId;
+
+    @Query
+    @NameInMap("HandlerId")
+    private Long handlerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("Timeout")
+    @Validation(required = true)
+    private Long timeout;
+
+    private BlockAlarmNotificationRequest(Builder builder) {
+        super(builder);
+        this.alarmId = builder.alarmId;
+        this.handlerId = builder.handlerId;
+        this.regionId = builder.regionId;
+        this.timeout = builder.timeout;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static BlockAlarmNotificationRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return alarmId
+     */
+    public Long getAlarmId() {
+        return this.alarmId;
+    }
+
+    /**
+     * @return handlerId
+     */
+    public Long getHandlerId() {
+        return this.handlerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return timeout
+     */
+    public Long getTimeout() {
+        return this.timeout;
+    }
+
+    public static final class Builder extends Request.Builder<BlockAlarmNotificationRequest, Builder> {
+        private Long alarmId; 
+        private Long handlerId; 
+        private String regionId; 
+        private Long timeout; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(BlockAlarmNotificationRequest request) {
+            super(request);
+            this.alarmId = request.alarmId;
+            this.handlerId = request.handlerId;
+            this.regionId = request.regionId;
+            this.timeout = request.timeout;
+        } 
+
+        /**
+         * AlarmId.
+         */
+        public Builder alarmId(Long alarmId) {
+            this.putQueryParameter("AlarmId", alarmId);
+            this.alarmId = alarmId;
+            return this;
+        }
+
+        /**
+         * HandlerId.
+         */
+        public Builder handlerId(Long handlerId) {
+            this.putQueryParameter("HandlerId", handlerId);
+            this.handlerId = handlerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(Long timeout) {
+            this.putQueryParameter("Timeout", timeout);
+            this.timeout = timeout;
+            return this;
+        }
+
+        @Override
+        public BlockAlarmNotificationRequest build() {
+            return new BlockAlarmNotificationRequest(this);
+        } 
+
+    } 
+
+}

@@ -99,6 +99,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     private String notice;
 
     @Body
+    @NameInMap("NotifyMode")
+    private String notifyMode;
+
+    @Body
     @NameInMap("NotifyStrategy")
     private String notifyStrategy;
 
@@ -142,6 +146,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.metricsKey = builder.metricsKey;
         this.metricsType = builder.metricsType;
         this.notice = builder.notice;
+        this.notifyMode = builder.notifyMode;
         this.notifyStrategy = builder.notifyStrategy;
         this.pids = builder.pids;
         this.promQL = builder.promQL;
@@ -310,6 +315,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     }
 
     /**
+     * @return notifyMode
+     */
+    public String getNotifyMode() {
+        return this.notifyMode;
+    }
+
+    /**
      * @return notifyStrategy
      */
     public String getNotifyStrategy() {
@@ -366,6 +378,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String metricsKey; 
         private String metricsType; 
         private String notice; 
+        private String notifyMode; 
         private String notifyStrategy; 
         private String pids; 
         private String promQL; 
@@ -399,6 +412,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.metricsKey = request.metricsKey;
             this.metricsType = request.metricsType;
             this.notice = request.notice;
+            this.notifyMode = request.notifyMode;
             this.notifyStrategy = request.notifyStrategy;
             this.pids = request.pids;
             this.promQL = request.promQL;
@@ -669,6 +683,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public Builder notice(String notice) {
             this.putBodyParameter("Notice", notice);
             this.notice = notice;
+            return this;
+        }
+
+        /**
+         * NotifyMode.
+         */
+        public Builder notifyMode(String notifyMode) {
+            this.putBodyParameter("NotifyMode", notifyMode);
+            this.notifyMode = notifyMode;
             return this;
         }
 
