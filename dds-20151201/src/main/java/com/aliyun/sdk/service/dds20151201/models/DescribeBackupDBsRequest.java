@@ -54,7 +54,6 @@ public class DescribeBackupDBsRequest extends Request {
 
     @Query
     @NameInMap("SourceDBInstance")
-    @Validation(required = true)
     private String sourceDBInstance;
 
     private DescribeBackupDBsRequest(Builder builder) {

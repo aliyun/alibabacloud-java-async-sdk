@@ -50,7 +50,6 @@ public class CheckRecoveryConditionRequest extends Request {
 
     @Query
     @NameInMap("SourceDBInstance")
-    @Validation(required = true)
     private String sourceDBInstance;
 
     private CheckRecoveryConditionRequest(Builder builder) {

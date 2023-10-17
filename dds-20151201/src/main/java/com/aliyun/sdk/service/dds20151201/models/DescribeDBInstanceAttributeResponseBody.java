@@ -1320,6 +1320,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("UseClusterBackup")
+        private Boolean useClusterBackup;
+
         @NameInMap("VPCCloudInstanceIds")
         private String VPCCloudInstanceIds;
 
@@ -1381,6 +1384,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.storageType = builder.storageType;
             this.syncPercent = builder.syncPercent;
             this.tags = builder.tags;
+            this.useClusterBackup = builder.useClusterBackup;
             this.VPCCloudInstanceIds = builder.VPCCloudInstanceIds;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
@@ -1712,6 +1716,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return useClusterBackup
+         */
+        public Boolean getUseClusterBackup() {
+            return this.useClusterBackup;
+        }
+
+        /**
          * @return VPCCloudInstanceIds
          */
         public String getVPCCloudInstanceIds() {
@@ -1792,6 +1803,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String storageType; 
             private String syncPercent; 
             private Tags tags; 
+            private Boolean useClusterBackup; 
             private String VPCCloudInstanceIds; 
             private String VPCId; 
             private String vSwitchId; 
@@ -2290,6 +2302,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UseClusterBackup.
+             */
+            public Builder useClusterBackup(Boolean useClusterBackup) {
+                this.useClusterBackup = useClusterBackup;
                 return this;
             }
 
