@@ -26,6 +26,10 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
     private Integer funcId;
 
     @Query
+    @NameInMap("MatchType")
+    private String matchType;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(maximum = 100000, minimum = 1)
     private Integer pageNumber;
@@ -44,6 +48,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         this.domainName = builder.domainName;
         this.funcFilter = builder.funcFilter;
         this.funcId = builder.funcId;
+        this.matchType = builder.matchType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -84,6 +89,13 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
     }
 
     /**
+     * @return matchType
+     */
+    public String getMatchType() {
+        return this.matchType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -108,6 +120,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         private String domainName; 
         private String funcFilter; 
         private Integer funcId; 
+        private String matchType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
@@ -121,6 +134,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
             this.domainName = request.domainName;
             this.funcFilter = request.funcFilter;
             this.funcId = request.funcId;
+            this.matchType = request.matchType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
@@ -154,6 +168,15 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         public Builder funcId(Integer funcId) {
             this.putQueryParameter("FuncId", funcId);
             this.funcId = funcId;
+            return this;
+        }
+
+        /**
+         * MatchType.
+         */
+        public Builder matchType(String matchType) {
+            this.putQueryParameter("MatchType", matchType);
+            this.matchType = matchType;
             return this;
         }
 
