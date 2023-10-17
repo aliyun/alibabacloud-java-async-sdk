@@ -54,7 +54,11 @@ public class ChangeUserLangRequest extends Request {
         } 
 
         /**
-         * UserLang.
+         * The new language. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder userLang(String userLang) {
             this.putQueryParameter("UserLang", userLang);

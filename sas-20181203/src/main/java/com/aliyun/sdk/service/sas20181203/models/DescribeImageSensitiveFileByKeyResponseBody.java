@@ -300,6 +300,9 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         @NameInMap("Advice")
         private String advice;
 
+        @NameInMap("Description")
+        private String description;
+
         @NameInMap("FilePath")
         private String filePath;
 
@@ -311,6 +314,9 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
 
         @NameInMap("LayerDigest")
         private String layerDigest;
+
+        @NameInMap("Md5")
+        private String md5;
 
         @NameInMap("Promt")
         private String promt;
@@ -326,10 +332,12 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
 
         private SensitiveFileList(Builder builder) {
             this.advice = builder.advice;
+            this.description = builder.description;
             this.filePath = builder.filePath;
             this.firstScanTime = builder.firstScanTime;
             this.lastScanTime = builder.lastScanTime;
             this.layerDigest = builder.layerDigest;
+            this.md5 = builder.md5;
             this.promt = builder.promt;
             this.riskLevel = builder.riskLevel;
             this.sensitiveFileKey = builder.sensitiveFileKey;
@@ -349,6 +357,13 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
          */
         public String getAdvice() {
             return this.advice;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -377,6 +392,13 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
          */
         public String getLayerDigest() {
             return this.layerDigest;
+        }
+
+        /**
+         * @return md5
+         */
+        public String getMd5() {
+            return this.md5;
         }
 
         /**
@@ -409,10 +431,12 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
 
         public static final class Builder {
             private String advice; 
+            private String description; 
             private String filePath; 
             private Long firstScanTime; 
             private Long lastScanTime; 
             private String layerDigest; 
+            private String md5; 
             private String promt; 
             private String riskLevel; 
             private String sensitiveFileKey; 
@@ -423,6 +447,14 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
              */
             public Builder advice(String advice) {
                 this.advice = advice;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -455,6 +487,14 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
              */
             public Builder layerDigest(String layerDigest) {
                 this.layerDigest = layerDigest;
+                return this;
+            }
+
+            /**
+             * Md5.
+             */
+            public Builder md5(String md5) {
+                this.md5 = md5;
                 return this;
             }
 

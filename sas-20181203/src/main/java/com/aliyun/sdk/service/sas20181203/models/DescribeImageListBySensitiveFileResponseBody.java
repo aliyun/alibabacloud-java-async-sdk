@@ -199,6 +199,9 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         private String riskLevel;
 
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Tag")
         private String tag;
 
@@ -214,6 +217,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
             this.riskLevel = builder.riskLevel;
+            this.status = builder.status;
             this.tag = builder.tag;
             this.uuid = builder.uuid;
         }
@@ -283,6 +287,13 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return tag
          */
         public String getTag() {
@@ -305,6 +316,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespace; 
             private String riskLevel; 
+            private String status; 
             private String tag; 
             private String uuid; 
 
@@ -374,6 +386,14 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

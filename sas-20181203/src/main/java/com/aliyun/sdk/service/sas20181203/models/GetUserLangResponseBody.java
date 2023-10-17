@@ -50,7 +50,7 @@ public class GetUserLangResponseBody extends TeaModel {
         private SasUserLang sasUserLang; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserLangResponseBody extends TeaModel {
         }
 
         /**
-         * SasUserLang.
+         * The language settings.
          */
         public Builder sasUserLang(SasUserLang sasUserLang) {
             this.sasUserLang = sasUserLang;
@@ -98,7 +98,11 @@ public class GetUserLangResponseBody extends TeaModel {
             private String lang; 
 
             /**
-             * Lang.
+             * The language specified for log analysis. Valid values:
+             * <p>
+             * 
+             * *   zh: Chinese
+             * *   en: English
              */
             public Builder lang(String lang) {
                 this.lang = lang;

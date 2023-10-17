@@ -297,6 +297,12 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
 
     }
     public static class SensitiveFileList extends TeaModel {
+        @NameInMap("ClassKey")
+        private String classKey;
+
+        @NameInMap("ClassName")
+        private String className;
+
         @NameInMap("Count")
         private Integer count;
 
@@ -316,6 +322,8 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         private String sensitiveFileName;
 
         private SensitiveFileList(Builder builder) {
+            this.classKey = builder.classKey;
+            this.className = builder.className;
             this.count = builder.count;
             this.firstScanTime = builder.firstScanTime;
             this.lastScanTime = builder.lastScanTime;
@@ -330,6 +338,20 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
 
         public static SensitiveFileList create() {
             return builder().build();
+        }
+
+        /**
+         * @return classKey
+         */
+        public String getClassKey() {
+            return this.classKey;
+        }
+
+        /**
+         * @return className
+         */
+        public String getClassName() {
+            return this.className;
         }
 
         /**
@@ -375,12 +397,30 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String classKey; 
+            private String className; 
             private Integer count; 
             private Long firstScanTime; 
             private Long lastScanTime; 
             private String riskLevel; 
             private String sensitiveFileKey; 
             private String sensitiveFileName; 
+
+            /**
+             * ClassKey.
+             */
+            public Builder classKey(String classKey) {
+                this.classKey = classKey;
+                return this;
+            }
+
+            /**
+             * ClassName.
+             */
+            public Builder className(String className) {
+                this.className = className;
+                return this;
+            }
 
             /**
              * The number of scans that are performed on the sensitive file.

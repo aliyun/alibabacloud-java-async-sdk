@@ -109,6 +109,9 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         @NameInMap("Level")
         private String level;
 
+        @NameInMap("MaliciousKey")
+        private String maliciousKey;
+
         @NameInMap("MaliciousMd5")
         private String maliciousMd5;
 
@@ -123,6 +126,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             this.imageCount = builder.imageCount;
             this.latestScanTimestamp = builder.latestScanTimestamp;
             this.level = builder.level;
+            this.maliciousKey = builder.maliciousKey;
             this.maliciousMd5 = builder.maliciousMd5;
             this.maliciousName = builder.maliciousName;
             this.status = builder.status;
@@ -165,6 +169,13 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return maliciousKey
+         */
+        public String getMaliciousKey() {
+            return this.maliciousKey;
+        }
+
+        /**
          * @return maliciousMd5
          */
         public String getMaliciousMd5() {
@@ -190,6 +201,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             private Long imageCount; 
             private Long latestScanTimestamp; 
             private String level; 
+            private String maliciousKey; 
             private String maliciousMd5; 
             private String maliciousName; 
             private Integer status; 
@@ -228,6 +240,14 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
              */
             public Builder level(String level) {
                 this.level = level;
+                return this;
+            }
+
+            /**
+             * MaliciousKey.
+             */
+            public Builder maliciousKey(String maliciousKey) {
+                this.maliciousKey = maliciousKey;
                 return this;
             }
 

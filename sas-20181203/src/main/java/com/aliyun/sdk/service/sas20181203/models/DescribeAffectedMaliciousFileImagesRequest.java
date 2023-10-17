@@ -94,6 +94,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     @NameInMap("ScanRange")
     private java.util.List < String > scanRange;
 
+    @Query
+    @NameInMap("Status")
+    private String status;
+
     private DescribeAffectedMaliciousFileImagesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -116,6 +120,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
         this.scanRange = builder.scanRange;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -271,6 +276,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         return this.scanRange;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAffectedMaliciousFileImagesRequest, Builder> {
         private String clusterId; 
         private String clusterName; 
@@ -292,6 +304,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         private String repoNamespace; 
         private String repoRegionId; 
         private java.util.List < String > scanRange; 
+        private String status; 
 
         private Builder() {
             super();
@@ -319,6 +332,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
             this.scanRange = request.scanRange;
+            this.status = request.status;
         } 
 
         /**
@@ -535,6 +549,15 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

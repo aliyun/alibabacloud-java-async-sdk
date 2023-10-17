@@ -52,6 +52,10 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
     @NameInMap("SensitiveFileKey")
     private String sensitiveFileKey;
 
+    @Query
+    @NameInMap("Status")
+    private String status;
+
     private DescribeImageListBySensitiveFileRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -64,6 +68,7 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
         this.riskLevel = builder.riskLevel;
         this.scanRange = builder.scanRange;
         this.sensitiveFileKey = builder.sensitiveFileKey;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -149,6 +154,13 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
         return this.sensitiveFileKey;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageListBySensitiveFileRequest, Builder> {
         private Integer currentPage; 
         private String imageDigest; 
@@ -160,6 +172,7 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
         private String riskLevel; 
         private java.util.List < String > scanRange; 
         private String sensitiveFileKey; 
+        private String status; 
 
         private Builder() {
             super();
@@ -177,6 +190,7 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
             this.riskLevel = request.riskLevel;
             this.scanRange = request.scanRange;
             this.sensitiveFileKey = request.sensitiveFileKey;
+            this.status = request.status;
         } 
 
         /**
@@ -403,6 +417,15 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
         public Builder sensitiveFileKey(String sensitiveFileKey) {
             this.putQueryParameter("SensitiveFileKey", sensitiveFileKey);
             this.sensitiveFileKey = sensitiveFileKey;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
