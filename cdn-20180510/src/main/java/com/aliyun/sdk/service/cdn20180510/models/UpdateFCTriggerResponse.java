@@ -16,6 +16,10 @@ public class UpdateFCTriggerResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private UpdateFCTriggerResponseBody body;
@@ -23,6 +27,7 @@ public class UpdateFCTriggerResponse extends Response {
     private UpdateFCTriggerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class UpdateFCTriggerResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public UpdateFCTriggerResponseBody getBody() {
@@ -52,6 +64,8 @@ public class UpdateFCTriggerResponse extends Response {
     public interface Builder extends Response.Builder<UpdateFCTriggerResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(UpdateFCTriggerResponseBody body);
 
@@ -64,6 +78,7 @@ public class UpdateFCTriggerResponse extends Response {
             extends Response.BuilderImpl<UpdateFCTriggerResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private UpdateFCTriggerResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class UpdateFCTriggerResponse extends Response {
         private BuilderImpl(UpdateFCTriggerResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class UpdateFCTriggerResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

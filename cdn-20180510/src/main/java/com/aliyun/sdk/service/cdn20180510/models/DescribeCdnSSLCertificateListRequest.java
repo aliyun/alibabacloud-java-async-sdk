@@ -124,7 +124,7 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +142,7 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +151,7 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: an integer from **1** to **1000**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +160,7 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * SearchKeyword.
+         * The keyword that is used to query the certificate.
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putQueryParameter("SearchKeyword", searchKeyword);

@@ -97,7 +97,7 @@ public class DescribeCdnCertificateDetailByIdRequest extends Request {
         } 
 
         /**
-         * CertId.
+         * The ID of the certificate.
          */
         public Builder certId(String certId) {
             this.putQueryParameter("CertId", certId);
@@ -106,7 +106,13 @@ public class DescribeCdnCertificateDetailByIdRequest extends Request {
         }
 
         /**
-         * CertRegion.
+         * The region of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **ap-southeast-1**: Singapore
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * 
+         * Default value: **cn-hangzhou**
          */
         public Builder certRegion(String certRegion) {
             this.putQueryParameter("CertRegion", certRegion);

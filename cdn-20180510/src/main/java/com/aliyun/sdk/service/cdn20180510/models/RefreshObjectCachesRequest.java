@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RefreshObjectCachesRequest extends Request {
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("ObjectPath")
     @Validation(required = true)
     private String objectPath;
@@ -31,6 +35,7 @@ public class RefreshObjectCachesRequest extends Request {
 
     private RefreshObjectCachesRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.objectPath = builder.objectPath;
         this.objectType = builder.objectType;
         this.ownerId = builder.ownerId;
@@ -48,6 +53,13 @@ public class RefreshObjectCachesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -79,6 +91,7 @@ public class RefreshObjectCachesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RefreshObjectCachesRequest, Builder> {
+        private Boolean force; 
         private String objectPath; 
         private String objectType; 
         private Long ownerId; 
@@ -90,11 +103,21 @@ public class RefreshObjectCachesRequest extends Request {
 
         private Builder(RefreshObjectCachesRequest request) {
             super(request);
+            this.force = request.force;
             this.objectPath = request.objectPath;
             this.objectType = request.objectType;
             this.ownerId = request.ownerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
 
         /**
          * ObjectPath.

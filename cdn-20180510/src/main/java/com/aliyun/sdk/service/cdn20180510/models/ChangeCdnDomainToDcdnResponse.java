@@ -16,6 +16,10 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ChangeCdnDomainToDcdnResponseBody body;
@@ -23,6 +27,7 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
     private ChangeCdnDomainToDcdnResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ChangeCdnDomainToDcdnResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
     public interface Builder extends Response.Builder<ChangeCdnDomainToDcdnResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ChangeCdnDomainToDcdnResponseBody body);
 
@@ -64,6 +78,7 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
             extends Response.BuilderImpl<ChangeCdnDomainToDcdnResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ChangeCdnDomainToDcdnResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
         private BuilderImpl(ChangeCdnDomainToDcdnResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ChangeCdnDomainToDcdnResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

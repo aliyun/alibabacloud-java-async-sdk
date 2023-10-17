@@ -87,7 +87,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<BatchUpdateCdnDomainResponse> batchUpdateCdnDomain(BatchUpdateCdnDomainRequest request);
 
+    CompletableFuture<CdnMigrateRegisterResponse> cdnMigrateRegister(CdnMigrateRegisterRequest request);
+
     CompletableFuture<ChangeCdnDomainToDcdnResponse> changeCdnDomainToDcdn(ChangeCdnDomainToDcdnRequest request);
+
+    CompletableFuture<CheckCdnDomainExistResponse> checkCdnDomainExist(CheckCdnDomainExistRequest request);
+
+    CompletableFuture<CheckCdnDomainICPResponse> checkCdnDomainICP(CheckCdnDomainICPRequest request);
 
     /**
       * > You can call this operation up to 100 times per second per account.
@@ -201,6 +207,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCdnCertificateDetailByIdResponse> describeCdnCertificateDetailById(DescribeCdnCertificateDetailByIdRequest request);
 
     /**
+      * @deprecated
       * > You can call this operation up to 30 times per second per account.
       *
      */
@@ -247,6 +254,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeCdnDomainLogsResponse> describeCdnDomainLogs(DescribeCdnDomainLogsRequest request);
 
+    CompletableFuture<DescribeCdnDomainLogsExTtlResponse> describeCdnDomainLogsExTtl(DescribeCdnDomainLogsExTtlRequest request);
+
     /**
       * > You can call this operation up to 30 times per second per account.
       *
@@ -258,6 +267,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeCdnHttpsDomainListResponse> describeCdnHttpsDomainList(DescribeCdnHttpsDomainListRequest request);
+
+    /**
+      * >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
+      *
+     */
+    CompletableFuture<DescribeCdnMigrateRegisterStatusResponse> describeCdnMigrateRegisterStatus(DescribeCdnMigrateRegisterStatusRequest request);
 
     CompletableFuture<DescribeCdnOrderCommodityCodeResponse> describeCdnOrderCommodityCode(DescribeCdnOrderCommodityCodeRequest request);
 
@@ -294,6 +309,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCdnSMCertificateListResponse> describeCdnSMCertificateList(DescribeCdnSMCertificateListRequest request);
 
     CompletableFuture<DescribeCdnSSLCertificateListResponse> describeCdnSSLCertificateList(DescribeCdnSSLCertificateListRequest request);
+
+    CompletableFuture<DescribeCdnSecFuncInfoResponse> describeCdnSecFuncInfo(DescribeCdnSecFuncInfoRequest request);
 
     /**
       * > You can call this operation up to 30 times per second per account.
