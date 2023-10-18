@@ -70,7 +70,7 @@ public class UpdateCategoryRequest extends Request {
         } 
 
         /**
-         * CateId.
+         * The ID of the category.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -79,7 +79,11 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * Modifies a video category.
+         * The name of the category.
+         * <p>
+         * 
+         * *   The value can be up to 64 bytes in length.
+         * *   The string must be encoded in the UTF-8 format.
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);

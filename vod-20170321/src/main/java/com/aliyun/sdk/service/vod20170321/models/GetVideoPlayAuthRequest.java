@@ -83,7 +83,7 @@ public class GetVideoPlayAuthRequest extends Request {
         } 
 
         /**
-         * The duration of the audio or video file. Unit: seconds.
+         * The API version. Set the value to **1.0.0**.
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -92,7 +92,11 @@ public class GetVideoPlayAuthRequest extends Request {
         }
 
         /**
-         * The title of the audio or video file.
+         * The validity period of the playback credential. Unit: **seconds**. You cannot obtain the playback URL of a video by using a credential that has expired. A new credential is required.
+         * <p>
+         * 
+         * *   Default value: **100**.
+         * *   Valid values: `[100,3000]`.
          */
         public Builder authInfoTimeout(Long authInfoTimeout) {
             this.putQueryParameter("AuthInfoTimeout", authInfoTimeout);
@@ -101,7 +105,12 @@ public class GetVideoPlayAuthRequest extends Request {
         }
 
         /**
-         * The API version number. Set the value to **1.0.0**.
+         * The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the ID of the file:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
+         * *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation.
+         * *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

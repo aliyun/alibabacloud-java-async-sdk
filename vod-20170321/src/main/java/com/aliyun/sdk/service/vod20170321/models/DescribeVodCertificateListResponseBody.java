@@ -50,7 +50,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The common name of the certificate.
+         * The information about the returned certificates.
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +58,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The certificate authority (CA) that issued the certificate.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
 
             /**
-             * CertId.
+             * The ID of the certificate.
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -166,7 +166,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeVodCertificateList**.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -174,7 +174,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * The common name of the certificate.
              */
             public Builder common(String common) {
                 this.common = common;
@@ -182,7 +182,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The fingerprint of the certificate.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -190,7 +190,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the certificates of a specified domain name for CDN or all the domain names for CDN within your Alibaba Cloud account.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -198,7 +198,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of each certificate.
+             * The time when the certificate was issued. Unit: seconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -292,7 +292,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The ID of the certificate.
+             * The details of each certificate.
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;

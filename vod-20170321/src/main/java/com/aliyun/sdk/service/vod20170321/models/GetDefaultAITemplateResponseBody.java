@@ -50,7 +50,7 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
         private TemplateInfo templateInfo; 
 
         /**
-         * The information about the AI template.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the AI template.
+         * The information about the AI template.
          */
         public Builder templateInfo(TemplateInfo templateInfo) {
             this.templateInfo = templateInfo;
@@ -182,58 +182,10 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The type of the AI template. The value is **AIMediaAudit**, which indicates automated review.
+             * The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             */
-            public Builder isDefault(String isDefault) {
-                this.isDefault = isDefault;
-                return this;
-            }
-
-            /**
-             * ModifyTime.
-             */
-            public Builder modifyTime(String modifyTime) {
-                this.modifyTime = modifyTime;
-                return this;
-            }
-
-            /**
-             * Queries information about the default AI template.
-             */
-            public Builder source(String source) {
-                this.source = source;
-                return this;
-            }
-
-            /**
-             * The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             */
-            public Builder templateConfig(String templateConfig) {
-                this.templateConfig = templateConfig;
-                return this;
-            }
-
-            /**
-             * TemplateId.
-             */
-            public Builder templateId(String templateId) {
-                this.templateId = templateId;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder templateName(String templateName) {
-                this.templateName = templateName;
                 return this;
             }
 
@@ -243,6 +195,58 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
              * 
              * *   **Default**
              * *   **NotDefault**
+             */
+            public Builder isDefault(String isDefault) {
+                this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
+             * The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             */
+            public Builder modifyTime(String modifyTime) {
+                this.modifyTime = modifyTime;
+                return this;
+            }
+
+            /**
+             * The source of the AI template. Valid values:
+             * <p>
+             * 
+             * *   **System**
+             * *   **Custom**
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).
+             */
+            public Builder templateConfig(String templateConfig) {
+                this.templateConfig = templateConfig;
+                return this;
+            }
+
+            /**
+             * The ID of the AI template.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * The name of the AI template.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            /**
+             * The type of the AI template. The value is **AIMediaAudit**, which indicates automated review.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

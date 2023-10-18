@@ -139,7 +139,12 @@ public class GetEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * The URLs of material snapshots. The value is an array.
+         * The type of the material. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         * *   **image**
          */
         public Builder materialType(String materialType) {
             this.putQueryParameter("MaterialType", materialType);
@@ -197,7 +202,11 @@ public class GetEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * The ID of the material.
+         * The type of the material. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

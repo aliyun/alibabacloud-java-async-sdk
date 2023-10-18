@@ -50,7 +50,7 @@ public class SubmitAIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the video.
+         * The information about the AI jobs.
          */
         public Builder AIJobList(AIJobList AIJobList) {
             this.AIJobList = AIJobList;
@@ -122,7 +122,7 @@ public class SubmitAIJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * JobId.
+             * The ID of the AI job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -130,7 +130,7 @@ public class SubmitAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the video.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -138,7 +138,11 @@ public class SubmitAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitAIJob
+             * The type of the AI job. Valid values:
+             * <p>
+             * 
+             * *   **AIMediaDNA**: The media fingerprinting job.
+             * *   **AIVideoTag**: The smart tagging job.
              */
             public Builder type(String type) {
                 this.type = type;

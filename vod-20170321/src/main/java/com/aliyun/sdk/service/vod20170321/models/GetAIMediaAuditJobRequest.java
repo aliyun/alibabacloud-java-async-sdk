@@ -55,7 +55,7 @@ public class GetAIMediaAuditJobRequest extends Request {
         } 
 
         /**
-         * http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg
+         * The ID of the intelligent review job.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

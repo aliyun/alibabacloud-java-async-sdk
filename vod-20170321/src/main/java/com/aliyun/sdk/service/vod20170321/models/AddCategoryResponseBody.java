@@ -58,7 +58,7 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **AddCategory**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class AddCategoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CateId.
+             * The ID of the video category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -154,7 +154,11 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * AddCategory
+             * The name of the category.
+             * <p>
+             * 
+             * - The value can be up to 64 bytes in length.
+             * - The string must be encoded in the UTF-8 format.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -162,7 +166,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the category. A value of **0** indicates a level 1 category.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -170,7 +174,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Creates a video category.
+             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -178,7 +182,11 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video category.
+             * The type of the category. Valid values:
+             * <p>
+             * 
+             * - **default** (default): default category
+             * - **material**: material category
              */
             public Builder type(String type) {
                 this.type = type;

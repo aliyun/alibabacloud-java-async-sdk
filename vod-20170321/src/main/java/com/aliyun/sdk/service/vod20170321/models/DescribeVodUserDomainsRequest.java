@@ -153,13 +153,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         } 
 
         /**
-         * The search method. Valid values:
-         * <p>
-         * 
-         * *   **fuzzy_match**: fuzzy match. This is the default value.
-         * *   **pre_match**: prefix match.
-         * *   **suf_match**: suffix match.
-         * *   **full_match**: exact match.
+         * The domain name. The value of this parameter is used as a filter condition for a fuzzy match.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -168,7 +162,12 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The remarks.
+         * The search method. Valid values:
+         * <p>
+         * *   **fuzzy_match**: fuzzy match. This is the default value.
+         * *   **pre_match**: prefix match.
+         * *   **suf_match**: suffix match.
+         * *   **full_match**: exact match.
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -177,10 +176,14 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The value of tag N. Valid values of N: **1** to **20**.
+         * The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:
          * <p>
-         * 
-         * If you do not specify this parameter, all tag values are queried.
+         * *   **online**: indicates that the domain name is enabled.
+         * *   **offline**: indicates that the domain name is disabled.
+         * *   **configuring**: indicates that the domain name is being configured.
+         * *   **configure_failed**: indicates that the domain name failed to be configured.
+         * *   **checking**: indicates that the domain name is under review.
+         * *   **check_failed**: indicates that the domain name failed the review.
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -198,7 +201,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +210,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeVodUserDomains**.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +228,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -279,15 +282,10 @@ public class DescribeVodUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The status of the domain name for CDN. Valid values:
+             * The key of tag N. Valid values of N: **1** to **20**.
              * <p>
              * 
-             * *   **online**: indicates that the domain name is enabled.
-             * *   **offline**: indicates that the domain name is disabled.
-             * *   **configuring**: indicates that the domain name is being configured.
-             * *   **configure_failed**: indicates that the domain name failed to be configured.
-             * *   **checking**: indicates that the domain name is under review.
-             * *   **check_failed**: indicates that the domain name failed the review.
+             * If you do not specify this parameter, all tag keys are queried.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -295,7 +293,10 @@ public class DescribeVodUserDomainsRequest extends Request {
             }
 
             /**
-             * The canonical domain name that is assigned to the domain name for CDN.
+             * The value of tag N. Valid values of N: **1** to **20**.
+             * <p>
+             * 
+             * If you do not specify this parameter, all tag values are queried.
              */
             public Builder value(String value) {
                 this.value = value;

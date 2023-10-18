@@ -96,7 +96,7 @@ public class UpdateVodTemplateRequest extends Request {
         }
 
         /**
-         * Modifies a snapshot template.
+         * The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -105,7 +105,7 @@ public class UpdateVodTemplateRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **UpdateVodTemplate**.
+         * The ID of the snapshot template.
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.putQueryParameter("VodTemplateId", vodTemplateId);

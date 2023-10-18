@@ -70,7 +70,11 @@ public class DeleteStreamRequest extends Request {
         } 
 
         /**
-         * Deletes one or more video or audio streams and their storage files at a time.
+         * The job IDs for deleting media streams.
+         * <p>
+         * 
+         * *   Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.
+         * *   You can obtain job IDs from the PlayInfo parameter that is returned after you call the [GetPlayInfo](~~56124~~) operation. Each media stream has a unique job ID.
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);
@@ -79,7 +83,7 @@ public class DeleteStreamRequest extends Request {
         }
 
         /**
-         * VideoId.
+         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

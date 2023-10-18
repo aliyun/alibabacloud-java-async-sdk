@@ -55,7 +55,7 @@ public class GetWatermarkRequest extends Request {
         } 
 
         /**
-         * The information about the watermark.
+         * The ID of the watermark.
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);

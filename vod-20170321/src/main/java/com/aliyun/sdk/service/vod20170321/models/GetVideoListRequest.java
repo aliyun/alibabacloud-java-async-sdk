@@ -152,7 +152,7 @@ public class GetVideoListRequest extends Request {
         } 
 
         /**
-         * The category ID. You can use one of the following methods to obtain the category ID:
+         * The ID of the category. You can use one of the following methods to obtain the category ID:
          * <p>
          * 
          * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID.
@@ -215,7 +215,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The video status. You can specify multiple video statuses and separate them with commas (,). Valid values:
+         * The status of the video. You can specify multiple video statuses and separate them with commas (,). Valid values:
          * <p>
          * 
          * *   **Uploading**: The video is being uploaded.

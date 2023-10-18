@@ -74,7 +74,7 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 没有多应用权限的视频ID
+         * The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see [Overview](~~113600~~).
          */
         public Builder forbiddenMediaIds(String forbiddenMediaIds) {
             this.forbiddenMediaIds = forbiddenMediaIds;
@@ -82,7 +82,7 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * Submits media refresh or prefetch tasks based on the media IDs.
+         * The ID of the refresh or prefetch task.
          */
         public Builder mediaRefreshJobId(String mediaRefreshJobId) {
             this.mediaRefreshJobId = mediaRefreshJobId;
@@ -90,7 +90,7 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * 不存在的媒资ID
+         * The IDs of the media files that do not exist.
          */
         public Builder nonExistMediaIds(String nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -98,7 +98,7 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

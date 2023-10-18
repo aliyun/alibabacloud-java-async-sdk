@@ -74,7 +74,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         private java.util.List < UploadDetails> uploadDetails; 
 
         /**
-         * The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * The IDs of the media files that cannot be accessed.
          */
         public Builder forbiddenMediaIds(java.util.List < String > forbiddenMediaIds) {
             this.forbiddenMediaIds = forbiddenMediaIds;
@@ -82,7 +82,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the uploaded file. Unit: byte.
+         * The IDs of the media files that do not exist.
          */
         public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -90,7 +90,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetUploadDetails**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The upload ratio.
+         * The upload details.
          */
         public Builder uploadDetails(java.util.List < UploadDetails> uploadDetails) {
             this.uploadDetails = uploadDetails;
@@ -282,7 +282,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             private String uploadStatus; 
 
             /**
-             * Queries the upload details, such as the upload time, upload ratio, and upload source, about one or more media files based on the media IDs.
+             * The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder completionTime(String completionTime) {
                 this.completionTime = completionTime;
@@ -290,7 +290,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the media file.
+             * The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -298,7 +298,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The device model.
              */
             public Builder deviceModel(String deviceModel) {
                 this.deviceModel = deviceModel;
@@ -306,7 +306,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the uploaded file. Unit: byte.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -314,7 +314,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the uploaded audio or video.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -322,7 +322,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -338,7 +338,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the media file.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -346,7 +346,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The upload size. Unit: byte.
+             * The IP address of the server that uploads the media file.
              */
             public Builder uploadIP(String uploadIP) {
                 this.uploadIP = uploadIP;
@@ -354,7 +354,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UploadRatio.
+             * The upload ratio.
              */
             public Builder uploadRatio(Float uploadRatio) {
                 this.uploadRatio = uploadRatio;
@@ -362,7 +362,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UploadSize.
+             * The upload size. Unit: byte.
              */
             public Builder uploadSize(Long uploadSize) {
                 this.uploadSize = uploadSize;
@@ -370,7 +370,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The method that is used to upload the media file.
              */
             public Builder uploadSource(String uploadSource) {
                 this.uploadSource = uploadSource;
@@ -378,7 +378,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * UploadStatus.
+             * The status of the upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a URL-based upload job" section of the [Basic structures](~~52839~~) topic.
              */
             public Builder uploadStatus(String uploadStatus) {
                 this.uploadStatus = uploadStatus;

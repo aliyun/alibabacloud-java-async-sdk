@@ -50,7 +50,7 @@ public class AddWatermarkResponseBody extends TeaModel {
         private WatermarkInfo watermarkInfo; 
 
         /**
-         * > For more information about how to upload a watermark file, see [CreateUploadAttachedMedia](~~98467~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * Adds a watermark.
+         * The information about the watermark.
          */
         public Builder watermarkInfo(WatermarkInfo watermarkInfo) {
             this.watermarkInfo = watermarkInfo;
@@ -170,7 +170,7 @@ public class AddWatermarkResponseBody extends TeaModel {
             private String watermarkId; 
 
             /**
-             * CreationTime.
+             * The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -178,7 +178,7 @@ public class AddWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * The OSS URL or Alibaba Cloud CDN URL of the watermark file. This parameter does not apply to text watermarks.
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -186,7 +186,11 @@ public class AddWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the default watermark was used. Valid values:
+             * <p>
+             * 
+             * *   **Default**
+             * *   **NotDefault**
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -194,7 +198,7 @@ public class AddWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the watermark.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +206,11 @@ public class AddWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the watermark. Valid values:
+             * <p>
+             * 
+             * *   **Image** (default)
+             * *   **Text**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -210,7 +218,10 @@ public class AddWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkConfig.
+             * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON string.
+             * <p>
+             * 
+             * > The value of this parameter varies based on the watermark type. For more information about the data structure, see [WatermarkConfig](~~98618~~).
              */
             public Builder watermarkConfig(String watermarkConfig) {
                 this.watermarkConfig = watermarkConfig;
@@ -218,7 +229,7 @@ public class AddWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkId.
+             * The ID of the watermark.
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;

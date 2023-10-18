@@ -85,7 +85,7 @@ public class AddAITemplateRequest extends Request {
         } 
 
         /**
-         * Adds an AI template for automated review and smart thumbnail tasks.
+         * The detailed configurations of the AI template. The value must be a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -94,7 +94,7 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the AI template. The name can be up to 128 bytes in length.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -103,7 +103,11 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **AddAITemplate**.
+         * The type of the AI template. Valid values:
+         * <p>
+         * 
+         * *   **AIMediaAudit**: automated review
+         * *   **AIImage**: smart thumbnail
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

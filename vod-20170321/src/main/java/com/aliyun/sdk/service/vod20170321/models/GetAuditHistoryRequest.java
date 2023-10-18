@@ -97,7 +97,7 @@ public class GetAuditHistoryRequest extends Request {
         } 
 
         /**
-         * The reason why the video failed the review. If the video failed the review, specify the reason.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -106,7 +106,7 @@ public class GetAuditHistoryRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,7 +115,10 @@ public class GetAuditHistoryRequest extends Request {
         }
 
         /**
-         * The review records.
+         * The sorting rule of the results. Valid values:
+         * <p>
+         * *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
+         * *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -124,7 +127,7 @@ public class GetAuditHistoryRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetAuditHistory**.
+         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

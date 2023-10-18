@@ -55,7 +55,7 @@ public class GetVideoInfosRequest extends Request {
         } 
 
         /**
-         * The tags of the video. Multiple tags are separated by commas (,).
+         * The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
          */
         public Builder videoIds(String videoIds) {
             this.putQueryParameter("VideoIds", videoIds);

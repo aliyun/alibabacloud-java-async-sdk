@@ -62,7 +62,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         private String transcodeTaskId; 
 
         /**
-         * The ID of the transcoding job that was submitted.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,9 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Submits a transcoding job and starts asynchronous transcoding.
+         * The transcoding jobs.
+         * <p>
+         * > This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
          */
         public Builder transcodeJobs(TranscodeJobs transcodeJobs) {
             this.transcodeJobs = transcodeJobs;
@@ -78,7 +80,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the transcoding job that was submitted.
          */
         public Builder transcodeTaskId(String transcodeTaskId) {
             this.transcodeTaskId = transcodeTaskId;
@@ -118,7 +120,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

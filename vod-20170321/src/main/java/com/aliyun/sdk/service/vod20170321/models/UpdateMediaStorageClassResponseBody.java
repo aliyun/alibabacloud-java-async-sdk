@@ -74,7 +74,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * ForbiddenList.
+         * The IDs of the media assets that failed to be processed.
          */
         public Builder forbiddenList(ForbiddenList forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -82,7 +82,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         }
 
         /**
-         * IgnoredList.
+         * The IDs of the media assets that failed to be obtained.
          */
         public Builder ignoredList(IgnoredList ignoredList) {
             this.ignoredList = ignoredList;
@@ -90,7 +90,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the task. Valid values:
+         * <p>
+         * 
+         * *   **Processing**
+         * *   **Failed**
          */
         public Builder status(String status) {
             this.status = status;
@@ -150,7 +154,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * MediaId.
+             * The ID of the media asset.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -158,7 +162,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the failure.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -240,7 +244,7 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             private java.util.List < String > mediaId; 
 
             /**
-             * MediaId.
+             * The ID of the media asset.
              */
             public Builder mediaId(java.util.List < String > mediaId) {
                 this.mediaId = mediaId;

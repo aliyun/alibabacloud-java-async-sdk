@@ -50,7 +50,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PreprocessJobs.
+         * The job information.
          */
         public Builder preprocessJobs(PreprocessJobs preprocessJobs) {
             this.preprocessJobs = preprocessJobs;
@@ -58,7 +58,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

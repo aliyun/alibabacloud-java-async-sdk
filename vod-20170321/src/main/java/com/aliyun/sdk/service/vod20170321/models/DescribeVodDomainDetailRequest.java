@@ -83,11 +83,7 @@ public class DescribeVodDomainDetailRequest extends Request {
         } 
 
         /**
-         * The status of the origin server. Valid values:
-         * <p>
-         * 
-         * *   **online**: indicates that the origin server is enabled.
-         * *   **offline**: indicates that the origin server is disabled.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

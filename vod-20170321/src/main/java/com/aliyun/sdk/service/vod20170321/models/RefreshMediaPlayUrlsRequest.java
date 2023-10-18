@@ -168,11 +168,10 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         } 
 
         /**
-         * Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:
+         * Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.
          * <p>
          * 
-         * *   **Single**: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.
-         * *   **Multiple**: All transcoded streams are refreshed or prefetched for each resolution and format.
+         * >  The value must be supported in the **Definition** section in [Parameters for media assets](~~124671~~).
          */
         public Builder definitions(String definitions) {
             this.putQueryParameter("Definitions", definitions);
@@ -181,28 +180,19 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:
+         * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
          * <p>
          * 
-         * *   **video**
-         * *   **audio**
+         * *   **mp4**
+         * *   **m3u8**
+         * *   **mp3**
+         * *   **flv**
+         * *   **webm**
+         * *   **ts**
          */
         public Builder formats(String formats) {
             this.putQueryParameter("Formats", formats);
             this.formats = formats;
-            return this;
-        }
-
-        /**
-         * Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   **false**
-         * *   **true**
-         */
-        public Builder mediaIds(String mediaIds) {
-            this.putQueryParameter("MediaIds", mediaIds);
-            this.mediaIds = mediaIds;
             return this;
         }
 
@@ -214,6 +204,19 @@ public class RefreshMediaPlayUrlsRequest extends Request {
          * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.
          * *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media file is uploaded.
          */
+        public Builder mediaIds(String mediaIds) {
+            this.putQueryParameter("MediaIds", mediaIds);
+            this.mediaIds = mediaIds;
+            return this;
+        }
+
+        /**
+         * Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:
+         * <p>
+         * 
+         * *   **Single**: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.
+         * *   **Multiple**: All transcoded streams are refreshed or prefetched for each resolution and format.
+         */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
             this.resultType = resultType;
@@ -221,7 +224,7 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see [Overview](~~113600~~).
+         * Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.
          */
         public Builder sliceCount(Integer sliceCount) {
             this.putQueryParameter("SliceCount", sliceCount);
@@ -230,11 +233,41 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The ID of the refresh or prefetch task.
+         * Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder sliceFlag(Boolean sliceFlag) {
             this.putQueryParameter("SliceFlag", sliceFlag);
             this.sliceFlag = sliceFlag;
+            return this;
+        }
+
+        /**
+         * Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         */
+        public Builder streamType(String streamType) {
+            this.putQueryParameter("StreamType", streamType);
+            this.streamType = streamType;
+            return this;
+        }
+
+        /**
+         * The type of the task that you want to create. Valid values:
+         * <p>
+         * 
+         * *   **Refresh**
+         * *   **Preload**
+         */
+        public Builder taskType(String taskType) {
+            this.putQueryParameter("TaskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 
@@ -244,27 +277,6 @@ public class RefreshMediaPlayUrlsRequest extends Request {
          * > 
          * - The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
          * - You must submit a ticket to enable the upload acceleration feature. For more information, see [Overview](~~55396~~).
-         */
-        public Builder streamType(String streamType) {
-            this.putQueryParameter("StreamType", streamType);
-            this.streamType = streamType;
-            return this;
-        }
-
-        /**
-         * The IDs of the media files that do not exist.
-         */
-        public Builder taskType(String taskType) {
-            this.putQueryParameter("TaskType", taskType);
-            this.taskType = taskType;
-            return this;
-        }
-
-        /**
-         * Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.
-         * <p>
-         * 
-         * >  The value must be supported in the **Definition** section in [Parameters for media assets](~~124671~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

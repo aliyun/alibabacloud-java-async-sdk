@@ -97,7 +97,7 @@ public class DeleteVodDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name for CDN that you want to delete.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

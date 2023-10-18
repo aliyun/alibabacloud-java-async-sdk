@@ -50,7 +50,7 @@ public class AddVodTemplateResponseBody extends TeaModel {
         private String vodTemplateId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddVodTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * VodTemplateId.
+         * The ID of the snapshot template. You can call the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.vodTemplateId = vodTemplateId;

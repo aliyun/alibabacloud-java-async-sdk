@@ -70,12 +70,7 @@ public class GetMediaAuditResultDetailRequest extends Request {
         } 
 
         /**
-         * The category of the pornographic content review result. Valid values:
-         * <p>
-         * 
-         * *   **normal**
-         * *   **porn**
-         * *   **sexy**
+         * The ID of the video.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -84,7 +79,7 @@ public class GetMediaAuditResultDetailRequest extends Request {
         }
 
         /**
-         * The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
+         * The page number of the review result to return. The default value is **1**. A maximum of **20** records can be returned on each page.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);

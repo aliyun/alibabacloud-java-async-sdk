@@ -129,7 +129,7 @@ public class GetEditingProjectRequest extends Request {
         }
 
         /**
-         * The timeline of the online editing project.
+         * The ID of the online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

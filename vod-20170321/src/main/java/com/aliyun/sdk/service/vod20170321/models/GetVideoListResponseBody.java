@@ -78,7 +78,7 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the media file. Information about a maximum of 5,000 media files can be returned.
+         * The period of time in which the object remains in the restored state.
          */
         public Builder videoList(VideoList videoList) {
             this.videoList = videoList;
@@ -363,7 +363,7 @@ public class GetVideoListResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The application ID. Default value: **app-1000000**.
+             * The ID of the application. Default value: **app-1000000**.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -371,7 +371,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID.
+             * The category ID of the media file.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -379,7 +379,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * The category name.
+             * The name of the category.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -427,7 +427,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreExpiration.
+             * The period of time in which the object remains in the restored state.
              */
             public Builder restoreExpiration(String restoreExpiration) {
                 this.restoreExpiration = restoreExpiration;
@@ -435,7 +435,12 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreStatus.
+             * The restoration status of the media file. Valid values:
+             * <p>
+             * 
+             * - **Processing**
+             * - **Success**
+             * - **Failed**
              */
             public Builder restoreStatus(String restoreStatus) {
                 this.restoreStatus = restoreStatus;
@@ -459,7 +464,7 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * The video status. Valid values:
+             * The status of the video. Valid values:
              * <p>
              * 
              * *   **Uploading**: The video is being uploaded.
@@ -480,7 +485,17 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageClass.
+             * The storage class of the media file. Valid values:
+             * <p>
+             * 
+             * - **Standard**: All media resources are stored as Standard objects.
+             * - **IA**: All media resources are stored as IA objects.
+             * - **Archive**: All media resources are stored as Archive objects.
+             * - **ColdArchive**: All media resources are stored as Cold Archive objects.
+             * - **SourceIA**: Only the source files are IA objects.
+             * - **SourceArchive**: Only the source files are Archive objects.
+             * - **SourceColdArchive**: Only the source files are Cold Archive objects.
+             * - **Changing**: The storage class is being modified.
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;

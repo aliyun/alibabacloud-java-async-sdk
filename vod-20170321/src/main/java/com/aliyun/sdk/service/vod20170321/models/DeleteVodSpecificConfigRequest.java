@@ -23,6 +23,10 @@ public class DeleteVodSpecificConfigRequest extends Request {
     private String domainName;
 
     @Query
+    @NameInMap("Env")
+    private String env;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -34,6 +38,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
         super(builder);
         this.configId = builder.configId;
         this.domainName = builder.domainName;
+        this.env = builder.env;
         this.ownerId = builder.ownerId;
         this.securityToken = builder.securityToken;
     }
@@ -66,6 +71,13 @@ public class DeleteVodSpecificConfigRequest extends Request {
     }
 
     /**
+     * @return env
+     */
+    public String getEnv() {
+        return this.env;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -82,6 +94,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteVodSpecificConfigRequest, Builder> {
         private String configId; 
         private String domainName; 
+        private String env; 
         private Long ownerId; 
         private String securityToken; 
 
@@ -93,12 +106,13 @@ public class DeleteVodSpecificConfigRequest extends Request {
             super(request);
             this.configId = request.configId;
             this.domainName = request.domainName;
+            this.env = request.env;
             this.ownerId = request.ownerId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -107,11 +121,20 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * Deletes the configurations of a domain name for CDN.
+         * The domain name for CDN.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * Env.
+         */
+        public Builder env(String env) {
+            this.putQueryParameter("Env", env);
+            this.env = env;
             return this;
         }
 

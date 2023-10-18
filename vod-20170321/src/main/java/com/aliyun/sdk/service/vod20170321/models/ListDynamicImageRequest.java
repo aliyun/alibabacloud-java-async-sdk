@@ -55,7 +55,7 @@ public class ListDynamicImageRequest extends Request {
         } 
 
         /**
-         * The size of the animated sticker file. Unit: byte.
+         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

@@ -113,7 +113,7 @@ public class AddWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +122,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The OSS URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
+         * The Object Storage Service (OSS) URL of the watermark file. This parameter is required if you add image watermarks.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -131,7 +131,11 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * The name of the watermark. The name can contain only letters and digits.
+         * <p>
+         * 
+         * *   The name can be up to 128 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +144,11 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The ID of the watermark.
+         * The type of the watermark. Valid values:
+         * <p>
+         * 
+         * *   **Image** (default)
+         * *   **Text**
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -149,7 +157,10 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The configurations such as the position and effect of the text watermark or image watermark. The value must be a JSON string.
+         * <p>
+         * 
+         * > The value of this parameter varies based on the watermark type. For more information about the data structure, see [WatermarkConfig](~~98618~~).
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);

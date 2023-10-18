@@ -50,7 +50,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         private WatermarkInfo watermarkInfo; 
 
         /**
-         * The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application.
+         * The information about the watermark.
          */
         public Builder watermarkInfo(WatermarkInfo watermarkInfo) {
             this.watermarkInfo = watermarkInfo;
@@ -182,7 +182,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             private String watermarkId; 
 
             /**
-             * The ID of the watermark.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -190,7 +190,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the watermark.
+             * The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **GetWatermark**.
+             * The Object Storage Service (OSS) URL or CDN URL of the watermark file. A text watermark does not have a file URL.
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -206,7 +206,11 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * Indicates whether the watermark is the default one. Valid values:
+             * <p>
+             * 
+             * *   **Default**
+             * *   **NotDefault**
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -214,7 +218,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the watermark.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +226,11 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
+             * The type of the watermark. Valid values:
+             * <p>
+             * 
+             * *   **Image**
+             * *   **Text**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -230,7 +238,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Queries a single watermark.
+             * The configuration information such as the position and effect about the text watermark or image watermark. The value is a JSON string. For more information about the data structure, see the "WatermarkConfig: specifies the watermark configurations" section of the [Parameters for media processing](~~98618~~) topic.
              */
             public Builder watermarkConfig(String watermarkConfig) {
                 this.watermarkConfig = watermarkConfig;
@@ -238,7 +246,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkId.
+             * The ID of the watermark.
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;

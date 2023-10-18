@@ -50,7 +50,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.
+         * The media fingerprinting results.
          */
         public Builder DNAResult(DNAResult DNAResult) {
             this.DNAResult = DNAResult;
@@ -58,7 +58,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the video. Unit: seconds.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the video. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -118,7 +118,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start time of the video. Unit: seconds.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -171,7 +171,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * The start time of the video. Unit: seconds.
+             * The duration of the video. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -179,7 +179,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video. Unit: seconds.
+             * The start time of the video. Unit: seconds.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -232,7 +232,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private Input input; 
 
             /**
-             * Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.
+             * The start time and duration of the matched video.
              */
             public Builder duplication(Duplication duplication) {
                 this.duplication = duplication;
@@ -240,7 +240,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The start time and duration of the input video.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -305,7 +305,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private String similarity; 
 
             /**
-             * The duration of the video. Unit: seconds.
+             * The details of the matched video. Information such as the location and duration of the video is returned.
              */
             public Builder detail(java.util.List < Detail> detail) {
                 this.detail = detail;
@@ -313,7 +313,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * The start time and duration of the input video.
+             * The ID of the video that has a similar fingerprint.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -321,7 +321,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             }
 
             /**
-             * The video fingerprint recognition result.
+             * The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -362,7 +362,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private java.util.List < VideoDNA> videoDNA; 
 
             /**
-             * The media fingerprinting results.
+             * The video fingerprint recognition result.
              */
             public Builder videoDNA(java.util.List < VideoDNA> videoDNA) {
                 this.videoDNA = videoDNA;

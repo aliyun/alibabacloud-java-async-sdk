@@ -62,7 +62,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedPolicyNames.
+         * The names of the policies that failed to be granted to the RAM user or RAM role.
          */
         public Builder failedPolicyNames(java.util.List < String > failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;
@@ -70,7 +70,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistPolicyNames.
+         * The names of the policies that were not found.
          */
         public Builder nonExistPolicyNames(java.util.List < String > nonExistPolicyNames) {
             this.nonExistPolicyNames = nonExistPolicyNames;
@@ -78,7 +78,7 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * Authorizes the specified identity to access the applications of ApsaraVideo VOD. The identity may be a RAM user or RAM role.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -69,7 +69,7 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

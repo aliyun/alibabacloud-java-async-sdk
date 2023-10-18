@@ -69,7 +69,7 @@ public class DescribeVodVerifyContentRequest extends Request {
         } 
 
         /**
-         * Queries the ownership verification content.
+         * The domain name for which you want to query the ownership verification content. You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

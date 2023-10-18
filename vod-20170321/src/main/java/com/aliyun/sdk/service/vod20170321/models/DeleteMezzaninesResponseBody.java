@@ -62,7 +62,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         private java.util.List < String > unRemoveableVideoIds; 
 
         /**
-         * NonExistVideoIds.
+         * The IDs of the videos that do not exist.
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -70,7 +70,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,9 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         }
 
         /**
-         * UnRemoveableVideoIds.
+         * The IDs of the videos whose mezzanine files cannot be deleted.
+         * <p>
+         * > Generally, mezzanine files cannot be deleted if they are used for original-quality playback or you do not have required [permissions](~~113600~~) to delete them.
          */
         public Builder unRemoveableVideoIds(java.util.List < String > unRemoveableVideoIds) {
             this.unRemoveableVideoIds = unRemoveableVideoIds;

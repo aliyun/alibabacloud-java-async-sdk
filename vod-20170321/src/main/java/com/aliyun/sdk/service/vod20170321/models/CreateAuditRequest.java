@@ -55,7 +55,9 @@ public class CreateAuditRequest extends Request {
         } 
 
         /**
-         * AuditContent.
+         * The review content. You can specify up to **100** audio or video files in a request. The value must be converted to a string.\
+         * <p>
+         * For more information about this parameter, see the **AuditContent** section of this topic.
          */
         public Builder auditContent(String auditContent) {
             this.putQueryParameter("AuditContent", auditContent);

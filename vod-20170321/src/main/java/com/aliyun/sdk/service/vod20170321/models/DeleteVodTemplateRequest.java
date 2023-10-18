@@ -55,7 +55,7 @@ public class DeleteVodTemplateRequest extends Request {
         } 
 
         /**
-         * Deletes a snapshot template.
+         * The ID of the snapshot template.
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.putQueryParameter("VodTemplateId", vodTemplateId);

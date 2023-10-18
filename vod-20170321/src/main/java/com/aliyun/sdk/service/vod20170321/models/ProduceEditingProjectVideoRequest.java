@@ -194,7 +194,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         } 
 
         /**
-         * >ApsaraVideo VOD sends a FileUploadComplete event notification after video production is complete, which is similar to the action that is performed after video upload. After the produced video is transcoded, ApsaraVideo VOD sends the StreamTranscodeComplete and TranscodeComplete event notifications.
+         * The thumbnail URL of the online editing project.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -212,7 +212,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * Produces a video from one or more mezzanine files. You can directly submit mezzanine files by specifying the Timeline parameter. Alternatively, you can submit mezzanine files after you create an online editing project.
+         * The video metadata. The value must be in JSON format. For more information about the parameter structure, see [MediaMetadata](~~52839#title_rtf_ry5\_gjp~~).
          */
         public Builder mediaMetadata(String mediaMetadata) {
             this.putQueryParameter("MediaMetadata", mediaMetadata);
@@ -230,7 +230,10 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * 朴灵
+         * The configuration of video production. The value must be in JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title_ybl\_7cs_y7d~~).
+         * <p>
+         * 
+         * > The StorageLocation field is required if you create an online editing project in a region other than the China (Shanghai) region.
          */
         public Builder produceConfig(String produceConfig) {
             this.putQueryParameter("ProduceConfig", produceConfig);
@@ -239,7 +242,11 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The thumbnail URL of the online editing project.
+         * The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to view the ID of the online editing project.
+         * *   Obtain the value of ProjectId from the response to the [AddEditingProject](~~69048~~) operation.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -266,11 +273,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The ID of the produced video.
-         * <p>
-         * 
-         * > *   This operation returns the ID of the produced video in synchronous mode.
-         * > *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.
+         * The timeline of the online editing project. The value must be in JSON format. For more information about the parameter structure, see [Timeline](~~52839#07bc7fe0f2xuh~~).
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -279,7 +282,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).
+         * The title of the online editing project.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -288,7 +291,10 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom configurations, such as the callback configuration. The value must be a JSON string. For more information about the parameter structure, see [UserData](~~86952#title_vz7\_xzs\_0c5~~).
+         * <p>
+         * 
+         * > The callback configurations take effect only after you specify an HTTP URL for receiving callback notifications and select the event types in the ApsaraVideo VOD console.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

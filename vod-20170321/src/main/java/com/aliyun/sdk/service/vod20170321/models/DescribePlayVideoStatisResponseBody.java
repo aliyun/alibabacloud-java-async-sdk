@@ -50,7 +50,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         private VideoPlayStatisDetails videoPlayStatisDetails; 
 
         /**
-         * The ID of the video.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unique visitors.
+         * The daily playback statistics on the video.
          */
         public Builder videoPlayStatisDetails(VideoPlayStatisDetails videoPlayStatisDetails) {
             this.videoPlayStatisDetails = videoPlayStatisDetails;
@@ -158,7 +158,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             private String vv; 
 
             /**
-             * The ID of the request.
+             * The date. The date is displayed in the *yyyy-MM-dd* format.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -166,7 +166,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video.
+             * The playback duration. Unit: millisecond.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -174,7 +174,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * PlayRange.
+             * The distribution of the playback duration.
              */
             public Builder playRange(String playRange) {
                 this.playRange = playRange;
@@ -182,7 +182,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * Queries daily playback statistics on a specified video in a specified time range.
+             * The video title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -190,7 +190,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * UV.
+             * The number of unique visitors.
              */
             public Builder uv(String uv) {
                 this.uv = uv;
@@ -198,7 +198,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribePlayVideoStatis**.
+             * The number of video views.
              */
             public Builder vv(String vv) {
                 this.vv = vv;

@@ -83,7 +83,7 @@ public class BatchStopVodDomainRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain name. Separate multiple domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);

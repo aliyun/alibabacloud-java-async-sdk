@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateMediaStorageClassRequest extends Request {
     @Query
     @NameInMap("MediaIds")
+    @Validation(required = true)
     private String mediaIds;
 
     @Query
@@ -26,6 +27,7 @@ public class UpdateMediaStorageClassRequest extends Request {
 
     @Query
     @NameInMap("StorageClass")
+    @Validation(required = true)
     private String storageClass;
 
     private UpdateMediaStorageClassRequest(Builder builder) {
@@ -96,7 +98,12 @@ public class UpdateMediaStorageClassRequest extends Request {
         } 
 
         /**
-         * MediaIds.
+         * The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
+         * *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media assets.
+         * *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media asset is uploaded.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
@@ -105,7 +112,12 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * RestoreTier.
+         * The restoration priority. This parameter is required only when you restore a Cold Archive media asset. Valid values:
+         * <p>
+         * 
+         * *   **Expedited**
+         * *   **Standard**
+         * *   **Bulk**
          */
         public Builder restoreTier(String restoreTier) {
             this.putQueryParameter("RestoreTier", restoreTier);
@@ -114,7 +126,11 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The modification range. Valid values:
+         * <p>
+         * 
+         * *   **All**: modifies the storage classes of all resources including the source files and transcoded streams.
+         * *   **SourceFile**: modifies the storage classes of only the source files. The storage class of other resources is Standard.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -123,7 +139,13 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * StorageClass.
+         * The storage class to which you want to modify. Valid values:
+         * <p>
+         * 
+         * *   **Standard**
+         * *   **IA**
+         * *   **Archive**
+         * *   **ColdArchive**
          */
         public Builder storageClass(String storageClass) {
             this.putQueryParameter("StorageClass", storageClass);

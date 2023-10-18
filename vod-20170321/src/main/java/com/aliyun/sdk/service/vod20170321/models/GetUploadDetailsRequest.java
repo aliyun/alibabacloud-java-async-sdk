@@ -69,7 +69,11 @@ public class GetUploadDetailsRequest extends Request {
         } 
 
         /**
-         * The method that is used to upload the media file.
+         * The ID of the media file, namely, the audio or video ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the audio or video ID:
+         * <p>
+         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the audio or video ID. Use this method if the audio or video file is uploaded by using the ApsaraVideo VOD console.
+         * *   View the value of the VideoId parameter returned by the [CreateUploadVideo](~~55407~~) operation that you called to obtain an upload URL and credential.
+         * *   View the value of the VideoId parameter returned by the [SearchMedia](~~86044~~) operation that you called to query media information after the audio or video file is uploaded.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
@@ -78,7 +82,7 @@ public class GetUploadDetailsRequest extends Request {
         }
 
         /**
-         * The upload details.
+         * The type of the media file. Set the value to **video**, which indicates audio and video files.
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);

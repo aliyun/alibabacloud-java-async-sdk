@@ -50,7 +50,7 @@ public class RefreshVodObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RefreshTaskId.
+         * The ID of the refresh task. Separate multiple task IDs with commas (,).
          */
         public Builder refreshTaskId(String refreshTaskId) {
             this.refreshTaskId = refreshTaskId;
@@ -58,7 +58,7 @@ public class RefreshVodObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

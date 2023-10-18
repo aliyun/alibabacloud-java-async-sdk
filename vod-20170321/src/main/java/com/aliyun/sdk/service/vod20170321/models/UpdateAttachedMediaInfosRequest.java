@@ -55,7 +55,7 @@ public class UpdateAttachedMediaInfosRequest extends Request {
         } 
 
         /**
-         * Modifies the information about multiple auxiliary media assets at a time.
+         * The new information about auxiliary media assets. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the **UpdateContent** section of this topic.
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

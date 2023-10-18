@@ -54,7 +54,7 @@ public class ListAuditSecurityIpRequest extends Request {
         } 
 
         /**
-         * The time when the review security group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The name of the review security group in which you want to query IP addresses. If you do not specify this parameter, IP addresses in all review security groups are queried.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

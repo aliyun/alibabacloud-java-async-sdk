@@ -25,6 +25,10 @@ public class GetPlayInfoRequest extends Request {
     private String definition;
 
     @Query
+    @NameInMap("DigitalWatermarkType")
+    private String digitalWatermarkType;
+
+    @Query
     @NameInMap("Formats")
     private String formats;
 
@@ -49,6 +53,10 @@ public class GetPlayInfoRequest extends Request {
     private String streamType;
 
     @Query
+    @NameInMap("Trace")
+    private String trace;
+
+    @Query
     @NameInMap("VideoId")
     @Validation(required = true)
     private String videoId;
@@ -58,12 +66,14 @@ public class GetPlayInfoRequest extends Request {
         this.additionType = builder.additionType;
         this.authTimeout = builder.authTimeout;
         this.definition = builder.definition;
+        this.digitalWatermarkType = builder.digitalWatermarkType;
         this.formats = builder.formats;
         this.outputType = builder.outputType;
         this.playConfig = builder.playConfig;
         this.reAuthInfo = builder.reAuthInfo;
         this.resultType = builder.resultType;
         this.streamType = builder.streamType;
+        this.trace = builder.trace;
         this.videoId = builder.videoId;
     }
 
@@ -99,6 +109,13 @@ public class GetPlayInfoRequest extends Request {
      */
     public String getDefinition() {
         return this.definition;
+    }
+
+    /**
+     * @return digitalWatermarkType
+     */
+    public String getDigitalWatermarkType() {
+        return this.digitalWatermarkType;
     }
 
     /**
@@ -144,6 +161,13 @@ public class GetPlayInfoRequest extends Request {
     }
 
     /**
+     * @return trace
+     */
+    public String getTrace() {
+        return this.trace;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -154,12 +178,14 @@ public class GetPlayInfoRequest extends Request {
         private String additionType; 
         private Long authTimeout; 
         private String definition; 
+        private String digitalWatermarkType; 
         private String formats; 
         private String outputType; 
         private String playConfig; 
         private String reAuthInfo; 
         private String resultType; 
         private String streamType; 
+        private String trace; 
         private String videoId; 
 
         private Builder() {
@@ -171,17 +197,22 @@ public class GetPlayInfoRequest extends Request {
             this.additionType = request.additionType;
             this.authTimeout = request.authTimeout;
             this.definition = request.definition;
+            this.digitalWatermarkType = request.digitalWatermarkType;
             this.formats = request.formats;
             this.outputType = request.outputType;
             this.playConfig = request.playConfig;
             this.reAuthInfo = request.reAuthInfo;
             this.resultType = request.resultType;
             this.streamType = request.streamType;
+            this.trace = request.trace;
             this.videoId = request.videoId;
         } 
 
         /**
-         * The ID of the media transcoding job. This ID uniquely identifies a media stream.
+         * The URL of the masked live comment data. Set the value to **danmu**.
+         * <p>
+         * 
+         * > This parameter takes effect only when the outputType parameter is set to **cdn**.
          */
         public Builder additionType(String additionType) {
             this.putQueryParameter("AdditionType", additionType);
@@ -190,7 +221,22 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The frame rate of the media stream. Unit: frames per second.
+         * The validity period of the playback URL. Unit: seconds.
+         * <p>
+         * 
+         * *   If you set OutputType to **cdn**:
+         * 
+         *     *   The playback URL has a validity period only if URL signing is enabled. Otherwise, the playback URL is permanently valid. For more information about how to enable and configure URL signing, see [URL signing](~~86090~~).
+         *     *   Minimum value: **1**.
+         *     *   Maximum value: unlimited.
+         *     *   Default value: The default validity period that is specified in URL signing is used.
+         * 
+         * *   If you set OutputType to **oss**:
+         * 
+         *     *   This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the playback URL does not expire.
+         *     *   Minimum value: **1**.
+         *     *   Maximum value: If the media file is stored in the VOD bucket, the maximum validity period is **2592000** (30 days). If the media file is stored in an OSS bucket, the maximum validity period is **129600** (36 hours). This limit is imposed to reduce security risks of the origin server. If you require a longer validity period, set OutputType to **cdn** and configure URL signing to specify a longer validity period.
+         *     *   Default value: **3600**.
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -199,44 +245,7 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The type of Narrowband HD transcoding. Valid values:
-         * <p>
-         * 
-         * *   **0**: regular
-         * *   **1.0**: Narrowband HD 1.0
-         * *   **2.0**: Narrowband HD 2.0
-         * 
-         * This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
-         */
-        public Builder definition(String definition) {
-            this.putQueryParameter("Definition", definition);
-            this.definition = definition;
-            return this;
-        }
-
-        /**
-         * The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-         */
-        public Builder formats(String formats) {
-            this.putQueryParameter("Formats", formats);
-            this.formats = formats;
-            return this;
-        }
-
-        /**
-         * The URL of the masked live comment data. Set the value to **danmu**.
-         * <p>
-         * 
-         * > This parameter takes effect only when the outputType parameter is set to **cdn**.
-         */
-        public Builder outputType(String outputType) {
-            this.putQueryParameter("OutputType", outputType);
-            this.outputType = outputType;
-            return this;
-        }
-
-        /**
-         * The quality of the video stream. Valid values:
+         * The quality of the video stream. Separate multiple qualities with commas (,). Valid values:
          * <p>
          * 
          * *   **FD**: low definition
@@ -249,6 +258,60 @@ public class GetPlayInfoRequest extends Request {
          * *   **SQ**: standard sound quality
          * *   **HQ**: high sound quality
          * *   **AUTO**: adaptive bitrate
+         * 
+         * > By default, ApsaraVideo VOD returns video streams in all preceding qualities. However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate](~~52839~~) table.
+         */
+        public Builder definition(String definition) {
+            this.putQueryParameter("Definition", definition);
+            this.definition = definition;
+            return this;
+        }
+
+        /**
+         * DigitalWatermarkType.
+         */
+        public Builder digitalWatermarkType(String digitalWatermarkType) {
+            this.putQueryParameter("DigitalWatermarkType", digitalWatermarkType);
+            this.digitalWatermarkType = digitalWatermarkType;
+            return this;
+        }
+
+        /**
+         * The format of the media stream. Separate multiple formats with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **mp4**
+         * *   **m3u8**
+         * *   **mp3**
+         * *   **mpd**
+         * 
+         * > By default, ApsaraVideo VOD returns video streams in all the preceding formats. However, video streams in the MPD format are returned only if the MPD container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate](~~52839~~) table.
+         */
+        public Builder formats(String formats) {
+            this.putQueryParameter("Formats", formats);
+            this.formats = formats;
+            return this;
+        }
+
+        /**
+         * The type of the output URL. Default value: oss. Valid values:
+         * <p>
+         * 
+         * *   **oss**
+         * *   **cdn**
+         */
+        public Builder outputType(String outputType) {
+            this.putQueryParameter("OutputType", outputType);
+            this.outputType = outputType;
+            return this;
+        }
+
+        /**
+         * The custom playback configuration. The value is a JSON string. For more information, see [PlayConfig](~~86952~~).
+         * <p>
+         * 
+         * >-   If you do not specify PlayConfig or `PlayDomain` in PlayConfig, the default domain name configured in ApsaraVideo VOD is used in this operation. If no default domain name is configured, the domain names are queried in reverse chronological order based on the time when the domain names were modified. The domain name that was last modified is used as the streaming domain name. To prevent domain name issues, we recommend that you specify the default streaming domain name. You can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Configuration Management** > **Media Management** > **Storage** > **Manage** > **Origin Domain Name** to set the default streaming domain name.
+         * >-   If the `EncryptType` parameter in PlayConfig is set to `AliyunVoDEncryption`, the playback URL of the stream encrypted by using proprietary cryptography is not returned to ensure video security. If you want to return such URL, you must set the `ResultType` parameter to `Multiple`.
          */
         public Builder playConfig(String playConfig) {
             this.putQueryParameter("PlayConfig", playConfig);
@@ -257,7 +320,7 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The playback URL of the video stream.
+         * The CDN reauthentication configuration. The value is a JSON string. If CDN reauthentication is enabled, you can use this parameter to specify the UID and rand fields for URL authentication. For more information, see [URL authentication](~~57007~~).
          */
         public Builder reAuthInfo(String reAuthInfo) {
             this.putQueryParameter("ReAuthInfo", reAuthInfo);
@@ -266,7 +329,11 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The type of the data to return. Default value: Single. Valid values:
+         * <p>
+         * 
+         * *   **Single**: Only one latest transcoded stream is returned for each quality and format.
+         * *   **Multiple**: All transcoded streams are returned for each quality and format.
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -275,7 +342,13 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * Details of the audio or video file.
+         * The type of the media stream. Separate multiple types with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         * 
+         * By default, video and audio streams are returned.
          */
         public Builder streamType(String streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -284,7 +357,21 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The basic information about the audio or video file.
+         * Trace.
+         */
+        public Builder trace(String trace) {
+            this.putQueryParameter("Trace", trace);
+            this.trace = trace;
+            return this;
+        }
+
+        /**
+         * The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the media ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
+         * *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation.
+         * *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

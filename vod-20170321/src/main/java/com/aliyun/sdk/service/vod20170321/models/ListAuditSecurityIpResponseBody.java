@@ -50,7 +50,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         private java.util.List < SecurityIpList> securityIpList; 
 
         /**
-         * The name of the review security group.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The details of the review security group.
          */
         public Builder securityIpList(java.util.List < SecurityIpList> securityIpList) {
             this.securityIpList = securityIpList;
@@ -134,7 +134,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * The operation that you want to perform. Set the value to **ListAuditSecurityIp**.
+             * The time when the review security group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -142,7 +142,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the IP addresses in a review security group.
+             * The IP addresses in the review security group.
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -150,7 +150,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The time when the review security group was last modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -158,7 +158,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * The name of the review security group.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

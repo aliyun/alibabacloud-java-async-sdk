@@ -50,7 +50,7 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NonExistTranscodeTemplateIds.
+         * The IDs of transcoding templates that were not found.
          */
         public Builder nonExistTranscodeTemplateIds(java.util.List < String > nonExistTranscodeTemplateIds) {
             this.nonExistTranscodeTemplateIds = nonExistTranscodeTemplateIds;
@@ -58,7 +58,7 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

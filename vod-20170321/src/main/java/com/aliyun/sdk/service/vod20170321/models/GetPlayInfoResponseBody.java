@@ -62,7 +62,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         private VideoBase videoBase; 
 
         /**
-         * The height of the media stream. Unit: pixels.
+         * The information about the audio or video stream.
          */
         public Builder playInfoList(PlayInfoList playInfoList) {
             this.playInfoList = playInfoList;
@@ -70,7 +70,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the audio or video stream.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The width of the media stream. Unit: pixels.
+         * The basic information about the audio or video file.
          */
         public Builder videoBase(VideoBase videoBase) {
             this.videoBase = videoBase;
@@ -125,8 +125,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Height")
         private Long height;
 
+        @NameInMap("JobExt")
+        private String jobExt;
+
         @NameInMap("JobId")
         private String jobId;
+
+        @NameInMap("JobType")
+        private Integer jobType;
 
         @NameInMap("ModificationTime")
         private String modificationTime;
@@ -167,7 +173,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
             this.fps = builder.fps;
             this.HDRType = builder.HDRType;
             this.height = builder.height;
+            this.jobExt = builder.jobExt;
             this.jobId = builder.jobId;
+            this.jobType = builder.jobType;
             this.modificationTime = builder.modificationTime;
             this.narrowBandType = builder.narrowBandType;
             this.playURL = builder.playURL;
@@ -265,10 +273,24 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobExt
+         */
+        public String getJobExt() {
+            return this.jobExt;
+        }
+
+        /**
          * @return jobId
          */
         public String getJobId() {
             return this.jobId;
+        }
+
+        /**
+         * @return jobType
+         */
+        public Integer getJobType() {
+            return this.jobType;
         }
 
         /**
@@ -346,7 +368,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String fps; 
             private String HDRType; 
             private Long height; 
+            private String jobExt; 
             private String jobId; 
+            private Integer jobType; 
             private String modificationTime; 
             private String narrowBandType; 
             private String playURL; 
@@ -358,7 +382,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private Long width; 
 
             /**
-             * 颜色位深
+             * The color depth. This value must be an integer.
              */
             public Builder bitDepth(Integer bitDepth) {
                 this.bitDepth = bitDepth;
@@ -366,15 +390,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the media stream. Separate multiple formats with commas (,). Valid values:
-             * <p>
-             * 
-             * *   **mp4**
-             * *   **m3u8**
-             * *   **mp3**
-             * *   **mpd**
-             * 
-             * > By default, ApsaraVideo VOD returns video streams in all the preceding formats. However, video streams in the MPD format are returned only if the MPD container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate](~~52839~~) table.
+             * The bitrate of the media stream. Unit: Kbit/s.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -382,11 +398,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the media stream. Valid values:
-             * <p>
-             * 
-             * *   **Normal**
-             * *   **Invisible**
+             * The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -394,175 +406,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The color depth. This value must be an integer.
-             */
-            public Builder definition(String definition) {
-                this.definition = definition;
-                return this;
-            }
-
-            /**
-             * The encryption type of the media stream. Valid values:
-             * <p>
-             * 
-             * *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
-             * *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
-             * 
-             * > If the encryption type is**AliyunVoDEncryption**, only ApsaraVideo Player SDK can be used to play videos.
-             */
-            public Builder duration(String duration) {
-                this.duration = duration;
-                return this;
-            }
-
-            /**
-             * The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
-             */
-            public Builder encrypt(Long encrypt) {
-                this.encrypt = encrypt;
-                return this;
-            }
-
-            /**
-             * The title of the audio or video file.
-             */
-            public Builder encryptType(String encryptType) {
-                this.encryptType = encryptType;
-                return this;
-            }
-
-            /**
-             * Queries the playback URL of a video or audio file by its ID.
-             */
-            public Builder format(String format) {
-                this.format = format;
-                return this;
-            }
-
-            /**
-             * The type of the output URL. Default value: oss. Valid values:
-             * <p>
-             * 
-             * *   **oss**
-             * *   **cdn**
-             */
-            public Builder fps(String fps) {
-                this.fps = fps;
-                return this;
-            }
-
-            /**
-             * 视频流HDR类型
-             */
-            public Builder HDRType(String HDRType) {
-                this.HDRType = HDRType;
-                return this;
-            }
-
-            /**
-             * The returned result.
-             */
-            public Builder height(Long height) {
-                this.height = height;
-                return this;
-            }
-
-            /**
-             * The type of the media file. Valid values:
-             * <p>
-             * 
-             * *   **video**
-             * *   **audio**
-             */
-            public Builder jobId(String jobId) {
-                this.jobId = jobId;
-                return this;
-            }
-
-            /**
-             * The validity period of the playback URL. Unit: seconds.
-             * <p>
-             * 
-             * *   If the OutputType parameter is set to **cdn**:
-             * 
-             *     *   This parameter takes effect only if URL authentication is enabled. Otherwise, the playback URL does not expire.
-             *     *   Minimum value: **1**.
-             *     *   Maximum value: unlimited.
-             *     *   Default value: The default validity period that is specified in URL authentication is used.
-             * 
-             * *   If the OutputType parameter is set to **oss**:
-             * 
-             *     *   This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the playback URL does not expire.
-             *     *   Minimum value: **1**.
-             *     *   Maximum value: **2592000** (30 days). This limit is imposed to reduce security risks of the origin server.
-             *     *   Default value: **3600**.
-             */
-            public Builder modificationTime(String modificationTime) {
-                this.modificationTime = modificationTime;
-                return this;
-            }
-
-            /**
-             * The type of the data to return. Default value: Single. Valid values:
-             * <p>
-             * 
-             * *   **Single**: Only one latest transcoded stream is returned for each quality and format.
-             * *   **Multiple**: All transcoded streams are returned for each quality and format.
-             */
-            public Builder narrowBandType(String narrowBandType) {
-                this.narrowBandType = narrowBandType;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder playURL(String playURL) {
-                this.playURL = playURL;
-                return this;
-            }
-
-            /**
-             * The custom playback configuration. The value is a JSON string. For more information, see [PlayConfig](~~86952~~).
-             * <p>
-             * 
-             * > 
-             * 
-             * *   If you do not specify PlayConfig or `PlayDomain` in PlayConfig, the default domain name configured in ApsaraVideo VOD is used in this operation. If no default domain name is configured, the domain names are queried in reverse chronological order based on the time when the domain names were modified. The domain name that was last modified is used as the streaming domain name. To prevent domain name issues, we recommend that you specify the default streaming domain name. You can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Configuration Management** > **Media Management** > **Storage** > **Manage** > **Origin Domain Name** to set the default streaming domain name.
-             * 
-             * *   If the `EncryptType` parameter in PlayConfig is set to `AliyunVoDEncryption`, the playback URL of the stream encrypted by using proprietary cryptography is not returned to ensure video security. If you want to return such URL, you must set the `ResultType` parameter to `Multiple`.
-             */
-            public Builder size(Long size) {
-                this.size = size;
-                return this;
-            }
-
-            /**
-             * The size of the media stream. Unit: bytes.
-             */
-            public Builder specification(String specification) {
-                this.specification = specification;
-                return this;
-            }
-
-            /**
-             * The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The bitrate of the media stream. Unit: Kbit/s.
-             */
-            public Builder streamType(String streamType) {
-                this.streamType = streamType;
-                return this;
-            }
-
-            /**
-             * The quality of the video stream. Separate multiple qualities with commas (,). Valid values:
+             * The quality of the media stream. Valid values:
              * <p>
              * 
              * *   **FD**: low definition
@@ -575,8 +419,183 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * *   **SQ**: standard sound quality
              * *   **HQ**: high sound quality
              * *   **AUTO**: adaptive bitrate
+             */
+            public Builder definition(String definition) {
+                this.definition = definition;
+                return this;
+            }
+
+            /**
+             * The duration of the media stream. Unit: seconds.
+             */
+            public Builder duration(String duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * Indicates whether the media stream was encrypted. Valid values:
+             * <p>
              * 
-             * > By default, ApsaraVideo VOD returns video streams in all preceding qualities. However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate](~~52839~~) table.
+             * *   **0**: no
+             * *   **1**: yes.
+             */
+            public Builder encrypt(Long encrypt) {
+                this.encrypt = encrypt;
+                return this;
+            }
+
+            /**
+             * The encryption type of the media stream. Valid values:
+             * <p>
+             * 
+             * *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
+             * *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
+             * 
+             * >  If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.
+             */
+            public Builder encryptType(String encryptType) {
+                this.encryptType = encryptType;
+                return this;
+            }
+
+            /**
+             * The format of the media stream.
+             * <p>
+             * 
+             * *   If the media file is a video file, the valid values are **mp4** and **m3u8**.
+             * *   If the media file is an audio-only file, the value is **mp3**.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * The frame rate of the media stream. Unit: frames per second.
+             */
+            public Builder fps(String fps) {
+                this.fps = fps;
+                return this;
+            }
+
+            /**
+             * The HDR type of the media stream. Valid values:
+             * <p>
+             * 
+             * *   HDR
+             * *   HDR10
+             * *   HLG
+             * *   DolbyVision
+             * *   HDRVivid
+             * *   SDR+
+             */
+            public Builder HDRType(String HDRType) {
+                this.HDRType = HDRType;
+                return this;
+            }
+
+            /**
+             * The height of the media stream. Unit: pixel.
+             */
+            public Builder height(Long height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * JobExt.
+             */
+            public Builder jobExt(String jobExt) {
+                this.jobExt = jobExt;
+                return this;
+            }
+
+            /**
+             * The job ID for transcoding the media stream. This ID uniquely identifies a media stream.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * JobType.
+             */
+            public Builder jobType(Integer jobType) {
+                this.jobType = jobType;
+                return this;
+            }
+
+            /**
+             * The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             */
+            public Builder modificationTime(String modificationTime) {
+                this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * The type of Narrowband HD transcoding. Valid values:
+             * <p>
+             * 
+             * *   **0**: normal transcoding
+             * *   **1.0**: Narrowband HD 1.0
+             * *   **2.0**: Narrowband HD 2.0
+             * 
+             * This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
+             */
+            public Builder narrowBandType(String narrowBandType) {
+                this.narrowBandType = narrowBandType;
+                return this;
+            }
+
+            /**
+             * The playback URL of the media stream.
+             */
+            public Builder playURL(String playURL) {
+                this.playURL = playURL;
+                return this;
+            }
+
+            /**
+             * The size of the media stream. Unit: bytes.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
+                return this;
+            }
+
+            /**
+             * The status of the media stream. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: The latest transcoded stream in each quality and format is in the Normal status.
+             * *   **Invisible**: If multiple streams are transcoded in the same quality and format, the latest transcoded stream is in the Normal status and other streams are in the Invisible status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.
+             */
+            public Builder streamType(String streamType) {
+                this.streamType = streamType;
+                return this;
+            }
+
+            /**
+             * The ID of the watermark that is associated with the media stream.
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;
@@ -584,11 +603,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the video stream was encrypted. Valid values:
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
+             * The width of the media stream. Unit: pixel.
              */
             public Builder width(Long width) {
                 this.width = width;
@@ -754,7 +769,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * ApsaraVideo VOD
+             * The thumbnail URL of the audio or video file.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -762,13 +777,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the media stream. Separate multiple types with commas (,). Valid values:
-             * <p>
-             * 
-             * *   **video**
-             * *   **audio**
-             * 
-             * By default, video and audio streams are returned.
+             * The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -776,7 +785,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The URL of the masked live comment data.
              */
             public Builder danMuURL(String danMuURL) {
                 this.danMuURL = danMuURL;
@@ -784,7 +793,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the watermark that is associated with the media stream.
+             * The duration of the audio or video file. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -792,12 +801,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the audio or video file. You can use one of the following methods to obtain the ID of the file:
+             * The type of the media file. Valid values:
              * <p>
              * 
-             * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-             * *   Obtain the value of the VideoId parameter when you call the [CreateUploadVideo](~~55407~~) operation to upload files.
-             * *   Obtain the value of the VideoId parameter by calling the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
+             * *   **video**
+             * *   **audio**
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -805,7 +813,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The thumbnail URL of the audio or video file.
+             * The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -813,11 +821,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the media stream.
-             * <p>
-             * 
-             * *   If the media file is a video file, the valid values are **mp4** and **m3u8**.
-             * *   If the media file is an audio-only file, the value is **mp3**.
+             * The title of the audio or video file.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -825,7 +829,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.
+             * The ID of the media file.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

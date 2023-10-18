@@ -38,7 +38,7 @@ public class AddVodDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The URL that is used for health checks.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -85,7 +85,7 @@ public class MoveAppResourceRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **MoveAppResource**.
+         * The resource ID. You can specify a maximum of 20 IDs at a time. Separate multiple IDs with commas (,).
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -94,7 +94,12 @@ public class MoveAppResourceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The resource type. Valid values:
+         * <p>
+         * 
+         * *   **video**: video files.
+         * *   **image**: image files.
+         * *   **attached**: auxiliary media assets.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -103,7 +108,7 @@ public class MoveAppResourceRequest extends Request {
         }
 
         /**
-         * The ID of the resource. You can specify a maximum of 20 IDs at a time. Separate them with commas (,).
+         * The ID of the application to which resources are migrated. Default value: **app-1000000**. For more information, see [Use the multi-application service](~~113600~~).
          */
         public Builder targetAppId(String targetAppId) {
             this.putQueryParameter("TargetAppId", targetAppId);

@@ -50,7 +50,7 @@ public class DeleteAttachedMediaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NonExistMediaIds.
+         * The ID of the auxiliary media asset that failed to be deleted.
          */
         public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
@@ -58,7 +58,7 @@ public class DeleteAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

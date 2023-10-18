@@ -50,7 +50,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The value of the parameter.
+         * The configurations of the domain name.
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,13 +58,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the configuration. Valid values:
-         * <p>
-         * 
-         * - **success**
-         * - **testing**
-         * - **failed**
-         * - **configuring**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +110,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * ArgName.
+             * The parameter name.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -124,7 +118,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The parameter value.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -242,33 +236,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ## Feature description
-             * <p>
-             * 
-             * | Feature | Description |
-             * | ------- | ----------- |
-             * | referer_white_list_set | Specifies the referer whitelist. |
-             * | referer_black_list_set | Specifies the referer blacklist. |
-             * | filetype_based_ttl_set | Specifies the time period after which a file expires. |
-             * | path_based_ttl_set | Specifies the time period after which a directory expires. |
-             * | cc_defense | Configures protection against HTTP flood attacks. |
-             * | oss_auth | Configures authentication for the access to an Object Storage Service (OSS) bucket. |
-             * | ip_black_list_set | Specifies the IP address blacklist. |
-             * | ip_white_list_set | Specifies the IP address whitelist. |
-             * | error_page | Redirects an error page to a specified page. |
-             * | tesla | Optimizes pages to accelerate access. |
-             * | set_req_host_header | Modifies the custom header of back-to-origin requests. |
-             * | set_hashkey_args | Ignores the specified URL parameters. |
-             * | aliauth | Configures Alibaba Cloud authentication. |
-             * | set_resp_header | Specifies a response header. To verify the setting, you can check the response message in a browser. |
-             * | video_seek | Configures video seeking. |
-             * | range | Configures object chunking. |
-             * | gzip | Optimizes pages by using GNU zip (Gzip) compression. |
-             * | https_force | Configures force redirect to HTTPS. |
-             * | http_force | Configures force redirect to HTTP. |
-             * | alivod | Configures ApsaraVideo VOD. |
-             * | forward_scheme | Specifies the origin protocol policy or configures whether to enable adaptive origin fetch. |
-             * | tmd_signature | Specifies the self-defined rules for the rate limit. |
+             * The configuration ID.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -276,7 +244,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * The feature parameters.
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -284,7 +252,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the configurations of a specified domain name for CDN. You can query the configurations of one or more features at a time.
+             * The feature name.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -292,7 +260,13 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeVodDomainConfigs**.
+             * The configuration status. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **testing**
+             * *   **failed**
+             * *   **configuring**
              */
             public Builder status(String status) {
                 this.status = status;

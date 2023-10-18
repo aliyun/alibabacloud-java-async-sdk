@@ -97,7 +97,11 @@ public class UpdateAppInfoRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
+         * <p>
+         * 
+         * *   Default value: **app-1000000**.
+         * *   For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -106,7 +110,11 @@ public class UpdateAppInfoRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
+         * <p>
+         * 
+         * *   The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).
+         * *   The name can contain only UTF-8 characters.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -115,7 +123,11 @@ public class UpdateAppInfoRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application.
+         * <p>
+         * 
+         * *   The description can contain up to 512 characters in length.
+         * *   The description can contain only UTF-8 characters.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -124,7 +136,11 @@ public class UpdateAppInfoRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the application. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **Disable**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

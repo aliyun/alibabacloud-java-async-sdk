@@ -204,7 +204,12 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The name of the source file.
+         * The type of the media asset. Valid values:
+         * <p>
+         * 
+         * *   **watermark**
+         * *   **subtitle**
+         * *   **material**
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -215,6 +220,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         /**
          * The one or more category IDs of the auxiliary media asset. Separate multiple category IDs with commas (,). A maximum of five category IDs can be specified. You can use one of the following methods to obtain the category ID:
          * <p>
+         * 
          * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. On the Categories page, you can view the category ID.
          * *   View the value of the CateId parameter returned by the [AddCategory](~~56401~~) operation that you called to create a category.
          * *   View the value of the CateId parameter returned by the [GetCategories](~~56406~~) operation that you called to query a category.
@@ -228,6 +234,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         /**
          * The description of the auxiliary media asset. Take note of the following items:
          * <p>
+         * 
          * *   The description can be up to 1,024 bytes in length.
          * *   The value must be encoded in UTF-8.
          */
@@ -238,7 +245,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The name of the source file.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -247,7 +254,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * FileSize.
+         * The size of the auxiliary media asset. Unit: byte.
          */
         public Builder fileSize(String fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -256,7 +263,12 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The size of the auxiliary media asset. Unit: byte.
+         * The file name extension. Valid values:
+         * <p>
+         * 
+         * *   Valid values for watermarks: **png, gif, apng, and mov**
+         * *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
+         * *   Valid values for materials: **jpg, gif, png, mp4, mat, zip, and apk**
          */
         public Builder mediaExt(String mediaExt) {
             this.putQueryParameter("MediaExt", mediaExt);
@@ -269,7 +281,8 @@ public class CreateUploadAttachedMediaRequest extends Request {
          * <p>
          * 
          * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the storage location.
-         * > If this parameter is set to a specific value, the auxiliary media asset is uploaded to the specified storage location.
+         * 
+         * >  If this parameter is set to a specific value, the auxiliary media asset is uploaded to the specified storage location.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -280,6 +293,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         /**
          * The one or more tags of the auxiliary media asset. Take note of the following items:
          * <p>
+         * 
          * *   You can specify a maximum of 16 tags.
          * *   If you need to specify multiple tags, separate the tags with commas (,).
          * *   Each tag can be up to 32 characters in length.
@@ -292,11 +306,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The file name extension. Valid values:
+         * The title of the media asset. Take note of the following items:
          * <p>
-         * *   Valid values for watermarks: **png, gif, apng, and mov**
-         * *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
-         * *   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**
+         * 
+         * *   The title can be up to 128 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -307,8 +321,9 @@ public class CreateUploadAttachedMediaRequest extends Request {
         /**
          * The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
          * <p>
+         * 
          * > *   The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure an HTTP callback in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-         * > *   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
+         * >*   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -70,7 +70,7 @@ public class SubmitPreprocessJobsRequest extends Request {
         } 
 
         /**
-         * PreprocessType.
+         * The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.
          */
         public Builder preprocessType(String preprocessType) {
             this.putQueryParameter("PreprocessType", preprocessType);
@@ -79,7 +79,7 @@ public class SubmitPreprocessJobsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **SubmitPreprocessJobs**.
+         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

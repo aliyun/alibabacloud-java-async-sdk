@@ -74,7 +74,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ForbiddenList.
+         * The IDs of the media asset that failed to be processed.
          */
         public Builder forbiddenList(ForbiddenList forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -82,7 +82,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * IgnoredList.
+         * The IDs of the media assets that failed to be obtained.
          */
         public Builder ignoredList(IgnoredList ignoredList) {
             this.ignoredList = ignoredList;
@@ -90,7 +90,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class RestoreMediaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,7 +150,7 @@ public class RestoreMediaResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * MediaId.
+             * The ID of the media asset.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -158,7 +158,7 @@ public class RestoreMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the failure.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -240,7 +240,7 @@ public class RestoreMediaResponseBody extends TeaModel {
             private java.util.List < String > mediaId; 
 
             /**
-             * MediaId.
+             * The ID of the media asset.
              */
             public Builder mediaId(java.util.List < String > mediaId) {
                 this.mediaId = mediaId;
