@@ -876,6 +876,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
+        @NameInMap("CreditSpecification")
+        private String creditSpecification;
+
         @NameInMap("DataDisks")
         private DataDisks dataDisks;
 
@@ -1016,6 +1019,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         private LaunchTemplateData(Builder builder) {
             this.autoReleaseTime = builder.autoReleaseTime;
+            this.creditSpecification = builder.creditSpecification;
             this.dataDisks = builder.dataDisks;
             this.deletionProtection = builder.deletionProtection;
             this.deploymentSetId = builder.deploymentSetId;
@@ -1077,6 +1081,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         public String getAutoReleaseTime() {
             return this.autoReleaseTime;
+        }
+
+        /**
+         * @return creditSpecification
+         */
+        public String getCreditSpecification() {
+            return this.creditSpecification;
         }
 
         /**
@@ -1403,6 +1414,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String autoReleaseTime; 
+            private String creditSpecification; 
             private DataDisks dataDisks; 
             private Boolean deletionProtection; 
             private String deploymentSetId; 
@@ -1455,6 +1467,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
+                return this;
+            }
+
+            /**
+             * CreditSpecification.
+             */
+            public Builder creditSpecification(String creditSpecification) {
+                this.creditSpecification = creditSpecification;
                 return this;
             }
 

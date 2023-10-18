@@ -25,6 +25,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     private String autoReleaseTime;
 
     @Query
+    @NameInMap("CreditSpecification")
+    private String creditSpecification;
+
+    @Query
     @NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
@@ -203,6 +207,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         this.systemDisk = builder.systemDisk;
         this.sourceRegionId = builder.sourceRegionId;
         this.autoReleaseTime = builder.autoReleaseTime;
+        this.creditSpecification = builder.creditSpecification;
         this.dataDisk = builder.dataDisk;
         this.deletionProtection = builder.deletionProtection;
         this.deploymentSetId = builder.deploymentSetId;
@@ -280,6 +285,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
      */
     public String getAutoReleaseTime() {
         return this.autoReleaseTime;
+    }
+
+    /**
+     * @return creditSpecification
+     */
+    public String getCreditSpecification() {
+        return this.creditSpecification;
     }
 
     /**
@@ -587,6 +599,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private String autoReleaseTime; 
+        private String creditSpecification; 
         private java.util.List < DataDisk> dataDisk; 
         private Boolean deletionProtection; 
         private String deploymentSetId; 
@@ -640,6 +653,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             this.systemDisk = request.systemDisk;
             this.sourceRegionId = request.sourceRegionId;
             this.autoReleaseTime = request.autoReleaseTime;
+            this.creditSpecification = request.creditSpecification;
             this.dataDisk = request.dataDisk;
             this.deletionProtection = request.deletionProtection;
             this.deploymentSetId = request.deploymentSetId;
@@ -714,6 +728,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
             this.autoReleaseTime = autoReleaseTime;
+            return this;
+        }
+
+        /**
+         * CreditSpecification.
+         */
+        public Builder creditSpecification(String creditSpecification) {
+            this.putQueryParameter("CreditSpecification", creditSpecification);
+            this.creditSpecification = creditSpecification;
             return this;
         }
 

@@ -15,11 +15,15 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
+    @NameInMap("LaunchTemplateVersionNumber")
+    private Long launchTemplateVersionNumber;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private CreateLaunchTemplateResponseBody(Builder builder) {
         this.launchTemplateId = builder.launchTemplateId;
+        this.launchTemplateVersionNumber = builder.launchTemplateVersionNumber;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return launchTemplateVersionNumber
+     */
+    public Long getLaunchTemplateVersionNumber() {
+        return this.launchTemplateVersionNumber;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +58,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
 
     public static final class Builder {
         private String launchTemplateId; 
+        private Long launchTemplateVersionNumber; 
         private String requestId; 
 
         /**
@@ -54,6 +66,14 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateVersionNumber.
+         */
+        public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
+            this.launchTemplateVersionNumber = launchTemplateVersionNumber;
             return this;
         }
 
