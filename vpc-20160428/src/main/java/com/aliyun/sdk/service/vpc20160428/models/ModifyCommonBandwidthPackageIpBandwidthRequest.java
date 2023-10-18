@@ -156,7 +156,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth for the EIP. This value cannot be larger than the maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+         * The maximum bandwidth for the EIP. This value cannot be larger than the maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -165,7 +165,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the EIP bandwidth plan.
+         * The ID of the Internet Shared Bandwidth instance.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -174,7 +174,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the EIP that is associated with the EIP bandwidth plan.
+         * The ID of the EIP that is associated with the Internet Shared Bandwidth instance.
          */
         public Builder eipId(String eipId) {
             this.putQueryParameter("EipId", eipId);
@@ -201,7 +201,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The region ID of the EIP bandwidth plan. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

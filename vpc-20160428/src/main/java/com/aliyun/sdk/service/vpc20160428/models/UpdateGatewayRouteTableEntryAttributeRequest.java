@@ -229,9 +229,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,7 +252,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route entry.
+         * The destination CIDR block of the route entry in the gateway route table.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -261,11 +261,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
+         * Specifies whether to precheck only this request. Valid values:
          * <p>
          * 
-         * *   **true**: checks the request but does not modify the route entry. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the route entry is modified.
+         * *   **true**: prechecks the request without modifying the gateway route table. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the gateway route table is modified.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -295,14 +295,14 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * The next hop ID of the route entry after the route entry is modified.
+         * The new next hop ID of the route entry.
          * <p>
          * 
-         * *   If you set **NextHopType** to **Instance**, specify an ECS instance ID for the **NextHopId** parameter.
-         * *   If you set **NextHopType** to **NetworkInterface**, specify an ENI ID for the **NextHopId** parameter.
-         * *   If you set **NextHopType** to **Local**, leave the **NextHopId** parameter empty, which specifies a local next hop.
+         * *   If you set **NextHopType** to **Instance**, specify an ECS instance ID for **NextHopId**.
+         * *   If you set **NextHopType** to **NetworkInterface**, specify an ENI ID for **NextHopId**.
+         * *   If you set **NextHopType** to **Local**, leave **NextHopId** empty. This indicates a local next hop.
          * 
-         * >  If you want to modify a route entry whose next hop type is **Instance** or **NetworkInterface**, you must first change the value of the **NextHopType** parameter to **Local**. Then, change the value of **NextHopType** to **Instance** or **NetworkInterface** and specify the **NextHopId** parameter. When you modify a route entry whose next hop type is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.
+         * >  If the value of NextHopType is **Instance** or **NetworkInterface**, and you want to modify the next hop, you must set **NextHopType** to **Local** first. Then, set **NextHopType** to **Instance** or **NetworkInterface** and specify **NextHopId** based on your requirements. If the next hop type of a route entry is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -311,12 +311,12 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * The next hop type of the route entry after the route entry is modified. Valid values:
+         * The new next hop type of the route entry. Valid values:
          * <p>
          * 
-         * *   **EcsInstance**: an Elastic Compute Service (ECS) instance
-         * *   **NetworkInterface**: an elastic network interface (ENI)
-         * *   **Local**: a local next hop
+         * *   **EcsInstance**: an Elastic Compute Service (ECS) instance.
+         * *   **NetworkInterface**: an elastic network interface (ENI).
+         * *   **Local**: a local next hop.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);

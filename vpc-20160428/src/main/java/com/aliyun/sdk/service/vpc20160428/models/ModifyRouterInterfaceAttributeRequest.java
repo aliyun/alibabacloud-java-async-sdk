@@ -269,8 +269,8 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
          * Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder deleteHealthCheckIp(Boolean deleteHealthCheckIp) {
             this.putQueryParameter("DeleteHealthCheckIp", deleteHealthCheckIp);
@@ -291,7 +291,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The rate of the heath check. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
+         * The rate of health checks. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
          * <p>
          * 
          * In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.
@@ -303,7 +303,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The health check threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
+         * The healthy threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
          */
         public Builder hcThreshold(Integer hcThreshold) {
             this.putQueryParameter("HcThreshold", hcThreshold);
@@ -315,7 +315,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
          * The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
          * <p>
          * 
-         * >  You can set this parameter if an Express Connect circuit is used.
+         * >  You can set this parameter when an Express Connect circuit is used.
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -327,7 +327,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
          * The destination IP address that is used to perform health checks.
          * <p>
          * 
-         * >  This parameter is required when the **HealthCheckSourceIp** parameter is set.
+         * >  This parameter is required when **HealthCheckSourceIp** is specified.
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -378,8 +378,8 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
          * The type of router to which the peer router interface belongs. Valid values:
          * <p>
          * 
-         * *   **VRouter**: vRouter
-         * *   **VBR** (default): virtual border router (VBR)
+         * *   **VRouter**
+         * *   **VBR** (default)
          */
         public Builder oppositeRouterType(String oppositeRouterType) {
             this.putQueryParameter("OppositeRouterType", oppositeRouterType);
@@ -397,7 +397,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the router interface belongs.
+         * The region ID of the router interface.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

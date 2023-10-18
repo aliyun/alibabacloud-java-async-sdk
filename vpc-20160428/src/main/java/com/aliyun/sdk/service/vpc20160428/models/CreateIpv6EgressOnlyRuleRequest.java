@@ -200,9 +200,9 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -235,7 +235,7 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
          * The type of the instance for which you want to create an egress-only rule.
          * <p>
          * 
-         * Set the value to **Ipv6Address** (default). This value specifies the IPv6 address type.
+         * Default value: **Ipv6Address**
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -283,10 +283,10 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 gateway.
+         * The ID of the region in which the IPv6 gateway is deployed.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

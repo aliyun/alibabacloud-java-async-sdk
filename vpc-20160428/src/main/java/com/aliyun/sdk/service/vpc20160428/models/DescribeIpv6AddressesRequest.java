@@ -301,7 +301,11 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * IncludeReservationData.
+         * Specifies whether to return information about pending orders. Valid values:
+         * <p>
+         * 
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -319,7 +323,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 IDs in each API request. Separate IPv6 IDs with commas (,).
+         * The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 address IDs in each API request. Separate IPv6 address IDs with commas (,).
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -352,8 +356,8 @@ public class DescribeIpv6AddressesRequest extends Request {
          * The type of communication supported by the IPv6 address. Valid values:
          * <p>
          * 
-         * *   **Private**: communication within private networks
-         * *   **Public**: communication over the Internet
+         * *   **Private**
+         * *   **Public**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);

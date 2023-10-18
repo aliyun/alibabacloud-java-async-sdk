@@ -86,7 +86,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the EIP bandwidth plan.
+         * The details of the Internet Shared Bandwidth instance.
          */
         public Builder commonBandwidthPackages(CommonBandwidthPackages commonBandwidthPackages) {
             this.commonBandwidthPackages = commonBandwidthPackages;
@@ -94,7 +94,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +190,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIP is associated with the EIP bandwidth plan.
+             * Indicates whether the EIP is associated with the Internet Shared Bandwidth instance. Valid values:
              * <p>
              * 
-             * *   **BINDED**: The EIP is associated with the EIP bandwidth plan.
-             * *   **BINDING**: The EIP is being associated with the EIP bandwidth plan.
+             * *   **BINDED**
+             * *   **BINDING**
              */
             public Builder bandwidthPackageIpRelationStatus(String bandwidthPackageIpRelationStatus) {
                 this.bandwidthPackageIpRelationStatus = bandwidthPackageIpRelationStatus;
@@ -337,7 +337,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key that is added to the Internet Shared Bandwidth instance.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -345,7 +345,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value that is added to the Internet Shared Bandwidth instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -727,7 +727,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+             * The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -735,7 +735,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EIP bandwidth plan.
+             * The ID of the Internet Shared Bandwidth instance.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -743,7 +743,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * The service type of the Internet Shared Bandwidth instance. Valid values:
+             * <p>
+             * 
+             * *   **CloudBox** The cloud box. Only cloud box users can select this type.
+             * *   **Default** (default): The general service type.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -751,12 +755,12 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The service state of the EIP bandwidth plan.
+             * The service status of the Internet Shared Bandwidth instance. Valid values:
              * <p>
              * 
-             * *   **Normal**: The EIP bandwidth plan works as expected.
-             * *   **FinancialLocked**: The EIP bandwidth plan has an overdue payment.
-             * *   **Unactivated**: The EIP bandwidth plan is not activated.
+             * *   **Normal**: The Internet Shared Bandwidth instance runs as expected.
+             * *   **FinancialLocked**: An overdue payment occurs in the Internet Shared Bandwidth instance
+             * *   **Unactivated**: The Internet Shared Bandwidth instance is not activated.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -764,7 +768,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP bandwidth plan was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the Internet Shared Bandwidth instance was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -772,11 +776,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether deletion protection was enabled.
+             * Indicates whether deletion protection is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: Deletion protection was enabled.
-             * *   **false**: Deletion protection was disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -784,7 +788,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the EIP bandwidth plan.
+             * The description of the Internet Shared Bandwidth instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -792,7 +796,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP bandwidth plan expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the Internet Shared Bandwidth instance expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -800,11 +804,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the information about pending orders was returned.
+             * Indicates whether the information about pending orders is returned. Valid values:
              * <p>
              * 
-             * *   **false**: The information about pending orders was not returned.
-             * *   **true**: The information about pending orders was returned.
+             * *   **false**
+             * *   **true**
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -812,20 +816,20 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The line type.
+             * The line type. Valid values:
              * <p>
              * 
-             * *   **BGP**: BGP (Multi-ISP) lines. BGP (Multi-ISP) lines are available in all regions.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro lines are available only in the China (Hong Kong), Singapore, Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.
+             * *   **BGP**: BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore (Singapore), Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.
              * 
              * If you are allowed to use single-ISP bandwidth, one of the following values is returned:
              * 
-             * *   **ChinaTelecom**: China Telecom
-             * *   **ChinaUnicom**: China Unicom
-             * *   **ChinaMobile**: China Mobile
-             * *   **ChinaTelecom_L2**: China Telecom L2
-             * *   **ChinaUnicom_L2**: China Unicom L2
-             * *   **ChinaMobile_L2**: China Mobile L2
+             * *   **ChinaTelecom**
+             * *   **ChinaUnicom**
+             * *   **ChinaMobile**
+             * *   **ChinaTelecom_L2**
+             * *   **ChinaUnicom_L2**
+             * *   **ChinaMobile_L2**
              * 
              * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
              */
@@ -835,10 +839,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the EIP bandwidth plan.
+             * The billing method of the Internet Shared Bandwidth instance. Valid value:
              * <p>
              * 
-             * **PostPaid**: the pay-as-you-go billing method
+             * **PostPaid**: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -846,10 +850,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the EIP bandwidth plan.
+             * The metering method of the Internet Shared Bandwidth instance. Valid value:
              * <p>
              * 
-             * **PayByTraffic**: the pay-by-data-transfer metering method.
+             * **PayByTraffic**
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -857,7 +861,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the EIP bandwidth plan.
+             * The name of the Internet Shared Bandwidth instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -865,7 +869,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic IP addresses (EIPs) associated with the EIP bandwidth plan.
+             * The elastic IP addresses (EIPs) that are associated with the Internet Shared Bandwidth instance.
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -873,10 +877,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the minimum bandwidth commitment. **20** is returned.
+             * The percentage of the minimum bandwidth commitment. Only **20** is returned.
              * <p>
              * 
-             * >  This parameter is available only on the Alibaba Cloud China site.
+             * >  This parameter is supported only on the Alibaba Cloud China site.
              */
             public Builder ratio(Integer ratio) {
                 this.ratio = ratio;
@@ -884,7 +888,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the EIP bandwidth plan.
+             * The ID of the region where the Internet Shared Bandwidth instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -900,7 +904,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The new maximum bandwidth. Unit: Mbit/s.
+             * The new maximum bandwidth after the configurations are changed. Unit: Mbit/s.
              */
             public Builder reservationBandwidth(String reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -908,10 +912,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The new metering method.
+             * The metering method after the configurations are changed. Valid value:
              * <p>
              * 
-             * **PayByTraffic**: the pay-by-data-transfer metering method
+             * **PayByTraffic**
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -919,12 +923,12 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal method.
+             * The renewal method. Valid values:
              * <p>
              * 
-             * *   **RENEWCHANGE**: renewal with an upgrade or a downgrade
-             * *   **TEMP_UPGRADE**: temporary upgrade
-             * *   **UPGRADE**: upgrade
+             * *   **RENEWCHANGE**: renewal with a specification change
+             * *   **TEMP_UPGRADE**: renewal with a temporary upgrade
+             * *   **UPGRADE**: renewal with an upgrade
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -940,11 +944,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Anti-DDoS. 
+             * The editions of Anti-DDoS.
              * <p>
              * 
-             * - If this parameter is empty, it indicates that Anti-DDoS Origin Basic was enabled.
-             * - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium was enabled.
+             * *   If this parameter is empty, Anti-DDoS Origin Basic is enabled.
+             * *   If **AntiDDoS_Enhanced** is returned, Anti-DDoS Pro/Premium is enabled.
              */
             public Builder securityProtectionTypes(SecurityProtectionTypes securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
@@ -952,11 +956,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIP bandwidth plan was created by the service account.
+             * Indicates whether the resource is created by the service account. Valid values:
              * <p>
              * 
-             * *   **0**: The EIP bandwidth plan was not created by the service account.
-             * *   **1**: The EIP bandwidth plan was created by the service account.
+             * *   **0**: The resource is not created by the service account.
+             * *   **1**: The resource is created by the service account.
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -964,11 +968,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the EIP bandwidth plan. Valid values:
+             * The status of the Internet Shared Bandwidth instance. Valid values:
              * <p>
              * 
-             * *   **Available**: The EIP bandwidth plan is available.
-             * *   **Modifying**: The EIP bandwidth plan is being modified.
+             * *   **Available**: The Internet Shared Bandwidth instance is available.
+             * *   **Modifying**: The Internet Shared Bandwidth instance is being modified.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -976,7 +980,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag that is added to the Internet Shared Bandwidth instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -984,7 +988,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The zone of the Internet Shared Bandwidth instance. This parameter is returned only when BizType is set to CloudBox. If BizType is set to Default, an empty value is returned.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

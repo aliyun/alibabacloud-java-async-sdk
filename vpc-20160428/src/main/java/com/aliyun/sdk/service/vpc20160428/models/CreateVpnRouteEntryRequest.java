@@ -231,9 +231,9 @@ public class CreateVpnRouteEntryRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -263,7 +263,7 @@ public class CreateVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * The tunneling protocol. Set the value to **Ipsec**.
+         * The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -293,8 +293,8 @@ public class CreateVpnRouteEntryRequest extends Request {
          * Specifies whether to advertise the destination-based route to a virtual private cloud (VPC) route table. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder publishVpc(Boolean publishVpc) {
             this.putQueryParameter("PublishVpc", publishVpc);

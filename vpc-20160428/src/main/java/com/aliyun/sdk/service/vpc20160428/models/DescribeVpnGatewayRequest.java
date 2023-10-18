@@ -140,7 +140,7 @@ public class DescribeVpnGatewayRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return information about pending orders. Valid values:
+         * Specifies whether to include the data about pending orders. Valid values:
          * <p>
          * 
          * *   **false** (default)

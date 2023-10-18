@@ -109,7 +109,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPsec server.
+         * The IPsec server ID.
          */
         public Builder ipsecServerId(String ipsecServerId) {
             this.ipsecServerId = ipsecServerId;
@@ -117,7 +117,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the IPsec server.
+         * The IPsec server name.
          */
         public Builder ipsecServerName(String ipsecServerName) {
             this.ipsecServerName = ipsecServerName;
@@ -133,7 +133,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

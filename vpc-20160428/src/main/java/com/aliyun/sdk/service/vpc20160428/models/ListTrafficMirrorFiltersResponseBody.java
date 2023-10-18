@@ -98,7 +98,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         private java.util.List < TrafficMirrorFilters> trafficMirrorFilters; 
 
         /**
-         * Count.
+         * The number of entries returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +106,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,11 +114,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If the return value of **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -126,7 +126,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -305,8 +305,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              * The action of the outbound rule. Valid values:
              * <p>
              * 
-             * *   **accept**: collects network traffic.
-             * *   **drop**: does not collect network traffic.
+             * *   **accept**
+             * *   **drop**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -341,10 +341,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              * The protocol that is used by the outbound traffic to be mirrored. Valid values:
              * <p>
              * 
-             * *   **ALL**: all protocols
-             * *   **ICMP**: ICMP
-             * *   **TCP**: TCP
-             * *   **UDP**: UDP
+             * *   **ALL**
+             * *   **ICMP**
+             * *   **TCP**
+             * *   **UDP**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -371,8 +371,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              * The direction of the network traffic. Valid values:
              * <p>
              * 
-             * *   **egress**: outbound
-             * *   **ingress**: inbound
+             * *   **egress**
+             * *   **ingress**
              */
             public Builder trafficDirection(String trafficDirection) {
                 this.trafficDirection = trafficDirection;
@@ -566,8 +566,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              * The action of the inbound rule. Valid values:
              * <p>
              * 
-             * *   **accept**: accepts network traffic.
-             * *   **drop**: does not collect network traffic.
+             * *   **accept**
+             * *   **drop**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -602,10 +602,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              * The protocol that is used by the inbound traffic to be mirrored. Valid values:
              * <p>
              * 
-             * *   **ALL**: all protocols
-             * *   **ICMP**: ICMP
-             * *   **TCP**: TCP
-             * *   **UDP**: UDP
+             * *   **ALL**
+             * *   **ICMP**
+             * *   **TCP**
+             * *   **UDP**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -632,8 +632,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              * The direction of the network traffic. Valid values:
              * <p>
              * 
-             * *   **egress**: outbound
-             * *   **ingress**: inbound
+             * *   **egress**
+             * *   **ingress**
              */
             public Builder trafficDirection(String trafficDirection) {
                 this.trafficDirection = trafficDirection;
@@ -716,7 +716,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -724,7 +724,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -889,7 +889,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the filter.
+             * The ID of the traffic mirror filter.
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;

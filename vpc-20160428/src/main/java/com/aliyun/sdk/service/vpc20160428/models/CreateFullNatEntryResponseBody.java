@@ -50,7 +50,7 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the FULLNAT entry.
+         * The FULLNAT entry ID.
          */
         public Builder fullNatEntryId(String fullNatEntryId) {
             this.fullNatEntryId = fullNatEntryId;
@@ -58,7 +58,7 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

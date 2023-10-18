@@ -193,8 +193,8 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
          * Indicates whether DPD is enabled. Valid values:
          * <p>
          * 
-         * - **true** 
-         * - **false**
+         * *   **false**
+         * *   **true**
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.enableDpd = enableDpd;
@@ -202,11 +202,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether BAT traversal is enabled. Valid values:
+         * Indicates whether NAT traversal is enabled. Valid values:
          * <p>
          * 
-         * - **true** 
-         * - **false**
+         * *   **false**
+         * *   **true**
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.enableNatTraversal = enableNatTraversal;
@@ -222,7 +222,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The peer CA certificate when a ShangMi (SM) VPN gateway is associated with the IPsec connection.
+         * The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.
          */
         public Builder remoteCaCertificate(String remoteCaCertificate) {
             this.remoteCaCertificate = remoteCaCertificate;
@@ -238,11 +238,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel role. Valid values: 
+         * The tunnel role. Valid values:
          * <p>
          * 
-         * - **master**
-         * - **slave**
+         * *   **master**
+         * *   **slave**
          */
         public Builder role(String role) {
             this.role = role;
@@ -250,12 +250,12 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel status. Valid values: 
+         * The tunnel status. Valid values:
          * <p>
          * 
-         * - **active** 
-         * - **updating** 
-         * - d**eleting**
+         * *   **active**
+         * *   **updating**
+         * *   **deleting**
          */
         public Builder state(String state) {
             this.state = state;
@@ -263,7 +263,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The BGP configurations.
+         * The BGP configuration.
          */
         public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
             this.tunnelBgpConfig = tunnelBgpConfig;
@@ -279,7 +279,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IKE settings for Phase 1 negotiations.
+         * The configurations of IKE Phase 1.
          */
         public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
             this.tunnelIkeConfig = tunnelIkeConfig;
@@ -287,7 +287,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IPsec settings for Phase 2 negotiations.
+         * The configurations of IPsec Phase 2.
          */
         public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
             this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -395,11 +395,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String tunnelCidr; 
 
             /**
-             * Indicates whether BGP is enabled. Valid values: 
+             * Indicates whether the BGP feature is enabled. Valid values:
              * <p>
              * 
-             * - **true** 
-             * - **false**
+             * *   **true**
+             * *   **false**
              */
             public Builder enableBgp(Boolean enableBgp) {
                 this.enableBgp = enableBgp;
@@ -600,11 +600,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values: 
+             * The IKE negotiation mode. Valid values:
              * <p>
              * 
-             * - **main**: This mode offers higher security during negotiations. 
-             * - **aggressive**: This mode is faster and has a higher success rate.
+             * *   **main:** This mode offers higher security during negotiations.
+             * *   **aggressive:** This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -612,7 +612,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman group.
+             * The DH group.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -620,11 +620,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the IKE protocol. 
+             * The IKE version. Valid values:
              * <p>
              * 
-             * - **ikev1**
-             * - **ikev2**
+             * *   **ikev1**
+             * *   **ikev2**
              * 
              * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
              */
@@ -634,7 +634,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel identifier. The identifier supports FQDNs and IP addresses. The default identifier is the tunnel IP address.
+             * The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -751,7 +751,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman group.
+             * The DH group.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;

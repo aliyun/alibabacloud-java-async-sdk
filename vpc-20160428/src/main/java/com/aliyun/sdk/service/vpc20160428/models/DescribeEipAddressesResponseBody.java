@@ -86,7 +86,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the EIP.
+         * The details about the EIPs.
          */
         public Builder eipAddresses(EipAddresses eipAddresses) {
             this.eipAddresses = eipAddresses;
@@ -94,7 +94,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -855,7 +855,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the EIP was created. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder allocationTime(String allocationTime) {
                 this.allocationTime = allocationTime;
@@ -871,7 +871,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the EIP bandwidth plan with which the EIP is associated. Unit: Mbit/s.
+             * The maximum bandwidth of the Internet Shared Bandwidth instance with which the EIP is associated. Unit: Mbit/s.
              */
             public Builder bandwidthPackageBandwidth(String bandwidthPackageBandwidth) {
                 this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
@@ -879,7 +879,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EIP bandwidth plan.
+             * The ID of the Internet Shared Bandwidth instance.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -887,7 +887,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the bandwidth. Only **CommonBandwidthPackage** (EIP Bandwidth Plan) is returned.
+             * The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
@@ -895,7 +895,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * The service type. Valid values:
+             * <p>
+             * 
+             * *   **CloudBox** Only cloud box users can select this type.
+             * *   **Default** (default)
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -903,11 +907,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the EIP. Valid values:
+             * The service state of the EIP. Valid values:
              * <p>
              * 
-             * *   **Normal**: active
-             * *   **FinancialLocked**: locked
+             * *   **Normal**
+             * *   **FinancialLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -918,8 +922,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The billing method of the EIP. Valid values:
              * <p>
              * 
-             * *   **PostPaid**: pay-as-you-go
-             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go.
+             * *   **PrePaid**: subscription.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -930,8 +934,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * Indicates whether deletion protection is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * *   **true**
+             * *   **false**
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -947,7 +951,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the EIP when it is not associated with an EIP bandwidth plan. Unit: Mbit/s.
+             * The maximum bandwidth of the EIP when it is not associated with an Internet Shared Bandwidth instance. Unit: Mbit/s.
              */
             public Builder eipBandwidth(String eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -955,7 +959,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP expires. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the EIP expires. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -966,8 +970,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * Indicates whether fine-grained monitoring is enabled for the EIP. Valid values:
              * <p>
              * 
-             * *   **false**: no
-             * *   **true**: yes
+             * *   **false**
+             * *   **true**
              */
             public Builder HDMonitorStatus(String HDMonitorStatus) {
                 this.HDMonitorStatus = HDMonitorStatus;
@@ -975,11 +979,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether renewal data is included.
+             * Indicates whether renewal data is included. Valid values:
              * <p>
              * 
-             * *   **false**: no
-             * *   **true**: yes This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and some orders have not taken effect.
+             * *   **false**
+             * *   **true** A value of **true** is returned only when **IncludeReservationData** is set to **true** and some orders have not taken effect.
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -987,22 +991,22 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The line type.
+             * The line type. Valid values:
              * <p>
              * 
-             * *   **BGP**: BGP (Multi-ISP). All regions support BGP (Multi-ISP) EIPs.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+             * *   **BGP**: BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
              * 
-             * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+             * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.
              * 
-             * If you are allowed to use single-ISP bandwidth, one of the following values is returned:
+             * If you are allowed to use single-ISP bandwidth, one of the following values may be returned:
              * 
-             * *   **ChinaTelecom**: China Telecom
-             * *   **ChinaUnicom**: China Unicom
-             * *   **ChinaMobile**: China Mobile
-             * *   **ChinaTelecom_L2**: China Telecom L2
-             * *   **ChinaUnicom_L2**: China Unicom L2
-             * *   **ChinaMobile_L2**: China Mobile L2
+             * *   **ChinaTelecom**
+             * *   **ChinaUnicom**
+             * *   **ChinaMobile**
+             * *   **ChinaTelecom_L2**
+             * *   **ChinaUnicom_L2**
+             * *   **ChinaMobile_L2**
              * 
              * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
              */
@@ -1031,12 +1035,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The type of the associated instance. Valid values:
              * <p>
              * 
-             * *   **EcsInstance**: an ECS instance in a VPC
-             * *   **SlbInstance**: an SLB instance in a VPC
-             * *   **Nat**: a NAT gateway
-             * *   **HaVip**: an HAVIP
-             * *   **NetworkInterface**: a secondary ENI
-             * *   **IpAddress**: an IP address
+             * *   **EcsInstance**: an ECS instance in a VPC.
+             * *   **SlbInstance**: an SLB instance in a VPC.
+             * *   **Nat**: a NAT gateway.
+             * *   **HaVip**: an HAVIP.
+             * *   **NetworkInterface**: a secondary ENI.
+             * *   **IpAddress**: an IP address.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1047,8 +1051,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The metering method of the EIP. Valid values:
              * <p>
              * 
-             * *   **PayByBandwidth**: pay-by-bandwidth
-             * *   **PayByTraffic**: pay-by-data-transfer
+             * *   **PayByBandwidth**: pay-by-bandwidth.
+             * *   **PayByTraffic**: pay-by-traffic.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1056,7 +1060,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the EIP.
+             * The EIP.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1072,7 +1076,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. The value is set to **public**, which indicates the Internet.
+             * The network type. Only **public** may be returned.
              */
             public Builder netmode(String netmode) {
                 this.netmode = netmode;
@@ -1080,7 +1084,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the locked EIPs.
+             * The details about the locked EIP.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -1104,7 +1108,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the renewal takes effect. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -1112,7 +1116,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth after the renewal takes effect. Unit: Mbit/s.
+             * The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
              */
             public Builder reservationBandwidth(String reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -1123,8 +1127,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The metering method that is used after the renewal takes effect. Valid values:
              * <p>
              * 
-             * *   **PayByBandwidth**: pay-by-bandwidth
-             * *   **PayByTraffic**: pay-by-data-transfer
+             * *   **PayByBandwidth**: pay-by-bandwidth.
+             * *   **PayByTraffic**: pay-by-traffic.
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -1135,9 +1139,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The type of the renewal order. Valid values:
              * <p>
              * 
-             * *   **RENEWCHANGE**: renewal with an upgrade or a downgrade
-             * *   **TEMP_UPGRADE**: temporary upgrade
-             * *   **UPGRADE**: upgrade
+             * *   **RENEWCHANGE**: renewal with an upgrade or a downgrade.
+             * *   **TEMP_UPGRADE**: temporary upgrade.
+             * *   **UPGRADE**: upgrade.
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -1156,8 +1160,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * Indicates whether level-2 throttling is configured. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder secondLimited(Boolean secondLimited) {
                 this.secondLimited = secondLimited;
@@ -1165,11 +1169,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Anti-DDoS. 
+             * The edition of Anti-DDoS.
              * <p>
              * 
-             * - If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.
-             * - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.
+             * *   If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.
+             * *   If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.
              */
             public Builder securityProtectionTypes(SecurityProtectionTypes securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
@@ -1177,10 +1181,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of contiguous EIPs.
+             * The ID of the contiguous EIP group.
              * <p>
              * 
-             * This value is returned only when you query contiguous EIP groups.
+             * This value is returned only when you query contiguous EIPs.
              */
             public Builder segmentInstanceId(String segmentInstanceId) {
                 this.segmentInstanceId = segmentInstanceId;
@@ -1188,11 +1192,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource is created by the service account.
+             * Indicates whether the resource is created by the service account. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: The resource is not created by the service account.
+             * *   **1**: The resource is created by the service account.
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -1200,14 +1204,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the EIP. Valid values:
+             * The state of the EIP. Valid values:
              * <p>
              * 
-             * *   **Associating**: being associated
-             * *   **Unassociating**: being disassociated
-             * *   **InUse**: allocated
-             * *   **Available**: available
-             * *   **Releasing**: being released
+             * *   **Associating**
+             * *   **Unassociating**
+             * *   **InUse**
+             * *   **Available**
+             * *   **Releasing**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1215,7 +1219,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list of the EIP.
+             * The tags of the EIP.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1223,12 +1227,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP. 
+             * The ID of the VPC in which an IPv4 gateway is created and that is deployed in the same region as the EIP.
              * <p>
              * 
-             * When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations. 
+             * When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.
              * 
-             * >  This parameter is returned if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
+             * >  This parameter is returned if the value of **InstanceType** is **IpAddress**. In this case, the EIP is associated with an IP address.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1236,10 +1240,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone of the EIP. 
+             * The zone of the EIP.
              * <p>
              * 
-             * This parameter is returned only if your account is included in the whitelist.
+             * This parameter is returned only when the service type is CloudBox.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

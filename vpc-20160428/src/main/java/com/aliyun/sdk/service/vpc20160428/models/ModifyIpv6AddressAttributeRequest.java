@@ -157,7 +157,7 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
          * The description of the IPv6 address.
          * <p>
          * 
-         * It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter but cannot start with `http://` or `https://`.
+         * It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -178,7 +178,7 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
          * The name of the IPv6 address.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name must start with a letter but cannot start with `http://` or `https://`.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

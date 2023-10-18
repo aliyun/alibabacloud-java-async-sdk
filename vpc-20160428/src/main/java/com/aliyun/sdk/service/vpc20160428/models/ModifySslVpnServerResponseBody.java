@@ -273,8 +273,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
          * Indicates whether two-factor authentication is enabled.
          * <p>
          * 
-         * *   **true**: enabled
-         * *   **false** (default): disabled
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
             this.enableMultiFactorAuth = enableMultiFactorAuth;
@@ -346,7 +346,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

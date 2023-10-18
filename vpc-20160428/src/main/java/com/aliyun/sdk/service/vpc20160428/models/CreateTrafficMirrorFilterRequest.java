@@ -325,7 +325,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -763,7 +763,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>
+             * 
+             * You can add up to 20 tags in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -771,7 +774,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

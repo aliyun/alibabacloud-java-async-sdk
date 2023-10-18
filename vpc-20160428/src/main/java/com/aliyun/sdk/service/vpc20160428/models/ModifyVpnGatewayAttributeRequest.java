@@ -185,8 +185,8 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
          * Specifies whether to automatically advertise BGP routes to the virtual private cloud (VPC). Valid values:
          * <p>
          * 
-         * *   **true:** yes.
-         * *   **false:** no.
+         * *   **true**
+         * *   **false**
          */
         public Builder autoPropagate(Boolean autoPropagate) {
             this.putQueryParameter("AutoPropagate", autoPropagate);
@@ -198,9 +198,9 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +224,7 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
          * The new name of the VPN gateway.
          * <p>
          * 
-         * The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
+         * The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). Other characters are not supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

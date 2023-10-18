@@ -280,13 +280,13 @@ public class ModifySslVpnServerRequest extends Request {
         } 
 
         /**
-         * The encryption algorithm that is used by the SSL server. Valid values:
+         * The encryption algorithm that is used in the SSL-VPN connection. Valid values:
          * <p>
          * 
-         * *   **AES-128-CBC** (default): AES-128-CBC
-         * *   **AES-192-CBC**: AES-192-CBC
-         * *   **AES-256-CBC**: AES-256-CBC
-         * *   **none**: does not use an encryption algorithm.
+         * *   **AES-128-CBC** (default)
+         * *   **AES-192-CBC**
+         * *   **AES-256-CBC**
+         * *   **none**
          */
         public Builder cipher(String cipher) {
             this.putQueryParameter("Cipher", cipher);
@@ -307,9 +307,9 @@ public class ModifySslVpnServerRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -321,8 +321,8 @@ public class ModifySslVpnServerRequest extends Request {
          * Specifies whether to enable data compression. Valid values:
          * <p>
          * 
-         * *   **true** (default): yes
-         * *   **false**: no
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder compress(Boolean compress) {
             this.putQueryParameter("Compress", compress);
@@ -334,8 +334,8 @@ public class ModifySslVpnServerRequest extends Request {
          * Specifies whether to enable two-factor authentication.
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
             this.putQueryParameter("EnableMultiFactorAuth", enableMultiFactorAuth);
@@ -416,8 +416,8 @@ public class ModifySslVpnServerRequest extends Request {
          * The protocol that is used by the SSL server. Valid values:
          * <p>
          * 
-         * *   **TCP**: TCP
-         * *   **UDP** (default): UDP
+         * *   **TCP**
+         * *   **UDP** (default)
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -426,7 +426,7 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPN gateway is created.
+         * The region ID of the VPN gateway.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

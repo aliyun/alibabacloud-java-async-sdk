@@ -86,7 +86,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the IPv6 gateways.
+         * The information about the IPv6 gateway.
          */
         public Builder ipv6Gateways(Ipv6Gateways ipv6Gateways) {
             this.ipv6Gateways = ipv6Gateways;
@@ -94,7 +94,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -396,7 +396,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Normal**: The IPv6 gateway runs as expected.
-             * *   **FinancialLocked**: The IPv6 gateway is locked due to overdue payments.
+             * *   **FinancialLocked:** The IPv6 gateway is locked due to overdue payments.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -431,7 +431,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
              * The billing method of the IPv6 gateway.
              * <p>
              * 
-             * The value is set to **PostPaid**. This value indicates the pay-as-you-go billing method.
+             * Only **PostPaid** may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -455,7 +455,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the IPv6 gateway.
+             * The ID of the region in which the IPv6 gateway is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -471,7 +471,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the IPv6 gateway. Valid values:
+             * The status of the IPv6 gateway. Valid values:
              * <p>
              * 
              * *   **Pending**: The IPv6 gateway is being configured.
@@ -483,7 +483,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The information about the tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

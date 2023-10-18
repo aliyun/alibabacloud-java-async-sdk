@@ -192,7 +192,7 @@ public class ModifyEipAddressAttributeRequest extends Request {
          * The new description of the EIP.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

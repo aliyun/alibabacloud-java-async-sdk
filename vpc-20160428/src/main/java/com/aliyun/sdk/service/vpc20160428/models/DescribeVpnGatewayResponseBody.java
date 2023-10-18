@@ -392,8 +392,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The second IP address assigned by the system to create an IPsec-VPN connection. 
+         * The second IP address assigned by the system to create an IPsec-VPN connection.
          * <p>
+         * 
          * This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
          */
         public Builder disasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
@@ -402,7 +403,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the second vSwitch associated with the VPN gateway. 
+         * The ID of the second vSwitch associated with the VPN gateway.
          * <p>
          * 
          * This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
@@ -436,11 +437,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * - If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. 
+         * *   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.
          * <p>
-         * - If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. 
          * 
-         * If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
+         * *   If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.
+         * 
+         *     If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -527,7 +529,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the SSL-VPN connection. 
+         * The IP address of the SSL-VPN connection.
          * <p>
          * 
          * This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.
@@ -854,7 +856,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;

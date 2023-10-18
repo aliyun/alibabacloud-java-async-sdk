@@ -222,7 +222,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
          * The name of the IPv6 gateway.
          * <p>
          * 
-         * The name must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. It cannot start with `http://` or `https://`.
+         * The name must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -249,7 +249,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -258,7 +258,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -267,10 +267,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPv6 gateway is deployed.
-         * <p>
-         * 
-         * >  IPv6 gateways are available in the following regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Philippines (Manila), Singapore, US (Virginia), and Germany (Frankfurt).
+         * The ID of the region in which the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,7 +303,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The information about the tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -369,12 +366,10 @@ public class DescribeIpv6GatewaysRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The tag key cannot be an empty string.
+             * The tag keys of the resources. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * It must be 1 to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify at most 20 tag keys in each call.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -382,12 +377,10 @@ public class DescribeIpv6GatewaysRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag values of the resources. You can specify up to 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be an empty string and must be 1 to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-             * 
-             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

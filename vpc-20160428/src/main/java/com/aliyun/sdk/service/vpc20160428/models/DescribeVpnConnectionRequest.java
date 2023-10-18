@@ -144,7 +144,7 @@ public class DescribeVpnConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPsec-VPN connection is established.
+         * The ID of the region where the IPsec-VPN connection is created.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

@@ -86,7 +86,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the SNAT entries.
+         * Details of SNAT entries.
          */
         public Builder snatTableEntries(SnatTableEntries snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
@@ -118,7 +118,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway to which the SNAT entry belongs.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -305,9 +305,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
              * The status of the SNAT entry. Valid values:
              * <p>
              * 
-             * *   **Pending**: being created or modified
-             * *   **Available**: available
-             * *   **Deleting**: being deleted
+             * *   **Pending**
+             * *   **Available**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;

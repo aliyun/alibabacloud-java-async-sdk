@@ -295,9 +295,9 @@ public class CreateVpcRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -318,11 +318,11 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
+         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -334,8 +334,8 @@ public class CreateVpcRequest extends Request {
          * Specifies whether to enable IPv6. Valid values:
          * <p>
          * 
-         * *   **false** (default): no
-         * *   **true**: yes
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -344,7 +344,7 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * Ipv4IpamPoolId.
+         * The ID of the IP Address Manager (IPAM) pool of the IPv4 type.
          */
         public Builder ipv4IpamPoolId(String ipv4IpamPoolId) {
             this.putQueryParameter("Ipv4IpamPoolId", ipv4IpamPoolId);
@@ -353,7 +353,7 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * The IPv6 CIDR blocks of the VPC.
+         * The IPv6 CIDR block of the VPC.
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -362,15 +362,15 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * The type of the IPv6 CIDR block. Valid values:
+         * The type of the IPv6 CIDR block of the VPC. Valid values:
          * <p>
          * 
-         * *   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP)
-         * *   **ChinaMobile**: China Mobile (single ISP).
-         * *   **ChinaUnicom**: China Unicom (single ISP).
-         * *   **ChinaTelecom**: China Telecom (single ISP).
+         * *   **BGP** (default)
+         * *   **ChinaMobile**
+         * *   **ChinaUnicom**
+         * *   **ChinaTelecom**
          * 
-         * >  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
+         * >  If you are allowed to use single-ISP bandwidth, you can set the value to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
          */
         public Builder ipv6Isp(String ipv6Isp) {
             this.putQueryParameter("Ipv6Isp", ipv6Isp);
@@ -439,7 +439,7 @@ public class CreateVpcRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -517,7 +517,10 @@ public class CreateVpcRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -525,7 +528,10 @@ public class CreateVpcRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

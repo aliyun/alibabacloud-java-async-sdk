@@ -94,7 +94,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +102,11 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
          * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -174,7 +174,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -351,7 +351,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -410,7 +410,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the gateway endpoint belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -426,7 +426,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag list.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

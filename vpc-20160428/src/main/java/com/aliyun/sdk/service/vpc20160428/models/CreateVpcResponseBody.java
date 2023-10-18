@@ -86,7 +86,7 @@ public class CreateVpcResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,7 +94,7 @@ public class CreateVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

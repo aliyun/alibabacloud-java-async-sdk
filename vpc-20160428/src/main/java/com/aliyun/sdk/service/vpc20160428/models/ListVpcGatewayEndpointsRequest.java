@@ -231,7 +231,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,11 +240,11 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+         * *   You do not need to specify this parameter for the first request.
+         * *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -283,7 +283,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the gateway endpoint belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -319,7 +319,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -373,7 +373,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N added to the resource. You can specify at most 20 tag keys. It cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -381,7 +384,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

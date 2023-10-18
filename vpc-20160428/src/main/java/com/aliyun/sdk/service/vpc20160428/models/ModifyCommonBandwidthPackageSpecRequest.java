@@ -141,7 +141,7 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+         * The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
          * <p>
          * 
          * Valid values: **1** to **1000**.
@@ -153,7 +153,7 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The ID of the EIP bandwidth plan.
+         * The ID of the Internet Shared Bandwidth instance.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -180,7 +180,7 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The region ID of the EIP bandwidth plan.
+         * The region ID of the Internet Shared Bandwidth instance.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

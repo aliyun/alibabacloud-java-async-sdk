@@ -158,10 +158,10 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * The timestamp generated when the policy-based route was created. Unit: milliseconds.
+         * The time when the policy-based route was created.
          * <p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -185,7 +185,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
+         * The tunneling protocol. The value is **Ipsec**.
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
@@ -201,7 +201,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -237,7 +237,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * The VPN gateway ID.
          */
         public Builder vpnInstanceId(String vpnInstanceId) {
             this.vpnInstanceId = vpnInstanceId;
@@ -245,7 +245,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The weight of the policy-based route.
+         * The weight of the policy-based route. Valid values:
          * <p>
          * 
          * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.

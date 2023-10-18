@@ -62,7 +62,7 @@ public class CreateSslVpnServerResponseBody extends TeaModel {
         private String sslVpnServerId; 
 
         /**
-         * The name of the SSL server.
+         * The SSL server name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -70,7 +70,7 @@ public class CreateSslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -310,7 +310,7 @@ public class DescribeFlowLogsRequest extends Request {
          * The description of the flow log.
          * <p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -331,7 +331,7 @@ public class DescribeFlowLogsRequest extends Request {
          * The name of the flow log.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -442,7 +442,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The type of the resource from which traffic is captured. Valid values:
+         * The type of resource from which traffic is captured. Valid values:
          * <p>
          * 
          * *   **NetworkInterface**: elastic network interface (ENI)
@@ -459,9 +459,9 @@ public class DescribeFlowLogsRequest extends Request {
          * The status of the flow log. Valid values:
          * <p>
          * 
-         * *   **Active**: enabled
-         * *   **Activating**: being enabled
-         * *   **Inactive**: disabled
+         * *   **Active**
+         * *   **Activating**
+         * *   **Inactive**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -547,10 +547,10 @@ public class DescribeFlowLogsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -558,10 +558,10 @@ public class DescribeFlowLogsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

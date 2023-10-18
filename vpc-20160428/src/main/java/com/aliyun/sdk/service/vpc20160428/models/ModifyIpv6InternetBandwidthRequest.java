@@ -168,7 +168,7 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * The Internet bandwidth for the IPv6 CIDR block. Valid values: **1** to **5000**. Unit: Mbit/s.
+         * The Internet bandwidth for the IPv6 CIDR block. Unit: Mbit/s. Valid values: **1** to **5000**.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -180,9 +180,9 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,7 +194,7 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
          * The ID of the IPv6 address.
          * <p>
          * 
-         * >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
+         * >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -203,10 +203,10 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the Internet bandwidth that you purchase for the IPv6 CIDR block.
+         * The ID of the Internet bandwidth that you purchased for the IPv6 CIDR block.
          * <p>
          * 
-         * >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
+         * >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);
@@ -233,7 +233,7 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

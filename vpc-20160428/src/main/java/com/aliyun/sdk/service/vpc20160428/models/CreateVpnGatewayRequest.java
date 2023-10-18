@@ -340,9 +340,9 @@ public class CreateVpnGatewayRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -354,12 +354,11 @@ public class CreateVpnGatewayRequest extends Request {
          * The second vSwitch with which you want to associate the VPN gateway.
          * <p>
          * 
-         * -  If you call this operation in a region that supports the dual-tunnel mode, this parameter is required. 
-         * - You need to specify two vSwitches in different zones from the VPC associated with the VPN gateway to implement disaster recovery across zones. 
-         * - For a region that supports only one zone, disaster recovery across zones is not supported. We recommend that you specify two vSwitches in the zone to implement high availability. You can specify the same vSwitch. 
+         * *   If you call this operation in a region that supports the IPsec-VPN connections in dual-tunnel mode, this parameter is required.
+         * *   You need to specify two vSwitches in different zones in the virtual private cloud (VPC) that is associated with the VPN gateway to implement disaster recovery across zones.
+         * *   For a region that supports only one zone, disaster recovery across zones is not supported. We recommend that you specify two vSwitches in the zone to implement high availability. You can specify the same vSwitch.
          * 
-         * 
-         * > For more information about the regions and zones that support the dual-tunnel mode, see [Upgrade a VPN gateway to enable the dual-tunnel mode](~~2358946~~).
+         * For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
          */
         public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
             this.putQueryParameter("DisasterRecoveryVSwitchId", disasterRecoveryVSwitchId);
@@ -397,7 +396,7 @@ public class CreateVpnGatewayRequest extends Request {
          * The billing method of the VPN gateway. Set the value to **POSTPAY**, which specifies the pay-as-you-go billing method.
          * <p>
          * 
-         * >  This parameter is required when you create a VPN gateway.
+         * > This parameter is required when you create a VPN gateway.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -409,7 +408,7 @@ public class CreateVpnGatewayRequest extends Request {
          * The name of the VPN gateway. The default value is the ID of the VPN gateway.
          * <p>
          * 
-         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+         * The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). Other special characters are not supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -494,7 +493,11 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the VPN gateway belongs.
+         * The vSwitch with which you want to associate the VPN gateway.
+         * <p>
+         * 
+         * *   If you call this operation in a region that supports the IPsec-VPN connections in dual-tunnel mode, this parameter is required. You must specify a vSwitch and specify **DisasterRecoveryVSwitchId**.
+         * *   If you call this operation in a region that supports the IPsec-VPN connections in single-tunnel mode and do not specify a vSwitch, the system automatically specifies a vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -512,7 +515,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * The type of the VPN gateway.
+         * The type of the VPN gateway. Valid values:
          * <p>
          * 
          * Set the value to **Normal** (default), which specifies a standard NAT gateway.

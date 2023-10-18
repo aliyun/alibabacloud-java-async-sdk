@@ -314,7 +314,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -377,7 +377,10 @@ public class CreateHaVipRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -385,7 +388,10 @@ public class CreateHaVipRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

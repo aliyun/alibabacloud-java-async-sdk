@@ -94,7 +94,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -335,9 +335,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
              * The protocol. Valid values:
              * <p>
              * 
-             * *   **TCP**: The NAT gateway forwards TCP packets.
-             * *   **UDP**: The NAT gateway forwards UDP packets.
-             * *   **Any**: The NAT gateway forwards packets of all protocols.
+             * *   **TCP**
+             * *   **UDP**
+             * *   **Any**
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -345,7 +345,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway to which the DNAT entry belongs.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -356,9 +356,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
              * The status of the DNAT entry. Valid values:
              * <p>
              * 
-             * *   **Pending**: being created or modified
-             * *   **Available**: available
-             * *   **Deleting**: being deleted
+             * *   **Pending**
+             * *   **Available**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;

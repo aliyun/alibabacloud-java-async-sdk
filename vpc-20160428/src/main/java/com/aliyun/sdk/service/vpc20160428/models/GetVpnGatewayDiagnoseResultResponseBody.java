@@ -149,7 +149,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * The time when the diagnostic started.
          * <p>
          * 
-         * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+         * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder beginTime(String beginTime) {
             this.beginTime = beginTime;
@@ -176,7 +176,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * The timestamp when the system finishes diagnosing the item.
          * <p>
          * 
-         * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+         * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -192,7 +192,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

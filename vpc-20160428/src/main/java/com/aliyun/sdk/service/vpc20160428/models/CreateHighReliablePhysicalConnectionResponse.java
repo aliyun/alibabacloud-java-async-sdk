@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AssociateGlobalAccelerationInstanceResponse} extends {@link TeaModel}
+ * {@link CreateHighReliablePhysicalConnectionResponse} extends {@link TeaModel}
  *
- * <p>AssociateGlobalAccelerationInstanceResponse</p>
+ * <p>CreateHighReliablePhysicalConnectionResponse</p>
  */
-public class AssociateGlobalAccelerationInstanceResponse extends Response {
+public class CreateHighReliablePhysicalConnectionResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class AssociateGlobalAccelerationInstanceResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private AssociateGlobalAccelerationInstanceResponseBody body;
+    private CreateHighReliablePhysicalConnectionResponseBody body;
 
-    private AssociateGlobalAccelerationInstanceResponse(BuilderImpl builder) {
+    private CreateHighReliablePhysicalConnectionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AssociateGlobalAccelerationInstanceResponse create() {
+    public static CreateHighReliablePhysicalConnectionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class AssociateGlobalAccelerationInstanceResponse extends Response {
     /**
      * @return body
      */
-    public AssociateGlobalAccelerationInstanceResponseBody getBody() {
+    public CreateHighReliablePhysicalConnectionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AssociateGlobalAccelerationInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateHighReliablePhysicalConnectionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AssociateGlobalAccelerationInstanceResponseBody body);
+        Builder body(CreateHighReliablePhysicalConnectionResponseBody body);
 
         @Override
-        AssociateGlobalAccelerationInstanceResponse build();
+        CreateHighReliablePhysicalConnectionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AssociateGlobalAccelerationInstanceResponse, Builder>
+            extends Response.BuilderImpl<CreateHighReliablePhysicalConnectionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AssociateGlobalAccelerationInstanceResponseBody body; 
+        private CreateHighReliablePhysicalConnectionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AssociateGlobalAccelerationInstanceResponse response) {
+        private BuilderImpl(CreateHighReliablePhysicalConnectionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class AssociateGlobalAccelerationInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AssociateGlobalAccelerationInstanceResponseBody body) {
+        public Builder body(CreateHighReliablePhysicalConnectionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AssociateGlobalAccelerationInstanceResponse build() {
-            return new AssociateGlobalAccelerationInstanceResponse(this);
+        public CreateHighReliablePhysicalConnectionResponse build() {
+            return new CreateHighReliablePhysicalConnectionResponse(this);
         } 
 
     } 

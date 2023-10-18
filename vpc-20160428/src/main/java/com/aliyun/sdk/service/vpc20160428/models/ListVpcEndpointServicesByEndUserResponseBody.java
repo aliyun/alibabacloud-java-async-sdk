@@ -122,7 +122,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -245,8 +245,8 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
              * Indicate whether the endpoint service supports the access policy. Valid values:
              * <p>
              * 
-             * *   **false**: no
-             * *   **true**: yes
+             * *   **false**
+             * *   **true**
              */
             public Builder supportPolicy(Boolean supportPolicy) {
                 this.supportPolicy = supportPolicy;

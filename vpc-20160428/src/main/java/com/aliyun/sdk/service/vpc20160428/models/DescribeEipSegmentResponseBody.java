@@ -94,7 +94,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The time when the contiguous EIP group was created. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.
+             * The time when the contiguous EIP group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -310,12 +310,12 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the contiguous EIP group.
+             * The status of the contiguous EIP group. Valid values:
              * <p>
              * 
-             * *   **Allocating**: being allocated
-             * *   **Allocated**: allocated
-             * *   **Releasing**: being released
+             * *   **Allocating**
+             * *   **Allocated**
+             * *   **Releasing**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -323,7 +323,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The zone of the contiguous EIP group.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

@@ -30,6 +30,10 @@ public class CreatePhysicalConnectionRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("DeviceAdvancedCapacity")
+    private java.util.List < String > deviceAdvancedCapacity;
+
+    @Query
     @NameInMap("LineOperator")
     @Validation(required = true)
     private String lineOperator;
@@ -93,6 +97,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         this.circuitCode = builder.circuitCode;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.deviceAdvancedCapacity = builder.deviceAdvancedCapacity;
         this.lineOperator = builder.lineOperator;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
@@ -148,6 +153,13 @@ public class CreatePhysicalConnectionRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return deviceAdvancedCapacity
+     */
+    public java.util.List < String > getDeviceAdvancedCapacity() {
+        return this.deviceAdvancedCapacity;
     }
 
     /**
@@ -253,6 +265,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private String circuitCode; 
         private String clientToken; 
         private String description; 
+        private java.util.List < String > deviceAdvancedCapacity; 
         private String lineOperator; 
         private String name; 
         private String ownerAccount; 
@@ -278,6 +291,7 @@ public class CreatePhysicalConnectionRequest extends Request {
             this.circuitCode = request.circuitCode;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.deviceAdvancedCapacity = request.deviceAdvancedCapacity;
             this.lineOperator = request.lineOperator;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
@@ -335,6 +349,15 @@ public class CreatePhysicalConnectionRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DeviceAdvancedCapacity.
+         */
+        public Builder deviceAdvancedCapacity(java.util.List < String > deviceAdvancedCapacity) {
+            this.putQueryParameter("DeviceAdvancedCapacity", deviceAdvancedCapacity);
+            this.deviceAdvancedCapacity = deviceAdvancedCapacity;
             return this;
         }
 

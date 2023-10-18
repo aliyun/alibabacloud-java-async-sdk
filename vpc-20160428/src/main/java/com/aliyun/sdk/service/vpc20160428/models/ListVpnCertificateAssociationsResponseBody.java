@@ -210,10 +210,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             private String vpnGatewayId; 
 
             /**
-             * The time when the certificate was associated.
+             * The time when the Anycast EIP was associated.
              * <p>
              * 
-             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder associationTime(String associationTime) {
                 this.associationTime = associationTime;
@@ -229,7 +229,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate type.
+             * The type of the certificate.
              * <p>
              * 
              * *   **Encryption**

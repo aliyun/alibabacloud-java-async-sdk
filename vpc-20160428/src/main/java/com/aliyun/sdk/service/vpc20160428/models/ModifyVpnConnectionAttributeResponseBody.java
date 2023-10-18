@@ -253,7 +253,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the customer gateway.
+         * The ID of the customer gateway associated with the IPsec-VPN connection.
+         * <p>
+         * 
+         * This parameter is returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -272,8 +275,8 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
          * Indicates whether IPsec negotiations immediately start after the configuration takes effect. Valid values:
          * <p>
          * 
-         * *   **true:** IPsec negotiations immediately start after the configuration takes effect.
-         * *   **false:** IPsec negotiations start when inbound traffic is detected.
+         * *   **true**: IPsec negotiations immediately start after the configuration takes effect.
+         * *   **false**: IPsec negotiations start when inbound traffic is detected.
          */
         public Builder effectImmediately(Boolean effectImmediately) {
             this.effectImmediately = effectImmediately;
@@ -281,11 +284,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether DPD is enabled. Valid values:
+         * Indicates whether the DPD feature is enabled for the IPsec-VPN connection. Valid values:
          * <p>
          * 
-         * *   **false:** The DPD feature is disabled.
-         * *   **true:** The DPD feature is enabled.
+         * *   **false**
+         * *   **true**
+         * 
+         * This parameter is returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.enableDpd = enableDpd;
@@ -293,11 +298,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether NAT traversal is enabled. Valid values:
+         * Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values: Valid values:
          * <p>
          * 
-         * *   **false:** NAT traversal is disabled.
-         * *   **true:** NAT traversal is enabled.
+         * *   **false**
+         * *   **true**
+         * 
+         * This parameter is returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.enableNatTraversal = enableNatTraversal;
@@ -305,10 +312,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether BGP is enabled for the tunnel. Valid values: 
+         * Indicates whether BGP is enabled for the tunnel. Valid values:
          * <p>
-         * - **true** 
-         * - **false** 
+         * 
+         * *   **true**
+         * *   **false**
          * 
          * This parameter is returned only by dual-tunnel IPsec-VPN connections.
          */
@@ -318,7 +326,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of Phase 1 negotiations.
+         * The configuration of Phase 1 negotiations.
+         * <p>
+         * 
+         * **IkeConfig** parameters are returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder ikeConfig(IkeConfig ikeConfig) {
             this.ikeConfig = ikeConfig;
@@ -326,7 +337,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of Phase 2 negotiations.
+         * The configuration of Phase 2 negotiations.
+         * <p>
+         * 
+         * **IpsecConfig** parameters are returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder ipsecConfig(IpsecConfig ipsecConfig) {
             this.ipsecConfig = ipsecConfig;
@@ -358,7 +372,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -366,7 +380,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel configurations of the IPsec-VPN connection. 
+         * The tunnel configuration of the IPsec-VPN connection.
          * <p>
          * 
          * **TunnelOptionsSpecification** parameters are returned only for dual-tunnel IPsec-VPN connections.
@@ -377,7 +391,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The health check configurations.
+         * The health check configuration.
+         * <p>
+         * 
+         * **VcoHealthCheck** parameters are returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder vcoHealthCheck(VcoHealthCheck vcoHealthCheck) {
             this.vcoHealthCheck = vcoHealthCheck;
@@ -385,7 +402,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The BGP configurations.
+         * The BGP configuration.
+         * <p>
+         * 
+         * **VpnBgpConfig** parameters are returned only for single-tunnel IPsec-VPN connections.
          */
         public Builder vpnBgpConfig(VpnBgpConfig vpnBgpConfig) {
             this.vpnBgpConfig = vpnBgpConfig;
@@ -537,7 +557,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The IKE authentication algorithm.
+             * The authentication algorithm in the IKE phase.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -545,7 +565,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE encryption algorithm.
+             * The encryption algorithm in the IKE phase.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -553,7 +573,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE lifetime. Unit: seconds.
+             * The lifetime in the IKE phase. Unit: seconds.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -561,11 +581,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values:
+             * The IKE negotiation mode.
              * <p>
              * 
-             * *   **main:** This mode offers higher security during negotiations.
-             * *   **aggressive:** This mode is faster and has a higher success rate.
+             * *   **main**: This mode offers higher security during negotiations.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -573,7 +593,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman group.
+             * The DH group in the IKE phase.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -611,7 +631,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier on the data center side. The default value is the IP address of the customer gateway. The value can be a fully qualified domain name (FQDN) or an IP address.
+             * The identifier on the data center side. The default value is the IP address of the customer gateway. The value can be a FQDN or an IP address.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -688,7 +708,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * The IPsec authentication algorithm.
+             * The authentication algorithm in the IPsec phase.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -696,7 +716,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec encryption algorithm.
+             * The encryption algorithm in the IPsec phase.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -704,7 +724,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec lifetime. Unit: seconds.
+             * The lifetime in the IPsec phase. Unit: seconds.
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -712,7 +732,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman group.
+             * The DH group in the IPsec phase.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -801,7 +821,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String tunnelCidr; 
 
             /**
-             * The local ASN (Alibaba Cloud side).
+             * The ASN of the tunnel on the Alibaba Cloud side.
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -809,7 +829,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The local BGP address (Alibaba Cloud side).
+             * The BGP IP address of the tunnel on the Alibaba Cloud side.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -817,7 +837,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The peer ASN.
+             * The ASN of the tunnel peer.
              */
             public Builder peerAsn(Long peerAsn) {
                 this.peerAsn = peerAsn;
@@ -825,7 +845,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The peer BGP address.
+             * The BGP IP address of the tunnel peer.
              */
             public Builder peerBgpIp(String peerBgpIp) {
                 this.peerBgpIp = peerBgpIp;
@@ -970,7 +990,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The algorithm in the IKE phase.
+             * The authentication algorithm in the IKE phase.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -994,11 +1014,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. 
+             * The IKE negotiation mode.
              * <p>
              * 
-             * - **main**: This mode offers higher security during negotiations. 
-             * - **aggressive**: This mode is faster and has a higher success rate.
+             * *   **main**: This mode offers higher security during negotiations.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -1022,7 +1042,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The local identifier (Alibaba Cloud side).
+             * The identifier of the tunnel on the Alibaba Cloud side.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -1038,7 +1058,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The peer identifier.
+             * The identifier of the tunnel peer.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -1312,7 +1332,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String zoneNo; 
 
             /**
-             * The ID of the customer gateway that is associated with the tunnel.
+             * The ID of the customer gateway associated with the tunnel.
              */
             public Builder customerGatewayId(String customerGatewayId) {
                 this.customerGatewayId = customerGatewayId;
@@ -1320,11 +1340,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DPD is enabled for the tunnel. Valid values: 
+             * Indicates whether the DPD feature is enabled for the tunnel. Valid values:
              * <p>
              * 
-             * - **false** 
-             * - **true**
+             * *   **false**
+             * *   **true**
              */
             public Builder enableDpd(Boolean enableDpd) {
                 this.enableDpd = enableDpd;
@@ -1332,11 +1352,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether NAT traversal is enabled for the tunnel. Valid values: 
+             * Indicates whether NAT traversal is enabled for the tunnel. Valid values:
              * <p>
              * 
-             * - **false** 
-             * - **true**
+             * *   **false**
+             * *   **true**
              */
             public Builder enableNatTraversal(Boolean enableNatTraversal) {
                 this.enableNatTraversal = enableNatTraversal;
@@ -1352,10 +1372,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The CA certificate used by the IPsec peer. 
+             * The CA certificate of the tunnel peer.
              * <p>
              * 
-             * This parameter is returned only by VPN gateways that use SM certificates.
+             * This parameter is returned only if the VPN gateway is of the SM type.
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
@@ -1363,11 +1383,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel role. Valid values: 
+             * The tunnel role. Valid values:
              * <p>
              * 
-             * - **master** 
-             * - **slave**
+             * *   **master**: The tunnel is an active tunnel.
+             * *   **slave**: The tunnel is a standby tunnel.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1375,12 +1395,12 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel status. Valid values: 
+             * The tunnel status. Valid values:
              * <p>
              * 
-             * - **active**
-             * - **updating**
-             * - **deleting**
+             * *   **active**
+             * *   **updating**
+             * *   **deleting**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1388,7 +1408,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP configurations.
+             * The BGP configuration.
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -1550,7 +1570,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String sip; 
 
             /**
-             * The destination IP address that was used for health checks.
+             * The destination IP address.
              */
             public Builder dip(String dip) {
                 this.dip = dip;
@@ -1558,11 +1578,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
+             * Indicates whether the health check feature is enabled for the IPsec-VPN connection.
              * <p>
              * 
-             * *   **true:** The health check feature is enabled.
-             * *   **false:** The health check feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -1570,7 +1590,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between two consecutive health check retries. Unit: seconds.
+             * The interval between two consecutive health checks. Unit: seconds.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1586,7 +1606,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address that was used for health checks.
+             * The source IP address that is used for health checks.
              */
             public Builder sip(String sip) {
                 this.sip = sip;
@@ -1702,8 +1722,8 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
              * Indicates whether BGP is enabled. Valid values:
              * <p>
              * 
-             * *   **true:** BGP is enabled.
-             * *   **false:** BGP is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder enableBgp(String enableBgp) {
                 this.enableBgp = enableBgp;
@@ -1735,7 +1755,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP IP address on the data center side.
+             * The BGP IP address of the data center.
              */
             public Builder peerBgpIp(String peerBgpIp) {
                 this.peerBgpIp = peerBgpIp;
@@ -1743,11 +1763,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The negotiation status of BGP. Valid values:
+             * The negotiation state of BGP. Valid values:
              * <p>
              * 
-             * *   **success:** normal.
-             * *   **false:** abnormal.
+             * *   **success**: normal
+             * *   **false**: abnormal
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1755,7 +1775,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the IPsec tunnel.
+             * The BGP CIDR block of the IPsec-VPN connection.
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;

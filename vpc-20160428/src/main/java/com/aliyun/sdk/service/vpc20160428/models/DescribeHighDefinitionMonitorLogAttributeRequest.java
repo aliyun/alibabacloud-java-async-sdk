@@ -140,7 +140,7 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the fine-grained monitoring instance.
+         * The ID of the instance whose fine-grained monitoring configurations you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +149,7 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance. Set the value to **EIP**.
+         * The type of the instance. Set the value to **EIP**.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -176,10 +176,10 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance is deployed.
+         * The region ID of the instance.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

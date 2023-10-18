@@ -98,7 +98,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         private String success; 
 
         /**
-         * The ID of the fine-grained monitoring instance.
+         * The ID of the instance whose fine-grained monitoring configurations you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -106,7 +106,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The type of the monitoring instance that is queried. The value is set to **EIP**.
+         * The type of instance for which you want to query fine-grained monitoring. Only **EIP** may be returned.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -114,7 +114,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the log project of Log Service.
+         * The name of the project.
          */
         public Builder logProject(String logProject) {
             this.logProject = logProject;
@@ -122,7 +122,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the Logstore of Log Service.
+         * The name of the Logstore.
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -130,7 +130,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,8 +141,8 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
          * Indicates whether the operation is performed. Valid values:
          * <p>
          * 
-         * *   **true**: The operation is performed.
-         * *   **false**: The operation is not performed.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;

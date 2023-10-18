@@ -170,7 +170,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.
+         * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -205,12 +205,12 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
          * The status of the gateway endpoint. Valid values:
          * <p>
          * 
-         * *   **Creating**: being created
-         * *   **Created**: created
-         * *   **Modifying**: being modified
-         * *   **Associating**: being associated
-         * *   **Dissociating**: being disassociated
-         * *   **Deleting**: being deleted
+         * *   **Creating**
+         * *   **Created**
+         * *   **Modifying**
+         * *   **Associating**
+         * *   **Dissociating**
+         * *   **Deleting**
          */
         public Builder endpointStatus(String endpointStatus) {
             this.endpointStatus = endpointStatus;
@@ -226,7 +226,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,7 +234,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the gateway endpoint belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -258,7 +258,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -318,7 +318,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -326,7 +326,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

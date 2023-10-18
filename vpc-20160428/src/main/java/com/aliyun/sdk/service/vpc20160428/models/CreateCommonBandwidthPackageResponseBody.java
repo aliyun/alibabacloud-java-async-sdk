@@ -62,7 +62,7 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of the EIP bandwidth plan.
+         * The ID of the Internet Shared Bandwidth instance.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -70,7 +70,7 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

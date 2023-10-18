@@ -238,7 +238,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP bandwidth plan.
+         * The ID of the Internet Shared Bandwidth instance.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -247,11 +247,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
+         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -263,8 +263,8 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
          * Specifies whether to return the information about pending orders. Valid values:
          * <p>
          * 
-         * *   **false**: does not return the information about pending orders. This is the default value.
-         * *   **true**: returns the information about pending orders.
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -273,7 +273,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The name of the EIP bandwidth plan.
+         * The name of the Internet Shared Bandwidth instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -300,7 +300,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -309,7 +309,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -318,10 +318,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The region ID of the EIP bandwidth plan.
+         * The ID of the region where the Internet Shared Bandwidth instance resides.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -360,8 +360,8 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
          * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
          * <p>
          * 
-         * *   **false**: disables Anti-DDoS Pro/Premium. This is the default value.
-         * *   **true**: enables Anti-DDoS Pro/Premium.
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
@@ -370,7 +370,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the Internet Shared Bandwidth instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -424,7 +424,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key to add to the Internet Shared Bandwidth instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -432,7 +435,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value to add to the Internet Shared Bandwidth instance. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

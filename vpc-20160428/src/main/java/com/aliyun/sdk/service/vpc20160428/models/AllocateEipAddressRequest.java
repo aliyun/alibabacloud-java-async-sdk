@@ -363,7 +363,7 @@ public class AllocateEipAddressRequest extends Request {
         } 
 
         /**
-         * The promotion code. Ignore this parameter.
+         * The promotion code. This parameter is not required.
          */
         public Builder activityId(Long activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -372,13 +372,13 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Default value: false. Valid values:
+         * Specifies whether to enable automatic payment. Valid values:
          * <p>
          * 
-         * *   **false**: disables automatic payment. This is the default value. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
-         * *   **true**: enables automatic payment. Payments are automatically completed.
+         * *   **false** (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+         * *   **true**: The automatic payment is enabled. Payments are automatically complete after an order is generated.
          * 
-         * When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
+         * If **InstanceChargeType** is set to **PrePaid**, this parameter is required. If **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -390,9 +390,9 @@ public class AllocateEipAddressRequest extends Request {
          * The maximum bandwidth of the EIP. Unit: Mbit/s.
          * <p>
          * 
-         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, valid values for **Bandwidth** are **1** to **500**.
-         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, valid values for **Bandwidth** are **1** to **200**.
-         * *   When **InstanceChargeType** is set to **PrePaid**, valid values for **Bandwidth** are **1** to **1000**.
+         * *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**: **1** to **500**.****
+         * *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**: **1** to **200**.****
+         * *   Valid values when **InstanceChargeType** is set to **PrePaid**: **1** to **1000**.****
          * 
          * Default value: **5**. Unit: Mbit/s.
          */
@@ -406,9 +406,9 @@ public class AllocateEipAddressRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters.
+         * You can use the client to generate a token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request is different.
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -420,9 +420,9 @@ public class AllocateEipAddressRequest extends Request {
          * The description of the EIP.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          * 
-         * >  This parameter is unavailable when you create a subscription EIP.
+         * >  You cannot specify this parameter if you create a subscription EIP.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -434,19 +434,19 @@ public class AllocateEipAddressRequest extends Request {
          * The line type. Valid values:
          * <p>
          * 
-         * *   **BGP** (default): BGP (Multi-ISP) lines All regions support BGP (Multi-ISP) EIPs.
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+         * *   **BGP** (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
          * 
-         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](~~32321~~)
          * 
          * *   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
          * 
-         *     *   **ChinaTelecom**: China Telecom
-         *     *   **ChinaUnicom**: China Unicom
-         *     *   **ChinaMobile**: China Mobile
-         *     *   **ChinaTelecom_L2**: China Telecom L2
-         *     *   **ChinaUnicom_L2**: China Unicom L2
-         *     *   **ChinaMobile_L2**: China Mobile L2
+         *     *   **ChinaTelecom**
+         *     *   **ChinaUnicom**
+         *     *   **ChinaMobile**
+         *     *   **ChinaTelecom_L2**
+         *     *   **ChinaUnicom_L2**
+         *     *   **ChinaMobile_L2**
          * 
          * *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
          */
@@ -463,7 +463,7 @@ public class AllocateEipAddressRequest extends Request {
          * *   **PrePaid**: subscription
          * *   **PostPaid** (default): pay-as-you-go
          * 
-         * When **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**. When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
+         * If **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**. If **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -472,7 +472,10 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The EIP ID.
+         * <p>
+         * 
+         * Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -487,9 +490,9 @@ public class AllocateEipAddressRequest extends Request {
          * *   **PayByBandwidth** (default): pay-by-bandwidth
          * *   **PayByTraffic**: pay-by-data-transfer
          * 
-         * When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.
+         * If **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**.
          * 
-         * When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
+         * If **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -498,7 +501,10 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * IpAddress.
+         * The IP address of the EIP that you want to request.
+         * <p>
+         * 
+         * Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -507,12 +513,12 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The name of the EIP.
+         * The EIP name.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          * 
-         * >  This parameter is unavailable when you create a subscription EIP.
+         * >  You cannot specify this parameter if you create a subscription EIP.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -521,7 +527,7 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The network type. Set the value to **public**, which specifies the Internet.
+         * The network type. Default value: **public**.
          */
         public Builder netmode(String netmode) {
             this.putQueryParameter("Netmode", netmode);
@@ -548,14 +554,14 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance.
+         * The subscription duration of the EIP.
          * <p>
          * 
-         * When **PricingCycle** is set to **Month**, set **Period** to a value from **1** to **9**.
+         * Valid values when **PricingCycle** is set to **Month**: **1** to **9**.****
          * 
-         * When **PricingCycle** is set to **Year**, set **Period** to a value from **1** to **5**.
+         * Valid values when **PricingCycle** is set to **Year**: **1** to **5**.****
          * 
-         * This parameter is required when **InstanceChargeType** is set to **PrePaid**. This parameter is optional when **InstanceChargeType** is set to **PostPaid**.
+         * This parameter must be specified when **InstanceChargeType** is set to **PrePaid**. This parameter is optional when **InstanceChargeType** is set to **PostPaid**.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -567,10 +573,10 @@ public class AllocateEipAddressRequest extends Request {
          * The billing cycle of the subscription EIP. Valid values:
          * <p>
          * 
-         * *   **Month** (default): The EIP is billed on a monthly basis.
-         * *   **Year**: The EIP is billed on an annual basis.
+         * *   **Month** (default)
+         * *   **Year**
          * 
-         * When **InstanceChargeType** is set to **PrePaid**, this parameter is required. When **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
+         * If **InstanceChargeType** is set to **PrePaid**, this parameter is required. If **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -584,7 +590,7 @@ public class AllocateEipAddressRequest extends Request {
          * 
          * The EIP is allocated from the IP address pool.
          * 
-         * You cannot use the IP address pool feature by default. To use the IP address pool feature, apply for the privilege in the Quota Center console. For more information, see [Request a quota increase in the Quota Center console](~~108213~~).
+         * By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](~~108213~~).
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -596,7 +602,7 @@ public class AllocateEipAddressRequest extends Request {
          * The ID of the region to which the EIP belongs.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -632,7 +638,13 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * SecurityProtectionTypes.
+         * The editions of Anti-DDoS.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, Anti-DDoS Origin Basic is used.
+         * *   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
+         * 
+         * You can specify up to 10 editions of Anti-DDoS.
          */
         public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
@@ -641,7 +653,12 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * Zone.
+         * The zone of the EIP.
+         * <p>
+         * 
+         * When the service type of the IP address pool specified by **PublicIpAddressPoolId** is CloudBox, the default value is the zone of the IP address pool.
+         * 
+         * For more information, see [ListPublicIpAddressPools](~~429433~~).
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

@@ -241,7 +241,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
          * The ID of the NAT gateway.
          * <p>
          * 
-         * >  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.
+         * >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -268,7 +268,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -277,7 +277,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,7 +286,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
+         * The ID of the region where you want to create the NAT gateway.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -351,7 +351,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
          * The ID of the SNAT table.
          * <p>
          * 
-         * >  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.
+         * >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);

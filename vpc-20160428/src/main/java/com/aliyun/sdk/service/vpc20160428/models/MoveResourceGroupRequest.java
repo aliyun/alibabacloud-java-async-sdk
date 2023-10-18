@@ -156,10 +156,10 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which the cloud resource is to be moved.
+         * The ID of the resource group to which you want to move the resource.
          * <p>
          * 
-         * >  You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~).
+         * >  You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see [What is resource management?](~~94475~~)
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -198,7 +198,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to move.
+         * The resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -225,12 +225,22 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The type of the resource for which you want to modify the resource group. Valid values:
          * <p>
          * 
-         * *   **vpc**: a virtual private cloud (VPC)
-         * *   **eip**: an elastic IP address (EIP)
-         * *   **bandwidthpackage**: an EIP bandwidth plan
+         * *   **Vpc**
+         * *   **Eip**
+         * *   **BandwidthPackage**
+         * *   **PrefixList**
+         * *   **PublicIpAddressPool**
+         * *   **FlowLog**
+         * *   **HaVip**
+         * *   **TrafficMirrorFilter**
+         * *   **TrafficMirrorSession**
+         * *   **IPv4Gateway**
+         * *   **IPv6Gateway**
+         * *   **DhcpOptionsSet**
+         * *   **GatewayEndpoint**
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

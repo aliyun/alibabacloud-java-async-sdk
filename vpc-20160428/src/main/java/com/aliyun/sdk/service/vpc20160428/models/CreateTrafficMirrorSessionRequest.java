@@ -557,7 +557,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -565,7 +568,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

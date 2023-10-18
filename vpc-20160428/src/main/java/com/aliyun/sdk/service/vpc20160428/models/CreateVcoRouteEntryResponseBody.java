@@ -137,7 +137,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
          * The timestamp when the destination-based route was created. Unit: milliseconds.
          * <p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -172,7 +172,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +207,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The weight of the destination-based route.
+         * The weight of the destination-based route. Valid values:
          * <p>
          * 
          * *   **0**: a low priority

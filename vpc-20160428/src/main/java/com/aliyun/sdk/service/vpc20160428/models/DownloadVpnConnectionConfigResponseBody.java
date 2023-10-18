@@ -50,7 +50,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         private VpnConnectionConfig vpnConnectionConfig; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the IPsec-VPN connection.
+         * The configurations of the peer gateway device.
          */
         public Builder vpnConnectionConfig(VpnConnectionConfig vpnConnectionConfig) {
             this.vpnConnectionConfig = vpnConnectionConfig;
@@ -194,7 +194,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The IKE authentication algorithm. Valid values: **sha1** and **MD5**.
+             * The authentication algorithm in the IKE phase.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -202,7 +202,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE encryption algorithm.
+             * The encryption algorithm in the IKE phase.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -210,7 +210,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE lifetime. Unit: seconds.
+             * The lifetime in the IKE phase. Unit: seconds.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -218,7 +218,11 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE mode. Valid values: **main** and **aggressive**. The **main** mode offers higher security. If NAT traversal is enabled, we recommend that you use the **aggressive** mode.
+             * The IKE negotiation mode. Valid values:
+             * <p>
+             * 
+             * *   **main**: This mode offers higher security during negotiations.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -226,7 +230,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group.
+             * The DH group in the IKE phase.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -242,7 +246,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The local ID. The default value is the IP address of the VPN gateway. You can specify the value as an IP address or in the FQDN format.
+             * The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -258,7 +262,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The peer ID. The default value is the IP address of the customer gateway. You can specify the value as an IP address or in the fully qualified domain name (FQDN) format.
+             * The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -335,7 +339,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * The IPsec authentication algorithm. Valid values: **sha1** and **md5**.
+             * The authentication algorithm in the IPsec phase.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -343,7 +347,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec encryption algorithm.
+             * The encryption algorithm in the IPsec phase.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -351,7 +355,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec lifetime. Unit: seconds.
+             * The lifetime in the IPsec phase. Unit: seconds.
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -359,7 +363,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group.
+             * The DH group in the IPsec phase.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -520,11 +524,11 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values: 
+             * The IKE negotiation mode. Valid values:
              * <p>
              * 
-             * - **main**: This mode offers higher security during negotiations. 
-             * - **aggressive**: This mode is faster and has a higher success rate.
+             * *   **main**: This mode offers higher security during negotiations.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -940,7 +944,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private TunnelsConfig tunnelsConfig; 
 
             /**
-             * The IKE configuration.
+             * The configurations of Phase 1 negotiations.
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -948,7 +952,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the IPsec-VPN connection.
+             * The configurations of Phase 2 negotiations.
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -956,7 +960,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the VPN gateway.
+             * The identifier of the customer gateway.
              */
             public Builder local(String local) {
                 this.local = local;
@@ -964,7 +968,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block on the virtual private cloud (VPC) side.
+             * The CIDR block on the data center side.
              */
             public Builder localSubnet(String localSubnet) {
                 this.localSubnet = localSubnet;
@@ -972,7 +976,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the customer gateway.
+             * The identifier of the VPN gateway.
              */
             public Builder remote(String remote) {
                 this.remote = remote;
@@ -980,7 +984,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block on the data center side.
+             * The CIDR block on the virtual private cloud (VPC) side.
              */
             public Builder remoteSubnet(String remoteSubnet) {
                 this.remoteSubnet = remoteSubnet;
@@ -988,7 +992,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel configuration of the peer gateway device. Parameters in TunnelsConfig are returned only if the IPsec-VPN connection is in dual-tunnel mode.
+             * The tunnel configurations of the peer gateway device.
+             * <p>
+             * 
+             * The parameters in **TunnelsConfig** are returned only when the IPsec-VPN connection supports the dual-tunnel mode.
              */
             public Builder tunnelsConfig(TunnelsConfig tunnelsConfig) {
                 this.tunnelsConfig = tunnelsConfig;

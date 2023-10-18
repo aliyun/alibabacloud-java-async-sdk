@@ -317,7 +317,9 @@ public class DescribeForwardTableEntriesRequest extends Request {
          * The ID of the DNAT table.
          * <p>
          * 
-         * >  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.
+         * **
+         * 
+         * **Description** You must specify at least one of **ForwardTableId** and **NatGatewayId**.
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -353,9 +355,9 @@ public class DescribeForwardTableEntriesRequest extends Request {
          * The protocol. Valid values:
          * <p>
          * 
-         * *   **TCP**: The NAT gateway forwards TCP packets.
-         * *   **UDP**: The NAT gateway forwards UDP packets.
-         * *   **Any**: The NAT gateway forwards packets of all protocols.
+         * *   **TCP**
+         * *   **UDP**
+         * *   **Any**
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -367,7 +369,9 @@ public class DescribeForwardTableEntriesRequest extends Request {
          * The ID of the NAT gateway.
          * <p>
          * 
-         * >  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.
+         * **
+         * 
+         * **Description** You must specify at least one of **ForwardTableId** and **NatGatewayId**.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -394,7 +398,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -403,7 +407,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -412,7 +416,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
+         * The ID of the region where you want to create the NAT gateway.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

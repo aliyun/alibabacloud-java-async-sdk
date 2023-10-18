@@ -134,7 +134,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The HTTP status code.
+         * The HTTP status codes returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The response message.
+         * The response messages.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -158,7 +158,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,8 +193,8 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
          * Indicates whether the call is successful. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +202,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
