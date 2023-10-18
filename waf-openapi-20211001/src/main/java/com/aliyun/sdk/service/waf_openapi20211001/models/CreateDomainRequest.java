@@ -488,7 +488,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The custom cipher suites that you want to add.
+             * The custom cipher suite that you want to add.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -535,7 +535,7 @@ public class CreateDomainRequest extends Request {
              * Specifies whether to enable HTTP/2. This parameter is available only if you specify **HttpsPorts**. Valid values:
              * <p>
              * 
-             * *   true
+             * *   **true**
              * *   **false** (default)
              */
             public Builder http2Enabled(Boolean http2Enabled) {

@@ -22,6 +22,10 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("IsGroupResource")
+    private String isGroupResource;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -46,6 +50,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         super(builder);
         this.endTimestamp = builder.endTimestamp;
         this.instanceId = builder.instanceId;
+        this.isGroupResource = builder.isGroupResource;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -78,6 +83,13 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return isGroupResource
+     */
+    public String getIsGroupResource() {
+        return this.isGroupResource;
     }
 
     /**
@@ -118,6 +130,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRuleHitsTopRuleIdRequest, Builder> {
         private String endTimestamp; 
         private String instanceId; 
+        private String isGroupResource; 
         private String regionId; 
         private String resource; 
         private String resourceManagerResourceGroupId; 
@@ -132,6 +145,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
             super(request);
             this.endTimestamp = request.endTimestamp;
             this.instanceId = request.instanceId;
+            this.isGroupResource = request.isGroupResource;
             this.regionId = request.regionId;
             this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -157,6 +171,15 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IsGroupResource.
+         */
+        public Builder isGroupResource(String isGroupResource) {
+            this.putQueryParameter("IsGroupResource", isGroupResource);
+            this.isGroupResource = isGroupResource;
             return this;
         }
 
