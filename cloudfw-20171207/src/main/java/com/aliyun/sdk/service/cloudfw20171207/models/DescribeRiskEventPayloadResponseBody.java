@@ -170,7 +170,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         private String xForwardFor; 
 
         /**
-         * DstIP.
+         * The destination IP address of the intrusion event.
          */
         public Builder dstIP(String dstIP) {
             this.dstIP = dstIP;
@@ -178,7 +178,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * DstPort.
+         * The destination port of the intrusion event.
          */
         public Builder dstPort(Integer dstPort) {
             this.dstPort = dstPort;
@@ -186,7 +186,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * DstVpcId.
+         * The destination VPC ID of the intrusion event.
          */
         public Builder dstVpcId(String dstVpcId) {
             this.dstVpcId = dstVpcId;
@@ -194,7 +194,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * Payload.
+         * The attack payload of the intrusion event.
          */
         public Builder payload(String payload) {
             this.payload = payload;
@@ -202,7 +202,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * PayloadLen.
+         * The length of the attack payload of the intrusion event.
          */
         public Builder payloadLen(Integer payloadLen) {
             this.payloadLen = payloadLen;
@@ -210,7 +210,11 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * Proto.
+         * The protocol type of intrusion event. Valid values:
+         * <p>
+         * 
+         * *   **TCP**
+         * *   **UDP**
          */
         public Builder proto(String proto) {
             this.proto = proto;
@@ -218,7 +222,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * RealIp.
+         * The HTTP X-Real-IP field.
          */
         public Builder realIp(String realIp) {
             this.realIp = realIp;
@@ -226,7 +230,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,7 +238,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * SrcIP.
+         * The source IP address of the intrusion event.
          */
         public Builder srcIP(String srcIP) {
             this.srcIP = srcIP;
@@ -242,7 +246,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * SrcPort.
+         * The source port of the intrusion event.
          */
         public Builder srcPort(Integer srcPort) {
             this.srcPort = srcPort;
@@ -250,7 +254,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * SrcVpcId.
+         * The source VPC ID of the intrusion event.
          */
         public Builder srcVpcId(String srcVpcId) {
             this.srcVpcId = srcVpcId;
@@ -258,7 +262,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * XForwardFor.
+         * The HTTP X-Forwarded-For field.
          */
         public Builder xForwardFor(String xForwardFor) {
             this.xForwardFor = xForwardFor;

@@ -224,7 +224,7 @@ public class DescribeAssetListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The page number. Valid values: 1 to 50.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -268,7 +268,12 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * NewResourceTag.
+         * The time when the asset was added. Valid values:
+         * <p>
+         * 
+         * *   **discovered in 1 hour**: within one hour.
+         * *   **discovered in 1 day**: within one day.
+         * *   **discovered in 7 days**: within seven days.
          */
         public Builder newResourceTag(String newResourceTag) {
             this.putQueryParameter("NewResourceTag", newResourceTag);
@@ -277,7 +282,7 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page. Valid values: 1 to 50.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

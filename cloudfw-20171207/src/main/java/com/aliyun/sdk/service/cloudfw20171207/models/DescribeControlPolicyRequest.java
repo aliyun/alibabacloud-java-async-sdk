@@ -60,6 +60,10 @@ public class DescribeControlPolicyRequest extends Request {
     private String release;
 
     @Query
+    @NameInMap("RepeatType")
+    private String repeatType;
+
+    @Query
     @NameInMap("Source")
     private String source;
 
@@ -76,6 +80,7 @@ public class DescribeControlPolicyRequest extends Request {
         this.pageSize = builder.pageSize;
         this.proto = builder.proto;
         this.release = builder.release;
+        this.repeatType = builder.repeatType;
         this.source = builder.source;
     }
 
@@ -170,6 +175,13 @@ public class DescribeControlPolicyRequest extends Request {
     }
 
     /**
+     * @return repeatType
+     */
+    public String getRepeatType() {
+        return this.repeatType;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -188,6 +200,7 @@ public class DescribeControlPolicyRequest extends Request {
         private String pageSize; 
         private String proto; 
         private String release; 
+        private String repeatType; 
         private String source; 
 
         private Builder() {
@@ -207,6 +220,7 @@ public class DescribeControlPolicyRequest extends Request {
             this.pageSize = request.pageSize;
             this.proto = request.proto;
             this.release = request.release;
+            this.repeatType = request.repeatType;
             this.source = request.source;
         } 
 
@@ -351,6 +365,15 @@ public class DescribeControlPolicyRequest extends Request {
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
             this.release = release;
+            return this;
+        }
+
+        /**
+         * RepeatType.
+         */
+        public Builder repeatType(String repeatType) {
+            this.putQueryParameter("RepeatType", repeatType);
+            this.repeatType = repeatType;
             return this;
         }
 

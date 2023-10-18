@@ -50,7 +50,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AbnormalResourceStatusList.
+         * The status information of the asset when it is not synchronized to Cloud Firewall.
          */
         public Builder abnormalResourceStatusList(java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList) {
             this.abnormalResourceStatusList = abnormalResourceStatusList;
@@ -122,7 +122,10 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Msg.
+             * The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:
+             * <p>
+             * 
+             * *   cloudfirewall do not sync this ip address: This IP address is not synchronized to Cloud Firewall.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -130,7 +133,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The IP address of the asset.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -138,7 +141,10 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the asset when it is not synchronized to Cloud Firewall. Valid values:
+             * <p>
+             * 
+             * *   ip_not_sync: The asset is not synchronized.
              */
             public Builder status(String status) {
                 this.status = status;

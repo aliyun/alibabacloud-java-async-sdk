@@ -107,6 +107,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationNameList")
         private java.util.List < String > applicationNameList;
 
+        @NameInMap("CreateTime")
+        private Long createTime;
+
         @NameInMap("Description")
         private String description;
 
@@ -134,6 +137,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         private String destinationType;
 
+        @NameInMap("EndTime")
+        private Long endTime;
+
         @NameInMap("HitLastTime")
         private Long hitLastTime;
 
@@ -155,6 +161,18 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("Release")
         private String release;
 
+        @NameInMap("RepeatDays")
+        private java.util.List < Long > repeatDays;
+
+        @NameInMap("RepeatEndTime")
+        private String repeatEndTime;
+
+        @NameInMap("RepeatStartTime")
+        private String repeatStartTime;
+
+        @NameInMap("RepeatType")
+        private String repeatType;
+
         @NameInMap("Source")
         private String source;
 
@@ -167,12 +185,19 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("SourceType")
         private String sourceType;
 
+        @NameInMap("SpreadCnt")
+        private Long spreadCnt;
+
+        @NameInMap("StartTime")
+        private Long startTime;
+
         private Policys(Builder builder) {
             this.aclAction = builder.aclAction;
             this.aclUuid = builder.aclUuid;
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
             this.applicationNameList = builder.applicationNameList;
+            this.createTime = builder.createTime;
             this.description = builder.description;
             this.destPort = builder.destPort;
             this.destPortGroup = builder.destPortGroup;
@@ -182,6 +207,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             this.destinationGroupCidrs = builder.destinationGroupCidrs;
             this.destinationGroupType = builder.destinationGroupType;
             this.destinationType = builder.destinationType;
+            this.endTime = builder.endTime;
             this.hitLastTime = builder.hitLastTime;
             this.hitTimes = builder.hitTimes;
             this.memberUid = builder.memberUid;
@@ -189,10 +215,16 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             this.order = builder.order;
             this.proto = builder.proto;
             this.release = builder.release;
+            this.repeatDays = builder.repeatDays;
+            this.repeatEndTime = builder.repeatEndTime;
+            this.repeatStartTime = builder.repeatStartTime;
+            this.repeatType = builder.repeatType;
             this.source = builder.source;
             this.sourceGroupCidrs = builder.sourceGroupCidrs;
             this.sourceGroupType = builder.sourceGroupType;
             this.sourceType = builder.sourceType;
+            this.spreadCnt = builder.spreadCnt;
+            this.startTime = builder.startTime;
         }
 
         public static Builder builder() {
@@ -236,6 +268,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          */
         public java.util.List < String > getApplicationNameList() {
             return this.applicationNameList;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -302,6 +341,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
          * @return hitLastTime
          */
         public Long getHitLastTime() {
@@ -351,6 +397,34 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return repeatDays
+         */
+        public java.util.List < Long > getRepeatDays() {
+            return this.repeatDays;
+        }
+
+        /**
+         * @return repeatEndTime
+         */
+        public String getRepeatEndTime() {
+            return this.repeatEndTime;
+        }
+
+        /**
+         * @return repeatStartTime
+         */
+        public String getRepeatStartTime() {
+            return this.repeatStartTime;
+        }
+
+        /**
+         * @return repeatType
+         */
+        public String getRepeatType() {
+            return this.repeatType;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -378,12 +452,27 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.sourceType;
         }
 
+        /**
+         * @return spreadCnt
+         */
+        public Long getSpreadCnt() {
+            return this.spreadCnt;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
         public static final class Builder {
             private String aclAction; 
             private String aclUuid; 
             private String applicationId; 
             private String applicationName; 
             private java.util.List < String > applicationNameList; 
+            private Long createTime; 
             private String description; 
             private String destPort; 
             private String destPortGroup; 
@@ -393,6 +482,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             private java.util.List < String > destinationGroupCidrs; 
             private String destinationGroupType; 
             private String destinationType; 
+            private Long endTime; 
             private Long hitLastTime; 
             private Long hitTimes; 
             private String memberUid; 
@@ -400,10 +490,16 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             private Integer order; 
             private String proto; 
             private String release; 
+            private java.util.List < Long > repeatDays; 
+            private String repeatEndTime; 
+            private String repeatStartTime; 
+            private String repeatType; 
             private String source; 
             private java.util.List < String > sourceGroupCidrs; 
             private String sourceGroupType; 
             private String sourceType; 
+            private Long spreadCnt; 
+            private Long startTime; 
 
             /**
              * The action that Cloud Firewall performs on the traffic. Valid values:
@@ -463,6 +559,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
              */
             public Builder applicationNameList(java.util.List < String > applicationNameList) {
                 this.applicationNameList = applicationNameList;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -557,6 +661,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
              * HitLastTime.
              */
             public Builder hitLastTime(Long hitLastTime) {
@@ -626,6 +738,38 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * RepeatDays.
+             */
+            public Builder repeatDays(java.util.List < Long > repeatDays) {
+                this.repeatDays = repeatDays;
+                return this;
+            }
+
+            /**
+             * RepeatEndTime.
+             */
+            public Builder repeatEndTime(String repeatEndTime) {
+                this.repeatEndTime = repeatEndTime;
+                return this;
+            }
+
+            /**
+             * RepeatStartTime.
+             */
+            public Builder repeatStartTime(String repeatStartTime) {
+                this.repeatStartTime = repeatStartTime;
+                return this;
+            }
+
+            /**
+             * RepeatType.
+             */
+            public Builder repeatType(String repeatType) {
+                this.repeatType = repeatType;
+                return this;
+            }
+
+            /**
              * The source address in the access control policy. Valid values:
              * <p>
              * 
@@ -662,6 +806,22 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * SpreadCnt.
+             */
+            public Builder spreadCnt(Long spreadCnt) {
+                this.spreadCnt = spreadCnt;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

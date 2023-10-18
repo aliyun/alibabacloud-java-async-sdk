@@ -57,8 +57,16 @@ public class CreateTrFirewallV2Request extends Request {
     private String trAttachmentMasterCidr;
 
     @Query
+    @NameInMap("TrAttachmentMasterZone")
+    private String trAttachmentMasterZone;
+
+    @Query
     @NameInMap("TrAttachmentSlaveCidr")
     private String trAttachmentSlaveCidr;
+
+    @Query
+    @NameInMap("TrAttachmentSlaveZone")
+    private String trAttachmentSlaveZone;
 
     @Query
     @NameInMap("TransitRouterId")
@@ -77,7 +85,9 @@ public class CreateTrFirewallV2Request extends Request {
         this.regionNo = builder.regionNo;
         this.routeMode = builder.routeMode;
         this.trAttachmentMasterCidr = builder.trAttachmentMasterCidr;
+        this.trAttachmentMasterZone = builder.trAttachmentMasterZone;
         this.trAttachmentSlaveCidr = builder.trAttachmentSlaveCidr;
+        this.trAttachmentSlaveZone = builder.trAttachmentSlaveZone;
         this.transitRouterId = builder.transitRouterId;
     }
 
@@ -172,10 +182,24 @@ public class CreateTrFirewallV2Request extends Request {
     }
 
     /**
+     * @return trAttachmentMasterZone
+     */
+    public String getTrAttachmentMasterZone() {
+        return this.trAttachmentMasterZone;
+    }
+
+    /**
      * @return trAttachmentSlaveCidr
      */
     public String getTrAttachmentSlaveCidr() {
         return this.trAttachmentSlaveCidr;
+    }
+
+    /**
+     * @return trAttachmentSlaveZone
+     */
+    public String getTrAttachmentSlaveZone() {
+        return this.trAttachmentSlaveZone;
     }
 
     /**
@@ -197,7 +221,9 @@ public class CreateTrFirewallV2Request extends Request {
         private String regionNo; 
         private String routeMode; 
         private String trAttachmentMasterCidr; 
+        private String trAttachmentMasterZone; 
         private String trAttachmentSlaveCidr; 
+        private String trAttachmentSlaveZone; 
         private String transitRouterId; 
 
         private Builder() {
@@ -217,7 +243,9 @@ public class CreateTrFirewallV2Request extends Request {
             this.regionNo = request.regionNo;
             this.routeMode = request.routeMode;
             this.trAttachmentMasterCidr = request.trAttachmentMasterCidr;
+            this.trAttachmentMasterZone = request.trAttachmentMasterZone;
             this.trAttachmentSlaveCidr = request.trAttachmentSlaveCidr;
+            this.trAttachmentSlaveZone = request.trAttachmentSlaveZone;
             this.transitRouterId = request.transitRouterId;
         } 
 
@@ -329,11 +357,29 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
+         * TrAttachmentMasterZone.
+         */
+        public Builder trAttachmentMasterZone(String trAttachmentMasterZone) {
+            this.putQueryParameter("TrAttachmentMasterZone", trAttachmentMasterZone);
+            this.trAttachmentMasterZone = trAttachmentMasterZone;
+            return this;
+        }
+
+        /**
          * The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
          */
         public Builder trAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
             this.putQueryParameter("TrAttachmentSlaveCidr", trAttachmentSlaveCidr);
             this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;
+            return this;
+        }
+
+        /**
+         * TrAttachmentSlaveZone.
+         */
+        public Builder trAttachmentSlaveZone(String trAttachmentSlaveZone) {
+            this.putQueryParameter("TrAttachmentSlaveZone", trAttachmentSlaveZone);
+            this.trAttachmentSlaveZone = trAttachmentSlaveZone;
             return this;
         }
 

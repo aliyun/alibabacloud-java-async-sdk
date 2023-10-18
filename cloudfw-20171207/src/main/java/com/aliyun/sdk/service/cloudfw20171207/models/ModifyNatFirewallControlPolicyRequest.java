@@ -58,6 +58,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
     private String domainResolveType;
 
     @Query
+    @NameInMap("EndTime")
+    private Long endTime;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -76,6 +80,22 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
     private String release;
 
     @Query
+    @NameInMap("RepeatDays")
+    private java.util.List < Long > repeatDays;
+
+    @Query
+    @NameInMap("RepeatEndTime")
+    private String repeatEndTime;
+
+    @Query
+    @NameInMap("RepeatStartTime")
+    private String repeatStartTime;
+
+    @Query
+    @NameInMap("RepeatType")
+    private String repeatType;
+
+    @Query
     @NameInMap("Source")
     @Validation(required = true)
     private String source;
@@ -84,6 +104,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
     @NameInMap("SourceType")
     @Validation(required = true)
     private String sourceType;
+
+    @Query
+    @NameInMap("StartTime")
+    private Long startTime;
 
     private ModifyNatFirewallControlPolicyRequest(Builder builder) {
         super(builder);
@@ -97,12 +121,18 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
         this.domainResolveType = builder.domainResolveType;
+        this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.natGatewayId = builder.natGatewayId;
         this.proto = builder.proto;
         this.release = builder.release;
+        this.repeatDays = builder.repeatDays;
+        this.repeatEndTime = builder.repeatEndTime;
+        this.repeatStartTime = builder.repeatStartTime;
+        this.repeatType = builder.repeatType;
         this.source = builder.source;
         this.sourceType = builder.sourceType;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -189,6 +219,13 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -217,6 +254,34 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
     }
 
     /**
+     * @return repeatDays
+     */
+    public java.util.List < Long > getRepeatDays() {
+        return this.repeatDays;
+    }
+
+    /**
+     * @return repeatEndTime
+     */
+    public String getRepeatEndTime() {
+        return this.repeatEndTime;
+    }
+
+    /**
+     * @return repeatStartTime
+     */
+    public String getRepeatStartTime() {
+        return this.repeatStartTime;
+    }
+
+    /**
+     * @return repeatType
+     */
+    public String getRepeatType() {
+        return this.repeatType;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -230,6 +295,13 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         return this.sourceType;
     }
 
+    /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ModifyNatFirewallControlPolicyRequest, Builder> {
         private String aclAction; 
         private String aclUuid; 
@@ -241,12 +313,18 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         private String destination; 
         private String destinationType; 
         private String domainResolveType; 
+        private Long endTime; 
         private String lang; 
         private String natGatewayId; 
         private String proto; 
         private String release; 
+        private java.util.List < Long > repeatDays; 
+        private String repeatEndTime; 
+        private String repeatStartTime; 
+        private String repeatType; 
         private String source; 
         private String sourceType; 
+        private Long startTime; 
 
         private Builder() {
             super();
@@ -264,12 +342,18 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
             this.destination = request.destination;
             this.destinationType = request.destinationType;
             this.domainResolveType = request.domainResolveType;
+            this.endTime = request.endTime;
             this.lang = request.lang;
             this.natGatewayId = request.natGatewayId;
             this.proto = request.proto;
             this.release = request.release;
+            this.repeatDays = request.repeatDays;
+            this.repeatEndTime = request.repeatEndTime;
+            this.repeatStartTime = request.repeatStartTime;
+            this.repeatType = request.repeatType;
             this.source = request.source;
             this.sourceType = request.sourceType;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -398,6 +482,15 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
          * The language of the content within the request and the response. Valid values:
          * <p>
          * 
@@ -450,6 +543,42 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
+         * RepeatDays.
+         */
+        public Builder repeatDays(java.util.List < Long > repeatDays) {
+            this.putQueryParameter("RepeatDays", repeatDays);
+            this.repeatDays = repeatDays;
+            return this;
+        }
+
+        /**
+         * RepeatEndTime.
+         */
+        public Builder repeatEndTime(String repeatEndTime) {
+            this.putQueryParameter("RepeatEndTime", repeatEndTime);
+            this.repeatEndTime = repeatEndTime;
+            return this;
+        }
+
+        /**
+         * RepeatStartTime.
+         */
+        public Builder repeatStartTime(String repeatStartTime) {
+            this.putQueryParameter("RepeatStartTime", repeatStartTime);
+            this.repeatStartTime = repeatStartTime;
+            return this;
+        }
+
+        /**
+         * RepeatType.
+         */
+        public Builder repeatType(String repeatType) {
+            this.putQueryParameter("RepeatType", repeatType);
+            this.repeatType = repeatType;
+            return this;
+        }
+
+        /**
          * The source address in the access control policy.
          * <p>
          * 
@@ -481,6 +610,15 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

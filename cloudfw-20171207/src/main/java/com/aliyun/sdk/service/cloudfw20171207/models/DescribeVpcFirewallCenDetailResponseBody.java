@@ -131,7 +131,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallVpc.
+         * The VPC that is automatically created for the firewall.
          */
         public Builder firewallVpc(FirewallVpc firewallVpc) {
             this.firewallVpc = firewallVpc;
@@ -263,7 +263,11 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AllowConfiguration.
+             * Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder allowConfiguration(Integer allowConfiguration) {
                 this.allowConfiguration = allowConfiguration;
@@ -271,7 +275,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VpcCidr.
+             * The CIDR block of the VPC.
              */
             public Builder vpcCidr(String vpcCidr) {
                 this.vpcCidr = vpcCidr;
@@ -279,7 +283,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -287,7 +291,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchCidr.
+             * The CIDR block of the vSwitch.
              */
             public Builder vswitchCidr(String vswitchCidr) {
                 this.vswitchCidr = vswitchCidr;
@@ -295,7 +299,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -303,7 +307,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -384,7 +388,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EniVSwitchId.
+             * The ID of the vSwitch to which the ENI is connected.
              */
             public Builder eniVSwitchId(String eniVSwitchId) {
                 this.eniVSwitchId = eniVSwitchId;
@@ -498,7 +502,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String routeTableId; 
 
             /**
-             * An array that consists of the route entries for the VPC.
+             * The route entries for the VPC.
              */
             public Builder routeEntryList(java.util.List < RouteEntryList> routeEntryList) {
                 this.routeEntryList = routeEntryList;
@@ -763,7 +767,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the elastic network interfaces (ENIs).
+             * The Elastic Network Interfaces (ENIs).
              */
             public Builder eniList(java.util.List < EniList> eniList) {
                 this.eniList = eniList;

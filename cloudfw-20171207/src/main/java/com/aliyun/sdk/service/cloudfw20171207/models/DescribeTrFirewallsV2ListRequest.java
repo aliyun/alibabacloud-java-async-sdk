@@ -194,7 +194,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -203,7 +203,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -212,7 +212,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -221,7 +221,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * FirewallName.
+         * The name of the VPC firewall.
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
@@ -230,7 +230,18 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * FirewallSwitchStatus.
+         * The status of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   **opened**: The VPC firewall is enabled.
+         * *   **closed**: The VPC firewall is disabled.
+         * *   **notconfigured**: The VPC firewall is not created.
+         * *   **configured**: The VPC firewall is created but is not enabled.
+         * *   **creating**: The VPC firewall is being created.
+         * *   **opening**: The VPC firewall is being enabled.
+         * *   **deleting**: The VPC firewall is being deleted.
+         * 
+         * >  If you do not specify this parameter, VPC firewalls in all states are queried.
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.putQueryParameter("FirewallSwitchStatus", firewallSwitchStatus);
@@ -239,7 +250,11 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -257,7 +272,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +281,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * The region ID of the transit router.
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -275,7 +290,13 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * RouteMode.
+         * The routing mode of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   **managed**: automatic mode
+         * *   **manual**: manual mode
+         * 
+         * >  If you do not specify this parameter, VPC firewalls in all routing modes are queried.
          */
         public Builder routeMode(String routeMode) {
             this.putQueryParameter("RouteMode", routeMode);
@@ -284,7 +305,7 @@ public class DescribeTrFirewallsV2ListRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

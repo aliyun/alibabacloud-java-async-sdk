@@ -466,7 +466,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * 入侵防御事件的名称。
+         * The name of the intrusion event.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);

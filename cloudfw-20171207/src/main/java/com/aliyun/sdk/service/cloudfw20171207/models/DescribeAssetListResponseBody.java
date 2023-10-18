@@ -361,7 +361,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
              * The UID of the Alibaba Cloud account.
              * <p>
              * 
-             * > The value of this parameter indicates the management account to which the member is added.
+             * >  The value of this parameter indicates the management account to which the member is added.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -369,7 +369,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * The ID of the cloud resource with which the asset is associated.
              */
             public Builder bindInstanceId(String bindInstanceId) {
                 this.bindInstanceId = bindInstanceId;
@@ -385,7 +385,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStamp.
+             * The timestamp when the asset is added to Cloud Firewall.
              */
             public Builder createTimeStamp(String createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -423,7 +423,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member that is added to Cloud Firewall.
+             * The UID of the member.
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;
@@ -439,7 +439,12 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * NewResourceTag.
+             * The time when the asset was added. Valid values:
+             * <p>
+             * 
+             * *   **discovered in 1 hour**: within one hour.
+             * *   **discovered in 1 day**: within one day.
+             * *   **discovered in 7 days**: within seven days.
              */
             public Builder newResourceTag(String newResourceTag) {
                 this.newResourceTag = newResourceTag;
@@ -462,10 +467,10 @@ public class DescribeAssetListResponseBody extends TeaModel {
              * The status of the firewall. Valid values:
              * <p>
              * 
-             * *   **open**: The firewall is enabled.
-             * *   **opening**: The firewall is being enabled.
-             * *   **closed**: The firewall is disabled.
-             * *   **closing**: The firewall is being disabled.
+             * *   **open**: enabled.
+             * *   **opening**: being enabled.
+             * *   **closed**: disabled.
+             * *   **closing**: being disabled.
              */
             public Builder protectStatus(String protectStatus) {
                 this.protectStatus = protectStatus;
@@ -484,8 +489,8 @@ public class DescribeAssetListResponseBody extends TeaModel {
              * Indicates whether the firewall is supported in the region in which the asset resides. Valid values:
              * <p>
              * 
-             * *   **enable**: supported
-             * *   **disable**: unsupported
+             * *   **enable**: yes
+             * *   **disable**: no
              */
             public Builder regionStatus(String regionStatus) {
                 this.regionStatus = regionStatus;
@@ -506,15 +511,15 @@ public class DescribeAssetListResponseBody extends TeaModel {
              * 
              * *   **BastionHostEgressIP**: the egress IP address of a bastion host
              * *   **BastionHostIngressIP**: the ingress IP address of a bastion host
-             * *   **EcsEIP**: the EIP of an ECS instance
+             * *   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
              * *   **EcsPublicIP**: the public IP address of an ECS instance
              * *   **EIP**: the EIP
-             * *   **EniEIP**: the EIP of an ENI
+             * *   **EniEIP**: the EIP of an elastic network interface (ENI)
              * *   **NatEIP**: the EIP of a NAT gateway
-             * *   **SlbEIP**: the EIP of an SLB instance
+             * *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
              * *   **SlbPublicIP**: the public IP address of an SLB instance
              * *   **NatPublicIP**: the public IP address of a NAT gateway
-             * *   **HAVIP**: the HAVIP
+             * *   **HAVIP**: the high-availability virtual IP address (HAVIP)
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -529,7 +534,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
              * *   **middle**: medium
              * *   **hight**: high
              * 
-             * > The value of this parameter is returned only when the UserType parameter is set to free.
+             * >  The value of this parameter is returned only when the UserType parameter is set to free.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -540,8 +545,8 @@ public class DescribeAssetListResponseBody extends TeaModel {
              * The status of the security group policy. Valid values:
              * <p>
              * 
-             * *   **pass**: delivered
-             * *   **block**: undelivered
+             * *   **pass**: applied
+             * *   **block**: not applied
              * *   **unsupport**: unsupported
              */
             public Builder sgStatus(String sgStatus) {
@@ -550,7 +555,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status of the security group policy was last checked. The value is a UNIX timestamp. Unit: seconds.
+             * The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder sgStatusTime(Long sgStatusTime) {
                 this.sgStatusTime = sgStatusTime;
@@ -558,11 +563,11 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of traffic redirection for the asset. Valid values:
+             * Indicates whether traffic redirection is supported for the asset. Valid values:
              * <p>
              * 
-             * *   **enable**: Traffic redirection is enabled.
-             * *   **disable**: Traffic redirection is disabled.
+             * *   **enable**: yes
+             * *   **disable**: no
              */
             public Builder syncStatus(String syncStatus) {
                 this.syncStatus = syncStatus;

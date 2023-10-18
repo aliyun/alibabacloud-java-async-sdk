@@ -299,7 +299,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallSubnetCidr.
+         * The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.
          */
         public Builder firewallSubnetCidr(String firewallSubnetCidr) {
             this.firewallSubnetCidr = firewallSubnetCidr;
@@ -326,7 +326,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirewallVpcCidr.
+         * The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.
          */
         public Builder firewallVpcCidr(String firewallVpcCidr) {
             this.firewallVpcCidr = firewallVpcCidr;
@@ -362,7 +362,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * TrAttachmentMasterCidr.
+         * The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
          */
         public Builder trAttachmentMasterCidr(String trAttachmentMasterCidr) {
             this.trAttachmentMasterCidr = trAttachmentMasterCidr;
@@ -370,7 +370,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * TrAttachmentSlaveCidr.
+         * The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
          */
         public Builder trAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
             this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;

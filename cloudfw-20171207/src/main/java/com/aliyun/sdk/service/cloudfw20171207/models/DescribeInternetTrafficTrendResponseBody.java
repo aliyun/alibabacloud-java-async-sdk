@@ -359,6 +359,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         @NameInMap("Time")
         private Integer time;
 
+        @NameInMap("TotalBps")
+        private Long totalBps;
+
         private DataList(Builder builder) {
             this.inBps = builder.inBps;
             this.inBytes = builder.inBytes;
@@ -369,6 +372,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             this.outPps = builder.outPps;
             this.sessionCount = builder.sessionCount;
             this.time = builder.time;
+            this.totalBps = builder.totalBps;
         }
 
         public static Builder builder() {
@@ -442,6 +446,13 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             return this.time;
         }
 
+        /**
+         * @return totalBps
+         */
+        public Long getTotalBps() {
+            return this.totalBps;
+        }
+
         public static final class Builder {
             private Long inBps; 
             private Long inBytes; 
@@ -452,6 +463,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             private Long outPps; 
             private Long sessionCount; 
             private Integer time; 
+            private Long totalBps; 
 
             /**
              * InBps.
@@ -522,6 +534,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
              */
             public Builder time(Integer time) {
                 this.time = time;
+                return this;
+            }
+
+            /**
+             * TotalBps.
+             */
+            public Builder totalBps(Long totalBps) {
+                this.totalBps = totalBps;
                 return this;
             }
 

@@ -58,6 +58,10 @@ public class AddControlPolicyRequest extends Request {
     private String direction;
 
     @Query
+    @NameInMap("EndTime")
+    private Long endTime;
+
+    @Query
     @NameInMap("IpVersion")
     private String ipVersion;
 
@@ -80,6 +84,22 @@ public class AddControlPolicyRequest extends Request {
     private String release;
 
     @Query
+    @NameInMap("RepeatDays")
+    private java.util.List < Long > repeatDays;
+
+    @Query
+    @NameInMap("RepeatEndTime")
+    private String repeatEndTime;
+
+    @Query
+    @NameInMap("RepeatStartTime")
+    private String repeatStartTime;
+
+    @Query
+    @NameInMap("RepeatType")
+    private String repeatType;
+
+    @Query
     @NameInMap("Source")
     @Validation(required = true)
     private String source;
@@ -94,6 +114,10 @@ public class AddControlPolicyRequest extends Request {
     @Validation(required = true)
     private String sourceType;
 
+    @Query
+    @NameInMap("StartTime")
+    private Long startTime;
+
     private AddControlPolicyRequest(Builder builder) {
         super(builder);
         this.aclAction = builder.aclAction;
@@ -106,14 +130,20 @@ public class AddControlPolicyRequest extends Request {
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
         this.direction = builder.direction;
+        this.endTime = builder.endTime;
         this.ipVersion = builder.ipVersion;
         this.lang = builder.lang;
         this.newOrder = builder.newOrder;
         this.proto = builder.proto;
         this.release = builder.release;
+        this.repeatDays = builder.repeatDays;
+        this.repeatEndTime = builder.repeatEndTime;
+        this.repeatStartTime = builder.repeatStartTime;
+        this.repeatType = builder.repeatType;
         this.source = builder.source;
         this.sourceIp = builder.sourceIp;
         this.sourceType = builder.sourceType;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -200,6 +230,13 @@ public class AddControlPolicyRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return ipVersion
      */
     public String getIpVersion() {
@@ -235,6 +272,34 @@ public class AddControlPolicyRequest extends Request {
     }
 
     /**
+     * @return repeatDays
+     */
+    public java.util.List < Long > getRepeatDays() {
+        return this.repeatDays;
+    }
+
+    /**
+     * @return repeatEndTime
+     */
+    public String getRepeatEndTime() {
+        return this.repeatEndTime;
+    }
+
+    /**
+     * @return repeatStartTime
+     */
+    public String getRepeatStartTime() {
+        return this.repeatStartTime;
+    }
+
+    /**
+     * @return repeatType
+     */
+    public String getRepeatType() {
+        return this.repeatType;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -255,6 +320,13 @@ public class AddControlPolicyRequest extends Request {
         return this.sourceType;
     }
 
+    /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<AddControlPolicyRequest, Builder> {
         private String aclAction; 
         private String applicationName; 
@@ -266,14 +338,20 @@ public class AddControlPolicyRequest extends Request {
         private String destination; 
         private String destinationType; 
         private String direction; 
+        private Long endTime; 
         private String ipVersion; 
         private String lang; 
         private String newOrder; 
         private String proto; 
         private String release; 
+        private java.util.List < Long > repeatDays; 
+        private String repeatEndTime; 
+        private String repeatStartTime; 
+        private String repeatType; 
         private String source; 
         private String sourceIp; 
         private String sourceType; 
+        private Long startTime; 
 
         private Builder() {
             super();
@@ -291,18 +369,29 @@ public class AddControlPolicyRequest extends Request {
             this.destination = request.destination;
             this.destinationType = request.destinationType;
             this.direction = request.direction;
+            this.endTime = request.endTime;
             this.ipVersion = request.ipVersion;
             this.lang = request.lang;
             this.newOrder = request.newOrder;
             this.proto = request.proto;
             this.release = request.release;
+            this.repeatDays = request.repeatDays;
+            this.repeatEndTime = request.repeatEndTime;
+            this.repeatStartTime = request.repeatStartTime;
+            this.repeatType = request.repeatType;
             this.source = request.source;
             this.sourceIp = request.sourceIp;
             this.sourceType = request.sourceType;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * AclAction.
+         * The action that Cloud Firewall performs on the traffic. Valid values:
+         * <p>
+         * 
+         * *   **accept**: allows the traffic.
+         * *   **drop**: denies the traffic.
+         * *   **log**: monitors the traffic.
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -311,7 +400,27 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationName.
+         * The application type supported by the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **FTP**
+         * *   **HTTP**
+         * *   **HTTPS**
+         * *   **Memcache**
+         * *   **MongoDB**
+         * *   **MQTT**
+         * *   **MySQL**
+         * *   **RDP**
+         * *   **Redis**
+         * *   **SMTP**
+         * *   **SMTPS**
+         * *   **SSH**
+         * *   **SSL_No_Cert**
+         * *   **SSL**
+         * *   **VNC**
+         * *   **ANY**
+         * 
+         * > The value of this parameter is based on the value of Proto. If Proto is set to TCP, you can set ApplicationName to any valid value. If Proto is set to UDP, ICMP, or ANY, you can set ApplicationName only to ANY. You must specify at least one of the ApplicationNameList and ApplicationName parameters.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -320,7 +429,7 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationNameList.
+         * The application types supported by the access control policy.
          */
         public Builder applicationNameList(java.util.List < String > applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
@@ -329,7 +438,7 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the access control policy.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -338,7 +447,18 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPort.
+         * The destination port in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   If Proto is set to ICMP, DestPort is automatically left empty.
+         * 
+         * > If Proto is set to ICMP, access control does not take effect on the destination port.
+         * 
+         * *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.
+         * 
+         * > If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.
+         * 
+         * *   If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.
          */
         public Builder destPort(String destPort) {
             this.putQueryParameter("DestPort", destPort);
@@ -347,7 +467,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPortGroup.
+         * The name of the destination port address book in the access control policy.
+         * <p>
+         * 
+         * > If DestPortType is set to group, you must specify the name of the destination port address book.
          */
         public Builder destPortGroup(String destPortGroup) {
             this.putQueryParameter("DestPortGroup", destPortGroup);
@@ -356,7 +479,13 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * DestPortType.
+         * The type of the destination port in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **port**: port
+         * *   **group**: port address book
          */
         public Builder destPortType(String destPortType) {
             this.putQueryParameter("DestPortType", destPortType);
@@ -365,7 +494,26 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Destination.
+         * The destination address in the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   If DestinationType is set to net, the value of this parameter is a CIDR block.
+         * 
+         *     Example: 1.2.XX.XX/24
+         * 
+         * *   If DestinationType is set to group, the value of this parameter is an address book name.
+         * 
+         *     Example: db_group
+         * 
+         * *   If DestinationType is set to domain, the value of this parameter is a domain name.
+         * 
+         *     Example: \*.aliyuncs.com
+         * 
+         * *   If DestinationType is set to location, the value of this parameter is a location.
+         * 
+         *     Example: \["BJ11", "ZB"]
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -374,7 +522,13 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * The type of the destination address in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **net**: CIDR block
+         * *   **group**: address book
+         * *   **domain**: domain name
+         * *   **location**: location
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -383,7 +537,11 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the traffic to which the access control policy applies. Valid values:
+         * <p>
+         * 
+         * *   **in**: inbound traffic
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -392,7 +550,22 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The IP version supported by the access control policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **4**: IPv4
+         * *   **6**: IPv6
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -401,7 +574,11 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -410,7 +587,7 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * NewOrder.
+         * The priority of the access control policy. The priority value starts from 1. A smaller priority value indicates a higher priority.
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -419,7 +596,13 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Proto.
+         * The protocol type supported by the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **ANY**
+         * *   **TCP**
+         * *   **UDP**
+         * *   **ICMP**
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -428,7 +611,11 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Release.
+         * Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the access control policy.
+         * *   **false**: disables the access control policy.
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -437,7 +624,56 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * Source.
+         * RepeatDays.
+         */
+        public Builder repeatDays(java.util.List < Long > repeatDays) {
+            this.putQueryParameter("RepeatDays", repeatDays);
+            this.repeatDays = repeatDays;
+            return this;
+        }
+
+        /**
+         * RepeatEndTime.
+         */
+        public Builder repeatEndTime(String repeatEndTime) {
+            this.putQueryParameter("RepeatEndTime", repeatEndTime);
+            this.repeatEndTime = repeatEndTime;
+            return this;
+        }
+
+        /**
+         * RepeatStartTime.
+         */
+        public Builder repeatStartTime(String repeatStartTime) {
+            this.putQueryParameter("RepeatStartTime", repeatStartTime);
+            this.repeatStartTime = repeatStartTime;
+            return this;
+        }
+
+        /**
+         * RepeatType.
+         */
+        public Builder repeatType(String repeatType) {
+            this.putQueryParameter("RepeatType", repeatType);
+            this.repeatType = repeatType;
+            return this;
+        }
+
+        /**
+         * The source address in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   If SourceType is set to net, the value of this parameter is a CIDR block.
+         * 
+         *     Example: 1.1.XX.XX/24
+         * 
+         * *   If SourceType is set to group, the value of this parameter is an address book name.
+         * 
+         *     Example: db_group
+         * 
+         * *   If SourceType is set to location, the value of this parameter is a location.
+         * 
+         *     Example: \["BJ11", "ZB"]
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -446,7 +682,7 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -455,11 +691,25 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the source address in the access control policy. Valid values:
+         * <p>
+         * 
+         * *   **net**: CIDR block
+         * *   **group**: address book
+         * *   **location**: location
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
