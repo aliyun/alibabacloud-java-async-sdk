@@ -38,7 +38,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         private java.util.List < Jobs> jobs; 
 
         /**
-         * The list of the jobs.
+         * The list of jobs.
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -102,7 +102,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             private String jobName; 
 
             /**
-             * The ID of the ACK cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

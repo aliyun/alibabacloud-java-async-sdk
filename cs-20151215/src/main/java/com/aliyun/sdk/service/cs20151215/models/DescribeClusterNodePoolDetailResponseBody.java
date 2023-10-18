@@ -158,7 +158,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         private TeeConfig teeConfig; 
 
         /**
-         * The auto scaling configurations of the queried node pool.
+         * The auto scaling configuration of the node pool.
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.autoScaling = autoScaling;
@@ -166,7 +166,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * interconnect_config.
+         * The network configuration of the edge node pool. This parameter takes effect only for edge node pools.
          */
         public Builder interconnectConfig(InterconnectConfig interconnectConfig) {
             this.interconnectConfig = interconnectConfig;
@@ -182,7 +182,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the cluster where the node pool is deployed.
+         * The configuration of the cluster where the node pool is deployed.
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             this.kubernetesConfig = kubernetesConfig;
@@ -190,7 +190,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations about the managed node pool feature.
+         * The configuration of the managed node pool feature.
          */
         public Builder management(Management management) {
             this.management = management;
@@ -198,7 +198,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of nodes that are supported by the edge node pool. The value of this parameter must be equal to or greater than 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools of the ess type or default edge node pools.
+         * The maximum number of nodes that are supported by the edge node pool. The value of this parameter must be equal to or greater than 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools whose types are ess or default edge node pools.
          */
         public Builder maxNodes(Long maxNodes) {
             this.maxNodes = maxNodes;
@@ -206,7 +206,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * node_config.
+         * 节点配置
          */
         public Builder nodeConfig(NodeConfig nodeConfig) {
             this.nodeConfig = nodeConfig;
@@ -214,7 +214,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the node pool.
+         * The configuration of the node pool.
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
             this.nodepoolInfo = nodepoolInfo;
@@ -222,7 +222,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the scaling group.
+         * The configuration of the scaling group.
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.scalingGroup = scalingGroup;
@@ -230,7 +230,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * The status details about the node pool.
          */
         public Builder status(Status status) {
             this.status = status;
@@ -238,7 +238,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of confidential computing.
+         * The configuration of confidential computing.
          */
         public Builder teeConfig(TeeConfig teeConfig) {
             this.teeConfig = teeConfig;
@@ -350,7 +350,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The peak bandwidth of the elastic IP address (EIP) that is associated with the node pool.
+             * The maximum bandwidth of the elastic IP address (EIP).
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -358,11 +358,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the EIP. Valid values:
+             * The metering method of the EIP. Valid values:
              * <p>
              * 
-             * *   `PayByBandwidth`: pay-by-bandwidth
-             * *   `PayByTraffic`: pay-by-data-transfer
+             * *   `PayByBandwidth`: pay-by-bandwidth.
+             * *   `PayByTraffic`: pay-by-data-transfer.
              */
             public Builder eipInternetChargeType(String eipInternetChargeType) {
                 this.eipInternetChargeType = eipInternetChargeType;
@@ -373,8 +373,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * Indicates whether auto scaling is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Auto scaling is enabled.
-             * *   `false`: Auto scaling is disabled. If this parameter is set to false, other parameters in the `auto_scaling` section do not take effect.
+             * *   `true`: auto scaling is enabled.
+             * *   `false`: auto scaling is disabled. If this parameter is set to false, other parameters in the `auto_scaling` section do not take effect.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -394,7 +394,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of Elastic Compute Service (ECS) instances supported by the node pool.
+             * The maximum number of Elastic Compute Service (ECS) instances that can be created in the node pool.
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -413,10 +413,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The instance types that can be used for the auto scaling of the node pool. Valid values:
              * <p>
              * 
-             * *   `cpu`: regular instance
-             * *   `gpu`: GPU-accelerated instance
-             * *   `gpushare`: shared GPU-accelerated instance
-             * *   `spot`: preemptible instance
+             * *   `cpu`: regular instance.
+             * *   `gpu`: GPU-accelerated instance.
+             * *   `gpushare`: shared GPU-accelerated instance.
+             * *   `spot`: preemptible instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -505,7 +505,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String improvedPeriod; 
 
             /**
-             * bandwidth.
+             * The bandwidth of the enhanced edge node pool. Unit: Mbit/s.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -513,7 +513,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ccn_id.
+             * The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.
              */
             public Builder ccnId(String ccnId) {
                 this.ccnId = ccnId;
@@ -521,7 +521,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ccn_region_id.
+             * The region to which the CCN instance that is associated with the enhanced edge node pool belongs.
              */
             public Builder ccnRegionId(String ccnRegionId) {
                 this.ccnRegionId = ccnRegionId;
@@ -529,7 +529,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cen_id.
+             * The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -537,7 +537,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * improved_period.
+             * The subscription duration of the enhanced edge node pool. The duration is measured in months.
              */
             public Builder improvedPeriod(String improvedPeriod) {
                 this.improvedPeriod = improvedPeriod;
@@ -728,7 +728,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The taints of the nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, toleration rules allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+             * The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -736,7 +736,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user-defined data of the node pool. For more information, see [Generate user-defined data](~~49121~~).
+             * The user data of the node pool. For more information, see [Generate user data](~~49121~~).
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -745,6 +745,149 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
             public KubernetesConfig build() {
                 return new KubernetesConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoRepairPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        private Boolean restartNode;
+
+        private AutoRepairPolicy(Builder builder) {
+            this.restartNode = builder.restartNode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoRepairPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return restartNode
+         */
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        public static final class Builder {
+            private Boolean restartNode; 
+
+            /**
+             * restart_node.
+             */
+            public Builder restartNode(Boolean restartNode) {
+                this.restartNode = restartNode;
+                return this;
+            }
+
+            public AutoRepairPolicy build() {
+                return new AutoRepairPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoUpgradePolicy extends TeaModel {
+        @NameInMap("auto_upgrade_kubelet")
+        private Boolean autoUpgradeKubelet;
+
+        private AutoUpgradePolicy(Builder builder) {
+            this.autoUpgradeKubelet = builder.autoUpgradeKubelet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoUpgradePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoUpgradeKubelet
+         */
+        public Boolean getAutoUpgradeKubelet() {
+            return this.autoUpgradeKubelet;
+        }
+
+        public static final class Builder {
+            private Boolean autoUpgradeKubelet; 
+
+            /**
+             * auto_upgrade_kubelet.
+             */
+            public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
+                this.autoUpgradeKubelet = autoUpgradeKubelet;
+                return this;
+            }
+
+            public AutoUpgradePolicy build() {
+                return new AutoUpgradePolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoVulFixPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        private Boolean restartNode;
+
+        @NameInMap("vul_level")
+        private String vulLevel;
+
+        private AutoVulFixPolicy(Builder builder) {
+            this.restartNode = builder.restartNode;
+            this.vulLevel = builder.vulLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoVulFixPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return restartNode
+         */
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        /**
+         * @return vulLevel
+         */
+        public String getVulLevel() {
+            return this.vulLevel;
+        }
+
+        public static final class Builder {
+            private Boolean restartNode; 
+            private String vulLevel; 
+
+            /**
+             * restart_node.
+             */
+            public Builder restartNode(Boolean restartNode) {
+                this.restartNode = restartNode;
+                return this;
+            }
+
+            /**
+             * vul_level.
+             */
+            public Builder vulLevel(String vulLevel) {
+                this.vulLevel = vulLevel;
+                return this;
+            }
+
+            public AutoVulFixPolicy build() {
+                return new AutoVulFixPolicy(this);
             } 
 
         } 
@@ -813,11 +956,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private Long surgePercentage; 
 
             /**
-             * Indicates whether auto upgrade is enabled. Valid values:
+             * Indicates whether auto update is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Auto upgrade is enabled.
-             * *   `false`: Auto upgrade is disabled.
+             * *   `true`: Auto update is enabled.
+             * *   `false`: Auto update is disabled.
              */
             public Builder autoUpgrade(Boolean autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -828,7 +971,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.
              * <p>
              * 
-             * Default value: 1
+             * Default value: 1.
              */
             public Builder maxUnavailable(Long maxUnavailable) {
                 this.maxUnavailable = maxUnavailable;
@@ -836,7 +979,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that are temporarily added to the node pool during an auto upgrade.
+             * The number of additional nodes.
              */
             public Builder surge(Long surge) {
                 this.surge = surge;
@@ -844,7 +987,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of temporary nodes to the nodes in the node pool. You must set this parameter or `surge`.
+             * The percentage of additional nodes to the nodes in the node pool. You must set this parameter or `surge`.
              */
             public Builder surgePercentage(Long surgePercentage) {
                 this.surgePercentage = surgePercentage;
@@ -862,6 +1005,21 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_repair")
         private Boolean autoRepair;
 
+        @NameInMap("auto_repair_policy")
+        private AutoRepairPolicy autoRepairPolicy;
+
+        @NameInMap("auto_upgrade")
+        private Boolean autoUpgrade;
+
+        @NameInMap("auto_upgrade_policy")
+        private AutoUpgradePolicy autoUpgradePolicy;
+
+        @NameInMap("auto_vul_fix")
+        private Boolean autoVulFix;
+
+        @NameInMap("auto_vul_fix_policy")
+        private AutoVulFixPolicy autoVulFixPolicy;
+
         @NameInMap("enable")
         private Boolean enable;
 
@@ -870,6 +1028,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         private Management(Builder builder) {
             this.autoRepair = builder.autoRepair;
+            this.autoRepairPolicy = builder.autoRepairPolicy;
+            this.autoUpgrade = builder.autoUpgrade;
+            this.autoUpgradePolicy = builder.autoUpgradePolicy;
+            this.autoVulFix = builder.autoVulFix;
+            this.autoVulFixPolicy = builder.autoVulFixPolicy;
             this.enable = builder.enable;
             this.upgradeConfig = builder.upgradeConfig;
         }
@@ -890,6 +1053,41 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return autoRepairPolicy
+         */
+        public AutoRepairPolicy getAutoRepairPolicy() {
+            return this.autoRepairPolicy;
+        }
+
+        /**
+         * @return autoUpgrade
+         */
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        /**
+         * @return autoUpgradePolicy
+         */
+        public AutoUpgradePolicy getAutoUpgradePolicy() {
+            return this.autoUpgradePolicy;
+        }
+
+        /**
+         * @return autoVulFix
+         */
+        public Boolean getAutoVulFix() {
+            return this.autoVulFix;
+        }
+
+        /**
+         * @return autoVulFixPolicy
+         */
+        public AutoVulFixPolicy getAutoVulFixPolicy() {
+            return this.autoVulFixPolicy;
+        }
+
+        /**
          * @return enable
          */
         public Boolean getEnable() {
@@ -905,11 +1103,16 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoRepair; 
+            private AutoRepairPolicy autoRepairPolicy; 
+            private Boolean autoUpgrade; 
+            private AutoUpgradePolicy autoUpgradePolicy; 
+            private Boolean autoVulFix; 
+            private AutoVulFixPolicy autoVulFixPolicy; 
             private Boolean enable; 
             private UpgradeConfig upgradeConfig; 
 
             /**
-             * Indicates whether enable auto repair is enabled. This parameter takes effect only when `enable=true` is specified.
+             * Indicates whether auto repair is enabled. This parameter takes effect only when `enable=true` is specified. Valid values:
              * <p>
              * 
              * *   `true`: Auto repair is enabled.
@@ -921,7 +1124,51 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the managed node pool feature is enabled. Valid values:
+             * auto_repair_policy.
+             */
+            public Builder autoRepairPolicy(AutoRepairPolicy autoRepairPolicy) {
+                this.autoRepairPolicy = autoRepairPolicy;
+                return this;
+            }
+
+            /**
+             * Indicates whether auto update is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: Auto update is enabled.
+             * *   `false`: Auto update is disabled.
+             */
+            public Builder autoUpgrade(Boolean autoUpgrade) {
+                this.autoUpgrade = autoUpgrade;
+                return this;
+            }
+
+            /**
+             * auto_upgrade_policy.
+             */
+            public Builder autoUpgradePolicy(AutoUpgradePolicy autoUpgradePolicy) {
+                this.autoUpgradePolicy = autoUpgradePolicy;
+                return this;
+            }
+
+            /**
+             * auto_vul_fix.
+             */
+            public Builder autoVulFix(Boolean autoVulFix) {
+                this.autoVulFix = autoVulFix;
+                return this;
+            }
+
+            /**
+             * auto_vul_fix_policy.
+             */
+            public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
+                this.autoVulFixPolicy = autoVulFixPolicy;
+                return this;
+            }
+
+            /**
+             * Indicates whether the managed node pool feature is enabled. Valid values:
              * <p>
              * 
              * *   `true`: The managed node pool feature is enabled.
@@ -933,7 +1180,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of auto upgrade. The configurations take effect only when `enable=true` is specified.
+             * The configuration of auto update. The configuration takes effect only when `enable=true` is specified.
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -974,7 +1221,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private KubeletConfig kubeletConfiguration; 
 
             /**
-             * kubelet_configuration.
+             * Kubelet参数配置。
              */
             public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
                 this.kubeletConfiguration = kubeletConfiguration;
@@ -1107,12 +1354,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node pool is a default node pool. A Container Service for Kubernetes (ACK) cluster usually has only one default node pool. Valid values:
-             * <p>
-             * 
-             * `true`: The node pool is a default node pool.
-             * 
-             * `false`: The node pool is not a default node pool.
+             * Indicates whether the node pool is a default node pool. A Container Service for Kubernetes (ACK) cluster usually has only one default node pool. Valid values: `true`: The node pool is a default node pool. `false`: The node pool is not a default node pool.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -1131,7 +1373,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node pool.
+             * The node pool ID.
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -1139,7 +1381,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the node pool is deployed.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1147,7 +1389,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the node pool belongs.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1155,7 +1397,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node pool.
+             * The type of node pool.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1224,12 +1466,12 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of private node pool. This parameter specifies the type of the private pool that you want to use to create instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool to start instances. Valid values:
+             * The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:
              * <p>
              * 
-             * *   `Open`: open private pool. The system selects an open private pool to start instances. If no matching open private pools are available, the resources in the public pool are used.
-             * *   `Target`: specific private pool. The system uses the resources of the specified private pool to start instances. If the specified private pool is unavailable, instances cannot be started.
-             * *   `None`: no private pool is used. The resources of private pools are not used to start instances.
+             * *   `Open`: open private pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.
+             * *   `Target`: specific private pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.
+             * *   `None`: no private node pool is used. The resources of private node pools are not used to launch the instances.
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -1812,8 +2054,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The billing method of the nodes in the node pool. Valid values:
              * <p>
              * 
-             * *   `PrePaid`: subscription
-             * *   `PostPaid`: pay-as-you-go
+             * *   `PrePaid`: the subscription billing method.
+             * *   `PostPaid`: the pay-as-you-go billing method.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1821,7 +2063,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance types of the nodes in the node pool.
+             * A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The instance type that is used to create the node varies based on the actual instance stock.
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1873,11 +2115,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * 
              *     **
              * 
-             *     **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.
+             *     **Note**The `COST_OPTIMIZED` setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.
              * 
-             * *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the RebalanceInstances operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~)
+             * *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the RebalanceInstances operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
              * 
-             * Default value: `PRIORITY`
+             * Default value: `PRIORITY`.
              */
             public Builder multiAzPolicy(String multiAzPolicy) {
                 this.multiAzPolicy = multiAzPolicy;
@@ -1915,7 +2157,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The billing cycle of the nodes. This parameter is required if `instance_charge_type` is set to `PrePaid`.
              * <p>
              * 
-             * Valid value: `Month`
+             * Valid value: `Month`.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -1937,7 +2179,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the private node pool.
+             * The configuration of the private node pool.
              */
             public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
                 this.privatePoolOptions = privatePoolOptions;
@@ -1953,7 +2195,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the ApsaraDB RDS instances.
+             * After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.
              */
             public Builder rdsInstances(java.util.List < String > rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -1972,8 +2214,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The scaling mode of the scaling group. Valid values:
              * <p>
              * 
-             * *   `release`: the standard mode. ECS instances are created and released based on the resource usage.
-             * *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances attached with local disks.
+             * *   `release`: the standard mode. ECS instances are created and released based on resource usage.
+             * *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.
              */
             public Builder scalingPolicy(String scalingPolicy) {
                 this.scalingPolicy = scalingPolicy;
@@ -2025,7 +2267,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding policy of preemptible instances. Valid values:
+             * The type of preemptible instance. Valid values:
              * <p>
              * 
              * *   NoSpot: a non-preemptible instance.
@@ -2043,8 +2285,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The type of system disk. Valid values:
              * <p>
              * 
-             * *   `cloud_efficiency`: ultra disk
-             * *   `cloud_ssd`: standard SSD
+             * *   `cloud_efficiency`: ultra disk.
+             * *   `cloud_ssd`: standard SSD.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -2063,7 +2305,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              * The system disk size of a node. Unit: GiB.
              * <p>
              * 
-             * Valid values: 20 to 500
+             * Valid values: 20 to 500.
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -2082,7 +2324,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of vSwitches.
+             * The IDs of vSwitches. You can specify 1 to 20 vSwitches.
+             * <p>
+             * 
+             * > We recommend that you select vSwitches in different zones to ensure high availability.
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -2207,7 +2452,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private Long totalNodes; 
 
             /**
-             * failed_nodes.
+             * The number of failed nodes.
              */
             public Builder failedNodes(Long failedNodes) {
                 this.failedNodes = failedNodes;
@@ -2215,7 +2460,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * healthy_nodes.
+             * The number of healthy nodes.
              */
             public Builder healthyNodes(Long healthyNodes) {
                 this.healthyNodes = healthyNodes;
@@ -2223,7 +2468,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * initial_nodes.
+             * The number of nodes that are being created.
              */
             public Builder initialNodes(Long initialNodes) {
                 this.initialNodes = initialNodes;
@@ -2231,7 +2476,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * offline_nodes.
+             * The number of offline nodes.
              */
             public Builder offlineNodes(Long offlineNodes) {
                 this.offlineNodes = offlineNodes;
@@ -2239,7 +2484,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * removing_nodes.
+             * The number of nodes that are being removed.
              */
             public Builder removingNodes(Long removingNodes) {
                 this.removingNodes = removingNodes;
@@ -2247,7 +2492,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * serving_nodes.
+             * The number of running nodes.
              */
             public Builder servingNodes(Long servingNodes) {
                 this.servingNodes = servingNodes;
@@ -2255,7 +2500,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The status of the node pool. Valid values:
+             * <p>
+             * 
+             * *   `active`: The node pool is active.
+             * *   `scaling`: The node pool is being scaled.
+             * *   `removing`: Nodes are being removed from the node pool.
+             * *   `deleting`: The node pool is being deleted.
+             * *   `updating`: The node pool is being updated.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -2263,7 +2515,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * total_nodes.
+             * The total number of nodes in the node pool.
              */
             public Builder totalNodes(Long totalNodes) {
                 this.totalNodes = totalNodes;

@@ -70,7 +70,7 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,10 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
         }
 
         /**
-         * The ID of the add-on. For example, nginx-ingress-controller, flexvolume, and metrics-server.
+         * The component ID. Example: nginx-ingress-controller, flexvolume, or metrics-server.
+         * <p>
+         * 
+         * You can call the `DescribeAddons` API operation to query the components supported by the cluster.
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("ComponentId", componentId);

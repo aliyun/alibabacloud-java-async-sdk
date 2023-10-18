@@ -55,7 +55,7 @@ public class DescribeClusterNodePoolsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to query.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

@@ -70,7 +70,7 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to query.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         }
 
         /**
-         * NodepoolId.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);

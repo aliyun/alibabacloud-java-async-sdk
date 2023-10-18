@@ -55,7 +55,7 @@ public class DescribeEdgeMachineActiveProcessRequest extends Request {
         } 
 
         /**
-         * edge_machineid.
+         * The ID of the cloud-native box.
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataDisk</p>
  */
 public class DataDisk extends TeaModel {
+    @NameInMap("auto_format")
+    private Boolean autoFormat;
+
     @NameInMap("auto_snapshot_policy_id")
     private String autoSnapshotPolicyId;
 
@@ -24,6 +27,12 @@ public class DataDisk extends TeaModel {
     @NameInMap("encrypted")
     private String encrypted;
 
+    @NameInMap("file_system")
+    private String fileSystem;
+
+    @NameInMap("mount_target")
+    private String mountTarget;
+
     @NameInMap("performance_level")
     private String performanceLevel;
 
@@ -34,10 +43,13 @@ public class DataDisk extends TeaModel {
     private Long size;
 
     private DataDisk(Builder builder) {
+        this.autoFormat = builder.autoFormat;
         this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.encrypted = builder.encrypted;
+        this.fileSystem = builder.fileSystem;
+        this.mountTarget = builder.mountTarget;
         this.performanceLevel = builder.performanceLevel;
         this.provisionedIops = builder.provisionedIops;
         this.size = builder.size;
@@ -49,6 +61,13 @@ public class DataDisk extends TeaModel {
 
     public static DataDisk create() {
         return builder().build();
+    }
+
+    /**
+     * @return autoFormat
+     */
+    public Boolean getAutoFormat() {
+        return this.autoFormat;
     }
 
     /**
@@ -80,6 +99,20 @@ public class DataDisk extends TeaModel {
     }
 
     /**
+     * @return fileSystem
+     */
+    public String getFileSystem() {
+        return this.fileSystem;
+    }
+
+    /**
+     * @return mountTarget
+     */
+    public String getMountTarget() {
+        return this.mountTarget;
+    }
+
+    /**
      * @return performanceLevel
      */
     public String getPerformanceLevel() {
@@ -101,13 +134,24 @@ public class DataDisk extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean autoFormat; 
         private String autoSnapshotPolicyId; 
         private Boolean burstingEnabled; 
         private String category; 
         private String encrypted; 
+        private String fileSystem; 
+        private String mountTarget; 
         private String performanceLevel; 
         private Long provisionedIops; 
         private Long size; 
+
+        /**
+         * auto_format.
+         */
+        public Builder autoFormat(Boolean autoFormat) {
+            this.autoFormat = autoFormat;
+            return this;
+        }
 
         /**
          * auto_snapshot_policy_id.
@@ -138,6 +182,22 @@ public class DataDisk extends TeaModel {
          */
         public Builder encrypted(String encrypted) {
             this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
+         * file_system.
+         */
+        public Builder fileSystem(String fileSystem) {
+            this.fileSystem = fileSystem;
+            return this;
+        }
+
+        /**
+         * mount_target.
+         */
+        public Builder mountTarget(String mountTarget) {
+            this.mountTarget = mountTarget;
             return this;
         }
 

@@ -55,10 +55,10 @@ public class StopAlertRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to manage.
+         * The cluster ID.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain cluster IDs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

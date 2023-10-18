@@ -83,7 +83,7 @@ public class DescribeExternalAgentRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +92,7 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * AgentMode.
+         * The agent mode.
          */
         public Builder agentMode(String agentMode) {
             this.putQueryParameter("AgentMode", agentMode);
@@ -101,7 +101,13 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * Specifies whether to obtain the credentials that are used to access the cluster over the internal network.
+         * <p>
+         * 
+         * *   `true`: obtains the credentials that are used to access the cluster over the internal network.
+         * *   `false`: obtains the credentials that are used to access the cluster over the Internet.
+         * 
+         * Default value: `false`.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

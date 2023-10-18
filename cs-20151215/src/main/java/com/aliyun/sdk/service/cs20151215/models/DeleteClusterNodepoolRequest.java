@@ -84,7 +84,7 @@ public class DeleteClusterNodepoolRequest extends Request {
         } 
 
         /**
-         * c61da77e8bfbc4c4c999af2b51b65\*\*\*\*
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * np30db56bcac7843dca90b999c8928\*\*\*\*
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -102,7 +102,7 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * false
+         * Specifies whether to forcefully delete the node pool.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

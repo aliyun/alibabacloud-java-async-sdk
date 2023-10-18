@@ -126,6 +126,87 @@ public class DescribeClusterResourcesResponse extends Response {
 
     } 
 
+    public static class Dependencies extends TeaModel {
+        @NameInMap("cluster_id")
+        private String clusterId;
+
+        @NameInMap("resource_type")
+        private String resourceType;
+
+        @NameInMap("instance_id")
+        private String instanceId;
+
+        private Dependencies(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.resourceType = builder.resourceType;
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dependencies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String resourceType; 
+            private String instanceId; 
+
+            /**
+             * 依赖资源的集群ID。
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * 依赖资源类型。
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * 依赖资源实例ID。
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public Dependencies build() {
+                return new Dependencies(this);
+            } 
+
+        } 
+
+    }
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         @NameInMap("cluster_id")
         private String clusterId;
@@ -148,6 +229,9 @@ public class DescribeClusterResourcesResponse extends Response {
         @NameInMap("auto_create")
         private Long autoCreate;
 
+        @NameInMap("dependencies")
+        private Dependencies dependencies;
+
         private DescribeClusterResourcesResponseBody(Builder builder) {
             this.clusterId = builder.clusterId;
             this.created = builder.created;
@@ -156,6 +240,7 @@ public class DescribeClusterResourcesResponse extends Response {
             this.resourceType = builder.resourceType;
             this.state = builder.state;
             this.autoCreate = builder.autoCreate;
+            this.dependencies = builder.dependencies;
         }
 
         public static Builder builder() {
@@ -215,6 +300,13 @@ public class DescribeClusterResourcesResponse extends Response {
             return this.autoCreate;
         }
 
+        /**
+         * @return dependencies
+         */
+        public Dependencies getDependencies() {
+            return this.dependencies;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private String created; 
@@ -223,6 +315,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private String resourceType; 
             private String state; 
             private Long autoCreate; 
+            private Dependencies dependencies; 
 
             /**
              * The ID of the cluster.
@@ -291,6 +384,14 @@ public class DescribeClusterResourcesResponse extends Response {
              */
             public Builder autoCreate(Long autoCreate) {
                 this.autoCreate = autoCreate;
+                return this;
+            }
+
+            /**
+             * dependencies.
+             */
+            public Builder dependencies(Dependencies dependencies) {
+                this.dependencies = dependencies;
                 return this;
             }
 

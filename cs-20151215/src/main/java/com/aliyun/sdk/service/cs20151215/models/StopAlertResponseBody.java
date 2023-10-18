@@ -58,7 +58,11 @@ public class StopAlertResponseBody extends TeaModel {
         }
 
         /**
-         * A value of True indicates that the call succeeds. A value of False indicates that the call failed.
+         * The operation result. Valid values:
+         * <p>
+         * 
+         * *   True: The operation is successful.
+         * *   False: The operation failed.
          */
         public Builder status(Boolean status) {
             this.status = status;

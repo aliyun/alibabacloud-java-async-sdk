@@ -1339,6 +1339,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * ****
+      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+      * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+      * *   Nodes remain in the Unschedulable state when they are being removed.
+      * *   You can remove only worker nodes. You cannot remove master nodes.
       *
      */
     @Override

@@ -456,7 +456,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.
+         * external_loadbalancer_id.
          */
         public Builder externalLoadbalancerId(String externalLoadbalancerId) {
             this.externalLoadbalancerId = externalLoadbalancerId;
@@ -507,15 +507,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The network mode of the cluster. Valid values:
-         * <p>
-         * 
-         * *   `classic`: classic network
-         * *   `vpc`: virtual private cloud (VPC)
-         * *   `overlay`: overlay network
-         * *   `calico`: network powered by Calico
-         * 
-         * Default value: `vpc`.
+         * network_mode.
          */
         public Builder networkMode(String networkMode) {
             this.networkMode = networkMode;
@@ -523,7 +515,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The Kubernetes version to which the cluster can be updated.
+         * next_version.
          */
         public Builder nextVersion(String nextVersion) {
             this.nextVersion = nextVersion;
@@ -539,11 +531,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Alibaba Cloud DNS PrivateZone is enabled.
-         * <p>
-         * 
-         * *   `true`: Alibaba Cloud DNS PrivateZone is enabled.
-         * *   `false`: Alibaba Cloud DNS PrivateZone is disabled.
+         * private_zone.
          */
         public Builder privateZone(Boolean privateZone) {
             this.privateZone = privateZone;
@@ -674,7 +662,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the zone where the cluster is deployed.
+         * zone_id.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

@@ -38,7 +38,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
         private java.util.List < Models> models; 
 
         /**
-         * The list of details about the models of cloud-native boxes.
+         * The cloud-native box models.
          */
         public Builder models(java.util.List < Models> models) {
             this.models = models;
@@ -162,7 +162,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             private String modelId; 
 
             /**
-             * The number of CPU cores.
+             * The number of vCores.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -186,7 +186,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The description of the cloud-native box.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -194,7 +194,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Docker runtime is managed.
+             * Indicates whether the cloud-native box model manages the Docker runtime.
              */
             public Builder manageRuntime(Integer manageRuntime) {
                 this.manageRuntime = manageRuntime;
@@ -202,7 +202,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GB.
+             * The memory. Unit: GB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;

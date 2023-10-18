@@ -98,7 +98,7 @@ public class RemoveClusterNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * drain_node.
+         * Specifies whether to evict all pods from the nodes that you want to remove.
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -116,7 +116,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * nodes.
+         * The list of nodes to be removed.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -125,7 +125,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * release_node.
+         * Specifies whether to release the Elastic Compute Service (ECS) instances when they are removed from the cluster.
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putBodyParameter("release_node", releaseNode);

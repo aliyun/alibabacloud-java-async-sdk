@@ -69,7 +69,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * addons.
+         * The list of components that you want to uninstall. The list is an array.
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.putBodyParameter("addons", addons);
@@ -132,7 +132,7 @@ public class UnInstallClusterAddonsRequest extends Request {
             private String name; 
 
             /**
-             * cleanup_cloud_resources.
+             * Whether to clean up cloud resources.
              */
             public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
                 this.cleanupCloudResources = cleanupCloudResources;
@@ -140,7 +140,7 @@ public class UnInstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * name.
+             * The component name.
              */
             public Builder name(String name) {
                 this.name = name;

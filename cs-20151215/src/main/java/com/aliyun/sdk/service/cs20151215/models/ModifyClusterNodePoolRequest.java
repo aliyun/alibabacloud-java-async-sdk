@@ -619,6 +619,149 @@ public class ModifyClusterNodePoolRequest extends Request {
         } 
 
     }
+    public static class AutoRepairPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        private Boolean restartNode;
+
+        private AutoRepairPolicy(Builder builder) {
+            this.restartNode = builder.restartNode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoRepairPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return restartNode
+         */
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        public static final class Builder {
+            private Boolean restartNode; 
+
+            /**
+             * restart_node.
+             */
+            public Builder restartNode(Boolean restartNode) {
+                this.restartNode = restartNode;
+                return this;
+            }
+
+            public AutoRepairPolicy build() {
+                return new AutoRepairPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoUpgradePolicy extends TeaModel {
+        @NameInMap("auto_upgrade_kubelet")
+        private Boolean autoUpgradeKubelet;
+
+        private AutoUpgradePolicy(Builder builder) {
+            this.autoUpgradeKubelet = builder.autoUpgradeKubelet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoUpgradePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoUpgradeKubelet
+         */
+        public Boolean getAutoUpgradeKubelet() {
+            return this.autoUpgradeKubelet;
+        }
+
+        public static final class Builder {
+            private Boolean autoUpgradeKubelet; 
+
+            /**
+             * auto_upgrade_kubelet.
+             */
+            public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
+                this.autoUpgradeKubelet = autoUpgradeKubelet;
+                return this;
+            }
+
+            public AutoUpgradePolicy build() {
+                return new AutoUpgradePolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoVulFixPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        private Boolean restartNode;
+
+        @NameInMap("vul_level")
+        private String vulLevel;
+
+        private AutoVulFixPolicy(Builder builder) {
+            this.restartNode = builder.restartNode;
+            this.vulLevel = builder.vulLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoVulFixPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return restartNode
+         */
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        /**
+         * @return vulLevel
+         */
+        public String getVulLevel() {
+            return this.vulLevel;
+        }
+
+        public static final class Builder {
+            private Boolean restartNode; 
+            private String vulLevel; 
+
+            /**
+             * restart_node.
+             */
+            public Builder restartNode(Boolean restartNode) {
+                this.restartNode = restartNode;
+                return this;
+            }
+
+            /**
+             * vul_level.
+             */
+            public Builder vulLevel(String vulLevel) {
+                this.vulLevel = vulLevel;
+                return this;
+            }
+
+            public AutoVulFixPolicy build() {
+                return new AutoVulFixPolicy(this);
+            } 
+
+        } 
+
+    }
     public static class UpgradeConfig extends TeaModel {
         @NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
@@ -738,6 +881,21 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("auto_repair")
         private Boolean autoRepair;
 
+        @NameInMap("auto_repair_policy")
+        private AutoRepairPolicy autoRepairPolicy;
+
+        @NameInMap("auto_upgrade")
+        private Boolean autoUpgrade;
+
+        @NameInMap("auto_upgrade_policy")
+        private AutoUpgradePolicy autoUpgradePolicy;
+
+        @NameInMap("auto_vul_fix")
+        private Boolean autoVulFix;
+
+        @NameInMap("auto_vul_fix_policy")
+        private AutoVulFixPolicy autoVulFixPolicy;
+
         @NameInMap("enable")
         private Boolean enable;
 
@@ -746,6 +904,11 @@ public class ModifyClusterNodePoolRequest extends Request {
 
         private Management(Builder builder) {
             this.autoRepair = builder.autoRepair;
+            this.autoRepairPolicy = builder.autoRepairPolicy;
+            this.autoUpgrade = builder.autoUpgrade;
+            this.autoUpgradePolicy = builder.autoUpgradePolicy;
+            this.autoVulFix = builder.autoVulFix;
+            this.autoVulFixPolicy = builder.autoVulFixPolicy;
             this.enable = builder.enable;
             this.upgradeConfig = builder.upgradeConfig;
         }
@@ -766,6 +929,41 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return autoRepairPolicy
+         */
+        public AutoRepairPolicy getAutoRepairPolicy() {
+            return this.autoRepairPolicy;
+        }
+
+        /**
+         * @return autoUpgrade
+         */
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        /**
+         * @return autoUpgradePolicy
+         */
+        public AutoUpgradePolicy getAutoUpgradePolicy() {
+            return this.autoUpgradePolicy;
+        }
+
+        /**
+         * @return autoVulFix
+         */
+        public Boolean getAutoVulFix() {
+            return this.autoVulFix;
+        }
+
+        /**
+         * @return autoVulFixPolicy
+         */
+        public AutoVulFixPolicy getAutoVulFixPolicy() {
+            return this.autoVulFixPolicy;
+        }
+
+        /**
          * @return enable
          */
         public Boolean getEnable() {
@@ -781,6 +979,11 @@ public class ModifyClusterNodePoolRequest extends Request {
 
         public static final class Builder {
             private Boolean autoRepair; 
+            private AutoRepairPolicy autoRepairPolicy; 
+            private Boolean autoUpgrade; 
+            private AutoUpgradePolicy autoUpgradePolicy; 
+            private Boolean autoVulFix; 
+            private AutoVulFixPolicy autoVulFixPolicy; 
             private Boolean enable; 
             private UpgradeConfig upgradeConfig; 
 
@@ -795,6 +998,52 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder autoRepair(Boolean autoRepair) {
                 this.autoRepair = autoRepair;
+                return this;
+            }
+
+            /**
+             * auto_repair_policy.
+             */
+            public Builder autoRepairPolicy(AutoRepairPolicy autoRepairPolicy) {
+                this.autoRepairPolicy = autoRepairPolicy;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable auto update.
+             * <p>
+             * 
+             * *   true: enables auto update.
+             * *   false: disables auto update.
+             * 
+             * Default value: `true`.
+             */
+            public Builder autoUpgrade(Boolean autoUpgrade) {
+                this.autoUpgrade = autoUpgrade;
+                return this;
+            }
+
+            /**
+             * auto_upgrade_policy.
+             */
+            public Builder autoUpgradePolicy(AutoUpgradePolicy autoUpgradePolicy) {
+                this.autoUpgradePolicy = autoUpgradePolicy;
+                return this;
+            }
+
+            /**
+             * auto_vul_fix.
+             */
+            public Builder autoVulFix(Boolean autoVulFix) {
+                this.autoVulFix = autoVulFix;
+                return this;
+            }
+
+            /**
+             * auto_vul_fix_policy.
+             */
+            public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
+                this.autoVulFixPolicy = autoVulFixPolicy;
                 return this;
             }
 

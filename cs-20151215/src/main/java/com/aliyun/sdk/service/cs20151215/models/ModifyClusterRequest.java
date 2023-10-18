@@ -61,6 +61,10 @@ public class ModifyClusterRequest extends Request {
     @NameInMap("resource_group_id")
     private String resourceGroupId;
 
+    @Body
+    @NameInMap("system_events_logging")
+    private SystemEventsLogging systemEventsLogging;
+
     private ModifyClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -75,6 +79,7 @@ public class ModifyClusterRequest extends Request {
         this.instanceDeletionProtection = builder.instanceDeletionProtection;
         this.maintenanceWindow = builder.maintenanceWindow;
         this.resourceGroupId = builder.resourceGroupId;
+        this.systemEventsLogging = builder.systemEventsLogging;
     }
 
     public static Builder builder() {
@@ -174,6 +179,13 @@ public class ModifyClusterRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return systemEventsLogging
+     */
+    public SystemEventsLogging getSystemEventsLogging() {
+        return this.systemEventsLogging;
+    }
+
     public static final class Builder extends Request.Builder<ModifyClusterRequest, Builder> {
         private String clusterId; 
         private java.util.List < String > accessControlList; 
@@ -187,6 +199,7 @@ public class ModifyClusterRequest extends Request {
         private Boolean instanceDeletionProtection; 
         private MaintenanceWindow maintenanceWindow; 
         private String resourceGroupId; 
+        private SystemEventsLogging systemEventsLogging; 
 
         private Builder() {
             super();
@@ -206,6 +219,7 @@ public class ModifyClusterRequest extends Request {
             this.instanceDeletionProtection = request.instanceDeletionProtection;
             this.maintenanceWindow = request.maintenanceWindow;
             this.resourceGroupId = request.resourceGroupId;
+            this.systemEventsLogging = request.systemEventsLogging;
         } 
 
         /**
@@ -342,6 +356,15 @@ public class ModifyClusterRequest extends Request {
             return this;
         }
 
+        /**
+         * system_events_logging.
+         */
+        public Builder systemEventsLogging(SystemEventsLogging systemEventsLogging) {
+            this.putBodyParameter("system_events_logging", systemEventsLogging);
+            this.systemEventsLogging = systemEventsLogging;
+            return this;
+        }
+
         @Override
         public ModifyClusterRequest build() {
             return new ModifyClusterRequest(this);
@@ -349,4 +372,65 @@ public class ModifyClusterRequest extends Request {
 
     } 
 
+    public static class SystemEventsLogging extends TeaModel {
+        @NameInMap("enabled")
+        private Boolean enabled;
+
+        @NameInMap("logging_project")
+        private String loggingProject;
+
+        private SystemEventsLogging(Builder builder) {
+            this.enabled = builder.enabled;
+            this.loggingProject = builder.loggingProject;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemEventsLogging create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return loggingProject
+         */
+        public String getLoggingProject() {
+            return this.loggingProject;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String loggingProject; 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * logging_project.
+             */
+            public Builder loggingProject(String loggingProject) {
+                this.loggingProject = loggingProject;
+                return this;
+            }
+
+            public SystemEventsLogging build() {
+                return new SystemEventsLogging(this);
+            } 
+
+        } 
+
+    }
 }
