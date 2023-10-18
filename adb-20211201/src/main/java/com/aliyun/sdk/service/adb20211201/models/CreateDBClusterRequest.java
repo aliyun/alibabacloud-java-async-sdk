@@ -314,7 +314,10 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
-         * BackupSetId.
+         * The ID of the backup set that you want to use to restore data.
+         * <p>
+         * 
+         * >  You can call the [DescribeBackups](~~612318~~) operation to query the backup sets of the cluster.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -323,10 +326,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+         * The amount of reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
          * <p>
          * 
-         * >  You must specify a value with the unit for this parameter.
+         * >  This parameter must be specified with a unit.
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -339,7 +342,7 @@ public class CreateDBClusterRequest extends Request {
          * <p>
          * 
          * *   The description cannot start with `http://` or `https://`.
-         * *   The description must be 2 to 256 characters in length.
+         * *   The description must be 2 to 256 characters in length
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -366,11 +369,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to distribute all the reserved computing resources to the default resource group user_default. Default value: true. Valid values:
+         * Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
          * <p>
          * 
-         * *   **true**: distributes all the reserved computing resources to the default resource group.
-         * *   **false**: does not distribute all the reserved computing resources to the default resource group.
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder enableDefaultResourcePool(Boolean enableDefaultResourcePool) {
             this.putQueryParameter("EnableDefaultResourcePool", enableDefaultResourcePool);
@@ -382,8 +385,8 @@ public class CreateDBClusterRequest extends Request {
          * The billing method of the cluster. Valid values:
          * <p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -395,10 +398,10 @@ public class CreateDBClusterRequest extends Request {
          * The subscription type of the subscription cluster. Valid values:
          * <p>
          * 
-         * *   **Year**: subscription on a yearly basis
-         * *   **Month**: subscription on a monthly basis
+         * *   **Year**: subscription on a yearly basis.
+         * *   **Month**: subscription on a monthly basis.
          * 
-         * >  This parameter is required when PayType is set to Prepaid.
+         * >  This parameter must be specified when PayType is set to Prepaid.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -407,7 +410,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the cluster.
+         * The region ID.
          * <p>
          * 
          * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
@@ -419,7 +422,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -428,7 +431,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * RestoreToTime.
+         * The point in time to which you want to restore data from the backup set.
          */
         public Builder restoreToTime(String restoreToTime) {
             this.putQueryParameter("RestoreToTime", restoreToTime);
@@ -437,7 +440,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * RestoreType.
+         * The method that you want to use to restore data. Valid values:
+         * <p>
+         * 
+         * *   **backup**: restores data from a backup set. You must also specify the **BackupSetId** and **SourceDBClusterId** parameters.
+         * *   **timepoint**: restores data to a point in time. You must also specify the **RestoreToTime** and **SourceDBClusterId** parameters.
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -446,7 +453,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * SourceDbClusterId.
+         * The ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster. If you want to restore a Data Lakehouse Edition cluster from a Data Warehouse Edition cluster, you must specify this parameter.
          */
         public Builder sourceDbClusterId(String sourceDbClusterId) {
             this.putQueryParameter("SourceDbClusterId", sourceDbClusterId);
@@ -455,10 +462,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The reserved storage resources. Unit: AnalyticDB Compute Units (ACUs). Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+         * The amount of reserved storage resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
          * <p>
          * 
-         * >  You must specify a value with the unit for this parameter.
+         * >  This parameter must be specified with a unit.
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);
@@ -467,7 +474,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the cluster.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -476,13 +483,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration of the subscription cluster. Valid values:
+         * The subscription duration of the subscription cluster.
          * <p>
          * 
-         * *   Valid values when **Period** is set to Year: 1 to 3 (integer)
-         * *   Valid values when **Period** is set to Month: 1 to 9 (integer)
+         * *   Valid values when **Period** is set to Year: 1 to 3 (integer).
+         * *   Valid values when **Period** is set to Month: 1 to 9 (integer).
          * 
-         * >  This parameter is required when PayType is set to **Prepaid**.
+         * >  This parameter must be specified when PayType is set to **Prepaid**.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -509,7 +516,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * The zone ID of the cluster.
+         * The zone ID.
          * <p>
          * 
          * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent zone list.
@@ -566,7 +573,10 @@ public class CreateDBClusterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
+             * <p>
+             * 
+             * >  The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -574,7 +584,10 @@ public class CreateDBClusterRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
+             * <p>
+             * 
+             * >  The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

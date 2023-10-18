@@ -74,7 +74,11 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request was successful, **SUCCESS** is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,7 +86,7 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +94,11 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -98,7 +106,7 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * The URL of the web UI for the Spark application.
          */
         public Builder url(String url) {
             this.url = url;

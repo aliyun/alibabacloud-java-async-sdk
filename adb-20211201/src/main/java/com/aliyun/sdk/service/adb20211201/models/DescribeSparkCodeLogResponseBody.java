@@ -74,7 +74,7 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Log.
+         * The content of the log.
          */
         public Builder log(String log) {
             this.log = log;
@@ -82,7 +82,11 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request was successful, **Success** is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,11 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -74,7 +74,11 @@ public class DescribeSparkCodeOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request was successful, **Success** is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,7 +86,7 @@ public class DescribeSparkCodeOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * The execution result, which is in the format of JSON objects.
          */
         public Builder output(String output) {
             this.output = output;
@@ -90,7 +94,7 @@ public class DescribeSparkCodeOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,11 @@ public class DescribeSparkCodeOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
