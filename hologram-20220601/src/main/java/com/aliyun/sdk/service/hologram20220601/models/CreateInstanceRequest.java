@@ -43,6 +43,10 @@ public class CreateInstanceRequest extends Request {
     private Long gatewayCount;
 
     @Body
+    @NameInMap("initialDatabases")
+    private String initialDatabases;
+
+    @Body
     @NameInMap("instanceName")
     @Validation(required = true)
     private String instanceName;
@@ -97,6 +101,7 @@ public class CreateInstanceRequest extends Request {
         this.cpu = builder.cpu;
         this.duration = builder.duration;
         this.gatewayCount = builder.gatewayCount;
+        this.initialDatabases = builder.initialDatabases;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
         this.leaderInstanceId = builder.leaderInstanceId;
@@ -169,6 +174,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Long getGatewayCount() {
         return this.gatewayCount;
+    }
+
+    /**
+     * @return initialDatabases
+     */
+    public String getInitialDatabases() {
+        return this.initialDatabases;
     }
 
     /**
@@ -249,6 +261,7 @@ public class CreateInstanceRequest extends Request {
         private Long cpu; 
         private Long duration; 
         private Long gatewayCount; 
+        private String initialDatabases; 
         private String instanceName; 
         private String instanceType; 
         private String leaderInstanceId; 
@@ -273,6 +286,7 @@ public class CreateInstanceRequest extends Request {
             this.cpu = request.cpu;
             this.duration = request.duration;
             this.gatewayCount = request.gatewayCount;
+            this.initialDatabases = request.initialDatabases;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
             this.leaderInstanceId = request.leaderInstanceId;
@@ -389,6 +403,15 @@ public class CreateInstanceRequest extends Request {
         public Builder gatewayCount(Long gatewayCount) {
             this.putBodyParameter("gatewayCount", gatewayCount);
             this.gatewayCount = gatewayCount;
+            return this;
+        }
+
+        /**
+         * initialDatabases.
+         */
+        public Builder initialDatabases(String initialDatabases) {
+            this.putBodyParameter("initialDatabases", initialDatabases);
+            this.initialDatabases = initialDatabases;
             return this;
         }
 
