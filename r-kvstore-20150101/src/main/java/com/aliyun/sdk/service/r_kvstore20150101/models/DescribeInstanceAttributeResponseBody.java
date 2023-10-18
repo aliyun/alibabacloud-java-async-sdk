@@ -303,6 +303,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ShardCount")
         private Integer shardCount;
 
+        @NameInMap("Storage")
+        private String storage;
+
+        @NameInMap("StorageType")
+        private String storageType;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -368,6 +374,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.secondaryZoneId = builder.secondaryZoneId;
             this.securityIPList = builder.securityIPList;
             this.shardCount = builder.shardCount;
+            this.storage = builder.storage;
+            this.storageType = builder.storageType;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcAuthMode = builder.vpcAuthMode;
@@ -687,6 +695,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return storage
+         */
+        public String getStorage() {
+            return this.storage;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -779,6 +801,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String secondaryZoneId; 
             private String securityIPList; 
             private Integer shardCount; 
+            private String storage; 
+            private String storageType; 
             private Tags tags; 
             private String vSwitchId; 
             private String vpcAuthMode; 
@@ -1220,6 +1244,22 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder shardCount(Integer shardCount) {
                 this.shardCount = shardCount;
+                return this;
+            }
+
+            /**
+             * Storage.
+             */
+            public Builder storage(String storage) {
+                this.storage = storage;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

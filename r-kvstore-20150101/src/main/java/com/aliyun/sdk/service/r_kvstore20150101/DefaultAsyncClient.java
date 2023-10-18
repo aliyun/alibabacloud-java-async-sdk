@@ -33,13 +33,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-qingdao", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-beijing", "r-kvstore.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shanghai", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-heyuan", "r-kvstore.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "r-kvstore.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "r-kvstore.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "r-kvstore.aliyuncs.com"),
-            new TeaPair("us-west-1", "r-kvstore.aliyuncs.com"),
-            new TeaPair("us-east-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "r-kvstore.aliyuncs.com"),
@@ -59,7 +60,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-internal-test-3", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou-test-306", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shanghai-et2-b01", "r-kvstore.aliyuncs.com"),
@@ -69,8 +69,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shenzhen-st4-d01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-wuhan", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "r-kvstore.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"),
@@ -306,9 +306,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
       * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * > 
-      * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
-      * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+      * > *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+      * >*   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
       *
      */
     @Override
@@ -1231,8 +1230,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<LockDBInstanceWriteResponse> lockDBInstanceWrite(LockDBInstanceWriteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LockDBInstanceWrite").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LockDBInstanceWriteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LockDBInstanceWriteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
-      * The ID of the request.
+      * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
+      * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+      * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
       *
      */
     @Override
@@ -1911,6 +1926,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TransformToPrePaidResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UnlockDBInstanceWriteResponse> unlockDBInstanceWrite(UnlockDBInstanceWriteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnlockDBInstanceWrite").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnlockDBInstanceWriteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnlockDBInstanceWriteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

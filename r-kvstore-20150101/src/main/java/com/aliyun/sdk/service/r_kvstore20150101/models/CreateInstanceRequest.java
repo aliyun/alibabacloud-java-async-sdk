@@ -161,7 +161,7 @@ public class CreateInstanceRequest extends Request {
 
     @Query
     @NameInMap("ShardCount")
-    @Validation(maximum = 64, minimum = 1)
+    @Validation(maximum = 128, minimum = 1)
     private Integer shardCount;
 
     @Query

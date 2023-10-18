@@ -7,22 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link FlushExpireKeysResponseBody} extends {@link TeaModel}
+ * {@link UnlockDBInstanceWriteResponseBody} extends {@link TeaModel}
  *
- * <p>FlushExpireKeysResponseBody</p>
+ * <p>UnlockDBInstanceWriteResponseBody</p>
  */
-public class FlushExpireKeysResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
-    private String instanceId;
+public class UnlockDBInstanceWriteResponseBody extends TeaModel {
+    @NameInMap("DBInstanceName")
+    private String DBInstanceName;
 
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("TaskId")
-    private String taskId;
+    private Long taskId;
 
-    private FlushExpireKeysResponseBody(Builder builder) {
-        this.instanceId = builder.instanceId;
+    private UnlockDBInstanceWriteResponseBody(Builder builder) {
+        this.DBInstanceName = builder.DBInstanceName;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
@@ -31,15 +31,15 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static FlushExpireKeysResponseBody create() {
+    public static UnlockDBInstanceWriteResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return instanceId
+     * @return DBInstanceName
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
     }
 
     /**
@@ -52,25 +52,25 @@ public class FlushExpireKeysResponseBody extends TeaModel {
     /**
      * @return taskId
      */
-    public String getTaskId() {
+    public Long getTaskId() {
         return this.taskId;
     }
 
     public static final class Builder {
-        private String instanceId; 
+        private String DBInstanceName; 
         private String requestId; 
-        private String taskId; 
+        private Long taskId; 
 
         /**
-         * The ID of the instance.
+         * DBInstanceName.
          */
-        public Builder instanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public Builder DBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
             return this;
         }
 
         /**
-         * The operation that you want to perform. Set the value to **FlushExpireKeys**.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,15 +78,15 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * TaskId.
          */
-        public Builder taskId(String taskId) {
+        public Builder taskId(Long taskId) {
             this.taskId = taskId;
             return this;
         }
 
-        public FlushExpireKeysResponseBody build() {
-            return new FlushExpireKeysResponseBody(this);
+        public UnlockDBInstanceWriteResponseBody build() {
+            return new UnlockDBInstanceWriteResponseBody(this);
         } 
 
     } 

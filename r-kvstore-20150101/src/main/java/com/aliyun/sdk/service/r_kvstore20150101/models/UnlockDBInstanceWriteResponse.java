@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteAccountResponse} extends {@link TeaModel}
+ * {@link UnlockDBInstanceWriteResponse} extends {@link TeaModel}
  *
- * <p>DeleteAccountResponse</p>
+ * <p>UnlockDBInstanceWriteResponse</p>
  */
-public class DeleteAccountResponse extends Response {
+public class UnlockDBInstanceWriteResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DeleteAccountResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteAccountResponseBody body;
+    private UnlockDBInstanceWriteResponseBody body;
 
-    private DeleteAccountResponse(BuilderImpl builder) {
+    private UnlockDBInstanceWriteResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteAccountResponse create() {
+    public static UnlockDBInstanceWriteResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DeleteAccountResponse extends Response {
     /**
      * @return body
      */
-    public DeleteAccountResponseBody getBody() {
+    public UnlockDBInstanceWriteResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteAccountResponse, Builder> {
+    public interface Builder extends Response.Builder<UnlockDBInstanceWriteResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteAccountResponseBody body);
+        Builder body(UnlockDBInstanceWriteResponseBody body);
 
         @Override
-        DeleteAccountResponse build();
+        UnlockDBInstanceWriteResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteAccountResponse, Builder>
+            extends Response.BuilderImpl<UnlockDBInstanceWriteResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteAccountResponseBody body; 
+        private UnlockDBInstanceWriteResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteAccountResponse response) {
+        private BuilderImpl(UnlockDBInstanceWriteResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DeleteAccountResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteAccountResponseBody body) {
+        public Builder body(UnlockDBInstanceWriteResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteAccountResponse build() {
-            return new DeleteAccountResponse(this);
+        public UnlockDBInstanceWriteResponse build() {
+            return new UnlockDBInstanceWriteResponse(this);
         } 
 
     } 

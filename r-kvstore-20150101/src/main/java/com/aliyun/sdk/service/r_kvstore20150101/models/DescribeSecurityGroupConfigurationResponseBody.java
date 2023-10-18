@@ -126,7 +126,11 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * NetType.
+             * The network type of the ECS security group. Valid values:
+             * <p>
+             * 
+             * *   **vpc**
+             * *   **classic**
              */
             public Builder netType(String netType) {
                 this.netType = netType;

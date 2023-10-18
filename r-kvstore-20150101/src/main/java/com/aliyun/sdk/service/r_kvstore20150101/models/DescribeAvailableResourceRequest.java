@@ -318,7 +318,12 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * InstanceScene.
+         * Redis产品系列，取值如下：
+         * <p>
+         * 
+         * - **professional**：标准版，支持单副本、主备、读写分离、集群四种架构，扩展性强。
+         *  <props="china">
+         * -  **economical**：仅支持主备架构，具有价格优势，更多信息请参见[经济版实例](~~2489678~~)。</props>
          */
         public Builder instanceScene(String instanceScene) {
             this.putQueryParameter("InstanceScene", instanceScene);

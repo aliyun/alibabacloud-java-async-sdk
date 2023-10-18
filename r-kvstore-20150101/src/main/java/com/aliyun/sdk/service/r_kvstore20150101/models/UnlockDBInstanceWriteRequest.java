@@ -7,15 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RemoveSubInstanceRequest} extends {@link RequestModel}
+ * {@link UnlockDBInstanceWriteRequest} extends {@link RequestModel}
  *
- * <p>RemoveSubInstanceRequest</p>
+ * <p>UnlockDBInstanceWriteRequest</p>
  */
-public class RemoveSubInstanceRequest extends Request {
+public class UnlockDBInstanceWriteRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
-    @NameInMap("InstanceId")
+    @NameInMap("DBInstanceId")
     @Validation(required = true)
-    private String instanceId;
+    private String DBInstanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -37,9 +41,10 @@ public class RemoveSubInstanceRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private RemoveSubInstanceRequest(Builder builder) {
+    private UnlockDBInstanceWriteRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -51,7 +56,7 @@ public class RemoveSubInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static RemoveSubInstanceRequest create() {
+    public static UnlockDBInstanceWriteRequest create() {
         return builder().build();
     }
 
@@ -61,10 +66,17 @@ public class RemoveSubInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return regionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     /**
@@ -102,8 +114,9 @@ public class RemoveSubInstanceRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<RemoveSubInstanceRequest, Builder> {
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<UnlockDBInstanceWriteRequest, Builder> {
+        private String regionId; 
+        private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -114,9 +127,10 @@ public class RemoveSubInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveSubInstanceRequest request) {
+        private Builder(UnlockDBInstanceWriteRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.DBInstanceId = request.DBInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -125,11 +139,20 @@ public class RemoveSubInstanceRequest extends Request {
         } 
 
         /**
-         * 分布式实例中的子实例ID，可调用[DescribeGlobalDistributeCache](~~188699~~)接口获取。
+         * RegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DBInstanceId.
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.putQueryParameter("DBInstanceId", DBInstanceId);
+            this.DBInstanceId = DBInstanceId;
             return this;
         }
 
@@ -179,8 +202,8 @@ public class RemoveSubInstanceRequest extends Request {
         }
 
         @Override
-        public RemoveSubInstanceRequest build() {
-            return new RemoveSubInstanceRequest(this);
+        public UnlockDBInstanceWriteRequest build() {
+            return new UnlockDBInstanceWriteRequest(this);
         } 
 
     } 

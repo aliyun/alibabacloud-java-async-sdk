@@ -333,6 +333,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RuleIds")
         private RuleIds ruleIds;
 
+        @NameInMap("ShowDiscountInfo")
+        private Boolean showDiscountInfo;
+
         @NameInMap("TradeAmount")
         private String tradeAmount;
 
@@ -343,6 +346,7 @@ public class DescribePriceResponseBody extends TeaModel {
             this.handlingFeeAmount = builder.handlingFeeAmount;
             this.originalAmount = builder.originalAmount;
             this.ruleIds = builder.ruleIds;
+            this.showDiscountInfo = builder.showDiscountInfo;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -397,6 +401,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return showDiscountInfo
+         */
+        public Boolean getShowDiscountInfo() {
+            return this.showDiscountInfo;
+        }
+
+        /**
          * @return tradeAmount
          */
         public String getTradeAmount() {
@@ -410,6 +421,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String handlingFeeAmount; 
             private String originalAmount; 
             private RuleIds ruleIds; 
+            private Boolean showDiscountInfo; 
             private String tradeAmount; 
 
             /**
@@ -457,6 +469,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
+                return this;
+            }
+
+            /**
+             * ShowDiscountInfo.
+             */
+            public Builder showDiscountInfo(Boolean showDiscountInfo) {
+                this.showDiscountInfo = showDiscountInfo;
                 return this;
             }
 

@@ -205,7 +205,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the ApsaraDB for Redis instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,7 +214,13 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * Specifies the time when the database is switched after data is migrated. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: immediately switched after the data is migrated.
+         * *   **MaintainTime**: switched within the maintenance window.
+         * 
+         * >  Default value: **Immediately**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -259,7 +265,10 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * SecondaryZoneId.
+         * The ID of the destination secondary zone. You can call the [DescribeZones](~~DescribeZones~~) operation to query zone IDs.
+         * <p>
+         * 
+         * >  You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -277,7 +286,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * > *   The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.
+         * > *   If the network type of the instance is VPC, this parameter is required.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -286,7 +299,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the destination primary zone. You can call the [DescribeZones](~~94527~~) operation to query zone IDs.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

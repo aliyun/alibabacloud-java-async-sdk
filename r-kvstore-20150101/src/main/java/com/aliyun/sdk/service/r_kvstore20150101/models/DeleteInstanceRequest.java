@@ -139,7 +139,7 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
-         * GlobalInstanceId.
+         * The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).
          */
         public Builder globalInstanceId(String globalInstanceId) {
             this.putQueryParameter("GlobalInstanceId", globalInstanceId);
@@ -148,7 +148,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).
+         * The ID of the instance that you want to release.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

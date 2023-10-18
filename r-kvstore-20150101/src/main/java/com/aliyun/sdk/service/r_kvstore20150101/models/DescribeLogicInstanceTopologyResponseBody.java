@@ -90,7 +90,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * RedisShardList.
+         * Details of data shards, including node information such as NodeInfo.
          */
         public Builder redisShardList(RedisShardList redisShardList) {
             this.redisShardList = redisShardList;
@@ -186,7 +186,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The bandwidth throttling of the node. Unit: MB/s.
+             * The maximum bandwidth of the node. Unit: Mbit/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -210,7 +210,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -364,7 +364,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String subInstanceType; 
 
             /**
-             * The bandwidth throttling of the node. Unit: MB/s.
+             * The maximum bandwidth of the node. Unit: Mbit/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -388,7 +388,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -408,7 +408,11 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * SubInstanceType.
+             * The type of the child instance. Valid values:
+             * <p>
+             * 
+             * *   **master**: master node
+             * *   **readonly**: read-only instance
              */
             public Builder subInstanceType(String subInstanceType) {
                 this.subInstanceType = subInstanceType;

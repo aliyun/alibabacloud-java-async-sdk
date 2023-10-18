@@ -827,7 +827,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

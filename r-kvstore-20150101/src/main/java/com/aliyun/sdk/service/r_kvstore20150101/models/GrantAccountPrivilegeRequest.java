@@ -187,7 +187,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * The permissions of the account. Valid values:
+         * <p>
+         * 
+         * *   **RoleReadOnly**: The account has read-only permissions.
+         * *   **RoleReadWrite**: The account has read and write permissions.
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);

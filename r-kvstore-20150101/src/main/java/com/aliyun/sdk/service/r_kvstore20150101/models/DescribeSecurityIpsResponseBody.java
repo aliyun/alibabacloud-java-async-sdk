@@ -130,7 +130,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpGroupName.
+             * The name of the security group.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,7 +138,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpList.
+             * The IP addresses in the whitelist.
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

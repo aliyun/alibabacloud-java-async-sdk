@@ -278,7 +278,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the instance in the classic network.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
