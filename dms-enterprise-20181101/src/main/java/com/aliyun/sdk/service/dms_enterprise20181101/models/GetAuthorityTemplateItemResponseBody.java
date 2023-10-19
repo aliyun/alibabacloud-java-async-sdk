@@ -27,12 +27,16 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
+    @NameInMap("Tid")
+    private Long tid;
+
     private GetAuthorityTemplateItemResponseBody(Builder builder) {
         this.authorityTemplateItemList = builder.authorityTemplateItemList;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.tid = builder.tid;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return tid
+     */
+    public Long getTid() {
+        return this.tid;
+    }
+
     public static final class Builder {
         private AuthorityTemplateItemList authorityTemplateItemList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+        private Long tid; 
 
         /**
          * The permission templates.
@@ -126,6 +138,14 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * Tid.
+         */
+        public Builder tid(Long tid) {
+            this.tid = tid;
             return this;
         }
 
