@@ -444,10 +444,11 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 网关产品类型：
+         * The MSE instance type. Valid values:
          * <p>
-         * - mse_pro：传统实例
-         * - mse_serverless：Serverless
+         * 
+         * *   mse_pro: ordinary instance.
+         * *   mse_serverless: serverless instance.
          */
         public Builder mserVersion(String mserVersion) {
             this.putQueryParameter("MserVersion", mserVersion);
@@ -465,11 +466,12 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * 购买Serverless实例时指定NLB的网络类型：
+         * The network type of the Network Load Balancer (NLB) instance when the serverless NLB instance is purchased. Valid values:
          * <p>
-         * - pubnet：公网
-         * - privatenet：私网
-         * - privatepubnet：公网+私网
+         * 
+         * *   pubnet
+         * *   privatenet
+         * *   privatepubnet
          */
         public Builder nlbNetworkType(String nlbNetworkType) {
             this.putQueryParameter("NlbNetworkType", nlbNetworkType);
@@ -495,15 +497,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The specifications of the Internet-facing SLB instance. Valid values:
-         * <p>
-         * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * The number of nodes.
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -551,7 +545,13 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The number of nodes.
+         * The node specifications. Valid values:
+         * <p>
+         * 
+         * *   MSE_GTW\_16\_32\_200\_c(16C32G)
+         * *   MSE_GTW\_2\_4\_200\_c(2C4G)
+         * *   MSE_GTW\_4\_8\_200\_c(4C8G)
+         * *   MSE_GTW\_8\_16\_200\_c(8C16G)
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

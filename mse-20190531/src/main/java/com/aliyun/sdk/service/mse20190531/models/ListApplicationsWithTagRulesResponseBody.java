@@ -86,7 +86,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -1178,8 +1178,8 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
              * Indicates whether the alert rule is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * *   `true`
+             * *   `false`
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1227,7 +1227,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1348,7 +1348,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the rule.
+             * The queried rules.
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;
@@ -1453,7 +1453,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The data returned.
+             * The returned data.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

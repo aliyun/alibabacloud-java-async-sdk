@@ -41,6 +41,10 @@ public class UpdateConfigRequest extends Request {
     private String configType;
 
     @Query
+    @NameInMap("ConsoleUIEnabled")
+    private Boolean consoleUIEnabled;
+
+    @Query
     @NameInMap("EurekaSupported")
     private Boolean eurekaSupported;
 
@@ -121,6 +125,7 @@ public class UpdateConfigRequest extends Request {
         this.configAuthEnabled = builder.configAuthEnabled;
         this.configSecretEnabled = builder.configSecretEnabled;
         this.configType = builder.configType;
+        this.consoleUIEnabled = builder.consoleUIEnabled;
         this.eurekaSupported = builder.eurekaSupported;
         this.extendedTypesEnable = builder.extendedTypesEnable;
         this.initLimit = builder.initLimit;
@@ -201,6 +206,13 @@ public class UpdateConfigRequest extends Request {
      */
     public String getConfigType() {
         return this.configType;
+    }
+
+    /**
+     * @return consoleUIEnabled
+     */
+    public Boolean getConsoleUIEnabled() {
+        return this.consoleUIEnabled;
     }
 
     /**
@@ -337,6 +349,7 @@ public class UpdateConfigRequest extends Request {
         private Boolean configAuthEnabled; 
         private Boolean configSecretEnabled; 
         private String configType; 
+        private Boolean consoleUIEnabled; 
         private Boolean eurekaSupported; 
         private String extendedTypesEnable; 
         private String initLimit; 
@@ -369,6 +382,7 @@ public class UpdateConfigRequest extends Request {
             this.configAuthEnabled = request.configAuthEnabled;
             this.configSecretEnabled = request.configSecretEnabled;
             this.configType = request.configType;
+            this.consoleUIEnabled = request.consoleUIEnabled;
             this.eurekaSupported = request.eurekaSupported;
             this.extendedTypesEnable = request.extendedTypesEnable;
             this.initLimit = request.initLimit;
@@ -465,6 +479,15 @@ public class UpdateConfigRequest extends Request {
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
             this.configType = configType;
+            return this;
+        }
+
+        /**
+         * ConsoleUIEnabled.
+         */
+        public Builder consoleUIEnabled(Boolean consoleUIEnabled) {
+            this.putQueryParameter("ConsoleUIEnabled", consoleUIEnabled);
+            this.consoleUIEnabled = consoleUIEnabled;
             return this;
         }
 

@@ -208,7 +208,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -217,7 +217,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * Check.
+         * Specifies whether to enable the health check.
          */
         public Builder check(Boolean check) {
             this.putQueryParameter("Check", check);
@@ -226,7 +226,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * ExpectedStatuses.
+         * The expected status code, which is required if the health check protocol is HTTP.
          */
         public Builder expectedStatuses(java.util.List < Integer > expectedStatuses) {
             String expectedStatusesShrink = shrink(expectedStatuses, "ExpectedStatuses", "json");
@@ -236,7 +236,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -245,7 +245,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * The healthy threshold of the health check.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -254,7 +254,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * HttpHost.
+         * The health check domain name, which is optional if the health check protocol is HTTP.
          */
         public Builder httpHost(String httpHost) {
             this.putQueryParameter("HttpHost", httpHost);
@@ -263,7 +263,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * HttpPath.
+         * The health check path, which is required if the health check protocol is HTTP.
          */
         public Builder httpPath(String httpPath) {
             this.putQueryParameter("HttpPath", httpPath);
@@ -272,7 +272,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The interval at which the health check is performed.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -281,7 +281,11 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The health check protocol. Valid values:
+         * <p>
+         * 
+         * *   HTTP
+         * *   TCP
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -290,7 +294,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The ID of the service.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -299,7 +303,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period of responses to the health check. Unit: seconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -308,7 +312,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * UnhealthyThreshold.
+         * The unhealthy threshold of the health check.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);

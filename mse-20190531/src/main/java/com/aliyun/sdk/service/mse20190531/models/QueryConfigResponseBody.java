@@ -221,6 +221,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         private Boolean configSecretSupported;
 
+        @NameInMap("ConsoleUIEnabled")
+        private Boolean consoleUIEnabled;
+
         @NameInMap("EurekaSupported")
         private Boolean eurekaSupported;
 
@@ -296,6 +299,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.configContentLimit = builder.configContentLimit;
             this.configSecretEnabled = builder.configSecretEnabled;
             this.configSecretSupported = builder.configSecretSupported;
+            this.consoleUIEnabled = builder.consoleUIEnabled;
             this.eurekaSupported = builder.eurekaSupported;
             this.extendedTypesEnable = builder.extendedTypesEnable;
             this.initLimit = builder.initLimit;
@@ -382,6 +386,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public Boolean getConfigSecretSupported() {
             return this.configSecretSupported;
+        }
+
+        /**
+         * @return consoleUIEnabled
+         */
+        public Boolean getConsoleUIEnabled() {
+            return this.consoleUIEnabled;
         }
 
         /**
@@ -547,6 +558,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Long configContentLimit; 
             private Boolean configSecretEnabled; 
             private Boolean configSecretSupported; 
+            private Boolean consoleUIEnabled; 
             private Boolean eurekaSupported; 
             private Boolean extendedTypesEnable; 
             private String initLimit; 
@@ -647,6 +659,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder configSecretSupported(Boolean configSecretSupported) {
                 this.configSecretSupported = configSecretSupported;
+                return this;
+            }
+
+            /**
+             * ConsoleUIEnabled.
+             */
+            public Builder consoleUIEnabled(Boolean consoleUIEnabled) {
+                this.consoleUIEnabled = consoleUIEnabled;
                 return this;
             }
 

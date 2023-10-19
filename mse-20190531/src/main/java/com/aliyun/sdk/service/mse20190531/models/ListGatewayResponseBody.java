@@ -206,7 +206,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * DesiredReplica.
+             * The expected number of replicas for auto scale-out.
              */
             public Builder desiredReplica(Integer desiredReplica) {
                 this.desiredReplica = desiredReplica;
@@ -214,7 +214,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of auto scale-out.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -222,7 +222,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of auto scale-out.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -299,7 +299,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private java.util.List < TimePolicyList> timePolicyList; 
 
             /**
-             * Elastic.
+             * Indicates whether auto scale-out is enabled.
              */
             public Builder elastic(Boolean elastic) {
                 this.elastic = elastic;
@@ -307,7 +307,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticType.
+             * The type of auto scale-out. Valid value:
+             * <p>
+             * 
+             * *   CronHPA: scale-out by time
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -315,7 +318,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReplica.
+             * The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -323,7 +326,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * TimePolicyList.
+             * The time policy list for auto scale-out.
              */
             public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;
@@ -650,7 +653,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * EndTime.
+             * The end time of auto scale-out.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -658,7 +661,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of auto scale-out.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -847,7 +850,11 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance was deployed on the public network or internal network.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   PUB_NET
+             * *   PRIVATE_NET
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1408,7 +1415,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Elastic.
+             * Indicates whether auto scale-out is enabled.
              */
             public Builder elastic(Boolean elastic) {
                 this.elastic = elastic;
@@ -1416,7 +1423,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticInstanceId.
+             * The ID of the elastic gateway. This parameter is returned if auto scale-out is used.
              */
             public Builder elasticInstanceId(String elasticInstanceId) {
                 this.elasticInstanceId = elasticInstanceId;
@@ -1424,7 +1431,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticPolicy.
+             * The auto scale-out policy.
              */
             public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
                 this.elasticPolicy = elasticPolicy;
@@ -1432,7 +1439,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticReplica.
+             * The number of replicas that are automatically scaled out.
              */
             public Builder elasticReplica(Integer elasticReplica) {
                 this.elasticReplica = elasticReplica;
@@ -1440,7 +1447,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticType.
+             * The type of auto scale-out. Valid value:
+             * <p>
+             * 
+             * *   CronHPA: scale-out by time
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -1584,7 +1594,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the gateway resides.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1600,7 +1610,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1639,8 +1649,8 @@ public class ListGatewayResponseBody extends TeaModel {
              * *   1: The gateway failed to be created.
              * *   2: The gateway is running.
              * *   3: The gateway is being changed.
-             * *   4: The gateway is scaling down.
-             * *   6: The gateway is scaling up.
+             * *   4: The gateway is scaling in.
+             * *   6: The gateway is scaling out.
              * *   8: The gateway is being deleted.
              * *   9: The gateway is suspended and is to be released.
              * *   10: The gateway is restarting.
@@ -1678,7 +1688,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReplica.
+             * The total number of replicas, including the number of replicas that are automatically scaled out.
              */
             public Builder totalReplica(Integer totalReplica) {
                 this.totalReplica = totalReplica;
@@ -1694,7 +1704,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the gateway belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

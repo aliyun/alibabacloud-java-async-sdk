@@ -215,6 +215,67 @@ public class ListClustersResponseBody extends TeaModel {
 
     } 
 
+    public static class MaintenancePeriod extends TeaModel {
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private MaintenancePeriod(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MaintenancePeriod create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public MaintenancePeriod build() {
+                return new MaintenancePeriod(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("AppVersion")
         private String appVersion;
@@ -261,6 +322,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("IntranetDomain")
         private String intranetDomain;
 
+        @NameInMap("MaintenancePeriod")
+        private MaintenancePeriod maintenancePeriod;
+
         @NameInMap("MseVersion")
         private String mseVersion;
 
@@ -292,6 +356,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.internetDomain = builder.internetDomain;
             this.intranetAddress = builder.intranetAddress;
             this.intranetDomain = builder.intranetDomain;
+            this.maintenancePeriod = builder.maintenancePeriod;
             this.mseVersion = builder.mseVersion;
             this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
@@ -413,6 +478,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return maintenancePeriod
+         */
+        public MaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
+        }
+
+        /**
          * @return mseVersion
          */
         public String getMseVersion() {
@@ -463,6 +535,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String internetDomain; 
             private String intranetAddress; 
             private String intranetDomain; 
+            private MaintenancePeriod maintenancePeriod; 
             private String mseVersion; 
             private String resourceGroupId; 
             private java.util.Map < String, ? > tags; 
@@ -586,6 +659,14 @@ public class ListClustersResponseBody extends TeaModel {
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
+                return this;
+            }
+
+            /**
+             * MaintenancePeriod.
+             */
+            public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
+                this.maintenancePeriod = maintenancePeriod;
                 return this;
             }
 
