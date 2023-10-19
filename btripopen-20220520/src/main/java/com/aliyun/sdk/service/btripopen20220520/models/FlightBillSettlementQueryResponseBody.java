@@ -416,6 +416,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_job_no")
         private String travelerJobNo;
 
+        @NameInMap("traveler_member_type_name")
+        private String travelerMemberTypeName;
+
         @NameInMap("traveler_name")
         private String travelerName;
 
@@ -514,6 +517,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.trade = builder.trade;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
+            this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.upgradeCost = builder.upgradeCost;
             this.voucherType = builder.voucherType;
@@ -1144,6 +1148,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return travelerMemberTypeName
+         */
+        public String getTravelerMemberTypeName() {
+            return this.travelerMemberTypeName;
+        }
+
+        /**
          * @return travelerName
          */
         public String getTravelerName() {
@@ -1253,6 +1264,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String trade; 
             private String travelerId; 
             private String travelerJobNo; 
+            private String travelerMemberTypeName; 
             private String travelerName; 
             private Double upgradeCost; 
             private Integer voucherType; 
@@ -1958,6 +1970,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
+                return this;
+            }
+
+            /**
+             * traveler_member_type_name.
+             */
+            public Builder travelerMemberTypeName(String travelerMemberTypeName) {
+                this.travelerMemberTypeName = travelerMemberTypeName;
                 return this;
             }
 

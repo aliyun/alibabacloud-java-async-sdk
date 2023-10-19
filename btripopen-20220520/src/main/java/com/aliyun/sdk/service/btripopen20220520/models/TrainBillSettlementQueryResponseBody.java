@@ -278,6 +278,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("primary_id")
         private Long primaryId;
 
+        @NameInMap("print_ticket_price")
+        private Double printTicketPrice;
+
         @NameInMap("project_code")
         private String projectCode;
 
@@ -356,6 +359,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_job_no")
         private String travelerJobNo;
 
+        @NameInMap("traveler_member_type_name")
+        private String travelerMemberTypeName;
+
         @NameInMap("traveler_name")
         private String travelerName;
 
@@ -405,6 +411,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.orderPrice = builder.orderPrice;
             this.overApplyId = builder.overApplyId;
             this.primaryId = builder.primaryId;
+            this.printTicketPrice = builder.printTicketPrice;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.refundFee = builder.refundFee;
@@ -431,6 +438,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.trainType = builder.trainType;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
+            this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
         }
@@ -738,6 +746,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return printTicketPrice
+         */
+        public Double getPrintTicketPrice() {
+            return this.printTicketPrice;
+        }
+
+        /**
          * @return projectCode
          */
         public String getProjectCode() {
@@ -920,6 +935,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return travelerMemberTypeName
+         */
+        public String getTravelerMemberTypeName() {
+            return this.travelerMemberTypeName;
+        }
+
+        /**
          * @return travelerName
          */
         public String getTravelerName() {
@@ -976,6 +998,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private Double orderPrice; 
             private String overApplyId; 
             private Long primaryId; 
+            private Double printTicketPrice; 
             private String projectCode; 
             private String projectName; 
             private Double refundFee; 
@@ -1002,6 +1025,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String trainType; 
             private String travelerId; 
             private String travelerJobNo; 
+            private String travelerMemberTypeName; 
             private String travelerName; 
             private Integer voucherType; 
 
@@ -1342,6 +1366,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * print_ticket_price.
+             */
+            public Builder printTicketPrice(Double printTicketPrice) {
+                this.printTicketPrice = printTicketPrice;
+                return this;
+            }
+
+            /**
              * project_code.
              */
             public Builder projectCode(String projectCode) {
@@ -1546,6 +1578,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
+                return this;
+            }
+
+            /**
+             * traveler_member_type_name.
+             */
+            public Builder travelerMemberTypeName(String travelerMemberTypeName) {
+                this.travelerMemberTypeName = travelerMemberTypeName;
                 return this;
             }
 

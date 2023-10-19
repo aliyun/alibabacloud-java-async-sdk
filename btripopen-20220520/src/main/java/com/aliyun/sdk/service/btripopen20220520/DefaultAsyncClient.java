@@ -1202,6 +1202,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<HotelPricePullResponse> hotelPricePull(HotelPricePullRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HotelPricePull").setMethod(HttpMethod.GET).setPathRegex("/dtb-hotel/v1/prices/action/pull").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HotelPricePullResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HotelPricePullResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<HotelRoomInfoResponse> hotelRoomInfo(HotelRoomInfoRequest request) {
         try {
             this.handler.validateRequestModel(request);

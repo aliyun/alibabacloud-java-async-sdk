@@ -344,6 +344,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         private String settlementType;
 
+        @NameInMap("star")
+        private String star;
+
         @NameInMap("status")
         private Integer status;
 
@@ -361,6 +364,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("traveler_job_no")
         private String travelerJobNo;
+
+        @NameInMap("traveler_member_type_name")
+        private String travelerMemberTypeName;
 
         @NameInMap("traveler_name")
         private String travelerName;
@@ -433,12 +439,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.settlementGrantFee = builder.settlementGrantFee;
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
+            this.star = builder.star;
             this.status = builder.status;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
             this.totalNights = builder.totalNights;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
+            this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
         }
@@ -900,6 +908,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return star
+         */
+        public String getStar() {
+            return this.star;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -939,6 +954,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        /**
+         * @return travelerMemberTypeName
+         */
+        public String getTravelerMemberTypeName() {
+            return this.travelerMemberTypeName;
         }
 
         /**
@@ -1020,12 +1042,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private Double settlementGrantFee; 
             private String settlementTime; 
             private String settlementType; 
+            private String star; 
             private Integer status; 
             private String taxRate; 
             private String thirdItineraryId; 
             private Integer totalNights; 
             private String travelerId; 
             private String travelerJobNo; 
+            private String travelerMemberTypeName; 
             private String travelerName; 
             private Integer voucherType; 
 
@@ -1542,6 +1566,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * star.
+             */
+            public Builder star(String star) {
+                this.star = star;
+                return this;
+            }
+
+            /**
              * status.
              */
             public Builder status(Integer status) {
@@ -1586,6 +1618,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
+                return this;
+            }
+
+            /**
+             * traveler_member_type_name.
+             */
+            public Builder travelerMemberTypeName(String travelerMemberTypeName) {
+                this.travelerMemberTypeName = travelerMemberTypeName;
                 return this;
             }
 
