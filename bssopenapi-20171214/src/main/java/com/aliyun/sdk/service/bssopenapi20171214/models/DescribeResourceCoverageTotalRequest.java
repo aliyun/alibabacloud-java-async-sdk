@@ -114,7 +114,7 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         } 
 
         /**
-         * The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.
+         * The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -123,7 +123,7 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The information about the coverage rate of deduction plans within a period.
+         * The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder endPeriod(String endPeriod) {
             this.putQueryParameter("EndPeriod", endPeriod);
@@ -132,7 +132,7 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);
@@ -141,7 +141,7 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The status code.
+         * The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -150,7 +150,7 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The total amount of the resources deducted from deduction plans.
+         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder startPeriod(String startPeriod) {
             this.putQueryParameter("StartPeriod", startPeriod);

@@ -86,7 +86,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The prepaid amount.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The commitment.
+         * The return data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the instances.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The region.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -516,12 +516,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
-             * 
-             * *   NORMAL: normal
-             * *   LIMIT: stopped due to overdue payment
-             * *   RELEASE: released
+             * The currency. Valid values: CNY and USD.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -553,7 +548,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the savings plan instance.
+             * The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -569,7 +564,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.
              */
             public Builder instanceFamily(String instanceFamily) {
                 this.instanceFamily = instanceFamily;
@@ -577,7 +572,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.
+             * The ID of the savings plan instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -601,7 +596,12 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PayMode.
+             * The payment type. Valid values:
+             * <p>
+             * 
+             * *   total: All Upfront
+             * *   half: Partial Upfront
+             * *   zero: No Upfront
              */
             public Builder payMode(String payMode) {
                 this.payMode = payMode;
@@ -609,7 +609,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount that is saved.
+             * The commitment.
              */
             public Builder poolValue(String poolValue) {
                 this.poolValue = poolValue;
@@ -617,7 +617,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The prepaid amount.
              */
             public Builder prepayFee(String prepayFee) {
                 this.prepayFee = prepayFee;
@@ -625,7 +625,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * The region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -641,7 +641,11 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The type of the savings plan. Valid values:
+             * <p>
+             * 
+             * *   universal: general-purpose
+             * *   ecs: ECS compute
              */
             public Builder savingsType(String savingsType) {
                 this.savingsType = savingsType;
@@ -649,12 +653,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The payment type. Valid values:
-             * <p>
-             * 
-             * *   total: All Upfront
-             * *   half: Partial Upfront
-             * *   zero: No Upfront
+             * The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -670,7 +669,12 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag to query.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: normal
+             * *   LIMIT: stopped due to overdue payment
+             * *   RELEASE: released
              */
             public Builder status(String status) {
                 this.status = status;
@@ -678,7 +682,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The details about the tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -686,7 +690,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The total amount that is saved.
              */
             public Builder totalSave(String totalSave) {
                 this.totalSave = totalSave;
@@ -694,7 +698,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The currency. Valid values: CNY and USD.
+             * The total usage.
              */
             public Builder utilization(String utilization) {
                 this.utilization = utilization;
@@ -771,7 +775,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of the page to return.
+             * The details about the instances.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -779,11 +783,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the savings plan. Valid values:
-             * <p>
-             * 
-             * *   universal: general-purpose
-             * *   ecs: ECS compute
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -791,7 +791,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag to query.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -799,11 +799,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the return data. Valid values:
-             * <p>
-             * 
-             * *   ZH: Chinese
-             * *   EN: English
+             * The total number of entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

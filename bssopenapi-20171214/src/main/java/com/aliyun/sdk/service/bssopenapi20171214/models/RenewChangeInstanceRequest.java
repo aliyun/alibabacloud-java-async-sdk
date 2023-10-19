@@ -22,6 +22,10 @@ public class RenewChangeInstanceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("Parameter")
     private java.util.List < Parameter> parameter;
 
@@ -43,6 +47,7 @@ public class RenewChangeInstanceRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
+        this.ownerId = builder.ownerId;
         this.parameter = builder.parameter;
         this.productCode = builder.productCode;
         this.productType = builder.productType;
@@ -77,6 +82,13 @@ public class RenewChangeInstanceRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return parameter
      */
     public java.util.List < Parameter> getParameter() {
@@ -107,6 +119,7 @@ public class RenewChangeInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<RenewChangeInstanceRequest, Builder> {
         private String clientToken; 
         private String instanceId; 
+        private Long ownerId; 
         private java.util.List < Parameter> parameter; 
         private String productCode; 
         private String productType; 
@@ -120,6 +133,7 @@ public class RenewChangeInstanceRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
             this.parameter = request.parameter;
             this.productCode = request.productCode;
             this.productType = request.productType;
@@ -141,6 +155,15 @@ public class RenewChangeInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 

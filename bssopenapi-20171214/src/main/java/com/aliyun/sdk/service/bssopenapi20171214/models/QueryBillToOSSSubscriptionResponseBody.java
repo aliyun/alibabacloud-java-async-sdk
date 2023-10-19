@@ -94,7 +94,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             private String subscribeType; 
 
             /**
-             * The owner ID of the OSS bucket.
+             * The owner ID of the Object Storage Service (OSS) bucket.
              */
             public Builder bucketOwnerId(Long bucketOwnerId) {
                 this.bucketOwnerId = bucketOwnerId;
@@ -238,7 +238,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The directory of the OSS bucket.
+             * The path in the OSS bucket.
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -246,7 +246,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * RowLimitPerFile.
+             * The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.
              */
             public Builder rowLimitPerFile(Integer rowLimitPerFile) {
                 this.rowLimitPerFile = rowLimitPerFile;
@@ -263,6 +263,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
             /**
              * The code of the language.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   en: English
+             * *   zh: Chinese
              */
             public Builder subscribeLanguage(String subscribeLanguage) {
                 this.subscribeLanguage = subscribeLanguage;
@@ -281,8 +287,8 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
              * The type of the subscribed bill. Valid values:
              * <p>
              * 
-             * *   BillingItemDetailForBillingPeriod: bill of a billable item
-             * *   InstanceDetailForBillingPeriod: bill of an instance
+             * *   BillingItemDetailForBillingPeriod: the bill of a billable item.
+             * *   InstanceDetailForBillingPeriod: the bill of an instance.
              */
             public Builder subscribeType(String subscribeType) {
                 this.subscribeType = subscribeType;
@@ -404,7 +410,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the subscribed bills.
+             * The details of the subscribed bill.
              */
             public Builder items(Items items) {
                 this.items = items;

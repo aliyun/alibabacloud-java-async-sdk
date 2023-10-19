@@ -114,7 +114,7 @@ public class DescribeResourceUsageTotalRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the account whose data you want to query. If you do not specify this parameter, the data of the current account and its linked accounts is queried. To query the data of a linked account, specify the ID of the linked account. You can specify only one account ID.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -123,7 +123,7 @@ public class DescribeResourceUsageTotalRequest extends Request {
         }
 
         /**
-         * EndPeriod.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format. The specified time is excluded from the time range. If you do not specify this parameter, this parameter is set to the current time.
          */
         public Builder endPeriod(String endPeriod) {
             this.putQueryParameter("EndPeriod", endPeriod);
@@ -132,7 +132,7 @@ public class DescribeResourceUsageTotalRequest extends Request {
         }
 
         /**
-         * PeriodType.
+         * The time granularity at which the data is queried. Valid values: MONTH, DAY, and HOUR.
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);
@@ -141,7 +141,7 @@ public class DescribeResourceUsageTotalRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource plan. Valid values: RI and SCU.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -150,7 +150,7 @@ public class DescribeResourceUsageTotalRequest extends Request {
         }
 
         /**
-         * StartPeriod.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format. The specified time is included in the time range.
          */
         public Builder startPeriod(String startPeriod) {
             this.putQueryParameter("StartPeriod", startPeriod);

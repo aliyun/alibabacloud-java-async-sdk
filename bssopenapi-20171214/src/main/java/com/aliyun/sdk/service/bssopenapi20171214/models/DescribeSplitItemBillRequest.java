@@ -224,7 +224,7 @@ public class DescribeSplitItemBillRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -233,7 +233,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle. Specify the parameter in the YYYY-MM format.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -242,7 +242,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * BillingDate.
+         * The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.
          */
         public Builder billingDate(String billingDate) {
             this.putQueryParameter("BillingDate", billingDate);
@@ -251,7 +251,13 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * The granularity at which bills are queried. Valid values:
+         * <p>
+         * 
+         * *   MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data that is queried by billing cycles in the Split Bill module of the User Center console.
+         * *   DAILY: queries bills on a daily basis. The data that you query is the same as the data that is queried by days in the Split Bill module of the User Center console.
+         * 
+         * If you specify DAILY for this parameter, the BillingDate parameter is required.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -260,7 +266,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * InstanceID.
+         * The ID of the instance.
          */
         public Builder instanceID(String instanceID) {
             this.putQueryParameter("InstanceID", instanceID);
@@ -269,7 +275,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to query. Default value: 20. Maximum value: 300.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -278,7 +284,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. The parameter must be left empty or set to the value of the NextToken parameter returned in the last call. Otherwise, an error is returned. If the parameter is left empty, the data is queried from the first entry.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -296,7 +302,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -305,7 +311,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -314,7 +320,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * SplitItemID.
+         * The ID of the split item.
          */
         public Builder splitItemID(String splitItemID) {
             this.putQueryParameter("SplitItemID", splitItemID);
@@ -323,7 +329,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values: Subscription: the subscription billing method. PayAsYouGo: the pay-as-you-go billing method. This parameter must be used with the ProductCode parameter.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -332,7 +338,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * TagFilter.
+         * The tags that are used to filter split bills. You can specify multiple tag values. If you specify multiple tag values, split bills that match one of the tag values are queried.
          */
         public Builder tagFilter(java.util.List < TagFilter> tagFilter) {
             this.putQueryParameter("TagFilter", tagFilter);
@@ -386,7 +392,12 @@ public class DescribeSplitItemBillRequest extends Request {
             private java.util.List < String > tagValues; 
 
             /**
-             * TagKey.
+             * The TagFilter.N parameter is used to query bills that match a specified tag. The value of the TagFilter.N parameter must be a key-value pair. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * *   If only the TagFilter.N.TagKey parameter is specified, all bills associated with the tag key are queried.
+             * *   If you specify multiple tag key-value pairs at the same time, bills that meet any one of the tag key-value pairs are queried.
+             * *   If the tags added to resources change, you can query only the bills that are generated within the period in which the tags and resources are associated.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -394,7 +405,11 @@ public class DescribeSplitItemBillRequest extends Request {
             }
 
             /**
-             * TagValues.
+             * You can specify the TagValues.N parameter to query bills that match the specified tag value. The value of the TagValues.N parameter must be a string. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * *   If you specify the TagValues.N parameter, the TagFilter.N.TagKey parameter is required. Otherwise, the error message InvalidParameter.TagValues is returned.
+             * *   If you specify multiple tag values, split bills that match one of the tag values are queried.
              */
             public Builder tagValues(java.util.List < String > tagValues) {
                 this.tagValues = tagValues;

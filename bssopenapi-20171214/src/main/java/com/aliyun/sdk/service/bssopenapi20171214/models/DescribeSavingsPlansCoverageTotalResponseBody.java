@@ -86,7 +86,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The message returned.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The coverage in different periods.
+         * The return data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,10 +170,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private String period; 
 
             /**
-             * The period.
-             * <p>
-             * 
-             * The value is in the format of yyyyMMddHH.
+             * The coverage.
              */
             public Builder percentage(Float percentage) {
                 this.percentage = percentage;
@@ -181,7 +178,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The coverage summary.
+             * The period.
+             * <p>
+             * 
+             * The value is in the format of yyyyMMddHH.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -234,7 +234,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private Float deductAmount; 
 
             /**
-             * The total deducted amount.
+             * The total coverage.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -242,7 +242,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the coverage summary of savings plans.
+             * The total deducted amount.
              */
             public Builder deductAmount(Float deductAmount) {
                 this.deductAmount = deductAmount;
@@ -295,7 +295,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private TotalCoverage totalCoverage; 
 
             /**
-             * The coverage.
+             * The coverage in different periods.
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -303,7 +303,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total coverage.
+             * The coverage summary.
              */
             public Builder totalCoverage(TotalCoverage totalCoverage) {
                 this.totalCoverage = totalCoverage;

@@ -86,7 +86,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The message returned.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The return data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * Indicates whether the operation was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +150,9 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         @NameInMap("InstanceSpec")
         private String instanceSpec;
 
+        @NameInMap("OwnerId")
+        private Long ownerId;
+
         @NameInMap("PostpaidCost")
         private Float postpaidCost;
 
@@ -175,6 +178,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             this.endPeriod = builder.endPeriod;
             this.instanceId = builder.instanceId;
             this.instanceSpec = builder.instanceSpec;
+            this.ownerId = builder.ownerId;
             this.postpaidCost = builder.postpaidCost;
             this.region = builder.region;
             this.startPeriod = builder.startPeriod;
@@ -234,6 +238,13 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return postpaidCost
          */
         public Float getPostpaidCost() {
@@ -282,6 +293,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private String endPeriod; 
             private String instanceId; 
             private String instanceSpec; 
+            private Long ownerId; 
             private Float postpaidCost; 
             private String region; 
             private String startPeriod; 
@@ -290,7 +302,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The region.
+             * The coverage.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -298,7 +310,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications.
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -306,7 +318,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * The deducted amount.
              */
             public Builder deductAmount(Float deductAmount) {
                 this.deductAmount = deductAmount;
@@ -314,7 +326,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndPeriod.
+             * The end time.
              */
             public Builder endPeriod(String endPeriod) {
                 this.endPeriod = endPeriod;
@@ -322,7 +334,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +342,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The pay-as-you-go cost.
+             * The specifications.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -338,7 +350,15 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The coverage.
+             * OwnerId.
+             */
+            public Builder ownerId(Long ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * The pay-as-you-go cost.
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -346,7 +366,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The deducted amount.
+             * The region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -354,7 +374,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total expenditure.
+             * The start time.
              */
             public Builder startPeriod(String startPeriod) {
                 this.startPeriod = startPeriod;
@@ -362,7 +382,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * The total expenditure.
              */
             public Builder totalAmount(Float totalAmount) {
                 this.totalAmount = totalAmount;
@@ -370,7 +390,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The ID of the account.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -378,7 +398,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -443,7 +463,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The ID of the account.
+             * The data entries.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -451,7 +471,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data entries.
+             * The token of the next page.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -459,7 +479,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the next page.
+             * The total number of entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

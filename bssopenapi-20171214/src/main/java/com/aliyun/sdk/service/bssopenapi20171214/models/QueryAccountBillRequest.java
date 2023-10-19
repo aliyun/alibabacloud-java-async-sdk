@@ -168,7 +168,13 @@ public class QueryAccountBillRequest extends Request {
         } 
 
         /**
-         * The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.
+         * Specifies whether to summarize bills based on service codes. Valid values:
+         * <p>
+         * 
+         * *   true: summarizes bills based on service codes.
+         * *   false: does not summarize bills based on service codes.
+         * 
+         * Default value: false.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -177,7 +183,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * The billing cycle. Format: YYYY-MM.
+         * BillingCycle.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -186,7 +192,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * The billing date. This parameter is required only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.
+         * The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.
          */
         public Builder billingDate(String billingDate) {
             this.putQueryParameter("BillingDate", billingDate);
@@ -195,13 +201,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * The granularity at which bills are queried. Valid values:
-         * <p>
-         * 
-         * *   MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.
-         * *   DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.
-         * 
-         * You must set the BillingDate parameter before you can set the Granularity parameter to DAILY.
+         * The code of the service.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -210,13 +210,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to summarize bills based on service codes. Valid values:
-         * <p>
-         * 
-         * *   true: summarizes bills based on service codes.
-         * *   false: does not summarize bills based on service codes.
-         * 
-         * Default value: false.
+         * The number of the page to return. Default value: 1.
          */
         public Builder isGroupByProduct(Boolean isGroupByProduct) {
             this.putQueryParameter("IsGroupByProduct", isGroupByProduct);
@@ -234,7 +228,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * PageNum.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -243,7 +237,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
+         * The billing cycle. Format: YYYY-MM.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,7 +246,7 @@ public class QueryAccountBillRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

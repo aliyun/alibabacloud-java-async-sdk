@@ -152,7 +152,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         } 
 
         /**
-         * The number of entries returned per page.
+         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +161,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * The ID of the savings plan instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +170,11 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * The language of the return data. Valid values:
+         * <p>
+         * 
+         * *   ZH: Chinese
+         * *   EN: English
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -179,7 +183,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The message returned.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -188,7 +192,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +201,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -206,7 +210,11 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the Instance. 
+         * <p>
+         * 
+         * *  NORMAL
+         * * RELEASE
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -215,7 +223,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -269,7 +277,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the savings plan instance.
+             * The key of the tag to query.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -277,7 +285,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             }
 
             /**
-             * The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.
+             * The value of the tag to query.
              */
             public Builder value(String value) {
                 this.value = value;

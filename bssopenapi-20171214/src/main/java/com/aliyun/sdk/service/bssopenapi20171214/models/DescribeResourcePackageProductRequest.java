@@ -55,7 +55,7 @@ public class DescribeResourcePackageProductRequest extends Request {
         } 
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

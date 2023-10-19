@@ -99,7 +99,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         } 
 
         /**
-         * The total amount of the savings plan.
+         * The ID of the account for which you want to query usage summary. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -108,7 +108,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * The usage summary.
+         * The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder endPeriod(String endPeriod) {
             this.putQueryParameter("EndPeriod", endPeriod);
@@ -117,7 +117,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * The amount that is saved.
+         * The time granularity at which usage summary are queried. Valid values: MONTH, DAY, and HOUR.
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);
@@ -126,7 +126,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends Request {
         }
 
         /**
-         * The usage.
+         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder startPeriod(String startPeriod) {
             this.putQueryParameter("StartPeriod", startPeriod);

@@ -98,7 +98,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -130,7 +130,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +190,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the property.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +198,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the property.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -304,7 +304,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private Integer value; 
 
             /**
-             * Name.
+             * The name of the validity period.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the validity period for the resource plan. Valid values:
+             * <p>
+             * 
+             * *   Month
+             * *   Year
+             * 
+             * Default value: Month.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -320,7 +326,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the validity period.
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -426,7 +432,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * AvailableDurations.
+             * The validity periods available for the resource plan.
              */
             public Builder availableDurations(AvailableDurations availableDurations) {
                 this.availableDurations = availableDurations;
@@ -434,7 +440,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the specification.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -442,7 +448,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the specification.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -560,7 +566,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private Specifications specifications; 
 
             /**
-             * Code.
+             * The code of the resource plan.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -568,7 +574,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the resource plan type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -576,7 +582,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The properties of the resource plan.
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -584,7 +590,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * Specifications.
+             * The specifications of the resource plan.
              */
             public Builder specifications(Specifications specifications) {
                 this.specifications = specifications;
@@ -702,7 +708,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String productType; 
 
             /**
-             * Name.
+             * The name of the resource plan.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -710,7 +716,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * PackageTypes.
+             * The types of the resource plans.
              */
             public Builder packageTypes(PackageTypes packageTypes) {
                 this.packageTypes = packageTypes;
@@ -718,7 +724,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -726,7 +732,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * The type of the service.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -808,7 +814,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private ResourcePackages resourcePackages; 
 
             /**
-             * ResourcePackages.
+             * The details about the resource plans.
              */
             public Builder resourcePackages(ResourcePackages resourcePackages) {
                 this.resourcePackages = resourcePackages;

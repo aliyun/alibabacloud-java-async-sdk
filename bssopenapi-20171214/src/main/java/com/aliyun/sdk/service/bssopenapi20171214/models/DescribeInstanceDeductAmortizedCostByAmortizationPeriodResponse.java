@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpgradeResourcePackageResponse} extends {@link TeaModel}
+ * {@link DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse} extends {@link TeaModel}
  *
- * <p>UpgradeResourcePackageResponse</p>
+ * <p>DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse</p>
  */
-public class UpgradeResourcePackageResponse extends Response {
+public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class UpgradeResourcePackageResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private UpgradeResourcePackageResponseBody body;
+    private DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody body;
 
-    private UpgradeResourcePackageResponse(BuilderImpl builder) {
+    private DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpgradeResourcePackageResponse create() {
+    public static DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class UpgradeResourcePackageResponse extends Response {
     /**
      * @return body
      */
-    public UpgradeResourcePackageResponseBody getBody() {
+    public DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpgradeResourcePackageResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpgradeResourcePackageResponseBody body);
+        Builder body(DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody body);
 
         @Override
-        UpgradeResourcePackageResponse build();
+        DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpgradeResourcePackageResponse, Builder>
+            extends Response.BuilderImpl<DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpgradeResourcePackageResponseBody body; 
+        private DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpgradeResourcePackageResponse response) {
+        private BuilderImpl(DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class UpgradeResourcePackageResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpgradeResourcePackageResponseBody body) {
+        public Builder body(DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpgradeResourcePackageResponse build() {
-            return new UpgradeResourcePackageResponse(this);
+        public DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse build() {
+            return new DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse(this);
         } 
 
     } 

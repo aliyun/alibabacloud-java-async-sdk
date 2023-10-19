@@ -86,7 +86,13 @@ public class QueryAccountBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The granularity at which bills are queried. Valid values:
+         * <p>
+         * 
+         * *   MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.
+         * *   DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.
+         * 
+         * You must set the BillingDate parameter before you can set the Granularity parameter to DAILY.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +100,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The ID of the request.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +108,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The billing date. This parameter is required only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +116,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The status code returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The message returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -410,7 +416,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * The amount deducted by using credit refunds.
+             * The billing date.
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -418,7 +424,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the bill belongs.
+             * The amount deducted by using prepaid cards.
              */
             public Builder billAccountID(String billAccountID) {
                 this.billAccountID = billAccountID;
@@ -426,7 +432,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account to which the bill belongs.
+             * The name of the member.
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -434,161 +440,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing date.
+             * The code of the service. The service code is consistent with that displayed in User Center.
              */
             public Builder billingDate(String billingDate) {
                 this.billingDate = billingDate;
-                return this;
-            }
-
-            /**
-             * The business type.
-             */
-            public Builder bizType(String bizType) {
-                this.bizType = bizType;
-                return this;
-            }
-
-            /**
-             * The amount paid in cash. The amount that was deducted by using credit refunds is not included.
-             */
-            public Builder cashAmount(Float cashAmount) {
-                this.cashAmount = cashAmount;
-                return this;
-            }
-
-            /**
-             * The cost center.
-             */
-            public Builder costUnit(String costUnit) {
-                this.costUnit = costUnit;
-                return this;
-            }
-
-            /**
-             * The type of the currency. Valid values:
-             * <p>
-             * 
-             * *   CNY
-             * *   USD
-             * *   JPY
-             */
-            public Builder currency(String currency) {
-                this.currency = currency;
-                return this;
-            }
-
-            /**
-             * The amount deducted by using vouchers.
-             */
-            public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
-                this.deductedByCashCoupons = deductedByCashCoupons;
-                return this;
-            }
-
-            /**
-             * The amount deducted by using coupons.
-             */
-            public Builder deductedByCoupons(Float deductedByCoupons) {
-                this.deductedByCoupons = deductedByCoupons;
-                return this;
-            }
-
-            /**
-             * The amount deducted by using prepaid cards.
-             */
-            public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
-                this.deductedByPrepaidCard = deductedByPrepaidCard;
-                return this;
-            }
-
-            /**
-             * The discount amount.
-             */
-            public Builder invoiceDiscount(Float invoiceDiscount) {
-                this.invoiceDiscount = invoiceDiscount;
-                return this;
-            }
-
-            /**
-             * The unsettled amount or the amount settled with credits.
-             */
-            public Builder outstandingAmount(Float outstandingAmount) {
-                this.outstandingAmount = outstandingAmount;
-                return this;
-            }
-
-            /**
-             * The ID of the member.
-             */
-            public Builder ownerID(String ownerID) {
-                this.ownerID = ownerID;
-                return this;
-            }
-
-            /**
-             * The name of the member.
-             */
-            public Builder ownerName(String ownerName) {
-                this.ownerName = ownerName;
-                return this;
-            }
-
-            /**
-             * The amount paid in cash. The amount that was deducted by using credit refunds is included.
-             */
-            public Builder paymentAmount(Float paymentAmount) {
-                this.paymentAmount = paymentAmount;
-                return this;
-            }
-
-            /**
-             * The code of the service. The service code is consistent with that displayed in User Center.
-             */
-            public Builder pipCode(String pipCode) {
-                this.pipCode = pipCode;
-                return this;
-            }
-
-            /**
-             * The pretax amount.
-             */
-            public Builder pretaxAmount(Float pretaxAmount) {
-                this.pretaxAmount = pretaxAmount;
-                return this;
-            }
-
-            /**
-             * The pretax gross amount.
-             */
-            public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
-                this.pretaxGrossAmount = pretaxGrossAmount;
-                return this;
-            }
-
-            /**
-             * The code of the service.
-             * <p>
-             * 
-             * **
-             * 
-             * ****A value is returned only if the **IsGroupByProduct **parameter is set to true.
-             */
-            public Builder productCode(String productCode) {
-                this.productCode = productCode;
-                return this;
-            }
-
-            /**
-             * The name of the service.
-             * <p>
-             * 
-             * **
-             * 
-             * ****A value is returned only if the **IsGroupByProduct **parameter is set to true.
-             */
-            public Builder productName(String productName) {
-                this.productName = productName;
                 return this;
             }
 
@@ -602,6 +457,152 @@ public class QueryAccountBillResponseBody extends TeaModel {
              * **
              * 
              * ****A value is returned only if the IsGroupByProduct parameter is set to true.
+             */
+            public Builder bizType(String bizType) {
+                this.bizType = bizType;
+                return this;
+            }
+
+            /**
+             * Not allocated
+             */
+            public Builder cashAmount(Float cashAmount) {
+                this.cashAmount = cashAmount;
+                return this;
+            }
+
+            /**
+             * The discount amount.
+             */
+            public Builder costUnit(String costUnit) {
+                this.costUnit = costUnit;
+                return this;
+            }
+
+            /**
+             * The amount deducted by using credit refunds.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * The name of the account to which the bill belongs.
+             */
+            public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
+                this.deductedByCashCoupons = deductedByCashCoupons;
+                return this;
+            }
+
+            /**
+             * The ID of the member.
+             */
+            public Builder deductedByCoupons(Float deductedByCoupons) {
+                this.deductedByCoupons = deductedByCoupons;
+                return this;
+            }
+
+            /**
+             * The business type.
+             */
+            public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
+                this.deductedByPrepaidCard = deductedByPrepaidCard;
+                return this;
+            }
+
+            /**
+             * The ID of the account to which the bill belongs.
+             */
+            public Builder invoiceDiscount(Float invoiceDiscount) {
+                this.invoiceDiscount = invoiceDiscount;
+                return this;
+            }
+
+            /**
+             * The amount paid in cash. The amount that was deducted by using credit refunds is included.
+             */
+            public Builder outstandingAmount(Float outstandingAmount) {
+                this.outstandingAmount = outstandingAmount;
+                return this;
+            }
+
+            /**
+             * The amount deducted by using vouchers.
+             */
+            public Builder ownerID(String ownerID) {
+                this.ownerID = ownerID;
+                return this;
+            }
+
+            /**
+             * The name of the service.
+             * <p>
+             * 
+             * **
+             * 
+             * ****A value is returned only if the **IsGroupByProduct **parameter is set to true.
+             */
+            public Builder ownerName(String ownerName) {
+                this.ownerName = ownerName;
+                return this;
+            }
+
+            /**
+             * The amount deducted by using coupons.
+             */
+            public Builder paymentAmount(Float paymentAmount) {
+                this.paymentAmount = paymentAmount;
+                return this;
+            }
+
+            /**
+             * The name of the Alibaba Cloud account.
+             */
+            public Builder pipCode(String pipCode) {
+                this.pipCode = pipCode;
+                return this;
+            }
+
+            /**
+             * The details of the bills.
+             */
+            public Builder pretaxAmount(Float pretaxAmount) {
+                this.pretaxAmount = pretaxAmount;
+                return this;
+            }
+
+            /**
+             * The cost center.
+             */
+            public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
+                this.pretaxGrossAmount = pretaxGrossAmount;
+                return this;
+            }
+
+            /**
+             * The pretax gross amount.
+             */
+            public Builder productCode(String productCode) {
+                this.productCode = productCode;
+                return this;
+            }
+
+            /**
+             * The pretax amount.
+             */
+            public Builder productName(String productName) {
+                this.productName = productName;
+                return this;
+            }
+
+            /**
+             * The type of the currency. Valid values:
+             * <p>
+             * 
+             * *   CNY
+             * *   USD
+             * *   JPY
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -755,7 +756,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The ID of your Alibaba Cloud account.
+             * The page number of the returned page.
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -763,7 +764,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account.
+             * The number of entries returned per page.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -771,7 +772,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle. Format: YYYY-MM.
+             * The data returned.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -779,7 +780,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the bills.
+             * The total number of returned entries.
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -787,7 +788,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * Indicates whether the request is successful.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -795,7 +796,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The billing cycle. Format: YYYY-MM.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -803,7 +804,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * The ID of your Alibaba Cloud account.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
