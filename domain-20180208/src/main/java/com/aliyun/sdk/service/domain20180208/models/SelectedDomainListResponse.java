@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AcceptDemandResponse} extends {@link TeaModel}
+ * {@link SelectedDomainListResponse} extends {@link TeaModel}
  *
- * <p>AcceptDemandResponse</p>
+ * <p>SelectedDomainListResponse</p>
  */
-public class AcceptDemandResponse extends Response {
+public class SelectedDomainListResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class AcceptDemandResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private AcceptDemandResponseBody body;
+    private SelectedDomainListResponseBody body;
 
-    private AcceptDemandResponse(BuilderImpl builder) {
+    private SelectedDomainListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AcceptDemandResponse create() {
+    public static SelectedDomainListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class AcceptDemandResponse extends Response {
     /**
      * @return body
      */
-    public AcceptDemandResponseBody getBody() {
+    public SelectedDomainListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AcceptDemandResponse, Builder> {
+    public interface Builder extends Response.Builder<SelectedDomainListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AcceptDemandResponseBody body);
+        Builder body(SelectedDomainListResponseBody body);
 
         @Override
-        AcceptDemandResponse build();
+        SelectedDomainListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AcceptDemandResponse, Builder>
+            extends Response.BuilderImpl<SelectedDomainListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AcceptDemandResponseBody body; 
+        private SelectedDomainListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AcceptDemandResponse response) {
+        private BuilderImpl(SelectedDomainListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class AcceptDemandResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AcceptDemandResponseBody body) {
+        public Builder body(SelectedDomainListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AcceptDemandResponse build() {
-            return new AcceptDemandResponse(this);
+        public SelectedDomainListResponse build() {
+            return new SelectedDomainListResponse(this);
         } 
 
     } 

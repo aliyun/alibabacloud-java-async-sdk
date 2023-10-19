@@ -68,6 +68,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReserveIntlDomainResponse> reserveIntlDomain(ReserveIntlDomainRequest request);
 
+    CompletableFuture<SelectedDomainListResponse> selectedDomainList(SelectedDomainListRequest request);
+
     CompletableFuture<UpdatePartnerReservePriceResponse> updatePartnerReservePrice(UpdatePartnerReservePriceRequest request);
 
 }
