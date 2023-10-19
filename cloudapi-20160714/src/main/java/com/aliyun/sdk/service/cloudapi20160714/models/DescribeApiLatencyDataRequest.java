@@ -127,7 +127,7 @@ public class DescribeApiLatencyDataRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -136,7 +136,7 @@ public class DescribeApiLatencyDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -145,7 +145,7 @@ public class DescribeApiLatencyDataRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -163,7 +163,12 @@ public class DescribeApiLatencyDataRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**: the pre-release environment
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -172,7 +177,7 @@ public class DescribeApiLatencyDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -38,7 +38,7 @@ public class RemoveIpControlPolicyItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Removes one or more policies from an access control list (ACL).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

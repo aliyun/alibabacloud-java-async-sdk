@@ -113,11 +113,33 @@ public class RemoveTrafficControlApisRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The IDs of the APIs from which you want to unbind a specified throttling policy.
+         * <p>
+         * 
+         * *   If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.
+         * *   Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
             this.apiIds = apiIds;
+            return this;
+        }
+
+        /**
+         * The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 
@@ -128,26 +150,6 @@ public class RemoveTrafficControlApisRequest extends Request {
          * *   **RELEASE**
          * *   **TEST**
          */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.
-         */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
             this.stageName = stageName;
@@ -155,11 +157,7 @@ public class RemoveTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The IDs of the APIs from which you want to unbind a specified throttling policy.
-         * <p>
-         * 
-         * *   If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.
-         * *   Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * The ID of the throttling policy that you want to unbind from APIs.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

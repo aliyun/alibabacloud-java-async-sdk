@@ -113,7 +113,7 @@ public class DeployApiRequest extends Request {
         } 
 
         /**
-         * The publishing remarks.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -122,10 +122,7 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * *   This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.
-         * <p>
-         * *   An API is published to a cluster in less than 5 seconds.
-         * *   The QPS limit on this operation is 50 per user.
+         * The publishing remarks.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,12 +131,7 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **PRE: the pre-release environment**
-         * *   **TEST: the test environment**
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -157,7 +149,12 @@ public class DeployApiRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**: the pre-release environment
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

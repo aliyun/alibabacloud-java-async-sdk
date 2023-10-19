@@ -38,7 +38,7 @@ public class SetSignatureApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Binds a signature key to APIs.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -99,7 +99,7 @@ public class DescribeSignaturesByApiRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -108,11 +108,7 @@ public class DescribeSignaturesByApiRequest extends Request {
         }
 
         /**
-         * The runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * The ID of the group to which the API belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -130,7 +126,11 @@ public class DescribeSignaturesByApiRequest extends Request {
         }
 
         /**
-         * The returned signature key information. It is an array consisting of SignatureItem data.
+         * The runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -128,7 +128,7 @@ public class SwitchApiRequest extends Request {
         } 
 
         /**
-         * The description of the switch operation.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -137,7 +137,7 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The description of the switch operation.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,11 +146,7 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
-         * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -159,12 +155,7 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   The historical version can be obtained through the DescribeHistoryApis API.****
-         * *   Only APIs that have been published more than once have historical versions to switch to.
-         * *   This operation can only be performed on running APIs. Use caution when performing this operation because the operation cannot be undone after it has been completed and takes effect within 5 seconds.
-         * *   The switch operation is in essence a publish operation, and the reason for this operation must be provided.
+         * The historical version that you want to switch to.
          */
         public Builder historyVersion(String historyVersion) {
             this.putQueryParameter("HistoryVersion", historyVersion);
@@ -182,7 +173,11 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The historical version you want to switch to.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -113,27 +113,6 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
-         */
-        public Builder appId(String appId) {
-            this.putQueryParameter("AppId", appId);
-            this.appId = appId;
-            return this;
-        }
-
-        /**
-         * *   This operation is intended for API providers.
-         * <p>
-         * *   The modification immediately takes effect on all the APIs that are bound to the policy.
-         * *   This operation causes a full modification of the content of a policy.
-         */
-        public Builder cidrIp(String cidrIp) {
-            this.putQueryParameter("CidrIp", cidrIp);
-            this.cidrIp = cidrIp;
-            return this;
-        }
-
-        /**
          * The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.
          * <p>
          * 
@@ -143,6 +122,24 @@ public class ModifyIpControlPolicyItemRequest extends Request {
          * *   If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.
          * *   If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.
          */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
+         * The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.
+         */
+        public Builder cidrIp(String cidrIp) {
+            this.putQueryParameter("CidrIp", cidrIp);
+            this.cidrIp = cidrIp;
+            return this;
+        }
+
+        /**
+         * The ID of the ACL. The ID is unique.
+         */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
             this.ipControlId = ipControlId;
@@ -150,7 +147,7 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.
+         * The ID of the policy.
          */
         public Builder policyItemId(String policyItemId) {
             this.putQueryParameter("PolicyItemId", policyItemId);

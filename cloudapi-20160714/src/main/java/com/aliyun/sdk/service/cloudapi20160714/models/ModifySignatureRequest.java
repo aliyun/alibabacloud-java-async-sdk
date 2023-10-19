@@ -111,7 +111,7 @@ public class ModifySignatureRequest extends Request {
         } 
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -120,7 +120,7 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+         * The ID of the signature key that you want to manage.
          */
         public Builder signatureId(String signatureId) {
             this.putQueryParameter("SignatureId", signatureId);
@@ -129,7 +129,7 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
          */
         public Builder signatureKey(String signatureKey) {
             this.putQueryParameter("SignatureKey", signatureKey);
@@ -138,7 +138,7 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.
+         * The new name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
          */
         public Builder signatureName(String signatureName) {
             this.putQueryParameter("SignatureName", signatureName);
@@ -147,7 +147,7 @@ public class ModifySignatureRequest extends Request {
         }
 
         /**
-         * The ID of the key.
+         * The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.
          */
         public Builder signatureSecret(String signatureSecret) {
             this.putQueryParameter("SignatureSecret", signatureSecret);

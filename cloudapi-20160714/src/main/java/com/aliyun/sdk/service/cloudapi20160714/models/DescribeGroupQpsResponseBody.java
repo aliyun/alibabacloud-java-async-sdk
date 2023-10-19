@@ -50,7 +50,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupQps.
+         * The number of requests directed to the API group.
          */
         public Builder groupQps(GroupQps groupQps) {
             this.groupQps = groupQps;
@@ -58,7 +58,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * ItemTime.
+             * The time.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +118,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The number of requests that fall into the time range.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

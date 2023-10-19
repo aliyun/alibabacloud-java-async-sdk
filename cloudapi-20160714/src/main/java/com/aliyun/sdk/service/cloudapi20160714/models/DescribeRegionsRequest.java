@@ -68,7 +68,12 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language in which you want to return the descriptions of the access control policies. Valid values:
+         * <p>
+         * 
+         * *   zh-CN (default value): Chinese
+         * *   en: English
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

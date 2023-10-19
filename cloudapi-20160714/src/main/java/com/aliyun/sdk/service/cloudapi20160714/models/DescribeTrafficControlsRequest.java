@@ -153,11 +153,47 @@ public class DescribeTrafficControlsRequest extends Request {
         } 
 
         /**
-         * The name of the throttling policy.
+         * The specified API ID. This parameter must be specified together with GroupId and StageName.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
             this.apiId = apiId;
+            return this;
+        }
+
+        /**
+         * The specified group ID. This parameter must be specified together with ApiId and StageName.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Pages start from page 1. Default value: 1.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 
@@ -168,42 +204,6 @@ public class DescribeTrafficControlsRequest extends Request {
          * *   **RELEASE**
          * *   **TEST**
          */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * The page number of the returned page.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * ThrottlingTest
-         */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
             this.stageName = stageName;
@@ -211,7 +211,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The specified API ID. This parameter must be specified together with GroupId and StageName.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
@@ -220,7 +220,7 @@ public class DescribeTrafficControlsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The name of the throttling policy.
          */
         public Builder trafficControlName(String trafficControlName) {
             this.putQueryParameter("TrafficControlName", trafficControlName);

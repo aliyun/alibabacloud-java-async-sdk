@@ -38,7 +38,7 @@ public class SwitchApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Switches the definition of an API in a specified runtime environment to a historical version.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

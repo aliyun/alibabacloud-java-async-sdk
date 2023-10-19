@@ -106,7 +106,7 @@ public class ResetAppSecretRequest extends Request {
         }
 
         /**
-         * NewAppKey.
+         * The new AppKey that you set must be globally unique.
          */
         public Builder newAppKey(String newAppKey) {
             this.putQueryParameter("NewAppKey", newAppKey);

@@ -99,7 +99,7 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         } 
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -108,9 +108,7 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   You can obtain the input parameters required in this operation by calling other APIs.
+         * The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.
          */
         public Builder specialKey(String specialKey) {
             this.putQueryParameter("SpecialKey", specialKey);
@@ -119,7 +117,11 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The type of the special throttling policy. Valid values:
+         * <p>
+         * 
+         * *   **APP**
+         * *   **USER**
          */
         public Builder specialType(String specialType) {
             this.putQueryParameter("SpecialType", specialType);
@@ -128,7 +130,7 @@ public class DeleteTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

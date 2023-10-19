@@ -114,11 +114,29 @@ public class SetTrafficControlApisRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
             this.apiIds = apiIds;
+            return this;
+        }
+
+        /**
+         * The ID of the API group containing the APIs to which you want to bind a specified throttling policy.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 
@@ -129,26 +147,6 @@ public class SetTrafficControlApisRequest extends Request {
          * *   **RELEASE**
          * *   **TEST**
          */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   This API allows you to bind a specific throttling policy to up to 100 APIs at a time.
-         */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
             this.stageName = stageName;
@@ -156,7 +154,7 @@ public class SetTrafficControlApisRequest extends Request {
         }
 
         /**
-         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

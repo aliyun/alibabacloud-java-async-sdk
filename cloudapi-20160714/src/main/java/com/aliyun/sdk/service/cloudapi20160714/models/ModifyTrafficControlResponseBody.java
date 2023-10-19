@@ -38,7 +38,7 @@ public class ModifyTrafficControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Modifies the settings of a custom throttling policy.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

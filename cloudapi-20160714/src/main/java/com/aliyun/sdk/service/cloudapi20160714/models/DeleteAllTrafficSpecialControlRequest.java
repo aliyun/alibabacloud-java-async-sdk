@@ -69,7 +69,7 @@ public class DeleteAllTrafficSpecialControlRequest extends Request {
         } 
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -78,7 +78,7 @@ public class DeleteAllTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * *   This API is intended for API providers.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

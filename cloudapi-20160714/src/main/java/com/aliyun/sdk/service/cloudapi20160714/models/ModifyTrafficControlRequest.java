@@ -153,7 +153,7 @@ public class ModifyTrafficControlRequest extends Request {
         } 
 
         /**
-         * The default throttling value for each app.
+         * The default throttling value for each API.
          */
         public Builder apiDefault(Integer apiDefault) {
             this.putQueryParameter("ApiDefault", apiDefault);
@@ -162,7 +162,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * ThrottlingTestDescription
+         * The default throttling value for each app.
          */
         public Builder appDefault(Integer appDefault) {
             this.putQueryParameter("AppDefault", appDefault);
@@ -171,7 +171,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The description of the throttling policy.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -180,7 +180,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -189,11 +189,20 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * ThrottlingTest
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);
             this.trafficControlId = trafficControlId;
+            return this;
+        }
+
+        /**
+         * The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
+         */
+        public Builder trafficControlName(String trafficControlName) {
+            this.putQueryParameter("TrafficControlName", trafficControlName);
+            this.trafficControlName = trafficControlName;
             return this;
         }
 
@@ -206,15 +215,6 @@ public class ModifyTrafficControlRequest extends Request {
          * *   **HOUR**
          * *   **DAY**
          */
-        public Builder trafficControlName(String trafficControlName) {
-            this.putQueryParameter("TrafficControlName", trafficControlName);
-            this.trafficControlName = trafficControlName;
-            return this;
-        }
-
-        /**
-         * The default throttling value for each user.
-         */
         public Builder trafficControlUnit(String trafficControlUnit) {
             this.putQueryParameter("TrafficControlUnit", trafficControlUnit);
             this.trafficControlUnit = trafficControlUnit;
@@ -222,7 +222,7 @@ public class ModifyTrafficControlRequest extends Request {
         }
 
         /**
-         * The description of the throttling policy.
+         * The default throttling value for each user.
          */
         public Builder userDefault(Integer userDefault) {
             this.putQueryParameter("UserDefault", userDefault);

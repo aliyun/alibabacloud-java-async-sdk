@@ -250,7 +250,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the plug-in.
+             * The plug-in description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +274,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plug-in.
+             * The plug-in ID.
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -282,7 +282,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * The plug-in name.
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -290,7 +290,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the plug-in.
+             * The plug-in type.
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;

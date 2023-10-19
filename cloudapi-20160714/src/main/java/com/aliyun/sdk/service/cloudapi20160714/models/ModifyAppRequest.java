@@ -125,7 +125,7 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -134,7 +134,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+         * <p>
+         * 
+         * If you do not want to modify the existing value, do not specify this parameter.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -143,7 +146,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application. The description can be up to 180 characters in length.
+         * <p>
+         * 
+         * If you do not want to modify the existing value, do not specify this parameter.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -170,7 +176,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -225,7 +231,10 @@ public class ModifyAppRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * Valid values of n: `[1, 20]`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +242,10 @@ public class ModifyAppRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * Valid values of n: `[1, 20]`.
              */
             public Builder value(String value) {
                 this.value = value;

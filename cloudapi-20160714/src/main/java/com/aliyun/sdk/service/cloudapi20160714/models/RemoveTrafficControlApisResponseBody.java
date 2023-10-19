@@ -38,7 +38,7 @@ public class RemoveTrafficControlApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Unbinds a specified throttling policy from APIs.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

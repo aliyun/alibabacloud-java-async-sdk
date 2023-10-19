@@ -84,7 +84,7 @@ public class RemoveIpControlPolicyItemRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the ACL. The ID is unique.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -93,7 +93,7 @@ public class RemoveIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * *   This operation is intended for API providers.
+         * The ID of a policy. Separate multiple IDs with semicolons (;). A maximum of 100 IDs can be entered.
          */
         public Builder policyItemIds(String policyItemIds) {
             this.putQueryParameter("PolicyItemIds", policyItemIds);

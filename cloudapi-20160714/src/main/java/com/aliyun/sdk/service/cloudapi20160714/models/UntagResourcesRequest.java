@@ -112,7 +112,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,7 +125,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -130,10 +134,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag N.
+         * The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
          * <p>
          * 
-         * Valid values of N: `1 to 20.`
+         * *   **apiGroup**
+         * *   **plugin**
+         * *   **app**
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -142,7 +148,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -151,7 +157,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag keys of the resource.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

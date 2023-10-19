@@ -86,7 +86,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the API.
+         * The information about the ACLs. The information is an array of ApiIpControlItem data.
          */
         public Builder apiIpControls(ApiIpControls apiIpControls) {
             this.apiIpControls = apiIpControls;
@@ -94,7 +94,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ACLs. The information is an array of ApiIpControlItem data.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The time of binding.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             private String ipControlName; 
 
             /**
-             * The name of the ACL.
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -214,7 +214,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the access control lists (ACLs) that are bound to all the APIs in an API group in a specified environment.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -222,7 +222,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ACL.
+             * The time of binding.
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -230,7 +230,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * The ID of the ACL.
              */
             public Builder ipControlId(String ipControlId) {
                 this.ipControlId = ipControlId;
@@ -238,11 +238,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * *   This operation is intended for API callers.
-             * <p>
-             * *   If an optional parameter is not specified, all results are returned on separate pages.
-             * 
-             * ·
+             * The name of the ACL.
              */
             public Builder ipControlName(String ipControlName) {
                 this.ipControlName = ipControlName;

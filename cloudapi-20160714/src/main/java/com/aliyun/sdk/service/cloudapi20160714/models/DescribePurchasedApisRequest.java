@@ -152,7 +152,7 @@ public class DescribePurchasedApisRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -161,7 +161,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The name of the API.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -170,7 +170,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -179,7 +179,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +188,7 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +206,12 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The name of the runtime environment. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**
+         * *   **PRE**
+         * *   **TEST**
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -215,7 +220,11 @@ public class DescribePurchasedApisRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * Specifies whether the API is public. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC**: indicates that the API is public. If you set this parameter to PUBLIC, this API is displayed on the API List page in the console for all users after the API is published to the production environment.
+         * *   **PRIVATE**: indicates that the API is private. If you set this parameter to PRIVATE, this API is not displayed in Alibaba Cloud Marketplace after the API group to which this API belongs is made available.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

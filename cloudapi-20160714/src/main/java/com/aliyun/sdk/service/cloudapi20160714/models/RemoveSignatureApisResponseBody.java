@@ -38,7 +38,7 @@ public class RemoveSignatureApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Unbinds a backend signature key from APIs.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

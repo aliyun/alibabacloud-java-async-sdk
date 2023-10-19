@@ -62,7 +62,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CallFails.
+         * The returned information about failed API calls. It is an array consisting of MonitorItem data.
          */
         public Builder callFails(CallFails callFails) {
             this.callFails = callFails;
@@ -70,7 +70,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * CallSuccesses.
+         * The returned information about successful API calls. It is an array consisting of MonitorItem data.
          */
         public Builder callSuccesses(CallSuccesses callSuccesses) {
             this.callSuccesses = callSuccesses;
@@ -78,7 +78,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * ItemTime.
+             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +138,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The value corresponding to the monitoring metric.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -232,7 +232,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * ItemTime.
+             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -240,7 +240,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The value corresponding to the monitoring metric.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

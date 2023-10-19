@@ -111,7 +111,7 @@ public class DescribeAppsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The ID of the app.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +120,7 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * The Alibaba Cloud account of the app owner. For more information, see [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3a8c196eVWxvQB#/secure).
          */
         public Builder appOwner(Long appOwner) {
             this.putQueryParameter("AppOwner", appOwner);
@@ -129,7 +129,7 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +138,7 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -38,7 +38,7 @@ public class DeleteTrafficSpecialControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Deletes a custom special throttling policy.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

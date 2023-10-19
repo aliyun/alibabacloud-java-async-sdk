@@ -114,7 +114,7 @@ public class DescribeGroupQpsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +123,7 @@ public class DescribeGroupQpsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The API group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -141,7 +141,12 @@ public class DescribeGroupQpsRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment to which the API group is published. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the staging environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -150,7 +155,7 @@ public class DescribeGroupQpsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

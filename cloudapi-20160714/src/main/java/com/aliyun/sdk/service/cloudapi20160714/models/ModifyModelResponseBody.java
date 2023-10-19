@@ -38,7 +38,7 @@ public class ModifyModelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Updates the model of an API group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

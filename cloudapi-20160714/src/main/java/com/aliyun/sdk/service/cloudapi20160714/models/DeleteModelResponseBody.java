@@ -38,7 +38,7 @@ public class DeleteModelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Deletes a model from Model Management for an API group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

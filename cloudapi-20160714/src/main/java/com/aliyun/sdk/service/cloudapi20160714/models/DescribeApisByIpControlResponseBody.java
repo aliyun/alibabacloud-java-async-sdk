@@ -86,11 +86,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Indicates whether the API is public. Valid values:
-         * <p>
-         * 
-         * *   **PUBLIC**
-         * *   **PRIVATE**
+         * The returned API information. It is an array of ApiInfo data.
          */
         public Builder apiInfos(ApiInfos apiInfos) {
             this.apiInfos = apiInfos;
@@ -98,7 +94,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +102,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned API information. It is an array consisting of ApiInfo data.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +110,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +118,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
         }
 
         /**
-         * The binding time of the API.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -258,7 +254,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * Description
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -266,9 +262,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
             }
 
             /**
-             * *   This API is intended for API providers.
-             * <p>
-             * *   You can specify PageNumber to obtain the result on the specified page.
+             * The name of the API
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -276,7 +270,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API.
+             * The time of API binding.
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -284,7 +278,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * The description of the API.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -292,10 +286,26 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
             }
 
             /**
-             * The API operation.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * The name of the API group.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * The region in which the API is located.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
@@ -304,23 +314,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
              * <p>
              * 
              * *   **RELEASE**
-             * *   **TEST**
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
-                return this;
-            }
-
-            /**
-             * Queries the APIs that are bound to an access control list (ACL).
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The region where the API is located.
+             * *   **TEST.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -328,7 +322,11 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * The visibility of the API. Valid values:
+             * <p>
+             * 
+             * *   **PUBLIC**
+             * *   **PRIVATE**
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

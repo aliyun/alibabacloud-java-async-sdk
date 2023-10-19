@@ -112,7 +112,7 @@ public class CreateIpControlRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description. The description can be up to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -121,7 +121,7 @@ public class CreateIpControlRequest extends Request {
         }
 
         /**
-         * IpControlName.
+         * The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (\_). The name cannot start with an underscore (\_).``
          */
         public Builder ipControlName(String ipControlName) {
             this.putQueryParameter("IpControlName", ipControlName);
@@ -130,7 +130,7 @@ public class CreateIpControlRequest extends Request {
         }
 
         /**
-         * IpControlPolicys.
+         * The information about the policies. The information is an array of ipcontrolpolicys data.
          */
         public Builder ipControlPolicys(java.util.List < IpControlPolicys> ipControlPolicys) {
             this.putQueryParameter("IpControlPolicys", ipControlPolicys);
@@ -139,7 +139,11 @@ public class CreateIpControlRequest extends Request {
         }
 
         /**
-         * IpControlType.
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **ALLOW**: an IP address whitelist
+         * *   **REFUSE**: an IP address blacklist
          */
         public Builder ipControlType(String ipControlType) {
             this.putQueryParameter("IpControlType", ipControlType);
@@ -202,7 +206,15 @@ public class CreateIpControlRequest extends Request {
             private String cidrIp; 
 
             /**
-             * AppId.
+             * The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.
+             * <p>
+             * 
+             * *   You can add only one application ID at a time.
+             * *   If this parameter is empty, no applications are restricted.
+             * *   If this parameter is not empty, not only IP addresses but also applications are restricted.
+             * *   If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.
+             * *   If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.
+             * *   Valid values of N in IpControlPolicys.N: `[1,100]`.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -210,7 +222,12 @@ public class CreateIpControlRequest extends Request {
             }
 
             /**
-             * CidrIp.
+             * The IP address or CIDR block involved in a policy.
+             * <p>
+             * 
+             * *   If you want to specify a policy when you create an ACL, this parameter is required.
+             * *   The IP address or CIDR block that is defined in each policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.
+             * *   Valid values of N in IpControlPolicys.N: `[1,100]`.
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;

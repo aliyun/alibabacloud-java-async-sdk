@@ -98,7 +98,7 @@ public class DescribeApisByTrafficControlRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -107,7 +107,7 @@ public class DescribeApisByTrafficControlRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +116,7 @@ public class DescribeApisByTrafficControlRequest extends Request {
         }
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -125,7 +125,7 @@ public class DescribeApisByTrafficControlRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The ID of the throttling policy that you want to query.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

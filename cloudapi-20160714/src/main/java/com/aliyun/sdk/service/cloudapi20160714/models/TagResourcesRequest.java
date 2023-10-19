@@ -99,7 +99,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -108,7 +108,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **TagResources**.
+         * The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
+         * <p>
+         * 
+         * *   **apiGroup**
+         * *   **plugin**
+         * *   **app**
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +131,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the lifecycle rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -182,7 +187,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Adds tags to resources.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -190,7 +195,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * TagResources
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;

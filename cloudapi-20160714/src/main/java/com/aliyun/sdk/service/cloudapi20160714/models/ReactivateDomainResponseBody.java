@@ -38,7 +38,7 @@ public class ReactivateDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Reactivates a custom domain name whose validity status is Abnormal.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

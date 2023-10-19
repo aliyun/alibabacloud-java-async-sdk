@@ -86,7 +86,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Plugins.
+         * The returned information about the plug-in. It is an array consisting of PluginAttribute data.
          */
         public Builder plugins(Plugins plugins) {
             this.plugins = plugins;
@@ -110,7 +110,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -356,7 +356,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * CreatedTime.
+             * The creation time (UTC) of the plug-in.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -364,7 +364,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The plug-in description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -372,7 +372,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last modification time (UTC) of the plug-in.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -380,7 +380,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginData.
+             * The definition statement of the plug-in.
              */
             public Builder pluginData(String pluginData) {
                 this.pluginData = pluginData;
@@ -388,7 +388,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * The ID of the plug-in.
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -396,7 +396,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * The name of the plug-in.
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -404,7 +404,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginType.
+             * The type of the plug-in.
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -412,7 +412,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the plug-in is located.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -420,7 +420,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

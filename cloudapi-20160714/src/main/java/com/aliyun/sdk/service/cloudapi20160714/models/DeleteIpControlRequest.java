@@ -69,10 +69,7 @@ public class DeleteIpControlRequest extends Request {
         } 
 
         /**
-         * *   This operation is intended for API providers.
-         * <p>
-         * *   If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.
-         * *   If you call this operation on an ACL that does not exist, a success message is returned.
+         * The ID of the ACL. The ID is unique.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);

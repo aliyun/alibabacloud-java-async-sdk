@@ -16,6 +16,10 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ModifyVpcAccessAndUpdateApisResponseBody body;
@@ -23,6 +27,7 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
     private ModifyVpcAccessAndUpdateApisResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ModifyVpcAccessAndUpdateApisResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
     public interface Builder extends Response.Builder<ModifyVpcAccessAndUpdateApisResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ModifyVpcAccessAndUpdateApisResponseBody body);
 
@@ -64,6 +78,7 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
             extends Response.BuilderImpl<ModifyVpcAccessAndUpdateApisResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ModifyVpcAccessAndUpdateApisResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
         private BuilderImpl(ModifyVpcAccessAndUpdateApisResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ModifyVpcAccessAndUpdateApisResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

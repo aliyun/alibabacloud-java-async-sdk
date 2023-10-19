@@ -86,7 +86,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the API.
+         * The returned API information. It is an array consisting of ApiHisItem data.
          */
         public Builder apiHisItems(ApiHisItems apiHisItems) {
             this.apiHisItems = apiHisItems;
@@ -94,7 +94,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned API information. It is an array consisting of ApiHisItem data.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Creates an object
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -274,7 +274,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the API is located.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -282,7 +282,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The historical version of the API.
+             * The publishing time (UTC) of the API.
              */
             public Builder deployedTime(String deployedTime) {
                 this.deployedTime = deployedTime;
@@ -290,10 +290,42 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which an API belongs.
+             * The description of the API.
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * The ID of the API group.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * The name of the API group.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * The historical version of the API.
+             */
+            public Builder historyVersion(String historyVersion) {
+                this.historyVersion = historyVersion;
+                return this;
+            }
+
+            /**
+             * The region in which the API is located.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
@@ -302,39 +334,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **RELEASE**
-             * *   **TEST.
-             */
-            public Builder groupId(String groupId) {
-                this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * The publishing time (UTC) of the API.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
-                return this;
-            }
-
-            /**
-             * CreateObject
-             */
-            public Builder historyVersion(String historyVersion) {
-                this.historyVersion = historyVersion;
-                return this;
-            }
-
-            /**
-             * Queries the historical versions of a specified API.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The name of the API.
+             * *   **TEST**
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -342,7 +342,7 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * Indicates whether an API version is effective. Valid values: **ONLINE** and **OFFLINE**.
              */
             public Builder status(String status) {
                 this.status = status;

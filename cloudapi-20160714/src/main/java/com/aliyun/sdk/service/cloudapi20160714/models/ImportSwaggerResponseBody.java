@@ -86,7 +86,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         private Success success; 
 
         /**
-         * Failed.
+         * The APIs that failed to be created based on the Swagger-compliant data imported this time.
          */
         public Builder failed(Failed failed) {
             this.failed = failed;
@@ -94,7 +94,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * ModelFailed.
+         * The models that failed to be imported based on the Swagger-compliant data imported this time.
          */
         public Builder modelFailed(ModelFailed modelFailed) {
             this.modelFailed = modelFailed;
@@ -102,7 +102,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * ModelSuccess.
+         * The models that were imported based on the Swagger-compliant data imported this time.
          */
         public Builder modelSuccess(ModelSuccess modelSuccess) {
             this.modelSuccess = modelSuccess;
@@ -110,7 +110,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The APIs that were created based on the Swagger-compliant data imported this time.
          */
         public Builder success(Success success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * ErrorMsg.
+             * The error message returned.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -190,7 +190,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * HttpMethod.
+             * The HTTP method of the API.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -198,7 +198,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -304,7 +304,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String modelName; 
 
             /**
-             * ErrorMsg.
+             * The error message.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -312,7 +312,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -320,7 +320,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * The name of the model.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -438,7 +438,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String modelUid; 
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -446,7 +446,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * The name of the model.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -454,7 +454,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * ModelOperation.
+             * The model operation.
              */
             public Builder modelOperation(String modelOperation) {
                 this.modelOperation = modelOperation;
@@ -462,7 +462,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * ModelUid.
+             * The UID of the model.
              */
             public Builder modelUid(String modelUid) {
                 this.modelUid = modelUid;
@@ -580,7 +580,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * ApiOperation.
+             * Specifies that the operation is CREATE or MODIFY.
              */
             public Builder apiOperation(String apiOperation) {
                 this.apiOperation = apiOperation;
@@ -588,7 +588,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * ApiUid.
+             * The UID of the imported API.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -596,7 +596,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * HttpMethod.
+             * The HTTP method of the API.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -604,7 +604,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;

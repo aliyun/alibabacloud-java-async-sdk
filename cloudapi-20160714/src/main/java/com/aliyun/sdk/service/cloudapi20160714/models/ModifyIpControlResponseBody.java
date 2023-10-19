@@ -38,7 +38,7 @@ public class ModifyIpControlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Modifies an access control list (ACL).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

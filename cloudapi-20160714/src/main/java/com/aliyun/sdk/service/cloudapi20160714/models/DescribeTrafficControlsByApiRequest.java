@@ -99,11 +99,29 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
             this.apiId = apiId;
+            return this;
+        }
+
+        /**
+         * The ID of the group to which the API to be queried belongs.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 
@@ -113,24 +131,6 @@ public class DescribeTrafficControlsByApiRequest extends Request {
          * 
          * *   **RELEASE**
          * *   **TEST**
-         */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * The returned throttling policy information. It is an array consisting of TrafficControlItem data.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

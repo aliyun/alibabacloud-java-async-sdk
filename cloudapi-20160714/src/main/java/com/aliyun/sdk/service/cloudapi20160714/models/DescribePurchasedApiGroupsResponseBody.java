@@ -86,7 +86,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PurchasedApiGroupAttributes.
+         * The attributes of the API group.
          */
         public Builder purchasedApiGroupAttributes(PurchasedApiGroupAttributes purchasedApiGroupAttributes) {
             this.purchasedApiGroupAttributes = purchasedApiGroupAttributes;
@@ -110,7 +110,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BillingType.
+             * The billing method.
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -274,7 +274,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the API group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -282,7 +282,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the API group expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -290,7 +290,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -298,7 +298,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -306,7 +306,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeTimesMax.
+             * The maximum number of calls.
              */
             public Builder invokeTimesMax(Long invokeTimesMax) {
                 this.invokeTimesMax = invokeTimesMax;
@@ -314,7 +314,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeTimesNow.
+             * The current number of calls.
              */
             public Builder invokeTimesNow(Long invokeTimesNow) {
                 this.invokeTimesNow = invokeTimesNow;
@@ -322,7 +322,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PurchasedTime.
+             * The time when the API group was purchased.
              */
             public Builder purchasedTime(String purchasedTime) {
                 this.purchasedTime = purchasedTime;
@@ -330,7 +330,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the API group is located.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,7 +338,11 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the API group.
+             * <p>
+             * 
+             * *   **NORMAL**: The API group is normal.
+             * *   **DELETE**: The API group is deleted.
              */
             public Builder status(String status) {
                 this.status = status;

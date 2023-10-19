@@ -38,7 +38,7 @@ public class DeployApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Publishes an API to a specified environment.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

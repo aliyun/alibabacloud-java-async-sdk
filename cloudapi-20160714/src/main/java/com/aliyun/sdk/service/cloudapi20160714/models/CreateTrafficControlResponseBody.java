@@ -50,7 +50,7 @@ public class CreateTrafficControlResponseBody extends TeaModel {
         private String trafficControlId; 
 
         /**
-         * Creates a custom throttling policy.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +58,7 @@ public class CreateTrafficControlResponseBody extends TeaModel {
         }
 
         /**
-         * *   This API is intended for API providers.
-         * <p>
-         * *   Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.
-         * *   The QPS limit on this operation is 50 per user.
+         * The ID of the throttling policy.
          */
         public Builder trafficControlId(String trafficControlId) {
             this.trafficControlId = trafficControlId;
