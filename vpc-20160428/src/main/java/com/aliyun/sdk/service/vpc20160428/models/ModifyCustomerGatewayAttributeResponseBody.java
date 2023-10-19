@@ -30,6 +30,9 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ModifyCustomerGatewayAttributeResponseBody(Builder builder) {
         this.createTime = builder.createTime;
         this.customerGatewayId = builder.customerGatewayId;
@@ -37,6 +40,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         this.ipAddress = builder.ipAddress;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -89,6 +93,13 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private Long createTime; 
         private String customerGatewayId; 
@@ -96,6 +107,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         private String ipAddress; 
         private String name; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
          * The timestamp generated when the customer gateway was created.
@@ -142,6 +154,14 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

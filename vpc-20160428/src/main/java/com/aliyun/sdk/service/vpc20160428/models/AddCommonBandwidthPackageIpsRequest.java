@@ -204,7 +204,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
+         * The type of the IP address. Set the value to **EIP** to associate EIPs with the EIP bandwidth plan.
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -234,7 +234,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
          * The region ID of the Internet Shared Bandwidth instance.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

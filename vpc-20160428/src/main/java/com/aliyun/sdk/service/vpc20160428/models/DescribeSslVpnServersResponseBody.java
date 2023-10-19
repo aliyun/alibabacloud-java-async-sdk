@@ -177,6 +177,9 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SslVpnServerId")
         private String sslVpnServerId;
 
@@ -199,6 +202,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             this.port = builder.port;
             this.proto = builder.proto;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sslVpnServerId = builder.sslVpnServerId;
             this.vpnGatewayId = builder.vpnGatewayId;
         }
@@ -317,6 +321,13 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sslVpnServerId
          */
         public String getSslVpnServerId() {
@@ -346,6 +357,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             private Integer port; 
             private String proto; 
             private String regionId; 
+            private String resourceGroupId; 
             private String sslVpnServerId; 
             private String vpnGatewayId; 
 
@@ -474,6 +486,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

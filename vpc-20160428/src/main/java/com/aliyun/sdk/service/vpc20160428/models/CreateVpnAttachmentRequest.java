@@ -85,6 +85,10 @@ public class CreateVpnAttachmentRequest extends Request {
     private String remoteSubnet;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -115,6 +119,7 @@ public class CreateVpnAttachmentRequest extends Request {
         this.regionId = builder.regionId;
         this.remoteCaCert = builder.remoteCaCert;
         this.remoteSubnet = builder.remoteSubnet;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tags = builder.tags;
@@ -253,6 +258,13 @@ public class CreateVpnAttachmentRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -291,6 +303,7 @@ public class CreateVpnAttachmentRequest extends Request {
         private String regionId; 
         private String remoteCaCert; 
         private String remoteSubnet; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tags> tags; 
@@ -318,6 +331,7 @@ public class CreateVpnAttachmentRequest extends Request {
             this.regionId = request.regionId;
             this.remoteCaCert = request.remoteCaCert;
             this.remoteSubnet = request.remoteSubnet;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tags = request.tags;
@@ -574,6 +588,15 @@ public class CreateVpnAttachmentRequest extends Request {
         public Builder remoteSubnet(String remoteSubnet) {
             this.putQueryParameter("RemoteSubnet", remoteSubnet);
             this.remoteSubnet = remoteSubnet;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

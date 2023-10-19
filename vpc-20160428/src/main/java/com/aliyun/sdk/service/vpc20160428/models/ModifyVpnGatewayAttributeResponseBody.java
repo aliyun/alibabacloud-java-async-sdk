@@ -48,6 +48,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Spec")
     private String spec;
 
@@ -79,6 +82,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         this.intranetIp = builder.intranetIp;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.spec = builder.spec;
         this.sslVpnInternetIp = builder.sslVpnInternetIp;
         this.status = builder.status;
@@ -180,6 +184,13 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -234,6 +245,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         private String intranetIp; 
         private String name; 
         private String requestId; 
+        private String resourceGroupId; 
         private String spec; 
         private String sslVpnInternetIp; 
         private String status; 
@@ -366,6 +378,14 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

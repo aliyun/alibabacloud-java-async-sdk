@@ -66,6 +66,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Spec")
     private String spec;
 
@@ -121,6 +124,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         this.remoteCaCertificate = builder.remoteCaCertificate;
         this.remoteSubnet = builder.remoteSubnet;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.spec = builder.spec;
         this.state = builder.state;
         this.status = builder.status;
@@ -270,6 +274,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -372,6 +383,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         private String remoteCaCertificate; 
         private String remoteSubnet; 
         private String requestId; 
+        private String resourceGroupId; 
         private String spec; 
         private String state; 
         private String status; 
@@ -568,6 +580,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

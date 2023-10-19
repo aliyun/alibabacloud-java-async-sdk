@@ -36,6 +36,9 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Tags")
     private Tags tags;
 
@@ -48,6 +51,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         this.ipAddress = builder.ipAddress;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
     }
 
@@ -116,6 +120,13 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tags
      */
     public Tags getTags() {
@@ -131,6 +142,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         private String ipAddress; 
         private String name; 
         private String requestId; 
+        private String resourceGroupId; 
         private Tags tags; 
 
         /**
@@ -197,6 +209,14 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

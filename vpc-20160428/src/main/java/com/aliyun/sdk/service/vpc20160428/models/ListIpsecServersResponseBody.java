@@ -469,6 +469,9 @@ public class ListIpsecServersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
@@ -489,6 +492,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             this.psk = builder.psk;
             this.pskEnabled = builder.pskEnabled;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.vpnGatewayId = builder.vpnGatewayId;
         }
 
@@ -613,6 +617,13 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return vpnGatewayId
          */
         public String getVpnGatewayId() {
@@ -636,6 +647,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String psk; 
             private Boolean pskEnabled; 
             private String regionId; 
+            private String resourceGroupId; 
             private String vpnGatewayId; 
 
             /**
@@ -777,6 +789,14 @@ public class ListIpsecServersResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

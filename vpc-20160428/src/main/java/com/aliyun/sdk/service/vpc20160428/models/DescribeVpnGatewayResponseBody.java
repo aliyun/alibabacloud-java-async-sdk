@@ -57,6 +57,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @NameInMap("ReservationData")
     private ReservationData reservationData;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Spec")
     private String spec;
 
@@ -106,6 +109,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         this.networkType = builder.networkType;
         this.requestId = builder.requestId;
         this.reservationData = builder.reservationData;
+        this.resourceGroupId = builder.resourceGroupId;
         this.spec = builder.spec;
         this.sslMaxConnections = builder.sslMaxConnections;
         this.sslVpn = builder.sslVpn;
@@ -233,6 +237,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -325,6 +336,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         private String networkType; 
         private String requestId; 
         private ReservationData reservationData; 
+        private String resourceGroupId; 
         private String spec; 
         private Long sslMaxConnections; 
         private String sslVpn; 
@@ -497,6 +509,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          */
         public Builder reservationData(ReservationData reservationData) {
             this.reservationData = reservationData;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

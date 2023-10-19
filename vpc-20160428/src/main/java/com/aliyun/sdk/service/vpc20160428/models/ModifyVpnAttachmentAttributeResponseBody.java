@@ -57,6 +57,9 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Spec")
     private String spec;
 
@@ -91,6 +94,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         this.networkType = builder.networkType;
         this.remoteSubnet = builder.remoteSubnet;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.spec = builder.spec;
         this.status = builder.status;
         this.vcoHealthCheck = builder.vcoHealthCheck;
@@ -213,6 +217,13 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -270,6 +281,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         private String networkType; 
         private String remoteSubnet; 
         private String requestId; 
+        private String resourceGroupId; 
         private String spec; 
         private String status; 
         private VcoHealthCheck vcoHealthCheck; 
@@ -418,6 +430,14 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

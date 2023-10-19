@@ -204,7 +204,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
+         * The type of IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);

@@ -194,7 +194,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The type of the instance. Set the value to **EIP**.
+         * The instance type. Set the value to **EIP**.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

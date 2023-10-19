@@ -144,6 +144,9 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SslVpnClientCertId")
         private String sslVpnClientCertId;
 
@@ -158,6 +161,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.name = builder.name;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sslVpnClientCertId = builder.sslVpnClientCertId;
             this.sslVpnServerId = builder.sslVpnServerId;
             this.status = builder.status;
@@ -200,6 +204,13 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sslVpnClientCertId
          */
         public String getSslVpnClientCertId() {
@@ -225,6 +236,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             private Long endTime; 
             private String name; 
             private String regionId; 
+            private String resourceGroupId; 
             private String sslVpnClientCertId; 
             private String sslVpnServerId; 
             private String status; 
@@ -264,6 +276,14 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

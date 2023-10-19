@@ -35,6 +35,10 @@ public class ListIpsecServersRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
@@ -45,6 +49,7 @@ public class ListIpsecServersRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.vpnGatewayId = builder.vpnGatewayId;
     }
 
@@ -97,6 +102,13 @@ public class ListIpsecServersRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return vpnGatewayId
      */
     public String getVpnGatewayId() {
@@ -109,6 +121,7 @@ public class ListIpsecServersRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String resourceGroupId; 
         private String vpnGatewayId; 
 
         private Builder() {
@@ -122,6 +135,7 @@ public class ListIpsecServersRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.vpnGatewayId = request.vpnGatewayId;
         } 
 
@@ -177,6 +191,15 @@ public class ListIpsecServersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

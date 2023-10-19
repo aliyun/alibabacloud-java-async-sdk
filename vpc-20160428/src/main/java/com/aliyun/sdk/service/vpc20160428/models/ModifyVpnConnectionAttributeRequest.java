@@ -1100,6 +1100,9 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         @NameInMap("RemoteCaCertificate")
         private String remoteCaCertificate;
 
+        @NameInMap("Role")
+        private String role;
+
         @NameInMap("TunnelBgpConfig")
         private TunnelBgpConfig tunnelBgpConfig;
 
@@ -1116,6 +1119,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             this.enableDpd = builder.enableDpd;
             this.enableNatTraversal = builder.enableNatTraversal;
             this.remoteCaCertificate = builder.remoteCaCertificate;
+            this.role = builder.role;
             this.tunnelBgpConfig = builder.tunnelBgpConfig;
             this.tunnelId = builder.tunnelId;
             this.tunnelIkeConfig = builder.tunnelIkeConfig;
@@ -1152,6 +1156,13 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
          * @return tunnelBgpConfig
          */
         public TunnelBgpConfig getTunnelBgpConfig() {
@@ -1183,6 +1194,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private Boolean enableDpd; 
             private Boolean enableNatTraversal; 
             private String remoteCaCertificate; 
+            private String role; 
             private TunnelBgpConfig tunnelBgpConfig; 
             private String tunnelId; 
             private TunnelIkeConfig tunnelIkeConfig; 
@@ -1220,6 +1232,14 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
                 return this;
             }
 

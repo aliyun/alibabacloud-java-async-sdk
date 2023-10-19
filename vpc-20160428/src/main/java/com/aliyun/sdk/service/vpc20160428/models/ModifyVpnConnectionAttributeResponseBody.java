@@ -51,6 +51,9 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("TunnelOptionsSpecification")
     private TunnelOptionsSpecification tunnelOptionsSpecification;
 
@@ -80,6 +83,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         this.name = builder.name;
         this.remoteSubnet = builder.remoteSubnet;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tunnelOptionsSpecification = builder.tunnelOptionsSpecification;
         this.vcoHealthCheck = builder.vcoHealthCheck;
         this.vpnBgpConfig = builder.vpnBgpConfig;
@@ -187,6 +191,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tunnelOptionsSpecification
      */
     public TunnelOptionsSpecification getTunnelOptionsSpecification() {
@@ -235,6 +246,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         private String name; 
         private String remoteSubnet; 
         private String requestId; 
+        private String resourceGroupId; 
         private TunnelOptionsSpecification tunnelOptionsSpecification; 
         private VcoHealthCheck vcoHealthCheck; 
         private VpnBgpConfig vpnBgpConfig; 
@@ -376,6 +388,14 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
