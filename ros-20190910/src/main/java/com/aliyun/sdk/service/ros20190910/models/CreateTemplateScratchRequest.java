@@ -486,6 +486,9 @@ public class CreateTemplateScratchRequest extends Request {
 
     }
     public static class SourceResources extends TeaModel {
+        @NameInMap("RegionId")
+        private String regionId;
+
         @NameInMap("ResourceId")
         @Validation(required = true)
         private String resourceId;
@@ -495,6 +498,7 @@ public class CreateTemplateScratchRequest extends Request {
         private String resourceType;
 
         private SourceResources(Builder builder) {
+            this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
         }
@@ -505,6 +509,13 @@ public class CreateTemplateScratchRequest extends Request {
 
         public static SourceResources create() {
             return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -522,8 +533,20 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         public static final class Builder {
+            private String regionId; 
             private String resourceId; 
             private String resourceType; 
+
+            /**
+             * The region ID of the scenario.
+             * <p>
+             * 
+             * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
 
             /**
              * The ID of the resource.
