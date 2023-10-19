@@ -33,12 +33,20 @@ public class CreateAppRequest extends Request {
     private java.util.List < Network> network;
 
     @Body
+    @NameInMap("quotaInfo")
+    private QuotaInfo quotaInfo;
+
+    @Body
     @NameInMap("regionId")
     private String regionId;
 
     @Body
     @NameInMap("version")
     private String version;
+
+    @Query
+    @NameInMap("dryRun")
+    private Boolean dryRun;
 
     private CreateAppRequest(Builder builder) {
         super(builder);
@@ -47,8 +55,10 @@ public class CreateAppRequest extends Request {
         this.chargeType = builder.chargeType;
         this.description = builder.description;
         this.network = builder.network;
+        this.quotaInfo = builder.quotaInfo;
         this.regionId = builder.regionId;
         this.version = builder.version;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -100,6 +110,13 @@ public class CreateAppRequest extends Request {
     }
 
     /**
+     * @return quotaInfo
+     */
+    public QuotaInfo getQuotaInfo() {
+        return this.quotaInfo;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -113,14 +130,23 @@ public class CreateAppRequest extends Request {
         return this.version;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppRequest, Builder> {
         private String appName; 
         private Authentication authentication; 
         private String chargeType; 
         private String description; 
         private java.util.List < Network> network; 
+        private QuotaInfo quotaInfo; 
         private String regionId; 
         private String version; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -133,8 +159,10 @@ public class CreateAppRequest extends Request {
             this.chargeType = request.chargeType;
             this.description = request.description;
             this.network = request.network;
+            this.quotaInfo = request.quotaInfo;
             this.regionId = request.regionId;
             this.version = request.version;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -183,6 +211,15 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * quotaInfo.
+         */
+        public Builder quotaInfo(QuotaInfo quotaInfo) {
+            this.putBodyParameter("quotaInfo", quotaInfo);
+            this.quotaInfo = quotaInfo;
+            return this;
+        }
+
+        /**
          * regionId.
          */
         public Builder regionId(String regionId) {
@@ -197,6 +234,15 @@ public class CreateAppRequest extends Request {
         public Builder version(String version) {
             this.putBodyParameter("version", version);
             this.version = version;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -486,6 +532,87 @@ public class CreateAppRequest extends Request {
 
             public Network build() {
                 return new Network(this);
+            } 
+
+        } 
+
+    }
+    public static class QuotaInfo extends TeaModel {
+        @NameInMap("appType")
+        private String appType;
+
+        @NameInMap("cu")
+        private Integer cu;
+
+        @NameInMap("storage")
+        private Integer storage;
+
+        private QuotaInfo(Builder builder) {
+            this.appType = builder.appType;
+            this.cu = builder.cu;
+            this.storage = builder.storage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QuotaInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
+        }
+
+        /**
+         * @return cu
+         */
+        public Integer getCu() {
+            return this.cu;
+        }
+
+        /**
+         * @return storage
+         */
+        public Integer getStorage() {
+            return this.storage;
+        }
+
+        public static final class Builder {
+            private String appType; 
+            private Integer cu; 
+            private Integer storage; 
+
+            /**
+             * appType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
+                return this;
+            }
+
+            /**
+             * cu.
+             */
+            public Builder cu(Integer cu) {
+                this.cu = cu;
+                return this;
+            }
+
+            /**
+             * storage.
+             */
+            public Builder storage(Integer storage) {
+                this.storage = storage;
+                return this;
+            }
+
+            public QuotaInfo build() {
+                return new QuotaInfo(this);
             } 
 
         } 
