@@ -98,7 +98,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +106,11 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +118,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +126,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned results.
          */
         public Builder model(java.util.Map < String, ? > model) {
             this.model = model;
@@ -130,7 +134,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -86,7 +86,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +94,11 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +106,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -110,7 +114,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +122,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +222,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             private Long start; 
 
             /**
-             * DeliveredCount.
+             * Delivered count
              */
             public Builder deliveredCount(Integer deliveredCount) {
                 this.deliveredCount = deliveredCount;
@@ -226,7 +230,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -234,7 +238,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Granularity.
+             * The granularity at which bills are queried.
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -242,7 +246,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The business phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -250,7 +254,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * SentCount.
+             * Sent count
              */
             public Builder sentCount(Integer sentCount) {
                 this.sentCount = sentCount;
@@ -258,7 +262,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder start(Long start) {
                 this.start = start;

@@ -155,7 +155,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -164,7 +164,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -173,7 +173,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * Metric granularity. Valid values:
+         * <p>
+         * 
+         * - DAILY
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -182,7 +185,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * IsvCode.
+         * The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -191,7 +194,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -200,7 +203,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * Start.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);
@@ -209,7 +212,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -218,7 +221,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the message template. Valid values:
+         * <p>
+         * 
+         * *   **WHATSAPP**
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

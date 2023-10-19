@@ -7,30 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EnableWhatsappROIMetricRequest} extends {@link RequestModel}
+ * {@link GetCommerceSettingRequest} extends {@link RequestModel}
  *
- * <p>EnableWhatsappROIMetricRequest</p>
+ * <p>GetCommerceSettingRequest</p>
  */
-public class EnableWhatsappROIMetricRequest extends Request {
+public class GetCommerceSettingRequest extends Request {
     @Query
     @NameInMap("CustSpaceId")
+    @Validation(required = true)
     private String custSpaceId;
 
     @Query
-    @NameInMap("IsvCode")
-    private String isvCode;
+    @NameInMap("PhoneNumber")
+    @Validation(required = true)
+    private String phoneNumber;
 
-    private EnableWhatsappROIMetricRequest(Builder builder) {
+    private GetCommerceSettingRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
-        this.isvCode = builder.isvCode;
+        this.phoneNumber = builder.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static EnableWhatsappROIMetricRequest create() {
+    public static GetCommerceSettingRequest create() {
         return builder().build();
     }
 
@@ -47,28 +49,28 @@ public class EnableWhatsappROIMetricRequest extends Request {
     }
 
     /**
-     * @return isvCode
+     * @return phoneNumber
      */
-    public String getIsvCode() {
-        return this.isvCode;
+    public String getPhoneNumber() {
+        return this.phoneNumber;
     }
 
-    public static final class Builder extends Request.Builder<EnableWhatsappROIMetricRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetCommerceSettingRequest, Builder> {
         private String custSpaceId; 
-        private String isvCode; 
+        private String phoneNumber; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EnableWhatsappROIMetricRequest request) {
+        private Builder(GetCommerceSettingRequest request) {
             super(request);
             this.custSpaceId = request.custSpaceId;
-            this.isvCode = request.isvCode;
+            this.phoneNumber = request.phoneNumber;
         } 
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -77,17 +79,17 @@ public class EnableWhatsappROIMetricRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
+         * PhoneNumber.
          */
-        public Builder isvCode(String isvCode) {
-            this.putQueryParameter("IsvCode", isvCode);
-            this.isvCode = isvCode;
+        public Builder phoneNumber(String phoneNumber) {
+            this.putQueryParameter("PhoneNumber", phoneNumber);
+            this.phoneNumber = phoneNumber;
             return this;
         }
 
         @Override
-        public EnableWhatsappROIMetricRequest build() {
-            return new EnableWhatsappROIMetricRequest(this);
+        public GetCommerceSettingRequest build() {
+            return new GetCommerceSettingRequest(this);
         } 
 
     } 

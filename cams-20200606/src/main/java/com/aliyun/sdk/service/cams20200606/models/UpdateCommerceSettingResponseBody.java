@@ -7,14 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EnableWhatsappROIMetricResponseBody} extends {@link TeaModel}
+ * {@link UpdateCommerceSettingResponseBody} extends {@link TeaModel}
  *
- * <p>EnableWhatsappROIMetricResponseBody</p>
+ * <p>UpdateCommerceSettingResponseBody</p>
  */
-public class EnableWhatsappROIMetricResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    private String accessDeniedDetail;
-
+public class UpdateCommerceSettingResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -24,8 +21,7 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private EnableWhatsappROIMetricResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
+    private UpdateCommerceSettingResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -35,15 +31,8 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static EnableWhatsappROIMetricResponseBody create() {
+    public static UpdateCommerceSettingResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return accessDeniedDetail
-     */
-    public String getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,25 +57,12 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private String requestId; 
 
         /**
-         * The details about the access denial.
-         */
-        public Builder accessDeniedDetail(String accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +70,7 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,15 +78,15 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public EnableWhatsappROIMetricResponseBody build() {
-            return new EnableWhatsappROIMetricResponseBody(this);
+        public UpdateCommerceSettingResponseBody build() {
+            return new UpdateCommerceSettingResponseBody(this);
         } 
 
     } 

@@ -111,7 +111,7 @@ public class GetWhatsappConnectionCatalogRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -147,7 +147,7 @@ public class GetWhatsappConnectionCatalogRequest extends Request {
         }
 
         /**
-         * Waba Id。
+         * The WABA ID.
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

@@ -260,6 +260,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("AutofillText")
         private String autofillText;
 
+        @NameInMap("CouponCode")
+        private String couponCode;
+
         @NameInMap("ExtendAttrs")
         private ExtendAttrs extendAttrs;
 
@@ -289,6 +292,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
         private Buttons(Builder builder) {
             this.autofillText = builder.autofillText;
+            this.couponCode = builder.couponCode;
             this.extendAttrs = builder.extendAttrs;
             this.isOptOut = builder.isOptOut;
             this.packageName = builder.packageName;
@@ -313,6 +317,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         public String getAutofillText() {
             return this.autofillText;
+        }
+
+        /**
+         * @return couponCode
+         */
+        public String getCouponCode() {
+            return this.couponCode;
         }
 
         /**
@@ -380,6 +391,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String autofillText; 
+            private String couponCode; 
             private ExtendAttrs extendAttrs; 
             private Boolean isOptOut; 
             private String packageName; 
@@ -395,6 +407,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              */
             public Builder autofillText(String autofillText) {
                 this.autofillText = autofillText;
+                return this;
+            }
+
+            /**
+             * CouponCode.
+             */
+            public Builder couponCode(String couponCode) {
+                this.couponCode = couponCode;
                 return this;
             }
 
@@ -494,6 +514,319 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    public static class CardComponentsButtons extends TeaModel {
+        @NameInMap("PhoneNumber")
+        private String phoneNumber;
+
+        @NameInMap("Text")
+        private String text;
+
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("Url")
+        private String url;
+
+        @NameInMap("UrlType")
+        private String urlType;
+
+        private CardComponentsButtons(Builder builder) {
+            this.phoneNumber = builder.phoneNumber;
+            this.text = builder.text;
+            this.type = builder.type;
+            this.url = builder.url;
+            this.urlType = builder.urlType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CardComponentsButtons create() {
+            return builder().build();
+        }
+
+        /**
+         * @return phoneNumber
+         */
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return urlType
+         */
+        public String getUrlType() {
+            return this.urlType;
+        }
+
+        public static final class Builder {
+            private String phoneNumber; 
+            private String text; 
+            private String type; 
+            private String url; 
+            private String urlType; 
+
+            /**
+             * The phone number. This parameter is valid only if the returned value of the Type parameter is **PHONE_NUMBER**.
+             */
+            public Builder phoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
+                return this;
+            }
+
+            /**
+             * The display name of the button.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * The type of the button. Valid values:
+             * <p>
+             * 
+             * *   **PHONE_NUMBER**: a phone call button
+             * *   **URL**: a URL button
+             * *   **QUICK_REPLY**: a quick reply button
+             * 
+             * > 
+             * 
+             * *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+             * 
+             * *   You can add only one button to a Viber message template, and the button must be a URL button.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The URL to be accessed when you click the URL button.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * The type of the URL. Valid values:
+             * <p>
+             * 
+             * *   **static**: a static URL
+             * *   **dynamic**: a dynamic URL
+             */
+            public Builder urlType(String urlType) {
+                this.urlType = urlType;
+                return this;
+            }
+
+            public CardComponentsButtons build() {
+                return new CardComponentsButtons(this);
+            } 
+
+        } 
+
+    }
+    public static class CardComponents extends TeaModel {
+        @NameInMap("Buttons")
+        private java.util.List < CardComponentsButtons> buttons;
+
+        @NameInMap("Format")
+        private String format;
+
+        @NameInMap("Text")
+        private String text;
+
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("Url")
+        private String url;
+
+        private CardComponents(Builder builder) {
+            this.buttons = builder.buttons;
+            this.format = builder.format;
+            this.text = builder.text;
+            this.type = builder.type;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CardComponents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return buttons
+         */
+        public java.util.List < CardComponentsButtons> getButtons() {
+            return this.buttons;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private java.util.List < CardComponentsButtons> buttons; 
+            private String format; 
+            private String text; 
+            private String type; 
+            private String url; 
+
+            /**
+             * Buttons.
+             */
+            public Builder buttons(java.util.List < CardComponentsButtons> buttons) {
+                this.buttons = buttons;
+                return this;
+            }
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * The display name of the button.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * The type of the button. Valid values:
+             * <p>
+             * 
+             * *   **PHONE_NUMBER**: a phone call button
+             * *   **URL**: a URL button
+             * *   **QUICK_REPLY**: a quick reply button
+             * 
+             * > 
+             * 
+             * *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+             * 
+             * *   You can add only one button to a Viber message template, and the button must be a URL button.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The URL to be accessed when you click the URL button.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public CardComponents build() {
+                return new CardComponents(this);
+            } 
+
+        } 
+
+    }
+    public static class Cards extends TeaModel {
+        @NameInMap("CardComponents")
+        private java.util.List < CardComponents> cardComponents;
+
+        private Cards(Builder builder) {
+            this.cardComponents = builder.cardComponents;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Cards create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cardComponents
+         */
+        public java.util.List < CardComponents> getCardComponents() {
+            return this.cardComponents;
+        }
+
+        public static final class Builder {
+            private java.util.List < CardComponents> cardComponents; 
+
+            /**
+             * CardComponents.
+             */
+            public Builder cardComponents(java.util.List < CardComponents> cardComponents) {
+                this.cardComponents = cardComponents;
+                return this;
+            }
+
+            public Cards build() {
+                return new Cards(this);
+            } 
+
+        } 
+
+    }
     public static class Components extends TeaModel {
         @NameInMap("AddSecretRecommendation")
         private Boolean addSecretRecommendation;
@@ -503,6 +836,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
         @NameInMap("Caption")
         private String caption;
+
+        @NameInMap("Cards")
+        private java.util.List < Cards> cards;
 
         @NameInMap("CodeExpirationMinutes")
         @Validation(maximum = 90, minimum = 1)
@@ -532,6 +868,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Longitude")
         private String longitude;
 
+        @NameInMap("OfferExpirationTimeMs")
+        private String offerExpirationTimeMs;
+
         @NameInMap("Text")
         private String text;
 
@@ -544,10 +883,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Url")
         private String url;
 
+        @NameInMap("hasExpiration")
+        private Boolean hasExpiration;
+
         private Components(Builder builder) {
             this.addSecretRecommendation = builder.addSecretRecommendation;
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.cards = builder.cards;
             this.codeExpirationMinutes = builder.codeExpirationMinutes;
             this.duration = builder.duration;
             this.fileName = builder.fileName;
@@ -557,10 +900,12 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.locationAddress = builder.locationAddress;
             this.locationName = builder.locationName;
             this.longitude = builder.longitude;
+            this.offerExpirationTimeMs = builder.offerExpirationTimeMs;
             this.text = builder.text;
             this.thumbUrl = builder.thumbUrl;
             this.type = builder.type;
             this.url = builder.url;
+            this.hasExpiration = builder.hasExpiration;
         }
 
         public static Builder builder() {
@@ -590,6 +935,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         public String getCaption() {
             return this.caption;
+        }
+
+        /**
+         * @return cards
+         */
+        public java.util.List < Cards> getCards() {
+            return this.cards;
         }
 
         /**
@@ -656,6 +1008,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return offerExpirationTimeMs
+         */
+        public String getOfferExpirationTimeMs() {
+            return this.offerExpirationTimeMs;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -683,10 +1042,18 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return this.url;
         }
 
+        /**
+         * @return hasExpiration
+         */
+        public Boolean getHasExpiration() {
+            return this.hasExpiration;
+        }
+
         public static final class Builder {
             private Boolean addSecretRecommendation; 
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private java.util.List < Cards> cards; 
             private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
@@ -696,10 +1063,12 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String locationAddress; 
             private String locationName; 
             private String longitude; 
+            private String offerExpirationTimeMs; 
             private String text; 
             private String thumbUrl; 
             private String type; 
             private String url; 
+            private Boolean hasExpiration; 
 
             /**
              * Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息
@@ -722,6 +1091,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              */
             public Builder caption(String caption) {
                 this.caption = caption;
+                return this;
+            }
+
+            /**
+             * Cards.
+             */
+            public Builder cards(java.util.List < Cards> cards) {
+                this.cards = cards;
                 return this;
             }
 
@@ -798,6 +1175,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
+             * OfferExpirationTimeMs.
+             */
+            public Builder offerExpirationTimeMs(String offerExpirationTimeMs) {
+                this.offerExpirationTimeMs = offerExpirationTimeMs;
+                return this;
+            }
+
+            /**
              * The text of the message that you want to send.
              */
             public Builder text(String text) {
@@ -844,6 +1229,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              */
             public Builder url(String url) {
                 this.url = url;
+                return this;
+            }
+
+            /**
+             * hasExpiration.
+             */
+            public Builder hasExpiration(Boolean hasExpiration) {
+                this.hasExpiration = hasExpiration;
                 return this;
             }
 

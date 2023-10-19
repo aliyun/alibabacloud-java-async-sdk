@@ -343,6 +343,9 @@ public class CreateChatappTemplateRequest extends Request {
         @NameInMap("AutofillText")
         private String autofillText;
 
+        @NameInMap("CouponCode")
+        private String couponCode;
+
         @NameInMap("IsOptOut")
         private Boolean isOptOut;
 
@@ -370,6 +373,7 @@ public class CreateChatappTemplateRequest extends Request {
 
         private Buttons(Builder builder) {
             this.autofillText = builder.autofillText;
+            this.couponCode = builder.couponCode;
             this.isOptOut = builder.isOptOut;
             this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
@@ -393,6 +397,13 @@ public class CreateChatappTemplateRequest extends Request {
          */
         public String getAutofillText() {
             return this.autofillText;
+        }
+
+        /**
+         * @return couponCode
+         */
+        public String getCouponCode() {
+            return this.couponCode;
         }
 
         /**
@@ -453,6 +464,7 @@ public class CreateChatappTemplateRequest extends Request {
 
         public static final class Builder {
             private String autofillText; 
+            private String couponCode; 
             private Boolean isOptOut; 
             private String packageName; 
             private String phoneNumber; 
@@ -467,6 +479,14 @@ public class CreateChatappTemplateRequest extends Request {
              */
             public Builder autofillText(String autofillText) {
                 this.autofillText = autofillText;
+                return this;
+            }
+
+            /**
+             * CouponCode.
+             */
+            public Builder couponCode(String couponCode) {
+                this.couponCode = couponCode;
                 return this;
             }
 
@@ -562,6 +582,330 @@ public class CreateChatappTemplateRequest extends Request {
         } 
 
     }
+    public static class CardComponentsButtons extends TeaModel {
+        @NameInMap("PhoneNumber")
+        private String phoneNumber;
+
+        @NameInMap("Text")
+        private String text;
+
+        @NameInMap("Type")
+        @Validation(required = true)
+        private String type;
+
+        @NameInMap("Url")
+        private String url;
+
+        @NameInMap("UrlType")
+        private String urlType;
+
+        private CardComponentsButtons(Builder builder) {
+            this.phoneNumber = builder.phoneNumber;
+            this.text = builder.text;
+            this.type = builder.type;
+            this.url = builder.url;
+            this.urlType = builder.urlType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CardComponentsButtons create() {
+            return builder().build();
+        }
+
+        /**
+         * @return phoneNumber
+         */
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return urlType
+         */
+        public String getUrlType() {
+            return this.urlType;
+        }
+
+        public static final class Builder {
+            private String phoneNumber; 
+            private String text; 
+            private String type; 
+            private String url; 
+            private String urlType; 
+
+            /**
+             * The phone number. This parameter is valid only when the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.
+             */
+            public Builder phoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
+                return this;
+            }
+
+            /**
+             * The display name of the button.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * The type of the button. Valid values:
+             * <p>
+             * 
+             * *   **PHONE_NUMBER**: the phone call button
+             * *   **URL**: the URL button
+             * *   **QUICK_REPLY**: the quick reply button
+             * *   **COPY_CODE**: the copy code button if Category is set to AUTHENTICATION
+             * *   **ONE_TAP**: the one-tap autofill button if Category is set to AUTHENTICATION
+             * 
+             * > 
+             * 
+             * *   In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.
+             * 
+             * *   If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the device. The value indicates that you must manually copy the verification code.
+             * 
+             * *   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The URL to which you are redirected when you click the URL button.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * The type of the URL. Valid values:
+             * <p>
+             * 
+             * *   **static**
+             * *   **dynamic**
+             */
+            public Builder urlType(String urlType) {
+                this.urlType = urlType;
+                return this;
+            }
+
+            public CardComponentsButtons build() {
+                return new CardComponentsButtons(this);
+            } 
+
+        } 
+
+    }
+    public static class CardComponents extends TeaModel {
+        @NameInMap("Buttons")
+        private java.util.List < CardComponentsButtons> buttons;
+
+        @NameInMap("Format")
+        private String format;
+
+        @NameInMap("Text")
+        private String text;
+
+        @NameInMap("Type")
+        @Validation(required = true)
+        private String type;
+
+        @NameInMap("Url")
+        private String url;
+
+        private CardComponents(Builder builder) {
+            this.buttons = builder.buttons;
+            this.format = builder.format;
+            this.text = builder.text;
+            this.type = builder.type;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CardComponents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return buttons
+         */
+        public java.util.List < CardComponentsButtons> getButtons() {
+            return this.buttons;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private java.util.List < CardComponentsButtons> buttons; 
+            private String format; 
+            private String text; 
+            private String type; 
+            private String url; 
+
+            /**
+             * Buttons.
+             */
+            public Builder buttons(java.util.List < CardComponentsButtons> buttons) {
+                this.buttons = buttons;
+                return this;
+            }
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * The display name of the button.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * The type of the button. Valid values:
+             * <p>
+             * 
+             * *   **PHONE_NUMBER**: the phone call button
+             * *   **URL**: the URL button
+             * *   **QUICK_REPLY**: the quick reply button
+             * *   **COPY_CODE**: the copy code button if Category is set to AUTHENTICATION
+             * *   **ONE_TAP**: the one-tap autofill button if Category is set to AUTHENTICATION
+             * 
+             * > 
+             * 
+             * *   In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.
+             * 
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.
+             * 
+             * *   If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the device. The value indicates that you must manually copy the verification code.
+             * 
+             * *   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The URL to which you are redirected when you click the URL button.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public CardComponents build() {
+                return new CardComponents(this);
+            } 
+
+        } 
+
+    }
+    public static class Cards extends TeaModel {
+        @NameInMap("CardComponents")
+        @Validation(required = true)
+        private java.util.List < CardComponents> cardComponents;
+
+        private Cards(Builder builder) {
+            this.cardComponents = builder.cardComponents;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Cards create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cardComponents
+         */
+        public java.util.List < CardComponents> getCardComponents() {
+            return this.cardComponents;
+        }
+
+        public static final class Builder {
+            private java.util.List < CardComponents> cardComponents; 
+
+            /**
+             * CardComponents.
+             */
+            public Builder cardComponents(java.util.List < CardComponents> cardComponents) {
+                this.cardComponents = cardComponents;
+                return this;
+            }
+
+            public Cards build() {
+                return new Cards(this);
+            } 
+
+        } 
+
+    }
     public static class Components extends TeaModel {
         @NameInMap("AddSecretRecommendation")
         private Boolean addSecretRecommendation;
@@ -571,6 +915,9 @@ public class CreateChatappTemplateRequest extends Request {
 
         @NameInMap("Caption")
         private String caption;
+
+        @NameInMap("Cards")
+        private java.util.List < Cards> cards;
 
         @NameInMap("CodeExpirationMinutes")
         @Validation(maximum = 90, minimum = 1)
@@ -587,6 +934,9 @@ public class CreateChatappTemplateRequest extends Request {
 
         @NameInMap("Format")
         private String format;
+
+        @NameInMap("HasExpiration")
+        private Boolean hasExpiration;
 
         @NameInMap("Text")
         private String text;
@@ -605,11 +955,13 @@ public class CreateChatappTemplateRequest extends Request {
             this.addSecretRecommendation = builder.addSecretRecommendation;
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.cards = builder.cards;
             this.codeExpirationMinutes = builder.codeExpirationMinutes;
             this.duration = builder.duration;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
             this.format = builder.format;
+            this.hasExpiration = builder.hasExpiration;
             this.text = builder.text;
             this.thumbUrl = builder.thumbUrl;
             this.type = builder.type;
@@ -643,6 +995,13 @@ public class CreateChatappTemplateRequest extends Request {
          */
         public String getCaption() {
             return this.caption;
+        }
+
+        /**
+         * @return cards
+         */
+        public java.util.List < Cards> getCards() {
+            return this.cards;
         }
 
         /**
@@ -681,6 +1040,13 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return hasExpiration
+         */
+        public Boolean getHasExpiration() {
+            return this.hasExpiration;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -712,11 +1078,13 @@ public class CreateChatappTemplateRequest extends Request {
             private Boolean addSecretRecommendation; 
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private java.util.List < Cards> cards; 
             private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
             private String fileType; 
             private String format; 
+            private Boolean hasExpiration; 
             private String text; 
             private String thumbUrl; 
             private String type; 
@@ -743,6 +1111,14 @@ public class CreateChatappTemplateRequest extends Request {
              */
             public Builder caption(String caption) {
                 this.caption = caption;
+                return this;
+            }
+
+            /**
+             * Cards.
+             */
+            public Builder cards(java.util.List < Cards> cards) {
+                this.cards = cards;
                 return this;
             }
 
@@ -789,6 +1165,14 @@ public class CreateChatappTemplateRequest extends Request {
              */
             public Builder format(String format) {
                 this.format = format;
+                return this;
+            }
+
+            /**
+             * HasExpiration.
+             */
+            public Builder hasExpiration(Boolean hasExpiration) {
+                this.hasExpiration = hasExpiration;
                 return this;
             }
 

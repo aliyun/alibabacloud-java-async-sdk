@@ -98,7 +98,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +106,11 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +118,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +126,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned results.
          */
         public Builder model(Model model) {
             this.model = model;
@@ -130,7 +134,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +198,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             private String before; 
 
             /**
-             * After.
+             * The cursor that points to the end of the page of the returned data.
              */
             public Builder after(String after) {
                 this.after = after;
@@ -198,7 +206,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * Before.
+             * The cursor that points to the beginning of the page of the returned data.
              */
             public Builder before(String before) {
                 this.before = before;
@@ -239,7 +247,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             private Cursors cursors; 
 
             /**
-             * Cursors.
+             * The cursors for pagination.
              */
             public Builder cursors(Cursors cursors) {
                 this.cursors = cursors;
@@ -292,7 +300,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             private Paging paging; 
 
             /**
-             * Data.
+             * The returned data.
              */
             public Builder data(java.util.List < java.util.Map<String, ?>> data) {
                 this.data = data;
@@ -300,7 +308,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * Paging.
+             * The pagination details.
              */
             public Builder paging(Paging paging) {
                 this.paging = paging;

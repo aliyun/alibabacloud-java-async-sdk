@@ -182,7 +182,7 @@ public class ListProductRequest extends Request {
         } 
 
         /**
-         * After.
+         * The cursor that points to the end of the page of the returned data.
          */
         public Builder after(String after) {
             this.putQueryParameter("After", after);
@@ -191,7 +191,7 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * Before.
+         * The cursor that points to the beginning of the page of the returned data.
          */
         public Builder before(String before) {
             this.putQueryParameter("Before", before);
@@ -200,7 +200,7 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * The ID of the product catalog.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -209,7 +209,7 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -218,7 +218,10 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * Fields.
+         * The fields. Separate multiple fields with commas (,).
+         * <p>
+         * 
+         *  see [product fields](~~2579419~~)
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
@@ -227,7 +230,7 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The number of products to be queried. Valid values: 1 to 1000.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -263,7 +266,7 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * Waba Id。
+         * The ID of the WhatsApp Business account (WABA).
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

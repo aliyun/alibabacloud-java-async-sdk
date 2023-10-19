@@ -126,7 +126,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -135,7 +135,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -144,7 +147,11 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * Metric granularity. Valid values:
+         * <p>
+         * 
+         * - DAILY
+         * - HALF_HOUR
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -153,7 +160,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * IsvCode.
+         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -162,7 +169,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The business phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -171,7 +178,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * Start.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

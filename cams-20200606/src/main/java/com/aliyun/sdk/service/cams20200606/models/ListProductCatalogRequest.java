@@ -167,7 +167,7 @@ public class ListProductCatalogRequest extends Request {
         } 
 
         /**
-         * After.
+         * The cursor that points to the end of the page of the returned data.
          */
         public Builder after(String after) {
             this.putQueryParameter("After", after);
@@ -176,7 +176,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * Before.
+         * The cursor that points to the beginning of the page of the returned data.
          */
         public Builder before(String before) {
             this.putQueryParameter("Before", before);
@@ -185,7 +185,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * BusinessId.
+         * The Business Manager ID.
          */
         public Builder businessId(Long businessId) {
             this.putQueryParameter("BusinessId", businessId);
@@ -194,7 +194,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -203,7 +203,9 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * Fields.
+         * The fields. Separate multiple fields with commas (,).
+         * <p>
+         * see  [catalog fields](~~2579419~~)
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
@@ -212,7 +214,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The number of catalogs to be queried. Valid values: 1 to 1000.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
