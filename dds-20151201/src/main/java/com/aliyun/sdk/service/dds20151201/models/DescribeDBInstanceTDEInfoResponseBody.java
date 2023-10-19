@@ -12,14 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceTDEInfoResponseBody</p>
  */
 public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
+    @NameInMap("EncryptionKey")
+    private String encryptionKey;
+
+    @NameInMap("EncryptorName")
+    private String encryptorName;
+
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("RoleARN")
+    private String roleARN;
 
     @NameInMap("TDEStatus")
     private String TDEStatus;
 
     private DescribeDBInstanceTDEInfoResponseBody(Builder builder) {
+        this.encryptionKey = builder.encryptionKey;
+        this.encryptorName = builder.encryptorName;
         this.requestId = builder.requestId;
+        this.roleARN = builder.roleARN;
         this.TDEStatus = builder.TDEStatus;
     }
 
@@ -32,10 +44,31 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return encryptionKey
+     */
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    /**
+     * @return encryptorName
+     */
+    public String getEncryptorName() {
+        return this.encryptorName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return roleARN
+     */
+    public String getRoleARN() {
+        return this.roleARN;
     }
 
     /**
@@ -46,14 +79,41 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String encryptionKey; 
+        private String encryptorName; 
         private String requestId; 
+        private String roleARN; 
         private String TDEStatus; 
+
+        /**
+         * EncryptionKey.
+         */
+        public Builder encryptionKey(String encryptionKey) {
+            this.encryptionKey = encryptionKey;
+            return this;
+        }
+
+        /**
+         * EncryptorName.
+         */
+        public Builder encryptorName(String encryptorName) {
+            this.encryptorName = encryptorName;
+            return this;
+        }
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RoleARN.
+         */
+        public Builder roleARN(String roleARN) {
+            this.roleARN = roleARN;
             return this;
         }
 
