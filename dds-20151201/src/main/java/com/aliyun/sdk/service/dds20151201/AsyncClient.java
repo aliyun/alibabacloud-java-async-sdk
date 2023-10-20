@@ -157,6 +157,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
+    CompletableFuture<DescribeClusterBackupsResponse> describeClusterBackups(DescribeClusterBackupsRequest request);
+
+    CompletableFuture<DescribeClusterRecoverTimeResponse> describeClusterRecoverTime(DescribeClusterRecoverTimeRequest request);
+
     CompletableFuture<DescribeDBInstanceAttributeResponse> describeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request);
 
     /**
@@ -513,6 +517,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<TransferClusterBackupResponse> transferClusterBackup(TransferClusterBackupRequest request);
 
     /**
       * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
