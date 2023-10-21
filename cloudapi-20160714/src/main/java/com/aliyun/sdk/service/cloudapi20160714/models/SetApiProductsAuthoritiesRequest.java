@@ -23,6 +23,10 @@ public class SetApiProductsAuthoritiesRequest extends Request {
     private Long appId;
 
     @Query
+    @NameInMap("AuthValidTime")
+    private String authValidTime;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -34,6 +38,7 @@ public class SetApiProductsAuthoritiesRequest extends Request {
         super(builder);
         this.apiProductIds = builder.apiProductIds;
         this.appId = builder.appId;
+        this.authValidTime = builder.authValidTime;
         this.description = builder.description;
         this.securityToken = builder.securityToken;
     }
@@ -66,6 +71,13 @@ public class SetApiProductsAuthoritiesRequest extends Request {
     }
 
     /**
+     * @return authValidTime
+     */
+    public String getAuthValidTime() {
+        return this.authValidTime;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -82,6 +94,7 @@ public class SetApiProductsAuthoritiesRequest extends Request {
     public static final class Builder extends Request.Builder<SetApiProductsAuthoritiesRequest, Builder> {
         private java.util.List < String > apiProductIds; 
         private Long appId; 
+        private String authValidTime; 
         private String description; 
         private String securityToken; 
 
@@ -93,6 +106,7 @@ public class SetApiProductsAuthoritiesRequest extends Request {
             super(request);
             this.apiProductIds = request.apiProductIds;
             this.appId = request.appId;
+            this.authValidTime = request.authValidTime;
             this.description = request.description;
             this.securityToken = request.securityToken;
         } 
@@ -113,6 +127,15 @@ public class SetApiProductsAuthoritiesRequest extends Request {
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * AuthValidTime.
+         */
+        public Builder authValidTime(String authValidTime) {
+            this.putQueryParameter("AuthValidTime", authValidTime);
+            this.authValidTime = authValidTime;
             return this;
         }
 

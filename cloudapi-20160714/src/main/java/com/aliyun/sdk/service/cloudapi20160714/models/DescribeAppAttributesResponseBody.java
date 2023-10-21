@@ -364,7 +364,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * Extended Fields.
              */
             public Builder extend(String extend) {
                 this.extend = extend;

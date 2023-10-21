@@ -240,7 +240,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * Extend.
+         * Extended Fields.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -355,7 +355,7 @@ public class DescribeAppAttributesRequest extends Request {
             }
 
             /**
-             * The key of the tag.
+             * The value of the tag.
              * <p>
              * 
              * N can be an integer from 1 to 20.``
