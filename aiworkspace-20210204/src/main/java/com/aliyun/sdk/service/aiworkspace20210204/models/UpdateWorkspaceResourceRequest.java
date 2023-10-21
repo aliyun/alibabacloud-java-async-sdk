@@ -19,7 +19,6 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     @Body
     @NameInMap("GroupName")
-    @Validation(required = true)
     private String groupName;
 
     @Body
@@ -27,20 +26,35 @@ public class UpdateWorkspaceResourceRequest extends Request {
     private Boolean isDefault;
 
     @Body
+    @NameInMap("Labels")
+    private java.util.List < Labels> labels;
+
+    @Body
     @NameInMap("ProductType")
     private String productType;
 
     @Body
+    @NameInMap("ResourceIds")
+    private java.util.List < String > resourceIds;
+
+    @Body
     @NameInMap("ResourceType")
     private String resourceType;
+
+    @Body
+    @NameInMap("Spec")
+    private java.util.Map < String, ? > spec;
 
     private UpdateWorkspaceResourceRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.groupName = builder.groupName;
         this.isDefault = builder.isDefault;
+        this.labels = builder.labels;
         this.productType = builder.productType;
+        this.resourceIds = builder.resourceIds;
         this.resourceType = builder.resourceType;
+        this.spec = builder.spec;
     }
 
     public static Builder builder() {
@@ -78,10 +92,24 @@ public class UpdateWorkspaceResourceRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.List < Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return productType
      */
     public String getProductType() {
         return this.productType;
+    }
+
+    /**
+     * @return resourceIds
+     */
+    public java.util.List < String > getResourceIds() {
+        return this.resourceIds;
     }
 
     /**
@@ -91,12 +119,22 @@ public class UpdateWorkspaceResourceRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return spec
+     */
+    public java.util.Map < String, ? > getSpec() {
+        return this.spec;
+    }
+
     public static final class Builder extends Request.Builder<UpdateWorkspaceResourceRequest, Builder> {
         private String workspaceId; 
         private String groupName; 
         private Boolean isDefault; 
+        private java.util.List < Labels> labels; 
         private String productType; 
+        private java.util.List < String > resourceIds; 
         private String resourceType; 
+        private java.util.Map < String, ? > spec; 
 
         private Builder() {
             super();
@@ -107,8 +145,11 @@ public class UpdateWorkspaceResourceRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.groupName = request.groupName;
             this.isDefault = request.isDefault;
+            this.labels = request.labels;
             this.productType = request.productType;
+            this.resourceIds = request.resourceIds;
             this.resourceType = request.resourceType;
+            this.spec = request.spec;
         } 
 
         /**
@@ -139,11 +180,29 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
+         * Labels.
+         */
+        public Builder labels(java.util.List < Labels> labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
+            return this;
+        }
+
+        /**
          * ProductType.
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
             this.productType = productType;
+            return this;
+        }
+
+        /**
+         * ResourceIds.
+         */
+        public Builder resourceIds(java.util.List < String > resourceIds) {
+            this.putBodyParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
             return this;
         }
 
@@ -156,6 +215,15 @@ public class UpdateWorkspaceResourceRequest extends Request {
             return this;
         }
 
+        /**
+         * Spec.
+         */
+        public Builder spec(java.util.Map < String, ? > spec) {
+            this.putBodyParameter("Spec", spec);
+            this.spec = spec;
+            return this;
+        }
+
         @Override
         public UpdateWorkspaceResourceRequest build() {
             return new UpdateWorkspaceResourceRequest(this);
@@ -163,4 +231,65 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     } 
 
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
 }

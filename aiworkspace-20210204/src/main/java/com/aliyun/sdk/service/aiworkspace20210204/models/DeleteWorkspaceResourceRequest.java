@@ -19,8 +19,11 @@ public class DeleteWorkspaceResourceRequest extends Request {
 
     @Query
     @NameInMap("GroupName")
-    @Validation(required = true)
     private String groupName;
+
+    @Query
+    @NameInMap("Labels")
+    private String labels;
 
     @Query
     @NameInMap("Option")
@@ -31,6 +34,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
     private String productType;
 
     @Query
+    @NameInMap("ResourceIds")
+    private String resourceIds;
+
+    @Query
     @NameInMap("ResourceType")
     private String resourceType;
 
@@ -38,8 +45,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.groupName = builder.groupName;
+        this.labels = builder.labels;
         this.option = builder.option;
         this.productType = builder.productType;
+        this.resourceIds = builder.resourceIds;
         this.resourceType = builder.resourceType;
     }
 
@@ -71,6 +80,13 @@ public class DeleteWorkspaceResourceRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public String getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return option
      */
     public String getOption() {
@@ -85,6 +101,13 @@ public class DeleteWorkspaceResourceRequest extends Request {
     }
 
     /**
+     * @return resourceIds
+     */
+    public String getResourceIds() {
+        return this.resourceIds;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -94,8 +117,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteWorkspaceResourceRequest, Builder> {
         private String workspaceId; 
         private String groupName; 
+        private String labels; 
         private String option; 
         private String productType; 
+        private String resourceIds; 
         private String resourceType; 
 
         private Builder() {
@@ -106,8 +131,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.groupName = request.groupName;
+            this.labels = request.labels;
             this.option = request.option;
             this.productType = request.productType;
+            this.resourceIds = request.resourceIds;
             this.resourceType = request.resourceType;
         } 
 
@@ -130,6 +157,15 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
+         * Labels.
+         */
+        public Builder labels(String labels) {
+            this.putQueryParameter("Labels", labels);
+            this.labels = labels;
+            return this;
+        }
+
+        /**
          * Option.
          */
         public Builder option(String option) {
@@ -144,6 +180,15 @@ public class DeleteWorkspaceResourceRequest extends Request {
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
             this.productType = productType;
+            return this;
+        }
+
+        /**
+         * ResourceIds.
+         */
+        public Builder resourceIds(String resourceIds) {
+            this.putQueryParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
             return this;
         }
 

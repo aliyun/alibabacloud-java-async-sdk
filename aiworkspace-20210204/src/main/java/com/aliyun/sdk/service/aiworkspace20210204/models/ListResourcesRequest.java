@@ -17,6 +17,10 @@ public class ListResourcesRequest extends Request {
     private String groupName;
 
     @Query
+    @NameInMap("Labels")
+    private String labels;
+
+    @Query
     @NameInMap("Option")
     private String option;
 
@@ -33,6 +37,10 @@ public class ListResourcesRequest extends Request {
     private String productTypes;
 
     @Query
+    @NameInMap("QuotaIds")
+    private String quotaIds;
+
+    @Query
     @NameInMap("ResourceName")
     private String resourceName;
 
@@ -45,19 +53,26 @@ public class ListResourcesRequest extends Request {
     private Boolean verbose;
 
     @Query
+    @NameInMap("VerboseFields")
+    private String verboseFields;
+
+    @Query
     @NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListResourcesRequest(Builder builder) {
         super(builder);
         this.groupName = builder.groupName;
+        this.labels = builder.labels;
         this.option = builder.option;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.productTypes = builder.productTypes;
+        this.quotaIds = builder.quotaIds;
         this.resourceName = builder.resourceName;
         this.resourceTypes = builder.resourceTypes;
         this.verbose = builder.verbose;
+        this.verboseFields = builder.verboseFields;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -79,6 +94,13 @@ public class ListResourcesRequest extends Request {
      */
     public String getGroupName() {
         return this.groupName;
+    }
+
+    /**
+     * @return labels
+     */
+    public String getLabels() {
+        return this.labels;
     }
 
     /**
@@ -110,6 +132,13 @@ public class ListResourcesRequest extends Request {
     }
 
     /**
+     * @return quotaIds
+     */
+    public String getQuotaIds() {
+        return this.quotaIds;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -131,6 +160,13 @@ public class ListResourcesRequest extends Request {
     }
 
     /**
+     * @return verboseFields
+     */
+    public String getVerboseFields() {
+        return this.verboseFields;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -139,13 +175,16 @@ public class ListResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListResourcesRequest, Builder> {
         private String groupName; 
+        private String labels; 
         private String option; 
         private Long pageNumber; 
         private Integer pageSize; 
         private String productTypes; 
+        private String quotaIds; 
         private String resourceName; 
         private String resourceTypes; 
         private Boolean verbose; 
+        private String verboseFields; 
         private String workspaceId; 
 
         private Builder() {
@@ -155,13 +194,16 @@ public class ListResourcesRequest extends Request {
         private Builder(ListResourcesRequest request) {
             super(request);
             this.groupName = request.groupName;
+            this.labels = request.labels;
             this.option = request.option;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.productTypes = request.productTypes;
+            this.quotaIds = request.quotaIds;
             this.resourceName = request.resourceName;
             this.resourceTypes = request.resourceTypes;
             this.verbose = request.verbose;
+            this.verboseFields = request.verboseFields;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -171,6 +213,15 @@ public class ListResourcesRequest extends Request {
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
             this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(String labels) {
+            this.putQueryParameter("Labels", labels);
+            this.labels = labels;
             return this;
         }
 
@@ -211,6 +262,15 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
+         * QuotaIds.
+         */
+        public Builder quotaIds(String quotaIds) {
+            this.putQueryParameter("QuotaIds", quotaIds);
+            this.quotaIds = quotaIds;
+            return this;
+        }
+
+        /**
          * ResourceName.
          */
         public Builder resourceName(String resourceName) {
@@ -234,6 +294,15 @@ public class ListResourcesRequest extends Request {
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
             this.verbose = verbose;
+            return this;
+        }
+
+        /**
+         * VerboseFields.
+         */
+        public Builder verboseFields(String verboseFields) {
+            this.putQueryParameter("VerboseFields", verboseFields);
+            this.verboseFields = verboseFields;
             return this;
         }
 

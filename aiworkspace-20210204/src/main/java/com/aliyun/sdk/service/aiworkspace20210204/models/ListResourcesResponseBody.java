@@ -213,6 +213,67 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
     public static class Specs extends TeaModel {
         @NameInMap("Name")
         private String name;
@@ -477,6 +538,9 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         private Boolean isDefault;
 
+        @NameInMap("Labels")
+        private java.util.List < Labels> labels;
+
         @NameInMap("Name")
         private String name;
 
@@ -503,6 +567,7 @@ public class ListResourcesResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.id = builder.id;
             this.isDefault = builder.isDefault;
+            this.labels = builder.labels;
             this.name = builder.name;
             this.productType = builder.productType;
             this.quotas = builder.quotas;
@@ -569,6 +634,13 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.List < Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -618,6 +690,7 @@ public class ListResourcesResponseBody extends TeaModel {
             private String groupName; 
             private String id; 
             private Boolean isDefault; 
+            private java.util.List < Labels> labels; 
             private String name; 
             private String productType; 
             private java.util.List < Quotas> quotas; 
@@ -678,6 +751,14 @@ public class ListResourcesResponseBody extends TeaModel {
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.List < Labels> labels) {
+                this.labels = labels;
                 return this;
             }
 
