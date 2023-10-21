@@ -26,6 +26,10 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
     private String gatewayId;
 
     @Query
+    @NameInMap("GatewayType")
+    private String gatewayType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -56,6 +60,7 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.gatewayId = builder.gatewayId;
+        this.gatewayType = builder.gatewayType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -96,6 +101,13 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
      */
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     /**
@@ -144,6 +156,7 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String gatewayId; 
+        private String gatewayType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -160,6 +173,7 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.gatewayId = request.gatewayId;
+            this.gatewayType = request.gatewayType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -201,6 +215,15 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
             this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * GatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("GatewayType", gatewayType);
+            this.gatewayType = gatewayType;
             return this;
         }
 

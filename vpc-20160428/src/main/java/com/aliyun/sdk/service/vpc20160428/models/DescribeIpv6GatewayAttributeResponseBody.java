@@ -24,6 +24,9 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("ExpiredTime")
     private String expiredTime;
 
+    @NameInMap("GatewayRouteTableId")
+    private String gatewayRouteTableId;
+
     @NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
@@ -56,6 +59,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.description = builder.description;
         this.expiredTime = builder.expiredTime;
+        this.gatewayRouteTableId = builder.gatewayRouteTableId;
         this.instanceChargeType = builder.instanceChargeType;
         this.ipv6GatewayId = builder.ipv6GatewayId;
         this.name = builder.name;
@@ -101,6 +105,13 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
      */
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    /**
+     * @return gatewayRouteTableId
+     */
+    public String getGatewayRouteTableId() {
+        return this.gatewayRouteTableId;
     }
 
     /**
@@ -171,6 +182,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         private String creationTime; 
         private String description; 
         private String expiredTime; 
+        private String gatewayRouteTableId; 
         private String instanceChargeType; 
         private String ipv6GatewayId; 
         private String name; 
@@ -215,6 +227,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
+            return this;
+        }
+
+        /**
+         * GatewayRouteTableId.
+         */
+        public Builder gatewayRouteTableId(String gatewayRouteTableId) {
+            this.gatewayRouteTableId = gatewayRouteTableId;
             return this;
         }
 

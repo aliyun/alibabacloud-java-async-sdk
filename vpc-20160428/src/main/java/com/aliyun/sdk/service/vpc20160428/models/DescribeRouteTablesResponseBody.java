@@ -86,7 +86,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the route table.
+         * The detailed information about the route tables.
          */
         public Builder routeTables(RouteTables routeTables) {
             this.routeTables = routeTables;
@@ -118,7 +118,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,11 +194,11 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Indicates whether the next hop feature is enabled.
+             * Indicates whether the route is available. Valid values:
              * <p>
              * 
-             * *   **0**: The next hop feature is disabled.
-             * *   **1**: The next hop feature is enabled.
+             * *   **0**: unavailable
+             * *   **1**: available
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -214,16 +214,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop.
+             * The type of the next hop. Valid values:
              * <p>
              * 
-             * *   **Instance**: The next hop is an Elastic Compute Service (ECS) instance.
-             * *   **HaVip**: The next hop is a high-availability virtual IP address (HAVIP).
-             * *   **VpnGateway**: The next hop is a VPN gateway.
-             * *   **NatGateway**: The next hop is a NAT gateway.
-             * *   **NetworkInterface**: The next hop is a secondary elastic network interface (ENI).
-             * *   **RouterInterface**: The next hop is a router interface.
-             * *   **IPv6Gateway**: The next hop is an IPv6 gateway.
+             * *   **Instance**: an ECS instance
+             * *   **HaVip**: an HAVIP
+             * *   **VpnGateway**: a VPN gateway
+             * *   **NatGateway**: a NAT gateway
+             * *   **NetworkInterface**: a secondary ENI
+             * *   **RouterInterface**: a router interface
+             * *   **IPv6Gateway**: an IPv6 gateway
+             * *   **Attachment**: a transit router
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -231,7 +232,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The route weight of the next hop.
+             * The weight of the route.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -421,7 +422,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the router entry.
+             * The description of the route. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -429,7 +430,11 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route entry.
+             * The destination CIDR block of the route. The destination CIDR block supports IPv4 and IPv6. Make sure that the destination CIDR block meets the following requirements:
+             * <p>
+             * 
+             * *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
+             * *   The destination CIDR block of each route in the route table is unique.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -437,7 +442,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop.
+             * The ID of the instance associated with the next hop.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -445,12 +450,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route.
+             * The type of the next hop. Valid values:
              * <p>
              * 
-             * *   **local**: a vSwitch route
-             * *   **service**: a cloud service route
-             * *   **classicLink**: a route added by the system after ClassicLink is enabled
+             * *   **Instance** (default): an Elastic Compute Service (ECS) instance
+             * *   **HaVip**: a high-availability virtual IP address (HAVIP).
+             * *   **VpnGateway**: a VPN gateway
+             * *   **NatGateway**: a NAT gateway
+             * *   **NetworkInterface**: a secondary elastic network interface (ENI)
+             * *   **RouterInterface**: a router interface
+             * *   **IPv6Gateway**: an IPv6 gateway
+             * *   **Attachment**: a transit router
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -458,7 +468,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of next hops of equal-cost multi-path routing (ECMP) routes.
+             * The information about the next hop.
              */
             public Builder nextHops(NextHops nextHops) {
                 this.nextHops = nextHops;
@@ -466,7 +476,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryId.
+             * The ID of the route.
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -474,7 +484,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route entry.
+             * The route name.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -482,7 +495,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table to which the route entry belongs.
+             * The route table ID.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -490,12 +503,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the route entry.
+             * The route status. Valid values:
              * <p>
              * 
-             * *   **Pending**: The route entry is being configured.
-             * *   **Available**: The route entry is available.
-             * *   **Modifying**: The route entry is being modified.
+             * *   **Pending**
+             * *   **Available**
+             * *   **Modifying**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -503,12 +516,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route entry.
+             * The route type. Valid values:
              * <p>
              * 
-             * *   **System** : a system route entry
-             * *   **Custom**: a custom route entry
-             * *   **BGP**: a BGP route entry
+             * *   **Custom**
+             * *   **System**
+             * *   **BGP**
+             * *   **CEN**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -716,6 +730,9 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
             /**
              * The time when the route table was created.
+             * <p>
+             * 
+             * The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -723,7 +740,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the elastic IP address (EIP) belongs.
+             * The ID of the resource group to which the route table belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -731,7 +748,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Detailed information about the route entry.
+             * The information about the route.
              */
             public Builder routeEntrys(RouteEntrys routeEntrys) {
                 this.routeEntrys = routeEntrys;
@@ -739,7 +756,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table to which the route entry belongs.
+             * The ID of the route table.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -747,7 +764,11 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableType.
+             * The type of the route table. Valid values:
+             * <p>
+             * 
+             * *   **Custom**
+             * *   **System**
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -755,11 +776,11 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the route table.
+             * The status of the route table. Valid values:
              * <p>
              * 
-             * *   **Pending**: The route table is being configured.
-             * *   **Available**: The route table is available.
+             * *   **Pending**
+             * *   **Available**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -767,7 +788,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vRouter.
+             * The vRouter ID.
              */
             public Builder vRouterId(String vRouterId) {
                 this.vRouterId = vRouterId;
@@ -775,7 +796,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of vSwitches that belong to the VPC.
+             * The vSwitch ID.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

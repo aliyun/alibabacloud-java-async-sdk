@@ -86,7 +86,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +94,11 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value is returned for **NextToken**, the value indicates the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -398,7 +398,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
              * The IP version of the prefix list. Valid values:
              * <p>
              * 
-             * *   **IPv4**
+             * *   **IPV4**
              * *   **IPV6**
              */
             public Builder ipVersion(String ipVersion) {
@@ -482,7 +482,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Shared**: The prefix list is shared.
-             * *   If an empty value is returned, it indicates that the prefix list is not shared.
+             * *   If an empty value is returned, the prefix list is not shared.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -503,7 +503,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags that are added to the resource group.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

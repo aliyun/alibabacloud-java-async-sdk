@@ -121,7 +121,7 @@ public class ActivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the router interface belongs.
+         * The region ID of the router interface.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

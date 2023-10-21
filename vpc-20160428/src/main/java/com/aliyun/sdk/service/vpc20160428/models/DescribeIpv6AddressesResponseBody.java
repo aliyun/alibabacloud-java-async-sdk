@@ -372,6 +372,108 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Ipv6Address extends TeaModel {
         @NameInMap("AllocationTime")
         private String allocationTime;
@@ -384,6 +486,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
         @NameInMap("Ipv6Address")
         private String ipv6Address;
+
+        @NameInMap("Ipv6AddressDescription")
+        private String ipv6AddressDescription;
 
         @NameInMap("Ipv6AddressId")
         private String ipv6AddressId;
@@ -406,8 +511,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("RealBandwidth")
         private Integer realBandwidth;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Tags")
+        private Tags tags;
 
         @NameInMap("VSwitchId")
         private String vSwitchId;
@@ -420,6 +531,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             this.associatedInstanceId = builder.associatedInstanceId;
             this.associatedInstanceType = builder.associatedInstanceType;
             this.ipv6Address = builder.ipv6Address;
+            this.ipv6AddressDescription = builder.ipv6AddressDescription;
             this.ipv6AddressId = builder.ipv6AddressId;
             this.ipv6AddressName = builder.ipv6AddressName;
             this.ipv6GatewayId = builder.ipv6GatewayId;
@@ -427,7 +539,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             this.ipv6Isp = builder.ipv6Isp;
             this.networkType = builder.networkType;
             this.realBandwidth = builder.realBandwidth;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
         }
@@ -466,6 +580,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
          */
         public String getIpv6Address() {
             return this.ipv6Address;
+        }
+
+        /**
+         * @return ipv6AddressDescription
+         */
+        public String getIpv6AddressDescription() {
+            return this.ipv6AddressDescription;
         }
 
         /**
@@ -518,10 +639,24 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
         }
 
         /**
@@ -543,6 +678,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String associatedInstanceId; 
             private String associatedInstanceType; 
             private String ipv6Address; 
+            private String ipv6AddressDescription; 
             private String ipv6AddressId; 
             private String ipv6AddressName; 
             private String ipv6GatewayId; 
@@ -550,7 +686,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String ipv6Isp; 
             private String networkType; 
             private Integer realBandwidth; 
+            private String resourceGroupId; 
             private String status; 
+            private Tags tags; 
             private String vSwitchId; 
             private String vpcId; 
 
@@ -583,6 +721,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            /**
+             * Ipv6AddressDescription.
+             */
+            public Builder ipv6AddressDescription(String ipv6AddressDescription) {
+                this.ipv6AddressDescription = ipv6AddressDescription;
                 return this;
             }
 
@@ -658,6 +804,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * The status of the IPv6 address. Valid values:
              * <p>
              * 
@@ -666,6 +820,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

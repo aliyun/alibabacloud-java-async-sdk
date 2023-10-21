@@ -30,8 +30,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("GatewayRouteTableId")
+    private String gatewayRouteTableId;
+
+    @Query
     @NameInMap("IPv4GatewayRouteTableId")
-    @Validation(required = true)
     private String iPv4GatewayRouteTableId;
 
     @Query
@@ -74,6 +77,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         this.description = builder.description;
         this.destinationCidrBlock = builder.destinationCidrBlock;
         this.dryRun = builder.dryRun;
+        this.gatewayRouteTableId = builder.gatewayRouteTableId;
         this.iPv4GatewayRouteTableId = builder.iPv4GatewayRouteTableId;
         this.name = builder.name;
         this.nextHopId = builder.nextHopId;
@@ -124,6 +128,13 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return gatewayRouteTableId
+     */
+    public String getGatewayRouteTableId() {
+        return this.gatewayRouteTableId;
     }
 
     /**
@@ -194,6 +205,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         private String description; 
         private String destinationCidrBlock; 
         private Boolean dryRun; 
+        private String gatewayRouteTableId; 
         private String iPv4GatewayRouteTableId; 
         private String name; 
         private String nextHopId; 
@@ -214,6 +226,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
             this.description = request.description;
             this.destinationCidrBlock = request.destinationCidrBlock;
             this.dryRun = request.dryRun;
+            this.gatewayRouteTableId = request.gatewayRouteTableId;
             this.iPv4GatewayRouteTableId = request.iPv4GatewayRouteTableId;
             this.name = request.name;
             this.nextHopId = request.nextHopId;
@@ -270,6 +283,15 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * GatewayRouteTableId.
+         */
+        public Builder gatewayRouteTableId(String gatewayRouteTableId) {
+            this.putQueryParameter("GatewayRouteTableId", gatewayRouteTableId);
+            this.gatewayRouteTableId = gatewayRouteTableId;
             return this;
         }
 

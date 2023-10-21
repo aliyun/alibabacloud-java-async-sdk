@@ -168,7 +168,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         } 
 
         /**
-         * The new sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10**.
+         * The new sampling interval of the flow log. Unit: minutes. Valid values: **1**, **5**, and **10**.
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -180,7 +180,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
          * The new description of the flow log.
          * <p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -201,7 +201,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
          * The new name of the flow log.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);

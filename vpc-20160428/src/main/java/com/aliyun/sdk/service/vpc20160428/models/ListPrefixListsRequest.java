@@ -196,7 +196,7 @@ public class ListPrefixListsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -205,11 +205,11 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -236,7 +236,7 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * PrefixListIds.
+         * The IDs of prefix lists to be queried. Valid values of **N** are **1** to **100**, which specifies that you can query up to 100 prefix lists at a time.
          */
         public Builder prefixListIds(java.util.List < String > prefixListIds) {
             this.putQueryParameter("PrefixListIds", prefixListIds);
@@ -248,7 +248,7 @@ public class ListPrefixListsRequest extends Request {
          * The name of the prefix list to query.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -296,7 +296,7 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -350,7 +350,7 @@ public class ListPrefixListsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
              * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
@@ -361,10 +361,10 @@ public class ListPrefixListsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * The tag value. You can specify up to 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

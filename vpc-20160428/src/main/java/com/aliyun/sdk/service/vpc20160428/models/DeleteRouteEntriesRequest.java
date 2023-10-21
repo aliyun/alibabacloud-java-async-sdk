@@ -172,7 +172,7 @@ public class DeleteRouteEntriesRequest extends Request {
         }
 
         /**
-         * RouteEntries.
+         * The information about the routes that you want to delete.
          */
         public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -251,10 +251,10 @@ public class DeleteRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * The destination CIDR block of the route entry that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.
+             * The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.
              * <p>
              * 
-             * >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
+             * >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -265,7 +265,7 @@ public class DeleteRouteEntriesRequest extends Request {
              * The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.
              * <p>
              * 
-             * >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
+             * >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -273,10 +273,10 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the route entry that you want to delete. You can specify up to 50 route entry IDs.
+             * The ID of the route that you want to delete. You can specify up to 50 route IDs.
              * <p>
              * 
-             * >  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.
+             * >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -284,7 +284,7 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the route table in which the route entry to be deleted resides. You can specify up to 50 route table IDs.
+             * The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

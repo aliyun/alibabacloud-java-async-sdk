@@ -255,7 +255,7 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,7 +264,7 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,7 +273,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) to which the route table belongs.
+         * The region ID of the VPC to which the route table belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,7 +285,7 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the route table belongs.
+         * The ID of the resource group to which the route table to be queried belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -319,6 +322,9 @@ public class DescribeRouteTablesRequest extends Request {
 
         /**
          * The name of the route table that you want to query.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -327,7 +333,7 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the vRouter or VBR to which the route table belongs.
+         * The ID of the router to which the route table belongs.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -339,8 +345,8 @@ public class DescribeRouteTablesRequest extends Request {
          * The type of the router to which the route table belongs. Valid values:
          * <p>
          * 
-         * *   **VRouter**: a vRouter
-         * *   **VBR**: a virtual border router (VBR)
+         * *   **VRouter** (default)
+         * *   **VBR**
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -349,12 +355,13 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The type of route table that you want to query. Valid values:
+         * The route type. Valid values:
          * <p>
          * 
-         * *   **System** : a system route table
-         * *   **Custom**: a custom route table
-         * *   **BGP**: a Border Gateway Protocol (BGP) route table
+         * *   **Custom**
+         * *   **System**
+         * *   **BGP**
+         * *   **CEN**
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -363,10 +370,7 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the vRouter to which the route table belongs.
-         * <p>
-         * 
-         * After you set this parameter, **RouterType** is automatically set to **VRouter**.
+         * The ID of the vRouter.
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);
