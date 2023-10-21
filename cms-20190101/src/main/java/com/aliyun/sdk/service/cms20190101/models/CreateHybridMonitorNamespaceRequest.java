@@ -83,11 +83,23 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         } 
 
         /**
-         * The returned message.
+         * The description of the namespace.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * The name of the namespace.
+         * <p>
+         * 
+         * The name can contain lowercase letters, digits, and hyphens (-).
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 
@@ -103,15 +115,6 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
          * *   cms.s1.12xlarge: 376 days
          * 
          * For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
-         */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

@@ -98,11 +98,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * The response code.
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -110,7 +109,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +117,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The consecutive number of times for which the metric value is measured before an alert is triggered.
+         * The information of the alert rules that are configured for the site monitoring task.
          */
         public Builder metricRules(MetricRules metricRules) {
             this.metricRules = metricRules;
@@ -126,7 +125,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the site monitoring task.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +133,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.
+         * The details of the site monitoring task.
          */
         public Builder siteMonitors(SiteMonitors siteMonitors) {
             this.siteMonitors = siteMonitors;
@@ -142,7 +141,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -362,7 +365,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String threshold; 
 
             /**
-             * The alert threshold.
+             * Indicates whether the alert rule is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: The alert rule is enabled.
+             * *   false: The alert rule is disabled.
              */
             public Builder actionEnable(String actionEnable) {
                 this.actionEnable = actionEnable;
@@ -370,7 +377,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert rule.
+             * The alert contact group to which alert notifications are sent.
              */
             public Builder alarmActions(String alarmActions) {
                 this.alarmActions = alarmActions;
@@ -378,98 +385,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension of the alert rule.
-             */
-            public Builder comparisonOperator(String comparisonOperator) {
-                this.comparisonOperator = comparisonOperator;
-                return this;
-            }
-
-            /**
-             * The status of the alert. Valid values:
-             * <p>
-             * 
-             * *   OK: normal.
-             * *   ALARM: The alert is triggered.
-             */
-            public Builder dimensions(String dimensions) {
-                this.dimensions = dimensions;
-                return this;
-            }
-
-            /**
-             * The alert contact groups to which alert notifications are sent.
-             */
-            public Builder evaluationCount(String evaluationCount) {
-                this.evaluationCount = evaluationCount;
-                return this;
-            }
-
-            /**
-             * Indicates whether the alert rule is enabled. Valid values:
-             * <p>
-             * 
-             * *   true: The alert rule is enabled.
-             * *   false: The alert rule is disabled.
-             */
-            public Builder expression(String expression) {
-                this.expression = expression;
-                return this;
-            }
-
-            /**
-             * This topic provides an example on how to query the details of a site monitoring task whose ID is `cc641dff-c19d-45f3-ad0a-818a0c4f****`. The returned result indicates that the task name is `test123`, the address that is monitored by the task is `https://aliyun.com`, and the name of the carrier is `Alibaba`.
-             */
-            public Builder level(String level) {
-                this.level = level;
-                return this;
-            }
-
-            /**
-             * The namespace of the cloud service.
-             */
-            public Builder metricName(String metricName) {
-                this.metricName = metricName;
-                return this;
-            }
-
-            /**
-             * The alert contact group to which alert notifications are sent.
-             */
-            public Builder namespace(String namespace) {
-                this.namespace = namespace;
-                return this;
-            }
-
-            /**
-             * The ID of the alert rule.
-             */
-            public Builder okActions(String okActions) {
-                this.okActions = okActions;
-                return this;
-            }
-
-            /**
-             * The expression that is used to trigger alerts.
-             */
-            public Builder period(String period) {
-                this.period = period;
-                return this;
-            }
-
-            /**
-             * The interval at which the monitoring data is queried. The value is the same as the interval at which metric data is reported. Unit: seconds.
-             * <p>
-             * 
-             * >  If you specify a statistical period for the alert rule, raw data is queried based on the statistical period.
-             */
-            public Builder ruleId(String ruleId) {
-                this.ruleId = ruleId;
-                return this;
-            }
-
-            /**
-             * The comparison operator that is used in the alert rule. Valid values:
+             * The operator that is used to compare the metric value with the threshold in the alert rule. Valid values:
              * <p>
              * 
              * *   `>=`
@@ -485,29 +401,111 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
              * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
-            public Builder ruleName(String ruleName) {
-                this.ruleName = ruleName;
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
                 return this;
             }
 
             /**
-             * The severity of the alert. Valid values:
+             * The dimension of the alert rule.
+             */
+            public Builder dimensions(String dimensions) {
+                this.dimensions = dimensions;
+                return this;
+            }
+
+            /**
+             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.
+             */
+            public Builder evaluationCount(String evaluationCount) {
+                this.evaluationCount = evaluationCount;
+                return this;
+            }
+
+            /**
+             * The expression that is used to trigger alerts.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * The alert severity. Valid values:
              * <p>
              * 
              * *   1: critical
              * *   2: warning
              * *   3: information
              */
-            public Builder stateValue(String stateValue) {
-                this.stateValue = stateValue;
+            public Builder level(String level) {
+                this.level = level;
                 return this;
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The metric name.
              */
-            public Builder statistics(String statistics) {
-                this.statistics = statistics;
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * The namespace of the cloud service.
+             * <p>
+             * 
+             * The value is in the following format: acs_service name.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * The alert contact group that receives alert notifications.
+             */
+            public Builder okActions(String okActions) {
+                this.okActions = okActions;
+                return this;
+            }
+
+            /**
+             * The time interval. The value is the same as the interval at which metric data is reported. Unit: seconds.
+             * <p>
+             * 
+             * >  If you specify a statistical period for the alert rule, data is queried based on the statistical period.
+             */
+            public Builder period(String period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * The ID of the alert rule.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * The name of the alert rule.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * The alert status. Valid values:
+             * <p>
+             * 
+             * *   OK: The alert rule has no active alerts.
+             * *   ALARM: The alert rule has active alerts.
+             */
+            public Builder stateValue(String stateValue) {
+                this.stateValue = stateValue;
                 return this;
             }
 
@@ -520,6 +518,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              * *   ErrorCodeMaximum: a status code for an alert
              * *   ErrorCodeMinimum: all status codes for a set of alerts
              * *   Average: response time
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * The alert threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -779,7 +785,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The ID of the carrier.
+             * The city ID.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -787,7 +793,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * The city name.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -795,7 +801,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the alert rules that are configured for the site monitoring task.
+             * The carrier ID.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -803,7 +809,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city.
+             * The carrier name.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -1928,7 +1934,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * attempts.
+             * The number of retries after a DNS failure occurred.
              */
             public Builder attempts(Long attempts) {
                 this.attempts = attempts;
@@ -1936,7 +1942,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * authentication.
+             * Indicates whether the security authentication feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   0: The feature is disabled.
+             * *   1: The feature is enabled.
              */
             public Builder authentication(Integer authentication) {
                 this.authentication = authentication;
@@ -1992,7 +2002,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * cookie.
+             * The cookie of the HTTP request.
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -2024,7 +2034,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * dns_match_rule.
+             * The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:
+             * <p>
+             * 
+             * *   IN_DNS: The list of expected values is a subset of the list of DNS results.
+             * *   DNS_IN: The list of DNS results is a subset of the list of expected values.
+             * *   EQUAL: The list of DNS results is the same as the list of expected values.
+             * *   ANY: The list of DNS results intersects with the list of expected values.
              */
             public Builder dnsMatchRule(String dnsMatchRule) {
                 this.dnsMatchRule = dnsMatchRule;
@@ -2032,7 +2048,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * dns_server.
+             * The IP address of the DNS server.
+             * <p>
+             * 
+             * >  This parameter is returned only if the TaskType parameter is set to DNS.
              */
             public Builder dnsServer(String dnsServer) {
                 this.dnsServer = dnsServer;
@@ -2040,7 +2059,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * dns_type.
+             * The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:
+             * <p>
+             * 
+             * *   A (default): a record that specifies an IP address related to the specified host name or domain name.
+             * *   CNAME: a record that maps multiple domain names to a domain name.
+             * *   NS: a record that specifies a DNS server used to parse domain names.
+             * *   MX: a record that links domain names to the address of a mail server.
+             * *   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;
@@ -2064,7 +2090,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * expect_value.
+             * The domain name or alias to be parsed.
+             * <p>
+             * 
+             * >  This parameter is returned only if the TaskType parameter is set to DNS.
              */
             public Builder expectValue(String expectValue) {
                 this.expectValue = expectValue;
@@ -2072,7 +2101,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * failure_rate.
+             * The packet loss rate.
+             * <p>
+             * 
+             * >  This parameter is returned only if the TaskType parameter is set to PING.
              */
             public Builder failureRate(Float failureRate) {
                 this.failureRate = failureRate;
@@ -2080,7 +2112,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * header.
+             * The header of the HTTP request.
              */
             public Builder header(String header) {
                 this.header = header;
@@ -2088,7 +2120,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * http_method.
+             * The HTTP request method. Valid values:
+             * <p>
+             * 
+             * *   get
+             * *   post
+             * *   head
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -2104,7 +2141,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * match_rule.
+             * Indicates whether the alert rule is included. Valid values:
+             * <p>
+             * 
+             * *   0: The alert rule is included.
+             * *   1: The alert rule is excluded.
              */
             public Builder matchRule(Integer matchRule) {
                 this.matchRule = matchRule;
@@ -2120,7 +2161,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * password.
+             * The password of the SMTP, POP3, or FTP protocol.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -2128,7 +2169,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ping_num.
+             * The heartbeat of the PING protocol.
              */
             public Builder pingNum(Integer pingNum) {
                 this.pingNum = pingNum;
@@ -2152,7 +2193,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * The port number of the TCP, UDP, SMTP, or POP3 protocol.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2160,7 +2201,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * The protocol that is used to send the request.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -2168,7 +2209,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * request_content.
+             * The content of the HTTP request.
              */
             public Builder requestContent(String requestContent) {
                 this.requestContent = requestContent;
@@ -2176,7 +2217,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * request_format.
+             * The format of the HTTP request. Valid values:
+             * <p>
+             * 
+             * *   hex: hexadecimal
+             * *   txt: text
              */
             public Builder requestFormat(String requestFormat) {
                 this.requestFormat = requestFormat;
@@ -2184,7 +2229,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * response_content.
+             * The response to the HTTP request.
              */
             public Builder responseContent(String responseContent) {
                 this.responseContent = responseContent;
@@ -2192,7 +2237,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * response_format.
+             * The format of the HTTP response. Valid values:
+             * <p>
+             * 
+             * *   hex: hexadecimal
+             * *   txt: text
              */
             public Builder responseFormat(String responseFormat) {
                 this.responseFormat = responseFormat;
@@ -2216,7 +2265,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * time_out.
+             * The timeout period. Unit: milliseconds.
              */
             public Builder timeOut(Long timeOut) {
                 this.timeOut = timeOut;
@@ -2248,7 +2297,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * The username of the FTP, SMTP, or POP3 protocol.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -2405,7 +2454,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.
+             * The URL that is monitored by the site monitoring task.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -2429,7 +2478,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the site monitoring task.
+             * The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -2437,7 +2486,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the carrier.
+             * The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.
              */
             public Builder ispCities(IspCities ispCities) {
                 this.ispCities = ispCities;
@@ -2445,7 +2494,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * OptionJson.
+             * The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).
              */
             public Builder optionJson(OptionJson optionJson) {
                 this.optionJson = optionJson;
@@ -2453,7 +2502,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the city.
+             * The ID of the site monitoring task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -2461,18 +2510,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the site monitoring task.
+             * The name of the site monitoring task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
-                return this;
-            }
-
-            /**
-             * The address that is monitored by the site monitoring task.
-             */
-            public Builder taskState(String taskState) {
-                this.taskState = taskState;
                 return this;
             }
 
@@ -2482,6 +2523,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              * 
              * *   1: The task is enabled.
              * *   2: The task is disabled.
+             */
+            public Builder taskState(String taskState) {
+                this.taskState = taskState;
+                return this;
+            }
+
+            /**
+             * The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

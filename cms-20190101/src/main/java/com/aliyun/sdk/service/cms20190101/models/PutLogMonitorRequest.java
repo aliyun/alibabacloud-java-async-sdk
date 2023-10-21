@@ -237,7 +237,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the log monitoring metric.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -255,10 +255,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call is successful.
+         * The ID of the log monitoring metric.
          */
         public Builder logId(String logId) {
             this.putQueryParameter("LogId", logId);
@@ -285,11 +282,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The returned message.
-         * <p>
-         * 
-         * *   If the call is successful, the value `successful` is returned.
-         * *   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`
+         * The name of the metric. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -298,7 +291,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the metric. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * The name of the Log Service Logstore.
          */
         public Builder slsLogstore(String slsLogstore) {
             this.putQueryParameter("SlsLogstore", slsLogstore);
@@ -307,7 +300,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the field that is specified as the dimension. Valid values of N: 1 to 10.
+         * The name of the Log Service project.
          */
         public Builder slsProject(String slsProject) {
             this.putQueryParameter("SlsProject", slsProject);
@@ -316,7 +309,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to PutLogMonitor.
+         * The region in which the Log Service project resides.
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putQueryParameter("SlsRegionId", slsRegionId);
@@ -325,13 +318,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The logical operator that is used between log filter conditions. Valid values:
-         * <p>
-         * 
-         * *   and
-         * *   or
-         * 
-         * >  The ValueFilterRelation and `ValueFilter.N.Key` parameters must be used in pair.
+         * The size of the tumbling window for calculation. Unit: seconds. CloudMonitor performs aggregation for each tumbling window.
          */
         public Builder tumblingwindows(String tumblingwindows) {
             this.putQueryParameter("Tumblingwindows", tumblingwindows);
@@ -340,7 +327,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The region in which the Log Service project resides.
+         * The unit.
          */
         public Builder unit(String unit) {
             this.putQueryParameter("Unit", unit);
@@ -358,7 +345,13 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The field value to be matched in the filter condition. Valid values of N: 1 to 10.
+         * The logical operator that is used between log filter conditions. Valid values:
+         * <p>
+         * 
+         * *   and
+         * *   or
+         * 
+         * >  The ValueFilterRelation and `ValueFilter.N.Key` parameters must be used in pair.
          */
         public Builder valueFilterRelation(String valueFilterRelation) {
             this.putQueryParameter("ValueFilterRelation", valueFilterRelation);
@@ -427,7 +420,7 @@ public class PutLogMonitorRequest extends Request {
             private String function; 
 
             /**
-             * The name of the Log Service project.
+             * The alias of the aggregate function. Valid values of N: 1 to 10.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -435,7 +428,7 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The alias of the aggregate function. Valid values of N: 1 to 10.
+             * The name of the field to be aggregated. Valid values of N: 1 to 10.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -443,7 +436,17 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The ID of the log monitoring metric.
+             * The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values of N: 1 to 10. Valid values:
+             * <p>
+             * 
+             * *   count: counts the number.
+             * *   sum: calculates the total value.
+             * *   avg: calculates the average value.
+             * *   max: selects the maximum value.
+             * *   min: selects the minimum value.
+             * *   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.
+             * *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
+             * *   distinct: counts the number of logs where the specified field appears within the aggregation period.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -496,17 +499,7 @@ public class PutLogMonitorRequest extends Request {
             private String fieldName; 
 
             /**
-             * The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values of N: 1 to 10. Valid values:
-             * <p>
-             * 
-             * *   count: counts the number.
-             * *   sum: calculates the total value.
-             * *   avg: calculates the average value.
-             * *   max: selects the maximum value.
-             * *   min: selects the minimum value.
-             * *   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.
-             * *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
-             * *   distinct: counts the number of logs where the specified field appears within the aggregation period.
+             * The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -514,7 +507,7 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The ID of the application group.
+             * The name of the field that is specified as the dimension. Valid values of N: 1 to 10.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -579,6 +572,14 @@ public class PutLogMonitorRequest extends Request {
             private String value; 
 
             /**
+             * The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
              * The method that is used to match the field value. Valid values of N: 1 to 10. Valid values:
              * <p>
              * 
@@ -589,21 +590,13 @@ public class PutLogMonitorRequest extends Request {
              * *   `>=`: be greater than or equal to
              * *   `<=`: be less than or equal to
              */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * The size of the tumbling window for calculation. Unit: seconds. CloudMonitor performs aggregation for each tumbling window.
-             */
             public Builder operator(String operator) {
                 this.operator = operator;
                 return this;
             }
 
             /**
-             * The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.
+             * The field value to be matched in the filter condition. Valid values of N: 1 to 10.
              */
             public Builder value(String value) {
                 this.value = value;

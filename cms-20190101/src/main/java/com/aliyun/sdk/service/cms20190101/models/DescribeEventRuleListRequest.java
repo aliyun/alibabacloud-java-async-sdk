@@ -110,7 +110,7 @@ public class DescribeEventRuleListRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to DescribeEventRuleList.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -128,10 +128,7 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The prefix in the name of the event-triggered alert rule.
          */
         public Builder namePrefix(String namePrefix) {
             this.putQueryParameter("NamePrefix", namePrefix);
@@ -140,7 +137,10 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The description of the event-triggered alert rule.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,11 +149,10 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The status of the event-triggered alert rule. Valid values:
+         * The number of entries to return on each page.
          * <p>
          * 
-         * *   ENABLED: enabled
-         * *   DISABLED: disabled
+         * A minimum of one entry can be returned on each page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

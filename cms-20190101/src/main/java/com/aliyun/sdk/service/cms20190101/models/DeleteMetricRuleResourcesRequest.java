@@ -70,10 +70,7 @@ public class DeleteMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The resources to be disassociated from the alert rule.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -82,7 +79,7 @@ public class DeleteMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The resources to be disassociated from the alert rule.
+         * The ID of the alert rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

@@ -86,7 +86,10 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,10 +97,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the custom event occurred.
-         * <p>
-         * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * The details of the custom event.
          */
         public Builder customEvents(CustomEvents customEvents) {
             this.customEvents = customEvents;
@@ -105,10 +105,18 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -118,14 +126,6 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The details of the custom event.
          */
         public Builder success(String success) {
             this.success = success;
@@ -213,7 +213,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The ID of the custom event.
+             * The content of the custom event.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -221,7 +221,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the custom event.
+             * The ID of the application group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -229,7 +229,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details of a custom event occurred in a specified time period.
+             * The ID of the custom event.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -237,7 +237,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The name of the custom event.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -245,7 +245,10 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom event.
+             * The time when the custom event occurred.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder time(String time) {
                 this.time = time;

@@ -114,7 +114,7 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         } 
 
         /**
-         * The interval at which monitoring data is collected.
+         * The timestamp that specifies the end of the time range to query.
          * <p>
          * 
          * Unit: seconds.
@@ -126,10 +126,10 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the namespace.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -138,7 +138,10 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The interval at which monitoring data is collected.
+         * <p>
+         * 
+         * Unit: seconds.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -147,7 +150,10 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeHybridMonitorDataList**.
+         * The name of the metric.
+         * <p>
+         * 
+         * >  PromQL statements are supported.
          */
         public Builder promSQL(String promSQL) {
             this.putQueryParameter("PromSQL", promSQL);
@@ -156,7 +162,10 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The metric values that are collected at different timestamps.
+         * The timestamp that specifies the beginning of the time range to query.
+         * <p>
+         * 
+         * Unit: seconds.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

@@ -96,7 +96,7 @@ public class DescribeLogMonitorListRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -105,7 +105,7 @@ public class DescribeLogMonitorListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +114,7 @@ public class DescribeLogMonitorListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for log monitoring metrics. Fuzzy match is supported.
+         * The number of entries to return on each page. Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +123,7 @@ public class DescribeLogMonitorListRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The keyword that is used to search for log monitoring metrics. Fuzzy match is supported.
          */
         public Builder searchValue(String searchValue) {
             this.putQueryParameter("SearchValue", searchValue);

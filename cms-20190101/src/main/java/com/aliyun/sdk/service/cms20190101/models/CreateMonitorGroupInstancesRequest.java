@@ -70,7 +70,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -79,7 +79,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * Instances.
+         * The instances that you want to add to the application group.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.putQueryParameter("Instances", instances);
@@ -161,10 +161,10 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             private String regionId; 
 
             /**
-             * The HTTP status code.
+             * The abbreviation of the Alibaba Cloud service name.
              * <p>
              * 
-             * >  The status code 200 indicates that the call was successful.
+             * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -172,7 +172,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -180,7 +180,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -188,7 +188,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **CreateMonitorGroupInstances**.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

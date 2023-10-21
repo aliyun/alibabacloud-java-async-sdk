@@ -122,7 +122,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * The number of the returned page. Default value: 1.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page. Default value: 10.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +141,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of the returned page. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +149,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The process monitoring tasks created for the application group.
+         * The number of entries returned on each page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +157,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the process monitoring task.
+         * The process monitoring tasks created for the application group.
          */
         public Builder processes(Processes processes) {
             this.processes = processes;
@@ -162,10 +165,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +173,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -181,7 +181,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the process monitoring task.
+         * The total number of entries returned.
          */
         public Builder total(String total) {
             this.total = total;
@@ -471,7 +471,20 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+             * The comparison operator of the threshold for critical-level alerts. Valid values:
+             * <p>
+             * 
+             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+             * *   GreaterThanThreshold: greater than the threshold
+             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
+             * *   LessThanThreshold: less than the threshold
+             * *   NotEqualToThreshold: not equal to the threshold
+             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+             * *   LessThanYesterday: less than the metric value at the same time yesterday
+             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
+             * *   LessThanLastWeek: less than the metric value at the same time last week
+             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -479,7 +492,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to calculate metric values that trigger alerts.
+             * The time period during which the alert rule is effective.
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -487,7 +500,12 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The time period during which the alert rule is effective.
+             * The level of the alert. Valid values:
+             * <p>
+             * 
+             * *   critical
+             * *   warn
+             * *   info
              */
             public Builder escalationsLevel(String escalationsLevel) {
                 this.escalationsLevel = escalationsLevel;
@@ -495,7 +513,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for triggering alerts.
+             * The time period during which the alert rule is ineffective.
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -503,10 +521,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times for which the threshold can be consecutively exceeded.
+             * The duration of the mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
              * <p>
              * 
-             * >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
+             * >  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -514,7 +532,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the process monitoring tasks for an application group.
+             * The method used to calculate metric values that trigger alerts.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -530,7 +548,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+             * The threshold for triggering alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -538,7 +556,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The time period during which the alert rule is ineffective.
+             * The number of times for which the threshold can be consecutively exceeded.
+             * <p>
+             * 
+             * >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -546,12 +567,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
-             * <p>
-             * 
-             * *   critical
-             * *   warn
-             * *   info
+             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -657,35 +673,6 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The comparison operator of the threshold for critical-level alerts. Valid values:
-             * <p>
-             * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
-             */
-            public Builder function(String function) {
-                this.function = function;
-                return this;
-            }
-
-            /**
-             * The configurations of the alert rule.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
              * The method used to match the instances. Default value: all. Valid values:
              * <p>
              * 
@@ -697,6 +684,25 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
              * *   equals
              * 
              * >  The matched instances are monitored by the process monitoring task.
+             */
+            public Builder function(String function) {
+                this.function = function;
+                return this;
+            }
+
+            /**
+             * The criteria based on which the instances are matched.
+             * <p>
+             * 
+             * >  Set the value to `name`, indicating that the instances are matched based on instance name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The keyword used to match the instance name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -838,10 +844,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             private String processName; 
 
             /**
-             * The duration of the mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
-             * <p>
-             * 
-             * >  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.
+             * The configurations of the alert rule.
              */
             public Builder alertConfig(ProcessAlertConfig alertConfig) {
                 this.alertConfig = alertConfig;
@@ -857,7 +860,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword used to match the instance name.
+             * The ID of the process monitoring task.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -865,10 +868,10 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The criteria based on which the instances are matched.
+             * The conditional expressions used to match the instances.
              * <p>
              * 
-             * >  Set the value to `name`, indicating that the instances are matched based on instance name.
+             * >  Only the instances that meet the conditional expressions are monitored by the process monitoring task.
              */
             public Builder matchExpress(ProcessMatchExpress matchExpress) {
                 this.matchExpress = matchExpress;
@@ -884,10 +887,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The conditional expressions used to match the instances.
-             * <p>
-             * 
-             * >  Only the instances that meet the conditional expressions are monitored by the process monitoring task.
+             * The name of the process monitoring task.
              */
             public Builder processName(String processName) {
                 this.processName = processName;

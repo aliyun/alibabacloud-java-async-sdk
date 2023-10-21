@@ -97,7 +97,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -106,7 +106,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +124,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The name of the process monitoring task.
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);

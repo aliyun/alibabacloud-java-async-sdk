@@ -278,7 +278,7 @@ public class DescribeAlertLogListRequest extends Request {
         } 
 
         /**
-         * The start timestamp of the alert logs to be queried. Unit: milliseconds.
+         * The alert contact group.
          */
         public Builder contactGroup(String contactGroup) {
             this.putQueryParameter("ContactGroup", contactGroup);
@@ -287,7 +287,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The alert contact group.
+         * The end timestamp of the alert logs to be queried. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -296,7 +296,14 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The alert information in a JSON string.
+         * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
+         * <p>
+         * 
+         * *   `product`: aggregates data by cloud service.
+         * *   `level`: aggregates data by alert level.
+         * *   `groupId`: aggregates data by application group.
+         * *   `contactGroup`: aggregates data by alert contact group.
+         * *   `product,metricName`: aggregates data both by cloud service and by metric.
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -305,7 +312,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeAlertLogList**.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -314,7 +321,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The name of the blacklist policy.
+         * The statistical period of alert logs. Unit: minutes.
          */
         public Builder lastMin(String lastMin) {
             this.putQueryParameter("LastMin", lastMin);
@@ -323,7 +330,11 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The webhook URLs of alert contacts.
+         * The severity level and notification methods of the alert. Valid values:
+         * <p>
+         * 
+         * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
+         * *   OK: No alert is generated.
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -332,7 +343,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The message returned for the alert callback.
+         * The metric name.
+         * <p>
+         * 
+         * > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -341,11 +355,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * The namespace of the cloud service.
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * > For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -354,10 +367,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -366,14 +376,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The severity level and notification methods of the alert. Valid values:
-         * <p>
-         * 
-         * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-         * 
-         * <!---->
-         * 
-         * *   OK: No alert is generated.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -382,7 +385,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The email addresses of alert contacts.
+         * The abbreviation of the cloud service name.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -391,10 +394,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The phone numbers of alert contacts that can receive alert text messages.
-         * <p>
-         * 
-         * >  This parameter can be returned only on the China site (aliyun.com).
+         * The ID of the alert rule. For more information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -403,11 +403,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The identifier of the cloud service. Valid values:
-         * <p>
-         * 
-         * *   If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.
-         * *   If the cloud service is not provided by Alibaba Cloud, a value in the `acs_Service keyword` format is returned. Example: acs_networkmonitor.
+         * The name of the alert rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -416,7 +412,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The ID of the log.
+         * The search keyword that is used to query alert logs.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -425,7 +421,16 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The sending results of alert notifications.
+         * The status of the alert. Valid values:
+         * <p>
+         * 
+         * *   0: The alert is triggered or cleared.
+         * *   1: The alert is ineffective.
+         * *   2: The alert is muted.
+         * *   3: The host is restarting.
+         * *   4: No alert notification is sent.
+         * 
+         * If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
          */
         public Builder sendStatus(String sendStatus) {
             this.putQueryParameter("SendStatus", sendStatus);
@@ -443,11 +448,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * Indicates whether the alert level was changed. Valid values:
-         * <p>
-         * 
-         * *   `P4->OK`: The alert level was changed from P4 to OK.
-         * *   `P4->P4`: The alert level was still P4.
+         * The start timestamp of the alert logs to be queried. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

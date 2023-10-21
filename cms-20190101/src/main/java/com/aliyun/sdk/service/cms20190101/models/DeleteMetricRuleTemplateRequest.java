@@ -55,10 +55,7 @@ public class DeleteMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the alert template.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

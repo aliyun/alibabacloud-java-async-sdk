@@ -139,7 +139,7 @@ public class PutEventRuleTargetsRequest extends Request {
         } 
 
         /**
-         * ContactParameters.
+         * The information about the alert contact groups that receive alert notifications.
          */
         public Builder contactParameters(java.util.List < ContactParameters> contactParameters) {
             this.putQueryParameter("ContactParameters", contactParameters);
@@ -148,7 +148,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * FcParameters.
+         * The information about the recipients in Function Compute.
          */
         public Builder fcParameters(java.util.List < FcParameters> fcParameters) {
             this.putQueryParameter("FcParameters", fcParameters);
@@ -157,7 +157,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * MnsParameters.
+         * The information about the recipients in Message Service (MNS).
          */
         public Builder mnsParameters(java.util.List < MnsParameters> mnsParameters) {
             this.putQueryParameter("MnsParameters", mnsParameters);
@@ -166,7 +166,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * OpenApiParameters.
+         * The parameters of API callback notification.
          */
         public Builder openApiParameters(java.util.List < OpenApiParameters> openApiParameters) {
             this.putQueryParameter("OpenApiParameters", openApiParameters);
@@ -175,12 +175,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * The name of the protocol. Valid values of N: 1 to 5. Valid values:
-         * <p>
-         * 
-         * *   http
-         * *   telnet
-         * *   ping
+         * The name of the alert rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -189,7 +184,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * SlsParameters.
+         * The information about the recipients in Simple Log Service.
          */
         public Builder slsParameters(java.util.List < SlsParameters> slsParameters) {
             this.putQueryParameter("SlsParameters", slsParameters);
@@ -198,7 +193,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * WebhookParameters.
+         * The information about the callback URLs that are used to receive alert notifications.
          */
         public Builder webhookParameters(java.util.List < WebhookParameters> webhookParameters) {
             this.putQueryParameter("WebhookParameters", webhookParameters);
@@ -264,7 +259,7 @@ public class PutEventRuleTargetsRequest extends Request {
             private String level; 
 
             /**
-             * The operation that you want to perform. Set the value to **PutEventRuleTargets**.
+             * The name of the alert contact group. Valid values of N: 1 to 5.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -272,10 +267,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The HTTP request method. Valid values of N: 1 to 5.
-             * <p>
-             * 
-             * Valid values: GET and POST.
+             * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -283,7 +275,10 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The name of the event-triggered alert rule.
+             * The alert level and the corresponding notification methods. Valid values of N: 1 to 5. Valid values:
+             * <p>
+             * 
+             * 4: Alert notifications are sent by using DingTalk chatbots and emails.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -360,7 +355,7 @@ public class PutEventRuleTargetsRequest extends Request {
             private String serviceName; 
 
             /**
-             * The number of resources that failed to be created or modified.
+             * The name of the function. Valid values of N: 1 to 5.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -368,10 +363,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The HTTP status code.
-             * <p>
-             * 
-             * >  The status code 200 indicates that the call was successful.
+             * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -379,7 +371,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The MNS topic.
+             * The region where Function Compute is deployed. Valid values of N: 1 to 5.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -387,7 +379,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The region where Log Service is deployed. Valid values of N: 1 to 5.
+             * The name of the Function Compute service. Valid values of N: 1 to 5.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -472,7 +464,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The version of the API.
+             * The name of the MNS queue. Valid values of N: 1 to 5.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -480,7 +472,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
+             * The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -488,16 +480,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5.
-             * <p>
-             * 
-             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
-             * 
-             * *   Service: the code of a cloud service
-             * *   Region: the region ID
-             * *   Account: the ID of an Alibaba Cloud account
-             * *   ResourceType: the resource type
-             * *   ResourceId: the resource ID
+             * The MNS topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -622,7 +605,7 @@ public class PutEventRuleTargetsRequest extends Request {
             private String version; 
 
             /**
-             * The ID of the recipient that receives alert notifications sent by an API callback.
+             * The API name.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -630,7 +613,14 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The error message.
+             * The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5. Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
+             * <p>
+             * 
+             * *   Service: the code of a cloud service
+             * *   Region: the region ID
+             * *   Account: the ID of an Alibaba Cloud account
+             * *   ResourceType: the resource type
+             * *   ResourceId: the resource ID
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -638,7 +628,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The region where Function Compute is deployed. Valid values of N: 1 to 5.
+             * The ID of the recipient that receives alert notifications sent by an API callback.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -646,7 +636,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.
+             * The parameters of the alert callback. Specify the parameters in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -654,7 +644,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The name of the Log Service project. Valid values of N: 1 to 5.
+             * The ID of the cloud service to which the API operation belongs.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -662,7 +652,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The callback URL. Valid values of N: 1 to 5.
+             * The region where the resource resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -670,7 +660,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * This parameter is returned if the specified alert contact groups in the request failed to be created or modified.
+             * The name of the role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -678,7 +668,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The name of the alert contact group.
+             * The version of the API.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -755,7 +745,7 @@ public class PutEventRuleTargetsRequest extends Request {
             private String region; 
 
             /**
-             * The name of the alert contact group. Valid values of N: 1 to 5.
+             * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -763,7 +753,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The name of the Log Service Logstore. Valid values of N: 1 to 5.
+             * The name of the Simple Log Service Logstore. Valid values of N: 1 to 5.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -771,7 +761,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * The name of the Simple Log Service project. Valid values of N: 1 to 5.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -779,7 +769,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
+             * The region where Simple Log Service is deployed. Valid values of N: 1 to 5.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -856,10 +846,7 @@ public class PutEventRuleTargetsRequest extends Request {
             private String url; 
 
             /**
-             * The alert notification methods. Valid values of N: 1 to 5. Valid values:
-             * <p>
-             * 
-             * 4: Alert notifications are sent by using DingTalk chatbots and emails.
+             * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -867,7 +854,10 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The region where the resource resides.
+             * The HTTP request method. Valid values of N: 1 to 5.
+             * <p>
+             * 
+             * Valid values: GET and POST.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -875,7 +865,12 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The ID of the recipient.
+             * The name of the protocol. Valid values of N: 1 to 5. Valid values:
+             * <p>
+             * 
+             * *   http
+             * *   telnet
+             * *   ping
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -883,7 +878,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * The name of the function. Valid values of N: 1 to 5.
+             * The callback URL. Valid values of N: 1 to 5.
              */
             public Builder url(String url) {
                 this.url = url;

@@ -154,10 +154,11 @@ public class DescribeSiteMonitorDataRequest extends Request {
         } 
 
         /**
-         * The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.
+         * The end of the time range for the query. Supported formats:
          * <p>
          * 
-         * >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
+         * *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -166,7 +167,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The returned monitoring data.
+         * The number of data points to return.
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -175,11 +176,11 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range for the query. Supported formats:
+         * The name of the metric. Valid values:
          * <p>
          * 
-         * *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-         * *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
+         * *   Availability
+         * *   ResponseTime
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -188,7 +189,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The number of data points to return.
+         * The pagination cursor.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +198,10 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The pagination cursor.
+         * The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.
+         * <p>
+         * 
+         * >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -206,7 +210,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The end of the time range for the query. Supported formats:
+         * The beginning of the time range for the query. Supported formats:
          * <p>
          * 
          * *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
@@ -219,11 +223,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The type of the monitored object whose monitoring data is to be queried. Valid values:
-         * <p>
-         * 
-         * *   metric
-         * *   event
+         * The ID of the site monitoring task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -232,11 +232,11 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The name of the metric. Valid values:
+         * The type of the monitored object whose monitoring data is to be queried. Valid values:
          * <p>
          * 
-         * *   Availability
-         * *   ResponseTime
+         * *   metric
+         * *   event
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -124,11 +124,29 @@ public class DescribeHostAvailabilityListRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The ID of the availability monitoring task.
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).
+         */
+        public Builder ids(String ids) {
+            this.putQueryParameter("Ids", ids);
+            this.ids = ids;
             return this;
         }
 
@@ -138,9 +156,9 @@ public class DescribeHostAvailabilityListRequest extends Request {
          * 
          * Pages start from page 1. Default value: 1.
          */
-        public Builder id(Long id) {
-            this.putQueryParameter("Id", id);
-            this.id = id;
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -150,27 +168,6 @@ public class DescribeHostAvailabilityListRequest extends Request {
          * 
          * Default value: 10.
          */
-        public Builder ids(String ids) {
-            this.putQueryParameter("Ids", ids);
-            this.ids = ids;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The value 200 indicates that the call was successful.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The error message.
-         */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -178,7 +175,7 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The name of the availability monitoring task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

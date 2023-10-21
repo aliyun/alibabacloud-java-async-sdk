@@ -86,11 +86,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         private SystemEventCounts systemEventCounts; 
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * The HTTP status code.
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +105,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the system event.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +113,11 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the system event.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -122,7 +125,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the system event occurred. Unit: milliseconds.
+         * The details of the system event.
          */
         public Builder systemEventCounts(SystemEventCounts systemEventCounts) {
             this.systemEventCounts = systemEventCounts;
@@ -282,7 +285,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The ID of the region.
+             * The description of the system event.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -290,7 +293,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The ID of the application group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -298,18 +301,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * This topic provides an example on how to query the number of times that a system event occurred for Elastic Compute Service (`ECS`). The returned result indicates that the number of times that the specified system event occurred is 3.
-             */
-            public Builder level(String level) {
-                this.level = level;
                 return this;
             }
 
@@ -321,13 +316,21 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
              * *   Warn
              * *   Info
              */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * The name of the system event.
+             */
             public Builder name(String name) {
                 this.name = name;
                 return this;
             }
 
             /**
-             * The name of the system event.
+             * The number of times that the system event occurred.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -335,7 +338,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the system event occurred.
+             * The name of the cloud service in which the system event occurred.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -343,7 +346,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -351,7 +354,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the system event.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -359,7 +362,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The status of the system event.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -367,7 +370,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service in which the system event occurred.
+             * The timestamp when the system event occurred. Unit: milliseconds.
              */
             public Builder time(Long time) {
                 this.time = time;

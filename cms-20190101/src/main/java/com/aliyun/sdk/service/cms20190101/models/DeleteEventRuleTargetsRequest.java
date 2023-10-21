@@ -79,7 +79,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * The ID of the target. Valid values of N: 1 to 20.
+         * The name of the event-triggered alert rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

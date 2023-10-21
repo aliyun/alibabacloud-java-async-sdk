@@ -86,13 +86,10 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         private Targets targets; 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
+         * The HTTP status code.
          * <p>
          * 
-         * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-         * *   {userId}: the ID of the Alibaba Cloud account.
-         * *   {regionId}: the region ID of the message queue or topic.
-         * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -100,7 +97,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource for which alerts are triggered.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -108,10 +105,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -119,7 +113,11 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -127,7 +125,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeMetricRuleTargets**.
+         * The information about the resource for which alerts are triggered.
          */
         public Builder targets(Targets targets) {
             this.targets = targets;
@@ -203,7 +201,13 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Queries the resources that are associated with a specified alert rule.
+             * The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
+             * <p>
+             * 
+             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * *   {userId}: the ID of the Alibaba Cloud account.
+             * *   {regionId}: the region ID of the message queue or topic.
+             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -211,7 +215,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The ID of the resource for which alerts are triggered.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -219,7 +223,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * JsonParams.
+             * The parameters of the alert callback. The parameters are in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -227,7 +231,12 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the alert. Valid values:
+             * <p>
+             * 
+             * *   INFO: information
+             * *   WARN: warning
+             * *   CRITICAL: critical
              */
             public Builder level(String level) {
                 this.level = level;

@@ -122,7 +122,10 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         private Integer total; 
 
         /**
-         * The information about the virtual private cloud (VPC).
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,12 +133,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Valid values: 1 to 1000000000.
-         * 
-         * Default value: 1.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +141,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the VPC.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -151,12 +149,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Valid values: 1 to 1000000000.
-         * 
-         * Default value: 10.
+         * The total number of returned pages.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +157,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The dimensions of the resource that is associated with the application group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +165,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the instance.
+         * The resources that are associated with the application group.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -180,7 +173,11 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of returned entries.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +185,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the resource. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources in each request.
+         * The total number of returned entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -301,7 +298,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * The name of the instance.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -309,7 +306,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The description of the resource.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -403,7 +400,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             private String vswitchInstanceId; 
 
             /**
-             * VpcInstanceId.
+             * The ID of the VPC.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -411,7 +408,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * VswitchInstanceId.
+             * The ID of the vSwitch to which the instance belongs.
              */
             public Builder vswitchInstanceId(String vswitchInstanceId) {
                 this.vswitchInstanceId = vswitchInstanceId;
@@ -548,7 +545,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             private Vpc vpc; 
 
             /**
-             * The network type.
+             * The name of the cloud service.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -556,7 +553,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The total number of returned pages.
+             * The description of the resource.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -564,7 +561,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The tag value.
+             * The dimensions of the resource that is associated with the application group.
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -572,11 +569,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * Specifies whether to return the total number of resources in the specified application group. Valid values:
-             * <p>
-             * 
-             * *   true (default value)
-             * *   false
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -584,7 +577,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The resources that are associated with the application group.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -592,7 +585,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The page number of the returned page.
+             * The network type.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -616,7 +609,7 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the request.
+             * The information about the virtual private cloud (VPC).
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;

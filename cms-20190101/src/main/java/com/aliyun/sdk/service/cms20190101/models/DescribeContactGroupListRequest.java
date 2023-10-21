@@ -68,10 +68,7 @@ public class DescribeContactGroupListRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -80,7 +77,7 @@ public class DescribeContactGroupListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -25,14 +25,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTagsResponse> addTags(AddTagsRequest request);
 
     /**
-      * The ID of the application group to which the alert template is applied.
-      * For more information about how to query the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+      * In this example, the `700****` alert template is applied to the `123456` application group. For the generated alert rule, the ID is `applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****`, and the name is `test123`.
       *
      */
     CompletableFuture<ApplyMetricRuleTemplateResponse> applyMetricRuleTemplate(ApplyMetricRuleTemplateRequest request);
 
     /**
-      * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+      * This topic provides an example on how to create a site monitoring task named `HangZhou_ECS1`. The URL that is monitored by the task is `https://www.aliyun.com` and the type of the task is `HTTP`. The returned result shows that the site monitoring task is created. The name of the site monitoring task is `HangZhou_ECS1` and the task ID is `679fbe4f-b80b-4706-91b2-5427b43e****`.
       *
      */
     CompletableFuture<BatchCreateInstantSiteMonitorResponse> batchCreateInstantSiteMonitor(BatchCreateInstantSiteMonitorRequest request);
@@ -59,15 +58,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCmsSmspackageOrderResponse> createCmsSmspackageOrder(CreateCmsSmspackageOrderRequest request);
 
     /**
-      * Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:
-      * *   true: The application group automatically subscribes to event notifications.
-      * *   false (default value): The application group does not automatically subscribe to event notifications.
+      * This operation is available for Elastic Compute Service (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
+      * This topic provides an example to show how to create an application group for resources whose tag key is `ecs_instance`. In this example, the alert contact group of the application group is `ECS_Group`.
       *
      */
     CompletableFuture<CreateDynamicTagGroupResponse> createDynamicTagGroup(CreateDynamicTagGroupRequest request);
 
     /**
-      * The details of the alert rules.
+      * This topic provides an example to show how to create an alert rule for the `cpu_total` metric of Elastic Compute Service (ECS) in the `123456` application group. The ID of the alert rule is `456789`. The name of the alert rule is `ECS_Rule1`. The alert level is `Critical`. The statistical method is `Average`. The comparison operator is `GreaterThanOrEqualToThreshold`. The alert threshold is `90`. The number of alert retries is `3`. The response shows that the alert rule named `ECS_Rule1` is created.
       *
      */
     CompletableFuture<CreateGroupMetricRulesResponse> createGroupMetricRules(CreateGroupMetricRulesRequest request);
@@ -81,22 +79,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHostAvailabilityResponse> createHostAvailability(CreateHostAvailabilityRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * ## Prerequisites
+      * Hybrid Cloud Monitoring is activated. For more information, see [Activate Hybrid Cloud Monitoring](~~250773~~).
       *
      */
     CompletableFuture<CreateHybridMonitorNamespaceResponse> createHybridMonitorNamespace(CreateHybridMonitorNamespaceRequest request);
 
     /**
-      * The Log Service projects.
-      * Valid values of N: 1 to 25.
+      * # Prerequisites
+      * Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see [Getting Started](~~54604~~).
+      * # Description
+      * In this example, a Logstore group named `Logstore_test` is created. The region ID is `cn-hangzhou`. The project is `aliyun-project`. The Logstore is `Logstore-ECS`. The response shows that the Logstore group is created.
       *
      */
     CompletableFuture<CreateHybridMonitorSLSGroupResponse> createHybridMonitorSLSGroup(CreateHybridMonitorSLSGroupRequest request);
 
     /**
-      * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.
+      * ## Prerequisites
+      * *   Hybrid Cloud Monitoring is activated. For more information, see [Activate Hybrid Cloud Monitoring](~~250773~~).
+      * *   If you want to create a metric for logs imported from Log Service, make sure that you have activated Log Service and created a project and a Logstore. For more information, see [Getting Started](~~54604~~).
       *
      */
     CompletableFuture<CreateHybridMonitorTaskResponse> createHybridMonitorTask(CreateHybridMonitorTaskRequest request);
@@ -123,7 +124,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMonitorAgentProcessResponse> createMonitorAgentProcess(CreateMonitorAgentProcessRequest request);
 
     /**
-      * The name of the application group.
+      * In this example, the application group named `ECS_Group` is created.
       *
      */
     CompletableFuture<CreateMonitorGroupResponse> createMonitorGroup(CreateMonitorGroupRequest request);
@@ -135,14 +136,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMonitorGroupByResourceGroupIdResponse> createMonitorGroupByResourceGroupId(CreateMonitorGroupByResourceGroupIdRequest request);
 
     /**
-      * The abbreviation of the Alibaba Cloud service name.
-      * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+      * You can add a maximum of 1,000 instances to an application group at a time. You can add a maximum of 3,000 instances of an Alibaba Cloud service to an application group. The total number of instances that you can add to an application group is unlimited.
+      * In this example, an Elastic Compute Service (ECS) instance in the `China (Hangzhou)` region is added to the `3607****` application group. The instance ID is `i-2ze26xj5wwy12****` and the instance name is `test-instance-ecs`.
       *
      */
     CompletableFuture<CreateMonitorGroupInstancesResponse> createMonitorGroupInstances(CreateMonitorGroupInstancesRequest request);
 
     /**
-      * The type of the policy. Valid value: PauseNotify.
+      * If the policy is valid, no alert notifications are sent for the application group.
+      * This topic describes how to create the `PauseNotify` policy to pause alert notifications for the `7301****` application group. The StartTime parameter is set to `1622949300000` and the EndTime parameter is set to `1623208500000`. This indicates that the policy is valid from `2021-06-06 11:15:00 UTC+8` to `2021-06-09 11:15:00 UTC+8`.
       *
      */
     CompletableFuture<CreateMonitorGroupNotifyPolicyResponse> createMonitorGroupNotifyPolicy(CreateMonitorGroupNotifyPolicyRequest request);
@@ -187,9 +189,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHostAvailabilityResponse> deleteHostAvailability(DeleteHostAvailabilityRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * > If a metric import task is created for metrics in a namespace, you cannot delete the namespace unless you delete the task first.
+      * This topic provides an example on how to delete a namespace named `aliyun`. The response shows that the namespace is deleted.
       *
      */
     CompletableFuture<DeleteHybridMonitorNamespaceResponse> deleteHybridMonitorNamespace(DeleteHybridMonitorNamespaceRequest request);
@@ -252,9 +253,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAlertLogHistogramResponse> describeAlertLogHistogram(DescribeAlertLogHistogramRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example to show how to query the alert logs of Elastic Compute Service (ECS) based on the `product` dimension.
       *
      */
     CompletableFuture<DescribeAlertLogListResponse> describeAlertLogList(DescribeAlertLogListRequest request);
@@ -270,7 +269,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomEventAttributeResponse> describeCustomEventAttribute(DescribeCustomEventAttributeRequest request);
 
     /**
-      * The name of the custom event.
+      * >  This operation counts the number of times that a custom event occurred for each service.
       *
      */
     CompletableFuture<DescribeCustomEventCountResponse> describeCustomEventCount(DescribeCustomEventCountRequest request);
@@ -278,15 +277,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomEventHistogramResponse> describeCustomEventHistogram(DescribeCustomEventHistogramRequest request);
 
     /**
-      * The ID of the application group.
-      * For more information, see [DescribeMonitorGroups](~~115032~~).
+      * >  You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see [DescribeMetricList](~~51936~~).
       *
      */
     CompletableFuture<DescribeCustomMetricListResponse> describeCustomMetricList(DescribeCustomMetricListRequest request);
 
     /**
-      * The HTTP status code.
-      * >  The status code 200 indicates that the call was successful.
+      * This topic provides an example to show how to query tag rules that are related to `tagkey1`. The sample responses indicate that two tag rules are found. The rule IDs are `1536df65-a719-429d-8813-73cc40d7****` and `56e8cebb-b3d7-4a91-9880-78a8c84f****`.
       *
      */
     CompletableFuture<DescribeDynamicTagRuleListResponse> describeDynamicTagRuleList(DescribeDynamicTagRuleListRequest request);
@@ -300,7 +297,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventRuleListResponse> describeEventRuleList(DescribeEventRuleListRequest request);
 
     /**
-      * The error message.
+      * This topic provides an example to show how to query the details of an event-triggered alert rule named `testRule`.
       *
      */
     CompletableFuture<DescribeEventRuleTargetListResponse> describeEventRuleTargetList(DescribeEventRuleTargetListRequest request);
@@ -310,31 +307,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExporterRuleListResponse> describeExporterRuleList(DescribeExporterRuleListRequest request);
 
     /**
-      * The ID of the application group.
+      * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
       *
      */
     CompletableFuture<DescribeGroupMonitoringAgentProcessResponse> describeGroupMonitoringAgentProcess(DescribeGroupMonitoringAgentProcessRequest request);
 
     /**
-      * The ID of the availability monitoring task.
+      * This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named `ecs_instance`.
       *
      */
     CompletableFuture<DescribeHostAvailabilityListResponse> describeHostAvailabilityList(DescribeHostAvailabilityListRequest request);
 
     /**
-      * The tag key.
+      * ## Prerequisites
+      * Hybrid Cloud Monitoring is activated. For more information, see [Activate Hybrid Cloud Monitoring](~~250773~~).
       *
      */
     CompletableFuture<DescribeHybridMonitorDataListResponse> describeHybridMonitorDataList(DescribeHybridMonitorDataListRequest request);
 
     /**
-      * The data retention period. Valid values:
-      * *   cms.s1.large: Data is stored for 15 days.
-      * *   cms.s1.xlarge: Data is stored for 32 days.
-      * *   cms.s1.2xlarge: Data is stored for 63 days.
-      * *   cms.s1.3xlarge: Data is stored for 93 days.
-      * *   cms.s1.6xlarge: Data is stored for 185 days.
-      * *   cms.s1.12xlarge: Data is stored for 376 days.
+      * In this example, all namespaces within the current account are queried. The response shows that the current account has only one namespace named `aliyun-test`.
       *
      */
     CompletableFuture<DescribeHybridMonitorNamespaceListResponse> describeHybridMonitorNamespaceList(DescribeHybridMonitorNamespaceListRequest request);
@@ -356,12 +348,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLogMonitorListResponse> describeLogMonitorList(DescribeLogMonitorListRequest request);
 
     /**
-      * The statistical period of the metric.
-      * Valid values: 15, 60, 900, and 3600.
-      * Unit: seconds.
-      * > 
-      * *   If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported.
-      * *   For more information about the statistical period of a metric that is specified by the `MetricName` parameter, see [Appendix 1: Metrics](~~163515~~).
+      * ## Limits
+      * Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota. 
+      * >  Different from [DescribeMetricList](~~51936~~), the DescribeMetricData operation provides statistical features. You can set the `Dimension` parameter to {"instanceId": "i-abcdefgh12****"} to aggregate all data of your Alibaba Cloud account. This topic provides an example to show how to query the monitoring data of the `cpu_idle` metric for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`.
       *
      */
     CompletableFuture<DescribeMetricDataResponse> describeMetricData(DescribeMetricDataRequest request);
@@ -381,15 +370,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMetricLastResponse> describeMetricLast(DescribeMetricLastRequest request);
 
     /**
-      * The name of the metric.
-      * For more information about metric names, see [Appendix 1: Metrics](~~163515~~).
+      * ## Limits
+      * Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota. 
+      * >This topic provides an example to show how to query the monitoring data of the `cpu_idle` metric for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`. The returned result indicates that the monitoring data for the instance `i-abcdefgh12****` of the account `120886317861****` is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.
       *
      */
     CompletableFuture<DescribeMetricListResponse> describeMetricList(DescribeMetricListRequest request);
 
     /**
-      * The namespace of the service.
-      * For more information, see [Appendix 1: Metrics](~~163515~~).
+      * This operation is usually used with DescribeMetricList and DescribeMetricLast. For more information, see [DescribeMetricList](~~51936~~) and [DescribeMetricLast](~~51939~~).
       *
      */
     CompletableFuture<DescribeMetricMetaListResponse> describeMetricMetaList(DescribeMetricMetaListRequest request);
@@ -405,13 +394,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMetricRuleListResponse> describeMetricRuleList(DescribeMetricRuleListRequest request);
 
     /**
-      * The parameters of the alert callback. The parameters are in the JSON format.
+      * ## Limit
+      * This operation supports only Message Service (MNS) resources. 
+      * >This topic provides an example on how to query the resources that are associated with an alert rule whose ID is `ae06917_75a8c43178ab66****`.
       *
      */
     CompletableFuture<DescribeMetricRuleTargetsResponse> describeMetricRuleTargets(DescribeMetricRuleTargetsRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeMetricRuleTemplateAttribute.
+      * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
       *
      */
     CompletableFuture<DescribeMetricRuleTemplateAttributeResponse> describeMetricRuleTemplateAttribute(DescribeMetricRuleTemplateAttributeRequest request);
@@ -461,7 +452,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMonitoringAgentHostsResponse> describeMonitoringAgentHosts(DescribeMonitoringAgentHostsRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeMonitoringAgentProcesses.
+      * >  Before you call this operation, call the CreateMonitoringAgentProcess operation to create processes. For more information, see [CreateMonitoringAgentProcess](~~114951~~~).
+      * This topic provides an example of how to query the processes of the `i-hp3hl3cx1pbahzy8****` instance. The response indicates the details of the `NGINX` and `HTTP` processes.
       *
      */
     CompletableFuture<DescribeMonitoringAgentProcessesResponse> describeMonitoringAgentProcesses(DescribeMonitoringAgentProcessesRequest request);
@@ -475,7 +467,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMonitoringConfigResponse> describeMonitoringConfig(DescribeMonitoringConfigRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeProductResourceTagKeyList.
+      * >  If a tag is attached to multiple cloud resources in the region, the key of the tag is returned only once.
       *
      */
     CompletableFuture<DescribeProductResourceTagKeyListResponse> describeProductResourceTagKeyList(DescribeProductResourceTagKeyListRequest request);
@@ -489,7 +481,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeProjectMetaResponse> describeProjectMeta(DescribeProjectMetaRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeSiteMonitorAttribute.
+      * This topic provides an example on how to query the details of a site monitoring task whose ID is `cc641dff-c19d-45f3-ad0a-818a0c4f****`. The returned result indicates that the task name is `test123`, the URL that is monitored by the task is `https://aliyun.com`, and the name of the carrier is `Alibaba`.
       *
      */
     CompletableFuture<DescribeSiteMonitorAttributeResponse> describeSiteMonitorAttribute(DescribeSiteMonitorAttributeRequest request);
@@ -503,7 +495,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSiteMonitorISPCityListResponse> describeSiteMonitorISPCityList(DescribeSiteMonitorISPCityListRequest request);
 
     /**
-      * The content of the HTTP request.
+      * This topic provides an example on how to query all the site monitoring tasks of your Alibaba Cloud account. In this example, the returned result indicates that the Alibaba Cloud account has one site monitoring task named `HanZhou_ECS2`.
       *
      */
     CompletableFuture<DescribeSiteMonitorListResponse> describeSiteMonitorList(DescribeSiteMonitorListRequest request);
@@ -517,12 +509,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSiteMonitorQuotaResponse> describeSiteMonitorQuota(DescribeSiteMonitorQuotaRequest request);
 
+    /**
+      * This topic provides an example to show how to query the statistics of the `Availability` metric for a site monitoring task whose ID is `ef4cdc8b-9dc7-43e7-810e-f950e56c****`. The result indicates that the availability rate of the site is `100%`.
+      *
+     */
     CompletableFuture<DescribeSiteMonitorStatisticsResponse> describeSiteMonitorStatistics(DescribeSiteMonitorStatisticsRequest request);
 
     CompletableFuture<DescribeSystemEventAttributeResponse> describeSystemEventAttribute(DescribeSystemEventAttributeRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeSystemEventCount.
+      * This topic provides an example on how to query the number of times that a system event occurred for Elastic Compute Service (`ECS`). The returned result indicates that the number of times that the specified system event occurred is 3.
       *
      */
     CompletableFuture<DescribeSystemEventCountResponse> describeSystemEventCount(DescribeSystemEventCountRequest request);
@@ -534,7 +530,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTagKeyListResponse> describeTagKeyList(DescribeTagKeyListRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to DescribeTagValueList.
+      * This topic provides an example of how to query the tag values corresponding to `tagKey1`. The return results are `tagValue1` and `tagValue2`.
       *
      */
     CompletableFuture<DescribeTagValueListResponse> describeTagValueList(DescribeTagValueListRequest request);
@@ -564,9 +560,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableSiteMonitorsResponse> enableSiteMonitors(EnableSiteMonitorsRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * ## Prerequisites
+      * The Cloud Assistant client is installed on an ECS instance. For more information about how to install the Cloud Assistant client, see [Overview](~~64601~~).
       *
      */
     CompletableFuture<InstallMonitoringAgentResponse> installMonitoringAgent(InstallMonitoringAgentRequest request);
@@ -586,16 +581,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyHostInfoResponse> modifyHostInfo(ModifyHostInfoRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to change the data retention period of the `aliyun` namespace to `cms.s1.2xlarge`. The response shows that the namespace is modified.
       *
      */
     CompletableFuture<ModifyHybridMonitorNamespaceResponse> modifyHybridMonitorNamespace(ModifyHybridMonitorNamespaceRequest request);
 
     /**
-      * The Log Service projects.
-      * Valid values of N: 1 to 25.
+      * In this example, a Logstore group named `Logstore_test` is modified. The Logstore of the `aliyun-project` project in the `cn-hangzhou` region is changed to `Logstore-aliyun-all`. The response shows that the Logstore group is modified.
       *
      */
     CompletableFuture<ModifyHybridMonitorSLSGroupResponse> modifyHybridMonitorSLSGroup(ModifyHybridMonitorSLSGroupRequest request);
@@ -609,9 +601,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMetricRuleBlackListResponse> modifyMetricRuleBlackList(ModifyMetricRuleBlackListRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to modify an alert template whose version is `1` and ID is `123456`. The alert level is changed to `Critical`. The statistical method is changed to `Average`. The alert threshold comparator is changed to `GreaterThanOrEqualToThreshold`. The alert threshold is changed to `90`. The number of alert retries is changed to `3`. The response shows that the alert template is modified.
       *
      */
     CompletableFuture<ModifyMetricRuleTemplateResponse> modifyMetricRuleTemplate(ModifyMetricRuleTemplateRequest request);
@@ -635,7 +625,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutContactResponse> putContact(PutContactRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to PutContactGroup.
+      * This topic provides an example on how to create an alert contact group named `ECS_Group`.
       *
      */
     CompletableFuture<PutContactGroupResponse> putContactGroup(PutContactGroupRequest request);
@@ -643,29 +633,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutCustomEventResponse> putCustomEvent(PutCustomEventRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to PutCustomEventRule.
+      * Before you call this operation, call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see [PutCustomEvent](~~115012~~).
       *
      */
     CompletableFuture<PutCustomEventRuleResponse> putCustomEventRule(PutCustomEventRuleRequest request);
 
     /**
-      * The dimensions that specify the resources whose monitoring data you want to query. Valid values of N: 1 to 21.
-      * Set the value to a collection of key-value pairs. Format:`{"Key":"Value"}`.
-      * The key or value must be 1 to 64 bytes in length. Excessive characters are truncated.
-      * The key or value can contain letters, digits, periods (.), hyphens (-), underscores (\\_), forward slashes (/), and backslashes (\\\\).
-      * >  Dimensions must be formatted as a JSON string in a specified order.
+      * >  We recommend that you call the [PutHybridMonitorMetricData](~~383455~~) operation of Hybrid Cloud Monitoring to report monitoring data.
       *
      */
     CompletableFuture<PutCustomMetricResponse> putCustomMetric(PutCustomMetricRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to PutCustomMetricRule.
+      * Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see [PutCustomMetric](~~115004~~).
       *
      */
     CompletableFuture<PutCustomMetricRuleResponse> putCustomMetricRule(PutCustomMetricRuleRequest request);
 
     /**
-      * The ID of the application group to which the event-triggered alert rule belongs.
+      * If the specified rule name does not exist, an event-triggered alert rule is created. If the specified rule name exists, the specified event-triggered alert rule is modified.
+      * In this example, the `myRuleName` alert rule is created for the `ecs` cloud service.
       *
      */
     CompletableFuture<PutEventRuleResponse> putEventRule(PutEventRuleRequest request);
@@ -698,15 +685,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutHybridMonitorMetricDataResponse> putHybridMonitorMetricData(PutHybridMonitorMetricDataRequest request);
 
     /**
-      * The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.
+      * In the example of this topic, the `cpu_total` log monitoring metric is created. The response shows that the log monitoring metric is created and the metric ID is `16****`.
       *
      */
     CompletableFuture<PutLogMonitorResponse> putLogMonitor(PutLogMonitorRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * ## Limit
+      * This operation supports only Message Service (MNS) resources.
       *
      */
     CompletableFuture<PutMetricRuleTargetsResponse> putMetricRuleTargets(PutMetricRuleTargetsRequest request);
@@ -722,9 +708,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutResourceMetricRuleResponse> putResourceMetricRule(PutResourceMetricRuleRequest request);
 
     /**
-      * Indicates whether the call was successful. Valid values:
-      * *   true: The call was successful.
-      * *   false: The call failed.
+      * This topic provides an example on how to create a threshold-triggered alert rule for the `cpu_total` metric of the `i-uf6j91r34rnwawoo****` instance that belongs to Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`. In this example, the alert contact group of the alert rule is `ECS_Group`, the name of the alert rule is `test123`, and the ID of the alert rule is `a151cd6023eacee2f0978e03863cc1697c89508****`. The statistical method for Critical-level alerts is `Average`, the comparison operator for Critical-level alerts is `GreaterThanOrEqualToThreshold`, the threshold for Critical-level alerts is `90`, and the consecutive number of times for which the metric value is measured before a Critical-level alert is triggered is `3`.
       *
      */
     CompletableFuture<PutResourceMetricRulesResponse> putResourceMetricRules(PutResourceMetricRulesRequest request);
@@ -732,14 +716,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveTagsResponse> removeTags(RemoveTagsRequest request);
 
     /**
-      * The name of the cloud service.
-      * >  For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see [System events](~~167388~~).
+      * This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after an alert is triggered by the system event.
       *
      */
     CompletableFuture<SendDryRunSystemEventResponse> sendDryRunSystemEvent(SendDryRunSystemEventRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to UninstallMonitoringAgent.
+      * >  This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see [Install and uninstall the Cloud Monitor agent](~~183482~~).
       *
      */
     CompletableFuture<UninstallMonitoringAgentResponse> uninstallMonitoringAgent(UninstallMonitoringAgentRequest request);

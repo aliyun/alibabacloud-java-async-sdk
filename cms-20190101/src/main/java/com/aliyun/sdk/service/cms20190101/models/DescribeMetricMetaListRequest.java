@@ -110,7 +110,17 @@ public class DescribeMetricMetaListRequest extends Request {
         } 
 
         /**
-         * The page to return. Default value: 1
+         * The tags for filtering metrics. Specify a JSON string.
+         * <p>
+         * 
+         * Format:`[{"name":"tag name","value":"tag value"},{"name":"tag name","value":"tag value"}]`. The following tags are available:
+         * 
+         * *   metricCategory: the category of the metric.
+         * *   alertEnable: specifies whether to report alerts for the metric.
+         * *   alertUnit: the suggested unit of the metric value in alerts.
+         * *   unitFactor: the factor for metric unit conversion.
+         * *   minAlertPeriod: the minimum time interval to report a new alert.
+         * *   productCategory: the category of the service.
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -119,7 +129,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30.
+         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -128,7 +138,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * The namespace of the service.
+         * <p>
+         * 
+         * For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -137,10 +150,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The response code.
-         * <p>
-         * 
-         * >  The HTTP 200 code indicates that the request was successful.
+         * The page to return. Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,7 +159,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The number of entries to return on each page. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

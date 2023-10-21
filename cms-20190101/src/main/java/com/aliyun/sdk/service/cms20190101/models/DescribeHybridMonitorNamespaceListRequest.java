@@ -110,11 +110,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false (default value)
+         * The keyword that is used to search for namespaces.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -123,7 +119,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The name of the namespace.
+         * <p>
+         * 
+         * The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -132,7 +131,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeHybridMonitorNamespaceList**.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -141,7 +143,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The returned message.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * A minimum of 1 entry can be returned on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +155,11 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The details of the namespaces.
+         * Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default value)
          */
         public Builder showTaskStatistic(Boolean showTaskStatistic) {
             this.putQueryParameter("ShowTaskStatistic", showTaskStatistic);

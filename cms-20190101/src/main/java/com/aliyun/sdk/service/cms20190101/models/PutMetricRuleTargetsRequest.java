@@ -70,7 +70,10 @@ public class PutMetricRuleTargetsRequest extends Request {
         } 
 
         /**
-         * The list of resources that failed to be created or modified.
+         * The ID of the alert rule.
+         * <p>
+         * 
+         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -162,6 +165,8 @@ public class PutMetricRuleTargetsRequest extends Request {
              * The ARN of the resource.
              * <p>
              * 
+             * For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
+             * 
              * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
              * 
              * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
@@ -186,7 +191,7 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The ID of the resource for which alerts are triggered.
+             * The parameters of the alert callback. The parameters are in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -194,10 +199,12 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The HTTP status code.
+             * The level of the alert. Valid values:
              * <p>
              * 
-             * >  The status code 200 indicates that the call was successful.
+             * *   INFO: information
+             * *   WARN: warning
+             * *   CRITICAL: critical
              */
             public Builder level(String level) {
                 this.level = level;

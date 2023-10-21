@@ -98,10 +98,21 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * The error message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * The error message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -111,21 +122,13 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
          * 
          * >  If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.
          */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
             return this;
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +136,7 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The keys of tags.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +144,7 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * >  If a tag is attached to multiple cloud resources in the region, the key of the tag is returned only once.
+         * The keys of tags.
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;

@@ -74,10 +74,10 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.
+         * The HTTP status code.
          * <p>
          * 
-         * >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +85,7 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +93,7 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +101,11 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

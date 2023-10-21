@@ -84,7 +84,10 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * SLSGroupConfig.
+         * The configurations of the Logstore group.
+         * <p>
+         * 
+         * Valid values of N: 1 to 25.
          */
         public Builder SLSGroupConfig(java.util.List < SLSGroupConfig> SLSGroupConfig) {
             this.putQueryParameter("SLSGroupConfig", SLSGroupConfig);
@@ -93,7 +96,7 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyHybridMonitorSLSGroup**.
+         * The description of the Logstore group.
          */
         public Builder SLSGroupDescription(String SLSGroupDescription) {
             this.putQueryParameter("SLSGroupDescription", SLSGroupDescription);
@@ -102,10 +105,10 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the Logstore group.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).
          */
         public Builder SLSGroupName(String SLSGroupName) {
             this.putQueryParameter("SLSGroupName", SLSGroupName);
@@ -186,10 +189,10 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
             private String SLSUserId; 
 
             /**
-             * The name of the Logstore group.
+             * The Logstore.
              * <p>
              * 
-             * For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).
+             * Valid values of N: 1 to 25.
              */
             public Builder SLSLogstore(String SLSLogstore) {
                 this.SLSLogstore = SLSLogstore;
@@ -197,14 +200,10 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
             }
 
             /**
-             * The IDs of the member accounts.
+             * The Simple Log Service project.
              * <p>
              * 
              * Valid values of N: 1 to 25.
-             * 
-             * If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in Resource Directory to Hybrid Cloud Monitoring. You can use Resource Directory to monitor Alibaba Cloud services across enterprise accounts.
-             * 
-             * >  If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -212,7 +211,10 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
             }
 
             /**
-             * The error message.
+             * The region ID.
+             * <p>
+             * 
+             * Valid values of N: 1 to 25.
              */
             public Builder SLSRegion(String SLSRegion) {
                 this.SLSRegion = SLSRegion;
@@ -220,10 +222,14 @@ public class ModifyHybridMonitorSLSGroupRequest extends Request {
             }
 
             /**
-             * The Logstores.
+             * The member ID.
              * <p>
              * 
              * Valid values of N: 1 to 25.
+             * 
+             * If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
+             * 
+             * > If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).
              */
             public Builder SLSUserId(String SLSUserId) {
                 this.SLSUserId = SLSUserId;

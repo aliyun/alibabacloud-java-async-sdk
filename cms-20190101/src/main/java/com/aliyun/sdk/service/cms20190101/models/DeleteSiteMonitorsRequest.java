@@ -69,10 +69,11 @@ public class DeleteSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
+         * Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * *   true (default value)
+         * *   false
          */
         public Builder isDeleteAlarms(Boolean isDeleteAlarms) {
             this.putQueryParameter("IsDeleteAlarms", isDeleteAlarms);
@@ -81,11 +82,7 @@ public class DeleteSiteMonitorsRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:
-         * <p>
-         * 
-         * *   true (default value)
-         * *   false
+         * The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

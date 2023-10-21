@@ -68,7 +68,7 @@ public class PutMonitoringConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
+         * Specifies whether to automatically install the CloudMonitor agent on existing Elastic Compute Service (ECS) instances. Valid values:
          * <p>
          * 
          * *   true (default value)
@@ -81,10 +81,11 @@ public class PutMonitoringConfigRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * *   true (default value)
+         * *   false
          */
         public Builder enableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
             this.putQueryParameter("EnableInstallAgentNewECS", enableInstallAgentNewECS);

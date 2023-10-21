@@ -85,27 +85,6 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.
-         */
-        public Builder groupId(Long groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
          * The abbreviation of the service name. Valid values:
          * <p>
          * 
@@ -144,6 +123,24 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
          * *   SHAREBANDWIDTHPACKAGES: EIP Bandwidth Plan
          * *   SLS: Log Service
          * *   VPN: VPN Gateway
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
+
+        /**
+         * The ID of the application group.
+         */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.
          */
         public Builder instanceIdList(String instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);

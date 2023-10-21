@@ -83,10 +83,10 @@ public class DescribeTagValueListRequest extends Request {
         } 
 
         /**
-         * The key of the tag whose values you want to query.
+         * The number of the page to return.
          * <p>
          * 
-         * For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -95,10 +95,10 @@ public class DescribeTagValueListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The number of entries to return on each page.
          * <p>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * Valid values: 1 to 100. Pages start from page 1. Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -107,7 +107,10 @@ public class DescribeTagValueListRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The key of the tag whose values you want to query.
+         * <p>
+         * 
+         * For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);

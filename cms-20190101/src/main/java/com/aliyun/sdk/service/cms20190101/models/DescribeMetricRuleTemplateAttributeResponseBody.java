@@ -86,10 +86,37 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * The error message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The details of the alert template.
+         */
+        public Builder resource(Resource resource) {
+            this.resource = resource;
             return this;
         }
 
@@ -99,30 +126,6 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
          * 
          * *   true: The call is successful.
          * *   false: The call fails.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The details of the alert template.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The version of the alert template.
-         */
-        public Builder resource(Resource resource) {
-            this.resource = resource;
-            return this;
-        }
-
-        /**
-         * The name of the alert template.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,26 +201,23 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The threshold for Critical-level alerts.
+             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
+             * <p>
+             * 
+             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+             * *   GreaterThanThreshold: greater than the threshold
+             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
+             * *   LessThanThreshold: less than the threshold
+             * *   NotEqualToThreshold: not equal to the threshold
+             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+             * *   LessThanYesterday: less than the metric value at the same time yesterday
+             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
+             * *   LessThanLastWeek: less than the metric value at the same time last week
+             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
-                return this;
-            }
-
-            /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
-             */
-            public Builder statistics(String statistics) {
-                this.statistics = statistics;
-                return this;
-            }
-
-            /**
-             * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
-             */
-            public Builder threshold(String threshold) {
-                this.threshold = threshold;
                 return this;
             }
 
@@ -226,6 +226,22 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * The value of the `Statistics` parameter varies with the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * The threshold for Critical-level alerts.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            /**
+             * The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -302,14 +318,6 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The threshold for Info-level alerts.
-             */
-            public Builder comparisonOperator(String comparisonOperator) {
-                this.comparisonOperator = comparisonOperator;
-                return this;
-            }
-
-            /**
              * The comparison operator that is used to compare the metric value with the threshold. Valid values:
              * <p>
              * 
@@ -325,16 +333,8 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
              * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
              * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
-            public Builder statistics(String statistics) {
-                this.statistics = statistics;
-                return this;
-            }
-
-            /**
-             * The conditions for triggering Warn-level alerts.
-             */
-            public Builder threshold(String threshold) {
-                this.threshold = threshold;
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
                 return this;
             }
 
@@ -343,6 +343,22 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * The value of the `Statistics` parameter varies with the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * The threshold for Info-level alerts.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            /**
+             * The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -419,14 +435,6 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The threshold for Warn-level alerts.
-             */
-            public Builder comparisonOperator(String comparisonOperator) {
-                this.comparisonOperator = comparisonOperator;
-                return this;
-            }
-
-            /**
              * The comparison operator that is used to compare the metric value with the threshold. Valid values:
              * <p>
              * 
@@ -442,16 +450,8 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
              * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
              * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
-            public Builder statistics(String statistics) {
-                this.statistics = statistics;
-                return this;
-            }
-
-            /**
-             * The conditions for triggering Critical-level alerts.
-             */
-            public Builder threshold(String threshold) {
-                this.threshold = threshold;
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
                 return this;
             }
 
@@ -460,6 +460,22 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * The value of the `Statistics` parameter varies with the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * The threshold for Warn-level alerts.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            /**
+             * The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -524,7 +540,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Warn warn; 
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.
+             * The conditions for triggering Critical-level alerts.
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -532,7 +548,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.
+             * The conditions for triggering Info-level alerts.
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -540,7 +556,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.
+             * The conditions for triggering Warn-level alerts.
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -593,7 +609,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * 报警模板的标签键。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -601,7 +617,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * 报警模板的标签值。
              */
             public Builder value(String value) {
                 this.value = value;
@@ -779,7 +795,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * The name of the alert rule.
+             * The abbreviation of the cloud service name.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -787,20 +803,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
-             * <p>
-             * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+             * The threshold and the alert level.
              */
             public Builder escalations(Escalations escalations) {
                 this.escalations = escalations;
@@ -808,7 +811,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * 报警模板标签。
              */
             public Builder labels(AlertTemplateLabels labels) {
                 this.labels = labels;
@@ -824,12 +827,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The processing method of alerts when no monitoring data is found. Valid values:
-             * <p>
-             * 
-             * *   KEEP_LAST_STATE (default value): No operation is performed.
-             * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
-             * *   OK: The alert rule has no active alerts.
+             * The namespace of the cloud service.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -837,7 +835,12 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold and the alert level.
+             * The processing method of alerts when no monitoring data is found. Valid values:
+             * <p>
+             * 
+             * *   KEEP_LAST_STATE (default value): No operation is performed.
+             * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
+             * *   OK: The alert rule has no active alerts.
              */
             public Builder noDataPolicy(String noDataPolicy) {
                 this.noDataPolicy = noDataPolicy;
@@ -845,7 +848,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The conditions for triggering Info-level alerts.
+             * The name of the alert rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -853,7 +856,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the cloud service.
+             * The dimension of the alert. It is an extended field.
              */
             public Builder selector(String selector) {
                 this.selector = selector;
@@ -861,7 +864,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the cloud service name.
+             * The callback URL to which a request is sent when an alert is triggered.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -991,7 +994,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * The callback URL to which a request is sent when an alert is triggered.
+             * The list of alert templates.
              */
             public Builder alertTemplates(AlertTemplates alertTemplates) {
                 this.alertTemplates = alertTemplates;
@@ -1007,7 +1010,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert template.
+             * The name of the alert template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1015,7 +1018,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The list of alert templates.
+             * The version of the alert template.
              */
             public Builder restVersion(String restVersion) {
                 this.restVersion = restVersion;
@@ -1023,7 +1026,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension of the alert. It is an extended field.
+             * The ID of the alert template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

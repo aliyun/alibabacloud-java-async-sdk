@@ -86,7 +86,10 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,10 +105,18 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alert rules without active alerts.
+         * The number of alert rules in each state.
          */
         public Builder metricRuleCount(MetricRuleCount metricRuleCount) {
             this.metricRuleCount = metricRuleCount;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -115,14 +126,6 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of alert rules in each state.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +213,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Alarm.
+             * The number of alert rules with active alerts.
              */
             public Builder alarm(Integer alarm) {
                 this.alarm = alarm;
@@ -218,7 +221,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alert rules.
+             * The number of disabled alert rules.
              */
             public Builder disable(Integer disable) {
                 this.disable = disable;
@@ -226,7 +229,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disabled alert rules.
+             * The number of alert rules without data.
              */
             public Builder nodata(Integer nodata) {
                 this.nodata = nodata;
@@ -234,7 +237,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert rules without data.
+             * The number of alert rules without active alerts.
              */
             public Builder ok(Integer ok) {
                 this.ok = ok;
@@ -242,7 +245,7 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert rules with active alerts.
+             * The total number of alert rules.
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -74,7 +74,10 @@ public class PutMonitoringConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class PutMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **PutMonitoringConfig**.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class PutMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,11 @@ public class PutMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

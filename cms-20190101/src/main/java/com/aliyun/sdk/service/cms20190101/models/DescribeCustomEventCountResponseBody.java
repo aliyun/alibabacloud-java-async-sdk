@@ -86,7 +86,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the custom event occurred in the specified time period.
+         * The details of the custom event.
          */
         public Builder customEventCounts(CustomEventCounts customEventCounts) {
             this.customEventCounts = customEventCounts;
@@ -102,7 +105,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the custom event.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,10 +121,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the custom event occurred.
-         * <p>
-         * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -185,7 +185,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * Queries the number of times that a custom event occurred in a specified time period.
+             * The name of the custom event.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,7 +193,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * >  This operation counts the number of times that a custom event occurred for each service.
+             * The number of times that the custom event occurred in the specified time period.
              */
             public Builder num(Integer num) {
                 this.num = num;
@@ -201,7 +201,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom event.
+             * The time when the custom event occurred.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder time(Long time) {
                 this.time = time;

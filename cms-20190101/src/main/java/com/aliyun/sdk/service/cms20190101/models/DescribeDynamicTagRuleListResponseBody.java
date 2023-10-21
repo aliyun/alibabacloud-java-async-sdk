@@ -122,10 +122,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The tag value.
+         * The HTTP status code.
          * <p>
          * 
-         * The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -133,10 +133,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The tag value.
-         * <p>
-         * 
-         * For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,11 +141,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The status of adding instances that meet the tag rule to the application group. Valid values:
-         * <p>
-         * 
-         * *   `RUNNING`
-         * *   `FINISH`
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +149,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the tags belong.
+         * The number of entries returned per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -164,13 +157,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The logical operator that is used between conditional expressions. Valid values:
-         * <p>
-         * 
-         * *   `and`
-         * *   `or`
-         * 
-         * >  Only one logical operator can be used in a request.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,10 +165,11 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The tag key.
+         * Indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -189,7 +177,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tag rule.
+         * The tag rules of application groups.
          */
         public Builder tagGroupList(TagGroupList tagGroupList) {
             this.tagGroupList = tagGroupList;
@@ -197,7 +185,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The tag rules of application groups.
+         * The total number of returned entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -302,7 +290,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private String tagValueMatchFunction; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -310,7 +298,10 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The tag value.
+             * <p>
+             * 
+             * The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -318,7 +309,15 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Queries tag rules.
+             * The method that is used to match tag values. Valid values:
+             * <p>
+             * 
+             * *   all: includes all
+             * *   startWith: starts with a prefix
+             * *   endWith: ends with a suffix
+             * *   contains: contains
+             * *   notContains: does not contain
+             * *   equals: equals
              */
             public Builder tagValueMatchFunction(String tagValueMatchFunction) {
                 this.tagValueMatchFunction = tagValueMatchFunction;
@@ -525,7 +524,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private TemplateIdList templateIdList; 
 
             /**
-             * ContactGroupList.
+             * The alert contact group.
              */
             public Builder contactGroupList(ContactGroupList contactGroupList) {
                 this.contactGroupList = contactGroupList;
@@ -533,7 +532,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * The ID of the tag rule.
              */
             public Builder dynamicTagRuleId(String dynamicTagRuleId) {
                 this.dynamicTagRuleId = dynamicTagRuleId;
@@ -541,7 +540,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The conditional expressions used to create an application group based on the tag.
              */
             public Builder matchExpress(TagGroupMatchExpress matchExpress) {
                 this.matchExpress = matchExpress;
@@ -549,10 +548,13 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.
+             * The logical operator that is used between conditional expressions. Valid values:
              * <p>
              * 
-             * Pages start from page 1. Default value: 1.
+             * *   `and`
+             * *   `or`
+             * 
+             * >  Only one logical operator can be used in a request.
              */
             public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
                 this.matchExpressFilterRelation = matchExpressFilterRelation;
@@ -560,7 +562,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The ID of the region to which the tags belong.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -568,7 +570,11 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact group.
+             * The status of adding instances that meet the tag rule to the application group. Valid values:
+             * <p>
+             * 
+             * *   `RUNNING`
+             * *   `FINISH`
              */
             public Builder status(String status) {
                 this.status = status;
@@ -576,7 +582,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -584,7 +590,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateIdList.
+             * The IDs of the alert templates.
              */
             public Builder templateIdList(TemplateIdList templateIdList) {
                 this.templateIdList = templateIdList;

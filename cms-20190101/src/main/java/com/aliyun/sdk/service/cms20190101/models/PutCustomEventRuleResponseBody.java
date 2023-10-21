@@ -74,7 +74,10 @@ public class PutCustomEventRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The value 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,10 +85,18 @@ public class PutCustomEventRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -95,14 +106,6 @@ public class PutCustomEventRuleResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Before you call this operation, call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see [PutCustomEvent](~~115012~~).
          */
         public Builder success(Boolean success) {
             this.success = success;

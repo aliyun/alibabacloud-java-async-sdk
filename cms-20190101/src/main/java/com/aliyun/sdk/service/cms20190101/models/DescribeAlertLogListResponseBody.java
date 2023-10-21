@@ -110,7 +110,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code of the alert callback.
+         * The queried alert logs.
          */
         public Builder alertLogList(java.util.List < AlertLogList> alertLogList) {
             this.alertLogList = alertLogList;
@@ -118,7 +118,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The extended fields.
+         * The HTTP status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +129,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The end timestamp of the alert logs to be queried. Unit: milliseconds.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +137,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The DingTalk chatbots of alert contacts.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -142,10 +145,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the metric.
-         * <p>
-         * 
-         * >  For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -153,7 +153,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the alert rule.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that was generated when the alert was triggered. Unit: milliseconds.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -213,7 +217,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The list of sending results that are categorized by notification method.
+             * The key of the dimension.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -221,7 +225,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the blacklist policy.
+             * The value of the dimension.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -286,7 +290,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * Expression.
+             * The description of the alert rule.
+             * <p>
+             * 
+             * > The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -294,7 +301,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity level and notification methods of the alert. Valid values:
+             * <p>
+             * 
+             * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
+             * *   OK: No alert is generated.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -302,7 +313,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * Times.
+             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -355,7 +366,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the event.
+             * The name of the extended field.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -363,16 +374,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to send alert notifications. Valid values:
-             * <p>
-             * 
-             * *   MAIL: email
-             * *   SMS: text message
-             * *   WEBHOOK: alert callback
-             * *   SLS: Log Service
-             * *   ONCALL: phone call
-             * *   FC: Function Compute
-             * *   MNS: Message Service queue
+             * The value of the extended field.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -461,14 +463,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < String > notifyTargetList; 
 
             /**
-             * The severity level and notification methods of the alert. Valid values:
+             * The HTTP status code.
              * <p>
              * 
-             * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-             * 
-             * <!---->
-             * 
-             * *   OK: No alert is generated.
+             * *   If the value of the `Channel` parameter is `WEBHOOK`, the status code is 200 or 500.
+             * *   If the value of the `Channel` parameter is `MAIL`, `SMS`, `SLS`, `ONCALL`, `FC`, or `MNS`, this parameter is empty or not returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -476,7 +475,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * The details of the returned results.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -484,10 +483,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
-             * <p>
-             * 
-             * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+             * The request ID returned when CloudMonitor calls another cloud service.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -495,7 +491,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -503,7 +503,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The queried resources.
              */
             public Builder notifyTargetList(java.util.List < String > notifyTargetList) {
                 this.notifyTargetList = notifyTargetList;
@@ -556,7 +556,16 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < ResultList> resultList; 
 
             /**
-             * The queried resources.
+             * The method that is used to send alert notifications. Valid values:
+             * <p>
+             * 
+             * *   MAIL: email
+             * *   SMS: text message
+             * *   WEBHOOK: alert callback
+             * *   SLS: Simple Log Service
+             * *   ONCALL: phone call
+             * *   FC: Function Compute
+             * *   MNS: Message Service queue
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -564,7 +573,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the sending results of alert notifications.
+             * The sending results of alert notifications.
              */
             public Builder resultList(java.util.List < ResultList> resultList) {
                 this.resultList = resultList;
@@ -617,7 +626,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String resultCode; 
 
             /**
-             * The namespace of the cloud service.
+             * The list of sending results that are categorized by notification method.
              */
             public Builder channelResultList(java.util.List < ChannelResultList> channelResultList) {
                 this.channelResultList = channelResultList;
@@ -625,7 +634,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert logs.
+             * Indicates whether the alert notifications are sent.
+             * <p>
+             * 
+             * *   If the alert notifications are sent, the value "success" is returned.
+             * *   If the configuration is invalid, no alert notification is sent and an error code is returned.
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -678,7 +691,15 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < String > value; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The category of the alert notification method. Valid values:
+             * <p>
+             * 
+             * *   Mail: email
+             * *   ALIIM: TradeManager
+             * *   SMS: text message
+             * *   CALL: phone call
+             * *   DING: DingTalk chatbot
+             * *   Merged: alert merging
              */
             public Builder key(String key) {
                 this.key = key;
@@ -686,16 +707,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to send alert notifications. Valid values:
-             * <p>
-             * 
-             * *   MAIL: email
-             * *   SMS: text message
-             * *   WEBHOOK: alert callback
-             * *   SLS: Log Service
-             * *   ONCALL: phone call
-             * *   FC: Function Compute
-             * *   MNS: Message Service queue
+             * The alert notification methods.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -760,7 +772,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The search keyword that is used to query alert logs.
+             * The status code of the alert callback.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -768,7 +780,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * The message returned for the alert callback.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -776,7 +788,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID returned when CloudMonitor calls another cloud service.
+             * The callback URL.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1189,7 +1201,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < WebhookList> webhookList; 
 
             /**
-             * The details of the blacklist policy.
+             * The timestamp that was generated when the alert was triggered. Unit: milliseconds.
              */
             public Builder alertTime(String alertTime) {
                 this.alertTime = alertTime;
@@ -1197,14 +1209,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
-             * <p>
-             * 
-             * *   `product`: aggregates data by cloud service.
-             * *   `level`: aggregates data by alert level.
-             * *   `groupId`: aggregates data by application group.
-             * *   `contactGroup`: aggregates data by alert contact group.
-             * *   `product,metricName`: aggregates data both by cloud service and by metric.
+             * The details of the blacklist policy.
              */
             public Builder blackListDetail(String blackListDetail) {
                 this.blackListDetail = blackListDetail;
@@ -1212,7 +1217,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Default value: 10.
+             * The name of the blacklist policy.
              */
             public Builder blackListName(String blackListName) {
                 this.blackListName = blackListName;
@@ -1220,15 +1225,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the alert notification method. Valid values:
-             * <p>
-             * 
-             * *   Mail: email
-             * *   ALIIM: TradeManager
-             * *   SMS: text message
-             * *   CALL: phone call
-             * *   DING: DingTalk chatbot
-             * *   Merged: alert merging
+             * The ID of the blacklist policy.
              */
             public Builder blackListUUID(String blackListUUID) {
                 this.blackListUUID = blackListUUID;
@@ -1236,7 +1233,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extended field.
+             * The TradeManager IDs of the alert contacts.
+             * <p>
+             * 
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder contactALIIWWList(java.util.List < String > contactALIIWWList) {
                 this.contactALIIWWList = contactALIIWWList;
@@ -1244,7 +1244,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * The DingTalk chatbots of the alert contacts.
              */
             public Builder contactDingList(java.util.List < String > contactDingList) {
                 this.contactDingList = contactDingList;
@@ -1252,7 +1252,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification method.
+             * The alert contact groups.
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -1260,7 +1260,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL.
+             * The email addresses of the alert contacts.
              */
             public Builder contactMailList(java.util.List < String > contactMailList) {
                 this.contactMailList = contactMailList;
@@ -1268,7 +1268,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The phone numbers of the alert contacts that receive alert phone calls.
+             * <p>
+             * 
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder contactOnCallList(java.util.List < String > contactOnCallList) {
                 this.contactOnCallList = contactOnCallList;
@@ -1276,10 +1279,185 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical period of alert logs. Unit: minutes.
+             * The phone numbers of the alert contacts that receive alert text messages.
+             * <p>
+             * 
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder contactSMSList(java.util.List < String > contactSMSList) {
                 this.contactSMSList = contactSMSList;
+                return this;
+            }
+
+            /**
+             * The dimensions of the resource that triggered alerts.
+             */
+            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+                this.dimensions = dimensions;
+                return this;
+            }
+
+            /**
+             * The webhook URLs of the alert contacts.
+             */
+            public Builder dingdingWebhookList(java.util.List < String > dingdingWebhookList) {
+                this.dingdingWebhookList = dingdingWebhookList;
+                return this;
+            }
+
+            /**
+             * The alert rule based on which the alert is triggered.
+             */
+            public Builder escalation(Escalation escalation) {
+                this.escalation = escalation;
+                return this;
+            }
+
+            /**
+             * The event name.
+             */
+            public Builder eventName(String eventName) {
+                this.eventName = eventName;
+                return this;
+            }
+
+            /**
+             * The extended fields.
+             */
+            public Builder extendedInfo(java.util.List < ExtendedInfo> extendedInfo) {
+                this.extendedInfo = extendedInfo;
+                return this;
+            }
+
+            /**
+             * The ID of the application group.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * The name of the application group.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * The resource ID.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The resource name.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The severity level and notification methods of the alert. Valid values:
+             * <p>
+             * 
+             * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
+             * *   OK: No alert is generated.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * Indicates whether the alert level was changed. Valid values:
+             * <p>
+             * 
+             * *   `P4->OK`: The alert level was changed from P4 to OK.
+             * *   `P4->P4`: The alert level was still P4.
+             */
+            public Builder levelChange(String levelChange) {
+                this.levelChange = levelChange;
+                return this;
+            }
+
+            /**
+             * The log ID.
+             */
+            public Builder logId(String logId) {
+                this.logId = logId;
+                return this;
+            }
+
+            /**
+             * The alert information in a JSON string.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The metric name.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * The namespace of the cloud service.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * The identifier of the cloud service. Valid values:
+             * <p>
+             * 
+             * *   If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.
+             * *   If the cloud service is not provided by Alibaba Cloud, a value in the `acs_Service keyword` format is returned. Example: acs_networkmonitor.
+             */
+            public Builder product(String product) {
+                this.product = product;
+                return this;
+            }
+
+            /**
+             * The ID of the alert rule.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * The name of the alert rule.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * The details of the alert notification method.
+             */
+            public Builder sendDetail(SendDetail sendDetail) {
+                this.sendDetail = sendDetail;
+                return this;
+            }
+
+            /**
+             * The sending results of alert notifications.
+             */
+            public Builder sendResultList(java.util.List < SendResultList> sendResultList) {
+                this.sendResultList = sendResultList;
                 return this;
             }
 
@@ -1289,185 +1467,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
              * 
              * *   0: The alert is triggered or cleared.
              * *   1: The alert is ineffective.
-             * *   2: The alert is muted and not triggered in a specified period.
+             * *   2: The alert is muted.
              * *   3: The host is restarting.
              * *   4: No alert notification is sent.
              * 
              * If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
-             */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
-                this.dimensions = dimensions;
-                return this;
-            }
-
-            /**
-             * The ID of the application group.
-             */
-            public Builder dingdingWebhookList(java.util.List < String > dingdingWebhookList) {
-                this.dingdingWebhookList = dingdingWebhookList;
-                return this;
-            }
-
-            /**
-             * Escalation.
-             */
-            public Builder escalation(Escalation escalation) {
-                this.escalation = escalation;
-                return this;
-            }
-
-            /**
-             * The number of the page to return. Default value: 1.
-             */
-            public Builder eventName(String eventName) {
-                this.eventName = eventName;
-                return this;
-            }
-
-            /**
-             * The sending results of alert notifications.
-             */
-            public Builder extendedInfo(java.util.List < ExtendedInfo> extendedInfo) {
-                this.extendedInfo = extendedInfo;
-                return this;
-            }
-
-            /**
-             * The number of entries returned per page.
-             */
-            public Builder groupId(String groupId) {
-                this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * The ID of the alert rule.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
-                return this;
-            }
-
-            /**
-             * The alert contact group.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The list of callback URLs.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * The HTTP status code.
-             * <p>
-             * 
-             * *   If the value of the `Channel` parameter is `WEBHOOK`, the status code is 200 or 500.
-             * *   If the value of the `Channel` parameter is `MAIL`, `SMS`, `SLS`, `ONCALL`, `FC`, or `MNS`, this parameter is empty or not returned.
-             */
-            public Builder level(String level) {
-                this.level = level;
-                return this;
-            }
-
-            /**
-             * The key of the dimension.
-             */
-            public Builder levelChange(String levelChange) {
-                this.levelChange = levelChange;
-                return this;
-            }
-
-            /**
-             * LogId.
-             */
-            public Builder logId(String logId) {
-                this.logId = logId;
-                return this;
-            }
-
-            /**
-             * The name of the alert rule.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The name of the metric.
-             */
-            public Builder metricName(String metricName) {
-                this.metricName = metricName;
-                return this;
-            }
-
-            /**
-             * The dimensions of the resource that triggered alerts.
-             */
-            public Builder namespace(String namespace) {
-                this.namespace = namespace;
-                return this;
-            }
-
-            /**
-             * Indicates whether the alert notifications are sent.
-             * <p>
-             * 
-             * *   If the alert notifications are sent, the value "success" is returned.
-             * *   If the configuration is invalid, no alert notification is sent and an error code is returned.
-             */
-            public Builder product(String product) {
-                this.product = product;
-                return this;
-            }
-
-            /**
-             * The phone numbers of alert contacts that can receive alert phone calls.
-             * <p>
-             * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
-             */
-            public Builder ruleId(String ruleId) {
-                this.ruleId = ruleId;
-                return this;
-            }
-
-            /**
-             * The ID of the resource.
-             */
-            public Builder ruleName(String ruleName) {
-                this.ruleName = ruleName;
-                return this;
-            }
-
-            /**
-             * The namespace of the cloud service.
-             * <p>
-             * 
-             * >  For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
-             */
-            public Builder sendDetail(SendDetail sendDetail) {
-                this.sendDetail = sendDetail;
-                return this;
-            }
-
-            /**
-             * The details of the returned results.
-             */
-            public Builder sendResultList(java.util.List < SendResultList> sendResultList) {
-                this.sendResultList = sendResultList;
-                return this;
-            }
-
-            /**
-             * The value of the dimension.
              */
             public Builder sendStatus(String sendStatus) {
                 this.sendStatus = sendStatus;
@@ -1475,7 +1479,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the extended field.
+             * The callback URLs.
              */
             public Builder webhookList(java.util.List < WebhookList> webhookList) {
                 this.webhookList = webhookList;

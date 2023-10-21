@@ -54,7 +54,11 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the instance to be monitored.
+         * Specifies whether to return information about used quotas. Valid values:
+         * <p>
+         * 
+         * *   true (default): yes
+         * *   false: no
          */
         public Builder showUsed(Boolean showUsed) {
             this.putQueryParameter("ShowUsed", showUsed);

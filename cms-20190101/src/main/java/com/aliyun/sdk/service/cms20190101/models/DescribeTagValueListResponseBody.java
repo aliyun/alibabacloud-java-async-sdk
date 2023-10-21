@@ -86,10 +86,29 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         private TagValues tagValues; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The value 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * The error message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -100,29 +119,13 @@ public class DescribeTagValueListResponseBody extends TeaModel {
          * *   true: The call was successful.
          * *   false: The call failed.
          */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The tag values returned.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * This topic provides an example of how to query the tag values corresponding to `tagKey1`. The return results are `tagValue1` and `tagValue2`.
-         */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The tag values returned.
          */
         public Builder tagValues(TagValues tagValues) {
             this.tagValues = tagValues;

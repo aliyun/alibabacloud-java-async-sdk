@@ -83,7 +83,7 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
         } 
 
         /**
-         * Indicates whether the request was successful.
+         * The description of the namespace.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,17 +92,12 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The data retention period of the namespace. Valid values:
+         * The name of the namespace.
          * <p>
          * 
-         * *   cms.s1.large: 15 days
-         * *   cms.s1.xlarge: 32 days
-         * *   cms.s1.2xlarge: 63 days
-         * *   cms.s1.3xlarge: 93 days
-         * *   cms.s1.6xlarge: 185 days
-         * *   cms.s1.12xlarge: 376 days
+         * The name can contain letters, digits, and hyphens (-).
          * 
-         * For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
+         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -111,7 +106,17 @@ public class ModifyHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The data retention period. Valid values:
+         * <p>
+         * 
+         * *   cms.s1.large: Data is stored for 15 days.
+         * *   cms.s1.xlarge: Data is stored for 32 days.
+         * *   cms.s1.2xlarge: Data is stored for 63 days.
+         * *   cms.s1.3xlarge: Data is stored for 93 days.
+         * *   cms.s1.6xlarge: Data is stored for 185 days.
+         * *   cms.s1.12xlarge: Data is stored for 376 days.
+         * 
+         * For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

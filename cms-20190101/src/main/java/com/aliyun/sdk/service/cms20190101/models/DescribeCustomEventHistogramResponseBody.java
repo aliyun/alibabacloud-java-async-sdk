@@ -86,7 +86,10 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,10 +97,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The end of an interval.
-         * <p>
-         * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * The information about the number of times that the custom event occurred during each interval of a time period.
          */
         public Builder eventHistograms(EventHistograms eventHistograms) {
             this.eventHistograms = eventHistograms;
@@ -105,7 +105,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +113,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +121,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the number of times that the custom event occurred during each interval of a time period.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(String success) {
             this.success = success;
@@ -185,7 +185,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * Queries the number of times that a custom event occurred during each interval of a time period.
+             * The information about the number of times that the custom event occurred during an interval of a time period.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -193,7 +193,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of an interval.
+             * The end of an interval.
              * <p>
              * 
              * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
@@ -204,7 +204,10 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the number of times that the custom event occurred during an interval of a time period.
+             * The beginning of an interval.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

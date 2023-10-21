@@ -122,7 +122,10 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The numeric value or character used for matching.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,11 +133,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the DNS server of the carrier is used.
-         * <p>
-         * 
-         * *   true (default value): The DNS server of the carrier is used.
-         * *   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,11 +141,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the alert rule is included. Valid values:
-         * <p>
-         * 
-         * *   0: The alert rule is included.
-         * *   1: The alert rule is not included.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +149,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name or IP address of the DNS server.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,11 +157,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:
-         * <p>
-         * 
-         * *   false (default value): Ping requests are not automatically sent to detect network latency if a detection task fails.
-         * *   true: Ping requests are automatically sent to detect network latency if a detection task fails.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,15 +165,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the assertion. Valid values:
-         * <p>
-         * 
-         * *   response_time: checks whether the response time meets expectations.
-         * *   status_code: checks whether the HTTP status code meets expectations.
-         * *   header: checks whether the fields in the response header meet expectations.
-         * *   body_text: checks whether the content in the response body meets expectations by using text matching.
-         * *   body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).
-         * *   body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).
+         * The site monitoring tasks that are returned.
          */
         public Builder siteMonitors(SiteMonitors siteMonitors) {
             this.siteMonitors = siteMonitors;
@@ -190,17 +173,11 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The comparison operator of the assertion. Valid values:
+         * Indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * *   contains: contains
-         * *   doesNotContain: does not contain
-         * *   matches: matches regular expressions
-         * *   doesNotMatch: does not match regular expressions
-         * *   is: equal to a numeric value or matches a character
-         * *   isNot: not equal to
-         * *   lessThan: less than
-         * *   moreThan: greater than
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -208,11 +185,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:
-         * <p>
-         * 
-         * *   true: Redirects are not followed.
-         * *   false (default value): Redirects are followed.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -288,7 +261,17 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * operator.
+             * The comparison operator of the assertion. Valid values:
+             * <p>
+             * 
+             * *   contains: contains
+             * *   doesNotContain: does not contain
+             * *   matches: matches regular expressions
+             * *   doesNotMatch: does not match regular expressions
+             * *   is: equal to a numeric value or matches a character
+             * *   isNot: not equal to
+             * *   lessThan: less than
+             * *   moreThan: greater than
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -296,13 +279,11 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:
+             * The parsing path of the assertion.
              * <p>
              * 
-             * *   IN_DNS: The list of expected values is a subset of the list of DNS results.
-             * *   DNS_IN: The list of DNS results is a subset of the list of expected values.
-             * *   EQUAL: The list of DNS results is the same as the list of expected values.
-             * *   ANY: The list of DNS results intersects with the list of expected values.
+             * *   If the assertion type is `body_json`, the path is `json path`.
+             * *   If the assertion type is `body_xml`, the path is `xml path`.
              */
             public Builder property(String property) {
                 this.property = property;
@@ -310,7 +291,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * target.
+             * The numeric value or character used for matching.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -318,7 +299,15 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The type of the assertion. Valid values:
+             * <p>
+             * 
+             * *   response_time: checks whether the response time meets expectations.
+             * *   status_code: checks whether the HTTP status code meets expectations.
+             * *   header: checks whether the fields in the response header meet expectations.
+             * *   body_text: checks whether the content in the response body meets expectations by using text matching.
+             * *   body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).
+             * *   body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -748,7 +737,10 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is `key1:value1`. Each HTTP header occupies a line.
+             * The acceptable status code.
+             * <p>
+             * 
+             * >  We recommend that you configure assertions.
              */
             public Builder acceptableResponseCode(String acceptableResponseCode) {
                 this.acceptableResponseCode = acceptableResponseCode;
@@ -756,7 +748,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries after a DNS failure occurred.
+             * The assertions.
              */
             public Builder assertions(OptionsJsonAssertions assertions) {
                 this.assertions = assertions;
@@ -764,7 +756,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the FTP, SMTP, or POP3 protocol.
+             * The number of retries after a DNS failure occurred.
              */
             public Builder attempts(Long attempts) {
                 this.attempts = attempts;
@@ -772,54 +764,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * Indicates whether the security authentication feature is enabled. Valid values:
              * <p>
              * 
-             * *   1: The task is enabled.
-             * *   2: The task is disabled.
+             * *   0: The feature is enabled.
+             * *   1: The feature is disabled.
              */
             public Builder authentication(Integer authentication) {
                 this.authentication = authentication;
-                return this;
-            }
-
-            /**
-             * The page number of the returned page.
-             */
-            public Builder certVerify(Boolean certVerify) {
-                this.certVerify = certVerify;
-                return this;
-            }
-
-            /**
-             * The returned message.
-             */
-            public Builder cookie(String cookie) {
-                this.cookie = cookie;
-                return this;
-            }
-
-            /**
-             * The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).
-             */
-            public Builder diagnosisMtr(Boolean diagnosisMtr) {
-                this.diagnosisMtr = diagnosisMtr;
-                return this;
-            }
-
-            /**
-             * The cookie of the HTTP request.
-             */
-            public Builder diagnosisPing(Boolean diagnosisPing) {
-                this.diagnosisPing = diagnosisPing;
-                return this;
-            }
-
-            /**
-             * The URL or IP address that is monitored by the site monitoring task.
-             */
-            public Builder dnsMatchRule(String dnsMatchRule) {
-                this.dnsMatchRule = dnsMatchRule;
                 return this;
             }
 
@@ -830,187 +782,62 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * *   false (default value): The certificate is not verified.
              * *   true: The certificate is verified.
              */
+            public Builder certVerify(Boolean certVerify) {
+                this.certVerify = certVerify;
+                return this;
+            }
+
+            /**
+             * The cookie of the HTTP request.
+             */
+            public Builder cookie(String cookie) {
+                this.cookie = cookie;
+                return this;
+            }
+
+            /**
+             * Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:
+             * <p>
+             * 
+             * *   false (default value): MTR is not automatically used to diagnose network issues if a task fails.
+             * *   true: MTR is automatically used to diagnose network issues if a task fails.
+             */
+            public Builder diagnosisMtr(Boolean diagnosisMtr) {
+                this.diagnosisMtr = diagnosisMtr;
+                return this;
+            }
+
+            /**
+             * Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:
+             * <p>
+             * 
+             * *   false (default value): Ping requests are not automatically sent to detect network latency if a detection task fails.
+             * *   true: Ping requests are automatically sent to detect network latency if a detection task fails.
+             */
+            public Builder diagnosisPing(Boolean diagnosisPing) {
+                this.diagnosisPing = diagnosisPing;
+                return this;
+            }
+
+            /**
+             * The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:
+             * <p>
+             * 
+             * *   IN_DNS: The list of expected values is a subset of the list of DNS results.
+             * *   DNS_IN: The list of DNS results is a subset of the list of expected values.
+             * *   EQUAL: The list of DNS results is the same as the list of expected values.
+             * *   ANY: The list of DNS results intersects with the list of expected values.
+             */
+            public Builder dnsMatchRule(String dnsMatchRule) {
+                this.dnsMatchRule = dnsMatchRule;
+                return this;
+            }
+
+            /**
+             * The domain name or IP address of the DNS server.
+             */
             public Builder dnsServer(String dnsServer) {
                 this.dnsServer = dnsServer;
-                return this;
-            }
-
-            /**
-             * Indicates whether the password is decoded by using the Base64 algorithm. Valid values:
-             * <p>
-             * 
-             * *   true: The password is decoded by using the Base64 algorithm.
-             * *   false (default value): The password is not decoded by using the Base64 algorithm.
-             */
-            public Builder dnsType(String dnsType) {
-                this.dnsType = dnsType;
-                return this;
-            }
-
-            /**
-             * The format of the HTTP request. Valid values:
-             * <p>
-             * 
-             * *   hex: hexadecimal
-             * *   txt: text
-             */
-            public Builder enableOperatorDns(Boolean enableOperatorDns) {
-                this.enableOperatorDns = enableOperatorDns;
-                return this;
-            }
-
-            /**
-             * The response to the HTTP request.
-             * <p>
-             * 
-             * *   Hexadecimal format: If the request content is a byte string and cannot be represented in printable characters, you can convert the byte string to printable characters in the hexadecimal format. If you convert the byte string to printable characters in the hexadecimal format, one byte is converted to two hexadecimal characters. For example, (byte)1 is converted to `01` and (byte)27 is converted to `1B`. If the request content is a binary array in the Java format, for example, `{(byte)1, (byte)27}`, you can convert the binary array to `011b` or `011B`. Hexadecimal characters are not case-sensitive in site monitoring tasks. You can enter `011B` in the request content and set the request_format parameter to hex.
-             * *   Text format: Common text refers to strings that consist of printable characters.
-             */
-            public Builder failureRate(Float failureRate) {
-                this.failureRate = failureRate;
-                return this;
-            }
-
-            /**
-             * The number of entries to return on each page. Default value: 10.
-             */
-            public Builder header(String header) {
-                this.header = header;
-                return this;
-            }
-
-            /**
-             * The status of the task. Valid values:
-             * <p>
-             * 
-             * *   1: The task is enabled.
-             * *   2: The task is disabled.
-             */
-            public Builder httpMethod(String httpMethod) {
-                this.httpMethod = httpMethod;
-                return this;
-            }
-
-            /**
-             * The time when the site monitoring task was created.
-             */
-            public Builder isBase64Encode(String isBase64Encode) {
-                this.isBase64Encode = isBase64Encode;
-                return this;
-            }
-
-            /**
-             * The assertions.
-             */
-            public Builder matchRule(Integer matchRule) {
-                this.matchRule = matchRule;
-                return this;
-            }
-
-            /**
-             * The number of entries returned per page.
-             */
-            public Builder password(String password) {
-                this.password = password;
-                return this;
-            }
-
-            /**
-             * The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
-             */
-            public Builder pingNum(Integer pingNum) {
-                this.pingNum = pingNum;
-                return this;
-            }
-
-            /**
-             * The interval at which detection requests are sent. Unit: minutes.
-             */
-            public Builder port(Integer port) {
-                this.port = port;
-                return this;
-            }
-
-            /**
-             * The name of the site monitoring task.
-             */
-            public Builder protocol(String protocol) {
-                this.protocol = protocol;
-                return this;
-            }
-
-            /**
-             * The ID of the site monitoring task.
-             */
-            public Builder proxyProtocol(Boolean proxyProtocol) {
-                this.proxyProtocol = proxyProtocol;
-                return this;
-            }
-
-            /**
-             * The format of the HTTP response. Valid values:
-             * <p>
-             * 
-             * *   hex: hexadecimal
-             * *   txt: text
-             */
-            public Builder requestContent(String requestContent) {
-                this.requestContent = requestContent;
-                return this;
-            }
-
-            /**
-             * The acceptable status code.
-             * <p>
-             * 
-             * >  We recommend that you configure assertions.
-             */
-            public Builder requestFormat(String requestFormat) {
-                this.requestFormat = requestFormat;
-                return this;
-            }
-
-            /**
-             * The total number of returned entries.
-             */
-            public Builder responseContent(String responseContent) {
-                this.responseContent = responseContent;
-                return this;
-            }
-
-            /**
-             * The port number of the TCP, UDP, SMTP, or POP3 protocol.
-             */
-            public Builder responseFormat(String responseFormat) {
-                this.responseFormat = responseFormat;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder retryDelay(Integer retryDelay) {
-                this.retryDelay = retryDelay;
-                return this;
-            }
-
-            /**
-             * The password of the SMTP, POP3, or FTP protocol.
-             */
-            public Builder timeOut(Long timeOut) {
-                this.timeOut = timeOut;
-                return this;
-            }
-
-            /**
-             * Indicates whether the PROXY protocol is enabled. Valid values:
-             * <p>
-             * 
-             * *   false (default value): The PROXY protocol is disabled.
-             * *   true: The PROXY protocol is enabled.
-             */
-            public Builder unfollowRedirect(Boolean unfollowRedirect) {
-                this.unfollowRedirect = unfollowRedirect;
                 return this;
             }
 
@@ -1024,6 +851,203 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * *   MX: a record that links domain names to the address of a mail server.
              * *   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.
              * *   AAAA: a record that maps a domain name to the relevant IPv6 address.
+             */
+            public Builder dnsType(String dnsType) {
+                this.dnsType = dnsType;
+                return this;
+            }
+
+            /**
+             * Indicates whether the DNS server of the carrier is used.
+             * <p>
+             * 
+             * *   true (default value): The DNS server of the carrier is used.
+             * *   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.
+             */
+            public Builder enableOperatorDns(Boolean enableOperatorDns) {
+                this.enableOperatorDns = enableOperatorDns;
+                return this;
+            }
+
+            /**
+             * The packet loss rate.
+             * <p>
+             * 
+             * >  This parameter is returned only if the TaskType parameter is set to PING.
+             */
+            public Builder failureRate(Float failureRate) {
+                this.failureRate = failureRate;
+                return this;
+            }
+
+            /**
+             * The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is `key1:value1`. Each HTTP header occupies a line.
+             */
+            public Builder header(String header) {
+                this.header = header;
+                return this;
+            }
+
+            /**
+             * The HTTP request method. Valid values:
+             * <p>
+             * 
+             * *   get
+             * *   post
+             * *   head
+             */
+            public Builder httpMethod(String httpMethod) {
+                this.httpMethod = httpMethod;
+                return this;
+            }
+
+            /**
+             * Indicates whether the password is decoded by using the Base64 algorithm. Valid values:
+             * <p>
+             * 
+             * *   true: The password is decoded by using the Base64 algorithm.
+             * *   false (default value): The password is not decoded by using the Base64 algorithm.
+             */
+            public Builder isBase64Encode(String isBase64Encode) {
+                this.isBase64Encode = isBase64Encode;
+                return this;
+            }
+
+            /**
+             * Indicates whether the alert rule is included. Valid values:
+             * <p>
+             * 
+             * *   0: The alert rule is included.
+             * *   1: The alert rule is not included.
+             */
+            public Builder matchRule(Integer matchRule) {
+                this.matchRule = matchRule;
+                return this;
+            }
+
+            /**
+             * The password of the SMTP, POP3, or FTP protocol.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * The number of hops for the PING protocol.
+             */
+            public Builder pingNum(Integer pingNum) {
+                this.pingNum = pingNum;
+                return this;
+            }
+
+            /**
+             * The port number of the TCP, UDP, SMTP, or POP3 protocol.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * The protocol type of DNS detection. Valid values:
+             * <p>
+             * 
+             * *   udp (default value)
+             * *   tcp
+             * *   tcp-tls
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * Indicates whether the PROXY protocol is enabled. Valid values:
+             * <p>
+             * 
+             * *   false (default value): The PROXY protocol is disabled.
+             * *   true: The PROXY protocol is enabled.
+             */
+            public Builder proxyProtocol(Boolean proxyProtocol) {
+                this.proxyProtocol = proxyProtocol;
+                return this;
+            }
+
+            /**
+             * The content of the HTTP request.
+             */
+            public Builder requestContent(String requestContent) {
+                this.requestContent = requestContent;
+                return this;
+            }
+
+            /**
+             * The format of the HTTP request. Valid values:
+             * <p>
+             * 
+             * *   hex: hexadecimal
+             * *   txt: text
+             */
+            public Builder requestFormat(String requestFormat) {
+                this.requestFormat = requestFormat;
+                return this;
+            }
+
+            /**
+             * The response to the HTTP request.
+             * <p>
+             * 
+             * *   Hexadecimal format: If the request content is a byte string and cannot be represented in printable characters, you can convert the byte string to printable characters in the hexadecimal format. If you convert the byte string to printable characters in the hexadecimal format, one byte is converted to two hexadecimal characters. For example, (byte)1 is converted to `01` and (byte)27 is converted to `1B`. If the request content is a binary array in the Java format, for example, `{(byte)1, (byte)27}`, you can convert the binary array to `011b` or `011B`. Hexadecimal characters are not case-sensitive in site monitoring tasks. You can enter `011B` in the request content and set the request_format parameter to hex.
+             * *   Text format: Common text refers to strings that consist of printable characters.
+             */
+            public Builder responseContent(String responseContent) {
+                this.responseContent = responseContent;
+                return this;
+            }
+
+            /**
+             * The format of the HTTP response. Valid values:
+             * <p>
+             * 
+             * *   hex: hexadecimal
+             * *   txt: text
+             */
+            public Builder responseFormat(String responseFormat) {
+                this.responseFormat = responseFormat;
+                return this;
+            }
+
+            /**
+             * The number of times a failed detection request is retried.
+             */
+            public Builder retryDelay(Integer retryDelay) {
+                this.retryDelay = retryDelay;
+                return this;
+            }
+
+            /**
+             * The timeout period. Unit: milliseconds.
+             */
+            public Builder timeOut(Long timeOut) {
+                this.timeOut = timeOut;
+                return this;
+            }
+
+            /**
+             * Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:
+             * <p>
+             * 
+             * *   true: Redirects are not followed.
+             * *   false (default value): Redirects are followed.
+             */
+            public Builder unfollowRedirect(Boolean unfollowRedirect) {
+                this.unfollowRedirect = unfollowRedirect;
+                return this;
+            }
+
+            /**
+             * The username of the FTP, SMTP, or POP3 protocol.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -1172,7 +1196,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The site monitoring tasks that are returned.
+             * The URL or IP address that is monitored by the site monitoring task.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -1188,10 +1212,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword to be matched.
-             * <p>
-             * 
-             * >  You can search for tasks by name or address. Fuzzy search is supported.
+             * The time when the site monitoring task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1199,12 +1220,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type of DNS detection. Valid values:
-             * <p>
-             * 
-             * *   udp (default value)
-             * *   tcp
-             * *   tcp-tls
+             * The interval at which detection requests are sent. Unit: minutes.
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -1212,7 +1228,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return. Default value: 1.
+             * The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).
              */
             public Builder optionsJson(OptionsJson optionsJson) {
                 this.optionsJson = optionsJson;
@@ -1220,12 +1236,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
-             * 
-             * *   get
-             * *   post
-             * *   head
+             * The ID of the site monitoring task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1233,7 +1244,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times a failed detection request is retried.
+             * The name of the site monitoring task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1241,11 +1252,11 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:
+             * The status of the task. Valid values:
              * <p>
              * 
-             * *   false (default value): MTR is not automatically used to diagnose network issues if a task fails.
-             * *   true: MTR is automatically used to diagnose network issues if a task fails.
+             * *   1: The task is enabled.
+             * *   2: The task is disabled.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -1261,10 +1272,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet loss rate.
-             * <p>
-             * 
-             * >  This parameter is returned only if the TaskType parameter is set to PING.
+             * The time when the site monitoring task was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -98,7 +98,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The ID of the request.
+         * The response code.
+         * <p>
+         * 
+         * >  The HTTP 200 code indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned records.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +117,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. The value true indicates success. The value false indicates failure.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +125,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the metric.
+         * The configuration of the metric.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -130,7 +133,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the metric.
+         * Indicates whether the request was successful. The value true indicates success. The value false indicates failure.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +141,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the metric.
+         * The total number of returned records.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +265,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The unit of the metric.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,18 +273,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical period of the metric. Multiple statistical periods are separated with commas (,).
+             * The dimensions of the metric. Multiple dimensions are separated with commas (,).
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
-                return this;
-            }
-
-            /**
-             * The dimensions of the metric. Multiple dimensions are separated with commas (,).
-             */
-            public Builder labels(String labels) {
-                this.labels = labels;
                 return this;
             }
 
@@ -298,13 +293,21 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
              * *   minAlertPeriod: the minimum time interval to report a new alert.
              * *   productCategory: the category of the service.
              */
+            public Builder labels(String labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * The name of the metric.
+             */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
                 return this;
             }
 
             /**
-             * The statistical method. Multiple statistic methods are separated with commas (,).
+             * The namespace of the service. The value is usually in the format of acs_Service.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -312,7 +315,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * This operation is usually used with DescribeMetricList and DescribeMetricLast. For more information, see [DescribeMetricList](~~51936~~) and [DescribeMetricLast](~~51939~~).
+             * The statistical period of the metric. Multiple statistical periods are separated with commas (,).
              */
             public Builder periods(String periods) {
                 this.periods = periods;
@@ -320,7 +323,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The statistical method. Multiple statistic methods are separated with commas (,).
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -328,7 +331,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the service. The value is usually in the format of acs_Service.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

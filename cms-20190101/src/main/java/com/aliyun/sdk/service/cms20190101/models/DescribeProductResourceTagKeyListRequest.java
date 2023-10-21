@@ -54,10 +54,7 @@ public class DescribeProductResourceTagKeyListRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The pagination cursor.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

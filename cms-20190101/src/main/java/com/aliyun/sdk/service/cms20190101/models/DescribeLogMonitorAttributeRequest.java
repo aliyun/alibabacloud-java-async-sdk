@@ -55,10 +55,10 @@ public class DescribeLogMonitorAttributeRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
+         * The name of the log monitoring metric. Exact match is supported.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);

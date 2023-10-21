@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAlertingMetricRuleResourcesRequest extends Request {
     @Query
+    @NameInMap("AlertBeforeTime")
+    private String alertBeforeTime;
+
+    @Query
     @NameInMap("Dimensions")
     private String dimensions;
 
@@ -38,6 +42,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
 
     private DescribeAlertingMetricRuleResourcesRequest(Builder builder) {
         super(builder);
+        this.alertBeforeTime = builder.alertBeforeTime;
         this.dimensions = builder.dimensions;
         this.groupId = builder.groupId;
         this.namespace = builder.namespace;
@@ -57,6 +62,13 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alertBeforeTime
+     */
+    public String getAlertBeforeTime() {
+        return this.alertBeforeTime;
     }
 
     /**
@@ -102,6 +114,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAlertingMetricRuleResourcesRequest, Builder> {
+        private String alertBeforeTime; 
         private String dimensions; 
         private String groupId; 
         private String namespace; 
@@ -115,6 +128,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
 
         private Builder(DescribeAlertingMetricRuleResourcesRequest request) {
             super(request);
+            this.alertBeforeTime = request.alertBeforeTime;
             this.dimensions = request.dimensions;
             this.groupId = request.groupId;
             this.namespace = request.namespace;
@@ -122,6 +136,15 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
             this.pageSize = request.pageSize;
             this.ruleId = request.ruleId;
         } 
+
+        /**
+         * AlertBeforeTime.
+         */
+        public Builder alertBeforeTime(String alertBeforeTime) {
+            this.putQueryParameter("AlertBeforeTime", alertBeforeTime);
+            this.alertBeforeTime = alertBeforeTime;
+            return this;
+        }
 
         /**
          * The dimensions that specify the resources whose monitoring data you want to query.

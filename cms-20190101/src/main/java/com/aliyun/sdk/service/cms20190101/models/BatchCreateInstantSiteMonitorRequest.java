@@ -145,21 +145,13 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             private String taskType; 
 
             /**
-             * The HTTP status code.
+             * The URL or IP address that is monitored by the task.
              * <p>
              * 
-             * >  The status code 200 indicates that the call was successful.
+             * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
              */
             public Builder address(String address) {
                 this.address = address;
-                return this;
-            }
-
-            /**
-             * The ID of the site monitoring task.
-             */
-            public Builder ispCities(String ispCities) {
-                this.ispCities = ispCities;
                 return this;
             }
 
@@ -171,13 +163,26 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
              * 
              * For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
              */
+            public Builder ispCities(String ispCities) {
+                this.ispCities = ispCities;
+                return this;
+            }
+
+            /**
+             * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+             */
             public Builder optionsJson(String optionsJson) {
                 this.optionsJson = optionsJson;
                 return this;
             }
 
             /**
-             * The operation that you want to perform. Set the value to **BatchCreateInstantSiteMonitor**.
+             * The name of the site monitoring task.
+             * <p>
+             * 
+             * The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+             * 
+             * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -185,7 +190,12 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * The name of the site monitoring task.
+             * The type of the site monitoring task.
+             * <p>
+             * 
+             * Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+             * 
+             * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

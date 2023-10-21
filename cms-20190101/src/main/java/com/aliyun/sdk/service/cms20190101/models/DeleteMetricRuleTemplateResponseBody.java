@@ -86,7 +86,10 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +105,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the template.
+         * The information about the alert template.
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -118,7 +121,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the alert template.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +161,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

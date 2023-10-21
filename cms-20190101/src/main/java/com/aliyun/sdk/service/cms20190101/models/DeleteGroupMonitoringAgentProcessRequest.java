@@ -70,7 +70,7 @@ public class DeleteGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the process monitoring task.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -79,10 +79,7 @@ public class DeleteGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the process monitoring task.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

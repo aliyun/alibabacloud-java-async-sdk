@@ -122,7 +122,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,11 +133,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
-         * <p>
-         * 
-         * *   and
-         * *   or
+         * The log monitoring metrics.
          */
         public Builder logMonitorList(java.util.List < LogMonitorList> logMonitorList) {
             this.logMonitorList = logMonitorList;
@@ -142,7 +141,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +149,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned entries.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -158,10 +157,18 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -172,24 +179,13 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
          * *   true: The call was successful.
          * *   false: The call failed.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
-         */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
         /**
-         * The log monitoring metrics.
+         * The total number of the returned entries.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -253,18 +249,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The field value to be matched in the filter condition.
+             * The name of the log field used for matching in the filter condition.
              */
             public Builder key(String key) {
                 this.key = key;
-                return this;
-            }
-
-            /**
-             * Operator.
-             */
-            public Builder operator(String operator) {
-                this.operator = operator;
                 return this;
             }
 
@@ -278,6 +266,14 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
              * *   `<`: less than
              * *   `>=`: greater than or equal to
              * *   `<=`: less than or equal to
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * The field value to be matched in the filter condition.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -414,7 +410,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             private String valueFilterRelation; 
 
             /**
-             * The name of the Log Service project.
+             * The time when the log monitoring metric was created.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -422,7 +421,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID returned by Log Service.
+             * The ID of the application group.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -430,7 +429,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Log Service Logstore resides.
+             * The ID returned by Log Service.
              */
             public Builder logId(Long logId) {
                 this.logId = logId;
@@ -438,7 +437,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -446,10 +445,26 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * The name of the Log Service Logstore.
              */
             public Builder slsLogstore(String slsLogstore) {
                 this.slsLogstore = slsLogstore;
+                return this;
+            }
+
+            /**
+             * The name of the Log Service project.
+             */
+            public Builder slsProject(String slsProject) {
+                this.slsProject = slsProject;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the Log Service Logstore resides.
+             */
+            public Builder slsRegionId(String slsRegionId) {
+                this.slsRegionId = slsRegionId;
                 return this;
             }
 
@@ -459,32 +474,17 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
              * 
              * If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
              */
-            public Builder slsProject(String slsProject) {
-                this.slsProject = slsProject;
-                return this;
-            }
-
-            /**
-             * The time when the log monitoring metric was created.
-             * <p>
-             * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-             */
-            public Builder slsRegionId(String slsRegionId) {
-                this.slsRegionId = slsRegionId;
-                return this;
-            }
-
-            /**
-             * The name of the log field used for matching in the filter condition.
-             */
             public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
                 this.valueFilter = valueFilter;
                 return this;
             }
 
             /**
-             * The name of the Log Service Logstore.
+             * The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
+             * <p>
+             * 
+             * *   and
+             * *   or
              */
             public Builder valueFilterRelation(String valueFilterRelation) {
                 this.valueFilterRelation = valueFilterRelation;

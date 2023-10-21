@@ -124,7 +124,7 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         } 
 
         /**
-         * The total number of returned entries.
+         * The ID of the tag rule.
          */
         public Builder dynamicTagRuleId(String dynamicTagRuleId) {
             this.putQueryParameter("DynamicTagRuleId", dynamicTagRuleId);
@@ -133,29 +133,14 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the tags belong.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The conditional expressions used to create an application group based on the tag.
-         */
-        public Builder pageSize(String pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The error message.
-         */
-        public Builder tagKey(String tagKey) {
-            this.putQueryParameter("TagKey", tagKey);
-            this.tagKey = tagKey;
             return this;
         }
 
@@ -165,6 +150,27 @@ public class DescribeDynamicTagRuleListRequest extends Request {
          * 
          * Minimum value: 1. Default value: 30.
          */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The tag key.
+         * <p>
+         * 
+         * For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+         */
+        public Builder tagKey(String tagKey) {
+            this.putQueryParameter("TagKey", tagKey);
+            this.tagKey = tagKey;
+            return this;
+        }
+
+        /**
+         * The ID of the region to which the tags belong.
+         */
         public Builder tagRegionId(String tagRegionId) {
             this.putQueryParameter("TagRegionId", tagRegionId);
             this.tagRegionId = tagRegionId;
@@ -172,7 +178,10 @@ public class DescribeDynamicTagRuleListRequest extends Request {
         }
 
         /**
-         * The ID of the tag rule.
+         * The tag value.
+         * <p>
+         * 
+         * For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);

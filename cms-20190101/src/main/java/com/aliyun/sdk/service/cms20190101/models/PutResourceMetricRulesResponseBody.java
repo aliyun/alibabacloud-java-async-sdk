@@ -86,10 +86,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * The HTTP status code.
          * <p>
          * 
-         * Valid values of N: 1 to 500.
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The alert rules that failed to be created for the resource.
          */
         public Builder failedListResult(FailedListResult failedListResult) {
             this.failedListResult = failedListResult;
@@ -105,14 +105,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
-         * 
-         * Valid values of N: 1 to 500.
-         * 
-         * You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
-         * 
-         * >  If you specify a new ID, you create a threshold-triggered alert rule.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +113,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The alert rule that failed to be created.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +121,11 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the tag.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -192,7 +189,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The HTTP status code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -200,14 +197,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
-             * <p>
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
-             * 
-             * >  If you specify a new ID, you create a threshold-triggered alert rule.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -215,7 +205,11 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * Indicates whether the call was successful. Valid values:
+             * <p>
+             * 
+             * *   true: The call was successful.
+             * *   false: The call failed.
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -268,7 +262,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The alert rules that failed to be created for the resource.
+             * The alert rule that failed to be created.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -276,14 +270,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical period of the metric.
-             * <p>
-             * 
-             * Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+             * The ID of the alert rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

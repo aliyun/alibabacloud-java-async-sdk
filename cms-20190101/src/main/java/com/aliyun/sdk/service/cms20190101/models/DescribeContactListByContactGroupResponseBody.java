@@ -86,7 +86,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the alert contact was modified.
+         * The alert group.
          */
         public Builder contacts(Contacts contacts) {
             this.contacts = contacts;
@@ -102,10 +105,18 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -115,14 +126,6 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The alert group.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,10 +201,29 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             private String SMS; 
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * The TradeManager ID of the alert contact.
+             * <p>
+             * 
+             * >  This parameter can be returned only on the China site (aliyun.com).
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
+                return this;
+            }
+
+            /**
+             * The webhook URL of the DingTalk chatbot.
+             */
+            public Builder dingWebHook(String dingWebHook) {
+                this.dingWebHook = dingWebHook;
+                return this;
+            }
+
+            /**
+             * The email address of the alert contact.
+             */
+            public Builder mail(String mail) {
+                this.mail = mail;
                 return this;
             }
 
@@ -210,25 +232,6 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
              * <p>
              * 
              * >  This parameter can be returned only on the China site (aliyun.com).
-             */
-            public Builder dingWebHook(String dingWebHook) {
-                this.dingWebHook = dingWebHook;
-                return this;
-            }
-
-            /**
-             * The TradeManager ID of the alert contact.
-             * <p>
-             * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
-             */
-            public Builder mail(String mail) {
-                this.mail = mail;
-                return this;
-            }
-
-            /**
-             * Queries the alert contacts in an alert group.
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -317,7 +320,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The email address of the alert contact.
+             * The alert notification targets.
              */
             public Builder channels(Channels channels) {
                 this.channels = channels;
@@ -325,7 +328,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert contact.
+             * The time when the alert contact was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -333,7 +336,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification targets.
+             * The description of the alert contact.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -341,7 +344,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact was created.
+             * The name of the alert contact.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -349,7 +352,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * The time when the alert contact was modified.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

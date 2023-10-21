@@ -86,7 +86,10 @@ public class PutLogMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the Log Service Logstore.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * LogId.
+         * The ID of the log monitoring metric.
          */
         public Builder logId(String logId) {
             this.logId = logId;
@@ -102,7 +105,11 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the call is successful, the value `successful` is returned.
+         * *   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +117,7 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +125,11 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;

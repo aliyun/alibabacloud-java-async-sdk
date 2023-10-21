@@ -106,7 +106,10 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,7 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,10 +133,7 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The AccessKey secret that is required to install the agent.
          */
         public Builder secretKey(String secretKey) {
             this.secretKey = secretKey;
@@ -141,7 +141,11 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeMonitoringAgentAccessKey**.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

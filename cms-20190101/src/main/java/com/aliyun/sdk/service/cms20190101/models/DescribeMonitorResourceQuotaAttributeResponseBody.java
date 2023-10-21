@@ -74,7 +74,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         private ResourceQuota resourceQuota; 
 
         /**
-         * The quota of alert phone calls in your purchased resource plan. Unit: calls.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The used quota of the time series in custom monitoring in your purchased plan.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The details about the quota of detection points that are provided by other carriers in site monitoring.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The total quota of alert text messages.
+         * The details about the resource quotas of CloudMonitor.
          */
         public Builder resourceQuota(ResourceQuota resourceQuota) {
             this.resourceQuota = resourceQuota;
@@ -162,12 +165,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The current edition of CloudMonitor. Valid values:
-             * <p>
-             * 
-             * *   free: free edition
-             * *   pro: Professional Edition
-             * *   cms_post: pay-as-you-go
+             * The total quota of API calls. Unit: 10,000 calls.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -175,7 +173,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of API operation calls in your purchased plan. Unit: calls.
+             * The quota of API calls in your resource plan. Unit: 10,000 calls.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -183,7 +181,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of alert text messages in your purchased resource plan.
+             * The used quota of API calls in your resource plan. Unit: calls.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -248,7 +246,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of alert phone calls. Unit: calls.
+             * The total quota of the time series for custom monitoring.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -256,7 +254,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of site monitoring tasks.
+             * The quota of the time series for custom monitoring in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -264,7 +262,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.
+             * The used quota of the time series for custom monitoring in your resource plan.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -317,7 +315,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private String suitInfo; 
 
             /**
-             * InstanceId.
+             * The ID of the instance monitored by Hybrid Cloud Monitoring.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -325,7 +323,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * SuitInfo.
+             * The description of Hybrid Cloud Monitoring.
              */
             public Builder suitInfo(String suitInfo) {
                 this.suitInfo = suitInfo;
@@ -390,10 +388,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The used quota of detection points that are provided by Alibaba Cloud in site monitoring in your purchased plan.
-             * <p>
-             * 
-             * >  The value indicates the total number of detection points provided by Alibaba Cloud that are used by existing site monitoring tasks.
+             * The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -401,7 +396,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of custom monitoring.
+             * The quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -409,7 +404,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The description of the instance.
+             * The used quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -474,7 +469,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The used quota of events that can be reported in event monitoring in your purchased plan. The product of multiplying the value and 10,000 indicates the used quota.
+             * The total quota of processed log data in log monitoring. Unit: MB/min.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -482,7 +477,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the resource quotas of CloudMonitor.
+             * The quota of processed log data in log monitoring in your resource plan. Unit: MB/min.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -490,7 +485,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of alert text messages in your purchased resource plan.
+             * The used quota of processed log data in log monitoring in your resource plan. Unit: MB/min.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -555,7 +550,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The quota of processed log data in log monitoring in your purchased plan. Unit: MB/min.
+             * The total quota of alert phone calls. Unit: calls.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -563,7 +558,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the request.
+             * The quota of alert phone calls in your resource plan. Unit: calls.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -571,7 +566,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of API operation calls in your purchased plan. Unit: 10,000 calls.
+             * The used quota of alert phone calls in your resource plan. Unit: calls.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -636,7 +631,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The details about the quota of detection points that are provided by Alibaba Cloud in site monitoring.
+             * The total quota of alert text messages.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -644,7 +639,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of processed log data in log monitoring in your purchased plan. Unit: MB/min.
+             * The quota of alert text messages in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -652,7 +647,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of events that can be reported in event monitoring in your purchased plan. The quota of events that can be reported in event monitoring.
+             * The used quota of alert text messages in your resource plan.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -661,6 +656,87 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
             public SMS build() {
                 return new SMS(this);
+            } 
+
+        } 
+
+    }
+    public static class SiteMonitorBrowser extends TeaModel {
+        @NameInMap("QuotaLimit")
+        private Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        private Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        private Integer quotaUsed;
+
+        private SiteMonitorBrowser(Builder builder) {
+            this.quotaLimit = builder.quotaLimit;
+            this.quotaPackage = builder.quotaPackage;
+            this.quotaUsed = builder.quotaUsed;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SiteMonitorBrowser create() {
+            return builder().build();
+        }
+
+        /**
+         * @return quotaLimit
+         */
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        /**
+         * @return quotaPackage
+         */
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        /**
+         * @return quotaUsed
+         */
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+        public static final class Builder {
+            private Integer quotaLimit; 
+            private Integer quotaPackage; 
+            private Integer quotaUsed; 
+
+            /**
+             * The total quota of alert text messages.
+             */
+            public Builder quotaLimit(Integer quotaLimit) {
+                this.quotaLimit = quotaLimit;
+                return this;
+            }
+
+            /**
+             * The quota of alert text messages in your resource plan.
+             */
+            public Builder quotaPackage(Integer quotaPackage) {
+                this.quotaPackage = quotaPackage;
+                return this;
+            }
+
+            /**
+             * The used quota of alert text messages in your resource plan.
+             */
+            public Builder quotaUsed(Integer quotaUsed) {
+                this.quotaUsed = quotaUsed;
+                return this;
+            }
+
+            public SiteMonitorBrowser build() {
+                return new SiteMonitorBrowser(this);
             } 
 
         } 
@@ -717,7 +793,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The used quota of site monitoring tasks in your purchased plan.
+             * The total quota of ECS detection points for site monitoring.
+             * <p>
+             * 
+             * > The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -725,7 +804,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of the time series in custom monitoring in your purchased plan.
+             * The quota of ECS detection points for site monitoring in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -733,11 +812,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * Specifies whether to return information about used quotas. Valid values:
+             * The used quota of ECS detection points for site monitoring in your resource plan.
              * <p>
              * 
-             * *   true: to include information about used quotas. Default value: true.
-             * *   false: to exclude information about used quotas.
+             * > The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -746,6 +824,93 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
             public SiteMonitorEcsProbe build() {
                 return new SiteMonitorEcsProbe(this);
+            } 
+
+        } 
+
+    }
+    public static class SiteMonitorMobile extends TeaModel {
+        @NameInMap("QuotaLimit")
+        private Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        private Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        private Integer quotaUsed;
+
+        private SiteMonitorMobile(Builder builder) {
+            this.quotaLimit = builder.quotaLimit;
+            this.quotaPackage = builder.quotaPackage;
+            this.quotaUsed = builder.quotaUsed;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SiteMonitorMobile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return quotaLimit
+         */
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        /**
+         * @return quotaPackage
+         */
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        /**
+         * @return quotaUsed
+         */
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+        public static final class Builder {
+            private Integer quotaLimit; 
+            private Integer quotaPackage; 
+            private Integer quotaUsed; 
+
+            /**
+             * The total quota of ECS detection points for site monitoring.
+             * <p>
+             * 
+             * > The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.
+             */
+            public Builder quotaLimit(Integer quotaLimit) {
+                this.quotaLimit = quotaLimit;
+                return this;
+            }
+
+            /**
+             * The quota of ECS detection points for site monitoring in your resource plan.
+             */
+            public Builder quotaPackage(Integer quotaPackage) {
+                this.quotaPackage = quotaPackage;
+                return this;
+            }
+
+            /**
+             * The used quota of ECS detection points for site monitoring in your resource plan.
+             * <p>
+             * 
+             * > The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.
+             */
+            public Builder quotaUsed(Integer quotaUsed) {
+                this.quotaUsed = quotaUsed;
+                return this;
+            }
+
+            public SiteMonitorMobile build() {
+                return new SiteMonitorMobile(this);
             } 
 
         } 
@@ -802,7 +967,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of processed log data in log monitoring. Unit: MB/min.
+             * The total quota of carrier detection points for site monitoring.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -810,7 +975,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The time when the plan expires.
+             * The quota of carrier detection points for site monitoring in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -818,7 +983,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of event monitoring.
+             * The used quota of carrier detection points for site monitoring in your resource plan.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -883,7 +1048,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of the time series in custom monitoring.
+             * The total quota of site monitoring tasks.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -891,7 +1056,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota.
+             * The quota of site monitoring tasks in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -899,7 +1064,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the purchased subscription plan.
+             * The used quota of site monitoring tasks in your resource plan.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -941,8 +1106,14 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("SMS")
         private SMS SMS;
 
+        @NameInMap("SiteMonitorBrowser")
+        private SiteMonitorBrowser siteMonitorBrowser;
+
         @NameInMap("SiteMonitorEcsProbe")
         private SiteMonitorEcsProbe siteMonitorEcsProbe;
+
+        @NameInMap("SiteMonitorMobile")
+        private SiteMonitorMobile siteMonitorMobile;
 
         @NameInMap("SiteMonitorOperatorProbe")
         private SiteMonitorOperatorProbe siteMonitorOperatorProbe;
@@ -963,7 +1134,9 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             this.logMonitor = builder.logMonitor;
             this.phone = builder.phone;
             this.SMS = builder.SMS;
+            this.siteMonitorBrowser = builder.siteMonitorBrowser;
             this.siteMonitorEcsProbe = builder.siteMonitorEcsProbe;
+            this.siteMonitorMobile = builder.siteMonitorMobile;
             this.siteMonitorOperatorProbe = builder.siteMonitorOperatorProbe;
             this.siteMonitorTask = builder.siteMonitorTask;
             this.suitInfo = builder.suitInfo;
@@ -1041,10 +1214,24 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
 
         /**
+         * @return siteMonitorBrowser
+         */
+        public SiteMonitorBrowser getSiteMonitorBrowser() {
+            return this.siteMonitorBrowser;
+        }
+
+        /**
          * @return siteMonitorEcsProbe
          */
         public SiteMonitorEcsProbe getSiteMonitorEcsProbe() {
             return this.siteMonitorEcsProbe;
+        }
+
+        /**
+         * @return siteMonitorMobile
+         */
+        public SiteMonitorMobile getSiteMonitorMobile() {
+            return this.siteMonitorMobile;
         }
 
         /**
@@ -1078,13 +1265,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private LogMonitor logMonitor; 
             private Phone phone; 
             private SMS SMS; 
+            private SiteMonitorBrowser siteMonitorBrowser; 
             private SiteMonitorEcsProbe siteMonitorEcsProbe; 
+            private SiteMonitorMobile siteMonitorMobile; 
             private SiteMonitorOperatorProbe siteMonitorOperatorProbe; 
             private SiteMonitorTask siteMonitorTask; 
             private String suitInfo; 
 
             /**
-             * The details about the quota of API operation calls.
+             * The details about the quota of API calls.
              */
             public Builder api(Api api) {
                 this.api = api;
@@ -1092,7 +1281,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of detection points that are provided by other carriers in site monitoring in your purchased plan.
+             * The details about the quota for custom monitoring.
              */
             public Builder customMonitor(CustomMonitor customMonitor) {
                 this.customMonitor = customMonitor;
@@ -1100,7 +1289,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The details about the quota of Hybrid Cloud Monitoring.
              */
             public Builder enterpriseQuota(EnterpriseQuota enterpriseQuota) {
                 this.enterpriseQuota = enterpriseQuota;
@@ -1108,7 +1297,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of alert phone calls.
+             * The details about the quota for event monitoring.
              */
             public Builder eventMonitor(EventMonitor eventMonitor) {
                 this.eventMonitor = eventMonitor;
@@ -1116,10 +1305,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The total quota of detection points that are provided by Alibaba Cloud in site monitoring.
-             * <p>
-             * 
-             * >  The value indicates the maximum number of detection points provided by Alibaba Cloud that you can select for a site monitoring task.
+             * The time when the resource plan expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1127,7 +1313,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The operation that you want to perform. Set the value to DescribeMonitorResourceQuotaAttribute.
+             * The ID of the resource plan.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1135,7 +1321,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The total quota of site monitoring tasks.
+             * The details about the quota for log monitoring.
              */
             public Builder logMonitor(LogMonitor logMonitor) {
                 this.logMonitor = logMonitor;
@@ -1143,7 +1329,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The details about the quota of alert text messages.
+             * The details about the quota of alert phone calls.
              */
             public Builder phone(Phone phone) {
                 this.phone = phone;
@@ -1151,7 +1337,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of detection points that are provided by other carriers in site monitoring in your purchased plan.
+             * The details about the quota of alert text messages.
              */
             public Builder SMS(SMS SMS) {
                 this.SMS = SMS;
@@ -1159,7 +1345,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The error message.
+             * SiteMonitorBrowser.
+             */
+            public Builder siteMonitorBrowser(SiteMonitorBrowser siteMonitorBrowser) {
+                this.siteMonitorBrowser = siteMonitorBrowser;
+                return this;
+            }
+
+            /**
+             * The details about the quota of ECS detection points for site monitoring.
              */
             public Builder siteMonitorEcsProbe(SiteMonitorEcsProbe siteMonitorEcsProbe) {
                 this.siteMonitorEcsProbe = siteMonitorEcsProbe;
@@ -1167,7 +1361,15 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The total quota of API operation calls. Unit: 10,000 calls.
+             * SiteMonitorMobile.
+             */
+            public Builder siteMonitorMobile(SiteMonitorMobile siteMonitorMobile) {
+                this.siteMonitorMobile = siteMonitorMobile;
+                return this;
+            }
+
+            /**
+             * The details about the quota of carrier detection points for site monitoring.
              */
             public Builder siteMonitorOperatorProbe(SiteMonitorOperatorProbe siteMonitorOperatorProbe) {
                 this.siteMonitorOperatorProbe = siteMonitorOperatorProbe;
@@ -1175,7 +1377,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of site monitoring tasks in your purchased plan.
+             * The quota of site monitoring tasks.
              */
             public Builder siteMonitorTask(SiteMonitorTask siteMonitorTask) {
                 this.siteMonitorTask = siteMonitorTask;
@@ -1183,10 +1385,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The HTTP status code.
+             * The current edition of CloudMonitor. Valid values:
              * <p>
              * 
-             * >  The HTTP status code 200 indicates that the call succeeds.
+             * *   free: Free Edition
+             * *   pro: Pro Edition
+             * *   cms_post: pay-as-you-go
              */
             public Builder suitInfo(String suitInfo) {
                 this.suitInfo = suitInfo;

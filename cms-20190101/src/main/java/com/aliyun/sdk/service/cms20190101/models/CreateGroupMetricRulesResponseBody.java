@@ -86,7 +86,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +105,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The details of the alert rules.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -118,7 +121,11 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid value:
+         * <p>
+         * 
+         * - true: The call is successful.
+         * - false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +213,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Code.
+             * The status code that is returned for the alert rule.
+             * <p>
+             * 
+             * >  The status code 200 indicates that the call is successful.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -214,7 +224,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message that is returned for the alert rule.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -222,7 +232,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the alert rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -230,7 +240,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the alert rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -238,7 +248,11 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the alert rule was created. Valid value:
+             * <p>
+             * 
+             * - true: The alert rule was created.
+             * - false: The alert rule failed to be created.
              */
             public Builder success(Boolean success) {
                 this.success = success;

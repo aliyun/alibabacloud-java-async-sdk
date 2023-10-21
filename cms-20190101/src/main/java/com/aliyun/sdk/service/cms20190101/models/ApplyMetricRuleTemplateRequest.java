@@ -154,7 +154,11 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * The error message returned.
+         * The mode in which the alert template is applied. Valid values:
+         * <p>
+         * 
+         * *   GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.
+         * *   ALARM_TEMPLATE_FIRST: The metrics specified in the alert template take precedence. If a metric specified in the alert template does not exist in the application group, the system still generates an alert rule for the metric based on the alert template.
          */
         public Builder applyMode(String applyMode) {
             this.putQueryParameter("ApplyMode", applyMode);
@@ -163,7 +167,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * The end of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:59 and a value of 23 indicates 23:59.
          */
         public Builder enableEndTime(Long enableEndTime) {
             this.putQueryParameter("EnableEndTime", enableEndTime);
@@ -172,11 +176,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The mode in which the alert template is applied. Valid values:
-         * <p>
-         * 
-         * *   GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.
-         * *   ALARM_TEMPLATE_FIRST: The metrics specified in the alert template take precedence. If a metric specified in the alert template does not exist in the application group, the system still generates an alert rule for the metric based on the alert template.
+         * The beginning of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:00 and a value of 23 indicates 23:00.
          */
         public Builder enableStartTime(Long enableStartTime) {
             this.putQueryParameter("EnableStartTime", enableStartTime);
@@ -185,35 +185,14 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The beginning of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:00 and a value of 23 indicates 23:00.
+         * The ID of the application group to which the alert template is applied.
+         * <p>
+         * 
+         * For more information about how to query the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * The response code.
-         * <p>
-         * 
-         * >  The HTTP status code 200 indicates that the call succeeds.
-         */
-        public Builder notifyLevel(Long notifyLevel) {
-            this.putQueryParameter("NotifyLevel", notifyLevel);
-            this.notifyLevel = notifyLevel;
-            return this;
-        }
-
-        /**
-         * The ID of the alert template.
-         * <p>
-         * 
-         * For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
-         */
-        public Builder silenceTime(Long silenceTime) {
-            this.putQueryParameter("SilenceTime", silenceTime);
-            this.silenceTime = silenceTime;
             return this;
         }
 
@@ -223,6 +202,30 @@ public class ApplyMetricRuleTemplateRequest extends Request {
          * 
          * Set the value to 4. A value of 4 indicates that alert notifications are sent by using TradeManager and DingTalk chatbots.
          */
+        public Builder notifyLevel(Long notifyLevel) {
+            this.putQueryParameter("NotifyLevel", notifyLevel);
+            this.notifyLevel = notifyLevel;
+            return this;
+        }
+
+        /**
+         * The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400.
+         * <p>
+         * 
+         * >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
+         */
+        public Builder silenceTime(Long silenceTime) {
+            this.putQueryParameter("SilenceTime", silenceTime);
+            this.silenceTime = silenceTime;
+            return this;
+        }
+
+        /**
+         * The ID of the alert template.
+         * <p>
+         * 
+         * For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
+         */
         public Builder templateIds(String templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
@@ -230,7 +233,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);

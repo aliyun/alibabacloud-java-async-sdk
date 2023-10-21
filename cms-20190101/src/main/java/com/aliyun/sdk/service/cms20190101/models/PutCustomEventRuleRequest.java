@@ -201,7 +201,7 @@ public class PutCustomEventRuleRequest extends Request {
         } 
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -210,7 +210,7 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The cycle that is used to aggregate monitoring data of the custom event. Unit: seconds. Set the value to an integral multiple of 60. Default value: 300.
+         * The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.
          */
         public Builder effectiveInterval(String effectiveInterval) {
             this.putQueryParameter("EffectiveInterval", effectiveInterval);
@@ -219,7 +219,7 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The alert threshold.
+         * The subject of the alert notification email.
          */
         public Builder emailSubject(String emailSubject) {
             this.putQueryParameter("EmailSubject", emailSubject);
@@ -228,7 +228,7 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).
+         * The name of the custom event. For more information about how to obtain the event name, see [DescribeCustomEventAttribute](~~115262~~).
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -237,53 +237,14 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
+         * The ID of the application group. For more information about how to obtain the group ID, see [DescribeCustomEventAttribute](~~115262~~).
          * <p>
          * 
-         * >  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.
+         * >  The value 0 indicates that the reported custom event does not belong to any application Group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The value 200 indicates that the call was successful.
-         */
-        public Builder level(String level) {
-            this.putQueryParameter("Level", level);
-            this.level = level;
-            return this;
-        }
-
-        /**
-         * The subject of the alert notification email.
-         */
-        public Builder period(String period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * The name of the alert rule.
-         */
-        public Builder ruleId(String ruleId) {
-            this.putQueryParameter("RuleId", ruleId);
-            this.ruleId = ruleId;
-            return this;
-        }
-
-        /**
-         * The name of the custom event. For more information about how to obtain the event name, see [DescribeCustomEventAttribute](~~115262~~).
-         */
-        public Builder ruleName(String ruleName) {
-            this.putQueryParameter("RuleName", ruleName);
-            this.ruleName = ruleName;
             return this;
         }
 
@@ -295,6 +256,45 @@ public class PutCustomEventRuleRequest extends Request {
          * *   WARN: warning
          * *   INFO: information
          */
+        public Builder level(String level) {
+            this.putQueryParameter("Level", level);
+            this.level = level;
+            return this;
+        }
+
+        /**
+         * The cycle that is used to aggregate monitoring data of the custom event. Unit: seconds. Set the value to an integral multiple of 60. Default value: 300.
+         */
+        public Builder period(String period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * The ID of the alert rule.
+         * <p>
+         * 
+         * >  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.
+         */
+        public Builder ruleId(String ruleId) {
+            this.putQueryParameter("RuleId", ruleId);
+            this.ruleId = ruleId;
+            return this;
+        }
+
+        /**
+         * The name of the alert rule.
+         */
+        public Builder ruleName(String ruleName) {
+            this.putQueryParameter("RuleName", ruleName);
+            this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * The alert threshold.
+         */
         public Builder threshold(String threshold) {
             this.putQueryParameter("Threshold", threshold);
             this.threshold = threshold;
@@ -302,7 +302,7 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.
+         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);

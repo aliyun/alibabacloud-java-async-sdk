@@ -110,25 +110,15 @@ public class DescribeContactListRequest extends Request {
         } 
 
         /**
-         * The status of the TradeManager ID.
+         * The alert notification method. Valid values:
          * <p>
          * 
-         * Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.
-         * 
-         * >  This parameter can be returned only on the China site (aliyun.com).
+         * *   Mail: emails
+         * *   DingWebHook: DingTalk chatbots
          */
         public Builder chanelType(String chanelType) {
             this.putQueryParameter("ChanelType", chanelType);
             this.chanelType = chanelType;
-            return this;
-        }
-
-        /**
-         * The error message.
-         */
-        public Builder chanelValue(String chanelValue) {
-            this.putQueryParameter("ChanelValue", chanelValue);
-            this.chanelValue = chanelValue;
             return this;
         }
 
@@ -138,6 +128,15 @@ public class DescribeContactListRequest extends Request {
          * 
          * >  This parameter is required only if you set the `ChanelType` parameter to `Mail`.
          */
+        public Builder chanelValue(String chanelValue) {
+            this.putQueryParameter("ChanelValue", chanelValue);
+            this.chanelValue = chanelValue;
+            return this;
+        }
+
+        /**
+         * The name of the alert contact.
+         */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
             this.contactName = contactName;
@@ -145,7 +144,10 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeContactList**.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,10 +156,10 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The number of entries to return on each page.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

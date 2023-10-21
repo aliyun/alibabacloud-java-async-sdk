@@ -86,7 +86,10 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the tag matching rule.
          */
         public Builder id(String id) {
             this.id = id;
@@ -102,7 +105,7 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

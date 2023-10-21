@@ -74,7 +74,10 @@ public class DeleteMetricRuleResourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,10 +85,18 @@ public class DeleteMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -95,14 +106,6 @@ public class DeleteMetricRuleResourcesResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

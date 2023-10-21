@@ -74,7 +74,10 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * The reported custom metrics that are found in the query.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The value 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * >  You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see [DescribeMetricList](~~51936~~).
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The reported custom metrics that are found in the query.
          */
         public Builder result(String result) {
             this.result = result;

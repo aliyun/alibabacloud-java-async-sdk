@@ -616,14 +616,7 @@ public class PutResourceMetricRulesRequest extends Request {
             private String value; 
 
             /**
-             * The interval at which the alert rule is executed.
-             * <p>
-             * 
-             * Unit: seconds.
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -631,10 +624,10 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The subject of the alert notification email.
+             * The value of the tag.
              * <p>
              * 
-             * Valid values of N: 1 to 500.
+             * >  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -869,7 +862,12 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The error message.
+             * The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
+             * 
+             * >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
              */
             public Builder contactGroups(String contactGroups) {
                 this.contactGroups = contactGroups;
@@ -877,7 +875,10 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **PutResourceMetricRules**.
+             * The time period during which the alert rule is effective.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -885,7 +886,10 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The HTTP status code.
+             * The subject of the alert notification email.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
              */
             public Builder emailSubject(String emailSubject) {
                 this.emailSubject = emailSubject;
@@ -893,12 +897,14 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.
+             * The interval at which the alert rule is executed.
              * <p>
+             * 
+             * Unit: seconds.
              * 
              * Valid values of N: 1 to 500.
              * 
-             * >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
+             * >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -914,55 +920,6 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The HTTP status code.
-             * <p>
-             * 
-             * >  The status code 200 indicates that the call was successful.
-             */
-            public Builder metricName(String metricName) {
-                this.metricName = metricName;
-                return this;
-            }
-
-            /**
-             * The name of the alert rule.
-             * <p>
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
-             * 
-             * >  If you specify a new name, you create a threshold-triggered alert rule.
-             */
-            public Builder namespace(String namespace) {
-                this.namespace = namespace;
-                return this;
-            }
-
-            /**
-             * Indicates whether the call was successful. Valid values:
-             * <p>
-             * 
-             * *   true: The call was successful.
-             * *   false: The call failed.
-             */
-            public Builder noDataPolicy(String noDataPolicy) {
-                this.noDataPolicy = noDataPolicy;
-                return this;
-            }
-
-            /**
-             * The time period during which the alert rule is effective.
-             * <p>
-             * 
-             * Valid values of N: 1 to 500.
-             */
-            public Builder noEffectiveInterval(String noEffectiveInterval) {
-                this.noEffectiveInterval = noEffectiveInterval;
-                return this;
-            }
-
-            /**
              * The name of the metric.
              * <p>
              * 
@@ -970,42 +927,21 @@ public class PutResourceMetricRulesRequest extends Request {
              * 
              * For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).
              */
-            public Builder period(String period) {
-                this.period = period;
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
                 return this;
             }
 
             /**
-             * The statistical methods for Warn-level alerts. Valid values:
+             * The namespace of the cloud service.
              * <p>
-             * 
-             * *   Maximum: the maximum value
-             * *   Minimum: the minimum value
-             * *   Average: the average value
-             * *   Availability: the availability rate
              * 
              * Valid values of N: 1 to 500.
              * 
-             * >  You must set a collection of the Rules.N.Escalations.Critical.Statistics, Rules.N.Escalations.Critical.ComparisonOperator, Rules.N.Escalations.Critical.Threshold, and Rules.N.Escalations.Critical.Times parameters, a collection of the Rules.N.Escalations.Warn.Statistics, Rules.N.Escalations.Warn.ComparisonOperator, Rules.N.Escalations.Warn.Threshold, and Rules.N.Escalations.Warn.Times parameters, or a collection of the Rules.N.Escalations.Info.Statistics, Rules.N.Escalations.Info.ComparisonOperator, Rules.N.Escalations.Info.Threshold, and Rules.N.Escalations.Info.Times parameters.
+             * For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
              */
-            public Builder resources(String resources) {
-                this.resources = resources;
-                return this;
-            }
-
-            /**
-             * The error message.
-             */
-            public Builder ruleId(String ruleId) {
-                this.ruleId = ruleId;
-                return this;
-            }
-
-            /**
-             * The ID of the alert rule.
-             */
-            public Builder ruleName(String ruleName) {
-                this.ruleName = ruleName;
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -1019,8 +955,77 @@ public class PutResourceMetricRulesRequest extends Request {
              * 
              * Valid values of N: 1 to 500.
              */
-            public Builder silenceTime(Integer silenceTime) {
-                this.silenceTime = silenceTime;
+            public Builder noDataPolicy(String noDataPolicy) {
+                this.noDataPolicy = noDataPolicy;
+                return this;
+            }
+
+            /**
+             * The time period during which the alert rule is ineffective.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
+             */
+            public Builder noEffectiveInterval(String noEffectiveInterval) {
+                this.noEffectiveInterval = noEffectiveInterval;
+                return this;
+            }
+
+            /**
+             * The statistical period of the metric.
+             * <p>
+             * 
+             * Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.
+             * 
+             * Valid values of N: 1 to 500.
+             * 
+             * >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+             */
+            public Builder period(String period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
+             * 
+             * For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).
+             */
+            public Builder resources(String resources) {
+                this.resources = resources;
+                return this;
+            }
+
+            /**
+             * The ID of the alert rule.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
+             * 
+             * You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+             * 
+             * >  If you specify a new ID, you create a threshold-triggered alert rule.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * The name of the alert rule.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
+             * 
+             * You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+             * 
+             * >  If you specify a new name, you create a threshold-triggered alert rule.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
                 return this;
             }
 
@@ -1033,6 +1038,17 @@ public class PutResourceMetricRulesRequest extends Request {
              * Valid values of N: 1 to 500.
              * 
              * >  If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.
+             */
+            public Builder silenceTime(Integer silenceTime) {
+                this.silenceTime = silenceTime;
+                return this;
+            }
+
+            /**
+             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+             * <p>
+             * 
+             * Valid values of N: 1 to 500.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

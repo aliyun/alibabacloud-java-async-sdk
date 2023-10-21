@@ -69,7 +69,10 @@ public class CreateMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The alert groups that receive alert notifications for the application group. The alarm notifications for the application group are sent to the alert contacts in the alarm groups.
+         * <p>
+         * 
+         * >  An alert group is a group of one or more alert contacts. For more information about how to create alert contacts and alert groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -78,7 +81,7 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The name of the application group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

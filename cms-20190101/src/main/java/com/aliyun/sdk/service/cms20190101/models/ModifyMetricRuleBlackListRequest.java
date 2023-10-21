@@ -199,10 +199,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * The IDs of instances that belong to the specified cloud service. The value of this parameter is a JSON array.
-         * <p>
-         * 
-         * Valid values of N: 1 to 20.
+         * The category of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -211,10 +208,15 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The ID of the application group. The value of this parameter is a JSON array.
+         * The time range within which the blacklist policy is effective. Take note of the following information:
          * <p>
          * 
-         * >  This parameter is required only if the `ScopeType` parameter is set to `GROUP`.
+         * *   If you do not configure this parameter, the blacklist policy is permanently effective.
+         * 
+         * *   If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:
+         * 
+         *     *   `03:00-04:59`: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.
+         *     *   `03:00-04:59 UTC+0700`: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -223,57 +225,14 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The timestamp when the blacklist policy expires.
+         * <p>
+         * 
+         * Unit: milliseconds.
          */
         public Builder enableEndTime(String enableEndTime) {
             this.putQueryParameter("EnableEndTime", enableEndTime);
             this.enableEndTime = enableEndTime;
-            return this;
-        }
-
-        /**
-         * The effective scope of the blacklist policy. Valid values:
-         * <p>
-         * 
-         * *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
-         * 
-         * *   GROUP: The blacklist policy takes effect only for the specified application group. This is the default value.
-         * 
-         *     For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
-         */
-        public Builder enableStartTime(String enableStartTime) {
-            this.putQueryParameter("EnableStartTime", enableStartTime);
-            this.enableStartTime = enableStartTime;
-            return this;
-        }
-
-        /**
-         * The namespace of the cloud service.
-         * <p>
-         * 
-         * For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
-         */
-        public Builder id(String id) {
-            this.putQueryParameter("Id", id);
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * Instances.
-         */
-        public Builder instances(java.util.List < String > instances) {
-            this.putQueryParameter("Instances", instances);
-            this.instances = instances;
-            return this;
-        }
-
-        /**
-         * Metrics.
-         */
-        public Builder metrics(java.util.List < Metrics> metrics) {
-            this.putQueryParameter("Metrics", metrics);
-            this.metrics = metrics;
             return this;
         }
 
@@ -283,6 +242,49 @@ public class ModifyMetricRuleBlackListRequest extends Request {
          * 
          * Unit: milliseconds.
          */
+        public Builder enableStartTime(String enableStartTime) {
+            this.putQueryParameter("EnableStartTime", enableStartTime);
+            this.enableStartTime = enableStartTime;
+            return this;
+        }
+
+        /**
+         * The ID of the blacklist policy.
+         * <p>
+         * 
+         * For information about how to obtain the ID of a blacklist policy, see [DescribeMetricRuleBlackList](~~457257~~).
+         */
+        public Builder id(String id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * The IDs of the instances that belong to the specified cloud service.
+         */
+        public Builder instances(java.util.List < String > instances) {
+            this.putQueryParameter("Instances", instances);
+            this.instances = instances;
+            return this;
+        }
+
+        /**
+         * The metrics of the instance.
+         * <p>
+         * 
+         * *   If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.
+         * *   If you configure this parameter, the blacklist policy applies only to the current metric.
+         */
+        public Builder metrics(java.util.List < Metrics> metrics) {
+            this.putQueryParameter("Metrics", metrics);
+            this.metrics = metrics;
+            return this;
+        }
+
+        /**
+         * The name of the blacklist policy.
+         */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
@@ -290,10 +292,10 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The namespace of the cloud service.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -302,7 +304,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyMetricRuleBlackList**.
+         * The effective scope of the blacklist policy. Valid values:
+         * <p>
+         * 
+         * *   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.
+         * *   GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -311,10 +317,10 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
+         * The IDs of the application groups. Specify a JSON array.
          * <p>
          * 
-         * Valid values of N: 1 to 10
+         * > This parameter must be specified when `ScopeType` is set to `GROUP`.
          */
         public Builder scopeValue(String scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -369,10 +375,10 @@ public class ModifyMetricRuleBlackListRequest extends Request {
             private String resource; 
 
             /**
-             * The ID of the blacklist policy.
+             * The name of the metric.
              * <p>
              * 
-             * For information about how to obtain the ID of a blacklist policy, see [DescribeMetricRuleBlackList](~~457257~~).
+             * Valid values of N: 1 to 10.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -380,7 +386,10 @@ public class ModifyMetricRuleBlackListRequest extends Request {
             }
 
             /**
-             * The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+             * The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10.
              */
             public Builder resource(String resource) {
                 this.resource = resource;

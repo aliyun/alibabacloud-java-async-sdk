@@ -74,7 +74,10 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyMonitorGroupInstances.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class ModifyMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(Boolean success) {
             this.success = success;

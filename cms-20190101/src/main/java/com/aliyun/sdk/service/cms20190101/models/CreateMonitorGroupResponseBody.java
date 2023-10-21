@@ -86,7 +86,10 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the application group.
+         * The response code.
+         * <p>
+         * 
+         * >  The value 200 indicates that the call was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,10 +97,26 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The error message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -107,22 +126,6 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * In this example, the application group named `ECS_Group` is created.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

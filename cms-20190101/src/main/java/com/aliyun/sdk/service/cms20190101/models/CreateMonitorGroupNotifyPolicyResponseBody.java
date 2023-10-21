@@ -86,10 +86,37 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The number of entries that are returned.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The HTTP status code 200 indicates that the call succeeds.
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * The error message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The number of entries that are returned.
+         */
+        public Builder result(Integer result) {
+            this.result = result;
             return this;
         }
 
@@ -99,33 +126,6 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
          * 
          * *   true: The call succeeds.
          * *   false: The call fails.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * If the policy is valid, no alert notifications are sent for the application group.
-         * <p>
-         * 
-         * This topic describes how to create the `PauseNotify` policy to pause alert notifications for the `7301****` application group. The StartTime parameter is set to `1622949300000` and the EndTime parameter is set to `1623208500000`. This indicates that the policy is valid from `2021-06-06 11:15:00 UTC+8` to `2021-06-09 11:15:00 UTC+8`.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
-         */
-        public Builder result(Integer result) {
-            this.result = result;
-            return this;
-        }
-
-        /**
-         * Success.
          */
         public Builder success(String success) {
             this.success = success;

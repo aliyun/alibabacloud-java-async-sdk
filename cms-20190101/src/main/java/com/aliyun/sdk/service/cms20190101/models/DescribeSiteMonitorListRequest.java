@@ -124,10 +124,10 @@ public class DescribeSiteMonitorListRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
+         * The keyword to be matched.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  You can search for tasks by name or address. Fuzzy search is supported.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -136,7 +136,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The number of hops for the PING protocol.
+         * The number of the page to return. Default value: 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -145,7 +145,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeSiteMonitorList**.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -154,11 +154,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The parsing path of the assertion.
-         * <p>
-         * 
-         * *   If the assertion type is `body_json`, the path is `json path`.
-         * *   If the assertion type is `body_xml`, the path is `xml path`.
+         * The ID of the site monitoring task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -167,7 +163,11 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The ID of the site monitoring task.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   1: The task is enabled.
+         * *   2: The task is disabled.
          */
         public Builder taskState(String taskState) {
             this.putQueryParameter("TaskState", taskState);
@@ -176,7 +176,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The time when the site monitoring task was updated.
+         * The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

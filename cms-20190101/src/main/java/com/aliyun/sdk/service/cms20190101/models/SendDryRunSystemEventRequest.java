@@ -98,7 +98,10 @@ public class SendDryRunSystemEventRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to SendDryRunSystemEvent.
+         * The content of the system event.
+         * <p>
+         * 
+         * >  The value of this parameter is a JSON object. We recommend that you include the `product`, `resourceId`, and `regionId` fields in the JSON object.
          */
         public Builder eventContent(String eventContent) {
             this.putQueryParameter("EventContent", eventContent);
@@ -107,7 +110,10 @@ public class SendDryRunSystemEventRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The name of the system event.
+         * <p>
+         * 
+         * >  For more information, see [DescribeSystemEventMetaList](~~114972~~).
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -116,10 +122,7 @@ public class SendDryRunSystemEventRequest extends Request {
         }
 
         /**
-         * The content of the system event.
-         * <p>
-         * 
-         * >  The value of this parameter is a JSON object. We recommend that you include the `product`, `resourceId`, and `regionId` fields in the JSON object.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -128,10 +131,10 @@ public class SendDryRunSystemEventRequest extends Request {
         }
 
         /**
-         * The name of the system event.
+         * The name of the cloud service.
          * <p>
          * 
-         * >  For more information, see [DescribeSystemEventMetaList](~~114972~~).
+         * >  For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see [System events](~~167388~~).
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

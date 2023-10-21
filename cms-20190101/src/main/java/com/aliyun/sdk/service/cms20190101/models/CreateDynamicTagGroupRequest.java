@@ -155,7 +155,11 @@ public class CreateDynamicTagGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupList.
+         * The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:
+         * <p>
+         * 
+         * *   and (default)
+         * *   or
          */
         public Builder contactGroupList(java.util.List < String > contactGroupList) {
             this.putQueryParameter("ContactGroupList", contactGroupList);
@@ -164,7 +168,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * EnableInstallAgent.
+         * The ID of the region to which the tags belong.
          */
         public Builder enableInstallAgent(Boolean enableInstallAgent) {
             this.putQueryParameter("EnableInstallAgent", enableInstallAgent);
@@ -173,7 +177,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * EnableSubscribeEvent.
+         * The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.
          */
         public Builder enableSubscribeEvent(Boolean enableSubscribeEvent) {
             this.putQueryParameter("EnableSubscribeEvent", enableSubscribeEvent);
@@ -182,7 +186,11 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * MatchExpress.
+         * Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:
+         * <p>
+         * 
+         * *   true: The CloudMonitor agent is automatically installed.
+         * *   false (default): The CloudMonitor agent is not automatically installed.
          */
         public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
             this.putQueryParameter("MatchExpress", matchExpress);
@@ -191,7 +199,11 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * MatchExpressFilterRelation.
+         * Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:
+         * <p>
+         * 
+         * *   true: The application group automatically subscribes to event notifications.
+         * *   false (default): The application group does not automatically subscribe to event notifications.
          */
         public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
             this.putQueryParameter("MatchExpressFilterRelation", matchExpressFilterRelation);
@@ -200,7 +212,10 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The alert contact groups. Valid values of N: 1 to 100. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.
+         * <p>
+         * 
+         * An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~). For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -209,7 +224,10 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * TagRegionId.
+         * The tag keys of the cloud resources.
+         * <p>
+         * 
+         * For more information about how to obtain tag keys, see [DescribeTagKeyList](~~145558~~).
          */
         public Builder tagRegionId(String tagRegionId) {
             this.putQueryParameter("TagRegionId", tagRegionId);
@@ -218,7 +236,10 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * TemplateIdList.
+         * The IDs of the alert templates.
+         * <p>
+         * 
+         * For more information about how to query alert template IDs, see [DescribeMetricRuleTemplateList](~~114982~~).
          */
         public Builder templateIdList(java.util.List < String > templateIdList) {
             this.putQueryParameter("TemplateIdList", templateIdList);
@@ -284,7 +305,10 @@ public class CreateDynamicTagGroupRequest extends Request {
             private String tagValueMatchFunction; 
 
             /**
-             * TagName.
+             * The tag values of the cloud resources. In this example, set the value of N to 1.
+             * <p>
+             * 
+             * >  If you set the `MatchExpress.N.TagValueMatchFunction` parameter, you must also set the `MatchExpress.N.TagValue` parameter.
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -292,7 +316,7 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * The ID of the region to which the tags belong.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -300,7 +324,7 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * TagValueMatchFunction.
+             * The error message.
              */
             public Builder tagValueMatchFunction(String tagValueMatchFunction) {
                 this.tagValueMatchFunction = tagValueMatchFunction;

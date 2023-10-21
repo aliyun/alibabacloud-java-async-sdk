@@ -70,10 +70,7 @@ public class DeleteMonitorGroupDynamicRuleRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The service to which the rule applies. Valid values: ecs, rds, and slb.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -82,7 +79,7 @@ public class DeleteMonitorGroupDynamicRuleRequest extends Request {
         }
 
         /**
-         * The service to which the rule applies. Valid values: ecs, rds, and slb.
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

@@ -84,13 +84,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         } 
 
         /**
-         * The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:
-         * <p>
-         * 
-         * *   contains: contains
-         * *   notContains: excludes
-         * *   startWith: starts with a prefix
-         * *   endWith: ends with a suffix
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -99,7 +93,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         }
 
         /**
-         * GroupRules.
+         * None.
          */
         public Builder groupRules(java.util.List < GroupRules> groupRules) {
             this.putQueryParameter("GroupRules", groupRules);
@@ -108,7 +102,11 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The mode for creating the alert rule. Valid values:
+         * <p>
+         * 
+         * *   true: creates asynchronously
+         * *   false (default): creates synchronously
          */
         public Builder isAsync(Boolean isAsync) {
             this.putQueryParameter("IsAsync", isAsync);
@@ -177,7 +175,13 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             private String value; 
 
             /**
-             * The error message.
+             * The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:
+             * <p>
+             * 
+             * *   contains: contains
+             * *   notContains: does not contain
+             * *   startWith: starts with a prefix
+             * *   endWith: ends with a suffix
              */
             public Builder function(String function) {
                 this.function = function;
@@ -185,7 +189,10 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **PutMonitorGroupDynamicRule**.
+             * The name of the field based on which instances are filtered. Valid values of N: 1 to 3.
+             * <p>
+             * 
+             * Only hostnames are supported. Example: hostName.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,10 +200,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * The HTTP status code.
-             * <p>
-             * 
-             * >  The status code 200 indicates that the call was successful.
+             * The value to be matched with the specified field. Valid values of N: 1 to 3.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -264,11 +268,12 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             private java.util.List < Filters> filters; 
 
             /**
-             * The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:
+             * The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:
              * <p>
              * 
-             * *   and: The instances that meet all the conditional expressions are automatically added to the application group.
-             * *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
+             * *   ecs: Elastic Compute Service (ECS)
+             * *   rds: ApsaraDB RDS
+             * *   slb: Server Load Balancer (SLB)
              */
             public Builder category(String category) {
                 this.category = category;
@@ -276,11 +281,11 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * The mode for creating the alert rule. Valid values:
+             * The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:
              * <p>
              * 
-             * *   true: creates asynchronously
-             * *   false (default value): creates synchronously
+             * *   and: The instances that meet all the conditional expressions are automatically added to the application group.
+             * *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
              */
             public Builder filterRelation(String filterRelation) {
                 this.filterRelation = filterRelation;
@@ -288,7 +293,7 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * Filters.
+             * None.
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;

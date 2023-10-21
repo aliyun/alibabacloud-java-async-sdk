@@ -74,7 +74,10 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Deletes the targets to which alert notifications are sent based on an event-triggered alert rule.
+         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
          */
         public Builder success(Boolean success) {
             this.success = success;

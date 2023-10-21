@@ -74,7 +74,7 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The operation that you want to perform. Set the value to **CreateHybridMonitorNamespace**.
+         * The returned message.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(String success) {
             this.success = success;

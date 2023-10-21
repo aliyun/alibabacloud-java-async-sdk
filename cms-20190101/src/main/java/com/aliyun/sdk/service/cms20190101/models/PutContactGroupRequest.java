@@ -97,7 +97,10 @@ public class PutContactGroupRequest extends Request {
         } 
 
         /**
-         * The description of the alert contact group.
+         * The name of the alert contact group.
+         * <p>
+         * 
+         * For information about how to obtain the name of an alert contact group, see [DescribeContactGroupList](~~114922~~).
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -115,13 +118,7 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the weekly report subscription feature. Valid values:
-         * <p>
-         * 
-         * *   true: The weekly report subscription feature is enabled.
-         * *   false: The weekly report subscription feature is disabled.
-         * 
-         * >  You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.
+         * The description of the alert contact group.
          */
         public Builder describe(String describe) {
             this.putQueryParameter("Describe", describe);
@@ -130,7 +127,13 @@ public class PutContactGroupRequest extends Request {
         }
 
         /**
-         * The name of the alert contact. Valid values of N: 1 to 100.
+         * Specifies whether to enable the weekly report subscription feature. Valid values:
+         * <p>
+         * 
+         * *   true: The weekly report subscription feature is enabled.
+         * *   false: The weekly report subscription feature is disabled.
+         * 
+         * >  You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.
          */
         public Builder enableSubscribed(Boolean enableSubscribed) {
             this.putQueryParameter("EnableSubscribed", enableSubscribed);

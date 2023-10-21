@@ -82,10 +82,11 @@ public class InstallMonitoringAgentRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
+         * Specifies whether to install the CloudMonitor agent. Valid values:
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * *   true (default value): yes
+         * *   false: no
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -94,7 +95,14 @@ public class InstallMonitoringAgentRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to install the CloudMonitor agent on all ECS instances that belong to the current Alibaba Cloud account. Valid values:
+         * <p>
+         * 
+         * *   `onlyInstallNotHasAgent`: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.
+         * *   `onlyUpgradeAgent`: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.
+         * *   `installAndUpgrade`: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.
+         * 
+         * >  If you set the InstallCommand parameter, the `InstanceIds` parameter does not take effect.
          */
         public Builder installCommand(String installCommand) {
             this.putQueryParameter("InstallCommand", installCommand);

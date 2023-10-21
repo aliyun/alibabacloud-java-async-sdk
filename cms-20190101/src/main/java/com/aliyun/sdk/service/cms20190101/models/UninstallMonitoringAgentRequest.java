@@ -55,10 +55,7 @@ public class UninstallMonitoringAgentRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The HTTP status code 200 indicates that the call was successful.
+         * The ID of the host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

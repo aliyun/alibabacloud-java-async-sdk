@@ -86,11 +86,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the call succeeds. Valid values:
+         * The response code.
          * <p>
          * 
-         * *   true: The call succeeds.
-         * *   false: The call fails.
+         * >  The HTTP status code 200 indicates that the call succeeds.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +97,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that are affected by the alert rule.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -106,7 +105,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application group to which the alert template is applied.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,10 +113,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
-         * 
-         * >  The HTTP status code 200 indicates that the call succeeds.
+         * The resources that are affected by the alert rule.
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -125,7 +121,11 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the generated alert rule.
+         * Indicates whether the call succeeds. Valid values:
+         * <p>
+         * 
+         * *   true: The call succeeds.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -213,7 +213,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The name of the alert rule.
+             * The response code.
+             * <p>
+             * 
+             * >  The HTTP status code 200 indicates that the call succeeds.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -221,7 +224,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * The returned information.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -229,7 +232,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the alert rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -237,7 +240,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The name of the alert rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -245,7 +248,11 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * In this example, the `700****` alert template is applied to the `123456` application group. For the generated alert rule, the ID is `applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****`, and the name is `test123`.
+             * Indicates whether the call succeeds. Valid values:
+             * <p>
+             * 
+             * *   true: The call succeeds.
+             * *   false: The call fails.
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -298,11 +305,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             private Long groupId; 
 
             /**
-             * Indicates whether the call succeeds. Valid values:
-             * <p>
-             * 
-             * *   true: The call succeeds.
-             * *   false: The call fails.
+             * The details of the generated alert rule.
              */
             public Builder alertResults(java.util.List < AlertResults> alertResults) {
                 this.alertResults = alertResults;
@@ -310,7 +313,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information.
+             * The ID of the application group to which the alert template is applied.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;

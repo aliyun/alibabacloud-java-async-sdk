@@ -55,7 +55,7 @@ public class DescribeEventRuleTargetListRequest extends Request {
         } 
 
         /**
-         * The name of the alert group.
+         * The name of the event-triggered alert rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

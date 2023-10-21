@@ -98,7 +98,10 @@ public class DescribeContactListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The description of the alert contact.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,13 +109,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the phone number. Valid values:
-         * <p>
-         * 
-         * *   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.
-         * *   OK: The phone number is activated and can receive alert notifications.
-         * 
-         * >  This parameter can be returned only on the China site (aliyun.com).
+         * The alert contacts.
          */
         public Builder contacts(Contacts contacts) {
             this.contacts = contacts;
@@ -120,11 +117,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The language in which the alert information is displayed. Valid values:
-         * <p>
-         * 
-         * *   zh-cn: simplified Chinese
-         * *   en: English
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,10 +125,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Default value: 100.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +133,11 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The TradeManager ID of the alert contact.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,11 +221,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String SMS; 
 
             /**
-             * The alert notification method. Valid values:
-             * <p>
-             * 
-             * *   Mail: emails
-             * *   DingWebHook: DingTalk chatbots
+             * The TradeManager ID of the alert contact.
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -239,10 +229,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert contact was updated.
-             * <p>
-             * 
-             * Unit: milliseconds.
+             * The webhook URL of the DingTalk chatbot.
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -250,7 +237,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact groups.
+             * The email address of the alert contact.
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -258,7 +245,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The phone number of the alert contact.
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -335,21 +322,15 @@ public class DescribeContactListResponseBody extends TeaModel {
             private String SMS; 
 
             /**
-             * Queries alert contacts.
+             * The status of the TradeManager ID.
+             * <p>
+             * 
+             * Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.
+             * 
+             * >  This parameter can be returned only on the China site (aliyun.com).
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
-                return this;
-            }
-
-            /**
-             * The timestamp when the alert contact was updated.
-             * <p>
-             * 
-             * Unit: milliseconds.
-             */
-            public Builder dingWebHook(String dingWebHook) {
-                this.dingWebHook = dingWebHook;
                 return this;
             }
 
@@ -359,13 +340,31 @@ public class DescribeContactListResponseBody extends TeaModel {
              * 
              * Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.
              */
+            public Builder dingWebHook(String dingWebHook) {
+                this.dingWebHook = dingWebHook;
+                return this;
+            }
+
+            /**
+             * The status of the email address. Valid values:
+             * <p>
+             * 
+             * *   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.
+             * *   OK: The email address is activated and can receive alert notifications.
+             */
             public Builder mail(String mail) {
                 this.mail = mail;
                 return this;
             }
 
             /**
-             * The ID of the request.
+             * The status of the phone number. Valid values:
+             * <p>
+             * 
+             * *   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.
+             * *   OK: The phone number is activated and can receive alert notifications.
+             * 
+             * >  This parameter can be returned only on the China site (aliyun.com).
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -531,11 +530,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The status of the email address. Valid values:
-             * <p>
-             * 
-             * *   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.
-             * *   OK: The email address is activated and can receive alert notifications.
+             * The alert notification method.
              */
             public Builder channels(Channels channels) {
                 this.channels = channels;
@@ -554,26 +549,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification method.
+             * The alert contact groups.
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
-                return this;
-            }
-
-            /**
-             * The name of the alert contact.
-             */
-            public Builder createTime(Long createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The alert contacts.
-             */
-            public Builder desc(String desc) {
-                this.desc = desc;
                 return this;
             }
 
@@ -583,16 +562,33 @@ public class DescribeContactListResponseBody extends TeaModel {
              * 
              * Unit: milliseconds.
              */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The description of the alert contact.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * The language in which the alert information is displayed. Valid values:
+             * <p>
+             * 
+             * *   zh-cn: simplified Chinese
+             * *   en: English
+             */
             public Builder lang(String lang) {
                 this.lang = lang;
                 return this;
             }
 
             /**
-             * The number of the page to return.
-             * <p>
-             * 
-             * Default value: 1.
+             * The name of the alert contact.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -600,7 +596,10 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * The timestamp when the alert contact was updated.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

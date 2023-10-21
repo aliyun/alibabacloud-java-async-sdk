@@ -74,7 +74,10 @@ public class UninstallMonitoringAgentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The HTTP status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,10 +85,18 @@ public class UninstallMonitoringAgentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -95,14 +106,6 @@ public class UninstallMonitoringAgentResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * >  This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see [Install and uninstall the Cloud Monitor agent](~~183482~~).
          */
         public Builder success(Boolean success) {
             this.success = success;

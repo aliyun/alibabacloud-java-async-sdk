@@ -135,10 +135,29 @@ public class PutCustomEventRequest extends Request {
             private String time; 
 
             /**
-             * The ID of the request.
+             * The content of the custom event. Valid values of N: 1 to 50.
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * The name of the custom event. Valid values of N: 1 to 50.
+             */
+            public Builder eventName(String eventName) {
+                this.eventName = eventName;
+                return this;
+            }
+
+            /**
+             * The ID of the application group. Valid values of N: 0 to 50.
+             * <p>
+             * 
+             * Default value: 0. This value indicates that the custom event to be reported does not belong to any application group.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
                 return this;
             }
 
@@ -151,25 +170,6 @@ public class PutCustomEventRequest extends Request {
              * Valid values of N: 1 to 50.
              * 
              * >  You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.
-             */
-            public Builder eventName(String eventName) {
-                this.eventName = eventName;
-                return this;
-            }
-
-            /**
-             * The HTTP status code.
-             * <p>
-             * 
-             * >  The status code 200 indicates that the call was successful.
-             */
-            public Builder groupId(String groupId) {
-                this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * The content of the custom event. Valid values of N: 1 to 50.
              */
             public Builder time(String time) {
                 this.time = time;

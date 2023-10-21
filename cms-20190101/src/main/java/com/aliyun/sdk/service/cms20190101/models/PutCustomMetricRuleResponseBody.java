@@ -74,7 +74,10 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The value 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,10 +85,18 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -95,14 +106,6 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see [PutCustomMetric](~~115004~~).
          */
         public Builder success(Boolean success) {
             this.success = success;

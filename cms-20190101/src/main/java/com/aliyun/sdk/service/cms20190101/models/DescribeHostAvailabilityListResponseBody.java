@@ -98,11 +98,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * The HTTP status code.
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * >  The value 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -110,7 +109,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +117,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the availability monitoring tasks.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,12 +125,11 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the availability monitoring task. Valid values:
+         * Indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * *   PING
-         * *   TELNET
-         * *   HTTP
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -139,7 +137,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application group.
+         * The details of the availability monitoring tasks.
          */
         public Builder taskList(TaskList taskList) {
             this.taskList = taskList;
@@ -147,7 +145,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the application group.
+         * The total number of returned entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -235,14 +233,6 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
-             */
-            public Builder aggregate(String aggregate) {
-                this.aggregate = aggregate;
-                return this;
-            }
-
-            /**
              * The method used to calculate metric values that trigger alerts. Valid values:
              * <p>
              * 
@@ -252,13 +242,35 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
              * *   TelnetLatency: the average Telnet response time
              * *   Average: the average Ping packet loss rate
              */
+            public Builder aggregate(String aggregate) {
+                this.aggregate = aggregate;
+                return this;
+            }
+
+            /**
+             * The name of the metric. Valid values:
+             * <p>
+             * 
+             * *   HttpStatus: HTTP status code
+             * *   HttpLatency: HTTP response time
+             * *   TelnetStatus: Telnet status code
+             * *   TelnetLatency: Telnet response time
+             * *   PingLostRate: Ping packet loss rate
+             */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
                 return this;
             }
 
             /**
-             * This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named `ecs_instance`.
+             * The comparison operator that is used in the alert rule. Valid values:
+             * <p>
+             * 
+             * *   `>`
+             * *   `>=`
+             * *   `<`
+             * *   `<=`
+             * *   `=`
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -266,7 +278,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * Queries availability monitoring tasks.
+             * The consecutive number of times for which the metric value is measured before an alert is triggered.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -274,7 +286,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value is measured before an alert is triggered.
+             * The alert threshold.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -570,10 +582,12 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String webHook; 
 
             /**
-             * The alert notification methods. Valid values:
+             * The end of the time period during which the alert rule is effective. Valid values: 0 to 23.
              * <p>
              * 
-             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
+             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
+             * 
+             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -581,14 +595,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The comparison operator that is used in the alert rule. Valid values:
-             * <p>
-             * 
-             * *   `>`
-             * *   `>=`
-             * *   `<`
-             * *   `<=`
-             * *   `=`
+             * The trigger conditions of the alert rule.
              */
             public Builder escalationList(AlertConfigEscalationList escalationList) {
                 this.escalationList = escalationList;
@@ -596,14 +603,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric. Valid values:
+             * The alert notification methods. Valid values:
              * <p>
              * 
-             * *   HttpStatus: HTTP status code
-             * *   HttpLatency: HTTP response time
-             * *   TelnetStatus: Telnet status code
-             * *   TelnetLatency: Telnet response time
-             * *   PingLostRate: Ping packet loss rate
+             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
              */
             public Builder notifyType(Integer notifyType) {
                 this.notifyType = notifyType;
@@ -611,10 +614,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL.
-             * <p>
-             * 
-             * CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.
+             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
              */
             public Builder silenceTime(Integer silenceTime) {
                 this.silenceTime = silenceTime;
@@ -622,7 +622,12 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger conditions of the alert rule.
+             * The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.
+             * <p>
+             * 
+             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
+             * 
+             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -638,7 +643,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert threshold.
+             * The callback URL.
+             * <p>
+             * 
+             * CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.
              */
             public Builder webHook(String webHook) {
                 this.webHook = webHook;
@@ -804,7 +812,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String telnetOrPingHost; 
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
+             * The response to the HTTP request.
              */
             public Builder httpKeyword(String httpKeyword) {
                 this.httpKeyword = httpKeyword;
@@ -812,55 +820,15 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name or IP address that you want to monitor.
+             * The HTTP request method. Valid values:
+             * <p>
+             * 
+             * *   GET
+             * *   POST
+             * *   HEAD
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
-                return this;
-            }
-
-            /**
-             * The end of the time period during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
-             * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
-             */
-            public Builder httpNegative(Boolean httpNegative) {
-                this.httpNegative = httpNegative;
-                return this;
-            }
-
-            /**
-             * The configurations of the alert rule.
-             */
-            public Builder httpPostContent(String httpPostContent) {
-                this.httpPostContent = httpPostContent;
-                return this;
-            }
-
-            /**
-             * The response to the HTTP request.
-             */
-            public Builder httpResponseCharset(String httpResponseCharset) {
-                this.httpResponseCharset = httpResponseCharset;
-                return this;
-            }
-
-            /**
-             * The content of the HTTP POST request.
-             */
-            public Builder httpURI(String httpURI) {
-                this.httpURI = httpURI;
-                return this;
-            }
-
-            /**
-             * The character set that is used in the HTTP response.
-             */
-            public Builder interval(Integer interval) {
-                this.interval = interval;
                 return this;
             }
 
@@ -870,6 +838,46 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
              * 
              * *   true: If the HTTP response body includes the alert rule, an alert is triggered.
              * *   false: If the HTTP response does not include the alert rule, an alert is triggered.
+             */
+            public Builder httpNegative(Boolean httpNegative) {
+                this.httpNegative = httpNegative;
+                return this;
+            }
+
+            /**
+             * The content of the HTTP POST request.
+             */
+            public Builder httpPostContent(String httpPostContent) {
+                this.httpPostContent = httpPostContent;
+                return this;
+            }
+
+            /**
+             * The character set that is used in the HTTP response.
+             */
+            public Builder httpResponseCharset(String httpResponseCharset) {
+                this.httpResponseCharset = httpResponseCharset;
+                return this;
+            }
+
+            /**
+             * The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.
+             */
+            public Builder httpURI(String httpURI) {
+                this.httpURI = httpURI;
+                return this;
+            }
+
+            /**
+             * The interval at which detection requests are sent. Unit: seconds.
+             */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * The domain name or IP address that you want to monitor.
              */
             public Builder telnetOrPingHost(String telnetOrPingHost) {
                 this.telnetOrPingHost = telnetOrPingHost;
@@ -1018,35 +1026,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
-             * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+             * The configurations of the alert rule.
              */
             public Builder alertConfig(AlertConfig alertConfig) {
                 this.alertConfig = alertConfig;
-                return this;
-            }
-
-            /**
-             * The ECS instances that are monitored.
-             */
-            public Builder disabled(Boolean disabled) {
-                this.disabled = disabled;
-                return this;
-            }
-
-            /**
-             * The range of instances that are monitored by the availability monitoring task. Valid values:
-             * <p>
-             * 
-             * *   GROUP: All ECS instances in the application group are monitored.
-             * *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.
-             */
-            public Builder groupId(Long groupId) {
-                this.groupId = groupId;
                 return this;
             }
 
@@ -1057,18 +1040,29 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
              * *   true: The availability monitoring task is disabled.
              * *   false: The availability monitoring task is enabled.
              */
+            public Builder disabled(Boolean disabled) {
+                this.disabled = disabled;
+                return this;
+            }
+
+            /**
+             * The ID of the application group.
+             */
+            public Builder groupId(Long groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * The name of the application group.
+             */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
                 return this;
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
-             * 
-             * *   GET
-             * *   POST
-             * *   HEAD
+             * The ID of the availability monitoring task.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1076,7 +1070,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which detection requests are sent. Unit: seconds.
+             * The ECS instances that are monitored.
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -1084,7 +1078,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the availability monitoring task.
+             * The name of the availability monitoring task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1092,7 +1086,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.
+             * The optional parameters of the availability monitoring task.
              */
             public Builder taskOption(TaskOption taskOption) {
                 this.taskOption = taskOption;
@@ -1100,7 +1094,11 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The optional parameters of the availability monitoring task.
+             * The range of instances that are monitored by the availability monitoring task. Valid values:
+             * <p>
+             * 
+             * *   GROUP: All ECS instances in the application group are monitored.
+             * *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.
              */
             public Builder taskScope(String taskScope) {
                 this.taskScope = taskScope;
@@ -1108,7 +1106,12 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the availability monitoring task.
+             * The type of the availability monitoring task. Valid values:
+             * <p>
+             * 
+             * *   PING
+             * *   TELNET
+             * *   HTTP
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

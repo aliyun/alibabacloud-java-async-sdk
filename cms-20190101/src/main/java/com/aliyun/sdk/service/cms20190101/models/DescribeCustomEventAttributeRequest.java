@@ -152,7 +152,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,11 +164,47 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * The ID of the custom event.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
+            return this;
+        }
+
+        /**
+         * The ID of the application group.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The name of the custom event.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -176,48 +215,6 @@ public class DescribeCustomEventAttributeRequest extends Request {
          * *   If you need to query the custom event whose content contains a and b, set the value to a and b.
          * *   If you need to query the custom event whose content contains a or b, set the value to a or b.
          */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * The ID of the custom event.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The beginning of the time range to query.
-         * <p>
-         * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-         */
         public Builder searchKeywords(String searchKeywords) {
             this.putQueryParameter("SearchKeywords", searchKeywords);
             this.searchKeywords = searchKeywords;
@@ -225,7 +222,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * The beginning of the time range to query.
          * <p>
          * 
          * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.

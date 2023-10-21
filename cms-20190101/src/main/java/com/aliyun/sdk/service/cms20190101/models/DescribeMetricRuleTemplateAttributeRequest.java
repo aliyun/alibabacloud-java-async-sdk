@@ -68,10 +68,10 @@ public class DescribeMetricRuleTemplateAttributeRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
+         * The name of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * For more information about how to query the names of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -80,7 +80,10 @@ public class DescribeMetricRuleTemplateAttributeRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The ID of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
+         * <p>
+         * 
+         * For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

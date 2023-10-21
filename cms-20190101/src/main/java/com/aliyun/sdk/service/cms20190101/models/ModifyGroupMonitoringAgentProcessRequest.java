@@ -117,10 +117,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.
-         * <p>
-         * 
-         * >  Set the value to Average.
+         * The ID of the process monitoring task.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -129,20 +126,12 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:
+         * The logical operator used between conditional expressions that are used to match instances. Valid values:
          * <p>
          * 
-         * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-         * *   GreaterThanThreshold: greater than the threshold
-         * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-         * *   LessThanThreshold: less than the threshold.
-         * *   NotEqualToThreshold: not equal to the threshold
-         * *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
-         * *   LessThanYesterday: less than the metric value at the same time yesterday
-         * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-         * *   LessThanLastWeek: less than the metric value at the same time last week
-         * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-         * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+         * *   all
+         * *   and
+         * *   or
          */
         public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
             this.putQueryParameter("MatchExpressFilterRelation", matchExpressFilterRelation);
@@ -238,7 +227,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.
+             * The ID of the resource for which alerts are triggered.
+             * <p>
+             * 
+             * For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
              */
             public Builder id(String id) {
                 this.id = id;
@@ -246,7 +238,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The alert threshold. Valid values of N: 1 to 200.
+             * The parameters of the alert callback. The parameters are in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -254,7 +246,12 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.
+             * The level of the alert. Valid values:
+             * <p>
+             * 
+             * *   INFO: information
+             * *   WARN: warning
+             * *   CRITICAL: critical
              */
             public Builder level(String level) {
                 this.level = level;
@@ -407,12 +404,20 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             private String webhook; 
 
             /**
-             * The level of the alert. Valid values:
+             * The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:
              * <p>
              * 
-             * *   INFO: information
-             * *   WARN: warning
-             * *   CRITICAL: critical
+             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+             * *   GreaterThanThreshold: greater than the threshold
+             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
+             * *   LessThanThreshold: less than the threshold.
+             * *   NotEqualToThreshold: not equal to the threshold
+             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
+             * *   LessThanYesterday: less than the metric value at the same time yesterday
+             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
+             * *   LessThanLastWeek: less than the metric value at the same time last week
+             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -420,39 +425,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The error message.
+             * The time period during which the alert rule is effective. Valid values of N: 1 to 200.
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
-                return this;
-            }
-
-            /**
-             * The time period during which the alert rule is effective. Valid values of N: 1 to 200.
-             */
-            public Builder escalationsLevel(String escalationsLevel) {
-                this.escalationsLevel = escalationsLevel;
-                return this;
-            }
-
-            /**
-             * The ID of the process monitoring task.
-             */
-            public Builder noEffectiveInterval(String noEffectiveInterval) {
-                this.noEffectiveInterval = noEffectiveInterval;
-                return this;
-            }
-
-            /**
-             * The logical operator used between conditional expressions that are used to match instances. Valid values:
-             * <p>
-             * 
-             * *   all
-             * *   and
-             * *   or
-             */
-            public Builder silenceTime(String silenceTime) {
-                this.silenceTime = silenceTime;
                 return this;
             }
 
@@ -463,6 +439,38 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
              * *   critical (default value): critical
              * *   warn: warning
              * *   info: information
+             */
+            public Builder escalationsLevel(String escalationsLevel) {
+                this.escalationsLevel = escalationsLevel;
+                return this;
+            }
+
+            /**
+             * The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.
+             */
+            public Builder noEffectiveInterval(String noEffectiveInterval) {
+                this.noEffectiveInterval = noEffectiveInterval;
+                return this;
+            }
+
+            /**
+             * The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.
+             * <p>
+             * 
+             * Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
+             * 
+             * >  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.
+             */
+            public Builder silenceTime(String silenceTime) {
+                this.silenceTime = silenceTime;
+                return this;
+            }
+
+            /**
+             * The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.
+             * <p>
+             * 
+             * >  Set the value to Average.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -478,12 +486,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.
-             * <p>
-             * 
-             * Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
-             * 
-             * >  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.
+             * The alert threshold. Valid values of N: 1 to 200.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -491,7 +494,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **ModifyGroupMonitoringAgentProcess**.
+             * The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.
+             * <p>
+             * 
+             * >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -499,10 +505,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The HTTP status code.
-             * <p>
-             * 
-             * >  The status code 200 indicates that the call was successful.
+             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

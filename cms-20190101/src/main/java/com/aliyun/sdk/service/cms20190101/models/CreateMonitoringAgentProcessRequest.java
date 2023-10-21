@@ -83,7 +83,7 @@ public class CreateMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The user who launches the process.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class CreateMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The name of the process.
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -101,10 +101,7 @@ public class CreateMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The user who launches the process.
          */
         public Builder processUser(String processUser) {
             this.putQueryParameter("ProcessUser", processUser);

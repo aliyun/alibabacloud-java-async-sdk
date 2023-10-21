@@ -55,7 +55,10 @@ public class DeleteHybridMonitorNamespaceRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The name of the namespace.
+         * <p>
+         * 
+         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

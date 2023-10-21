@@ -110,7 +110,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +121,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the monitoring data of a metric for a specified cloud service.
+         * The monitoring data.
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -126,7 +129,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +137,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The paging token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -142,7 +145,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.
          */
         public Builder period(String period) {
             this.period = period;
@@ -150,7 +153,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring data.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +161,11 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

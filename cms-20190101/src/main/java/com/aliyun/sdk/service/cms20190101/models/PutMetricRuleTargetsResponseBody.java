@@ -86,7 +86,10 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The operation that you want to perform. Set the value to **PutMetricRuleTargets**.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,17 +97,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the resource.
-         * <p>
-         * 
-         * For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
-         * 
-         * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-         * 
-         * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-         * *   {userId}: the ID of the Alibaba Cloud account.
-         * *   {regionId}: the region ID of the message queue or topic.
-         * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+         * The list of resources that failed to be created or modified.
          */
         public Builder failData(FailData failData) {
             this.failData = failData;
@@ -120,10 +113,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
-         * 
-         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,12 +121,11 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The level of the alert. Valid values:
+         * Indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * *   INFO: information
-         * *   WARN: warning
-         * *   CRITICAL: critical
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -200,7 +189,15 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Arn.
+             * The ARN of the resource.
+             * <p>
+             * 
+             * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
+             * 
+             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * *   {userId}: the ID of the Alibaba Cloud account.
+             * *   {regionId}: the region ID of the message queue or topic.
+             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -208,7 +205,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The ID of the resource for which alerts are triggered.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -216,7 +213,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the alert. Valid values:
+             * <p>
+             * 
+             * *   INFO: information
+             * *   WARN: warning
+             * *   CRITICAL: critical
              */
             public Builder level(String level) {
                 this.level = level;
@@ -298,7 +300,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private Targets targets; 
 
             /**
-             * The ID of the request.
+             * The information about the resource for which alerts are triggered.
              */
             public Builder targets(Targets targets) {
                 this.targets = targets;

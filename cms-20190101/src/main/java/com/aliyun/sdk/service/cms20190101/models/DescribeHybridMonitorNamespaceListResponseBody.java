@@ -122,7 +122,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The account that is used to create the namespace.
+         * The returned message.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The metrics.
+         * The details of the namespaces.
          */
         public Builder describeHybridMonitorNamespace(java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace) {
             this.describeHybridMonitorNamespace = describeHybridMonitorNamespace;
@@ -138,7 +138,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +146,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that was generated when the namespace was last modified.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,10 +162,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * A minimum of 1 entry can be returned on each page. Default value: 10.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +170,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The namespace for the Alibaba Cloud service.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -181,10 +182,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1. Default value: 1.
+         * The total number of returned entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -236,7 +234,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private Long period; 
 
             /**
-             * List.
+             * The metrics.
              */
             public Builder list(java.util.List < String > list) {
                 this.list = list;
@@ -244,7 +242,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The interval at which metrics are collected.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -297,7 +298,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String namespace; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The list of metrics for the Alibaba Cloud service.
              */
             public Builder metricList(java.util.List < MetricList> metricList) {
                 this.metricList = metricList;
@@ -305,10 +306,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which metrics are collected.
-             * <p>
-             * 
-             * Unit: seconds.
+             * The namespace for the Alibaba Cloud service.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -381,7 +379,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The account that is used to create the namespace.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -430,7 +428,15 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The page number of the returned page.
+             * The data retention period. Valid values:
+             * <p>
+             * 
+             * *   cms.s1.large: Data is stored for 15 days.
+             * *   cms.s1.xlarge: Data is stored for 32 days.
+             * *   cms.s1.2xlarge: Data is stored for 63 days.
+             * *   cms.s1.3xlarge: Data is stored for 93 days.
+             * *   cms.s1.6xlarge: Data is stored for 185 days.
+             * *   cms.s1.12xlarge: Data is stored for 376 days.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -567,11 +573,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private Long notAliyunTaskNumber; 
 
             /**
-             * Indicates whether the namespace is deleted. Valid values:
-             * <p>
-             * 
-             * *   0: The namespace is not deleted.
-             * *   1: The namespace is deleted.
+             * The configuration details of metric import tasks for Alibaba Cloud services.
              */
             public Builder aliyunProductMetricList(java.util.List < AliyunProductMetricList> aliyunProductMetricList) {
                 this.aliyunProductMetricList = aliyunProductMetricList;
@@ -579,7 +581,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword that is used to search for namespaces.
+             * The timestamp that was generated when the namespace was created.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -587,7 +592,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of metric import tasks for third-party services.
+             * The description of the namespace.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -595,10 +600,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
-             * <p>
-             * 
-             * The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
+             * The details of the data retention period.
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -606,7 +608,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The list of metrics for the Alibaba Cloud service.
+             * The ID of the namespace.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -614,7 +616,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data retention period.
+             * Indicates whether the namespace is deleted. Valid values:
+             * <p>
+             * 
+             * *   0: The namespace is not deleted.
+             * *   1: The namespace is deleted.
              */
             public Builder isDelete(Integer isDelete) {
                 this.isDelete = isDelete;
@@ -622,7 +628,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * The timestamp that was generated when the namespace was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -630,7 +636,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration details of metric import tasks for Alibaba Cloud services.
+             * The name of the namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -638,7 +644,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of metric import tasks for third-party services.
              */
             public Builder notAliyunTaskNumber(Long notAliyunTaskNumber) {
                 this.notAliyunTaskNumber = notAliyunTaskNumber;

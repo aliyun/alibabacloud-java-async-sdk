@@ -98,7 +98,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The prefix in the name of the event-triggered alert rule.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,10 +109,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1. Default value: 1.
+         * The event-triggered alert rules.
          */
         public Builder eventRules(EventRules eventRules) {
             this.eventRules = eventRules;
@@ -117,7 +117,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The event-triggered alert rules.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -125,7 +125,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the event-triggered alert rule.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +133,11 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +145,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The list of event names.
+         * The total number of returned entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -275,7 +279,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String relation; 
 
             /**
-             * Keywords.
+             * The keywords that are used to match events.
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -283,7 +287,11 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * The relationship between multiple keywords in a condition. Valid values:
+             * <p>
+             * 
+             * *   OR: The relationship between keywords is OR.
+             * *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -478,26 +486,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String SQLFilter; 
 
             /**
-             * The ID of the request.
+             * The custom filter condition. If an event contains a specified keyword, the event triggers an alert.
              */
             public Builder customFilters(String customFilters) {
                 this.customFilters = customFilters;
-                return this;
-            }
-
-            /**
-             * The keywords that are used to match events.
-             */
-            public Builder eventTypeList(EventTypeList eventTypeList) {
-                this.eventTypeList = eventTypeList;
-                return this;
-            }
-
-            /**
-             * Queries event-triggered alert rules.
-             */
-            public Builder keywordFilter(KeywordFilter keywordFilter) {
-                this.keywordFilter = keywordFilter;
                 return this;
             }
 
@@ -507,13 +499,34 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
              * 
              * `*` indicates all types of alert rules.
              */
+            public Builder eventTypeList(EventTypeList eventTypeList) {
+                this.eventTypeList = eventTypeList;
+                return this;
+            }
+
+            /**
+             * The filter keyword.
+             */
+            public Builder keywordFilter(KeywordFilter keywordFilter) {
+                this.keywordFilter = keywordFilter;
+                return this;
+            }
+
+            /**
+             * The level of the event. Valid values:
+             * <p>
+             * 
+             * *   CRITICAL: critical
+             * *   WARN: warning
+             * *   INFO: information
+             */
             public Builder levelList(LevelList levelList) {
                 this.levelList = levelList;
                 return this;
             }
 
             /**
-             * Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
+             * The list of event names.
              */
             public Builder nameList(NameList nameList) {
                 this.nameList = nameList;
@@ -521,7 +534,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The abbreviation of the service name.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -529,7 +542,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLFilter.
+             * Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
              */
             public Builder SQLFilter(String SQLFilter) {
                 this.SQLFilter = SQLFilter;
@@ -683,7 +696,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The filter keyword.
+             * The description of the event-triggered alert rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -691,7 +704,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The mode of the event-triggered alert rule.
              */
             public Builder eventPattern(EventRuleEventPattern eventPattern) {
                 this.eventPattern = eventPattern;
@@ -699,7 +712,11 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the event-triggered alert rule.
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * - SYSTEM: system event
+             * - CUSTOM: custom event
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -707,10 +724,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
-             * <p>
-             * 
-             * A minimum of one entry can be returned on each page. Default value: 10.
+             * The ID of the application group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -718,11 +732,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The relationship between multiple keywords in a condition. Valid values:
-             * <p>
-             * 
-             * *   OR: The relationship between keywords is OR.
-             * *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
+             * The name of the event-triggered alert rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -730,7 +740,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceTime.
+             * The mute period during which new alerts are not sent even if the trigger conditions are met.
              */
             public Builder silenceTime(Long silenceTime) {
                 this.silenceTime = silenceTime;
@@ -738,12 +748,11 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the event. Valid values:
+             * The status of the event-triggered alert rule. Valid values:
              * <p>
              * 
-             * *   CRITICAL: critical
-             * *   WARN: warning
-             * *   INFO: information
+             * *   ENABLED: enabled
+             * *   DISABLED: disabled
              */
             public Builder state(String state) {
                 this.state = state;

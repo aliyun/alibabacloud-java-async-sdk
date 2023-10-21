@@ -86,7 +86,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The information about the site monitoring task.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,12 +105,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the site monitoring task.
-         * <p>
-         * 
-         * Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
-         * 
-         * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +113,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +121,11 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the site monitoring task.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +177,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * TaskId.
+             * The ID of the site monitoring task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -183,7 +185,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The name of the site monitoring task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

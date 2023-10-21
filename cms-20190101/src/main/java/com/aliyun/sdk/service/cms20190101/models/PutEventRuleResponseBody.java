@@ -86,7 +86,10 @@ public class PutEventRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class PutEventRuleResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The number of event-triggered alert rules that were created or modified.
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,13 +105,7 @@ public class PutEventRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The level of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:
-         * <p>
-         * 
-         * *   CRITICAL: critical
-         * *   WARN: warning
-         * *   INFO: information
-         * *   \*: all levels
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +113,7 @@ public class PutEventRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +121,11 @@ public class PutEventRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -68,10 +68,7 @@ public class DescribeMetricRuleCountRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -80,7 +77,7 @@ public class DescribeMetricRuleCountRequest extends Request {
         }
 
         /**
-         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

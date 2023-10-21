@@ -86,7 +86,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The information about the site monitoring tasks that were deleted.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the site monitoring tasks that were deleted.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +105,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message such as `TaskId not found` is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Deletes one or more site monitoring tasks.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. The value true indicates success. The value false indicates failure.
          */
         public Builder success(String success) {
             this.success = success;
@@ -158,7 +161,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * count.
+             * The number of the site monitoring tasks that were deleted.
              */
             public Builder count(Integer count) {
                 this.count = count;

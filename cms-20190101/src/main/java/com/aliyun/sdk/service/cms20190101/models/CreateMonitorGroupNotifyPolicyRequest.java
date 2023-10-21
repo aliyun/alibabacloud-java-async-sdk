@@ -100,7 +100,10 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The timestamp that indicates the end time of the validity period for the policy.
+         * <p>
+         * 
+         * This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -109,10 +112,7 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The HTTP status code 200 indicates that the call succeeds.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -121,10 +121,7 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates the end time of the validity period for the policy.
-         * <p>
-         * 
-         * This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The type of the policy. Valid value: PauseNotify.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -133,7 +130,10 @@ public class CreateMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The timestamp that indicates the start time of the validity period for the policy.
+         * <p>
+         * 
+         * This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

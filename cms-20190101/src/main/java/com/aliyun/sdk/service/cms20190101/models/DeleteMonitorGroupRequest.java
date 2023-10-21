@@ -55,10 +55,7 @@ public class DeleteMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

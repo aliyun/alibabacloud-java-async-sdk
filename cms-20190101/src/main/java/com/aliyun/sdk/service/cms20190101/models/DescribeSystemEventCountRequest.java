@@ -166,11 +166,32 @@ public class DescribeSystemEventCountRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The timestamp that specifies the end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The type of the system event.
+         * <p>
+         * 
+         * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `EventType`. The value of the EventType parameter indicates the types of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * The ID of the application group.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 
@@ -184,39 +205,9 @@ public class DescribeSystemEventCountRequest extends Request {
          * 
          * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Level`. The value of the Level parameter indicates the levels of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
          */
-        public Builder eventType(String eventType) {
-            this.putQueryParameter("EventType", eventType);
-            this.eventType = eventType;
-            return this;
-        }
-
-        /**
-         * The timestamp that specifies the start of the time range to query. Unit: milliseconds.
-         */
-        public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
-            this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * The ID of the application group.
-         */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
             this.level = level;
-            return this;
-        }
-
-        /**
-         * The status of the system event.
-         * <p>
-         * 
-         * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Status`. The value of the Status parameter indicates the status of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
             return this;
         }
 
@@ -226,30 +217,21 @@ public class DescribeSystemEventCountRequest extends Request {
          * 
          * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Name`. The value of the Name parameter indicates the names of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
          */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The name of the cloud service in which the system event occurred.
+         * <p>
+         * 
+         * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Product`. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+         */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
             this.product = product;
-            return this;
-        }
-
-        /**
-         * The timestamp that specifies the end of the time range to query. Unit: milliseconds.
-         */
-        public Builder searchKeywords(String searchKeywords) {
-            this.putQueryParameter("SearchKeywords", searchKeywords);
-            this.searchKeywords = searchKeywords;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
-         */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
             return this;
         }
 
@@ -259,6 +241,27 @@ public class DescribeSystemEventCountRequest extends Request {
          * 
          * *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
          * *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
+         */
+        public Builder searchKeywords(String searchKeywords) {
+            this.putQueryParameter("SearchKeywords", searchKeywords);
+            this.searchKeywords = searchKeywords;
+            return this;
+        }
+
+        /**
+         * The timestamp that specifies the start of the time range to query. Unit: milliseconds.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * The status of the system event.
+         * <p>
+         * 
+         * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Status`. The value of the Status parameter indicates the status of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

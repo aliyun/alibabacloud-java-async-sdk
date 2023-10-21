@@ -86,7 +86,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,11 +97,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
-         * <p>
-         * 
-         * *   and
-         * *   or
+         * The details of the log monitoring metric.
          */
         public Builder logMonitor(LogMonitor logMonitor) {
             this.logMonitor = logMonitor;
@@ -106,10 +105,18 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -119,14 +126,6 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The details of the log monitoring metric.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +213,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             private String min; 
 
             /**
-             * The name of the field in logs.
+             * The alias of the aggregate function.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -222,29 +221,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.
-             * <p>
-             * 
-             * If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
+             * The name of the field in logs.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
-                return this;
-            }
-
-            /**
-             * The alias of the aggregate function.
-             */
-            public Builder function(String function) {
-                this.function = function;
-                return this;
-            }
-
-            /**
-             * The minimum value.
-             */
-            public Builder max(String max) {
-                this.max = max;
                 return this;
             }
 
@@ -260,6 +240,22 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
              * *   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.
              * *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
              * *   distinct: counts the number of logs where the specified field appears within the aggregation period.
+             */
+            public Builder function(String function) {
+                this.function = function;
+                return this;
+            }
+
+            /**
+             * The maximum value.
+             */
+            public Builder max(String max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * The minimum value.
              */
             public Builder min(String min) {
                 this.min = min;
@@ -324,18 +320,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The field value to be matched in the filter condition.
+             * The name of the log field used for matching in the filter condition.
              */
             public Builder key(String key) {
                 this.key = key;
-                return this;
-            }
-
-            /**
-             * The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.
-             */
-            public Builder operator(String operator) {
-                this.operator = operator;
                 return this;
             }
 
@@ -349,6 +337,14 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
              * *   `<`: less than
              * *   `>=`: greater than or equal to
              * *   `<=`: less than or equal to
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * The field value to be matched in the filter condition.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -533,77 +529,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             private String valueFilterRelation; 
 
             /**
-             * The maximum value.
+             * The aggregate functions.
              */
             public Builder aggregates(java.util.List < Aggregates> aggregates) {
                 this.aggregates = aggregates;
-                return this;
-            }
-
-            /**
-             * The name of the Log Service project.
-             */
-            public Builder gmtCreate(Long gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * The ID returned by Log Service.
-             */
-            public Builder groupId(Long groupId) {
-                this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * Groupbys.
-             */
-            public Builder groupbys(java.util.List < String > groupbys) {
-                this.groupbys = groupbys;
-                return this;
-            }
-
-            /**
-             * The extended field. The extended field allows you to perform basic operations on the aggregation results.
-             * <p>
-             * 
-             * Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
-             */
-            public Builder logId(Long logId) {
-                this.logId = logId;
-                return this;
-            }
-
-            /**
-             * The ID of the region where the Log Service Logstore resides.
-             */
-            public Builder metricExpress(String metricExpress) {
-                this.metricExpress = metricExpress;
-                return this;
-            }
-
-            /**
-             * The ID of the application group.
-             */
-            public Builder metricName(String metricName) {
-                this.metricName = metricName;
-                return this;
-            }
-
-            /**
-             * The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
-             */
-            public Builder slsLogstore(String slsLogstore) {
-                this.slsLogstore = slsLogstore;
-                return this;
-            }
-
-            /**
-             * The aggregate functions.
-             */
-            public Builder slsProject(String slsProject) {
-                this.slsProject = slsProject;
                 return this;
             }
 
@@ -613,13 +542,80 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
              * 
              * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
+            public Builder gmtCreate(Long gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * The ID of the application group.
+             */
+            public Builder groupId(Long groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+             */
+            public Builder groupbys(java.util.List < String > groupbys) {
+                this.groupbys = groupbys;
+                return this;
+            }
+
+            /**
+             * The ID returned by Log Service.
+             */
+            public Builder logId(Long logId) {
+                this.logId = logId;
+                return this;
+            }
+
+            /**
+             * The extended field. The extended field allows you to perform basic operations on the aggregation results.
+             * <p>
+             * 
+             * Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
+             */
+            public Builder metricExpress(String metricExpress) {
+                this.metricExpress = metricExpress;
+                return this;
+            }
+
+            /**
+             * The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * The name of the Log Service Logstore.
+             */
+            public Builder slsLogstore(String slsLogstore) {
+                this.slsLogstore = slsLogstore;
+                return this;
+            }
+
+            /**
+             * The name of the Log Service project.
+             */
+            public Builder slsProject(String slsProject) {
+                this.slsProject = slsProject;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the Log Service Logstore resides.
+             */
             public Builder slsRegionId(String slsRegionId) {
                 this.slsRegionId = slsRegionId;
                 return this;
             }
 
             /**
-             * The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+             * The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.
              */
             public Builder tumblingwindows(java.util.List < String > tumblingwindows) {
                 this.tumblingwindows = tumblingwindows;
@@ -627,7 +623,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log field used for matching in the filter condition.
+             * The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.
+             * <p>
+             * 
+             * If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
              */
             public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
                 this.valueFilter = valueFilter;
@@ -635,7 +634,11 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service Logstore.
+             * The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
+             * <p>
+             * 
+             * *   and
+             * *   or
              */
             public Builder valueFilterRelation(String valueFilterRelation) {
                 this.valueFilterRelation = valueFilterRelation;

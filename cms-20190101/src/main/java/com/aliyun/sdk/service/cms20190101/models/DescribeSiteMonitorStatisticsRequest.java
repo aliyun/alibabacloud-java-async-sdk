@@ -98,7 +98,12 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         } 
 
         /**
-         * MetricName.
+         * The name of the metric. Valid values:
+         * <p>
+         * 
+         * *   Availability
+         * *   ErrorRate
+         * *   ResponseTime
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -107,7 +112,10 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp that specifies the beginning of the time range to query.
+         * <p>
+         * 
+         * Unit: milliseconds. The default value is 1 hour ahead of the current time.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -116,7 +124,10 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the site monitoring task.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of a site monitoring task, see [DescribeSiteMonitorList](~~115052~~).
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -125,7 +136,10 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * TimeRange.
+         * The statistical period.
+         * <p>
+         * 
+         * Unit: minutes. Default value: 1440 (1 day). Maximum value: 43200 (30 days).
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("TimeRange", timeRange);

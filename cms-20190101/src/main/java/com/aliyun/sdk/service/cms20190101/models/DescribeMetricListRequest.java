@@ -168,10 +168,12 @@ public class DescribeMetricListRequest extends Request {
         } 
 
         /**
-         * The expression that is used to compute the query results in real time.
+         * The dimensions that specify the resources whose monitoring data you want to query.
          * <p>
          * 
-         * >  Only the groupby expression is supported. This expression is similar to the GROUP BY statement that is used in databases.
+         * Set the value to a collection of key-value pairs. A typical key-value pair is `instanceId:i-2ze2d6j5uhg20x47****`.
+         * 
+         * >  You can query a maximum of 50 instances in a single request.
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -180,12 +182,11 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * The dimensions that specify the resources whose monitoring data you want to query.
+         * The end of the time range to query. The following formats are supported:
          * <p>
          * 
-         * Set the value to a collection of key-value pairs. A typical key-value pair is `instanceId:i-2ze2d6j5uhg20x47****`.
-         * 
-         * >  You can query a maximum of 50 instances in a single request.
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -194,11 +195,78 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.
+         * The expression that is used to compute the query results in real time.
+         * <p>
+         * 
+         * >  Only the groupby expression is supported. This expression is similar to the GROUP BY statement that is used in databases.
          */
         public Builder express(String express) {
             this.putQueryParameter("Express", express);
             this.express = express;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * >  The maximum value of the Length parameter in a request is 1440.
+         */
+        public Builder length(String length) {
+            this.putQueryParameter("Length", length);
+            this.length = length;
+            return this;
+        }
+
+        /**
+         * The name of the metric.
+         * <p>
+         * 
+         * For more information about metric names, see [Appendix 1: Metrics](~~163515~~).
+         */
+        public Builder metricName(String metricName) {
+            this.putQueryParameter("MetricName", metricName);
+            this.metricName = metricName;
+            return this;
+        }
+
+        /**
+         * The namespace of the cloud service. Format: acs_service name.
+         * <p>
+         * 
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * The paging token.
+         * <p>
+         * 
+         * >  If this parameter is not specified, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * The interval at which the monitoring data is queried.
+         * <p>
+         * 
+         * Valid values: 60, 300, and 900.
+         * 
+         * Unit: seconds.
+         * 
+         * >  Configure this parameter based on your business scenario.
+         */
+        public Builder period(String period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
             return this;
         }
 
@@ -210,61 +278,6 @@ public class DescribeMetricListRequest extends Request {
          * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
          * 
          * >  The specified period includes the end time and excludes the start time. The start time must be earlier than the end time.
-         */
-        public Builder length(String length) {
-            this.putQueryParameter("Length", length);
-            this.length = length;
-            return this;
-        }
-
-        /**
-         * The operation that you want to perform. Set the value to **DescribeMetricList**.
-         */
-        public Builder metricName(String metricName) {
-            this.putQueryParameter("MetricName", metricName);
-            this.metricName = metricName;
-            return this;
-        }
-
-        /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
-         */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
-            return this;
-        }
-
-        /**
-         * The namespace of the cloud service. Format: acs_service name.
-         * <p>
-         * 
-         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The end of the time range to query. The following formats are supported:
-         * <p>
-         * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
-         */
-        public Builder period(String period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * The error message.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

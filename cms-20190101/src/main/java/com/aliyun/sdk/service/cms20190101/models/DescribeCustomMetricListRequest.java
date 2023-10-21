@@ -124,10 +124,7 @@ public class DescribeCustomMetricListRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Pages start from page 1. Default value: 10.
+         * The dimensions that specify the resources for which you want to query custom metrics.
          */
         public Builder dimension(String dimension) {
             this.putQueryParameter("Dimension", dimension);
@@ -136,7 +133,10 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported custom metrics.
+         * The ID of the application group.
+         * <p>
+         * 
+         * For more information, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -145,14 +145,20 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The value 200 indicates that the call is successful.
+         * The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported custom metrics.
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
             this.md5 = md5;
+            return this;
+        }
+
+        /**
+         * The name of the custom metric.
+         */
+        public Builder metricName(String metricName) {
+            this.putQueryParameter("MetricName", metricName);
+            this.metricName = metricName;
             return this;
         }
 
@@ -162,15 +168,6 @@ public class DescribeCustomMetricListRequest extends Request {
          * 
          * Pages start from page 1. Default value: 1.
          */
-        public Builder metricName(String metricName) {
-            this.putQueryParameter("MetricName", metricName);
-            this.metricName = metricName;
-            return this;
-        }
-
-        /**
-         * The returned message.
-         */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
@@ -178,7 +175,10 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

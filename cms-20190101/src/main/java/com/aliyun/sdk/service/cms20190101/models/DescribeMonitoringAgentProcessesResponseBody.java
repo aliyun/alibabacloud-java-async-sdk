@@ -86,11 +86,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * The HTTP status code.
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * >  The value 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -98,7 +97,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the processes.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -106,7 +105,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the process.
+         * The information about the processes.
          */
         public Builder nodeProcesses(NodeProcesses nodeProcesses) {
             this.nodeProcesses = nodeProcesses;
@@ -122,7 +121,11 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the process.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +225,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             private String processUser; 
 
             /**
-             * The ID of the instance.
+             * The command used to obtain the number of processes. Valid value: `number`.
+             * <p>
+             * 
+             * >  The `number` command obtains the number of processes that match the condition.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -230,7 +236,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The user who launched the process.
+             * The ID of the application group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -238,7 +244,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -246,10 +252,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The command used to obtain the number of processes. Valid value: `number`.
-             * <p>
-             * 
-             * >  The `number` command obtains the number of processes that match the condition.
+             * The ID of the process.
              */
             public Builder processId(Long processId) {
                 this.processId = processId;
@@ -257,7 +260,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * The name of the process.
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -265,10 +268,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * >  Before you call this operation, call the CreateMonitoringAgentProcess operation to create processes. For more information, see [CreateMonitoringAgentProcess](~~114951~~~).
-             * <p>
-             * 
-             * This topic provides an example of how to query the processes of the `i-hp3hl3cx1pbahzy8****` instance. The response indicates the details of the `NGINX` and `HTTP` processes.
+             * The user who launched the process.
              */
             public Builder processUser(String processUser) {
                 this.processUser = processUser;

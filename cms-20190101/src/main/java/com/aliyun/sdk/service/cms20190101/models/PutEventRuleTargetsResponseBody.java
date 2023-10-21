@@ -122,7 +122,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the API operation.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the queue. Valid values of N: 1 to 5.
+         * This parameter is returned if the specified alert contact groups in the request failed to be created or modified.
          */
         public Builder failedContactParameters(FailedContactParameters failedContactParameters) {
             this.failedContactParameters = failedContactParameters;
@@ -138,7 +141,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * FailedFcParameters.
+         * This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.
          */
         public Builder failedFcParameters(FailedFcParameters failedFcParameters) {
             this.failedFcParameters = failedFcParameters;
@@ -146,7 +149,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * FailedMnsParameters.
+         * This parameter is returned if the specified queues in the request failed to be created or modified in MNS.
          */
         public Builder failedMnsParameters(FailedMnsParameters failedMnsParameters) {
             this.failedMnsParameters = failedMnsParameters;
@@ -154,7 +157,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Function Compute service. Valid values of N: 1 to 5.
+         * The number of resources that failed to be created or modified.
          */
         public Builder failedParameterCount(String failedParameterCount) {
             this.failedParameterCount = failedParameterCount;
@@ -162,7 +165,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,10 +173,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The alert notification methods. Valid values:
-         * <p>
-         * 
-         * 4: Alert notifications are sent by using DingTalk chatbots and emails.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +181,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the role.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -245,7 +245,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The ID of the request.
+             * The name of the alert contact group.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -253,7 +253,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -261,7 +261,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The alert level and the corresponding notification methods. Valid values:
+             * <p>
+             * 
+             * 4: Alert notifications are sent by using DingTalk chatbots and emails.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -379,7 +382,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * FunctionName.
+             * The name of the function.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -387,7 +390,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -395,7 +398,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -403,7 +406,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the Function Compute service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -509,7 +512,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -517,7 +520,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The name of the MNS queue.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -525,7 +528,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;

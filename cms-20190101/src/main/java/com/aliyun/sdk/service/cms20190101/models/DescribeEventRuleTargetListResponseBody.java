@@ -134,10 +134,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         private WebhookParameters webhookParameters; 
 
         /**
-         * The alert notification methods. Valid values:
+         * The HTTP status code.
          * <p>
          * 
-         * 4: Alert notifications are sent by using DingTalk chatbots and emails.
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -145,7 +145,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * For more information about common request parameters, see [Common parameters](~~199331~~).
+         * The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.
          */
         public Builder contactParameters(ContactParameters contactParameters) {
             this.contactParameters = contactParameters;
@@ -153,7 +153,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * FcParameters.
+         * The information about the recipients in Function Compute.
          */
         public Builder fcParameters(FcParameters fcParameters) {
             this.fcParameters = fcParameters;
@@ -161,7 +161,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +169,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * MnsParameters.
+         * The information about the recipients in Message Service (MNS).
          */
         public Builder mnsParameters(MnsParameters mnsParameters) {
             this.mnsParameters = mnsParameters;
@@ -177,7 +177,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * OpenApiParameters.
+         * The information about the recipients in OpenAPI Explorer.
          */
         public Builder openApiParameters(OpenApiParameters openApiParameters) {
             this.openApiParameters = openApiParameters;
@@ -193,7 +193,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * SlsParameters.
+         * The information about the recipients in Log Service.
          */
         public Builder slsParameters(SlsParameters slsParameters) {
             this.slsParameters = slsParameters;
@@ -201,7 +201,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
 
         /**
-         * WebhookParameters.
+         * The information about the recipients if alert notifications are sent by sending a request to a callback URL.
          */
         public Builder webhookParameters(WebhookParameters webhookParameters) {
             this.webhookParameters = webhookParameters;
@@ -265,7 +265,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Queries the details of an event-triggered alert rule.
+             * The name of the alert group.
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -273,7 +273,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -281,7 +281,10 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The alert notification methods. Valid values:
+             * <p>
+             * 
+             * 4: Alert notifications are sent by using DingTalk chatbots and emails.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -411,7 +414,16 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the function. 
+             * <p>
+             * 
+             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
+             * 
+             * - Service: the code of an Alibaba Cloud service
+             * - Region: the region ID
+             * - Account: the ID of an Alibaba Cloud account
+             * - ResourceType: the resource type
+             * - ResourceId: the resource ID
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -419,7 +431,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the function.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -427,7 +439,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -435,7 +447,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where Function Compute is deployed.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -443,7 +455,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the Function Compute service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -573,7 +585,16 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * Arn.
+             * The ARN of the MNS queue. 
+             * <p>
+             * 
+             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
+             * 
+             * - Service: the code of an Alibaba Cloud service
+             * - Region: the region ID
+             * - Account: the ID of an Alibaba Cloud account
+             * - ResourceType: the resource type
+             * - ResourceId: the resource ID
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -581,7 +602,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -589,7 +610,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The name of the MNS queue.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -597,7 +618,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where MNS is deployed.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -605,7 +626,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The MNS topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -759,7 +780,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Action.
+             * The name of the API operation.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -767,7 +788,23 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Arn.
+             * The ARN of the API operation. 
+             * <p>
+             * 
+             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
+             * 
+             * - Service: the code of an Alibaba Cloud service
+             * - Region: the region ID
+             * - Account: the ID of an Alibaba Cloud account
+             * - ResourceType: the resource type
+             * - ResourceId: the resource ID The ARN of the Log Service Logstore. 
+             * 
+             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
+             * - Service: the code of an Alibaba Cloud service
+             * - Region: the region ID
+             * - Account: the ID of an Alibaba Cloud account
+             * - ResourceType: the resource type
+             * - ResourceId: the resource ID
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -775,7 +812,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -783,7 +820,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The ID of the cloud service to which the API operation belongs.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -791,7 +828,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where the resource resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -799,7 +836,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The name of the role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -807,7 +844,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the API.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -848,7 +885,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private java.util.List < OpenApiParametersOpenApiParameters> openApiParameters; 
 
             /**
-             * OpenApiParameters.
+             * The information about the recipients in OpenAPI Explorer.
              */
             public Builder openApiParameters(java.util.List < OpenApiParametersOpenApiParameters> openApiParameters) {
                 this.openApiParameters = openApiParameters;
@@ -937,7 +974,16 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Arn.
+             * The ARN of the Log Service Logstore. 
+             * <p>
+             * 
+             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: 
+             * 
+             * - Service: the code of an Alibaba Cloud service
+             * - Region: the region ID
+             * - Account: the ID of an Alibaba Cloud account
+             * - ResourceType: the resource type
+             * - ResourceId: the resource ID
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -945,7 +991,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -953,7 +999,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * LogStore.
+             * The name of the Logstore.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -961,7 +1007,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The name of the project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -969,7 +1015,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region where the Log Service project resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1087,7 +1133,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Id.
+             * The ID of the recipient.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1095,7 +1141,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The HTTP request method. Valid values: GET and POST.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1103,7 +1149,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol type.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1111,7 +1157,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The callback URL.
              */
             public Builder url(String url) {
                 this.url = url;

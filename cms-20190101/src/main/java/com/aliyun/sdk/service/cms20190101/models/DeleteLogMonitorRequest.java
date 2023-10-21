@@ -55,10 +55,7 @@ public class DeleteLogMonitorRequest extends Request {
         } 
 
         /**
-         * The HTTP status code.
-         * <p>
-         * 
-         * >  The status code 200 indicates that the call was successful.
+         * The ID returned by Log Service.
          */
         public Builder logId(Long logId) {
             this.putQueryParameter("LogId", logId);

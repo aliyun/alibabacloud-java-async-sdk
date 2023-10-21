@@ -55,7 +55,7 @@ public class DeleteContactRequest extends Request {
         } 
 
         /**
-         * test-01
+         * The name of the alert contact.
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);

@@ -55,7 +55,7 @@ public class DescribeMonitoringAgentProcessesRequest extends Request {
         } 
 
         /**
-         * The returned message.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

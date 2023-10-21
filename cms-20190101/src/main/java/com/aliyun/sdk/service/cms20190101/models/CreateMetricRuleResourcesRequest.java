@@ -83,10 +83,11 @@ public class CreateMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * The resources to be associated with the alert rule. The value is a JSON array.
+         * Specifies whether to overwrite the existing data. Valid values:
          * <p>
          * 
-         * >  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.
+         * *   true: The resources submitted this time will overwrite the previous associated resources.
+         * *   false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.
          */
         public Builder overwrite(String overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -95,10 +96,10 @@ public class CreateMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The resources to be associated with the alert rule. The value is a JSON array.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -107,11 +108,7 @@ public class CreateMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite the existing data. Valid values:
-         * <p>
-         * 
-         * *   true: The resources submitted this time will overwrite the previous associated resources.
-         * *   false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.
+         * The ID of the alert rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

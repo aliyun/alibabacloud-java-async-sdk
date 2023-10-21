@@ -110,7 +110,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The returned message.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +121,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the alert group.
+         * The information about alert groups that were queried.
          */
         public Builder contactGroupList(ContactGroupList contactGroupList) {
             this.contactGroupList = contactGroupList;
@@ -126,7 +129,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about alert groups that were queried.
+         * The names of alert groups.
          */
         public Builder contactGroups(ContactGroups contactGroups) {
             this.contactGroups = contactGroups;
@@ -134,7 +137,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,18 +145,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned entries.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The names of alert groups.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -163,6 +158,14 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
          * 
          * *   true: The call was successful.
          * *   false: The call failed.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * The total number of the returned entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -315,10 +318,38 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * Queries alert groups.
+             * The alert contacts in the alert group.
              */
             public Builder contacts(Contacts contacts) {
                 this.contacts = contacts;
+                return this;
+            }
+
+            /**
+             * The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The description of the alert group.
+             */
+            public Builder describe(String describe) {
+                this.describe = describe;
+                return this;
+            }
+
+            /**
+             * Indicates whether the alert group subscribes to weekly reports. Valid values:
+             * <p>
+             * 
+             * *   true: The alert group subscribes to weekly reports.
+             * *   false: The alert group does not subscribe to weekly reports.
+             */
+            public Builder enableSubscribed(Boolean enableSubscribed) {
+                this.enableSubscribed = enableSubscribed;
                 return this;
             }
 
@@ -331,41 +362,13 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
              * 
              * >  The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.
              */
-            public Builder createTime(Long createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             */
-            public Builder describe(String describe) {
-                this.describe = describe;
-                return this;
-            }
-
-            /**
-             * The alert contacts in the alert group.
-             */
-            public Builder enableSubscribed(Boolean enableSubscribed) {
-                this.enableSubscribed = enableSubscribed;
-                return this;
-            }
-
-            /**
-             * The name of the alert group.
-             */
             public Builder enabledWeeklyReport(Boolean enabledWeeklyReport) {
                 this.enabledWeeklyReport = enabledWeeklyReport;
                 return this;
             }
 
             /**
-             * Indicates whether the alert group subscribes to weekly reports. Valid values:
-             * <p>
-             * 
-             * *   true: The alert group subscribes to weekly reports.
-             * *   false: The alert group does not subscribe to weekly reports.
+             * The name of the alert group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -373,7 +376,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

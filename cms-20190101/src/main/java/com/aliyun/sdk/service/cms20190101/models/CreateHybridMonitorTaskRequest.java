@@ -220,7 +220,15 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The interval at which metrics are collected. Valid values:
+         * <p>
+         * 
+         * *   15
+         * *   60 (default value)
+         * 
+         * Unit: seconds.
+         * 
+         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
          */
         public Builder collectInterval(String collectInterval) {
             this.putQueryParameter("CollectInterval", collectInterval);
@@ -242,7 +250,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The tag value of the metric.
+         * The description of the metric import task.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -251,7 +259,12 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The conditions that are used to filter logs imported from Log Service.
+         * The ID of the application group.
+         * <p>
+         * 
+         * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * 
+         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -260,7 +273,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The extended field that specifies the result of basic operations that are performed on aggregation results.
+         * The name of the namespace.
+         * <p>
+         * 
+         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -269,7 +285,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The tag key of the metric.
+         * The configurations of the logs that are imported from Log Service.
+         * <p>
+         * 
+         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
          */
         public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
             this.putQueryParameter("SLSProcessConfig", SLSProcessConfig);
@@ -278,17 +297,12 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The method that is used to filter logs imported from Log Service. Valid values:
+         * The ID of the member account.
          * <p>
          * 
-         * *   `contain`: contains
-         * *   `notContain`: does not contain
-         * *   `>`: greater than
-         * *   `<`: less than
-         * *   `=`: equal to
-         * *   `! =`: not equal to
-         * *   `>=`: greater than or equal to
-         * *   `<=`: less than or equal to
+         * If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
+         * 
+         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);
@@ -297,7 +311,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The ID of the metric import task.
+         * The IDs of the member accounts. Separate multiple member account IDs with commas (,).
+         * <p>
+         * 
+         * >  This parameter is required only if you call this operation by using the management account.
          */
         public Builder targetUserIdList(String targetUserIdList) {
             this.putQueryParameter("TargetUserIdList", targetUserIdList);
@@ -306,10 +323,11 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the metric import task.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * *   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.
+         * *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -318,7 +336,11 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateHybridMonitorTask**.
+         * Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:
+         * <p>
+         * 
+         * *   aliyun_fc: creates a metric import task for an Alibaba Cloud service
+         * *   aliyun_sls: creates a metric for logs imported from Log Service
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -327,15 +349,36 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The interval at which metrics are collected. Valid values:
+         * The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
          * <p>
          * 
-         * *   15
-         * *   60 (default value)
+         * *   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
+         * *   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
          * 
-         * Unit: seconds.
+         * The following code shows a sample configuration file:
          * 
-         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+         * ```
+         * 
+         * products:
+         * - namespace: acs_ecs_dashboard
+         *   metric_info:
+         *   - metric_list:
+         *     - cpu_total
+         *     - cpu_idle
+         *     - diskusage_utilization
+         *     - CPUUtilization
+         *     - DiskReadBPS
+         *     - InternetOut
+         *     - IntranetOut
+         *     - cpu_system
+         * - namespace: acs_rds_dashboard
+         *   metric_info:
+         *   - metric_list:
+         *     - MySQL_QPS
+         *     - MySQL_TPS
+         * ```
+         * 
+         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
          */
         public Builder YARMConfig(String YARMConfig) {
             this.putQueryParameter("YARMConfig", YARMConfig);
@@ -389,7 +432,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The conditions that are used to filter logs imported from Log Service.
+             * The tag key of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -397,10 +440,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the namespace.
-             * <p>
-             * 
-             * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+             * The tag value of the metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -453,7 +493,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String express; 
 
             /**
-             * The value of the key that is used to filter logs imported from Log Service.
+             * The alias of the extended field that specifies the result of basic operations that are performed on aggregation results.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -461,11 +501,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:
-             * <p>
-             * 
-             * *   aliyun_fc: creates a metric import task for an Alibaba Cloud service
-             * *   aliyun_sls: creates a metric for logs imported from Log Service
+             * The extended field that specifies the result of basic operations that are performed on aggregation results.
              */
             public Builder express(String express) {
                 this.express = express;
@@ -530,7 +566,17 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The description of the metric import task.
+             * The method that is used to filter logs imported from Log Service. Valid values:
+             * <p>
+             * 
+             * *   `contain`: contains
+             * *   `notContain`: does not contain
+             * *   `>`: greater than
+             * *   `<`: less than
+             * *   `=`: equal to
+             * *   `! =`: not equal to
+             * *   `>=`: greater than or equal to
+             * *   `<=`: less than or equal to
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -538,36 +584,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
-             * <p>
-             * 
-             * *   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
-             * *   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
-             * 
-             * The following code shows a sample configuration file:
-             * 
-             * ```
-             * 
-             * products:
-             * - namespace: acs_ecs_dashboard
-             *   metric_info:
-             *   - metric_list:
-             *     - cpu_total
-             *     - cpu_idle
-             *     - diskusage_utilization
-             *     - CPUUtilization
-             *     - DiskReadBPS
-             *     - InternetOut
-             *     - IntranetOut
-             *     - cpu_system
-             * - namespace: acs_rds_dashboard
-             *   metric_info:
-             *   - metric_list:
-             *     - MySQL_QPS
-             *     - MySQL_TPS
-             * ```
-             * 
-             * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
+             * The name of the key that is used to filter logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -575,11 +592,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the metric import task.
-             * <p>
-             * 
-             * *   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.
-             * *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.
+             * The value of the key that is used to filter logs imported from Log Service.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -632,11 +645,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String relation; 
 
             /**
-             * The relationship between multiple filter conditions. Valid values:
-             * <p>
-             * 
-             * *   and (default value): Logs are processed only if all filter conditions are met.
-             * *   or: Logs are processed if one of the filter conditions is met.
+             * The conditions that are used to filter logs imported from Log Service.
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -644,10 +653,11 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The configurations of the logs that are imported from Log Service.
+             * The relationship between multiple filter conditions. Valid values:
              * <p>
              * 
-             * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+             * *   and (default value): Logs are processed only if all filter conditions are met.
+             * *   or: Logs are processed if one of the filter conditions is met.
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -700,12 +710,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
 
             /**
-             * The ID of the member account.
-             * <p>
-             * 
-             * If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
-             * 
-             * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
+             * The alias of the aggregation result.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -713,10 +718,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The IDs of the member accounts. Separate multiple member account IDs with commas (,).
-             * <p>
-             * 
-             * >  This parameter is required only if you call this operation by using the management account.
+             * The name of the key that is used to aggregate logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -805,12 +807,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
 
             /**
-             * The ID of the member account.
-             * <p>
-             * 
-             * If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
-             * 
-             * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
+             * The alias of the aggregation result.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -842,10 +839,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The IDs of the member accounts. Separate multiple member account IDs with commas (,).
-             * <p>
-             * 
-             * >  This parameter is required only if you call this operation by using the management account.
+             * The name of the key that is used to aggregate logs imported from Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -922,7 +916,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private java.util.List < Statistics> statistics; 
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * The extended fields that specify the results of basic operations that are performed on aggregation results.
              */
             public Builder express(java.util.List < Express> express) {
                 this.express = express;
@@ -930,7 +924,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The extended fields that specify the results of basic operations that are performed on aggregation results.
+             * The conditions that are used to filter logs imported from Log Service.
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -938,12 +932,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The ID of the application group.
-             * <p>
-             * 
-             * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
-             * 
-             * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+             * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.
              */
             public Builder groupBy(java.util.List < GroupBy> groupBy) {
                 this.groupBy = groupBy;

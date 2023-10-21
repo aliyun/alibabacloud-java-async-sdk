@@ -86,7 +86,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         private java.util.List < TimeSeries> timeSeries; 
 
         /**
-         * The name of the metric.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned monitoring data.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,10 +105,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
-         * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,10 +113,11 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates the time when the metric value is collected.
+         * Indicates whether the call is successful. Valid values:
          * <p>
          * 
-         * Unit: seconds.
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(String success) {
             this.success = success;
@@ -124,7 +125,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The metric value.
+         * The returned monitoring data.
          */
         public Builder timeSeries(java.util.List < TimeSeries> timeSeries) {
             this.timeSeries = timeSeries;
@@ -176,10 +177,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             private String v; 
 
             /**
-             * The timestamp that specifies the end of the time range to query.
-             * <p>
-             * 
-             * Unit: seconds.
+             * The tag key.
              */
             public Builder k(String k) {
                 this.k = k;
@@ -187,7 +185,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The tag value.
              */
             public Builder v(String v) {
                 this.v = v;
@@ -240,7 +238,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             private String v; 
 
             /**
-             * Ts.
+             * The timestamp that indicates the time when the metric value is collected.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder ts(String ts) {
                 this.ts = ts;
@@ -248,7 +249,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The metric value.
              */
             public Builder v(String v) {
                 this.v = v;
@@ -321,7 +322,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The name of the metric.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -329,7 +330,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * The metric values that are collected at different timestamps.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
