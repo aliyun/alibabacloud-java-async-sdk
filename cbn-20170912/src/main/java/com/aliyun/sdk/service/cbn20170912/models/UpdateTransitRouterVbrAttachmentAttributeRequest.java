@@ -181,7 +181,11 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * AutoPublishRouteEnabled.
+         * Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -190,11 +194,12 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +208,11 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Default values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -248,7 +257,10 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The new description of the VBR connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -257,7 +269,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the VBR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -266,7 +278,10 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The new name of the VBR connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

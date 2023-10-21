@@ -167,7 +167,12 @@ public class DescribeTransitRouteTableAggregationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters.
+         * 
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +181,7 @@ public class DescribeTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -185,7 +190,11 @@ public class DescribeTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -230,7 +239,7 @@ public class DescribeTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * TransitRouteTableAggregationCidr.
+         * The destination CIDR block of the aggregate route.
          */
         public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
             this.putQueryParameter("TransitRouteTableAggregationCidr", transitRouteTableAggregationCidr);
@@ -239,7 +248,7 @@ public class DescribeTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * TransitRouteTableId.
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouteTableId(String transitRouteTableId) {
             this.putQueryParameter("TransitRouteTableId", transitRouteTableId);

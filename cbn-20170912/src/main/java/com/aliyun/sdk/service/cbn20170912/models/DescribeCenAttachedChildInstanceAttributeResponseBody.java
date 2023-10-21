@@ -291,15 +291,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The type of the IPv6 CIDR block. Valid values:
+             * The type of the IPv6 CIDR block of the VPC. Valid values:
              * <p>
              * 
-             * * **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
-             * * **ChinaMobile:** China Mobile (single line)
-             * * **ChinaUnicom:** China Unicom (single line)
-             * * **ChinaTelecom:** China Telecom (single line)
+             * *   BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
+             * *   ChinaMobile: China Mobile (single line)
+             * *   ChinaUnicom: China Unicom (single line)
+             * *   ChinaTelecom: China Telecom (single line)
              * 
-             * > If your Alibaba Cloud account has the required permissions to activate single-ISP bandwidth, you can set Ipv6Isp to ChinaTelecom, ChinaUnicom, or ChinaMobile.
+             * >  If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -474,7 +474,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The information about the IPv6 CIDR blocks of the VPC.
+             * The IPv6 CIDR blocks of the VPC.
              */
             public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
                 this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -482,7 +482,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The secondary IPv4 CIDR block of the VPC.
+             * The information about the VPC secondary CIDR block.
              */
             public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
                 this.secondaryCidrBlocks = secondaryCidrBlocks;

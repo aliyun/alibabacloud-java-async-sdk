@@ -86,7 +86,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Count.
+         * The number of entries returned per page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -94,7 +94,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * A list of aggregate routes.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,11 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -230,7 +234,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             private String transitRouteTableAggregationCidr; 
 
             /**
-             * Description.
+             * The description of the aggregate route.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +242,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the aggregate route.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +250,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * RouteType.
+             * The type of the aggregate route.
+             * <p>
+             * 
+             * The valid value is **Static**, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;
@@ -254,7 +261,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * The cope of networks to which the aggregate route is advertised.
+             * <p>
+             * 
+             * The valid value is **VPC**, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -262,7 +272,14 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the advertisement of the aggregate route. Valid values:
+             * <p>
+             * 
+             * *   **AllConfigured**: The aggregate route is advertised to all VPCs.
+             * *   **Configuring**: The aggregate route is being advertised.
+             * *   **ConfigFailed**: The aggregate route failed to be advertised.
+             * *   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.
+             * *   **Deleting**: The aggregate route is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +287,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * TrRouteTableId.
+             * The ID of the route table of the Enterprise Edition transit router.
              */
             public Builder trRouteTableId(String trRouteTableId) {
                 this.trRouteTableId = trRouteTableId;
@@ -278,7 +295,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouteTableAggregationCidr.
+             * The destination CIDR block of the aggregate route.
              */
             public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
                 this.transitRouteTableAggregationCidr = transitRouteTableAggregationCidr;

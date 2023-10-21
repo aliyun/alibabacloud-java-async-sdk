@@ -142,7 +142,10 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * The region ID of the Enterprise Edition transit router.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +172,14 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         }
 
         /**
-         * A list of zones.
+         * Specifies whether to query only the zones in which the multicast feature is supported. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * 
+         *     After you call **ListTransitRouterAvailableResource**, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.
+         * 
+         * *   **false** (default)
          */
         public Builder supportMulticast(Boolean supportMulticast) {
             this.putQueryParameter("SupportMulticast", supportMulticast);

@@ -206,7 +206,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             private String transitRouterRouteTableId; 
 
             /**
-             * The ID of the next hop.
+             * The ID of the network instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -214,7 +214,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * The type of next hop. Valid values:
+             * The type of the network instance. Valid values:
              * <p>
              * 
              * *   **VPC**: VPC
@@ -234,7 +234,6 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
              * *   **Enabling**: being enabled
              * *   **Disabling**: being disabled
              * *   **Active**: available
-             * *   **Deleted**: deleted
              */
             public Builder status(String status) {
                 this.status = status;

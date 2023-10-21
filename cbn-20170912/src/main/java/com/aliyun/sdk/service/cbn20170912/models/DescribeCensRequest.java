@@ -166,7 +166,10 @@ public class DescribeCensRequest extends Request {
         } 
 
         /**
-         * The key of the tag.
+         * The filter conditions.
+         * <p>
+         * 
+         * You can specify at most five filter conditions in each call.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -202,12 +205,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The value of the filter condition.
-         * <p>
-         * 
-         * This parameter sets the value of a filter **key**. You can specify multiple values for a filter **key**. The logical operator among multiple filter values is **OR**. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.
-         * 
-         * You can specify at most five values in each filter condition.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +214,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the CEN instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -243,7 +241,10 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -297,7 +298,15 @@ public class DescribeCensRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The name of the CEN instance.
+             * The key of the filter. Valid values:
+             * <p>
+             * 
+             * *   **CenId**: the ID of a CEN instance.
+             * *   **Name**: the name of a CEN instance.
+             * 
+             * By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.
+             * 
+             * You can specify at most five filter conditions in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -305,10 +314,12 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * The time when the CEN instance was created.
+             * The value of the filter condition.
              * <p>
              * 
-             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
+             * Specify a filter value based on the **Key** parameter. You can specify multiple values for a filter **key**. The logical operator among multiple filter values is **OR**. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.
+             * 
+             * You can specify at most five values in each filter condition.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -361,7 +372,12 @@ public class DescribeCensRequest extends Request {
             private String value; 
 
             /**
-             * The list of the filter conditions.
+             * The tag keys.
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -369,7 +385,12 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * The description of the CEN instance.
+             * The tag values.
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -86,7 +86,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The expiration time of the temporary upgrade.
+         * The details about the bandwidth plan.
          */
         public Builder cenBandwidthPackages(CenBandwidthPackages cenBandwidthPackages) {
             this.cenBandwidthPackages = cenBandwidthPackages;
@@ -94,7 +94,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * A list of CEN instances that are associated with the bandwidth plan.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the source region.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,14 +110,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the area that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **china**: Chinese mainland.
-         * *   **asia-pacific**: Asia Pacific
-         * *   **europe**: Europe
-         * *   **australia**: Australia
-         * *   **north-america**: North America
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,7 +118,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The bandwidth value to which the bandwidth plan is rolled back when the temporary upgrade ends.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +235,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private String oppositeRegionId; 
 
             /**
-             * WB01235021
+             * The maximum bandwidth value for the inter-region connection.
              */
             public Builder bandwidthLimit(String bandwidthLimit) {
                 this.bandwidthLimit = bandwidthLimit;
@@ -250,7 +243,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * GeographicSpanId.
+             * The connected regions.
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -258,7 +251,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalRegionId.
+             * The ID of the local region.
              */
             public Builder localRegionId(String localRegionId) {
                 this.localRegionId = localRegionId;
@@ -266,7 +259,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeRegionId.
+             * The ID of the peer region.
              */
             public Builder oppositeRegionId(String oppositeRegionId) {
                 this.oppositeRegionId = oppositeRegionId;
@@ -360,7 +353,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -368,7 +361,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -702,7 +695,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The ID of the bandwidth plan.
+             * The maximum bandwidth of the bandwidth plan.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -710,7 +703,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the bandwidth plan.
+             * The billing method of the bandwidth plan.
              */
             public Builder bandwidthPackageChargeType(String bandwidthPackageChargeType) {
                 this.bandwidthPackageChargeType = bandwidthPackageChargeType;
@@ -718,7 +711,12 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The status of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: running as expected.
+             * *   **FinancialLocked**: locked due to overdue payments.
+             * *   **SecurityLocked**: locked due to security reasons
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -726,7 +724,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the connected area.
+             * The ID of the bandwidth plan.
              */
             public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
                 this.cenBandwidthPackageId = cenBandwidthPackageId;
@@ -734,7 +732,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CenIds.
+             * A list of CEN instances that are associated with the bandwidth plan.
              */
             public Builder cenIds(CenIds cenIds) {
                 this.cenIds = cenIds;
@@ -742,7 +740,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The connected regions.
+             * The time when the bandwidth plan was created. The time is displayed in the ISO8601 standard in the YYYY-MM-DDThh:mmZ format.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -750,7 +748,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the bandwidth plan.
+             * The description of the bandwidth plan.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -758,7 +756,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The new billing method.
+             * The time when the bandwidth plan expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -766,7 +764,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bandwidth plan.
+             * The ID of the area that you want to query. Valid values:
+             * <p>
+             * 
+             * *   **china**: Chinese mainland.
+             * *   **asia-pacific**: Asia Pacific
+             * *   **europe**: Europe
+             * *   **australia**: Australia
+             * *   **north-america**: North America
              */
             public Builder geographicRegionAId(String geographicRegionAId) {
                 this.geographicRegionAId = geographicRegionAId;
@@ -774,7 +779,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The ID of the other area connected by the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **china**: Chinese mainland.
+             * *   **asia-pacific**: Asia Pacific
+             * *   **europe**: Europe
+             * *   **australia**: Australia
+             * *   **north-america**: North America
              */
             public Builder geographicRegionBId(String geographicRegionBId) {
                 this.geographicRegionBId = geographicRegionBId;
@@ -782,7 +794,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The ID of the connected area.
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -790,7 +802,13 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries details about Cloud Enterprise Network (CEN) bandwidth plans within the current Alibaba Cloud account.
+             * Indicates whether renewal data is included.
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * >  This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and a pending order exists.
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -798,26 +816,54 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The filter condition.
+             * Indicates whether the bandwidth plan supports cross-border communication.
              * <p>
              * 
-             * You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
-             * 
-             * *   **CenId**: CEN instance ID
-             * 
-             * *   **Status**: bandwidth plan status. Valid values:
-             * 
-             *     *   **Idle**: not associated with a CEN instance.
-             *     *   **InUse**: associated with a CEN instance.
-             * 
-             * *   **CenBandwidthPackageId**: bandwidth plan ID
-             * 
-             * *   **Name**: bandwidth plan name
-             * 
-             *     You can specify one or more filter conditions. The maximum value of **N** is **5**.
+             * *   **false**
+             * *   **true**
              */
             public Builder isCrossBorder(Boolean isCrossBorder) {
                 this.isCrossBorder = isCrossBorder;
+                return this;
+            }
+
+            /**
+             * The name of the bandwidth plan.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The details about the connected regions.
+             */
+            public Builder orginInterRegionBandwidthLimits(OrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits) {
+                this.orginInterRegionBandwidthLimits = orginInterRegionBandwidthLimits;
+                return this;
+            }
+
+            /**
+             * The expiration time of the temporary upgrade.
+             */
+            public Builder reservationActiveTime(String reservationActiveTime) {
+                this.reservationActiveTime = reservationActiveTime;
+                return this;
+            }
+
+            /**
+             * The bandwidth value to which the bandwidth plan is restored when the temporary upgrade ends.
+             */
+            public Builder reservationBandwidth(String reservationBandwidth) {
+                this.reservationBandwidth = reservationBandwidth;
+                return this;
+            }
+
+            /**
+             * The new billing method.
+             */
+            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
+                this.reservationInternetChargeType = reservationInternetChargeType;
                 return this;
             }
 
@@ -828,61 +874,13 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
              * *   **TEMP_UPGRADE**: temporary upgrade
              * *   **UPGRADE**: upgrade
              */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * DescribeCenBandwidthPackages
-             */
-            public Builder orginInterRegionBandwidthLimits(OrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits) {
-                this.orginInterRegionBandwidthLimits = orginInterRegionBandwidthLimits;
-                return this;
-            }
-
-            /**
-             * The maximum bandwidth value for the inter-region connection.
-             */
-            public Builder reservationActiveTime(String reservationActiveTime) {
-                this.reservationActiveTime = reservationActiveTime;
-                return this;
-            }
-
-            /**
-             * The logical operator between the filter conditions. Valid values:
-             * <p>
-             * 
-             * *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
-             * *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
-             */
-            public Builder reservationBandwidth(String reservationBandwidth) {
-                this.reservationBandwidth = reservationBandwidth;
-                return this;
-            }
-
-            /**
-             * Indicates whether the bandwidth plan is associated with a CEN instance.
-             * <p>
-             * 
-             * *   **Idle**: no
-             * *   **InUse**: yes
-             */
-            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
-                this.reservationInternetChargeType = reservationInternetChargeType;
-                return this;
-            }
-
-            /**
-             * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
-             */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
                 return this;
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the ACL belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -890,7 +888,11 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return. Default value: **1**.
+             * Indicates whether the bandwidth plan is associated with a CEN instance.
+             * <p>
+             * 
+             * *   **Idle**
+             * *   **InUse**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -898,7 +900,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the bandwidth plan.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

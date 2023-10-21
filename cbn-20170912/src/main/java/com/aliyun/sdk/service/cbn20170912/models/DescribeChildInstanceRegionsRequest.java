@@ -124,7 +124,7 @@ public class DescribeChildInstanceRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

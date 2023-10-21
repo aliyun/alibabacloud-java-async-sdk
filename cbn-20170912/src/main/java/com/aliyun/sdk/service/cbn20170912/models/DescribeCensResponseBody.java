@@ -86,7 +86,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The value of the tag.
+         * The information about the CEN instance.
          */
         public Builder cens(Cens cens) {
             this.cens = cens;
@@ -94,10 +94,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The level of CIDR block overlapping.
-         * <p>
-         * 
-         * **REDUCED**: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.
+         * The number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,12 +102,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the CEN instance.
-         * <p>
-         * 
-         * *   **Creating**: The CEN instance is being created.
-         * *   **Active**: The CEN instance is running.
-         * *   **Deleting**: The instance is being deleted.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +110,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the CEN instance belongs.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,7 +118,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the bandwidth plans that are associated with the CEN instance.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -219,7 +211,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Queries detailed information about Cloud Enterprise Network (CEN) instances within the current Alibaba Cloud account.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,7 +219,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -417,7 +409,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * CenBandwidthPackageIds.
+             * The IDs of the bandwidth plans that are associated with the CEN instance.
              */
             public Builder cenBandwidthPackageIds(CenBandwidthPackageIds cenBandwidthPackageIds) {
                 this.cenBandwidthPackageIds = cenBandwidthPackageIds;
@@ -425,15 +417,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The filter condition. Valid values:
-             * <p>
-             * 
-             * *   **CenId**: the ID of a CEN instance.
-             * *   **Name**: the name of a CEN instance.
-             * 
-             * By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.
-             * 
-             * You can specify at most five filter conditions in each call.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -441,7 +425,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The time when the CEN instance was created.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -449,7 +436,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The description of the CEN instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -457,7 +444,11 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page returned.
+             * Indicates whether IPv6 is enabled for the CEN instance.
+             * <p>
+             * 
+             * *   **ENABLE**
+             * *   **DISABLED**
              */
             public Builder ipv6Level(String ipv6Level) {
                 this.ipv6Level = ipv6Level;
@@ -465,7 +456,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * The CEN instance name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +464,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The level of CIDR block overlapping.
+             * <p>
+             * 
+             * **REDUCED**: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -481,7 +475,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the filter condition.
+             * The ID of the resource group to which the CEN instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -489,11 +483,12 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled for the CEN instance.
+             * The status of the CEN instance.
              * <p>
              * 
-             * *   **ENABLE**: enabled
-             * *   **DISABLED**: disabled
+             * *   **Creating**
+             * *   **Active**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -501,12 +496,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tag keys of the resources.
-             * <p>
-             * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * The IDs of the tags that are added to the CEN instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

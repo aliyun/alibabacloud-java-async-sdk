@@ -208,7 +208,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         } 
 
         /**
-         * The tags of the multicast domain.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -220,7 +220,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -229,7 +229,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -238,7 +238,11 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -265,7 +269,10 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * The region ID of the transit router.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -292,7 +299,10 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The information about the multicast domain.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -301,7 +311,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The description of the multicast domain.
+         * The transit router ID.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -310,7 +320,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * The multicast domain ID.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -364,7 +374,12 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
             private String value; 
 
             /**
-             * $.parameters[7].schema.description
+             * The tag keys.
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -372,7 +387,12 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
             }
 
             /**
-             * $.parameters[7].schema.example
+             * The tag values.
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

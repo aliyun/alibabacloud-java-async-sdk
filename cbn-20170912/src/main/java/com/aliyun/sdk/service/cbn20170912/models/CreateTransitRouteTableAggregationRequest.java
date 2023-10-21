@@ -264,9 +264,8 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
          * <p>
          * 
          * >  The following CIDR blocks are not supported:
-         * 
-         * *   CIDR blocks that start with 0 or 100.64.
-         * *   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.
+         * >*   CIDR blocks that start with 0 or 100.64.
+         * >*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.
          */
         public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
             this.putQueryParameter("TransitRouteTableAggregationCidr", transitRouteTableAggregationCidr);
@@ -278,7 +277,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
          * The description of the aggregate route.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
+         * The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
          */
         public Builder transitRouteTableAggregationDescription(String transitRouteTableAggregationDescription) {
             this.putQueryParameter("TransitRouteTableAggregationDescription", transitRouteTableAggregationDescription);

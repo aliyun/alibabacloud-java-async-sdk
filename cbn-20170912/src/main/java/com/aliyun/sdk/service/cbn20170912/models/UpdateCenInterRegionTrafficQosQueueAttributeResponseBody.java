@@ -38,7 +38,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeResponseBody extends Te
         private String requestId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

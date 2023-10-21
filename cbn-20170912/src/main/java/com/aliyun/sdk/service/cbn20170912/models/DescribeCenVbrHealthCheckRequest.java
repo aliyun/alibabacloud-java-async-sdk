@@ -181,7 +181,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * The ID of the VBR.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -208,7 +208,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +217,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +244,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the VBR.
          */
         public Builder vbrInstanceId(String vbrInstanceId) {
             this.putQueryParameter("VbrInstanceId", vbrInstanceId);
@@ -253,7 +253,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The ID of the Alibaba Cloud account that owns the VBR.
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -262,7 +262,10 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeCenVbrHealthCheck**.
+         * The ID of the region where the VBR is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
             this.putQueryParameter("VbrInstanceRegionId", vbrInstanceRegionId);

@@ -86,7 +86,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         private java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains; 
 
         /**
-         * $.parameters[8].schema.example
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * $.parameters[8].schema.enumValueTitles
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * $.parameters[7].schema.enumValueTitles
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * $.parameters[8].schema.description
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,21 +122,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * {
-         * <p>
-         *     "RequestId": "8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2",
-         *     "TotalCount": 1,
-         *     "MaxResults": 20,
-         *     "NextToken": "FFmyTO70tTpLG6I3FmYAXGKPd****",
-         *     "TransitRouterMulticastDomains": [
-         *         {
-         *             "TransitRouterMulticastDomainId": "tr-mcast-domain-3r3bvbypxqheej****",
-         *             "TransitRouterMulticastDomainName": "nametest",
-         *             "TransitRouterMulticastDomainDescription": "desctest",
-         *             "Status": "Active"
-         *         }
-         *     ]
-         * }
+         * The information about the multicast domain.
          */
         public Builder transitRouterMulticastDomains(java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains) {
             this.transitRouterMulticastDomains = transitRouterMulticastDomains;
@@ -184,7 +174,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -192,7 +182,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -317,7 +307,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             private String transitRouterMulticastDomainName; 
 
             /**
-             * CenId.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -325,7 +315,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the transit router.
+             * <p>
+             * 
+             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -333,7 +326,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * WB656982
+             * The status of the multicast domain.
+             * <p>
+             * 
+             * The valid value is **Active**, which indicates that the multicast domain is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,7 +337,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -349,7 +345,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * The transit router ID.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -357,7 +353,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ListTransitRouterMulticastDomains
+             * The description of the multicast domain.
              */
             public Builder transitRouterMulticastDomainDescription(String transitRouterMulticastDomainDescription) {
                 this.transitRouterMulticastDomainDescription = transitRouterMulticastDomainDescription;
@@ -365,19 +361,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <ListTransitRouterMulticastDomainsResponse>
-             * <p>
-             *     <RequestId>8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2</RequestId>
-             *     <TotalCount>1</TotalCount>
-             *     <MaxResults>20</MaxResults>
-             *     <NextToken>FFmyTO70tTpLG6I3FmYAXGKPd****</NextToken>
-             *     <TransitRouterMulticastDomains>
-             *         <TransitRouterMulticastDomainId>tr-mcast-domain-3r3bvbypxqheej****</TransitRouterMulticastDomainId>
-             *         <TransitRouterMulticastDomainName>nametest</TransitRouterMulticastDomainName>
-             *         <TransitRouterMulticastDomainDescription>desctest</TransitRouterMulticastDomainDescription>
-             *         <Status>Active</Status>
-             *     </TransitRouterMulticastDomains>
-             * </ListTransitRouterMulticastDomainsResponse>
+             * The ID of the multicast domain.
              */
             public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
                 this.transitRouterMulticastDomainId = transitRouterMulticastDomainId;
@@ -385,7 +369,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the information about a multicast domain.
+             * The name of the multicast domain.
              */
             public Builder transitRouterMulticastDomainName(String transitRouterMulticastDomainName) {
                 this.transitRouterMulticastDomainName = transitRouterMulticastDomainName;

@@ -194,7 +194,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         } 
 
         /**
-         * The description of the bandwidth plan.
+         * The filter configurations.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -206,8 +206,8 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
          * Specifies whether to include renewal data. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -216,14 +216,11 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the other connected area of the bandwidth plan. Valid values:
+         * The logical operator between the filter conditions. Valid values:
          * <p>
          * 
-         * *   **china**: Chinese mainland.
-         * *   **asia-pacific**: Asia Pacific
-         * *   **europe**: Europe
-         * *   **australia**: Australia
-         * *   **north-america**: North America
+         * *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
+         * *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
          */
         public Builder isOrKey(Boolean isOrKey) {
             this.putQueryParameter("IsOrKey", isOrKey);
@@ -250,10 +247,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * Specify a filter value based on the **Key** parameter.
-         * <p>
-         * 
-         * You can specify multiple values for a **filter key**. The logical relation among multiple filter values is **OR**. If a bandwidth package matches one of the values that you specify, the bandwidth package matches the filter condition.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,7 +256,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the peer region.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,7 +265,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -298,7 +292,10 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -352,7 +349,19 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeCenBandwidthPackages**.
+             * The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
+             * <p>
+             * 
+             * *   **CenId**: CEN instance ID
+             * 
+             * *   **Status**: bandwidth plan status. Valid values:
+             * 
+             *     *   **Idle**: not associated with a CEN instance.
+             *     *   **InUse**: associated with a CEN instance.
+             * 
+             * *   **CenBandwidthPackageId**: bandwidth plan ID
+             * 
+             * *   **Name**: bandwidth plan name You can specify one or more filter conditions. The maximum value of **N** is **5**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,12 +369,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * The status of the bandwidth plan. Valid values:
-             * <p>
-             * 
-             * *   **Normal**: normal
-             * *   **FinancialLocked**: locked due to overdue payments
-             * *   **SecurityLocked**: locked due to security reasons
+             * Specify a filter value based on the **Key** parameter. You can specify multiple filter values for each **Key**. The logical operator between filter values is **OR**. If one filter value is matched, the filter condition is matched.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -418,7 +422,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private String value; 
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeCenBandwidthPackages**.
+             * The tag keys.
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -426,12 +435,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * The status of the bandwidth plan. Valid values:
+             * The tag values.
              * <p>
              * 
-             * *   **Normal**: normal
-             * *   **FinancialLocked**: locked due to overdue payments
-             * *   **SecurityLocked**: locked due to security reasons
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -264,7 +264,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * NextHopInstanceId.
+         * The ID of the network instance associated with the next hop connection.
          */
         public Builder nextHopInstanceId(String nextHopInstanceId) {
             this.putQueryParameter("NextHopInstanceId", nextHopInstanceId);
@@ -372,7 +372,11 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the prefix list. Valid values:
+         * <p>
+         * 
+         * *   **Active**
+         * *   **Updating**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

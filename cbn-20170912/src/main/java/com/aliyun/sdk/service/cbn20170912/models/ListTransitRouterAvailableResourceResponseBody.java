@@ -86,7 +86,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         private Boolean supportMulticast; 
 
         /**
-         * AvailableZones.
+         * A list of zone IDs.
          */
         public Builder availableZones(java.util.List < String > availableZones) {
             this.availableZones = availableZones;
@@ -94,7 +94,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ListTransitRouterAvailableResource
+         * A list of primary zones.
          */
         public Builder masterZones(java.util.List < String > masterZones) {
             this.masterZones = masterZones;
@@ -102,7 +102,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListTransitRouterAvailableResource**.
+         * A list of secondary zone IDs.
          */
         public Builder slaveZones(java.util.List < String > slaveZones) {
             this.slaveZones = slaveZones;
@@ -118,7 +118,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否为支持组播功能的可用区信息。
+         * Indicates whether the zone supports the multicast feature.
          */
         public Builder supportMulticast(Boolean supportMulticast) {
             this.supportMulticast = supportMulticast;

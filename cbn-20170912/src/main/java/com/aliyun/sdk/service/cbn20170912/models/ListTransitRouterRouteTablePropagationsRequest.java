@@ -272,7 +272,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The ID of the next hop.
+         * The ID of the network instance.
          */
         public Builder transitRouterAttachmentResourceId(String transitRouterAttachmentResourceId) {
             this.putQueryParameter("TransitRouterAttachmentResourceId", transitRouterAttachmentResourceId);
@@ -281,7 +281,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The type of next hop. Valid values:
+         * The type of the network instance. Valid values:
          * <p>
          * 
          * *   **VPC**: virtual private cloud (VPC)

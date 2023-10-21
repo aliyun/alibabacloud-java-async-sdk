@@ -86,7 +86,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the routes.
+         * The information about the route.
          */
         public Builder cenRouteEntries(CenRouteEntries cenRouteEntries) {
             this.cenRouteEntries = cenRouteEntries;
@@ -211,7 +211,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * The ID of the region in which the routing policy is applied.
+             * The region ID of the routing policy.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -219,7 +219,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing policy.
+             * The routing policy ID.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -406,12 +406,12 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the peer network instance on which the overlapping routes are found. Valid values: Valid values:
+             * The type of the peer network instance on which the overlapping routes are found. Valid values:
              * <p>
              * 
-             * *   **VPC**: VPC
-             * *   **VBR**: VBR
-             * *   **CCN**: CCN instance
+             * *   **VPC**
+             * *   **VBR**
+             * *   **CCN**
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -419,7 +419,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the peer network instance on which the overlapping routes are found is deployed.
+             * The region ID of the peer network instance on which the overlapping routes are found.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -657,7 +657,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The autonomous system (AS) paths of the routes.
+             * The AS paths of the routes.
              */
             public Builder asPaths(AsPaths asPaths) {
                 this.asPaths = asPaths;
@@ -673,7 +673,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The community attributes of the route entry.
+             * The community attributes of the route entries.
              */
             public Builder communities(Communities communities) {
                 this.communities = communities;
@@ -705,7 +705,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance specified as the next hop in the route belongs.
+             * The region ID of the instance specified as the next hop in the route.
              */
             public Builder nextHopRegionId(String nextHopRegionId) {
                 this.nextHopRegionId = nextHopRegionId;
@@ -716,27 +716,28 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
              * The type of the instance specified as the next hop in the route. Valid values:
              * <p>
              * 
-             * *   **Instance**: Elastic Compute Service (ECS) instance.
-             * *   **HaVip**: high-availability virtual IP address (HAVIP).
-             * *   **RouterInterface**: router interface.
-             * *   **NetworkInterface**: elastic network interface (ENI).
-             * *   **VpnGateway**: VPN gateway.
-             * *   **IPv6Gateway**: IPv6 gateway.
-             * *   **NatGateway**: NAT gateway.
-             * *   **Attachment**: network instance connection.
-             * *   **service**: cloud service.
-             * *   **VBR**: VBR.
-             * *   **CCN**: CCN instance.
-             * *   **VPC**: VPC.
-             * *   **local**: system route. No next hop is specified.
-             * *   **TR**: transit router.
-             * *   \*\*BlackHole\*\*: blackhole route. No next hop is specified.
-             * *   \*\*EcRouterInterface\*\*: router interface for Express Connect
-             * *   **HealthCheck**: health check.
-             * *   **AS**: access gateway for CCN.
-             * *   **classicLink**: classic network-type instance.
-             * *   **GatewayEndpoint**: gateway endpoint.
-             * *   **CPE**: data center connected to the VBR.
+             * *   **Instance**: an ECS instance
+             * *   **HaVip**: an HAVIP
+             * *   **RouterInterface**: a router interface
+             * *   **NetworkInterface**: an ENI
+             * *   **VpnGateway**: a VPN gateway
+             * *   **IPv6Gateway**: an IPv6 gateway
+             * *   **Ipv4Gateway**: an IPv4 gateway
+             * *   **NatGateway**: a NAT gateway
+             * *   **Attachment**: a network instance connection
+             * *   **service**: a cloud service
+             * *   **VBR**: a VBR
+             * *   **CCN**: a CCN instance
+             * *   **VPC**: a VPC
+             * *   **local**: a system route (no next hop is specified)
+             * *   **TR**: a transit router
+             * *   **BlackHole**: a blackhole route (no next hop is specified)
+             * *   **EcRouterInterface**: a router interface for Express Connect
+             * *   **HealthCheck**: a health check
+             * *   **AS**: an access gateway for CCN
+             * *   **classic**: a classic network-type instance
+             * *   **GatewayEndpoint**: a gateway endpoint
+             * *   **CPE**: a data center connected to a VBR
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -747,8 +748,8 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
              * Indicates whether the route is allowed to be advertised to or withdrawn from the CEN instance. Valid values:
              * <p>
              * 
-             * *   **true**: The route is allowed to be advertised to or withdrawn from the CEN instance.
-             * *   **false**: The route is not allowed to be advertised to or withdrawn from the CEN instance.
+             * *   **true**
+             * *   **false**
              */
             public Builder operationalMode(Boolean operationalMode) {
                 this.operationalMode = operationalMode;
@@ -756,11 +757,11 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the route is advertised to the CEN instance. Valid values: Valid values:
+             * Indicates whether the route is advertised to the CEN instance. Valid values:
              * <p>
              * 
-             * *   **Published**: The route is advertised to the CEN instance.
-             * *   **NonPublished**: The route is not advertised to the CEN instance.
+             * *   **Published**
+             * *   **NonPublished**
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -768,7 +769,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table.
+             * The route table ID.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -776,13 +777,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values:
+             * The route status. Valid values:
              * <p>
              * 
-             * *   **Active**: available
-             * *   **Candidate**: standby
-             * *   **Rejected**: rejected
-             * *   **Prohibited**: prohibited
+             * *   **Active**: available routes
+             * *   **Candidate**: standby routes
+             * *   **Rejected**: rejected routes
+             * *   **Prohibited**: prohibited routes
              */
             public Builder status(String status) {
                 this.status = status;
@@ -790,10 +791,10 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route. Valid values: Valid values:
+             * The route type. Valid values:
              * <p>
              * 
-             * *   **CEN**: advertised by CEN
+             * *   **CEN**: route that is advertised through CEN
              * *   **System**: system route
              * *   **Custom**: custom route
              */

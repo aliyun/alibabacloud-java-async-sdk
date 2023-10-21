@@ -181,11 +181,11 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * 是否允许企业版转发路由器自动发布路由到VPC实例。
+         * Specifies whether to allow the Enterprise Edition transit router to advertise routes to the VPC. Valid values:
          * <p>
          * 
-         * - **false**（默认值）：否。
-         * - **true**：是。
+         * *   **false:** (default)
+         * *   **true**
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
