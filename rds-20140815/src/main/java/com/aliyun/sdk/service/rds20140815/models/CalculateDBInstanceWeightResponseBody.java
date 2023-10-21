@@ -50,7 +50,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the system-assigned read weights.
+         * An array that consists of information about the system-assigned read weight.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The ID of instance.
+             * The instance ID
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -142,7 +142,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the instance. Valid values:
+             * The type of the instance. Valid values:
              * <p>
              * 
              * *   **Master**: primary instance
@@ -154,7 +154,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for the latency of data replication from the primary instance to the read-only instances. The read-only instances start to synchronize data from the primary instance after the time specified by the **ReadonlyInstanceSQLDelayedTime** parameter elapses. Unit: seconds.
+             * The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds.
              */
             public Builder readonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
                 this.readonlyInstanceSQLDelayedTime = readonlyInstanceSQLDelayedTime;
@@ -162,7 +162,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * The read weight that ApsaraDB RDS calculates in real time for the instance.
+             * The read weight that the system calculates in real time for the instance.
              */
             public Builder weight(String weight) {
                 this.weight = weight;

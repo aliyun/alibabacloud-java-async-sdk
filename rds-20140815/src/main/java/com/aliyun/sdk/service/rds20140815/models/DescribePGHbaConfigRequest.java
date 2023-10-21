@@ -139,7 +139,7 @@ public class DescribePGHbaConfigRequest extends Request {
         } 
 
         /**
-         * This parameter is reserved. You do not need to specify this parameter.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,7 +148,7 @@ public class DescribePGHbaConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

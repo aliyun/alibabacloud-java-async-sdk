@@ -151,7 +151,7 @@ public class DescribeSlotsRequest extends Request {
         }
 
         /**
-         * 实例ID。可调用[DescribeDBInstances](~~26232~~)查询。
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -178,7 +178,7 @@ public class DescribeSlotsRequest extends Request {
         }
 
         /**
-         * 资源组ID，可以为空。
+         * The ID of the resource group. You can leave this parameter empty.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

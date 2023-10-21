@@ -93,11 +93,12 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * The key method for instance level TDE encryption, with values:
+         * The method that is used to generate the key for TDE at the instance level. Valid values:
          * <p>
-         * - **Aliyun_Generate_Key**
-         * - **Customer_Provided_Key**
-         * - **Unknown**
+         * 
+         * *   **Aliyun_Generate_Key**
+         * *   **Customer_Provided_Key**
+         * *   **Unknown**
          */
         public Builder TDEMode(String TDEMode) {
             this.TDEMode = TDEMode;

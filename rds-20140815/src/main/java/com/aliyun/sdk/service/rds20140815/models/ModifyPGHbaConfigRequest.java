@@ -164,7 +164,7 @@ public class ModifyPGHbaConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -173,7 +173,7 @@ public class ModifyPGHbaConfigRequest extends Request {
         }
 
         /**
-         * The details of the AD domain.
+         * An array that consists of the details of the AD domain services.
          */
         public Builder hbaItem(java.util.List < HbaItem> hbaItem) {
             this.putQueryParameter("HbaItem", hbaItem);
@@ -367,7 +367,7 @@ public class ModifyPGHbaConfigRequest extends Request {
              * The name of the database. If you set this parameter to all, the specified users are allowed to access all databases on the instance.
              * <p>
              * 
-             * If you specify multiple users, separate the usernames with commas (,).
+             * If you specify multiple entries, separate the entries with commas (,).
              */
             public Builder database(String database) {
                 this.database = database;
@@ -375,7 +375,7 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The mask of the instance. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.
+             * The mask of the IP address. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -383,7 +383,7 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The authentication method. Valid values: authorization_code and refresh_token.
+             * The authentication method. Valid values:
              * <p>
              * 
              * *   **trust**
@@ -404,7 +404,7 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * Optional. The value of this parameter varies based on the value of the Method parameter. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).
+             * The options of the authentication method. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).
              */
             public Builder option(String option) {
                 this.option = option;
@@ -428,11 +428,11 @@ public class ModifyPGHbaConfigRequest extends Request {
              * 
              * Valid values:
              * 
-             * *   **host**: The AD domain verifies TCP/IP connections, including SSL connections and non-SSL connections.
+             * *   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
              * *   **hostssl**: The record matches only TCP/IP connections that are established over SSL.
-             * *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.
+             * *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.
              * 
-             * > You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see [Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance](~~229518~~).
+             * >  You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance.[](~~229518~~)
              */
             public Builder type(String type) {
                 this.type = type;
@@ -440,7 +440,7 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple users, separate the usernames with commas (,).
+             * The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple entries, separate the entries with commas (,).
              */
             public Builder user(String user) {
                 this.user = user;

@@ -198,7 +198,7 @@ public class DescribeMigrateTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Valid values: any non-zero positive integer.
          * <p>
          * 
          * Default value: **1**.

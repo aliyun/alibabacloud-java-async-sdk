@@ -184,8 +184,6 @@ public class CreateAccountRequest extends Request {
          * The username of the account.
          * <p>
          * 
-         * > 
-         * 
          * *   The value must be unique.
          * 
          * *   The value must start with a lowercase letter, and end with a lowercase letter or a digit.
@@ -212,8 +210,7 @@ public class CreateAccountRequest extends Request {
         /**
          * The password of the account.
          * <p>
-         * 
-         * > 
+         *  
          * 
          * *   The value must be 8 to 32 characters in length.
          * 

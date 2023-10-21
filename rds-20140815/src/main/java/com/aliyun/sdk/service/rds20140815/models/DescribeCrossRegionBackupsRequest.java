@@ -224,7 +224,7 @@ public class DescribeCrossRegionBackupsRequest extends Request {
         } 
 
         /**
-         * The ID of the cross-region data backup file.
+         * The ID of the backup file.
          */
         public Builder backupId(Integer backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -245,7 +245,7 @@ public class DescribeCrossRegionBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the destination region where the cross-region data backup file is stored.
+         * The ID of the region in which the cross-region data backup file is stored.
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.putQueryParameter("CrossBackupRegion", crossBackupRegion);
@@ -254,7 +254,7 @@ public class DescribeCrossRegionBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -281,7 +281,7 @@ public class DescribeCrossRegionBackupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Valid values: any non-zero positive integer.
          * <p>
          * 
          * Default value: **1**.
@@ -293,7 +293,7 @@ public class DescribeCrossRegionBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **30**
@@ -309,7 +309,7 @@ public class DescribeCrossRegionBackupsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -158,7 +158,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The endpoint of the instance.
+             * The endpoints of the instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -166,7 +166,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the endpoint.
+             * The IP address.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -194,7 +194,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -202,7 +202,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -308,7 +308,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -316,7 +316,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -457,7 +457,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private NodeItems nodeItems; 
 
             /**
-             * An array that consists of the details of the endpoint.
+             * The information about the endpoint.
              */
             public Builder addressItems(AddressItems addressItems) {
                 this.addressItems = addressItems;
@@ -484,8 +484,8 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Primary**: read/write endpoint of the instance
-             * *   **Readonly**: read-only endpoint of the instance
+             * *   **Primary**: the read/write endpoint of the instance
+             * *   **Readonly**: the read-only endpoint of the instance
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -493,7 +493,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the details of the node that is configured for the endpoint.
+             * The information about the node that is configured for the endpoint.
              */
             public Builder nodeItems(NodeItems nodeItems) {
                 this.nodeItems = nodeItems;
@@ -599,7 +599,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String ipVersion; 
 
             /**
-             * An array that consists of details of the endpoint.
+             * The information of the endpoints of the instance.
              */
             public Builder DBInstanceEndpoints(DBInstanceEndpoints DBInstanceEndpoints) {
                 this.DBInstanceEndpoints = DBInstanceEndpoints;

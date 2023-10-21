@@ -204,11 +204,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When the [read/write splitting](~~51073~~) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   SQL Server
+      * ### [](#)Feature description
+      * When the [read/write splitting](~~51073~~) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](~~610423~~).
+      * ### [](#)Prerequisites
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-      * *   The instance must run one of the following database engine versions and RDS editions:
-      *     *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+      * *   If the instance runs MySQL, the instance uses a shared proxy.
+      * *   The instance runs one of the following MySQL versions and RDS editions:
+      *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
       *     *   MySQL 5.6
       *     *   SQL Server on RDS Cluster Edition
       *
@@ -296,6 +301,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      *
+     */
     @Override
     public CompletableFuture<CheckDBNameAvailableResponse> checkDBNameAvailable(CheckDBNameAvailableRequest request) {
         try {
@@ -470,9 +483,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      * ### [](#)Feature description:
       * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](~~437245~~).
+      * ### [](#)Precautions
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The original instance is in the Running state.
+      * *   The instance is in the running state.
       * *   The instance does not have ongoing backup tasks.
       * *   The number of backup files that are created per day for an instance cannot exceed 20.
       *
@@ -671,10 +691,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you enable the dedicated proxy feature for an ApsaraDB RDS for MySQL instance or enable the database proxy feature for an ApsaraDB RDS for PostgreSQL instance, a default proxy endpoint is created. You can call this operation to create proxy endpoints of different network types. For more information, see [Activate and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~) and [What are database proxies?](~~138705~~)
-      * > 
-      * *   The following network types are supported for ApsaraDB RDS for MySQL instances that use local disks: virtual private cloud (VPC), Classic, and Public.
-      * *   The following network types are supported for instances that use cloud disks: VPC and Public. If you want to create a proxy endpoint of the public network type, you must configure IP address whitelists for the instance and its read-only instances to ensure connectivity between the client and the instance. You can call the [ModifySecurityIps](~~26242~~) operation to configure an IP address whitelist for an instance.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+      * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
       *
      */
     @Override
@@ -720,11 +743,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether the data of the source instance can be restored from a cross-region backup set.
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+      * >  Before restoration, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether a cross-region backup set can be used for cross-region restoration.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
      */
     @Override
@@ -849,6 +877,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<CreateOrderForDeleteDBNodesResponse> createOrderForDeleteDBNodes(CreateOrderForDeleteDBNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateOrderForDeleteDBNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrderForDeleteDBNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOrderForDeleteDBNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) and [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
       * > This operation is supported only when your instance runs MySQL or PostgreSQL.
@@ -869,11 +911,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Supported database engine
-      * PostgreSQL
-      * ### References
-      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * ### [](#)Supported database engines
+      * RDS PostgreSQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * [Manage extensions](~~2402409~~)
+      * ### [](#)Precautions
+      * Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.
+      * *   For more information, see [Extensions supported by ApsaraDB RDS for PostgreSQL](~~142340~~).
+      * *   You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the major engine version of an instance.
       *
      */
     @Override
@@ -1369,7 +1415,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       *
      */
     @Override
@@ -1476,10 +1526,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
      */
     @Override
@@ -1517,10 +1572,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To query the time range to which you can restore data by using a common backup file, see [DescribeBackups](~~26273~~).
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~).
-      * *   PostgreSQL. For more information, see [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+      * >  To view the time range within which you can restore data from a standard backup set, see [DescribeBackups](~~26273~~)
+      * ### [](#)Supported database engines
+      * MySQL
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
       *
      */
     @Override
@@ -1599,6 +1656,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      *
+     */
     @Override
     public CompletableFuture<DescribeBackupTasksResponse> describeBackupTasks(DescribeBackupTasksRequest request) {
         try {
@@ -1614,7 +1679,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > A backup set can be used to restore data only when **BackupStatus** of the backup set is **Success**.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       *
      */
     @Override
@@ -1638,9 +1707,9 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   MariaDB
       * ### Usage notes
       * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a download URL.
-      * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by **LinkExpiredTime**. You must download the backup files before the expiration time.
+      * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the backup files before the expiration time.
       * *   If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see [Grant backup file download permissions to a RAM user with read-only permissions](~~100043~~).
-      * *   Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by StartTime and EndTime.
+      * *   Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by the StartTime and EndTime parameters.
       *
      */
     @Override
@@ -1794,11 +1863,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about how to query the cross-region log backup files of an RDS instance, see [DescribeCrossRegionLogBackupFiles](~~121734~~).
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * >  For more information about how to query cross-region log backup files, see [DescribeCrossRegionLogBackupFiles](~~121734~~).
       *
      */
     @Override
@@ -1816,11 +1889,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about how to query the cross-region data backup files of an RDS instance, see [DescribeCrossRegionBackups](~~121733~~).
-      * Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
-      * *   MySQL 8.0 on RDS High-availability Edition (with local SSDs)
-      * *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
-      * *   MySQL 5.6
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](~~121733~~).
       *
      */
     @Override
@@ -1906,9 +1983,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Background information
-      * *   An ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition is created. The instance is referred to as a cluster.
-      * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+      * ### [](#)Supported database engines
+      * RDS MySQL
       *
      */
     @Override
@@ -1951,6 +2027,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceIPArrayListResponse> describeDBInstanceIPArrayList(DescribeDBInstanceIPArrayListRequest request) {
         try {
@@ -1966,8 +2050,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ApsaraDB RDS instances are deployed based on ECS instances. This operation is used to query the hostname of the ECS instance where an ApsaraDB RDS instance resides. The hostname is required when you [configure a distributed transaction whitelist](~~124321~~).
-      * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+      * ### [](#)Supported database engines
+      * RDS SQL Server
+      * ### [](#)Prerequisites
+      * *   The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
+      * *   The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.
+      * *   If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Configure a distributed transaction whitelist](~~124321~~)
       *
      */
     @Override
@@ -2143,10 +2234,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that your instance is one of the following instances:
-      * *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
-      * *   ApsaraDB RDS for SQL Server instances
-      * *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
       *
      */
     @Override
@@ -2165,9 +2256,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### [](#)Supported database engines
-      * *   RDS MySQL
-      * *   RDS PostgreSQL
-      * *   RDS SQL Server
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
       *
      */
     @Override
@@ -2303,9 +2394,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
-      * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
-      * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
       *
      */
     @Override
@@ -2323,9 +2414,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the DescribeDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
-      * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
-      * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
       *
      */
     @Override
@@ -2624,10 +2715,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
      */
     @Override
@@ -2693,6 +2788,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * RDS SQL Server
+      * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+      *
+     */
     @Override
     public CompletableFuture<DescribeLogBackupFilesResponse> describeLogBackupFiles(DescribeLogBackupFilesRequest request) {
         try {
@@ -2708,8 +2809,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ### [](#)Supported database engines
+      * MySQL
+      * > This operation is available for RDS instances that run MySQL 8.0, MySQL 5.7, and MySQL 5.6 on RDS High-availability Edition with local disks.
+      * ### [](#)Description
       * Before you call the [RestoreTable](~~131510~~) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
-      * > This operation is supported only when the instance runs MySQL 8.0, MySQL 5.7, or MySQL 5.6 on RDS High-availability Edition with local disks.
       *
      */
     @Override
@@ -2761,6 +2865,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * RDS PostgreSQL
+      *
+     */
     @Override
     public CompletableFuture<DescribeModifyPGHbaConfigLogResponse> describeModifyPGHbaConfigLog(DescribeModifyPGHbaConfigLogRequest request) {
         try {
@@ -2807,6 +2916,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * RDS PostgreSQL
+      *
+     */
     @Override
     public CompletableFuture<DescribePGHbaConfigResponse> describePGHbaConfig(DescribePGHbaConfigRequest request) {
         try {
@@ -3493,14 +3607,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ApsaraDB RDS provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The dedicated proxy feature must be enabled for the instance.
-      * *   The minor engine version that the dedicated proxies of the instance run must be 1.12.8 or later.
-      * *   The minor engine version of the instance must be 20200831 or later, and the instance must run the following MySQL versions and RDS editions:
-      *     *   MySQL 8.0 on RDS High-availability Edition with local SSDs
-      *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
-      *     *   MySQL 5.6 on RDS High-availability Edition with local SSDs
+      * ### [](#)Supported database engines
+      * RDS MySQL
       *
      */
     @Override
@@ -3537,11 +3645,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you seek help from Alibaba Cloud technical support to troubleshoot instance exceptions, you need to grant permissions to the service account of your instance. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your instance.
-      * This operation is available only when your instance runs one of the following database engines:
+      * ### [](#)Supported database engines
       * *   MySQL
       * *   SQL Server
-      * For more information, see [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](~~96102~~) and [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](~~95693~~).
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](~~96102~~)
+      * *   [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](~~95693~~)
       *
      */
     @Override
@@ -3738,11 +3848,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The prerequisites for this operation vary based on the database engine of the instance. For more information, see the following topics:
-      * *   [RDS MySQL](~~96053~~)
-      * *   [RDS PostgreSQL](~~96746~~)
-      * *   [RDS SQL Server](~~95658~~)
-      * > This operation allows you to migrate an instance across zones in the same region. This operation does not allow you to migrate an instance across zones in different regions. For example, you cannot migrate an instance from a zone in the China (Hangzhou) region to a zone in the China (Qingdao) region.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Migrate an ApsaraDB RDS for MySQL instance across zones in the same region](~~96053~~)
+      * *   [Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region](~~96746~~)
+      * *   [Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region](~~95658~~)
       *
      */
     @Override
@@ -3778,7 +3892,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       *
      */
     @Override
@@ -3878,7 +3996,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is not applicable to instances that run PostgreSQL.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
       *
      */
     @Override
@@ -4029,9 +4151,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Background information
-      * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
-      * *   When you modify information about the endpoint of an instance, you can modify the settings only of common parameters of the endpoint, such as the weight and description. This operation is called to manage an endpoint.
+      * ### [](#)Supported database engines
+      * RDS MySQL
       *
      */
     @Override
@@ -4049,10 +4170,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Background information
-      * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+      * ### [](#)Supported database engines
+      * RDS MySQL
+      * ### [](#)Precautions
       * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
-      * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port of the internal endpoint, you do not need to specify the VPC, vSwitch, and IP address.
+      * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port, you do not need to specify the VPC, vSwitch, and IP address of the internal endpoint.
       *
      */
     @Override
@@ -4161,8 +4283,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Prerequisites
-      * The network type of the instance is classic network.
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Change the network type of an ApsaraDB RDS for MySQL instance](~~96109~~)
+      * *   [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~)
+      * *   [Change the network type of an ApsaraDB RDS for SQL Server instance](~~95707~~)
       *
      */
     @Override
@@ -4223,13 +4352,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is used to configure SSL encryption for an instance. For more information, see [](~~32474~~).
-      * > 
-      * *   Before you call this operation, make sure that your instance is one of the following instances:
-      *     *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
-      *     *   ApsaraDB RDS for SQL Server instances
-      *     *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
-      * *   SSL encryption is not supported for the connections to the read/write splitting endpoint of an instance.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Use the SSL encryption feature for an ApsaraDB RDS for MySQL instance](~~96120~~)
+      * *   [Use the SSL encryption feature for an ApsaraDB RDS for PostgreSQL instance](~~229517~~)
+      * *   [Use the SSL encryption feature for an ApsaraDB RDS for SQL Server instance](~~95715~~)
       *
      */
     @Override
@@ -4300,6 +4431,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<ModifyDBNodeResponse> modifyDBNode(ModifyDBNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDBNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDBNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDBNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * ### [](#)Supported database engines
       * *   RDS MySQL
@@ -4325,9 +4470,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
-      * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
-      * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Enable and configure the dedicated proxy feature](~~197456~~)
+      * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
       *
      */
     @Override
@@ -4426,6 +4575,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * *   SQL Server
+      * ### [](#)References
+      * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * [Manage advanced features of an ApsaraDB RDS for SQL Server instance](~~2401398~~)
+      *
+     */
     @Override
     public CompletableFuture<ModifyDatabaseConfigResponse> modifyDatabaseConfig(ModifyDatabaseConfigRequest request) {
         try {
@@ -4441,15 +4598,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The system provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The dedicated proxy feature is enabled for the instance.
-      * *   The minor engine version that the dedicated proxies of the instance run is 1.12.8 or later.
-      * *   Your RDS instance runs one of the following MySQL versions:
-      *     *   MySQL 8.0 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
-      *     *   MySQL 5.7 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
-      *     *   MySQL 5.6 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
-      * > Calling this operation causes your instance to restart. Proceed with caution.
+      * ### [](#)Supported database engines
+      * RDS MySQL
+      * ### [](#)References
+      * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
+      * [Configure SSL encryption for a proxy endpoint](~~188164~~)
       *
      */
     @Override
@@ -4485,8 +4638,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a switchover is complete, the original primary RDS instance runs as the secondary RDS instance. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS for MySQL instances](~~96054~~).
-      * Before you call this operation, make sure that the instance does not run the RDS Basic Edition.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MySQL instance](~~96054~~)
+      * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for PostgreSQL instance](~~96747~~)
+      * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for SQL Server instance](~~95659~~)
+      * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MariaDB instance](~~97127~~)
       *
      */
     @Override
@@ -4522,10 +4684,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
      */
     @Override
@@ -4543,8 +4709,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ApsaraDB RDS for PostgreSQL allows you to modify the pg_hba.conf file based on your business requirements. For more information, see [Introduction to the pg_hba.conf file](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html).
-      * You can modify the information of the Active Directory (AD) domain controller in the pg_hba.conf file of an instance. Then, you can connect the instance to a self-managed AD domain. For more information, see [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](~~349288~~).
+      * ### [](#)Supported database engines
+      * RDS PostgreSQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](~~349288~~)
+      * *   [The pg_hba.conf File](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html)
       *
      */
     @Override
@@ -5114,14 +5284,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
-      * Before you call this operation, make sure that the following requirements are met:
+      * ### [](#)Supported database engines
+      * MySQL
+      * ### [](#)Description
+      * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~). Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the Running state.
       * *   The instance does not have ongoing migration tasks.
       * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
       * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
       * *   The names that you want to use for the restored tables do not exist in the instance.
-      * > This operation is supported only for instances that run MySQL.
       *
      */
     @Override

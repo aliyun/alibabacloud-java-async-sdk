@@ -58,7 +58,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of information about replication slots.
+         * Details about the replication slot.
          */
         public Builder slots(java.util.List < Slots> slots) {
             this.slots = slots;
@@ -190,7 +190,34 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * The extension that is used by the replication slot.
+             * The extension used by the replication slot.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   test_decoding
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   pgoutput
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   wal2json
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;
@@ -234,6 +261,25 @@ public class DescribeSlotsResponseBody extends TeaModel {
 
             /**
              * The type of the replication slot.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   physical
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   logical
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder slotType(String slotType) {
                 this.slotType = slotType;
@@ -241,7 +287,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * The current Replication Slot corresponds to the specific delay of the logical subscription of the subscriber, in seconds (s)
+             * The latency of the logical subscription on the subscriber node that corresponds to the current replication slot. Unit: seconds.
              */
             public Builder subReplayLag(String subReplayLag) {
                 this.subReplayLag = subReplayLag;
@@ -249,7 +295,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the replication slot is temporary.
+             * Indicates whether the replication slot is a temporary replication slot.
              * <p>
              * 
              * Valid values:
@@ -276,7 +322,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logs that are accumulated for the replication slot.
+             * The number of logs accumulated in the replication slot.
              */
             public Builder walDelay(String walDelay) {
                 this.walDelay = walDelay;

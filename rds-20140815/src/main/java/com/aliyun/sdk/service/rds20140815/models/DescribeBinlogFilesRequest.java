@@ -210,7 +210,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * The page number. Valid values: any non-zero positive integer.
          * <p>
          * 
          * Default value: **1**.
@@ -222,7 +222,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * The number of entries to return on each page.
          * <p>
          * 
          * Valid values: **30** to **100**.

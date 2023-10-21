@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateOrderForCreateDBNodesRequest} extends {@link RequestModel}
+ * {@link CreateOrderForDeleteDBNodesRequest} extends {@link RequestModel}
  *
- * <p>CreateOrderForCreateDBNodesRequest</p>
+ * <p>CreateOrderForDeleteDBNodesRequest</p>
  */
-public class CreateOrderForCreateDBNodesRequest extends Request {
+public class CreateOrderForDeleteDBNodesRequest extends Request {
     @Query
     @NameInMap("AutoPay")
     private Boolean autoPay;
@@ -34,8 +34,8 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
     private String DBInstanceId;
 
     @Query
-    @NameInMap("DBNode")
-    private java.util.List < DBNode> DBNode;
+    @NameInMap("DBNodeId")
+    private java.util.List < String > DBNodeId;
 
     @Query
     @NameInMap("EngineVersion")
@@ -77,14 +77,14 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
     @NameInMap("ZoneId")
     private String zoneId;
 
-    private CreateOrderForCreateDBNodesRequest(Builder builder) {
+    private CreateOrderForDeleteDBNodesRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
         this.commodityCode = builder.commodityCode;
         this.DBInstanceId = builder.DBInstanceId;
-        this.DBNode = builder.DBNode;
+        this.DBNodeId = builder.DBNodeId;
         this.engineVersion = builder.engineVersion;
         this.nodeType = builder.nodeType;
         this.ownerId = builder.ownerId;
@@ -101,7 +101,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         return new Builder();
     }
 
-    public static CreateOrderForCreateDBNodesRequest create() {
+    public static CreateOrderForDeleteDBNodesRequest create() {
         return builder().build();
     }
 
@@ -146,10 +146,10 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
     }
 
     /**
-     * @return DBNode
+     * @return DBNodeId
      */
-    public java.util.List < DBNode> getDBNode() {
-        return this.DBNode;
+    public java.util.List < String > getDBNodeId() {
+        return this.DBNodeId;
     }
 
     /**
@@ -222,13 +222,13 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         return this.zoneId;
     }
 
-    public static final class Builder extends Request.Builder<CreateOrderForCreateDBNodesRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateOrderForDeleteDBNodesRequest, Builder> {
         private Boolean autoPay; 
         private String businessInfo; 
         private String clientToken; 
         private String commodityCode; 
         private String DBInstanceId; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List < String > DBNodeId; 
         private String engineVersion; 
         private String nodeType; 
         private Long ownerId; 
@@ -244,14 +244,14 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrderForCreateDBNodesRequest request) {
+        private Builder(CreateOrderForDeleteDBNodesRequest request) {
             super(request);
             this.autoPay = request.autoPay;
             this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
             this.commodityCode = request.commodityCode;
             this.DBInstanceId = request.DBInstanceId;
-            this.DBNode = request.DBNode;
+            this.DBNodeId = request.DBNodeId;
             this.engineVersion = request.engineVersion;
             this.nodeType = request.nodeType;
             this.ownerId = request.ownerId;
@@ -265,13 +265,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid values:
-         * <p>
-         * 
-         * 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
-         * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
-         * 
-         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * AutoPay.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -280,7 +274,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The additional business information about the instance.
+         * BusinessInfo.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -289,7 +283,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -298,17 +292,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The commodity code of the instance. Valid values:
-         * <p>
-         * 
-         * *   **bards**: The instance is a pay-as-you-go primary instance.
-         * *   **rds**: The instance is a subscription primary instance.
-         * *   **rords**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance.
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance.
-         * *   **rds_intl**: The instance is a subscription primary instance.
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.
+         * CommodityCode.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -317,7 +301,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -326,23 +310,17 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The details about the node.
+         * DBNodeId.
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
-            String DBNodeShrink = shrink(DBNode, "DBNode", "json");
-            this.putQueryParameter("DBNode", DBNodeShrink);
-            this.DBNode = DBNode;
+        public Builder DBNodeId(java.util.List < String > DBNodeId) {
+            String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
+            this.putQueryParameter("DBNodeId", DBNodeIdShrink);
+            this.DBNodeId = DBNodeId;
             return this;
         }
 
         /**
-         * The database engine version of the instance. Valid values:
-         * <p>
-         * 
-         * *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
-         * *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-         * *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, and 14.0**
-         * *   Valid value if you set Engine to MariaDB: **10.3**
+         * EngineVersion.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -351,11 +329,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The type of the database node. Valid values:
-         * <p>
-         * 
-         * *   **Master**: the primary node
-         * *   **Slave**: the secondary node
+         * NodeType.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -373,7 +347,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The coupon code.
+         * PromotionCode.
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -382,7 +356,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -391,7 +365,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The resource of the instance.
+         * Resource.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -400,7 +374,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -427,7 +401,7 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The zone ID of the host. You can call the [DescribeRegions](~~26243~~) operation to query the zone ID of the host.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -436,71 +410,10 @@ public class CreateOrderForCreateDBNodesRequest extends Request {
         }
 
         @Override
-        public CreateOrderForCreateDBNodesRequest build() {
-            return new CreateOrderForCreateDBNodesRequest(this);
+        public CreateOrderForDeleteDBNodesRequest build() {
+            return new CreateOrderForDeleteDBNodesRequest(this);
         } 
 
     } 
 
-    public static class DBNode extends TeaModel {
-        @NameInMap("classCode")
-        private String classCode;
-
-        @NameInMap("zoneId")
-        private String zoneId;
-
-        private DBNode(Builder builder) {
-            this.classCode = builder.classCode;
-            this.zoneId = builder.zoneId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DBNode create() {
-            return builder().build();
-        }
-
-        /**
-         * @return classCode
-         */
-        public String getClassCode() {
-            return this.classCode;
-        }
-
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public static final class Builder {
-            private String classCode; 
-            private String zoneId; 
-
-            /**
-             * The instance type of the node.
-             */
-            public Builder classCode(String classCode) {
-                this.classCode = classCode;
-                return this;
-            }
-
-            /**
-             * The zone ID of the node.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            public DBNode build() {
-                return new DBNode(this);
-            } 
-
-        } 
-
-    }
 }

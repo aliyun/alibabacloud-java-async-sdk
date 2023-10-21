@@ -62,14 +62,7 @@ public class ModifyDatabaseConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code returned. Valid values:
-         * <p>
-         * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **401**: identity authentication failed
-         * *   **404**: request page not found
-         * *   **500**: server error
+         * The code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -77,7 +70,7 @@ public class ModifyDatabaseConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -85,7 +78,7 @@ public class ModifyDatabaseConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

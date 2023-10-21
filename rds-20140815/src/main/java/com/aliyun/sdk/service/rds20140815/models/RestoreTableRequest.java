@@ -182,12 +182,10 @@ public class RestoreTableRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
+         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
          * <p>
          * 
-         * You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
-         * 
-         * > You must specify at least one of **BackupId** and **RestoreTime**.
+         * > You must specify at least one of BackupId or **RestoreTime** parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -268,11 +266,8 @@ public class RestoreTableRequest extends Request {
          * The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
-         * > 
-         * 
-         * *   You must specify at least one of **BackupId** and **RestoreTime**.
-         * 
-         * *   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+         * > *   You must specify at least one of **BackupId** and **RestoreTime**.
+         * > *   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

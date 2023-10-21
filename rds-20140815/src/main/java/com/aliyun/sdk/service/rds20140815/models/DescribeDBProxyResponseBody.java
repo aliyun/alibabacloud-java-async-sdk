@@ -266,39 +266,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          * The status of the proxy instance.
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   DBInstanceClassChanging
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Creating
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Running
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Deleting
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * *   DBInstanceClassChanging: The specifications of the proxy instance are being changed.
+         * *   Creating: The proxy instance is being created.
+         * *   Running: The proxy instance is being running.
+         * *   Deleting: The proxy instance is being deleted.
          */
         public Builder DBProxyInstanceStatus(String DBProxyInstanceStatus) {
             this.DBProxyInstanceStatus = DBProxyInstanceStatus;
@@ -309,33 +280,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          * The type of the database proxy that is enabled on the instance.
          * <p>
          * 
-         * > ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.
+         * *   1: shared proxy
+         * *   2: dedicated proxy
          * 
-         * Valid values:
-         * 
-         * *   1
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     shared proxy
-         * 
-         *     <!-- -->
-         * 
-         * *   2
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     dedicated proxy
-         * 
-         *     <!-- -->
+         * >  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.DBProxyInstanceType = DBProxyInstanceType;
@@ -346,23 +294,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          * The status of the database proxy.
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   Shutdown
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Startup
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * *   Shutdown: disabled
+         * *   Startup: enabled
          */
         public Builder DBProxyServiceStatus(String DBProxyServiceStatus) {
             this.DBProxyServiceStatus = DBProxyServiceStatus;
@@ -574,31 +507,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
              * The network type of the proxy endpoint.
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   OuterString
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Internet
-             * 
-             *     <!-- -->
-             * 
-             * *   InnerString
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     internal network
-             * 
-             *     <!-- -->
+             * *   OuterString: Internet
+             * *   InnerString: internal network
              */
             public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
                 this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
@@ -609,43 +519,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
              * The network type of the database proxy.
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Internet
-             * 
-             *     <!-- -->
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     classic network
-             * 
-             *     <!-- -->
-             * 
-             * *   2
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     virtual private cloud (VPC)
-             * 
-             *     <!-- -->
+             * *   0: Internet
+             * *   1: classic network
+             * *   2: virtual private cloud (VPC)
              */
             public Builder DBProxyConnectStringNetWorkType(String DBProxyConnectStringNetWorkType) {
                 this.DBProxyConnectStringNetWorkType = DBProxyConnectStringNetWorkType;
@@ -830,31 +706,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
              * The type of the proxy terminal.
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   Custom
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     custom proxy terminal
-             * 
-             *     <!-- -->
-             * 
-             * *   RWSplit
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     default proxy terminal
-             * 
-             *     <!-- -->
+             * *   Custom: custom proxy terminal
+             * *   RWSplit: default proxy terminal
              */
             public Builder dbProxyEndpointType(String dbProxyEndpointType) {
                 this.dbProxyEndpointType = dbProxyEndpointType;
@@ -865,23 +718,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
              * The read and write attributes of the proxy terminal.
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   ReadOnly
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   ReadWrite
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * *   ReadOnly: The proxy terminal supports only read requests.
+             * *   ReadWrite: The proxy terminal supports read and write requests.
              */
             public Builder dbProxyReadWriteMode(String dbProxyReadWriteMode) {
                 this.dbProxyReadWriteMode = dbProxyReadWriteMode;

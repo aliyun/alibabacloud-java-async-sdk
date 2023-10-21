@@ -122,7 +122,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The end of the time range that is queried.
+         * The end of the time range to query.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +130,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of details of the cross-region data backup files.
+         * The cross-region data backup files.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Valid values: any non-zero positive integer.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: **1**.
@@ -165,7 +165,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +173,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that is queried.
+         * The beginning of the time range to query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -181,7 +181,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of entries that are returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -545,8 +545,8 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
              * The RDS edition of the instance. Valid values:
              * <p>
              * 
-             * *   **Basic**: Basic Edition.
-             * *   **HighAvailability**: High-availability Edition.
+             * *   **Basic**: RDS Basic Edition
+             * *   **HighAvailability**: RDS High-availability Edition
              * *   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).
              */
             public Builder category(String category) {
@@ -579,7 +579,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination region where the cross-region data backup file of the instance is stored.
+             * The ID of the region in which the cross-region backup files of the instance are stored.
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -616,7 +616,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
              * 
              * *   **local_ssd**: local SSD. This is the recommended storage type.
              * *   **cloud_ssd**: standard SSD.
-             * *   **cloud_essd**: enhanced SSD (ESSD).
+             * *   **cloud_essd**: enhanced SSD (ESSD)
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -624,7 +624,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the database.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -632,7 +632,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * The database engine version of the instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;

@@ -202,7 +202,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The port number that is bound to the proxy endpoint.
+         * The port number that is associated with the proxy endpoint.
          */
         public Builder DBProxyConnectStringPort(String DBProxyConnectStringPort) {
             this.DBProxyConnectStringPort = DBProxyConnectStringPort;
@@ -218,7 +218,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * An internal parameter. This operation does not return a value for this parameter.
+         * An internal parameter. You can ignore this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.DBProxyEngineType = DBProxyEngineType;
@@ -230,11 +230,11 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          * <p>
          * 
          * *   **TransactionReadSqlRouteOptimizeStatus**: the status of the transaction splitting feature. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-         * *   **ConnectionPersist**: the status of the connection pool feature. Valid values: **0**, **1**, and **2**. The value 0 indicates that the connection pool feature is disabled. The value 1 indicates that the session connection pool feature is enabled. The value 2 indicates that the transaction connection pool feature is enabled.
+         * *   **ConnectionPersist**: the status of the connection pooling feature. Valid values: **0**, **1**, and **2**. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session connection pooling feature is enabled. The value 2 indicates that the transaction connection pooling feature is enabled.
          * *   **ReadWriteSpliting**: the status of the read/write splitting feature. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
          * *   **PinPreparedStmt**: an internal field that is available only for ApsaraDB RDS for PostgrSQL instances.
          * 
-         *     > If the instance runs PostgreSQL, you can change only the value of the **ReadWriteSpliting** field. The **TransactionReadSqlRouteOptimizeStatus** and **PinPreparedStmt** fields are set to their default values 1.
+         * >  If the instance runs PostgreSQL, you can change only the value of the **ReadWriteSpliting** field. The **TransactionReadSqlRouteOptimizeStatus** and **PinPreparedStmt** fields are set to their default values 1.
          */
         public Builder DBProxyFeatures(String DBProxyFeatures) {
             this.DBProxyFeatures = DBProxyFeatures;
@@ -273,7 +273,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          * The method that is used to assign read weights. For more information, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](~~96076~~). Valid values:
          * <p>
          * 
-         * *   **Standard**: ApsaraDB RDS automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.
+         * *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
          * *   **Custom**: You must manually assign read weights to the instance and its read-only instances.
          */
         public Builder readOnlyInstanceDistributionType(String readOnlyInstanceDistributionType) {
@@ -295,9 +295,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          * 
          * *   **DBInstanceId**: the ID of the instance.
          * *   **DBInstanceType**: the role of the instance. Valid values: **Master** and **ReadOnly**.
+         * *   **NodeID**: the IDs of the primary and secondary nodes on the primary instance if the instance runs RDS Cluster Edition.
+         * *   **NodeType**: the type of the node if the instance runs RDS Cluster Edition. Valid values: **Primary** and **Secondary**. The value Primary indicates the primary node on the primary instance. The value Secondary indicates the secondary node on the primary instance.
          * *   **Weight**: the read weight of the instance. The read weight increases in increments of **100** and cannot exceed **10000**.
-         * 
-         * >  If no read-only instances are attached to the instance, this operation returns **null** for this parameter.
          */
         public Builder readOnlyInstanceWeight(String readOnlyInstanceWeight) {
             this.readOnlyInstanceWeight = readOnlyInstanceWeight;
@@ -305,7 +305,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -377,7 +377,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the proxy endpoint. Valid values:
+             * The network type of the instance. Valid values:
              * <p>
              * 
              * *   **0**: Internet

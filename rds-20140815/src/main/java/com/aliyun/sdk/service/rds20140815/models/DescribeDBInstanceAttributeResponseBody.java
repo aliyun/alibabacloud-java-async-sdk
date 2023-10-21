@@ -145,6 +145,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ClassCode")
         private String classCode;
 
+        @NameInMap("ClassType")
+        private String classType;
+
+        @NameInMap("Cpu")
+        private String cpu;
+
+        @NameInMap("Memory")
+        private String memory;
+
         @NameInMap("NodeId")
         private String nodeId;
 
@@ -157,12 +166,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("NodeZoneId")
         private String nodeZoneId;
 
+        @NameInMap("Status")
+        private String status;
+
         private DBClusterNode(Builder builder) {
             this.classCode = builder.classCode;
+            this.classType = builder.classType;
+            this.cpu = builder.cpu;
+            this.memory = builder.memory;
             this.nodeId = builder.nodeId;
             this.nodeRegionId = builder.nodeRegionId;
             this.nodeRole = builder.nodeRole;
             this.nodeZoneId = builder.nodeZoneId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -178,6 +194,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getClassCode() {
             return this.classCode;
+        }
+
+        /**
+         * @return classType
+         */
+        public String getClassType() {
+            return this.classType;
+        }
+
+        /**
+         * @return cpu
+         */
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
         }
 
         /**
@@ -208,18 +245,53 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.nodeZoneId;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String classCode; 
+            private String classType; 
+            private String cpu; 
+            private String memory; 
             private String nodeId; 
             private String nodeRegionId; 
             private String nodeRole; 
             private String nodeZoneId; 
+            private String status; 
 
             /**
              * The specification of the node.
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
+                return this;
+            }
+
+            /**
+             * ClassType.
+             */
+            public Builder classType(String classType) {
+                this.classType = classType;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(String cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
                 return this;
             }
 
@@ -256,6 +328,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder nodeZoneId(String nodeZoneId) {
                 this.nodeZoneId = nodeZoneId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

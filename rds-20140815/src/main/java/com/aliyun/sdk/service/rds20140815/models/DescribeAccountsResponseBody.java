@@ -98,7 +98,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the accounts.
+         * The details of the account.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -205,11 +205,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * The type of the permissions. Valid values:
              * <p>
              * 
-             * *   **ReadWrite**: read and write permissions
-             * *   **ReadOnly**: read-only permissions
-             * *   **DDLOnly**: DDL-only permissions
-             * *   **DMLOnly**: DML-only permissions
-             * *   **Custom**: custom permissions (You can modify the permissions of the account by using SQL commands.)
+             * *   **ReadWrite**: read and write permissions.
+             * *   **ReadOnly**: read-only permissions.
+             * *   **DDLOnly**: DDL-only permissions.
+             * *   **DMLOnly**: DML-only permissions.
+             * *   **Custom**: custom permissions. You can modify the permissions of the account by using SQL commands.
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -447,7 +447,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * The name of the database account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -486,7 +486,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * *   **t**: yes
              * *   **f**: no
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder bypassRLS(String bypassRLS) {
                 this.bypassRLS = bypassRLS;
@@ -500,7 +500,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * *   **t**: yes
              * *   **f**: no
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder createDB(String createDB) {
                 this.createDB = createDB;
@@ -514,7 +514,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * *   **t**: yes
              * *   **f**: no
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder createRole(String createRole) {
                 this.createRole = createRole;
@@ -556,7 +556,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * *   **t**: yes
              * *   **f**: no
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder replication(String replication) {
                 this.replication = replication;
@@ -571,7 +571,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * *   **Empty**: The expiration time is not specified.
              * *   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;

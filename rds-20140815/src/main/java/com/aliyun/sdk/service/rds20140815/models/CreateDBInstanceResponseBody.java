@@ -183,11 +183,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
          * *   **true**
          * *   **false**
          * 
-         * > 
-         * 
-         * *   If the system does not perform a dry run, this parameter is not returned.
-         * 
-         * *   If the request failed the dry run, an error message is returned.
+         * > *   If the system does not perform a dry run, this parameter is not returned.
+         * > *   If the request failed the dry run, an error message is returned.
          */
         public Builder dryRunResult(Boolean dryRunResult) {
             this.dryRunResult = dryRunResult;

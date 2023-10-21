@@ -74,7 +74,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -98,7 +98,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +222,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address of the instance.
+             * The IP address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -238,7 +238,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The mask of the instance.
+             * The mask of the IP address.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -262,7 +262,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the configuration item in the pg_hba.conf file.
+             * The priority.
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -270,7 +270,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the connection.
+             * The connection type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +278,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account that was used to connect to the instance.
+             * The username of the account.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -444,7 +444,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address of the instance.
+             * The IP address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -460,7 +460,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The mask of the instance.
+             * The mask of the IP address.
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -476,7 +476,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The value of this parameter was set based on the value of the Method parameter.
+             * The value of this parameter varies based on the value of the Method parameter.
              */
             public Builder option(String option) {
                 this.option = option;
@@ -484,7 +484,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the configuration item in the pg_hba.conf file.
+             * The priority.
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -492,7 +492,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the connection.
+             * The connection type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -500,7 +500,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account that was used to connect to the instance.
+             * The username of the account.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -630,7 +630,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The configuration of the pg_hba.conf file after the modification was made.
+             * The configurations of the pg_hba.conf file after modification.
              */
             public Builder afterHbaItems(AfterHbaItems afterHbaItems) {
                 this.afterHbaItems = afterHbaItems;
@@ -638,7 +638,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the pg_hba.conf file before the modification was made.
+             * The configurations of the pg_hba.conf file before modification.
              */
             public Builder beforeHbaItems(BeforeHbaItems beforeHbaItems) {
                 this.beforeHbaItems = beforeHbaItems;

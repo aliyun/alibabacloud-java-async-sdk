@@ -136,10 +136,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          * <p>
          * 
-         * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+         * >  This operation is not supported for instances that run SQL Server 2017 (cluster edition).
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,7 +157,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid value: **30 to 200**. Default value: **30**.
+         * The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

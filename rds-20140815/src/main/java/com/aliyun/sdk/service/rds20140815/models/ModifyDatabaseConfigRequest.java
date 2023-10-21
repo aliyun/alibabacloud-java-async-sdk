@@ -156,7 +156,7 @@ public class ModifyDatabaseConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -165,7 +165,10 @@ public class ModifyDatabaseConfigRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * The database name.
+         * <p>
+         * 
+         * >  You can specify only one database name.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -174,7 +177,7 @@ public class ModifyDatabaseConfigRequest extends Request {
         }
 
         /**
-         * The name of the database property expected to be modified.
+         * The name of the database property that you want to modify.
          */
         public Builder databasePropertyName(String databasePropertyName) {
             this.putQueryParameter("DatabasePropertyName", databasePropertyName);
@@ -183,7 +186,7 @@ public class ModifyDatabaseConfigRequest extends Request {
         }
 
         /**
-         * The database property value that is expected to be modified.
+         * The value of the database property that you want to modify.
          */
         public Builder databasePropertyValue(String databasePropertyValue) {
             this.putQueryParameter("DatabasePropertyValue", databasePropertyValue);

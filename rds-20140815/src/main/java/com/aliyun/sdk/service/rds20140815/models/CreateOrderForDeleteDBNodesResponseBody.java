@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateOrderForCreateDBNodesResponseBody} extends {@link TeaModel}
+ * {@link CreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
  *
- * <p>CreateOrderForCreateDBNodesResponseBody</p>
+ * <p>CreateOrderForDeleteDBNodesResponseBody</p>
  */
-public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
+public class CreateOrderForDeleteDBNodesResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     private String DBInstanceId;
 
@@ -21,7 +21,7 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateOrderForCreateDBNodesResponseBody(Builder builder) {
+    private CreateOrderForDeleteDBNodesResponseBody(Builder builder) {
         this.DBInstanceId = builder.DBInstanceId;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
@@ -31,7 +31,7 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateOrderForCreateDBNodesResponseBody create() {
+    public static CreateOrderForDeleteDBNodesResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,15 +78,15 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateOrderForCreateDBNodesResponseBody build() {
-            return new CreateOrderForCreateDBNodesResponseBody(this);
+        public CreateOrderForDeleteDBNodesResponseBody build() {
+            return new CreateOrderForDeleteDBNodesResponseBody(this);
         } 
 
     } 

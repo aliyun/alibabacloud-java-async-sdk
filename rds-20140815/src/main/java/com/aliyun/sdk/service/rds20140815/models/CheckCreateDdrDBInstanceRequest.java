@@ -245,7 +245,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
          * The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.
          * <p>
          * 
-         * > : If you set **RestoreType** to **0**, you must also specify this parameter.
+         * > If you set **RestoreType** to **0**, you must also specify this parameter.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -348,7 +348,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
          * The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          * <p>
          * 
-         * > : If you set **RestoreType** to **1**, you must also specify this parameter.
+         * > If you set **RestoreType** to **1**, you must also specify this parameter.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -375,7 +375,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
          * The ID of the source instance if you want to restore data to a point in time.
          * <p>
          * 
-         * > : If you set **RestoreType** to **1**, you must also specify this parameter.
+         * > If you set **RestoreType** to **1**, you must also specify this parameter.
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);
@@ -387,7 +387,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
          * The region ID of the source instance if you want to restore data to a point in time.
          * <p>
          * 
-         * > : If you set **RestoreType** to **1**, you must also specify this parameter.
+         * > If you set **RestoreType** to **1**, you must also specify this parameter.
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);

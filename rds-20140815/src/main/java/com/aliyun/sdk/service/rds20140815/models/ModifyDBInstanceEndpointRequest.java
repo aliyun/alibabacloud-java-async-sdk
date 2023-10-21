@@ -147,7 +147,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~464397~~) operation to query the endpoint ID of the instance.
+         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -156,7 +156,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -241,7 +241,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+             * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -249,13 +249,13 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              * <p>
              * 
              * You can use one of the following methods to query the ID of the node:
              * 
              * *   Log on to the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology section.
-             * *   Call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the ID of the node.
+             * *   Call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

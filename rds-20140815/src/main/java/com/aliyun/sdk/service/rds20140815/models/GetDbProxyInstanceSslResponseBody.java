@@ -58,7 +58,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -178,7 +178,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate expires.
+             * The time at which the certificate expires.
              */
             public Builder sslExpiredTime(String sslExpiredTime) {
                 this.sslExpiredTime = sslExpiredTime;

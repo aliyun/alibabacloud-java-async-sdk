@@ -709,7 +709,7 @@ public class CreateDdrInstanceRequest extends Request {
          * <p>
          * 
          * *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.
-         * *   **BackupTime**: restores data to a point in time. You must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
+         * *   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);

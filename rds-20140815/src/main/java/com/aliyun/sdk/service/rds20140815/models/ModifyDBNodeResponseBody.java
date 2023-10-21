@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateOrderForCreateDBNodesResponseBody} extends {@link TeaModel}
+ * {@link ModifyDBNodeResponseBody} extends {@link TeaModel}
  *
- * <p>CreateOrderForCreateDBNodesResponseBody</p>
+ * <p>ModifyDBNodeResponseBody</p>
  */
-public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
+public class ModifyDBNodeResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     private String DBInstanceId;
 
@@ -21,17 +21,21 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateOrderForCreateDBNodesResponseBody(Builder builder) {
+    @NameInMap("Success")
+    private Boolean success;
+
+    private ModifyDBNodeResponseBody(Builder builder) {
         this.DBInstanceId = builder.DBInstanceId;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateOrderForCreateDBNodesResponseBody create() {
+    public static ModifyDBNodeResponseBody create() {
         return builder().build();
     }
 
@@ -56,13 +60,21 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String DBInstanceId; 
         private Long orderId; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * The instance ID.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +82,7 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,15 +90,23 @@ public class CreateOrderForCreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateOrderForCreateDBNodesResponseBody build() {
-            return new CreateOrderForCreateDBNodesResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public ModifyDBNodeResponseBody build() {
+            return new ModifyDBNodeResponseBody(this);
         } 
 
     } 

@@ -221,8 +221,8 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
          * The status of the cross-region backup feature on the instance. Valid values:
          * <p>
          * 
-         * *   **Disable**: The feature is disabled.
-         * *   **Enable**: The feature is enabled.
+         * *   **Disable**
+         * *   **Enable**
          */
         public Builder backupEnabled(String backupEnabled) {
             this.backupEnabled = backupEnabled;
@@ -238,7 +238,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region in which the cross-region backup files of the instance is stored.
+         * The ID of the destination region where the cross-region backup files of the instance are stored.
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.crossBackupRegion = crossBackupRegion;
@@ -254,10 +254,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
          * <p>
          * 
-         * > The name cannot start with http:// or https://.
+         * >  The value cannot start with http:// or https://.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.DBInstanceDescription = DBInstanceDescription;
@@ -265,7 +265,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -281,7 +281,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -289,7 +289,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine version of the instance.
+         * The database engine version.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -303,7 +303,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
          * *   **Unlock**: The instance is not locked.
          * *   **ManualLock**: The instance is manually locked.
          * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-         * *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
+         * *   **LockByRestoration**: The instance is automatically locked before a rollback.
          * *   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.
          */
         public Builder lockMode(String lockMode) {
@@ -315,8 +315,8 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
          * The status of the cross-region log backup feature on the instance. Valid values:
          * <p>
          * 
-         * *   **Disable**: The feature is disabled.
-         * *   **Enable**: The feature is enabled.
+         * *   **Disable**
+         * *   **Enable**
          */
         public Builder logBackupEnabled(String logBackupEnabled) {
             this.logBackupEnabled = logBackupEnabled;
@@ -324,7 +324,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when cross-region log backup was enabled on the instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder logBackupEnabledTime(String logBackupEnabledTime) {
             this.logBackupEnabledTime = logBackupEnabledTime;
@@ -340,7 +340,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
