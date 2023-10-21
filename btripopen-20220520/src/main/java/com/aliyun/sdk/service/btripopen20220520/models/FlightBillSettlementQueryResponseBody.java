@@ -308,6 +308,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         private String invoiceTitle;
 
+        @NameInMap("item_type")
+        private String itemType;
+
         @NameInMap("itinerary_num")
         private String itineraryNum;
 
@@ -428,6 +431,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("voucher_type")
         private Integer voucherType;
 
+        @NameInMap("voyage_name")
+        private String voyageName;
+
         private DataList(Builder builder) {
             this.advanceDay = builder.advanceDay;
             this.airlineCorpCode = builder.airlineCorpCode;
@@ -481,6 +487,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.insuranceFee = builder.insuranceFee;
             this.insuranceNumber = builder.insuranceNumber;
             this.invoiceTitle = builder.invoiceTitle;
+            this.itemType = builder.itemType;
             this.itineraryNum = builder.itineraryNum;
             this.itineraryPrice = builder.itineraryPrice;
             this.mileage = builder.mileage;
@@ -521,6 +528,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.travelerName = builder.travelerName;
             this.upgradeCost = builder.upgradeCost;
             this.voucherType = builder.voucherType;
+            this.voyageName = builder.voyageName;
         }
 
         public static Builder builder() {
@@ -896,6 +904,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return itemType
+         */
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        /**
          * @return itineraryNum
          */
         public String getItineraryNum() {
@@ -1175,6 +1190,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.voucherType;
         }
 
+        /**
+         * @return voyageName
+         */
+        public String getVoyageName() {
+            return this.voyageName;
+        }
+
         public static final class Builder {
             private Integer advanceDay; 
             private String airlineCorpCode; 
@@ -1228,6 +1250,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private Double insuranceFee; 
             private String insuranceNumber; 
             private String invoiceTitle; 
+            private String itemType; 
             private String itineraryNum; 
             private Double itineraryPrice; 
             private String mileage; 
@@ -1268,6 +1291,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String travelerName; 
             private Double upgradeCost; 
             private Integer voucherType; 
+            private String voyageName; 
 
             /**
              * advance_day.
@@ -1686,6 +1710,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * item_type.
+             */
+            public Builder itemType(String itemType) {
+                this.itemType = itemType;
+                return this;
+            }
+
+            /**
              * itinerary_num.
              */
             public Builder itineraryNum(String itineraryNum) {
@@ -2002,6 +2034,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voyage_name.
+             */
+            public Builder voyageName(String voyageName) {
+                this.voyageName = voyageName;
                 return this;
             }
 

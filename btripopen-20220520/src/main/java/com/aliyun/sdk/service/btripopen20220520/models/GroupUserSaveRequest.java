@@ -215,6 +215,9 @@ public class GroupUserSaveRequest extends Request {
         @NameInMap("depart_ids")
         private java.util.List < String > departIds;
 
+        @NameInMap("email")
+        private String email;
+
         @NameInMap("leave_status")
         @Validation(required = true)
         private Integer leaveStatus;
@@ -231,6 +234,7 @@ public class GroupUserSaveRequest extends Request {
 
         private SubCorpIdList(Builder builder) {
             this.departIds = builder.departIds;
+            this.email = builder.email;
             this.leaveStatus = builder.leaveStatus;
             this.managerUserId = builder.managerUserId;
             this.positionLevel = builder.positionLevel;
@@ -250,6 +254,13 @@ public class GroupUserSaveRequest extends Request {
          */
         public java.util.List < String > getDepartIds() {
             return this.departIds;
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
         }
 
         /**
@@ -282,6 +293,7 @@ public class GroupUserSaveRequest extends Request {
 
         public static final class Builder {
             private java.util.List < String > departIds; 
+            private String email; 
             private Integer leaveStatus; 
             private String managerUserId; 
             private String positionLevel; 
@@ -292,6 +304,14 @@ public class GroupUserSaveRequest extends Request {
              */
             public Builder departIds(java.util.List < String > departIds) {
                 this.departIds = departIds;
+                return this;
+            }
+
+            /**
+             * email.
+             */
+            public Builder email(String email) {
+                this.email = email;
                 return this;
             }
 
