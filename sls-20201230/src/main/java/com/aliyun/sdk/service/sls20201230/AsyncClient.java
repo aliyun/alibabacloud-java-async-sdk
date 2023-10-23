@@ -58,11 +58,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request);
 
+    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
+
     CompletableFuture<DeleteAnnotationDataResponse> deleteAnnotationData(DeleteAnnotationDataRequest request);
 
     CompletableFuture<DeleteAnnotationDataSetResponse> deleteAnnotationDataSet(DeleteAnnotationDataSetRequest request);
 
     CompletableFuture<DeleteAnnotationLabelResponse> deleteAnnotationLabel(DeleteAnnotationLabelRequest request);
+
+    CompletableFuture<DeleteCollectionPolicyResponse> deleteCollectionPolicy(DeleteCollectionPolicyRequest request);
 
     CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
 
@@ -104,6 +108,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request);
 
+    CompletableFuture<GetCollectionPolicyResponse> getCollectionPolicy(GetCollectionPolicyRequest request);
+
     CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request);
 
     CompletableFuture<GetContextLogsResponse> getContextLogs(GetContextLogsRequest request);
@@ -121,6 +127,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request);
 
     CompletableFuture<GetLogStoreResponse> getLogStore(GetLogStoreRequest request);
+
+    CompletableFuture<GetLogStoreMeteringModeResponse> getLogStoreMeteringMode(GetLogStoreMeteringModeRequest request);
 
     CompletableFuture<GetLoggingResponse> getLogging(GetLoggingRequest request);
 
@@ -147,6 +155,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAnnotationDataSetsResponse> listAnnotationDataSets(ListAnnotationDataSetsRequest request);
 
     CompletableFuture<ListAnnotationLabelsResponse> listAnnotationLabels(ListAnnotationLabelsRequest request);
+
+    CompletableFuture<ListCollectionPoliciesResponse> listCollectionPolicies(ListCollectionPoliciesRequest request);
 
     CompletableFuture<ListConfigResponse> listConfig(ListConfigRequest request);
 
@@ -208,6 +218,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateLogStoreResponse> updateLogStore(UpdateLogStoreRequest request);
 
+    CompletableFuture<UpdateLogStoreMeteringModeResponse> updateLogStoreMeteringMode(UpdateLogStoreMeteringModeRequest request);
+
     CompletableFuture<UpdateLoggingResponse> updateLogging(UpdateLoggingRequest request);
 
     CompletableFuture<UpdateLogtailPipelineConfigResponse> updateLogtailPipelineConfig(UpdateLogtailPipelineConfigRequest request);
@@ -227,5 +239,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRdsExternalStoreResponse> updateRdsExternalStore(UpdateRdsExternalStoreRequest request);
 
     CompletableFuture<UpdateSavedSearchResponse> updateSavedSearch(UpdateSavedSearchRequest request);
+
+    CompletableFuture<UpsertCollectionPolicyResponse> upsertCollectionPolicy(UpsertCollectionPolicyRequest request);
 
 }
