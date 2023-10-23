@@ -99,10 +99,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除集群。
-      *
-     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -875,6 +871,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * 执行应用操作。
+      *
+     */
     @Override
     public CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request) {
         try {
@@ -889,10 +889,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 给资源打标签。
-      *
-     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {

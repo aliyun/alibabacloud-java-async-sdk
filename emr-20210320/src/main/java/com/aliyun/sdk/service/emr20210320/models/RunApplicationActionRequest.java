@@ -221,10 +221,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 运行失败策略。取值范围：
-         * <p>
-         * - FAILED_BLOCK：失败后阻塞。
-         * - FAILED_CONTINUE：失败后继续。
+         * 运行策略。
          */
         public Builder executeStrategy(String executeStrategy) {
             this.putQueryParameter("ExecuteStrategy", executeStrategy);
@@ -233,7 +230,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 滚动执行间隔时间。
+         * 间隔时间。
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);

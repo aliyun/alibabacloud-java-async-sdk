@@ -79,7 +79,7 @@ public class GetClusterRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * 地域ID。
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

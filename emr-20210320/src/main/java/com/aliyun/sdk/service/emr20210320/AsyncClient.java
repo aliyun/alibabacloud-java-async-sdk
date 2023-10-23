@@ -32,10 +32,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DecreaseNodesResponse> decreaseNodes(DecreaseNodesRequest request);
 
-    /**
-      * 删除集群。
-      *
-     */
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
@@ -280,12 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveAutoScalingPolicyResponse> removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request);
 
-    CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request);
-
     /**
-      * 给资源打标签。
+      * 执行应用操作。
       *
      */
+    CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request);
+
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**

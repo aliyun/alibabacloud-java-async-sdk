@@ -51,6 +51,9 @@ public class ClusterSummary extends TeaModel {
     @NameInMap("StateChangeReason")
     private ClusterStateChangeReason stateChangeReason;
 
+    @NameInMap("Status")
+    private String status;
+
     @NameInMap("Tags")
     private java.util.List < Tag > tags;
 
@@ -68,6 +71,7 @@ public class ClusterSummary extends TeaModel {
         this.releaseVersion = builder.releaseVersion;
         this.resourceGroupId = builder.resourceGroupId;
         this.stateChangeReason = builder.stateChangeReason;
+        this.status = builder.status;
         this.tags = builder.tags;
     }
 
@@ -171,6 +175,13 @@ public class ClusterSummary extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tag > getTags() {
@@ -191,6 +202,7 @@ public class ClusterSummary extends TeaModel {
         private String releaseVersion; 
         private String resourceGroupId; 
         private ClusterStateChangeReason stateChangeReason; 
+        private String status; 
         private java.util.List < Tag > tags; 
 
         /**
@@ -311,6 +323,23 @@ public class ClusterSummary extends TeaModel {
          */
         public Builder stateChangeReason(ClusterStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;
+            return this;
+        }
+
+        /**
+         * 集群状态。取值范围：
+         * <p>
+         * - STARTING：启动中。
+         * - START_FAILED：启动失败。
+         * - BOOTSTRAPPING：引导操作初始化。
+         * - RUNNING：运行中。
+         * - TERMINATING：终止中。
+         * - TERMINATED：已终止。
+         * - TERMINATED_WITH_ERRORS：发生异常导致终止。
+         * - TERMINATE_FAILED：终止失败。
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
