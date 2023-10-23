@@ -968,20 +968,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<DescribeSQLPatternAttributeResponse> describeSQLPatternAttribute(DescribeSQLPatternAttributeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSQLPatternAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSQLPatternAttributeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeSQLPatternAttributeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<DescribeSQLPatternsResponse> describeSQLPatterns(DescribeSQLPatternsRequest request) {
         try {
             this.handler.validateRequestModel(request);

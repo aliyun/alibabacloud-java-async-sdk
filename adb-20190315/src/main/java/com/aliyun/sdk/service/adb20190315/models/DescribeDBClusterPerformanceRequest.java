@@ -19,7 +19,6 @@ public class DescribeDBClusterPerformanceRequest extends Request {
 
     @Query
     @NameInMap("EndTime")
-    @Validation(required = true)
     private String endTime;
 
     @Query
@@ -35,6 +34,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -43,8 +47,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ResourcePools")
+    private String resourcePools;
+
+    @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     private DescribeDBClusterPerformanceRequest(Builder builder) {
@@ -54,8 +61,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         this.key = builder.key;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourcePools = builder.resourcePools;
         this.startTime = builder.startTime;
     }
 
@@ -108,6 +117,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -119,6 +135,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return resourcePools
+     */
+    public String getResourcePools() {
+        return this.resourcePools;
     }
 
     /**
@@ -134,8 +157,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         private String key; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String resourcePools; 
         private String startTime; 
 
         private Builder() {
@@ -149,8 +174,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             this.key = request.key;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePools = request.resourcePools;
             this.startTime = request.startTime;
         } 
 
@@ -247,6 +274,15 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -261,6 +297,15 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ResourcePools.
+         */
+        public Builder resourcePools(String resourcePools) {
+            this.putQueryParameter("ResourcePools", resourcePools);
+            this.resourcePools = resourcePools;
             return this;
         }
 

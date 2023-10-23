@@ -217,8 +217,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
-    CompletableFuture<DescribeSQLPatternAttributeResponse> describeSQLPatternAttribute(DescribeSQLPatternAttributeRequest request);
-
     CompletableFuture<DescribeSQLPatternsResponse> describeSQLPatterns(DescribeSQLPatternsRequest request);
 
     CompletableFuture<DescribeSQLPlanResponse> describeSQLPlan(DescribeSQLPlanRequest request);

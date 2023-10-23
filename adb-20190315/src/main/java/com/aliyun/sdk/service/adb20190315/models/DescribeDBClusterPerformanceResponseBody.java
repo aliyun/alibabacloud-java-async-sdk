@@ -135,11 +135,15 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Tags")
+        private String tags;
+
         @NameInMap("Values")
         private java.util.List < String > values;
 
         private Series(Builder builder) {
             this.name = builder.name;
+            this.tags = builder.tags;
             this.values = builder.values;
         }
 
@@ -159,6 +163,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public String getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return values
          */
         public java.util.List < String > getValues() {
@@ -167,6 +178,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+            private String tags; 
             private java.util.List < String > values; 
 
             /**
@@ -174,6 +186,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(String tags) {
+                this.tags = tags;
                 return this;
             }
 
