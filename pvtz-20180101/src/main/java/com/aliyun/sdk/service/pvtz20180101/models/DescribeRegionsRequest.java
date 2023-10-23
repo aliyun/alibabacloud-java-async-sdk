@@ -25,6 +25,10 @@ public class DescribeRegionsRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Scene")
+    private String scene;
+
+    @Query
     @NameInMap("UserClientIp")
     private String userClientIp;
 
@@ -37,6 +41,7 @@ public class DescribeRegionsRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.authorizedUserId = builder.authorizedUserId;
         this.lang = builder.lang;
+        this.scene = builder.scene;
         this.userClientIp = builder.userClientIp;
         this.vpcType = builder.vpcType;
     }
@@ -76,6 +81,13 @@ public class DescribeRegionsRequest extends Request {
     }
 
     /**
+     * @return scene
+     */
+    public String getScene() {
+        return this.scene;
+    }
+
+    /**
      * @return userClientIp
      */
     public String getUserClientIp() {
@@ -93,6 +105,7 @@ public class DescribeRegionsRequest extends Request {
         private String acceptLanguage; 
         private Long authorizedUserId; 
         private String lang; 
+        private String scene; 
         private String userClientIp; 
         private String vpcType; 
 
@@ -105,6 +118,7 @@ public class DescribeRegionsRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.authorizedUserId = request.authorizedUserId;
             this.lang = request.lang;
+            this.scene = request.scene;
             this.userClientIp = request.userClientIp;
             this.vpcType = request.vpcType;
         } 
@@ -133,6 +147,15 @@ public class DescribeRegionsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Scene.
+         */
+        public Builder scene(String scene) {
+            this.putQueryParameter("Scene", scene);
+            this.scene = scene;
             return this;
         }
 

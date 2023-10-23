@@ -240,6 +240,18 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
+        @NameInMap("Creator")
+        private String creator;
+
+        @NameInMap("CreatorType")
+        private String creatorType;
+
+        @NameInMap("DnsGroup")
+        private String dnsGroup;
+
+        @NameInMap("DnsGroupChanging")
+        private Boolean dnsGroupChanging;
+
         @NameInMap("IsPtr")
         private Boolean isPtr;
 
@@ -273,6 +285,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         private Zone(Builder builder) {
             this.createTime = builder.createTime;
             this.createTimestamp = builder.createTimestamp;
+            this.creator = builder.creator;
+            this.creatorType = builder.creatorType;
+            this.dnsGroup = builder.dnsGroup;
+            this.dnsGroupChanging = builder.dnsGroupChanging;
             this.isPtr = builder.isPtr;
             this.recordCount = builder.recordCount;
             this.remark = builder.remark;
@@ -305,6 +321,34 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
          */
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        /**
+         * @return creator
+         */
+        public String getCreator() {
+            return this.creator;
+        }
+
+        /**
+         * @return creatorType
+         */
+        public String getCreatorType() {
+            return this.creatorType;
+        }
+
+        /**
+         * @return dnsGroup
+         */
+        public String getDnsGroup() {
+            return this.dnsGroup;
+        }
+
+        /**
+         * @return dnsGroupChanging
+         */
+        public Boolean getDnsGroupChanging() {
+            return this.dnsGroupChanging;
         }
 
         /**
@@ -380,6 +424,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private Long createTimestamp; 
+            private String creator; 
+            private String creatorType; 
+            private String dnsGroup; 
+            private Boolean dnsGroupChanging; 
             private Boolean isPtr; 
             private Integer recordCount; 
             private String remark; 
@@ -404,6 +452,38 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Creator.
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
+                return this;
+            }
+
+            /**
+             * CreatorType.
+             */
+            public Builder creatorType(String creatorType) {
+                this.creatorType = creatorType;
+                return this;
+            }
+
+            /**
+             * DnsGroup.
+             */
+            public Builder dnsGroup(String dnsGroup) {
+                this.dnsGroup = dnsGroup;
+                return this;
+            }
+
+            /**
+             * DnsGroupChanging.
+             */
+            public Builder dnsGroupChanging(Boolean dnsGroupChanging) {
+                this.dnsGroupChanging = dnsGroupChanging;
                 return this;
             }
 

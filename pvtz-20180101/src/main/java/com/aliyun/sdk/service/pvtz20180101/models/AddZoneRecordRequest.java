@@ -13,8 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddZoneRecordRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
+
+    @Query
+    @NameInMap("Line")
+    private String line;
 
     @Query
     @NameInMap("Priority")
@@ -50,13 +58,19 @@ public class AddZoneRecordRequest extends Request {
     private String value;
 
     @Query
+    @NameInMap("Weight")
+    private Integer weight;
+
+    @Query
     @NameInMap("ZoneId")
     @Validation(required = true)
     private String zoneId;
 
     private AddZoneRecordRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.lang = builder.lang;
+        this.line = builder.line;
         this.priority = builder.priority;
         this.remark = builder.remark;
         this.rr = builder.rr;
@@ -64,6 +78,7 @@ public class AddZoneRecordRequest extends Request {
         this.type = builder.type;
         this.userClientIp = builder.userClientIp;
         this.value = builder.value;
+        this.weight = builder.weight;
         this.zoneId = builder.zoneId;
     }
 
@@ -81,10 +96,24 @@ public class AddZoneRecordRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return line
+     */
+    public String getLine() {
+        return this.line;
     }
 
     /**
@@ -137,6 +166,13 @@ public class AddZoneRecordRequest extends Request {
     }
 
     /**
+     * @return weight
+     */
+    public Integer getWeight() {
+        return this.weight;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -144,7 +180,9 @@ public class AddZoneRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddZoneRecordRequest, Builder> {
+        private String clientToken; 
         private String lang; 
+        private String line; 
         private Integer priority; 
         private String remark; 
         private String rr; 
@@ -152,6 +190,7 @@ public class AddZoneRecordRequest extends Request {
         private String type; 
         private String userClientIp; 
         private String value; 
+        private Integer weight; 
         private String zoneId; 
 
         private Builder() {
@@ -160,7 +199,9 @@ public class AddZoneRecordRequest extends Request {
 
         private Builder(AddZoneRecordRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.lang = request.lang;
+            this.line = request.line;
             this.priority = request.priority;
             this.remark = request.remark;
             this.rr = request.rr;
@@ -168,8 +209,18 @@ public class AddZoneRecordRequest extends Request {
             this.type = request.type;
             this.userClientIp = request.userClientIp;
             this.value = request.value;
+            this.weight = request.weight;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Lang.
@@ -177,6 +228,15 @@ public class AddZoneRecordRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Line.
+         */
+        public Builder line(String line) {
+            this.putQueryParameter("Line", line);
+            this.line = line;
             return this;
         }
 
@@ -240,6 +300,15 @@ public class AddZoneRecordRequest extends Request {
         public Builder value(String value) {
             this.putQueryParameter("Value", value);
             this.value = value;
+            return this;
+        }
+
+        /**
+         * Weight.
+         */
+        public Builder weight(Integer weight) {
+            this.putQueryParameter("Weight", weight);
+            this.weight = weight;
             return this;
         }
 

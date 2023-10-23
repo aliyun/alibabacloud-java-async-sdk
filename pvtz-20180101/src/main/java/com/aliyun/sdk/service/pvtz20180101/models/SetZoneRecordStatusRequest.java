@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SetZoneRecordStatusRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -32,6 +36,7 @@ public class SetZoneRecordStatusRequest extends Request {
 
     private SetZoneRecordStatusRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.lang = builder.lang;
         this.recordId = builder.recordId;
         this.status = builder.status;
@@ -49,6 +54,13 @@ public class SetZoneRecordStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -80,6 +92,7 @@ public class SetZoneRecordStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetZoneRecordStatusRequest, Builder> {
+        private String clientToken; 
         private String lang; 
         private Long recordId; 
         private String status; 
@@ -91,11 +104,21 @@ public class SetZoneRecordStatusRequest extends Request {
 
         private Builder(SetZoneRecordStatusRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.lang = request.lang;
             this.recordId = request.recordId;
             this.status = request.status;
             this.userClientIp = request.userClientIp;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Lang.

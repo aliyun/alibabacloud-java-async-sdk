@@ -152,6 +152,15 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     } 
 
     public static class Record extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
+        @NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
+        @NameInMap("Line")
+        private String line;
+
         @NameInMap("Priority")
         private Integer priority;
 
@@ -173,10 +182,25 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("UpdateTime")
+        private String updateTime;
+
+        @NameInMap("UpdateTimestamp")
+        private Long updateTimestamp;
+
         @NameInMap("Value")
         private String value;
 
+        @NameInMap("Weight")
+        private Integer weight;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private Record(Builder builder) {
+            this.createTime = builder.createTime;
+            this.createTimestamp = builder.createTimestamp;
+            this.line = builder.line;
             this.priority = builder.priority;
             this.recordId = builder.recordId;
             this.remark = builder.remark;
@@ -184,7 +208,11 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             this.status = builder.status;
             this.ttl = builder.ttl;
             this.type = builder.type;
+            this.updateTime = builder.updateTime;
+            this.updateTimestamp = builder.updateTimestamp;
             this.value = builder.value;
+            this.weight = builder.weight;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -193,6 +221,27 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
 
         public static Record create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        /**
+         * @return line
+         */
+        public String getLine() {
+            return this.line;
         }
 
         /**
@@ -245,13 +294,44 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
+         * @return updateTimestamp
+         */
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
             return this.value;
         }
 
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
+            private String createTime; 
+            private Long createTimestamp; 
+            private String line; 
             private Integer priority; 
             private Long recordId; 
             private String remark; 
@@ -259,7 +339,35 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             private String status; 
             private Integer ttl; 
             private String type; 
+            private String updateTime; 
+            private Long updateTimestamp; 
             private String value; 
+            private Integer weight; 
+            private String zoneId; 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Line.
+             */
+            public Builder line(String line) {
+                this.line = line;
+                return this;
+            }
 
             /**
              * Priority.
@@ -318,10 +426,42 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * UpdateTimestamp.
+             */
+            public Builder updateTimestamp(Long updateTimestamp) {
+                this.updateTimestamp = updateTimestamp;
+                return this;
+            }
+
+            /**
              * Value.
              */
             public Builder value(String value) {
                 this.value = value;
+                return this;
+            }
+
+            /**
+             * Weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

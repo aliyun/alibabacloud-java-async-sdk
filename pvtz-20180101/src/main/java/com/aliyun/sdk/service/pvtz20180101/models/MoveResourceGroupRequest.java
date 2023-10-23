@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MoveResourceGroupRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -28,6 +32,7 @@ public class MoveResourceGroupRequest extends Request {
 
     private MoveResourceGroupRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.lang = builder.lang;
         this.newResourceGroupId = builder.newResourceGroupId;
         this.resourceId = builder.resourceId;
@@ -44,6 +49,13 @@ public class MoveResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -68,6 +80,7 @@ public class MoveResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<MoveResourceGroupRequest, Builder> {
+        private String clientToken; 
         private String lang; 
         private String newResourceGroupId; 
         private String resourceId; 
@@ -78,10 +91,20 @@ public class MoveResourceGroupRequest extends Request {
 
         private Builder(MoveResourceGroupRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.lang = request.lang;
             this.newResourceGroupId = request.newResourceGroupId;
             this.resourceId = request.resourceId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Lang.

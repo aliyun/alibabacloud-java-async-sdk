@@ -260,6 +260,18 @@ public class DescribeZonesResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
+        @NameInMap("Creator")
+        private String creator;
+
+        @NameInMap("CreatorSubType")
+        private String creatorSubType;
+
+        @NameInMap("DnsGroup")
+        private String dnsGroup;
+
+        @NameInMap("DnsGroupChanging")
+        private Boolean dnsGroupChanging;
+
         @NameInMap("IsPtr")
         private Boolean isPtr;
 
@@ -299,6 +311,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zone(Builder builder) {
             this.createTime = builder.createTime;
             this.createTimestamp = builder.createTimestamp;
+            this.creator = builder.creator;
+            this.creatorSubType = builder.creatorSubType;
+            this.dnsGroup = builder.dnsGroup;
+            this.dnsGroupChanging = builder.dnsGroupChanging;
             this.isPtr = builder.isPtr;
             this.proxyPattern = builder.proxyPattern;
             this.recordCount = builder.recordCount;
@@ -333,6 +349,34 @@ public class DescribeZonesResponseBody extends TeaModel {
          */
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        /**
+         * @return creator
+         */
+        public String getCreator() {
+            return this.creator;
+        }
+
+        /**
+         * @return creatorSubType
+         */
+        public String getCreatorSubType() {
+            return this.creatorSubType;
+        }
+
+        /**
+         * @return dnsGroup
+         */
+        public String getDnsGroup() {
+            return this.dnsGroup;
+        }
+
+        /**
+         * @return dnsGroupChanging
+         */
+        public Boolean getDnsGroupChanging() {
+            return this.dnsGroupChanging;
         }
 
         /**
@@ -422,6 +466,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private Long createTimestamp; 
+            private String creator; 
+            private String creatorSubType; 
+            private String dnsGroup; 
+            private Boolean dnsGroupChanging; 
             private Boolean isPtr; 
             private String proxyPattern; 
             private Integer recordCount; 
@@ -448,6 +496,38 @@ public class DescribeZonesResponseBody extends TeaModel {
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Creator.
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
+                return this;
+            }
+
+            /**
+             * CreatorSubType.
+             */
+            public Builder creatorSubType(String creatorSubType) {
+                this.creatorSubType = creatorSubType;
+                return this;
+            }
+
+            /**
+             * DnsGroup.
+             */
+            public Builder dnsGroup(String dnsGroup) {
+                this.dnsGroup = dnsGroup;
+                return this;
+            }
+
+            /**
+             * DnsGroupChanging.
+             */
+            public Builder dnsGroupChanging(Boolean dnsGroupChanging) {
+                this.dnsGroupChanging = dnsGroupChanging;
                 return this;
             }
 

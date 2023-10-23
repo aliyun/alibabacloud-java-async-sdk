@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SetProxyPatternRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -32,6 +36,7 @@ public class SetProxyPatternRequest extends Request {
 
     private SetProxyPatternRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.lang = builder.lang;
         this.proxyPattern = builder.proxyPattern;
         this.userClientIp = builder.userClientIp;
@@ -49,6 +54,13 @@ public class SetProxyPatternRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -80,6 +92,7 @@ public class SetProxyPatternRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetProxyPatternRequest, Builder> {
+        private String clientToken; 
         private String lang; 
         private String proxyPattern; 
         private String userClientIp; 
@@ -91,11 +104,21 @@ public class SetProxyPatternRequest extends Request {
 
         private Builder(SetProxyPatternRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.lang = request.lang;
             this.proxyPattern = request.proxyPattern;
             this.userClientIp = request.userClientIp;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Lang.

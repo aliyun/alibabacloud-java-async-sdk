@@ -161,10 +161,18 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         @NameInMap("AuthorizedUserId")
         private Long authorizedUserId;
 
+        @NameInMap("CreateTime")
+        private String createTime;
+
+        @NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
         private Users(Builder builder) {
             this.authType = builder.authType;
             this.authorizedAliyunId = builder.authorizedAliyunId;
             this.authorizedUserId = builder.authorizedUserId;
+            this.createTime = builder.createTime;
+            this.createTimestamp = builder.createTimestamp;
         }
 
         public static Builder builder() {
@@ -196,10 +204,26 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             return this.authorizedUserId;
         }
 
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
         public static final class Builder {
             private String authType; 
             private String authorizedAliyunId; 
             private Long authorizedUserId; 
+            private String createTime; 
+            private Long createTimestamp; 
 
             /**
              * AuthType.
@@ -222,6 +246,22 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
              */
             public Builder authorizedUserId(Long authorizedUserId) {
                 this.authorizedUserId = authorizedUserId;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
                 return this;
             }
 

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteZoneRecordRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -27,6 +31,7 @@ public class DeleteZoneRecordRequest extends Request {
 
     private DeleteZoneRecordRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.lang = builder.lang;
         this.recordId = builder.recordId;
         this.userClientIp = builder.userClientIp;
@@ -43,6 +48,13 @@ public class DeleteZoneRecordRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -67,6 +79,7 @@ public class DeleteZoneRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteZoneRecordRequest, Builder> {
+        private String clientToken; 
         private String lang; 
         private Long recordId; 
         private String userClientIp; 
@@ -77,10 +90,20 @@ public class DeleteZoneRecordRequest extends Request {
 
         private Builder(DeleteZoneRecordRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.lang = request.lang;
             this.recordId = request.recordId;
             this.userClientIp = request.userClientIp;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Lang.

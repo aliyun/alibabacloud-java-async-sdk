@@ -167,12 +167,16 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         @NameInMap("VpcType")
         private String vpcType;
 
+        @NameInMap("VpcUserId")
+        private String vpcUserId;
+
         private BindVpcs(Builder builder) {
             this.regionId = builder.regionId;
             this.regionName = builder.regionName;
             this.vpcId = builder.vpcId;
             this.vpcName = builder.vpcName;
             this.vpcType = builder.vpcType;
+            this.vpcUserId = builder.vpcUserId;
         }
 
         public static Builder builder() {
@@ -218,12 +222,20 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             return this.vpcType;
         }
 
+        /**
+         * @return vpcUserId
+         */
+        public String getVpcUserId() {
+            return this.vpcUserId;
+        }
+
         public static final class Builder {
             private String regionId; 
             private String regionName; 
             private String vpcId; 
             private String vpcName; 
             private String vpcType; 
+            private String vpcUserId; 
 
             /**
              * RegionId.
@@ -262,6 +274,14 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
+                return this;
+            }
+
+            /**
+             * VpcUserId.
+             */
+            public Builder vpcUserId(String vpcUserId) {
+                this.vpcUserId = vpcUserId;
                 return this;
             }
 

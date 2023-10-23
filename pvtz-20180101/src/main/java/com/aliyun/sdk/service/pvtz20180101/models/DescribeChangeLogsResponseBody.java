@@ -155,6 +155,15 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         @NameInMap("Content")
         private String content;
 
+        @NameInMap("CreatorId")
+        private String creatorId;
+
+        @NameInMap("CreatorSubType")
+        private String creatorSubType;
+
+        @NameInMap("CreatorType")
+        private String creatorType;
+
         @NameInMap("EntityId")
         private String entityId;
 
@@ -181,6 +190,9 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
 
         private ChangeLog(Builder builder) {
             this.content = builder.content;
+            this.creatorId = builder.creatorId;
+            this.creatorSubType = builder.creatorSubType;
+            this.creatorType = builder.creatorType;
             this.entityId = builder.entityId;
             this.entityName = builder.entityName;
             this.id = builder.id;
@@ -204,6 +216,27 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return creatorId
+         */
+        public String getCreatorId() {
+            return this.creatorId;
+        }
+
+        /**
+         * @return creatorSubType
+         */
+        public String getCreatorSubType() {
+            return this.creatorSubType;
+        }
+
+        /**
+         * @return creatorType
+         */
+        public String getCreatorType() {
+            return this.creatorType;
         }
 
         /**
@@ -264,6 +297,9 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
+            private String creatorId; 
+            private String creatorSubType; 
+            private String creatorType; 
             private String entityId; 
             private String entityName; 
             private Long id; 
@@ -278,6 +314,30 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * CreatorId.
+             */
+            public Builder creatorId(String creatorId) {
+                this.creatorId = creatorId;
+                return this;
+            }
+
+            /**
+             * CreatorSubType.
+             */
+            public Builder creatorSubType(String creatorSubType) {
+                this.creatorSubType = creatorSubType;
+                return this;
+            }
+
+            /**
+             * CreatorType.
+             */
+            public Builder creatorType(String creatorType) {
+                this.creatorType = creatorType;
                 return this;
             }
 
