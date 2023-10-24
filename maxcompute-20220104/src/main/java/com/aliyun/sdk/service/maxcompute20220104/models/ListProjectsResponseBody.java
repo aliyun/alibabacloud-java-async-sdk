@@ -339,9 +339,6 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("allowFullScan")
         private Boolean allowFullScan;
 
-        @NameInMap("elderTunnelQuota")
-        private String elderTunnelQuota;
-
         @NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
@@ -371,7 +368,6 @@ public class ListProjectsResponseBody extends TeaModel {
 
         private Properties(Builder builder) {
             this.allowFullScan = builder.allowFullScan;
-            this.elderTunnelQuota = builder.elderTunnelQuota;
             this.enableDecimal2 = builder.enableDecimal2;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
@@ -396,13 +392,6 @@ public class ListProjectsResponseBody extends TeaModel {
          */
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
-        }
-
-        /**
-         * @return elderTunnelQuota
-         */
-        public String getElderTunnelQuota() {
-            return this.elderTunnelQuota;
         }
 
         /**
@@ -470,7 +459,6 @@ public class ListProjectsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowFullScan; 
-            private String elderTunnelQuota; 
             private Boolean enableDecimal2; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
@@ -486,14 +474,6 @@ public class ListProjectsResponseBody extends TeaModel {
              */
             public Builder allowFullScan(Boolean allowFullScan) {
                 this.allowFullScan = allowFullScan;
-                return this;
-            }
-
-            /**
-             * elderTunnelQuota.
-             */
-            public Builder elderTunnelQuota(String elderTunnelQuota) {
-                this.elderTunnelQuota = elderTunnelQuota;
                 return this;
             }
 

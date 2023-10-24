@@ -111,7 +111,7 @@ public class GetJobResourceUsageRequest extends Request {
         } 
 
         /**
-         * date.
+         * The date that is accurate to the day part for the query. The date must be in the yyyy-MM-dd format.
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);
@@ -120,7 +120,7 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * jobOwnerList.
+         * The list of job executors.
          */
         public Builder jobOwnerList(java.util.List < String > jobOwnerList) {
             String jobOwnerListShrink = shrink(jobOwnerList, "jobOwnerList", "simple");
@@ -130,7 +130,7 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -139,7 +139,7 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -148,7 +148,7 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * quotaNicknameList.
+         * The list of nicknames of quotas that are used by jobs.
          */
         public Builder quotaNicknameList(java.util.List < String > quotaNicknameList) {
             String quotaNicknameListShrink = shrink(quotaNicknameList, "quotaNicknameList", "simple");

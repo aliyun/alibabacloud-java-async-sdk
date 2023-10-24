@@ -86,7 +86,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * The error message returned if the request failed.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +110,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -118,7 +118,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             private String quotaNickname; 
 
             /**
-             * cuUsage.
+             * The total number of used compute units (CUs).
              */
             public Builder cuUsage(Long cuUsage) {
                 this.cuUsage = cuUsage;
@@ -214,7 +214,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * date.
+             * The start date of the query in the format of yyyy-MM-dd.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -222,7 +222,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * jobOwner.
+             * The job executor.
              */
             public Builder jobOwner(String jobOwner) {
                 this.jobOwner = jobOwner;
@@ -230,7 +230,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * memoryUsage.
+             * The total memory usage.
              */
             public Builder memoryUsage(Long memoryUsage) {
                 this.memoryUsage = memoryUsage;
@@ -238,7 +238,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * quotaNickname.
+             * The quota nickname.
              */
             public Builder quotaNickname(String quotaNickname) {
                 this.quotaNickname = quotaNickname;
@@ -315,7 +315,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * jobResourceUsageList.
+             * The data list returned.
              */
             public Builder jobResourceUsageList(java.util.List < JobResourceUsageList> jobResourceUsageList) {
                 this.jobResourceUsageList = jobResourceUsageList;
@@ -323,7 +323,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * The page number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -331,7 +331,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +339,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

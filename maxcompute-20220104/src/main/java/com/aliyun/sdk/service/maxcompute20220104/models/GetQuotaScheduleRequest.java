@@ -7,14 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link KillJobsRequest} extends {@link RequestModel}
+ * {@link GetQuotaScheduleRequest} extends {@link RequestModel}
  *
- * <p>KillJobsRequest</p>
+ * <p>GetQuotaScheduleRequest</p>
  */
-public class KillJobsRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private String body;
+public class GetQuotaScheduleRequest extends Request {
+    @Path
+    @NameInMap("nickname")
+    @Validation(required = true)
+    private String nickname;
+
+    @Query
+    @NameInMap("displayTimezone")
+    private String displayTimezone;
 
     @Query
     @NameInMap("region")
@@ -24,9 +29,10 @@ public class KillJobsRequest extends Request {
     @NameInMap("tenantId")
     private String tenantId;
 
-    private KillJobsRequest(Builder builder) {
+    private GetQuotaScheduleRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
+        this.nickname = builder.nickname;
+        this.displayTimezone = builder.displayTimezone;
         this.region = builder.region;
         this.tenantId = builder.tenantId;
     }
@@ -35,7 +41,7 @@ public class KillJobsRequest extends Request {
         return new Builder();
     }
 
-    public static KillJobsRequest create() {
+    public static GetQuotaScheduleRequest create() {
         return builder().build();
     }
 
@@ -45,10 +51,17 @@ public class KillJobsRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return nickname
      */
-    public String getBody() {
-        return this.body;
+    public String getNickname() {
+        return this.nickname;
+    }
+
+    /**
+     * @return displayTimezone
+     */
+    public String getDisplayTimezone() {
+        return this.displayTimezone;
     }
 
     /**
@@ -65,8 +78,9 @@ public class KillJobsRequest extends Request {
         return this.tenantId;
     }
 
-    public static final class Builder extends Request.Builder<KillJobsRequest, Builder> {
-        private String body; 
+    public static final class Builder extends Request.Builder<GetQuotaScheduleRequest, Builder> {
+        private String nickname; 
+        private String displayTimezone; 
         private String region; 
         private String tenantId; 
 
@@ -74,24 +88,34 @@ public class KillJobsRequest extends Request {
             super();
         } 
 
-        private Builder(KillJobsRequest request) {
+        private Builder(GetQuotaScheduleRequest request) {
             super(request);
-            this.body = request.body;
+            this.nickname = request.nickname;
+            this.displayTimezone = request.displayTimezone;
             this.region = request.region;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * The request body parameters.
+         * The name of the quota.
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder nickname(String nickname) {
+            this.putPathParameter("nickname", nickname);
+            this.nickname = nickname;
             return this;
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * displayTimezone.
+         */
+        public Builder displayTimezone(String displayTimezone) {
+            this.putQueryParameter("displayTimezone", displayTimezone);
+            this.displayTimezone = displayTimezone;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -109,8 +133,8 @@ public class KillJobsRequest extends Request {
         }
 
         @Override
-        public KillJobsRequest build() {
-            return new KillJobsRequest(this);
+        public GetQuotaScheduleRequest build() {
+            return new GetQuotaScheduleRequest(this);
         } 
 
     } 

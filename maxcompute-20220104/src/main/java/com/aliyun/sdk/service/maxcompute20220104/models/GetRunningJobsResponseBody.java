@@ -86,7 +86,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,9 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * *   If the value of success was false, an error code was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +104,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +112,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -118,7 +120,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +256,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             private Long submittedAtTime; 
 
             /**
-             * cuSnapshot.
+             * The compute unit (CU) snapshot proportion of the job.
              */
             public Builder cuSnapshot(Double cuSnapshot) {
                 this.cuSnapshot = cuSnapshot;
@@ -262,7 +264,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -270,7 +272,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * jobOwner.
+             * The account that submits the job.
              */
             public Builder jobOwner(String jobOwner) {
                 this.jobOwner = jobOwner;
@@ -278,7 +280,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * memorySnapshot.
+             * The memory snapshot proportion of the job.
              */
             public Builder memorySnapshot(Double memorySnapshot) {
                 this.memorySnapshot = memorySnapshot;
@@ -286,7 +288,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * progress.
+             * The progress of the job.
              */
             public Builder progress(Double progress) {
                 this.progress = progress;
@@ -294,7 +296,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * The name of the MaxCompute project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -302,7 +304,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * quotaNickname.
+             * The nickname of the quota that is used by the job.
              */
             public Builder quotaNickname(String quotaNickname) {
                 this.quotaNickname = quotaNickname;
@@ -310,7 +312,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * runningAtTime.
+             * The time when the job starts to run.
              */
             public Builder runningAtTime(Long runningAtTime) {
                 this.runningAtTime = runningAtTime;
@@ -318,7 +320,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * submittedAtTime.
+             * The time when the job is submitted.
              */
             public Builder submittedAtTime(Long submittedAtTime) {
                 this.submittedAtTime = submittedAtTime;
@@ -395,7 +397,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * pageNumber.
+             * The page number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -403,7 +405,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -411,7 +413,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * runningJobInfoList.
+             * The list of jobs in the running state.
              */
             public Builder runningJobInfoList(java.util.List < RunningJobInfoList> runningJobInfoList) {
                 this.runningJobInfoList = runningJobInfoList;
@@ -419,7 +421,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

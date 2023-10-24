@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetQuotaPlanResponse> getQuotaPlan(GetQuotaPlanRequest request);
 
+    CompletableFuture<GetQuotaScheduleResponse> getQuotaSchedule(GetQuotaScheduleRequest request);
+
     CompletableFuture<GetRoleAclResponse> getRoleAcl(GetRoleAclRequest request);
 
     CompletableFuture<GetRoleAclOnObjectResponse> getRoleAclOnObject(GetRoleAclOnObjectRequest request);

@@ -62,7 +62,7 @@ public class KillJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class KillJobsResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -78,7 +78,7 @@ public class KillJobsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

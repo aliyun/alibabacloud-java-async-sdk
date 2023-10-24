@@ -233,6 +233,148 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    public static class StorageTierSize extends TeaModel {
+        @NameInMap("longTermSize")
+        private Long longTermSize;
+
+        @NameInMap("lowFrequencySize")
+        private Long lowFrequencySize;
+
+        @NameInMap("standardSize")
+        private Long standardSize;
+
+        private StorageTierSize(Builder builder) {
+            this.longTermSize = builder.longTermSize;
+            this.lowFrequencySize = builder.lowFrequencySize;
+            this.standardSize = builder.standardSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StorageTierSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return longTermSize
+         */
+        public Long getLongTermSize() {
+            return this.longTermSize;
+        }
+
+        /**
+         * @return lowFrequencySize
+         */
+        public Long getLowFrequencySize() {
+            return this.lowFrequencySize;
+        }
+
+        /**
+         * @return standardSize
+         */
+        public Long getStandardSize() {
+            return this.standardSize;
+        }
+
+        public static final class Builder {
+            private Long longTermSize; 
+            private Long lowFrequencySize; 
+            private Long standardSize; 
+
+            /**
+             * The long-term storage.
+             */
+            public Builder longTermSize(Long longTermSize) {
+                this.longTermSize = longTermSize;
+                return this;
+            }
+
+            /**
+             * The IA storage.
+             */
+            public Builder lowFrequencySize(Long lowFrequencySize) {
+                this.lowFrequencySize = lowFrequencySize;
+                return this;
+            }
+
+            /**
+             * The standard storage.
+             */
+            public Builder standardSize(Long standardSize) {
+                this.standardSize = standardSize;
+                return this;
+            }
+
+            public StorageTierSize build() {
+                return new StorageTierSize(this);
+            } 
+
+        } 
+
+    }
+    public static class StorageTierInfo extends TeaModel {
+        @NameInMap("projectBackupSize")
+        private Long projectBackupSize;
+
+        @NameInMap("storageTierSize")
+        private StorageTierSize storageTierSize;
+
+        private StorageTierInfo(Builder builder) {
+            this.projectBackupSize = builder.projectBackupSize;
+            this.storageTierSize = builder.storageTierSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StorageTierInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return projectBackupSize
+         */
+        public Long getProjectBackupSize() {
+            return this.projectBackupSize;
+        }
+
+        /**
+         * @return storageTierSize
+         */
+        public StorageTierSize getStorageTierSize() {
+            return this.storageTierSize;
+        }
+
+        public static final class Builder {
+            private Long projectBackupSize; 
+            private StorageTierSize storageTierSize; 
+
+            /**
+             * The backup storage.
+             */
+            public Builder projectBackupSize(Long projectBackupSize) {
+                this.projectBackupSize = projectBackupSize;
+                return this;
+            }
+
+            /**
+             * The tiered storage.
+             */
+            public Builder storageTierSize(StorageTierSize storageTierSize) {
+                this.storageTierSize = storageTierSize;
+                return this;
+            }
+
+            public StorageTierInfo build() {
+                return new StorageTierInfo(this);
+            } 
+
+        } 
+
+    }
     public static class TableLifecycle extends TeaModel {
         @NameInMap("type")
         private String type;
@@ -298,9 +440,6 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("allowFullScan")
         private Boolean allowFullScan;
 
-        @NameInMap("elderTunnelQuota")
-        private String elderTunnelQuota;
-
         @NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
@@ -316,6 +455,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("sqlMeteringMax")
         private String sqlMeteringMax;
 
+        @NameInMap("storageTierInfo")
+        private StorageTierInfo storageTierInfo;
+
         @NameInMap("tableLifecycle")
         private TableLifecycle tableLifecycle;
 
@@ -330,12 +472,12 @@ public class GetProjectResponseBody extends TeaModel {
 
         private Properties(Builder builder) {
             this.allowFullScan = builder.allowFullScan;
-            this.elderTunnelQuota = builder.elderTunnelQuota;
             this.enableDecimal2 = builder.enableDecimal2;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
             this.retentionDays = builder.retentionDays;
             this.sqlMeteringMax = builder.sqlMeteringMax;
+            this.storageTierInfo = builder.storageTierInfo;
             this.tableLifecycle = builder.tableLifecycle;
             this.timezone = builder.timezone;
             this.tunnelQuota = builder.tunnelQuota;
@@ -355,13 +497,6 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
-        }
-
-        /**
-         * @return elderTunnelQuota
-         */
-        public String getElderTunnelQuota() {
-            return this.elderTunnelQuota;
         }
 
         /**
@@ -400,6 +535,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageTierInfo
+         */
+        public StorageTierInfo getStorageTierInfo() {
+            return this.storageTierInfo;
+        }
+
+        /**
          * @return tableLifecycle
          */
         public TableLifecycle getTableLifecycle() {
@@ -429,12 +571,12 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowFullScan; 
-            private String elderTunnelQuota; 
             private Boolean enableDecimal2; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
             private Long retentionDays; 
             private String sqlMeteringMax; 
+            private StorageTierInfo storageTierInfo; 
             private TableLifecycle tableLifecycle; 
             private String timezone; 
             private String tunnelQuota; 
@@ -445,14 +587,6 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder allowFullScan(Boolean allowFullScan) {
                 this.allowFullScan = allowFullScan;
-                return this;
-            }
-
-            /**
-             * This operation does not return a value for this parameter.
-             */
-            public Builder elderTunnelQuota(String elderTunnelQuota) {
-                this.elderTunnelQuota = elderTunnelQuota;
                 return this;
             }
 
@@ -493,6 +627,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder sqlMeteringMax(String sqlMeteringMax) {
                 this.sqlMeteringMax = sqlMeteringMax;
+                return this;
+            }
+
+            /**
+             * The information about the tiered storage.
+             */
+            public Builder storageTierInfo(StorageTierInfo storageTierInfo) {
+                this.storageTierInfo = storageTierInfo;
                 return this;
             }
 

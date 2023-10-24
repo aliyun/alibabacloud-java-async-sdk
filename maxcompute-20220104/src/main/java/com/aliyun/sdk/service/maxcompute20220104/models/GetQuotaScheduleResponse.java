@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateRoleResponse} extends {@link TeaModel}
+ * {@link GetQuotaScheduleResponse} extends {@link TeaModel}
  *
- * <p>CreateRoleResponse</p>
+ * <p>GetQuotaScheduleResponse</p>
  */
-public class CreateRoleResponse extends Response {
+public class GetQuotaScheduleResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class CreateRoleResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateRoleResponseBody body;
+    private GetQuotaScheduleResponseBody body;
 
-    private CreateRoleResponse(BuilderImpl builder) {
+    private GetQuotaScheduleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateRoleResponse create() {
+    public static GetQuotaScheduleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class CreateRoleResponse extends Response {
     /**
      * @return body
      */
-    public CreateRoleResponseBody getBody() {
+    public GetQuotaScheduleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateRoleResponse, Builder> {
+    public interface Builder extends Response.Builder<GetQuotaScheduleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateRoleResponseBody body);
+        Builder body(GetQuotaScheduleResponseBody body);
 
         @Override
-        CreateRoleResponse build();
+        GetQuotaScheduleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateRoleResponse, Builder>
+            extends Response.BuilderImpl<GetQuotaScheduleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateRoleResponseBody body; 
+        private GetQuotaScheduleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateRoleResponse response) {
+        private BuilderImpl(GetQuotaScheduleResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class CreateRoleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateRoleResponseBody body) {
+        public Builder body(GetQuotaScheduleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateRoleResponse build() {
-            return new CreateRoleResponse(this);
+        public GetQuotaScheduleResponse build() {
+            return new GetQuotaScheduleResponse(this);
         } 
 
     } 

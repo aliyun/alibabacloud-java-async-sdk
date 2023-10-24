@@ -126,7 +126,11 @@ public class GetRunningJobsRequest extends Request {
         } 
 
         /**
-         * from.
+         * The time when the query starts. This parameter specifies the time when a job is submitted.
+         * <p>
+         * 
+         * *   The time range that is specified by the **from** and **to** request parameters is a closed interval. The start time and end time are included in the range. If the value of **from** is the same as the value of **to**, the time range is invalid, and a null value is returned.
+         * *   The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -135,7 +139,7 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * jobOwnerList.
+         * The list of job executors.
          */
         public Builder jobOwnerList(java.util.List < String > jobOwnerList) {
             String jobOwnerListShrink = shrink(jobOwnerList, "jobOwnerList", "simple");
@@ -145,7 +149,7 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -154,7 +158,7 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -163,7 +167,7 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * quotaNicknameList.
+         * The list of nicknames of quotas that are used by jobs.
          */
         public Builder quotaNicknameList(java.util.List < String > quotaNicknameList) {
             String quotaNicknameListShrink = shrink(quotaNicknameList, "quotaNicknameList", "simple");
@@ -173,7 +177,11 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * to.
+         * The time when the query ends. This parameter specifies the time when a job is submitted.
+         * <p>
+         * 
+         * *   The time interval that is specified by the **from** and **to** request parameters is a closed interval. The start time and end time are included in the interval. If the value of **from** is the same as the value of **to**, the interval is invalid, and a null value is returned.
+         * *   The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);

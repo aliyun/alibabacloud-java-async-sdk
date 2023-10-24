@@ -871,9 +871,6 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("groupName")
-        private String groupName;
-
         @NameInMap("id")
         private String id;
 
@@ -918,7 +915,6 @@ public class ListQuotasResponseBody extends TeaModel {
             this.cluster = builder.cluster;
             this.createTime = builder.createTime;
             this.creatorId = builder.creatorId;
-            this.groupName = builder.groupName;
             this.id = builder.id;
             this.name = builder.name;
             this.nickName = builder.nickName;
@@ -968,13 +964,6 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        /**
-         * @return groupName
-         */
-        public String getGroupName() {
-            return this.groupName;
         }
 
         /**
@@ -1073,7 +1062,6 @@ public class ListQuotasResponseBody extends TeaModel {
             private String cluster; 
             private Long createTime; 
             private String creatorId; 
-            private String groupName; 
             private String id; 
             private String name; 
             private String nickName; 
@@ -1117,14 +1105,6 @@ public class ListQuotasResponseBody extends TeaModel {
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
-                return this;
-            }
-
-            /**
-             * groupName.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
                 return this;
             }
 
@@ -1255,9 +1235,6 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("groupName")
-        private String groupName;
-
         @NameInMap("id")
         private String id;
 
@@ -1306,7 +1283,6 @@ public class ListQuotasResponseBody extends TeaModel {
             this.cluster = builder.cluster;
             this.createTime = builder.createTime;
             this.creatorId = builder.creatorId;
-            this.groupName = builder.groupName;
             this.id = builder.id;
             this.name = builder.name;
             this.nickName = builder.nickName;
@@ -1364,13 +1340,6 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        /**
-         * @return groupName
-         */
-        public String getGroupName() {
-            return this.groupName;
         }
 
         /**
@@ -1477,7 +1446,6 @@ public class ListQuotasResponseBody extends TeaModel {
             private String cluster; 
             private Long createTime; 
             private String creatorId; 
-            private String groupName; 
             private String id; 
             private String name; 
             private String nickName; 
@@ -1530,14 +1498,6 @@ public class ListQuotasResponseBody extends TeaModel {
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
-                return this;
-            }
-
-            /**
-             * groupName.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
                 return this;
             }
 
@@ -2481,9 +2441,6 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("groupName")
-        private String groupName;
-
         @NameInMap("id")
         private String id;
 
@@ -2528,7 +2485,6 @@ public class ListQuotasResponseBody extends TeaModel {
             this.cluster = builder.cluster;
             this.createTime = builder.createTime;
             this.creatorId = builder.creatorId;
-            this.groupName = builder.groupName;
             this.id = builder.id;
             this.name = builder.name;
             this.nickName = builder.nickName;
@@ -2578,13 +2534,6 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        /**
-         * @return groupName
-         */
-        public String getGroupName() {
-            return this.groupName;
         }
 
         /**
@@ -2683,7 +2632,6 @@ public class ListQuotasResponseBody extends TeaModel {
             private String cluster; 
             private Long createTime; 
             private String creatorId; 
-            private String groupName; 
             private String id; 
             private String name; 
             private String nickName; 
@@ -2727,14 +2675,6 @@ public class ListQuotasResponseBody extends TeaModel {
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
-                return this;
-            }
-
-            /**
-             * groupName.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
                 return this;
             }
 
@@ -2865,9 +2805,6 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("groupName")
-        private String groupName;
-
         @NameInMap("id")
         private String id;
 
@@ -2916,7 +2853,6 @@ public class ListQuotasResponseBody extends TeaModel {
             this.cluster = builder.cluster;
             this.createTime = builder.createTime;
             this.creatorId = builder.creatorId;
-            this.groupName = builder.groupName;
             this.id = builder.id;
             this.name = builder.name;
             this.nickName = builder.nickName;
@@ -2974,13 +2910,6 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        /**
-         * @return groupName
-         */
-        public String getGroupName() {
-            return this.groupName;
         }
 
         /**
@@ -3087,7 +3016,6 @@ public class ListQuotasResponseBody extends TeaModel {
             private String cluster; 
             private Long createTime; 
             private String creatorId; 
-            private String groupName; 
             private String id; 
             private String name; 
             private String nickName; 
@@ -3140,14 +3068,6 @@ public class ListQuotasResponseBody extends TeaModel {
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
-                return this;
-            }
-
-            /**
-             * groupName.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
                 return this;
             }
 
