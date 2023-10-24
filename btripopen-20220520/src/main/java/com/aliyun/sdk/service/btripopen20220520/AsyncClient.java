@@ -196,6 +196,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InsInvoiceScanQueryResponse> insInvoiceScanQuery(InsInvoiceScanQueryRequest request);
 
+    CompletableFuture<InsureOrderApplyResponse> insureOrderApply(InsureOrderApplyRequest request);
+
+    CompletableFuture<InsureOrderCancelResponse> insureOrderCancel(InsureOrderCancelRequest request);
+
+    CompletableFuture<InsureOrderCreateResponse> insureOrderCreate(InsureOrderCreateRequest request);
+
+    CompletableFuture<InsureOrderDetailResponse> insureOrderDetail(InsureOrderDetailRequest request);
+
+    CompletableFuture<InsureOrderPayResponse> insureOrderPay(InsureOrderPayRequest request);
+
     CompletableFuture<InvoiceAddResponse> invoiceAdd(InvoiceAddRequest request);
 
     CompletableFuture<InvoiceDeleteResponse> invoiceDelete(InvoiceDeleteRequest request);
