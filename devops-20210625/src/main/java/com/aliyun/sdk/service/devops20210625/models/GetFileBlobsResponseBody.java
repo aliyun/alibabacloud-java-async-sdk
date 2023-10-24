@@ -135,11 +135,15 @@ public class GetFileBlobsResponseBody extends TeaModel {
         @NameInMap("content")
         private String content;
 
+        @NameInMap("size")
+        private Long size;
+
         @NameInMap("totalLines")
         private Integer totalLines;
 
         private Result(Builder builder) {
             this.content = builder.content;
+            this.size = builder.size;
             this.totalLines = builder.totalLines;
         }
 
@@ -159,6 +163,13 @@ public class GetFileBlobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
          * @return totalLines
          */
         public Integer getTotalLines() {
@@ -167,6 +178,7 @@ public class GetFileBlobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
+            private Long size; 
             private Integer totalLines; 
 
             /**
@@ -174,6 +186,14 @@ public class GetFileBlobsResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
                 return this;
             }
 
