@@ -101,7 +101,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -155,7 +155,10 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>
+             * 
+             * You can add up to 20 tags in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +166,10 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

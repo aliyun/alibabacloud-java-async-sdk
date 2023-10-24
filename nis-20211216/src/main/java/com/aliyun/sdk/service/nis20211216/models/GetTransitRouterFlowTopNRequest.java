@@ -297,7 +297,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * The IDs of member accounts.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -307,7 +307,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * BandwithPackageId.
+         * The ID of the CEN bandwidth plan.
          */
         public Builder bandwithPackageId(String bandwithPackageId) {
             this.putQueryParameter("BandwithPackageId", bandwithPackageId);
@@ -316,7 +316,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -325,7 +325,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The CEN instance ID.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -334,7 +334,11 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the inter-region traffic in the local regions or for the local IP addresses. Valid values:
+         * <p>
+         * 
+         * *   in: inbound traffic
+         * *   out: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -343,7 +347,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -352,7 +356,16 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * GroupBy.
+         * The dimension for ranking inter-region traffic data. The value of this parameter is case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   1Tuple: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.
+         * *   2Tuple: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.
+         * *   5Tuple: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols in use.
+         * *   Cen: queries the rankings of inter-region traffic data for CEN instances.
+         * *   RegionPair: queries the rankings of inter-region traffic data for the local and remote regions.
+         * *   Port: queries the rankings of inter-region traffic data for the local and remote ports.
+         * *   Protocol: queries the rankings of inter-region traffic data for the protocols in use.
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -361,7 +374,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The metric for ranking inter-region traffic data. Default value: Bytes. This value specifies that inter-region traffic data is ranked by traffic volume.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -370,7 +383,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * OtherIp.
+         * The remote IP address.
          */
         public Builder otherIp(String otherIp) {
             this.putQueryParameter("OtherIp", otherIp);
@@ -379,7 +392,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * OtherPort.
+         * The remote port.
          */
         public Builder otherPort(String otherPort) {
             this.putQueryParameter("OtherPort", otherPort);
@@ -388,7 +401,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * OtherRegion.
+         * The remote region.
          */
         public Builder otherRegion(String otherRegion) {
             this.putQueryParameter("OtherRegion", otherRegion);
@@ -397,7 +410,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The protocol number.
+         * <p>
+         * 
+         * >  All protocols are supported. This parameter is required only if you set GroupBy to 5Tuple or Protocol.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -406,7 +422,11 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * Sort.
+         * The order for ranking inter-region traffic data. Valid values:
+         * <p>
+         * 
+         * *   desc: descending order
+         * *   asc: ascending order
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -415,7 +435,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * ThisIp.
+         * The local IP address.
          */
         public Builder thisIp(String thisIp) {
             this.putQueryParameter("ThisIp", thisIp);
@@ -424,7 +444,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * ThisPort.
+         * The local port.
          */
         public Builder thisPort(String thisPort) {
             this.putQueryParameter("ThisPort", thisPort);
@@ -433,7 +453,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * ThisRegion.
+         * The local region where the **local IP address** resides.
          */
         public Builder thisRegion(String thisRegion) {
             this.putQueryParameter("ThisRegion", thisRegion);
@@ -442,7 +462,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * TopN.
+         * Specifies the maximum number of data entries to display. Default value: **10**. Maximum value: 100.
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -451,7 +471,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * UseMultiAccount.
+         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
+         * <p>
+         * 
+         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

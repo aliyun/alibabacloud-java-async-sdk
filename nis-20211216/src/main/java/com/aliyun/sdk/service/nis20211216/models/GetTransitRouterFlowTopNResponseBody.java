@@ -50,7 +50,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
         private java.util.List < TransitRouterFlowTopN> transitRouterFlowTopN; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterFlowTopN.
+         * The ranking result of inter-region traffic data.
          */
         public Builder transitRouterFlowTopN(java.util.List < TransitRouterFlowTopN> transitRouterFlowTopN) {
             this.transitRouterFlowTopN = transitRouterFlowTopN;
@@ -254,7 +254,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             private String thisRegion; 
 
             /**
-             * AccountId.
+             * The account ID.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -262,7 +262,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * BandwithPackageId.
+             * The ID of the CEN bandwidth plan.
              */
             public Builder bandwithPackageId(String bandwithPackageId) {
                 this.bandwithPackageId = bandwithPackageId;
@@ -270,7 +270,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * Bytes.
+             * The total volume of traffic in the specified time range.
              */
             public Builder bytes(Double bytes) {
                 this.bytes = bytes;
@@ -278,7 +278,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -286,7 +286,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range that you queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -294,7 +294,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * OtherIp.
+             * The remote IP address.
              */
             public Builder otherIp(String otherIp) {
                 this.otherIp = otherIp;
@@ -302,7 +302,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * OtherPort.
+             * The remote port.
              */
             public Builder otherPort(String otherPort) {
                 this.otherPort = otherPort;
@@ -310,7 +310,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * OtherRegion.
+             * The remote region where the remote IP address resides.
              */
             public Builder otherRegion(String otherRegion) {
                 this.otherRegion = otherRegion;
@@ -318,7 +318,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * Packets.
+             * The total number of packets in the specified time range.
              */
             public Builder packets(Double packets) {
                 this.packets = packets;
@@ -326,7 +326,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol number.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -334,7 +334,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range that you queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -342,7 +342,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * ThisIp.
+             * The local IP address.
              */
             public Builder thisIp(String thisIp) {
                 this.thisIp = thisIp;
@@ -350,7 +350,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * ThisPort.
+             * The local port.
              */
             public Builder thisPort(String thisPort) {
                 this.thisPort = thisPort;
@@ -358,7 +358,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * ThisRegion.
+             * The local region where the local IP address resides.
              */
             public Builder thisRegion(String thisRegion) {
                 this.thisRegion = thisRegion;

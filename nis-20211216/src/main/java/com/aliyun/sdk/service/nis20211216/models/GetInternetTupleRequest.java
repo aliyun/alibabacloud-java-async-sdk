@@ -381,7 +381,7 @@ public class GetInternetTupleRequest extends Request {
          * The local port.
          * <p>
          * 
-         * > This parameter is required only when you set **TupleType** to **5**.
+         * >  This parameter is required only if you set the **TupleType** parameter to **5**.
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -393,8 +393,8 @@ public class GetInternetTupleRequest extends Request {
          * The direction of the Internet traffic that you want to query. Valid values:
          * <p>
          * 
-         * - **in**: inbound
-         * - **out**: outbound
+         * *   **in**: inbound
+         * *   **out**: outbound
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -431,7 +431,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The metric for instance ranking. Default value: **ByteCount**. This value specifies that instances are ranked by traffic volume.
+         * The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -524,8 +524,8 @@ public class GetInternetTupleRequest extends Request {
          * The order in which instances are ranked by Internet traffic. Valid values:
          * <p>
          * 
-         * - **desc**: the descending order
-         * - **asc**: the ascending order
+         * *   **desc**: the descending order
+         * *   **asc**: the ascending order
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -534,7 +534,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
+         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -543,12 +543,12 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The type of the tuple. Valid values:
+         * The type of the tuple. Valid values:
          * <p>
          * 
-         * - **1**: 1-tuple
-         * - **2**: 2-tuples
-         * - **5**: 5-tuples
+         * *   **1**: 1-tuple
+         * *   **2**: 2-tuple
+         * *   **5**: 5-tuple
          */
         public Builder tupleType(Integer tupleType) {
             this.putQueryParameter("TupleType", tupleType);
@@ -557,10 +557,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
+         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
          * <p>
          * 
-         * > By default, the multi-account management feature is disabled. If you want to enable this feature, contact your customer business manager.
+         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

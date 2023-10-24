@@ -50,7 +50,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
         private java.util.List < VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualBorderRouterFlowlogTopN.
+         * The ranking result of hybrid cloud traffic data.
          */
         public Builder virtualBorderRouterFlowlogTopN(java.util.List < VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN) {
             this.virtualBorderRouterFlowlogTopN = virtualBorderRouterFlowlogTopN;
@@ -218,7 +218,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             private String virtualBorderRouterId; 
 
             /**
-             * AccountId.
+             * The account ID.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -226,7 +226,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * AttachmentId.
+             * The CEN connection ID.
              */
             public Builder attachmentId(String attachmentId) {
                 this.attachmentId = attachmentId;
@@ -234,7 +234,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * Bytes.
+             * The total volume of traffic in the specified time range.
              */
             public Builder bytes(Double bytes) {
                 this.bytes = bytes;
@@ -242,7 +242,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * CloudIp.
+             * The local IP address.
              */
             public Builder cloudIp(String cloudIp) {
                 this.cloudIp = cloudIp;
@@ -250,7 +250,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * CloudPort.
+             * The local port.
              */
             public Builder cloudPort(String cloudPort) {
                 this.cloudPort = cloudPort;
@@ -258,7 +258,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * CloudRegion.
+             * The local region where the local IP address resides.
              */
             public Builder cloudRegion(String cloudRegion) {
                 this.cloudRegion = cloudRegion;
@@ -266,7 +266,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * OtherIp.
+             * The remote IP address.
              */
             public Builder otherIp(String otherIp) {
                 this.otherIp = otherIp;
@@ -274,7 +274,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * OtherPort.
+             * The remote port.
              */
             public Builder otherPort(String otherPort) {
                 this.otherPort = otherPort;
@@ -282,7 +282,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * Packets.
+             * The total number of packets in the specified time range.
              */
             public Builder packets(Double packets) {
                 this.packets = packets;
@@ -290,7 +290,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol number.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -298,7 +298,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualBorderRouterId.
+             * The ID of the VBR that is associated with the Express Connect circuit.
              */
             public Builder virtualBorderRouterId(String virtualBorderRouterId) {
                 this.virtualBorderRouterId = virtualBorderRouterId;
