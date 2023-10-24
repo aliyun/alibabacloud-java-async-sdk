@@ -24,7 +24,6 @@ public class AddShareReportRequest extends Request {
 
     @Query
     @NameInMap("ShareToId")
-    @Validation(required = true)
     private String shareToId;
 
     @Query
