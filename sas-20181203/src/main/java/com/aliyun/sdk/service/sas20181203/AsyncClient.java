@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddClientUserDefineRuleResponse> addClientUserDefineRule(AddClientUserDefineRuleRequest request);
 
+    CompletableFuture<AddImageEventOperationResponse> addImageEventOperation(AddImageEventOperationRequest request);
+
     CompletableFuture<AddImageVulWhiteListResponse> addImageVulWhiteList(AddImageVulWhiteListRequest request);
 
     CompletableFuture<AddInstallCodeResponse> addInstallCode(AddInstallCodeRequest request);
@@ -185,6 +187,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHoneypotProbeResponse> deleteHoneypotProbe(DeleteHoneypotProbeRequest request);
 
     CompletableFuture<DeleteHoneypotProbeBindResponse> deleteHoneypotProbeBind(DeleteHoneypotProbeBindRequest request);
+
+    CompletableFuture<DeleteImageEventOperationResponse> deleteImageEventOperation(DeleteImageEventOperationRequest request);
 
     CompletableFuture<DeleteImageVulWhitelistResponse> deleteImageVulWhitelist(DeleteImageVulWhitelistRequest request);
 
@@ -419,6 +423,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeImageBaselineStrategyResponse> describeImageBaselineStrategy(DescribeImageBaselineStrategyRequest request);
 
     CompletableFuture<DescribeImageCriteriaResponse> describeImageCriteria(DescribeImageCriteriaRequest request);
+
+    CompletableFuture<DescribeImageEventOperationConditionResponse> describeImageEventOperationCondition(DescribeImageEventOperationConditionRequest request);
+
+    CompletableFuture<DescribeImageEventOperationPageResponse> describeImageEventOperationPage(DescribeImageEventOperationPageRequest request);
 
     CompletableFuture<DescribeImageFixCycleConfigResponse> describeImageFixCycleConfig(DescribeImageFixCycleConfigRequest request);
 
@@ -841,6 +849,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCommonSwitchConfigResponse> getCommonSwitchConfig(GetCommonSwitchConfigRequest request);
 
+    CompletableFuture<GetContainerDefenseRuleDetailResponse> getContainerDefenseRuleDetail(GetContainerDefenseRuleDetailRequest request);
+
     CompletableFuture<GetFileDetectApiInvokeInfoResponse> getFileDetectApiInvokeInfo(GetFileDetectApiInvokeInfoRequest request);
 
     /**
@@ -870,6 +880,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHoneypotProbeResponse> getHoneypotProbe(GetHoneypotProbeRequest request);
 
     CompletableFuture<GetHoneypotStatisticsResponse> getHoneypotStatistics(GetHoneypotStatisticsRequest request);
+
+    CompletableFuture<GetImageEventOperationResponse> getImageEventOperation(GetImageEventOperationRequest request);
 
     CompletableFuture<GetImageScanNumInPeriodResponse> getImageScanNumInPeriod(GetImageScanNumInPeriodRequest request);
 
@@ -904,6 +916,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
 
     CompletableFuture<GetSecurityScoreRuleResponse> getSecurityScoreRule(GetSecurityScoreRuleRequest request);
+
+    CompletableFuture<GetSensitiveDefineRuleConfigResponse> getSensitiveDefineRuleConfig(GetSensitiveDefineRuleConfigRequest request);
 
     CompletableFuture<GetServiceTrailResponse> getServiceTrail(GetServiceTrailRequest request);
 
@@ -988,6 +1002,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterCnnfStatusDetailResponse> listClusterCnnfStatusDetail(ListClusterCnnfStatusDetailRequest request);
 
     CompletableFuture<ListClusterInterceptionConfigResponse> listClusterInterceptionConfig(ListClusterInterceptionConfigRequest request);
+
+    CompletableFuture<ListContainerDefenseRuleResponse> listContainerDefenseRule(ListContainerDefenseRuleRequest request);
 
     CompletableFuture<ListCriteriaStrategyResponse> listCriteriaStrategy(ListCriteriaStrategyRequest request);
 
@@ -1284,7 +1300,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetClusterInterceptionConfigResponse> setClusterInterceptionConfig(SetClusterInterceptionConfigRequest request);
 
+    CompletableFuture<SetImageSensitiveFileStatusResponse> setImageSensitiveFileStatus(SetImageSensitiveFileStatusRequest request);
+
     CompletableFuture<SetRegistryScanDayNumResponse> setRegistryScanDayNum(SetRegistryScanDayNumRequest request);
+
+    CompletableFuture<SetSensitiveDefineRuleConfigResponse> setSensitiveDefineRuleConfig(SetSensitiveDefineRuleConfigRequest request);
 
     /**
       * @deprecated
@@ -1341,6 +1361,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateHoneypotProbeResponse> updateHoneypotProbe(UpdateHoneypotProbeRequest request);
 
     CompletableFuture<UpdateHoneypotProbeBindResponse> updateHoneypotProbeBind(UpdateHoneypotProbeBindRequest request);
+
+    CompletableFuture<UpdateImageEventOperationResponse> updateImageEventOperation(UpdateImageEventOperationRequest request);
 
     CompletableFuture<UpdateImageVulWhitelistTargetResponse> updateImageVulWhitelistTarget(UpdateImageVulWhitelistTargetRequest request);
 

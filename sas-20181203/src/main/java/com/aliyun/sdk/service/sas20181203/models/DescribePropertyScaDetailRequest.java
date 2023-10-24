@@ -427,7 +427,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
-         * The timestamp generated when the process starts. Unit: milliseconds.
+         * The timestamp when the process starts. Unit: milliseconds.
          */
         public Builder processStartedStart(Long processStartedStart) {
             this.putQueryParameter("ProcessStartedStart", processStartedStart);

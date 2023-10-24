@@ -210,7 +210,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of windows system vulnerabilities.
+         * The total number of Windows system vulnerabilities.
          */
         public Builder sysVulCount(String sysVulCount) {
             this.sysVulCount = sysVulCount;

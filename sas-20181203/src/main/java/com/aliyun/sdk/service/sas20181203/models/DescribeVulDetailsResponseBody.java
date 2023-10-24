@@ -171,6 +171,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("CveId")
         private String cveId;
 
+        @NameInMap("CveLink")
+        private String cveLink;
+
         @NameInMap("CvssScore")
         private String cvssScore;
 
@@ -235,6 +238,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             this.complexity = builder.complexity;
             this.content = builder.content;
             this.cveId = builder.cveId;
+            this.cveLink = builder.cveLink;
             this.cvssScore = builder.cvssScore;
             this.cvssVector = builder.cvssVector;
             this.instanceName = builder.instanceName;
@@ -304,6 +308,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          */
         public String getCveId() {
             return this.cveId;
+        }
+
+        /**
+         * @return cveLink
+         */
+        public String getCveLink() {
+            return this.cveLink;
         }
 
         /**
@@ -446,6 +457,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String complexity; 
             private String content; 
             private String cveId; 
+            private String cveLink; 
             private String cvssScore; 
             private String cvssVector; 
             private String instanceName; 
@@ -516,6 +528,14 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
+                return this;
+            }
+
+            /**
+             * CveLink.
+             */
+            public Builder cveLink(String cveLink) {
+                this.cveLink = cveLink;
                 return this;
             }
 

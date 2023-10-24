@@ -247,6 +247,9 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         @NameInMap("Pid")
         private String pid;
 
+        @NameInMap("PodName")
+        private String podName;
+
         @NameInMap("Port")
         private String port;
 
@@ -296,6 +299,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             this.name = builder.name;
             this.path = builder.path;
             this.pid = builder.pid;
+            this.podName = builder.podName;
             this.port = builder.port;
             this.ppid = builder.ppid;
             this.processStarted = builder.processStarted;
@@ -443,6 +447,13 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return podName
+         */
+        public String getPodName() {
+            return this.podName;
+        }
+
+        /**
          * @return port
          */
         public String getPort() {
@@ -531,6 +542,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private String name; 
             private String path; 
             private String pid; 
+            private String podName; 
             private String port; 
             private String ppid; 
             private Long processStarted; 
@@ -565,7 +577,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
              * 
              * *   System service
              * *   Software library
-             * *   Docker component
+             * *   Container component
              * *   Database
              * *   Web container
              * *   JAR package
@@ -601,7 +613,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the latest collection , which indicates the last timestamp generated when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.
+             * The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -665,7 +677,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol. Valid values:
+             * The protocol of the traffic on which the process listens. Valid values:
              * <p>
              * 
              * *   **UDP**
@@ -680,8 +692,8 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
              * The listening status of the process. Valid values:
              * <p>
              * 
-             * *   **NONE**: The process is not listened.
-             * *   **LISTEN**: The process is listened.
+             * *   **NONE**: not listening
+             * *   **LISTEN**: listening
              */
             public Builder listenStatus(String listenStatus) {
                 this.listenStatus = listenStatus;
@@ -705,10 +717,18 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID.
+             * The PID.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
+                return this;
+            }
+
+            /**
+             * The name of the Kubernetes pod.
+             */
+            public Builder podName(String podName) {
+                this.podName = podName;
                 return this;
             }
 
@@ -729,7 +749,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the process starts. Unit: milliseconds.
+             * The timestamp when the process starts. Unit: milliseconds.
              */
             public Builder processStarted(Long processStarted) {
                 this.processStarted = processStarted;
@@ -756,7 +776,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
              * The version of the runtime environment.
              * <p>
              * 
-             * > The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.
+             * >  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.
              */
             public Builder runtimeEnvVersion(String runtimeEnvVersion) {
                 this.runtimeEnvVersion = runtimeEnvVersion;

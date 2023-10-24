@@ -100,7 +100,7 @@ public class UpdateHoneypotRequest extends Request {
          * The ID of the honeypot.
          * <p>
          * 
-         * > You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
