@@ -286,7 +286,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiMethod.
+             * The HTTP method of the API request.
              */
             public Builder apiMethod(String apiMethod) {
                 this.apiMethod = apiMethod;
@@ -302,7 +302,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiPath.
+             * The request path of the API.
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;

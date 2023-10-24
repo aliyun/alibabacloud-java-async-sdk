@@ -326,7 +326,12 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment in which the API is requested. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the pre-release environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

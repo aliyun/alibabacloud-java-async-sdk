@@ -457,7 +457,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainResponse> describeDomain(DescribeDomainRequest request);
 
+    CompletableFuture<DescribeGroupLatencyResponse> describeGroupLatency(DescribeGroupLatencyRequest request);
+
     CompletableFuture<DescribeGroupQpsResponse> describeGroupQps(DescribeGroupQpsRequest request);
+
+    CompletableFuture<DescribeGroupTrafficResponse> describeGroupTraffic(DescribeGroupTrafficRequest request);
 
     CompletableFuture<DescribeHistoryApisResponse> describeHistoryApis(DescribeHistoryApisRequest request);
 
