@@ -220,6 +220,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
         @NameInMap("RegisteredCount")
         private Integer registeredCount;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
 
@@ -236,6 +239,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.ipAddressRange = builder.ipAddressRange;
             this.registeredCount = builder.registeredCount;
+            this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
             this.timeToLiveInHours = builder.timeToLiveInHours;
         }
@@ -312,6 +316,13 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List < Tags> getTags() {
@@ -335,6 +346,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private String instanceName; 
             private String ipAddressRange; 
             private Integer registeredCount; 
+            private String resourceGroupId; 
             private java.util.List < Tags> tags; 
             private Long timeToLiveInHours; 
 
@@ -407,6 +419,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

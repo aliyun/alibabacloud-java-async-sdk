@@ -520,6 +520,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Provider")
         private String provider;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -548,6 +551,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             this.parameterDefinitions = builder.parameterDefinitions;
             this.parameterNames = builder.parameterNames;
             this.provider = builder.provider;
+            this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
             this.timeout = builder.timeout;
             this.type = builder.type;
@@ -648,6 +652,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -695,6 +706,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private ParameterDefinitions parameterDefinitions; 
             private ParameterNames parameterNames; 
             private String provider; 
+            private String resourceGroupId; 
             private Tags tags; 
             private Long timeout; 
             private String type; 
@@ -794,6 +806,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
              */
             public Builder provider(String provider) {
                 this.provider = provider;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
