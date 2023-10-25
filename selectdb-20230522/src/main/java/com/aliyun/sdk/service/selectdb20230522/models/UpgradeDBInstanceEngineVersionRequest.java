@@ -31,12 +31,17 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("SwitchTimeMode")
+    private String switchTimeMode;
+
     private UpgradeDBInstanceEngineVersionRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.engineVersion = builder.engineVersion;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchTimeMode = builder.switchTimeMode;
     }
 
     public static Builder builder() {
@@ -80,11 +85,19 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchTimeMode
+     */
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceEngineVersionRequest, Builder> {
         private String DBInstanceId; 
         private String engineVersion; 
         private String regionId; 
         private Long resourceOwnerId; 
+        private String switchTimeMode; 
 
         private Builder() {
             super();
@@ -96,6 +109,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
             this.engineVersion = request.engineVersion;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTimeMode = request.switchTimeMode;
         } 
 
         /**
@@ -131,6 +145,15 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SwitchTimeMode.
+         */
+        public Builder switchTimeMode(String switchTimeMode) {
+            this.putQueryParameter("SwitchTimeMode", switchTimeMode);
+            this.switchTimeMode = switchTimeMode;
             return this;
         }
 
