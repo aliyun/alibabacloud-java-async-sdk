@@ -97,7 +97,7 @@ public class ListSpanNamesRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -106,7 +106,7 @@ public class ListSpanNamesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -115,7 +115,7 @@ public class ListSpanNamesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the application.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -124,7 +124,7 @@ public class ListSpanNamesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

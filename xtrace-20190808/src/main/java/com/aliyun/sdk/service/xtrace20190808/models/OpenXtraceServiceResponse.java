@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SearchTracesResponse} extends {@link TeaModel}
+ * {@link OpenXtraceServiceResponse} extends {@link TeaModel}
  *
- * <p>SearchTracesResponse</p>
+ * <p>OpenXtraceServiceResponse</p>
  */
-public class SearchTracesResponse extends Response {
+public class OpenXtraceServiceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class SearchTracesResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private SearchTracesResponseBody body;
+    private OpenXtraceServiceResponseBody body;
 
-    private SearchTracesResponse(BuilderImpl builder) {
+    private OpenXtraceServiceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SearchTracesResponse create() {
+    public static OpenXtraceServiceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class SearchTracesResponse extends Response {
     /**
      * @return body
      */
-    public SearchTracesResponseBody getBody() {
+    public OpenXtraceServiceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SearchTracesResponse, Builder> {
+    public interface Builder extends Response.Builder<OpenXtraceServiceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SearchTracesResponseBody body);
+        Builder body(OpenXtraceServiceResponseBody body);
 
         @Override
-        SearchTracesResponse build();
+        OpenXtraceServiceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SearchTracesResponse, Builder>
+            extends Response.BuilderImpl<OpenXtraceServiceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SearchTracesResponseBody body; 
+        private OpenXtraceServiceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SearchTracesResponse response) {
+        private BuilderImpl(OpenXtraceServiceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class SearchTracesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SearchTracesResponseBody body) {
+        public Builder body(OpenXtraceServiceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SearchTracesResponse build() {
-            return new SearchTracesResponse(this);
+        public OpenXtraceServiceResponse build() {
+            return new OpenXtraceServiceResponse(this);
         } 
 
     } 

@@ -30,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSpanNamesResponse> listSpanNames(ListSpanNamesRequest request);
 
+    CompletableFuture<OpenXtraceServiceResponse> openXtraceService(OpenXtraceServiceRequest request);
+
     CompletableFuture<QueryMetricResponse> queryMetric(QueryMetricRequest request);
 
     CompletableFuture<SearchTracesResponse> searchTraces(SearchTracesRequest request);

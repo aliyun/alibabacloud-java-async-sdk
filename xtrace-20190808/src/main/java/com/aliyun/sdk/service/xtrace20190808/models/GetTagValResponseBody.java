@@ -50,7 +50,7 @@ public class GetTagValResponseBody extends TeaModel {
         private TagValues tagValues; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTagValResponseBody extends TeaModel {
         }
 
         /**
-         * TagValues.
+         * The tag values.
          */
         public Builder tagValues(TagValues tagValues) {
             this.tagValues = tagValues;

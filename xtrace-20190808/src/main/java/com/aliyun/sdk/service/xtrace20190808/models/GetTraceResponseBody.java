@@ -50,7 +50,7 @@ public class GetTraceResponseBody extends TeaModel {
         private Spans spans; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * Spans.
+         * The details of the trace.
          */
         public Builder spans(Spans spans) {
             this.spans = spans;
@@ -110,7 +110,7 @@ public class GetTraceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key in the log event.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value in the log event.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,7 +212,7 @@ public class GetTraceResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * TagEntryList.
+             * The tags in the log event.
              */
             public Builder tagEntryList(TagEntryList tagEntryList) {
                 this.tagEntryList = tagEntryList;
@@ -220,7 +220,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp when the log event was generated.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -314,7 +314,7 @@ public class GetTraceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key in the span.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,7 +322,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value in the span.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -548,7 +548,7 @@ public class GetTraceResponseBody extends TeaModel {
             private String traceID; 
 
             /**
-             * Duration.
+             * The time used to call the trace. Unit: milliseconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -556,7 +556,11 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * HaveStack.
+             * Indicates whether the span has child spans. Valid values:
+             * <p>
+             * 
+             * - true: The span has child spans. 
+             * - false: The span has no child spans.
              */
             public Builder haveStack(Boolean haveStack) {
                 this.haveStack = haveStack;
@@ -564,7 +568,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * LogEventList.
+             * The log events in the trace.
              */
             public Builder logEventList(LogEventList logEventList) {
                 this.logEventList = logEventList;
@@ -572,7 +576,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * OperationName.
+             * The name of the span.
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -580,7 +584,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSpanId.
+             * The ID of the parent span.
              */
             public Builder parentSpanId(String parentSpanId) {
                 this.parentSpanId = parentSpanId;
@@ -588,7 +592,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * The status code.
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -596,7 +600,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * RpcId.
+             * The parent-child and sibling relationship between spans. For example, span 1.1 is the parent of span 1.1.1, and span 1.1.2 and span 1.1.1 are siblings.
              */
             public Builder rpcId(String rpcId) {
                 this.rpcId = rpcId;
@@ -604,7 +608,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIp.
+             * The IP address of the server where the span resides.
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -612,7 +616,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the application.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -620,7 +624,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * SpanId.
+             * Span ID.
              */
             public Builder spanId(String spanId) {
                 this.spanId = spanId;
@@ -628,7 +632,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * TagEntryList.
+             * The tags in the span.
              */
             public Builder tagEntryList(SpanTagEntryList tagEntryList) {
                 this.tagEntryList = tagEntryList;
@@ -636,7 +640,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp when the span was generated. Unit: microseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -644,7 +648,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * TraceID.
+             * The unique ID of the trace.
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;

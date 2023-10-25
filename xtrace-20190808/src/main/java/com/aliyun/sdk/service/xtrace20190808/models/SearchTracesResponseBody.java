@@ -50,7 +50,7 @@ public class SearchTracesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The information about the returned page.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class SearchTracesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class SearchTracesResponseBody extends TeaModel {
             private String traceID; 
 
             /**
-             * Duration.
+             * The time used to call the trace. Unit: milliseconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -178,7 +178,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationName.
+             * The name of the span.
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -186,7 +186,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIp.
+             * The IP address of the server where the span resides.
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -194,7 +194,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the application.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -202,7 +202,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * TagMap.
+             * The map of tags.
              */
             public Builder tagMap(java.util.Map < String, ? > tagMap) {
                 this.tagMap = tagMap;
@@ -210,7 +210,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the span was generated. Unit: microseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -218,7 +218,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * TraceID.
+             * The ID of the trace.
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;
@@ -336,7 +336,7 @@ public class SearchTracesResponseBody extends TeaModel {
             private TraceInfos traceInfos; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -344,7 +344,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -352,7 +352,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -360,7 +360,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * TraceInfos.
+             * The information about the trace.
              */
             public Builder traceInfos(TraceInfos traceInfos) {
                 this.traceInfos = traceInfos;

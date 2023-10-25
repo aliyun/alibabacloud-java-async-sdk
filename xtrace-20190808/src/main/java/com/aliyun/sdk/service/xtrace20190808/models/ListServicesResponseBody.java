@@ -50,7 +50,7 @@ public class ListServicesResponseBody extends TeaModel {
         private Services services; 
 
         /**
-         * RequestId.
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Services.
+         * The applications.
          */
         public Builder services(Services services) {
             this.services = services;
@@ -122,7 +122,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * Pid.
+             * The ID of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -130,7 +130,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +138,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the application.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

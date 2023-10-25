@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMetricRequest</p>
  */
 public class QueryMetricRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Dimensions")
     private java.util.List < String > dimensions;
@@ -55,10 +59,6 @@ public class QueryMetricRequest extends Request {
     @NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -66,6 +66,7 @@ public class QueryMetricRequest extends Request {
 
     private QueryMetricRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.dimensions = builder.dimensions;
         this.endTime = builder.endTime;
         this.filters = builder.filters;
@@ -76,7 +77,6 @@ public class QueryMetricRequest extends Request {
         this.order = builder.order;
         this.orderBy = builder.orderBy;
         this.proxyUserId = builder.proxyUserId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -91,6 +91,13 @@ public class QueryMetricRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -164,13 +171,6 @@ public class QueryMetricRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -178,6 +178,7 @@ public class QueryMetricRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryMetricRequest, Builder> {
+        private String regionId; 
         private java.util.List < String > dimensions; 
         private Long endTime; 
         private java.util.List < Filters> filters; 
@@ -188,7 +189,6 @@ public class QueryMetricRequest extends Request {
         private String order; 
         private String orderBy; 
         private String proxyUserId; 
-        private String regionId; 
         private Long startTime; 
 
         private Builder() {
@@ -197,6 +197,7 @@ public class QueryMetricRequest extends Request {
 
         private Builder(QueryMetricRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.dimensions = request.dimensions;
             this.endTime = request.endTime;
             this.filters = request.filters;
@@ -207,99 +208,8 @@ public class QueryMetricRequest extends Request {
             this.order = request.order;
             this.orderBy = request.orderBy;
             this.proxyUserId = request.proxyUserId;
-            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
-
-        /**
-         * Dimensions.
-         */
-        public Builder dimensions(java.util.List < String > dimensions) {
-            this.putQueryParameter("Dimensions", dimensions);
-            this.dimensions = dimensions;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Filters.
-         */
-        public Builder filters(java.util.List < Filters> filters) {
-            this.putQueryParameter("Filters", filters);
-            this.filters = filters;
-            return this;
-        }
-
-        /**
-         * IntervalInSec.
-         */
-        public Builder intervalInSec(Integer intervalInSec) {
-            this.putQueryParameter("IntervalInSec", intervalInSec);
-            this.intervalInSec = intervalInSec;
-            return this;
-        }
-
-        /**
-         * Limit.
-         */
-        public Builder limit(Integer limit) {
-            this.putQueryParameter("Limit", limit);
-            this.limit = limit;
-            return this;
-        }
-
-        /**
-         * Measures.
-         */
-        public Builder measures(java.util.List < String > measures) {
-            this.putQueryParameter("Measures", measures);
-            this.measures = measures;
-            return this;
-        }
-
-        /**
-         * Metric.
-         */
-        public Builder metric(String metric) {
-            this.putQueryParameter("Metric", metric);
-            this.metric = metric;
-            return this;
-        }
-
-        /**
-         * Order.
-         */
-        public Builder order(String order) {
-            this.putQueryParameter("Order", order);
-            this.order = order;
-            return this;
-        }
-
-        /**
-         * OrderBy.
-         */
-        public Builder orderBy(String orderBy) {
-            this.putQueryParameter("OrderBy", orderBy);
-            this.orderBy = orderBy;
-            return this;
-        }
-
-        /**
-         * ProxyUserId.
-         */
-        public Builder proxyUserId(String proxyUserId) {
-            this.putQueryParameter("ProxyUserId", proxyUserId);
-            this.proxyUserId = proxyUserId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -311,7 +221,108 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The dimensions of the metric that you want to query.
+         */
+        public Builder dimensions(java.util.List < String > dimensions) {
+            this.putQueryParameter("Dimensions", dimensions);
+            this.dimensions = dimensions;
+            return this;
+        }
+
+        /**
+         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The filter conditions.
+         */
+        public Builder filters(java.util.List < Filters> filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
+            return this;
+        }
+
+        /**
+         * The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000. 
+         * <p>
+         * 
+         * > If you set this parameter to 2147483647, all data in the specified time interval is returned.
+         */
+        public Builder intervalInSec(Integer intervalInSec) {
+            this.putQueryParameter("IntervalInSec", intervalInSec);
+            this.intervalInSec = intervalInSec;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries that you want to return.
+         */
+        public Builder limit(Integer limit) {
+            this.putQueryParameter("Limit", limit);
+            this.limit = limit;
+            return this;
+        }
+
+        /**
+         * The measures of the metric that you want to query.
+         */
+        public Builder measures(java.util.List < String > measures) {
+            this.putQueryParameter("Measures", measures);
+            this.measures = measures;
+            return this;
+        }
+
+        /**
+         * The name of the metric. Valid values:
+         * <p>
+         * 
+         * - `appstat.incall`: trace statistics 
+         * - `appstat.sql`: SQL statistics
+         */
+        public Builder metric(String metric) {
+            this.putQueryParameter("Metric", metric);
+            this.metric = metric;
+            return this;
+        }
+
+        /**
+         * The order in which you want to sort the returned entries. Valid values:
+         * <p>
+         * 
+         * - ASC: ascending order 
+         * - DESC: descending order
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * The field based on which you want to sort the returned entries.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+         * The ID of the proxy user.
+         */
+        public Builder proxyUserId(String proxyUserId) {
+            this.putQueryParameter("ProxyUserId", proxyUserId);
+            this.proxyUserId = proxyUserId;
+            return this;
+        }
+
+        /**
+         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -365,7 +376,7 @@ public class QueryMetricRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the field that you want to use to filter the returned entries.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -373,7 +384,7 @@ public class QueryMetricRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the field that you want to use to filter the returned entries.
              */
             public Builder value(String value) {
                 this.value = value;

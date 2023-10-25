@@ -84,7 +84,7 @@ public class GetTraceRequest extends Request {
         } 
 
         /**
-         * AppType.
+         * The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -93,7 +93,7 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * TraceID.
+         * The unique ID of the trace.
          */
         public Builder traceID(String traceID) {
             this.putQueryParameter("TraceID", traceID);

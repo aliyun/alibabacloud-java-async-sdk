@@ -50,7 +50,7 @@ public class ListIpOrHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IpNames.
+         * The IP addresses.
          */
         public Builder ipNames(IpNames ipNames) {
             this.ipNames = ipNames;
@@ -58,7 +58,7 @@ public class ListIpOrHostsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

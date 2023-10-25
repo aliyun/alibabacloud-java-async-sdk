@@ -50,7 +50,7 @@ public class ListSpanNamesResponseBody extends TeaModel {
         private SpanNames spanNames; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSpanNamesResponseBody extends TeaModel {
         }
 
         /**
-         * SpanNames.
+         * The span names.
          */
         public Builder spanNames(SpanNames spanNames) {
             this.spanNames = spanNames;

@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryMetricResponseBody} extends {@link TeaModel}
+ * {@link OpenXtraceServiceResponseBody} extends {@link TeaModel}
  *
- * <p>QueryMetricResponseBody</p>
+ * <p>OpenXtraceServiceResponseBody</p>
  */
-public class QueryMetricResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private String data;
+public class OpenXtraceServiceResponseBody extends TeaModel {
+    @NameInMap("OrderId")
+    private String orderId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private QueryMetricResponseBody(Builder builder) {
-        this.data = builder.data;
+    private OpenXtraceServiceResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class QueryMetricResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryMetricResponseBody create() {
+    public static OpenXtraceServiceResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return data
+     * @return orderId
      */
-    public String getData() {
-        return this.data;
+    public String getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -46,27 +46,27 @@ public class QueryMetricResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String data; 
+        private String orderId; 
         private String requestId; 
 
         /**
-         * The returned statistics.
+         * OrderId.
          */
-        public Builder data(String data) {
-            this.data = data;
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public QueryMetricResponseBody build() {
-            return new QueryMetricResponseBody(this);
+        public OpenXtraceServiceResponseBody build() {
+            return new OpenXtraceServiceResponseBody(this);
         } 
 
     } 

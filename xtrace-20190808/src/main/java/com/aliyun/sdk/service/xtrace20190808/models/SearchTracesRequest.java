@@ -211,7 +211,7 @@ public class SearchTracesRequest extends Request {
         } 
 
         /**
-         * AppType.
+         * The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -220,7 +220,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -229,7 +229,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * MinDuration.
+         * The time more than which is used to call the trace. Unit: milliseconds. For example, a value of 100 specifies to return the traces that more than 100 milliseconds are used to call.
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("MinDuration", minDuration);
@@ -238,7 +238,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * OperationName.
+         * The name of the span.
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -247,7 +247,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. For example, a value of 5 indicates page 5.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +256,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +265,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,7 +274,11 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: false. Valid values:
+         * <p>
+         * 
+         * - true: reverse chronological order 
+         * - false: chronological order
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -283,7 +287,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * ServiceIp.
+         * The IP address that corresponds to the span.
          */
         public Builder serviceIp(String serviceIp) {
             this.putQueryParameter("ServiceIp", serviceIp);
@@ -292,7 +296,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the application.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -301,7 +305,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -310,7 +314,7 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of the tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -364,7 +368,7 @@ public class SearchTracesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -372,7 +376,7 @@ public class SearchTracesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
