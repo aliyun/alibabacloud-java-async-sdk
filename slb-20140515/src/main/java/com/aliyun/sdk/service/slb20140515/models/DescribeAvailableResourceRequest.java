@@ -127,19 +127,22 @@ public class DescribeAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableResourceRequest response) {
-            super(response);
-            this.addressIPVersion = response.addressIPVersion;
-            this.addressType = response.addressType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAvailableResourceRequest request) {
+            super(request);
+            this.addressIPVersion = request.addressIPVersion;
+            this.addressType = request.addressType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AddressIPVersion.
+         * The type of the IP address.
+         * <p>
+         * 
+         * Valid values: **ipv4 and ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -148,7 +151,16 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * AddressType.
+         * The network type.
+         * <p>
+         * 
+         * Valid values: **vpc, classic-internet, and classic-intranet**.
+         * 
+         * vpc: an internal Classic Load Balancer (CLB) instance that is deployed in a virtual private cloud (VPC).
+         * 
+         * classic_internet: a public-facing CLB instance.
+         * 
+         * classic_intranet: an internal CLB instance that is deployed in a classic network.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -175,7 +187,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

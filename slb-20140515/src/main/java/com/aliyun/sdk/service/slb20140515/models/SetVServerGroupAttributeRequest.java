@@ -40,11 +40,11 @@ public class SetVServerGroupAttributeRequest extends Request {
     @Query
     @NameInMap("VServerGroupId")
     @Validation(required = true)
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     @Query
     @NameInMap("VServerGroupName")
-    private String VServerGroupName;
+    private String vServerGroupName;
 
     private SetVServerGroupAttributeRequest(Builder builder) {
         super(builder);
@@ -54,8 +54,8 @@ public class SetVServerGroupAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VServerGroupId = builder.VServerGroupId;
-        this.VServerGroupName = builder.VServerGroupName;
+        this.vServerGroupId = builder.vServerGroupId;
+        this.vServerGroupName = builder.vServerGroupName;
     }
 
     public static Builder builder() {
@@ -114,17 +114,17 @@ public class SetVServerGroupAttributeRequest extends Request {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     /**
-     * @return VServerGroupName
+     * @return vServerGroupName
      */
     public String getVServerGroupName() {
-        return this.VServerGroupName;
+        return this.vServerGroupName;
     }
 
     public static final class Builder extends Request.Builder<SetVServerGroupAttributeRequest, Builder> {
@@ -134,27 +134,49 @@ public class SetVServerGroupAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VServerGroupId; 
-        private String VServerGroupName; 
+        private String vServerGroupId; 
+        private String vServerGroupName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetVServerGroupAttributeRequest response) {
-            super(response);
-            this.backendServers = response.backendServers;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VServerGroupId = response.VServerGroupId;
-            this.VServerGroupName = response.VServerGroupName;
+        private Builder(SetVServerGroupAttributeRequest request) {
+            super(request);
+            this.backendServers = request.backendServers;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vServerGroupId = request.vServerGroupId;
+            this.vServerGroupName = request.vServerGroupName;
         } 
 
         /**
-         * BackendServers.
+         * The list of backend servers in the vServer group. You can specify at most 20 backend servers for a vServer group in each call.
+         * <p>
+         * 
+         * *   **ServerId**: required. The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI) that serves as a backend server. This parameter must be of the STRING type.
+         * 
+         * *   **Port**: required. The port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1 to 65535**.
+         * 
+         * *   **Weight**: required. The weight of the backend server. This parameter must be of the INTEGER type. You can modify this parameter. Valid values: **0 to 100**.
+         * 
+         * *   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. You can modify this parameter. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         * 
+         * *   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:
+         * 
+         *     *   **ecs**: an ECS instance. This is the default value.
+         *     *   **eni**: an ENI.
+         * 
+         * *   **ServerIp**: the IP address of the ECS instance or ENI.
+         * 
+         * Examples:
+         * 
+         * *   An ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`
+         * *   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`
+         * *   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`
          */
         public Builder backendServers(String backendServers) {
             this.putQueryParameter("BackendServers", backendServers);
@@ -181,7 +203,7 @@ public class SetVServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed. This parameter cannot be modified.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,20 +230,20 @@ public class SetVServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group. This parameter cannot be modified.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 
         /**
-         * VServerGroupName.
+         * The name of the vServer group. You can specify a custom name for the vServer group.
          */
-        public Builder VServerGroupName(String VServerGroupName) {
-            this.putQueryParameter("VServerGroupName", VServerGroupName);
-            this.VServerGroupName = VServerGroupName;
+        public Builder vServerGroupName(String vServerGroupName) {
+            this.putQueryParameter("VServerGroupName", vServerGroupName);
+            this.vServerGroupName = vServerGroupName;
             return this;
         }
 

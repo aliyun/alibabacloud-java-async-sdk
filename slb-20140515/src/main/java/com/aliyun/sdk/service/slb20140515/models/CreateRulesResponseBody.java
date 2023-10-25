@@ -50,7 +50,7 @@ public class CreateRulesResponseBody extends TeaModel {
         private Rules rules; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * The forwarding rules.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -110,7 +110,7 @@ public class CreateRulesResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * RuleId.
+             * The forwarding rule ID.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -118,7 +118,7 @@ public class CreateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the forwarding rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

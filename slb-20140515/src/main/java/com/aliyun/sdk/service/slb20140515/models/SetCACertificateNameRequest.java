@@ -129,19 +129,19 @@ public class SetCACertificateNameRequest extends Request {
             super();
         } 
 
-        private Builder(SetCACertificateNameRequest response) {
-            super(response);
-            this.CACertificateId = response.CACertificateId;
-            this.CACertificateName = response.CACertificateName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetCACertificateNameRequest request) {
+            super(request);
+            this.CACertificateId = request.CACertificateId;
+            this.CACertificateName = request.CACertificateName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CACertificateId.
+         * The ID of the CA certificate.
          */
         public Builder CACertificateId(String CACertificateId) {
             this.putQueryParameter("CACertificateId", CACertificateId);
@@ -150,7 +150,10 @@ public class SetCACertificateNameRequest extends Request {
         }
 
         /**
-         * CACertificateName.
+         * The name of the CA certificate.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length and start with an English letter or a Chinese character. It can contain numbers, underscores (\_), periods (.), and hyphens (-).
          */
         public Builder CACertificateName(String CACertificateName) {
             this.putQueryParameter("CACertificateName", CACertificateName);
@@ -177,7 +180,10 @@ public class SetCACertificateNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region to which the CA certificate belongs.
+         * <p>
+         * 
+         * To query the region ID, call [DescribeRegions](~~27584~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

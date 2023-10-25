@@ -62,7 +62,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MasterSlaveBackendServers.
+         * The list of backend servers in the primary/secondary server group.
          */
         public Builder masterSlaveBackendServers(MasterSlaveBackendServers masterSlaveBackendServers) {
             this.masterSlaveBackendServers = masterSlaveBackendServers;
@@ -70,7 +70,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MasterSlaveServerGroupId.
+         * The ID of the primary/secondary server group.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -78,7 +78,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Description.
+             * The description of the primary/secondary server group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +186,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number used by the backend server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -194,7 +194,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the ECS instance or ENI that is added.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -202,7 +202,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ServerType.
+             * The type of the backend server.
+             * <p>
+             * 
+             * Valid values: **Master** and **Slave**.
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -210,7 +213,11 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs**: an ECS instance
+             * *   **eni**: an ENI
              */
             public Builder type(String type) {
                 this.type = type;
@@ -218,7 +225,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

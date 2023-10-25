@@ -129,19 +129,22 @@ public class SetLoadBalancerDeleteProtectionRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerDeleteProtectionRequest response) {
-            super(response);
-            this.deleteProtection = response.deleteProtection;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetLoadBalancerDeleteProtectionRequest request) {
+            super(request);
+            this.deleteProtection = request.deleteProtection;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DeleteProtection.
+         * Specify whether to enable or disable deletion protection for the SLB instance.
+         * <p>
+         * 
+         * Valid values: **on and off**.
          */
         public Builder deleteProtection(String deleteProtection) {
             this.putQueryParameter("DeleteProtection", deleteProtection);
@@ -150,7 +153,7 @@ public class SetLoadBalancerDeleteProtectionRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -177,7 +180,10 @@ public class SetLoadBalancerDeleteProtectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the SLB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

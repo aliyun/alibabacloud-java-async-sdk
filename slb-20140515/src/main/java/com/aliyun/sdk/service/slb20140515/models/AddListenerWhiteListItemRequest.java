@@ -155,21 +155,21 @@ public class AddListenerWhiteListItemRequest extends Request {
             super();
         } 
 
-        private Builder(AddListenerWhiteListItemRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceItems = response.sourceItems;
+        private Builder(AddListenerWhiteListItemRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceItems = request.sourceItems;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the CLB instance.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -178,7 +178,10 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend protocol that is used by the CLB instance.
+         * <p>
+         * 
+         * >  This parameter is required when listeners that use different protocols listen on the same port.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -187,7 +190,7 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -214,7 +217,10 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +247,14 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * SourceItems.
+         * The IP addresses or CIDR blocks that you want to add to the whitelist.
+         * <p>
+         * 
+         * This parameter takes effect when the **AccessControlStatus** parameter of the listener is set to **open_white_list**.
+         * 
+         * Separate multiple IP addresses or CIDR blocks with commas (,).
+         * 
+         * You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](~~27599~~) operation to set the value of the **AccessControlStatus** parameter to **close**.
          */
         public Builder sourceItems(String sourceItems) {
             this.putQueryParameter("SourceItems", sourceItems);

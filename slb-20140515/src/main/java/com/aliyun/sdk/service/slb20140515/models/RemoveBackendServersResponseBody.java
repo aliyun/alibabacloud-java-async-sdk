@@ -62,7 +62,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackendServers.
+         * The list of backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -70,7 +70,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -78,7 +78,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Description.
+             * The description of the server group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +162,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -170,7 +170,11 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs**: an ECS instance
+             * *   **eni**: an ENI
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +182,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server. Valid values: **0 to 100**.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

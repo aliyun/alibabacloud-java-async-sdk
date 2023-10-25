@@ -101,17 +101,17 @@ public class DescribeZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * OwnerAccount.
+         * The logon name of the RAM user.
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);
@@ -120,7 +120,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * The ID of the Alibaba Cloud account to which the VPC belongs.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -129,7 +129,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Server Load Balancer (SLB) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * ResourceOwnerAccount
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -147,7 +147,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The ID of the asset owner.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

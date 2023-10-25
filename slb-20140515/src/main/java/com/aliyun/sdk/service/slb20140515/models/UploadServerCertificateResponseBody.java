@@ -206,7 +206,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         private SubjectAlternativeNames subjectAlternativeNames; 
 
         /**
-         * AliCloudCertificateId.
+         * The AliCloud certificate ID.
          */
         public Builder aliCloudCertificateId(String aliCloudCertificateId) {
             this.aliCloudCertificateId = aliCloudCertificateId;
@@ -214,7 +214,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * AliCloudCertificateName.
+         * The AliCloud certificate name.
          */
         public Builder aliCloudCertificateName(String aliCloudCertificateName) {
             this.aliCloudCertificateName = aliCloudCertificateName;
@@ -222,7 +222,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CommonName.
+         * The domain name of the CA certificate.
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -230,7 +230,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the CA certificate is uploaded.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -238,7 +238,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimeStamp.
+         * The timestamp generated when the CA certificate is uploaded.
          */
         public Builder createTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
@@ -246,7 +246,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The time when the CA certificate expires.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -254,7 +254,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTimeStamp.
+         * The timestamp generated when the CA certificate expires.
          */
         public Builder expireTimeStamp(Long expireTimeStamp) {
             this.expireTimeStamp = expireTimeStamp;
@@ -262,7 +262,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Fingerprint.
+         * The fingerprint of the CA certificate.
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -270,7 +270,10 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * IsAliCloudCertificate.
+         * Indicates whether the certificate is provided by Alibaba Cloud Certificate Management Service. Valid values:
+         * <p>
+         * - **0**: The certificate is not provided by Alibaba Cloud Certificate Management Service.
+         * - **1**: The certificate is provided by Alibaba Cloud Certificate Management Service.
          */
         public Builder isAliCloudCertificate(Integer isAliCloudCertificate) {
             this.isAliCloudCertificate = isAliCloudCertificate;
@@ -278,7 +281,10 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -286,7 +292,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -294,7 +300,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -302,7 +308,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the server certificate.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;
@@ -310,7 +316,10 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCertificateName.
+         * The name of the server certificate.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder serverCertificateName(String serverCertificateName) {
             this.serverCertificateName = serverCertificateName;
@@ -318,7 +327,10 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SubjectAlternativeNames.
+         * The subject alternative names.
+         * <p>
+         * 
+         * A domain name list is supported. A maximum of 10 domain names are supported.
          */
         public Builder subjectAlternativeNames(SubjectAlternativeNames subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;

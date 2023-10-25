@@ -15,24 +15,32 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     @NameInMap("BackendServers")
     private BackendServers backendServers;
 
+    @NameInMap("CreateTime")
+    private String createTime;
+
     @NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     @NameInMap("VServerGroupName")
-    private String VServerGroupName;
+    private String vServerGroupName;
 
     private DescribeVServerGroupAttributeResponseBody(Builder builder) {
         this.backendServers = builder.backendServers;
+        this.createTime = builder.createTime;
         this.loadBalancerId = builder.loadBalancerId;
         this.requestId = builder.requestId;
-        this.VServerGroupId = builder.VServerGroupId;
-        this.VServerGroupName = builder.VServerGroupName;
+        this.tags = builder.tags;
+        this.vServerGroupId = builder.vServerGroupId;
+        this.vServerGroupName = builder.vServerGroupName;
     }
 
     public static Builder builder() {
@@ -51,6 +59,13 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
      * @return loadBalancerId
      */
     public String getLoadBalancerId() {
@@ -65,28 +80,37 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return VServerGroupId
+     * @return tags
      */
-    public String getVServerGroupId() {
-        return this.VServerGroupId;
+    public Tags getTags() {
+        return this.tags;
     }
 
     /**
-     * @return VServerGroupName
+     * @return vServerGroupId
+     */
+    public String getVServerGroupId() {
+        return this.vServerGroupId;
+    }
+
+    /**
+     * @return vServerGroupName
      */
     public String getVServerGroupName() {
-        return this.VServerGroupName;
+        return this.vServerGroupName;
     }
 
     public static final class Builder {
         private BackendServers backendServers; 
+        private String createTime; 
         private String loadBalancerId; 
         private String requestId; 
-        private String VServerGroupId; 
-        private String VServerGroupName; 
+        private Tags tags; 
+        private String vServerGroupId; 
+        private String vServerGroupName; 
 
         /**
-         * BackendServers.
+         * The list of backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -94,7 +118,15 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -102,7 +134,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,18 +142,26 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VServerGroupId.
+         * The tag list.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
+        public Builder tags(Tags tags) {
+            this.tags = tags;
             return this;
         }
 
         /**
-         * VServerGroupName.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupName(String VServerGroupName) {
-            this.VServerGroupName = VServerGroupName;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.vServerGroupId = vServerGroupId;
+            return this;
+        }
+
+        /**
+         * The name of the vServer group.
+         */
+        public Builder vServerGroupName(String vServerGroupName) {
+            this.vServerGroupName = vServerGroupName;
             return this;
         }
 
@@ -141,6 +181,9 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         @NameInMap("ServerId")
         private String serverId;
 
+        @NameInMap("ServerIp")
+        private String serverIp;
+
         @NameInMap("Type")
         private String type;
 
@@ -151,6 +194,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             this.description = builder.description;
             this.port = builder.port;
             this.serverId = builder.serverId;
+            this.serverIp = builder.serverIp;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -185,6 +229,13 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverIp
+         */
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -202,11 +253,12 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             private String description; 
             private Integer port; 
             private String serverId; 
+            private String serverIp; 
             private String type; 
             private Integer weight; 
 
             /**
-             * Description.
+             * The description of the vServer group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +266,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port used by the backend server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -222,7 +274,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the ECS instance, ENI, or elastic container instance.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -230,7 +282,20 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The IP address of the ECS instance, ENI, or elastic container instance.
+             */
+            public Builder serverIp(String serverIp) {
+                this.serverIp = serverIp;
+                return this;
+            }
+
+            /**
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs** (default): an Elastic Compute Service (ECS) instance
+             * *   **eni**: an elastic network interface (ENI)
+             * *   **eci**: an elastic container instance
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +303,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -288,6 +353,108 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
             public BackendServers build() {
                 return new BackendServers(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

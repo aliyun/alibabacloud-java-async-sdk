@@ -167,22 +167,28 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLoadBalancerPayTypeRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.duration = response.duration;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyLoadBalancerPayTypeRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.duration = request.duration;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         * 
+         * >  This parameter is valid only when the `PayType` parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -191,7 +197,13 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration.
+         * <p>
+         * 
+         * *   If **PricingCycle** is set to **month**, the valid values are **1** to **9**.
+         * *   If **PricingCycle** is set to **year**, the valid values are **1** to **3**.
+         * 
+         * >  This parameter is valid only when the **PayType** parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -200,7 +212,7 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -227,7 +239,12 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **PayOnDemand** (default): pay-as-you-go
+         * 
+         * To change the billing method of a pay-as-you-go CLB instance to subscription, you must set the parameter to **PrePay**. In addition, the previous billing method of the CLB instance must be **PayOnDemand**.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -236,7 +253,12 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The billing cycle.
+         * <p>
+         * 
+         * Valid values: **year** and **month**.
+         * 
+         * >  This parameter is valid only when the **PayType** parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -245,7 +267,10 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
+         * <p>
+         * 
+         * You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

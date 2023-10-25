@@ -115,18 +115,18 @@ public class DeleteCACertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCACertificateRequest response) {
-            super(response);
-            this.CACertificateId = response.CACertificateId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteCACertificateRequest request) {
+            super(request);
+            this.CACertificateId = request.CACertificateId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CACertificateId.
+         * The CA certificate ID.
          */
         public Builder CACertificateId(String CACertificateId) {
             this.putQueryParameter("CACertificateId", CACertificateId);
@@ -153,7 +153,10 @@ public class DeleteCACertificateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region of the CA certificates.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -154,21 +154,25 @@ public class ModifyLoadBalancerInternetSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLoadBalancerInternetSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.internetChargeType = response.internetChargeType;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyLoadBalancerInternetSpecRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.internetChargeType = request.internetChargeType;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically pay the subscription fee of the Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payments. This is the default value.
+         * *   **false**: disables automatic payment. You must complete the payment in Order Center.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -177,7 +181,12 @@ public class ModifyLoadBalancerInternetSpecRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the Internet-facing CLB instance that uses the pay-by-bandwidth metering method. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **1 to 5000**. The maximum bandwidth varies based on the region where the CLB instance is created.****
+         * 
+         * >  You do not need to specify this parameter if you set **InternetChargeType** to **paybytraffic** (pay-by-data-transfer).
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -186,7 +195,11 @@ public class ModifyLoadBalancerInternetSpecRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **paybybandwidth**: pay-by-bandwidth
+         * *   **paybytraffic**: pay-by-data-transfer
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -195,7 +208,7 @@ public class ModifyLoadBalancerInternetSpecRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -222,7 +235,10 @@ public class ModifyLoadBalancerInternetSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

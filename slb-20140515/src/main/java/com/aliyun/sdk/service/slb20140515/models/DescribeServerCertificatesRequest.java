@@ -40,6 +40,10 @@ public class DescribeServerCertificatesRequest extends Request {
     @NameInMap("ServerCertificateId")
     private String serverCertificateId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeServerCertificatesRequest(Builder builder) {
         super(builder);
         this.ownerAccount = builder.ownerAccount;
@@ -49,6 +53,7 @@ public class DescribeServerCertificatesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.serverCertificateId = builder.serverCertificateId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -113,6 +118,13 @@ public class DescribeServerCertificatesRequest extends Request {
         return this.serverCertificateId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeServerCertificatesRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
@@ -121,20 +133,22 @@ public class DescribeServerCertificatesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String serverCertificateId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeServerCertificatesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverCertificateId = response.serverCertificateId;
+        private Builder(DescribeServerCertificatesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverCertificateId = request.serverCertificateId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -156,7 +170,12 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the CLB instances are deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * 
+         * >  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +184,7 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -192,11 +211,20 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the server certificate.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);
             this.serverCertificateId = serverCertificateId;
+            return this;
+        }
+
+        /**
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -207,4 +235,65 @@ public class DescribeServerCertificatesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

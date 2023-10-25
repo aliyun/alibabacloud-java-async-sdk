@@ -86,7 +86,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LoadBalancers.
+         * An array of CLB instances.
          */
         public Builder loadBalancers(LoadBalancers loadBalancers) {
             this.loadBalancers = loadBalancers;
@@ -94,7 +94,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on the current page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of instances returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -255,6 +255,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("DeleteProtection")
         private String deleteProtection;
 
+        @NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
         @NameInMap("InternetChargeType")
         private String internetChargeType;
 
@@ -317,6 +320,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.createTimeStamp = builder.createTimeStamp;
             this.deleteProtection = builder.deleteProtection;
+            this.instanceChargeType = builder.instanceChargeType;
             this.internetChargeType = builder.internetChargeType;
             this.internetChargeTypeAlias = builder.internetChargeTypeAlias;
             this.loadBalancerId = builder.loadBalancerId;
@@ -392,6 +396,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
          */
         public String getDeleteProtection() {
             return this.deleteProtection;
+        }
+
+        /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
         }
 
         /**
@@ -528,6 +539,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String createTime; 
             private Long createTimeStamp; 
             private String deleteProtection; 
+            private String instanceChargeType; 
             private String internetChargeType; 
             private String internetChargeTypeAlias; 
             private String loadBalancerId; 
@@ -548,7 +560,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Address.
+             * The endpoint of the CLB instance.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -556,7 +568,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * AddressIPVersion.
+             * The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -564,7 +576,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * AddressType.
+             * The network type of the CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.
+             * *   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -572,7 +588,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
+             * <p>
+             * 
+             * *   **-1:** For a pay-by-data-transfer Internet-facing CLB instance, this value is set to -1. This indicates that the bandwidth is unlimited.
+             * *   **1 to 5120:** For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth for each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -580,7 +600,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -588,7 +608,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStamp.
+             * The timestamp when the instance was created.
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -596,7 +616,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteProtection.
+             * Indicates whether deletion protection is enabled for the CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **on:** Deletion protection is enabled.
+             * *   **off:** Deletion protection is disabled.
              */
             public Builder deleteProtection(String deleteProtection) {
                 this.deleteProtection = deleteProtection;
@@ -604,7 +628,25 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The metering method of the CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **PayBySpec:** pay-by-specification.
+             * *   **PayByCLCU:** pay-by-LCU.
+             * 
+             * >  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PayOnDemand**.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * The metering method of the Internet-facing CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **3:** pay-by-bandwidth (**paybybandwidth**).
+             * *   **4:** pay-by-data-transfer (**paybytraffic**).
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -612,7 +654,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeTypeAlias.
+             * The metering method of Internet data transfer. Valid values:
+             * <p>
+             * 
+             * *   **paybybandwidth:** pay-by-bandwidth.
+             * *   **paybytraffic:** pay-by-data-transfer.
              */
             public Builder internetChargeTypeAlias(String internetChargeTypeAlias) {
                 this.internetChargeTypeAlias = internetChargeTypeAlias;
@@ -620,7 +666,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * The ID of the CLB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -628,7 +674,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerName.
+             * The name of the CLB instance.
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -636,7 +682,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerSpec.
+             * The specification of the CLB instance.
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -644,7 +690,12 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerStatus.
+             * The status of the CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.
+             * *   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.
+             * *   **locked:** The CLB instance is locked.
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -652,7 +703,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * MasterZoneId.
+             * The ID of the primary zone to which the CLB instance belongs.
              */
             public Builder masterZoneId(String masterZoneId) {
                 this.masterZoneId = masterZoneId;
@@ -660,7 +711,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationProtectionReason.
+             * The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+             * <p>
+             * 
+             * > This parameter takes effect only when you set the `ModificationProtectionStatus` parameter to **ConsoleProtection**.
              */
             public Builder modificationProtectionReason(String modificationProtectionReason) {
                 this.modificationProtectionReason = modificationProtectionReason;
@@ -668,7 +722,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationProtectionStatus.
+             * Indicates whether the configuration read-only mode is enabled for the CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **NonProtection:** The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the `ModificationProtectionReason` parameter, the value is cleared.
+             * *   **ConsoleProtection:** The configuration read-only mode is enabled.
+             * 
+             * >  If you set this parameter to **ConsoleProtection**, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.
              */
             public Builder modificationProtectionStatus(String modificationProtectionStatus) {
                 this.modificationProtectionStatus = modificationProtectionStatus;
@@ -676,7 +736,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the internal-facing CLB instance. Valid values:
+             * <p>
+             * 
+             * *   **vpc:** VPC.
+             * *   **classic:** classic network.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -684,7 +748,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the CLB instance.
+             * <p>
+             * 
+             * *   **PayOnDemand** is returned, which indicates the pay-as-you-go billing method.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -692,7 +759,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the CLB instance was deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -700,7 +767,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionIdAlias.
+             * The region where the CLB instance was deployed.
              */
             public Builder regionIdAlias(String regionIdAlias) {
                 this.regionIdAlias = regionIdAlias;
@@ -708,7 +775,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -716,7 +783,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveZoneId.
+             * The ID of the secondary zone to which the CLB instance belongs.
              */
             public Builder slaveZoneId(String slaveZoneId) {
                 this.slaveZoneId = slaveZoneId;
@@ -724,7 +791,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the CLB instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -732,7 +799,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch to which the internal-facing CLB instance belongs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -740,7 +807,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC in which the internal-facing CLB instance was deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

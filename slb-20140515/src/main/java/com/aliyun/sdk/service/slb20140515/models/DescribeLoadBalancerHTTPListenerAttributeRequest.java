@@ -128,19 +128,22 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancerHTTPListenerAttributeRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeLoadBalancerHTTPListenerAttributeRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the CLB instance.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -149,7 +152,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The CLB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -176,7 +179,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

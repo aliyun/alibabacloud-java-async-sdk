@@ -128,15 +128,15 @@ public class SetLoadBalancerNameRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerNameRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerName = response.loadBalancerName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetLoadBalancerNameRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerName = request.loadBalancerName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -176,7 +176,10 @@ public class SetLoadBalancerNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

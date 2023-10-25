@@ -128,19 +128,22 @@ public class DescribeLoadBalancerUDPListenerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancerUDPListenerAttributeRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeLoadBalancerUDPListenerAttributeRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend port used by the CLB instance.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -149,7 +152,7 @@ public class DescribeLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -176,7 +179,7 @@ public class DescribeLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

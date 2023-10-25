@@ -30,6 +30,14 @@ public class DescribeAccessControlListAttributeRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Page")
+    private Integer page;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -48,6 +56,8 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         this.aclId = builder.aclId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.page = builder.page;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -95,6 +105,20 @@ public class DescribeAccessControlListAttributeRequest extends Request {
     }
 
     /**
+     * @return page
+     */
+    public Integer getPage() {
+        return this.page;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -120,6 +144,8 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         private String aclId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer page; 
+        private Integer pageSize; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -128,19 +154,24 @@ public class DescribeAccessControlListAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccessControlListAttributeRequest response) {
-            super(response);
-            this.aclEntryComment = response.aclEntryComment;
-            this.aclId = response.aclId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAccessControlListAttributeRequest request) {
+            super(request);
+            this.aclEntryComment = request.aclEntryComment;
+            this.aclId = request.aclId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.page = request.page;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AclEntryComment.
+         * The remarks of the ACL entry.
+         * <p>
+         * 
+         * It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder aclEntryComment(String aclEntryComment) {
             this.putQueryParameter("AclEntryComment", aclEntryComment);
@@ -149,7 +180,7 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ID of the ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -176,7 +207,25 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The page number.
+         */
+        public Builder page(Integer page) {
+            this.putQueryParameter("Page", page);
+            this.page = page;
+            return this;
+        }
+
+        /**
+         * The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

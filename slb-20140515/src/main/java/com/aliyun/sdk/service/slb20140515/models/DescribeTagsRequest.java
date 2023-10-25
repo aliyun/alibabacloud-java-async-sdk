@@ -166,22 +166,25 @@ public class DescribeTagsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTagsRequest response) {
-            super(response);
-            this.distinctKey = response.distinctKey;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
+        private Builder(DescribeTagsRequest request) {
+            super(request);
+            this.distinctKey = request.distinctKey;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
         } 
 
         /**
-         * DistinctKey.
+         * Specifies whether the tag is DistinctKey.
+         * <p>
+         * 
+         * Valid values: **true and false**.
          */
         public Builder distinctKey(Boolean distinctKey) {
             this.putQueryParameter("DistinctKey", distinctKey);
@@ -190,7 +193,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -217,7 +220,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Minimum value: 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +229,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 50. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +238,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +265,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that you want to query.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

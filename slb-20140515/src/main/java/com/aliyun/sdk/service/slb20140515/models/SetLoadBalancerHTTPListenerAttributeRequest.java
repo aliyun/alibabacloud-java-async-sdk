@@ -145,27 +145,27 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
 
     @Query
     @NameInMap("VServerGroup")
-    private String VServerGroup;
+    private String vServerGroup;
 
     @Query
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     @Query
     @NameInMap("XForwardedFor")
-    private String XForwardedFor;
+    private String xForwardedFor;
 
     @Query
     @NameInMap("XForwardedFor_SLBID")
-    private String XForwardedFor_SLBID;
+    private String xForwardedForSLBID;
 
     @Query
     @NameInMap("XForwardedFor_SLBIP")
-    private String XForwardedFor_SLBIP;
+    private String xForwardedForSLBIP;
 
     @Query
     @NameInMap("XForwardedFor_proto")
-    private String XForwardedFor_proto;
+    private String xForwardedForProto;
 
     private SetLoadBalancerHTTPListenerAttributeRequest(Builder builder) {
         super(builder);
@@ -199,12 +199,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         this.stickySession = builder.stickySession;
         this.stickySessionType = builder.stickySessionType;
         this.unhealthyThreshold = builder.unhealthyThreshold;
-        this.VServerGroup = builder.VServerGroup;
-        this.VServerGroupId = builder.VServerGroupId;
-        this.XForwardedFor = builder.XForwardedFor;
-        this.XForwardedFor_SLBID = builder.XForwardedFor_SLBID;
-        this.XForwardedFor_SLBIP = builder.XForwardedFor_SLBIP;
-        this.XForwardedFor_proto = builder.XForwardedFor_proto;
+        this.vServerGroup = builder.vServerGroup;
+        this.vServerGroupId = builder.vServerGroupId;
+        this.xForwardedFor = builder.xForwardedFor;
+        this.xForwardedForSLBID = builder.xForwardedForSLBID;
+        this.xForwardedForSLBIP = builder.xForwardedForSLBIP;
+        this.xForwardedForProto = builder.xForwardedForProto;
     }
 
     public static Builder builder() {
@@ -431,45 +431,45 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
     }
 
     /**
-     * @return VServerGroup
+     * @return vServerGroup
      */
     public String getVServerGroup() {
-        return this.VServerGroup;
+        return this.vServerGroup;
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     /**
-     * @return XForwardedFor
+     * @return xForwardedFor
      */
     public String getXForwardedFor() {
-        return this.XForwardedFor;
+        return this.xForwardedFor;
     }
 
     /**
-     * @return XForwardedFor_SLBID
+     * @return xForwardedForSLBID
      */
-    public String getXForwardedFor_SLBID() {
-        return this.XForwardedFor_SLBID;
+    public String getXForwardedForSLBID() {
+        return this.xForwardedForSLBID;
     }
 
     /**
-     * @return XForwardedFor_SLBIP
+     * @return xForwardedForSLBIP
      */
-    public String getXForwardedFor_SLBIP() {
-        return this.XForwardedFor_SLBIP;
+    public String getXForwardedForSLBIP() {
+        return this.xForwardedForSLBIP;
     }
 
     /**
-     * @return XForwardedFor_proto
+     * @return xForwardedForProto
      */
-    public String getXForwardedFor_proto() {
-        return this.XForwardedFor_proto;
+    public String getXForwardedForProto() {
+        return this.xForwardedForProto;
     }
 
     public static final class Builder extends Request.Builder<SetLoadBalancerHTTPListenerAttributeRequest, Builder> {
@@ -503,59 +503,62 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         private String stickySession; 
         private String stickySessionType; 
         private Integer unhealthyThreshold; 
-        private String VServerGroup; 
-        private String VServerGroupId; 
-        private String XForwardedFor; 
-        private String XForwardedFor_SLBID; 
-        private String XForwardedFor_SLBIP; 
-        private String XForwardedFor_proto; 
+        private String vServerGroup; 
+        private String vServerGroupId; 
+        private String xForwardedFor; 
+        private String xForwardedForSLBID; 
+        private String xForwardedForSLBIP; 
+        private String xForwardedForProto; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetLoadBalancerHTTPListenerAttributeRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclStatus = response.aclStatus;
-            this.aclType = response.aclType;
-            this.bandwidth = response.bandwidth;
-            this.cookie = response.cookie;
-            this.cookieTimeout = response.cookieTimeout;
-            this.description = response.description;
-            this.gzip = response.gzip;
-            this.healthCheck = response.healthCheck;
-            this.healthCheckConnectPort = response.healthCheckConnectPort;
-            this.healthCheckDomain = response.healthCheckDomain;
-            this.healthCheckHttpCode = response.healthCheckHttpCode;
-            this.healthCheckInterval = response.healthCheckInterval;
-            this.healthCheckMethod = response.healthCheckMethod;
-            this.healthCheckTimeout = response.healthCheckTimeout;
-            this.healthCheckURI = response.healthCheckURI;
-            this.healthyThreshold = response.healthyThreshold;
-            this.idleTimeout = response.idleTimeout;
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.requestTimeout = response.requestTimeout;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scheduler = response.scheduler;
-            this.stickySession = response.stickySession;
-            this.stickySessionType = response.stickySessionType;
-            this.unhealthyThreshold = response.unhealthyThreshold;
-            this.VServerGroup = response.VServerGroup;
-            this.VServerGroupId = response.VServerGroupId;
-            this.XForwardedFor = response.XForwardedFor;
-            this.XForwardedFor_SLBID = response.XForwardedFor_SLBID;
-            this.XForwardedFor_SLBIP = response.XForwardedFor_SLBIP;
-            this.XForwardedFor_proto = response.XForwardedFor_proto;
+        private Builder(SetLoadBalancerHTTPListenerAttributeRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclStatus = request.aclStatus;
+            this.aclType = request.aclType;
+            this.bandwidth = request.bandwidth;
+            this.cookie = request.cookie;
+            this.cookieTimeout = request.cookieTimeout;
+            this.description = request.description;
+            this.gzip = request.gzip;
+            this.healthCheck = request.healthCheck;
+            this.healthCheckConnectPort = request.healthCheckConnectPort;
+            this.healthCheckDomain = request.healthCheckDomain;
+            this.healthCheckHttpCode = request.healthCheckHttpCode;
+            this.healthCheckInterval = request.healthCheckInterval;
+            this.healthCheckMethod = request.healthCheckMethod;
+            this.healthCheckTimeout = request.healthCheckTimeout;
+            this.healthCheckURI = request.healthCheckURI;
+            this.healthyThreshold = request.healthyThreshold;
+            this.idleTimeout = request.idleTimeout;
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.requestTimeout = request.requestTimeout;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scheduler = request.scheduler;
+            this.stickySession = request.stickySession;
+            this.stickySessionType = request.stickySessionType;
+            this.unhealthyThreshold = request.unhealthyThreshold;
+            this.vServerGroup = request.vServerGroup;
+            this.vServerGroupId = request.vServerGroupId;
+            this.xForwardedFor = request.xForwardedFor;
+            this.xForwardedForSLBID = request.xForwardedForSLBID;
+            this.xForwardedForSLBIP = request.xForwardedForSLBIP;
+            this.xForwardedForProto = request.xForwardedForProto;
         } 
 
         /**
-         * AclId.
+         * The ID of the access control list (ACL) that is associated with the listener.
+         * <p>
+         * 
+         * > This parameter is required when **AclStatus** is set to **on**.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -564,7 +567,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * AclStatus.
+         * Specifies whether to enable access control. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -573,7 +580,18 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * AclType.
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Risks may occur if a whitelist is improperly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.
+         * 
+         * If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.
+         * 
+         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.
+         * 
+         * If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.
+         * 
+         * > This parameter takes effect when the value of **AclStatus** is set to **on**.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -582,7 +600,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the listener. Unit: Mbit/s. Set the value to
+         * <p>
+         * 
+         * *   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this value specifies that the bandwidth of the listener is unlimited.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -591,7 +612,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Cookie.
+         * The cookie that is configured on the server.
+         * <p>
+         * 
+         * The cookie must be 1 to 200 characters in length, and can contain ASCII characters and digits. It cannot contain commas (,), semicolons (;), or spaces. It cannot start with a dollar sign ($).
+         * 
+         * > This parameter is required when **StickySession** is set to **on** and **StickySessionType** is set to **server**.
          */
         public Builder cookie(String cookie) {
             this.putQueryParameter("Cookie", cookie);
@@ -600,7 +626,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * CookieTimeout.
+         * The timeout period of a cookie.
+         * <p>
+         * 
+         * Valid values: **1** to **86400**. Unit: seconds.
+         * 
+         * > This parameter is required when **StickySession** is set to **on** and **StickySessionType** is set to **insert**.
          */
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.putQueryParameter("CookieTimeout", cookieTimeout);
@@ -609,7 +640,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the listener.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -618,7 +649,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Gzip.
+         * Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder gzip(String gzip) {
             this.putQueryParameter("Gzip", gzip);
@@ -627,7 +662,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheck.
+         * Specifies whether to enable the health check feature. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder healthCheck(String healthCheck) {
             this.putQueryParameter("HealthCheck", healthCheck);
@@ -636,7 +675,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
+         * 
+         * > This parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -645,7 +689,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckDomain.
+         * The domain name that is used for health checks. Valid values:
+         * <p>
+         * 
+         * *   **$\_ip**: the private IP address of a backend server. If you specify \*\*$\_ip **or** ignore HealthCheckDomain\*\*, CLB uses the private IP addresses of backend servers as the health check domain names.
+         * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
+         * 
+         * > The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.putQueryParameter("HealthCheckDomain", healthCheckDomain);
@@ -654,7 +704,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckHttpCode.
+         * The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).
+         * <p>
+         * 
+         * Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+         * 
+         * >  The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.putQueryParameter("HealthCheckHttpCode", healthCheckHttpCode);
@@ -663,7 +718,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckInterval.
+         * The interval at which health checks are performed.
+         * <p>
+         * 
+         * Valid values: **1** to **50**. Unit: seconds.
+         * 
+         * >  The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -672,7 +732,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckMethod.
+         * The health check method that is used in HTTP health checks. Valid values: **head** and **get**.
+         * <p>
+         * 
+         * > The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.putQueryParameter("HealthCheckMethod", healthCheckMethod);
@@ -681,7 +744,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckTimeout.
+         * The timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. This parameter takes effect only if you set **HealthCheck** to **on**.
+         * <p>
+         * 
+         * Valid values: **1** to **300**. Unit: seconds.
+         * 
+         * > If the value of **HealthCheckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCheckTimeout** becomes invalid and the value of **HealthCheckInterval** is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -690,7 +758,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckURI.
+         * The Uniform Resource Identifier (URI) that you want to use for health checks.
+         * <p>
+         * 
+         * The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # & The URI must start with a forward slash (/) but cannot be a single forward slash (/).
+         * 
+         * > The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -699,7 +772,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
+         * 
+         * > The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -708,7 +786,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * IdleTimeout.
+         * The timeout period of an idle connection. Unit: seconds. Valid values: **1 to 60**. Default value: **15**.
+         * <p>
+         * 
+         * If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -717,7 +798,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the CLB instance.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -726,7 +810,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The CLB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -753,7 +837,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
+         * <p>
+         * 
+         * You can query the region ID from the [Regions and zones](~~27585~~) list or by calling the [DescribeRegions](~~27584~~) operation.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -762,7 +849,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * RequestTimeout.
+         * The timeout period of a request. Unit: seconds. Valid values: **1 to 180**. Default value: **60**.
+         * <p>
+         * 
+         * If no response is received from the backend server within the request timeout period, CLB returns an HTTP 504 error code to the client.
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -789,7 +879,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * The scheduling algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -798,7 +892,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * StickySession.
+         * Specifies whether to enable session persistence. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder stickySession(String stickySession) {
             this.putQueryParameter("StickySession", stickySession);
@@ -807,7 +905,18 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * StickySessionType.
+         * The method that is used to handle a cookie. Valid values:
+         * <p>
+         * 
+         * *   **insert**: inserts a cookie.
+         * 
+         * CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie, and the listener distributes the request to the recorded backend server.
+         * 
+         * *   **server**: rewrites a cookie.
+         * 
+         * When CLB detects a user-defined cookie, CLB overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards the request to the recorded backend server.
+         * 
+         * > This parameter is required when **StickySession** is set to **on**.
          */
         public Builder stickySessionType(String stickySessionType) {
             this.putQueryParameter("StickySessionType", stickySessionType);
@@ -816,7 +925,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * UnhealthyThreshold.
+         * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
+         * 
+         * > The parameter takes effect only if you set **HealthCheck** to **on**.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
@@ -825,56 +939,76 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * VServerGroup.
+         * Specifies whether to use a vServer group. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
-        public Builder VServerGroup(String VServerGroup) {
-            this.putQueryParameter("VServerGroup", VServerGroup);
-            this.VServerGroup = VServerGroup;
+        public Builder vServerGroup(String vServerGroup) {
+            this.putQueryParameter("VServerGroup", vServerGroup);
+            this.vServerGroup = vServerGroup;
             return this;
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 
         /**
-         * XForwardedFor.
+         * Specifies whether to use the `X-Forwarded-For` header to preserve client IP addresses. Valid values:
+         * <p>
+         * 
+         * *   **on** (default)
+         * *   **off**
          */
-        public Builder XForwardedFor(String XForwardedFor) {
-            this.putQueryParameter("XForwardedFor", XForwardedFor);
-            this.XForwardedFor = XForwardedFor;
+        public Builder xForwardedFor(String xForwardedFor) {
+            this.putQueryParameter("XForwardedFor", xForwardedFor);
+            this.xForwardedFor = xForwardedFor;
             return this;
         }
 
         /**
-         * XForwardedFor_SLBID.
+         * Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
-        public Builder XForwardedFor_SLBID(String XForwardedFor_SLBID) {
-            this.putQueryParameter("XForwardedFor_SLBID", XForwardedFor_SLBID);
-            this.XForwardedFor_SLBID = XForwardedFor_SLBID;
+        public Builder xForwardedForSLBID(String xForwardedForSLBID) {
+            this.putQueryParameter("XForwardedFor_SLBID", xForwardedForSLBID);
+            this.xForwardedForSLBID = xForwardedForSLBID;
             return this;
         }
 
         /**
-         * XForwardedFor_SLBIP.
+         * Specifies whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) requested by the client. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
-        public Builder XForwardedFor_SLBIP(String XForwardedFor_SLBIP) {
-            this.putQueryParameter("XForwardedFor_SLBIP", XForwardedFor_SLBIP);
-            this.XForwardedFor_SLBIP = XForwardedFor_SLBIP;
+        public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
+            this.putQueryParameter("XForwardedFor_SLBIP", xForwardedForSLBIP);
+            this.xForwardedForSLBIP = xForwardedForSLBIP;
             return this;
         }
 
         /**
-         * XForwardedFor_proto.
+         * Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
-        public Builder XForwardedFor_proto(String XForwardedFor_proto) {
-            this.putQueryParameter("XForwardedFor_proto", XForwardedFor_proto);
-            this.XForwardedFor_proto = XForwardedFor_proto;
+        public Builder xForwardedForProto(String xForwardedForProto) {
+            this.putQueryParameter("XForwardedFor_proto", xForwardedForProto);
+            this.xForwardedForProto = xForwardedForProto;
             return this;
         }
 

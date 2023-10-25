@@ -41,7 +41,7 @@ public class RemoveVServerGroupBackendServersRequest extends Request {
     @Query
     @NameInMap("VServerGroupId")
     @Validation(required = true)
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private RemoveVServerGroupBackendServersRequest(Builder builder) {
         super(builder);
@@ -51,7 +51,7 @@ public class RemoveVServerGroupBackendServersRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -110,10 +110,10 @@ public class RemoveVServerGroupBackendServersRequest extends Request {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder extends Request.Builder<RemoveVServerGroupBackendServersRequest, Builder> {
@@ -123,25 +123,45 @@ public class RemoveVServerGroupBackendServersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RemoveVServerGroupBackendServersRequest response) {
-            super(response);
-            this.backendServers = response.backendServers;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VServerGroupId = response.VServerGroupId;
+        private Builder(RemoveVServerGroupBackendServersRequest request) {
+            super(request);
+            this.backendServers = request.backendServers;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vServerGroupId = request.vServerGroupId;
         } 
 
         /**
-         * BackendServers.
+         * The list of backend servers that you want to remove from the vServer group.
+         * <p>
+         * 
+         * You can specify at most 20 backend servers for a vServer group in each call.
+         * 
+         * The value of this parameter is a JSON list of the STRING type. You can specify at most 20 elements in a list for each request.
+         * 
+         * *   **ServerId**: the ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI) that serves as a backend server.
+         * 
+         * *   **Port**: the port that is used by the backend server. Valid values: **1 to 65535**.
+         * 
+         * *   **Weight**: the weight of the backend server. Valid values: **0 to 100**.
+         * 
+         * *   **Description**: the description of the backend server. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         * 
+         * *   **Type**: the type of backend server. Valid values:
+         * 
+         *     *   **ecs**: an ECS instance. This is the default value.
+         *     *   **eni**: an ENI.
+         * 
+         * *   **ServerIp**: the IP address of the ECS instance or ENI.
          */
         public Builder backendServers(String backendServers) {
             this.putQueryParameter("BackendServers", backendServers);
@@ -168,7 +188,7 @@ public class RemoveVServerGroupBackendServersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,11 +215,11 @@ public class RemoveVServerGroupBackendServersRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class SetTLSCipherPolicyAttributeResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SetTLSCipherPolicyAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the asynchronous task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

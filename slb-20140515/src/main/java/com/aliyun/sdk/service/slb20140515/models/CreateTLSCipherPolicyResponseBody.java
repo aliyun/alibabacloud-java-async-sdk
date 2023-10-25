@@ -50,7 +50,7 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
         private String TLSCipherPolicyId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * TLSCipherPolicyId.
+         * The ID of the policy.
          */
         public Builder TLSCipherPolicyId(String TLSCipherPolicyId) {
             this.TLSCipherPolicyId = TLSCipherPolicyId;

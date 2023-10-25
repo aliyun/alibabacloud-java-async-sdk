@@ -50,7 +50,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         private ServerCertificates serverCertificates; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCertificates.
+         * The list of server certificates.
          */
         public Builder serverCertificates(ServerCertificates serverCertificates) {
             this.serverCertificates = serverCertificates;
@@ -112,6 +112,108 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag keys of the resource.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ServerCertificate extends TeaModel {
         @NameInMap("AliCloudCertificateId")
         private String aliCloudCertificateId;
@@ -155,6 +257,9 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         @NameInMap("SubjectAlternativeNames")
         private SubjectAlternativeNames subjectAlternativeNames;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         private ServerCertificate(Builder builder) {
             this.aliCloudCertificateId = builder.aliCloudCertificateId;
             this.aliCloudCertificateName = builder.aliCloudCertificateName;
@@ -170,6 +275,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             this.serverCertificateId = builder.serverCertificateId;
             this.serverCertificateName = builder.serverCertificateName;
             this.subjectAlternativeNames = builder.subjectAlternativeNames;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -278,6 +384,13 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.subjectAlternativeNames;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String aliCloudCertificateId; 
             private String aliCloudCertificateName; 
@@ -293,9 +406,10 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             private String serverCertificateId; 
             private String serverCertificateName; 
             private SubjectAlternativeNames subjectAlternativeNames; 
+            private Tags tags; 
 
             /**
-             * AliCloudCertificateId.
+             * The ID of the server certificate from Alibaba Cloud Certificate Management Service.
              */
             public Builder aliCloudCertificateId(String aliCloudCertificateId) {
                 this.aliCloudCertificateId = aliCloudCertificateId;
@@ -303,7 +417,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * AliCloudCertificateName.
+             * The name of the server certificate from Alibaba Cloud Certificate Management Service.
              */
             public Builder aliCloudCertificateName(String aliCloudCertificateName) {
                 this.aliCloudCertificateName = aliCloudCertificateName;
@@ -311,7 +425,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * The domain name of the certificate. The domain name is specified in the `CommonName` field.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -319,7 +433,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the server certificate is uploaded.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -327,7 +441,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStamp.
+             * The timestamp generated when the server certificate is uploaded.
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -335,7 +449,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The expiration time.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -343,7 +457,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTimeStamp.
+             * The timestamp that indicates when the certificate expires.
              */
             public Builder expireTimeStamp(Long expireTimeStamp) {
                 this.expireTimeStamp = expireTimeStamp;
@@ -351,7 +465,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * The fingerprint of the server certificate.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -359,7 +473,11 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsAliCloudCertificate.
+             * Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder isAliCloudCertificate(Integer isAliCloudCertificate) {
                 this.isAliCloudCertificate = isAliCloudCertificate;
@@ -367,7 +485,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the server certificate is created.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -375,7 +493,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -383,7 +501,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCertificateId.
+             * The ID of the server certificate.
              */
             public Builder serverCertificateId(String serverCertificateId) {
                 this.serverCertificateId = serverCertificateId;
@@ -391,7 +509,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCertificateName.
+             * The name of the server certificate.
              */
             public Builder serverCertificateName(String serverCertificateName) {
                 this.serverCertificateName = serverCertificateName;
@@ -399,10 +517,18 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * SubjectAlternativeNames.
+             * The list of alternative domain names of the server certificate. The alternative domain names are specified in the `Subject Alternative Name` field of the server certificate.
              */
             public Builder subjectAlternativeNames(SubjectAlternativeNames subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
+                return this;
+            }
+
+            /**
+             * The tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

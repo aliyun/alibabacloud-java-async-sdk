@@ -12,14 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetAccessControlListAttributeResponseBody</p>
  */
 public class SetAccessControlListAttributeResponseBody extends TeaModel {
-    @NameInMap("AclId")
-    private String aclId;
-
     @NameInMap("RequestId")
     private String requestId;
 
     private SetAccessControlListAttributeResponseBody(Builder builder) {
-        this.aclId = builder.aclId;
         this.requestId = builder.requestId;
     }
 
@@ -32,13 +28,6 @@ public class SetAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return aclId
-     */
-    public String getAclId() {
-        return this.aclId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -46,19 +35,10 @@ public class SetAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String aclId; 
         private String requestId; 
 
         /**
-         * AclId.
-         */
-        public Builder aclId(String aclId) {
-            this.aclId = aclId;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

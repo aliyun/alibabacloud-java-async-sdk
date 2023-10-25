@@ -156,21 +156,24 @@ public class CreateRulesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRulesRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ruleList = response.ruleList;
+        private Builder(CreateRulesRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ruleList = request.ruleList;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend listener port that is used by the SLB instance.
+         * <p>
+         * 
+         * Valid values: **1 to 65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -179,7 +182,10 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend protocol that is used by the SLB instance.
+         * <p>
+         * 
+         * > This parameter is required if the same port is used by listeners that use different protocols.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -188,7 +194,7 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -215,7 +221,10 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +251,15 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * RuleList.
+         * The forwarding rules that you want to create. You can create up to 10 forwarding rules in each request. Each forwarding rule contains the following parameters:
+         * <p>
+         * 
+         * *   **RuleName**: Required. The value must be of the STRING type. The name of the forwarding rule. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). Forwarding rule names must be unique within the same listener.
+         * *   **Domain**: Optional. The value must be of the STRING type. The domain name that is associated with the forwarding rule. You must specify at least one of this parameter and **Url**.
+         * *   **Url**: Optional. The value must be of the STRING type. The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL cannot be a forward slash (/). However, the URL must start with a forward slash (/). You must specify at least one of this parameter and **Domain**.
+         * *   **VServerGroupId**: Required. The value must be of the STRING type. The ID of the vServer group that is associated with the forwarding rule.
+         * 
+         * > You must specify at least one of `Domain` and `Url`. The combination of `Domain` and `Url` must be unique within the same listener.
          */
         public Builder ruleList(String ruleList) {
             this.putQueryParameter("RuleList", ruleList);

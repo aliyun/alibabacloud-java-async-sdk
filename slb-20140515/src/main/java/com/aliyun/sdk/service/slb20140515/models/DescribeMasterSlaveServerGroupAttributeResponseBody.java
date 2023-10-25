@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
  */
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
+    @NameInMap("CreateTime")
+    private String createTime;
+
     @NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
@@ -27,12 +30,17 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
     private DescribeMasterSlaveServerGroupAttributeResponseBody(Builder builder) {
+        this.createTime = builder.createTime;
         this.loadBalancerId = builder.loadBalancerId;
         this.masterSlaveBackendServers = builder.masterSlaveBackendServers;
         this.masterSlaveServerGroupId = builder.masterSlaveServerGroupId;
         this.masterSlaveServerGroupName = builder.masterSlaveServerGroupName;
         this.requestId = builder.requestId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -41,6 +49,13 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
     public static DescribeMasterSlaveServerGroupAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     /**
@@ -78,15 +93,32 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return this.requestId;
     }
 
+    /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
     public static final class Builder {
+        private String createTime; 
         private String loadBalancerId; 
         private MasterSlaveBackendServers masterSlaveBackendServers; 
         private String masterSlaveServerGroupId; 
         private String masterSlaveServerGroupName; 
         private String requestId; 
+        private Tags tags; 
 
         /**
-         * LoadBalancerId.
+         * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * The ID of the associated CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -94,7 +126,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * MasterSlaveBackendServers.
+         * The list of backend servers in the primary/secondary server group.
          */
         public Builder masterSlaveBackendServers(MasterSlaveBackendServers masterSlaveBackendServers) {
             this.masterSlaveBackendServers = masterSlaveBackendServers;
@@ -102,7 +134,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * MasterSlaveServerGroupId.
+         * The ID of the primary/secondary server group.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -110,7 +142,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * MasterSlaveServerGroupName.
+         * The name of the primary/secondary server group.
          */
         public Builder masterSlaveServerGroupName(String masterSlaveServerGroupName) {
             this.masterSlaveServerGroupName = masterSlaveServerGroupName;
@@ -118,10 +150,18 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The tag list.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -218,7 +258,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             private Integer weight; 
 
             /**
-             * Description.
+             * The description of the primary/secondary server group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +266,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * Port.
+             * The port used by the backend server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -234,7 +274,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * ServerId.
+             * The ID of the ECS instance or ENI.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -242,7 +282,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * ServerType.
+             * The type of backend server. Valid values: **Master and Slave. Default value: Master.
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -250,7 +290,11 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs** (default): an Elastic Compute Service (ECS) instance
+             * *   **eni**: an elastic network interface (ENI)
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +302,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -308,6 +352,108 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
             public MasterSlaveBackendServers build() {
                 return new MasterSlaveBackendServers(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

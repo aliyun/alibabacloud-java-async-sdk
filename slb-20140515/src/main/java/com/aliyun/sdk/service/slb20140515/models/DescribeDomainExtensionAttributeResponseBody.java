@@ -98,7 +98,7 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         private String serverCertificateId; 
 
         /**
-         * Domain.
+         * The domain name.
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -106,7 +106,7 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DomainExtensionId.
+         * The ID of the additional certificate.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.domainExtensionId = domainExtensionId;
@@ -114,7 +114,7 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -122,7 +122,7 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -130,7 +130,7 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the server certificate that is used by the domain name.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;

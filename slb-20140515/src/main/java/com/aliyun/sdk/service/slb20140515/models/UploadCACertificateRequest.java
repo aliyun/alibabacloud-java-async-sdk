@@ -46,6 +46,10 @@ public class UploadCACertificateRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private UploadCACertificateRequest(Builder builder) {
         super(builder);
         this.CACertificate = builder.CACertificate;
@@ -56,6 +60,7 @@ public class UploadCACertificateRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -127,6 +132,13 @@ public class UploadCACertificateRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<UploadCACertificateRequest, Builder> {
         private String CACertificate; 
         private String CACertificateName; 
@@ -136,25 +148,30 @@ public class UploadCACertificateRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UploadCACertificateRequest response) {
-            super(response);
-            this.CACertificate = response.CACertificate;
-            this.CACertificateName = response.CACertificateName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UploadCACertificateRequest request) {
+            super(request);
+            this.CACertificate = request.CACertificate;
+            this.CACertificateName = request.CACertificateName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**
-         * CACertificate.
+         * The name of this action.
+         * <p>
+         * 
+         * Value: **UploadCACertificate**
          */
         public Builder CACertificate(String CACertificate) {
             this.putQueryParameter("CACertificate", CACertificate);
@@ -163,7 +180,10 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * CACertificateName.
+         * The ID of the region to which the CA certificate belongs.
+         * <p>
+         * 
+         * To query the region ID, call [DescribeRegions](~~27584~~).
          */
         public Builder CACertificateName(String CACertificateName) {
             this.putQueryParameter("CACertificateName", CACertificateName);
@@ -190,7 +210,7 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region id.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +219,7 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The content of the CA certificate to be uploaded.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -225,6 +245,15 @@ public class UploadCACertificateRequest extends Request {
             return this;
         }
 
+        /**
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public UploadCACertificateRequest build() {
             return new UploadCACertificateRequest(this);
@@ -232,4 +261,71 @@ public class UploadCACertificateRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key. You can specify at most 20 tag keys.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

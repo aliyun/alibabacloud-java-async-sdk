@@ -50,7 +50,7 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AclId.
+         * The IP version. Valid values: **ipv4** and **ipv6**.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -58,7 +58,7 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the resource group to which the ACL belongs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

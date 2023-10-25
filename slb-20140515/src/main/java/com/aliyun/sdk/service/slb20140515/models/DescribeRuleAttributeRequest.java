@@ -115,14 +115,14 @@ public class DescribeRuleAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRuleAttributeRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ruleId = response.ruleId;
+        private Builder(DescribeRuleAttributeRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ruleId = request.ruleId;
         } 
 
         /**
@@ -144,7 +144,10 @@ public class DescribeRuleAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class DescribeRuleAttributeRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the forwarding rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

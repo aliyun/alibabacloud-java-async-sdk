@@ -115,14 +115,14 @@ public class DeleteRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRulesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ruleIds = response.ruleIds;
+        private Builder(DeleteRulesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ruleIds = request.ruleIds;
         } 
 
         /**
@@ -144,7 +144,10 @@ public class DeleteRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,10 @@ public class DeleteRulesRequest extends Request {
         }
 
         /**
-         * RuleIds.
+         * The list of forwarding rules that you want to delete.
+         * <p>
+         * 
+         * >  The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.
          */
         public Builder ruleIds(String ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);

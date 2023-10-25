@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMasterSlaveServerGroupsRequest extends Request {
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("IncludeListener")
     private Boolean includeListener;
 
@@ -42,8 +46,13 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeMasterSlaveServerGroupsRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.includeListener = builder.includeListener;
         this.loadBalancerId = builder.loadBalancerId;
         this.ownerAccount = builder.ownerAccount;
@@ -51,6 +60,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -64,6 +74,13 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -115,7 +132,15 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeMasterSlaveServerGroupsRequest, Builder> {
+        private String description; 
         private Boolean includeListener; 
         private String loadBalancerId; 
         private String ownerAccount; 
@@ -123,24 +148,40 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeMasterSlaveServerGroupsRequest response) {
-            super(response);
-            this.includeListener = response.includeListener;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeMasterSlaveServerGroupsRequest request) {
+            super(request);
+            this.description = request.description;
+            this.includeListener = request.includeListener;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**
-         * IncludeListener.
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Specifies whether to return information about the associated listeners. Valid values:
+         * <p>
+         * 
+         * *   **true**: returns information about the associated listeners.
+         * *   **false**: does not return information about the associated listeners.
          */
         public Builder includeListener(Boolean includeListener) {
             this.putQueryParameter("IncludeListener", includeListener);
@@ -149,7 +190,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -176,7 +217,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Classic Load Balancer (CLB) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,6 +243,15 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
             return this;
         }
 
+        /**
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public DescribeMasterSlaveServerGroupsRequest build() {
             return new DescribeMasterSlaveServerGroupsRequest(this);
@@ -209,4 +259,71 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key. You can specify at most 20 tag keys.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.
+             * <p>
+             * 
+             * The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

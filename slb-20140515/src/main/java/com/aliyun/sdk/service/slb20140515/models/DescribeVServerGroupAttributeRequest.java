@@ -36,7 +36,7 @@ public class DescribeVServerGroupAttributeRequest extends Request {
     @Query
     @NameInMap("VServerGroupId")
     @Validation(required = true)
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private DescribeVServerGroupAttributeRequest(Builder builder) {
         super(builder);
@@ -45,7 +45,7 @@ public class DescribeVServerGroupAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -97,10 +97,10 @@ public class DescribeVServerGroupAttributeRequest extends Request {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder extends Request.Builder<DescribeVServerGroupAttributeRequest, Builder> {
@@ -109,20 +109,20 @@ public class DescribeVServerGroupAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeVServerGroupAttributeRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VServerGroupId = response.VServerGroupId;
+        private Builder(DescribeVServerGroupAttributeRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vServerGroupId = request.vServerGroupId;
         } 
 
         /**
@@ -144,7 +144,7 @@ public class DescribeVServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Classic Load Balancer (CLB) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,11 +171,11 @@ public class DescribeVServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 

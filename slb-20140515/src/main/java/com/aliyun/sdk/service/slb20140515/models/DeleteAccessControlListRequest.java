@@ -115,18 +115,18 @@ public class DeleteAccessControlListRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessControlListRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteAccessControlListRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AclId.
+         * The ACL ID.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -153,7 +153,10 @@ public class DeleteAccessControlListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ACL.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -141,20 +141,23 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeListenerAccessControlAttributeRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeListenerAccessControlAttributeRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the CLB instance.
+         * <p>
+         * 
+         * Valid values: **1 to 65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -163,7 +166,10 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend protocol that is used by the CLB instance.
+         * <p>
+         * 
+         * > This parameter is required if the same port is specified for listeners of different protocols.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -172,7 +178,7 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The CLB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -199,7 +205,10 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the Classic Load Balancer (CLB) instance is created.
+         * <p>
+         * 
+         * You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

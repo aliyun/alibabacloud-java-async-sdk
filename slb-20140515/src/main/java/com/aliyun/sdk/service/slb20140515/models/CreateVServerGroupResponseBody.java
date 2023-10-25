@@ -19,12 +19,12 @@ public class CreateVServerGroupResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private CreateVServerGroupResponseBody(Builder builder) {
         this.backendServers = builder.backendServers;
         this.requestId = builder.requestId;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -50,19 +50,19 @@ public class CreateVServerGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder {
         private BackendServers backendServers; 
         private String requestId; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         /**
-         * BackendServers.
+         * The list of backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -70,7 +70,7 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +78,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 
@@ -166,7 +166,7 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Description.
+             * The description of the vServer group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that is used by the backend server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -182,7 +182,7 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the ECS instance or ENI.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -190,7 +190,11 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs**: an ECS instance. This is the default value.
+             * *   **eni**: an ENI.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -198,7 +202,7 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

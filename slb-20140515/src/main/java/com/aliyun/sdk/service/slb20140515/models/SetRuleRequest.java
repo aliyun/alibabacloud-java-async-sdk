@@ -110,7 +110,7 @@ public class SetRuleRequest extends Request {
 
     @Query
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private SetRuleRequest(Builder builder) {
         super(builder);
@@ -136,7 +136,7 @@ public class SetRuleRequest extends Request {
         this.stickySession = builder.stickySession;
         this.stickySessionType = builder.stickySessionType;
         this.unhealthyThreshold = builder.unhealthyThreshold;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -307,10 +307,10 @@ public class SetRuleRequest extends Request {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder extends Request.Builder<SetRuleRequest, Builder> {
@@ -336,41 +336,46 @@ public class SetRuleRequest extends Request {
         private String stickySession; 
         private String stickySessionType; 
         private Integer unhealthyThreshold; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetRuleRequest response) {
-            super(response);
-            this.cookie = response.cookie;
-            this.cookieTimeout = response.cookieTimeout;
-            this.healthCheck = response.healthCheck;
-            this.healthCheckConnectPort = response.healthCheckConnectPort;
-            this.healthCheckDomain = response.healthCheckDomain;
-            this.healthCheckHttpCode = response.healthCheckHttpCode;
-            this.healthCheckInterval = response.healthCheckInterval;
-            this.healthCheckTimeout = response.healthCheckTimeout;
-            this.healthCheckURI = response.healthCheckURI;
-            this.healthyThreshold = response.healthyThreshold;
-            this.listenerSync = response.listenerSync;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ruleId = response.ruleId;
-            this.ruleName = response.ruleName;
-            this.scheduler = response.scheduler;
-            this.stickySession = response.stickySession;
-            this.stickySessionType = response.stickySessionType;
-            this.unhealthyThreshold = response.unhealthyThreshold;
-            this.VServerGroupId = response.VServerGroupId;
+        private Builder(SetRuleRequest request) {
+            super(request);
+            this.cookie = request.cookie;
+            this.cookieTimeout = request.cookieTimeout;
+            this.healthCheck = request.healthCheck;
+            this.healthCheckConnectPort = request.healthCheckConnectPort;
+            this.healthCheckDomain = request.healthCheckDomain;
+            this.healthCheckHttpCode = request.healthCheckHttpCode;
+            this.healthCheckInterval = request.healthCheckInterval;
+            this.healthCheckTimeout = request.healthCheckTimeout;
+            this.healthCheckURI = request.healthCheckURI;
+            this.healthyThreshold = request.healthyThreshold;
+            this.listenerSync = request.listenerSync;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ruleId = request.ruleId;
+            this.ruleName = request.ruleName;
+            this.scheduler = request.scheduler;
+            this.stickySession = request.stickySession;
+            this.stickySessionType = request.stickySessionType;
+            this.unhealthyThreshold = request.unhealthyThreshold;
+            this.vServerGroupId = request.vServerGroupId;
         } 
 
         /**
-         * Cookie.
+         * The cookie that is configured on the server.
+         * <p>
+         * 
+         * The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).
+         * 
+         * >  This parameter is required and takes effect if **StickySession** is set to **on** and **StickySessionType** is set to **server**.
          */
         public Builder cookie(String cookie) {
             this.putQueryParameter("Cookie", cookie);
@@ -379,7 +384,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * CookieTimeout.
+         * The timeout period of a cookie. Unit: seconds. Valid values: **1** to **86400**.
+         * <p>
+         * 
+         * >  This parameter is required and takes effect if **StickySession** is set to **on** and **StickySessionType** is set to **insert**.
          */
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.putQueryParameter("CookieTimeout", cookieTimeout);
@@ -388,7 +396,13 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheck.
+         * Specifies whether to enable the health check feature. Valid values:
+         * <p>
+         * 
+         * *   **on**: yes
+         * *   **off**: no
+         * 
+         * >  This parameter is required and takes effect if the **ListenerSync** parameter is set to **off**.
          */
         public Builder healthCheck(String healthCheck) {
             this.putQueryParameter("HealthCheck", healthCheck);
@@ -397,7 +411,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks. Valid values: **1** to **65535**.
+         * <p>
+         * 
+         * >  This parameter takes effect when the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -406,7 +423,13 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheckDomain.
+         * The domain name that is used for health checks. Valid values:
+         * <p>
+         * 
+         * *   **$\_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $\_ip, the SLB instance uses the private IP address of each backend server for health checks.
+         * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
+         * 
+         * >  This parameter takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.putQueryParameter("HealthCheckDomain", healthCheckDomain);
@@ -415,7 +438,12 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheckHttpCode.
+         * The HTTP status code for a successful health check. Multiple HTTP status codes are separated by commas (,).
+         * <p>
+         * 
+         * Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+         * 
+         * >  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.putQueryParameter("HealthCheckHttpCode", healthCheckHttpCode);
@@ -424,7 +452,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheckInterval.
+         * The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
+         * <p>
+         * 
+         * >  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -433,7 +464,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheckTimeout.
+         * The timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds. Valid values: **1** to **300**.
+         * <p>
+         * 
+         * >  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -442,7 +476,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthCheckURI.
+         * The URI that is used for health checks.
+         * <p>
+         * 
+         * >  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -451,7 +488,12 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
+         * 
+         * >  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -460,7 +502,11 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * ListenerSync.
+         * Specifies whether to use the scheduling algorithm, session persistence, and health check configurations of the listener. Valid values:
+         * <p>
+         * 
+         * *   **on**: uses the configurations of the listener.
+         * *   **off**: does not use the configurations of the listener. You can customize the health check and session persistence configurations for the forwarding rule.
          */
         public Builder listenerSync(String listenerSync) {
             this.putQueryParameter("ListenerSync", listenerSync);
@@ -487,7 +533,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -514,7 +563,7 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the forwarding rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -523,7 +572,10 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the forwarding rule. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+         * <p>
+         * 
+         * >  Forwarding rule names must be unique within the same listener.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -532,7 +584,13 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * The scheduling algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * 
+         * >  This parameter is required and takes effect if the **ListenerSync** parameter is set to **off**.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -541,7 +599,13 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * StickySession.
+         * Specifies whether to enable session persistence. Valid values:
+         * <p>
+         * 
+         * *   **on**: yes
+         * *   **off**: no
+         * 
+         * This parameter is required and takes effect if the **ListenerSync** parameter is set to **off**.
          */
         public Builder stickySession(String stickySession) {
             this.putQueryParameter("StickySession", stickySession);
@@ -550,7 +614,18 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * StickySessionType.
+         * The method that is used to handle a cookie. Valid values:
+         * <p>
+         * 
+         * *   **insert**: inserts a cookie.
+         * 
+         *     CLB inserts the backend server ID as a cookie into the first HTTP or HTTPS response that is sent to a client. The next request from the client will contain this cookie, and the listener will distribute this request to the recorded backend server.
+         * 
+         * *   **server**: rewrites a cookie.
+         * 
+         *     When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client will contain the user-defined cookie, and the listener will distribute this request to the recorded backend server.
+         * 
+         * >  This parameter is required and takes effect if the **StickySession** parameter is set to **on**.
          */
         public Builder stickySessionType(String stickySessionType) {
             this.putQueryParameter("StickySessionType", stickySessionType);
@@ -559,7 +634,12 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * UnhealthyThreshold.
+         * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
+         * 
+         * >  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
@@ -568,11 +648,11 @@ public class SetRuleRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group that is associated with the forwarding rule.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 

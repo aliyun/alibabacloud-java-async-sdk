@@ -86,7 +86,11 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the current page is the last page. Valid values:
+         * <p>
+         * 
+         * *   **true**: The current page is the last page.
+         * *   **false**: The current page is not the last page.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -94,7 +98,11 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
+         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +110,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +118,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TLSCipherPolicies.
+         * The list of TLS policies.
          */
         public Builder TLSCipherPolicies(java.util.List < TLSCipherPolicies> TLSCipherPolicies) {
             this.TLSCipherPolicies = TLSCipherPolicies;
@@ -118,7 +126,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of TLS policies returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +190,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * LoadBalancerId.
+             * The ID of the CLB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -190,7 +198,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The listening port. Valid values: **1** to **65535**.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -198,7 +206,13 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The listening protocol. Valid values:
+             * <p>
+             * 
+             * *   **TCP**
+             * *   **UDP**
+             * *   **HTTP**
+             * *   **HTTPS**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -311,7 +325,45 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             private java.util.List < String > TLSVersions; 
 
             /**
-             * Ciphers.
+             * The cipher suites supported by the TLS version.
+             * <p>
+             * 
+             * TLS 1.0 and TLS 1.1 support the following cipher suites:
+             * 
+             * *   ECDHE-ECDSA-AES128-SHA
+             * *   ECDHE-ECDSA-AES256-SHA
+             * *   ECDHE-RSA-AES128-SHA
+             * *   ECDHE-RSA-AES256-SHA
+             * *   AES128-SHA AES256-SHA
+             * *   DES-CBC3-SHA
+             * 
+             * TLS 1.2 supports the following cipher suites:
+             * 
+             * *   ECDHE-ECDSA-AES128-SHA
+             * *   ECDHE-ECDSA-AES256-SHA
+             * *   ECDHE-RSA-AES128-SHA
+             * *   ECDHE-RSA-AES256-SHA
+             * *   AES128-SHA AES256-SHA
+             * *   DES-CBC3-SHA
+             * *   ECDHE-ECDSA-AES128-GCM-SHA256
+             * *   ECDHE-ECDSA-AES256-GCM-SHA384
+             * *   ECDHE-ECDSA-AES128-SHA256
+             * *   ECDHE-ECDSA-AES256-SHA384
+             * *   ECDHE-RSA-AES128-GCM-SHA256
+             * *   ECDHE-RSA-AES256-GCM-SHA384
+             * *   ECDHE-RSA-AES128-SHA256
+             * *   ECDHE-RSA-AES256-SHA384
+             * *   AES128-GCM-SHA256
+             * *   AES256-GCM-SHA384
+             * *   AES128-SHA256 AES256-SHA256
+             * 
+             * TLS 1.3 supports the following cipher suites:
+             * 
+             * *   TLS_AES\_128\_GCM_SHA256
+             * *   TLS_AES\_256\_GCM_SHA384
+             * *   TLS_CHACHA20\_POLY1305\_SHA256
+             * *   TLS_AES\_128\_CCM_SHA256
+             * *   TLS_AES\_128\_CCM\_8\_SHA256
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -319,7 +371,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp generated when the TLS policy is created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -327,7 +379,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the TLS policy.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -335,7 +387,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the TLS policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +395,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RelateListeners.
+             * The list of associated listeners.
              */
             public Builder relateListeners(java.util.List < RelateListeners> relateListeners) {
                 this.relateListeners = relateListeners;
@@ -351,7 +403,11 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the TLS policy. Valid values:
+             * <p>
+             * 
+             * *   **configuring**: The TLS policy is being configured.
+             * *   **normal**: The TLS policy works as expected.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +415,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TLSVersions.
+             * The version of the TLS protocol.
              */
             public Builder TLSVersions(java.util.List < String > TLSVersions) {
                 this.TLSVersions = TLSVersions;

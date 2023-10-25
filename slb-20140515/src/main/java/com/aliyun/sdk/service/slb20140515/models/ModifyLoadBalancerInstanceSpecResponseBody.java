@@ -50,7 +50,7 @@ public class ModifyLoadBalancerInstanceSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The order ID of the subscription CLB instance.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -58,7 +58,7 @@ public class ModifyLoadBalancerInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -79,7 +79,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
     private String url;
 
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private DescribeRuleAttributeResponseBody(Builder builder) {
         this.cookie = builder.cookie;
@@ -104,7 +104,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         this.stickySessionType = builder.stickySessionType;
         this.unhealthyThreshold = builder.unhealthyThreshold;
         this.url = builder.url;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -270,10 +270,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder {
@@ -299,10 +299,15 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         private String stickySessionType; 
         private Integer unhealthyThreshold; 
         private String url; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         /**
-         * Cookie.
+         * The cookie to be configured on the backend server.
+         * <p>
+         * 
+         * The cookie must be 1 to 200 characters in length and can contain ASCII letters and digits. It cannot contain commas (,), semicolons (;), or whitespace characters. It cannot start with a dollar sign ($).
+         * 
+         * If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **server**, this parameter is required.
          */
         public Builder cookie(String cookie) {
             this.cookie = cookie;
@@ -310,7 +315,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CookieTimeout.
+         * The timeout period of a cookie.
+         * <p>
+         * 
+         * Valid values: **1 to 86400**. Unit: seconds.
+         * 
+         * >  If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **insert**, this parameter is required.
          */
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.cookieTimeout = cookieTimeout;
@@ -318,7 +328,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Domain.
+         * The domain name that is configured in the forwarding rule.
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -326,7 +336,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheck.
+         * Specifies whether to enable health checks.
+         * <p>
+         * 
+         * Valid values: **on** and **off**.
+         * 
+         * >  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -334,7 +349,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port of the backend server that is used for health checks.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required. If you left this parameter empty and the **HealthCheck** parameter is set to **on**, the backend port configuration of the listener is used by default.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -342,7 +362,13 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckDomain.
+         * The domain name that is used for health checks. Valid values:
+         * <p>
+         * 
+         * *   **$\_ip**: The private IP address of the backend server. If the $\_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.
+         * *   **domain**: The domain name must be 1 to 80 characters in length. It can contain only letters, digits, periods (.),and hyphens (-).
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
@@ -350,7 +376,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckHttpCode.
+         * The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http\_2xx**.
+         * <p>
+         * 
+         * Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
@@ -358,7 +389,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckInterval.
+         * The time interval between two consecutive health checks.
+         * <p>
+         * 
+         * Valid values: **1** to **50**. Unit: seconds.
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -366,7 +402,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckTimeout.
+         * The timeout period of a health check response. If a backend ECS instance does not send an expected response within the specified period of time, the ECS instance is considered unhealthy.
+         * <p>
+         * 
+         * Valid values: **1** to **300**. Unit: seconds.
+         * 
+         * >  If the value of the **HealthCHeckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the value of the **HealthCHeckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is regarded as the waiting period. If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -374,7 +415,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckURI.
+         * The URI that is used for health checks.
+         * <p>
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -382,7 +426,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthyThreshold.
+         * The number of consecutive successful health checks that must occur before an unhealthy backend server is declared healthy. In this case, the health check state is changed from **fail** to **success**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -390,7 +439,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerPort.
+         * The listener port that is used by the SLB instance.
          */
         public Builder listenerPort(String listenerPort) {
             this.listenerPort = listenerPort;
@@ -398,7 +447,13 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerSync.
+         * Indicates whether the forwarding rule uses the scheduling algorithm, session persistence, and health check configurations of the listener.
+         * <p>
+         * 
+         * Valid values: **on** and **off**.
+         * 
+         * *   **off**: does not use the configurations of the listener. You can customize health check and session persistence configurations for the forwarding rule.
+         * *   **on**: uses the configurations of the listener.
          */
         public Builder listenerSync(String listenerSync) {
             this.listenerSync = listenerSync;
@@ -406,7 +461,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -414,7 +469,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -422,7 +477,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * The ID of the forwarding rule.
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;
@@ -430,7 +485,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * The name of the forwarding rule.
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -438,7 +493,13 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Scheduler.
+         * The scheduling algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr** (default): Backend servers that have higher weights receive more requests than backend servers that have lower weights.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * 
+         * >  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -446,7 +507,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StickySession.
+         * Indicates whether session persistence is enabled.
+         * <p>
+         * 
+         * Valid values: **on** and **off**.
+         * 
+         * >  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.
          */
         public Builder stickySession(String stickySession) {
             this.stickySession = stickySession;
@@ -454,7 +520,13 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StickySessionType.
+         * The method that is used to handle a cookie. Valid values:
+         * <p>
+         * 
+         * *   **insert**: inserts a cookie into the response. SLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client will contain this cookie, and the listener will distribute this request to the recorded backend server.
+         * *   **server**: rewrites a cookie. When SLB detects a user-defined cookie, SLB overwrites the original cookie with the user-defined cookie. The next request from the client contains the user-defined cookie, and the listener distributes the request to the recorded backend server.
+         * 
+         * >  If you set the **StickySession** parameter to **on**, this parameter is required.
          */
         public Builder stickySessionType(String stickySessionType) {
             this.stickySessionType = stickySessionType;
@@ -462,7 +534,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UnhealthyThreshold.
+         * The number of consecutive failed health checks that must occur before a healthy backend server is declared unhealthy. In this case, the health check state is changed from **success** to **fail**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
+         * 
+         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
@@ -470,7 +547,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * The URL that is configured in the forwarding rule.
          */
         public Builder url(String url) {
             this.url = url;
@@ -478,10 +555,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group that is associated with the forwarding rule.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 

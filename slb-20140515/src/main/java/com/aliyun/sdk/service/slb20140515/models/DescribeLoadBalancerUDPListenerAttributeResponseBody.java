@@ -54,8 +54,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("ListenerPort")
     private Integer listenerPort;
 
+    @NameInMap("LoadBalancerId")
+    private String loadBalancerId;
+
     @NameInMap("MasterSlaveServerGroupId")
     private String masterSlaveServerGroupId;
+
+    @NameInMap("ProxyProtocolV2Enabled")
+    private Boolean proxyProtocolV2Enabled;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -66,11 +72,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
     @NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private DescribeLoadBalancerUDPListenerAttributeResponseBody(Builder builder) {
         this.aclId = builder.aclId;
@@ -87,12 +96,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         this.healthCheckReq = builder.healthCheckReq;
         this.healthyThreshold = builder.healthyThreshold;
         this.listenerPort = builder.listenerPort;
+        this.loadBalancerId = builder.loadBalancerId;
         this.masterSlaveServerGroupId = builder.masterSlaveServerGroupId;
+        this.proxyProtocolV2Enabled = builder.proxyProtocolV2Enabled;
         this.requestId = builder.requestId;
         this.scheduler = builder.scheduler;
         this.status = builder.status;
+        this.tags = builder.tags;
         this.unhealthyThreshold = builder.unhealthyThreshold;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -202,10 +214,24 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
 
     /**
+     * @return loadBalancerId
+     */
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    /**
      * @return masterSlaveServerGroupId
      */
     public String getMasterSlaveServerGroupId() {
         return this.masterSlaveServerGroupId;
+    }
+
+    /**
+     * @return proxyProtocolV2Enabled
+     */
+    public Boolean getProxyProtocolV2Enabled() {
+        return this.proxyProtocolV2Enabled;
     }
 
     /**
@@ -230,6 +256,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
 
     /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return unhealthyThreshold
      */
     public Integer getUnhealthyThreshold() {
@@ -237,10 +270,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder {
@@ -258,15 +291,18 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private String healthCheckReq; 
         private Integer healthyThreshold; 
         private Integer listenerPort; 
+        private String loadBalancerId; 
         private String masterSlaveServerGroupId; 
+        private Boolean proxyProtocolV2Enabled; 
         private String requestId; 
         private String scheduler; 
         private String status; 
+        private Tags tags; 
         private Integer unhealthyThreshold; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -274,7 +310,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * AclStatus.
+         * Indicates whether access control is enabled. Valid values: **on** and **off**. Default value: off.
          */
         public Builder aclStatus(String aclStatus) {
             this.aclStatus = aclStatus;
@@ -282,7 +318,16 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * AclType.
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application.
+         * 
+         *     Your service may be adversely affected if the whitelist is not properly configured. After a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener. If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.
+         * 
+         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the network ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses or CIDR blocks to an application.
+         * 
+         *     If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.
          */
         public Builder aclType(String aclType) {
             this.aclType = aclType;
@@ -290,7 +335,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * BackendServerPort.
+         * The backend port used by the CLB instance.
+         * <p>
+         * 
+         * >  If the listener is associated with a vServer group, this parameter is not returned.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.backendServerPort = backendServerPort;
@@ -298,7 +346,11 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
+         * <p>
+         * 
+         * *   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this parameter is set to -1. This indicates that the bandwidth of the listener is unlimited.
+         * *   **1** to **5120**: For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -306,7 +358,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Description.
+         * The description of the listener.
          */
         public Builder description(String description) {
             this.description = description;
@@ -314,7 +366,11 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheck.
+         * Indicates whether the health check feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **on**: yes
+         * *   **off**: no
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -322,7 +378,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks. Valid values: **1** to **65535**. If this parameter is not set, the port specified by BackendServerPort is used for health checks.
+         * <p>
+         * 
+         * >  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -330,7 +389,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckConnectTimeout.
+         * The timeout period of a health check. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the server fails the health check. Valid values: **1** to **300**. Unit: seconds.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -338,7 +397,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckExp.
+         * The response string for UDP listener health checks. The string is up to 64 characters in length, and can contain letters and digits.
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.healthCheckExp = healthCheckExp;
@@ -346,7 +405,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckInterval.
+         * The interval between two consecutive health checks. Valid values: **1** to **50**. Unit: seconds.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -354,7 +413,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckReq.
+         * The request string for UDP listener health checks. The string is up to 64 characters in length, and can contain letters and digits.
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.healthCheckReq = healthCheckReq;
@@ -362,7 +421,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthyThreshold.
+         * The healthy threshold. The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**. Valid values: **2** to **10**.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -370,7 +429,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * ListenerPort.
+         * The frontend port used by the CLB instance.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -378,7 +437,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * MasterSlaveServerGroupId.
+         * The ID of the CLB instance.
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+
+        /**
+         * The ID of the primary/secondary server group that is associated with the listener.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -386,7 +453,19 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         */
+        public Builder proxyProtocolV2Enabled(Boolean proxyProtocolV2Enabled) {
+            this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -394,7 +473,11 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Scheduler.
+         * The scheduling algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -402,7 +485,11 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Status.
+         * The status of the listener. Valid values:
+         * <p>
+         * 
+         * *   **running**
+         * *   **stopped**
          */
         public Builder status(String status) {
             this.status = status;
@@ -410,7 +497,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * UnhealthyThreshold.
+         * The tags.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The unhealthy threshold. The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**. Valid values: **2** to **10**.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
@@ -418,10 +513,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group that is associated with the listener.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 
@@ -431,4 +526,106 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

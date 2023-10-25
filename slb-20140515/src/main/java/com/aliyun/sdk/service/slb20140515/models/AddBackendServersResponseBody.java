@@ -62,7 +62,7 @@ public class AddBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackendServers.
+         * The list of backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -70,7 +70,7 @@ public class AddBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -78,7 +78,7 @@ public class AddBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class AddBackendServersResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Description.
+             * The description of the backend server.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +162,7 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the ECS instance, ENI, or elastic container instance.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -170,7 +170,12 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs** (default): an ECS instance
+             * *   **eni**: an ENI
+             * *   **eci**: an elastic container instance
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +183,12 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
+             * <p>
+             * 
+             * Valid values: **0 to 100**. Default value: **100**.
+             * 
+             * If the value is set to **0**, no requests are forwarded to the backend server.
              */
             public Builder weight(String weight) {
                 this.weight = weight;

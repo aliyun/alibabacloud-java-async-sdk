@@ -115,18 +115,18 @@ public class DescribeDomainExtensionAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainExtensionAttributeRequest response) {
-            super(response);
-            this.domainExtensionId = response.domainExtensionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDomainExtensionAttributeRequest request) {
+            super(request);
+            this.domainExtensionId = request.domainExtensionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DomainExtensionId.
+         * The ID of the additional certificate.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -153,7 +153,7 @@ public class DescribeDomainExtensionAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

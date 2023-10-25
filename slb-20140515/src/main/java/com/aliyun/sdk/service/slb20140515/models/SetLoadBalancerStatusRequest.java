@@ -128,19 +128,19 @@ public class SetLoadBalancerStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerStatusRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerStatus = response.loadBalancerStatus;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetLoadBalancerStatusRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerStatus = request.loadBalancerStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -149,7 +149,20 @@ public class SetLoadBalancerStatusRequest extends Request {
         }
 
         /**
-         * LoadBalancerStatus.
+         * The state of the CLB instance. Valid values: **active** and **inactive**.
+         * <p>
+         * 
+         * *   **active** (default)
+         * 
+         *     If a CLB instance is in the **active** state, listeners of the CLB instance can forward traffic based on forwarding rules.
+         * 
+         *     By default, newly created CLB instances are in the **active** state.
+         * 
+         * *   **inactive**
+         * 
+         *     If a CLB instance is in the **inactive** state, listeners of the CLB instance do not forward traffic.
+         * 
+         * >  If all listeners of a CLB instance are deleted, the CLB instance automatically switches to the **inactive** state.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -176,7 +189,10 @@ public class SetLoadBalancerStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
+         * <p>
+         * 
+         * You can query region IDs from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

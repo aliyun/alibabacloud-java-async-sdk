@@ -141,20 +141,26 @@ public class ModifyLoadBalancerInstanceSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLoadBalancerInstanceSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerSpec = response.loadBalancerSpec;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyLoadBalancerInstanceSpecRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerSpec = request.loadBalancerSpec;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **true**: automatically completes the payment.
+         * *   **false** (default): If you select this option, you must complete the payment in the Order Center.
+         * 
+         * > This parameter takes effect only for subscription instances.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -163,7 +169,7 @@ public class ModifyLoadBalancerInstanceSpecRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -172,7 +178,19 @@ public class ModifyLoadBalancerInstanceSpecRequest extends Request {
         }
 
         /**
-         * LoadBalancerSpec.
+         * The specification of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **slb.s1.small**
+         * *   **slb.s2.small**
+         * *   **slb.s2.medium**
+         * *   **slb.s3.small**
+         * *   **slb.s3.medium**
+         * *   **slb.s3.large**
+         * 
+         * The specifications available vary by region. For more information about the specifications, see [High-performance CLB instance](~~85931~~).
+         * 
+         * > When you switch a shared-resource CLB instance to a high-performance CLB instance, your service may be interrupted for 10 to 30 seconds. We recommend that you modify the specification during off-peak hours or use Alibaba Cloud DNS to schedule your workloads to another CLB instance before you modify the specification.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -199,7 +217,10 @@ public class ModifyLoadBalancerInstanceSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
+         * <p>
+         * 
+         * You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~27584~~) operation.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

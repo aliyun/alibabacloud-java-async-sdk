@@ -127,19 +127,25 @@ public class AddAccessControlListEntryRequest extends Request {
             super();
         } 
 
-        private Builder(AddAccessControlListEntryRequest response) {
-            super(response);
-            this.aclEntrys = response.aclEntrys;
-            this.aclId = response.aclId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AddAccessControlListEntryRequest request) {
+            super(request);
+            this.aclEntrys = request.aclEntrys;
+            this.aclId = request.aclId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AclEntrys.
+         * The configuration of the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **entry**: the IP entries that you want to add to the network ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).
+         * *   **comment**: the comment on the network ACL.
+         * 
+         * > You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add to a network ACL already exists, the IP entry is not added. The IP entries that you add must be CIDR blocks.
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -148,7 +154,7 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -175,7 +181,7 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the network ACL.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -129,15 +129,15 @@ public class SetServerCertificateNameRequest extends Request {
             super();
         } 
 
-        private Builder(SetServerCertificateNameRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverCertificateId = response.serverCertificateId;
-            this.serverCertificateName = response.serverCertificateName;
+        private Builder(SetServerCertificateNameRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverCertificateId = request.serverCertificateId;
+            this.serverCertificateName = request.serverCertificateName;
         } 
 
         /**
@@ -159,7 +159,10 @@ public class SetServerCertificateNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the Server Load Balancer (SLB) instance belongs.
+         * <p>
+         * 
+         * To query the region ID, call [DescribeRegions](~~27584~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -186,7 +189,7 @@ public class SetServerCertificateNameRequest extends Request {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the server certificate.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);
@@ -195,7 +198,10 @@ public class SetServerCertificateNameRequest extends Request {
         }
 
         /**
-         * ServerCertificateName.
+         * The name of the server certificate.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder serverCertificateName(String serverCertificateName) {
             this.putQueryParameter("ServerCertificateName", serverCertificateName);

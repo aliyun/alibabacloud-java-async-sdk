@@ -166,22 +166,26 @@ public class ListTLSCipherPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTLSCipherPoliciesRequest response) {
-            super(response);
-            this.includeListener = response.includeListener;
-            this.maxItems = response.maxItems;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.TLSCipherPolicyId = response.TLSCipherPolicyId;
+        private Builder(ListTLSCipherPoliciesRequest request) {
+            super(request);
+            this.includeListener = request.includeListener;
+            this.maxItems = request.maxItems;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.TLSCipherPolicyId = request.TLSCipherPolicyId;
         } 
 
         /**
-         * IncludeListener.
+         * Specifies whether to return the information about the associated listeners. Valid values:
+         * <p>
+         * 
+         * *   **true**: returns the information about the associated listeners.
+         * *   **false** (default): does not return the information about the associated listeners.
          */
         public Builder includeListener(Boolean includeListener) {
             this.putQueryParameter("IncludeListener", includeListener);
@@ -190,7 +194,7 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * The maximum number of TLS policies to be queried in this call. Valid values: **1** to **100**. If you do not set this parameter, the default value **20** is used.
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -199,7 +203,7 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -208,7 +212,11 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -235,7 +243,10 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +273,7 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * TLSCipherPolicyId.
+         * The ID of the TLS policy.
          */
         public Builder TLSCipherPolicyId(String TLSCipherPolicyId) {
             this.putQueryParameter("TLSCipherPolicyId", TLSCipherPolicyId);

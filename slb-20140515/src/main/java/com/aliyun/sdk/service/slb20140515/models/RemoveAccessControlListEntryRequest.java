@@ -128,19 +128,23 @@ public class RemoveAccessControlListEntryRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveAccessControlListEntryRequest response) {
-            super(response);
-            this.aclEntrys = response.aclEntrys;
-            this.aclId = response.aclId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RemoveAccessControlListEntryRequest request) {
+            super(request);
+            this.aclEntrys = request.aclEntrys;
+            this.aclId = request.aclId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AclEntrys.
+         * The IP entries that you want to remove from the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **entry**: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).
+         * *   **comment**: the description of the network ACL.
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -149,7 +153,7 @@ public class RemoveAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -176,7 +180,10 @@ public class RemoveAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the network ACL is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

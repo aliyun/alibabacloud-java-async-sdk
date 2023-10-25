@@ -142,20 +142,23 @@ public class DescribeRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRulesRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeRulesRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend listener port that is used by the Server Load Balancer (SLB) instance.
+         * <p>
+         * 
+         * Valid values: **1 to 65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -164,7 +167,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend listener protocol that is used by the SLB instance.
+         * <p>
+         * 
+         * >  This parameter is required when listeners that use different protocols listen on the same port.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -173,7 +179,7 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -200,7 +206,10 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the SLB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

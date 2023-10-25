@@ -46,6 +46,10 @@ public class CreateLoadBalancerRequest extends Request {
     private Integer duration;
 
     @Query
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
+    @Query
     @NameInMap("InternetChargeType")
     private String internetChargeType;
 
@@ -107,6 +111,10 @@ public class CreateLoadBalancerRequest extends Request {
     private String slaveZoneId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -124,6 +132,7 @@ public class CreateLoadBalancerRequest extends Request {
         this.clientToken = builder.clientToken;
         this.deleteProtection = builder.deleteProtection;
         this.duration = builder.duration;
+        this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
         this.loadBalancerName = builder.loadBalancerName;
         this.loadBalancerSpec = builder.loadBalancerSpec;
@@ -139,6 +148,7 @@ public class CreateLoadBalancerRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.slaveZoneId = builder.slaveZoneId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -210,6 +220,13 @@ public class CreateLoadBalancerRequest extends Request {
      */
     public Integer getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return instanceChargeType
+     */
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
@@ -318,6 +335,13 @@ public class CreateLoadBalancerRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -340,6 +364,7 @@ public class CreateLoadBalancerRequest extends Request {
         private String clientToken; 
         private String deleteProtection; 
         private Integer duration; 
+        private String instanceChargeType; 
         private String internetChargeType; 
         private String loadBalancerName; 
         private String loadBalancerSpec; 
@@ -355,6 +380,7 @@ public class CreateLoadBalancerRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String slaveZoneId; 
+        private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -362,37 +388,39 @@ public class CreateLoadBalancerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLoadBalancerRequest response) {
-            super(response);
-            this.address = response.address;
-            this.addressIPVersion = response.addressIPVersion;
-            this.addressType = response.addressType;
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.deleteProtection = response.deleteProtection;
-            this.duration = response.duration;
-            this.internetChargeType = response.internetChargeType;
-            this.loadBalancerName = response.loadBalancerName;
-            this.loadBalancerSpec = response.loadBalancerSpec;
-            this.masterZoneId = response.masterZoneId;
-            this.modificationProtectionReason = response.modificationProtectionReason;
-            this.modificationProtectionStatus = response.modificationProtectionStatus;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.slaveZoneId = response.slaveZoneId;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateLoadBalancerRequest request) {
+            super(request);
+            this.address = request.address;
+            this.addressIPVersion = request.addressIPVersion;
+            this.addressType = request.addressType;
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.deleteProtection = request.deleteProtection;
+            this.duration = request.duration;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.loadBalancerName = request.loadBalancerName;
+            this.loadBalancerSpec = request.loadBalancerSpec;
+            this.masterZoneId = request.masterZoneId;
+            this.modificationProtectionReason = request.modificationProtectionReason;
+            this.modificationProtectionStatus = request.modificationProtectionStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.slaveZoneId = request.slaveZoneId;
+            this.tag = request.tag;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * Address.
+         * The private IP address of the CLB instance. The private IP address must belong to the destination CIDR block of the vSwitch.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -401,7 +429,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * AddressIPVersion.
+         * The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -410,7 +438,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * AddressType.
+         * The network type of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **internet**: After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.
+         * *   **intranet**: After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over the internal networks.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -419,7 +451,13 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically pay for the subscription Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: automatically pays for the CLB instance. After you call this operation, the system automatically completes the payment and creates the CLB instance.
+         * *   **false** (default): After you call the operation, the order is created but the payment is not completed. You can view the pending order in the console. The CLB instance will not be created until you complete the payment.
+         * 
+         * >  This parameter is supported only by subscription instances created on the Alibaba Cloud China site.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -428,7 +466,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the listener. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **1** to **5120**. For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -437,7 +478,12 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * 
+         * >  If you do not specify this parameter, the system uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -446,7 +492,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * DeleteProtection.
+         * Specifies whether to enable deletion protection for the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder deleteProtection(String deleteProtection) {
             this.putQueryParameter("DeleteProtection", deleteProtection);
@@ -455,7 +505,13 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration of the Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   If **PricingCycle** is set to **month**, the valid values are **1 to 9**.
+         * *   If **PricingCycle** is set to **year**, the valid values are **1 to 5**.
+         * 
+         * >  This parameter is supported only by subscription instances created on the Alibaba Cloud China site.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -464,7 +520,31 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **PayBySpec** (default)
+         * *   **PayByCLCU**
+         * 
+         * >  This parameter is supported only by instances created on the Alibaba Cloud China site and only when **PayType** is set to **PayOnDemand**.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * The metering method of the Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **paybytraffic** (default)
+         * 
+         * > If you set the value to **paybytraffic**, you do not need to specify **Bandwidth**. Even if you specify **Bandwidth**, the value does not take effect.
+         * 
+         * *   **paybybandwidth**: pay-by-bandwidth
+         * 
+         * >  If you set **PayType** to **PayOnDemand** and set **InstanceChargeType** to **PayByCLCU**, you must set InternetChargeType to **paybytraffic**.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -473,7 +553,12 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * The CLB instance name.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+         * 
+         * If you do not specify this parameter, the system automatically assigns a name to the CLB instance.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -482,7 +567,26 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerSpec.
+         * The specification of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **slb.s1.small**
+         * 
+         * *   **slb.s2.small**
+         * 
+         * *   **slb.s2.medium**
+         * 
+         * *   **slb.s3.small**
+         * 
+         * *   **slb.s3.medium**
+         * 
+         * *   **slb.s3.large**
+         * 
+         *     **
+         * 
+         *     **Note** If you do not specify this parameter, a shared-resource CLB instance is created. Shared-resource CLB instances are no longer available for purchase. Therefore, you must specify this parameter.
+         * 
+         * If **InstanceChargeType** is set to **PayByCLCU**, this parameter is invalid and you do not need to specify this parameter.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -491,7 +595,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * MasterZoneId.
+         * The ID of the primary zone to which the CLB instance belongs.
+         * <p>
+         * 
+         * You can call the [DescribeZone](~~DescribeZone~~) operation to query the primary and secondary zones in the region where you want to create the CLB instance.
          */
         public Builder masterZoneId(String masterZoneId) {
             this.putQueryParameter("MasterZoneId", masterZoneId);
@@ -500,7 +607,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * ModificationProtectionReason.
+         * The reason for enabling the configuration read-only mode. The reason must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * >  This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
          */
         public Builder modificationProtectionReason(String modificationProtectionReason) {
             this.putQueryParameter("ModificationProtectionReason", modificationProtectionReason);
@@ -509,7 +619,13 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * ModificationProtectionStatus.
+         * Specifies whether to enable the configuration read-only mode. Valid values:
+         * <p>
+         * 
+         * *   **NonProtection**: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.
+         * *   **ConsoleProtection**: enables the configuration read-only mode.
+         * 
+         * >  If you set this parameter to **ConsoleProtection**, you cannot modify instance configurations in the CLB console. However, you can modify instance configurations by calling API operations.
          */
         public Builder modificationProtectionStatus(String modificationProtectionStatus) {
             this.putQueryParameter("ModificationProtectionStatus", modificationProtectionStatus);
@@ -536,7 +652,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the CLB instance. Set the value to
+         * <p>
+         * 
+         * **PayOnDemand**, which specifies the pay-as-you-go billing method.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -545,7 +664,13 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The billing cycle of the subscription Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **month**
+         * *   **year**
+         * 
+         * >  This parameter is supported only by subscription instances created on the Alibaba Cloud China site.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -554,7 +679,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -563,7 +691,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -590,7 +718,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * SlaveZoneId.
+         * The ID of the secondary zone to which the CLB instance belongs.
+         * <p>
+         * 
+         * You can call the [DescribeZone](~~DescribeZone~~) operation to query the primary and secondary zones in the region where you want to create the CLB instance.
          */
         public Builder slaveZoneId(String slaveZoneId) {
             this.putQueryParameter("SlaveZoneId", slaveZoneId);
@@ -599,7 +730,19 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch to which the CLB instance belongs.
+         * <p>
+         * 
+         * If you want to deploy the CLB instance in a VPC, this parameter is required. If this parameter is specified, **AddessType** is set to **intranet** by default.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -608,7 +751,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the CLB instance belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -623,4 +766,71 @@ public class CreateLoadBalancerRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the bastion host. Valid values of N: **1 to 20**. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

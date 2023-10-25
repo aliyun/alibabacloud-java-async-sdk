@@ -98,7 +98,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Acls.
+         * A list of ACLs.
          */
         public Builder acls(Acls acls) {
             this.acls = acls;
@@ -106,7 +106,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of ACLs on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +114,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of ACLs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,6 +151,108 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Acl extends TeaModel {
         @NameInMap("AclId")
         private String aclId;
@@ -161,14 +263,22 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private Tags tags;
 
         private Acl(Builder builder) {
             this.aclId = builder.aclId;
             this.aclName = builder.aclName;
             this.addressIPVersion = builder.addressIPVersion;
+            this.createTime = builder.createTime;
             this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -201,20 +311,36 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String aclId; 
             private String aclName; 
             private String addressIPVersion; 
+            private String createTime; 
             private String resourceGroupId; 
+            private Tags tags; 
 
             /**
-             * AclId.
+             * The ACL ID.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -222,7 +348,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * The ACL name.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -230,7 +356,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressIPVersion.
+             * The IP version that is used by the CLB instance associated with the ACL.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -238,10 +364,26 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The list of tags added to the network ACL. The value of this parameter must be a STRING list in the JSON format.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

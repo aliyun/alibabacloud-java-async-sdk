@@ -146,7 +146,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * CACertificateId.
+         * The name of the CA certificate.
          */
         public Builder CACertificateId(String CACertificateId) {
             this.CACertificateId = CACertificateId;
@@ -154,7 +154,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CACertificateName.
+         * The domain name of the CA certificate.
          */
         public Builder CACertificateName(String CACertificateName) {
             this.CACertificateName = CACertificateName;
@@ -162,7 +162,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CommonName.
+         * The fingerprint of the CA certificate.
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -170,7 +170,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the CA certificate expires.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -178,7 +178,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimeStamp.
+         * The name of the CA certificate.
          */
         public Builder createTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
@@ -186,7 +186,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The timestamp generated when the CA certificate is uploaded.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -194,7 +194,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTimeStamp.
+         * The ID of the enterprise resource group.
          */
         public Builder expireTimeStamp(Long expireTimeStamp) {
             this.expireTimeStamp = expireTimeStamp;
@@ -202,7 +202,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Fingerprint.
+         * The ID of the request.
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -210,7 +210,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the enterprise resource group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The time when the CA certificate is uploaded.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

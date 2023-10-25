@@ -50,7 +50,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackendServers.
+         * The list of backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -58,7 +58,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String serverIp; 
 
             /**
-             * ListenerPort.
+             * The frontend port that is used by the CLB instance.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -166,7 +166,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The backend port that is used by the CLB instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -174,7 +174,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The frontend protocol that is used by the CLB instance.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -182,7 +182,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerHealthStatus.
+             * The health status of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **normal**: The backend server is healthy.
+             * *   **abnormal**: The backend server is unhealthy.
+             * *   **unavailable**: The health check is not complete.
              */
             public Builder serverHealthStatus(String serverHealthStatus) {
                 this.serverHealthStatus = serverHealthStatus;
@@ -190,7 +195,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI).
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -198,7 +203,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * The IP address of the ECS instance.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;

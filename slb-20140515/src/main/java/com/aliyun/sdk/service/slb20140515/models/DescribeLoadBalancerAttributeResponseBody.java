@@ -45,6 +45,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("EndTimeStamp")
     private Long endTimeStamp;
 
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
     @NameInMap("InternetChargeType")
     private String internetChargeType;
 
@@ -108,6 +111,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("SlaveZoneId")
     private String slaveZoneId;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -126,6 +132,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         this.deleteProtection = builder.deleteProtection;
         this.endTime = builder.endTime;
         this.endTimeStamp = builder.endTimeStamp;
+        this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
         this.listenerPorts = builder.listenerPorts;
         this.listenerPortsAndProtocal = builder.listenerPortsAndProtocal;
@@ -147,6 +154,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.slaveZoneId = builder.slaveZoneId;
+        this.tags = builder.tags;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -234,6 +242,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
      */
     public Long getEndTimeStamp() {
         return this.endTimeStamp;
+    }
+
+    /**
+     * @return instanceChargeType
+     */
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
@@ -384,6 +399,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -409,6 +431,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String deleteProtection; 
         private String endTime; 
         private Long endTimeStamp; 
+        private String instanceChargeType; 
         private String internetChargeType; 
         private ListenerPorts listenerPorts; 
         private ListenerPortsAndProtocal listenerPortsAndProtocal; 
@@ -430,11 +453,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String slaveZoneId; 
+        private Tags tags; 
         private String vSwitchId; 
         private String vpcId; 
 
         /**
-         * Address.
+         * The service IP address of the CLB instance.
          */
         public Builder address(String address) {
             this.address = address;
@@ -442,7 +466,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AddressIPVersion.
+         * The version of the IP address. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -450,7 +474,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AddressType.
+         * The address type of the CLB instance.
          */
         public Builder addressType(String addressType) {
             this.addressType = addressType;
@@ -458,7 +482,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AutoReleaseTime.
+         * The timestamp generated when the CLB instance is released.
          */
         public Builder autoReleaseTime(Long autoReleaseTime) {
             this.autoReleaseTime = autoReleaseTime;
@@ -466,7 +490,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BackendServers.
+         * The backend servers of the CLB instance.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -474,7 +498,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -482,7 +506,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the CLB instance was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -490,7 +514,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimeStamp.
+         * The timestamp generated when the CA certificate is uploaded.
          */
         public Builder createTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
@@ -498,7 +522,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DeleteProtection.
+         * Indicates whether deletion protection is enabled for the CLB instance.
+         * <p>
+         * 
+         * Valid values: **on** and **off**.
          */
         public Builder deleteProtection(String deleteProtection) {
             this.deleteProtection = deleteProtection;
@@ -506,7 +533,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the CLB instance expires.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -514,7 +541,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndTimeStamp.
+         * The timestamp that indicates the expiration time of the CLB instance.
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.endTimeStamp = endTimeStamp;
@@ -522,7 +549,25 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **PayBySpec** (default)
+         * *   **PayByCLCU**
+         * 
+         * > This parameter is available only on the China site and takes effect only when **PayType** is set to **PayOnDemand**.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * The metering method of the Internet-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **paybytraffic**
+         * *   **paybybandwidth**
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -530,7 +575,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerPorts.
+         * The frontend port used by the CLB instance.
          */
         public Builder listenerPorts(ListenerPorts listenerPorts) {
             this.listenerPorts = listenerPorts;
@@ -538,7 +583,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerPortsAndProtocal.
+         * The ports or protocols of the listeners.
          */
         public Builder listenerPortsAndProtocal(ListenerPortsAndProtocal listenerPortsAndProtocal) {
             this.listenerPortsAndProtocal = listenerPortsAndProtocal;
@@ -546,7 +591,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerPortsAndProtocol.
+         * The ports or protocols of the listeners.
          */
         public Builder listenerPortsAndProtocol(ListenerPortsAndProtocol listenerPortsAndProtocol) {
             this.listenerPortsAndProtocol = listenerPortsAndProtocol;
@@ -554,7 +599,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The CLB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -562,7 +607,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerName.
+         * The name of the CLB instance.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
@@ -570,7 +615,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerSpec.
+         * The specification of the CLB instance.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.loadBalancerSpec = loadBalancerSpec;
@@ -578,7 +623,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerStatus.
+         * The status of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **inactive**: The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.
+         * *   **active**: The CLB instance is running as expected. Newly created CLB instances are in the **active** state by default.
+         * *   **locked**: The CLB instance is locked. CLB instances may be locked due to overdue payments or other reasons.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.loadBalancerStatus = loadBalancerStatus;
@@ -586,7 +636,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MasterZoneId.
+         * The ID of the primary zone to which the CLB instance belongs.
          */
         public Builder masterZoneId(String masterZoneId) {
             this.masterZoneId = masterZoneId;
@@ -594,7 +644,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ModificationProtectionReason.
+         * The reason why the configuration read-only mode is enabled. The value is 1 to 80 characters in length. It starts with a letter and can contain digits, periods (.), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * >  This parameter is valid only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
          */
         public Builder modificationProtectionReason(String modificationProtectionReason) {
             this.modificationProtectionReason = modificationProtectionReason;
@@ -602,7 +655,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ModificationProtectionStatus.
+         * Indicates whether the configuration read-only mode is enabled. Valid values:
+         * <p>
+         * 
+         * *   **NonProtection**: The configuration read-only mode is disabled. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.
+         * *   **ConsoleProtection**: The configuration read-only mode is enabled.
+         * 
+         * >  If this parameter is set to **ConsoleProtection**, you cannot modify instance configurations in the CLB console. However, you can modify instance configurations by calling API operations.
          */
         public Builder modificationProtectionStatus(String modificationProtectionStatus) {
             this.modificationProtectionStatus = modificationProtectionStatus;
@@ -610,7 +669,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * The network type of the CLB instance.
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -618,7 +677,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   Only **PayOnDemand** may be returned, which indicates the pay-as-you-go billing method.
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -626,7 +688,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -634,7 +696,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionIdAlias.
+         * The alias of the region to which the CLB instance belongs.
          */
         public Builder regionIdAlias(String regionIdAlias) {
             this.regionIdAlias = regionIdAlias;
@@ -642,7 +704,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RenewalCycUnit.
+         * The auto-renewal cycle. Valid values: **Year** and **Month**. Default value: Month.
+         * <p>
+         * 
+         * >  This parameter is valid only if you create a subscription CLB instance on the Alibaba Cloud China site. In this case, **PayType** must be set to **PrePay** and **RenewalStatus** must be set to **AutoRenewal**.
          */
         public Builder renewalCycUnit(String renewalCycUnit) {
             this.renewalCycUnit = renewalCycUnit;
@@ -650,7 +715,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RenewalDuration.
+         * The auto-renewal duration. This parameter is valid only if **RenewalStatus** is set to **AutoRenewal**.
+         * <p>
+         * 
+         * *   Valid values when **PeriodUnit** is set to **Year**: **1**, **2**, and **3**.
+         * 
+         * *   Valid values when **PeriodUnit** is set to **Month**: **1**, **2**, **3**, and **6**.
+         * 
+         * > This parameter is valid only when you create a subscription CLB instance on the Alibaba Cloud China site. In this case, the **PayType** parameter must be set to **PrePay**.
          */
         public Builder renewalDuration(Integer renewalDuration) {
             this.renewalDuration = renewalDuration;
@@ -658,7 +730,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RenewalStatus.
+         * Indicates whether auto-renewal is enabled. Valid values:
+         * <p>
+         * 
+         * *   **AutoRenewal**: Auto-renewal is enabled.
+         * 
+         * *   **Normal**: Auto-renewal is disabled. You must manually renew the CLB instance.
+         * 
+         * *   **NotRenewal**: The CLB instance will not be renewed upon expiration. If this value is returned, the system does not send notifications until three days before the expiration date.
+         * 
+         *     **
+         * 
+         *     **Note** This parameter is valid only when you create a subscription CLB instance on the Alibaba Cloud China site. In this case, **PayType** must be set to **PrePay**.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.renewalStatus = renewalStatus;
@@ -666,7 +749,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -674,7 +757,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -682,7 +765,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SlaveZoneId.
+         * The ID of the secondary zone to which the CLB instance belongs.
          */
         public Builder slaveZoneId(String slaveZoneId) {
             this.slaveZoneId = slaveZoneId;
@@ -690,7 +773,15 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The tags.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch to which the internal-facing CLB instance belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -698,7 +789,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) where the internal-facing CLB instance is deployed.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -718,6 +809,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("ServerId")
         private String serverId;
 
+        @NameInMap("ServerIp")
+        private String serverIp;
+
         @NameInMap("Type")
         private String type;
 
@@ -727,6 +821,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private BackendServer(Builder builder) {
             this.description = builder.description;
             this.serverId = builder.serverId;
+            this.serverIp = builder.serverIp;
             this.type = builder.type;
             this.weight = builder.weight;
         }
@@ -754,6 +849,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverIp
+         */
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -770,11 +872,15 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String serverId; 
+            private String serverIp; 
             private String type; 
             private Integer weight; 
 
             /**
-             * Description.
+             * The description of the backend server.
+             * <p>
+             * 
+             * > This parameter is not returned if Description is not set.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -782,7 +888,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The backend server ID.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -790,7 +896,15 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The ID of the elastic network interface (ENI) or elastic container instance.
+             */
+            public Builder serverIp(String serverIp) {
+                this.serverIp = serverIp;
+                return this;
+            }
+
+            /**
+             * The type of the backend server.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -798,7 +912,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -933,7 +1047,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private String listenerProtocal; 
 
             /**
-             * ListenerPort.
+             * The frontend port that is used by the CLB instance.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -941,7 +1055,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerProtocal.
+             * The frontend protocol that is used by the CLB instance.
              */
             public Builder listenerProtocal(String listenerProtocal) {
                 this.listenerProtocal = listenerProtocal;
@@ -1071,7 +1185,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private String listenerProtocol; 
 
             /**
-             * Description.
+             * Indicates whether the listener is enabled.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1079,7 +1193,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardPort.
+             * The destination listening port to which requests are forwarded. The port must be open and use HTTPS.
              */
             public Builder forwardPort(Integer forwardPort) {
                 this.forwardPort = forwardPort;
@@ -1087,7 +1201,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerForward.
+             * Indicates whether the listener is enabled.
              */
             public Builder listenerForward(String listenerForward) {
                 this.listenerForward = listenerForward;
@@ -1095,7 +1209,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerPort.
+             * The frontend port that is used by the CLB instance.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -1103,7 +1217,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerProtocol.
+             * The frontend protocol that is used by the CLB instance.
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -1153,6 +1267,114 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
             public ListenerPortsAndProtocol build() {
                 return new ListenerPortsAndProtocol(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key. Valid values of N: **1** to **20**. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value. Valid values of N: **1** to **20**. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

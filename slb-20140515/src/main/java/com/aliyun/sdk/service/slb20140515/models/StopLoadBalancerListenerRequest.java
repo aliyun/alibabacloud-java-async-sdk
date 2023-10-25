@@ -141,20 +141,23 @@ public class StopLoadBalancerListenerRequest extends Request {
             super();
         } 
 
-        private Builder(StopLoadBalancerListenerRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(StopLoadBalancerListenerRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ListenerPort.
+         * The frontend listening port used by the listener.
+         * <p>
+         * 
+         * Value range: **1 to 65535**
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -163,7 +166,10 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend listening protocol used by the SLB instance.
+         * <p>
+         * 
+         * >  This parameter is required when listeners with different protocols use the same port.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -172,7 +178,7 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance to which the listener belongs.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -199,7 +205,10 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the SLB instance belongs.
+         * <p>
+         * 
+         * To query the region ID, refer to the list of [regions and zones](~~40654~~) or call [DescribeRegions](~~25609~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

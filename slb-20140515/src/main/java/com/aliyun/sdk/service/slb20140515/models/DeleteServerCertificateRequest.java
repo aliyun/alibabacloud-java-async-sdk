@@ -114,14 +114,14 @@ public class DeleteServerCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServerCertificateRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverCertificateId = response.serverCertificateId;
+        private Builder(DeleteServerCertificateRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverCertificateId = request.serverCertificateId;
         } 
 
         /**
@@ -143,7 +143,10 @@ public class DeleteServerCertificateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the Server Load Balancer (SLB) instance is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +173,7 @@ public class DeleteServerCertificateRequest extends Request {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the server certificate.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);

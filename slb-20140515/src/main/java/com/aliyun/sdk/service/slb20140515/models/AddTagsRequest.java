@@ -129,19 +129,22 @@ public class AddTagsRequest extends Request {
             super();
         } 
 
-        private Builder(AddTagsRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
+        private Builder(AddTagsRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
         } 
 
         /**
-         * LoadBalancerId.
+         * The name of this action.
+         * <p>
+         * 
+         * Value: **AddTags**
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -168,7 +171,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the SLB instance belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +198,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The ID of the region to which the SLB instance belongs.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

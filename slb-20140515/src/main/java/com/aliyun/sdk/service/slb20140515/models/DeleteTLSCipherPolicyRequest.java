@@ -115,14 +115,14 @@ public class DeleteTLSCipherPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTLSCipherPolicyRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.TLSCipherPolicyId = response.TLSCipherPolicyId;
+        private Builder(DeleteTLSCipherPolicyRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.TLSCipherPolicyId = request.TLSCipherPolicyId;
         } 
 
         /**
@@ -144,7 +144,10 @@ public class DeleteTLSCipherPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class DeleteTLSCipherPolicyRequest extends Request {
         }
 
         /**
-         * TLSCipherPolicyId.
+         * The ID of the TLS policy.
          */
         public Builder TLSCipherPolicyId(String TLSCipherPolicyId) {
             this.putQueryParameter("TLSCipherPolicyId", TLSCipherPolicyId);

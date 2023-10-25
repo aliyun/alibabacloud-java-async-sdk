@@ -129,19 +129,19 @@ public class SetAccessControlListAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(SetAccessControlListAttributeRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclName = response.aclName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetAccessControlListAttributeRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclName = request.aclName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -150,7 +150,7 @@ public class SetAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * AclName.
+         * The new name of the network ACL. The name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the network ACL must be unique within each region.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -177,7 +177,10 @@ public class SetAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the network ACL is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

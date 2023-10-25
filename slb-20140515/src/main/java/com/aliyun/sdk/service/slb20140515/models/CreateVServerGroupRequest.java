@@ -43,8 +43,12 @@ public class CreateVServerGroupRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VServerGroupName")
-    private String VServerGroupName;
+    private String vServerGroupName;
 
     private CreateVServerGroupRequest(Builder builder) {
         super(builder);
@@ -55,7 +59,8 @@ public class CreateVServerGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VServerGroupName = builder.VServerGroupName;
+        this.tag = builder.tag;
+        this.vServerGroupName = builder.vServerGroupName;
     }
 
     public static Builder builder() {
@@ -121,10 +126,17 @@ public class CreateVServerGroupRequest extends Request {
     }
 
     /**
-     * @return VServerGroupName
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return vServerGroupName
      */
     public String getVServerGroupName() {
-        return this.VServerGroupName;
+        return this.vServerGroupName;
     }
 
     public static final class Builder extends Request.Builder<CreateVServerGroupRequest, Builder> {
@@ -135,26 +147,52 @@ public class CreateVServerGroupRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VServerGroupName; 
+        private java.util.List < Tag> tag; 
+        private String vServerGroupName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateVServerGroupRequest response) {
-            super(response);
-            this.backendServers = response.backendServers;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VServerGroupName = response.VServerGroupName;
+        private Builder(CreateVServerGroupRequest request) {
+            super(request);
+            this.backendServers = request.backendServers;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.vServerGroupName = request.vServerGroupName;
         } 
 
         /**
-         * BackendServers.
+         * The list of backend servers to be added.
+         * <p>
+         * 
+         * The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.
+         * 
+         * *   **ServerId**: Required. Specify the ID of an Elastic Compute Service (ECS) instance or an Elastic Network Interface (ENI). This parameter must be of the STRING type.
+         * 
+         * *   **Port**: Required. Specify the port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1** to **65535**.
+         * 
+         * *   **Weight**: Required. Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.
+         * 
+         * *   **Description**: Optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         * 
+         * *   **Type**: Specify the type of the backend server. This parameter must be of the STRING type. Valid values:
+         * 
+         *     *   **ecs**: an ECS instance. This is the default value.
+         *     *   **eni**: an ENI.
+         * 
+         * *   **ServerIp**: The IP address of the ECS instance or ENI.
+         * 
+         * Examples:
+         * 
+         * *   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `
+         * *   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }] `
+         * *   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }] `
          */
         public Builder backendServers(String backendServers) {
             this.putQueryParameter("BackendServers", backendServers);
@@ -163,7 +201,7 @@ public class CreateVServerGroupRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the Server Load Balancer (SLB) instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -190,7 +228,7 @@ public class CreateVServerGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the SLB instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,11 +255,23 @@ public class CreateVServerGroupRequest extends Request {
         }
 
         /**
-         * VServerGroupName.
+         * 标签列表。
          */
-        public Builder VServerGroupName(String VServerGroupName) {
-            this.putQueryParameter("VServerGroupName", VServerGroupName);
-            this.VServerGroupName = VServerGroupName;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The name of the vServer group.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         */
+        public Builder vServerGroupName(String vServerGroupName) {
+            this.putQueryParameter("VServerGroupName", vServerGroupName);
+            this.vServerGroupName = vServerGroupName;
             return this;
         }
 
@@ -232,4 +282,70 @@ public class CreateVServerGroupRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。
+             * <p>
+             * 
+             * 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
+             * <p>
+             * 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

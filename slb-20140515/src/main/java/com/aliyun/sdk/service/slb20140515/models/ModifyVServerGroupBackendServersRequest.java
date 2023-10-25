@@ -44,7 +44,7 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
     @Query
     @NameInMap("VServerGroupId")
     @Validation(required = true)
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private ModifyVServerGroupBackendServersRequest(Builder builder) {
         super(builder);
@@ -55,7 +55,7 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -121,10 +121,10 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder extends Request.Builder<ModifyVServerGroupBackendServersRequest, Builder> {
@@ -135,26 +135,48 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyVServerGroupBackendServersRequest response) {
-            super(response);
-            this.newBackendServers = response.newBackendServers;
-            this.oldBackendServers = response.oldBackendServers;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VServerGroupId = response.VServerGroupId;
+        private Builder(ModifyVServerGroupBackendServersRequest request) {
+            super(request);
+            this.newBackendServers = request.newBackendServers;
+            this.oldBackendServers = request.oldBackendServers;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vServerGroupId = request.vServerGroupId;
         } 
 
         /**
-         * NewBackendServers.
+         * The list of new backend servers that you want to use to replace those in the vServer group. You can specify at most 20 backend servers for a vServer group in each call.
+         * <p>
+         * 
+         * *   **ServerId**: required. The ID of the ECS instance or ENI that serves as a backend server. This parameter must be of the STRING type.
+         * 
+         * *   **Port**: required. The port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1 to 65535**.
+         * 
+         * *   **Weight**: required. The weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0 to 100**.
+         * 
+         * *   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. The description can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         * 
+         * *   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:
+         * 
+         *     *   **ecs**: an ECS instance. This is the default value.
+         *     *   **eni**: an ENI.
+         * 
+         * *   **ServerIp**: the IP address of the ECS instance or ENI.
+         * 
+         * Examples:
+         * 
+         * *   An ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`
+         * *   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`
+         * *   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`
          */
         public Builder newBackendServers(String newBackendServers) {
             this.putQueryParameter("NewBackendServers", newBackendServers);
@@ -163,7 +185,29 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
         }
 
         /**
-         * OldBackendServers.
+         * The list of backend servers that you want to replace in the vServer group. You can specify at most 20 backend servers for a vServer group in each call.
+         * <p>
+         * 
+         * *   **ServerId**: required. The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI) that serves as a backend server. This parameter must be of the STRING type.
+         * 
+         * *   **Port**: required. The port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1 to 65535**.
+         * 
+         * *   **Weight**: required. The weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0 to 100**.
+         * 
+         * *   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         * 
+         * *   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:
+         * 
+         *     *   **ecs**: an ECS instance. This is the default value.
+         *     *   **eni**: an ENI.
+         * 
+         * *   **ServerIp**: the IP address of the ECS instance or ENI.
+         * 
+         * Examples:
+         * 
+         * *   An ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`
+         * *   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`
+         * *   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`
          */
         public Builder oldBackendServers(String oldBackendServers) {
             this.putQueryParameter("OldBackendServers", oldBackendServers);
@@ -190,7 +234,7 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,11 +261,11 @@ public class ModifyVServerGroupBackendServersRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 

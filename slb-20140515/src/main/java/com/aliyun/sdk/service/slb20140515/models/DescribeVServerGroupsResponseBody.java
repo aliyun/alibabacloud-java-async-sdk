@@ -16,11 +16,11 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("VServerGroups")
-    private VServerGroups VServerGroups;
+    private VServerGroups vServerGroups;
 
     private DescribeVServerGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.VServerGroups = builder.VServerGroups;
+        this.vServerGroups = builder.vServerGroups;
     }
 
     public static Builder builder() {
@@ -39,18 +39,18 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     /**
-     * @return VServerGroups
+     * @return vServerGroups
      */
     public VServerGroups getVServerGroups() {
-        return this.VServerGroups;
+        return this.vServerGroups;
     }
 
     public static final class Builder {
         private String requestId; 
-        private VServerGroups VServerGroups; 
+        private VServerGroups vServerGroups; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +58,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * VServerGroups.
+         * The list of backend servers.
          */
-        public Builder VServerGroups(VServerGroups VServerGroups) {
-            this.VServerGroups = VServerGroups;
+        public Builder vServerGroups(VServerGroups vServerGroups) {
+            this.vServerGroups = vServerGroups;
             return this;
         }
 
@@ -110,7 +110,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The listening port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -118,7 +118,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The listening protocol. Valid values: **tcp**, **udp**, **http**, and **https**.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -236,7 +236,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Domain.
+             * The requested domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -244,7 +244,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the forwarding rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -252,7 +252,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the forwarding rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -260,7 +260,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The request path.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -354,7 +354,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private Rules rules; 
 
             /**
-             * Listeners.
+             * The list of listeners.
              */
             public Builder listeners(Listeners listeners) {
                 this.listeners = listeners;
@@ -362,7 +362,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The list of forwarding rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -376,24 +376,134 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag keys of the resource.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class VServerGroup extends TeaModel {
         @NameInMap("AssociatedObjects")
         private AssociatedObjects associatedObjects;
 
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("ServerCount")
         private Long serverCount;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         @NameInMap("VServerGroupId")
-        private String VServerGroupId;
+        private String vServerGroupId;
 
         @NameInMap("VServerGroupName")
-        private String VServerGroupName;
+        private String vServerGroupName;
 
         private VServerGroup(Builder builder) {
             this.associatedObjects = builder.associatedObjects;
+            this.createTime = builder.createTime;
             this.serverCount = builder.serverCount;
-            this.VServerGroupId = builder.VServerGroupId;
-            this.VServerGroupName = builder.VServerGroupName;
+            this.tags = builder.tags;
+            this.vServerGroupId = builder.vServerGroupId;
+            this.vServerGroupName = builder.vServerGroupName;
         }
 
         public static Builder builder() {
@@ -412,6 +522,13 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return serverCount
          */
         public Long getServerCount() {
@@ -419,27 +536,36 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return VServerGroupId
+         * @return tags
          */
-        public String getVServerGroupId() {
-            return this.VServerGroupId;
+        public Tags getTags() {
+            return this.tags;
         }
 
         /**
-         * @return VServerGroupName
+         * @return vServerGroupId
+         */
+        public String getVServerGroupId() {
+            return this.vServerGroupId;
+        }
+
+        /**
+         * @return vServerGroupName
          */
         public String getVServerGroupName() {
-            return this.VServerGroupName;
+            return this.vServerGroupName;
         }
 
         public static final class Builder {
             private AssociatedObjects associatedObjects; 
+            private String createTime; 
             private Long serverCount; 
-            private String VServerGroupId; 
-            private String VServerGroupName; 
+            private Tags tags; 
+            private String vServerGroupId; 
+            private String vServerGroupName; 
 
             /**
-             * AssociatedObjects.
+             * The items associated with the server groups.
              */
             public Builder associatedObjects(AssociatedObjects associatedObjects) {
                 this.associatedObjects = associatedObjects;
@@ -447,7 +573,18 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCount.
+             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The number of servers. 
+             * <p>
+             * 
+             * >  The feature corresponding to this parameter is not available by default. If you want to use this feature, [submit a ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex).
              */
             public Builder serverCount(Long serverCount) {
                 this.serverCount = serverCount;
@@ -455,18 +592,26 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VServerGroupId.
+             * The tags.
              */
-            public Builder VServerGroupId(String VServerGroupId) {
-                this.VServerGroupId = VServerGroupId;
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
             /**
-             * VServerGroupName.
+             * The ID of the server group.
              */
-            public Builder VServerGroupName(String VServerGroupName) {
-                this.VServerGroupName = VServerGroupName;
+            public Builder vServerGroupId(String vServerGroupId) {
+                this.vServerGroupId = vServerGroupId;
+                return this;
+            }
+
+            /**
+             * The name of the server group.
+             */
+            public Builder vServerGroupName(String vServerGroupName) {
+                this.vServerGroupName = vServerGroupName;
                 return this;
             }
 
@@ -479,10 +624,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
     public static class VServerGroups extends TeaModel {
         @NameInMap("VServerGroup")
-        private java.util.List < VServerGroup> VServerGroup;
+        private java.util.List < VServerGroup> vServerGroup;
 
         private VServerGroups(Builder builder) {
-            this.VServerGroup = builder.VServerGroup;
+            this.vServerGroup = builder.vServerGroup;
         }
 
         public static Builder builder() {
@@ -494,20 +639,20 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return VServerGroup
+         * @return vServerGroup
          */
         public java.util.List < VServerGroup> getVServerGroup() {
-            return this.VServerGroup;
+            return this.vServerGroup;
         }
 
         public static final class Builder {
-            private java.util.List < VServerGroup> VServerGroup; 
+            private java.util.List < VServerGroup> vServerGroup; 
 
             /**
              * VServerGroup.
              */
-            public Builder VServerGroup(java.util.List < VServerGroup> VServerGroup) {
-                this.VServerGroup = VServerGroup;
+            public Builder vServerGroup(java.util.List < VServerGroup> vServerGroup) {
+                this.vServerGroup = vServerGroup;
                 return this;
             }
 

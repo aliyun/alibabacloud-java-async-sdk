@@ -156,21 +156,21 @@ public class CreateDomainExtensionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDomainExtensionRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverCertificateId = response.serverCertificateId;
+        private Builder(CreateDomainExtensionRequest request) {
+            super(request);
+            this.domain = request.domain;
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverCertificateId = request.serverCertificateId;
         } 
 
         /**
-         * Domain.
+         * The domain name to be created.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -179,7 +179,10 @@ public class CreateDomainExtensionRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port of the HTTPS listener.
+         * <p>
+         * 
+         * Value range:** 1 to 65535**
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -188,7 +191,7 @@ public class CreateDomainExtensionRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -215,7 +218,7 @@ public class CreateDomainExtensionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the SLB instance belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +245,7 @@ public class CreateDomainExtensionRequest extends Request {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the certificate used by the domain name.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);

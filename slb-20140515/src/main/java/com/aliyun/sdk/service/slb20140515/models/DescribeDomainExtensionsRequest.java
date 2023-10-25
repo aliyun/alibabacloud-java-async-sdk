@@ -142,20 +142,20 @@ public class DescribeDomainExtensionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainExtensionsRequest response) {
-            super(response);
-            this.domainExtensionId = response.domainExtensionId;
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDomainExtensionsRequest request) {
+            super(request);
+            this.domainExtensionId = request.domainExtensionId;
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DomainExtensionId.
+         * The ID of the additional certificate.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -164,7 +164,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: **1 to 65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -173,7 +173,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -200,7 +200,7 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

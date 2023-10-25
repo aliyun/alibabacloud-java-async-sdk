@@ -115,18 +115,18 @@ public class DeleteDomainExtensionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainExtensionRequest response) {
-            super(response);
-            this.domainExtensionId = response.domainExtensionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDomainExtensionRequest request) {
+            super(request);
+            this.domainExtensionId = request.domainExtensionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DomainExtensionId.
+         * The ID of the domain name extension to be deleted.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -153,7 +153,7 @@ public class DeleteDomainExtensionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the SLB instance belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

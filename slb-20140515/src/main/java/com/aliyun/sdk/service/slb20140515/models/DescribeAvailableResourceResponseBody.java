@@ -50,7 +50,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableResources.
+         * The zones and the supported resources.
          */
         public Builder availableResources(AvailableResources availableResources) {
             this.availableResources = availableResources;
@@ -58,7 +58,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String addressType; 
 
             /**
-             * AddressIPVersion.
+             * The type of the IP address.
+             * <p>
+             * 
+             * Valid values: **ipv4 and ipv6**.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -118,7 +121,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * AddressType.
+             * The network type.
+             * <p>
+             * 
+             * Valid values: **vpc, classic-internet, and classic-intranet**.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -224,7 +230,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportResources supportResources; 
 
             /**
-             * MasterZoneId.
+             * The primary zone.
              */
             public Builder masterZoneId(String masterZoneId) {
                 this.masterZoneId = masterZoneId;
@@ -232,7 +238,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveZoneId.
+             * The secondary zone.
              */
             public Builder slaveZoneId(String slaveZoneId) {
                 this.slaveZoneId = slaveZoneId;
@@ -240,7 +246,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportResources.
+             * The supported resources.
              */
             public Builder supportResources(SupportResources supportResources) {
                 this.supportResources = supportResources;

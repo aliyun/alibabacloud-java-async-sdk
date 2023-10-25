@@ -50,7 +50,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CACertificates.
+         * The information about the CA certificate.
          */
         public Builder CACertificates(CACertificates CACertificates) {
             this.CACertificates = CACertificates;
@@ -58,7 +58,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,6 +71,108 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class CACertificate extends TeaModel {
         @NameInMap("CACertificateId")
         private String CACertificateId;
@@ -102,6 +204,9 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         private CACertificate(Builder builder) {
             this.CACertificateId = builder.CACertificateId;
             this.CACertificateName = builder.CACertificateName;
@@ -113,6 +218,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             this.fingerprint = builder.fingerprint;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -193,6 +299,13 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String CACertificateId; 
             private String CACertificateName; 
@@ -204,9 +317,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             private String fingerprint; 
             private String regionId; 
             private String resourceGroupId; 
+            private Tags tags; 
 
             /**
-             * CACertificateId.
+             * The CA certificate ID.
              */
             public Builder CACertificateId(String CACertificateId) {
                 this.CACertificateId = CACertificateId;
@@ -214,7 +328,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CACertificateName.
+             * The CA certificate name.
              */
             public Builder CACertificateName(String CACertificateName) {
                 this.CACertificateName = CACertificateName;
@@ -222,7 +336,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * The domain name of the CA certificate.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -230,7 +344,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +352,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStamp.
+             * The timestamp when the CA certificate was created. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -246,7 +363,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -254,7 +371,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTimeStamp.
+             * The timestamp that indicates when the CA certificate expires. Unit: milliseconds.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder expireTimeStamp(Long expireTimeStamp) {
                 this.expireTimeStamp = expireTimeStamp;
@@ -262,7 +382,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * The fingerprint of the CA certificate.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -270,7 +390,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region of the CA certificate.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -278,10 +398,18 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The tag.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

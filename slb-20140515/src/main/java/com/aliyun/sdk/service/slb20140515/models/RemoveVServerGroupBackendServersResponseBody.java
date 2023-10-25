@@ -19,12 +19,12 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     private RemoveVServerGroupBackendServersResponseBody(Builder builder) {
         this.backendServers = builder.backendServers;
         this.requestId = builder.requestId;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
     }
 
     public static Builder builder() {
@@ -50,19 +50,19 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     public static final class Builder {
         private BackendServers backendServers; 
         private String requestId; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
 
         /**
-         * BackendServers.
+         * The list of backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -70,7 +70,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +78,10 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 
@@ -154,7 +154,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Port.
+             * The port that is used by the backend server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -162,7 +162,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the ECS instance or ENI.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -170,7 +170,11 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of backend server. Valid values:
+             * <p>
+             * 
+             * *   **ecs**: an ECS instance
+             * *   **eni**: an ENI
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +182,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

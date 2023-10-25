@@ -146,7 +146,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * Address.
+         * The IP address that is allocated to the CLB instance.
          */
         public Builder address(String address) {
             this.address = address;
@@ -154,7 +154,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * AddressIPVersion.
+         * The IP version that is used by the CLB instance.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -162,7 +162,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * The CLB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -170,7 +170,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerName.
+         * The CLB instance name.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
@@ -178,7 +178,11 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * The network type of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **vpc**
+         * *   **classic**
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -186,7 +190,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID of the subscription CLB instance.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -194,7 +198,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +206,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the CLB instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -210,7 +214,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the CLB instance belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -218,7 +222,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the CLB instance belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

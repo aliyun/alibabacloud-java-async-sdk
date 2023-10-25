@@ -128,19 +128,19 @@ public class SetDomainExtensionAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(SetDomainExtensionAttributeRequest response) {
-            super(response);
-            this.domainExtensionId = response.domainExtensionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverCertificateId = response.serverCertificateId;
+        private Builder(SetDomainExtensionAttributeRequest request) {
+            super(request);
+            this.domainExtensionId = request.domainExtensionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverCertificateId = request.serverCertificateId;
         } 
 
         /**
-         * DomainExtensionId.
+         * The ID of the domain name that is associated with the additional certificate to be replaced.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -167,7 +167,7 @@ public class SetDomainExtensionAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the SLB instance is created.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +194,7 @@ public class SetDomainExtensionAttributeRequest extends Request {
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the new certificate.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);

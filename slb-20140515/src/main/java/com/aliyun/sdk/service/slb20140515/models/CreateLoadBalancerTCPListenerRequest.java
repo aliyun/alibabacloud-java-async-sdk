@@ -70,6 +70,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     private String healthCheckHttpCode;
 
     @Query
+    @NameInMap("HealthCheckSwitch")
+    private String healthCheckSwitch;
+
+    @Query
     @NameInMap("HealthCheckType")
     private String healthCheckType;
 
@@ -110,6 +114,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     private Integer persistenceTimeout;
 
     @Query
+    @NameInMap("ProxyProtocolV2Enabled")
+    private Boolean proxyProtocolV2Enabled;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -126,13 +134,17 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     private String scheduler;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("UnhealthyThreshold")
     @Validation(maximum = 10, minimum = 1)
     private Integer unhealthyThreshold;
 
     @Query
     @NameInMap("VServerGroupId")
-    private String VServerGroupId;
+    private String vServerGroupId;
 
     @Query
     @NameInMap("healthCheckInterval")
@@ -154,6 +166,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
         this.healthCheckDomain = builder.healthCheckDomain;
         this.healthCheckHttpCode = builder.healthCheckHttpCode;
+        this.healthCheckSwitch = builder.healthCheckSwitch;
         this.healthCheckType = builder.healthCheckType;
         this.healthCheckURI = builder.healthCheckURI;
         this.healthyThreshold = builder.healthyThreshold;
@@ -163,12 +176,14 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.persistenceTimeout = builder.persistenceTimeout;
+        this.proxyProtocolV2Enabled = builder.proxyProtocolV2Enabled;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scheduler = builder.scheduler;
+        this.tag = builder.tag;
         this.unhealthyThreshold = builder.unhealthyThreshold;
-        this.VServerGroupId = builder.VServerGroupId;
+        this.vServerGroupId = builder.vServerGroupId;
         this.healthCheckInterval = builder.healthCheckInterval;
     }
 
@@ -277,6 +292,13 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     }
 
     /**
+     * @return healthCheckSwitch
+     */
+    public String getHealthCheckSwitch() {
+        return this.healthCheckSwitch;
+    }
+
+    /**
      * @return healthCheckType
      */
     public String getHealthCheckType() {
@@ -340,6 +362,13 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     }
 
     /**
+     * @return proxyProtocolV2Enabled
+     */
+    public Boolean getProxyProtocolV2Enabled() {
+        return this.proxyProtocolV2Enabled;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -368,6 +397,13 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return unhealthyThreshold
      */
     public Integer getUnhealthyThreshold() {
@@ -375,10 +411,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
     }
 
     /**
-     * @return VServerGroupId
+     * @return vServerGroupId
      */
     public String getVServerGroupId() {
-        return this.VServerGroupId;
+        return this.vServerGroupId;
     }
 
     /**
@@ -402,6 +438,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         private Integer healthCheckConnectTimeout; 
         private String healthCheckDomain; 
         private String healthCheckHttpCode; 
+        private String healthCheckSwitch; 
         private String healthCheckType; 
         private String healthCheckURI; 
         private Integer healthyThreshold; 
@@ -411,53 +448,61 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private Integer persistenceTimeout; 
+        private Boolean proxyProtocolV2Enabled; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scheduler; 
+        private java.util.List < Tag> tag; 
         private Integer unhealthyThreshold; 
-        private String VServerGroupId; 
+        private String vServerGroupId; 
         private Integer healthCheckInterval; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLoadBalancerTCPListenerRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclStatus = response.aclStatus;
-            this.aclType = response.aclType;
-            this.backendServerPort = response.backendServerPort;
-            this.bandwidth = response.bandwidth;
-            this.connectionDrain = response.connectionDrain;
-            this.connectionDrainTimeout = response.connectionDrainTimeout;
-            this.description = response.description;
-            this.establishedTimeout = response.establishedTimeout;
-            this.healthCheckConnectPort = response.healthCheckConnectPort;
-            this.healthCheckConnectTimeout = response.healthCheckConnectTimeout;
-            this.healthCheckDomain = response.healthCheckDomain;
-            this.healthCheckHttpCode = response.healthCheckHttpCode;
-            this.healthCheckType = response.healthCheckType;
-            this.healthCheckURI = response.healthCheckURI;
-            this.healthyThreshold = response.healthyThreshold;
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.masterSlaveServerGroupId = response.masterSlaveServerGroupId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.persistenceTimeout = response.persistenceTimeout;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scheduler = response.scheduler;
-            this.unhealthyThreshold = response.unhealthyThreshold;
-            this.VServerGroupId = response.VServerGroupId;
-            this.healthCheckInterval = response.healthCheckInterval;
+        private Builder(CreateLoadBalancerTCPListenerRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclStatus = request.aclStatus;
+            this.aclType = request.aclType;
+            this.backendServerPort = request.backendServerPort;
+            this.bandwidth = request.bandwidth;
+            this.connectionDrain = request.connectionDrain;
+            this.connectionDrainTimeout = request.connectionDrainTimeout;
+            this.description = request.description;
+            this.establishedTimeout = request.establishedTimeout;
+            this.healthCheckConnectPort = request.healthCheckConnectPort;
+            this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
+            this.healthCheckDomain = request.healthCheckDomain;
+            this.healthCheckHttpCode = request.healthCheckHttpCode;
+            this.healthCheckSwitch = request.healthCheckSwitch;
+            this.healthCheckType = request.healthCheckType;
+            this.healthCheckURI = request.healthCheckURI;
+            this.healthyThreshold = request.healthyThreshold;
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.masterSlaveServerGroupId = request.masterSlaveServerGroupId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.persistenceTimeout = request.persistenceTimeout;
+            this.proxyProtocolV2Enabled = request.proxyProtocolV2Enabled;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scheduler = request.scheduler;
+            this.tag = request.tag;
+            this.unhealthyThreshold = request.unhealthyThreshold;
+            this.vServerGroupId = request.vServerGroupId;
+            this.healthCheckInterval = request.healthCheckInterval;
         } 
 
         /**
-         * AclId.
+         * The ID of the network ACL that is associated with the listener.
+         * <p>
+         * 
+         * >  If **AclStatus** is set to **on**, this parameter is required.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -466,7 +511,11 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * AclStatus.
+         * Specifies whether to enable access control. Valid values:
+         * <p>
+         * 
+         * *   **on**: yes
+         * *   **off** (default): no
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -475,7 +524,20 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * AclType.
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application.
+         * 
+         *     Your service may be adversely affected if the whitelist is not properly configured.
+         * 
+         *     If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener. If a whitelist is configured but no IP address is added to the whitelist, the listener forwards all requests.
+         * 
+         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.
+         * 
+         *     If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.
+         * 
+         * >  If **AclStatus** is set to **on**, this parameter is required.
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -484,7 +546,12 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * BackendServerPort.
+         * The backend port used by the CLB instance.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
+         * 
+         * If the **VServerGroupId** parameter is not set, this parameter is required.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.putQueryParameter("BackendServerPort", backendServerPort);
@@ -493,7 +560,11 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
+         * <p>
+         * 
+         * *   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this value can be set to -1, which specifies unlimited bandwidth.
+         * *   **1** to **5120**: For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of the maximum bandwidth values that you set for all listeners cannot exceed the maximum bandwidth of the CLB instance.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -502,7 +573,11 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * ConnectionDrain.
+         * Specifies whether to enable connection draining. Valid values:
+         * <p>
+         * 
+         * *   **on**: yes
+         * *   **off**: no
          */
         public Builder connectionDrain(String connectionDrain) {
             this.putQueryParameter("ConnectionDrain", connectionDrain);
@@ -511,7 +586,12 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * ConnectionDrainTimeout.
+         * The timeout period of connection draining. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **10** to **900**.
+         * 
+         * >  This parameter is required if **ConnectionDrain** is set to **on**.
          */
         public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
             this.putQueryParameter("ConnectionDrainTimeout", connectionDrainTimeout);
@@ -520,7 +600,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * Description.
+         * The name of the listener.
+         * <p>
+         * 
+         * The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -529,7 +612,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * EstablishedTimeout.
+         * The timeout period of a connection. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **10** to **900**.
          */
         public Builder establishedTimeout(Integer establishedTimeout) {
             this.putQueryParameter("EstablishedTimeout", establishedTimeout);
@@ -538,7 +624,12 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
+         * 
+         * If this parameter is not set, the backend port specified by **BackendServerPort** is used for health checks.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -547,7 +638,12 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectTimeout.
+         * The maximum timeout period of a health check response. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **1** to **300**.
+         * 
+         * Default value: **5**.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -556,7 +652,11 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckDomain.
+         * The domain name that you want to use for health checks. Valid values:
+         * <p>
+         * 
+         * *   **$\_ip**: the private IP address of a backend server. If you do not set the HealthCheckDomain parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server for health checks.
+         * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.putQueryParameter("HealthCheckDomain", healthCheckDomain);
@@ -565,7 +665,13 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckHttpCode.
+         * The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **http\_2xx**(default)
+         * *   **http\_3xx**
+         * *   **http\_4xx**
+         * *   **http\_5xx**
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.putQueryParameter("HealthCheckHttpCode", healthCheckHttpCode);
@@ -574,7 +680,24 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckType.
+         * Specifies whether to enable the health check feature. Valid values:
+         * <p>
+         * 
+         * *   **on** (default): yes
+         * *   **off**: no
+         */
+        public Builder healthCheckSwitch(String healthCheckSwitch) {
+            this.putQueryParameter("HealthCheckSwitch", healthCheckSwitch);
+            this.healthCheckSwitch = healthCheckSwitch;
+            return this;
+        }
+
+        /**
+         * The type of health checks. Valid values:
+         * <p>
+         * 
+         * *   **tcp** (default)
+         * *   **http**
          */
         public Builder healthCheckType(String healthCheckType) {
             this.putQueryParameter("HealthCheckType", healthCheckType);
@@ -583,7 +706,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckURI.
+         * The URI that is used for health checks. The URI must be 1 to 80 characters in length, and can contain only digits, letters, hyphens (-), forward slashes (/), periods (.), percent signs (%), number signs (#), and ampersands (&). The URI must start with a forward slash (/) but cannot be a single forward slash (/).
+         * <p>
+         * 
+         * You can set this parameter when the TCP listener requires HTTP health checks. If you do not set this parameter, TCP health checks are performed.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -592,7 +718,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -601,7 +730,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port used by the CLB instance.
+         * <p>
+         * 
+         * Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -610,7 +742,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -619,7 +751,10 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * MasterSlaveServerGroupId.
+         * The ID of the primary/secondary server group.
+         * <p>
+         * 
+         * >  You cannot set both VServerGroupId and MasterSlaveServerGroupId.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.putQueryParameter("MasterSlaveServerGroupId", masterSlaveServerGroupId);
@@ -646,7 +781,12 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * PersistenceTimeout.
+         * The timeout period of session persistence. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **0 to 3600**.
+         * 
+         * Default value: **0**. If the default value is used, the system disables session persistence.
          */
         public Builder persistenceTimeout(Integer persistenceTimeout) {
             this.putQueryParameter("PersistenceTimeout", persistenceTimeout);
@@ -655,7 +795,23 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         */
+        public Builder proxyProtocolV2Enabled(Boolean proxyProtocolV2Enabled) {
+            this.putQueryParameter("ProxyProtocolV2Enabled", proxyProtocolV2Enabled);
+            this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+            return this;
+        }
+
+        /**
+         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+         * <p>
+         * 
+         * You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -682,7 +838,15 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * The routing algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * *   **sch**: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
+         * *   **tch**: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.
+         * 
+         * >  Only high-performance CLB instances support the **sch** and **tch** consistent hashing algorithms.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -691,7 +855,19 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * UnhealthyThreshold.
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+         * <p>
+         * 
+         * Valid values: **2** to **10**.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
@@ -700,16 +876,19 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * VServerGroupId.
+         * The ID of the vServer group.
          */
-        public Builder VServerGroupId(String VServerGroupId) {
-            this.putQueryParameter("VServerGroupId", VServerGroupId);
-            this.VServerGroupId = VServerGroupId;
+        public Builder vServerGroupId(String vServerGroupId) {
+            this.putQueryParameter("VServerGroupId", vServerGroupId);
+            this.vServerGroupId = vServerGroupId;
             return this;
         }
 
         /**
-         * healthCheckInterval.
+         * The interval between two consecutive health checks. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: **1** to **50**.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("healthCheckInterval", healthCheckInterval);
@@ -724,4 +903,71 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be at most 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

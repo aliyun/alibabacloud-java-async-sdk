@@ -61,6 +61,10 @@ public class UploadServerCertificateRequest extends Request {
     @NameInMap("ServerCertificateName")
     private String serverCertificateName;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private UploadServerCertificateRequest(Builder builder) {
         super(builder);
         this.aliCloudCertificateId = builder.aliCloudCertificateId;
@@ -75,6 +79,7 @@ public class UploadServerCertificateRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.serverCertificate = builder.serverCertificate;
         this.serverCertificateName = builder.serverCertificateName;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -174,6 +179,13 @@ public class UploadServerCertificateRequest extends Request {
         return this.serverCertificateName;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<UploadServerCertificateRequest, Builder> {
         private String aliCloudCertificateId; 
         private String aliCloudCertificateName; 
@@ -187,29 +199,31 @@ public class UploadServerCertificateRequest extends Request {
         private Long resourceOwnerId; 
         private String serverCertificate; 
         private String serverCertificateName; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UploadServerCertificateRequest response) {
-            super(response);
-            this.aliCloudCertificateId = response.aliCloudCertificateId;
-            this.aliCloudCertificateName = response.aliCloudCertificateName;
-            this.aliCloudCertificateRegionId = response.aliCloudCertificateRegionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.privateKey = response.privateKey;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverCertificate = response.serverCertificate;
-            this.serverCertificateName = response.serverCertificateName;
+        private Builder(UploadServerCertificateRequest request) {
+            super(request);
+            this.aliCloudCertificateId = request.aliCloudCertificateId;
+            this.aliCloudCertificateName = request.aliCloudCertificateName;
+            this.aliCloudCertificateRegionId = request.aliCloudCertificateRegionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.privateKey = request.privateKey;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverCertificate = request.serverCertificate;
+            this.serverCertificateName = request.serverCertificateName;
+            this.tag = request.tag;
         } 
 
         /**
-         * AliCloudCertificateId.
+         * AliCloud certificate ID.
          */
         public Builder aliCloudCertificateId(String aliCloudCertificateId) {
             this.putQueryParameter("AliCloudCertificateId", aliCloudCertificateId);
@@ -218,7 +232,7 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * AliCloudCertificateName.
+         * AliCloud certificate name.
          */
         public Builder aliCloudCertificateName(String aliCloudCertificateName) {
             this.putQueryParameter("AliCloudCertificateName", aliCloudCertificateName);
@@ -227,7 +241,7 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * AliCloudCertificateRegionId.
+         * The region ID of AliCloud certificate.
          */
         public Builder aliCloudCertificateRegionId(String aliCloudCertificateRegionId) {
             this.putQueryParameter("AliCloudCertificateRegionId", aliCloudCertificateRegionId);
@@ -254,7 +268,7 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * PrivateKey.
+         * The private key of the certificate.
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -263,7 +277,10 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +289,7 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -299,7 +316,7 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * ServerCertificate.
+         * The server certificate to be uploaded.
          */
         public Builder serverCertificate(String serverCertificate) {
             this.putQueryParameter("ServerCertificate", serverCertificate);
@@ -308,11 +325,23 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * ServerCertificateName.
+         * The name of the server certificate.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder serverCertificateName(String serverCertificateName) {
             this.putQueryParameter("ServerCertificateName", serverCertificateName);
             this.serverCertificateName = serverCertificateName;
+            return this;
+        }
+
+        /**
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -323,4 +352,68 @@ public class UploadServerCertificateRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

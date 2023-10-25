@@ -38,7 +38,7 @@ public class AddTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the SLB instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

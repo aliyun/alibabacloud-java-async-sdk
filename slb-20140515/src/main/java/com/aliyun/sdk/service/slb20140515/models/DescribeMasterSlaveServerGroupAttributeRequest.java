@@ -115,18 +115,18 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMasterSlaveServerGroupAttributeRequest response) {
-            super(response);
-            this.masterSlaveServerGroupId = response.masterSlaveServerGroupId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeMasterSlaveServerGroupAttributeRequest request) {
+            super(request);
+            this.masterSlaveServerGroupId = request.masterSlaveServerGroupId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * MasterSlaveServerGroupId.
+         * The ID of the primary/secondary server group.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.putQueryParameter("MasterSlaveServerGroupId", masterSlaveServerGroupId);
@@ -153,7 +153,7 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Classic Load Balancer (CLB) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

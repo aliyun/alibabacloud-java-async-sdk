@@ -142,20 +142,20 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerModificationProtectionRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
-            this.modificationProtectionReason = response.modificationProtectionReason;
-            this.modificationProtectionStatus = response.modificationProtectionStatus;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetLoadBalancerModificationProtectionRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
+            this.modificationProtectionReason = request.modificationProtectionReason;
+            this.modificationProtectionStatus = request.modificationProtectionStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -164,7 +164,10 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         }
 
         /**
-         * ModificationProtectionReason.
+         * The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * >  This parameter is valid only if the **ModificationProtectionStatus** parameter is set to **ConsoleProtection**.
          */
         public Builder modificationProtectionReason(String modificationProtectionReason) {
             this.putQueryParameter("ModificationProtectionReason", modificationProtectionReason);
@@ -173,7 +176,13 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         }
 
         /**
-         * ModificationProtectionStatus.
+         * Specifies whether to enable the configuration read-only mode. Valid values:
+         * <p>
+         * 
+         * *   **NonProtection**: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.
+         * *   **ConsoleProtection**: enables the configuration read-only mode.
+         * 
+         * >  If you set this parameter to **ConsoleProtection**, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
          */
         public Builder modificationProtectionStatus(String modificationProtectionStatus) {
             this.putQueryParameter("ModificationProtectionStatus", modificationProtectionStatus);
@@ -200,7 +209,10 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the CLB instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

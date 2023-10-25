@@ -86,7 +86,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page. Minimum value: 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Default value: 50. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TagSets.
+         * A list of tags.
          */
         public Builder tagSets(TagSets tagSets) {
             this.tagSets = tagSets;
@@ -118,7 +118,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of instances returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * InstanceCount.
+             * The number of instances to which the tag is added.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -190,7 +190,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -198,7 +198,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

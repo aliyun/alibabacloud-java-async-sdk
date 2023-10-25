@@ -155,21 +155,21 @@ public class RemoveListenerWhiteListItemRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveListenerWhiteListItemRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.listenerProtocol = response.listenerProtocol;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceItems = response.sourceItems;
+        private Builder(RemoveListenerWhiteListItemRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceItems = request.sourceItems;
         } 
 
         /**
-         * ListenerPort.
+         * The listening port.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -178,7 +178,10 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend protocol that is used by the CLB instance.
+         * <p>
+         * 
+         * >  This parameter is required when listeners that use different protocols listen on the same port.
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -187,7 +190,7 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -214,7 +217,10 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the Classic Load Balancer (CLB) instance is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +247,10 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * SourceItems.
+         * The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).
+         * <p>
+         * 
+         * >  If all IP addresses are removed from the whitelist, the listener does not forward requests.
          */
         public Builder sourceItems(String sourceItems) {
             this.putQueryParameter("SourceItems", sourceItems);

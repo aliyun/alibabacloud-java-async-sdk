@@ -50,7 +50,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainExtensions.
+         * The list of additional certificates.
          */
         public Builder domainExtensions(DomainExtensions domainExtensions) {
             this.domainExtensions = domainExtensions;
@@ -58,7 +58,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             private String serverCertificateId; 
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -130,7 +130,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainExtensionId.
+             * The ID of the additional certificate.
              */
             public Builder domainExtensionId(String domainExtensionId) {
                 this.domainExtensionId = domainExtensionId;
@@ -138,7 +138,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCertificateId.
+             * The ID of the server certificate that is used by the domain name.
              */
             public Builder serverCertificateId(String serverCertificateId) {
                 this.serverCertificateId = serverCertificateId;

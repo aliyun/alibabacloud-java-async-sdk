@@ -62,7 +62,11 @@ public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel
         private String sourceItems; 
 
         /**
-         * AccessControlStatus.
+         * Indicates whether the whitelist is enabled. Valid values:
+         * <p>
+         * 
+         * *   **open_white_list**: the whitelist is enabled.
+         * *   **close**: the whitelist is disabled.
          */
         public Builder accessControlStatus(String accessControlStatus) {
             this.accessControlStatus = accessControlStatus;
@@ -70,7 +74,7 @@ public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel
         }
 
         /**
-         * SourceItems.
+         * The queried ACLs.
          */
         public Builder sourceItems(String sourceItems) {
             this.sourceItems = sourceItems;

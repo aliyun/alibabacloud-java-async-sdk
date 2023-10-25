@@ -62,7 +62,7 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainExtensionId.
+         * The ID of the created domain name extension.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.domainExtensionId = domainExtensionId;
@@ -70,7 +70,7 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port used by the SLB instance.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -78,7 +78,7 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MasterSlaveServerGroups.
+         * The list of backend servers in the primary/secondary server group.
          */
         public Builder masterSlaveServerGroups(MasterSlaveServerGroups masterSlaveServerGroups) {
             this.masterSlaveServerGroups = masterSlaveServerGroups;
@@ -58,7 +58,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The listening port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -118,7 +118,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The listening protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -200,7 +200,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private Listeners listeners; 
 
             /**
-             * Listeners.
+             * The list of listeners.
              */
             public Builder listeners(Listeners listeners) {
                 this.listeners = listeners;
@@ -214,9 +214,114 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag keys.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag values.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class MasterSlaveServerGroup extends TeaModel {
         @NameInMap("AssociatedObjects")
         private AssociatedObjects associatedObjects;
+
+        @NameInMap("CreateTime")
+        private String createTime;
 
         @NameInMap("MasterSlaveServerGroupId")
         private String masterSlaveServerGroupId;
@@ -224,10 +329,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         @NameInMap("MasterSlaveServerGroupName")
         private String masterSlaveServerGroupName;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         private MasterSlaveServerGroup(Builder builder) {
             this.associatedObjects = builder.associatedObjects;
+            this.createTime = builder.createTime;
             this.masterSlaveServerGroupId = builder.masterSlaveServerGroupId;
             this.masterSlaveServerGroupName = builder.masterSlaveServerGroupName;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -246,6 +356,13 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return masterSlaveServerGroupId
          */
         public String getMasterSlaveServerGroupId() {
@@ -259,13 +376,22 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             return this.masterSlaveServerGroupName;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private AssociatedObjects associatedObjects; 
+            private String createTime; 
             private String masterSlaveServerGroupId; 
             private String masterSlaveServerGroupName; 
+            private Tags tags; 
 
             /**
-             * AssociatedObjects.
+             * The associated resources.
              */
             public Builder associatedObjects(AssociatedObjects associatedObjects) {
                 this.associatedObjects = associatedObjects;
@@ -273,7 +399,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MasterSlaveServerGroupId.
+             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The ID of the primary/secondary server group.
              */
             public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
                 this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -281,10 +415,18 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MasterSlaveServerGroupName.
+             * The name of the primary/secondary server group.
              */
             public Builder masterSlaveServerGroupName(String masterSlaveServerGroupName) {
                 this.masterSlaveServerGroupName = masterSlaveServerGroupName;
+                return this;
+            }
+
+            /**
+             * The tag key.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -128,19 +128,37 @@ public class RemoveBackendServersRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveBackendServersRequest response) {
-            super(response);
-            this.backendServers = response.backendServers;
-            this.loadBalancerId = response.loadBalancerId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RemoveBackendServersRequest request) {
+            super(request);
+            this.backendServers = request.backendServers;
+            this.loadBalancerId = request.loadBalancerId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * BackendServers.
+         * The backend servers to be removed.
+         * <p>
+         * 
+         * *   **ServerId**: The IDs of the backend servers. Set the value to a string. This parameter is required.
+         * 
+         * *   **Type**: The type of the backend server. Valid values:
+         * 
+         *     *   **ecs** (default): an Elastic Compute Service (ECS) instance
+         * 
+         *     <!---->
+         * 
+         *     *   **eni**: an elastic network interface (ENI)
+         * 
+         * *   **Weight**: the weight of the backend server. Valid values: **0** to **100**. Set the value to an integer.
+         * 
+         * You can remove at most 20 backend servers in each call. Examples:
+         * 
+         * *   Remove an ECS instance: `[{"ServerId":"i-bp1fq61enf4loa5i****", "Type": "ecs","Weight":"100"}]`
+         * *   Remove an ENI: `[{"ServerId":"eni-2ze1sdp5****","Type": "eni","Weight":"100"}]`
          */
         public Builder backendServers(String backendServers) {
             this.putQueryParameter("BackendServers", backendServers);
@@ -149,7 +167,7 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -176,7 +194,7 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

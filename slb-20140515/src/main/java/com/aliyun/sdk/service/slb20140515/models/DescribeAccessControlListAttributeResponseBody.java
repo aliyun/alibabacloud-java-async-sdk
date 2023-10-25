@@ -24,6 +24,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
+    @NameInMap("CreateTime")
+    private String createTime;
+
     @NameInMap("RelatedListeners")
     private RelatedListeners relatedListeners;
 
@@ -33,14 +36,23 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
+    @NameInMap("TotalAclEntry")
+    private Integer totalAclEntry;
+
     private DescribeAccessControlListAttributeResponseBody(Builder builder) {
         this.aclEntrys = builder.aclEntrys;
         this.aclId = builder.aclId;
         this.aclName = builder.aclName;
         this.addressIPVersion = builder.addressIPVersion;
+        this.createTime = builder.createTime;
         this.relatedListeners = builder.relatedListeners;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
+        this.totalAclEntry = builder.totalAclEntry;
     }
 
     public static Builder builder() {
@@ -80,6 +92,13 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
      * @return relatedListeners
      */
     public RelatedListeners getRelatedListeners() {
@@ -100,17 +119,38 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    /**
+     * @return totalAclEntry
+     */
+    public Integer getTotalAclEntry() {
+        return this.totalAclEntry;
+    }
+
     public static final class Builder {
         private AclEntrys aclEntrys; 
         private String aclId; 
         private String aclName; 
         private String addressIPVersion; 
+        private String createTime; 
         private RelatedListeners relatedListeners; 
         private String requestId; 
         private String resourceGroupId; 
+        private Tags tags; 
+        private Integer totalAclEntry; 
 
         /**
-         * AclEntrys.
+         * The IP entries that you want to remove from the network ACL. Valid values:
+         * <p>
+         * 
+         * *   **entry**: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).
+         * *   **comment**: the description of the network ACL.
          */
         public Builder aclEntrys(AclEntrys aclEntrys) {
             this.aclEntrys = aclEntrys;
@@ -118,7 +158,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AclId.
+         * The ID of the network ACL.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -126,7 +166,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AclName.
+         * The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of each ACL must be unique within a region. Fuzzy match is supported.
          */
         public Builder aclName(String aclName) {
             this.aclName = aclName;
@@ -134,7 +174,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AddressIPVersion.
+         * The IP version. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -142,7 +182,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RelatedListeners.
+         * The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * The listeners that are associated with the network ACL.
          */
         public Builder relatedListeners(RelatedListeners relatedListeners) {
             this.relatedListeners = relatedListeners;
@@ -150,7 +198,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,10 +206,26 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The tags.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The total number of access control entries.
+         */
+        public Builder totalAclEntry(Integer totalAclEntry) {
+            this.totalAclEntry = totalAclEntry;
             return this;
         }
 
@@ -210,7 +274,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private String aclEntryIP; 
 
             /**
-             * AclEntryComment.
+             * The description of the ACL entry.
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -218,7 +282,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AclEntryIP.
+             * The IP address specified in the ACL entry.
              */
             public Builder aclEntryIP(String aclEntryIP) {
                 this.aclEntryIP = aclEntryIP;
@@ -336,7 +400,11 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * AclType.
+             * The type of ACL. Valid values:
+             * <p>
+             * 
+             * *   **black**
+             * *   **white**
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -344,7 +412,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerPort.
+             * The frontend port of the listener with which the ACL is associated.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -352,7 +420,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * The CLB instance ID.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -360,7 +428,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The type of protocol that the associated listener uses.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -410,6 +478,108 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
             public RelatedListeners build() {
                 return new RelatedListeners(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * The tag key.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

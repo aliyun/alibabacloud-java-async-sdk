@@ -100,6 +100,10 @@ public class DescribeLoadBalancersRequest extends Request {
     private String slaveZoneId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("Tags")
     private String tags;
 
@@ -134,6 +138,7 @@ public class DescribeLoadBalancersRequest extends Request {
         this.serverId = builder.serverId;
         this.serverIntranetAddress = builder.serverIntranetAddress;
         this.slaveZoneId = builder.slaveZoneId;
+        this.tag = builder.tag;
         this.tags = builder.tags;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -300,6 +305,13 @@ public class DescribeLoadBalancersRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -342,6 +354,7 @@ public class DescribeLoadBalancersRequest extends Request {
         private String serverId; 
         private String serverIntranetAddress; 
         private String slaveZoneId; 
+        private java.util.List < Tag> tag; 
         private String tags; 
         private String vSwitchId; 
         private String vpcId; 
@@ -350,36 +363,37 @@ public class DescribeLoadBalancersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancersRequest response) {
-            super(response);
-            this.address = response.address;
-            this.addressIPVersion = response.addressIPVersion;
-            this.addressType = response.addressType;
-            this.internetChargeType = response.internetChargeType;
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerName = response.loadBalancerName;
-            this.loadBalancerStatus = response.loadBalancerStatus;
-            this.masterZoneId = response.masterZoneId;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverId = response.serverId;
-            this.serverIntranetAddress = response.serverIntranetAddress;
-            this.slaveZoneId = response.slaveZoneId;
-            this.tags = response.tags;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeLoadBalancersRequest request) {
+            super(request);
+            this.address = request.address;
+            this.addressIPVersion = request.addressIPVersion;
+            this.addressType = request.addressType;
+            this.internetChargeType = request.internetChargeType;
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerName = request.loadBalancerName;
+            this.loadBalancerStatus = request.loadBalancerStatus;
+            this.masterZoneId = request.masterZoneId;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverId = request.serverId;
+            this.serverIntranetAddress = request.serverIntranetAddress;
+            this.slaveZoneId = request.slaveZoneId;
+            this.tag = request.tag;
+            this.tags = request.tags;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * Address.
+         * The IP address that the CLB instance uses to provide services.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -388,7 +402,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * AddressIPVersion.
+         * The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -397,7 +411,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * AddressType.
+         * The network type of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.
+         * *   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -406,7 +424,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of Internet data transfer. Valid values:
+         * <p>
+         * 
+         * *   **paybybandwidth:** pay-by-bandwidth.
+         * *   **paybytraffic:** pay-by-data-transfer.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -415,7 +437,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
+         * <p>
+         * 
+         * You can specify up to 10 IDs. Separate multiple IDs with commas (,).
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -424,7 +449,12 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * The name of the CLB instance.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * 
+         * You can specify up to 10 names. Separate multiple names with commas (,).
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -433,7 +463,12 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerStatus.
+         * The status of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.
+         * *   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.
+         * *   **locked:** The CLB instance is locked. After a CLB instance expires, it is locked for seven days. A locked CLB instance cannot forward traffic and you cannot perform operations on the locked CLB instance. However, other settings such as the IP address are retained.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -442,7 +477,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * MasterZoneId.
+         * The ID of the primary zone to which the CLB instance belongs.
          */
         public Builder masterZoneId(String masterZoneId) {
             this.putQueryParameter("MasterZoneId", masterZoneId);
@@ -451,7 +486,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the internal-facing CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **vpc:** VPC.
+         * *   **classic:** classic network.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -478,7 +517,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -487,7 +526,12 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: **1** to **100**.
+         * 
+         * >  If you specify the **PageSize** parameter, you must also specify the **PageNumber** parameter.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -496,7 +540,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   Set the value to **PayOnDemand**.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -505,7 +552,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the CLB instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -514,7 +564,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -541,7 +591,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * ServerId.
+         * The ID of the backend server that is added to the CLB instance.
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -550,7 +600,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * ServerIntranetAddress.
+         * The private IP address of the backend server that is added to the CLB instance.
+         * <p>
+         * 
+         * You can specify multiple IP addresses. Separate multiple IP addresses with commas (,).
          */
         public Builder serverIntranetAddress(String serverIntranetAddress) {
             this.putQueryParameter("ServerIntranetAddress", serverIntranetAddress);
@@ -559,7 +612,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * SlaveZoneId.
+         * The ID of the secondary zone to which the CLB instance belongs.
+         * <p>
+         * 
+         * CLB instances on Alibaba Finance Cloud do not support cross-zone deployment.
          */
         public Builder slaveZoneId(String slaveZoneId) {
             this.putQueryParameter("SlaveZoneId", slaveZoneId);
@@ -568,7 +624,19 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.
+         * <p>
+         * 
+         * You can specify up to 10 tags in each call.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -577,7 +645,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the CLB instance belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -586,7 +654,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the CLB instance belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -601,4 +669,71 @@ public class DescribeLoadBalancersRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be at most 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -115,18 +115,21 @@ public class DeleteMasterSlaveServerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMasterSlaveServerGroupRequest response) {
-            super(response);
-            this.masterSlaveServerGroupId = response.masterSlaveServerGroupId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteMasterSlaveServerGroupRequest request) {
+            super(request);
+            this.masterSlaveServerGroupId = request.masterSlaveServerGroupId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * MasterSlaveServerGroupId.
+         * The ID of the active/standby server group to be deleted.
+         * <p>
+         * 
+         * >  An active/standby server group in use cannot be deleted.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.putQueryParameter("MasterSlaveServerGroupId", masterSlaveServerGroupId);
@@ -153,7 +156,7 @@ public class DeleteMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
