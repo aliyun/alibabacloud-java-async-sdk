@@ -90,6 +90,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExportDoNotCallNumbersResponse> exportDoNotCallNumbers(ExportDoNotCallNumbersRequest request);
 
+    CompletableFuture<GetAccessChannelOfStagingResponse> getAccessChannelOfStaging(GetAccessChannelOfStagingRequest request);
+
     CompletableFuture<GetAudioFileResponse> getAudioFile(GetAudioFileRequest request);
 
     CompletableFuture<GetAudioFileDownloadUrlResponse> getAudioFileDownloadUrl(GetAudioFileDownloadUrlRequest request);
@@ -292,6 +294,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PollUserStatusResponse> pollUserStatus(PollUserStatusRequest request);
 
+    CompletableFuture<ProcessAliMeCallbackOfStagingResponse> processAliMeCallbackOfStaging(ProcessAliMeCallbackOfStagingRequest request);
+
     CompletableFuture<PublishContactFlowResponse> publishContactFlow(PublishContactFlowRequest request);
 
     CompletableFuture<ReadyForServiceResponse> readyForService(ReadyForServiceRequest request);
@@ -363,6 +367,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnmuteCallResponse> unmuteCall(UnmuteCallRequest request);
 
     CompletableFuture<UnregisterDeviceResponse> unregisterDevice(UnregisterDeviceRequest request);
+
+    CompletableFuture<UpdateCampaignResponse> updateCampaign(UpdateCampaignRequest request);
 
     CompletableFuture<UpdateConfigItemsResponse> updateConfigItems(UpdateConfigItemsRequest request);
 

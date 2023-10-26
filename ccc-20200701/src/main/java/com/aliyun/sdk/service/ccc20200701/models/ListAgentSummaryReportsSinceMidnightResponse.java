@@ -16,6 +16,10 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ListAgentSummaryReportsSinceMidnightResponseBody body;
@@ -23,6 +27,7 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
     private ListAgentSummaryReportsSinceMidnightResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListAgentSummaryReportsSinceMidnightResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
     public interface Builder extends Response.Builder<ListAgentSummaryReportsSinceMidnightResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListAgentSummaryReportsSinceMidnightResponseBody body);
 
@@ -64,6 +78,7 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
             extends Response.BuilderImpl<ListAgentSummaryReportsSinceMidnightResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListAgentSummaryReportsSinceMidnightResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
         private BuilderImpl(ListAgentSummaryReportsSinceMidnightResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ListAgentSummaryReportsSinceMidnightResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

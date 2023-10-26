@@ -18,7 +18,6 @@ public class ReleaseCallRequest extends Request {
 
     @Query
     @NameInMap("DeviceId")
-    @Validation(required = true)
     private String deviceId;
 
     @Query

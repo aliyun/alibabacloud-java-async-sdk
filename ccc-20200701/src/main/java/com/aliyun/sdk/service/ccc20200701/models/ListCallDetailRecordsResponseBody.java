@@ -177,6 +177,9 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("EstablishedTime")
         private Long establishedTime;
 
+        @NameInMap("HeldTime")
+        private Long heldTime;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -247,6 +250,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             this.dialingTime = builder.dialingTime;
             this.earlyMediaState = builder.earlyMediaState;
             this.establishedTime = builder.establishedTime;
+            this.heldTime = builder.heldTime;
             this.instanceId = builder.instanceId;
             this.ivrTime = builder.ivrTime;
             this.queueTime = builder.queueTime;
@@ -378,6 +382,13 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
          */
         public Long getEstablishedTime() {
             return this.establishedTime;
+        }
+
+        /**
+         * @return heldTime
+         */
+        public Long getHeldTime() {
+            return this.heldTime;
         }
 
         /**
@@ -522,6 +533,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private Long dialingTime; 
             private String earlyMediaState; 
             private Long establishedTime; 
+            private Long heldTime; 
             private String instanceId; 
             private Long ivrTime; 
             private Long queueTime; 
@@ -658,6 +670,14 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
              */
             public Builder establishedTime(Long establishedTime) {
                 this.establishedTime = establishedTime;
+                return this;
+            }
+
+            /**
+             * HeldTime.
+             */
+            public Builder heldTime(Long heldTime) {
+                this.heldTime = heldTime;
                 return this;
             }
 
