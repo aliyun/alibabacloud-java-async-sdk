@@ -30,6 +30,9 @@ public class GrafanaWorkspaceAccount extends TeaModel {
     @NameInMap("orgs")
     private java.util.List < GrafanaWorkspaceUserOrg > orgs;
 
+    @NameInMap("type")
+    private String type;
+
     private GrafanaWorkspaceAccount(Builder builder) {
         this.accountId = builder.accountId;
         this.accountNotes = builder.accountNotes;
@@ -37,6 +40,7 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         this.aliyunUserName = builder.aliyunUserName;
         this.gmtCreate = builder.gmtCreate;
         this.orgs = builder.orgs;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -89,6 +93,13 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         return this.orgs;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private Long accountId; 
         private String accountNotes; 
@@ -96,6 +107,7 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         private String aliyunUserName; 
         private Float gmtCreate; 
         private java.util.List < GrafanaWorkspaceUserOrg > orgs; 
+        private String type; 
 
         /**
          * accountId.
@@ -142,6 +154,14 @@ public class GrafanaWorkspaceAccount extends TeaModel {
          */
         public Builder orgs(java.util.List < GrafanaWorkspaceUserOrg > orgs) {
             this.orgs = orgs;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

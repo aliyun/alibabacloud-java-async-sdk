@@ -50,7 +50,7 @@ public class ConfigAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of turning on or turning off the main switch of the ARMS agent or the main switch status of the ARMS agent.
+         * The result of turning on or off the main switch of the ARMS agent or the main switch status of the ARMS agent. Indicates whether the request was successful. Valid values: success failed The main switch status of the ARMS agent. Valid values: true false
          */
         public Builder data(String data) {
             this.data = data;

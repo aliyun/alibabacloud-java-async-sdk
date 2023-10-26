@@ -84,6 +84,9 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         @NameInMap("Pid")
         private String pid;
 
+        @NameInMap("ProblemId")
+        private String problemId;
+
         @NameInMap("Title")
         private String title;
 
@@ -95,6 +98,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             this.desc = builder.desc;
             this.level = builder.level;
             this.pid = builder.pid;
+            this.problemId = builder.problemId;
             this.title = builder.title;
             this.type = builder.type;
         }
@@ -136,6 +140,13 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return problemId
+         */
+        public String getProblemId() {
+            return this.problemId;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -154,6 +165,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             private String desc; 
             private String level; 
             private String pid; 
+            private String problemId; 
             private String title; 
             private String type; 
 
@@ -186,6 +198,14 @@ public class ListInsightsEventsResponseBody extends TeaModel {
              */
             public Builder pid(String pid) {
                 this.pid = pid;
+                return this;
+            }
+
+            /**
+             * ProblemId.
+             */
+            public Builder problemId(String problemId) {
+                this.problemId = problemId;
                 return this;
             }
 

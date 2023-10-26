@@ -601,13 +601,25 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         @NameInMap("IpType")
         private Integer ipType;
 
+        @NameInMap("IsOpenTrace")
+        private Boolean isOpenTrace;
+
         @NameInMap("MonitorSamples")
         private Integer monitorSamples;
+
+        @NameInMap("TraceClientType")
+        private Integer traceClientType;
+
+        @NameInMap("XtraceRegion")
+        private String xtraceRegion;
 
         private CommonSetting(Builder builder) {
             this.customHost = builder.customHost;
             this.ipType = builder.ipType;
+            this.isOpenTrace = builder.isOpenTrace;
             this.monitorSamples = builder.monitorSamples;
+            this.traceClientType = builder.traceClientType;
+            this.xtraceRegion = builder.xtraceRegion;
         }
 
         public static Builder builder() {
@@ -633,16 +645,40 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return isOpenTrace
+         */
+        public Boolean getIsOpenTrace() {
+            return this.isOpenTrace;
+        }
+
+        /**
          * @return monitorSamples
          */
         public Integer getMonitorSamples() {
             return this.monitorSamples;
         }
 
+        /**
+         * @return traceClientType
+         */
+        public Integer getTraceClientType() {
+            return this.traceClientType;
+        }
+
+        /**
+         * @return xtraceRegion
+         */
+        public String getXtraceRegion() {
+            return this.xtraceRegion;
+        }
+
         public static final class Builder {
             private CustomHost customHost; 
             private Integer ipType; 
+            private Boolean isOpenTrace; 
             private Integer monitorSamples; 
+            private Integer traceClientType; 
+            private String xtraceRegion; 
 
             /**
              * CustomHost.
@@ -661,10 +697,34 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
+             * IsOpenTrace.
+             */
+            public Builder isOpenTrace(Boolean isOpenTrace) {
+                this.isOpenTrace = isOpenTrace;
+                return this;
+            }
+
+            /**
              * MonitorSamples.
              */
             public Builder monitorSamples(Integer monitorSamples) {
                 this.monitorSamples = monitorSamples;
+                return this;
+            }
+
+            /**
+             * TraceClientType.
+             */
+            public Builder traceClientType(Integer traceClientType) {
+                this.traceClientType = traceClientType;
+                return this;
+            }
+
+            /**
+             * XtraceRegion.
+             */
+            public Builder xtraceRegion(String xtraceRegion) {
+                this.xtraceRegion = xtraceRegion;
                 return this;
             }
 

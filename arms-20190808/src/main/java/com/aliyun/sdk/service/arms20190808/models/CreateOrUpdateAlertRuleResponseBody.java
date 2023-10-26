@@ -818,6 +818,9 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         @NameInMap("MetricsType")
         private String metricsType;
 
+        @NameInMap("NotifyMode")
+        private String notifyMode;
+
         @NameInMap("NotifyStrategy")
         private String notifyStrategy;
 
@@ -858,6 +861,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             this.level = builder.level;
             this.message = builder.message;
             this.metricsType = builder.metricsType;
+            this.notifyMode = builder.notifyMode;
             this.notifyStrategy = builder.notifyStrategy;
             this.pids = builder.pids;
             this.promQL = builder.promQL;
@@ -1002,6 +1006,13 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return notifyMode
+         */
+        public String getNotifyMode() {
+            return this.notifyMode;
+        }
+
+        /**
          * @return notifyStrategy
          */
         public String getNotifyStrategy() {
@@ -1069,6 +1080,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             private String level; 
             private String message; 
             private String metricsType; 
+            private String notifyMode; 
             private String notifyStrategy; 
             private java.util.List < String > pids; 
             private String promQL; 
@@ -1250,6 +1262,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
              */
             public Builder metricsType(String metricsType) {
                 this.metricsType = metricsType;
+                return this;
+            }
+
+            /**
+             * NotifyMode.
+             */
+            public Builder notifyMode(String notifyMode) {
+                this.notifyMode = notifyMode;
                 return this;
             }
 

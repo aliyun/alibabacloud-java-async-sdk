@@ -70,6 +70,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDispatchRuleResponse> createDispatchRule(CreateDispatchRuleRequest request);
 
+    CompletableFuture<CreateEnvCustomJobResponse> createEnvCustomJob(CreateEnvCustomJobRequest request);
+
+    CompletableFuture<CreateEnvPodMonitorResponse> createEnvPodMonitor(CreateEnvPodMonitorRequest request);
+
+    CompletableFuture<CreateEnvServiceMonitorResponse> createEnvServiceMonitor(CreateEnvServiceMonitorRequest request);
+
+    CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
+
     CompletableFuture<CreateIntegrationResponse> createIntegration(CreateIntegrationRequest request);
 
     CompletableFuture<CreateOrUpdateAlertRuleResponse> createOrUpdateAlertRule(CreateOrUpdateAlertRuleRequest request);
@@ -126,6 +134,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDispatchRuleResponse> deleteDispatchRule(DeleteDispatchRuleRequest request);
 
+    CompletableFuture<DeleteEnvCustomJobResponse> deleteEnvCustomJob(DeleteEnvCustomJobRequest request);
+
+    CompletableFuture<DeleteEnvPodMonitorResponse> deleteEnvPodMonitor(DeleteEnvPodMonitorRequest request);
+
+    CompletableFuture<DeleteEnvServiceMonitorResponse> deleteEnvServiceMonitor(DeleteEnvServiceMonitorRequest request);
+
+    CompletableFuture<DeleteEnvironmentResponse> deleteEnvironment(DeleteEnvironmentRequest request);
+
+    CompletableFuture<DeleteEnvironmentFeatureResponse> deleteEnvironmentFeature(DeleteEnvironmentFeatureRequest request);
+
     CompletableFuture<DeleteEventBridgeIntegrationResponse> deleteEventBridgeIntegration(DeleteEventBridgeIntegrationRequest request);
 
     CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request);
@@ -169,6 +187,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeContactsResponse> describeContacts(DescribeContactsRequest request);
 
     CompletableFuture<DescribeDispatchRuleResponse> describeDispatchRule(DescribeDispatchRuleRequest request);
+
+    CompletableFuture<DescribeEnvCustomJobResponse> describeEnvCustomJob(DescribeEnvCustomJobRequest request);
+
+    CompletableFuture<DescribeEnvPodMonitorResponse> describeEnvPodMonitor(DescribeEnvPodMonitorRequest request);
+
+    CompletableFuture<DescribeEnvServiceMonitorResponse> describeEnvServiceMonitor(DescribeEnvServiceMonitorRequest request);
+
+    CompletableFuture<DescribeEnvironmentResponse> describeEnvironment(DescribeEnvironmentRequest request);
 
     CompletableFuture<DescribeIMRobotsResponse> describeIMRobots(DescribeIMRobotsRequest request);
 
@@ -256,6 +282,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ImportAppAlertRulesResponse> importAppAlertRules(ImportAppAlertRulesRequest request);
 
+    CompletableFuture<InitEnvironmentResponse> initEnvironment(InitEnvironmentRequest request);
+
     CompletableFuture<InstallCmsExporterResponse> installCmsExporter(InstallCmsExporterRequest request);
 
     /**
@@ -284,9 +312,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDispatchRuleResponse> listDispatchRule(ListDispatchRuleRequest request);
 
+    CompletableFuture<ListEnvCustomJobsResponse> listEnvCustomJobs(ListEnvCustomJobsRequest request);
+
+    CompletableFuture<ListEnvPodMonitorsResponse> listEnvPodMonitors(ListEnvPodMonitorsRequest request);
+
+    CompletableFuture<ListEnvServiceMonitorsResponse> listEnvServiceMonitors(ListEnvServiceMonitorsRequest request);
+
     CompletableFuture<ListEscalationPoliciesResponse> listEscalationPolicies(ListEscalationPoliciesRequest request);
 
     CompletableFuture<ListEventBridgeIntegrationsResponse> listEventBridgeIntegrations(ListEventBridgeIntegrationsRequest request);
+
+    CompletableFuture<ListGrafanaWorkspaceResponse> listGrafanaWorkspace(ListGrafanaWorkspaceRequest request);
 
     CompletableFuture<ListInsightsEventsResponse> listInsightsEvents(ListInsightsEventsRequest request);
 
@@ -357,6 +393,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveAliClusterIdsFromPrometheusGlobalViewResponse> removeAliClusterIdsFromPrometheusGlobalView(RemoveAliClusterIdsFromPrometheusGlobalViewRequest request);
 
     CompletableFuture<RemoveSourcesFromPrometheusGlobalViewResponse> removeSourcesFromPrometheusGlobalView(RemoveSourcesFromPrometheusGlobalViewRequest request);
+
+    CompletableFuture<RestartEnvironmentFeatureResponse> restartEnvironmentFeature(RestartEnvironmentFeatureRequest request);
 
     CompletableFuture<SaveTraceAppConfigResponse> saveTraceAppConfig(SaveTraceAppConfigRequest request);
 
@@ -447,6 +485,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAlertRuleResponse> updateAlertRule(UpdateAlertRuleRequest request);
 
     CompletableFuture<UpdateDispatchRuleResponse> updateDispatchRule(UpdateDispatchRuleRequest request);
+
+    CompletableFuture<UpdateEnvCustomJobResponse> updateEnvCustomJob(UpdateEnvCustomJobRequest request);
+
+    CompletableFuture<UpdateEnvPodMonitorResponse> updateEnvPodMonitor(UpdateEnvPodMonitorRequest request);
+
+    CompletableFuture<UpdateEnvServiceMonitorResponse> updateEnvServiceMonitor(UpdateEnvServiceMonitorRequest request);
+
+    CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request);
 
     CompletableFuture<UpdateIntegrationResponse> updateIntegration(UpdateIntegrationRequest request);
 

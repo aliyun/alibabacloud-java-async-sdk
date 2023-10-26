@@ -107,11 +107,11 @@ public class ConfigAppRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on or turn off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.
+         * Specifies whether to turn on or off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.
          * <p>
          * 
-         * *   `true`
-         * *   `false`
+         * *   `true`: turns on the switch
+         * *   `false`: turns off the switch
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
