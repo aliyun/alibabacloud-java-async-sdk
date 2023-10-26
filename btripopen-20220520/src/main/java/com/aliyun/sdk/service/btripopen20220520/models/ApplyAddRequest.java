@@ -21,6 +21,10 @@ public class ApplyAddRequest extends Request {
     private Integer budgetMerge;
 
     @Body
+    @NameInMap("car_rule")
+    private CarRule carRule;
+
+    @Body
     @NameInMap("corp_name")
     private String corpName;
 
@@ -156,6 +160,7 @@ public class ApplyAddRequest extends Request {
         super(builder);
         this.budget = builder.budget;
         this.budgetMerge = builder.budgetMerge;
+        this.carRule = builder.carRule;
         this.corpName = builder.corpName;
         this.departId = builder.departId;
         this.departName = builder.departName;
@@ -215,6 +220,13 @@ public class ApplyAddRequest extends Request {
      */
     public Integer getBudgetMerge() {
         return this.budgetMerge;
+    }
+
+    /**
+     * @return carRule
+     */
+    public CarRule getCarRule() {
+        return this.carRule;
     }
 
     /**
@@ -444,6 +456,7 @@ public class ApplyAddRequest extends Request {
     public static final class Builder extends Request.Builder<ApplyAddRequest, Builder> {
         private Long budget; 
         private Integer budgetMerge; 
+        private CarRule carRule; 
         private String corpName; 
         private String departId; 
         private String departName; 
@@ -485,6 +498,7 @@ public class ApplyAddRequest extends Request {
             super(request);
             this.budget = request.budget;
             this.budgetMerge = request.budgetMerge;
+            this.carRule = request.carRule;
             this.corpName = request.corpName;
             this.departId = request.departId;
             this.departName = request.departName;
@@ -534,6 +548,16 @@ public class ApplyAddRequest extends Request {
         public Builder budgetMerge(Integer budgetMerge) {
             this.putBodyParameter("budget_merge", budgetMerge);
             this.budgetMerge = budgetMerge;
+            return this;
+        }
+
+        /**
+         * car_rule.
+         */
+        public Builder carRule(CarRule carRule) {
+            String carRuleShrink = shrink(carRule, "car_rule", "json");
+            this.putBodyParameter("car_rule", carRuleShrink);
+            this.carRule = carRule;
             return this;
         }
 
@@ -839,6 +863,67 @@ public class ApplyAddRequest extends Request {
 
     } 
 
+    public static class CarRule extends TeaModel {
+        @NameInMap("scenario_template_id")
+        private String scenarioTemplateId;
+
+        @NameInMap("scenario_template_name")
+        private String scenarioTemplateName;
+
+        private CarRule(Builder builder) {
+            this.scenarioTemplateId = builder.scenarioTemplateId;
+            this.scenarioTemplateName = builder.scenarioTemplateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scenarioTemplateId
+         */
+        public String getScenarioTemplateId() {
+            return this.scenarioTemplateId;
+        }
+
+        /**
+         * @return scenarioTemplateName
+         */
+        public String getScenarioTemplateName() {
+            return this.scenarioTemplateName;
+        }
+
+        public static final class Builder {
+            private String scenarioTemplateId; 
+            private String scenarioTemplateName; 
+
+            /**
+             * scenario_template_id.
+             */
+            public Builder scenarioTemplateId(String scenarioTemplateId) {
+                this.scenarioTemplateId = scenarioTemplateId;
+                return this;
+            }
+
+            /**
+             * scenario_template_name.
+             */
+            public Builder scenarioTemplateName(String scenarioTemplateName) {
+                this.scenarioTemplateName = scenarioTemplateName;
+                return this;
+            }
+
+            public CarRule build() {
+                return new CarRule(this);
+            } 
+
+        } 
+
+    }
     public static class ExternalTravelerList extends TeaModel {
         @NameInMap("user_name")
         private String userName;
@@ -2041,6 +2126,69 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    public static class CarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        @Validation(required = true)
+        private String cityCode;
+
+        @NameInMap("city_name")
+        @Validation(required = true)
+        private String cityName;
+
+        private CarCitySet(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarCitySet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            public CarCitySet build() {
+                return new CarCitySet(this);
+            } 
+
+        } 
+
+    }
     public static class TravelerStandardHotelCitys extends TeaModel {
         @NameInMap("city_code")
         private String cityCode;
@@ -2126,6 +2274,9 @@ public class ApplyAddRequest extends Request {
         @NameInMap("business_discount")
         private Integer businessDiscount;
 
+        @NameInMap("car_city_set")
+        private java.util.List < CarCitySet> carCitySet;
+
         @NameInMap("economy_discount")
         private Integer economyDiscount;
 
@@ -2155,6 +2306,7 @@ public class ApplyAddRequest extends Request {
 
         private TravelerStandard(Builder builder) {
             this.businessDiscount = builder.businessDiscount;
+            this.carCitySet = builder.carCitySet;
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
@@ -2179,6 +2331,13 @@ public class ApplyAddRequest extends Request {
          */
         public Integer getBusinessDiscount() {
             return this.businessDiscount;
+        }
+
+        /**
+         * @return carCitySet
+         */
+        public java.util.List < CarCitySet> getCarCitySet() {
+            return this.carCitySet;
         }
 
         /**
@@ -2246,6 +2405,7 @@ public class ApplyAddRequest extends Request {
 
         public static final class Builder {
             private Integer businessDiscount; 
+            private java.util.List < CarCitySet> carCitySet; 
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
@@ -2261,6 +2421,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder businessDiscount(Integer businessDiscount) {
                 this.businessDiscount = businessDiscount;
+                return this;
+            }
+
+            /**
+             * car_city_set.
+             */
+            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+                this.carCitySet = carCitySet;
                 return this;
             }
 

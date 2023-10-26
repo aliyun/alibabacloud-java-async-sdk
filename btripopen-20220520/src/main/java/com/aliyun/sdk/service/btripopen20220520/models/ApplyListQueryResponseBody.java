@@ -312,6 +312,67 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    public static class CarRule extends TeaModel {
+        @NameInMap("scenario_template_id")
+        private String scenarioTemplateId;
+
+        @NameInMap("scenario_template_name")
+        private String scenarioTemplateName;
+
+        private CarRule(Builder builder) {
+            this.scenarioTemplateId = builder.scenarioTemplateId;
+            this.scenarioTemplateName = builder.scenarioTemplateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scenarioTemplateId
+         */
+        public String getScenarioTemplateId() {
+            return this.scenarioTemplateId;
+        }
+
+        /**
+         * @return scenarioTemplateName
+         */
+        public String getScenarioTemplateName() {
+            return this.scenarioTemplateName;
+        }
+
+        public static final class Builder {
+            private String scenarioTemplateId; 
+            private String scenarioTemplateName; 
+
+            /**
+             * scenario_template_id.
+             */
+            public Builder scenarioTemplateId(String scenarioTemplateId) {
+                this.scenarioTemplateId = scenarioTemplateId;
+                return this;
+            }
+
+            /**
+             * scenario_template_name.
+             */
+            public Builder scenarioTemplateName(String scenarioTemplateName) {
+                this.scenarioTemplateName = scenarioTemplateName;
+                return this;
+            }
+
+            public CarRule build() {
+                return new CarRule(this);
+            } 
+
+        } 
+
+    }
     public static class ExternalTravelerList extends TeaModel {
         @NameInMap("user_name")
         private String userName;
@@ -855,7 +916,71 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    public static class CarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        private String cityCode;
+
+        @NameInMap("city_name")
+        private String cityName;
+
+        private CarCitySet(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarCitySet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            public CarCitySet build() {
+                return new CarCitySet(this);
+            } 
+
+        } 
+
+    }
     public static class TravelerList extends TeaModel {
+        @NameInMap("car_city_set")
+        private java.util.List < CarCitySet> carCitySet;
+
         @NameInMap("job_no")
         private String jobNo;
 
@@ -866,6 +991,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String userName;
 
         private TravelerList(Builder builder) {
+            this.carCitySet = builder.carCitySet;
             this.jobNo = builder.jobNo;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -877,6 +1003,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         public static TravelerList create() {
             return builder().build();
+        }
+
+        /**
+         * @return carCitySet
+         */
+        public java.util.List < CarCitySet> getCarCitySet() {
+            return this.carCitySet;
         }
 
         /**
@@ -901,9 +1034,18 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < CarCitySet> carCitySet; 
             private String jobNo; 
             private String userId; 
             private String userName; 
+
+            /**
+             * car_city_set.
+             */
+            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+                this.carCitySet = carCitySet;
+                return this;
+            }
 
             /**
              * job_no.
@@ -942,6 +1084,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         @NameInMap("approver_list")
         private java.util.List < ApproverList> approverList;
+
+        @NameInMap("car_rule")
+        private CarRule carRule;
 
         @NameInMap("corp_id")
         private String corpId;
@@ -1021,6 +1166,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private ModuleList(Builder builder) {
             this.applyShowId = builder.applyShowId;
             this.approverList = builder.approverList;
+            this.carRule = builder.carRule;
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
             this.departId = builder.departId;
@@ -1068,6 +1214,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
          */
         public java.util.List < ApproverList> getApproverList() {
             return this.approverList;
+        }
+
+        /**
+         * @return carRule
+         */
+        public CarRule getCarRule() {
+            return this.carRule;
         }
 
         /**
@@ -1248,6 +1401,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String applyShowId; 
             private java.util.List < ApproverList> approverList; 
+            private CarRule carRule; 
             private String corpId; 
             private String corpName; 
             private String departId; 
@@ -1287,6 +1441,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder approverList(java.util.List < ApproverList> approverList) {
                 this.approverList = approverList;
+                return this;
+            }
+
+            /**
+             * car_rule.
+             */
+            public Builder carRule(CarRule carRule) {
+                this.carRule = carRule;
                 return this;
             }
 

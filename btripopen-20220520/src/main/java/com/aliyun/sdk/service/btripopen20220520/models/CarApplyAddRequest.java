@@ -23,6 +23,10 @@ public class CarApplyAddRequest extends Request {
     private String city;
 
     @Body
+    @NameInMap("city_code_set")
+    private String cityCodeSet;
+
+    @Body
     @NameInMap("date")
     @Validation(required = true)
     private String date;
@@ -80,6 +84,10 @@ public class CarApplyAddRequest extends Request {
     private String title;
 
     @Body
+    @NameInMap("traveler_standard")
+    private java.util.List < TravelerStandard> travelerStandard;
+
+    @Body
     @NameInMap("user_id")
     @Validation(required = true)
     private String userId;
@@ -92,6 +100,7 @@ public class CarApplyAddRequest extends Request {
         super(builder);
         this.cause = builder.cause;
         this.city = builder.city;
+        this.cityCodeSet = builder.cityCodeSet;
         this.date = builder.date;
         this.finishedDate = builder.finishedDate;
         this.projectCode = builder.projectCode;
@@ -104,6 +113,7 @@ public class CarApplyAddRequest extends Request {
         this.timesType = builder.timesType;
         this.timesUsed = builder.timesUsed;
         this.title = builder.title;
+        this.travelerStandard = builder.travelerStandard;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
@@ -133,6 +143,13 @@ public class CarApplyAddRequest extends Request {
      */
     public String getCity() {
         return this.city;
+    }
+
+    /**
+     * @return cityCodeSet
+     */
+    public String getCityCodeSet() {
+        return this.cityCodeSet;
     }
 
     /**
@@ -220,6 +237,13 @@ public class CarApplyAddRequest extends Request {
     }
 
     /**
+     * @return travelerStandard
+     */
+    public java.util.List < TravelerStandard> getTravelerStandard() {
+        return this.travelerStandard;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -236,6 +260,7 @@ public class CarApplyAddRequest extends Request {
     public static final class Builder extends Request.Builder<CarApplyAddRequest, Builder> {
         private String cause; 
         private String city; 
+        private String cityCodeSet; 
         private String date; 
         private String finishedDate; 
         private String projectCode; 
@@ -248,6 +273,7 @@ public class CarApplyAddRequest extends Request {
         private Integer timesType; 
         private Integer timesUsed; 
         private String title; 
+        private java.util.List < TravelerStandard> travelerStandard; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -259,6 +285,7 @@ public class CarApplyAddRequest extends Request {
             super(request);
             this.cause = request.cause;
             this.city = request.city;
+            this.cityCodeSet = request.cityCodeSet;
             this.date = request.date;
             this.finishedDate = request.finishedDate;
             this.projectCode = request.projectCode;
@@ -271,6 +298,7 @@ public class CarApplyAddRequest extends Request {
             this.timesType = request.timesType;
             this.timesUsed = request.timesUsed;
             this.title = request.title;
+            this.travelerStandard = request.travelerStandard;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
@@ -290,6 +318,15 @@ public class CarApplyAddRequest extends Request {
         public Builder city(String city) {
             this.putBodyParameter("city", city);
             this.city = city;
+            return this;
+        }
+
+        /**
+         * city_code_set.
+         */
+        public Builder cityCodeSet(String cityCodeSet) {
+            this.putBodyParameter("city_code_set", cityCodeSet);
+            this.cityCodeSet = cityCodeSet;
             return this;
         }
 
@@ -402,6 +439,16 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
+         * traveler_standard.
+         */
+        public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+            String travelerStandardShrink = shrink(travelerStandard, "traveler_standard", "json");
+            this.putBodyParameter("traveler_standard", travelerStandardShrink);
+            this.travelerStandard = travelerStandard;
+            return this;
+        }
+
+        /**
          * user_id.
          */
         public Builder userId(String userId) {
@@ -426,4 +473,128 @@ public class CarApplyAddRequest extends Request {
 
     } 
 
+    public static class CarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        @Validation(required = true)
+        private String cityCode;
+
+        @NameInMap("city_name")
+        @Validation(required = true)
+        private String cityName;
+
+        private CarCitySet(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarCitySet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            public CarCitySet build() {
+                return new CarCitySet(this);
+            } 
+
+        } 
+
+    }
+    public static class TravelerStandard extends TeaModel {
+        @NameInMap("car_city_set")
+        private java.util.List < CarCitySet> carCitySet;
+
+        @NameInMap("user_id")
+        private String userId;
+
+        private TravelerStandard(Builder builder) {
+            this.carCitySet = builder.carCitySet;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TravelerStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return carCitySet
+         */
+        public java.util.List < CarCitySet> getCarCitySet() {
+            return this.carCitySet;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private java.util.List < CarCitySet> carCitySet; 
+            private String userId; 
+
+            /**
+             * car_city_set.
+             */
+            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+                this.carCitySet = carCitySet;
+                return this;
+            }
+
+            /**
+             * user_id.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public TravelerStandard build() {
+                return new TravelerStandard(this);
+            } 
+
+        } 
+
+    }
 }

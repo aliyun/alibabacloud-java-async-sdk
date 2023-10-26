@@ -633,6 +633,128 @@ public class CarApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    public static class CarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        private String cityCode;
+
+        @NameInMap("city_name")
+        private String cityName;
+
+        private CarCitySet(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarCitySet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            public CarCitySet build() {
+                return new CarCitySet(this);
+            } 
+
+        } 
+
+    }
+    public static class TravelerStandard extends TeaModel {
+        @NameInMap("car_city_set")
+        private java.util.List < CarCitySet> carCitySet;
+
+        @NameInMap("user_id")
+        private String userId;
+
+        private TravelerStandard(Builder builder) {
+            this.carCitySet = builder.carCitySet;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TravelerStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return carCitySet
+         */
+        public java.util.List < CarCitySet> getCarCitySet() {
+            return this.carCitySet;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private java.util.List < CarCitySet> carCitySet; 
+            private String userId; 
+
+            /**
+             * car_city_set.
+             */
+            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+                this.carCitySet = carCitySet;
+                return this;
+            }
+
+            /**
+             * user_id.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public TravelerStandard build() {
+                return new TravelerStandard(this);
+            } 
+
+        } 
+
+    }
     public static class ApplyList extends TeaModel {
         @NameInMap("approver_list")
         private java.util.List < ApproverList> approverList;
@@ -661,6 +783,9 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_id")
         private String thirdpartId;
 
+        @NameInMap("traveler_standard")
+        private java.util.List < TravelerStandard> travelerStandard;
+
         @NameInMap("trip_cause")
         private String tripCause;
 
@@ -683,6 +808,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.thirdpartId = builder.thirdpartId;
+            this.travelerStandard = builder.travelerStandard;
             this.tripCause = builder.tripCause;
             this.tripTitle = builder.tripTitle;
             this.userId = builder.userId;
@@ -761,6 +887,13 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return travelerStandard
+         */
+        public java.util.List < TravelerStandard> getTravelerStandard() {
+            return this.travelerStandard;
+        }
+
+        /**
          * @return tripCause
          */
         public String getTripCause() {
@@ -798,6 +931,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
             private Integer status; 
             private String statusDesc; 
             private String thirdpartId; 
+            private java.util.List < TravelerStandard> travelerStandard; 
             private String tripCause; 
             private String tripTitle; 
             private String userId; 
@@ -872,6 +1006,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
              */
             public Builder thirdpartId(String thirdpartId) {
                 this.thirdpartId = thirdpartId;
+                return this;
+            }
+
+            /**
+             * traveler_standard.
+             */
+            public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+                this.travelerStandard = travelerStandard;
                 return this;
             }
 
