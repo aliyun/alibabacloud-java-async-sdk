@@ -25,6 +25,10 @@ public class ChangeCheckConfigRequest extends Request {
     private ConfigStandardIds configStandardIds;
 
     @Query
+    @NameInMap("Configure")
+    private String configure;
+
+    @Query
     @NameInMap("CycleDays")
     private java.util.List < Integer > cycleDays;
 
@@ -56,11 +60,16 @@ public class ChangeCheckConfigRequest extends Request {
     @NameInMap("StartTime")
     private Integer startTime;
 
+    @Query
+    @NameInMap("Vendors")
+    private java.util.List < String > vendors;
+
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
         this.addedCheck = builder.addedCheck;
         this.configRequirementIds = builder.configRequirementIds;
         this.configStandardIds = builder.configStandardIds;
+        this.configure = builder.configure;
         this.cycleDays = builder.cycleDays;
         this.enableAddCheck = builder.enableAddCheck;
         this.enableAutoCheck = builder.enableAutoCheck;
@@ -69,6 +78,7 @@ public class ChangeCheckConfigRequest extends Request {
         this.removedCheck = builder.removedCheck;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
+        this.vendors = builder.vendors;
     }
 
     public static Builder builder() {
@@ -103,6 +113,13 @@ public class ChangeCheckConfigRequest extends Request {
      */
     public ConfigStandardIds getConfigStandardIds() {
         return this.configStandardIds;
+    }
+
+    /**
+     * @return configure
+     */
+    public String getConfigure() {
+        return this.configure;
     }
 
     /**
@@ -161,10 +178,18 @@ public class ChangeCheckConfigRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return vendors
+     */
+    public java.util.List < String > getVendors() {
+        return this.vendors;
+    }
+
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
         private java.util.List < AddedCheck> addedCheck; 
         private ConfigRequirementIds configRequirementIds; 
         private ConfigStandardIds configStandardIds; 
+        private String configure; 
         private java.util.List < Integer > cycleDays; 
         private Boolean enableAddCheck; 
         private Boolean enableAutoCheck; 
@@ -173,6 +198,7 @@ public class ChangeCheckConfigRequest extends Request {
         private java.util.List < RemovedCheck> removedCheck; 
         private java.util.List < Long > standardIds; 
         private Integer startTime; 
+        private java.util.List < String > vendors; 
 
         private Builder() {
             super();
@@ -183,6 +209,7 @@ public class ChangeCheckConfigRequest extends Request {
             this.addedCheck = request.addedCheck;
             this.configRequirementIds = request.configRequirementIds;
             this.configStandardIds = request.configStandardIds;
+            this.configure = request.configure;
             this.cycleDays = request.cycleDays;
             this.enableAddCheck = request.enableAddCheck;
             this.enableAutoCheck = request.enableAutoCheck;
@@ -191,6 +218,7 @@ public class ChangeCheckConfigRequest extends Request {
             this.removedCheck = request.removedCheck;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
+            this.vendors = request.vendors;
         } 
 
         /**
@@ -219,6 +247,15 @@ public class ChangeCheckConfigRequest extends Request {
             String configStandardIdsShrink = shrink(configStandardIds, "ConfigStandardIds", "json");
             this.putQueryParameter("ConfigStandardIds", configStandardIdsShrink);
             this.configStandardIds = configStandardIds;
+            return this;
+        }
+
+        /**
+         * Configure.
+         */
+        public Builder configure(String configure) {
+            this.putQueryParameter("Configure", configure);
+            this.configure = configure;
             return this;
         }
 
@@ -300,6 +337,15 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Vendors.
+         */
+        public Builder vendors(java.util.List < String > vendors) {
+            this.putQueryParameter("Vendors", vendors);
+            this.vendors = vendors;
             return this;
         }
 
