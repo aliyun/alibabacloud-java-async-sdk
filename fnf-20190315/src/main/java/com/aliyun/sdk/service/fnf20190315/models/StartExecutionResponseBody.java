@@ -134,7 +134,7 @@ public class StartExecutionResponseBody extends TeaModel {
         private String stoppedTime; 
 
         /**
-         * FlowDefinition.
+         * The definition of the flow.
          */
         public Builder flowDefinition(String flowDefinition) {
             this.flowDefinition = flowDefinition;
@@ -142,7 +142,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * FlowName.
+         * The name of the flow.
          */
         public Builder flowName(String flowName) {
             this.flowName = flowName;
@@ -150,7 +150,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Input.
+         * The input of the execution, which is in the JSON format.
          */
         public Builder input(String input) {
             this.input = input;
@@ -158,7 +158,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the execution.
          */
         public Builder name(String name) {
             this.name = name;
@@ -166,7 +166,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * The execution result, which is in the JSON format.
          */
         public Builder output(String output) {
             this.output = output;
@@ -174,7 +174,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * StartedTime.
+         * The time when the execution started.
          */
         public Builder startedTime(String startedTime) {
             this.startedTime = startedTime;
@@ -190,7 +190,14 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The execution state. Valid values:
+         * <p>
+         * 
+         * *   **Running**
+         * *   **Stopped**
+         * *   **Succeeded**
+         * *   **Failed**
+         * *   **TimedOut**
          */
         public Builder status(String status) {
             this.status = status;
@@ -198,7 +205,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * StoppedTime.
+         * The time when the execution stopped.
          */
         public Builder stoppedTime(String stoppedTime) {
             this.stoppedTime = stoppedTime;

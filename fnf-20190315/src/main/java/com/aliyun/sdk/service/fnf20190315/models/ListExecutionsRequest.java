@@ -153,7 +153,7 @@ public class ListExecutionsRequest extends Request {
         } 
 
         /**
-         * ExecutionNamePrefix.
+         * The name prefix of the execution.
          */
         public Builder executionNamePrefix(String executionNamePrefix) {
             this.putQueryParameter("ExecutionNamePrefix", executionNamePrefix);
@@ -162,7 +162,13 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * <p>
+         * 
+         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must start with a letter or an underscore (\_).
+         * *   The name is case-sensitive.
+         * *   The name must be 1 to 128 characters in length.
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -171,7 +177,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of executions to be queried. Valid values: 1 to 100.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -180,7 +186,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The name of the execution to start the query. You can obtain the value from the response data. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -189,7 +195,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -198,7 +204,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * StartedTimeBegin.
+         * The beginning of the time range to query executions. Specify the value in the UTC RFC3339 format.
          */
         public Builder startedTimeBegin(String startedTimeBegin) {
             this.putQueryParameter("StartedTimeBegin", startedTimeBegin);
@@ -207,7 +213,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * StartedTimeEnd.
+         * The end of the time range to query executions. Specify the value in the UTC RFC3339 format.
          */
         public Builder startedTimeEnd(String startedTimeEnd) {
             this.putQueryParameter("StartedTimeEnd", startedTimeEnd);
@@ -216,7 +222,14 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the execution that you want to filter. Valid values:
+         * <p>
+         * 
+         * *   **Running**
+         * *   **Stopped**
+         * *   **Succeeded**
+         * *   **Failed**
+         * *   **TimedOut**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

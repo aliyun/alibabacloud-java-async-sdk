@@ -146,7 +146,7 @@ public class CreateFlowResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * CreatedTime.
+         * The time when the flow was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -154,7 +154,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Definition.
+         * The definition of the flow.
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -162,7 +162,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the flow.
          */
         public Builder description(String description) {
             this.description = description;
@@ -170,7 +170,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * ExecutionMode.
+         * The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
          */
         public Builder executionMode(String executionMode) {
             this.executionMode = executionMode;
@@ -178,7 +178,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The unique ID of the flow.
          */
         public Builder id(String id) {
             this.id = id;
@@ -186,7 +186,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * LastModifiedTime.
+         * The time when the flow was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -194,7 +194,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the flow.
          */
         public Builder name(String name) {
             this.name = name;
@@ -202,7 +202,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. Each time an `HTTP status code` is returned, Serverless Workflow returns a value for the parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RoleArn.
+         * The ARN of the RAM role.
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -218,7 +218,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the flow.
          */
         public Builder type(String type) {
             this.type = type;

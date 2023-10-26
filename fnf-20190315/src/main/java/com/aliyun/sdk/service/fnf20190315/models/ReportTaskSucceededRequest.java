@@ -84,7 +84,7 @@ public class ReportTaskSucceededRequest extends Request {
         } 
 
         /**
-         * Output.
+         * The output information of the task whose execution success you want to report.
          */
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
@@ -93,7 +93,7 @@ public class ReportTaskSucceededRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -102,7 +102,7 @@ public class ReportTaskSucceededRequest extends Request {
         }
 
         /**
-         * TaskToken.
+         * The token of the task whose execution success you want to report. If this parameter appears in **waitforCallback** mode, the parameter is passed to the called service, such as Message Service (MNS) or Function Compute. For MNS, the value of this parameter can be obtained from the message. For Function Compute, the value of this parameter can be obtained from the event.
          */
         public Builder taskToken(String taskToken) {
             this.putQueryParameter("TaskToken", taskToken);

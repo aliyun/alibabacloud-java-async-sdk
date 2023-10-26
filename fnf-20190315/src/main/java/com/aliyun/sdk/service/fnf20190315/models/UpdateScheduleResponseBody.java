@@ -134,7 +134,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         private String scheduleName; 
 
         /**
-         * CreatedTime.
+         * The time when the time-based schedule was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -142,7 +142,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * CronExpression.
+         * The CRON expression.
          */
         public Builder cronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
@@ -150,7 +150,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the time-based schedule.
          */
         public Builder description(String description) {
             this.description = description;
@@ -158,7 +158,11 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Enable.
+         * Indicates whether the time-based schedule is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -166,7 +170,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * LastModifiedTime.
+         * The time when the time-based schedule was last updated.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -174,7 +178,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Payload.
+         * The trigger message of the time-based schedule.
          */
         public Builder payload(String payload) {
             this.payload = payload;
@@ -182,7 +186,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +194,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduleId.
+         * The ID of the time-based schedule.
          */
         public Builder scheduleId(String scheduleId) {
             this.scheduleId = scheduleId;
@@ -198,7 +202,7 @@ public class UpdateScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduleName.
+         * The name of the time-based schedule.
          */
         public Builder scheduleName(String scheduleName) {
             this.scheduleName = scheduleName;

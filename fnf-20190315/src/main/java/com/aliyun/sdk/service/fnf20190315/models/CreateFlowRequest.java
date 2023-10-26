@@ -156,7 +156,7 @@ public class CreateFlowRequest extends Request {
         } 
 
         /**
-         * Definition.
+         * The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -165,7 +165,7 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the flow.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -174,7 +174,7 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * ExecutionMode.
+         * The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
          */
         public Builder executionMode(String executionMode) {
             this.putBodyParameter("ExecutionMode", executionMode);
@@ -183,7 +183,7 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * ExternalStorageLocation.
+         * The path of the external storage.
          */
         public Builder externalStorageLocation(String externalStorageLocation) {
             this.putBodyParameter("ExternalStorageLocation", externalStorageLocation);
@@ -192,7 +192,13 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * <p>
+         * 
+         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must start with a letter or an underscore (\_).
+         * *   The name is case-sensitive.
+         * *   The name must be 1 to 128 characters in length.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -201,7 +207,7 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -210,7 +216,7 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the task is executed.
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -219,7 +225,7 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the flow. Valid value: **FDL**.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

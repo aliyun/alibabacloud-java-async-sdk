@@ -44,6 +44,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
+      * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+      *
+     */
     @Override
     public CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request) {
         try {
@@ -72,6 +78,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Usage notes
+      * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+      *
+     */
     @Override
     public CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request) {
         try {
@@ -156,6 +167,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Usage notes
+      * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+      *
+     */
     @Override
     public CompletableFuture<ListExecutionsResponse> listExecutions(ListExecutionsRequest request) {
         try {
@@ -198,6 +214,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Usage notes
+      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+      *
+     */
     @Override
     public CompletableFuture<ReportTaskFailedResponse> reportTaskFailed(ReportTaskFailedRequest request) {
         try {
@@ -212,6 +233,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Usage notes
+      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+      *
+     */
     @Override
     public CompletableFuture<ReportTaskSucceededResponse> reportTaskSucceeded(ReportTaskSucceededRequest request) {
         try {
@@ -226,6 +252,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   The flow is created.
+      * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+      * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+      * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+      * *   If no execution with the same name exists, the system starts a new execution.
+      *
+     */
     @Override
     public CompletableFuture<StartExecutionResponse> startExecution(StartExecutionRequest request) {
         try {
@@ -240,6 +275,25 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<StartSyncExecutionResponse> startSyncExecution(StartSyncExecutionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartSyncExecution").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartSyncExecutionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartSyncExecutionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * ## [](#)Usage notes
+      * The flow must be in progress.
+      *
+     */
     @Override
     public CompletableFuture<StopExecutionResponse> stopExecution(StopExecutionRequest request) {
         try {

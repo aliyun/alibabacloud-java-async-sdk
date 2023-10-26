@@ -69,7 +69,7 @@ public class DescribeFlowRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the flow.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -78,7 +78,7 @@ public class DescribeFlowRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

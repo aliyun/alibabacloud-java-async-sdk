@@ -62,7 +62,7 @@ public class ListSchedulesResponseBody extends TeaModel {
         private java.util.List < Schedules> schedules; 
 
         /**
-         * NextToken.
+         * The token for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * Schedules.
+         * The time-based schedules that are queried.
          */
         public Builder schedules(java.util.List < Schedules> schedules) {
             this.schedules = schedules;
@@ -202,7 +202,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             private String scheduleName; 
 
             /**
-             * CreatedTime.
+             * The time when the time-based schedule was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -210,7 +210,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * The CRON expression of the scheduled task.
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -218,7 +218,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the time-based schedule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +226,11 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the time-based schedule is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -234,7 +238,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * The time when the time-based schedule was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -242,7 +246,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Payload.
+             * The trigger message of the time-based schedule.
              */
             public Builder payload(String payload) {
                 this.payload = payload;
@@ -250,7 +254,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleId.
+             * The ID of the time-based schedule.
              */
             public Builder scheduleId(String scheduleId) {
                 this.scheduleId = scheduleId;
@@ -258,7 +262,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleName.
+             * The name of the time-based schedule.
              */
             public Builder scheduleName(String scheduleName) {
                 this.scheduleName = scheduleName;

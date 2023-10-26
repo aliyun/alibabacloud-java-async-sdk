@@ -62,7 +62,7 @@ public class ListFlowsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Flows.
+         * The details of flows.
          */
         public Builder flows(java.util.List < Flows> flows) {
             this.flows = flows;
@@ -70,7 +70,7 @@ public class ListFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The start key for the next query. This parameter is not returned if all results have been returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class ListFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class ListFlowsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreatedTime.
+             * The time when the flow was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -222,7 +222,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Definition.
+             * The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
              */
             public Builder definition(String definition) {
                 this.definition = definition;
@@ -230,7 +230,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the flow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +238,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionMode.
+             * The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
              */
             public Builder executionMode(String executionMode) {
                 this.executionMode = executionMode;
@@ -246,7 +246,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The unique ID of the flow.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -254,7 +254,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * The time when the flow was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -262,7 +262,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the flow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +270,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -278,7 +278,7 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the flow.
              */
             public Builder type(String type) {
                 this.type = type;

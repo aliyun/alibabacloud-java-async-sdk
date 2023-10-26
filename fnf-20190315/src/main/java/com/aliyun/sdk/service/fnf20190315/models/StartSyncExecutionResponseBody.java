@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopExecutionResponseBody} extends {@link TeaModel}
+ * {@link StartSyncExecutionResponseBody} extends {@link TeaModel}
  *
- * <p>StopExecutionResponseBody</p>
+ * <p>StartSyncExecutionResponseBody</p>
  */
-public class StopExecutionResponseBody extends TeaModel {
-    @NameInMap("FlowDefinition")
-    private String flowDefinition;
+public class StartSyncExecutionResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
+    @NameInMap("ErrorMessage")
+    private String errorMessage;
 
     @NameInMap("FlowName")
     private String flowName;
-
-    @NameInMap("Input")
-    private String input;
 
     @NameInMap("Name")
     private String name;
@@ -39,10 +39,10 @@ public class StopExecutionResponseBody extends TeaModel {
     @NameInMap("StoppedTime")
     private String stoppedTime;
 
-    private StopExecutionResponseBody(Builder builder) {
-        this.flowDefinition = builder.flowDefinition;
+    private StartSyncExecutionResponseBody(Builder builder) {
+        this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
         this.flowName = builder.flowName;
-        this.input = builder.input;
         this.name = builder.name;
         this.output = builder.output;
         this.requestId = builder.requestId;
@@ -55,15 +55,22 @@ public class StopExecutionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static StopExecutionResponseBody create() {
+    public static StartSyncExecutionResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return flowDefinition
+     * @return errorCode
      */
-    public String getFlowDefinition() {
-        return this.flowDefinition;
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     /**
@@ -71,13 +78,6 @@ public class StopExecutionResponseBody extends TeaModel {
      */
     public String getFlowName() {
         return this.flowName;
-    }
-
-    /**
-     * @return input
-     */
-    public String getInput() {
-        return this.input;
     }
 
     /**
@@ -123,9 +123,9 @@ public class StopExecutionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String flowDefinition; 
+        private String errorCode; 
+        private String errorMessage; 
         private String flowName; 
-        private String input; 
         private String name; 
         private String output; 
         private String requestId; 
@@ -134,15 +134,23 @@ public class StopExecutionResponseBody extends TeaModel {
         private String stoppedTime; 
 
         /**
-         * The definition of the flow.
+         * ErrorCode.
          */
-        public Builder flowDefinition(String flowDefinition) {
-            this.flowDefinition = flowDefinition;
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
 
         /**
-         * The name of the flow.
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * FlowName.
          */
         public Builder flowName(String flowName) {
             this.flowName = flowName;
@@ -150,15 +158,7 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The input of the execution, which is in the JSON format.
-         */
-        public Builder input(String input) {
-            this.input = input;
-            return this;
-        }
-
-        /**
-         * The name of the execution.
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -166,7 +166,7 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The execution result, which is in the JSON format.
+         * Output.
          */
         public Builder output(String output) {
             this.output = output;
@@ -174,7 +174,7 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the execution started.
+         * StartedTime.
          */
         public Builder startedTime(String startedTime) {
             this.startedTime = startedTime;
@@ -190,14 +190,7 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The execution state. Valid values:
-         * <p>
-         * 
-         * *   **Running**
-         * *   **Stopped**
-         * *   **Succeeded**
-         * *   **Failed**
-         * *   **TimedOut**
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -205,15 +198,15 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the execution stopped.
+         * StoppedTime.
          */
         public Builder stoppedTime(String stoppedTime) {
             this.stoppedTime = stoppedTime;
             return this;
         }
 
-        public StopExecutionResponseBody build() {
-            return new StopExecutionResponseBody(this);
+        public StartSyncExecutionResponseBody build() {
+            return new StartSyncExecutionResponseBody(this);
         } 
 
     } 

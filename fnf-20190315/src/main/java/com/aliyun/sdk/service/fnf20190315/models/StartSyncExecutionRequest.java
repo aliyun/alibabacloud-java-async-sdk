@@ -7,15 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartExecutionRequest} extends {@link RequestModel}
+ * {@link StartSyncExecutionRequest} extends {@link RequestModel}
  *
- * <p>StartExecutionRequest</p>
+ * <p>StartSyncExecutionRequest</p>
  */
-public class StartExecutionRequest extends Request {
-    @Body
-    @NameInMap("CallbackFnFTaskToken")
-    private String callbackFnFTaskToken;
-
+public class StartSyncExecutionRequest extends Request {
     @Body
     @NameInMap("ExecutionName")
     private String executionName;
@@ -33,9 +29,8 @@ public class StartExecutionRequest extends Request {
     @NameInMap("RequestId")
     private String requestId;
 
-    private StartExecutionRequest(Builder builder) {
+    private StartSyncExecutionRequest(Builder builder) {
         super(builder);
-        this.callbackFnFTaskToken = builder.callbackFnFTaskToken;
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
         this.input = builder.input;
@@ -46,20 +41,13 @@ public class StartExecutionRequest extends Request {
         return new Builder();
     }
 
-    public static StartExecutionRequest create() {
+    public static StartSyncExecutionRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return callbackFnFTaskToken
-     */
-    public String getCallbackFnFTaskToken() {
-        return this.callbackFnFTaskToken;
     }
 
     /**
@@ -90,8 +78,7 @@ public class StartExecutionRequest extends Request {
         return this.requestId;
     }
 
-    public static final class Builder extends Request.Builder<StartExecutionRequest, Builder> {
-        private String callbackFnFTaskToken; 
+    public static final class Builder extends Request.Builder<StartSyncExecutionRequest, Builder> {
         private String executionName; 
         private String flowName; 
         private String input; 
@@ -101,9 +88,8 @@ public class StartExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(StartExecutionRequest request) {
+        private Builder(StartSyncExecutionRequest request) {
             super(request);
-            this.callbackFnFTaskToken = request.callbackFnFTaskToken;
             this.executionName = request.executionName;
             this.flowName = request.flowName;
             this.input = request.input;
@@ -111,22 +97,7 @@ public class StartExecutionRequest extends Request {
         } 
 
         /**
-         * Specifies that the **TaskToken**-related tasks are called back after the execution in the flow ends.
-         */
-        public Builder callbackFnFTaskToken(String callbackFnFTaskToken) {
-            this.putBodyParameter("CallbackFnFTaskToken", callbackFnFTaskToken);
-            this.callbackFnFTaskToken = callbackFnFTaskToken;
-            return this;
-        }
-
-        /**
-         * The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
-         * <p>
-         * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * ExecutionName.
          */
         public Builder executionName(String executionName) {
             this.putBodyParameter("ExecutionName", executionName);
@@ -135,13 +106,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow you want to start to execute. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
-         * <p>
-         * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * FlowName.
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -150,7 +115,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The input of the execution, which is in the JSON format.
+         * Input.
          */
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
@@ -159,7 +124,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -168,8 +133,8 @@ public class StartExecutionRequest extends Request {
         }
 
         @Override
-        public StartExecutionRequest build() {
-            return new StartExecutionRequest(this);
+        public StartSyncExecutionRequest build() {
+            return new StartSyncExecutionRequest(this);
         } 
 
     } 

@@ -112,7 +112,13 @@ public class GetExecutionHistoryRequest extends Request {
         } 
 
         /**
-         * ExecutionName.
+         * The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
+         * <p>
+         * 
+         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must start with a letter or an underscore (\_).
+         * *   The name is case-sensitive.
+         * *   The name must be 1 to 128 characters in length.
          */
         public Builder executionName(String executionName) {
             this.putQueryParameter("ExecutionName", executionName);
@@ -121,7 +127,13 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * <p>
+         * 
+         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must start with a letter or an underscore (\_).
+         * *   The name is case-sensitive.
+         * *   The name must be 1 to 128 characters in length.
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -130,7 +142,7 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of steps to be queried. Valid values: 1 to 1000.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -139,7 +151,7 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The name of the event to start the query. You can obtain the value from the response data.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +160,7 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

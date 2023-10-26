@@ -62,7 +62,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Executions.
+         * The queried executions.
          */
         public Builder executions(java.util.List < Executions> executions) {
             this.executions = executions;
@@ -70,7 +70,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The start key for the next query. This parameter is not returned if all results have been returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +202,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String stoppedTime; 
 
             /**
-             * FlowDefinition.
+             * The definition of the flow.
              */
             public Builder flowDefinition(String flowDefinition) {
                 this.flowDefinition = flowDefinition;
@@ -210,7 +210,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * The name of the flow.
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -218,7 +218,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The input of the execution, which is in the JSON format.
              */
             public Builder input(String input) {
                 this.input = input;
@@ -226,7 +226,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the execution.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +234,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * The execution result, which is in the JSON format.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -242,7 +242,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartedTime.
+             * The time when the execution started.
              */
             public Builder startedTime(String startedTime) {
                 this.startedTime = startedTime;
@@ -250,7 +250,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the execution.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +258,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedTime.
+             * The time when the execution stopped.
              */
             public Builder stoppedTime(String stoppedTime) {
                 this.stoppedTime = stoppedTime;

@@ -98,7 +98,7 @@ public class ReportTaskFailedRequest extends Request {
         } 
 
         /**
-         * Cause.
+         * The cause of the failure. The value must be 1 to 4,096 characters in length.
          */
         public Builder cause(String cause) {
             this.putBodyParameter("Cause", cause);
@@ -107,7 +107,7 @@ public class ReportTaskFailedRequest extends Request {
         }
 
         /**
-         * Error.
+         * The error code for the failed task. The value must be 1 to 128 characters in length.
          */
         public Builder error(String error) {
             this.putBodyParameter("Error", error);
@@ -116,7 +116,7 @@ public class ReportTaskFailedRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -125,7 +125,7 @@ public class ReportTaskFailedRequest extends Request {
         }
 
         /**
-         * TaskToken.
+         * The token of the specified task that you want to report. If this parameter appears in **waitforCallback** mode, the parameter is passed to the called service, such as Message Service (MNS) or Function Compute. For MNS, the value of this parameter can be obtained from a message. For Function Compute, the value of this parameter can be obtained from an event.
          */
         public Builder taskToken(String taskToken) {
             this.putQueryParameter("TaskToken", taskToken);

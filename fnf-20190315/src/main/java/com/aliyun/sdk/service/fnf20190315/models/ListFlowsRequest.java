@@ -82,7 +82,7 @@ public class ListFlowsRequest extends Request {
         } 
 
         /**
-         * Limit.
+         * The number of flows to be queried. Valid values: 1 to 1000.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -91,7 +91,7 @@ public class ListFlowsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token to start the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -100,7 +100,7 @@ public class ListFlowsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

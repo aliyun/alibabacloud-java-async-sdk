@@ -50,7 +50,7 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventId.
+         * The ID of the event.
          */
         public Builder eventId(Long eventId) {
             this.eventId = eventId;
@@ -58,7 +58,7 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

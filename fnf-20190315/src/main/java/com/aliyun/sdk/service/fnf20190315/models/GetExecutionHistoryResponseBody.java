@@ -62,7 +62,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Events.
+         * The events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -70,7 +70,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * You do not need to specify this parameter for the first request. The returned value of **ScheduleEventId** is used as the token for the next query. No value is returned for the last query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * EventDetail.
+             * The details about the execution step.
              */
             public Builder eventDetail(String eventDetail) {
                 this.eventDetail = eventDetail;
@@ -186,7 +186,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the execution step.
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -194,7 +194,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleEventId.
+             * The ID of the scheduling step.
              */
             public Builder scheduleEventId(Long scheduleEventId) {
                 this.scheduleEventId = scheduleEventId;
@@ -202,7 +202,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * The name of the execution step.
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -210,7 +210,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the event was updated.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -218,7 +218,30 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the execution step. Valid values:
+             * <p>
+             * 
+             * *   **StepEntered**
+             * *   **StepStarted**
+             * *   **StepSucceeded**
+             * *   **StepFailed**
+             * *   **StepExited**
+             * *   **BranchEntered**
+             * *   **BranchExited**
+             * *   **IterationEntered**
+             * *   **IterationExited**
+             * *   **TaskScheduled**
+             * *   **TaskStarted**
+             * *   **TaskSubmitted**
+             * *   **TaskSubmitFailed**
+             * *   **TaskSucceeded**
+             * *   **TaskFailed**
+             * *   **TaskTimedOut**
+             * *   **ExecutionStarted**
+             * *   **ExecutionStopped**
+             * *   **ExecutionSucceeded**
+             * *   **ExecutionFailed**
+             * *   **ExecutionTimedOut**
              */
             public Builder type(String type) {
                 this.type = type;
