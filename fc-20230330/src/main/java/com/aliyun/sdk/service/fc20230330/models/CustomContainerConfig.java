@@ -36,6 +36,9 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("port")
     private Integer port;
 
+    @NameInMap("resolvedImageUri")
+    private String resolvedImageUri;
+
     private CustomContainerConfig(Builder builder) {
         this.accelerationInfo = builder.accelerationInfo;
         this.accelerationType = builder.accelerationType;
@@ -45,6 +48,7 @@ public class CustomContainerConfig extends TeaModel {
         this.healthCheckConfig = builder.healthCheckConfig;
         this.image = builder.image;
         this.port = builder.port;
+        this.resolvedImageUri = builder.resolvedImageUri;
     }
 
     public static Builder builder() {
@@ -111,6 +115,13 @@ public class CustomContainerConfig extends TeaModel {
         return this.port;
     }
 
+    /**
+     * @return resolvedImageUri
+     */
+    public String getResolvedImageUri() {
+        return this.resolvedImageUri;
+    }
+
     public static final class Builder {
         private AccelerationInfo accelerationInfo; 
         private String accelerationType; 
@@ -120,6 +131,7 @@ public class CustomContainerConfig extends TeaModel {
         private CustomHealthCheckConfig healthCheckConfig; 
         private String image; 
         private Integer port; 
+        private String resolvedImageUri; 
 
         /**
          * accelerationInfo.
@@ -182,6 +194,14 @@ public class CustomContainerConfig extends TeaModel {
          */
         public Builder port(Integer port) {
             this.port = port;
+            return this;
+        }
+
+        /**
+         * resolvedImageUri.
+         */
+        public Builder resolvedImageUri(String resolvedImageUri) {
+            this.resolvedImageUri = resolvedImageUri;
             return this;
         }
 

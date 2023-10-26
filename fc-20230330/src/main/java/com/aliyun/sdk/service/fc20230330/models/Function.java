@@ -69,6 +69,15 @@ public class Function extends TeaModel {
     @NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
+    @NameInMap("lastUpdateStatus")
+    private String lastUpdateStatus;
+
+    @NameInMap("lastUpdateStatusReason")
+    private String lastUpdateStatusReason;
+
+    @NameInMap("lastUpdateStatusReasonCode")
+    private String lastUpdateStatusReasonCode;
+
     @NameInMap("layers")
     private java.util.List < FunctionLayer > layers;
 
@@ -89,6 +98,15 @@ public class Function extends TeaModel {
 
     @NameInMap("runtime")
     private String runtime;
+
+    @NameInMap("state")
+    private String state;
+
+    @NameInMap("stateReason")
+    private String stateReason;
+
+    @NameInMap("stateReasonCode")
+    private String stateReasonCode;
 
     @NameInMap("timeout")
     private Integer timeout;
@@ -119,6 +137,9 @@ public class Function extends TeaModel {
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
         this.internetAccess = builder.internetAccess;
         this.lastModifiedTime = builder.lastModifiedTime;
+        this.lastUpdateStatus = builder.lastUpdateStatus;
+        this.lastUpdateStatusReason = builder.lastUpdateStatusReason;
+        this.lastUpdateStatusReasonCode = builder.lastUpdateStatusReasonCode;
         this.layers = builder.layers;
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
@@ -126,6 +147,9 @@ public class Function extends TeaModel {
         this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.runtime = builder.runtime;
+        this.state = builder.state;
+        this.stateReason = builder.stateReason;
+        this.stateReasonCode = builder.stateReasonCode;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
         this.vpcConfig = builder.vpcConfig;
@@ -273,6 +297,27 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return lastUpdateStatus
+     */
+    public String getLastUpdateStatus() {
+        return this.lastUpdateStatus;
+    }
+
+    /**
+     * @return lastUpdateStatusReason
+     */
+    public String getLastUpdateStatusReason() {
+        return this.lastUpdateStatusReason;
+    }
+
+    /**
+     * @return lastUpdateStatusReasonCode
+     */
+    public String getLastUpdateStatusReasonCode() {
+        return this.lastUpdateStatusReasonCode;
+    }
+
+    /**
      * @return layers
      */
     public java.util.List < FunctionLayer > getLayers() {
@@ -322,6 +367,27 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return state
+     */
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     * @return stateReason
+     */
+    public String getStateReason() {
+        return this.stateReason;
+    }
+
+    /**
+     * @return stateReasonCode
+     */
+    public String getStateReasonCode() {
+        return this.stateReasonCode;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -362,6 +428,9 @@ public class Function extends TeaModel {
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
         private String lastModifiedTime; 
+        private String lastUpdateStatus; 
+        private String lastUpdateStatusReason; 
+        private String lastUpdateStatusReasonCode; 
         private java.util.List < FunctionLayer > layers; 
         private LogConfig logConfig; 
         private Integer memorySize; 
@@ -369,6 +438,9 @@ public class Function extends TeaModel {
         private OSSMountConfig ossMountConfig; 
         private String role; 
         private String runtime; 
+        private String state; 
+        private String stateReason; 
+        private String stateReasonCode; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -526,6 +598,30 @@ public class Function extends TeaModel {
         }
 
         /**
+         * lastUpdateStatus.
+         */
+        public Builder lastUpdateStatus(String lastUpdateStatus) {
+            this.lastUpdateStatus = lastUpdateStatus;
+            return this;
+        }
+
+        /**
+         * lastUpdateStatusReason.
+         */
+        public Builder lastUpdateStatusReason(String lastUpdateStatusReason) {
+            this.lastUpdateStatusReason = lastUpdateStatusReason;
+            return this;
+        }
+
+        /**
+         * lastUpdateStatusReasonCode.
+         */
+        public Builder lastUpdateStatusReasonCode(String lastUpdateStatusReasonCode) {
+            this.lastUpdateStatusReasonCode = lastUpdateStatusReasonCode;
+            return this;
+        }
+
+        /**
          * layers.
          */
         public Builder layers(java.util.List < FunctionLayer > layers) {
@@ -578,6 +674,30 @@ public class Function extends TeaModel {
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
+            return this;
+        }
+
+        /**
+         * state.
+         */
+        public Builder state(String state) {
+            this.state = state;
+            return this;
+        }
+
+        /**
+         * stateReason.
+         */
+        public Builder stateReason(String stateReason) {
+            this.stateReason = stateReason;
+            return this;
+        }
+
+        /**
+         * stateReasonCode.
+         */
+        public Builder stateReasonCode(String stateReasonCode) {
+            this.stateReasonCode = stateReasonCode;
             return this;
         }
 
