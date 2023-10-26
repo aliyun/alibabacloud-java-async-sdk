@@ -1205,12 +1205,20 @@ public class CreateClusterRequest extends Request {
         @NameInMap("NewVpdInfo")
         private NewVpdInfo newVpdInfo;
 
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @NameInMap("VSwitchZoneId")
+        private String vSwitchZoneId;
+
         @NameInMap("VpdInfo")
         private VpdInfo vpdInfo;
 
         private Networks(Builder builder) {
             this.ipAllocationPolicy = builder.ipAllocationPolicy;
             this.newVpdInfo = builder.newVpdInfo;
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchZoneId = builder.vSwitchZoneId;
             this.vpdInfo = builder.vpdInfo;
         }
 
@@ -1237,6 +1245,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchZoneId
+         */
+        public String getVSwitchZoneId() {
+            return this.vSwitchZoneId;
+        }
+
+        /**
          * @return vpdInfo
          */
         public VpdInfo getVpdInfo() {
@@ -1246,6 +1268,8 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private java.util.List < IpAllocationPolicy> ipAllocationPolicy; 
             private NewVpdInfo newVpdInfo; 
+            private String securityGroupId; 
+            private String vSwitchZoneId; 
             private VpdInfo vpdInfo; 
 
             /**
@@ -1261,6 +1285,22 @@ public class CreateClusterRequest extends Request {
              */
             public Builder newVpdInfo(NewVpdInfo newVpdInfo) {
                 this.newVpdInfo = newVpdInfo;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VSwitchZoneId.
+             */
+            public Builder vSwitchZoneId(String vSwitchZoneId) {
+                this.vSwitchZoneId = vSwitchZoneId;
                 return this;
             }
 

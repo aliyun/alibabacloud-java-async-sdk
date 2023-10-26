@@ -33,6 +33,10 @@ public class ExtendClusterRequest extends Request {
     private java.util.List < NodeGroups> nodeGroups;
 
     @Body
+    @NameInMap("VSwitchZoneId")
+    private String vSwitchZoneId;
+
+    @Body
     @NameInMap("VpdSubnets")
     private java.util.List < String > vpdSubnets;
 
@@ -43,6 +47,7 @@ public class ExtendClusterRequest extends Request {
         this.ignoreFailedNodeTasks = builder.ignoreFailedNodeTasks;
         this.ipAllocationPolicy = builder.ipAllocationPolicy;
         this.nodeGroups = builder.nodeGroups;
+        this.vSwitchZoneId = builder.vSwitchZoneId;
         this.vpdSubnets = builder.vpdSubnets;
     }
 
@@ -95,6 +100,13 @@ public class ExtendClusterRequest extends Request {
     }
 
     /**
+     * @return vSwitchZoneId
+     */
+    public String getVSwitchZoneId() {
+        return this.vSwitchZoneId;
+    }
+
+    /**
      * @return vpdSubnets
      */
     public java.util.List < String > getVpdSubnets() {
@@ -107,6 +119,7 @@ public class ExtendClusterRequest extends Request {
         private Boolean ignoreFailedNodeTasks; 
         private java.util.List < IpAllocationPolicy> ipAllocationPolicy; 
         private java.util.List < NodeGroups> nodeGroups; 
+        private String vSwitchZoneId; 
         private java.util.List < String > vpdSubnets; 
 
         private Builder() {
@@ -120,6 +133,7 @@ public class ExtendClusterRequest extends Request {
             this.ignoreFailedNodeTasks = request.ignoreFailedNodeTasks;
             this.ipAllocationPolicy = request.ipAllocationPolicy;
             this.nodeGroups = request.nodeGroups;
+            this.vSwitchZoneId = request.vSwitchZoneId;
             this.vpdSubnets = request.vpdSubnets;
         } 
 
@@ -167,6 +181,15 @@ public class ExtendClusterRequest extends Request {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
             this.putBodyParameter("NodeGroups", nodeGroupsShrink);
             this.nodeGroups = nodeGroups;
+            return this;
+        }
+
+        /**
+         * VSwitchZoneId.
+         */
+        public Builder vSwitchZoneId(String vSwitchZoneId) {
+            this.putBodyParameter("VSwitchZoneId", vSwitchZoneId);
+            this.vSwitchZoneId = vSwitchZoneId;
             return this;
         }
 
@@ -765,10 +788,14 @@ public class ExtendClusterRequest extends Request {
         @NameInMap("UserData")
         private String userData;
 
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private NodeGroups(Builder builder) {
             this.nodeGroupId = builder.nodeGroupId;
             this.nodes = builder.nodes;
             this.userData = builder.userData;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -800,10 +827,18 @@ public class ExtendClusterRequest extends Request {
             return this.userData;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String nodeGroupId; 
             private java.util.List < Nodes> nodes; 
             private String userData; 
+            private String zoneId; 
 
             /**
              * NodeGroupId.
@@ -826,6 +861,14 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder userData(String userData) {
                 this.userData = userData;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
