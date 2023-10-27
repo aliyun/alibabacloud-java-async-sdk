@@ -134,7 +134,11 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Whether China Mainland.
+             * Indicates whether the region is in the Chinese mainland. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder chinaMainland(Boolean chinaMainland) {
                 this.chinaMainland = chinaMainland;
@@ -142,7 +146,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * The region name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -150,11 +154,11 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the region is a point of presence (PoP). Valid values:
+             * Indicates whether the region is a point of presence (PoP) of Alibaba Cloud. Valid values:
              * <p>
              * 
-             * *   **true**: The region is a PoP.
-             * *   **false**: The region is not a PoP.
+             * *   **true**
+             * *   **false**
              */
             public Builder pop(Boolean pop) {
                 this.pop = pop;
@@ -162,7 +166,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

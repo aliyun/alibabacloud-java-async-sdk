@@ -406,6 +406,148 @@ public class CreateEndpointGroupsRequest extends Request {
         } 
 
     }
+    public static class SystemTag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Scope")
+        private String scope;
+
+        @NameInMap("Value")
+        private String value;
+
+        private SystemTag(Builder builder) {
+            this.key = builder.key;
+            this.scope = builder.scope;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return scope
+         */
+        public String getScope() {
+            return this.scope;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String scope; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Scope.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SystemTag build() {
+                return new SystemTag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
     public static class EndpointGroupConfigurations extends TeaModel {
         @NameInMap("EnableClientIPPreservationProxyProtocol")
         private Boolean enableClientIPPreservationProxyProtocol;
@@ -450,6 +592,12 @@ public class CreateEndpointGroupsRequest extends Request {
         @NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
+        @NameInMap("SystemTag")
+        private java.util.List < SystemTag> systemTag;
+
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
         @NameInMap("ThresholdCount")
         private Long thresholdCount;
 
@@ -471,6 +619,8 @@ public class CreateEndpointGroupsRequest extends Request {
             this.healthCheckPort = builder.healthCheckPort;
             this.healthCheckProtocol = builder.healthCheckProtocol;
             this.portOverrides = builder.portOverrides;
+            this.systemTag = builder.systemTag;
+            this.tag = builder.tag;
             this.thresholdCount = builder.thresholdCount;
             this.trafficPercentage = builder.trafficPercentage;
         }
@@ -582,6 +732,20 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
+         * @return systemTag
+         */
+        public java.util.List < SystemTag> getSystemTag() {
+            return this.systemTag;
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        /**
          * @return thresholdCount
          */
         public Long getThresholdCount() {
@@ -610,6 +774,8 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long healthCheckPort; 
             private String healthCheckProtocol; 
             private java.util.List < PortOverrides> portOverrides; 
+            private java.util.List < SystemTag> systemTag; 
+            private java.util.List < Tag> tag; 
             private Long thresholdCount; 
             private Long trafficPercentage; 
 
@@ -787,6 +953,22 @@ public class CreateEndpointGroupsRequest extends Request {
              */
             public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
                 this.portOverrides = portOverrides;
+                return this;
+            }
+
+            /**
+             * SystemTag.
+             */
+            public Builder systemTag(java.util.List < SystemTag> systemTag) {
+                this.systemTag = systemTag;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
                 return this;
             }
 
