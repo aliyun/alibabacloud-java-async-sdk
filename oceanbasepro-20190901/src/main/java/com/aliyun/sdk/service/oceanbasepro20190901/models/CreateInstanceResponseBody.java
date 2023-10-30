@@ -72,6 +72,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("DryRunResult")
+        private Boolean dryRunResult;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -82,6 +85,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String resourceGroupId;
 
         private Data(Builder builder) {
+            this.dryRunResult = builder.dryRunResult;
             this.instanceId = builder.instanceId;
             this.orderId = builder.orderId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -93,6 +97,13 @@ public class CreateInstanceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return dryRunResult
+         */
+        public Boolean getDryRunResult() {
+            return this.dryRunResult;
         }
 
         /**
@@ -117,9 +128,18 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean dryRunResult; 
             private String instanceId; 
             private String orderId; 
             private String resourceGroupId; 
+
+            /**
+             * DryRunResult.
+             */
+            public Builder dryRunResult(Boolean dryRunResult) {
+                this.dryRunResult = dryRunResult;
+                return this;
+            }
 
             /**
              * 订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。

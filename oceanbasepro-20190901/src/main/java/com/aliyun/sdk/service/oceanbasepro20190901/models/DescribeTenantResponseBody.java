@@ -105,6 +105,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         private Integer intranetPort;
 
+        @NameInMap("MaxConnectionNum")
+        private Long maxConnectionNum;
+
         @NameInMap("ParallelQueryDegree")
         private Long parallelQueryDegree;
 
@@ -132,6 +135,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
             this.intranetAddressStatus = builder.intranetAddressStatus;
             this.intranetPort = builder.intranetPort;
+            this.maxConnectionNum = builder.maxConnectionNum;
             this.parallelQueryDegree = builder.parallelQueryDegree;
             this.tenantEndpointId = builder.tenantEndpointId;
             this.transactionSplit = builder.transactionSplit;
@@ -225,6 +229,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxConnectionNum
+         */
+        public Long getMaxConnectionNum() {
+            return this.maxConnectionNum;
+        }
+
+        /**
          * @return parallelQueryDegree
          */
         public Long getParallelQueryDegree() {
@@ -271,6 +282,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String intranetAddressSlaveZoneId; 
             private String intranetAddressStatus; 
             private Integer intranetPort; 
+            private Long maxConnectionNum; 
             private Long parallelQueryDegree; 
             private String tenantEndpointId; 
             private Boolean transactionSplit; 
@@ -366,6 +378,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder intranetPort(Integer intranetPort) {
                 this.intranetPort = intranetPort;
+                return this;
+            }
+
+            /**
+             * MaxConnectionNum.
+             */
+            public Builder maxConnectionNum(Long maxConnectionNum) {
+                this.maxConnectionNum = maxConnectionNum;
                 return this;
             }
 
@@ -633,6 +653,67 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    public static class LogDiskSize extends TeaModel {
+        @NameInMap("TotalLogDisk")
+        private Integer totalLogDisk;
+
+        @NameInMap("UnitLogDisk")
+        private Integer unitLogDisk;
+
+        private LogDiskSize(Builder builder) {
+            this.totalLogDisk = builder.totalLogDisk;
+            this.unitLogDisk = builder.unitLogDisk;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalLogDisk
+         */
+        public Integer getTotalLogDisk() {
+            return this.totalLogDisk;
+        }
+
+        /**
+         * @return unitLogDisk
+         */
+        public Integer getUnitLogDisk() {
+            return this.unitLogDisk;
+        }
+
+        public static final class Builder {
+            private Integer totalLogDisk; 
+            private Integer unitLogDisk; 
+
+            /**
+             * TotalLogDisk.
+             */
+            public Builder totalLogDisk(Integer totalLogDisk) {
+                this.totalLogDisk = totalLogDisk;
+                return this;
+            }
+
+            /**
+             * UnitLogDisk.
+             */
+            public Builder unitLogDisk(Integer unitLogDisk) {
+                this.unitLogDisk = unitLogDisk;
+                return this;
+            }
+
+            public LogDiskSize build() {
+                return new LogDiskSize(this);
+            } 
+
+        } 
+
+    }
     public static class Memory extends TeaModel {
         @NameInMap("TotalMemory")
         private Float totalMemory;
@@ -729,6 +810,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("DiskSize")
         private DiskSize diskSize;
 
+        @NameInMap("LogDiskSize")
+        private LogDiskSize logDiskSize;
+
         @NameInMap("Memory")
         private Memory memory;
 
@@ -739,6 +823,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.capacityUnit = builder.capacityUnit;
             this.cpu = builder.cpu;
             this.diskSize = builder.diskSize;
+            this.logDiskSize = builder.logDiskSize;
             this.memory = builder.memory;
             this.unitNum = builder.unitNum;
         }
@@ -773,6 +858,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return logDiskSize
+         */
+        public LogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        /**
          * @return memory
          */
         public Memory getMemory() {
@@ -790,6 +882,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private CapacityUnit capacityUnit; 
             private Cpu cpu; 
             private DiskSize diskSize; 
+            private LogDiskSize logDiskSize; 
             private Memory memory; 
             private Integer unitNum; 
 
@@ -819,6 +912,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * LogDiskSize.
+             */
+            public Builder logDiskSize(LogDiskSize logDiskSize) {
+                this.logDiskSize = logDiskSize;
                 return this;
             }
 

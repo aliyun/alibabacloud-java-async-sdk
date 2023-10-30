@@ -791,6 +791,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         private Integer cpu;
 
+        @NameInMap("CpuArchitecture")
+        private String cpuArchitecture;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -870,6 +873,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.availableZones = builder.availableZones;
             this.commodityCode = builder.commodityCode;
             this.cpu = builder.cpu;
+            this.cpuArchitecture = builder.cpuArchitecture;
             this.createTime = builder.createTime;
             this.dataDiskAutoScaleConfig = builder.dataDiskAutoScaleConfig;
             this.deployMode = builder.deployMode;
@@ -924,6 +928,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return cpuArchitecture
+         */
+        public String getCpuArchitecture() {
+            return this.cpuArchitecture;
         }
 
         /**
@@ -1105,6 +1116,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < String > availableZones; 
             private String commodityCode; 
             private Integer cpu; 
+            private String cpuArchitecture; 
             private String createTime; 
             private DataDiskAutoScaleConfig dataDiskAutoScaleConfig; 
             private String deployMode; 
@@ -1156,6 +1168,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * CpuArchitecture.
+             */
+            public Builder cpuArchitecture(String cpuArchitecture) {
+                this.cpuArchitecture = cpuArchitecture;
                 return this;
             }
 

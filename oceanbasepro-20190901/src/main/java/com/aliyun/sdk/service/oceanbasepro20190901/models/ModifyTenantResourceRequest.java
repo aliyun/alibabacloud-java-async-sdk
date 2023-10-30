@@ -28,9 +28,17 @@ public class ModifyTenantResourceRequest extends Request {
     private String instanceId;
 
     @Body
+    @NameInMap("LogDisk")
+    private Long logDisk;
+
+    @Body
     @NameInMap("Memory")
     @Validation(required = true)
     private Integer memory;
+
+    @Body
+    @NameInMap("ReadOnlyZoneList")
+    private String readOnlyZoneList;
 
     @Body
     @NameInMap("TenantId")
@@ -42,7 +50,9 @@ public class ModifyTenantResourceRequest extends Request {
         this.regionId = builder.regionId;
         this.cpu = builder.cpu;
         this.instanceId = builder.instanceId;
+        this.logDisk = builder.logDisk;
         this.memory = builder.memory;
+        this.readOnlyZoneList = builder.readOnlyZoneList;
         this.tenantId = builder.tenantId;
     }
 
@@ -81,10 +91,24 @@ public class ModifyTenantResourceRequest extends Request {
     }
 
     /**
+     * @return logDisk
+     */
+    public Long getLogDisk() {
+        return this.logDisk;
+    }
+
+    /**
      * @return memory
      */
     public Integer getMemory() {
         return this.memory;
+    }
+
+    /**
+     * @return readOnlyZoneList
+     */
+    public String getReadOnlyZoneList() {
+        return this.readOnlyZoneList;
     }
 
     /**
@@ -98,7 +122,9 @@ public class ModifyTenantResourceRequest extends Request {
         private String regionId; 
         private Integer cpu; 
         private String instanceId; 
+        private Long logDisk; 
         private Integer memory; 
+        private String readOnlyZoneList; 
         private String tenantId; 
 
         private Builder() {
@@ -110,7 +136,9 @@ public class ModifyTenantResourceRequest extends Request {
             this.regionId = request.regionId;
             this.cpu = request.cpu;
             this.instanceId = request.instanceId;
+            this.logDisk = request.logDisk;
             this.memory = request.memory;
+            this.readOnlyZoneList = request.readOnlyZoneList;
             this.tenantId = request.tenantId;
         } 
 
@@ -144,11 +172,29 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
+         * LogDisk.
+         */
+        public Builder logDisk(Long logDisk) {
+            this.putBodyParameter("LogDisk", logDisk);
+            this.logDisk = logDisk;
+            return this;
+        }
+
+        /**
          * The ID of the tenant.
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * ReadOnlyZoneList.
+         */
+        public Builder readOnlyZoneList(String readOnlyZoneList) {
+            this.putBodyParameter("ReadOnlyZoneList", readOnlyZoneList);
+            this.readOnlyZoneList = readOnlyZoneList;
             return this;
         }
 

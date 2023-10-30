@@ -18,6 +18,10 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("CheckId")
+    private String checkId;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -29,6 +33,7 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
     private DescribeTenantSecurityConfigsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.checkId = builder.checkId;
         this.instanceId = builder.instanceId;
         this.tenantId = builder.tenantId;
     }
@@ -54,6 +59,13 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
     }
 
     /**
+     * @return checkId
+     */
+    public String getCheckId() {
+        return this.checkId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -69,6 +81,7 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeTenantSecurityConfigsRequest, Builder> {
         private String regionId; 
+        private String checkId; 
         private String instanceId; 
         private String tenantId; 
 
@@ -79,6 +92,7 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
         private Builder(DescribeTenantSecurityConfigsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.checkId = request.checkId;
             this.instanceId = request.instanceId;
             this.tenantId = request.tenantId;
         } 
@@ -89,6 +103,15 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CheckId.
+         */
+        public Builder checkId(String checkId) {
+            this.putBodyParameter("CheckId", checkId);
+            this.checkId = checkId;
             return this;
         }
 

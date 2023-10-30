@@ -123,6 +123,9 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("ExpectedWorkerCount")
         private Double expectedWorkerCount;
 
+        @NameInMap("FullSqlText")
+        private String fullSqlText;
+
         @NameInMap("GetPlanTime")
         private Double getPlanTime;
 
@@ -243,6 +246,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             this.executeTime = builder.executeTime;
             this.executorRpc = builder.executorRpc;
             this.expectedWorkerCount = builder.expectedWorkerCount;
+            this.fullSqlText = builder.fullSqlText;
             this.getPlanTime = builder.getPlanTime;
             this.hitPlan = builder.hitPlan;
             this.inner = builder.inner;
@@ -404,6 +408,13 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
          */
         public Double getExpectedWorkerCount() {
             return this.expectedWorkerCount;
+        }
+
+        /**
+         * @return fullSqlText
+         */
+        public String getFullSqlText() {
+            return this.fullSqlText;
         }
 
         /**
@@ -662,6 +673,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double executeTime; 
             private Double executorRpc; 
             private Double expectedWorkerCount; 
+            private String fullSqlText; 
             private Double getPlanTime; 
             private Double hitPlan; 
             private Boolean inner; 
@@ -830,6 +842,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              */
             public Builder expectedWorkerCount(Double expectedWorkerCount) {
                 this.expectedWorkerCount = expectedWorkerCount;
+                return this;
+            }
+
+            /**
+             * FullSqlText.
+             */
+            public Builder fullSqlText(String fullSqlText) {
+                this.fullSqlText = fullSqlText;
                 return this;
             }
 

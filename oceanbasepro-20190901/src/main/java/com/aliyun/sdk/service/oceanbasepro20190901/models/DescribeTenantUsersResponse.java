@@ -16,6 +16,10 @@ public class DescribeTenantUsersResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeTenantUsersResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeTenantUsersResponse extends Response {
     private DescribeTenantUsersResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeTenantUsersResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeTenantUsersResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeTenantUsersResponse extends Response {
     public interface Builder extends Response.Builder<DescribeTenantUsersResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeTenantUsersResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeTenantUsersResponse extends Response {
             extends Response.BuilderImpl<DescribeTenantUsersResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeTenantUsersResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeTenantUsersResponse extends Response {
         private BuilderImpl(DescribeTenantUsersResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeTenantUsersResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

@@ -18,6 +18,10 @@ public class ModifyInstanceNodeNumRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -30,6 +34,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
     private ModifyInstanceNodeNumRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.nodeNum = builder.nodeNum;
     }
@@ -55,6 +60,13 @@ public class ModifyInstanceNodeNumRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -70,6 +82,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyInstanceNodeNumRequest, Builder> {
         private String regionId; 
+        private Boolean dryRun; 
         private String instanceId; 
         private String nodeNum; 
 
@@ -80,6 +93,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
         private Builder(ModifyInstanceNodeNumRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.nodeNum = request.nodeNum;
         } 
@@ -90,6 +104,15 @@ public class ModifyInstanceNodeNumRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

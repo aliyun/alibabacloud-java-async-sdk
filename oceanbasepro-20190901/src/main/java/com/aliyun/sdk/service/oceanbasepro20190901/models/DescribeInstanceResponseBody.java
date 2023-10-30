@@ -613,6 +613,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class LogDiskSize extends TeaModel {
+        @NameInMap("LogAssignedSize")
+        private String logAssignedSize;
+
+        @NameInMap("MaxLogAssignedObServer")
+        private java.util.List < String > maxLogAssignedObServer;
+
+        @NameInMap("MaxLogAssignedPercent")
+        private String maxLogAssignedPercent;
+
         @NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
@@ -620,6 +629,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Long unitDiskSize;
 
         private LogDiskSize(Builder builder) {
+            this.logAssignedSize = builder.logAssignedSize;
+            this.maxLogAssignedObServer = builder.maxLogAssignedObServer;
+            this.maxLogAssignedPercent = builder.maxLogAssignedPercent;
             this.totalDiskSize = builder.totalDiskSize;
             this.unitDiskSize = builder.unitDiskSize;
         }
@@ -630,6 +642,27 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static LogDiskSize create() {
             return builder().build();
+        }
+
+        /**
+         * @return logAssignedSize
+         */
+        public String getLogAssignedSize() {
+            return this.logAssignedSize;
+        }
+
+        /**
+         * @return maxLogAssignedObServer
+         */
+        public java.util.List < String > getMaxLogAssignedObServer() {
+            return this.maxLogAssignedObServer;
+        }
+
+        /**
+         * @return maxLogAssignedPercent
+         */
+        public String getMaxLogAssignedPercent() {
+            return this.maxLogAssignedPercent;
         }
 
         /**
@@ -647,8 +680,35 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String logAssignedSize; 
+            private java.util.List < String > maxLogAssignedObServer; 
+            private String maxLogAssignedPercent; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
+
+            /**
+             * LogAssignedSize.
+             */
+            public Builder logAssignedSize(String logAssignedSize) {
+                this.logAssignedSize = logAssignedSize;
+                return this;
+            }
+
+            /**
+             * MaxLogAssignedObServer.
+             */
+            public Builder maxLogAssignedObServer(java.util.List < String > maxLogAssignedObServer) {
+                this.maxLogAssignedObServer = maxLogAssignedObServer;
+                return this;
+            }
+
+            /**
+             * MaxLogAssignedPercent.
+             */
+            public Builder maxLogAssignedPercent(String maxLogAssignedPercent) {
+                this.maxLogAssignedPercent = maxLogAssignedPercent;
+                return this;
+            }
 
             /**
              * The ID of the region.
@@ -989,6 +1049,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("AvailableZones")
         private java.util.List < String > availableZones;
 
+        @NameInMap("CpuArchitecture")
+        private String cpuArchitecture;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -1012,6 +1075,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("EnableIsolationOptimization")
         private Boolean enableIsolationOptimization;
+
+        @NameInMap("EnableProxyService")
+        private Boolean enableProxyService;
 
         @NameInMap("EnableUpgradeLogDisk")
         private Boolean enableUpgradeLogDisk;
@@ -1055,6 +1121,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("PayType")
         private String payType;
 
+        @NameInMap("ProxyClusterId")
+        private String proxyClusterId;
+
+        @NameInMap("ProxyServiceStatus")
+        private String proxyServiceStatus;
+
         @NameInMap("ReplicaMode")
         private String replicaMode;
 
@@ -1080,6 +1152,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.autoRenewal = builder.autoRenewal;
             this.autoUpgradeObVersion = builder.autoUpgradeObVersion;
             this.availableZones = builder.availableZones;
+            this.cpuArchitecture = builder.cpuArchitecture;
             this.createTime = builder.createTime;
             this.dataDiskAutoScale = builder.dataDiskAutoScale;
             this.dataDiskAutoScaleConfig = builder.dataDiskAutoScaleConfig;
@@ -1088,6 +1161,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.deployType = builder.deployType;
             this.diskType = builder.diskType;
             this.enableIsolationOptimization = builder.enableIsolationOptimization;
+            this.enableProxyService = builder.enableProxyService;
             this.enableUpgradeLogDisk = builder.enableUpgradeLogDisk;
             this.expireTime = builder.expireTime;
             this.inTempCapacityStatus = builder.inTempCapacityStatus;
@@ -1102,6 +1176,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.nodeNum = builder.nodeNum;
             this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
+            this.proxyClusterId = builder.proxyClusterId;
+            this.proxyServiceStatus = builder.proxyServiceStatus;
             this.replicaMode = builder.replicaMode;
             this.resource = builder.resource;
             this.series = builder.series;
@@ -1138,6 +1214,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public java.util.List < String > getAvailableZones() {
             return this.availableZones;
+        }
+
+        /**
+         * @return cpuArchitecture
+         */
+        public String getCpuArchitecture() {
+            return this.cpuArchitecture;
         }
 
         /**
@@ -1194,6 +1277,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Boolean getEnableIsolationOptimization() {
             return this.enableIsolationOptimization;
+        }
+
+        /**
+         * @return enableProxyService
+         */
+        public Boolean getEnableProxyService() {
+            return this.enableProxyService;
         }
 
         /**
@@ -1295,6 +1385,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return proxyClusterId
+         */
+        public String getProxyClusterId() {
+            return this.proxyClusterId;
+        }
+
+        /**
+         * @return proxyServiceStatus
+         */
+        public String getProxyServiceStatus() {
+            return this.proxyServiceStatus;
+        }
+
+        /**
          * @return replicaMode
          */
         public String getReplicaMode() {
@@ -1347,6 +1451,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean autoRenewal; 
             private Boolean autoUpgradeObVersion; 
             private java.util.List < String > availableZones; 
+            private String cpuArchitecture; 
             private String createTime; 
             private Boolean dataDiskAutoScale; 
             private DataDiskAutoScaleConfig dataDiskAutoScaleConfig; 
@@ -1355,6 +1460,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String deployType; 
             private String diskType; 
             private Boolean enableIsolationOptimization; 
+            private Boolean enableProxyService; 
             private Boolean enableUpgradeLogDisk; 
             private String expireTime; 
             private Boolean inTempCapacityStatus; 
@@ -1369,6 +1475,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String nodeNum; 
             private String obRpmVersion; 
             private String payType; 
+            private String proxyClusterId; 
+            private String proxyServiceStatus; 
             private String replicaMode; 
             private Resource resource; 
             private String series; 
@@ -1398,6 +1506,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder availableZones(java.util.List < String > availableZones) {
                 this.availableZones = availableZones;
+                return this;
+            }
+
+            /**
+             * CpuArchitecture.
+             */
+            public Builder cpuArchitecture(String cpuArchitecture) {
+                this.cpuArchitecture = cpuArchitecture;
                 return this;
             }
 
@@ -1462,6 +1578,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder enableIsolationOptimization(Boolean enableIsolationOptimization) {
                 this.enableIsolationOptimization = enableIsolationOptimization;
+                return this;
+            }
+
+            /**
+             * EnableProxyService.
+             */
+            public Builder enableProxyService(Boolean enableProxyService) {
+                this.enableProxyService = enableProxyService;
                 return this;
             }
 
@@ -1574,6 +1698,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder payType(String payType) {
                 this.payType = payType;
+                return this;
+            }
+
+            /**
+             * ProxyClusterId.
+             */
+            public Builder proxyClusterId(String proxyClusterId) {
+                this.proxyClusterId = proxyClusterId;
+                return this;
+            }
+
+            /**
+             * ProxyServiceStatus.
+             */
+            public Builder proxyServiceStatus(String proxyServiceStatus) {
+                this.proxyServiceStatus = proxyServiceStatus;
                 return this;
             }
 

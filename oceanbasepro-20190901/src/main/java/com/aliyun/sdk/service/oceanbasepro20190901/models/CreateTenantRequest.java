@@ -37,6 +37,10 @@ public class CreateTenantRequest extends Request {
     private String instanceId;
 
     @Body
+    @NameInMap("LogDisk")
+    private Long logDisk;
+
+    @Body
     @NameInMap("Memory")
     @Validation(required = true)
     private Integer memory;
@@ -45,6 +49,10 @@ public class CreateTenantRequest extends Request {
     @NameInMap("PrimaryZone")
     @Validation(required = true)
     private String primaryZone;
+
+    @Body
+    @NameInMap("ReadOnlyZoneList")
+    private String readOnlyZoneList;
 
     @Body
     @NameInMap("TenantMode")
@@ -82,8 +90,10 @@ public class CreateTenantRequest extends Request {
         this.cpu = builder.cpu;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
+        this.logDisk = builder.logDisk;
         this.memory = builder.memory;
         this.primaryZone = builder.primaryZone;
+        this.readOnlyZoneList = builder.readOnlyZoneList;
         this.tenantMode = builder.tenantMode;
         this.tenantName = builder.tenantName;
         this.timeZone = builder.timeZone;
@@ -141,6 +151,13 @@ public class CreateTenantRequest extends Request {
     }
 
     /**
+     * @return logDisk
+     */
+    public Long getLogDisk() {
+        return this.logDisk;
+    }
+
+    /**
      * @return memory
      */
     public Integer getMemory() {
@@ -152,6 +169,13 @@ public class CreateTenantRequest extends Request {
      */
     public String getPrimaryZone() {
         return this.primaryZone;
+    }
+
+    /**
+     * @return readOnlyZoneList
+     */
+    public String getReadOnlyZoneList() {
+        return this.readOnlyZoneList;
     }
 
     /**
@@ -202,8 +226,10 @@ public class CreateTenantRequest extends Request {
         private Integer cpu; 
         private String description; 
         private String instanceId; 
+        private Long logDisk; 
         private Integer memory; 
         private String primaryZone; 
+        private String readOnlyZoneList; 
         private String tenantMode; 
         private String tenantName; 
         private String timeZone; 
@@ -222,8 +248,10 @@ public class CreateTenantRequest extends Request {
             this.cpu = request.cpu;
             this.description = request.description;
             this.instanceId = request.instanceId;
+            this.logDisk = request.logDisk;
             this.memory = request.memory;
             this.primaryZone = request.primaryZone;
+            this.readOnlyZoneList = request.readOnlyZoneList;
             this.tenantMode = request.tenantMode;
             this.tenantName = request.tenantName;
             this.timeZone = request.timeZone;
@@ -283,6 +311,15 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
+         * LogDisk.
+         */
+        public Builder logDisk(Long logDisk) {
+            this.putBodyParameter("LogDisk", logDisk);
+            this.logDisk = logDisk;
+            return this;
+        }
+
+        /**
          * The memory size of the tenant, in GB.   
          * <p>
          * 
@@ -302,6 +339,15 @@ public class CreateTenantRequest extends Request {
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
             this.primaryZone = primaryZone;
+            return this;
+        }
+
+        /**
+         * ReadOnlyZoneList.
+         */
+        public Builder readOnlyZoneList(String readOnlyZoneList) {
+            this.putBodyParameter("ReadOnlyZoneList", readOnlyZoneList);
+            this.readOnlyZoneList = readOnlyZoneList;
             return this;
         }
 

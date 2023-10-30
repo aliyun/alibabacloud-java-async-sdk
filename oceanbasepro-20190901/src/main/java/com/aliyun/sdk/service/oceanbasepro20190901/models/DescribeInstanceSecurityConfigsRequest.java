@@ -18,6 +18,10 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("CheckId")
+    private String checkId;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -25,6 +29,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
     private DescribeInstanceSecurityConfigsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.checkId = builder.checkId;
         this.instanceId = builder.instanceId;
     }
 
@@ -49,6 +54,13 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
     }
 
     /**
+     * @return checkId
+     */
+    public String getCheckId() {
+        return this.checkId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -57,6 +69,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInstanceSecurityConfigsRequest, Builder> {
         private String regionId; 
+        private String checkId; 
         private String instanceId; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
         private Builder(DescribeInstanceSecurityConfigsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.checkId = request.checkId;
             this.instanceId = request.instanceId;
         } 
 
@@ -75,6 +89,15 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CheckId.
+         */
+        public Builder checkId(String checkId) {
+            this.putBodyParameter("CheckId", checkId);
+            this.checkId = checkId;
             return this;
         }
 

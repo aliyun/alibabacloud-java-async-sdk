@@ -39,6 +39,10 @@ public class CreateInstanceRequest extends Request {
     private String diskType;
 
     @Body
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Body
     @NameInMap("InstanceClass")
     @Validation(required = true)
     private String instanceClass;
@@ -47,6 +51,10 @@ public class CreateInstanceRequest extends Request {
     @NameInMap("InstanceName")
     @Validation(maxLength = 20)
     private String instanceName;
+
+    @Body
+    @NameInMap("IsolationOptimization")
+    private String isolationOptimization;
 
     @Body
     @NameInMap("ObVersion")
@@ -59,6 +67,10 @@ public class CreateInstanceRequest extends Request {
     @Body
     @NameInMap("PeriodUnit")
     private String periodUnit;
+
+    @Body
+    @NameInMap("ReplicaMode")
+    private String replicaMode;
 
     @Body
     @NameInMap("ResourceGroupId")
@@ -82,11 +94,14 @@ public class CreateInstanceRequest extends Request {
         this.chargeType = builder.chargeType;
         this.diskSize = builder.diskSize;
         this.diskType = builder.diskType;
+        this.dryRun = builder.dryRun;
         this.instanceClass = builder.instanceClass;
         this.instanceName = builder.instanceName;
+        this.isolationOptimization = builder.isolationOptimization;
         this.obVersion = builder.obVersion;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.replicaMode = builder.replicaMode;
         this.resourceGroupId = builder.resourceGroupId;
         this.series = builder.series;
         this.zones = builder.zones;
@@ -148,6 +163,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceClass
      */
     public String getInstanceClass() {
@@ -159,6 +181,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return isolationOptimization
+     */
+    public String getIsolationOptimization() {
+        return this.isolationOptimization;
     }
 
     /**
@@ -180,6 +209,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    /**
+     * @return replicaMode
+     */
+    public String getReplicaMode() {
+        return this.replicaMode;
     }
 
     /**
@@ -210,11 +246,14 @@ public class CreateInstanceRequest extends Request {
         private String chargeType; 
         private Long diskSize; 
         private String diskType; 
+        private Boolean dryRun; 
         private String instanceClass; 
         private String instanceName; 
+        private String isolationOptimization; 
         private String obVersion; 
         private Long period; 
         private String periodUnit; 
+        private String replicaMode; 
         private String resourceGroupId; 
         private String series; 
         private String zones; 
@@ -231,11 +270,14 @@ public class CreateInstanceRequest extends Request {
             this.chargeType = request.chargeType;
             this.diskSize = request.diskSize;
             this.diskType = request.diskType;
+            this.dryRun = request.dryRun;
             this.instanceClass = request.instanceClass;
             this.instanceName = request.instanceName;
+            this.isolationOptimization = request.isolationOptimization;
             this.obVersion = request.obVersion;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.replicaMode = request.replicaMode;
             this.resourceGroupId = request.resourceGroupId;
             this.series = request.series;
             this.zones = request.zones;
@@ -313,6 +355,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * The specifications of the cluster.     
          * <p>
          * You can specify one of the following four plans:   
@@ -336,6 +387,15 @@ public class CreateInstanceRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * IsolationOptimization.
+         */
+        public Builder isolationOptimization(String isolationOptimization) {
+            this.putBodyParameter("IsolationOptimization", isolationOptimization);
+            this.isolationOptimization = isolationOptimization;
             return this;
         }
 
@@ -371,6 +431,15 @@ public class CreateInstanceRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * ReplicaMode.
+         */
+        public Builder replicaMode(String replicaMode) {
+            this.putBodyParameter("ReplicaMode", replicaMode);
+            this.replicaMode = replicaMode;
             return this;
         }
 

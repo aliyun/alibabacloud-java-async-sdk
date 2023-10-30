@@ -72,10 +72,14 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("DryRunResult")
+        private Boolean dryRunResult;
+
         @NameInMap("OrderId")
         private String orderId;
 
         private Data(Builder builder) {
+            this.dryRunResult = builder.dryRunResult;
             this.orderId = builder.orderId;
         }
 
@@ -88,6 +92,13 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
+         * @return dryRunResult
+         */
+        public Boolean getDryRunResult() {
+            return this.dryRunResult;
+        }
+
+        /**
          * @return orderId
          */
         public String getOrderId() {
@@ -95,7 +106,16 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean dryRunResult; 
             private String orderId; 
+
+            /**
+             * DryRunResult.
+             */
+            public Builder dryRunResult(Boolean dryRunResult) {
+                this.dryRunResult = dryRunResult;
+                return this;
+            }
 
             /**
              * OrderId.

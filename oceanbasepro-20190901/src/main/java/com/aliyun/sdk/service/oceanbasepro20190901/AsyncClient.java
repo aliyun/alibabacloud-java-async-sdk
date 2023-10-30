@@ -82,6 +82,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceCreatableZoneResponse> describeInstanceCreatableZone(DescribeInstanceCreatableZoneRequest request);
 
+    CompletableFuture<DescribeInstanceSSLResponse> describeInstanceSSL(DescribeInstanceSSLRequest request);
+
     CompletableFuture<DescribeInstanceSecurityConfigsResponse> describeInstanceSecurityConfigs(DescribeInstanceSecurityConfigsRequest request);
 
     CompletableFuture<DescribeInstanceTagsResponse> describeInstanceTags(DescribeInstanceTagsRequest request);
@@ -91,6 +93,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceTopologyResponse> describeInstanceTopology(DescribeInstanceTopologyRequest request);
 
     CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
+
+    CompletableFuture<DescribeMetricsDataResponse> describeMetricsData(DescribeMetricsDataRequest request);
 
     CompletableFuture<DescribeNodeMetricsResponse> describeNodeMetrics(DescribeNodeMetricsRequest request);
 
@@ -195,6 +199,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request);
 
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    CompletableFuture<ModifyTenantEncryptionResponse> modifyTenantEncryption(ModifyTenantEncryptionRequest request);
 
     CompletableFuture<ModifyTenantPrimaryZoneResponse> modifyTenantPrimaryZone(ModifyTenantPrimaryZoneRequest request);
 

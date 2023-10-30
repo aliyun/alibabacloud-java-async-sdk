@@ -21,6 +21,10 @@ public class DeleteInstancesRequest extends Request {
     private String backupRetainMode;
 
     @Body
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Body
     @NameInMap("InstanceIds")
     @Validation(required = true)
     private String instanceIds;
@@ -29,6 +33,7 @@ public class DeleteInstancesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.backupRetainMode = builder.backupRetainMode;
+        this.dryRun = builder.dryRun;
         this.instanceIds = builder.instanceIds;
     }
 
@@ -60,6 +65,13 @@ public class DeleteInstancesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceIds
      */
     public String getInstanceIds() {
@@ -69,6 +81,7 @@ public class DeleteInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteInstancesRequest, Builder> {
         private String regionId; 
         private String backupRetainMode; 
+        private Boolean dryRun; 
         private String instanceIds; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class DeleteInstancesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupRetainMode = request.backupRetainMode;
+            this.dryRun = request.dryRun;
             this.instanceIds = request.instanceIds;
         } 
 
@@ -97,6 +111,15 @@ public class DeleteInstancesRequest extends Request {
         public Builder backupRetainMode(String backupRetainMode) {
             this.putBodyParameter("BackupRetainMode", backupRetainMode);
             this.backupRetainMode = backupRetainMode;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

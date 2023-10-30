@@ -22,6 +22,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private Long diskSize;
 
     @Body
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Body
     @NameInMap("InstanceClass")
     private String instanceClass;
 
@@ -34,6 +38,7 @@ public class ModifyInstanceSpecRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.diskSize = builder.diskSize;
+        this.dryRun = builder.dryRun;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
     }
@@ -66,6 +71,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceClass
      */
     public String getInstanceClass() {
@@ -82,6 +94,7 @@ public class ModifyInstanceSpecRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyInstanceSpecRequest, Builder> {
         private String regionId; 
         private Long diskSize; 
+        private Boolean dryRun; 
         private String instanceClass; 
         private String instanceId; 
 
@@ -93,6 +106,7 @@ public class ModifyInstanceSpecRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.diskSize = request.diskSize;
+            this.dryRun = request.dryRun;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
         } 
@@ -112,6 +126,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

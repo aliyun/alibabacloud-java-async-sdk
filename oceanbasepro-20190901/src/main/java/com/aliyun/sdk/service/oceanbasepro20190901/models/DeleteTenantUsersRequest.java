@@ -108,7 +108,7 @@ public class DeleteTenantUsersRequest extends Request {
         }
 
         /**
-         * Example 1
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class DeleteTenantUsersRequest extends Request {
         }
 
         /**
-         * $.parameters[4].schema.enumValueTitles
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -126,7 +126,7 @@ public class DeleteTenantUsersRequest extends Request {
         }
 
         /**
-         * $.parameters[2].schema.example
+         * A list of usernames.
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

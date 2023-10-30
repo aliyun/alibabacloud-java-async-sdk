@@ -86,12 +86,16 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         @NameInMap("MinMem")
         private Long minMem;
 
+        @NameInMap("SafeMem")
+        private String safeMem;
+
         @NameInMap("UsedMem")
         private Long usedMem;
 
         private Data(Builder builder) {
             this.maxMem = builder.maxMem;
             this.minMem = builder.minMem;
+            this.safeMem = builder.safeMem;
             this.usedMem = builder.usedMem;
         }
 
@@ -118,6 +122,13 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return safeMem
+         */
+        public String getSafeMem() {
+            return this.safeMem;
+        }
+
+        /**
          * @return usedMem
          */
         public Long getUsedMem() {
@@ -127,6 +138,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         public static final class Builder {
             private Long maxMem; 
             private Long minMem; 
+            private String safeMem; 
             private Long usedMem; 
 
             /**
@@ -142,6 +154,14 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
              */
             public Builder minMem(Long minMem) {
                 this.minMem = minMem;
+                return this;
+            }
+
+            /**
+             * SafeMem.
+             */
+            public Builder safeMem(String safeMem) {
+                this.safeMem = safeMem;
                 return this;
             }
 

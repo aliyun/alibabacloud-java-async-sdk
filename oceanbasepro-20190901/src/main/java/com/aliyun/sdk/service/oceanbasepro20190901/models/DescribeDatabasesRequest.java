@@ -21,6 +21,10 @@ public class DescribeDatabasesRequest extends Request {
     private String databaseName;
 
     @Body
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Body
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -34,7 +38,6 @@ public class DescribeDatabasesRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private String tenantId;
 
     @Body
@@ -45,6 +48,7 @@ public class DescribeDatabasesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.databaseName = builder.databaseName;
+        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchKey = builder.searchKey;
@@ -77,6 +81,13 @@ public class DescribeDatabasesRequest extends Request {
      */
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -117,6 +128,7 @@ public class DescribeDatabasesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDatabasesRequest, Builder> {
         private String regionId; 
         private String databaseName; 
+        private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchKey; 
@@ -131,6 +143,7 @@ public class DescribeDatabasesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.databaseName = request.databaseName;
+            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.searchKey = request.searchKey;
@@ -153,6 +166,15 @@ public class DescribeDatabasesRequest extends Request {
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
             this.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

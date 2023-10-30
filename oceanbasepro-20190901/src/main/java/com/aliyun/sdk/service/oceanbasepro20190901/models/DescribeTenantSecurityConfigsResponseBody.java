@@ -294,6 +294,15 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
     }
     public static class Configs extends TeaModel {
+        @NameInMap("CheckId")
+        private String checkId;
+
+        @NameInMap("CheckTime")
+        private String checkTime;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
         @NameInMap("TenantSecurityConfigs")
         private java.util.List < TenantSecurityConfigs> tenantSecurityConfigs;
 
@@ -304,6 +313,9 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
         private Integer totalRiskCount;
 
         private Configs(Builder builder) {
+            this.checkId = builder.checkId;
+            this.checkTime = builder.checkTime;
+            this.instanceId = builder.instanceId;
             this.tenantSecurityConfigs = builder.tenantSecurityConfigs;
             this.totalCheckCount = builder.totalCheckCount;
             this.totalRiskCount = builder.totalRiskCount;
@@ -315,6 +327,27 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
         public static Configs create() {
             return builder().build();
+        }
+
+        /**
+         * @return checkId
+         */
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return checkTime
+         */
+        public String getCheckTime() {
+            return this.checkTime;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -339,9 +372,36 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String checkId; 
+            private String checkTime; 
+            private String instanceId; 
             private java.util.List < TenantSecurityConfigs> tenantSecurityConfigs; 
             private Integer totalCheckCount; 
             private Integer totalRiskCount; 
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(String checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * CheckTime.
+             */
+            public Builder checkTime(String checkTime) {
+                this.checkTime = checkTime;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
 
             /**
              * TenantSecurityConfigs.

@@ -270,6 +270,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("TenantId")
         private String tenantId;
 
+        @NameInMap("TenantName")
+        private String tenantName;
+
         @NameInMap("Users")
         private java.util.List < Users> users;
 
@@ -286,6 +289,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.status = builder.status;
             this.tables = builder.tables;
             this.tenantId = builder.tenantId;
+            this.tenantName = builder.tenantName;
             this.users = builder.users;
         }
 
@@ -382,6 +386,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantName
+         */
+        public String getTenantName() {
+            return this.tenantName;
+        }
+
+        /**
          * @return users
          */
         public java.util.List < Users> getUsers() {
@@ -401,6 +412,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String status; 
             private java.util.List < Tables> tables; 
             private String tenantId; 
+            private String tenantName; 
             private java.util.List < Users> users; 
 
             /**
@@ -504,6 +516,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
+                return this;
+            }
+
+            /**
+             * TenantName.
+             */
+            public Builder tenantName(String tenantName) {
+                this.tenantName = tenantName;
                 return this;
             }
 
