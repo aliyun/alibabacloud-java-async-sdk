@@ -67,6 +67,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AttachCommonBandwidthPackageToLoadBalancerResponse> attachCommonBandwidthPackageToLoadBalancer(AttachCommonBandwidthPackageToLoadBalancerRequest request);
 
+    CompletableFuture<CancelShiftLoadBalancerZonesResponse> cancelShiftLoadBalancerZones(CancelShiftLoadBalancerZonesRequest request);
+
     /**
       * ### Prerequisites
       * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](~~214358~~).
@@ -353,6 +355,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<StartListenerResponse> startListener(StartListenerRequest request);
+
+    CompletableFuture<StartShiftLoadBalancerZonesResponse> startShiftLoadBalancerZones(StartShiftLoadBalancerZonesRequest request);
 
     /**
       * **StopListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task:

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateLoadBalancerZonesRequest} extends {@link RequestModel}
+ * {@link CancelShiftLoadBalancerZonesRequest} extends {@link RequestModel}
  *
- * <p>UpdateLoadBalancerZonesRequest</p>
+ * <p>CancelShiftLoadBalancerZonesRequest</p>
  */
-public class UpdateLoadBalancerZonesRequest extends Request {
+public class CancelShiftLoadBalancerZonesRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -30,7 +30,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
     @Validation(required = true)
     private java.util.List < ZoneMappings> zoneMappings;
 
-    private UpdateLoadBalancerZonesRequest(Builder builder) {
+    private CancelShiftLoadBalancerZonesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
@@ -42,7 +42,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateLoadBalancerZonesRequest create() {
+    public static CancelShiftLoadBalancerZonesRequest create() {
         return builder().build();
     }
 
@@ -79,7 +79,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         return this.zoneMappings;
     }
 
-    public static final class Builder extends Request.Builder<UpdateLoadBalancerZonesRequest, Builder> {
+    public static final class Builder extends Request.Builder<CancelShiftLoadBalancerZonesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String loadBalancerId; 
@@ -89,7 +89,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLoadBalancerZonesRequest request) {
+        private Builder(CancelShiftLoadBalancerZonesRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
@@ -98,12 +98,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -112,11 +107,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
-         * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -125,7 +116,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The ID of the ALB instance.
+         * LoadBalancerId.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -134,7 +125,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The zones and the vSwitches. You must specify at least two zones. The specified zones overwrite the existing configurations.
+         * ZoneMappings.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -143,16 +134,13 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         @Override
-        public UpdateLoadBalancerZonesRequest build() {
-            return new UpdateLoadBalancerZonesRequest(this);
+        public CancelShiftLoadBalancerZonesRequest build() {
+            return new CancelShiftLoadBalancerZonesRequest(this);
         } 
 
     } 
 
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("IntranetAddress")
-        private String intranetAddress;
-
         @NameInMap("VSwitchId")
         @Validation(required = true)
         private String vSwitchId;
@@ -162,7 +150,6 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
-            this.intranetAddress = builder.intranetAddress;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
         }
@@ -173,13 +160,6 @@ public class UpdateLoadBalancerZonesRequest extends Request {
 
         public static ZoneMappings create() {
             return builder().build();
-        }
-
-        /**
-         * @return intranetAddress
-         */
-        public String getIntranetAddress() {
-            return this.intranetAddress;
         }
 
         /**
@@ -197,20 +177,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         public static final class Builder {
-            private String intranetAddress; 
             private String vSwitchId; 
             private String zoneId; 
 
             /**
-             * IntranetAddress.
-             */
-            public Builder intranetAddress(String intranetAddress) {
-                this.intranetAddress = intranetAddress;
-                return this;
-            }
-
-            /**
-             * The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -218,7 +189,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The name of the zone. You can call the [DescribeZones](~~189196~~) operation to query the zones. You can specify up to 10 zone IDs.
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

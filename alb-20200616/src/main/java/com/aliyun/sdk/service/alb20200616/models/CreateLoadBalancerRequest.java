@@ -603,6 +603,9 @@ public class CreateLoadBalancerRequest extends Request {
 
     }
     public static class ZoneMappings extends TeaModel {
+        @NameInMap("IntranetAddress")
+        private String intranetAddress;
+
         @NameInMap("VSwitchId")
         @Validation(required = true)
         private String vSwitchId;
@@ -612,6 +615,7 @@ public class CreateLoadBalancerRequest extends Request {
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
+            this.intranetAddress = builder.intranetAddress;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
         }
@@ -622,6 +626,13 @@ public class CreateLoadBalancerRequest extends Request {
 
         public static ZoneMappings create() {
             return builder().build();
+        }
+
+        /**
+         * @return intranetAddress
+         */
+        public String getIntranetAddress() {
+            return this.intranetAddress;
         }
 
         /**
@@ -639,8 +650,17 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         public static final class Builder {
+            private String intranetAddress; 
             private String vSwitchId; 
             private String zoneId; 
+
+            /**
+             * IntranetAddress.
+             */
+            public Builder intranetAddress(String intranetAddress) {
+                this.intranetAddress = intranetAddress;
+                return this;
+            }
 
             /**
              * The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.
