@@ -58,7 +58,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the user that was queried.
+         * The details of the user that was queried.
          */
         public Builder user(User user) {
             this.user = user;
@@ -282,7 +282,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveEndTime.
+             * The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder effectiveEndTime(Long effectiveEndTime) {
                 this.effectiveEndTime = effectiveEndTime;
@@ -290,7 +290,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveStartTime.
+             * The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder effectiveStartTime(Long effectiveStartTime) {
                 this.effectiveStartTime = effectiveStartTime;
@@ -306,7 +306,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user.
+             * The mobile phone number of the user.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -314,12 +314,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The country where the mobile number of the user is registered. Valid values:
+             * The location in which the mobile number of the user is registered. Valid values:
              * <p>
              * 
              * *   **CN**: the Chinese mainland, whose country calling code is +86
              * *   **HK**: Hong Kong (China), whose country calling code is +852
-             * *   **MO**: Macau (China), whose country calling code is +853
+             * *   **MO**: Macao (China), whose country calling code is +853
              * *   **TW**: Taiwan (China), whose country calling code is +886
              * *   **RU**: Russia, whose country calling code is +7
              * *   **SG**: Singapore, whose country calling code is +65
@@ -327,12 +327,12 @@ public class GetUserResponseBody extends TeaModel {
              * *   **ID**: Indonesia, whose country calling code is +62
              * *   **DE**: Germany, whose country calling code is +49
              * *   **AU**: Australia, whose country calling code is +61
-             * *   **US**: United States, whose country calling code is +1
+             * *   **US**: US, whose country calling code is +1
              * *   **AE**: United Arab Emirates, whose country calling code is +971
-             * *   **JP**: Japan, whose country calling code is +81
-             * *   **GB**: United Kingdom, whose country calling code is +44
+             * *   **JP:** Japan, whose country calling code is +81
+             * *   **GB**: UK, whose country calling code is +44
              * *   **IN**: India, whose country calling code is +91
-             * *   **KR**: South Korea, whose country calling code is +82
+             * *   **KR**: Republic of Korea, whose country calling code is +82
              * *   **PH**: Philippines, whose country calling code is +63
              * *   **CH**: Switzerland, whose country calling code is +41
              * *   **SE**: Sweden, whose country calling code is +46
@@ -343,7 +343,11 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * NeedResetPassword.
+             * Specifies whether password reset is required upon the next logon. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder needResetPassword(Boolean needResetPassword) {
                 this.needResetPassword = needResetPassword;
@@ -366,7 +370,7 @@ public class GetUserResponseBody extends TeaModel {
              * The unique ID of the user.
              * <p>
              * 
-             * >  This parameter uniquely identifies a RAM user of the Bastionhost instance. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
+             * > This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
              */
             public Builder sourceUserId(String sourceUserId) {
                 this.sourceUserId = sourceUserId;
@@ -374,7 +378,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * TwoFactorMethods.
+             * An array that consists of the details of the two-factor authentication method.
              */
             public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;
@@ -382,7 +386,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * TwoFactorStatus.
+             * The two-factor authentication status of the user. Valid values:
+             * <p>
+             * 
+             * *   **Global**: The global settings are used.
+             * *   **Disable**: The two-factor authentication is disabled.
+             * *   **Enable**: The two-factor authentication is enabled and the user-specific setting is used.
              */
             public Builder twoFactorStatus(String twoFactorStatus) {
                 this.twoFactorStatus = twoFactorStatus;
@@ -406,7 +415,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The statuses of the user.
+             * An array that consists of the details of the user status.
              */
             public Builder userState(java.util.List < String > userState) {
                 this.userState = userState;

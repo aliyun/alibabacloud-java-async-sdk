@@ -170,7 +170,10 @@ public class CreateHostAccountRequest extends Request {
         } 
 
         /**
-         * The name of the host account that you want to add. The name can be up to 128 characters in length.
+         * The passphrase of the private key for the host account.
+         * <p>
+         * 
+         * >  You can specify this parameter when the ProtocolName parameter is set to SSH. If the ProtocolName parameter is set to RDP, you do not need to specify this parameter.
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -179,68 +182,11 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * The ID of the host to which you want to add a host account.
-         * <p>
-         * 
-         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+         * The ID of the shared key.
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
             this.hostId = hostId;
-            return this;
-        }
-
-        /**
-         * The ID of the shared key.
-         */
-        public Builder hostShareKeyId(String hostShareKeyId) {
-            this.putQueryParameter("HostShareKeyId", hostShareKeyId);
-            this.hostShareKeyId = hostShareKeyId;
-            return this;
-        }
-
-        /**
-         * The ID of the bastion host in which you want to add a host account to the host.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The passphrase of the private key for the host account.
-         * <p>
-         * 
-         * >  You can specify this parameter when the ProtocolName parameter is set to SSH. If the ProtocolName parameter is set to RDP, you do not need to specify this parameter.
-         */
-        public Builder passPhrase(String passPhrase) {
-            this.putQueryParameter("PassPhrase", passPhrase);
-            this.passPhrase = passPhrase;
-            return this;
-        }
-
-        /**
-         * The password of the host account.
-         */
-        public Builder password(String password) {
-            this.putQueryParameter("Password", password);
-            this.password = password;
-            return this;
-        }
-
-        /**
-         * The private key of the host account. The value is a Base64-encoded string.
-         * <p>
-         * 
-         * >  This parameter takes effect only when the ProtocolName parameter is set to SSH. If the ProtocolName parameter is set to RDP, you do not need to specify this parameter. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key to log on to the host.
-         */
-        public Builder privateKey(String privateKey) {
-            this.putQueryParameter("PrivateKey", privateKey);
-            this.privateKey = privateKey;
             return this;
         }
 
@@ -253,9 +199,30 @@ public class CreateHostAccountRequest extends Request {
          * *   SSH
          * *   RDP
          */
-        public Builder protocolName(String protocolName) {
-            this.putQueryParameter("ProtocolName", protocolName);
-            this.protocolName = protocolName;
+        public Builder hostShareKeyId(String hostShareKeyId) {
+            this.putQueryParameter("HostShareKeyId", hostShareKeyId);
+            this.hostShareKeyId = hostShareKeyId;
+            return this;
+        }
+
+        /**
+         * master
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The private key of the host account. The value is a Base64-encoded string.
+         * <p>
+         * 
+         * >  This parameter takes effect only when the ProtocolName parameter is set to SSH. If the ProtocolName parameter is set to RDP, you do not need to specify this parameter. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key to log on to the host.
+         */
+        public Builder passPhrase(String passPhrase) {
+            this.putQueryParameter("PassPhrase", passPhrase);
+            this.passPhrase = passPhrase;
             return this;
         }
 
@@ -264,6 +231,39 @@ public class CreateHostAccountRequest extends Request {
          * <p>
          * 
          * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         */
+        public Builder password(String password) {
+            this.putQueryParameter("Password", password);
+            this.password = password;
+            return this;
+        }
+
+        /**
+         * The ID of the host to which you want to add a host account.
+         * <p>
+         * 
+         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+         */
+        public Builder privateKey(String privateKey) {
+            this.putQueryParameter("PrivateKey", privateKey);
+            this.privateKey = privateKey;
+            return this;
+        }
+
+        /**
+         * The ID of the bastion host in which you want to add a host account to the host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         */
+        public Builder protocolName(String protocolName) {
+            this.putQueryParameter("ProtocolName", protocolName);
+            this.protocolName = protocolName;
+            return this;
+        }
+
+        /**
+         * The password of the host account.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

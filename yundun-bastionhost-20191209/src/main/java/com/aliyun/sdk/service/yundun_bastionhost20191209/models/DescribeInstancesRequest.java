@@ -139,7 +139,7 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * The IDs of the bastion hosts.
+         * An array that consists of the IDs of the bastion hosts.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +148,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The state of the bastion host. Valid values:
+         * The status of the bastion host. Valid values:
          * <p>
          * 
          * *   **PENDING**: The bastion host is not initialized.
@@ -202,7 +202,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * An array consisting of the tags that are added to the bastion hosts.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -256,7 +256,7 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the bastion host.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -264,7 +264,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The tag value of the bastion host.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

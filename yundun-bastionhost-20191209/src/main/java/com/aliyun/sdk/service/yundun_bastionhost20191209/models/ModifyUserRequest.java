@@ -341,7 +341,11 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * The original password of the user. The password must be 8 to 128 characters in length and must contain lowercase letters, uppercase letters, digits, and special characters.
+         * Specifies whether password reset is required upon the next logon. Valid values:
+         * <p>
+         * 
+         * - true: yes
+         * - false: no
          */
         public Builder needResetPassword(Boolean needResetPassword) {
             this.putQueryParameter("NeedResetPassword", needResetPassword);
@@ -379,9 +383,7 @@ public class ModifyUserRequest extends Request {
          * *   **dingtalk:** DingTalk
          * *   **totp OTP:** time-based one-time password (TOTP) app
          * 
-         * > 
-         * 
-         * *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.
+         * > *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.
          */
         public Builder twoFactorMethods(String twoFactorMethods) {
             this.putQueryParameter("TwoFactorMethods", twoFactorMethods);

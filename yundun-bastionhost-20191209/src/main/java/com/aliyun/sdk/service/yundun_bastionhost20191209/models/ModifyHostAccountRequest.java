@@ -157,7 +157,7 @@ public class ModifyHostAccountRequest extends Request {
          * The ID of the host account whose information you want to modify.
          * <p>
          * 
-         * > : You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
+         * > You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
          */
         public Builder hostAccountId(String hostAccountId) {
             this.putQueryParameter("HostAccountId", hostAccountId);
@@ -187,7 +187,7 @@ public class ModifyHostAccountRequest extends Request {
          * The ID of the bastion host in which you want to modify the information about the host account.
          * <p>
          * 
-         * > : You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,7 @@ public class ModifyHostAccountRequest extends Request {
          * The passphrase of the new private key for the host account.
          * <p>
          * 
-         * > : This parameter takes effect only when the protocol of the host is set to SSH. If the protocol of the host is set to RDP, this parameter is not required.
+         * > This parameter takes effect only when the protocol of the host is set to SSH. If the protocol of the host is set to RDP, this parameter is not required.
          */
         public Builder passPhrase(String passPhrase) {
             this.putQueryParameter("PassPhrase", passPhrase);
@@ -220,7 +220,7 @@ public class ModifyHostAccountRequest extends Request {
          * The new private key of the host account. The value is a Base64-encoded string.
          * <p>
          * 
-         * > : This parameter takes effect only when the protocol of the host is set to SSH. If the protocol of the host is set to RDP, this parameter is not required. You can call the [GetHostAccount](~~204391~~) operation to query the protocol used by the host. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.
+         * > This parameter takes effect only when the protocol of the host is set to SSH. If the protocol of the host is set to RDP, this parameter is not required. You can call the [GetHostAccount](~~204391~~) operation to query the protocol used by the host. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -229,10 +229,10 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host in which you want to modify the information about the host account.
+         * The region ID of the bastion host in which you want to query the details of the host account.
          * <p>
          * 
-         * > : For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

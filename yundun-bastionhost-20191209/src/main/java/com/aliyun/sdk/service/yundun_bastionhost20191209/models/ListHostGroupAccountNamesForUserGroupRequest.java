@@ -99,10 +99,7 @@ public class ListHostGroupAccountNamesForUserGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the host group.
-         * <p>
-         * 
-         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+         * WB662865
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -111,10 +108,10 @@ public class ListHostGroupAccountNamesForUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the host account names that the user group is authorized to manage in a specified host group.
+         * All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * For more information about sample requests, see the "Examples" section of this topic.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,10 +120,7 @@ public class ListHostGroupAccountNamesForUserGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the host account names that the user group is authorized to manage in a specified host group.
-         * <p>
-         * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * Queries the names of the host accounts that a specified user group is authorized to manage in a specified host group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -135,10 +129,7 @@ public class ListHostGroupAccountNamesForUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user group.
-         * <p>
-         * 
-         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+         * ListHostGroupAccountNamesForUserGroup
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

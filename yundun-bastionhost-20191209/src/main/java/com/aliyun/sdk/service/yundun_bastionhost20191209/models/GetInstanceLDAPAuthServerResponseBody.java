@@ -50,7 +50,11 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The settings of LDAP authentication.
+         * Indicates whether SSL is supported. Valid values:
+         * <p>
+         * 
+         * *   **true**: supported
+         * *   **false**: not supported
          */
         public Builder LDAP(LDAP LDAP) {
             this.LDAP = LDAP;
@@ -58,7 +62,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The settings of LDAP authentication.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +234,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             private String standbyServer; 
 
             /**
-             * The account of the LDAP server.
+             * The ID of the bastion host.
+             * <p>
+             * 
+             * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -238,7 +245,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The Base distinguished name (DN).
+             * The field that is used to indicate the logon name of a user on the LDAP server.
              */
             public Builder baseDN(String baseDN) {
                 this.baseDN = baseDN;
@@ -246,7 +253,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the email address of a user on the LDAP server.
+             * The address of the secondary LDAP server.
              */
             public Builder emailMapping(String emailMapping) {
                 this.emailMapping = emailMapping;
@@ -254,7 +261,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The condition that is used to filter users.
+             * The Base distinguished name (DN).
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -262,11 +269,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether passwords are required. Valid values:
-             * <p>
-             * 
-             * *   **true**: required
-             * *   **false**: not required
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder hasPassword(String hasPassword) {
                 this.hasPassword = hasPassword;
@@ -274,11 +277,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL is supported. Valid values:
-             * <p>
-             * 
-             * *   **true**: supported
-             * *   **false**: not supported
+             * The condition that is used to filter users.
              */
             public Builder isSSL(Boolean isSSL) {
                 this.isSSL = isSSL;
@@ -286,7 +285,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the logon name of a user on the LDAP server.
+             * The port that is used to access the LDAP server.
              */
             public Builder loginNameMapping(String loginNameMapping) {
                 this.loginNameMapping = loginNameMapping;
@@ -294,7 +293,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the mobile phone number of a user on the LDAP server.
+             * The field that is used to indicate the email address of a user on the LDAP server.
              */
             public Builder mobileMapping(String mobileMapping) {
                 this.mobileMapping = mobileMapping;
@@ -302,7 +301,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the name of a user on the LDAP server.
+             * The field that is used to indicate the mobile phone number of a user on the LDAP server.
              */
             public Builder nameMapping(String nameMapping) {
                 this.nameMapping = nameMapping;
@@ -310,7 +309,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to access the LDAP server.
+             * Port.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -318,7 +317,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the LDAP server.
+             * Server.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -326,7 +325,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the secondary LDAP server.
+             * StandbyServer.
              */
             public Builder standbyServer(String standbyServer) {
                 this.standbyServer = standbyServer;

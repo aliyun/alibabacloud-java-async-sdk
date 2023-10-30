@@ -62,7 +62,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The host groups returned.
+         * An array that consists of the host groups.
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.hostGroups = hostGroups;

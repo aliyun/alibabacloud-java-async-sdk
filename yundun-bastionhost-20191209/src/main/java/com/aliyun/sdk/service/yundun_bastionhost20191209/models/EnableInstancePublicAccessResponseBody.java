@@ -50,7 +50,7 @@ public class EnableInstancePublicAccessResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the bastion host whose Internet access is enabled.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -58,7 +58,7 @@ public class EnableInstancePublicAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

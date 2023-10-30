@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The token for starting the next query.
+         * Queries the tags bound to one or more Bastionhost instances.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * ListTagResources
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about Bastionhost instances and the tags bound to Bastionhost instances.
-         * <p>
-         * 
-         * The following information is included: instance ID, resource type, tag key, and tag value.
+         * 58928
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -157,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the instance.
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -165,10 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
-             * <p>
-             * 
-             * The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -176,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -184,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

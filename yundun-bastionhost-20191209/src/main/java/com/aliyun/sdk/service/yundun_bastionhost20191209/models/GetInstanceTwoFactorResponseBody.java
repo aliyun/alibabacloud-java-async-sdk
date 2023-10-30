@@ -58,7 +58,10 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.
+         * <p>
+         * 
+         * >  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +125,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             private java.util.List < String > twoFactorMethods; 
 
             /**
-             * Indicates whether two-factor authentication is enabled. Valid values:
-             * <p>
-             * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * Queries the settings of two-factor authentication on a bastion host.
              */
             public Builder enableTwoFactor(Boolean enableTwoFactor) {
                 this.enableTwoFactor = enableTwoFactor;
@@ -134,10 +133,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             }
 
             /**
-             * The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.
-             * <p>
-             * 
-             * >  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.
+             * SkipTwoFactorTime.
              */
             public Builder skipTwoFactorTime(Long skipTwoFactorTime) {
                 this.skipTwoFactorTime = skipTwoFactorTime;
@@ -145,7 +141,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates one or more methods that are used to send verification codes if two-factor authentication is enabled.
+             * TwoFactorMethods.
              */
             public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;

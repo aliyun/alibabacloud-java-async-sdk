@@ -50,7 +50,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the shared key.
+         * The operation that you want to perform. Set the value to **GetHostShareKey**.
          */
         public Builder hostShareKey(HostShareKey hostShareKey) {
             this.hostShareKey = hostShareKey;
@@ -134,7 +134,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             private String privateKeyFingerPrint; 
 
             /**
-             * The ID of the shared key.
+             * The fingerprint of the private key.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -142,7 +142,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shared key.
+             * HostShareKeyName.
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -150,7 +150,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the shared key was last modified.
+             * LastModifyKeyAt.
              */
             public Builder lastModifyKeyAt(Long lastModifyKeyAt) {
                 this.lastModifyKeyAt = lastModifyKeyAt;
@@ -158,7 +158,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the private key.
+             * PrivateKeyFingerPrint.
              */
             public Builder privateKeyFingerPrint(String privateKeyFingerPrint) {
                 this.privateKeyFingerPrint = privateKeyFingerPrint;

@@ -99,14 +99,27 @@ public class RemoveHostsFromGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the host group from which you want to remove hosts.
+         * The return code that indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+         * *   **OK**: The call was successful.
+         * *   **UNEXPECTED**: An unknown error occurred.
+         * *   **INVALID_ARGUMENT**: A request parameter is invalid.
+         * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
+         * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
             this.hostGroupId = hostGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder hostIds(String hostIds) {
+            this.putQueryParameter("HostIds", hostIds);
+            this.hostIds = hostIds;
             return this;
         }
 
@@ -116,18 +129,6 @@ public class RemoveHostsFromGroupRequest extends Request {
          * 
          * >  You can call the [ListHosts](~~200665~~) operation to query the IDs of hosts.
          */
-        public Builder hostIds(String hostIds) {
-            this.putQueryParameter("HostIds", hostIds);
-            this.hostIds = hostIds;
-            return this;
-        }
-
-        /**
-         * The ID of the bastion host for which you want to remove hosts from the host group.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
-         */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
@@ -135,10 +136,7 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host for which you want to remove hosts from the host group.
-         * <p>
-         * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * The ID of the host group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

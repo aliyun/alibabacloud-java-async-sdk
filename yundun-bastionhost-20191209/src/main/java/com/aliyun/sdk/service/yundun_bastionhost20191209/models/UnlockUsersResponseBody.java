@@ -58,7 +58,7 @@ public class UnlockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the call.
+         * An array that consists of information about the result of the call.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -122,7 +122,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The return code that indicates whether the call was successful. Valid values:
+             * The result of the call. Valid values:
              * <p>
              * 
              * *   **OK**: The call was successful.
@@ -131,11 +131,15 @@ public class UnlockUsersResponseBody extends TeaModel {
              * 
              * *   **INVALID_ARGUMENT**: A request parameter is invalid.
              * 
-             * > Make sure that the request parameters are valid and call the operation again.
+             *     **
+             * 
+             *     **Note**Make sure that the request parameters are valid and call the operation again.
              * 
              * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
              * 
-             * > Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
+             *     **
+             * 
+             *     **Note**Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
              * 
              * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
              */

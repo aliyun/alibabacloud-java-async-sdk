@@ -116,7 +116,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +128,7 @@ public class ListTagKeysRequest extends Request {
          * The type of the resource.
          * <p>
          * 
-         * Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.
+         * Set the value to INSTANCE, which indicates that the resource is a bastion host.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

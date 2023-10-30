@@ -120,10 +120,10 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query host groups.
+         * The ID of the bastion host in which you want to query the host group.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,12 +141,11 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries to return on each page.\
          * <p>
+         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * 
-         * The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page by default.
-         * 
-         * >  We recommend that you do not leave the PageSize parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,10 +154,10 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query host groups.
+         * The region ID of the bastion host in which you want to query the host group.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

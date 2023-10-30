@@ -129,7 +129,7 @@ public class UntagResourcesRequest extends Request {
          * The region ID of the bastion host to query.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify a maximum of 20 resource IDs.
+         * An array that consists of IDs of bastion hosts.
+         * <p>
+         * 
+         * Valid values: 1 to 20.
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -159,7 +164,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * The key of tag N.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

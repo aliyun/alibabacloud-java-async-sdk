@@ -86,7 +86,7 @@ public class DeleteHostShareKeyRequest extends Request {
          * The ID of the shared key.
          * <p>
          * 
-         * >  You must specify this parameter.
+         * > You must specify this parameter.
          */
         public Builder hostShareKeyId(String hostShareKeyId) {
             this.putQueryParameter("HostShareKeyId", hostShareKeyId);

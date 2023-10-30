@@ -202,8 +202,8 @@ public class CreateHostRequest extends Request {
          * The endpoint type of the host that you want to create. Valid values:
          * <p>
          * 
-         * *   **Public**: a public endpoint
-         * *   **Private**: an internal endpoint
+         * *   **Public**: public endpoint
+         * *   **Private**: internal endpoint
          */
         public Builder activeAddressType(String activeAddressType) {
             this.putQueryParameter("ActiveAddressType", activeAddressType);
@@ -212,7 +212,7 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The description of the host that you want to create. The value can be up to 500 characters.
+         * The description of the host that you want to create. The value can be up to 500 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -233,7 +233,7 @@ public class CreateHostRequest extends Request {
          * The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.
          * <p>
          * 
-         * >  This parameter is required if the **ActiveAddressType** parameter is set to **Private**.
+         * > This parameter is required if the **ActiveAddressType** parameter is set to **Private**.
          */
         public Builder hostPrivateAddress(String hostPrivateAddress) {
             this.putQueryParameter("HostPrivateAddress", hostPrivateAddress);
@@ -245,7 +245,7 @@ public class CreateHostRequest extends Request {
          * The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.
          * <p>
          * 
-         * >  This parameter is required if the **ActiveAddressType** parameter is set to **Public**.
+         * > This parameter is required if the **ActiveAddressType** parameter is set to **Public**.
          */
         public Builder hostPublicAddress(String hostPublicAddress) {
             this.putQueryParameter("HostPublicAddress", hostPublicAddress);
@@ -254,10 +254,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to create the host.
+         * The ID of the bastion host in which you want to create the host.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -266,10 +266,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The ID of the region where the ECS instance or dedicated cluster host that you want to create resides.
+         * The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.
          * <p>
          * 
-         * >  This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.
+         * > This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.
          */
         public Builder instanceRegionId(String instanceRegionId) {
             this.putQueryParameter("InstanceRegionId", instanceRegionId);
@@ -291,10 +291,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to create the host.
+         * The region ID of the bastion host in which you want to create the host.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,9 +306,9 @@ public class CreateHostRequest extends Request {
          * The source of the host that you want to create. Valid values:
          * <p>
          * 
-         * *   **Local**: an on-premises host
+         * *   **Local**: a host in a data center
          * *   **Ecs**: an Elastic Compute Service (ECS) instance
-         * *   **Rds**: a host in a dedicated cluster
+         * *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -317,10 +317,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance or dedicated cluster host that you want to create.
+         * The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.
          * <p>
          * 
-         * >  This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.
+         * > This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);

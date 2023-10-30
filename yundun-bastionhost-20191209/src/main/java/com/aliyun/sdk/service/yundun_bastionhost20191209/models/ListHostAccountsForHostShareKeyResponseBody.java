@@ -178,7 +178,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The O&M protocol.
+             * The O\&M protocol.
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

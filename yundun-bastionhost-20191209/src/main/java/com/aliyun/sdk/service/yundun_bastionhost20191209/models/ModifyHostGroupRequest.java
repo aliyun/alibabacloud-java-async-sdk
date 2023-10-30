@@ -112,11 +112,23 @@ public class ModifyHostGroupRequest extends Request {
         } 
 
         /**
-         * The new description of the host group. The value can be up to 500 characters in length.
+         * The new name of the host group. The name can be up to 128 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * The region ID of the Bastionhost instance where you want to modify the information of the host group.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         */
+        public Builder hostGroupId(String hostGroupId) {
+            this.putQueryParameter("HostGroupId", hostGroupId);
+            this.hostGroupId = hostGroupId;
             return this;
         }
 
@@ -126,15 +138,6 @@ public class ModifyHostGroupRequest extends Request {
          * 
          * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
          */
-        public Builder hostGroupId(String hostGroupId) {
-            this.putQueryParameter("HostGroupId", hostGroupId);
-            this.hostGroupId = hostGroupId;
-            return this;
-        }
-
-        /**
-         * The new name of the host group. The name can be up to 128 characters in length.
-         */
         public Builder hostGroupName(String hostGroupName) {
             this.putQueryParameter("HostGroupName", hostGroupName);
             this.hostGroupName = hostGroupName;
@@ -142,10 +145,7 @@ public class ModifyHostGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to modify the information of the host group.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,10 +154,10 @@ public class ModifyHostGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to modify the information of the host group.
+         * The ID of the Bastionhost instance where you want to modify the information of the host group.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

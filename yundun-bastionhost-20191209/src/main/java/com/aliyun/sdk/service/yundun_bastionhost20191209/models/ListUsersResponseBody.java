@@ -302,7 +302,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveEndTime.
+             * The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder effectiveEndTime(Long effectiveEndTime) {
                 this.effectiveEndTime = effectiveEndTime;
@@ -310,7 +310,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveStartTime.
+             * The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder effectiveStartTime(Long effectiveStartTime) {
                 this.effectiveStartTime = effectiveStartTime;
@@ -363,7 +363,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * NeedResetPassword.
+             * Specifies whether password reset is required upon the next logon. Valid values:
+             * <p>
+             * 
+             * - true: yes
+             * - false: no
              */
             public Builder needResetPassword(Boolean needResetPassword) {
                 this.needResetPassword = needResetPassword;
@@ -394,7 +398,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TwoFactorMethods.
+             * The two-factor authentication method.
              */
             public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;
@@ -402,7 +406,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TwoFactorStatus.
+             * The two-factor authentication status of the user. Valid values:
+             * <p>
+             * 
+             * *   **Global:** follows the global settings
+             * *   **Disable:** disables two-factor authentication
+             * *   **Enable:** enable two-factor authentication and follows settings of the single user
              */
             public Builder twoFactorStatus(String twoFactorStatus) {
                 this.twoFactorStatus = twoFactorStatus;

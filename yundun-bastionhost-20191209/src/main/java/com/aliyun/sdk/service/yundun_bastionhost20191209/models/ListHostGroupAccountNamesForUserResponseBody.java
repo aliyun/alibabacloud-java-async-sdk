@@ -50,7 +50,7 @@ public class ListHostGroupAccountNamesForUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The names of host accounts returned.
+         * An array that consists of the names of host accounts.
          */
         public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
             this.hostAccountNames = hostAccountNames;

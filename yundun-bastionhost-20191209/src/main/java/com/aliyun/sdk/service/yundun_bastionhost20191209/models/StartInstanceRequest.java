@@ -101,7 +101,7 @@ public class StartInstanceRequest extends Request {
          * The ID of the bastion host that you want to enable.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -119,7 +119,7 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The IDs of the security groups.
+         * An array consisting of the IDs of security groups to which the bastion host is added.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);

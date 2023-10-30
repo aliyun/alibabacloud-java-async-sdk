@@ -99,11 +99,7 @@ public class ResetHostAccountCredentialRequest extends Request {
         } 
 
         /**
-         * The type of the logon credential that you want to delete. Valid values:
-         * <p>
-         * 
-         * *   **Password**: You want to delete the password.
-         * *   **PrivateKey**: You want to delete the SSH private key.
+         * ResetHostAccountCredential
          */
         public Builder credentialType(String credentialType) {
             this.putQueryParameter("CredentialType", credentialType);
@@ -112,10 +108,7 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * The ID of the host account for which the logon credential is to be deleted.
-         * <p>
-         * 
-         * >  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
+         * WB662865
          */
         public Builder hostAccountId(String hostAccountId) {
             this.putQueryParameter("HostAccountId", hostAccountId);
@@ -124,10 +117,7 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to delete the logon credential for the host account.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * Deletes the logon credential of a specified host account of a specified Bastionhost instance. The logon credential can be the password or SSH private key.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -136,10 +126,7 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to delete the logon credential for the host account.
-         * <p>
-         * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * ResetHostAccountCredential
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

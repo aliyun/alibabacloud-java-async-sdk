@@ -273,7 +273,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * The ID of the user group.
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;

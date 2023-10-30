@@ -50,7 +50,10 @@ public class GetHostGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the host group returned.
+         * The ID of the host group that you want to query.
+         * <p>
+         * 
+         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
          */
         public Builder hostGroup(HostGroup hostGroup) {
             this.hostGroup = hostGroup;
@@ -58,7 +61,7 @@ public class GetHostGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * my host group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +125,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             private String hostGroupName; 
 
             /**
-             * The description of the host group.
+             * The details of the host group returned.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -130,7 +133,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host group.
+             * The description of the host group.
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -138,7 +141,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host group.
+             * The ID of the host group.
              */
             public Builder hostGroupName(String hostGroupName) {
                 this.hostGroupName = hostGroupName;

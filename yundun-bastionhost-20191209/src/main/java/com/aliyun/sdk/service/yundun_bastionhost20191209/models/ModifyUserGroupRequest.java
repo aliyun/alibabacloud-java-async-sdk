@@ -112,7 +112,7 @@ public class ModifyUserGroupRequest extends Request {
         } 
 
         /**
-         * The new description of the user group. The value can be up to 500 characters in length.
+         * The new description of the user group. The description can be up to 500 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -121,10 +121,10 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to modify the information of the user group.
+         * The ID of the bastion host in which you want to modify the information about the user group.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,10 +133,10 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to modify the information of the user group.
+         * The region ID of the bastion host in which you want to modify the information about the user group.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +148,7 @@ public class ModifyUserGroupRequest extends Request {
          * The ID of the user group that you want to modify.
          * <p>
          * 
-         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+         * > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -157,7 +157,7 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * The new name of the user group. The value can be up to 128 characters in length.
+         * The new name of the user group. This name can be up to 128 characters in length.
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

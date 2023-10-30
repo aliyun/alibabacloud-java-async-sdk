@@ -100,7 +100,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
          * The IDs of the host accounts.
          * <p>
          * 
-         * >  You must specify this parameter.
+         * > You must specify this parameter.
          */
         public Builder hostAccountIds(String hostAccountIds) {
             this.putQueryParameter("HostAccountIds", hostAccountIds);
@@ -112,7 +112,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
          * The ID of the shared key.
          * <p>
          * 
-         * >  You must specify this parameter.
+         * > You must specify this parameter.
          */
         public Builder hostShareKeyId(String hostShareKeyId) {
             this.putQueryParameter("HostShareKeyId", hostShareKeyId);

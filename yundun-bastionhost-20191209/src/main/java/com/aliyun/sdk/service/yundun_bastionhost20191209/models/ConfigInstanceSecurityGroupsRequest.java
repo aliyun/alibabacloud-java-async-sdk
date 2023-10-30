@@ -98,7 +98,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
         } 
 
         /**
-         * The IDs of authorized security group.
+         * An array that consists of the IDs of authorized security groups.
          */
         public Builder authorizedSecurityGroups(java.util.List < String > authorizedSecurityGroups) {
             this.putQueryParameter("AuthorizedSecurityGroups", authorizedSecurityGroups);
@@ -110,7 +110,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
          * The ID of the bastion host.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

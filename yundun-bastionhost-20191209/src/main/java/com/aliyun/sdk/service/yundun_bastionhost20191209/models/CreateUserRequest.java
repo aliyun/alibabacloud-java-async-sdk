@@ -285,7 +285,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 有效期结束时间戳。单位秒
+         * The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder effectiveEndTime(Long effectiveEndTime) {
             this.putQueryParameter("EffectiveEndTime", effectiveEndTime);
@@ -294,7 +294,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 开始生效时间戳，单位秒
+         * The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder effectiveStartTime(Long effectiveStartTime) {
             this.putQueryParameter("EffectiveStartTime", effectiveStartTime);
@@ -363,7 +363,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 下次登录是否需要重置密码
+         * Specifies whether password reset is required upon the next logon. Valid values:
+         * <p>
+         * 
+         * - true: yes
+         * 
+         * - false: no
          */
         public Builder needResetPassword(Boolean needResetPassword) {
             this.putQueryParameter("NeedResetPassword", needResetPassword);
@@ -423,7 +428,15 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * TwoFactorMethods.
+         * The two-factor authentication method. You can select only one method. Valid values:
+         * <p>
+         * 
+         * *   **sms:** text message
+         * *   **email:** email
+         * *   **dingtalk:** DingTalk
+         * *   **totp OTP:** time-based one-time password (TOTP) app
+         * 
+         * > *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.
          */
         public Builder twoFactorMethods(String twoFactorMethods) {
             this.putQueryParameter("TwoFactorMethods", twoFactorMethods);
@@ -432,7 +445,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * TwoFactorStatus.
+         * The two-factor authentication status of the user. Valid values:
+         * <p>
+         * 
+         * - Global: follows the global settings
+         * - Disable: disables two-factor authentication
+         * - Enable: enable two-factor authentication and follows settings of the single user
          */
         public Builder twoFactorStatus(String twoFactorStatus) {
             this.putQueryParameter("TwoFactorStatus", twoFactorStatus);

@@ -289,8 +289,8 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
          * Specifies whether to support SSL. Valid values:
          * <p>
          * 
-         * *   **true**: supports SSL.
-         * *   **false**: does not support SSL.
+         * *   **true**
+         * *   **false**
          */
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);
@@ -326,7 +326,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The password of the account that is used for the LDAP server.
+         * The password of the account that is used for the LDAP server. You must configure a password when you configure LDAP authentication. If you leave this parameter empty when you modify the settings of LDAP authentication, the current password is used.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

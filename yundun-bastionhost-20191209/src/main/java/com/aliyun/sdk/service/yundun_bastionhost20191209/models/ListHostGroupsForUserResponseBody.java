@@ -62,7 +62,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The host groups returned.
+         * ListHostGroupsForUser
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
@@ -70,7 +70,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Queries the host groups that a specified user is authorized or not authorized to manage.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,10 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of host groups returned.
+         * All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
+         * <p>
+         * 
+         * For more information about sample requests, see the "Examples" section of this topic.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +145,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
             private String hostGroupName; 
 
             /**
-             * The description of the host group.
+             * ListHostGroupsForUser
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -150,7 +153,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host group.
+             * WB662865
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -158,7 +161,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host group.
+             * HostGroupName.
              */
             public Builder hostGroupName(String hostGroupName) {
                 this.hostGroupName = hostGroupName;

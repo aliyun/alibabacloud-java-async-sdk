@@ -62,7 +62,10 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The hosts returned.
+         * The ID of the user group for which you want to query hosts.
+         * <p>
+         * 
+         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -70,7 +73,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The hosts returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of hosts returned.
+         * The public endpoint of the host. The value is a domain name or an IP address.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,11 +193,10 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             private String OSType; 
 
             /**
-             * The endpoint type of the host. Valid values:
+             * All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
              * <p>
              * 
-             * *   **Public**: a public endpoint
-             * *   **Private**: an internal endpoint
+             * For more information about sample requests, see the "Examples" section of this topic.
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -202,7 +204,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the host.
+             * The ID of the request.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -210,7 +212,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -218,7 +220,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * ListHostsForUserGroup
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -226,7 +228,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the host. The value is a domain name or an IP address.
+             * WB662865
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -234,7 +236,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the host. The value is a domain name or an IP address.
+             * Queries the hosts that a specified user group is authorized or not authorized to manage.
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -242,11 +244,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the host. Valid values:
-             * <p>
-             * 
-             * *   **Linux**
-             * *   **Windows**
+             * ListHostsForUserGroup
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;

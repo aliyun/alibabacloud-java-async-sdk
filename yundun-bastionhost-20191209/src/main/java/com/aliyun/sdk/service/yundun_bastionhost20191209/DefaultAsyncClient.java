@@ -39,11 +39,43 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    @Override
+    public CompletableFuture<AcceptApproveCommandResponse> acceptApproveCommand(AcceptApproveCommandRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AcceptApproveCommand").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AcceptApproveCommandResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AcceptApproveCommandResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
-      * ## Usage notes
-      * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.  
-      * ## QPS limit
+      * You can call this operation as a Bastionhost administrator to approve an O\\&M application of an O\\&M engineer.
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
+    @Override
+    public CompletableFuture<AcceptOperationTicketResponse> acceptOperationTicket(AcceptOperationTicketRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AcceptOperationTicket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AcceptOperationTicketResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AcceptOperationTicketResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
+      * # Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
      */
     @Override
@@ -61,10 +93,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/createusergroup) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.  
-      * ## QPS limit
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * This parameter is deprecated.
       *
      */
     @Override
@@ -170,10 +199,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
-      * ## Limits
-      * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The ID of the request, which is used to locate and troubleshoot issues.
       *
      */
     @Override
@@ -268,9 +294,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](https://www.alibabacloud.com/help/en/bastion-host/latest/adduserstogroup) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.  
-      * ## Limits
+      * You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the [AddUsersToGroup](~~204600~~) operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -321,11 +345,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
-      * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+      * For more information about sample requests, see the "Examples" section of this topic.
       *
      */
     @Override
@@ -343,9 +364,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to delete a single host group. If you no longer need to perform O&M operations on all hosts in a host group, you can call this operation to delete the host group.  
-      * ## Limits
+      * You can call this operation to delete a single host group. If you no longer need to perform O\\&M operations on all hosts in a host group, you can call this operation to delete the host group.
+      * ### Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -624,10 +644,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O&M operations on servers.  
-      * ## Limits
-      * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The condition that is used to filter users.
       *
      */
     @Override
@@ -659,10 +676,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.  
-      * ## Limits
-      * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * Indicates whether two-factor authentication is enabled. Valid values:
+      * *   **true**: enabled
+      * *   **false**: disabled
       *
      */
     @Override
@@ -702,6 +718,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetUserGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListApproveCommandsResponse> listApproveCommands(ListApproveCommandsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApproveCommands").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApproveCommandsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApproveCommandsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -889,11 +919,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Yundun-bastionhost\\&api=ListTagKeys\\&type=RPC\\&version=2019-12-09)
-      *
-     */
+    @Override
+    public CompletableFuture<ListOperationTicketsResponse> listOperationTickets(ListOperationTicketsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListOperationTickets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationTicketsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationTicketsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     @Override
     public CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request) {
         try {
@@ -965,9 +1004,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/unlockusers) operation.  
-      * ## QPS limit
+      * # Description
+      * You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\\&M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\\&M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the [UnlockUsers](~~204590~~) operation.
+      * # Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -986,8 +1025,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to modify the basic information of an on-premises host, an Elastic Compute Service (ECS) instance, or a host in a dedicated cluster.
-      * >  The basic information of ECS instances and hosts in dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information of an ECS instance or a host in a dedicated cluster, the modification result may be overwritten by the synchronized information.
+      * The ID of the request.
       *
      */
     @Override
@@ -1181,6 +1219,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<RejectApproveCommandResponse> rejectApproveCommand(RejectApproveCommandRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RejectApproveCommand").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RejectApproveCommandResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RejectApproveCommandResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<RejectOperationTicketResponse> rejectOperationTicket(RejectOperationTicketRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RejectOperationTicket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RejectOperationTicketResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RejectOperationTicketResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<RemoveHostsFromGroupResponse> removeHostsFromGroup(RemoveHostsFromGroupRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1195,10 +1261,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
-      * ## QPS limit
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * This parameter is deprecated.
       *
      */
     @Override
@@ -1258,9 +1321,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * After you call the [LockUsers](https://www.alibabacloud.com/help/en/bastion-host/latest/lockusers) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O&M operations by using the bastion host.  
-      * ## QPS limit
+      * After you call the [LockUsers](~~204591~~) operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\\&M operations by using the bastion host.
+      * # Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */

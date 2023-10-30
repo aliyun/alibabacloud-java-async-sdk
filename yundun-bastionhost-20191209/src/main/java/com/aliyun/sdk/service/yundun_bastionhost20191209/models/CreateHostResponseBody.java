@@ -50,7 +50,7 @@ public class CreateHostResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the host that was created.
+         * The ID of the host.
          */
         public Builder hostId(String hostId) {
             this.hostId = hostId;

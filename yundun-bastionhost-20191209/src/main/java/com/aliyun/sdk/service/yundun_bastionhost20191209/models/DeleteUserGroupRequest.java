@@ -84,10 +84,10 @@ public class DeleteUserGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the Bastionhost instance where you want to delete the user group.
+         * The ID of the bastion host on which you want to delete the user group.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,10 +96,10 @@ public class DeleteUserGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to delete the user group.
+         * The region ID of the bastion host on which you want to delete the user group.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -111,7 +111,7 @@ public class DeleteUserGroupRequest extends Request {
          * The ID of the user group that you want to delete.
          * <p>
          * 
-         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+         * > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

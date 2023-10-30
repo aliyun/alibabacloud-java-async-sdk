@@ -300,8 +300,8 @@ public class ModifyInstanceADAuthServerRequest extends Request {
          * Specifies whether to support SSL. Valid values:
          * <p>
          * 
-         * *   **true**: supports SSL.
-         * *   **false**: does not support SSL.
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);

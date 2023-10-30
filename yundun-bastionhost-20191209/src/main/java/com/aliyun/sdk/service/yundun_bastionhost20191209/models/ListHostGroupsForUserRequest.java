@@ -140,7 +140,7 @@ public class ListHostGroupsForUserRequest extends Request {
         } 
 
         /**
-         * The name of the host group that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
+         * The ID of the request.
          */
         public Builder hostGroupName(String hostGroupName) {
             this.putQueryParameter("HostGroupName", hostGroupName);
@@ -149,36 +149,11 @@ public class ListHostGroupsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * The host groups returned.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The category of the host group that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **Authorized**: Query the host groups that the user is authorized to manage. This is the default value.
-         * *   **Unauthorized**: Query the host groups that the user is not authorized to manage.
-         */
-        public Builder mode(String mode) {
-            this.putQueryParameter("Mode", mode);
-            this.mode = mode;
-            return this;
-        }
-
-        /**
-         * The number of the page to return. Default value: **1**.
-         */
-        public Builder pageNumber(String pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -190,21 +165,18 @@ public class ListHostGroupsForUserRequest extends Request {
          * 
          * >  We recommend that you do not leave the PageSize parameter empty.
          */
-        public Builder pageSize(String pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.
-         * <p>
-         * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * The ID of the host group.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder pageNumber(String pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -213,6 +185,27 @@ public class ListHostGroupsForUserRequest extends Request {
          * <p>
          * 
          * >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Default value: **1**.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Bastionhost instance where you want to query the host groups that the user is authorized or not authorized to manage.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

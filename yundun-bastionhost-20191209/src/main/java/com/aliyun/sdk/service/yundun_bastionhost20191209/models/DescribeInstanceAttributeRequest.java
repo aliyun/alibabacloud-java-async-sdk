@@ -69,7 +69,7 @@ public class DescribeInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the bastion host to query.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host to query.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -68,12 +68,7 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The natural language in which responses are returned. Valid values:
-         * <p>
-         * 
-         * *   **zh-CN**: Chinese. This is the default value.
-         * *   **en-US**: English.
-         * *   **ja**: Japanese.
+         * The ID of the region.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -82,7 +77,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

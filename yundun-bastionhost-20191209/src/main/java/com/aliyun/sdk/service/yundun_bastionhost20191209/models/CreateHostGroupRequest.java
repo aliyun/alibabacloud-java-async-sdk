@@ -98,7 +98,7 @@ public class CreateHostGroupRequest extends Request {
         } 
 
         /**
-         * The description of the host group. The value can be up to 500 characters in length.
+         * The description of the host group. The description can be up to 500 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -116,10 +116,10 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to create the host group.
+         * The ID of the bastion host on which you want to create a host group.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,10 +128,12 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to create the host group.
+         * The region ID of the bastion host on which you want to create a host group.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * **
+         * 
+         * **For more information about the mapping between region IDs and region names, see **Regions and zones[.](~~40654~~)
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

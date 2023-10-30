@@ -330,7 +330,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the bastion host. Valid values:
+             * The status of the bastion host. Valid values:
              * <p>
              * 
              * *   **PENDING**: The bastion host is not initialized.

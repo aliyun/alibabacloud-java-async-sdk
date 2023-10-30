@@ -50,7 +50,7 @@ public class GetHostAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the host account that were queried.
+         * The details of the host account that was queried.
          */
         public Builder hostAccount(HostAccount hostAccount) {
             this.hostAccount = hostAccount;
@@ -182,11 +182,11 @@ public class GetHostAccountResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * Indicates whether a password is set for the host account. Valid values:
+             * Indicates whether a password is configured for the host account. Valid values:
              * <p>
              * 
-             * *   **true**: indicates that a password is set for the host account.
-             * *   **false**: indicates that no password is set for the host account.
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -242,7 +242,7 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used by the host account. Valid values:
+             * The protocol that is used by the host. Valid values:
              * <p>
              * 
              * *   **SSH**

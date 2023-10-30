@@ -112,7 +112,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token for starting the next query.
+         * The region ID of the Bastionhost instance.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance.
+         * The ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of instances. The ID is up to 20.
+         * The value of the tag.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,10 +139,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * The operation that you want to perform.
          * <p>
          * 
-         * Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.
+         * Set the value to **ListTagResources**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -151,7 +151,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The key of tag N.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -205,10 +208,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
-             * 
-             * Valid values of N: 1 to 20.
+             * The ID of the request.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -216,10 +216,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * The type of the resource.
              * <p>
              * 
-             * Valid values of N: 1 to 20.
+             * The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.
              */
             public Builder value(String value) {
                 this.value = value;

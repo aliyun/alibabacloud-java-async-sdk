@@ -62,7 +62,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The host accounts returned.
+         * An array that consists of the queried host accounts.
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -78,7 +78,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of host accounts returned.
+         * The total number of host accounts that were queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,8 +193,8 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
              * Indicates whether the user group is authorized to manage the host account. Valid values:
              * <p>
              * 
-             * *   **true**: The user group is authorized to manage the host account.
-             * *   **false**: The user group is not authorized to manage the host account.
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder isAuthorized(Boolean isAuthorized) {
                 this.isAuthorized = isAuthorized;
@@ -202,7 +202,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the host account. Valid values:
+             * The protocol that is used by the host. Valid values:
              * <p>
              * 
              * *   **SSH**

@@ -50,7 +50,10 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+         * <p>
+         * 
+         * For more information about sample requests, see the "Examples" section of this topic.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the call.
+         * Adds one or more users to a user group.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -134,22 +137,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The return code that indicates whether the call was successful. Valid values:
-             * <p>
-             * 
-             * *   **OK**: The call was successful.
-             * 
-             * *   **UNEXPECTED**: An unknown error occurred.
-             * 
-             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-             * 
-             * > Make sure that the request parameters are valid and call the operation again.
-             * 
-             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-             * 
-             * > Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
-             * 
-             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+             * AddUsersToGroup
              */
             public Builder code(String code) {
                 this.code = code;
@@ -157,7 +145,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * WB01014029
              */
             public Builder message(String message) {
                 this.message = message;
@@ -165,7 +153,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * AddUsersToGroup
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -173,7 +161,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

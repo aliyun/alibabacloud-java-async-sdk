@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about regions where you can create bastion hosts.
+         * DescribeRegions
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of request.
+         * Queries available regions where you can create bastion hosts.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The name of the region.
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +130,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the region.
+             * RegionEndpoint.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -138,7 +138,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

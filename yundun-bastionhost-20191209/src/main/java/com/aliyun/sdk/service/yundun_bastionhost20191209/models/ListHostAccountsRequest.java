@@ -140,7 +140,13 @@ public class ListHostAccountsRequest extends Request {
         } 
 
         /**
-         * The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
+         * Indicates whether a password is configured for the host account.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true: A password is configured for the host account.
+         * *   false: No passwords are configured for the host account.
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -149,10 +155,13 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the specified host whose accounts you want to query.
+         * The protocol used by the host whose accounts you want to query.
          * <p>
          * 
-         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+         * Valid values:
+         * 
+         * *   SSH
+         * *   RDP
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -161,10 +170,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host in which you want to query accounts of the specified host.
-         * <p>
-         * 
-         * >  You can call the DescribeInstances operation to query the ID of the bastion host.
+         * The ID of the shared key.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +179,10 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The operation that you want to perform.
+         * <p>
+         * 
+         * Set the value to **ListHostAccounts**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -196,13 +205,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The protocol used by the host whose accounts you want to query.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   SSH
-         * *   RDP
+         * The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
          */
         public Builder protocolName(String protocolName) {
             this.putQueryParameter("ProtocolName", protocolName);
@@ -211,10 +214,10 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host in which you want to query accounts of the specified host.
+         * The ID of the specified host whose accounts you want to query.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

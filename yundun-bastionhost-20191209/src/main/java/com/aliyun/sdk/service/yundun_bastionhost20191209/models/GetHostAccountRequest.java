@@ -87,7 +87,7 @@ public class GetHostAccountRequest extends Request {
          * The ID of the host account that you want to query.
          * <p>
          * 
-         * >  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
+         * > You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
          */
         public Builder hostAccountId(String hostAccountId) {
             this.putQueryParameter("HostAccountId", hostAccountId);
@@ -96,10 +96,10 @@ public class GetHostAccountRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the details of the host account.
+         * The ID of the bastion host in which you want to query the details of the host account.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,10 +108,10 @@ public class GetHostAccountRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the details of the host account.
+         * The region ID of the bastion host in which you want to query the details of the host account.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

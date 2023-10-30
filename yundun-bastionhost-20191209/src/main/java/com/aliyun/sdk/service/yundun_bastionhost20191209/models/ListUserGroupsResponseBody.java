@@ -62,7 +62,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         private java.util.List < UserGroups> userGroups; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of user groups returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The user groups returned.
+         * UserGroups.
          */
         public Builder userGroups(java.util.List < UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -154,7 +154,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * The description of the user group.
+             * Comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -162,7 +162,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of users in the user group.
+             * MemberCount.
              */
             public Builder memberCount(Integer memberCount) {
                 this.memberCount = memberCount;
@@ -170,7 +170,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user group.
+             * UserGroupId.
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -178,7 +178,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * UserGroupName.
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

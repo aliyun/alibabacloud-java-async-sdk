@@ -50,7 +50,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         private UserGroup userGroup; 
 
         /**
-         * The ID of the request.
+         * Queries the details of a specified user group in a specified Bastionhost instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the user group returned.
+         * GetUserGroup
          */
         public Builder userGroup(UserGroup userGroup) {
             this.userGroup = userGroup;
@@ -122,7 +122,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * The description of the user group.
+             * GetUserGroup
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -130,7 +130,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user group.
+             * UserGroupId.
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -138,7 +138,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * WB662865
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

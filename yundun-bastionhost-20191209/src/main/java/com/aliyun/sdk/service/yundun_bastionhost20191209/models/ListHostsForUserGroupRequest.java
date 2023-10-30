@@ -168,20 +168,15 @@ public class ListHostsForUserGroupRequest extends Request {
         } 
 
         /**
-         * The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+         * The operating system of the host that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Linux**
+         * *   **Windows**
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
             this.hostAddress = hostAddress;
-            return this;
-        }
-
-        /**
-         * The name of the host that you want to query. Only exact match is supported.
-         */
-        public Builder hostName(String hostName) {
-            this.putQueryParameter("HostName", hostName);
-            this.hostName = hostName;
             return this;
         }
 
@@ -191,9 +186,9 @@ public class ListHostsForUserGroupRequest extends Request {
          * 
          * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder hostName(String hostName) {
+            this.putQueryParameter("HostName", hostName);
+            this.hostName = hostName;
             return this;
         }
 
@@ -204,6 +199,19 @@ public class ListHostsForUserGroupRequest extends Request {
          * *   **Authorized**: Query the hosts that the user group is authorized to manage. This is the default value.
          * *   **Unauthorized**: Query the hosts that the user group is not authorized to manage.
          */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The operating system of the host. Valid values:
+         * <p>
+         * 
+         * *   **Linux**
+         * *   **Windows**
+         */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
             this.mode = mode;
@@ -211,11 +219,7 @@ public class ListHostsForUserGroupRequest extends Request {
         }
 
         /**
-         * The operating system of the host that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **Linux**
-         * *   **Windows**
+         * The internal endpoint of the host. The value is a domain name or an IP address.
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -224,7 +228,11 @@ public class ListHostsForUserGroupRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The endpoint type of the host. Valid values:
+         * <p>
+         * 
+         * *   **Public**: a public endpoint
+         * *   **Private**: an internal endpoint
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -247,10 +255,7 @@ public class ListHostsForUserGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.
-         * <p>
-         * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,10 +264,7 @@ public class ListHostsForUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user group for which you want to query hosts.
-         * <p>
-         * 
-         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+         * The number of the page to return. Default value: 1.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

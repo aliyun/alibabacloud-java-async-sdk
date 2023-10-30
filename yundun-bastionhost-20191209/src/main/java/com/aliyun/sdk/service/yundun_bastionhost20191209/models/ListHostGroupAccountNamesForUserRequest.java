@@ -102,7 +102,7 @@ public class ListHostGroupAccountNamesForUserRequest extends Request {
          * The ID of the host group.
          * <p>
          * 
-         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+         * > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -111,10 +111,10 @@ public class ListHostGroupAccountNamesForUserRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the host account names that the user is authorized to manage in a specified host group.
+         * The ID of the bastion host to which the user belongs.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,10 +123,10 @@ public class ListHostGroupAccountNamesForUserRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the host account names that the user is authorized to manage in a specified host group.
+         * The region ID of the bastion host to which the user belongs.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,7 @@ public class ListHostGroupAccountNamesForUserRequest extends Request {
          * The ID of the user.
          * <p>
          * 
-         * >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+         * > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

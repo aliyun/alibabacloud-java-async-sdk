@@ -84,7 +84,7 @@ public class DeleteUserPublicKeyRequest extends Request {
         } 
 
         /**
-         * Specifies the region ID of the bastion host on which you want to delete the public key from the user.
+         * The region ID of the bastion host on which you want to delete the public key from the user.
          * <p>
          * 
          * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.

@@ -153,7 +153,7 @@ public class ModifyHostShareKeyRequest extends Request {
         }
 
         /**
-         * The password of the private key. The value is a Base64-encoded string.
+         * The passphrase of the private key. The value is a Base64-encoded string.
          */
         public Builder passPhrase(String passPhrase) {
             this.putQueryParameter("PassPhrase", passPhrase);

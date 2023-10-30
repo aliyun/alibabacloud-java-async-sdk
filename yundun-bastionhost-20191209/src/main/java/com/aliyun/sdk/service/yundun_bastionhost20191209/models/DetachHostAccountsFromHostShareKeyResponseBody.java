@@ -134,7 +134,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code. If **OK** is returned, the disassociation was successful. If a different error code is returned, the disassociation failed.
+             * The error code returned. If **OK** is returned, the disassociation was successful. If a different error code is returned, the disassociation failed.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -158,7 +158,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;

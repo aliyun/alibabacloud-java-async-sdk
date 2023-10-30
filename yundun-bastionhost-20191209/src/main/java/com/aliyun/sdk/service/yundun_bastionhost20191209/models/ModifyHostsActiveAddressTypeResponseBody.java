@@ -50,7 +50,7 @@ public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the call.
+         * Results.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -122,14 +122,7 @@ public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The return code that indicates whether the call was successful. Valid values:
-             * <p>
-             * 
-             * *   **OK**: The call was successful.
-             * *   **UNEXPECTED**: An unknown error occurred.
-             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -137,7 +130,7 @@ public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -145,7 +138,7 @@ public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;

@@ -195,7 +195,7 @@ public class ListHostsRequest extends Request {
         } 
 
         /**
-         * The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+         * The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -204,10 +204,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The ID of the host group to which the host that you want to query belongs.
+         * The ID of the host group to which the host to be queried belongs.
          * <p>
          * 
-         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+         * > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -225,10 +225,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query hosts.
+         * The ID of the bastion host on which you want to query hosts.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -259,12 +259,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries to return on each page. Default value: **10**.
          * <p>
          * 
-         * The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page by default.
-         * 
-         * >  We recommend that you do not leave the PageSize parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,10 +271,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query hosts.
+         * The region ID of the bastion host on which you want to query hosts.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,9 +286,9 @@ public class ListHostsRequest extends Request {
          * The source of the host that you want to query. Valid values:
          * <p>
          * 
-         * *   **Local**: an on-premises host
+         * *   **Local**: a host in a data center
          * *   **Ecs**: an Elastic Compute Service (ECS) instance
-         * *   **Rds**: a host in a dedicated cluster
+         * *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -299,7 +297,7 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance or dedicated cluster host that you want to query. Only exact match is supported.
+         * The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster that you want to query. Only exact match is supported.
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -311,9 +309,8 @@ public class ListHostsRequest extends Request {
          * The status of the host that you want to query. Valid values:
          * <p>
          * 
-         * - **Normal**: The host is normal.
-         * 
-         * - **Release**: The host is released.
+         * *   **Normal**: normal
+         * *   **Release**: released
          */
         public Builder sourceInstanceState(String sourceInstanceState) {
             this.putQueryParameter("SourceInstanceState", sourceInstanceState);
