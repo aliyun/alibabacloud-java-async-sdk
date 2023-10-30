@@ -1195,6 +1195,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AddedCpuCores")
         private String addedCpuCores;
 
+        @NameInMap("CpuCores")
+        private String cpuCores;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -1228,6 +1231,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
+        @NameInMap("MemorySize")
+        private String memorySize;
+
         @NameInMap("SccMode")
         @Validation(required = true)
         private String sccMode;
@@ -1243,6 +1249,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         private DBNodes(Builder builder) {
             this.addedCpuCores = builder.addedCpuCores;
+            this.cpuCores = builder.cpuCores;
             this.creationTime = builder.creationTime;
             this.DBNodeClass = builder.DBNodeClass;
             this.DBNodeId = builder.DBNodeId;
@@ -1254,6 +1261,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.masterId = builder.masterId;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
+            this.memorySize = builder.memorySize;
             this.sccMode = builder.sccMode;
             this.serverWeight = builder.serverWeight;
             this.serverlessType = builder.serverlessType;
@@ -1273,6 +1281,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getAddedCpuCores() {
             return this.addedCpuCores;
+        }
+
+        /**
+         * @return cpuCores
+         */
+        public String getCpuCores() {
+            return this.cpuCores;
         }
 
         /**
@@ -1353,6 +1368,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return memorySize
+         */
+        public String getMemorySize() {
+            return this.memorySize;
+        }
+
+        /**
          * @return sccMode
          */
         public String getSccMode() {
@@ -1382,6 +1404,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addedCpuCores; 
+            private String cpuCores; 
             private String creationTime; 
             private String DBNodeClass; 
             private String DBNodeId; 
@@ -1393,6 +1416,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String masterId; 
             private Integer maxConnections; 
             private Integer maxIOPS; 
+            private String memorySize; 
             private String sccMode; 
             private String serverWeight; 
             private String serverlessType; 
@@ -1403,6 +1427,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder addedCpuCores(String addedCpuCores) {
                 this.addedCpuCores = addedCpuCores;
+                return this;
+            }
+
+            /**
+             * CpuCores.
+             */
+            public Builder cpuCores(String cpuCores) {
+                this.cpuCores = cpuCores;
                 return this;
             }
 
@@ -1518,6 +1550,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
+                return this;
+            }
+
+            /**
+             * MemorySize.
+             */
+            public Builder memorySize(String memorySize) {
+                this.memorySize = memorySize;
                 return this;
             }
 
