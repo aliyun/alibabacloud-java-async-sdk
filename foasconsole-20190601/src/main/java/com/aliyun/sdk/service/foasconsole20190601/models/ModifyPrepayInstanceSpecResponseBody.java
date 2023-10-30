@@ -62,7 +62,7 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 订单id
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -49,9 +49,9 @@ public class DeleteNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNamespaceRequest response) {
-            super(response);
-            this.deleteNamespaceRequest = response.deleteNamespaceRequest;
+        private Builder(DeleteNamespaceRequest request) {
+            super(request);
+            this.deleteNamespaceRequest = request.deleteNamespaceRequest;
         } 
 
         /**

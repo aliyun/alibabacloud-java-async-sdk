@@ -49,9 +49,9 @@ public class QueryModifyInstancePriceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryModifyInstancePriceRequest response) {
-            super(response);
-            this.modifyPrepayInstanceSpecRequest = response.modifyPrepayInstanceSpecRequest;
+        private Builder(QueryModifyInstancePriceRequest request) {
+            super(request);
+            this.modifyPrepayInstanceSpecRequest = request.modifyPrepayInstanceSpecRequest;
         } 
 
         /**

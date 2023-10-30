@@ -16,6 +16,10 @@ public class DescribeSupportedZonesResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeSupportedZonesResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeSupportedZonesResponse extends Response {
     private DescribeSupportedZonesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeSupportedZonesResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeSupportedZonesResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeSupportedZonesResponse extends Response {
     public interface Builder extends Response.Builder<DescribeSupportedZonesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeSupportedZonesResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeSupportedZonesResponse extends Response {
             extends Response.BuilderImpl<DescribeSupportedZonesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeSupportedZonesResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeSupportedZonesResponse extends Response {
         private BuilderImpl(DescribeSupportedZonesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeSupportedZonesResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

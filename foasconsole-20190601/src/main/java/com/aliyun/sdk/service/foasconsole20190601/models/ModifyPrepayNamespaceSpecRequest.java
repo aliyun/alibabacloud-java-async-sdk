@@ -49,9 +49,9 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPrepayNamespaceSpecRequest response) {
-            super(response);
-            this.modifyPrepayNamespaceSpecRequest = response.modifyPrepayNamespaceSpecRequest;
+        private Builder(ModifyPrepayNamespaceSpecRequest request) {
+            super(request);
+            this.modifyPrepayNamespaceSpecRequest = request.modifyPrepayNamespaceSpecRequest;
         } 
 
         /**

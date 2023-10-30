@@ -49,9 +49,9 @@ public class QueryCreateInstancePriceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCreateInstancePriceRequest response) {
-            super(response);
-            this.createInstanceRequest = response.createInstanceRequest;
+        private Builder(QueryCreateInstancePriceRequest request) {
+            super(request);
+            this.createInstanceRequest = request.createInstanceRequest;
         } 
 
         /**
@@ -214,6 +214,9 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     }
     public static class CreateInstanceRequest extends TeaModel {
+        @NameInMap("ArchitectureType")
+        private String architectureType;
+
         @NameInMap("AutoRenew")
         private Boolean autoRenew;
 
@@ -223,6 +226,9 @@ public class QueryCreateInstancePriceRequest extends Request {
 
         @NameInMap("Duration")
         private Integer duration;
+
+        @NameInMap("Extra")
+        private String extra;
 
         @NameInMap("InstanceName")
         private String instanceName;
@@ -256,9 +262,11 @@ public class QueryCreateInstancePriceRequest extends Request {
         private String zoneId;
 
         private CreateInstanceRequest(Builder builder) {
+            this.architectureType = builder.architectureType;
             this.autoRenew = builder.autoRenew;
             this.chargeType = builder.chargeType;
             this.duration = builder.duration;
+            this.extra = builder.extra;
             this.instanceName = builder.instanceName;
             this.pricingCycle = builder.pricingCycle;
             this.promotionCode = builder.promotionCode;
@@ -280,6 +288,13 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
+         * @return architectureType
+         */
+        public String getArchitectureType() {
+            return this.architectureType;
+        }
+
+        /**
          * @return autoRenew
          */
         public Boolean getAutoRenew() {
@@ -298,6 +313,13 @@ public class QueryCreateInstancePriceRequest extends Request {
          */
         public Integer getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -371,9 +393,11 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         public static final class Builder {
+            private String architectureType; 
             private Boolean autoRenew; 
             private String chargeType; 
             private Integer duration; 
+            private String extra; 
             private String instanceName; 
             private String pricingCycle; 
             private String promotionCode; 
@@ -384,6 +408,14 @@ public class QueryCreateInstancePriceRequest extends Request {
             private java.util.List < String > vSwitchIds; 
             private String vpcId; 
             private String zoneId; 
+
+            /**
+             * ArchitectureType.
+             */
+            public Builder architectureType(String architectureType) {
+                this.architectureType = architectureType;
+                return this;
+            }
 
             /**
              * AutoRenew.
@@ -410,6 +442,14 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
+             * Extra.
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
+                return this;
+            }
+
+            /**
              * InstanceName.
              */
             public Builder instanceName(String instanceName) {
@@ -426,7 +466,7 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * 优惠券code
+             * PromotionCode.
              */
             public Builder promotionCode(String promotionCode) {
                 this.promotionCode = promotionCode;
@@ -458,7 +498,7 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * 是否使用优惠券
+             * UsePromotionCode.
              */
             public Builder usePromotionCode(Boolean usePromotionCode) {
                 this.usePromotionCode = usePromotionCode;
@@ -474,7 +514,7 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

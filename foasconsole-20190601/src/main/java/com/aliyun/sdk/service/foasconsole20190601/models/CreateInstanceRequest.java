@@ -49,9 +49,9 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.createInstanceRequest = response.createInstanceRequest;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.createInstanceRequest = request.createInstanceRequest;
         } 
 
         /**
@@ -216,6 +216,9 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class CreateInstanceRequestCreateInstanceRequest extends TeaModel {
+        @NameInMap("ArchitectureType")
+        private String architectureType;
+
         @NameInMap("AutoRenew")
         private Boolean autoRenew;
 
@@ -225,6 +228,9 @@ public class CreateInstanceRequest extends Request {
 
         @NameInMap("Duration")
         private Integer duration;
+
+        @NameInMap("Extra")
+        private String extra;
 
         @NameInMap("InstanceName")
         @Validation(required = true)
@@ -239,6 +245,9 @@ public class CreateInstanceRequest extends Request {
         @NameInMap("Region")
         @Validation(required = true)
         private String region;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
@@ -263,13 +272,16 @@ public class CreateInstanceRequest extends Request {
         private String zoneId;
 
         private CreateInstanceRequestCreateInstanceRequest(Builder builder) {
+            this.architectureType = builder.architectureType;
             this.autoRenew = builder.autoRenew;
             this.chargeType = builder.chargeType;
             this.duration = builder.duration;
+            this.extra = builder.extra;
             this.instanceName = builder.instanceName;
             this.pricingCycle = builder.pricingCycle;
             this.promotionCode = builder.promotionCode;
             this.region = builder.region;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceSpec = builder.resourceSpec;
             this.storage = builder.storage;
             this.usePromotionCode = builder.usePromotionCode;
@@ -284,6 +296,13 @@ public class CreateInstanceRequest extends Request {
 
         public static CreateInstanceRequestCreateInstanceRequest create() {
             return builder().build();
+        }
+
+        /**
+         * @return architectureType
+         */
+        public String getArchitectureType() {
+            return this.architectureType;
         }
 
         /**
@@ -305,6 +324,13 @@ public class CreateInstanceRequest extends Request {
          */
         public Integer getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -333,6 +359,13 @@ public class CreateInstanceRequest extends Request {
          */
         public String getRegion() {
             return this.region;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -378,19 +411,30 @@ public class CreateInstanceRequest extends Request {
         }
 
         public static final class Builder {
+            private String architectureType; 
             private Boolean autoRenew; 
             private String chargeType; 
             private Integer duration; 
+            private String extra; 
             private String instanceName; 
             private String pricingCycle; 
             private String promotionCode; 
             private String region; 
+            private String resourceGroupId; 
             private ResourceSpec resourceSpec; 
             private Storage storage; 
             private Boolean usePromotionCode; 
             private java.util.List < String > vSwitchIds; 
             private String vpcId; 
             private String zoneId; 
+
+            /**
+             * ArchitectureType.
+             */
+            public Builder architectureType(String architectureType) {
+                this.architectureType = architectureType;
+                return this;
+            }
 
             /**
              * AutoRenew.
@@ -417,6 +461,14 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
+             * Extra.
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
+                return this;
+            }
+
+            /**
              * InstanceName.
              */
             public Builder instanceName(String instanceName) {
@@ -433,7 +485,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * 优惠券code
+             * PromotionCode.
              */
             public Builder promotionCode(String promotionCode) {
                 this.promotionCode = promotionCode;
@@ -445,6 +497,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -465,7 +525,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * 是否使用优惠券
+             * UsePromotionCode.
              */
             public Builder usePromotionCode(Boolean usePromotionCode) {
                 this.usePromotionCode = usePromotionCode;
@@ -481,7 +541,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

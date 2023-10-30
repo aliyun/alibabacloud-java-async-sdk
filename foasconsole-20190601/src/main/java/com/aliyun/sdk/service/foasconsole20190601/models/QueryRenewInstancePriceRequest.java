@@ -49,9 +49,9 @@ public class QueryRenewInstancePriceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRenewInstancePriceRequest response) {
-            super(response);
-            this.renewInstanceRequest = response.renewInstanceRequest;
+        private Builder(QueryRenewInstancePriceRequest request) {
+            super(request);
+            this.renewInstanceRequest = request.renewInstanceRequest;
         } 
 
         /**
@@ -137,7 +137,7 @@ public class QueryRenewInstancePriceRequest extends Request {
             private String region; 
 
             /**
-             * 订购周期数量
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -145,7 +145,7 @@ public class QueryRenewInstancePriceRequest extends Request {
             }
 
             /**
-             * 实例id
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -153,7 +153,7 @@ public class QueryRenewInstancePriceRequest extends Request {
             }
 
             /**
-             * 订购周期
+             * PricingCycle.
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -161,7 +161,7 @@ public class QueryRenewInstancePriceRequest extends Request {
             }
 
             /**
-             * 地域id
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;

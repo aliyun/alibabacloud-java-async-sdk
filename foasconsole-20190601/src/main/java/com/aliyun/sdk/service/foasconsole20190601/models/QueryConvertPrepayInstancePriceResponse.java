@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryCreateInstancePriceResponse} extends {@link TeaModel}
+ * {@link QueryConvertPrepayInstancePriceResponse} extends {@link TeaModel}
  *
- * <p>QueryCreateInstancePriceResponse</p>
+ * <p>QueryConvertPrepayInstancePriceResponse</p>
  */
-public class QueryCreateInstancePriceResponse extends Response {
+public class QueryConvertPrepayInstancePriceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class QueryCreateInstancePriceResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private QueryCreateInstancePriceResponseBody body;
+    private QueryConvertPrepayInstancePriceResponseBody body;
 
-    private QueryCreateInstancePriceResponse(BuilderImpl builder) {
+    private QueryConvertPrepayInstancePriceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryCreateInstancePriceResponse create() {
+    public static QueryConvertPrepayInstancePriceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class QueryCreateInstancePriceResponse extends Response {
     /**
      * @return body
      */
-    public QueryCreateInstancePriceResponseBody getBody() {
+    public QueryConvertPrepayInstancePriceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryCreateInstancePriceResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryConvertPrepayInstancePriceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryCreateInstancePriceResponseBody body);
+        Builder body(QueryConvertPrepayInstancePriceResponseBody body);
 
         @Override
-        QueryCreateInstancePriceResponse build();
+        QueryConvertPrepayInstancePriceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryCreateInstancePriceResponse, Builder>
+            extends Response.BuilderImpl<QueryConvertPrepayInstancePriceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private QueryCreateInstancePriceResponseBody body; 
+        private QueryConvertPrepayInstancePriceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryCreateInstancePriceResponse response) {
+        private BuilderImpl(QueryConvertPrepayInstancePriceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class QueryCreateInstancePriceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryCreateInstancePriceResponseBody body) {
+        public Builder body(QueryConvertPrepayInstancePriceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryCreateInstancePriceResponse build() {
-            return new QueryCreateInstancePriceResponse(this);
+        public QueryConvertPrepayInstancePriceResponse build() {
+            return new QueryConvertPrepayInstancePriceResponse(this);
         } 
 
     } 

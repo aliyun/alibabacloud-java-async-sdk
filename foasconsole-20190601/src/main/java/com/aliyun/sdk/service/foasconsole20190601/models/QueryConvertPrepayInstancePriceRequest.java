@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteInstanceRequest} extends {@link RequestModel}
+ * {@link QueryConvertPrepayInstancePriceRequest} extends {@link RequestModel}
  *
- * <p>DeleteInstanceRequest</p>
+ * <p>QueryConvertPrepayInstancePriceRequest</p>
  */
-public class DeleteInstanceRequest extends Request {
+public class QueryConvertPrepayInstancePriceRequest extends Request {
     @Body
-    @NameInMap("DeleteInstanceRequest")
+    @NameInMap("ConvertPrepayInstanceRequest")
     @Validation(required = true)
-    private DeleteInstanceRequestDeleteInstanceRequest deleteInstanceRequest;
+    private ConvertPrepayInstanceRequest convertPrepayInstanceRequest;
 
-    private DeleteInstanceRequest(Builder builder) {
+    private QueryConvertPrepayInstancePriceRequest(Builder builder) {
         super(builder);
-        this.deleteInstanceRequest = builder.deleteInstanceRequest;
+        this.convertPrepayInstanceRequest = builder.convertPrepayInstanceRequest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteInstanceRequest create() {
+    public static QueryConvertPrepayInstancePriceRequest create() {
         return builder().build();
     }
 
@@ -36,41 +36,41 @@ public class DeleteInstanceRequest extends Request {
     }
 
     /**
-     * @return deleteInstanceRequest
+     * @return convertPrepayInstanceRequest
      */
-    public DeleteInstanceRequestDeleteInstanceRequest getDeleteInstanceRequest() {
-        return this.deleteInstanceRequest;
+    public ConvertPrepayInstanceRequest getConvertPrepayInstanceRequest() {
+        return this.convertPrepayInstanceRequest;
     }
 
-    public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
-        private DeleteInstanceRequestDeleteInstanceRequest deleteInstanceRequest; 
+    public static final class Builder extends Request.Builder<QueryConvertPrepayInstancePriceRequest, Builder> {
+        private ConvertPrepayInstanceRequest convertPrepayInstanceRequest; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest request) {
+        private Builder(QueryConvertPrepayInstancePriceRequest request) {
             super(request);
-            this.deleteInstanceRequest = request.deleteInstanceRequest;
+            this.convertPrepayInstanceRequest = request.convertPrepayInstanceRequest;
         } 
 
         /**
-         * DeleteInstanceRequest.
+         * ConvertPrepayInstanceRequest.
          */
-        public Builder deleteInstanceRequest(DeleteInstanceRequestDeleteInstanceRequest deleteInstanceRequest) {
-            this.putBodyParameter("DeleteInstanceRequest", deleteInstanceRequest);
-            this.deleteInstanceRequest = deleteInstanceRequest;
+        public Builder convertPrepayInstanceRequest(ConvertPrepayInstanceRequest convertPrepayInstanceRequest) {
+            this.putBodyParameter("ConvertPrepayInstanceRequest", convertPrepayInstanceRequest);
+            this.convertPrepayInstanceRequest = convertPrepayInstanceRequest;
             return this;
         }
 
         @Override
-        public DeleteInstanceRequest build() {
-            return new DeleteInstanceRequest(this);
+        public QueryConvertPrepayInstancePriceRequest build() {
+            return new QueryConvertPrepayInstancePriceRequest(this);
         } 
 
     } 
 
-    public static class DeleteInstanceRequestDeleteInstanceRequest extends TeaModel {
+    public static class ConvertPrepayInstanceRequest extends TeaModel {
         @NameInMap("InstanceId")
         @Validation(required = true)
         private String instanceId;
@@ -79,7 +79,7 @@ public class DeleteInstanceRequest extends Request {
         @Validation(required = true)
         private String region;
 
-        private DeleteInstanceRequestDeleteInstanceRequest(Builder builder) {
+        private ConvertPrepayInstanceRequest(Builder builder) {
             this.instanceId = builder.instanceId;
             this.region = builder.region;
         }
@@ -88,7 +88,7 @@ public class DeleteInstanceRequest extends Request {
             return new Builder();
         }
 
-        public static DeleteInstanceRequestDeleteInstanceRequest create() {
+        public static ConvertPrepayInstanceRequest create() {
             return builder().build();
         }
 
@@ -126,8 +126,8 @@ public class DeleteInstanceRequest extends Request {
                 return this;
             }
 
-            public DeleteInstanceRequestDeleteInstanceRequest build() {
-                return new DeleteInstanceRequestDeleteInstanceRequest(this);
+            public ConvertPrepayInstanceRequest build() {
+                return new ConvertPrepayInstanceRequest(this);
             } 
 
         } 

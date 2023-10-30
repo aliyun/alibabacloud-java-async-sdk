@@ -49,9 +49,9 @@ public class DescribeInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstancesRequest response) {
-            super(response);
-            this.describeInstancesRequest = response.describeInstancesRequest;
+        private Builder(DescribeInstancesRequest request) {
+            super(request);
+            this.describeInstancesRequest = request.describeInstancesRequest;
         } 
 
         /**
@@ -70,7 +70,71 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class DescribeInstancesRequestDescribeInstancesRequest extends TeaModel {
+        @NameInMap("ArchitectureType")
+        private String architectureType;
+
         @NameInMap("ChargeType")
         private String chargeType;
 
@@ -87,12 +151,21 @@ public class DescribeInstancesRequest extends Request {
         @Validation(required = true)
         private String region;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private DescribeInstancesRequestDescribeInstancesRequest(Builder builder) {
+            this.architectureType = builder.architectureType;
             this.chargeType = builder.chargeType;
             this.instanceId = builder.instanceId;
             this.pageIndex = builder.pageIndex;
             this.pageSize = builder.pageSize;
             this.region = builder.region;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -101,6 +174,13 @@ public class DescribeInstancesRequest extends Request {
 
         public static DescribeInstancesRequestDescribeInstancesRequest create() {
             return builder().build();
+        }
+
+        /**
+         * @return architectureType
+         */
+        public String getArchitectureType() {
+            return this.architectureType;
         }
 
         /**
@@ -138,15 +218,40 @@ public class DescribeInstancesRequest extends Request {
             return this.region;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
+            private String architectureType; 
             private String chargeType; 
             private String instanceId; 
             private Integer pageIndex; 
             private Integer pageSize; 
             private String region; 
+            private String resourceGroupId; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * 付款类型
+             * ArchitectureType.
+             */
+            public Builder architectureType(String architectureType) {
+                this.architectureType = architectureType;
+                return this;
+            }
+
+            /**
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -182,6 +287,22 @@ public class DescribeInstancesRequest extends Request {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

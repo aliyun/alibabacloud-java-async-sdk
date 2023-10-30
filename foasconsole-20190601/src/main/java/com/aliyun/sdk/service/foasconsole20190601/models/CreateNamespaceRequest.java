@@ -49,9 +49,9 @@ public class CreateNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNamespaceRequest response) {
-            super(response);
-            this.createNamespaceRequest = response.createNamespaceRequest;
+        private Builder(CreateNamespaceRequest request) {
+            super(request);
+            this.createNamespaceRequest = request.createNamespaceRequest;
         } 
 
         /**

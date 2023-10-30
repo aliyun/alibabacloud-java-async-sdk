@@ -62,7 +62,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 价格信息，包括价格和优惠规则。
+         * PriceInfo.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -70,7 +70,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,7 +154,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * 优惠券描述
+             * PromotionDesc.
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -162,7 +162,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠券名称
+             * PromotionName.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -170,7 +170,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 优惠券编号
+             * PromotionOptionNo.
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -231,7 +231,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * 活动规则描述。
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -239,7 +239,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 活动ID。
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -364,7 +364,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             private Float tradeAmount; 
 
             /**
-             * 错误码
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -372,7 +372,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 货币单位。
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -380,7 +380,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 折扣
+             * DiscountAmount.
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -388,7 +388,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 错误信息
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -404,7 +404,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 原价
+             * OriginalAmount.
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -412,7 +412,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 活动规则。
+             * Rules.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -420,7 +420,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * 最终价，为原价减去折扣。
+             * TradeAmount.
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;

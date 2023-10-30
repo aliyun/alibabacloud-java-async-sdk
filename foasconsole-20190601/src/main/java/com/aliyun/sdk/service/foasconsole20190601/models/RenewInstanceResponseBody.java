@@ -62,7 +62,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * orderId
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

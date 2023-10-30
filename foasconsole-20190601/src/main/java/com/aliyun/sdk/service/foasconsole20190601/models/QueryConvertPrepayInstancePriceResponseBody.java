@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryModifyInstancePriceResponseBody} extends {@link TeaModel}
+ * {@link QueryConvertPrepayInstancePriceResponseBody} extends {@link TeaModel}
  *
- * <p>QueryModifyInstancePriceResponseBody</p>
+ * <p>QueryConvertPrepayInstancePriceResponseBody</p>
  */
-public class QueryModifyInstancePriceResponseBody extends TeaModel {
+public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
     @NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
@@ -21,7 +21,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private QueryModifyInstancePriceResponseBody(Builder builder) {
+    private QueryConvertPrepayInstancePriceResponseBody(Builder builder) {
         this.priceInfo = builder.priceInfo;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -31,7 +31,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryModifyInstancePriceResponseBody create() {
+    public static QueryConvertPrepayInstancePriceResponseBody create() {
         return builder().build();
     }
 
@@ -85,8 +85,8 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             return this;
         }
 
-        public QueryModifyInstancePriceResponseBody build() {
-            return new QueryModifyInstancePriceResponseBody(this);
+        public QueryConvertPrepayInstancePriceResponseBody build() {
+            return new QueryConvertPrepayInstancePriceResponseBody(this);
         } 
 
     } 

@@ -70,7 +70,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * regionId
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -138,7 +138,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * region名称
+             * RegionName.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

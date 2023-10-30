@@ -62,7 +62,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 订单信息
+         * OrderInfo.
          */
         public Builder orderInfo(OrderInfo orderInfo) {
             this.orderInfo = orderInfo;
@@ -70,7 +70,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * 实例id
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,7 +138,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 订单id
+             * OrderId.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

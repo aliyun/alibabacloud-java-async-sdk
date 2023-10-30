@@ -7,18 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyPrepayNamespaceSpecResponseBody} extends {@link TeaModel}
+ * {@link ConvertPrepayInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyPrepayNamespaceSpecResponseBody</p>
+ * <p>ConvertPrepayInstanceResponseBody</p>
  */
-public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
+public class ConvertPrepayInstanceResponseBody extends TeaModel {
+    @NameInMap("OrderId")
+    private Long orderId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Success")
     private Boolean success;
 
-    private ModifyPrepayNamespaceSpecResponseBody(Builder builder) {
+    private ConvertPrepayInstanceResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -27,8 +31,15 @@ public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyPrepayNamespaceSpecResponseBody create() {
+    public static ConvertPrepayInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -46,8 +57,17 @@ public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long orderId; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
 
         /**
          * RequestId.
@@ -65,8 +85,8 @@ public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
             return this;
         }
 
-        public ModifyPrepayNamespaceSpecResponseBody build() {
-            return new ModifyPrepayNamespaceSpecResponseBody(this);
+        public ConvertPrepayInstanceResponseBody build() {
+            return new ConvertPrepayInstanceResponseBody(this);
         } 
 
     } 

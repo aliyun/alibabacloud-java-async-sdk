@@ -49,9 +49,9 @@ public class QueryConvertInstancePriceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryConvertInstancePriceRequest response) {
-            super(response);
-            this.convertPostpayInstanceRequest = response.convertPostpayInstanceRequest;
+        private Builder(QueryConvertInstancePriceRequest request) {
+            super(request);
+            this.convertPostpayInstanceRequest = request.convertPostpayInstanceRequest;
         } 
 
         /**
@@ -111,7 +111,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             private Integer memoryGB; 
 
             /**
-             * cpu数量。
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -119,7 +119,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * 内存大小。
+             * MemoryGB.
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -174,7 +174,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             private ResourceSpec resourceSpec; 
 
             /**
-             * namespace名称，
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -182,7 +182,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * 资源规格。
+             * ResourceSpec.
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -289,7 +289,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             private String region; 
 
             /**
-             * 订购周期数量
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -305,7 +305,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * 是否自动续费
+             * IsAutoRenew.
              */
             public Builder isAutoRenew(Boolean isAutoRenew) {
                 this.isAutoRenew = isAutoRenew;
@@ -313,7 +313,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * 项目空间资源规格。
+             * NamespaceResourceSpecs.
              */
             public Builder namespaceResourceSpecs(java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs) {
                 this.namespaceResourceSpecs = namespaceResourceSpecs;
@@ -321,7 +321,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * 订购周期
+             * PricingCycle.
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;

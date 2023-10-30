@@ -62,7 +62,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         private java.util.List < String > zoneIds; 
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

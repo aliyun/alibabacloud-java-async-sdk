@@ -49,9 +49,9 @@ public class DescribeNamespacesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNamespacesRequest response) {
-            super(response);
-            this.describeNamespacesRequest = response.describeNamespacesRequest;
+        private Builder(DescribeNamespacesRequest request) {
+            super(request);
+            this.describeNamespacesRequest = request.describeNamespacesRequest;
         } 
 
         /**
@@ -70,6 +70,67 @@ public class DescribeNamespacesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -88,12 +149,16 @@ public class DescribeNamespacesRequest extends Request {
         @Validation(required = true)
         private String region;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private DescribeNamespacesRequestDescribeNamespacesRequest(Builder builder) {
             this.instanceId = builder.instanceId;
             this.namespace = builder.namespace;
             this.pageIndex = builder.pageIndex;
             this.pageSize = builder.pageSize;
             this.region = builder.region;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -139,15 +204,23 @@ public class DescribeNamespacesRequest extends Request {
             return this.region;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String instanceId; 
             private String namespace; 
             private Integer pageIndex; 
             private Integer pageSize; 
             private String region; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * 实例id
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -155,7 +228,7 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * 命名空间名称
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -163,7 +236,7 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * 当前页数
+             * PageIndex.
              */
             public Builder pageIndex(Integer pageIndex) {
                 this.pageIndex = pageIndex;
@@ -171,7 +244,7 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * 每页大小
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -179,10 +252,18 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * regionId
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
