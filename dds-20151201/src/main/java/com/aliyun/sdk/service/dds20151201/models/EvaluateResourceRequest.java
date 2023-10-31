@@ -420,9 +420,10 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * 副本集的存储空间，单位为GB。
+         * The storage capacity of the replica set instance. Unit: GB.
          * <p>
-         * > 实例规格为云盘型时，该参数必填。</props>
+         * 
+         * > This parameter is required for the instances that use cloud disks.
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);

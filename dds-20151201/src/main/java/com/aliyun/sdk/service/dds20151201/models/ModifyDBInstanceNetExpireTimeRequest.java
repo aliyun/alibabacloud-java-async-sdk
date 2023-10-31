@@ -17,10 +17,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("Category")
-    private String category;
-
-    @Query
     @NameInMap("ClassicExpendExpiredDays")
     @Validation(required = true)
     private Integer classicExpendExpiredDays;
@@ -57,7 +53,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
     private ModifyDBInstanceNetExpireTimeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.category = builder.category;
         this.classicExpendExpiredDays = builder.classicExpendExpiredDays;
         this.connectionString = builder.connectionString;
         this.DBInstanceId = builder.DBInstanceId;
@@ -86,13 +81,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return category
-     */
-    public String getCategory() {
-        return this.category;
     }
 
     /**
@@ -153,7 +141,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceNetExpireTimeRequest, Builder> {
         private String regionId; 
-        private String category; 
         private Integer classicExpendExpiredDays; 
         private String connectionString; 
         private String DBInstanceId; 
@@ -170,7 +157,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         private Builder(ModifyDBInstanceNetExpireTimeRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.category = request.category;
             this.classicExpendExpiredDays = request.classicExpendExpiredDays;
             this.connectionString = request.connectionString;
             this.DBInstanceId = request.DBInstanceId;
@@ -187,15 +173,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Category.
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
             return this;
         }
 
