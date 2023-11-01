@@ -66,6 +66,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitAudioTo3DAvatarVideoTaskResponse> submitAudioTo3DAvatarVideoTask(SubmitAudioTo3DAvatarVideoTaskRequest request);
 
+    CompletableFuture<SubmitAvatarVideoTaskResponse> submitAvatarVideoTask(SubmitAvatarVideoTaskRequest request);
+
     CompletableFuture<SubmitTextTo2DAvatarVideoTaskResponse> submitTextTo2DAvatarVideoTask(SubmitTextTo2DAvatarVideoTaskRequest request);
 
     CompletableFuture<SubmitTextTo3DAvatarVideoTaskResponse> submitTextTo3DAvatarVideoTask(SubmitTextTo3DAvatarVideoTaskRequest request);

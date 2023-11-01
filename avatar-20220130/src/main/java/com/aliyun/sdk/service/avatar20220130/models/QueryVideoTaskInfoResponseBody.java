@@ -135,6 +135,9 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("AlphaUrl")
         private String alphaUrl;
 
+        @NameInMap("AttachmentUrl")
+        private String attachmentUrl;
+
         @NameInMap("FailCode")
         private String failCode;
 
@@ -158,6 +161,7 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
 
         private TaskResult(Builder builder) {
             this.alphaUrl = builder.alphaUrl;
+            this.attachmentUrl = builder.attachmentUrl;
             this.failCode = builder.failCode;
             this.failReason = builder.failReason;
             this.previewPic = builder.previewPic;
@@ -180,6 +184,13 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
          */
         public String getAlphaUrl() {
             return this.alphaUrl;
+        }
+
+        /**
+         * @return attachmentUrl
+         */
+        public String getAttachmentUrl() {
+            return this.attachmentUrl;
         }
 
         /**
@@ -233,6 +244,7 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alphaUrl; 
+            private String attachmentUrl; 
             private String failCode; 
             private String failReason; 
             private String previewPic; 
@@ -246,6 +258,14 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
              */
             public Builder alphaUrl(String alphaUrl) {
                 this.alphaUrl = alphaUrl;
+                return this;
+            }
+
+            /**
+             * AttachmentUrl.
+             */
+            public Builder attachmentUrl(String attachmentUrl) {
+                this.attachmentUrl = attachmentUrl;
                 return this;
             }
 

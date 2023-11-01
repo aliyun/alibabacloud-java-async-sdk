@@ -400,12 +400,16 @@ public class QueryRunningInstanceResponseBody extends TeaModel {
         @NameInMap("SessionId")
         private String sessionId;
 
+        @NameInMap("Token")
+        private String token;
+
         @NameInMap("User")
         private User user;
 
         private Data(Builder builder) {
             this.channel = builder.channel;
             this.sessionId = builder.sessionId;
+            this.token = builder.token;
             this.user = builder.user;
         }
 
@@ -432,6 +436,13 @@ public class QueryRunningInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return token
+         */
+        public String getToken() {
+            return this.token;
+        }
+
+        /**
          * @return user
          */
         public User getUser() {
@@ -441,6 +452,7 @@ public class QueryRunningInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Channel channel; 
             private String sessionId; 
+            private String token; 
             private User user; 
 
             /**
@@ -456,6 +468,14 @@ public class QueryRunningInstanceResponseBody extends TeaModel {
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * Token.
+             */
+            public Builder token(String token) {
+                this.token = token;
                 return this;
             }
 
