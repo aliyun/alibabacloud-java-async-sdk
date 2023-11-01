@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDocumentExtractResultResponse> getDocumentExtractResult(GetDocumentExtractResultRequest request);
 
+    CompletableFuture<GetPageNumResponse> getPageNum(GetPageNumRequest request);
+
     CompletableFuture<GetTableUnderstandingResultResponse> getTableUnderstandingResult(GetTableUnderstandingResultRequest request);
 
     CompletableFuture<SubmitConvertImageToExcelJobResponse> submitConvertImageToExcelJob(SubmitConvertImageToExcelJobRequest request);
