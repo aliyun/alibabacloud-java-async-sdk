@@ -7,16 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SendMessageResponseBody} extends {@link TeaModel}
+ * {@link DeleteQuickQueryResponseBody} extends {@link TeaModel}
  *
- * <p>SendMessageResponseBody</p>
+ * <p>DeleteQuickQueryResponseBody</p>
  */
-public class SendMessageResponseBody extends TeaModel {
+public class DeleteQuickQueryResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
     @NameInMap("Data")
     private Boolean data;
+
+    @NameInMap("DyCode")
+    private String dyCode;
+
+    @NameInMap("DyMessage")
+    private String dyMessage;
 
     @NameInMap("ErrCode")
     private String errCode;
@@ -30,9 +36,11 @@ public class SendMessageResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private SendMessageResponseBody(Builder builder) {
+    private DeleteQuickQueryResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.dyCode = builder.dyCode;
+        this.dyMessage = builder.dyMessage;
         this.errCode = builder.errCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -43,7 +51,7 @@ public class SendMessageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SendMessageResponseBody create() {
+    public static DeleteQuickQueryResponseBody create() {
         return builder().build();
     }
 
@@ -59,6 +67,20 @@ public class SendMessageResponseBody extends TeaModel {
      */
     public Boolean getData() {
         return this.data;
+    }
+
+    /**
+     * @return dyCode
+     */
+    public String getDyCode() {
+        return this.dyCode;
+    }
+
+    /**
+     * @return dyMessage
+     */
+    public String getDyMessage() {
+        return this.dyMessage;
     }
 
     /**
@@ -92,6 +114,8 @@ public class SendMessageResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private Boolean data; 
+        private String dyCode; 
+        private String dyMessage; 
         private String errCode; 
         private String message; 
         private String requestId; 
@@ -110,6 +134,22 @@ public class SendMessageResponseBody extends TeaModel {
          */
         public Builder data(Boolean data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * DyCode.
+         */
+        public Builder dyCode(String dyCode) {
+            this.dyCode = dyCode;
+            return this;
+        }
+
+        /**
+         * DyMessage.
+         */
+        public Builder dyMessage(String dyMessage) {
+            this.dyMessage = dyMessage;
             return this;
         }
 
@@ -145,8 +185,8 @@ public class SendMessageResponseBody extends TeaModel {
             return this;
         }
 
-        public SendMessageResponseBody build() {
-            return new SendMessageResponseBody(this);
+        public DeleteQuickQueryResponseBody build() {
+            return new DeleteQuickQueryResponseBody(this);
         } 
 
     } 

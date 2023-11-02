@@ -485,7 +485,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * key = task name
+             * ConfigList.
              */
             public Builder configList(java.util.List < ConfigList> configList) {
                 this.configList = configList;

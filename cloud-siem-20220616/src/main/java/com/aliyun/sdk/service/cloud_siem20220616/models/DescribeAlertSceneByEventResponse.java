@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SendMessageResponse} extends {@link TeaModel}
+ * {@link DescribeAlertSceneByEventResponse} extends {@link TeaModel}
  *
- * <p>SendMessageResponse</p>
+ * <p>DescribeAlertSceneByEventResponse</p>
  */
-public class SendMessageResponse extends Response {
+public class DescribeAlertSceneByEventResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private SendMessageResponseBody body;
+    private DescribeAlertSceneByEventResponseBody body;
 
-    private SendMessageResponse(BuilderImpl builder) {
+    private DescribeAlertSceneByEventResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SendMessageResponse create() {
+    public static DescribeAlertSceneByEventResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class SendMessageResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public SendMessageResponseBody getBody() {
+    public DescribeAlertSceneByEventResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SendMessageResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeAlertSceneByEventResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(SendMessageResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeAlertSceneByEventResponseBody body);
 
         @Override
-        SendMessageResponse build();
+        DescribeAlertSceneByEventResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SendMessageResponse, Builder>
+            extends Response.BuilderImpl<DescribeAlertSceneByEventResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private SendMessageResponseBody body; 
+        private Integer statusCode; 
+        private DescribeAlertSceneByEventResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SendMessageResponse response) {
+        private BuilderImpl(DescribeAlertSceneByEventResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class SendMessageResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(SendMessageResponseBody body) {
+        public Builder body(DescribeAlertSceneByEventResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SendMessageResponse build() {
-            return new SendMessageResponse(this);
+        public DescribeAlertSceneByEventResponse build() {
+            return new DescribeAlertSceneByEventResponse(this);
         } 
 
     } 
