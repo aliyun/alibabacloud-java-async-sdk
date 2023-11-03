@@ -74,7 +74,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +98,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ServiceMonitor\"s yaml configuration string.
+             * The YAML configuration string of the ServiceMonitor.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -206,7 +206,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Environment instance ID.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -230,7 +230,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMonitor name.
+             * The name of the ServiceMonitor.
              */
             public Builder serviceMonitorName(String serviceMonitorName) {
                 this.serviceMonitorName = serviceMonitorName;
@@ -238,7 +238,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Status: run, stop.
+             * The status of the ServiceMonitor. Valid values: run and stop.
              */
             public Builder status(String status) {
                 this.status = status;

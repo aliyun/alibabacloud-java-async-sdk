@@ -74,7 +74,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The result of the operation.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * scrape interval.
+             * The collection interval.
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -194,7 +194,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of targets (pods) matched by PodMonitor.Endpoint.
+             * The number of pods that match the PodMonitor endpoint.
              */
             public Builder matchedTargetCount(Integer matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;
@@ -202,7 +202,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * metric path.
+             * The collection path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -210,7 +210,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * External port.
+             * The external port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -218,7 +218,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Destination port.
+             * The destination port.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -379,7 +379,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * addon name.
+             * The name of the component to which the PodMonitor belongs.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -387,7 +387,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addon release name.
+             * The instance name of the component.
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -395,7 +395,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addon version.
+             * The version of the component.
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -403,7 +403,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * yaml configuration string.
+             * The YAML configuration string.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -411,7 +411,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Creation time (timestamp).
+             * The time when the PodMonitor was created. The value of this parameter is a timestamp.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -419,7 +419,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * List of endpoints for podmonitor.
+             * The endpoints of the PodMonitor.
              */
             public Builder endpoints(java.util.List < Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -427,7 +427,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment ID.
+             * The environment ID.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -443,7 +443,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * PodMonitor name.
+             * The name of the PodMonitor.
              */
             public Builder podMonitorName(String podMonitorName) {
                 this.podMonitorName = podMonitorName;
@@ -459,7 +459,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The status of the PodMonitor.
              */
             public Builder status(String status) {
                 this.status = status;

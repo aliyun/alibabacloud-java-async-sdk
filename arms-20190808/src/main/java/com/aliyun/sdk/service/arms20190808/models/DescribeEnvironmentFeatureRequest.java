@@ -7,24 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListEnvPodMonitorsRequest} extends {@link RequestModel}
+ * {@link DescribeEnvironmentFeatureRequest} extends {@link RequestModel}
  *
- * <p>ListEnvPodMonitorsRequest</p>
+ * <p>DescribeEnvironmentFeatureRequest</p>
  */
-public class ListEnvPodMonitorsRequest extends Request {
+public class DescribeEnvironmentFeatureRequest extends Request {
     @Query
     @NameInMap("EnvironmentId")
     @Validation(required = true)
     private String environmentId;
 
     @Query
-    @NameInMap("RegionId")
+    @NameInMap("FeatureName")
     @Validation(required = true)
+    private String featureName;
+
+    @Query
+    @NameInMap("RegionId")
     private String regionId;
 
-    private ListEnvPodMonitorsRequest(Builder builder) {
+    private DescribeEnvironmentFeatureRequest(Builder builder) {
         super(builder);
         this.environmentId = builder.environmentId;
+        this.featureName = builder.featureName;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +37,7 @@ public class ListEnvPodMonitorsRequest extends Request {
         return new Builder();
     }
 
-    public static ListEnvPodMonitorsRequest create() {
+    public static DescribeEnvironmentFeatureRequest create() {
         return builder().build();
     }
 
@@ -49,32 +54,50 @@ public class ListEnvPodMonitorsRequest extends Request {
     }
 
     /**
+     * @return featureName
+     */
+    public String getFeatureName() {
+        return this.featureName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListEnvPodMonitorsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeEnvironmentFeatureRequest, Builder> {
         private String environmentId; 
+        private String featureName; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEnvPodMonitorsRequest request) {
+        private Builder(DescribeEnvironmentFeatureRequest request) {
             super(request);
             this.environmentId = request.environmentId;
+            this.featureName = request.featureName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The environment ID.
+         * Environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
             this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * Name of Feature.
+         */
+        public Builder featureName(String featureName) {
+            this.putQueryParameter("FeatureName", featureName);
+            this.featureName = featureName;
             return this;
         }
 
@@ -88,8 +111,8 @@ public class ListEnvPodMonitorsRequest extends Request {
         }
 
         @Override
-        public ListEnvPodMonitorsRequest build() {
-            return new ListEnvPodMonitorsRequest(this);
+        public DescribeEnvironmentFeatureRequest build() {
+            return new DescribeEnvironmentFeatureRequest(this);
         } 
 
     } 

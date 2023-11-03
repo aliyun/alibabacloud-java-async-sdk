@@ -74,7 +74,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +98,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * scrape interval.
+             * The collection interval.
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -194,7 +194,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of targets matched by servcieMonitor.Endpoint.
+             * The number of pods that match the ServiceMonitor endpoint.
              */
             public Builder matchedTargetCount(Integer matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;
@@ -202,7 +202,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * metric path.
+             * The collection path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -210,7 +210,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * External port.
+             * The external port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -218,7 +218,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Destination port.
+             * The destination port.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -391,7 +391,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * addon name.
+             * The name of the component to which the ServiceMonitor belongs.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -399,7 +399,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addon release name.
+             * The instance name of the component.
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -407,7 +407,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addon version.
+             * The version of the component.
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -415,7 +415,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * yaml configuration string.
+             * The YAML configuration string.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -423,7 +423,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Creation time (timestamp).
+             * The time when the ServiceMonitor was created. The value of this parameter is a timestamp.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -431,7 +431,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * List of endpoints for ServiceMonitor.
+             * The endpoints of the ServiceMonitor.
              */
             public Builder endpoints(java.util.List < Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -439,7 +439,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment ID.
+             * The environment ID.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -447,7 +447,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of matching services.
+             * The number of matched services.
              */
             public Builder matchedServiceCount(Integer matchedServiceCount) {
                 this.matchedServiceCount = matchedServiceCount;
@@ -471,7 +471,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMonitor name.
+             * The name of the ServiceMonitor.
              */
             public Builder serviceMonitorName(String serviceMonitorName) {
                 this.serviceMonitorName = serviceMonitorName;
@@ -479,7 +479,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the ServiceMonitor.
              */
             public Builder status(String status) {
                 this.status = status;

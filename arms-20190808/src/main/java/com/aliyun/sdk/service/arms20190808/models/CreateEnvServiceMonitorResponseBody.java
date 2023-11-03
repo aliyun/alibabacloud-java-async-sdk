@@ -74,7 +74,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
             private String serviceMonitorName; 
 
             /**
-             * target matching prompt information.
+             * Indicates whether targets are matched.
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;
@@ -198,7 +198,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the serviceMonitor successfully created.
+             * The name of the created ServiceMonitor.
              */
             public Builder serviceMonitorName(String serviceMonitorName) {
                 this.serviceMonitorName = serviceMonitorName;

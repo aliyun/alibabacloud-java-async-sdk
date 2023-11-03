@@ -7,19 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEnvPodMonitorRequest} extends {@link RequestModel}
+ * {@link UpgradeAddonReleaseRequest} extends {@link RequestModel}
  *
- * <p>CreateEnvPodMonitorRequest</p>
+ * <p>UpgradeAddonReleaseRequest</p>
  */
-public class CreateEnvPodMonitorRequest extends Request {
+public class UpgradeAddonReleaseRequest extends Request {
     @Query
-    @NameInMap("AliyunLang")
-    private String aliyunLang;
-
-    @Body
-    @NameInMap("ConfigYaml")
+    @NameInMap("AddonVersion")
     @Validation(required = true)
-    private String configYaml;
+    private String addonVersion;
 
     @Query
     @NameInMap("DryRun")
@@ -32,23 +28,33 @@ public class CreateEnvPodMonitorRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private CreateEnvPodMonitorRequest(Builder builder) {
+    @Query
+    @NameInMap("ReleaseName")
+    @Validation(required = true)
+    private String releaseName;
+
+    @Query
+    @NameInMap("Values")
+    @Validation(required = true)
+    private String values;
+
+    private UpgradeAddonReleaseRequest(Builder builder) {
         super(builder);
-        this.aliyunLang = builder.aliyunLang;
-        this.configYaml = builder.configYaml;
+        this.addonVersion = builder.addonVersion;
         this.dryRun = builder.dryRun;
         this.environmentId = builder.environmentId;
         this.regionId = builder.regionId;
+        this.releaseName = builder.releaseName;
+        this.values = builder.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateEnvPodMonitorRequest create() {
+    public static UpgradeAddonReleaseRequest create() {
         return builder().build();
     }
 
@@ -58,17 +64,10 @@ public class CreateEnvPodMonitorRequest extends Request {
     }
 
     /**
-     * @return aliyunLang
+     * @return addonVersion
      */
-    public String getAliyunLang() {
-        return this.aliyunLang;
-    }
-
-    /**
-     * @return configYaml
-     */
-    public String getConfigYaml() {
-        return this.configYaml;
+    public String getAddonVersion() {
+        return this.addonVersion;
     }
 
     /**
@@ -92,46 +91,53 @@ public class CreateEnvPodMonitorRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<CreateEnvPodMonitorRequest, Builder> {
-        private String aliyunLang; 
-        private String configYaml; 
+    /**
+     * @return releaseName
+     */
+    public String getReleaseName() {
+        return this.releaseName;
+    }
+
+    /**
+     * @return values
+     */
+    public String getValues() {
+        return this.values;
+    }
+
+    public static final class Builder extends Request.Builder<UpgradeAddonReleaseRequest, Builder> {
+        private String addonVersion; 
         private Boolean dryRun; 
         private String environmentId; 
         private String regionId; 
+        private String releaseName; 
+        private String values; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateEnvPodMonitorRequest request) {
+        private Builder(UpgradeAddonReleaseRequest request) {
             super(request);
-            this.aliyunLang = request.aliyunLang;
-            this.configYaml = request.configYaml;
+            this.addonVersion = request.addonVersion;
             this.dryRun = request.dryRun;
             this.environmentId = request.environmentId;
             this.regionId = request.regionId;
+            this.releaseName = request.releaseName;
+            this.values = request.values;
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * Version of Addon.
          */
-        public Builder aliyunLang(String aliyunLang) {
-            this.putQueryParameter("AliyunLang", aliyunLang);
-            this.aliyunLang = aliyunLang;
+        public Builder addonVersion(String addonVersion) {
+            this.putQueryParameter("AddonVersion", addonVersion);
+            this.addonVersion = addonVersion;
             return this;
         }
 
         /**
-         * The YAML configuration string of the PodMonitor.
-         */
-        public Builder configYaml(String configYaml) {
-            this.putBodyParameter("ConfigYaml", configYaml);
-            this.configYaml = configYaml;
-            return this;
-        }
-
-        /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
+         * Whether to pre-check this request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,7 +146,7 @@ public class CreateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * Environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -149,7 +155,7 @@ public class CreateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -157,9 +163,27 @@ public class CreateEnvPodMonitorRequest extends Request {
             return this;
         }
 
+        /**
+         * The name of Release.
+         */
+        public Builder releaseName(String releaseName) {
+            this.putQueryParameter("ReleaseName", releaseName);
+            this.releaseName = releaseName;
+            return this;
+        }
+
+        /**
+         * Metadata information.
+         */
+        public Builder values(String values) {
+            this.putQueryParameter("Values", values);
+            this.values = values;
+            return this;
+        }
+
         @Override
-        public CreateEnvPodMonitorRequest build() {
-            return new CreateEnvPodMonitorRequest(this);
+        public UpgradeAddonReleaseRequest build() {
+            return new UpgradeAddonReleaseRequest(this);
         } 
 
     } 

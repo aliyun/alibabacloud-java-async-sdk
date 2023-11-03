@@ -74,7 +74,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * The returned struct.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String scrapeInterval; 
 
             /**
-             * Job name.
+             * The name of the job.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -182,7 +182,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * scrape the path of the metric.
+             * The path of the metric.
              */
             public Builder metricsPath(String metricsPath) {
                 this.metricsPath = metricsPath;
@@ -190,7 +190,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * List of service discovery methods.
+             * The service discovery methods.
              */
             public Builder scrapeDiscoverys(java.util.List < String > scrapeDiscoverys) {
                 this.scrapeDiscoverys = scrapeDiscoverys;
@@ -198,7 +198,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * scrape interval.
+             * The capture interval.
              */
             public Builder scrapeInterval(String scrapeInterval) {
                 this.scrapeInterval = scrapeInterval;
@@ -347,7 +347,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The attributed component name.
+             * The name of the component to which the custom job belongs.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -355,7 +355,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The attributed component instance name.
+             * The instance name of the component.
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -363,7 +363,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The attributed component version.
+             * The version of the component.
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -371,7 +371,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * If the request parameter encryptYaml is true, the base64-encoded yaml string is returned. Otherwise, the plaintext yaml string is returned.
+             * If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -379,7 +379,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Creation time (timestamp).
+             * The time when the custom job was created. The value of this parameter is a timestamp.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -387,7 +387,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Custom job name.
+             * The name of the custom job.
              */
             public Builder customJobName(String customJobName) {
                 this.customJobName = customJobName;
@@ -395,7 +395,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment instance ID.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -411,7 +411,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * scrape configuration.
+             * The capture configurations.
              */
             public Builder scrapeConfigs(java.util.List < ScrapeConfigs> scrapeConfigs) {
                 this.scrapeConfigs = scrapeConfigs;
@@ -419,7 +419,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The status of the custom job.
              */
             public Builder status(String status) {
                 this.status = status;

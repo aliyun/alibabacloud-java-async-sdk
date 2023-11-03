@@ -74,7 +74,7 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
             private String matchedTargetCount; 
 
             /**
-             * Target matching prompt information.
+             * Indicates whether targets are matched.
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;

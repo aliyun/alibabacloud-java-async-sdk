@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateEnvServiceMonitorRequest} extends {@link RequestModel}
+ * {@link InstallAddonRequest} extends {@link RequestModel}
  *
- * <p>UpdateEnvServiceMonitorRequest</p>
+ * <p>InstallAddonRequest</p>
  */
-public class UpdateEnvServiceMonitorRequest extends Request {
+public class InstallAddonRequest extends Request {
+    @Query
+    @NameInMap("AddonVersion")
+    @Validation(required = true)
+    private String addonVersion;
+
     @Query
     @NameInMap("AliyunLang")
     private String aliyunLang;
-
-    @Body
-    @NameInMap("ConfigYaml")
-    @Validation(required = true)
-    private String configYaml;
 
     @Query
     @NameInMap("DryRun")
@@ -31,36 +31,39 @@ public class UpdateEnvServiceMonitorRequest extends Request {
     private String environmentId;
 
     @Query
-    @NameInMap("Namespace")
+    @NameInMap("Name")
     @Validation(required = true)
-    private String namespace;
+    private String name;
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query
-    @NameInMap("ServiceMonitorName")
-    @Validation(required = true)
-    private String serviceMonitorName;
+    @NameInMap("ReleaseName")
+    private String releaseName;
 
-    private UpdateEnvServiceMonitorRequest(Builder builder) {
+    @Query
+    @NameInMap("Values")
+    private String values;
+
+    private InstallAddonRequest(Builder builder) {
         super(builder);
+        this.addonVersion = builder.addonVersion;
         this.aliyunLang = builder.aliyunLang;
-        this.configYaml = builder.configYaml;
         this.dryRun = builder.dryRun;
         this.environmentId = builder.environmentId;
-        this.namespace = builder.namespace;
+        this.name = builder.name;
         this.regionId = builder.regionId;
-        this.serviceMonitorName = builder.serviceMonitorName;
+        this.releaseName = builder.releaseName;
+        this.values = builder.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateEnvServiceMonitorRequest create() {
+    public static InstallAddonRequest create() {
         return builder().build();
     }
 
@@ -70,17 +73,17 @@ public class UpdateEnvServiceMonitorRequest extends Request {
     }
 
     /**
+     * @return addonVersion
+     */
+    public String getAddonVersion() {
+        return this.addonVersion;
+    }
+
+    /**
      * @return aliyunLang
      */
     public String getAliyunLang() {
         return this.aliyunLang;
-    }
-
-    /**
-     * @return configYaml
-     */
-    public String getConfigYaml() {
-        return this.configYaml;
     }
 
     /**
@@ -98,10 +101,10 @@ public class UpdateEnvServiceMonitorRequest extends Request {
     }
 
     /**
-     * @return namespace
+     * @return name
      */
-    public String getNamespace() {
-        return this.namespace;
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -112,38 +115,56 @@ public class UpdateEnvServiceMonitorRequest extends Request {
     }
 
     /**
-     * @return serviceMonitorName
+     * @return releaseName
      */
-    public String getServiceMonitorName() {
-        return this.serviceMonitorName;
+    public String getReleaseName() {
+        return this.releaseName;
     }
 
-    public static final class Builder extends Request.Builder<UpdateEnvServiceMonitorRequest, Builder> {
+    /**
+     * @return values
+     */
+    public String getValues() {
+        return this.values;
+    }
+
+    public static final class Builder extends Request.Builder<InstallAddonRequest, Builder> {
+        private String addonVersion; 
         private String aliyunLang; 
-        private String configYaml; 
         private Boolean dryRun; 
         private String environmentId; 
-        private String namespace; 
+        private String name; 
         private String regionId; 
-        private String serviceMonitorName; 
+        private String releaseName; 
+        private String values; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateEnvServiceMonitorRequest request) {
+        private Builder(InstallAddonRequest request) {
             super(request);
+            this.addonVersion = request.addonVersion;
             this.aliyunLang = request.aliyunLang;
-            this.configYaml = request.configYaml;
             this.dryRun = request.dryRun;
             this.environmentId = request.environmentId;
-            this.namespace = request.namespace;
+            this.name = request.name;
             this.regionId = request.regionId;
-            this.serviceMonitorName = request.serviceMonitorName;
+            this.releaseName = request.releaseName;
+            this.values = request.values;
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * Version of Addon.
+         */
+        public Builder addonVersion(String addonVersion) {
+            this.putQueryParameter("AddonVersion", addonVersion);
+            this.addonVersion = addonVersion;
+            return this;
+        }
+
+        /**
+         * Locale, the default is Chinese zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -152,16 +173,7 @@ public class UpdateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The YAML configuration string.
-         */
-        public Builder configYaml(String configYaml) {
-            this.putBodyParameter("ConfigYaml", configYaml);
-            this.configYaml = configYaml;
-            return this;
-        }
-
-        /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
+         * Whether to test run. The default value is false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -170,7 +182,7 @@ public class UpdateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The environment ID.
+         * Environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -179,11 +191,11 @@ public class UpdateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where the ServiceMonitor is located.
+         * Name of Addon.
          */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -197,17 +209,26 @@ public class UpdateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The name of the ServiceMonitor.
+         * The release name after installation, if not specified, generates the default rule name.
          */
-        public Builder serviceMonitorName(String serviceMonitorName) {
-            this.putQueryParameter("ServiceMonitorName", serviceMonitorName);
-            this.serviceMonitorName = serviceMonitorName;
+        public Builder releaseName(String releaseName) {
+            this.putQueryParameter("ReleaseName", releaseName);
+            this.releaseName = releaseName;
+            return this;
+        }
+
+        /**
+         * Config information.
+         */
+        public Builder values(String values) {
+            this.putQueryParameter("Values", values);
+            this.values = values;
             return this;
         }
 
         @Override
-        public UpdateEnvServiceMonitorRequest build() {
-            return new UpdateEnvServiceMonitorRequest(this);
+        public InstallAddonRequest build() {
+            return new InstallAddonRequest(this);
         } 
 
     } 

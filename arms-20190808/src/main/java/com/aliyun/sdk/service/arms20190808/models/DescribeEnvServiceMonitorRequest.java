@@ -100,7 +100,7 @@ public class DescribeEnvServiceMonitorRequest extends Request {
         } 
 
         /**
-         * Environment instance ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -109,7 +109,7 @@ public class DescribeEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * The namespace where the ServiceMonitor is located.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -127,7 +127,7 @@ public class DescribeEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * ServiceMonitor name.
+         * The name of the ServiceMonitor.
          */
         public Builder serviceMonitorName(String serviceMonitorName) {
             this.putQueryParameter("ServiceMonitorName", serviceMonitorName);

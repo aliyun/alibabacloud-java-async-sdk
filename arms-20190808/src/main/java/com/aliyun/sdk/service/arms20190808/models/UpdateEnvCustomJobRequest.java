@@ -127,7 +127,7 @@ public class UpdateEnvCustomJobRequest extends Request {
         } 
 
         /**
-         * Locale, the default is Chinese zh | en.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -136,7 +136,7 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * yaml configuration string.
+         * The YAML configuration string.
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -145,7 +145,7 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Custom job name.
+         * The name of the custom job.
          */
         public Builder customJobName(String customJobName) {
             this.putQueryParameter("CustomJobName", customJobName);
@@ -154,7 +154,7 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -172,7 +172,7 @@ public class UpdateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Custom task status: run or stop.
+         * The status of the custom job. Valid values: run and stop.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

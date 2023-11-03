@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEnvCustomJobResponseBody} extends {@link TeaModel}
+ * {@link UpgradeEnvironmentFeatureResponseBody} extends {@link TeaModel}
  *
- * <p>CreateEnvCustomJobResponseBody</p>
+ * <p>UpgradeEnvironmentFeatureResponseBody</p>
  */
-public class CreateEnvCustomJobResponseBody extends TeaModel {
+public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
     @NameInMap("Data")
-    private String data;
+    private java.util.Map < String, String > data;
 
     @NameInMap("Message")
     private String message;
@@ -24,18 +24,22 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateEnvCustomJobResponseBody(Builder builder) {
+    @NameInMap("Success")
+    private Boolean success;
+
+    private UpgradeEnvironmentFeatureResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateEnvCustomJobResponseBody create() {
+    public static UpgradeEnvironmentFeatureResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +53,7 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.Map < String, String > getData() {
         return this.data;
     }
 
@@ -67,14 +71,22 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private Integer code; 
-        private String data; 
+        private java.util.Map < String, String > data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +94,15 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the custom job that was created, or the exception information.
+         * Data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.Map < String, String > data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,15 +110,23 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateEnvCustomJobResponseBody build() {
-            return new CreateEnvCustomJobResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public UpgradeEnvironmentFeatureResponseBody build() {
+            return new UpgradeEnvironmentFeatureResponseBody(this);
         } 
 
     } 

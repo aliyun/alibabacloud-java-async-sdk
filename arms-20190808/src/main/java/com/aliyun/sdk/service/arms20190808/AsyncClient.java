@@ -112,6 +112,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DelAuthTokenResponse> delAuthToken(DelAuthTokenRequest request);
 
+    CompletableFuture<DeleteAddonReleaseResponse> deleteAddonRelease(DeleteAddonReleaseRequest request);
+
     /**
       * ********
       *
@@ -182,6 +184,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteWebhookContactResponse> deleteWebhookContact(DeleteWebhookContactRequest request);
 
+    CompletableFuture<DescribeAddonReleaseResponse> describeAddonRelease(DescribeAddonReleaseRequest request);
+
     CompletableFuture<DescribeContactGroupsResponse> describeContactGroups(DescribeContactGroupsRequest request);
 
     CompletableFuture<DescribeContactsResponse> describeContacts(DescribeContactsRequest request);
@@ -195,6 +199,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEnvServiceMonitorResponse> describeEnvServiceMonitor(DescribeEnvServiceMonitorRequest request);
 
     CompletableFuture<DescribeEnvironmentResponse> describeEnvironment(DescribeEnvironmentRequest request);
+
+    CompletableFuture<DescribeEnvironmentFeatureResponse> describeEnvironmentFeature(DescribeEnvironmentFeatureRequest request);
 
     CompletableFuture<DescribeIMRobotsResponse> describeIMRobots(DescribeIMRobotsRequest request);
 
@@ -284,7 +290,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InitEnvironmentResponse> initEnvironment(InitEnvironmentRequest request);
 
+    CompletableFuture<InstallAddonResponse> installAddon(InstallAddonRequest request);
+
     CompletableFuture<InstallCmsExporterResponse> installCmsExporter(InstallCmsExporterRequest request);
+
+    CompletableFuture<InstallEnvironmentFeatureResponse> installEnvironmentFeature(InstallEnvironmentFeatureRequest request);
 
     /**
       * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
@@ -293,6 +303,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallManagedPrometheusResponse> installManagedPrometheus(InstallManagedPrometheusRequest request);
 
     CompletableFuture<ListActivatedAlertsResponse> listActivatedAlerts(ListActivatedAlertsRequest request);
+
+    CompletableFuture<ListAddonReleasesResponse> listAddonReleases(ListAddonReleasesRequest request);
 
     CompletableFuture<ListAlertEventsResponse> listAlertEvents(ListAlertEventsRequest request);
 
@@ -317,6 +329,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEnvPodMonitorsResponse> listEnvPodMonitors(ListEnvPodMonitorsRequest request);
 
     CompletableFuture<ListEnvServiceMonitorsResponse> listEnvServiceMonitors(ListEnvServiceMonitorsRequest request);
+
+    CompletableFuture<ListEnvironmentFeaturesResponse> listEnvironmentFeatures(ListEnvironmentFeaturesRequest request);
+
+    CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);
 
     CompletableFuture<ListEscalationPoliciesResponse> listEscalationPolicies(ListEscalationPoliciesRequest request);
 
@@ -515,6 +531,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UpdateWebhookResponse> updateWebhook(UpdateWebhookRequest request);
+
+    CompletableFuture<UpgradeAddonReleaseResponse> upgradeAddonRelease(UpgradeAddonReleaseRequest request);
+
+    CompletableFuture<UpgradeEnvironmentFeatureResponse> upgradeEnvironmentFeature(UpgradeEnvironmentFeatureRequest request);
 
     CompletableFuture<UploadResponse> upload(UploadRequest request);
 

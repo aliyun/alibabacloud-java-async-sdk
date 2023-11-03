@@ -113,7 +113,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         } 
 
         /**
-         * Locale, default is Chinese zh | en.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -122,7 +122,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * ServiceMonitor\"s yaml configuration string.
+         * The YAML configuration string of the ServiceMonitor.
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -131,7 +131,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * Trial run: Check whether the format is legal and whether it can match targets.
+         * Specifies whether to perform only a dry run, without performing the actual request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,7 +140,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * Environment instance ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -149,7 +149,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

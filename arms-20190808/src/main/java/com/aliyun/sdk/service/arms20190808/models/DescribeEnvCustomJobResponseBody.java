@@ -74,7 +74,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +98,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * If the request parameter encryptYaml is true, the base64-encoded yaml string is returned. Otherwise, the plaintext yaml string is returned.
+             * If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -194,7 +194,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * Custom job name.
+             * The name of the custom job.
              */
             public Builder customJobName(String customJobName) {
                 this.customJobName = customJobName;
@@ -202,7 +202,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * Environment instance ID.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -218,7 +218,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status: run, stop.
+             * The status of the custom job. Valid values: run and stop.
              */
             public Builder status(String status) {
                 this.status = status;

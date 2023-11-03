@@ -28,6 +28,7 @@ public class CreateEnvironmentRequest extends Request {
 
     @Query
     @NameInMap("EnvironmentSubType")
+    @Validation(required = true)
     private String environmentSubType;
 
     @Query

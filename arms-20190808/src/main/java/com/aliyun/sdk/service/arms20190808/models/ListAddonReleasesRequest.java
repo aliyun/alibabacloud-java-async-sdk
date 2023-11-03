@@ -7,19 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeEnvCustomJobRequest} extends {@link RequestModel}
+ * {@link ListAddonReleasesRequest} extends {@link RequestModel}
  *
- * <p>DescribeEnvCustomJobRequest</p>
+ * <p>ListAddonReleasesRequest</p>
  */
-public class DescribeEnvCustomJobRequest extends Request {
+public class ListAddonReleasesRequest extends Request {
     @Query
-    @NameInMap("CustomJobName")
-    @Validation(required = true)
-    private String customJobName;
-
-    @Query
-    @NameInMap("EncryptYaml")
-    private Boolean encryptYaml;
+    @NameInMap("AddonName")
+    private String addonName;
 
     @Query
     @NameInMap("EnvironmentId")
@@ -28,13 +23,11 @@ public class DescribeEnvCustomJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private DescribeEnvCustomJobRequest(Builder builder) {
+    private ListAddonReleasesRequest(Builder builder) {
         super(builder);
-        this.customJobName = builder.customJobName;
-        this.encryptYaml = builder.encryptYaml;
+        this.addonName = builder.addonName;
         this.environmentId = builder.environmentId;
         this.regionId = builder.regionId;
     }
@@ -43,7 +36,7 @@ public class DescribeEnvCustomJobRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeEnvCustomJobRequest create() {
+    public static ListAddonReleasesRequest create() {
         return builder().build();
     }
 
@@ -53,17 +46,10 @@ public class DescribeEnvCustomJobRequest extends Request {
     }
 
     /**
-     * @return customJobName
+     * @return addonName
      */
-    public String getCustomJobName() {
-        return this.customJobName;
-    }
-
-    /**
-     * @return encryptYaml
-     */
-    public Boolean getEncryptYaml() {
-        return this.encryptYaml;
+    public String getAddonName() {
+        return this.addonName;
     }
 
     /**
@@ -80,9 +66,8 @@ public class DescribeEnvCustomJobRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeEnvCustomJobRequest, Builder> {
-        private String customJobName; 
-        private Boolean encryptYaml; 
+    public static final class Builder extends Request.Builder<ListAddonReleasesRequest, Builder> {
+        private String addonName; 
         private String environmentId; 
         private String regionId; 
 
@@ -90,34 +75,24 @@ public class DescribeEnvCustomJobRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnvCustomJobRequest request) {
+        private Builder(ListAddonReleasesRequest request) {
             super(request);
-            this.customJobName = request.customJobName;
-            this.encryptYaml = request.encryptYaml;
+            this.addonName = request.addonName;
             this.environmentId = request.environmentId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The name of the custom job.
+         * Name of Addon.
          */
-        public Builder customJobName(String customJobName) {
-            this.putQueryParameter("CustomJobName", customJobName);
-            this.customJobName = customJobName;
+        public Builder addonName(String addonName) {
+            this.putQueryParameter("AddonName", addonName);
+            this.addonName = addonName;
             return this;
         }
 
         /**
-         * Specifies whether to return the encrypted YAML string.
-         */
-        public Builder encryptYaml(Boolean encryptYaml) {
-            this.putQueryParameter("EncryptYaml", encryptYaml);
-            this.encryptYaml = encryptYaml;
-            return this;
-        }
-
-        /**
-         * The ID of the environment instance.
+         * Environment instance ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -135,8 +110,8 @@ public class DescribeEnvCustomJobRequest extends Request {
         }
 
         @Override
-        public DescribeEnvCustomJobRequest build() {
-            return new DescribeEnvCustomJobRequest(this);
+        public ListAddonReleasesRequest build() {
+            return new ListAddonReleasesRequest(this);
         } 
 
     } 

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEnvCustomJobResponseBody} extends {@link TeaModel}
+ * {@link UpgradeAddonReleaseResponseBody} extends {@link TeaModel}
  *
- * <p>CreateEnvCustomJobResponseBody</p>
+ * <p>UpgradeAddonReleaseResponseBody</p>
  */
-public class CreateEnvCustomJobResponseBody extends TeaModel {
+public class UpgradeAddonReleaseResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -24,18 +24,22 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateEnvCustomJobResponseBody(Builder builder) {
+    @NameInMap("Success")
+    private Boolean success;
+
+    private UpgradeAddonReleaseResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateEnvCustomJobResponseBody create() {
+    public static UpgradeAddonReleaseResponseBody create() {
         return builder().build();
     }
 
@@ -67,14 +71,22 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private Integer code; 
         private String data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * The status code. 200 indicates success.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the custom job that was created, or the exception information.
+         * Return a message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +102,7 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The information returned when the request parameter is incorrect.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,15 +110,23 @@ public class CreateEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateEnvCustomJobResponseBody build() {
-            return new CreateEnvCustomJobResponseBody(this);
+        /**
+         * Whether the call was successful.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public UpgradeAddonReleaseResponseBody build() {
+            return new UpgradeAddonReleaseResponseBody(this);
         } 
 
     } 

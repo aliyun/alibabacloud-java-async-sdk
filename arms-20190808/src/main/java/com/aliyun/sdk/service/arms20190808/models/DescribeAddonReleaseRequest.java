@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListEnvPodMonitorsRequest} extends {@link RequestModel}
+ * {@link DescribeAddonReleaseRequest} extends {@link RequestModel}
  *
- * <p>ListEnvPodMonitorsRequest</p>
+ * <p>DescribeAddonReleaseRequest</p>
  */
-public class ListEnvPodMonitorsRequest extends Request {
+public class DescribeAddonReleaseRequest extends Request {
     @Query
     @NameInMap("EnvironmentId")
     @Validation(required = true)
@@ -19,20 +19,25 @@ public class ListEnvPodMonitorsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private ListEnvPodMonitorsRequest(Builder builder) {
+    @Query
+    @NameInMap("ReleaseName")
+    @Validation(required = true)
+    private String releaseName;
+
+    private DescribeAddonReleaseRequest(Builder builder) {
         super(builder);
         this.environmentId = builder.environmentId;
         this.regionId = builder.regionId;
+        this.releaseName = builder.releaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListEnvPodMonitorsRequest create() {
+    public static DescribeAddonReleaseRequest create() {
         return builder().build();
     }
 
@@ -55,22 +60,31 @@ public class ListEnvPodMonitorsRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListEnvPodMonitorsRequest, Builder> {
+    /**
+     * @return releaseName
+     */
+    public String getReleaseName() {
+        return this.releaseName;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeAddonReleaseRequest, Builder> {
         private String environmentId; 
         private String regionId; 
+        private String releaseName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEnvPodMonitorsRequest request) {
+        private Builder(DescribeAddonReleaseRequest request) {
             super(request);
             this.environmentId = request.environmentId;
             this.regionId = request.regionId;
+            this.releaseName = request.releaseName;
         } 
 
         /**
-         * The environment ID.
+         * Environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -87,9 +101,18 @@ public class ListEnvPodMonitorsRequest extends Request {
             return this;
         }
 
+        /**
+         * Name of Release.
+         */
+        public Builder releaseName(String releaseName) {
+            this.putQueryParameter("ReleaseName", releaseName);
+            this.releaseName = releaseName;
+            return this;
+        }
+
         @Override
-        public ListEnvPodMonitorsRequest build() {
-            return new ListEnvPodMonitorsRequest(this);
+        public DescribeAddonReleaseRequest build() {
+            return new DescribeAddonReleaseRequest(this);
         } 
 
     } 

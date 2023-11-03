@@ -74,7 +74,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
             private String matchedTargetCount; 
 
             /**
-             * Target matching prompt information.
+             * Indicates whether targets are matched.
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;

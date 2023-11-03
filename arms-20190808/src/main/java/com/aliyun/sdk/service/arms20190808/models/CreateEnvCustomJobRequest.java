@@ -114,9 +114,7 @@ public class CreateEnvCustomJobRequest extends Request {
         } 
 
         /**
-         * Locale: zh | en. 
-         * <p>
-         * The default value is zh.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -125,7 +123,7 @@ public class CreateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Customize the Job\"s yaml configuration string.
+         * The YAML configuration string of the custom job.
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -134,7 +132,7 @@ public class CreateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Customize job name.
+         * The name of the custom job.
          */
         public Builder customJobName(String customJobName) {
             this.putQueryParameter("CustomJobName", customJobName);
@@ -143,7 +141,7 @@ public class CreateEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Environment instance ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);

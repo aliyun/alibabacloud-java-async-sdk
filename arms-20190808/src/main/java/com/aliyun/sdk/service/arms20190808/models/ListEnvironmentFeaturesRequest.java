@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListEnvPodMonitorsRequest} extends {@link RequestModel}
+ * {@link ListEnvironmentFeaturesRequest} extends {@link RequestModel}
  *
- * <p>ListEnvPodMonitorsRequest</p>
+ * <p>ListEnvironmentFeaturesRequest</p>
  */
-public class ListEnvPodMonitorsRequest extends Request {
+public class ListEnvironmentFeaturesRequest extends Request {
     @Query
     @NameInMap("EnvironmentId")
     @Validation(required = true)
@@ -19,10 +19,9 @@ public class ListEnvPodMonitorsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private ListEnvPodMonitorsRequest(Builder builder) {
+    private ListEnvironmentFeaturesRequest(Builder builder) {
         super(builder);
         this.environmentId = builder.environmentId;
         this.regionId = builder.regionId;
@@ -32,7 +31,7 @@ public class ListEnvPodMonitorsRequest extends Request {
         return new Builder();
     }
 
-    public static ListEnvPodMonitorsRequest create() {
+    public static ListEnvironmentFeaturesRequest create() {
         return builder().build();
     }
 
@@ -55,7 +54,7 @@ public class ListEnvPodMonitorsRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListEnvPodMonitorsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListEnvironmentFeaturesRequest, Builder> {
         private String environmentId; 
         private String regionId; 
 
@@ -63,14 +62,14 @@ public class ListEnvPodMonitorsRequest extends Request {
             super();
         } 
 
-        private Builder(ListEnvPodMonitorsRequest request) {
+        private Builder(ListEnvironmentFeaturesRequest request) {
             super(request);
             this.environmentId = request.environmentId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The environment ID.
+         * EnvironmentId.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -79,7 +78,7 @@ public class ListEnvPodMonitorsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -88,8 +87,8 @@ public class ListEnvPodMonitorsRequest extends Request {
         }
 
         @Override
-        public ListEnvPodMonitorsRequest build() {
-            return new ListEnvPodMonitorsRequest(this);
+        public ListEnvironmentFeaturesRequest build() {
+            return new ListEnvironmentFeaturesRequest(this);
         } 
 
     } 

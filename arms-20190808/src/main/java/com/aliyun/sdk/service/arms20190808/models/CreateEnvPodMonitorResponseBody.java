@@ -74,7 +74,7 @@ public class CreateEnvPodMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * The returned result, which indicates whether the operation was successful.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class CreateEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class CreateEnvPodMonitorResponseBody extends TeaModel {
             private String podMonitorName; 
 
             /**
-             * target matching prompt information.
+             * Indicates whether targets are matched.
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;
@@ -198,7 +198,7 @@ public class CreateEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Successfully created podMonitor name.
+             * The name of the created PodMonitor.
              */
             public Builder podMonitorName(String podMonitorName) {
                 this.podMonitorName = podMonitorName;

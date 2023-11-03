@@ -84,7 +84,7 @@ public class ListEnvCustomJobsRequest extends Request {
         } 
 
         /**
-         * Whether to return encrypted yaml.
+         * Specifies whether to return the encrypted YAML string.
          */
         public Builder encryptYaml(Boolean encryptYaml) {
             this.putQueryParameter("EncryptYaml", encryptYaml);
@@ -93,7 +93,7 @@ public class ListEnvCustomJobsRequest extends Request {
         }
 
         /**
-         * Environment instance ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);

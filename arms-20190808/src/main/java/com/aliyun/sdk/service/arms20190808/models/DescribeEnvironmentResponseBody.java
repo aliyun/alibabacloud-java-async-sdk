@@ -197,6 +197,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         @NameInMap("EnvironmentName")
         private String environmentName;
 
+        @NameInMap("EnvironmentSubType")
+        private String environmentSubType;
+
         @NameInMap("EnvironmentType")
         private String environmentType;
 
@@ -245,6 +248,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             this.bindVpcCidr = builder.bindVpcCidr;
             this.environmentId = builder.environmentId;
             this.environmentName = builder.environmentName;
+            this.environmentSubType = builder.environmentSubType;
             this.environmentType = builder.environmentType;
             this.grafaDataSourceName = builder.grafaDataSourceName;
             this.grafanaDatasourceUid = builder.grafanaDatasourceUid;
@@ -322,6 +326,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
          */
         public String getEnvironmentName() {
             return this.environmentName;
+        }
+
+        /**
+         * @return environmentSubType
+         */
+        public String getEnvironmentSubType() {
+            return this.environmentSubType;
         }
 
         /**
@@ -424,6 +435,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String bindVpcCidr; 
             private String environmentId; 
             private String environmentName; 
+            private String environmentSubType; 
             private String environmentType; 
             private String grafaDataSourceName; 
             private String grafanaDatasourceUid; 
@@ -499,6 +511,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              */
             public Builder environmentName(String environmentName) {
                 this.environmentName = environmentName;
+                return this;
+            }
+
+            /**
+             * EnvironmentSubType.
+             */
+            public Builder environmentSubType(String environmentSubType) {
+                this.environmentSubType = environmentSubType;
                 return this;
             }
 

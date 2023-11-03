@@ -74,7 +74,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. The status code 200 indicates that the request was successful.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * PodMonitor\"s yaml configuration string.
+             * The YAML configuration string of the PodMonitor.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -206,7 +206,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Environment instance ID.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -222,7 +222,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * PodMonitor name.
+             * The name of the PodMonitor.
              */
             public Builder podMonitorName(String podMonitorName) {
                 this.podMonitorName = podMonitorName;
@@ -238,7 +238,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Status: run, stop.
+             * The status of the PodMonitor. Valid values: run and stop.
              */
             public Builder status(String status) {
                 this.status = status;
