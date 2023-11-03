@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class ListConfigResponseBody extends TeaModel {
     @NameInMap("configs")
-    private java.util.List < LogtailConfig > configs;
+    private java.util.List < String > configs;
 
     @NameInMap("count")
     private Integer count;
@@ -38,7 +38,7 @@ public class ListConfigResponseBody extends TeaModel {
     /**
      * @return configs
      */
-    public java.util.List < LogtailConfig > getConfigs() {
+    public java.util.List < String > getConfigs() {
         return this.configs;
     }
 
@@ -57,14 +57,14 @@ public class ListConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogtailConfig > configs; 
+        private java.util.List < String > configs; 
         private Integer count; 
         private Integer total; 
 
         /**
          * configs.
          */
-        public Builder configs(java.util.List < LogtailConfig > configs) {
+        public Builder configs(java.util.List < String > configs) {
             this.configs = configs;
             return this;
         }

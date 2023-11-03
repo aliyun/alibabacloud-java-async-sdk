@@ -46,19 +46,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMachineGroupResponse> createMachineGroup(CreateMachineGroupRequest request);
 
-    CompletableFuture<CreateOdpsShipperResponse> createOdpsShipper(CreateOdpsShipperRequest request);
-
     CompletableFuture<CreateOssExternalStoreResponse> createOssExternalStore(CreateOssExternalStoreRequest request);
-
-    CompletableFuture<CreateOssShipperResponse> createOssShipper(CreateOssShipperRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     CompletableFuture<CreateRdsExternalStoreResponse> createRdsExternalStore(CreateRdsExternalStoreRequest request);
 
     CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request);
-
-    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
 
     CompletableFuture<DeleteAnnotationDataResponse> deleteAnnotationData(DeleteAnnotationDataRequest request);
 
@@ -186,8 +180,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
-    CompletableFuture<PullDataResponse> pullData(PullDataRequest request);
-
     CompletableFuture<PutAnnotationDataResponse> putAnnotationData(PutAnnotationDataRequest request);
 
     CompletableFuture<PutProjectPolicyResponse> putProjectPolicy(PutProjectPolicyRequest request);
@@ -228,11 +220,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateMachineGroupMachineResponse> updateMachineGroupMachine(UpdateMachineGroupMachineRequest request);
 
-    CompletableFuture<UpdateOdpsShipperResponse> updateOdpsShipper(UpdateOdpsShipperRequest request);
-
     CompletableFuture<UpdateOssExternalStoreResponse> updateOssExternalStore(UpdateOssExternalStoreRequest request);
-
-    CompletableFuture<UpdateOssShipperResponse> updateOssShipper(UpdateOssShipperRequest request);
 
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 

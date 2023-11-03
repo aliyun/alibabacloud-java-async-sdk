@@ -34,14 +34,14 @@ public class Ticket extends TeaModel {
     @Validation(maximum = 2147483647)
     private Integer number;
 
-    @NameInMap("policy")
-    private String policy;
-
     @NameInMap("ticket")
     private String ticket;
 
     @NameInMap("ticketId")
     private String ticketId;
+
+    @NameInMap("type")
+    private String type;
 
     @NameInMap("unlimitedExpiration")
     private Boolean unlimitedExpiration;
@@ -63,9 +63,9 @@ public class Ticket extends TeaModel {
         this.extra = builder.extra;
         this.name = builder.name;
         this.number = builder.number;
-        this.policy = builder.policy;
         this.ticket = builder.ticket;
         this.ticketId = builder.ticketId;
+        this.type = builder.type;
         this.unlimitedExpiration = builder.unlimitedExpiration;
         this.unlimitedNumber = builder.unlimitedNumber;
         this.usedNumber = builder.usedNumber;
@@ -130,13 +130,6 @@ public class Ticket extends TeaModel {
     }
 
     /**
-     * @return policy
-     */
-    public String getPolicy() {
-        return this.policy;
-    }
-
-    /**
      * @return ticket
      */
     public String getTicket() {
@@ -148,6 +141,13 @@ public class Ticket extends TeaModel {
      */
     public String getTicketId() {
         return this.ticketId;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
     }
 
     /**
@@ -186,9 +186,9 @@ public class Ticket extends TeaModel {
         private String extra; 
         private String name; 
         private Integer number; 
-        private String policy; 
         private String ticket; 
         private String ticketId; 
+        private String type; 
         private Boolean unlimitedExpiration; 
         private Boolean unlimitedNumber; 
         private Integer usedNumber; 
@@ -251,14 +251,6 @@ public class Ticket extends TeaModel {
         }
 
         /**
-         * policy.
-         */
-        public Builder policy(String policy) {
-            this.policy = policy;
-            return this;
-        }
-
-        /**
          * ticket.
          */
         public Builder ticket(String ticket) {
@@ -271,6 +263,14 @@ public class Ticket extends TeaModel {
          */
         public Builder ticketId(String ticketId) {
             this.ticketId = ticketId;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

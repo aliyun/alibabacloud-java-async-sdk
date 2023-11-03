@@ -18,7 +18,8 @@ public class UntagResourcesRequest extends Request {
 
     @Body
     @NameInMap("resourceId")
-    private String resourceId;
+    @Validation(required = true)
+    private java.util.List < String > resourceId;
 
     @Body
     @NameInMap("resourceType")
@@ -59,7 +60,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public String getResourceId() {
+    public java.util.List < String > getResourceId() {
         return this.resourceId;
     }
 
@@ -79,7 +80,7 @@ public class UntagResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
-        private String resourceId; 
+        private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < String > tags; 
 
@@ -107,7 +108,7 @@ public class UntagResourcesRequest extends Request {
         /**
          * resourceId.
          */
-        public Builder resourceId(String resourceId) {
+        public Builder resourceId(java.util.List < String > resourceId) {
             this.putBodyParameter("resourceId", resourceId);
             this.resourceId = resourceId;
             return this;
