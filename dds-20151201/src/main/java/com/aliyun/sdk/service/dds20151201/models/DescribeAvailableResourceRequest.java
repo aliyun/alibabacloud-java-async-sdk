@@ -13,8 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAvailableResourceRequest extends Request {
     @Query
+    @NameInMap("DBInstanceClass")
+    private String DBInstanceClass;
+
+    @Query
     @NameInMap("DbType")
     private String dbType;
+
+    @Query
+    @NameInMap("EngineVersion")
+    private String engineVersion;
 
     @Query
     @NameInMap("InstanceChargeType")
@@ -59,7 +67,9 @@ public class DescribeAvailableResourceRequest extends Request {
 
     private DescribeAvailableResourceRequest(Builder builder) {
         super(builder);
+        this.DBInstanceClass = builder.DBInstanceClass;
         this.dbType = builder.dbType;
+        this.engineVersion = builder.engineVersion;
         this.instanceChargeType = builder.instanceChargeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -86,10 +96,24 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return DBInstanceClass
+     */
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
+    /**
      * @return dbType
      */
     public String getDbType() {
         return this.dbType;
+    }
+
+    /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -163,7 +187,9 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAvailableResourceRequest, Builder> {
+        private String DBInstanceClass; 
         private String dbType; 
+        private String engineVersion; 
         private String instanceChargeType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -181,7 +207,9 @@ public class DescribeAvailableResourceRequest extends Request {
 
         private Builder(DescribeAvailableResourceRequest request) {
             super(request);
+            this.DBInstanceClass = request.DBInstanceClass;
             this.dbType = request.dbType;
+            this.engineVersion = request.engineVersion;
             this.instanceChargeType = request.instanceChargeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -195,6 +223,15 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
+         * DBInstanceClass.
+         */
+        public Builder DBInstanceClass(String DBInstanceClass) {
+            this.putQueryParameter("DBInstanceClass", DBInstanceClass);
+            this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+
+        /**
          * The architecture of the instance. Valid values:
          * <p>
          * 
@@ -204,6 +241,15 @@ public class DescribeAvailableResourceRequest extends Request {
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
             this.dbType = dbType;
+            return this;
+        }
+
+        /**
+         * EngineVersion.
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
             return this;
         }
 

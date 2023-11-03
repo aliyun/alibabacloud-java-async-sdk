@@ -17,8 +17,16 @@ public class DescribeAvailabilityZonesRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("DBInstanceClass")
+    private String DBInstanceClass;
+
+    @Query
     @NameInMap("DbType")
     private String dbType;
+
+    @Query
+    @NameInMap("EngineVersion")
+    private String engineVersion;
 
     @Query
     @NameInMap("ExcludeSecondaryZoneId")
@@ -80,7 +88,9 @@ public class DescribeAvailabilityZonesRequest extends Request {
     private DescribeAvailabilityZonesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.DBInstanceClass = builder.DBInstanceClass;
         this.dbType = builder.dbType;
+        this.engineVersion = builder.engineVersion;
         this.excludeSecondaryZoneId = builder.excludeSecondaryZoneId;
         this.excludeZoneId = builder.excludeZoneId;
         this.instanceChargeType = builder.instanceChargeType;
@@ -118,10 +128,24 @@ public class DescribeAvailabilityZonesRequest extends Request {
     }
 
     /**
+     * @return DBInstanceClass
+     */
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
+    /**
      * @return dbType
      */
     public String getDbType() {
         return this.dbType;
+    }
+
+    /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -224,7 +248,9 @@ public class DescribeAvailabilityZonesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAvailabilityZonesRequest, Builder> {
         private String acceptLanguage; 
+        private String DBInstanceClass; 
         private String dbType; 
+        private String engineVersion; 
         private String excludeSecondaryZoneId; 
         private String excludeZoneId; 
         private String instanceChargeType; 
@@ -247,7 +273,9 @@ public class DescribeAvailabilityZonesRequest extends Request {
         private Builder(DescribeAvailabilityZonesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.DBInstanceClass = request.DBInstanceClass;
             this.dbType = request.dbType;
+            this.engineVersion = request.engineVersion;
             this.excludeSecondaryZoneId = request.excludeSecondaryZoneId;
             this.excludeZoneId = request.excludeZoneId;
             this.instanceChargeType = request.instanceChargeType;
@@ -278,6 +306,15 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
+         * DBInstanceClass.
+         */
+        public Builder DBInstanceClass(String DBInstanceClass) {
+            this.putQueryParameter("DBInstanceClass", DBInstanceClass);
+            this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+
+        /**
          * The database engine type of the instance. Valid values:
          * <p>
          * 
@@ -287,6 +324,15 @@ public class DescribeAvailabilityZonesRequest extends Request {
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
             this.dbType = dbType;
+            return this;
+        }
+
+        /**
+         * EngineVersion.
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
             return this;
         }
 
