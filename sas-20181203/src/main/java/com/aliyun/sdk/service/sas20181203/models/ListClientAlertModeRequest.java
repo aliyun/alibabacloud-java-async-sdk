@@ -54,7 +54,11 @@ public class ListClientAlertModeRequest extends Request {
         } 
 
         /**
-         * Mode.
+         * The protection mode. Valid values:
+         * <p>
+         * 
+         * *   **strict**: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.
+         * *   **balance**: The balanced mode. More risks can be detected with less false positives in this mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

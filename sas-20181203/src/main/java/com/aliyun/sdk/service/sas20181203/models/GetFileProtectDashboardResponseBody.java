@@ -50,7 +50,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             private Integer pluginOnlineCount; 
 
             /**
-             * EnableRuleCount.
+             * The total number of enabled rules.
              */
             public Builder enableRuleCount(Integer enableRuleCount) {
                 this.enableRuleCount = enableRuleCount;
@@ -142,7 +142,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * PluginCount.
+             * The total number of servers on which the Security Center agent is installed.
              */
             public Builder pluginCount(Integer pluginCount) {
                 this.pluginCount = pluginCount;
@@ -150,7 +150,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * PluginOfflineCount.
+             * The total number of servers on which the Security Center agent is offline.
              */
             public Builder pluginOfflineCount(Integer pluginOfflineCount) {
                 this.pluginOfflineCount = pluginOfflineCount;
@@ -158,7 +158,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * PluginOnlineCount.
+             * The total number of servers on which the Security Center agent is online.
              */
             public Builder pluginOnlineCount(Integer pluginOnlineCount) {
                 this.pluginOnlineCount = pluginOnlineCount;

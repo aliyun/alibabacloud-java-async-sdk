@@ -54,7 +54,10 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
         } 
 
         /**
-         * RuleId.
+         * The ID of the rule.
+         * <p>
+         * 
+         * >  You can call the [ListContainerDefenseRule](~~xx~~) operation to obtain the IDs of rules.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

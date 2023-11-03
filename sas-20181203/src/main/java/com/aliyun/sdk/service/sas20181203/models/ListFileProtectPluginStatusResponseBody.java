@@ -62,7 +62,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned if the call is successful.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * ClientVersion.
+             * The version of the Security Center agent.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -234,7 +234,11 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstallCode.
+             * The returned code after you install the Security Center agent. Valid values:
+             * <p>
+             * 
+             * 1.  0: The installation is successful.
+             * 2.  \-2: The kernel does not support the installation.
              */
             public Builder installCode(String installCode) {
                 this.installCode = installCode;
@@ -242,7 +246,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstallMessage.
+             * The returned message after you install the Security Center agent.
              */
             public Builder installMessage(String installMessage) {
                 this.installMessage = installMessage;
@@ -250,7 +254,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Installed.
+             * Indicates whether the Security Center agent is installed.
              */
             public Builder installed(Boolean installed) {
                 this.installed = installed;
@@ -258,7 +262,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -266,7 +270,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address that is associated with the instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -274,7 +278,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address that is associated with the instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -282,7 +286,11 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * Indicates whether the Security Center agent is online. Valid value:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -290,7 +298,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFile.
+             * Indicates whether the core file monitoring file is supported.
              */
             public Builder supportFile(Boolean supportFile) {
                 this.supportFile = supportFile;
@@ -298,7 +306,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -363,7 +371,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -371,7 +379,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +387,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

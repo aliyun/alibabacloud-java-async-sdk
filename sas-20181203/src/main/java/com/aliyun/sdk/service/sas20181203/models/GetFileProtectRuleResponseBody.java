@@ -50,7 +50,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,11 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * Action.
+             * The handling method of the rule. Valid values:
+             * <p>
+             * 
+             * 1.  pass: allow
+             * 2.  alert
              */
             public Builder action(String action) {
                 this.action = action;
@@ -202,7 +206,13 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AlertLevel.
+             * The severity of alerts. Valid values:
+             * <p>
+             * 
+             * *   0: does not generate alerts
+             * *   1: sends notifications
+             * *   2: suspicious
+             * *   3: high-risk
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -210,7 +220,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FileOps.
+             * The operations performed on the files.
              */
             public Builder fileOps(java.util.List < String > fileOps) {
                 this.fileOps = fileOps;
@@ -218,7 +228,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FilePaths.
+             * The paths to the monitored files.
              */
             public Builder filePaths(java.util.List < String > filePaths) {
                 this.filePaths = filePaths;
@@ -226,7 +236,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -234,7 +244,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPaths.
+             * The paths to the monitored processes.
              */
             public Builder procPaths(java.util.List < String > procPaths) {
                 this.procPaths = procPaths;
@@ -242,7 +252,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -250,7 +260,11 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * 1.  0: disabled
+             * 2.  1: enabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -258,7 +272,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * The switch ID of the rule.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

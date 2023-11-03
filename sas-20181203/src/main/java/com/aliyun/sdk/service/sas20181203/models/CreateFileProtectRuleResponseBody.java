@@ -50,7 +50,7 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
         private Long ruleId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(Long ruleId) {
             this.ruleId = ruleId;

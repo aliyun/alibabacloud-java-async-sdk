@@ -62,7 +62,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventList.
+         * The events.
          */
         public Builder eventList(java.util.List < EventList> eventList) {
             this.eventList = eventList;
@@ -70,7 +70,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +310,13 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AlertLevel.
+             * The severity of the alert. Valid values:
+             * <p>
+             * 
+             * *   0: does not generate alerts
+             * *   1: sends notifications
+             * *   2: suspicious
+             * *   3: high-risk
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -318,7 +324,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * CmdLine.
+             * The command line of the event.
              */
             public Builder cmdLine(String cmdLine) {
                 this.cmdLine = cmdLine;
@@ -326,7 +332,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The path to the file.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -334,7 +340,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * HandleTime.
+             * The time when the event was handled.
              */
             public Builder handleTime(Long handleTime) {
                 this.handleTime = handleTime;
@@ -342,7 +348,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the event.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -350,7 +356,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -358,7 +364,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -366,7 +372,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the asset.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -374,7 +380,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * LatestTime.
+             * The time when the event last occurred.
              */
             public Builder latestTime(Long latestTime) {
                 this.latestTime = latestTime;
@@ -382,7 +388,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * The operation performed by the process on the file.
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -390,7 +396,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPath.
+             * The path to the process.
              */
             public Builder procPath(String procPath) {
                 this.procPath = procPath;
@@ -398,7 +404,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPermission.
+             * The permissions required to start the process.
              */
             public Builder procPermission(String procPermission) {
                 this.procPermission = procPermission;
@@ -406,7 +412,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * The process ID (PID) of the event process.
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -414,7 +420,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -422,7 +428,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -430,7 +436,12 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * *   0: unhandled
+             * *   1: handled
+             * *   2: added to the whitelist
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -438,7 +449,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server that is associated with the process.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -503,7 +514,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -511,7 +522,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -519,7 +530,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

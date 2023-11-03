@@ -130,7 +130,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the alert events.
+         * The information about the alert event.
          */
         public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -238,7 +238,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The display path of the alert event.
+             * The display name of the path of the alert event.
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -372,7 +372,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String tacticId; 
 
             /**
-             * The tactic name of the ATT\&CK attack.
+             * The ATT\&CK tactic name.
              */
             public Builder tacticDisplayName(String tacticDisplayName) {
                 this.tacticDisplayName = tacticDisplayName;
@@ -380,7 +380,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The stage information about the ATT\&CK attack.
+             * The ATT\&CK stage information.
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -1061,7 +1061,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event.
+             * The name of the alert.
              */
             public Builder alarmEventNameDisplay(String alarmEventNameDisplay) {
                 this.alarmEventNameDisplay = alarmEventNameDisplay;
@@ -1077,7 +1077,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event.
+             * The display name of the type of the alert event.
              */
             public Builder alarmEventTypeDisplay(String alarmEventTypeDisplay) {
                 this.alarmEventTypeDisplay = alarmEventTypeDisplay;
@@ -1085,7 +1085,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert event.
+             * The unique ID of the alert event.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -1109,7 +1109,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert event can be handled online, such as quarantining the source file of the malicious process. Valid values:
+             * Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:
              * <p>
              * 
              * *   **true**
@@ -1145,7 +1145,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The container ID.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -1193,7 +1193,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:
+             * Indicates whether the alert event can be detected by cloud sandbox. Valid values:
              * <p>
              * 
              * *   **true**
@@ -1216,13 +1216,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              * The status of the alert event. Valid values:
              * <p>
              * 
-             * *   **1**: The alert event is not handled.
-             * *   **2**: The alert event is ignored.
-             * *   **4**: The alert event is confirmed.
-             * *   **8**: The alert event is marked as a false positive.
-             * *   **16**: The alert event is being handled.
-             * *   **32**: The alert event is handled.
-             * *   **64**: The alert event expired.
+             * *   **1**: pending handling
+             * *   **2**: ignored
+             * *   **4**: confirmed
+             * *   **8**: marked as a false positive
+             * *   **16**: handling
+             * *   **32**: handled
+             * *   **64**: expired
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -1250,7 +1250,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert event.
+             * The unique ID of the alert event.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1282,7 +1282,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address that is associated with instance.
+             * The public IP address of the associated instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1298,7 +1298,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ACK cluster.
+             * The ID of the Kubernetes cluster.
              */
             public Builder k8sClusterId(String k8sClusterId) {
                 this.k8sClusterId = k8sClusterId;
@@ -1306,7 +1306,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Container Service for Kubernetes (ACK) cluster.
+             * The name of the Kubernetes cluster.
              */
             public Builder k8sClusterName(String k8sClusterName) {
                 this.k8sClusterName = k8sClusterName;
@@ -1314,7 +1314,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the ACK cluster.
+             * The namespace of the Kubernetes cluster.
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -1322,7 +1322,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node of the ACK cluster.
+             * The ID of the Kubernetes node.
              */
             public Builder k8sNodeId(String k8sNodeId) {
                 this.k8sNodeId = k8sNodeId;
@@ -1330,7 +1330,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node in the ACK cluster.
+             * The name of the Kubernetes node.
              */
             public Builder k8sNodeName(String k8sNodeName) {
                 this.k8sNodeName = k8sNodeName;
@@ -1338,7 +1338,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pod in the ACK cluster.
+             * The name of the Kubernetes pod.
              */
             public Builder k8sPodName(String k8sPodName) {
                 this.k8sPodName = k8sPodName;
@@ -1362,7 +1362,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert event was last detected. Unit: milliseconds.
+             * The timestamp when the alert event was last detected. Unit: milliseconds.
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -1419,7 +1419,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert event was first detected. Unit: milliseconds.
+             * The timestamp when the alert event was first detected. Unit: milliseconds.
              */
             public Builder occurrenceTimeStamp(Long occurrenceTimeStamp) {
                 this.occurrenceTimeStamp = occurrenceTimeStamp;
@@ -1443,7 +1443,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert event was handled. Unit: milliseconds.
+             * The handling timestamp of the alert event. Unit: milliseconds.
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -1451,7 +1451,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Security Center in which alert event detection is supported. Valid values:
+             * The edition of Security Center in which the alert event can be detected. Valid values:
              * <p>
              * 
              * *   **0**: Basic edition
@@ -1487,7 +1487,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique key of the alert event.
+             * The unique key of the alert.
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;
@@ -1495,7 +1495,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated instance.
+             * The unique ID of the associated instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1503,7 +1503,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

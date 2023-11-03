@@ -50,7 +50,11 @@ public class UpdateClientAlertModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class UpdateClientAlertModeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class DeleteMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * NoteId.
+         * The ID of the remarks.
+         * <p>
+         * 
+         * >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID from the NoteId parameter.
          */
         public Builder noteId(Long noteId) {
             this.putQueryParameter("NoteId", noteId);

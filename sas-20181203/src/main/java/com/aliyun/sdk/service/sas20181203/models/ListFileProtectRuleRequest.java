@@ -111,7 +111,13 @@ public class ListFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * The severity of alerts. Valid values:
+         * <p>
+         * 
+         * *   0: does not generate alerts
+         * *   1: sends notifications
+         * *   2: suspicious
+         * *   3: high-risk
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -120,7 +126,7 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -129,7 +135,7 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +144,11 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * The handling method of the rule. Valid values:
+         * <p>
+         * 
+         * *   pass: allow
+         * *   alert
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -147,7 +157,7 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

@@ -139,7 +139,10 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         } 
 
         /**
-         * CheckIds.
+         * The ID of the check item.
+         * <p>
+         * 
+         * >  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of check items.
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -148,7 +151,10 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * CheckWarningIds.
+         * The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of the alerts triggered by check items.
          */
         public Builder checkWarningIds(String checkWarningIds) {
             this.putQueryParameter("CheckWarningIds", checkWarningIds);
@@ -166,7 +172,10 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * The ID of the risk item that you want to ignore or cancel ignoring.
+         * <p>
+         * 
+         * >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
          */
         public Builder riskId(String riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -175,7 +184,11 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source. If this parameter is left empty, the server baseline results are queried by default. Valid values:
+         * <p>
+         * 
+         * *   **default**: server
+         * *   **agentless**
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

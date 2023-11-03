@@ -50,7 +50,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             private java.util.List < String > uuids; 
 
             /**
-             * Count.
+             * The total number of entries returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             }
 
             /**
-             * Uuids.
+             * The UUIDs of the assets.
              */
             public Builder uuids(java.util.List < String > uuids) {
                 this.uuids = uuids;

@@ -50,7 +50,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupedFields.
+         * The summary of cloud services.
          */
         public Builder groupedFields(GroupedFields groupedFields) {
             this.groupedFields = groupedFields;
@@ -146,7 +146,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer vendor; 
 
             /**
-             * AssetSubType.
+             * The subtype of the cloud service.
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -154,7 +154,34 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * The type of the cloud service. Valid values:
+             * <p>
+             * 
+             * *   **0**: Elastic Compute Service (ECS)
+             * *   **1**: Server Load Balancer (SLB)
+             * *   **3**: ApsaraDB RDS
+             * *   **4**: ApsaraDB for MongoDB (MongoDB)
+             * *   **5**: ApsaraDB for Redis (Redis)
+             * *   **6**: Container Registry
+             * *   **8**: Container Service for Kubernetes (ACK)
+             * *   **9**: Virtual Private Cloud (VPC)
+             * *   **11**: ActionTrail
+             * *   **12**: Alibaba Cloud CDN (CDN)
+             * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
+             * *   **14**: Apsara Devops
+             * *   **15**: Resource Access Management (RAM)
+             * *   **16**: Anti-DDoS
+             * *   **17**: Web Application Firewall (WAF)
+             * *   **18**: Object Storage Service (OSS)
+             * *   **19**: PolarDB
+             * *   **20**: ApsaraDB RDS for PostgreSQL
+             * *   **21**: Microservices Engine (MSE)
+             * *   **22**: Apsara File Storage NAS (NAS)
+             * *   **23**: Data Security Center (DSC)
+             * *   **24**: Elastic IP Address (EIP)
+             * *   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)
+             * *   **26**: PolarDB for Xscale (PolarDB-X)
+             * *   **27**: Elasticsearch
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -162,7 +189,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The total number of cloud service instances of this type.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -170,7 +197,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRiskCount.
+             * The total number of cloud service instances that are at risk of this type.
              */
             public Builder instanceRiskCount(Integer instanceRiskCount) {
                 this.instanceRiskCount = instanceRiskCount;
@@ -243,7 +270,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer instanceRiskCountTotal; 
 
             /**
-             * CloudAssetSummaryMetas.
+             * The statistics of cloud services.
              */
             public Builder cloudAssetSummaryMetas(java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas) {
                 this.cloudAssetSummaryMetas = cloudAssetSummaryMetas;

@@ -62,7 +62,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The sub-tasks returned.
+         * The details of the sub-tasks.
          */
         public Builder onceTasks(java.util.List < OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -346,7 +346,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID of the node.
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;
@@ -378,7 +378,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the server image.
+             * The region ID of the server image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -659,7 +659,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are scanned.
+             * The number of the assets that are scanned.
              */
             public Builder finishCount(String finishCount) {
                 this.finishCount = finishCount;
@@ -683,7 +683,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the task.
+             * The execution result of the sub-task.
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -699,7 +699,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The status information.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -713,7 +713,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
              * *   **INIT**: The sub-task is not started.
              * *   **START**: The sub-task is started.
              * *   **SUCCESS**: The sub-task is complete.
-             * *   **TIMEOUT**: The sub-task timed out.
+             * *   **TIMEOUT**: The task timed out.
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -729,7 +729,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset on which the sub-task is performed.
+             * The type of the assets that are scanned.
              * <p>
              * 
              * *   **IMAGE_REPO**: image repository

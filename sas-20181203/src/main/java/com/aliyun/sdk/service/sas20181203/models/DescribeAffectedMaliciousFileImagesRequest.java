@@ -424,7 +424,12 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
+         * The severity. Separate multiple severities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **serious**
+         * *   **suspicious**
+         * *   **remind**
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -553,7 +558,12 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * 镜像恶意样本处理状态。取值：
+         * <p>
+         * - **0**：未处理
+         * - **1**：已处理
+         * - **2**：验证中
+         * - **3**：已加白
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

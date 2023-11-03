@@ -54,7 +54,11 @@ public class GetFileProtectEventCountRequest extends Request {
         } 
 
         /**
-         * Status.
+         * The status of the event. Valid values:
+         * <p>
+         * 
+         * *   0: unhandled
+         * *   1: handled
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

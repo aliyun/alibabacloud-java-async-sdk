@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddClientUserDefineRuleResponse> addClientUserDefineRule(AddClientUserDefineRuleRequest request);
 
+    CompletableFuture<AddContainerDefenseRuleResponse> addContainerDefenseRule(AddContainerDefenseRuleRequest request);
+
     CompletableFuture<AddImageEventOperationResponse> addImageEventOperation(AddImageEventOperationRequest request);
 
     CompletableFuture<AddImageVulWhiteListResponse> addImageVulWhiteList(AddImageVulWhiteListRequest request);
@@ -136,6 +138,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateOrUpdateDingTalkResponse> createOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request);
 
+    CompletableFuture<CreateOssBucketScanTaskResponse> createOssBucketScanTask(CreateOssBucketScanTaskRequest request);
+
+    CompletableFuture<CreateOssScanConfigResponse> createOssScanConfig(CreateOssScanConfigRequest request);
+
     CompletableFuture<CreateRestoreJobResponse> createRestoreJob(CreateRestoreJobRequest request);
 
     /**
@@ -154,6 +160,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUniRestorePlanResponse> createUniRestorePlan(CreateUniRestorePlanRequest request);
 
+    CompletableFuture<CreateVirusScanOnceTaskResponse> createVirusScanOnceTask(CreateVirusScanOnceTaskRequest request);
+
     CompletableFuture<CreateVulAutoRepairConfigResponse> createVulAutoRepairConfig(CreateVulAutoRepairConfigRequest request);
 
     CompletableFuture<DeleteAntiBruteForceRuleResponse> deleteAntiBruteForceRule(DeleteAntiBruteForceRuleRequest request);
@@ -165,6 +173,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBinarySecurityPolicyResponse> deleteBinarySecurityPolicy(DeleteBinarySecurityPolicyRequest request);
 
     CompletableFuture<DeleteClientUserDefineRuleResponse> deleteClientUserDefineRule(DeleteClientUserDefineRuleRequest request);
+
+    CompletableFuture<DeleteContainerDefenseRuleResponse> deleteContainerDefenseRule(DeleteContainerDefenseRuleRequest request);
 
     CompletableFuture<DeleteCustomBlockRecordResponse> deleteCustomBlockRecord(DeleteCustomBlockRecordRequest request);
 
@@ -823,6 +833,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCheckRiskStatisticsResponse> getCheckRiskStatistics(GetCheckRiskStatisticsRequest request);
 
+    CompletableFuture<GetCheckSaleResponse> getCheckSale(GetCheckSaleRequest request);
+
     CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request);
 
     /**
@@ -853,6 +865,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFileDetectApiInvokeInfoResponse> getFileDetectApiInvokeInfo(GetFileDetectApiInvokeInfoRequest request);
 
+    CompletableFuture<GetFileDetectReportResponse> getFileDetectReport(GetFileDetectReportRequest request);
+
     /**
       * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
@@ -874,6 +888,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHoneypotEventTrendResponse> getHoneypotEventTrend(GetHoneypotEventTrendRequest request);
 
     CompletableFuture<GetHoneypotNodeResponse> getHoneypotNode(GetHoneypotNodeRequest request);
+
+    CompletableFuture<GetHoneypotNodeMetricListResponse> getHoneypotNodeMetricList(GetHoneypotNodeMetricListRequest request);
 
     CompletableFuture<GetHoneypotPresetResponse> getHoneypotPreset(GetHoneypotPresetRequest request);
 
@@ -897,6 +913,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetModuleConfigResponse> getModuleConfig(GetModuleConfigRequest request);
 
+    CompletableFuture<GetObjectScanEventResponse> getObjectScanEvent(GetObjectScanEventRequest request);
+
     CompletableFuture<GetOnceTaskResultInfoResponse> getOnceTaskResultInfo(GetOnceTaskResultInfoRequest request);
 
     CompletableFuture<GetOpaClusterBaseLineListResponse> getOpaClusterBaseLineList(GetOpaClusterBaseLineListRequest request);
@@ -910,6 +928,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOpaPluginStatusResponse> getOpaPluginStatus(GetOpaPluginStatusRequest request);
 
     CompletableFuture<GetOpaStrategyTemplateSummaryResponse> getOpaStrategyTemplateSummary(GetOpaStrategyTemplateSummaryRequest request);
+
+    CompletableFuture<GetOssBucketScanStatisticResponse> getOssBucketScanStatistic(GetOssBucketScanStatisticRequest request);
+
+    CompletableFuture<GetOssScanConfigResponse> getOssScanConfig(GetOssScanConfigRequest request);
 
     CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request);
 
@@ -928,6 +950,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSwitchRegionDetailResponse> getSwitchRegionDetail(GetSwitchRegionDetailRequest request);
 
     CompletableFuture<GetUserLangResponse> getUserLang(GetUserLangRequest request);
+
+    CompletableFuture<GetVirusScanConfigResponse> getVirusScanConfig(GetVirusScanConfigRequest request);
+
+    CompletableFuture<GetVirusScanLatestTaskStatisticResponse> getVirusScanLatestTaskStatistic(GetVirusScanLatestTaskStatisticRequest request);
 
     CompletableFuture<GetVulStatisticsResponse> getVulStatistics(GetVulStatisticsRequest request);
 
@@ -1013,6 +1039,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFileProtectRuleResponse> listFileProtectRule(ListFileProtectRuleRequest request);
 
+    CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
+
     CompletableFuture<ListHoneypotResponse> listHoneypot(ListHoneypotRequest request);
 
     CompletableFuture<ListHoneypotAlarmEventsResponse> listHoneypotAlarmEvents(ListHoneypotAlarmEventsRequest request);
@@ -1043,6 +1071,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInterceptionTargetPageResponse> listInterceptionTargetPage(ListInterceptionTargetPageRequest request);
 
+    CompletableFuture<ListObjectScanEventResponse> listObjectScanEvent(ListObjectScanEventRequest request);
+
+    CompletableFuture<ListOssBucketResponse> listOssBucket(ListOssBucketRequest request);
+
+    CompletableFuture<ListOssBucketScanInfoResponse> listOssBucketScanInfo(ListOssBucketScanInfoRequest request);
+
     CompletableFuture<ListPluginForUuidResponse> listPluginForUuid(ListPluginForUuidRequest request);
 
     CompletableFuture<ListPodRiskResponse> listPodRisk(ListPodRiskRequest request);
@@ -1055,6 +1089,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRuleTargetAllResponse> listRuleTargetAll(ListRuleTargetAllRequest request);
 
+    CompletableFuture<ListSupportObjectSuffixResponse> listSupportObjectSuffix(ListSupportObjectSuffixRequest request);
+
     CompletableFuture<ListSystemAggregationRulesResponse> listSystemAggregationRules(ListSystemAggregationRulesRequest request);
 
     CompletableFuture<ListSystemClientRuleTypesResponse> listSystemClientRuleTypes(ListSystemClientRuleTypesRequest request);
@@ -1066,6 +1102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUninstallAegisMachinesResponse> listUninstallAegisMachines(ListUninstallAegisMachinesRequest request);
 
     CompletableFuture<ListUuidsByWebPathResponse> listUuidsByWebPath(ListUuidsByWebPathRequest request);
+
+    CompletableFuture<ListVirusScanMachineResponse> listVirusScanMachine(ListVirusScanMachineRequest request);
+
+    CompletableFuture<ListVirusScanMachineEventResponse> listVirusScanMachineEvent(ListVirusScanMachineEventRequest request);
+
+    CompletableFuture<ListVirusScanTaskResponse> listVirusScanTask(ListVirusScanTaskRequest request);
 
     CompletableFuture<ListVulAutoRepairConfigResponse> listVulAutoRepairConfig(ListVulAutoRepairConfigRequest request);
 
@@ -1222,6 +1264,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OperateAgentClientInstallResponse> operateAgentClientInstall(OperateAgentClientInstallRequest request);
 
+    CompletableFuture<OperateBucketScanTaskResponse> operateBucketScanTask(OperateBucketScanTaskRequest request);
+
     CompletableFuture<OperateCommonOverallConfigResponse> operateCommonOverallConfig(OperateCommonOverallConfigRequest request);
 
     CompletableFuture<OperateCommonTargetConfigResponse> operateCommonTargetConfig(OperateCommonTargetConfigRequest request);
@@ -1281,6 +1325,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshAssetsResponse> refreshAssets(RefreshAssetsRequest request);
 
     CompletableFuture<RefreshContainerAssetsResponse> refreshContainerAssets(RefreshContainerAssetsRequest request);
+
+    CompletableFuture<RefreshOssBucketScanInfoResponse> refreshOssBucketScanInfo(RefreshOssBucketScanInfoRequest request);
 
     CompletableFuture<RemoveCheckInstanceResultWhiteListResponse> removeCheckInstanceResultWhiteList(RemoveCheckInstanceResultWhiteListRequest request);
 
@@ -1369,6 +1415,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateJenkinsImageRegistryNameResponse> updateJenkinsImageRegistryName(UpdateJenkinsImageRegistryNameRequest request);
 
     CompletableFuture<UpdateJenkinsImageRegistryPersistenceDayResponse> updateJenkinsImageRegistryPersistenceDay(UpdateJenkinsImageRegistryPersistenceDayRequest request);
+
+    CompletableFuture<UpdateOssScanConfigResponse> updateOssScanConfig(UpdateOssScanConfigRequest request);
+
+    CompletableFuture<UpdateSelectionKeyByTypeResponse> updateSelectionKeyByType(UpdateSelectionKeyByTypeRequest request);
 
     CompletableFuture<UpgradeBackupPolicyVersionResponse> upgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request);
 

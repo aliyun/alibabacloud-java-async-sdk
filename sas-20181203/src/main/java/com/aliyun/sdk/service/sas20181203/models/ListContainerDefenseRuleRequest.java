@@ -124,7 +124,7 @@ public class ListContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * Conditions.
+         * The conditions.
          */
         public Builder conditions(java.util.List < Conditions> conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -133,7 +133,7 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -142,7 +142,10 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * IsDefaultRule.
+         * Specifies whether to query system rules.
+         * <p>
+         * 
+         * >  This parameter is deprecated.
          */
         public Builder isDefaultRule(Integer isDefaultRule) {
             this.putQueryParameter("IsDefaultRule", isDefaultRule);
@@ -160,7 +163,10 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +229,10 @@ public class ListContainerDefenseRuleRequest extends Request {
             private String value; 
 
             /**
-             * Type.
+             * The type of the condition. Valid values:
+             * <p>
+             * 
+             * *   **ruleName: the name of the rule**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -231,7 +240,7 @@ public class ListContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the condition.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -54,7 +54,7 @@ public class RetryAgentlessTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * The ID of the task. You can call the [ListAgentlessTask](~~ListAgentlessTask~~) operation to obtain the IDs of tasks.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -54,7 +54,7 @@ public class DeleteFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The IDs of the core file monitoring rules that you want to delete.
          */
         public Builder id(java.util.List < Long > id) {
             this.putQueryParameter("Id", id);

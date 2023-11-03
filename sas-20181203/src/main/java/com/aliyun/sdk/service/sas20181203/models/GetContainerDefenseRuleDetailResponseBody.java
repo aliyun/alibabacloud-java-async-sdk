@@ -98,7 +98,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the rule.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +206,11 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private java.util.List < String > namespaces; 
 
             /**
-             * AllNamespace.
+             * Indicates whether all namespaces are included. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -210,7 +218,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -218,7 +226,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespaces.
+             * The namespaces.
              */
             public Builder namespaces(java.util.List < String > namespaces) {
                 this.namespaces = namespaces;
@@ -283,7 +291,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private java.util.List < String > path; 
 
             /**
-             * Hash.
+             * The hash values of the files that are added to the whitelist.
+             * <p>
+             * 
+             * >  This parameter is not supported.
              */
             public Builder hash(java.util.List < String > hash) {
                 this.hash = hash;
@@ -299,7 +310,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The paths to the files that are added to the whitelist.
              */
             public Builder path(java.util.List < String > path) {
                 this.path = path;
@@ -460,7 +471,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private Whitelist whitelist; 
 
             /**
-             * AliUid.
+             * The user ID.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -468,7 +479,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -476,7 +487,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The alert name. Valid values:
+             * <p>
+             * 
+             * *   **Non-image Program Startup**
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -484,7 +498,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The alert type. Valid values:
+             * <p>
+             * 
+             * *   **Proactive Defense for Containers**
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -492,7 +509,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -500,7 +517,11 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleAction.
+             * The action specified in the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: alert
+             * *   **2**: block
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -508,7 +529,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -516,7 +537,11 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleSwitch.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -524,7 +549,11 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: system rule
+             * *   **2**: custom rule
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -532,7 +561,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * The effective scope of the rule.
              */
             public Builder scope(java.util.List < Scope> scope) {
                 this.scope = scope;
@@ -540,7 +569,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * The whitelist.
              */
             public Builder whitelist(Whitelist whitelist) {
                 this.whitelist = whitelist;

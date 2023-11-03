@@ -98,7 +98,7 @@ public class StopHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -262,7 +266,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * ControlNodeName.
+             * The name of the management node to which the honeypot belongs.
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -270,7 +274,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotId.
+             * The ID of the honeypot.
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -278,7 +282,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotImageDisplayName.
+             * The display name of the image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -286,7 +290,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotImageName.
+             * The name of the image that is used for the honeypot.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -294,7 +298,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotName.
+             * The name of the honeypot.
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -302,7 +306,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the management node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -310,7 +314,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * PresetId.
+             * The ID of the honeypot custom parameter.
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -318,7 +322,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The statuses of the honeypots.
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

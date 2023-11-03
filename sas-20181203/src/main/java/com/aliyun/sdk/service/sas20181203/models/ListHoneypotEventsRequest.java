@@ -194,7 +194,7 @@ public class ListHoneypotEventsRequest extends Request {
         } 
 
         /**
-         * AgentIdList.
+         * The probe IDs.
          */
         public Builder agentIdList(java.util.List < String > agentIdList) {
             this.putBodyParameter("AgentIdList", agentIdList);
@@ -203,7 +203,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * AlarmEventId.
+         * The ID of the alert.
          */
         public Builder alarmEventId(Long alarmEventId) {
             this.putBodyParameter("AlarmEventId", alarmEventId);
@@ -212,7 +212,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -221,7 +221,12 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * The status of the event. Valid values:
+         * <p>
+         * 
+         * *   **y**: handled
+         * *   **n**: unhandled
+         * *   **a**: all statuses
          */
         public Builder dealed(String dealed) {
             this.putBodyParameter("Dealed", dealed);
@@ -230,7 +235,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * HoneypotIdList.
+         * The honeypot IDs.
          */
         public Builder honeypotIdList(java.util.List < String > honeypotIdList) {
             this.putBodyParameter("HoneypotIdList", honeypotIdList);
@@ -239,7 +244,11 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -248,7 +257,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -257,7 +266,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * PortraitId.
+         * The ID of the attacker profile.
          */
         public Builder portraitId(String portraitId) {
             this.putQueryParameter("PortraitId", portraitId);
@@ -266,7 +275,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -275,7 +284,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * RiskLevelList.
+         * The risk levels.
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putBodyParameter("RiskLevelList", riskLevelList);
@@ -284,7 +293,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * The source IP address of the attack.
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);

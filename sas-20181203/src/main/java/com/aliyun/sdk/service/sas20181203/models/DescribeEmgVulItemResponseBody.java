@@ -94,7 +94,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the urgent vulnerabilities returned.
+         * The information about the urgent vulnerabilities.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -317,7 +317,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
              * The progress of the urgent vulnerability detection task. Valid values: 0 to 100.
              * <p>
              * 
-             * > This parameter is returned only when an urgent vulnerability is being detected.
+             * >  This parameter takes effect only when an urgent vulnerability is being detected.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -325,7 +325,13 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * RaspDefend.
+             * Indicates whether the application protection feature is supported. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
+             * 
+             * >  If this parameter is not returned, the application protection is not supported.
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;

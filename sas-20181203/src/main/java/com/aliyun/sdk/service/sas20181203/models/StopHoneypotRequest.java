@@ -69,7 +69,10 @@ public class StopHoneypotRequest extends Request {
         } 
 
         /**
-         * HoneypotId.
+         * The honeypot ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -78,7 +81,11 @@ public class StopHoneypotRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

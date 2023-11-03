@@ -110,7 +110,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * The rules.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +286,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             private Integer ruleType; 
 
             /**
-             * ClusterCount.
+             * The total number of clusters.
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -290,7 +294,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterIdList.
+             * The clusters specified in the rule.
              */
             public Builder clusterIdList(String clusterIdList) {
                 this.clusterIdList = clusterIdList;
@@ -298,7 +302,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +310,11 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleAction.
+             * The action specified in the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: alert
+             * *   **2**: block
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -314,7 +322,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -322,7 +330,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -330,7 +338,11 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleSwitch.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -338,7 +350,11 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: system rule
+             * *   **2**: custom rule
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -439,7 +455,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -447,7 +463,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -455,7 +471,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LastRowKey.
+             * The key of the last data entry.
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -463,7 +479,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The query credential.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -471,7 +487,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +495,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

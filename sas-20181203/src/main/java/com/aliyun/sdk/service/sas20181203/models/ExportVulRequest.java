@@ -286,7 +286,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * ContainerName.
+         * 要查询漏洞影响的容器名称。
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -295,7 +295,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * CreateTsEnd.
+         * 首次扫描时间结束时间。
+         * <p>
+         * > 时间戳，单位为毫秒。
          */
         public Builder createTsEnd(Long createTsEnd) {
             this.putQueryParameter("CreateTsEnd", createTsEnd);
@@ -304,7 +306,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * CreateTsStart.
+         * 首次扫描时间起始时间。
+         * <p>
+         * > 时间戳，单位为毫秒。
          */
         public Builder createTsStart(Long createTsStart) {
             this.putQueryParameter("CreateTsStart", createTsStart);
@@ -347,7 +351,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * 要查询漏洞影响的镜像名称。
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -383,7 +387,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Path.
+         * 要查询漏洞影响的进程路径。
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

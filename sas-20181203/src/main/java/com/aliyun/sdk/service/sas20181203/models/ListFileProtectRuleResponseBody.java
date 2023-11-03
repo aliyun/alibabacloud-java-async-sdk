@@ -62,7 +62,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileProtectList.
+         * The details of returned data.
          */
         public Builder fileProtectList(java.util.List < FileProtectList> fileProtectList) {
             this.fileProtectList = fileProtectList;
@@ -70,7 +70,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,11 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * Action.
+             * The handling method of the rule. Valid values:
+             * <p>
+             * 
+             * *   pass: allow
+             * *   alert
              */
             public Builder action(String action) {
                 this.action = action;
@@ -258,7 +262,13 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AlertLevel.
+             * The severity of alerts. Valid values:
+             * <p>
+             * 
+             * *   0: does not generate alerts
+             * *   1: sends notifications
+             * *   2: suspicious
+             * *   3: high-risk
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -266,7 +276,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * EffectInstanceCount.
+             * The total number of affected assets.
              */
             public Builder effectInstanceCount(Long effectInstanceCount) {
                 this.effectInstanceCount = effectInstanceCount;
@@ -274,7 +284,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FileOps.
+             * The operations performed on the files.
              */
             public Builder fileOps(java.util.List < String > fileOps) {
                 this.fileOps = fileOps;
@@ -282,7 +292,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FilePaths.
+             * The paths to the monitored files. Wildcard characters are supported.
              */
             public Builder filePaths(java.util.List < String > filePaths) {
                 this.filePaths = filePaths;
@@ -290,7 +300,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the rule was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -298,7 +308,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the rule was last modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -306,7 +316,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +324,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPaths.
+             * The paths to the monitored processes. Wildcard characters are supported.
              */
             public Builder procPaths(java.util.List < String > procPaths) {
                 this.procPaths = procPaths;
@@ -322,7 +332,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -330,7 +340,11 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -338,7 +352,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * The switch ID of the rule.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -403,7 +417,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -411,7 +425,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -419,7 +433,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

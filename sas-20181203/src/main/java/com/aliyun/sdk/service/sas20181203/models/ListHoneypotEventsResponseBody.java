@@ -62,7 +62,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HoneypotEvents.
+         * The intrusion events.
          */
         public Builder honeypotEvents(java.util.List < HoneypotEvents> honeypotEvents) {
             this.honeypotEvents = honeypotEvents;
@@ -70,7 +70,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * FieldExtInfo.
+             * The supplementary information about the field.
              */
             public Builder fieldExtInfo(String fieldExtInfo) {
                 this.fieldExtInfo = fieldExtInfo;
@@ -162,7 +162,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldKey.
+             * The key of the field.
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -170,7 +170,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldType.
+             * The type of the field.
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -178,7 +178,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldValue.
+             * The value of the field key.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -363,7 +363,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * AgentId.
+             * The probe ID.
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -371,7 +371,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * The name of the probe.
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -379,7 +379,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventId.
+             * The ID of the alert event.
              */
             public Builder alarmEventId(Long alarmEventId) {
                 this.alarmEventId = alarmEventId;
@@ -387,7 +387,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DstIp.
+             * The destination IP address of the attack.
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -395,7 +395,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * The timestamp at which the event was first detected.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -403,7 +403,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotName.
+             * The name of the honeypot.
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -411,7 +411,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp at which the event was last detected.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -419,7 +419,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The region.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -427,7 +427,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MergeFieldList.
+             * The extended values that correspond to the field key.
              */
             public Builder mergeFieldList(java.util.List < MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
@@ -435,7 +435,11 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -443,7 +447,12 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **2**: low
+             * *   **3**: medium
+             * *   **4**: high
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -451,7 +460,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEventId.
+             * The ID of the intrusion event.
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -459,7 +468,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * The source IP address of the attack.
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -560,7 +569,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -568,7 +577,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -576,7 +585,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRowKey.
+             * The key of the last data entry.
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -584,7 +593,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The value of the NextToken parameter that is returned by using the NextToken method.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -592,7 +601,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -600,7 +609,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

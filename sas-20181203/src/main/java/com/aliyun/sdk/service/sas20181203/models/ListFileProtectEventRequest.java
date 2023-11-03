@@ -111,7 +111,7 @@ public class ListFileProtectEventRequest extends Request {
         } 
 
         /**
-         * AlertLevels.
+         * The severities of alerts.
          */
         public Builder alertLevels(java.util.List < Integer > alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -120,7 +120,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -129,7 +129,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +138,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -147,7 +147,12 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the event. Valid values:
+         * <p>
+         * 
+         * *   0: unhandled
+         * *   1: handled
+         * *   2: added to the whitelist
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -68,7 +68,11 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         } 
 
         /**
-         * TargetDefault.
+         * Specifies whether to turn on the switch for newly added servers. Valid values:
+         * <p>
+         * 
+         * *   **add**: yes
+         * *   **del**: no
          */
         public Builder targetDefault(String targetDefault) {
             this.putQueryParameter("TargetDefault", targetDefault);
@@ -77,7 +81,10 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the switch.
+         * <p>
+         * 
+         * >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) or [ListSystemClientRules](~~ListSystemClientRules~~) operation to obtain the type from the response parameter SwitchId.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

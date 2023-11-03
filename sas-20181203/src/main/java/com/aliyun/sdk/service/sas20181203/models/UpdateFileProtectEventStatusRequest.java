@@ -68,7 +68,7 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The IDs of the events.
          */
         public Builder id(java.util.List < Long > id) {
             this.putQueryParameter("Id", id);
@@ -77,7 +77,12 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The handling status of the event. Valid values:
+         * <p>
+         * 
+         * *   **0**: unhandled
+         * *   **1**: handled
+         * *   **2**: added to the whitelist
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

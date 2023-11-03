@@ -50,7 +50,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of the returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,7 +302,13 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AlertLevel.
+             * The severity of alerts. Valid values:
+             * <p>
+             * 
+             * *   0: does not generate alerts
+             * *   1: sends notifications
+             * *   2: suspicious
+             * *   3: high-risk
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -310,7 +316,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * CmdLine.
+             * The event command line.
              */
             public Builder cmdLine(String cmdLine) {
                 this.cmdLine = cmdLine;
@@ -318,7 +324,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The path to the file.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -326,7 +332,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * FilePermission.
+             * The permissions to run the process.
              */
             public Builder filePermission(String filePermission) {
                 this.filePermission = filePermission;
@@ -334,7 +340,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * The timestamp at which the event was first detected.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -342,7 +348,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * HandleTime.
+             * The time when the event was handled.
              */
             public Builder handleTime(Long handleTime) {
                 this.handleTime = handleTime;
@@ -350,7 +356,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the event.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -358,7 +364,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -366,7 +372,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the associated instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -374,7 +380,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the associated instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -382,7 +388,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * LatestTime.
+             * The time when the event last occurred.
              */
             public Builder latestTime(Long latestTime) {
                 this.latestTime = latestTime;
@@ -390,7 +396,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * The operation that the process performed on the file.
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -398,7 +404,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPath.
+             * The path to the process.
              */
             public Builder procPath(String procPath) {
                 this.procPath = procPath;
@@ -406,7 +412,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * The process ID of the event.
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -414,7 +420,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -422,7 +428,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -430,7 +436,12 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * *   0: not handled
+             * *   1: handled
+             * *   2: added to the whitelist
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -438,7 +449,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

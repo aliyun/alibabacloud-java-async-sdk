@@ -68,7 +68,7 @@ public class UpdateFileProtectRemarkRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the event.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -77,7 +77,7 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks.
          */
         public Builder remark(java.util.List < String > remark) {
             this.putQueryParameter("Remark", remark);

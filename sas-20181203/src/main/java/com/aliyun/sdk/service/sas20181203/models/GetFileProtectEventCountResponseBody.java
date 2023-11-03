@@ -50,7 +50,7 @@ public class GetFileProtectEventCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned if the request is successful.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileProtectEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

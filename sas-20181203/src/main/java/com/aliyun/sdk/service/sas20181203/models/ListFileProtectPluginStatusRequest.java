@@ -83,7 +83,7 @@ public class ListFileProtectPluginStatusRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -92,7 +92,7 @@ public class ListFileProtectPluginStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -101,7 +101,7 @@ public class ListFileProtectPluginStatusRequest extends Request {
         }
 
         /**
-         * SwitchId.
+         * The ID of the core file monitoring rule.
          */
         public Builder switchId(String switchId) {
             this.putQueryParameter("SwitchId", switchId);

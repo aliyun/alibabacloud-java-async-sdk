@@ -125,7 +125,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         } 
 
         /**
-         * The cloud service assets.
+         * The cloud assets.
          */
         public Builder cloudAssetTypes(java.util.List < CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);

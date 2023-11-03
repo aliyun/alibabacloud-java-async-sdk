@@ -671,7 +671,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: 100.
+         * The number of entries per page. Default value: **20**. Maximum value: 100.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -729,7 +729,7 @@ public class DescribeSuspEventsRequest extends Request {
          * The Alibaba Cloud account ID of the member in the resource directory.
          * <p>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -794,11 +794,11 @@ public class DescribeSuspEventsRequest extends Request {
          * *   **2**: ignored
          * *   **4**: confirmed
          * *   **8**: marked as a false positive
-         * *   **16**: being handled
+         * *   **16**: handling
          * *   **32**: handled
          * *   **64**: expired
          * *   **128**: deleted
-         * *   **512**: being automatically blocked
+         * *   **512**: automatically blocking
          * *   **513**: automatically blocked
          */
         public Builder status(String status) {

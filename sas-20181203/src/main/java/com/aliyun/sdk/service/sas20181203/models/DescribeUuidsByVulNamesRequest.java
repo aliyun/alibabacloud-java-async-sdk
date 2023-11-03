@@ -355,8 +355,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
          * <p>
          * 
          * *   **1**: unfixed
-         * *   **4**: being fixed
-         * *   **7**: fixed
+         * *   **2**: fix failed
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -392,10 +391,6 @@ public class DescribeUuidsByVulNamesRequest extends Request {
          * 
          * *   **cve**: Linux software vulnerability
          * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability
-         * *   **emg**: urgent vulnerability
-         * *   **sca**: vulnerability that is detected based on software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

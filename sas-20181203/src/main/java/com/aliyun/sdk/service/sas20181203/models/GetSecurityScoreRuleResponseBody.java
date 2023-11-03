@@ -62,7 +62,11 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         private java.util.List < SecurityScoreRuleList> securityScoreRuleList; 
 
         /**
-         * EnableStatus.
+         * The status of the custom settings of the security score feature.
+         * <p>
+         * 
+         * *   true: enabled
+         * *   false: disabled
          */
         public Builder enableStatus(Boolean enableStatus) {
             this.enableStatus = enableStatus;
@@ -70,7 +74,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityScoreRuleList.
+         * The list of deducted modules that are supported by the security score feature.
          */
         public Builder securityScoreRuleList(java.util.List < SecurityScoreRuleList> securityScoreRuleList) {
             this.securityScoreRuleList = securityScoreRuleList;
@@ -154,7 +158,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Score.
+             * The penalty point of the deduction item.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -162,7 +166,10 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreThreshold.
+             * The threshold for the deduction item.
+             * <p>
+             * 
+             * >  Valid values: 0 to the deduction threshold of the deduction module.
              */
             public Builder scoreThreshold(Integer scoreThreshold) {
                 this.scoreThreshold = scoreThreshold;
@@ -170,7 +177,47 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SubRuleType.
+             * The deduction item of the deduction module. The following list describes the deduction modules and their deduction items:
+             * <p>
+             * 
+             * *   SS_REINFORCE: issue in key feature configuration
+             * 
+             *     *   XPRESS_INSTALL: Security Center is not authorized.
+             *     *   REINFORCE_SUSPICIOUS: The antivirus feature is disabled.
+             *     *   RANSOMWARE: The anti-ransomware policy is disabled.
+             *     *   WEB_LOCK: The web tamper proofing feature is disabled.
+             *     *   VIRUS_SCHEDULE_SCAN: The periodic virus scan policy is disabled.
+             *     *   IMAGE_REPO_SCAN: The range of container image scan is not configured.
+             *     *   IMAGE_SCAN_TASK: The feature of one-click scan of container images for security risks is not performed.
+             * 
+             * *   SS_ALARM: unhandled alert.
+             * 
+             *     *   ALARM_SERIOUS: An unhandled high-risk alert event is detected.
+             *     *   ALARM_SUSPICIOUS: An unhandled medium-risk alarm event is detected.
+             *     *   ALARM_REMIND: An unhandled low-risk alarm event is detected.
+             * 
+             * *   SS_VUL: unfixed vulnerability
+             * 
+             *     *   CMS_UNFIX: An unfixed Web-CMS vulnerability is detected.
+             *     *   WIN_UNFIX: An unfixed Windows host vulnerability is detected.
+             *     *   CVE_UNFIX: An unfixed Linux host vulnerability is detected.
+             *     *   ERM_UNFIX: An unfixed urgent vulnerability is detected.
+             *     *   ERM_UNCHECK: An undetected urgent vulnerability exists.
+             * 
+             * *   SS_HC: baseline risks
+             * 
+             *     *   WEAK_EXPLOIT: Weak passwords are exposed to the Internet.
+             *     *   WEAK_PASSWORD: Weak passwords exist.
+             *     *   HC_EXPLOIT: The data source may be hacked.
+             *     *   HC_OTHER_WARNING: Security configuration risks exist.
+             * 
+             * *   SS_CLOUD_HC: Cloud platform configuration check item problem.
+             * 
+             *     *   CSPM_CIEM_NOT_PASS: A CIEM check item failed the check.
+             *     *   CSPM_RISK_NOT_PASS: A security risk check item failed the check.
+             *     *   CSPM_COMPLIANCE_NOT_PASS: A compliance check item failed the check.
+             * 
+             * *   SS_AK: risk of AccessKey pair leaks
              */
             public Builder subRuleType(String subRuleType) {
                 this.subRuleType = subRuleType;
@@ -178,7 +225,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The description of the deduction item in a deduction module.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -255,7 +302,15 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * RuleType.
+             * The deducted module that is supported by the security score feature. Valid values:
+             * <p>
+             * 
+             * *   SS_REINFORCE: issue in key feature configuration
+             * *   SS_ALARM: unhandled alert
+             * *   SS_VUL: unfixed vulnerability
+             * *   SS_HC: baseline risk
+             * *   SS_CLOUD_HC: risk item of configuration assessment
+             * *   SS_AK: risk of AccessKey pair leaks
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -263,7 +318,10 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The deduction threshold of the deduction module.
+             * <p>
+             * 
+             * >  Valid values: 0 to 100. The sum of the deduction thresholds for all deduction modules must be equal to 100.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -271,7 +329,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityScoreItemList.
+             * The deduction items of the deduction module.
              */
             public Builder securityScoreItemList(java.util.List < SecurityScoreItemList> securityScoreItemList) {
                 this.securityScoreItemList = securityScoreItemList;
@@ -279,7 +337,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The description of the deduction module.
              */
             public Builder title(String title) {
                 this.title = title;
