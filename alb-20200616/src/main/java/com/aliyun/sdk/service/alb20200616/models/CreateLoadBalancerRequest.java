@@ -603,6 +603,9 @@ public class CreateLoadBalancerRequest extends Request {
 
     }
     public static class ZoneMappings extends TeaModel {
+        @NameInMap("AllocationId")
+        private String allocationId;
+
         @NameInMap("IntranetAddress")
         private String intranetAddress;
 
@@ -615,6 +618,7 @@ public class CreateLoadBalancerRequest extends Request {
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
+            this.allocationId = builder.allocationId;
             this.intranetAddress = builder.intranetAddress;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
@@ -626,6 +630,13 @@ public class CreateLoadBalancerRequest extends Request {
 
         public static ZoneMappings create() {
             return builder().build();
+        }
+
+        /**
+         * @return allocationId
+         */
+        public String getAllocationId() {
+            return this.allocationId;
         }
 
         /**
@@ -650,9 +661,18 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         public static final class Builder {
+            private String allocationId; 
             private String intranetAddress; 
             private String vSwitchId; 
             private String zoneId; 
+
+            /**
+             * AllocationId.
+             */
+            public Builder allocationId(String allocationId) {
+                this.allocationId = allocationId;
+                return this;
+            }
 
             /**
              * IntranetAddress.

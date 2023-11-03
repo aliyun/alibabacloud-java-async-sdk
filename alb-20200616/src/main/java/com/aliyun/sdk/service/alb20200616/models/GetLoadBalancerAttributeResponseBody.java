@@ -913,6 +913,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("EipType")
         private String eipType;
 
+        @NameInMap("IntranetAddress")
+        private String intranetAddress;
+
         @NameInMap("Ipv6Address")
         private String ipv6Address;
 
@@ -920,6 +923,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             this.address = builder.address;
             this.allocationId = builder.allocationId;
             this.eipType = builder.eipType;
+            this.intranetAddress = builder.intranetAddress;
             this.ipv6Address = builder.ipv6Address;
         }
 
@@ -953,6 +957,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetAddress
+         */
+        public String getIntranetAddress() {
+            return this.intranetAddress;
+        }
+
+        /**
          * @return ipv6Address
          */
         public String getIpv6Address() {
@@ -963,6 +974,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String address; 
             private String allocationId; 
             private String eipType; 
+            private String intranetAddress; 
             private String ipv6Address; 
 
             /**
@@ -989,6 +1001,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
              */
             public Builder eipType(String eipType) {
                 this.eipType = eipType;
+                return this;
+            }
+
+            /**
+             * IntranetAddress.
+             */
+            public Builder intranetAddress(String intranetAddress) {
+                this.intranetAddress = intranetAddress;
                 return this;
             }
 

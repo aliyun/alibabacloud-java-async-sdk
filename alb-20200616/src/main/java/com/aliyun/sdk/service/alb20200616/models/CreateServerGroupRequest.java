@@ -63,6 +63,10 @@ public class CreateServerGroupRequest extends Request {
     private UchConfig uchConfig;
 
     @Query
+    @NameInMap("UpstreamKeepaliveEnabled")
+    private Boolean upstreamKeepaliveEnabled;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -80,6 +84,7 @@ public class CreateServerGroupRequest extends Request {
         this.stickySessionConfig = builder.stickySessionConfig;
         this.tag = builder.tag;
         this.uchConfig = builder.uchConfig;
+        this.upstreamKeepaliveEnabled = builder.upstreamKeepaliveEnabled;
         this.vpcId = builder.vpcId;
     }
 
@@ -181,6 +186,13 @@ public class CreateServerGroupRequest extends Request {
     }
 
     /**
+     * @return upstreamKeepaliveEnabled
+     */
+    public Boolean getUpstreamKeepaliveEnabled() {
+        return this.upstreamKeepaliveEnabled;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -200,6 +212,7 @@ public class CreateServerGroupRequest extends Request {
         private StickySessionConfig stickySessionConfig; 
         private java.util.List < Tag> tag; 
         private UchConfig uchConfig; 
+        private Boolean upstreamKeepaliveEnabled; 
         private String vpcId; 
 
         private Builder() {
@@ -220,6 +233,7 @@ public class CreateServerGroupRequest extends Request {
             this.stickySessionConfig = request.stickySessionConfig;
             this.tag = request.tag;
             this.uchConfig = request.uchConfig;
+            this.upstreamKeepaliveEnabled = request.upstreamKeepaliveEnabled;
             this.vpcId = request.vpcId;
         } 
 
@@ -359,6 +373,15 @@ public class CreateServerGroupRequest extends Request {
         public Builder uchConfig(UchConfig uchConfig) {
             this.putQueryParameter("UchConfig", uchConfig);
             this.uchConfig = uchConfig;
+            return this;
+        }
+
+        /**
+         * UpstreamKeepaliveEnabled.
+         */
+        public Builder upstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
+            this.putQueryParameter("UpstreamKeepaliveEnabled", upstreamKeepaliveEnabled);
+            this.upstreamKeepaliveEnabled = upstreamKeepaliveEnabled;
             return this;
         }
 

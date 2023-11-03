@@ -49,6 +49,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     @NameInMap("UchConfig")
     private UchConfig uchConfig;
 
+    @Query
+    @NameInMap("UpstreamKeepaliveEnabled")
+    private Boolean upstreamKeepaliveEnabled;
+
     private UpdateServerGroupAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -60,6 +64,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         this.serviceName = builder.serviceName;
         this.stickySessionConfig = builder.stickySessionConfig;
         this.uchConfig = builder.uchConfig;
+        this.upstreamKeepaliveEnabled = builder.upstreamKeepaliveEnabled;
     }
 
     public static Builder builder() {
@@ -138,6 +143,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
         return this.uchConfig;
     }
 
+    /**
+     * @return upstreamKeepaliveEnabled
+     */
+    public Boolean getUpstreamKeepaliveEnabled() {
+        return this.upstreamKeepaliveEnabled;
+    }
+
     public static final class Builder extends Request.Builder<UpdateServerGroupAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
@@ -148,6 +160,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         private String serviceName; 
         private StickySessionConfig stickySessionConfig; 
         private UchConfig uchConfig; 
+        private Boolean upstreamKeepaliveEnabled; 
 
         private Builder() {
             super();
@@ -164,6 +177,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             this.serviceName = request.serviceName;
             this.stickySessionConfig = request.stickySessionConfig;
             this.uchConfig = request.uchConfig;
+            this.upstreamKeepaliveEnabled = request.upstreamKeepaliveEnabled;
         } 
 
         /**
@@ -261,6 +275,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         public Builder uchConfig(UchConfig uchConfig) {
             this.putQueryParameter("UchConfig", uchConfig);
             this.uchConfig = uchConfig;
+            return this;
+        }
+
+        /**
+         * UpstreamKeepaliveEnabled.
+         */
+        public Builder upstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
+            this.putQueryParameter("UpstreamKeepaliveEnabled", upstreamKeepaliveEnabled);
+            this.upstreamKeepaliveEnabled = upstreamKeepaliveEnabled;
             return this;
         }
 
