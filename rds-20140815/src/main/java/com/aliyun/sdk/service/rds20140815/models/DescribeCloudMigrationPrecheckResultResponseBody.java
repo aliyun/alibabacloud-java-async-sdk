@@ -86,7 +86,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * The details of the assessment report.
+         * The details about the assessment report.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -314,7 +314,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * The username.
              */
             public Builder sourceAccount(String sourceAccount) {
                 this.sourceAccount = sourceAccount;
@@ -342,7 +342,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the account.
+             * The password.
              */
             public Builder sourcePassword(String sourcePassword) {
                 this.sourcePassword = sourcePassword;
@@ -358,7 +358,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter. The return value of this parameter is null.
+             * A reserved parameter. The return value of this parameter is empty.
              */
             public Builder targetEip(String targetEip) {
                 this.targetEip = targetEip;
@@ -366,7 +366,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * The instance ID.
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -374,7 +374,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -382,7 +382,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * The task name.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

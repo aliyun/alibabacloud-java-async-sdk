@@ -74,7 +74,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         private java.util.List < UninstalledExtensions> uninstalledExtensions; 
 
         /**
-         * The extensions that are installed on the database.
+         * The list of extensions that are installed on the specified database.
          */
         public Builder installedExtensions(java.util.List < InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
@@ -98,7 +98,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The extensions that are not installed on the database.
+         * The list of extensions that are not installed on the specified database.
          */
         public Builder uninstalledExtensions(java.util.List < UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;

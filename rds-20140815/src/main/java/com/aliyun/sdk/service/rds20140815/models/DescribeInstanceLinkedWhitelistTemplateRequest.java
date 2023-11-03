@@ -106,7 +106,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * 资源组ID，可以为空。
+         * The resource group ID. You can leave this parameter empty.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

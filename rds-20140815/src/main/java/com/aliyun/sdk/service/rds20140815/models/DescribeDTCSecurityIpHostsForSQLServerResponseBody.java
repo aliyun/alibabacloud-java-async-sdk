@@ -74,7 +74,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -98,7 +98,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
             private String whitelistGroupName; 
 
             /**
-             * The IP address of the ECS instance and the hostname of the Windows computer. Format: IP address,Hostname. Multiple values are separated with semicolons (;).
+             * The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Multiple values are separated with semicolons (;).
              */
             public Builder securityIpHosts(String securityIpHosts) {
                 this.securityIpHosts = securityIpHosts;

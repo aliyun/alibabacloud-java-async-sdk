@@ -98,7 +98,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The information of instances.
+         * The details of the instance.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -845,8 +845,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:
              * <p>
              * 
-             * *   **1**: The feature is enabled.
-             * *   **0**: The feature is disabled.
+             * *   **1**
+             * *   **0**
              */
             public Builder bpeEnabled(String bpeEnabled) {
                 this.bpeEnabled = bpeEnabled;
@@ -857,8 +857,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * Indicates whether the I/O burst feature is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -870,10 +870,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: High-availability Edition
+             * *   **HighAvailability**: RDS High-availability Edition
              * *   **Finance**: RDS Enterprise Edition
              * 
-             * > This parameter is returned only when **InstanceLevel** is set to **1**.
+             * >  This parameter is returned only when the **InstanceLevel** parameter is set to **1**.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -975,7 +975,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The dedicated cluster ID.
+             * The ID of the dedicated cluster.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -1066,8 +1066,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * Indicates whether the release protection feature is enabled for the instance. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -1083,7 +1083,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the serverless instance.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1102,7 +1102,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > Pay-as-you-go instances never expire.
+             * >  Pay-as-you-go instances never expire.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1144,7 +1144,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **Unlock**: The instance is not locked.
              * *   **ManualLock**: The instance is manually locked.
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+             * *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
              * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
              * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
              */
@@ -1176,7 +1176,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **true**
              * *   **false**
              * 
-             * > If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.
+             * >  If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.
              */
             public Builder mutriORsignle(Boolean mutriORsignle) {
                 this.mutriORsignle = mutriORsignle;
@@ -1204,7 +1204,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1212,7 +1212,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1252,7 +1252,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **1**: The instance is normal.
-             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and the performance is affected. You must adjust the specifications of these instances based on your business requirements.
+             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.
              */
             public Builder tipsLevel(Integer tipsLevel) {
                 this.tipsLevel = tipsLevel;
@@ -1276,7 +1276,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The virtual private cloud (VPC) ID of the instance.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1292,7 +1292,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

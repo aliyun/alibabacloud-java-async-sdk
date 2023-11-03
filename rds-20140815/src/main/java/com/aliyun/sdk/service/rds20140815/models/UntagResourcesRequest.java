@@ -190,7 +190,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of instances. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.
+         * The instance ID. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

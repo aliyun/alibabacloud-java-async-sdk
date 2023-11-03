@@ -271,8 +271,8 @@ public class MigrateToOtherZoneRequest extends Request {
          * 
          * *   **Basic**: RDS Basic Edition
          * *   **HighAvailability**: RDS High-availability Edition
-         * *   **AlwaysOn**: RDS Cluster Edition for SQL Server
-         * *   **cluster**: RDS Cluster Edition for MySQL
+         * *   **AlwaysOn**: SQL Server on RDS Cluster Edition
+         * *   **cluster**: MySQL on RDS Cluster Edition
          * *   **Finance**: RDS Enterprise Edition
          */
         public Builder category(String category) {
@@ -429,10 +429,10 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary instance.
+         * The secondary zone 1 of the instance.
          * <p>
          * 
-         * > If the instance does not run RDS Basic Edition, you must specify this parameter.
+         * >  This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
@@ -441,10 +441,10 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The zone ID of the logger instance.
+         * The secondary zone 2 of the instance.
          * <p>
          * 
-         * > This parameter is available only when the instance runs RDS Enterprise Edition.
+         * >  You can specify this parameter only for instances that run RDS Enterprise Edition.
          */
         public Builder zoneIdSlave2(String zoneIdSlave2) {
             this.putQueryParameter("ZoneIdSlave2", zoneIdSlave2);

@@ -258,7 +258,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the whitelist template.
+             * The whitelist template ID.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -266,7 +266,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * The name of the whitelist template.
+             * The whitelist template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

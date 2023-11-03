@@ -272,7 +272,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ClassType.
+             * Node specification type. Value range:
+             * <p>
+             * 
+             * *   **d**: Exclusive specifications
+             * *   **x**: General specifications
              */
             public Builder classType(String classType) {
                 this.classType = classType;
@@ -280,7 +284,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that you want to allocate to the elastic container instance. Unit: cores.
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -288,7 +292,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size that you applied for each instance. Unit: MB.
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -332,7 +336,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the migration task. Valid values:
+             * <p>
+             * 
+             * *   **NoStart**: The task has not started.
+             * *   **Running**:The task is in progress.
+             * *   **Success**: The task is successful.
+             * *   **Failed**: The task failed.
+             * *   **Waiting**: The task is waiting for an incremental backup file to be imported.
              */
             public Builder status(String status) {
                 this.status = status;

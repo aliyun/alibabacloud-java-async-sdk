@@ -209,7 +209,13 @@ public class ModifyDBNodeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment. Valid values:
+         * <p>
+         * 
+         * 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
+         * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
+         * 
+         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -218,7 +224,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -227,7 +233,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -236,7 +242,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](~~26312~~).
          */
         public Builder DBInstanceStorage(String DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -245,7 +251,12 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The storage type of the new instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd/ephemeral_ssd**: local SSD
+         * *   **cloud_ssd**: standard SSD
+         * *   **cloud_essd**: enhanced SSD (ESSD)
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -254,7 +265,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * DBNode.
+         * An array that consists of the details of the node.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -264,7 +275,11 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Indicates that the system performed a dry run.
+         * <p>
+         * 
+         * *   The value is fixed as **true**.
+         * *   If the system does not perform a dry run, this parameter is not returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -291,7 +306,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * ProduceAsync.
+         * Do you want to perform a pre check on the operation of this node change.
          */
         public Builder produceAsync(Boolean produceAsync) {
             this.putQueryParameter("ProduceAsync", produceAsync);
@@ -363,7 +378,7 @@ public class ModifyDBNodeRequest extends Request {
             private String nodeId; 
 
             /**
-             * classCode.
+             * The instance type of the node.
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -371,7 +386,7 @@ public class ModifyDBNodeRequest extends Request {
             }
 
             /**
-             * nodeId.
+             * Node ID
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

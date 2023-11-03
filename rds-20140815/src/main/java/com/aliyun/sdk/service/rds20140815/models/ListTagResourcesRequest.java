@@ -154,7 +154,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, in the next query, you can specify the token returned from the previous query to obtain more results.
+         * The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,7 +172,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +181,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources. You can specify up to 50 resource IDs.
+         * The instance ID. You can specify a maximum of **50** instance IDs.****
+         * <p>
+         * 
+         * >  You must specify at least one of the **ResourceId** and **Key** parameters.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -217,7 +220,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to query resources. You can specify up to 20 tags.
+         * The tag list.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -271,10 +274,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.
+             * The tag key. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value cannot be an empty string.
              * <p>
              * 
-             * >  You must specify at least one of the **ResourceId.N** and **Tag.N.Key** parameters.
+             * >  You must specify at least one of the **ResourceId** and **Key** parameters.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +285,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. This parameter can be an empty string.
+             * The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. The value can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

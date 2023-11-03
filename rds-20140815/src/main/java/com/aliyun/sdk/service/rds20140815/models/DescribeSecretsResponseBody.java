@@ -98,7 +98,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the credential.
+         * The details of the credential.
          */
         public Builder secrets(java.util.List < Secrets> secrets) {
             this.secrets = secrets;
@@ -214,7 +214,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

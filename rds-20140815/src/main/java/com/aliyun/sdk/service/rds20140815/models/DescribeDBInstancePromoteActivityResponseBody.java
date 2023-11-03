@@ -110,7 +110,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AliUid.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder aliUid(String aliUid) {
             this.aliUid = aliUid;
@@ -118,7 +118,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * Bid.
+         * China site: 26842 International site: 26888
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -126,7 +126,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -134,7 +134,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceName.
+         * The instance name.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -142,7 +142,12 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * The type of the database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **Oracle**
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -150,7 +155,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * IsActivity.
+         * The activity information about the instance. For more information, see [Instance activities](~~26312~~).
          */
         public Builder isActivity(String isActivity) {
             this.isActivity = isActivity;
@@ -158,7 +163,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

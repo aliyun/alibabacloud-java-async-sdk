@@ -262,7 +262,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -286,7 +286,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine that the instance runs.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -302,7 +302,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The backup storage for which you must pay. ApsaraDB RDS provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.
+         * The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.
          */
         public Builder paidBackupSize(Long paidBackupSize) {
             this.paidBackupSize = paidBackupSize;
@@ -310,7 +310,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

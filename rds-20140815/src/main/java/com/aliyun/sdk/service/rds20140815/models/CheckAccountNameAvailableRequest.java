@@ -126,7 +126,25 @@ public class CheckAccountNameAvailableRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The username of the account.
+         * <p>
+         * 
+         * *   The value must be unique.
+         * 
+         * *   The value must start with a lowercase letter, and end with a lowercase letter or a digit.
+         * 
+         * *   The value can contain lowercase letters, digits, and underscores (\_).
+         * 
+         * *   The length of the value must meet the following requirements:
+         * 
+         *     *   If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.
+         *     *   If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.
+         *     *   If the instance runs SQL Server, the value must be 2 to 64 characters in length.
+         *     *   If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.
+         *     *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.
+         *     *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.
+         * 
+         * *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,7 +153,7 @@ public class CheckAccountNameAvailableRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -144,7 +162,10 @@ public class CheckAccountNameAvailableRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>
+         * 
+         * >  This operation is not supported for instances that run SQL Server 2017 (cluster edition).
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

@@ -139,7 +139,7 @@ public class CreateBackupRequest extends Request {
         } 
 
         /**
-         * The backup type. Valid values:
+         * The backup type of the instance. Valid values:
          * <p>
          * 
          * *   **Logical**: logical backup
@@ -148,13 +148,10 @@ public class CreateBackupRequest extends Request {
          * 
          * Default value: **Physical**.
          * 
-         * > 
-         * 
-         * *   You can perform a logical backup only when databases are created on the instance.
-         * 
-         * *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.
-         * *   For more information about the supported backup types, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-         * *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.
+         * > *   You can perform a logical backup only when databases are created on the instance.
+         * > *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.
+         * > *   For more information about the supported backup types, see [Use the data backup feature](~~98818~~).
+         * > *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -186,11 +183,8 @@ public class CreateBackupRequest extends Request {
          * 
          * Default value: **Auto**.
          * 
-         * > 
-         * 
-         * *   You must set this parameter only when the instance runs SQL Server.
-         * 
-         * *   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.
+         * > *   You must set this parameter only when the instance runs SQL Server.
+         * > *   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);

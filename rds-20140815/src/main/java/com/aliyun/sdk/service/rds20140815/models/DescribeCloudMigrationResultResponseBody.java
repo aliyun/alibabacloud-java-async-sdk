@@ -86,7 +86,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * The details of the cloud migration tasks.
+         * The details about the cloud migration task.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -338,7 +338,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * The details of the task.
+             * The details about the migration task.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -362,7 +362,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The migration phase in which the task stays.
+             * The migration phase of the migration task.
              * <p>
              * 
              * *   **precheck**: precheck
@@ -401,7 +401,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * The username.
              */
             public Builder sourceAccount(String sourceAccount) {
                 this.sourceAccount = sourceAccount;
@@ -429,7 +429,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the account.
+             * The password.
              */
             public Builder sourcePassword(String sourcePassword) {
                 this.sourcePassword = sourcePassword;
@@ -445,7 +445,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when a switchover was performed.
+             * The time when the switchover was performed.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -453,7 +453,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter. The return value of this parameter is null.
+             * A reserved parameter. The return value of this parameter is empty.
              */
             public Builder targetEip(String targetEip) {
                 this.targetEip = targetEip;
@@ -469,7 +469,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -477,7 +477,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * The task name.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

@@ -206,10 +206,6 @@ public class DescribeClassDetailsRequest extends Request {
          * The commodity code of the instance. Valid values:
          * <p>
          * 
-         * *   ****
-         * *   ****
-         * *   ****
-         * *   ****
          * *   **bards_intl**: The instance is a pay-as-you-go primary instance.
          * *   **rds_intl**: The instance is a subscription primary instance.
          * *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
@@ -258,7 +254,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * 资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)获取。
+         * The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

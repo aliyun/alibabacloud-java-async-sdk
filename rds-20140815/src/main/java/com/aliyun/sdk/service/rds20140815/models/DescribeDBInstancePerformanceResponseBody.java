@@ -198,7 +198,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The queried values of the performance metric.
+             * The value of the performance metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -316,7 +316,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private Values values; 
 
             /**
-             * Specify the name of the performance metric.
+             * The name of the performance metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -335,7 +335,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
              * The format in which the value of the performance metric is returned.
              * <p>
              * 
-             * >  Multiple performance metric values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.
+             * >  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;
@@ -343,7 +343,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the values of the performance metric in the following format: {value1, value2, ...}.
+             * The performance metric values.
              */
             public Builder values(Values values) {
                 this.values = values;

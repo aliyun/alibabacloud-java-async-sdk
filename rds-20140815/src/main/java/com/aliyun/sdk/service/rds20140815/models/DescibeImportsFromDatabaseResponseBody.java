@@ -238,7 +238,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Full**: full migration
-             * *   **Incremental:**: incremental migration
+             * *   **Incremental**: incremental migration
              */
             public Builder importDataType(String importDataType) {
                 this.importDataType = importDataType;

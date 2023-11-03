@@ -122,7 +122,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The ID of the RDS instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -130,7 +130,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine that the RDS instance runs.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -138,7 +138,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine that the RDS instance runs.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -146,7 +146,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of parameter reconfiguration log entries.
+         * An array that consists of parameter modification log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -154,7 +154,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -162,7 +162,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -170,7 +170,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the parameter was reconfigured. This value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;

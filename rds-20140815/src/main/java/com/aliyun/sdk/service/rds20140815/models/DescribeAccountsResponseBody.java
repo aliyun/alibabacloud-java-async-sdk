@@ -98,7 +98,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the account.
+         * The details about the account.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -114,7 +114,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The first time when the superuser account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * >  This parameter is returned only for instances that run SQL Server.
          */
         public Builder systemAdminAccountFirstActivationTime(String systemAdminAccountFirstActivationTime) {
             this.systemAdminAccountFirstActivationTime = systemAdminAccountFirstActivationTime;
@@ -130,7 +133,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the superuser account is enabled.
+         * Indicates whether the system admin account was enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: The system admin account was enabled.
+         * *   **false**: The system admin account was disabled.
+         * 
+         * >  The [system admin account](~~170736~~) is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.
          */
         public Builder systemAdminAccountStatus(String systemAdminAccountStatus) {
             this.systemAdminAccountStatus = systemAdminAccountStatus;
@@ -138,7 +147,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of entries that are returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -472,7 +481,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * 
              * *   **Normal**: standard account
              * *   **Super**: privileged account
-             * *   **Sysadmin**: superuser account that has the system administrator permissions
+             * *   **Sysadmin**: system admin account, which is supported only for instances running SQL Server
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -483,8 +492,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * Indicates whether the account has the row-level security (RLS) permissions. Valid values:
              * <p>
              * 
-             * *   **t**: yes
-             * *   **f**: no
+             * *   **t**: The account has the RLS permissions.
+             * *   **f**: The account does not have the RLS permissions.
              * 
              * >  This parameter is returned only for instances that run PostgreSQL.
              */
@@ -497,8 +506,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * Indicates whether the account has the permissions to create databases. Valid values:
              * <p>
              * 
-             * *   **t**: yes
-             * *   **f**: no
+             * *   **t**: The account has the permissions to create databases.
+             * *   **f**: The account does not have the permissions to create databases.
              * 
              * >  This parameter is returned only for instances that run PostgreSQL.
              */
@@ -511,8 +520,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * Indicates whether the account has the permissions to create roles. Valid values:
              * <p>
              * 
-             * *   **t**: yes
-             * *   **f**: no
+             * *   **t**: The account has the permissions to create roles.
+             * *   **f**: The account does not have the permissions to create roles.
              * 
              * >  This parameter is returned only for instances that run PostgreSQL.
              */
@@ -530,7 +539,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the permissions that are granted to the account.
+             * The details about the permissions that are granted to the account.
              */
             public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
@@ -541,8 +550,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:
              * <p>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * *   **1**: The number of databases that are managed by the account exceeds the upper limit.
+             * *   **0**: The number of databases that are managed by the account does not exceed the upper limit.
              */
             public Builder privExceeded(String privExceeded) {
                 this.privExceeded = privExceeded;
@@ -553,8 +562,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * Indicates whether the account has the replication permissions. Valid values:
              * <p>
              * 
-             * *   **t**: yes
-             * *   **f**: no
+             * *   **t**: The account has the replication permissions.
+             * *   **f**: The account does not have the replication permissions.
              * 
              * >  This parameter is returned only for instances that run PostgreSQL.
              */
@@ -569,7 +578,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * 
              * *   **infinity**: The password never expires.
              * *   **Empty**: The expiration time is not specified.
-             * *   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
+             * *   **Actual expiration time**: in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
              * 
              * >  This parameter is returned only for instances that run PostgreSQL.
              */

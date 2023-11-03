@@ -205,7 +205,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -214,7 +214,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
          * >  You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).
@@ -226,7 +226,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
+         * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);
@@ -244,7 +244,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +253,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -280,10 +280,10 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The tags that you want to bind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. Format: {"key1":"value1","key2":"value2"...}.
+         * The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {"key1":"value1","key2":"value2"...}.
          * <p>
          * 
-         * >  The TagKey is required, and the TagValue is optional.
+         * >  The tag key is required and the tag value is optional.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -292,7 +292,7 @@ public class AddTagsToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the proxy pattern.
+         * The ID of the proxy mode.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);
@@ -346,7 +346,7 @@ public class AddTagsToResourceRequest extends Request {
             private String value; 
 
             /**
-             * The TagKey of the first tag that you want to bind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. The TagKey is required, and the TagValue is optional.
+             * The tag key of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,7 +354,7 @@ public class AddTagsToResourceRequest extends Request {
             }
 
             /**
-             * The TagValue of the first tag that you want to bind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. The TagKey is required, and the TagValue is optional.
+             * The tag value of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.
              */
             public Builder value(String value) {
                 this.value = value;

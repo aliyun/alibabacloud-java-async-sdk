@@ -80,9 +80,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * Indicates whether parameter templates exist in the specified region. Valid values:
          * <p>
-         * 
          * *   true
          * *   false
+         * ><notice>This parameter is deprecated.></notice>
          */
         public Builder signalForOptimizeParams(Boolean signalForOptimizeParams) {
             this.signalForOptimizeParams = signalForOptimizeParams;
@@ -246,7 +246,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * The database engine version.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;

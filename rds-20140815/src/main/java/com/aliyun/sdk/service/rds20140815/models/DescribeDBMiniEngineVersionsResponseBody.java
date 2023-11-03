@@ -114,7 +114,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of details of the minor engine version.
+         * The details of the minor engine version.
          */
         public Builder minorVersionItems(java.util.List < MinorVersionItems> minorVersionItems) {
             this.minorVersionItems = minorVersionItems;
@@ -301,7 +301,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
              * The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).
              * <p>
              * 
-             * > This parameter is valid only when the instance runs **PostgreSQL**.
+             * >  This parameter is available only for instances that run **PostgreSQL**.
              */
             public Builder communityMinorVersion(String communityMinorVersion) {
                 this.communityMinorVersion = communityMinorVersion;
@@ -325,13 +325,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * 内核版本过期状态。返回值如下：
+             * The expiration status of the minor engine version. Valid values:
              * <p>
              * 
-             * - **vaild**：有效
-             * - **expired**：过期
+             * *   **vaild**
+             * *   **expired**
              * 
-             * > 下线状态为Offline时，表示版本已下线，此时忽略过期状态。下线状态为Online时，过期状态为expired，表示版本已超过生命周期；过期状态为vaild，表示版本仍在生命周期内。
+             * >  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
@@ -388,7 +388,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the minor engine version.
+             * The status of the minor engine version. Valid values:
+             * <p>
+             * 
+             * *   **Offline**: Discontinued
+             * *   **online**: Available
+             * 
+             * >  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -402,7 +408,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
              * *   **pgsql_docker_image**: tag of the common instance
              * *   **pgsql_babelfish_image**: tag of the instance for which Babelfish is enabled
              * 
-             * > This parameter is valid only when the instance runs **PostgreSQL**.
+             * >  This parameter is available only for instances that run **PostgreSQL**.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

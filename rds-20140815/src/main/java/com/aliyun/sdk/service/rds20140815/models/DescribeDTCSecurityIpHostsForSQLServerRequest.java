@@ -154,7 +154,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -181,7 +181,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instances reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,7 +190,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

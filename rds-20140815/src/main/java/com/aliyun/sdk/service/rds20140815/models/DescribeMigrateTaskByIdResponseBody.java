@@ -166,7 +166,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;

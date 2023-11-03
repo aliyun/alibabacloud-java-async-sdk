@@ -86,7 +86,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The O\&M tasks of the instance.
+         * The details about the O\&M task.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -562,7 +562,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * The ID of the task.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -602,7 +602,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance ID.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -689,13 +689,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The type of the O\&M task. Valid values:
              * <p>
              * 
              * *   **rds_apsaradb_ha**: primary/secondary switchover
              * *   **rds_apsaradb_transfer**: instance migration
              * *   **rds_apsaradb_upgrade**: update of the minor engine version
-             * *   **rds_apsaradb_maxscale**: upgrade of the database proxy version
+             * *   **rds_apsaradb_maxscale**: minor version update of the database proxy
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

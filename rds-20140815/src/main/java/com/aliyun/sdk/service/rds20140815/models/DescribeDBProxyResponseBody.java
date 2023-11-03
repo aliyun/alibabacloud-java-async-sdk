@@ -202,7 +202,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the information about the proxy endpoint that is created for the instance.
+         * An array consisting of the information about the database proxy endpoint that is created for the instance.
          */
         public Builder DBProxyConnectStringItems(DBProxyConnectStringItems DBProxyConnectStringItems) {
             this.DBProxyConnectStringItems = DBProxyConnectStringItems;
@@ -268,7 +268,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          * 
          * *   DBInstanceClassChanging: The specifications of the proxy instance are being changed.
          * *   Creating: The proxy instance is being created.
-         * *   Running: The proxy instance is being running.
+         * *   Running: The proxy instance is running.
          * *   Deleting: The proxy instance is being deleted.
          */
         public Builder DBProxyInstanceStatus(String DBProxyInstanceStatus) {
@@ -569,7 +569,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch that is associated with the proxy endpoint.
+             * The vSwitch of the proxy service.
              */
             public Builder DBProxyVswitchId(String DBProxyVswitchId) {
                 this.DBProxyVswitchId = DBProxyVswitchId;
@@ -610,7 +610,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems; 
 
             /**
-             * An array consisting of the information about the proxy endpoint that is created for the instance.
+             * An array consisting of the information about the database proxy endpoint that is created for the instance.
              */
             public Builder DBProxyConnectStringItems(java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems) {
                 this.DBProxyConnectStringItems = DBProxyConnectStringItems;

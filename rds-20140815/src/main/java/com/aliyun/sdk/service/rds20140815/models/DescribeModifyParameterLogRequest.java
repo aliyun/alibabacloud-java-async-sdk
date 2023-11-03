@@ -171,7 +171,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         } 
 
         /**
-         * The ID of the RDS instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -180,7 +180,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -207,7 +207,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: **1**.
@@ -219,7 +219,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **30**

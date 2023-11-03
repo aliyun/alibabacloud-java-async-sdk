@@ -244,26 +244,11 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot.
+         * The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot. Valid values:
          * <p>
          * 
-         * Valid values:
-         * 
          * *   ACTIVE
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
          * *   INACTIVE
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
          */
         public Builder slotStatus(String slotStatus) {
             this.putQueryParameter("SlotStatus", slotStatus);

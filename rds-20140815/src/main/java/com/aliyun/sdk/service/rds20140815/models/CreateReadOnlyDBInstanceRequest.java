@@ -579,7 +579,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * *   **HighAvailability** (default): RDS High-availability Edition
          * *   **AlwaysOn**: RDS Cluster Edition
          * 
-         * > If the primary instance runs PostgreSQL with cloud disks, you must set this parameter to **Basic**.
+         * >  The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to **Basic**.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -645,11 +645,8 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * *   **cloud_essd2**: ESSDs of PL2
          * *   **cloud_essd3**: ESSDs of PL3
          * 
-         * > 
-         * 
-         * *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
-         * 
-         * *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
+         * > *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
+         * > *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -682,12 +679,12 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The major engine version of the read-only instance. The read-only instance and the primary instance must run the same major engine version.
+         * The version of the database engine. The read-only instance and the primary instance must run the same major engine version.
          * <p>
          * 
          * *   If the read-only instance runs MySQL, set this parameter to **5.6**, **5.7**, or **8.0**.
-         * *   If the read-only instance runs SQL Server, set this parameter to **2017\_ent or 2019\_ent**.
-         * *   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**
+         * *   If the read-only instance runs MySQL, set this parameter to **2017\_ent, 2019\_ent, or 2022\_ent**.
+         * *   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -775,10 +772,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * 支持在RDS MySQL主实例创建只读实例时初始化端口。
+         * The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.
          * <p>
          * 
-         * 取值范围：1000~65534
+         * Valid values: 1000 to 65534.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

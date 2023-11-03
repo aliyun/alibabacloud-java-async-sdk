@@ -151,7 +151,7 @@ public class CancelImportRequest extends Request {
         /**
          * The ID of the migration task.
          * <p>
-         * 
+         *  
          * > This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).
          */
         public Builder importId(Integer importId) {
@@ -179,7 +179,7 @@ public class CancelImportRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

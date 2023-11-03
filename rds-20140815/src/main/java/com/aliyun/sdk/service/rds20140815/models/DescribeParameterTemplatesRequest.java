@@ -185,9 +185,9 @@ public class DescribeParameterTemplatesRequest extends Request {
          * The RDS edition of the instance. Valid values:
          * <p>
          * 
-         * *   **Basic:** The instance is of the Basic Edition.
-         * *   **HighAvailability:** The instance is of the High-availability Edition.
-         * *   **Finance:** The instance is of the Enterprise Edition.
+         * *   **Basic**: RDS Basic Edition
+         * *   **HighAvailability**: RDS High-availability Edition
+         * *   **Finance**: RDS Enterprise Edition
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -196,7 +196,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +205,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,13 +214,13 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The database engine that the instance runs. Valid values:
+         * The database engine of the instance. Valid values:
          * <p>
          * 
-         * *   **mysql:** The instance runs MySQL.
-         * *   **mssql:** The instance runs SQL Server.
-         * *   **PostgreSQL:** The instance runs PostgreSQL.
-         * *   **MariaDB:** The instance runs MariaDB.
+         * *   **mysql**: MySQL
+         * *   **mssql**: SQL Server
+         * *   **PostgreSQL**: PostgreSQL
+         * *   **MariaDB**: MariaDB
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -232,10 +232,10 @@ public class DescribeParameterTemplatesRequest extends Request {
          * The version of the database engine. Valid values:
          * <p>
          * 
-         * *   MySQL: **5.5 | 5.6 | 5.7 | 8.0**
-         * *   SQL Server: **2008r2**
-         * *   PostgreSQL: **9.4 | 10.0 | 11.0 | 12.0 | 13.0 | 14.0**
-         * *   MariaDB: **10.3**
+         * *   Valid values when you set the Engine parameter to mysql: **5.5, 5.6, 5.7, and 8.0**.
+         * *   Valid values when you set the Engine parameter to mssql: **2008r2**.
+         * *   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**.
+         * *   Valid values when you set the Engine parameter to MariaDB: **10.3**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -262,7 +262,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -164,7 +164,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer. The default value is 1.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +173,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 30 to 100. The default value is 30.
+         * The number of entries per page. Valid values: **30** to **100**. Default value: 30.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

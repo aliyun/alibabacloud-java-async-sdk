@@ -127,7 +127,7 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * The username of the account.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -136,10 +136,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
          * <p>
          * 
-         * >  This operation is not supported for instances that run SQL Server 2017 (cluster edition).
+         * >  This parameter is not supported if your RDS instance runs RDS Cluster Edition and SQL Server 2017.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

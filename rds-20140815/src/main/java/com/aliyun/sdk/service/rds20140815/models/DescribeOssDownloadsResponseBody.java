@@ -74,7 +74,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -98,7 +98,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +243,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the file.
+             * The description of the backup file.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +251,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -286,7 +286,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
              * The state of the backup file. Valid values:
              * <p>
              * 
-             * *   **NoStart**:
+             * *   **NoStart**
              * *   **Downloading**
              * *   **Finished**
              * *   **DownloadFailed**
@@ -297,7 +297,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
              * *   **CheckFailed**
              * *   **Restoring**
              * *   **Restored**
-             * *   **RestoredFailed**
+             * *   **RestoreFailed**
              */
             public Builder status(String status) {
                 this.status = status;

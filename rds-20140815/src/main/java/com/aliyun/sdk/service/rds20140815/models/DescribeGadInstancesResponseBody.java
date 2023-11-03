@@ -50,7 +50,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details about the global active database clusters that are returned.
+         * The details about the global active database cluster.
          */
         public Builder gadInstances(java.util.List < GadInstances> gadInstances) {
             this.gadInstances = gadInstances;
@@ -58,7 +58,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder DBInstanceID(String DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -193,7 +193,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
              * A JSON array that consists of the details about the Data Transmission Service (DTS) synchronization task.
              * <p>
              * 
-             * >  Each unit node uses DTS to synchronize data with the central node. This parameter contains the ID of the DTS synchronization link and the ID of the DTS synchronization request.
+             * >  Each unit node (secondary node) synchronizes data from the central node (primary node) by using DTS. This parameter contains the synchronization link ID and request ID of DTS.
              */
             public Builder dtsInstance(String dtsInstance) {
                 this.dtsInstance = dtsInstance;
@@ -220,7 +220,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the node resides.
+             * The ID of the region in which the node resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -236,7 +236,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
+             * The node type. Valid values:
              * <p>
              * 
              * *   **CENTRAL**: The node is the central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.
@@ -248,7 +248,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node. Valid values:
+             * The node status. Valid values:
              * <p>
              * 
              * *   **activation**: The node is running.
@@ -373,7 +373,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the global active database cluster.
+             * The cluster name.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,7 +381,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details about the nodes in the global active database cluster.
+             * The information about each node in the cluster.
              */
             public Builder gadInstanceMembers(java.util.List < GadInstanceMembers> gadInstanceMembers) {
                 this.gadInstanceMembers = gadInstanceMembers;
@@ -416,12 +416,12 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the global active database cluster. Valid values:
+             * The cluster status. Valid values:
              * <p>
              * 
-             * *   **activation**: The global active database cluster is running.
-             * *   **creating**: The global active database cluster is being created.
-             * *   **replica_adding**: Nodes are being added to the global active database cluster.
+             * *   **activation**: The cluster is running.
+             * *   **creating**: The cluster is being created.
+             * *   **replica_adding**: Nodes are being added to the cluster.
              */
             public Builder status(String status) {
                 this.status = status;

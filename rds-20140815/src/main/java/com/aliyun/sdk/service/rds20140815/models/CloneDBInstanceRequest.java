@@ -544,7 +544,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -743,7 +743,7 @@ public class CloneDBInstanceRequest extends Request {
          * The ID of the virtual private cloud (VPC).
          * <p>
          * 
-         * > Make sure that the VPC belongs to the required region.
+         * >  Make sure that the VPC belongs to the required region.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -752,13 +752,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. The vSwitch must belong to the zone that is specified by the **ZoneId** parameter.
+         * The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.
          * <p>
          * 
-         * > 
-         * 
-         * *   If you set the **InstanceNetworkType** parameter to **VPC**, you must also specify this parameter.
-         * 
+         * *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
          * *   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
          */
         public Builder vSwitchId(String vSwitchId) {

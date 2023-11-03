@@ -74,7 +74,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +82,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the enhanced monitoring metrics that are enabled for the instance.
+         * An array consisting of the Enhanced Monitoring metrics that are enabled for the instance.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;

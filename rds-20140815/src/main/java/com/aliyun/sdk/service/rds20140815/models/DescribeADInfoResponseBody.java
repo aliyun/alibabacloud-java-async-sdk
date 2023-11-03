@@ -127,7 +127,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The cause of the exception.
+         * The cause of the error.
          */
         public Builder abnormalReason(String abnormalReason) {
             this.abnormalReason = abnormalReason;
@@ -135,7 +135,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

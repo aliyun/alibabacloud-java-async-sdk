@@ -58,7 +58,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

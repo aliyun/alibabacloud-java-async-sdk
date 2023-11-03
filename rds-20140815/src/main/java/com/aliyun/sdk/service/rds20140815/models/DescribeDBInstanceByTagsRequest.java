@@ -192,7 +192,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -219,7 +219,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: **1**.

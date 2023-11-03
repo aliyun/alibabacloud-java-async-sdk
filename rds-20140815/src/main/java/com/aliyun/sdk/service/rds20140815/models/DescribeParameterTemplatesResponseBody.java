@@ -86,7 +86,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The database engine.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -110,7 +110,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of parameters.
+         * The details of the parameters.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -118,7 +118,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The value range of the parameter.
+             * The valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -226,7 +226,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter can be modified. Valid values: **true | false**
+             * Indicates whether the parameter can be modified. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -234,7 +238,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the modified parameter takes effect only after a database restart. Valid values: **true | false**
+             * Indicates whether you must restart the instance for the modifications to take effect. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;

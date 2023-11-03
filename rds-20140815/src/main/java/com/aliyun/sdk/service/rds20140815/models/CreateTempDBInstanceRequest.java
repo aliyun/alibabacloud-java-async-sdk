@@ -153,10 +153,10 @@ public class CreateTempDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
+         * The ID of the backup set. You can call the [DescribeBackups](~~610544~~) operation to query backup set IDs.
          * <p>
          * 
-         * > You must specify at least one of **BackupId** and **RestoreTime**.
+         * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
          */
         public Builder backupId(Integer backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -165,7 +165,7 @@ public class CreateTempDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -222,11 +222,8 @@ public class CreateTempDBInstanceRequest extends Request {
          * The specified point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
-         * > 
-         * 
-         * *   The time can be set to a point in time within the past seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.
-         * 
-         * *   You must specify at least one of the **BackupId** and **RestoreTime** parameters.
+         * > *   The time can be set to a point in time within the last seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.
+         * > *   You must specify at least one of the **BackupId** and **RestoreTime** parameters.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

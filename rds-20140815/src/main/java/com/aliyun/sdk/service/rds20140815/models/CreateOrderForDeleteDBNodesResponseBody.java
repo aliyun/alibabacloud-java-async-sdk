@@ -62,7 +62,7 @@ public class CreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The instance ID
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class CreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

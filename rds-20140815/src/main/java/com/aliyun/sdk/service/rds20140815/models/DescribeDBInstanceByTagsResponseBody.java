@@ -86,7 +86,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of the information about the instance.
+         * The details about the instance.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -170,7 +170,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -272,7 +272,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -280,7 +280,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the queried tags.
+             * The details about the tag.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

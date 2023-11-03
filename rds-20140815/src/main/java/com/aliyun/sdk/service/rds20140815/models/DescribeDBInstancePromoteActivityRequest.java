@@ -126,7 +126,7 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -135,7 +135,7 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         }
 
         /**
-         * DbInstanceName.
+         * The instance ID.
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.putQueryParameter("DbInstanceName", dbInstanceName);
@@ -153,7 +153,7 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
