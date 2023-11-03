@@ -28,6 +28,10 @@ public class CreateArtifactBuildRuleRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("Parameters")
+    private java.util.Map < String, ? > parameters;
+
+    @Query
     @NameInMap("ScopeId")
     @Validation(required = true)
     private String scopeId;
@@ -42,6 +46,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         this.regionId = builder.regionId;
         this.artifactType = builder.artifactType;
         this.instanceId = builder.instanceId;
+        this.parameters = builder.parameters;
         this.scopeId = builder.scopeId;
         this.scopeType = builder.scopeType;
     }
@@ -81,6 +86,13 @@ public class CreateArtifactBuildRuleRequest extends Request {
     }
 
     /**
+     * @return parameters
+     */
+    public java.util.Map < String, ? > getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return scopeId
      */
     public String getScopeId() {
@@ -98,6 +110,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         private String regionId; 
         private String artifactType; 
         private String instanceId; 
+        private java.util.Map < String, ? > parameters; 
         private String scopeId; 
         private String scopeType; 
 
@@ -110,6 +123,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
             this.regionId = request.regionId;
             this.artifactType = request.artifactType;
             this.instanceId = request.instanceId;
+            this.parameters = request.parameters;
             this.scopeId = request.scopeId;
             this.scopeType = request.scopeType;
         } 
@@ -138,6 +152,16 @@ public class CreateArtifactBuildRuleRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.Map < String, ? > parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
             return this;
         }
 
