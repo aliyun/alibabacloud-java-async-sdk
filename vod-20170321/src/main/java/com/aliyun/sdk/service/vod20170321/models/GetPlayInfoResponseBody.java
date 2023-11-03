@@ -398,7 +398,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -434,11 +434,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the media stream was encrypted. Valid values:
+             * Indicates whether the media stream is encrypted. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes.
+             * *   **0**: The media stream is not encrypted.
+             * *   **1**: The media stream is encrypted.
              */
             public Builder encrypt(Long encrypt) {
                 this.encrypt = encrypt;
@@ -496,7 +496,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the media stream. Unit: pixel.
+             * The height of the media stream. Unit: pixels.
              */
             public Builder height(Long height) {
                 this.height = height;
@@ -504,7 +504,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * JobExt.
+             * The custom watermark information of the copyright watermark. This parameter is returned if you set `JobType` to `2`.
              */
             public Builder jobExt(String jobExt) {
                 this.jobExt = jobExt;
@@ -520,7 +520,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * The type of the digital watermark. Valid values:
+             * <p>
+             * 
+             * *   **1**: tracing watermark
+             * *   **2**: copyright watermark
              */
             public Builder jobType(Integer jobType) {
                 this.jobType = jobType;
@@ -575,7 +579,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the media stream. Valid values:
+             * The status of the audio or video stream. Valid values:
              * <p>
              * 
              * *   **Normal**: The latest transcoded stream in each quality and format is in the Normal status.
@@ -603,7 +607,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the media stream. Unit: pixel.
+             * The width of the media stream. Unit: pixels.
              */
             public Builder width(Long width) {
                 this.width = width;

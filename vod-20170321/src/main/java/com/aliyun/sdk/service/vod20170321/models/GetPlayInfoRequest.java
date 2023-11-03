@@ -268,7 +268,11 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * DigitalWatermarkType.
+         * The type of the digital watermark. Valid values:
+         * <p>
+         * 
+         * *   TraceMark: tracing watermark
+         * *   CopyrightMark: copyright watermark
          */
         public Builder digitalWatermarkType(String digitalWatermarkType) {
             this.putQueryParameter("DigitalWatermarkType", digitalWatermarkType);
@@ -357,7 +361,11 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * Trace.
+         * The custom digital watermark.
+         * <p>
+         * 
+         * *   If you set `DigitalWatermarkType` to `TraceMark`, specify this parameter to configure the video tracing watermark and return the video stream that contains the watermark. The value can be up to 1,024 characters in length and can contain letters and digits.
+         * *   If you set `DigitalWatermarkType` to `CopyrightMark`, specify the **watermark text** that you created for the watermark template for this parameter.`` You can specify this parameter to query and return the video stream that contains the specified watermark text.
          */
         public Builder trace(String trace) {
             this.putQueryParameter("Trace", trace);

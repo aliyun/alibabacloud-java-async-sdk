@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ProduceEditingProjectVideoRequest extends Request {
     @Query
+    @NameInMap("AppId")
+    private String appId;
+
+    @Query
     @NameInMap("CoverURL")
     private String coverURL;
 
@@ -58,6 +62,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
 
     private ProduceEditingProjectVideoRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.coverURL = builder.coverURL;
         this.description = builder.description;
         this.mediaMetadata = builder.mediaMetadata;
@@ -82,6 +87,13 @@ public class ProduceEditingProjectVideoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -162,6 +174,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ProduceEditingProjectVideoRequest, Builder> {
+        private String appId; 
         private String coverURL; 
         private String description; 
         private String mediaMetadata; 
@@ -180,6 +193,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
 
         private Builder(ProduceEditingProjectVideoRequest request) {
             super(request);
+            this.appId = request.appId;
             this.coverURL = request.coverURL;
             this.description = request.description;
             this.mediaMetadata = request.mediaMetadata;
@@ -192,6 +206,15 @@ public class ProduceEditingProjectVideoRequest extends Request {
             this.title = request.title;
             this.userData = request.userData;
         } 
+
+        /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * The thumbnail URL of the online editing project.

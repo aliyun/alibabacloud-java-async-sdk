@@ -50,7 +50,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AiExtractResultList.
+         * The information about the job.
          */
         public Builder aiExtractResultList(java.util.List < AiExtractResultList> aiExtractResultList) {
             this.aiExtractResultList = aiExtractResultList;
@@ -58,7 +58,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             private String waterMarkText; 
 
             /**
-             * CreateTime.
+             * The time when the job was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -174,7 +174,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -182,7 +182,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the job was modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -190,7 +190,12 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   **Success**
+             * *   **Failed**
+             * *   **Processing**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +203,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * WaterMarkText.
+             * The extracted watermark text.
              */
             public Builder waterMarkText(String waterMarkText) {
                 this.waterMarkText = waterMarkText;

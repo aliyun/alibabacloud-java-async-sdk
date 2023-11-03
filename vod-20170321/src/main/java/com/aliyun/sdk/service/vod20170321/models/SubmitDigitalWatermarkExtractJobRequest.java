@@ -126,7 +126,11 @@ public class SubmitDigitalWatermarkExtractJobRequest extends Request {
         } 
 
         /**
-         * ExtractType.
+         * The type of the digital watermark that you want to extract. Valid values:
+         * <p>
+         * 
+         * *   TraceMark: tracing watermark
+         * *   CopyrightMark: copyright watermark
          */
         public Builder extractType(String extractType) {
             this.putQueryParameter("ExtractType", extractType);
@@ -135,7 +139,7 @@ public class SubmitDigitalWatermarkExtractJobRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

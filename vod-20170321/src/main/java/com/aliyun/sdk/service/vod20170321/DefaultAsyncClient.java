@@ -31,6 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2017-03-21";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-hangzhou", "vod.cn-shanghai.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "vod.aliyuncs.com"),
             new TeaPair("ap-southeast-2", "vod.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "vod.aliyuncs.com"),
@@ -42,7 +43,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-edge-1", "vod.aliyuncs.com"),
             new TeaPair("cn-fujian", "vod.aliyuncs.com"),
             new TeaPair("cn-haidian-cm12-c01", "vod.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "vod.aliyuncs.com"),
             new TeaPair("cn-hangzhou-bj-b01", "vod.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "vod.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-prod-1", "vod.aliyuncs.com"),
@@ -50,7 +50,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-internal-test-2", "vod.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-3", "vod.aliyuncs.com"),
             new TeaPair("cn-hangzhou-test-306", "vod.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "vod.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "vod.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "vod.aliyuncs.com"),
             new TeaPair("cn-huhehaote-nebula-1", "vod.aliyuncs.com"),
@@ -70,15 +69,12 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-yushanfang", "vod.aliyuncs.com"),
             new TeaPair("cn-zhangbei", "vod.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "vod.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "vod.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "vod.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "vod.aliyuncs.com"),
-            new TeaPair("eu-west-1", "vod.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "vod.aliyuncs.com"),
             new TeaPair("me-east-1", "vod.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "vod.aliyuncs.com"),
-            new TeaPair("us-east-1", "vod.aliyuncs.com"),
-            new TeaPair("us-west-1", "vod.aliyuncs.com")
+            new TeaPair("us-east-1", "vod.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1395,6 +1391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+      *
+     */
     @Override
     public CompletableFuture<GetDigitalWatermarkExtractResultResponse> getDigitalWatermarkExtractResult(GetDigitalWatermarkExtractResultRequest request) {
         try {
@@ -1674,7 +1674,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+      * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
       *
      */
     @Override
@@ -2240,8 +2240,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
+      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
+      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
       *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
       *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
       *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
@@ -2463,6 +2463,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
+      * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+      *
+     */
     @Override
     public CompletableFuture<SubmitDigitalWatermarkExtractJobResponse> submitDigitalWatermarkExtractJob(SubmitDigitalWatermarkExtractJobRequest request) {
         try {

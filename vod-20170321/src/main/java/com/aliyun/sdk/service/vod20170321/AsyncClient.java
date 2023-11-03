@@ -485,6 +485,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetDefaultAITemplateResponse> getDefaultAITemplate(GetDefaultAITemplateRequest request);
 
+    /**
+      * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+      *
+     */
     CompletableFuture<GetDigitalWatermarkExtractResultResponse> getDigitalWatermarkExtractResult(GetDigitalWatermarkExtractResultRequest request);
 
     CompletableFuture<GetEditingProjectResponse> getEditingProject(GetEditingProjectRequest request);
@@ -572,7 +576,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTranscodeTaskResponse> getTranscodeTask(GetTranscodeTaskRequest request);
 
     /**
-      * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+      * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
       *
      */
     CompletableFuture<GetTranscodeTemplateGroupResponse> getTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request);
@@ -766,8 +770,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
+      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
+      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
       *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
       *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
       *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
@@ -833,6 +837,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitAIMediaAuditJobResponse> submitAIMediaAuditJob(SubmitAIMediaAuditJobRequest request);
 
+    /**
+      * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
+      * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+      *
+     */
     CompletableFuture<SubmitDigitalWatermarkExtractJobResponse> submitDigitalWatermarkExtractJob(SubmitDigitalWatermarkExtractJobRequest request);
 
     /**
