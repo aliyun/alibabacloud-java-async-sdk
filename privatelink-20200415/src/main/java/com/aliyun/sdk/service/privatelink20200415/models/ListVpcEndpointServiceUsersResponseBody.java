@@ -13,13 +13,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
 
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("TotalCount")
+    private String totalCount;
+
+    @NameInMap("UserARNs")
+    private java.util.List < UserARNs> userARNs;
 
     @NameInMap("Users")
     private java.util.List < Users> users;
@@ -28,6 +34,8 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+        this.userARNs = builder.userARNs;
         this.users = builder.users;
     }
 
@@ -42,7 +50,7 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -61,6 +69,20 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalCount
+     */
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    /**
+     * @return userARNs
+     */
+    public java.util.List < UserARNs> getUserARNs() {
+        return this.userARNs;
+    }
+
+    /**
      * @return users
      */
     public java.util.List < Users> getUsers() {
@@ -68,21 +90,27 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+        private String totalCount; 
+        private java.util.List < UserARNs> userARNs; 
         private java.util.List < Users> users; 
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next requests are performed.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +118,7 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +126,23 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * TotalCount.
+         */
+        public Builder totalCount(String totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * The whitelists in the format of Aliyun Resource Name (ARN).
+         */
+        public Builder userARNs(java.util.List < UserARNs> userARNs) {
+            this.userARNs = userARNs;
+            return this;
+        }
+
+        /**
+         * The Alibaba Cloud accounts in the whitelist of the endpoint service.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -111,6 +155,47 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
 
     } 
 
+    public static class UserARNs extends TeaModel {
+        @NameInMap("UserARN")
+        private String userARN;
+
+        private UserARNs(Builder builder) {
+            this.userARN = builder.userARN;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserARNs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userARN
+         */
+        public String getUserARN() {
+            return this.userARN;
+        }
+
+        public static final class Builder {
+            private String userARN; 
+
+            /**
+             * The whitelist in the format of ARN.
+             */
+            public Builder userARN(String userARN) {
+                this.userARN = userARN;
+                return this;
+            }
+
+            public UserARNs build() {
+                return new UserARNs(this);
+            } 
+
+        } 
+
+    }
     public static class Users extends TeaModel {
         @NameInMap("UserId")
         private Long userId;
@@ -138,7 +223,7 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * UserId.
+             * The ID of the Alibaba Cloud account in the whitelist of the endpoint service.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

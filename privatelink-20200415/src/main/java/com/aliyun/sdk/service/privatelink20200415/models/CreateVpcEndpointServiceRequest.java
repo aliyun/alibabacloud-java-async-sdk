@@ -38,12 +38,24 @@ public class CreateVpcEndpointServiceRequest extends Request {
     private java.util.List < Resource> resource;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ServiceDescription")
     private String serviceDescription;
 
     @Query
     @NameInMap("ServiceResourceType")
     private String serviceResourceType;
+
+    @Query
+    @NameInMap("ServiceSupportIPv6")
+    private Boolean serviceSupportIPv6;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("ZoneAffinityEnabled")
@@ -57,8 +69,11 @@ public class CreateVpcEndpointServiceRequest extends Request {
         this.payer = builder.payer;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceDescription = builder.serviceDescription;
         this.serviceResourceType = builder.serviceResourceType;
+        this.serviceSupportIPv6 = builder.serviceSupportIPv6;
+        this.tag = builder.tag;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
@@ -118,6 +133,13 @@ public class CreateVpcEndpointServiceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceDescription
      */
     public String getServiceDescription() {
@@ -129,6 +151,20 @@ public class CreateVpcEndpointServiceRequest extends Request {
      */
     public String getServiceResourceType() {
         return this.serviceResourceType;
+    }
+
+    /**
+     * @return serviceSupportIPv6
+     */
+    public Boolean getServiceSupportIPv6() {
+        return this.serviceSupportIPv6;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -145,29 +181,39 @@ public class CreateVpcEndpointServiceRequest extends Request {
         private String payer; 
         private String regionId; 
         private java.util.List < Resource> resource; 
+        private String resourceGroupId; 
         private String serviceDescription; 
         private String serviceResourceType; 
+        private Boolean serviceSupportIPv6; 
+        private java.util.List < Tag> tag; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateVpcEndpointServiceRequest response) {
-            super(response);
-            this.autoAcceptEnabled = response.autoAcceptEnabled;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.payer = response.payer;
-            this.regionId = response.regionId;
-            this.resource = response.resource;
-            this.serviceDescription = response.serviceDescription;
-            this.serviceResourceType = response.serviceResourceType;
-            this.zoneAffinityEnabled = response.zoneAffinityEnabled;
+        private Builder(CreateVpcEndpointServiceRequest request) {
+            super(request);
+            this.autoAcceptEnabled = request.autoAcceptEnabled;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.payer = request.payer;
+            this.regionId = request.regionId;
+            this.resource = request.resource;
+            this.resourceGroupId = request.resourceGroupId;
+            this.serviceDescription = request.serviceDescription;
+            this.serviceResourceType = request.serviceResourceType;
+            this.serviceSupportIPv6 = request.serviceSupportIPv6;
+            this.tag = request.tag;
+            this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
 
         /**
-         * AutoAcceptEnabled.
+         * Specifies whether to automatically accept endpoint connection requests. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.putQueryParameter("AutoAcceptEnabled", autoAcceptEnabled);
@@ -176,7 +222,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +234,11 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request.
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -194,7 +247,13 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * Payer.
+         * The payer of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Endpoint**: the service consumer
+         * *   **EndpointService**: the service provider
+         * 
+         * > By default, the feature of allowing the service provider to pay is unavailable. To use this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/privatelink/quotas) and click Privileges in the left-side navigation pane. On the **Privileges** page, enter the quota ID `privatelink_whitelist/epsvc_payer_mode`, and click Apply in the Actions column.
          */
         public Builder payer(String payer) {
             this.putQueryParameter("Payer", payer);
@@ -203,7 +262,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint service.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -212,7 +274,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The service resources of the endpoint service.
          */
         public Builder resource(java.util.List < Resource> resource) {
             this.putQueryParameter("Resource", resource);
@@ -221,7 +283,16 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * ServiceDescription.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The description of the endpoint service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -230,7 +301,12 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * ServiceResourceType.
+         * The type of the service resource. Valid values:
+         * <p>
+         * 
+         * *   **slb**: a Classic Load Balancer (CLB) instance
+         * *   **alb**: an Application Load Balancer (ALB) instance
+         * *   **nlb**: a Network Load Balancer (NLB) instance
          */
         public Builder serviceResourceType(String serviceResourceType) {
             this.putQueryParameter("ServiceResourceType", serviceResourceType);
@@ -239,7 +315,33 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * Specifies whether to enable IPv6 for the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
+         */
+        public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
+            this.putQueryParameter("ServiceSupportIPv6", serviceSupportIPv6);
+            this.serviceSupportIPv6 = serviceSupportIPv6;
+            return this;
+        }
+
+        /**
+         * The list of tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.putQueryParameter("ZoneAffinityEnabled", zoneAffinityEnabled);
@@ -261,9 +363,13 @@ public class CreateVpcEndpointServiceRequest extends Request {
         @NameInMap("ResourceType")
         private String resourceType;
 
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private Resource(Builder builder) {
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -288,12 +394,20 @@ public class CreateVpcEndpointServiceRequest extends Request {
             return this.resourceType;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String resourceId; 
             private String resourceType; 
+            private String zoneId; 
 
             /**
-             * ResourceId.
+             * The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -301,15 +415,97 @@ public class CreateVpcEndpointServiceRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:
+             * <p>
+             * 
+             * *   **slb**: a CLB instance
+             * *   **alb**: an ALB instance
+             * *   **nlb**: a NLB instance
+             * 
+             * >  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as service resources of the endpoint service.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
                 return this;
             }
 
+            /**
+             * The zone ID.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
             public Resource build() {
                 return new Resource(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

@@ -49,13 +49,13 @@ public class DescribeZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * The region ID of the zone. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

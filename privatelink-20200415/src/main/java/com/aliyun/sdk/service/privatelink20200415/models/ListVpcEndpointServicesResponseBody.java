@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVpcEndpointServicesResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -24,11 +24,15 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
     @NameInMap("Services")
     private java.util.List < Services> services;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private ListVpcEndpointServicesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.services = builder.services;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -42,7 +46,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -67,16 +71,24 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         return this.services;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < Services> services; 
+        private Integer totalCount; 
 
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -105,12 +117,81 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListVpcEndpointServicesResponseBody build() {
             return new ListVpcEndpointServicesResponseBody(this);
         } 
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Services extends TeaModel {
         @NameInMap("AutoAcceptEnabled")
         private Boolean autoAcceptEnabled;
@@ -133,6 +214,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ServiceBusinessStatus")
         private String serviceBusinessStatus;
 
@@ -154,8 +238,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         @NameInMap("ServiceStatus")
         private String serviceStatus;
 
+        @NameInMap("ServiceSupportIPv6")
+        private Boolean serviceSupportIPv6;
+
         @NameInMap("ServiceType")
         private String serviceType;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("ZoneAffinityEnabled")
         private Boolean zoneAffinityEnabled;
@@ -168,6 +258,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             this.minBandwidth = builder.minBandwidth;
             this.payer = builder.payer;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceBusinessStatus = builder.serviceBusinessStatus;
             this.serviceDescription = builder.serviceDescription;
             this.serviceDomain = builder.serviceDomain;
@@ -175,7 +266,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             this.serviceName = builder.serviceName;
             this.serviceResourceType = builder.serviceResourceType;
             this.serviceStatus = builder.serviceStatus;
+            this.serviceSupportIPv6 = builder.serviceSupportIPv6;
             this.serviceType = builder.serviceType;
+            this.tags = builder.tags;
             this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
         }
 
@@ -237,6 +330,13 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceBusinessStatus
          */
         public String getServiceBusinessStatus() {
@@ -286,10 +386,24 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceSupportIPv6
+         */
+        public Boolean getServiceSupportIPv6() {
+            return this.serviceSupportIPv6;
+        }
+
+        /**
          * @return serviceType
          */
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -307,6 +421,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             private Integer minBandwidth; 
             private String payer; 
             private String regionId; 
+            private String resourceGroupId; 
             private String serviceBusinessStatus; 
             private String serviceDescription; 
             private String serviceDomain; 
@@ -314,7 +429,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             private String serviceName; 
             private String serviceResourceType; 
             private String serviceStatus; 
+            private Boolean serviceSupportIPv6; 
             private String serviceType; 
+            private java.util.List < Tags> tags; 
             private Boolean zoneAffinityEnabled; 
 
             /**
@@ -370,6 +487,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -430,10 +555,26 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceSupportIPv6.
+             */
+            public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
+                this.serviceSupportIPv6 = serviceSupportIPv6;
+                return this;
+            }
+
+            /**
              * ServiceType.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

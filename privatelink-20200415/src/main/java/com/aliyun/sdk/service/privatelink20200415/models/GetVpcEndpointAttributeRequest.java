@@ -63,14 +63,14 @@ public class GetVpcEndpointAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetVpcEndpointAttributeRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.regionId = response.regionId;
+        private Builder(GetVpcEndpointAttributeRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * EndpointId.
+         * The ID of the endpoint whose attributes you want to query.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -79,7 +79,10 @@ public class GetVpcEndpointAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint whose attributes you want to query.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

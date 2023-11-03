@@ -40,6 +40,10 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
     @Validation(required = true)
     private String serviceId;
 
+    @Query
+    @NameInMap("ZoneId")
+    private String zoneId;
+
     private UpdateVpcEndpointServiceResourceAttributeRequest(Builder builder) {
         super(builder);
         this.autoAllocatedEnabled = builder.autoAllocatedEnabled;
@@ -48,6 +52,7 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.serviceId = builder.serviceId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -105,6 +110,13 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         return this.serviceId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateVpcEndpointServiceResourceAttributeRequest, Builder> {
         private Boolean autoAllocatedEnabled; 
         private String clientToken; 
@@ -112,23 +124,29 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         private String regionId; 
         private String resourceId; 
         private String serviceId; 
+        private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateVpcEndpointServiceResourceAttributeRequest response) {
-            super(response);
-            this.autoAllocatedEnabled = response.autoAllocatedEnabled;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.serviceId = response.serviceId;
+        private Builder(UpdateVpcEndpointServiceResourceAttributeRequest request) {
+            super(request);
+            this.autoAllocatedEnabled = request.autoAllocatedEnabled;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.serviceId = request.serviceId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * AutoAllocatedEnabled.
+         * Specifies whether to enable automatic resource allocation. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder autoAllocatedEnabled(Boolean autoAllocatedEnabled) {
             this.putQueryParameter("AutoAllocatedEnabled", autoAllocatedEnabled);
@@ -137,7 +155,10 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +167,11 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -155,7 +180,10 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the service resource is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +192,7 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The service resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -173,11 +201,20 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * The zone ID of the service resource.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

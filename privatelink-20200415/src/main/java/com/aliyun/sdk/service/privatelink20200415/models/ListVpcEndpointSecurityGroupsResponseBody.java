@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +42,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -68,21 +68,25 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < SecurityGroups> securityGroups; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next requests are performed.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroups.
+         * The security groups that are associated with the endpoint.
          */
         public Builder securityGroups(java.util.List < SecurityGroups> securityGroups) {
             this.securityGroups = securityGroups;
@@ -138,7 +142,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group that is associated with the endpoint.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

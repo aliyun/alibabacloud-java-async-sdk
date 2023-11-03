@@ -48,9 +48,9 @@ public class OpenPrivateLinkServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenPrivateLinkServiceRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(OpenPrivateLinkServiceRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

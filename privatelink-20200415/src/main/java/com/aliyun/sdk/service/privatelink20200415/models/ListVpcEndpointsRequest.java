@@ -47,8 +47,16 @@ public class ListVpcEndpointsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ServiceName")
     private String serviceName;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("VpcId")
@@ -64,7 +72,9 @@ public class ListVpcEndpointsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceName = builder.serviceName;
+        this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
 
@@ -138,10 +148,24 @@ public class ListVpcEndpointsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -160,25 +184,29 @@ public class ListVpcEndpointsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String resourceGroupId; 
         private String serviceName; 
+        private java.util.List < Tag> tag; 
         private String vpcId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListVpcEndpointsRequest response) {
-            super(response);
-            this.connectionStatus = response.connectionStatus;
-            this.endpointId = response.endpointId;
-            this.endpointName = response.endpointName;
-            this.endpointStatus = response.endpointStatus;
-            this.endpointType = response.endpointType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.serviceName = response.serviceName;
-            this.vpcId = response.vpcId;
+        private Builder(ListVpcEndpointsRequest request) {
+            super(request);
+            this.connectionStatus = request.connectionStatus;
+            this.endpointId = request.endpointId;
+            this.endpointName = request.endpointName;
+            this.endpointStatus = request.endpointStatus;
+            this.endpointType = request.endpointType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.serviceName = request.serviceName;
+            this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -254,11 +282,29 @@ public class ListVpcEndpointsRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -278,4 +324,65 @@ public class ListVpcEndpointsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

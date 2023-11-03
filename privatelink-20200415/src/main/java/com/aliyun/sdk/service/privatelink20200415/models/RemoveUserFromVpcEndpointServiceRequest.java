@@ -31,8 +31,12 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
     private String serviceId;
 
     @Query
+    @NameInMap("UserARN")
+    private String userARN;
+
+    @Query
     @NameInMap("UserId")
-    @Validation(required = true)
+    @Validation()
     private Long userId;
 
     private RemoveUserFromVpcEndpointServiceRequest(Builder builder) {
@@ -41,6 +45,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
         this.dryRun = builder.dryRun;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
+        this.userARN = builder.userARN;
         this.userId = builder.userId;
     }
 
@@ -86,6 +91,13 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
     }
 
     /**
+     * @return userARN
+     */
+    public String getUserARN() {
+        return this.userARN;
+    }
+
+    /**
      * @return userId
      */
     public Long getUserId() {
@@ -97,23 +109,25 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
         private Boolean dryRun; 
         private String regionId; 
         private String serviceId; 
+        private String userARN; 
         private Long userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RemoveUserFromVpcEndpointServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.serviceId = response.serviceId;
-            this.userId = response.userId;
+        private Builder(RemoveUserFromVpcEndpointServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
+            this.userARN = request.userARN;
+            this.userId = request.userId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +136,11 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -131,7 +149,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint service for which you want to remove the account ID from the whitelist. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +158,7 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -149,7 +167,16 @@ public class RemoveUserFromVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The whitelist in the format of Aliyun Resource Name (ARN).
+         */
+        public Builder userARN(String userARN) {
+            this.putQueryParameter("UserARN", userARN);
+            this.userARN = userARN;
+            return this;
+        }
+
+        /**
+         * The account ID that you want to remove from the whitelist.
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

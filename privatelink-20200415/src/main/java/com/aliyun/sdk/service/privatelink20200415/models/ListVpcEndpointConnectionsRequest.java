@@ -48,6 +48,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
     private String replacedResourceId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceId")
     private String resourceId;
 
@@ -65,6 +69,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.replacedResourceId = builder.replacedResourceId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.serviceId = builder.serviceId;
     }
@@ -139,6 +144,13 @@ public class ListVpcEndpointConnectionsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -161,6 +173,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private String replacedResourceId; 
+        private String resourceGroupId; 
         private String resourceId; 
         private String serviceId; 
 
@@ -168,22 +181,32 @@ public class ListVpcEndpointConnectionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpcEndpointConnectionsRequest response) {
-            super(response);
-            this.connectionStatus = response.connectionStatus;
-            this.endpointId = response.endpointId;
-            this.endpointOwnerId = response.endpointOwnerId;
-            this.eniId = response.eniId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.replacedResourceId = response.replacedResourceId;
-            this.resourceId = response.resourceId;
-            this.serviceId = response.serviceId;
+        private Builder(ListVpcEndpointConnectionsRequest request) {
+            super(request);
+            this.connectionStatus = request.connectionStatus;
+            this.endpointId = request.endpointId;
+            this.endpointOwnerId = request.endpointOwnerId;
+            this.eniId = request.eniId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.replacedResourceId = request.replacedResourceId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
+            this.serviceId = request.serviceId;
         } 
 
         /**
-         * ConnectionStatus.
+         * The state of the endpoint connection. Valid values:
+         * <p>
+         * 
+         * *   **Pending**: The endpoint connection is being modified.
+         * *   **Connecting**: The endpoint connection is being established.
+         * *   **Connected**: The endpoint connection is established.
+         * *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
+         * *   **Disconnected**: The endpoint is disconnected from the endpoint service.
+         * *   **Deleting**: The connection is being deleted.
+         * *   **ServiceDeleted**: The corresponding endpoint service has been deleted.
          */
         public Builder connectionStatus(String connectionStatus) {
             this.putQueryParameter("ConnectionStatus", connectionStatus);
@@ -192,7 +215,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * EndpointId.
+         * The endpoint ID.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -201,7 +224,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * EndpointOwnerId.
+         * The ID of the Alibaba Cloud account to which the endpoint belongs.
          */
         public Builder endpointOwnerId(Long endpointOwnerId) {
             this.putQueryParameter("EndpointOwnerId", endpointOwnerId);
@@ -210,7 +233,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * EniId.
+         * The ID of the endpoint elastic network interface (ENI).
          */
         public Builder eniId(String eniId) {
             this.putQueryParameter("EniId", eniId);
@@ -219,7 +242,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -228,7 +251,11 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
+         * *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -237,7 +264,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -246,7 +276,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * ReplacedResourceId.
+         * The ID of the replaced service resource in smooth migration scenarios.
          */
         public Builder replacedResourceId(String replacedResourceId) {
             this.putQueryParameter("ReplacedResourceId", replacedResourceId);
@@ -255,7 +285,16 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group to which the endpoint belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The service resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -264,7 +303,7 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

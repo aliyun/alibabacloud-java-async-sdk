@@ -35,8 +35,8 @@ public class CheckProductOpenRequest extends Request {
             super();
         } 
 
-        private Builder(CheckProductOpenRequest response) {
-            super(response);
+        private Builder(CheckProductOpenRequest request) {
+            super(request);
         } 
 
         @Override

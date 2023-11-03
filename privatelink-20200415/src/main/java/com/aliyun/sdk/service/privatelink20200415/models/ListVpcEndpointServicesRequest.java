@@ -31,6 +31,14 @@ public class ListVpcEndpointServicesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceId")
+    private String resourceId;
+
+    @Query
     @NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
@@ -51,6 +59,10 @@ public class ListVpcEndpointServicesRequest extends Request {
     private String serviceStatus;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
@@ -60,11 +72,14 @@ public class ListVpcEndpointServicesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceId = builder.resourceId;
         this.serviceBusinessStatus = builder.serviceBusinessStatus;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.serviceResourceType = builder.serviceResourceType;
         this.serviceStatus = builder.serviceStatus;
+        this.tag = builder.tag;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
@@ -110,6 +125,20 @@ public class ListVpcEndpointServicesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return serviceBusinessStatus
      */
     public String getServiceBusinessStatus() {
@@ -145,6 +174,13 @@ public class ListVpcEndpointServicesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return zoneAffinityEnabled
      */
     public Boolean getZoneAffinityEnabled() {
@@ -156,29 +192,35 @@ public class ListVpcEndpointServicesRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String resourceGroupId; 
+        private String resourceId; 
         private String serviceBusinessStatus; 
         private String serviceId; 
         private String serviceName; 
         private String serviceResourceType; 
         private String serviceStatus; 
+        private java.util.List < Tag> tag; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListVpcEndpointServicesRequest response) {
-            super(response);
-            this.autoAcceptEnabled = response.autoAcceptEnabled;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.serviceBusinessStatus = response.serviceBusinessStatus;
-            this.serviceId = response.serviceId;
-            this.serviceName = response.serviceName;
-            this.serviceResourceType = response.serviceResourceType;
-            this.serviceStatus = response.serviceStatus;
-            this.zoneAffinityEnabled = response.zoneAffinityEnabled;
+        private Builder(ListVpcEndpointServicesRequest request) {
+            super(request);
+            this.autoAcceptEnabled = request.autoAcceptEnabled;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
+            this.serviceBusinessStatus = request.serviceBusinessStatus;
+            this.serviceId = request.serviceId;
+            this.serviceName = request.serviceName;
+            this.serviceResourceType = request.serviceResourceType;
+            this.serviceStatus = request.serviceStatus;
+            this.tag = request.tag;
+            this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
 
         /**
@@ -214,6 +256,24 @@ public class ListVpcEndpointServicesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 
@@ -263,6 +323,15 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * ZoneAffinityEnabled.
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
@@ -278,4 +347,65 @@ public class ListVpcEndpointServicesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

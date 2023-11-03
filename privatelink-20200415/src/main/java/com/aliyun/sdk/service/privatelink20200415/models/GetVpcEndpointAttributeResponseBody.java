@@ -51,6 +51,9 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("ResourceOwner")
     private Boolean resourceOwner;
 
@@ -83,6 +86,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         this.payer = builder.payer;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwner = builder.resourceOwner;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
@@ -191,6 +195,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwner
      */
     public Boolean getResourceOwner() {
@@ -246,6 +257,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private String payer; 
         private String regionId; 
         private String requestId; 
+        private String resourceGroupId; 
         private Boolean resourceOwner; 
         private String serviceId; 
         private String serviceName; 
@@ -254,7 +266,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private Long zonePrivateIpAddressCount; 
 
         /**
-         * Bandwidth.
+         * The bandwidth of the endpoint connection. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -262,7 +274,15 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionStatus.
+         * The state of the endpoint connection. Valid values:
+         * <p>
+         * 
+         * *   **Pending**: The connection is being modified.
+         * *   **Connecting**: The connection is being established.
+         * *   **Connected**: The connection is established.
+         * *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
+         * *   **Disconnected**: The endpoint is disconnected from the endpoint service.
+         * *   **Deleting**: The connection is being deleted.
          */
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
@@ -270,7 +290,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the endpoint was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -278,7 +298,11 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointBusinessStatus.
+         * The service state of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The endpoint runs as expected.
+         * *   **FinacialLocked**: The endpoint is locked due to overdue payments.
          */
         public Builder endpointBusinessStatus(String endpointBusinessStatus) {
             this.endpointBusinessStatus = endpointBusinessStatus;
@@ -286,7 +310,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointDescription.
+         * The description of the endpoint.
          */
         public Builder endpointDescription(String endpointDescription) {
             this.endpointDescription = endpointDescription;
@@ -294,7 +318,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointDomain.
+         * The domain name of the endpoint.
          */
         public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = endpointDomain;
@@ -302,7 +326,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointId.
+         * The endpoint ID.
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -310,7 +334,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointName.
+         * The name of the endpoint.
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -318,7 +342,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointStatus.
+         * The state of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The endpoint is being created.
+         * *   **Active**: The endpoint is available.
+         * *   **Pending**: The endpoint is being modified.
+         * *   **Deleting**: The endpoint is being deleted.
          */
         public Builder endpointStatus(String endpointStatus) {
             this.endpointStatus = endpointStatus;
@@ -326,7 +356,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointType.
+         * The type of the endpoint.
+         * <p>
+         * 
+         * **Interface** is returned. The value indicates the interface endpoint with which the Classic Load Balancer (CLB) instances are associated.
          */
         public Builder endpointType(String endpointType) {
             this.endpointType = endpointType;
@@ -334,7 +367,11 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Payer.
+         * The payer. Valid values:
+         * <p>
+         * 
+         * *   **Endpoint**: the service consumer.
+         * *   **EndpointService**: the service provider.
          */
         public Builder payer(String payer) {
             this.payer = payer;
@@ -342,7 +379,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -350,7 +387,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -358,7 +395,19 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceOwner.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:
+         * <p>
+         * 
+         * *   **true**: The endpoint and the endpoint service belong to the same Alibaba Cloud account.
+         * *   **false**: The endpoint and the endpoint service do not belong to the same Alibaba Cloud account.
          */
         public Builder resourceOwner(Boolean resourceOwner) {
             this.resourceOwner = resourceOwner;
@@ -366,7 +415,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The ID of the endpoint service with which the endpoint is associated.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -374,7 +423,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service with which the endpoint is associated.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -382,7 +431,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the endpoint belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -390,7 +439,11 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * Indicates whether zone affinity is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: Zone affinity is enabled.
+         * *   **false**: Zone affinity is disabled.
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.zoneAffinityEnabled = zoneAffinityEnabled;
@@ -398,7 +451,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZonePrivateIpAddressCount.
+         * The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Only **1** is returned.
          */
         public Builder zonePrivateIpAddressCount(Long zonePrivateIpAddressCount) {
             this.zonePrivateIpAddressCount = zonePrivateIpAddressCount;

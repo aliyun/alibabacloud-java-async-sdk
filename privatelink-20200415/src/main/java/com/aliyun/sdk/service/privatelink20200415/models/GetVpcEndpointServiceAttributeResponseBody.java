@@ -36,6 +36,9 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
@@ -57,6 +60,9 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     @NameInMap("ServiceStatus")
     private String serviceStatus;
 
+    @NameInMap("ServiceSupportIPv6")
+    private Boolean serviceSupportIPv6;
+
     @NameInMap("ServiceType")
     private String serviceType;
 
@@ -75,6 +81,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         this.payer = builder.payer;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceBusinessStatus = builder.serviceBusinessStatus;
         this.serviceDescription = builder.serviceDescription;
         this.serviceDomain = builder.serviceDomain;
@@ -82,6 +89,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         this.serviceName = builder.serviceName;
         this.serviceResourceType = builder.serviceResourceType;
         this.serviceStatus = builder.serviceStatus;
+        this.serviceSupportIPv6 = builder.serviceSupportIPv6;
         this.serviceType = builder.serviceType;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
         this.zones = builder.zones;
@@ -152,6 +160,13 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceBusinessStatus
      */
     public String getServiceBusinessStatus() {
@@ -201,6 +216,13 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceSupportIPv6
+     */
+    public Boolean getServiceSupportIPv6() {
+        return this.serviceSupportIPv6;
+    }
+
+    /**
      * @return serviceType
      */
     public String getServiceType() {
@@ -230,6 +252,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         private String payer; 
         private String regionId; 
         private String requestId; 
+        private String resourceGroupId; 
         private String serviceBusinessStatus; 
         private String serviceDescription; 
         private String serviceDomain; 
@@ -237,12 +260,17 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         private String serviceName; 
         private String serviceResourceType; 
         private String serviceStatus; 
+        private Boolean serviceSupportIPv6; 
         private String serviceType; 
         private Boolean zoneAffinityEnabled; 
         private java.util.List < String > zones; 
 
         /**
-         * AutoAcceptEnabled.
+         * Indicates whether endpoint connection requests are automatically accepted. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.autoAcceptEnabled = autoAcceptEnabled;
@@ -250,7 +278,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectBandwidth.
+         * The default bandwidth of the endpoint connection. Valid values: **100** to 10240. Unit: Mbit/s.
          */
         public Builder connectBandwidth(Integer connectBandwidth) {
             this.connectBandwidth = connectBandwidth;
@@ -258,7 +286,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the endpoint service was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -266,7 +294,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MaxBandwidth.
+         * The maximum bandwidth of the endpoint connection. Unit: Mbit/s.
          */
         public Builder maxBandwidth(Integer maxBandwidth) {
             this.maxBandwidth = maxBandwidth;
@@ -274,7 +302,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MinBandwidth.
+         * The minimum bandwidth of the endpoint connection. Unit: Mbit/s.
          */
         public Builder minBandwidth(Integer minBandwidth) {
             this.minBandwidth = minBandwidth;
@@ -282,7 +310,11 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Payer.
+         * The payer of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Endpoint**: the service consumer.
+         * *   **EndpointService**: the service provider.
          */
         public Builder payer(String payer) {
             this.payer = payer;
@@ -290,7 +322,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint service.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -298,7 +330,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +338,19 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceBusinessStatus.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The service state of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The endpoint service runs as expected.
+         * *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
          */
         public Builder serviceBusinessStatus(String serviceBusinessStatus) {
             this.serviceBusinessStatus = serviceBusinessStatus;
@@ -314,7 +358,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the endpoint service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -322,7 +366,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDomain.
+         * The domain name of the endpoint service.
          */
         public Builder serviceDomain(String serviceDomain) {
             this.serviceDomain = serviceDomain;
@@ -330,7 +374,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -338,7 +382,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -346,7 +390,11 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceResourceType.
+         * The type of the service resource. Valid values:
+         * <p>
+         * 
+         * *   **slb**: a CLB instance.
+         * *   **alb**: an ALB instance.
          */
         public Builder serviceResourceType(String serviceResourceType) {
             this.serviceResourceType = serviceResourceType;
@@ -354,7 +402,14 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceStatus.
+         * The state of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The endpoint service is being created.
+         * *   **Pending**: The endpoint service is being modified.
+         * *   **Active**: The endpoint service is available.
+         * *   **Deleting**: The endpoint service is being deleted.
+         * *   **Inactive**: The endpoint service is unavailable.
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;
@@ -362,7 +417,22 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * Indicates whether IPv6 is enabled for the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
+         */
+        public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
+            this.serviceSupportIPv6 = serviceSupportIPv6;
+            return this;
+        }
+
+        /**
+         * The type of the endpoint.
+         * <p>
+         * 
+         * Only **Interface** is returned. The value indicates the interface endpoint. Then, you can specify ALB and CLB instances as service resources for the endpoint service.
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -370,7 +440,11 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * Indicates whether zone affinity is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.zoneAffinityEnabled = zoneAffinityEnabled;
@@ -378,7 +452,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * The zones to which the service resources belong.
          */
         public Builder zones(java.util.List < String > zones) {
             this.zones = zones;

@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * The returned zones.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -110,7 +110,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * LocalName.
+             * The name of the zone.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

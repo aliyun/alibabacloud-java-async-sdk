@@ -50,7 +50,7 @@ public class CheckProductOpenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class CheckProductOpenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether PrivateLink is activated.
+         * <p>
+         * 
+         * Only **true** is returned. The value indicates that PrivateLink is activated.
          */
         public Builder success(Boolean success) {
             this.success = success;

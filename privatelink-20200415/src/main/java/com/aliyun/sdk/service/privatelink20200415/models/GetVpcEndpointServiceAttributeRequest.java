@@ -63,14 +63,17 @@ public class GetVpcEndpointServiceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetVpcEndpointServiceAttributeRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.serviceId = response.serviceId;
+        private Builder(GetVpcEndpointServiceAttributeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
         } 
 
         /**
-         * RegionId.
+         * The region ID of the endpoint service.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +82,7 @@ public class GetVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

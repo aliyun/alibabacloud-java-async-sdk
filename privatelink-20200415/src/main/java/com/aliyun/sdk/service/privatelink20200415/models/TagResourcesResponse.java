@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateVpcEndpointServiceResponse} extends {@link TeaModel}
+ * {@link TagResourcesResponse} extends {@link TeaModel}
  *
- * <p>CreateVpcEndpointServiceResponse</p>
+ * <p>TagResourcesResponse</p>
  */
-public class CreateVpcEndpointServiceResponse extends Response {
+public class TagResourcesResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class CreateVpcEndpointServiceResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateVpcEndpointServiceResponseBody body;
+    private TagResourcesResponseBody body;
 
-    private CreateVpcEndpointServiceResponse(BuilderImpl builder) {
+    private TagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateVpcEndpointServiceResponse create() {
+    public static TagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class CreateVpcEndpointServiceResponse extends Response {
     /**
      * @return body
      */
-    public CreateVpcEndpointServiceResponseBody getBody() {
+    public TagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateVpcEndpointServiceResponse, Builder> {
+    public interface Builder extends Response.Builder<TagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateVpcEndpointServiceResponseBody body);
+        Builder body(TagResourcesResponseBody body);
 
         @Override
-        CreateVpcEndpointServiceResponse build();
+        TagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateVpcEndpointServiceResponse, Builder>
+            extends Response.BuilderImpl<TagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateVpcEndpointServiceResponseBody body; 
+        private TagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateVpcEndpointServiceResponse response) {
+        private BuilderImpl(TagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class CreateVpcEndpointServiceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateVpcEndpointServiceResponseBody body) {
+        public Builder body(TagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateVpcEndpointServiceResponse build() {
-            return new CreateVpcEndpointServiceResponse(this);
+        public TagResourcesResponse build() {
+            return new TagResourcesResponse(this);
         } 
 
     } 

@@ -43,6 +43,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
     private String serviceId;
 
     @Query
+    @NameInMap("ServiceSupportIPv6")
+    private Boolean serviceSupportIPv6;
+
+    @Query
     @NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
@@ -55,6 +59,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.serviceDescription = builder.serviceDescription;
         this.serviceId = builder.serviceId;
+        this.serviceSupportIPv6 = builder.serviceSupportIPv6;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
@@ -121,6 +126,13 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
     }
 
     /**
+     * @return serviceSupportIPv6
+     */
+    public Boolean getServiceSupportIPv6() {
+        return this.serviceSupportIPv6;
+    }
+
+    /**
      * @return zoneAffinityEnabled
      */
     public Boolean getZoneAffinityEnabled() {
@@ -135,26 +147,32 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         private String regionId; 
         private String serviceDescription; 
         private String serviceId; 
+        private Boolean serviceSupportIPv6; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateVpcEndpointServiceAttributeRequest response) {
-            super(response);
-            this.autoAcceptEnabled = response.autoAcceptEnabled;
-            this.clientToken = response.clientToken;
-            this.connectBandwidth = response.connectBandwidth;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.serviceDescription = response.serviceDescription;
-            this.serviceId = response.serviceId;
-            this.zoneAffinityEnabled = response.zoneAffinityEnabled;
+        private Builder(UpdateVpcEndpointServiceAttributeRequest request) {
+            super(request);
+            this.autoAcceptEnabled = request.autoAcceptEnabled;
+            this.clientToken = request.clientToken;
+            this.connectBandwidth = request.connectBandwidth;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.serviceDescription = request.serviceDescription;
+            this.serviceId = request.serviceId;
+            this.serviceSupportIPv6 = request.serviceSupportIPv6;
+            this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
 
         /**
-         * AutoAcceptEnabled.
+         * Specifies whether to automatically accept endpoint connection requests. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.putQueryParameter("AutoAcceptEnabled", autoAcceptEnabled);
@@ -163,7 +181,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -172,7 +193,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * ConnectBandwidth.
+         * The default bandwidth of the endpoint connection. Valid values: **100** to **10240**. Unit: Mbit/s.
          */
         public Builder connectBandwidth(Integer connectBandwidth) {
             this.putQueryParameter("ConnectBandwidth", connectBandwidth);
@@ -181,7 +202,11 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -190,7 +215,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint service.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +227,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the endpoint service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -208,7 +236,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -217,7 +245,24 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * Specifies whether to enable IPv6. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
+         */
+        public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
+            this.putQueryParameter("ServiceSupportIPv6", serviceSupportIPv6);
+            this.serviceSupportIPv6 = serviceSupportIPv6;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable zone affinity. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.putQueryParameter("ZoneAffinityEnabled", zoneAffinityEnabled);

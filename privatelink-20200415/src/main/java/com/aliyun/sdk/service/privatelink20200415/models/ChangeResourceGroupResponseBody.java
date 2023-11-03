@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RemoveZoneFromVpcEndpointResponseBody} extends {@link TeaModel}
+ * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
  *
- * <p>RemoveZoneFromVpcEndpointResponseBody</p>
+ * <p>ChangeResourceGroupResponseBody</p>
  */
-public class RemoveZoneFromVpcEndpointResponseBody extends TeaModel {
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RemoveZoneFromVpcEndpointResponseBody(Builder builder) {
+    private ChangeResourceGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class RemoveZoneFromVpcEndpointResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RemoveZoneFromVpcEndpointResponseBody create() {
+    public static ChangeResourceGroupResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class RemoveZoneFromVpcEndpointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RemoveZoneFromVpcEndpointResponseBody build() {
-            return new RemoveZoneFromVpcEndpointResponseBody(this);
+        public ChangeResourceGroupResponseBody build() {
+            return new ChangeResourceGroupResponseBody(this);
         } 
 
     } 

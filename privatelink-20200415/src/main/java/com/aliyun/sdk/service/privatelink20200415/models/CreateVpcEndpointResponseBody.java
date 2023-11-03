@@ -182,7 +182,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * Bandwidth.
+         * The bandwidth of the endpoint connection. Unit: Mbit/s.
          */
         public Builder bandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
@@ -190,7 +190,15 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionStatus.
+         * The state of the endpoint connection. Valid values:
+         * <p>
+         * 
+         * *   **Pending**: The connection is being modified.
+         * *   **Connecting**: The connection is being established.
+         * *   **Connected**: The connection is established.
+         * *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
+         * *   **Disconnected**: The endpoint is disconnected from the endpoint service.
+         * *   **Deleting**: The connection is being deleted.
          */
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
@@ -198,7 +206,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the endpoint was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -206,7 +214,11 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointBusinessStatus.
+         * The service state of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The endpoint runs as expected.
+         * *   **FinacialLocked**: The endpoint is locked due to overdue payments.
          */
         public Builder endpointBusinessStatus(String endpointBusinessStatus) {
             this.endpointBusinessStatus = endpointBusinessStatus;
@@ -214,7 +226,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointDescription.
+         * The description of the endpoint.
          */
         public Builder endpointDescription(String endpointDescription) {
             this.endpointDescription = endpointDescription;
@@ -222,7 +234,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointDomain.
+         * The domain name of the endpoint.
          */
         public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = endpointDomain;
@@ -230,7 +242,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointId.
+         * The endpoint ID.
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -238,7 +250,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointName.
+         * The name of the endpoint.
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -246,7 +258,13 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointStatus.
+         * The state of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The endpoint is being created.
+         * *   **Active**: The endpoint is available.
+         * *   **Pending**: The endpoint is being modified.
+         * *   **Deleting**: The endpoint is being deleted.
          */
         public Builder endpointStatus(String endpointStatus) {
             this.endpointStatus = endpointStatus;
@@ -254,7 +272,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +280,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The ID of the endpoint service with which the endpoint is associated.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -270,7 +288,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service with which the endpoint is associated.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -278,7 +296,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the endpoint belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

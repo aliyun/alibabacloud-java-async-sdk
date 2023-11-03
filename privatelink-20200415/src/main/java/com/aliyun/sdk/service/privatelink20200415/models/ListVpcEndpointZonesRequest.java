@@ -90,16 +90,19 @@ public class ListVpcEndpointZonesRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpcEndpointZonesRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(ListVpcEndpointZonesRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * EndpointId.
+         * The ID of the endpoint for which you want to query zones.
+         * <p>
+         * 
+         * After you specify an endpoint ID, the system queries the zones of the specified endpoint.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -108,7 +111,7 @@ public class ListVpcEndpointZonesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -117,7 +120,11 @@ public class ListVpcEndpointZonesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
+         * *   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -126,7 +133,10 @@ public class ListVpcEndpointZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

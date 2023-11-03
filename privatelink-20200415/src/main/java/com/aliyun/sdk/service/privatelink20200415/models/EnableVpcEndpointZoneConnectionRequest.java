@@ -117,18 +117,21 @@ public class EnableVpcEndpointZoneConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(EnableVpcEndpointZoneConnectionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointId = response.endpointId;
-            this.regionId = response.regionId;
-            this.serviceId = response.serviceId;
-            this.zoneId = response.zoneId;
+        private Builder(EnableVpcEndpointZoneConnectionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointId = request.endpointId;
+            this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -137,7 +140,11 @@ public class EnableVpcEndpointZoneConnectionRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -146,7 +153,7 @@ public class EnableVpcEndpointZoneConnectionRequest extends Request {
         }
 
         /**
-         * EndpointId.
+         * The endpoint ID.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -155,7 +162,7 @@ public class EnableVpcEndpointZoneConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the endpoint connection request is accepted. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +171,7 @@ public class EnableVpcEndpointZoneConnectionRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -173,7 +180,7 @@ public class EnableVpcEndpointZoneConnectionRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone that is associated with the endpoint.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

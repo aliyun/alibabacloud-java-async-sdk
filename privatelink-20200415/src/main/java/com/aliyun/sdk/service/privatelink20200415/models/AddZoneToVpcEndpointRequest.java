@@ -130,19 +130,22 @@ public class AddZoneToVpcEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(AddZoneToVpcEndpointRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointId = response.endpointId;
-            this.regionId = response.regionId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
-            this.ip = response.ip;
+        private Builder(AddZoneToVpcEndpointRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointId = request.endpointId;
+            this.regionId = request.regionId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
+            this.ip = request.ip;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,7 +154,11 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -160,7 +167,7 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * EndpointId.
+         * The ID of the endpoint to which you want to add the zone.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -169,7 +176,10 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -178,7 +188,7 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch in the zone that you want to add. The system automatically creates an endpoint ENI in the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -187,7 +197,7 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone that you want to add.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -196,7 +206,7 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * ip.
+         * The IP address of the endpoint ENI in the zone that you want to add.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("ip", ip);

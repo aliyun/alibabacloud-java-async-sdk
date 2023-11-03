@@ -21,6 +21,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
@@ -39,6 +42,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     @NameInMap("ServiceStatus")
     private String serviceStatus;
 
+    @NameInMap("ServiceSupportIPv6")
+    private Boolean serviceSupportIPv6;
+
     @NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
@@ -46,12 +52,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         this.autoAcceptEnabled = builder.autoAcceptEnabled;
         this.createTime = builder.createTime;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceBusinessStatus = builder.serviceBusinessStatus;
         this.serviceDescription = builder.serviceDescription;
         this.serviceDomain = builder.serviceDomain;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.serviceStatus = builder.serviceStatus;
+        this.serviceSupportIPv6 = builder.serviceSupportIPv6;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
@@ -82,6 +90,13 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -127,6 +142,13 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceSupportIPv6
+     */
+    public Boolean getServiceSupportIPv6() {
+        return this.serviceSupportIPv6;
+    }
+
+    /**
      * @return zoneAffinityEnabled
      */
     public Boolean getZoneAffinityEnabled() {
@@ -137,16 +159,22 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         private Boolean autoAcceptEnabled; 
         private String createTime; 
         private String requestId; 
+        private String resourceGroupId; 
         private String serviceBusinessStatus; 
         private String serviceDescription; 
         private String serviceDomain; 
         private String serviceId; 
         private String serviceName; 
         private String serviceStatus; 
+        private Boolean serviceSupportIPv6; 
         private Boolean zoneAffinityEnabled; 
 
         /**
-         * AutoAcceptEnabled.
+         * Indicates whether the endpoint service automatically accepts endpoint connection requests. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.autoAcceptEnabled = autoAcceptEnabled;
@@ -154,7 +182,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the endpoint service was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -162,7 +190,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +198,19 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceBusinessStatus.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The service state of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The endpoint service runs as expected.
+         * *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
          */
         public Builder serviceBusinessStatus(String serviceBusinessStatus) {
             this.serviceBusinessStatus = serviceBusinessStatus;
@@ -178,7 +218,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the endpoint service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -186,7 +226,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDomain.
+         * The domain name of the endpoint service.
          */
         public Builder serviceDomain(String serviceDomain) {
             this.serviceDomain = serviceDomain;
@@ -194,7 +234,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -202,7 +242,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -210,7 +250,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceStatus.
+         * The state of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The endpoint service is being created.
+         * *   **Pending**: The endpoint service is being modified.
+         * *   **Active**: The endpoint service is available.
+         * *   **Deleting**: The endpoint service is being deleted.
+         * *   **Inactive**: The endpoint service is unavailable.
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;
@@ -218,7 +265,23 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * Indicates whether IPv6 was enabled for the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         */
+        public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
+            this.serviceSupportIPv6 = serviceSupportIPv6;
+            return this;
+        }
+
+        /**
+         * Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.zoneAffinityEnabled = zoneAffinityEnabled;

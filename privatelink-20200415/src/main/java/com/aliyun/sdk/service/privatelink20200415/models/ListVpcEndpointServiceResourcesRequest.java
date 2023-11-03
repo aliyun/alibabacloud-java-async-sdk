@@ -90,16 +90,16 @@ public class ListVpcEndpointServiceResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpcEndpointServiceResourcesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.serviceId = response.serviceId;
+        private Builder(ListVpcEndpointServiceResourcesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -108,7 +108,11 @@ public class ListVpcEndpointServiceResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
+         * *   If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -117,7 +121,10 @@ public class ListVpcEndpointServiceResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the service resource.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +133,7 @@ public class ListVpcEndpointServiceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

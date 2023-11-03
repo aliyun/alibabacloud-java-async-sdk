@@ -89,16 +89,19 @@ public class DeleteVpcEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVpcEndpointRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointId = response.endpointId;
-            this.regionId = response.regionId;
+        private Builder(DeleteVpcEndpointRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointId = request.endpointId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +110,11 @@ public class DeleteVpcEndpointRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -116,7 +123,7 @@ public class DeleteVpcEndpointRequest extends Request {
         }
 
         /**
-         * EndpointId.
+         * The ID of the endpoint that you want to delete.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -125,7 +132,7 @@ public class DeleteVpcEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint that you want to delete. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

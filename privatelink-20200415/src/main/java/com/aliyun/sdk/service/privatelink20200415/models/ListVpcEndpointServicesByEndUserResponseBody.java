@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -24,11 +24,15 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     @NameInMap("Services")
     private java.util.List < Services> services;
 
+    @NameInMap("TotalCount")
+    private String totalCount;
+
     private ListVpcEndpointServicesByEndUserResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.services = builder.services;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -42,7 +46,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -67,16 +71,24 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         return this.services;
     }
 
+    /**
+     * @return totalCount
+     */
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < Services> services; 
+        private String totalCount; 
 
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -105,15 +117,87 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(String totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListVpcEndpointServicesByEndUserResponseBody build() {
             return new ListVpcEndpointServicesByEndUserResponseBody(this);
         } 
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Services extends TeaModel {
         @NameInMap("Payer")
         private String payer;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("ServiceDomain")
         private String serviceDomain;
@@ -124,18 +208,31 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         private String serviceName;
 
+        @NameInMap("ServiceResourceType")
+        private String serviceResourceType;
+
+        @NameInMap("ServiceSupportIPv6")
+        private Boolean serviceSupportIPv6;
+
         @NameInMap("ServiceType")
         private String serviceType;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("Zones")
         private java.util.List < String > zones;
 
         private Services(Builder builder) {
             this.payer = builder.payer;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceDomain = builder.serviceDomain;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
+            this.serviceResourceType = builder.serviceResourceType;
+            this.serviceSupportIPv6 = builder.serviceSupportIPv6;
             this.serviceType = builder.serviceType;
+            this.tags = builder.tags;
             this.zones = builder.zones;
         }
 
@@ -152,6 +249,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
          */
         public String getPayer() {
             return this.payer;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -176,10 +280,31 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceResourceType
+         */
+        public String getServiceResourceType() {
+            return this.serviceResourceType;
+        }
+
+        /**
+         * @return serviceSupportIPv6
+         */
+        public Boolean getServiceSupportIPv6() {
+            return this.serviceSupportIPv6;
+        }
+
+        /**
          * @return serviceType
          */
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -191,10 +316,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String payer; 
+            private String resourceGroupId; 
             private String serviceDomain; 
             private String serviceId; 
             private String serviceName; 
+            private String serviceResourceType; 
+            private Boolean serviceSupportIPv6; 
             private String serviceType; 
+            private java.util.List < Tags> tags; 
             private java.util.List < String > zones; 
 
             /**
@@ -202,6 +331,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
              */
             public Builder payer(String payer) {
                 this.payer = payer;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -230,10 +367,34 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceResourceType.
+             */
+            public Builder serviceResourceType(String serviceResourceType) {
+                this.serviceResourceType = serviceResourceType;
+                return this;
+            }
+
+            /**
+             * ServiceSupportIPv6.
+             */
+            public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
+                this.serviceSupportIPv6 = serviceSupportIPv6;
+                return this;
+            }
+
+            /**
              * ServiceType.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -16,7 +16,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     private java.util.List < Connections> connections;
 
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -24,11 +24,15 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalCount")
+    private String totalCount;
+
     private ListVpcEndpointConnectionsResponseBody(Builder builder) {
         this.connections = builder.connections;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -49,7 +53,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -67,14 +71,22 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < Connections> connections; 
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+        private String totalCount; 
 
         /**
-         * Connections.
+         * The endpoint connections.
          */
         public Builder connections(java.util.List < Connections> connections) {
             this.connections = connections;
@@ -82,15 +94,19 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next requests are performed.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,10 +114,18 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(String totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -222,7 +246,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             private String zoneStatus; 
 
             /**
-             * EniId.
+             * The endpoint ENI ID.
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -230,7 +254,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplacedEniId.
+             * The ID of the replaced endpoint ENI in smooth migration scenarios.
              */
             public Builder replacedEniId(String replacedEniId) {
                 this.replacedEniId = replacedEniId;
@@ -238,7 +262,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplacedResourceId.
+             * The ID of the replaced service resource in smooth migration scenarios.
              */
             public Builder replacedResourceId(String replacedResourceId) {
                 this.replacedResourceId = replacedResourceId;
@@ -246,7 +270,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The service resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -254,7 +278,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch to which the endpoint belongs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -262,7 +286,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneDomain.
+             * The domain name of the zone.
              */
             public Builder zoneDomain(String zoneDomain) {
                 this.zoneDomain = zoneDomain;
@@ -270,7 +294,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -278,7 +302,18 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneStatus.
+             * The state of the zone. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The zone is being created.
+             * *   **Wait**: The zone is to be connected.
+             * *   **Connected**: The zone is connected.
+             * *   **Deleting**: The zone is being deleted.
+             * *   **Disconnecting**: The zone is being disconnected.
+             * *   **Disconnected**: The zone is disconnected.
+             * *   **Connecting**: The zone is being connected.
+             * *   **Migrating**: The zone is being migrated.
+             * *   **Migrated**: The zone is migrated.
              */
             public Builder zoneStatus(String zoneStatus) {
                 this.zoneStatus = zoneStatus;
@@ -311,6 +346,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         private String modifiedTime;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ResourceOwner")
         private Boolean resourceOwner;
 
@@ -327,6 +365,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             this.endpointOwnerId = builder.endpointOwnerId;
             this.endpointVpcId = builder.endpointVpcId;
             this.modifiedTime = builder.modifiedTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceOwner = builder.resourceOwner;
             this.serviceId = builder.serviceId;
             this.zones = builder.zones;
@@ -383,6 +422,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return resourceOwner
          */
         public Boolean getResourceOwner() {
@@ -410,12 +456,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             private Long endpointOwnerId; 
             private String endpointVpcId; 
             private String modifiedTime; 
+            private String resourceGroupId; 
             private Boolean resourceOwner; 
             private String serviceId; 
             private java.util.List < Zones> zones; 
 
             /**
-             * Bandwidth.
+             * The bandwidth of the endpoint connection. Valid values: **1024 to 10240**. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -423,7 +470,16 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStatus.
+             * The state of the endpoint connection. Valid values:
+             * <p>
+             * 
+             * *   **Pending**: The connection is being modified.
+             * *   **Connecting**: The connection is being established.
+             * *   **Connected**: The connection is established.
+             * *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
+             * *   **Disconnected**: The endpoint is disconnected from the endpoint service.
+             * *   **Deleting**: The connection is being deleted.
+             * *   **ServiceDeleted**: The corresponding endpoint service has been deleted.
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -431,7 +487,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * The endpoint ID.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -439,7 +495,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointOwnerId.
+             * The ID of the Alibaba Cloud account to which the endpoint belongs.
              */
             public Builder endpointOwnerId(Long endpointOwnerId) {
                 this.endpointOwnerId = endpointOwnerId;
@@ -447,7 +503,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointVpcId.
+             * The ID of the virtual private cloud (VPC) to which the endpoint belongs.
              */
             public Builder endpointVpcId(String endpointVpcId) {
                 this.endpointVpcId = endpointVpcId;
@@ -455,7 +511,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the endpoint connection was modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -463,7 +519,19 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwner.
+             * The ID of the resource group to which the endpoint belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder resourceOwner(Boolean resourceOwner) {
                 this.resourceOwner = resourceOwner;
@@ -471,7 +539,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The endpoint service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -479,7 +547,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * The zones.
              */
             public Builder zones(java.util.List < Zones> zones) {
                 this.zones = zones;
