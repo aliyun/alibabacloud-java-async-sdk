@@ -24,12 +24,10 @@ public class GetViewDDLRequest extends Request {
 
     @Query
     @NameInMap("SchemaName")
-    @Validation(required = true)
     private String schemaName;
 
     @Query
     @NameInMap("ViewName")
-    @Validation(required = true)
     private String viewName;
 
     private GetViewDDLRequest(Builder builder) {

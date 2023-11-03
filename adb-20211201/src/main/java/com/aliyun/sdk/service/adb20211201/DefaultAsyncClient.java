@@ -1185,6 +1185,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<GetTableResponse> getTable(GetTableRequest request) {
         try {

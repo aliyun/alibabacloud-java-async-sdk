@@ -24,12 +24,10 @@ public class GetTableDDLRequest extends Request {
 
     @Query
     @NameInMap("SchemaName")
-    @Validation(required = true)
     private String schemaName;
 
     @Query
     @NameInMap("TableName")
-    @Validation(required = true)
     private String tableName;
 
     private GetTableDDLRequest(Builder builder) {

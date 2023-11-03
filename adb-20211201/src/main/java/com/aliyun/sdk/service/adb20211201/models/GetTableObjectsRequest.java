@@ -39,12 +39,10 @@ public class GetTableObjectsRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
     private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Long pageSize;
 
     @Query
@@ -54,7 +52,6 @@ public class GetTableObjectsRequest extends Request {
 
     @Query
     @NameInMap("SchemaName")
-    @Validation(required = true)
     private String schemaName;
 
     private GetTableObjectsRequest(Builder builder) {

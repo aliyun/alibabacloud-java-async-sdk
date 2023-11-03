@@ -24,7 +24,6 @@ public class DescribeAdbMySqlTablesRequest extends Request {
 
     @Query
     @NameInMap("Schema")
-    @Validation(required = true)
     private String schema;
 
     private DescribeAdbMySqlTablesRequest(Builder builder) {

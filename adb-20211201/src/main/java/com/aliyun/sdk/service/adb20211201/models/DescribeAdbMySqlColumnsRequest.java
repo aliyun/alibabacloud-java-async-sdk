@@ -24,12 +24,10 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
 
     @Query
     @NameInMap("Schema")
-    @Validation(required = true)
     private String schema;
 
     @Query
     @NameInMap("TableName")
-    @Validation(required = true)
     private String tableName;
 
     private DescribeAdbMySqlColumnsRequest(Builder builder) {

@@ -183,6 +183,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSparkTemplateFullTreeResponse> getSparkTemplateFullTree(GetSparkTemplateFullTreeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
     CompletableFuture<GetTableColumnsResponse> getTableColumns(GetTableColumnsRequest request);

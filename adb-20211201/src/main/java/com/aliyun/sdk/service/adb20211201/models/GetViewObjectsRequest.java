@@ -35,12 +35,10 @@ public class GetViewObjectsRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
     private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Long pageSize;
 
     @Query
@@ -50,7 +48,6 @@ public class GetViewObjectsRequest extends Request {
 
     @Query
     @NameInMap("SchemaName")
-    @Validation(required = true)
     private String schemaName;
 
     private GetViewObjectsRequest(Builder builder) {

@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetDatabaseObjectsRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     private String DBClusterId;
 
     @Query
@@ -31,12 +30,10 @@ public class GetDatabaseObjectsRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
     private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Long pageSize;
 
     @Query
@@ -175,7 +172,7 @@ public class GetDatabaseObjectsRequest extends Request {
          * *   Asc
          * *   Desc
          * 
-         * Valid values for Field: DatabaseName, CreateTime, and UpdateTime.
+         * Valid values for Field: DatabaseName, CreateTime, and UpdateTime. -CreateTime; -UpdateTime;
          * 
          * Default value: {"Type": "Desc","Field": "DatabaseName"}.
          */
