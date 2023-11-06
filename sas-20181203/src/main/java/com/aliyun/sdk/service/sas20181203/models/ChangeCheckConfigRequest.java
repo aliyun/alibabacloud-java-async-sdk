@@ -222,7 +222,10 @@ public class ChangeCheckConfigRequest extends Request {
         } 
 
         /**
-         * AddedCheck.
+         * The list of check items that you want to add to the policy.
+         * <p>
+         * 
+         * >  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.
          */
         public Builder addedCheck(java.util.List < AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
@@ -231,7 +234,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * ConfigRequirementIds.
+         * The requirement IDs that you want to specify for the check policy.
+         * <p>
+         * 
+         * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.
          */
         public Builder configRequirementIds(ConfigRequirementIds configRequirementIds) {
             String configRequirementIdsShrink = shrink(configRequirementIds, "ConfigRequirementIds", "json");
@@ -241,7 +247,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * ConfigStandardIds.
+         * The standard IDs that you want to specify for the check policy.
+         * <p>
+         * 
+         * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the standard ID.
          */
         public Builder configStandardIds(ConfigStandardIds configStandardIds) {
             String configStandardIdsShrink = shrink(configStandardIds, "ConfigStandardIds", "json");
@@ -251,7 +260,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * Configure.
+         * The configuration of the check item. Valid values:
+         * <p>
+         * - **all**
          */
         public Builder configure(String configure) {
             this.putQueryParameter("Configure", configure);
@@ -260,7 +271,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * CycleDays.
+         * The days in a week on which a check is performed.
          */
         public Builder cycleDays(java.util.List < Integer > cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
@@ -269,7 +280,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * EnableAddCheck.
+         * Specifies whether to check the new check items in the selected requirement item. Valid values:
+         * <p>
+         * - **true**
+         * - **false**
          */
         public Builder enableAddCheck(Boolean enableAddCheck) {
             this.putQueryParameter("EnableAddCheck", enableAddCheck);
@@ -278,7 +292,11 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * EnableAutoCheck.
+         * Specifies whether to enable the automatic periodical check feature. Valid values:
+         * <p>
+         * 
+         * - **true**
+         * - **false**
          */
         public Builder enableAutoCheck(Boolean enableAutoCheck) {
             this.putQueryParameter("EnableAutoCheck", enableAutoCheck);
@@ -314,7 +332,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * RemovedCheck.
+         * The list of the check items that you want to remove from the policy.
+         * <p>
+         * 
+         * >  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.
          */
         public Builder removedCheck(java.util.List < RemovedCheck> removedCheck) {
             this.putQueryParameter("RemovedCheck", removedCheck);
@@ -341,7 +362,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * Vendors.
+         * The service provider (SP) of the cloud asset.
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);
@@ -395,7 +416,10 @@ public class ChangeCheckConfigRequest extends Request {
             private Long sectionId; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
+             * <p>
+             * 
+             * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -403,7 +427,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * SectionId.
+             * The section ID of the check item.
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;
@@ -456,7 +480,7 @@ public class ChangeCheckConfigRequest extends Request {
             private java.util.List < Long > removeIds; 
 
             /**
-             * AddIds.
+             * The requirement IDs that you want to add to the policy.
              */
             public Builder addIds(java.util.List < Long > addIds) {
                 this.addIds = addIds;
@@ -464,7 +488,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * RemoveIds.
+             * The requirement IDs that you want to remove from the policy.
              */
             public Builder removeIds(java.util.List < Long > removeIds) {
                 this.removeIds = removeIds;
@@ -517,7 +541,7 @@ public class ChangeCheckConfigRequest extends Request {
             private java.util.List < Long > removeIds; 
 
             /**
-             * AddIds.
+             * The standard IDs that you want to add to the policy.
              */
             public Builder addIds(java.util.List < Long > addIds) {
                 this.addIds = addIds;
@@ -525,7 +549,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * RemoveIds.
+             * The standard IDs that you want to remove from the policy.
              */
             public Builder removeIds(java.util.List < Long > removeIds) {
                 this.removeIds = removeIds;
@@ -578,7 +602,10 @@ public class ChangeCheckConfigRequest extends Request {
             private Long sectionId; 
 
             /**
-             * CheckId.
+             * The ID of the check item.
+             * <p>
+             * 
+             * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -586,7 +613,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * SectionId.
+             * The section ID of the check item.
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;

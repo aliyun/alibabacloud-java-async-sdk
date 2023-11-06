@@ -51,6 +51,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("IsOverBalance")
     private Boolean isOverBalance;
 
+    @NameInMap("IsPostpay")
+    private Boolean isPostpay;
+
     @NameInMap("IsTrialVersion")
     private Integer isTrialVersion;
 
@@ -65,6 +68,18 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @NameInMap("OpenTime")
     private Long openTime;
+
+    @NameInMap("PostPayInstanceId")
+    private String postPayInstanceId;
+
+    @NameInMap("PostPayModuleSwitch")
+    private String postPayModuleSwitch;
+
+    @NameInMap("PostPayOpenTime")
+    private Long postPayOpenTime;
+
+    @NameInMap("PostPayStatus")
+    private Integer postPayStatus;
 
     @NameInMap("RaspCapacity")
     private Long raspCapacity;
@@ -119,11 +134,16 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.isNewContainerVersion = builder.isNewContainerVersion;
         this.isNewMultiVersion = builder.isNewMultiVersion;
         this.isOverBalance = builder.isOverBalance;
+        this.isPostpay = builder.isPostpay;
         this.isTrialVersion = builder.isTrialVersion;
         this.lastTrailEndTime = builder.lastTrailEndTime;
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
         this.openTime = builder.openTime;
+        this.postPayInstanceId = builder.postPayInstanceId;
+        this.postPayModuleSwitch = builder.postPayModuleSwitch;
+        this.postPayOpenTime = builder.postPayOpenTime;
+        this.postPayStatus = builder.postPayStatus;
         this.raspCapacity = builder.raspCapacity;
         this.releaseTime = builder.releaseTime;
         this.requestId = builder.requestId;
@@ -239,6 +259,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return isPostpay
+     */
+    public Boolean getIsPostpay() {
+        return this.isPostpay;
+    }
+
+    /**
      * @return isTrialVersion
      */
     public Integer getIsTrialVersion() {
@@ -271,6 +298,34 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Long getOpenTime() {
         return this.openTime;
+    }
+
+    /**
+     * @return postPayInstanceId
+     */
+    public String getPostPayInstanceId() {
+        return this.postPayInstanceId;
+    }
+
+    /**
+     * @return postPayModuleSwitch
+     */
+    public String getPostPayModuleSwitch() {
+        return this.postPayModuleSwitch;
+    }
+
+    /**
+     * @return postPayOpenTime
+     */
+    public Long getPostPayOpenTime() {
+        return this.postPayOpenTime;
+    }
+
+    /**
+     * @return postPayStatus
+     */
+    public Integer getPostPayStatus() {
+        return this.postPayStatus;
     }
 
     /**
@@ -378,11 +433,16 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Boolean isNewContainerVersion; 
         private Boolean isNewMultiVersion; 
         private Boolean isOverBalance; 
+        private Boolean isPostpay; 
         private Integer isTrialVersion; 
         private Long lastTrailEndTime; 
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
         private Long openTime; 
+        private String postPayInstanceId; 
+        private String postPayModuleSwitch; 
+        private Long postPayOpenTime; 
+        private Integer postPayStatus; 
         private Long raspCapacity; 
         private Long releaseTime; 
         private String requestId; 
@@ -538,6 +598,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * IsPostpay.
+         */
+        public Builder isPostpay(Boolean isPostpay) {
+            this.isPostpay = isPostpay;
+            return this;
+        }
+
+        /**
          * Indicates whether Security Center runs the free trial edition. Valid values:
          * <p>
          * 
@@ -578,6 +646,38 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder openTime(Long openTime) {
             this.openTime = openTime;
+            return this;
+        }
+
+        /**
+         * PostPayInstanceId.
+         */
+        public Builder postPayInstanceId(String postPayInstanceId) {
+            this.postPayInstanceId = postPayInstanceId;
+            return this;
+        }
+
+        /**
+         * PostPayModuleSwitch.
+         */
+        public Builder postPayModuleSwitch(String postPayModuleSwitch) {
+            this.postPayModuleSwitch = postPayModuleSwitch;
+            return this;
+        }
+
+        /**
+         * PostPayOpenTime.
+         */
+        public Builder postPayOpenTime(Long postPayOpenTime) {
+            this.postPayOpenTime = postPayOpenTime;
+            return this;
+        }
+
+        /**
+         * PostPayStatus.
+         */
+        public Builder postPayStatus(Integer postPayStatus) {
+            this.postPayStatus = postPayStatus;
             return this;
         }
 

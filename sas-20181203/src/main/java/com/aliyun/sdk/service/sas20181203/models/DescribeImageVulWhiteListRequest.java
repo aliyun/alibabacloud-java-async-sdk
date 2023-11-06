@@ -110,7 +110,7 @@ public class DescribeImageVulWhiteListRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability that you want to query.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -119,7 +119,7 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -128,7 +128,11 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -137,7 +141,7 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +150,10 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the whitelist. Valid values:
+         * <p>
+         * - **image**
+         * - **agentless**
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

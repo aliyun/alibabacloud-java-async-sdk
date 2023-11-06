@@ -122,7 +122,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * Code.
+         * The status code returned. A value of **200** indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -138,7 +138,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * ImageVulWhitelist.
+         * The information about the whitelist of image vulnerabilities.
          */
         public Builder imageVulWhitelist(java.util.List < ImageVulWhitelist> imageVulWhitelist) {
             this.imageVulWhitelist = imageVulWhitelist;
@@ -146,7 +146,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +154,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -162,7 +162,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,11 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * TimeCost.
+         * The amount of time that was consumed to process the request. Unit: milliseconds.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;
@@ -278,7 +282,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AliasName.
+             * The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -286,7 +290,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The primary key ID of the vulnerability.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -294,7 +298,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +306,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason the vulnerability is added to the whitelist.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -310,7 +314,11 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The object on which the query is performed. The value of this parameter is in the JSON format and contains the following fields:
+             * <p>
+             * 
+             * *   **type**: the object type. The value is fixed to repo.
+             * *   **target**: the object content. The value is in the Namespace/Image repository format.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -318,7 +326,11 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **cve**: system vulnerability
+             * *   **sca**: application vulnerability
              */
             public Builder type(String type) {
                 this.type = type;
@@ -395,7 +407,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -403,7 +415,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -411,7 +423,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -419,7 +431,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
