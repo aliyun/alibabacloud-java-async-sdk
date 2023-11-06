@@ -33,6 +33,9 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("IdleTimeout")
+    private Integer idleTimeout;
+
     @NameInMap("ListenerId")
     private String listenerId;
 
@@ -53,6 +56,9 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("RequestTimeout")
+    private Integer requestTimeout;
 
     @NameInMap("SecurityPolicyId")
     private String securityPolicyId;
@@ -83,6 +89,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         this.clientAffinity = builder.clientAffinity;
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.idleTimeout = builder.idleTimeout;
         this.listenerId = builder.listenerId;
         this.name = builder.name;
         this.portRanges = builder.portRanges;
@@ -90,6 +97,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         this.proxyProtocol = builder.proxyProtocol;
         this.relatedAcls = builder.relatedAcls;
         this.requestId = builder.requestId;
+        this.requestTimeout = builder.requestTimeout;
         this.securityPolicyId = builder.securityPolicyId;
         this.serviceId = builder.serviceId;
         this.serviceManaged = builder.serviceManaged;
@@ -157,6 +165,13 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    /**
      * @return listenerId
      */
     public String getListenerId() {
@@ -203,6 +218,13 @@ public class DescribeListenerResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return requestTimeout
+     */
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     /**
@@ -262,6 +284,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         private String clientAffinity; 
         private String createTime; 
         private String description; 
+        private Integer idleTimeout; 
         private String listenerId; 
         private String name; 
         private java.util.List < PortRanges> portRanges; 
@@ -269,6 +292,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         private Boolean proxyProtocol; 
         private java.util.List < RelatedAcls> relatedAcls; 
         private String requestId; 
+        private Integer requestTimeout; 
         private String securityPolicyId; 
         private String serviceId; 
         private Boolean serviceManaged; 
@@ -344,6 +368,14 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
+         * IdleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
          * The ID of the listener.
          */
         public Builder listenerId(String listenerId) {
@@ -406,6 +438,14 @@ public class DescribeListenerResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RequestTimeout.
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            this.requestTimeout = requestTimeout;
             return this;
         }
 

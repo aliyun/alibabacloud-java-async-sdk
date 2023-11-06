@@ -42,6 +42,10 @@ public class CreateListenerRequest extends Request {
     private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
 
     @Query
+    @NameInMap("IdleTimeout")
+    private Integer idleTimeout;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -64,6 +68,10 @@ public class CreateListenerRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("RequestTimeout")
+    private Integer requestTimeout;
+
+    @Query
     @NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
@@ -84,11 +92,13 @@ public class CreateListenerRequest extends Request {
         this.customRoutingEndpointGroupConfigurations = builder.customRoutingEndpointGroupConfigurations;
         this.description = builder.description;
         this.endpointGroupConfigurations = builder.endpointGroupConfigurations;
+        this.idleTimeout = builder.idleTimeout;
         this.name = builder.name;
         this.portRanges = builder.portRanges;
         this.protocol = builder.protocol;
         this.proxyProtocol = builder.proxyProtocol;
         this.regionId = builder.regionId;
+        this.requestTimeout = builder.requestTimeout;
         this.securityPolicyId = builder.securityPolicyId;
         this.type = builder.type;
         this.xForwardedForConfig = builder.xForwardedForConfig;
@@ -157,6 +167,13 @@ public class CreateListenerRequest extends Request {
     }
 
     /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -192,6 +209,13 @@ public class CreateListenerRequest extends Request {
     }
 
     /**
+     * @return requestTimeout
+     */
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
+    /**
      * @return securityPolicyId
      */
     public String getSecurityPolicyId() {
@@ -220,11 +244,13 @@ public class CreateListenerRequest extends Request {
         private java.util.List < CustomRoutingEndpointGroupConfigurations> customRoutingEndpointGroupConfigurations; 
         private String description; 
         private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations; 
+        private Integer idleTimeout; 
         private String name; 
         private java.util.List < PortRanges> portRanges; 
         private String protocol; 
         private Boolean proxyProtocol; 
         private String regionId; 
+        private Integer requestTimeout; 
         private String securityPolicyId; 
         private String type; 
         private XForwardedForConfig xForwardedForConfig; 
@@ -242,11 +268,13 @@ public class CreateListenerRequest extends Request {
             this.customRoutingEndpointGroupConfigurations = request.customRoutingEndpointGroupConfigurations;
             this.description = request.description;
             this.endpointGroupConfigurations = request.endpointGroupConfigurations;
+            this.idleTimeout = request.idleTimeout;
             this.name = request.name;
             this.portRanges = request.portRanges;
             this.protocol = request.protocol;
             this.proxyProtocol = request.proxyProtocol;
             this.regionId = request.regionId;
+            this.requestTimeout = request.requestTimeout;
             this.securityPolicyId = request.securityPolicyId;
             this.type = request.type;
             this.xForwardedForConfig = request.xForwardedForConfig;
@@ -335,6 +363,15 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
+         * IdleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.putQueryParameter("IdleTimeout", idleTimeout);
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
          * The name of the listener.
          * <p>
          * 
@@ -391,6 +428,15 @@ public class CreateListenerRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestTimeout.
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            this.putQueryParameter("RequestTimeout", requestTimeout);
+            this.requestTimeout = requestTimeout;
             return this;
         }
 

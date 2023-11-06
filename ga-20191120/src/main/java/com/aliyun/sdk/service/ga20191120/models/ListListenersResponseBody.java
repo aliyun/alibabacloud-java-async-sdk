@@ -591,6 +591,9 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("IdleTimeout")
+        private Integer idleTimeout;
+
         @NameInMap("ListenerId")
         private String listenerId;
 
@@ -605,6 +608,9 @@ public class ListListenersResponseBody extends TeaModel {
 
         @NameInMap("ProxyProtocol")
         private Boolean proxyProtocol;
+
+        @NameInMap("RequestTimeout")
+        private Integer requestTimeout;
 
         @NameInMap("SecurityPolicyId")
         private String securityPolicyId;
@@ -634,11 +640,13 @@ public class ListListenersResponseBody extends TeaModel {
             this.clientAffinity = builder.clientAffinity;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.idleTimeout = builder.idleTimeout;
             this.listenerId = builder.listenerId;
             this.name = builder.name;
             this.portRanges = builder.portRanges;
             this.protocol = builder.protocol;
             this.proxyProtocol = builder.proxyProtocol;
+            this.requestTimeout = builder.requestTimeout;
             this.securityPolicyId = builder.securityPolicyId;
             this.serviceId = builder.serviceId;
             this.serviceManaged = builder.serviceManaged;
@@ -699,6 +707,13 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
+         * @return idleTimeout
+         */
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
+        }
+
+        /**
          * @return listenerId
          */
         public String getListenerId() {
@@ -731,6 +746,13 @@ public class ListListenersResponseBody extends TeaModel {
          */
         public Boolean getProxyProtocol() {
             return this.proxyProtocol;
+        }
+
+        /**
+         * @return requestTimeout
+         */
+        public Integer getRequestTimeout() {
+            return this.requestTimeout;
         }
 
         /**
@@ -789,11 +811,13 @@ public class ListListenersResponseBody extends TeaModel {
             private String clientAffinity; 
             private Long createTime; 
             private String description; 
+            private Integer idleTimeout; 
             private String listenerId; 
             private String name; 
             private java.util.List < PortRanges> portRanges; 
             private String protocol; 
             private Boolean proxyProtocol; 
+            private Integer requestTimeout; 
             private String securityPolicyId; 
             private String serviceId; 
             private Boolean serviceManaged; 
@@ -855,6 +879,14 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
+             * IdleTimeout.
+             */
+            public Builder idleTimeout(Integer idleTimeout) {
+                this.idleTimeout = idleTimeout;
+                return this;
+            }
+
+            /**
              * The ID of the listener.
              */
             public Builder listenerId(String listenerId) {
@@ -901,6 +933,14 @@ public class ListListenersResponseBody extends TeaModel {
              */
             public Builder proxyProtocol(Boolean proxyProtocol) {
                 this.proxyProtocol = proxyProtocol;
+                return this;
+            }
+
+            /**
+             * RequestTimeout.
+             */
+            public Builder requestTimeout(Integer requestTimeout) {
+                this.requestTimeout = requestTimeout;
                 return this;
             }
 

@@ -33,6 +33,10 @@ public class UpdateListenerRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("IdleTimeout")
+    private Integer idleTimeout;
+
+    @Query
     @NameInMap("ListenerId")
     @Validation(required = true)
     private String listenerId;
@@ -58,6 +62,10 @@ public class UpdateListenerRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("RequestTimeout")
+    private Integer requestTimeout;
+
+    @Query
     @NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
@@ -72,12 +80,14 @@ public class UpdateListenerRequest extends Request {
         this.clientAffinity = builder.clientAffinity;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.idleTimeout = builder.idleTimeout;
         this.listenerId = builder.listenerId;
         this.name = builder.name;
         this.portRanges = builder.portRanges;
         this.protocol = builder.protocol;
         this.proxyProtocol = builder.proxyProtocol;
         this.regionId = builder.regionId;
+        this.requestTimeout = builder.requestTimeout;
         this.securityPolicyId = builder.securityPolicyId;
         this.xForwardedForConfig = builder.xForwardedForConfig;
     }
@@ -131,6 +141,13 @@ public class UpdateListenerRequest extends Request {
     }
 
     /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    /**
      * @return listenerId
      */
     public String getListenerId() {
@@ -173,6 +190,13 @@ public class UpdateListenerRequest extends Request {
     }
 
     /**
+     * @return requestTimeout
+     */
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
+    /**
      * @return securityPolicyId
      */
     public String getSecurityPolicyId() {
@@ -192,12 +216,14 @@ public class UpdateListenerRequest extends Request {
         private String clientAffinity; 
         private String clientToken; 
         private String description; 
+        private Integer idleTimeout; 
         private String listenerId; 
         private String name; 
         private java.util.List < PortRanges> portRanges; 
         private String protocol; 
         private String proxyProtocol; 
         private String regionId; 
+        private Integer requestTimeout; 
         private String securityPolicyId; 
         private XForwardedForConfig xForwardedForConfig; 
 
@@ -212,12 +238,14 @@ public class UpdateListenerRequest extends Request {
             this.clientAffinity = request.clientAffinity;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.idleTimeout = request.idleTimeout;
             this.listenerId = request.listenerId;
             this.name = request.name;
             this.portRanges = request.portRanges;
             this.protocol = request.protocol;
             this.proxyProtocol = request.proxyProtocol;
             this.regionId = request.regionId;
+            this.requestTimeout = request.requestTimeout;
             this.securityPolicyId = request.securityPolicyId;
             this.xForwardedForConfig = request.xForwardedForConfig;
         } 
@@ -273,6 +301,15 @@ public class UpdateListenerRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * IdleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.putQueryParameter("IdleTimeout", idleTimeout);
+            this.idleTimeout = idleTimeout;
             return this;
         }
 
@@ -347,6 +384,15 @@ public class UpdateListenerRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestTimeout.
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            this.putQueryParameter("RequestTimeout", requestTimeout);
+            this.requestTimeout = requestTimeout;
             return this;
         }
 
