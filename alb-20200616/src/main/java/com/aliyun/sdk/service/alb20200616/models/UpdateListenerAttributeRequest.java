@@ -428,7 +428,11 @@ public class UpdateListenerAttributeRequest extends Request {
     } 
 
     public static class CaCertificates extends TeaModel {
+        @NameInMap("CertificateId")
+        private String certificateId;
+
         private CaCertificates(Builder builder) {
+            this.certificateId = builder.certificateId;
         }
 
         public static Builder builder() {
@@ -439,7 +443,23 @@ public class UpdateListenerAttributeRequest extends Request {
             return builder().build();
         }
 
+        /**
+         * @return certificateId
+         */
+        public String getCertificateId() {
+            return this.certificateId;
+        }
+
         public static final class Builder {
+            private String certificateId; 
+
+            /**
+             * CertificateId.
+             */
+            public Builder certificateId(String certificateId) {
+                this.certificateId = certificateId;
+                return this;
+            }
 
             public CaCertificates build() {
                 return new CaCertificates(this);

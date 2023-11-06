@@ -13,8 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLoadBalancersRequest extends Request {
     @Query
+    @NameInMap("AddressIpVersion")
+    private String addressIpVersion;
+
+    @Query
     @NameInMap("AddressType")
     private String addressType;
+
+    @Query
+    @NameInMap("DNSName")
+    private String DNSName;
+
+    @Query
+    @NameInMap("Ipv6AddressType")
+    private String ipv6AddressType;
 
     @Query
     @NameInMap("LoadBalancerBussinessStatus")
@@ -62,7 +74,10 @@ public class ListLoadBalancersRequest extends Request {
 
     private ListLoadBalancersRequest(Builder builder) {
         super(builder);
+        this.addressIpVersion = builder.addressIpVersion;
         this.addressType = builder.addressType;
+        this.DNSName = builder.DNSName;
+        this.ipv6AddressType = builder.ipv6AddressType;
         this.loadBalancerBussinessStatus = builder.loadBalancerBussinessStatus;
         this.loadBalancerIds = builder.loadBalancerIds;
         this.loadBalancerNames = builder.loadBalancerNames;
@@ -90,10 +105,31 @@ public class ListLoadBalancersRequest extends Request {
     }
 
     /**
+     * @return addressIpVersion
+     */
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
+    }
+
+    /**
      * @return addressType
      */
     public String getAddressType() {
         return this.addressType;
+    }
+
+    /**
+     * @return DNSName
+     */
+    public String getDNSName() {
+        return this.DNSName;
+    }
+
+    /**
+     * @return ipv6AddressType
+     */
+    public String getIpv6AddressType() {
+        return this.ipv6AddressType;
     }
 
     /**
@@ -174,7 +210,10 @@ public class ListLoadBalancersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLoadBalancersRequest, Builder> {
+        private String addressIpVersion; 
         private String addressType; 
+        private String DNSName; 
+        private String ipv6AddressType; 
         private String loadBalancerBussinessStatus; 
         private java.util.List < String > loadBalancerIds; 
         private java.util.List < String > loadBalancerNames; 
@@ -193,7 +232,10 @@ public class ListLoadBalancersRequest extends Request {
 
         private Builder(ListLoadBalancersRequest request) {
             super(request);
+            this.addressIpVersion = request.addressIpVersion;
             this.addressType = request.addressType;
+            this.DNSName = request.DNSName;
+            this.ipv6AddressType = request.ipv6AddressType;
             this.loadBalancerBussinessStatus = request.loadBalancerBussinessStatus;
             this.loadBalancerIds = request.loadBalancerIds;
             this.loadBalancerNames = request.loadBalancerNames;
@@ -208,6 +250,15 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
+         * AddressIpVersion.
+         */
+        public Builder addressIpVersion(String addressIpVersion) {
+            this.putQueryParameter("AddressIpVersion", addressIpVersion);
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+
+        /**
          * The network type. Valid values:
          * <p>
          * 
@@ -217,6 +268,24 @@ public class ListLoadBalancersRequest extends Request {
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
             this.addressType = addressType;
+            return this;
+        }
+
+        /**
+         * DNSName.
+         */
+        public Builder DNSName(String DNSName) {
+            this.putQueryParameter("DNSName", DNSName);
+            this.DNSName = DNSName;
+            return this;
+        }
+
+        /**
+         * Ipv6AddressType.
+         */
+        public Builder ipv6AddressType(String ipv6AddressType) {
+            this.putQueryParameter("Ipv6AddressType", ipv6AddressType);
+            this.ipv6AddressType = ipv6AddressType;
             return this;
         }
 
