@@ -74,7 +74,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * This parameter is no longer returned.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;

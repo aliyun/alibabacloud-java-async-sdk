@@ -56,6 +56,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateDBInstancePlanResponse> createDBInstancePlan(CreateDBInstancePlanRequest request);
 
+    CompletableFuture<CreateDocumentCollectionResponse> createDocumentCollection(CreateDocumentCollectionRequest request);
+
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
 
     /**
@@ -95,6 +97,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteDBInstancePlanResponse> deleteDBInstancePlan(DeleteDBInstancePlanRequest request);
+
+    CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request);
+
+    CompletableFuture<DeleteDocumentCollectionResponse> deleteDocumentCollection(DeleteDocumentCollectionRequest request);
 
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
 
@@ -207,6 +213,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBInstanceSSLResponse> describeDBInstanceSSL(DescribeDBInstanceSSLRequest request);
 
+    CompletableFuture<DescribeDBInstanceSupportMaxPerformanceResponse> describeDBInstanceSupportMaxPerformance(DescribeDBInstanceSupportMaxPerformanceRequest request);
+
     /**
       * ##
       * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
@@ -215,6 +223,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request);
+
+    CompletableFuture<DescribeDBVersionInfosResponse> describeDBVersionInfos(DescribeDBVersionInfosRequest request);
 
     /**
       * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
@@ -269,6 +279,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDiagnosisSQLInfoResponse> describeDiagnosisSQLInfo(DescribeDiagnosisSQLInfoRequest request);
 
+    CompletableFuture<DescribeDocumentResponse> describeDocument(DescribeDocumentRequest request);
+
     /**
       * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
       * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
@@ -285,6 +297,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeHealthStatusResponse> describeHealthStatus(DescribeHealthStatusRequest request);
+
+    CompletableFuture<DescribeIMVInfosResponse> describeIMVInfos(DescribeIMVInfosRequest request);
 
     CompletableFuture<DescribeLogBackupsResponse> describeLogBackups(DescribeLogBackupsRequest request);
 
@@ -329,6 +343,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeSQLLogCountResponse> describeSQLLogCount(DescribeSQLLogCountRequest request);
+
+    /**
+      * > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](~~453722~~) operation.
+      *
+     */
+    CompletableFuture<DescribeSQLLogsResponse> describeSQLLogs(DescribeSQLLogsRequest request);
 
     /**
       * You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
@@ -379,9 +399,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GrantCollectionResponse> grantCollection(GrantCollectionRequest request);
 
+    CompletableFuture<HandleActiveSQLRecordResponse> handleActiveSQLRecord(HandleActiveSQLRecordRequest request);
+
     CompletableFuture<InitVectorDatabaseResponse> initVectorDatabase(InitVectorDatabaseRequest request);
 
     CompletableFuture<ListCollectionsResponse> listCollections(ListCollectionsRequest request);
+
+    CompletableFuture<ListDocumentCollectionsResponse> listDocumentCollections(ListDocumentCollectionsRequest request);
+
+    CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
 
     CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
 
@@ -453,11 +479,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryCollectionDataResponse> queryCollectionData(QueryCollectionDataRequest request);
 
+    CompletableFuture<QueryContentResponse> queryContent(QueryContentRequest request);
+
     CompletableFuture<RebalanceDBInstanceResponse> rebalanceDBInstance(RebalanceDBInstanceRequest request);
 
     CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request);
 
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
+
+    CompletableFuture<ResetIMVMonitorDataResponse> resetIMVMonitorData(ResetIMVMonitorDataRequest request);
 
     /**
       * A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
@@ -525,6 +555,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpgradeDBInstanceResponse> upgradeDBInstance(UpgradeDBInstanceRequest request);
 
     CompletableFuture<UpgradeDBVersionResponse> upgradeDBVersion(UpgradeDBVersionRequest request);
+
+    CompletableFuture<UpsertChunksResponse> upsertChunks(UpsertChunksRequest request);
 
     CompletableFuture<UpsertCollectionDataResponse> upsertCollectionData(UpsertCollectionDataRequest request);
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-gpdb20160503</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>alibabacloud-gpdb20160503</name>
   <description>Alibaba Cloud gpdb (20160503) Async SDK for Java

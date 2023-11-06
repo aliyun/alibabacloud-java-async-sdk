@@ -148,7 +148,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * The major version of the instance.
+         * This parameter is no longer used and does not need to be specified.
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);
@@ -184,7 +184,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * The upgrade time.
+         * This parameter is no longer used and does not need to be specified.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -193,7 +193,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * The upgrade method.
+         * This parameter is no longer used and does not need to be specified.
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

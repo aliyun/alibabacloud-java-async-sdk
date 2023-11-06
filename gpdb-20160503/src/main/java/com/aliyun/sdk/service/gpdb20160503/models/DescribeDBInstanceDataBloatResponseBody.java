@@ -335,8 +335,9 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
              * The storage type of the table. Valid values:
              * <p>
              * 
-             * *   **Heap**: heap table
-             * *   **AO**: append-optimized (AO) table
+             * *   **Heap Table**
+             * *   **Append-Only Heap Table**
+             * *   **Append-Only Columnar Table**
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
