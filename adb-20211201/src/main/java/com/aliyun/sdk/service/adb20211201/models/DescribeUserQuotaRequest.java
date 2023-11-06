@@ -17,9 +17,14 @@ public class DescribeUserQuotaRequest extends Request {
     @Validation(required = true)
     private String DBClusterId;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
     private DescribeUserQuotaRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class DescribeUserQuotaRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUserQuotaRequest, Builder> {
         private String DBClusterId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class DescribeUserQuotaRequest extends Request {
         private Builder(DescribeUserQuotaRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class DescribeUserQuotaRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

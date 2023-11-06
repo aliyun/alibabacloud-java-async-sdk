@@ -86,7 +86,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The average number of tasks.
+         * The queried SQL pattern.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -338,7 +338,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * AccessIP.
+             * The IP address of the client.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Type** is set to **accessip**.
              */
             public Builder accessIP(String accessIP) {
                 this.accessIP = accessIP;
@@ -346,7 +349,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgCpuTime.
+             * The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder avgCpuTime(String avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -354,7 +357,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPeakMemory.
+             * The average peak memory usage of the SQL pattern within the query time range. Unit: KB.
              */
             public Builder avgPeakMemory(String avgPeakMemory) {
                 this.avgPeakMemory = avgPeakMemory;
@@ -362,7 +365,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgScanSize.
+             * The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
              */
             public Builder avgScanSize(String avgScanSize) {
                 this.avgScanSize = avgScanSize;
@@ -370,7 +373,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgStageCount.
+             * The average number of scanned rows.
              */
             public Builder avgStageCount(String avgStageCount) {
                 this.avgStageCount = avgStageCount;
@@ -378,7 +381,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTaskCount.
+             * The average number of tasks.
              */
             public Builder avgTaskCount(String avgTaskCount) {
                 this.avgTaskCount = avgTaskCount;
@@ -386,7 +389,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -394,7 +397,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCpuTime.
+             * The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder maxCpuTime(String maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -402,7 +405,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPeakMemory.
+             * The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.
              */
             public Builder maxPeakMemory(String maxPeakMemory) {
                 this.maxPeakMemory = maxPeakMemory;
@@ -410,7 +413,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScanSize.
+             * The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.
              */
             public Builder maxScanSize(String maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -418,7 +421,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxStageCount.
+             * The maximum number of stages.
              */
             public Builder maxStageCount(String maxStageCount) {
                 this.maxStageCount = maxStageCount;
@@ -426,7 +429,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTaskCount.
+             * The maximum number of tasks.
              */
             public Builder maxTaskCount(String maxTaskCount) {
                 this.maxTaskCount = maxTaskCount;
@@ -434,7 +437,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * SQL Pattern。
+             * The SQL pattern.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -442,7 +445,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCount.
+             * The number of queries performed in association with the SQL pattern within the query time range.
              */
             public Builder queryCount(String queryCount) {
                 this.queryCount = queryCount;
@@ -450,7 +453,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * ReportDate.
+             * The start date of the query.
              */
             public Builder reportDate(String reportDate) {
                 this.reportDate = reportDate;
@@ -458,7 +461,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Type** is left empty or set to **user**.
              */
             public Builder user(String user) {
                 this.user = user;
