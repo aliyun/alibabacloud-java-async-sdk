@@ -1,0 +1,323 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.config20200907.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetAggregateDiscoveredResourceResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetAggregateDiscoveredResourceResponseBody</p>
+ */
+public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
+    @NameInMap("DiscoveredResourceDetail")
+    private DiscoveredResourceDetail discoveredResourceDetail;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private GetAggregateDiscoveredResourceResponseBody(Builder builder) {
+        this.discoveredResourceDetail = builder.discoveredResourceDetail;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetAggregateDiscoveredResourceResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return discoveredResourceDetail
+     */
+    public DiscoveredResourceDetail getDiscoveredResourceDetail() {
+        return this.discoveredResourceDetail;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private DiscoveredResourceDetail discoveredResourceDetail; 
+        private String requestId; 
+
+        /**
+         * The information about the resource.
+         */
+        public Builder discoveredResourceDetail(DiscoveredResourceDetail discoveredResourceDetail) {
+            this.discoveredResourceDetail = discoveredResourceDetail;
+            return this;
+        }
+
+        /**
+         * The request ID.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public GetAggregateDiscoveredResourceResponseBody build() {
+            return new GetAggregateDiscoveredResourceResponseBody(this);
+        } 
+
+    } 
+
+    public static class DiscoveredResourceDetail extends TeaModel {
+        @NameInMap("AccountId")
+        private Long accountId;
+
+        @NameInMap("AvailabilityZone")
+        private String availabilityZone;
+
+        @NameInMap("Configuration")
+        private String configuration;
+
+        @NameInMap("Region")
+        private String region;
+
+        @NameInMap("ResourceCreationTime")
+        private Long resourceCreationTime;
+
+        @NameInMap("ResourceDeleted")
+        private Integer resourceDeleted;
+
+        @NameInMap("ResourceId")
+        private String resourceId;
+
+        @NameInMap("ResourceName")
+        private String resourceName;
+
+        @NameInMap("ResourceStatus")
+        private String resourceStatus;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        @NameInMap("Tags")
+        private String tags;
+
+        private DiscoveredResourceDetail(Builder builder) {
+            this.accountId = builder.accountId;
+            this.availabilityZone = builder.availabilityZone;
+            this.configuration = builder.configuration;
+            this.region = builder.region;
+            this.resourceCreationTime = builder.resourceCreationTime;
+            this.resourceDeleted = builder.resourceDeleted;
+            this.resourceId = builder.resourceId;
+            this.resourceName = builder.resourceName;
+            this.resourceStatus = builder.resourceStatus;
+            this.resourceType = builder.resourceType;
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiscoveredResourceDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public Long getAccountId() {
+            return this.accountId;
+        }
+
+        /**
+         * @return availabilityZone
+         */
+        public String getAvailabilityZone() {
+            return this.availabilityZone;
+        }
+
+        /**
+         * @return configuration
+         */
+        public String getConfiguration() {
+            return this.configuration;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return resourceCreationTime
+         */
+        public Long getResourceCreationTime() {
+            return this.resourceCreationTime;
+        }
+
+        /**
+         * @return resourceDeleted
+         */
+        public Integer getResourceDeleted() {
+            return this.resourceDeleted;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceStatus
+         */
+        public String getResourceStatus() {
+            return this.resourceStatus;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return tags
+         */
+        public String getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private Long accountId; 
+            private String availabilityZone; 
+            private String configuration; 
+            private String region; 
+            private Long resourceCreationTime; 
+            private Integer resourceDeleted; 
+            private String resourceId; 
+            private String resourceName; 
+            private String resourceStatus; 
+            private String resourceType; 
+            private String tags; 
+
+            /**
+             * The ID of the Alibaba Cloud account to which the resource belongs.
+             */
+            public Builder accountId(Long accountId) {
+                this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * The ID of the zone where the resource resides.
+             */
+            public Builder availabilityZone(String availabilityZone) {
+                this.availabilityZone = availabilityZone;
+                return this;
+            }
+
+            /**
+             * The configuration of the resource.
+             */
+            public Builder configuration(String configuration) {
+                this.configuration = configuration;
+                return this;
+            }
+
+            /**
+             * The region ID.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * The timestamp when the resource was created.
+             */
+            public Builder resourceCreationTime(Long resourceCreationTime) {
+                this.resourceCreationTime = resourceCreationTime;
+                return this;
+            }
+
+            /**
+             * Indicates whether the resource was deleted. Valid values:
+             * <p>
+             * 
+             * *   1: The resource was not deleted.
+             * *   0: The resource was deleted.
+             */
+            public Builder resourceDeleted(Integer resourceDeleted) {
+                this.resourceDeleted = resourceDeleted;
+                return this;
+            }
+
+            /**
+             * The resource ID.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * The name of the resource.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:
+             * <p>
+             * 
+             * *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.
+             * *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
+             */
+            public Builder resourceStatus(String resourceStatus) {
+                this.resourceStatus = resourceStatus;
+                return this;
+            }
+
+            /**
+             * The type of the resource.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * The tags of the resource.
+             */
+            public Builder tags(String tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public DiscoveredResourceDetail build() {
+                return new DiscoveredResourceDetail(this);
+            } 
+
+        } 
+
+    }
+}
