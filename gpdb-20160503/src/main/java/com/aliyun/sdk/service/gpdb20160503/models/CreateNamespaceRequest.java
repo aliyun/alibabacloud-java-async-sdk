@@ -42,6 +42,7 @@ public class CreateNamespaceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private CreateNamespaceRequest(Builder builder) {

@@ -36,6 +36,7 @@ public class DeleteCollectionDataRequest extends Request {
 
     @Query
     @NameInMap("NamespacePassword")
+    @Validation(required = true)
     private String namespacePassword;
 
     @Query
@@ -44,6 +45,7 @@ public class DeleteCollectionDataRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DeleteCollectionDataRequest(Builder builder) {

@@ -29,6 +29,7 @@ public class DeleteNamespaceRequest extends Request {
 
     @Query
     @NameInMap("Namespace")
+    @Validation(required = true)
     private String namespace;
 
     @Query
@@ -37,6 +38,7 @@ public class DeleteNamespaceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DeleteNamespaceRequest(Builder builder) {

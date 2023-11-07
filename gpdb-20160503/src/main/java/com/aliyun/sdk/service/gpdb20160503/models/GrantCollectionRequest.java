@@ -52,6 +52,7 @@ public class GrantCollectionRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private GrantCollectionRequest(Builder builder) {

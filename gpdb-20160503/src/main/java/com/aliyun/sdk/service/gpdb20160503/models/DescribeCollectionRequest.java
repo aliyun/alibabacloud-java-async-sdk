@@ -28,6 +28,7 @@ public class DescribeCollectionRequest extends Request {
 
     @Query
     @NameInMap("NamespacePassword")
+    @Validation(required = true)
     private String namespacePassword;
 
     @Query
@@ -36,6 +37,7 @@ public class DescribeCollectionRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DescribeCollectionRequest(Builder builder) {

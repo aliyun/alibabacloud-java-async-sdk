@@ -24,6 +24,7 @@ public class DescribeNamespaceRequest extends Request {
 
     @Query
     @NameInMap("ManagerAccountPassword")
+    @Validation(required = true)
     private String managerAccountPassword;
 
     @Query
@@ -37,6 +38,7 @@ public class DescribeNamespaceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DescribeNamespaceRequest(Builder builder) {

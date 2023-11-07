@@ -33,6 +33,7 @@ public class ListNamespacesRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private ListNamespacesRequest(Builder builder) {

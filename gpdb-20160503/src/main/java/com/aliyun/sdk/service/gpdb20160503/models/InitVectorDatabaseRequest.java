@@ -33,6 +33,7 @@ public class InitVectorDatabaseRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private InitVectorDatabaseRequest(Builder builder) {

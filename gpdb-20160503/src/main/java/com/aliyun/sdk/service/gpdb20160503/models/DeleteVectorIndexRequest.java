@@ -42,6 +42,7 @@ public class DeleteVectorIndexRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DeleteVectorIndexRequest(Builder builder) {

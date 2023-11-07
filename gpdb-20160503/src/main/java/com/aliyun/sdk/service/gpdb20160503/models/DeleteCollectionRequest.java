@@ -37,6 +37,7 @@ public class DeleteCollectionRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DeleteCollectionRequest(Builder builder) {

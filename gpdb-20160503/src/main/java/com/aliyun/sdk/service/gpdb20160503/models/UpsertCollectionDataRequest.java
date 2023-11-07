@@ -37,11 +37,11 @@ public class UpsertCollectionDataRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
-    @Query
+    @Body
     @NameInMap("Rows")
-    @Validation(required = true)
     private java.util.List < Rows> rows;
 
     private UpsertCollectionDataRequest(Builder builder) {
@@ -200,7 +200,7 @@ public class UpsertCollectionDataRequest extends Request {
          */
         public Builder rows(java.util.List < Rows> rows) {
             String rowsShrink = shrink(rows, "Rows", "json");
-            this.putQueryParameter("Rows", rowsShrink);
+            this.putBodyParameter("Rows", rowsShrink);
             this.rows = rows;
             return this;
         }
@@ -220,6 +220,7 @@ public class UpsertCollectionDataRequest extends Request {
         private java.util.Map < String, String > metadata;
 
         @NameInMap("Vector")
+        @Validation(required = true)
         private java.util.List < Double > vector;
 
         private Rows(Builder builder) {

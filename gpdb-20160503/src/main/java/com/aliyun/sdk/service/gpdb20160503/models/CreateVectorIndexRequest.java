@@ -60,6 +60,7 @@ public class CreateVectorIndexRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private CreateVectorIndexRequest(Builder builder) {

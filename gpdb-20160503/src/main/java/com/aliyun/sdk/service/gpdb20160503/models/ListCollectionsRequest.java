@@ -32,6 +32,7 @@ public class ListCollectionsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private ListCollectionsRequest(Builder builder) {

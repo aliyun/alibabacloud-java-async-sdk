@@ -53,6 +53,7 @@ public class QueryCollectionDataRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
