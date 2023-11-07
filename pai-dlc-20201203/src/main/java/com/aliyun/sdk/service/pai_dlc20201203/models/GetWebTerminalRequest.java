@@ -21,6 +21,10 @@ public class GetWebTerminalRequest extends Request {
     private String podId;
 
     @Query
+    @NameInMap("IsShared")
+    private Boolean isShared;
+
+    @Query
     @NameInMap("PodUid")
     private String podUid;
 
@@ -28,6 +32,7 @@ public class GetWebTerminalRequest extends Request {
         super(builder);
         this.jobId = builder.jobId;
         this.podId = builder.podId;
+        this.isShared = builder.isShared;
         this.podUid = builder.podUid;
     }
 
@@ -59,6 +64,13 @@ public class GetWebTerminalRequest extends Request {
     }
 
     /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
+    /**
      * @return podUid
      */
     public String getPodUid() {
@@ -68,6 +80,7 @@ public class GetWebTerminalRequest extends Request {
     public static final class Builder extends Request.Builder<GetWebTerminalRequest, Builder> {
         private String jobId; 
         private String podId; 
+        private Boolean isShared; 
         private String podUid; 
 
         private Builder() {
@@ -78,6 +91,7 @@ public class GetWebTerminalRequest extends Request {
             super(request);
             this.jobId = request.jobId;
             this.podId = request.podId;
+            this.isShared = request.isShared;
             this.podUid = request.podUid;
         } 
 
@@ -96,6 +110,15 @@ public class GetWebTerminalRequest extends Request {
         public Builder podId(String podId) {
             this.putPathParameter("PodId", podId);
             this.podId = podId;
+            return this;
+        }
+
+        /**
+         * IsShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.putQueryParameter("IsShared", isShared);
+            this.isShared = isShared;
             return this;
         }
 
