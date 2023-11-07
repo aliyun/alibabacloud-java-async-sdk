@@ -173,7 +173,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         private String userName; 
 
         /**
-         * AccessKeyId.
+         * The AccessKey ID.
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -181,7 +181,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -189,7 +189,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AccountType.
+         * The type of the account to which the AccessKey pair belongs.
          */
         public Builder accountType(String accountType) {
             this.accountType = accountType;
@@ -197,7 +197,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * The details about the event.
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -205,7 +205,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * The ID of the account to which the AccessKey pair belongs.
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -213,7 +213,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,7 +221,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The Alibaba Cloud service that was last accessed.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -229,7 +229,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceNameCn.
+         * The Chinese name of the Alibaba Cloud service that was last accessed.
          */
         public Builder serviceNameCn(String serviceNameCn) {
             this.serviceNameCn = serviceNameCn;
@@ -237,7 +237,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceNameEn.
+         * The English name of the Alibaba Cloud service that was last accessed.
          */
         public Builder serviceNameEn(String serviceNameEn) {
             this.serviceNameEn = serviceNameEn;
@@ -245,7 +245,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * The event source.
          */
         public Builder source(String source) {
             this.source = source;
@@ -253,7 +253,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UsedTimestamp.
+         * The timestamp when the AccessKey pair was last called.
          */
         public Builder usedTimestamp(Long usedTimestamp) {
             this.usedTimestamp = usedTimestamp;
@@ -261,7 +261,10 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UserName.
+         * The name of the account to which the AccessKey pair belongs.
+         * <p>
+         * 
+         * If the value of the AccountType parameter is root-account, the value of the UserName parameter is root. If the value of the AccountType parameter is ram-user, the value of the UserName parameter is the name of a RAM user.
          */
         public Builder userName(String userName) {
             this.userName = userName;

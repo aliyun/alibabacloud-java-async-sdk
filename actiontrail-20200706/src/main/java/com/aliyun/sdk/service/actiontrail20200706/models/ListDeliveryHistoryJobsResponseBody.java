@@ -86,7 +86,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DeliveryHistoryJobs.
+         * The list of historical event delivery tasks.
          */
         public Builder deliveryHistoryJobs(java.util.List < DeliveryHistoryJobs> deliveryHistoryJobs) {
             this.deliveryHistoryJobs = deliveryHistoryJobs;
@@ -94,7 +94,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of historical event delivery tasks returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             private String updatedTime; 
 
             /**
-             * CreatedTime.
+             * The time when the task was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +250,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -258,7 +258,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * HomeRegion.
+             * The home region of the trail.
              */
             public Builder homeRegion(String homeRegion) {
                 this.homeRegion = homeRegion;
@@ -266,7 +266,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The task ID.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -274,7 +274,13 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * The task status. Valid values:
+             * <p>
+             * 
+             * *   0: The task is initializing.
+             * *   1: The task is delivering historical events.
+             * *   2: The task is complete.
+             * *   3: The task fails.
              */
             public Builder jobStatus(Integer jobStatus) {
                 this.jobStatus = jobStatus;
@@ -282,7 +288,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the task started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -290,7 +296,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TrailName.
+             * The name of the trail.
              */
             public Builder trailName(String trailName) {
                 this.trailName = trailName;
@@ -298,7 +304,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The time when the task was updated.
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;

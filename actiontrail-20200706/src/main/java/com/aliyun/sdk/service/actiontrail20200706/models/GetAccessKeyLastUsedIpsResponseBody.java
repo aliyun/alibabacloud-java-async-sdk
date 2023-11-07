@@ -64,7 +64,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ips.
+         * The list of returned IP addresses.
          */
         public Builder ips(java.util.List < Ips> ips) {
             this.ips = ips;
@@ -72,7 +72,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -80,7 +80,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +156,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
             private Long usedTimestamp; 
 
             /**
-             * Detail.
+             * An array that consists of the details about the event.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -164,7 +164,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -172,7 +172,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The event source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -180,7 +180,7 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTimestamp.
+             * The timestamp when the IP address was used.
              */
             public Builder usedTimestamp(Long usedTimestamp) {
                 this.usedTimestamp = usedTimestamp;

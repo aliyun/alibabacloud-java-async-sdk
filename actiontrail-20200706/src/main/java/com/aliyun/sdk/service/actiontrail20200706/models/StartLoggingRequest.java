@@ -55,7 +55,12 @@ public class StartLoggingRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the trail that you want to enable.
+         * <p>
+         * 
+         * The name must be 6 to 36 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). It must start with a lowercase letter.
+         * 
+         * > The name must be unique within your Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -86,7 +86,7 @@ public class LookupEventsResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * EndTime.
+         * The end of the time range when event details were queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -94,7 +94,10 @@ public class LookupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Events.
+         * The returned event details.
+         * <p>
+         * 
+         * For more information about the fields in an event log, see [ActionTrail event log reference](~~28819~~).
          */
         public Builder events(java.util.List < java.util.Map<String, ?>> events) {
             this.events = events;
@@ -102,7 +105,10 @@ public class LookupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token used to return the next page of query results.
+         * <p>
+         * 
+         * > This parameter is not returned if no more results are to be returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +116,7 @@ public class LookupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,7 @@ public class LookupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range when event details were queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

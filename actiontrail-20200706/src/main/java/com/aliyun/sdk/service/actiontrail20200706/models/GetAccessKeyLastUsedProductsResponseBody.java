@@ -52,7 +52,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Products.
+         * The list of returned Alibaba Cloud services.
          */
         public Builder products(java.util.List < Products> products) {
             this.products = products;
@@ -60,7 +60,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,7 +160,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
             private Long usedTimestamp; 
 
             /**
-             * Detail.
+             * The event details.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -168,7 +168,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The Alibaba Cloud service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -176,7 +176,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceNameCn.
+             * The Chinese name of the Alibaba Cloud service.
              */
             public Builder serviceNameCn(String serviceNameCn) {
                 this.serviceNameCn = serviceNameCn;
@@ -184,7 +184,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceNameEn.
+             * The English name of the Alibaba Cloud service.
              */
             public Builder serviceNameEn(String serviceNameEn) {
                 this.serviceNameEn = serviceNameEn;
@@ -192,7 +192,46 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The event source.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Internal
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     other events
+             * 
+             *     <!-- -->
+             * 
+             * *   ManagementEvent
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     management events
+             * 
+             *     <!-- -->
+             * 
+             * *   DataEvent
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     data events
+             * 
+             *     <!-- -->
              */
             public Builder source(String source) {
                 this.source = source;
@@ -200,7 +239,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTimestamp.
+             * A pagination token. It can be used in the next request to retrieve a new page of results. Unit: millisecond.
              */
             public Builder usedTimestamp(Long usedTimestamp) {
                 this.usedTimestamp = usedTimestamp;

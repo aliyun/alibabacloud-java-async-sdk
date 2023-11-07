@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTrailResponseBody} extends {@link TeaModel}
+ * {@link UpdateGlobalEventsStorageRegionResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteTrailResponseBody</p>
+ * <p>UpdateGlobalEventsStorageRegionResponseBody</p>
  */
-public class DeleteTrailResponseBody extends TeaModel {
+public class UpdateGlobalEventsStorageRegionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteTrailResponseBody(Builder builder) {
+    private UpdateGlobalEventsStorageRegionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteTrailResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteTrailResponseBody create() {
+    public static UpdateGlobalEventsStorageRegionResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class DeleteTrailResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteTrailResponseBody build() {
-            return new DeleteTrailResponseBody(this);
+        public UpdateGlobalEventsStorageRegionResponseBody build() {
+            return new UpdateGlobalEventsStorageRegionResponseBody(this);
         } 
 
     } 

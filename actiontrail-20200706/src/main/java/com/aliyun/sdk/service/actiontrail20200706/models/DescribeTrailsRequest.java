@@ -82,7 +82,11 @@ public class DescribeTrailsRequest extends Request {
         } 
 
         /**
-         * IncludeOrganizationTrail.
+         * Specifies whether to query the information about multi-account trails. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder includeOrganizationTrail(Boolean includeOrganizationTrail) {
             this.putQueryParameter("IncludeOrganizationTrail", includeOrganizationTrail);
@@ -91,7 +95,11 @@ public class DescribeTrailsRequest extends Request {
         }
 
         /**
-         * IncludeShadowTrails.
+         * Specifies whether to return the information about shadow trails. Valid values:
+         * <p>
+         * 
+         * *   false: Do not return the information about shadow trails. It is the default value.
+         * *   true: Return the information about shadow trails.
          */
         public Builder includeShadowTrails(Boolean includeShadowTrails) {
             this.putQueryParameter("IncludeShadowTrails", includeShadowTrails);
@@ -100,7 +108,7 @@ public class DescribeTrailsRequest extends Request {
         }
 
         /**
-         * NameList.
+         * The names of the trails whose information you want to query. Separate multiple trail names with commas (,).
          */
         public Builder nameList(String nameList) {
             this.putQueryParameter("NameList", nameList);

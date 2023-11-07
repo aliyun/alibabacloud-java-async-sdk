@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-actiontrail20200706</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-actiontrail20200706</name>
   <description>Alibaba Cloud Actiontrail (20200706) Async SDK for Java
@@ -41,7 +41,7 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-    <service.version>0.1.5-beta</service.version>
+    <service.version>0.2.4-beta</service.version>
   </properties>
   <dependencies>
     <dependency>

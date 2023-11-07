@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetTrailStatusResponse} extends {@link TeaModel}
+ * {@link GetGlobalEventsStorageRegionResponse} extends {@link TeaModel}
  *
- * <p>GetTrailStatusResponse</p>
+ * <p>GetGlobalEventsStorageRegionResponse</p>
  */
-public class GetTrailStatusResponse extends Response {
+public class GetGlobalEventsStorageRegionResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class GetTrailStatusResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetTrailStatusResponseBody body;
+    private GetGlobalEventsStorageRegionResponseBody body;
 
-    private GetTrailStatusResponse(BuilderImpl builder) {
+    private GetGlobalEventsStorageRegionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetTrailStatusResponse create() {
+    public static GetGlobalEventsStorageRegionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class GetTrailStatusResponse extends Response {
     /**
      * @return body
      */
-    public GetTrailStatusResponseBody getBody() {
+    public GetGlobalEventsStorageRegionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetTrailStatusResponse, Builder> {
+    public interface Builder extends Response.Builder<GetGlobalEventsStorageRegionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetTrailStatusResponseBody body);
+        Builder body(GetGlobalEventsStorageRegionResponseBody body);
 
         @Override
-        GetTrailStatusResponse build();
+        GetGlobalEventsStorageRegionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetTrailStatusResponse, Builder>
+            extends Response.BuilderImpl<GetGlobalEventsStorageRegionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetTrailStatusResponseBody body; 
+        private GetGlobalEventsStorageRegionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetTrailStatusResponse response) {
+        private BuilderImpl(GetGlobalEventsStorageRegionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class GetTrailStatusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetTrailStatusResponseBody body) {
+        public Builder body(GetGlobalEventsStorageRegionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetTrailStatusResponse build() {
-            return new GetTrailStatusResponse(this);
+        public GetGlobalEventsStorageRegionResponse build() {
+            return new GetGlobalEventsStorageRegionResponse(this);
         } 
 
     } 

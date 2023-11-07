@@ -64,7 +64,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -72,7 +72,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +80,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The list of returned resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -168,7 +168,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
             private Long usedTimestamp; 
 
             /**
-             * Detail.
+             * The event details.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -176,7 +176,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -184,7 +184,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -192,7 +192,46 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The event source.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Internal
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     other events
+             * 
+             *     <!-- -->
+             * 
+             * *   ManagementEvent
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     management events
+             * 
+             *     <!-- -->
+             * 
+             * *   DataEvent
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     data events
+             * 
+             *     <!-- -->
              */
             public Builder source(String source) {
                 this.source = source;
@@ -200,7 +239,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTimestamp.
+             * The timestamp when the resource was used. Unit: millisecond.
              */
             public Builder usedTimestamp(Long usedTimestamp) {
                 this.usedTimestamp = usedTimestamp;

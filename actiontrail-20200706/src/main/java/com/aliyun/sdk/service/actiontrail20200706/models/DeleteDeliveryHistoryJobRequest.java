@@ -55,7 +55,10 @@ public class DeleteDeliveryHistoryJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the historical event delivery task to be deleted.
+         * <p>
+         * 
+         * You can call the [ListDeliveryHistoryJobs](~~188101~~) operation to query task IDs.
          */
         public Builder jobId(Integer jobId) {
             this.putQueryParameter("JobId", jobId);

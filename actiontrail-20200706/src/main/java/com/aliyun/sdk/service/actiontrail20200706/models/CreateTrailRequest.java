@@ -167,7 +167,12 @@ public class CreateTrailRequest extends Request {
         } 
 
         /**
-         * EventRW.
+         * The read/write type of the events to be delivered. Valid values:
+         * <p>
+         * 
+         * *   Write: write events. It is the default value.
+         * *   Read: read events.
+         * *   All: read and write events.
          */
         public Builder eventRW(String eventRW) {
             this.putQueryParameter("EventRW", eventRW);
@@ -176,7 +181,11 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * IsOrganizationTrail.
+         * Specifies whether to create a multi-account trail. Valid values:
+         * <p>
+         * 
+         * *   true: creates a multi-account trail.
+         * *   false (default): creates a single-account trail.
          */
         public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
             this.putQueryParameter("IsOrganizationTrail", isOrganizationTrail);
@@ -185,7 +194,12 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the trail to be created.
+         * <p>
+         * 
+         * The name must be 6 to 36 characters in length. The name must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * > The name must be unique within your Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -194,7 +208,12 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * OssBucketName.
+         * The name of the OSS bucket to which events are to be delivered.
+         * <p>
+         * 
+         * The name must be 3 to 63 characters in length. The name must start with a lowercase letter or a digit and can contain lowercase letters, digits, and hyphens (-).
+         * 
+         * > You must specify at least one of the OssBucketName and SlsProjectArn parameters.
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -203,7 +222,10 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * OssKeyPrefix.
+         * The prefix of the log files to be stored in the destination OSS bucket. This parameter can be left empty.
+         * <p>
+         * 
+         * The prefix must be 6 to 32 characters in length. The prefix must start with a letter and can contain letters, digits, hyphens (-), forward slashes (/), and underscores (\_).
          */
         public Builder ossKeyPrefix(String ossKeyPrefix) {
             this.putQueryParameter("OssKeyPrefix", ossKeyPrefix);
@@ -212,7 +234,11 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * OssWriteRoleArn.
+         * The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, ActionTrail creates a service-linked role to create the required resources. For more information, see [Manage the service-linked role](~~169244~~).
+         * *   If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see [Deliver events across Alibaba Cloud accounts](~~207462~~).
          */
         public Builder ossWriteRoleArn(String ossWriteRoleArn) {
             this.putQueryParameter("OssWriteRoleArn", ossWriteRoleArn);
@@ -221,7 +247,10 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * SlsProjectArn.
+         * The ARN of the Log Service project to which events are to be delivered.
+         * <p>
+         * 
+         * > You must specify at least one of the OssBucketName and SlsProjectArn parameters.
          */
         public Builder slsProjectArn(String slsProjectArn) {
             this.putQueryParameter("SlsProjectArn", slsProjectArn);
@@ -230,7 +259,11 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * SlsWriteRoleArn.
+         * The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see [Manage the service-linked role](~~169244~~).
+         * *   If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see [Deliver events across Alibaba Cloud accounts](~~207462~~).
          */
         public Builder slsWriteRoleArn(String slsWriteRoleArn) {
             this.putQueryParameter("SlsWriteRoleArn", slsWriteRoleArn);
@@ -239,7 +272,12 @@ public class CreateTrailRequest extends Request {
         }
 
         /**
-         * TrailRegion.
+         * The one or more regions from which the trail delivers events.
+         * <p>
+         * 
+         * The default value is All, which indicates that the trail delivers events from all regions.
+         * 
+         * You can also specify specific regions. You can call the [DescribeRegions](~~213597~~) operation to query all the supported regions.
          */
         public Builder trailRegion(String trailRegion) {
             this.putQueryParameter("TrailRegion", trailRegion);

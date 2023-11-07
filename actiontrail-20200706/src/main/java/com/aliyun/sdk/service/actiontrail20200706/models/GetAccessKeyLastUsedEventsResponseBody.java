@@ -64,7 +64,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Events.
+         * The list of returned events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -72,7 +72,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -80,7 +80,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +156,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
             private Long usedTimestamp; 
 
             /**
-             * Detail.
+             * An array that consists of the details about the event.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -164,7 +164,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the event.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -172,7 +172,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The event source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -180,7 +180,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTimestamp.
+             * The timestamp when the event was generated.
              */
             public Builder usedTimestamp(Long usedTimestamp) {
                 this.usedTimestamp = usedTimestamp;

@@ -69,7 +69,11 @@ public class GetTrailStatusRequest extends Request {
         } 
 
         /**
-         * IsOrganizationTrail.
+         * Specifies whether to query the status of a multi-account trail. Valid values:
+         * <p>
+         * 
+         * *   true: Query the status of a multi-account trail.
+         * *   false: Query the status of a single-account trail. It is the default value.
          */
         public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
             this.putQueryParameter("IsOrganizationTrail", isOrganizationTrail);
@@ -78,7 +82,12 @@ public class GetTrailStatusRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the trail.
+         * <p>
+         * 
+         * The name must be 6 to 36 characters in length. The name must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * > The name must be unique within your Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

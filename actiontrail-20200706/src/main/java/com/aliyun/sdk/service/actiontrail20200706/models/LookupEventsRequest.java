@@ -124,7 +124,11 @@ public class LookupEventsRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The order in which details of events are to be retrieved. Valid values:
+         * <p>
+         * 
+         * *   FORWARD: ascending order.
+         * *   BACKWARD: descending order. This is the default value.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -133,7 +137,7 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The default time is the current time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -142,7 +146,7 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * LookupAttribute.
+         * Query conditions.
          */
         public Builder lookupAttribute(java.util.List < LookupAttribute> lookupAttribute) {
             this.putQueryParameter("LookupAttribute", lookupAttribute);
@@ -151,7 +155,10 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to be returned.
+         * <p>
+         * 
+         * Valid values: 0 to 50.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,7 +167,10 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used to request the next page of query results.
+         * <p>
+         * 
+         * > The request parameters must be the same as those of the last request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -169,7 +179,7 @@ public class LookupEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The default time is seven days prior to the current time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -223,7 +233,19 @@ public class LookupEventsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the query condition. Valid values:
+             * <p>
+             * 
+             * *  ServiceName: the name of a specific Alibaba Cloud service.
+             * *  EventName: the name of a specific event.
+             * *  User: the name of the RAM user who calls a specific operation.
+             * *  EventId: the ID of a specific event.
+             * *  ResourceType: the type of resources.
+             * *   ResourceName: the name of a specific resource.
+             * *   EventRW: the read/write type of events.
+             * *  EventAccessKeyId: the AccessKey ID used in events.
+             * 
+             * > You can use only one query condition for each query.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +253,17 @@ public class LookupEventsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the query condition. Valid values:
+             * <p>
+             * 
+             * *   When the LookupAttribute.N.Key parameter is set to ServiceName, you can set this parameter to a value such as `Ecs`.
+             * *   When the LookupAttribute.N.Key parameter is set to EventName, you can set this parameter to a value such as `ConsoleSignin`.
+             * *   When the LookupAttribute.N.Key parameter is set to User, you can set this parameter to a value such as `Alice`.
+             * *   When the LookupAttribute.N.Key parameter is set to EventId, you can set this parameter to a value such as `B702AFA3-FD4B-40E3-88E4-C0752FAA****`.
+             * *   When the LookupAttribute.N.Key parameter is set to ResourceType, you can set this parameter to a value such as `ACS::ECS::Instance`.
+             * *   When the LookupAttribute.N.Key parameter is set to ResourceName, you can set this parameter to a value such as `i-bp14664y88udkt45****`.
+             * *   When the LookupAttribute.N.Key parameter is set to EventRW, you can set this parameter to `Read` or `Write`.
+             * *   When the LookupAttribute.N.Key parameter is set to EventAccessKeyId, you can set this parameter to a value such as `LTAI4FoDkCf4DU1bic1V****`.
              */
             public Builder value(String value) {
                 this.value = value;

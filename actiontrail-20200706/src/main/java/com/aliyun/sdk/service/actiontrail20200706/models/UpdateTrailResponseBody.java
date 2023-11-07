@@ -146,7 +146,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         private String trailRegion; 
 
         /**
-         * EventRW.
+         * The read/write type of the events to be delivered.
          */
         public Builder eventRW(String eventRW) {
             this.eventRW = eventRW;
@@ -154,7 +154,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * HomeRegion.
+         * The home region of the trail.
          */
         public Builder homeRegion(String homeRegion) {
             this.homeRegion = homeRegion;
@@ -162,7 +162,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the trail.
          */
         public Builder name(String name) {
             this.name = name;
@@ -170,7 +170,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucketName.
+         * The name of the OSS bucket.
          */
         public Builder ossBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
@@ -178,7 +178,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * OssKeyPrefix.
+         * The prefix of the log files to be stored in the destination OSS bucket.
          */
         public Builder ossKeyPrefix(String ossKeyPrefix) {
             this.ossKeyPrefix = ossKeyPrefix;
@@ -186,7 +186,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * OssWriteRoleArn.
+         * The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
          */
         public Builder ossWriteRoleArn(String ossWriteRoleArn) {
             this.ossWriteRoleArn = ossWriteRoleArn;
@@ -194,7 +194,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +202,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * SlsProjectArn.
+         * The ARN of the Log Service project to which events are to be delivered.
          */
         public Builder slsProjectArn(String slsProjectArn) {
             this.slsProjectArn = slsProjectArn;
@@ -210,7 +210,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * SlsWriteRoleArn.
+         * The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.
          */
         public Builder slsWriteRoleArn(String slsWriteRoleArn) {
             this.slsWriteRoleArn = slsWriteRoleArn;
@@ -218,7 +218,7 @@ public class UpdateTrailResponseBody extends TeaModel {
         }
 
         /**
-         * TrailRegion.
+         * The one or more regions from which the trail delivers events.
          */
         public Builder trailRegion(String trailRegion) {
             this.trailRegion = trailRegion;

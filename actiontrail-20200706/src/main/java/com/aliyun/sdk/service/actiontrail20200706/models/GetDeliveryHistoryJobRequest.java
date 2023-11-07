@@ -55,7 +55,7 @@ public class GetDeliveryHistoryJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the historical event delivery task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * The regions returned.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * 地域名称
+             * The name of the region.
+             * <p>
+             * 
+             * > If the AcceptLanguage parameter is set to zh-CN, the Chinese name of the region is returned. If the AcceptLanguage parameter is set to zh-US or left empty, the English name of the region is returned.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +133,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域链接地址
+             * The endpoint of ActionTrail in the region.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -138,7 +141,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域ID
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

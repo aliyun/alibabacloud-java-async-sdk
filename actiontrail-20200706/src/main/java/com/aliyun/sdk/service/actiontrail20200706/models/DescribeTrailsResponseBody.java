@@ -50,7 +50,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
         private java.util.List < TrailList> trailList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
         }
 
         /**
-         * TrailList.
+         * A list of returned trails.
          */
         public Builder trailList(java.util.List < TrailList> trailList) {
             this.trailList = trailList;
@@ -314,7 +314,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the trail was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -322,7 +322,12 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * EventRW.
+             * The read/write type of the events that are delivered. Valid values:
+             * <p>
+             * 
+             * *   Write: write events. This is the default value.
+             * *   Read: read events.
+             * *   All: read and write events.
              */
             public Builder eventRW(String eventRW) {
                 this.eventRW = eventRW;
@@ -330,7 +335,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * HomeRegion.
+             * The home region of the trail.
              */
             public Builder homeRegion(String homeRegion) {
                 this.homeRegion = homeRegion;
@@ -338,7 +343,11 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * IsOrganizationTrail.
+             * Indicates whether the trail is a multi-account trail. Valid values:
+             * <p>
+             * 
+             * *   false (default)
+             * *   true
              */
             public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
                 this.isOrganizationTrail = isOrganizationTrail;
@@ -346,7 +355,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the trail.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,7 +363,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * The ID of the resource directory.
+             * <p>
+             * 
+             * >  This parameter is returned only when the trail is a multi-account trail.
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -362,7 +374,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucketLocation.
+             * The region where the OSS bucket resides.
              */
             public Builder ossBucketLocation(String ossBucketLocation) {
                 this.ossBucketLocation = ossBucketLocation;
@@ -370,7 +382,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucketName.
+             * The name of the OSS bucket to which events are delivered.
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -378,7 +390,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * OssKeyPrefix.
+             * The prefix of the files that are stored in the Object Storage Service (OSS) bucket.
              */
             public Builder ossKeyPrefix(String ossKeyPrefix) {
                 this.ossKeyPrefix = ossKeyPrefix;
@@ -386,7 +398,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * OssWriteRoleArn.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
              */
             public Builder ossWriteRoleArn(String ossWriteRoleArn) {
                 this.ossWriteRoleArn = ossWriteRoleArn;
@@ -394,7 +406,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where the trail resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -402,7 +414,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProjectArn.
+             * The ARN of the Log Service project to which events are delivered.
              */
             public Builder slsProjectArn(String slsProjectArn) {
                 this.slsProjectArn = slsProjectArn;
@@ -410,7 +422,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsWriteRoleArn.
+             * The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.
              */
             public Builder slsWriteRoleArn(String slsWriteRoleArn) {
                 this.slsWriteRoleArn = slsWriteRoleArn;
@@ -418,7 +430,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * StartLoggingTime.
+             * The time when the trail was last enabled.
              */
             public Builder startLoggingTime(String startLoggingTime) {
                 this.startLoggingTime = startLoggingTime;
@@ -426,7 +438,12 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the trail. Valid values:
+             * <p>
+             * 
+             * *   Disable: disabled.
+             * *   Enable: enabled.
+             * *   Fresh: The trail is created but is not enabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -434,7 +451,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * StopLoggingTime.
+             * The time when the trail was last disabled.
              */
             public Builder stopLoggingTime(String stopLoggingTime) {
                 this.stopLoggingTime = stopLoggingTime;
@@ -442,7 +459,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * TrailArn.
+             * The ARN of the trail.
              */
             public Builder trailArn(String trailArn) {
                 this.trailArn = trailArn;
@@ -450,7 +467,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * TrailRegion.
+             * The region of the trail.
              */
             public Builder trailRegion(String trailRegion) {
                 this.trailRegion = trailRegion;
@@ -458,7 +475,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the configurations of the trail were last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

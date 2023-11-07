@@ -98,7 +98,7 @@ public class GetAccessKeyLastUsedIpsRequest extends Request {
         } 
 
         /**
-         * AccessKey.
+         * The AccessKey ID.
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);
@@ -107,7 +107,10 @@ public class GetAccessKeyLastUsedIpsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
+         * <p>
+         * 
+         * > The request parameters must be the same as those of the last request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -116,7 +119,12 @@ public class GetAccessKeyLastUsedIpsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 0 to 100.
+         * 
+         * Default value: 20.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +133,7 @@ public class GetAccessKeyLastUsedIpsRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see [Supported Alibaba Cloud services](~~28829~~).
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

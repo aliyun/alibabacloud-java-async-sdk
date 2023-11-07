@@ -54,7 +54,11 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which the region names are returned. Valid values:
+         * <p>
+         * 
+         * - zh-CN: Chinese.
+         * - en-US: English. It is the default value.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

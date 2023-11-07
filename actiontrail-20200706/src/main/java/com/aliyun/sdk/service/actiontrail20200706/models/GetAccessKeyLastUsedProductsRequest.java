@@ -55,7 +55,7 @@ public class GetAccessKeyLastUsedProductsRequest extends Request {
         } 
 
         /**
-         * AccessKey.
+         * The AccessKey ID.
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);

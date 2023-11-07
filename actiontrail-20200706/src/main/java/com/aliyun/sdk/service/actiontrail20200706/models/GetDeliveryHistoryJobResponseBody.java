@@ -146,7 +146,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         private String updatedTime; 
 
         /**
-         * CreatedTime.
+         * The time when the task was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -154,7 +154,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the task ended.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -162,7 +162,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * HomeRegion.
+         * The home region of the trail.
          */
         public Builder homeRegion(String homeRegion) {
             this.homeRegion = homeRegion;
@@ -170,7 +170,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * The ID of the task.
          */
         public Builder jobId(Long jobId) {
             this.jobId = jobId;
@@ -178,7 +178,13 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobStatus.
+         * The task status. Valid values:
+         * <p>
+         * 
+         * *   0: The task is initializing.
+         * *   1: The task is delivering historical events.
+         * *   2: The task is complete.
+         * *   3: The task fails.
          */
         public Builder jobStatus(Integer jobStatus) {
             this.jobStatus = jobStatus;
@@ -186,7 +192,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +200,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The time when the task started.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +208,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * A list of task statuses in each region.
          */
         public Builder status(java.util.List < Status> status) {
             this.status = status;
@@ -210,7 +216,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * TrailName.
+         * The name of the trail based on which the task delivers events.
          */
         public Builder trailName(String trailName) {
             this.trailName = trailName;
@@ -218,7 +224,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * The time when the task was updated.
          */
         public Builder updatedTime(String updatedTime) {
             this.updatedTime = updatedTime;
@@ -270,7 +276,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Region.
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -278,7 +284,13 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task status in each region. Valid values:
+             * <p>
+             * 
+             * *   0: The task is initializing.
+             * *   1: The task is delivering historical events.
+             * *   2: The task is complete.
+             * *   3: The task fails.
              */
             public Builder status(Integer status) {
                 this.status = status;

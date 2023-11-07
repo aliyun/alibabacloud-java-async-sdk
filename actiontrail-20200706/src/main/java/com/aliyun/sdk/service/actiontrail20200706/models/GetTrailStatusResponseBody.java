@@ -146,7 +146,11 @@ public class GetTrailStatusResponseBody extends TeaModel {
         private String stopLoggingTime; 
 
         /**
-         * IsLogging.
+         * Indicates whether logging is enabled for the trail. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isLogging(Boolean isLogging) {
             this.isLogging = isLogging;
@@ -154,7 +158,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LatestDeliveryError.
+         * The log of the last failed delivery.
          */
         public Builder latestDeliveryError(String latestDeliveryError) {
             this.latestDeliveryError = latestDeliveryError;
@@ -162,7 +166,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LatestDeliveryLogServiceError.
+         * The log of the last failed delivery to Log Service.
          */
         public Builder latestDeliveryLogServiceError(String latestDeliveryLogServiceError) {
             this.latestDeliveryLogServiceError = latestDeliveryLogServiceError;
@@ -170,7 +174,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LatestDeliveryLogServiceTime.
+         * The most recent time when an event was delivered to Log Service.
          */
         public Builder latestDeliveryLogServiceTime(String latestDeliveryLogServiceTime) {
             this.latestDeliveryLogServiceTime = latestDeliveryLogServiceTime;
@@ -178,7 +182,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LatestDeliveryTime.
+         * The most recent time when an event was delivered by the trail.
          */
         public Builder latestDeliveryTime(String latestDeliveryTime) {
             this.latestDeliveryTime = latestDeliveryTime;
@@ -186,7 +190,11 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucketStatus.
+         * Indicates whether the destination Object Storage Service (OSS) bucket is available. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder ossBucketStatus(Boolean ossBucketStatus) {
             this.ossBucketStatus = ossBucketStatus;
@@ -194,7 +202,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +210,11 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsLogStoreStatus.
+         * Indicates whether the destination Log Service Logstore is available. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder slsLogStoreStatus(Boolean slsLogStoreStatus) {
             this.slsLogStoreStatus = slsLogStoreStatus;
@@ -210,7 +222,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StartLoggingTime.
+         * The time when logging was last enabled for the trail.
          */
         public Builder startLoggingTime(String startLoggingTime) {
             this.startLoggingTime = startLoggingTime;
@@ -218,7 +230,7 @@ public class GetTrailStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StopLoggingTime.
+         * The time when logging was last disabled for the trail.
          */
         public Builder stopLoggingTime(String stopLoggingTime) {
             this.stopLoggingTime = stopLoggingTime;

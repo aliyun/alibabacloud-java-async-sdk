@@ -50,7 +50,7 @@ public class CreateDeliveryHistoryJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the historical event delivery task.
          */
         public Builder jobId(Integer jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class CreateDeliveryHistoryJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

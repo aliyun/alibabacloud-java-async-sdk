@@ -55,7 +55,7 @@ public class GetAccessKeyLastUsedInfoRequest extends Request {
         } 
 
         /**
-         * AccessKey.
+         * The AccessKey secret.
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);
