@@ -13,6 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GroupUserSaveRequest extends Request {
     @Body
+    @NameInMap("base_city_code")
+    private String baseCityCode;
+
+    @Body
+    @NameInMap("birthday")
+    private String birthday;
+
+    @Body
+    @NameInMap("cert_list")
+    private java.util.List < CertList> certList;
+
+    @Body
+    @NameInMap("gender")
+    private String gender;
+
+    @Body
     @NameInMap("job_no")
     private String jobNo;
 
@@ -45,6 +61,10 @@ public class GroupUserSaveRequest extends Request {
 
     private GroupUserSaveRequest(Builder builder) {
         super(builder);
+        this.baseCityCode = builder.baseCityCode;
+        this.birthday = builder.birthday;
+        this.certList = builder.certList;
+        this.gender = builder.gender;
         this.jobNo = builder.jobNo;
         this.phone = builder.phone;
         this.realNameEn = builder.realNameEn;
@@ -65,6 +85,34 @@ public class GroupUserSaveRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return baseCityCode
+     */
+    public String getBaseCityCode() {
+        return this.baseCityCode;
+    }
+
+    /**
+     * @return birthday
+     */
+    public String getBirthday() {
+        return this.birthday;
+    }
+
+    /**
+     * @return certList
+     */
+    public java.util.List < CertList> getCertList() {
+        return this.certList;
+    }
+
+    /**
+     * @return gender
+     */
+    public String getGender() {
+        return this.gender;
     }
 
     /**
@@ -117,6 +165,10 @@ public class GroupUserSaveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GroupUserSaveRequest, Builder> {
+        private String baseCityCode; 
+        private String birthday; 
+        private java.util.List < CertList> certList; 
+        private String gender; 
         private String jobNo; 
         private String phone; 
         private String realNameEn; 
@@ -131,6 +183,10 @@ public class GroupUserSaveRequest extends Request {
 
         private Builder(GroupUserSaveRequest request) {
             super(request);
+            this.baseCityCode = request.baseCityCode;
+            this.birthday = request.birthday;
+            this.certList = request.certList;
+            this.gender = request.gender;
             this.jobNo = request.jobNo;
             this.phone = request.phone;
             this.realNameEn = request.realNameEn;
@@ -139,6 +195,43 @@ public class GroupUserSaveRequest extends Request {
             this.userName = request.userName;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * base_city_code.
+         */
+        public Builder baseCityCode(String baseCityCode) {
+            this.putBodyParameter("base_city_code", baseCityCode);
+            this.baseCityCode = baseCityCode;
+            return this;
+        }
+
+        /**
+         * birthday.
+         */
+        public Builder birthday(String birthday) {
+            this.putBodyParameter("birthday", birthday);
+            this.birthday = birthday;
+            return this;
+        }
+
+        /**
+         * cert_list.
+         */
+        public Builder certList(java.util.List < CertList> certList) {
+            String certListShrink = shrink(certList, "cert_list", "json");
+            this.putBodyParameter("cert_list", certListShrink);
+            this.certList = certList;
+            return this;
+        }
+
+        /**
+         * gender.
+         */
+        public Builder gender(String gender) {
+            this.putBodyParameter("gender", gender);
+            this.gender = gender;
+            return this;
+        }
 
         /**
          * job_no.
@@ -211,6 +304,127 @@ public class GroupUserSaveRequest extends Request {
 
     } 
 
+    public static class CertList extends TeaModel {
+        @NameInMap("cert_expired_time")
+        private String certExpiredTime;
+
+        @NameInMap("cert_nation")
+        private String certNation;
+
+        @NameInMap("cert_no")
+        private String certNo;
+
+        @NameInMap("cert_type")
+        private Integer certType;
+
+        @NameInMap("nationality")
+        private String nationality;
+
+        private CertList(Builder builder) {
+            this.certExpiredTime = builder.certExpiredTime;
+            this.certNation = builder.certNation;
+            this.certNo = builder.certNo;
+            this.certType = builder.certType;
+            this.nationality = builder.nationality;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return certExpiredTime
+         */
+        public String getCertExpiredTime() {
+            return this.certExpiredTime;
+        }
+
+        /**
+         * @return certNation
+         */
+        public String getCertNation() {
+            return this.certNation;
+        }
+
+        /**
+         * @return certNo
+         */
+        public String getCertNo() {
+            return this.certNo;
+        }
+
+        /**
+         * @return certType
+         */
+        public Integer getCertType() {
+            return this.certType;
+        }
+
+        /**
+         * @return nationality
+         */
+        public String getNationality() {
+            return this.nationality;
+        }
+
+        public static final class Builder {
+            private String certExpiredTime; 
+            private String certNation; 
+            private String certNo; 
+            private Integer certType; 
+            private String nationality; 
+
+            /**
+             * cert_expired_time.
+             */
+            public Builder certExpiredTime(String certExpiredTime) {
+                this.certExpiredTime = certExpiredTime;
+                return this;
+            }
+
+            /**
+             * cert_nation.
+             */
+            public Builder certNation(String certNation) {
+                this.certNation = certNation;
+                return this;
+            }
+
+            /**
+             * cert_no.
+             */
+            public Builder certNo(String certNo) {
+                this.certNo = certNo;
+                return this;
+            }
+
+            /**
+             * cert_type.
+             */
+            public Builder certType(Integer certType) {
+                this.certType = certType;
+                return this;
+            }
+
+            /**
+             * nationality.
+             */
+            public Builder nationality(String nationality) {
+                this.nationality = nationality;
+                return this;
+            }
+
+            public CertList build() {
+                return new CertList(this);
+            } 
+
+        } 
+
+    }
     public static class SubCorpIdList extends TeaModel {
         @NameInMap("depart_ids")
         private java.util.List < String > departIds;

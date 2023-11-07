@@ -164,8 +164,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("city_ad_code")
         private String cityAdCode;
 
+        @NameInMap("hotel_address")
+        private String hotelAddress;
+
         @NameInMap("hotel_name")
         private String hotelName;
+
+        @NameInMap("hotel_phone")
+        private String hotelPhone;
 
         @NameInMap("hotel_support_vat_invoice_type")
         private Integer hotelSupportVatInvoiceType;
@@ -184,7 +190,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.checkOut = builder.checkOut;
             this.city = builder.city;
             this.cityAdCode = builder.cityAdCode;
+            this.hotelAddress = builder.hotelAddress;
             this.hotelName = builder.hotelName;
+            this.hotelPhone = builder.hotelPhone;
             this.hotelSupportVatInvoiceType = builder.hotelSupportVatInvoiceType;
             this.night = builder.night;
             this.roomNum = builder.roomNum;
@@ -228,10 +236,24 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotelAddress
+         */
+        public String getHotelAddress() {
+            return this.hotelAddress;
+        }
+
+        /**
          * @return hotelName
          */
         public String getHotelName() {
             return this.hotelName;
+        }
+
+        /**
+         * @return hotelPhone
+         */
+        public String getHotelPhone() {
+            return this.hotelPhone;
         }
 
         /**
@@ -267,7 +289,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Long checkOut; 
             private String city; 
             private String cityAdCode; 
+            private String hotelAddress; 
             private String hotelName; 
+            private String hotelPhone; 
             private Integer hotelSupportVatInvoiceType; 
             private Integer night; 
             private Integer roomNum; 
@@ -306,10 +330,26 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * hotel_address.
+             */
+            public Builder hotelAddress(String hotelAddress) {
+                this.hotelAddress = hotelAddress;
+                return this;
+            }
+
+            /**
              * hotel_name.
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
+                return this;
+            }
+
+            /**
+             * hotel_phone.
+             */
+            public Builder hotelPhone(String hotelPhone) {
+                this.hotelPhone = hotelPhone;
                 return this;
             }
 
@@ -432,6 +472,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         private String departName;
 
+        @NameInMap("exceed_apply_nos")
+        private java.util.List < String > exceedApplyNos;
+
         @NameInMap("extend_field")
         private String extendField;
 
@@ -475,6 +518,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.departId = builder.departId;
             this.departName = builder.departName;
+            this.exceedApplyNos = builder.exceedApplyNos;
             this.extendField = builder.extendField;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -537,6 +581,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getDepartName() {
             return this.departName;
+        }
+
+        /**
+         * @return exceedApplyNos
+         */
+        public java.util.List < String > getExceedApplyNos() {
+            return this.exceedApplyNos;
         }
 
         /**
@@ -630,6 +681,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String corpName; 
             private String departId; 
             private String departName; 
+            private java.util.List < String > exceedApplyNos; 
             private String extendField; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -688,6 +740,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder departName(String departName) {
                 this.departName = departName;
+                return this;
+            }
+
+            /**
+             * exceed_apply_nos.
+             */
+            public Builder exceedApplyNos(java.util.List < String > exceedApplyNos) {
+                this.exceedApplyNos = exceedApplyNos;
                 return this;
             }
 
