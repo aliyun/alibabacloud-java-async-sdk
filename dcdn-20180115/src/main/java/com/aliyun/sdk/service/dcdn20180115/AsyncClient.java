@@ -780,6 +780,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDcdnDomainWebsocketTrafficDataResponse> describeDcdnDomainWebsocketTrafficData(DescribeDcdnDomainWebsocketTrafficDataRequest request);
 
+    CompletableFuture<DescribeDcdnDomainsBySourceResponse> describeDcdnDomainsBySource(DescribeDcdnDomainsBySourceRequest request);
+
     /**
       * *   You can call this operation up to 10 times per second per account.
       * *   The minimum time granularity for a query is 1 hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
@@ -1254,6 +1256,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EditRoutineConfResponse> editRoutineConf(EditRoutineConfRequest request);
 
     CompletableFuture<GetDcdnKvResponse> getDcdnKv(GetDcdnKvRequest request);
+
+    CompletableFuture<GetDcdnKvStatusResponse> getDcdnKvStatus(GetDcdnKvStatusRequest request);
 
     CompletableFuture<ListDcdnKvResponse> listDcdnKv(ListDcdnKvRequest request);
 
