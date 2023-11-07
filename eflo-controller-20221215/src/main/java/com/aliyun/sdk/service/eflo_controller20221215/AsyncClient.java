@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ApproveOperationResponse> approveOperation(ApproveOperationRequest request);
+
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
