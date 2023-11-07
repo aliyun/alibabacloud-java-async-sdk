@@ -18,10 +18,6 @@ public class OpenAITaskRequest extends Request {
     private String DBClusterId;
 
     @Query
-    @NameInMap("DescribeType")
-    private String describeType;
-
-    @Query
     @NameInMap("NodeType")
     private String nodeType;
 
@@ -61,7 +57,6 @@ public class OpenAITaskRequest extends Request {
     private OpenAITaskRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.describeType = builder.describeType;
         this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -91,13 +86,6 @@ public class OpenAITaskRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    /**
-     * @return describeType
-     */
-    public String getDescribeType() {
-        return this.describeType;
     }
 
     /**
@@ -165,7 +153,6 @@ public class OpenAITaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<OpenAITaskRequest, Builder> {
         private String DBClusterId; 
-        private String describeType; 
         private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -183,7 +170,6 @@ public class OpenAITaskRequest extends Request {
         private Builder(OpenAITaskRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.describeType = request.describeType;
             this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -201,15 +187,6 @@ public class OpenAITaskRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
-            return this;
-        }
-
-        /**
-         * DescribeType.
-         */
-        public Builder describeType(String describeType) {
-            this.putQueryParameter("DescribeType", describeType);
-            this.describeType = describeType;
             return this;
         }
 

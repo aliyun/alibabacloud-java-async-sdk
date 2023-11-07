@@ -66,9 +66,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("DeletionLock")
     private Integer deletionLock;
 
-    @NameInMap("DeployUnit")
-    private String deployUnit;
-
     @NameInMap("Engine")
     private String engine;
 
@@ -193,7 +190,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.dataLevel1BackupChainSize = builder.dataLevel1BackupChainSize;
         this.dataSyncMode = builder.dataSyncMode;
         this.deletionLock = builder.deletionLock;
-        this.deployUnit = builder.deployUnit;
         this.engine = builder.engine;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
@@ -363,13 +359,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public Integer getDeletionLock() {
         return this.deletionLock;
-    }
-
-    /**
-     * @return deployUnit
-     */
-    public String getDeployUnit() {
-        return this.deployUnit;
     }
 
     /**
@@ -636,7 +625,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Long dataLevel1BackupChainSize; 
         private String dataSyncMode; 
         private Integer deletionLock; 
-        private String deployUnit; 
         private String engine; 
         private String expireTime; 
         private String expired; 
@@ -840,14 +828,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder deletionLock(Integer deletionLock) {
             this.deletionLock = deletionLock;
-            return this;
-        }
-
-        /**
-         * The unit to which the cluster belongs.
-         */
-        public Builder deployUnit(String deployUnit) {
-            this.deployUnit = deployUnit;
             return this;
         }
 

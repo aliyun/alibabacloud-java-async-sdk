@@ -18,6 +18,10 @@ public class DescribeDBClusterVersionRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("DescribeType")
+    private String describeType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -36,6 +40,7 @@ public class DescribeDBClusterVersionRequest extends Request {
     private DescribeDBClusterVersionRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.describeType = builder.describeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -60,6 +65,13 @@ public class DescribeDBClusterVersionRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return describeType
+     */
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     /**
@@ -92,6 +104,7 @@ public class DescribeDBClusterVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBClusterVersionRequest, Builder> {
         private String DBClusterId; 
+        private String describeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -104,6 +117,7 @@ public class DescribeDBClusterVersionRequest extends Request {
         private Builder(DescribeDBClusterVersionRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.describeType = request.describeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -119,6 +133,15 @@ public class DescribeDBClusterVersionRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DescribeType.
+         */
+        public Builder describeType(String describeType) {
+            this.putQueryParameter("DescribeType", describeType);
+            this.describeType = describeType;
             return this;
         }
 
