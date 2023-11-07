@@ -58,7 +58,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +306,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of groups.
+             * The number of user groups.
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -314,7 +314,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota for groups.
+             * The quota for user groups.
              */
             public Builder groupQuota(Integer groupQuota) {
                 this.groupQuota = groupQuota;
@@ -349,8 +349,8 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
              * Indicates whether SCIM synchronization is enabled. Valid values:
              * <p>
              * 
-             * *   true: SCIM synchronization is enabled.
-             * *   false: SCIM synchronization is disabled.
+             * *   true
+             * *   false
              */
             public Builder SCIMSyncEnabled(Boolean SCIMSyncEnabled) {
                 this.SCIMSyncEnabled = SCIMSyncEnabled;
@@ -358,11 +358,11 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSO logon is enabled. Valid values:
+             * Indicates whether SSO is enabled. Valid values:
              * <p>
              * 
-             * *   true: SSO logon is enabled.
-             * *   false: SSO logon is disabled.
+             * *   true
+             * *   false
              */
             public Builder SSOEnabled(Boolean SSOEnabled) {
                 this.SSOEnabled = SSOEnabled;
@@ -370,7 +370,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPolicyPerAccessConfigurationQuota.
+             * The quota for system policies that can be configured for an access configuration.
              */
             public Builder systemPolicyPerAccessConfigurationQuota(Integer systemPolicyPerAccessConfigurationQuota) {
                 this.systemPolicyPerAccessConfigurationQuota = systemPolicyPerAccessConfigurationQuota;

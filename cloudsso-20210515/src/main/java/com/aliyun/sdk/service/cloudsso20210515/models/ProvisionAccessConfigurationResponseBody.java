@@ -267,7 +267,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task object. The value is fixed as RD-Account, which indicates an account your resource directory.
+             * The type of the task object. The value is fixed as RD-Account, which indicates an account in your resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

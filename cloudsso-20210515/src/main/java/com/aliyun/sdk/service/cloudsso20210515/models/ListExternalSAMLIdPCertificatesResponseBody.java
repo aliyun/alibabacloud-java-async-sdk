@@ -258,7 +258,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The public key of the certificate. The value of this paremeter is in the PEM format and is Base64-encoded.
+             * The public key of the certificate. The value of this parameter is in the PEM format and is Base64-encoded.
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;

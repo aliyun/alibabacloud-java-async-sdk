@@ -16,6 +16,10 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private GetMFAAuthenticationSettingInfoResponseBody body;
@@ -23,6 +27,7 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
     private GetMFAAuthenticationSettingInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetMFAAuthenticationSettingInfoResponseBody getBody() {
@@ -52,6 +64,8 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
     public interface Builder extends Response.Builder<GetMFAAuthenticationSettingInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetMFAAuthenticationSettingInfoResponseBody body);
 
@@ -64,6 +78,7 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
             extends Response.BuilderImpl<GetMFAAuthenticationSettingInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetMFAAuthenticationSettingInfoResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
         private BuilderImpl(GetMFAAuthenticationSettingInfoResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class GetMFAAuthenticationSettingInfoResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
