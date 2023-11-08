@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class IsvRuleSaveRequest extends Request {
     @Body
+    @NameInMap("apply_need")
+    private Boolean applyNeed;
+
+    @Body
     @NameInMap("book_type")
     @Validation(required = true)
     private String bookType;
@@ -20,6 +24,10 @@ public class IsvRuleSaveRequest extends Request {
     @Body
     @NameInMap("bookuser_list")
     private java.util.List < BookuserList> bookuserList;
+
+    @Body
+    @NameInMap("rule_need")
+    private Boolean ruleNeed;
 
     @Body
     @NameInMap("status")
@@ -37,8 +45,10 @@ public class IsvRuleSaveRequest extends Request {
 
     private IsvRuleSaveRequest(Builder builder) {
         super(builder);
+        this.applyNeed = builder.applyNeed;
         this.bookType = builder.bookType;
         this.bookuserList = builder.bookuserList;
+        this.ruleNeed = builder.ruleNeed;
         this.status = builder.status;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -58,6 +68,13 @@ public class IsvRuleSaveRequest extends Request {
     }
 
     /**
+     * @return applyNeed
+     */
+    public Boolean getApplyNeed() {
+        return this.applyNeed;
+    }
+
+    /**
      * @return bookType
      */
     public String getBookType() {
@@ -69,6 +86,13 @@ public class IsvRuleSaveRequest extends Request {
      */
     public java.util.List < BookuserList> getBookuserList() {
         return this.bookuserList;
+    }
+
+    /**
+     * @return ruleNeed
+     */
+    public Boolean getRuleNeed() {
+        return this.ruleNeed;
     }
 
     /**
@@ -93,8 +117,10 @@ public class IsvRuleSaveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IsvRuleSaveRequest, Builder> {
+        private Boolean applyNeed; 
         private String bookType; 
         private java.util.List < BookuserList> bookuserList; 
+        private Boolean ruleNeed; 
         private Integer status; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
@@ -105,12 +131,23 @@ public class IsvRuleSaveRequest extends Request {
 
         private Builder(IsvRuleSaveRequest request) {
             super(request);
+            this.applyNeed = request.applyNeed;
             this.bookType = request.bookType;
             this.bookuserList = request.bookuserList;
+            this.ruleNeed = request.ruleNeed;
             this.status = request.status;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
+
+        /**
+         * apply_need.
+         */
+        public Builder applyNeed(Boolean applyNeed) {
+            this.putBodyParameter("apply_need", applyNeed);
+            this.applyNeed = applyNeed;
+            return this;
+        }
 
         /**
          * book_type.
@@ -128,6 +165,15 @@ public class IsvRuleSaveRequest extends Request {
             String bookuserListShrink = shrink(bookuserList, "bookuser_list", "json");
             this.putBodyParameter("bookuser_list", bookuserListShrink);
             this.bookuserList = bookuserList;
+            return this;
+        }
+
+        /**
+         * rule_need.
+         */
+        public Builder ruleNeed(Boolean ruleNeed) {
+            this.putBodyParameter("rule_need", ruleNeed);
+            this.ruleNeed = ruleNeed;
             return this;
         }
 

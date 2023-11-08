@@ -13,8 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HotelOrderDetailInfoRequest extends Request {
     @Query
+    @NameInMap("btrip_order_id")
+    private String btripOrderId;
+
+    @Query
     @NameInMap("dis_order_id")
-    @Validation(required = true)
     private String disOrderId;
 
     @Header
@@ -23,6 +26,7 @@ public class HotelOrderDetailInfoRequest extends Request {
 
     private HotelOrderDetailInfoRequest(Builder builder) {
         super(builder);
+        this.btripOrderId = builder.btripOrderId;
         this.disOrderId = builder.disOrderId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
@@ -41,6 +45,13 @@ public class HotelOrderDetailInfoRequest extends Request {
     }
 
     /**
+     * @return btripOrderId
+     */
+    public String getBtripOrderId() {
+        return this.btripOrderId;
+    }
+
+    /**
      * @return disOrderId
      */
     public String getDisOrderId() {
@@ -55,6 +66,7 @@ public class HotelOrderDetailInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<HotelOrderDetailInfoRequest, Builder> {
+        private String btripOrderId; 
         private String disOrderId; 
         private String xAcsBtripCorpToken; 
 
@@ -64,9 +76,19 @@ public class HotelOrderDetailInfoRequest extends Request {
 
         private Builder(HotelOrderDetailInfoRequest request) {
             super(request);
+            this.btripOrderId = request.btripOrderId;
             this.disOrderId = request.disOrderId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * btrip_order_id.
+         */
+        public Builder btripOrderId(String btripOrderId) {
+            this.putQueryParameter("btrip_order_id", btripOrderId);
+            this.btripOrderId = btripOrderId;
+            return this;
+        }
 
         /**
          * dis_order_id.
