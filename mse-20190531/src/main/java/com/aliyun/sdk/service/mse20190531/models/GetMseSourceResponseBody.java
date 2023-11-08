@@ -98,11 +98,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,11 +114,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
-         * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +122,11 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request is successfully processed.
+         * The message returned.
+         * <p>
+         * 
+         * *   If the request is successful, a success message is returned.
+         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +134,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +142,11 @@ public class GetMseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -234,7 +234,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The type.
+             * The endpoint of the instance.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -242,7 +242,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * code
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -250,7 +250,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -258,7 +258,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of cluster.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +266,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;

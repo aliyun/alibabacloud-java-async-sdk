@@ -123,24 +123,6 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the plug-in.
-         */
-        public Builder category(Integer category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * The name of the plug-in.
-         */
-        public Builder enableOnly(Boolean enableOnly) {
-            this.putQueryParameter("EnableOnly", enableOnly);
-            this.enableOnly = enableOnly;
-            return this;
-        }
-
-        /**
          * The type of the plug-in. Valid values:
          * <p>
          * 
@@ -151,6 +133,24 @@ public class GetPluginsRequest extends Request {
          * *   4: traffic control
          * *   5: traffic observation
          */
+        public Builder category(Integer category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable the plug-in.
+         */
+        public Builder enableOnly(Boolean enableOnly) {
+            this.putQueryParameter("EnableOnly", enableOnly);
+            this.enableOnly = enableOnly;
+            return this;
+        }
+
+        /**
+         * The ID of the gateway.
+         */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
@@ -158,10 +158,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * zh: Chinese en: English
+         * The name of the plug-in.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

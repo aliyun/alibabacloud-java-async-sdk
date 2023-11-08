@@ -86,10 +86,34 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the application.
+         * The configuration information.
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
+            return this;
+        }
+
+        /**
+         * The error code returned if the request failed.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The message returned.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -99,30 +123,6 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
          * 
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The request was successfully processed.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The configuration information.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * mse-200-105
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -234,7 +234,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             private String opType; 
 
             /**
-             * The MD5 value of the configuration.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -242,7 +242,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration group.
+             * The content of the configuration.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -250,7 +250,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the configuration.
+             * The ID of the configuration.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -258,7 +258,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * The encryption key.
              */
             public Builder encryptedDataKey(String encryptedDataKey) {
                 this.encryptedDataKey = encryptedDataKey;
@@ -266,7 +266,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration type.
+             * The name of the configuration group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -274,7 +274,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * The MD5 value of the configuration.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -282,7 +282,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption key.
+             * The configuration type.
              */
             public Builder opType(String opType) {
                 this.opType = opType;

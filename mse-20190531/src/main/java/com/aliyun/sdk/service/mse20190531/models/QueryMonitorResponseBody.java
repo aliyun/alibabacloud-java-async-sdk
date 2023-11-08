@@ -86,7 +86,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data structure.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the pod.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The interval between data points. Unit: seconds.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,11 +110,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +118,11 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +186,7 @@ public class QueryMonitorResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> values; 
 
             /**
-             * The ID of the request.
+             * The prefix of the name.
              */
             public Builder clusterNamePrefix(String clusterNamePrefix) {
                 this.clusterNamePrefix = clusterNamePrefix;
@@ -194,7 +194,7 @@ public class QueryMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The request was successfully processed.
+             * The name of the pod.
              */
             public Builder podName(String podName) {
                 this.podName = podName;

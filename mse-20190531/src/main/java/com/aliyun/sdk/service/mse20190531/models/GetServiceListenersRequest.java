@@ -221,7 +221,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the service belongs.
+         * The ID of the MSE instance to which the service belongs.
          * <p>
          * 
          * > You must specify InstanceId or ClusterId.
@@ -233,7 +233,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * The name of the cluster to which the service belongs.
+         * <p>
+         * 
+         * > The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -242,7 +245,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The namespace to which the service belongs.
+         * The group to which the service belongs.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -251,10 +254,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The ID of the MSE instance to which the service belongs.
-         * <p>
-         * 
-         * > You must specify InstanceId or ClusterId.
+         * A reserved parameter.
          */
         public Builder hasIpCount(String hasIpCount) {
             this.putQueryParameter("HasIpCount", hasIpCount);
@@ -263,7 +263,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The ID of the instance to which the service belongs.
+         * <p>
+         * 
+         * > You must specify InstanceId or ClusterId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -272,10 +275,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The name of the cluster to which the service belongs.
-         * <p>
-         * 
-         * > The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.
+         * The namespace to which the service belongs.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -284,7 +284,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -293,7 +293,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -302,7 +302,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -311,11 +311,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -324,7 +320,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * The group to which the service belongs.
+         * The name of the service whose listeners you want to query.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

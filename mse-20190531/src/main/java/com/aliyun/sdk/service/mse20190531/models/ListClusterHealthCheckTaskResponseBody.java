@@ -425,7 +425,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -441,7 +441,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risk item notification feature is disabled. Valid values:
+             * Indicates whether the risk item notification feature is disabled.
              * <p>
              * 
              * *   true: disabled
@@ -469,7 +469,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the risk.
+             * The risk code.
              */
             public Builder riskCode(String riskCode) {
                 this.riskCode = riskCode;
@@ -815,7 +815,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number.
+             * The ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -831,7 +831,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -839,7 +839,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user to which the cluster belongs.
+             * The ID of the user to which the instance belongs.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -847,7 +847,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes in the cluster.
+             * The number of nodes in the instance.
              */
             public Builder replica(String replica) {
                 this.replica = replica;
@@ -855,7 +855,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The risk items.
+             * The list of risk items.
              */
             public Builder riskList(java.util.List < RiskList> riskList) {
                 this.riskList = riskList;
@@ -879,7 +879,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task state.
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -911,7 +911,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was last updated.
+             * The last update time.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

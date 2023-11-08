@@ -87,7 +87,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNacosConfigResponse> createNacosConfig(CreateNacosConfigRequest request);
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -481,7 +481,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
       *
      */
     CompletableFuture<UpdateClusterSpecResponse> updateClusterSpec(UpdateClusterSpecRequest request);

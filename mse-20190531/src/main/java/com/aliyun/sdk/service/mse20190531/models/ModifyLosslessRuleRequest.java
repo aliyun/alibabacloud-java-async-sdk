@@ -243,7 +243,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
          */
         public Builder aligned(Boolean aligned) {
             this.putQueryParameter("Aligned", aligned);
@@ -261,7 +261,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the rule applies.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -270,11 +270,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable graceful start. Valid values:
-         * <p>
-         * 
-         * *   true: enabled
-         * *   false: disabled
+         * The registration latency.
          */
         public Builder delayTime(Integer delayTime) {
             this.putQueryParameter("DelayTime", delayTime);
@@ -283,7 +279,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The prefetching duration.
+         * Specifies whether to enable the alert rule. Valid values:
+         * <p>
+         * 
+         * *   `true`: enables the rule.
+         * *   `false`: disables the rule.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -292,7 +292,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The registration latency.
+         * The slope of the prefetching curve.
          */
         public Builder funcType(Integer funcType) {
             this.putQueryParameter("FuncType", funcType);
@@ -328,7 +328,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The slope of the prefetching curve.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -337,7 +337,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to complete service registration before readiness probe.
+         * Specifies whether to associate with service prefetching.
          */
         public Builder related(Boolean related) {
             this.putQueryParameter("Related", related);
@@ -346,7 +346,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to complete service prefetching before readiness probe.
+         * The prefetching duration.
          */
         public Builder warmupTime(Integer warmupTime) {
             this.putQueryParameter("WarmupTime", warmupTime);

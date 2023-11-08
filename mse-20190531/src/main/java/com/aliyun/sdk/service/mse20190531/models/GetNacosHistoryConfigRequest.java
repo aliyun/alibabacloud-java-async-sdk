@@ -141,7 +141,7 @@ public class GetNacosHistoryConfigRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * The ID of the data.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -150,7 +150,7 @@ public class GetNacosHistoryConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The name of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -159,7 +159,7 @@ public class GetNacosHistoryConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +168,7 @@ public class GetNacosHistoryConfigRequest extends Request {
         }
 
         /**
-         * The version ID of the configuration.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -177,11 +177,7 @@ public class GetNacosHistoryConfigRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The version ID of the configuration.
          */
         public Builder nid(String nid) {
             this.putQueryParameter("Nid", nid);

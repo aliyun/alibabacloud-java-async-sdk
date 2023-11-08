@@ -134,11 +134,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         private java.util.List < Traces> traces; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -146,7 +142,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The track data.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -154,7 +150,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The request was successfully processed.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +158,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -170,7 +166,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -178,7 +174,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +182,11 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The track data.
          */
         public Builder traces(java.util.List < Traces> traces) {
             this.traces = traces;
@@ -386,7 +386,11 @@ public class ListConfigTrackResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of entries returned per page.
+             * Indicates whether the request is sent from the client. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder client(Boolean client) {
                 this.client = client;
@@ -394,7 +398,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration group.
+             * The ID of the configuration.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -402,18 +406,10 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 value.
+             * The response latency. Unit: milliseconds.
              */
             public Builder delay(String delay) {
                 this.delay = delay;
-                return this;
-            }
-
-            /**
-             * The result.
-             */
-            public Builder event(String event) {
-                this.event = event;
                 return this;
             }
 
@@ -424,16 +420,21 @@ public class ListConfigTrackResponseBody extends TeaModel {
              * *   pull: configuration acquisition events
              * *   persist: persistence events
              */
+            public Builder event(String event) {
+                this.event = event;
+                return this;
+            }
+
+            /**
+             * The name of the configuration group.
+             */
             public Builder group(String group) {
                 this.group = group;
                 return this;
             }
 
             /**
-             * The timestamp that indicates the time when the metric value is collected.
-             * <p>
-             * 
-             * Unit: seconds.
+             * The logging time.
              */
             public Builder logDate(String logDate) {
                 this.logDate = logDate;
@@ -441,12 +442,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The release type. Valid values:
-             * <p>
-             * 
-             * *   beta: beta release
-             * *   tag: canary release
-             * *   batch: batch release
+             * The MD5 value.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -454,7 +450,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request is sent from the client. Valid values:
+             * Indicates whether messages are pushed by a server. Valid values:
              * <p>
              * 
              * *   true
@@ -466,7 +462,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The response node.
+             * The source IP address of the request.
              */
             public Builder requestIp(String requestIp) {
                 this.requestIp = requestIp;
@@ -474,7 +470,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * The response node.
              */
             public Builder responseIp(String responseIp) {
                 this.responseIp = responseIp;
@@ -482,7 +478,7 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The response latency. Unit: milliseconds.
+             * The result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -490,7 +486,10 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the request.
+             * The timestamp that indicates the time when the metric value is collected.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder ts(String ts) {
                 this.ts = ts;
@@ -498,11 +497,12 @@ public class ListConfigTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether messages are pushed by a server. Valid values:
+             * The release type. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   beta: beta release
+             * *   tag: canary release
+             * *   batch: batch release
              */
             public Builder type(String type) {
                 this.type = type;

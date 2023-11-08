@@ -104,7 +104,14 @@ public class ListServiceSourceRequest extends Request {
         }
 
         /**
-         * Source.
+         * Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:
+         * <p>
+         * 
+         * *   K8S
+         * *   MSE
+         * *   MSE_ZK
+         * *   SAE
+         * *   EDAS
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

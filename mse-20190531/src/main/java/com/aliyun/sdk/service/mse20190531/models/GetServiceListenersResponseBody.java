@@ -134,7 +134,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,46 +150,10 @@ public class GetServiceListenersResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode=500
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The number of listeners that are queried.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The error code returned if the request failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
             return this;
         }
 
@@ -200,13 +164,49 @@ public class GetServiceListenersResponseBody extends TeaModel {
          * *   If the request is successful, a success message is returned.
          * *   If the request fails, an error message is returned.
          */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The page number of the returned page.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries returned per page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
+         */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of listeners that are queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -330,7 +330,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The listener client version.
+             * The IP address of the listener.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -338,7 +338,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The application name of the listener.
+             * The listener client version.
              */
             public Builder agent(String agent) {
                 this.agent = agent;
@@ -346,7 +346,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the monitored service.
+             * The application name of the listener.
              */
             public Builder app(String app) {
                 this.app = app;
@@ -354,7 +354,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The name of the cluster to which the monitored service belongs.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -362,7 +362,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the monitored service.
+             * The IP address of the monitored service.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -370,7 +370,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitored service.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -378,7 +378,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * The port number of the monitored service.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -386,7 +386,7 @@ public class GetServiceListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster to which the monitored service belongs.
+             * The name of the monitored service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

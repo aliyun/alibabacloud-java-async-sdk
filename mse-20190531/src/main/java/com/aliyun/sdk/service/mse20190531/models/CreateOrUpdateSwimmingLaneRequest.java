@@ -26,6 +26,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     @Query
     @NameInMap("EntryRule")
+    @Deprecated
     private String entryRule;
 
     @Body
@@ -46,7 +47,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     @Query
     @NameInMap("Name")
-    @Validation(required = true)
+    @Validation(required = true, maxLength = 64)
     private String name;
 
     @Query
@@ -60,6 +61,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     @Query
     @NameInMap("Tag")
+    @Validation(maxLength = 64)
     private String tag;
 
     private CreateOrUpdateSwimmingLaneRequest(Builder builder) {

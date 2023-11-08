@@ -161,7 +161,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
          * The dynamic part in the error message. This parameter is used to replace `%s` in the `ErrMessage` parameter.
          * <p>
          * 
-         * > If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.
+         * >  If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -185,7 +185,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
+         * The returned message. If the request is successful, a success message is returned. If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -201,7 +201,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
          * *   `true`: The request was successful.

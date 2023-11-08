@@ -98,7 +98,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The result returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The response code returned.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request is successfully processed.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-105
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

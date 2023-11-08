@@ -95,11 +95,7 @@ public class GetMseSourceRequest extends Request {
         }
 
         /**
-         * The MSE engine type. Valid values:
-         * <p>
-         * 
-         * *   NACOS
-         * *   ZOOKEEPER
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -108,11 +104,11 @@ public class GetMseSourceRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
+         * The MSE engine type. Valid values:
          * <p>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * *   NACOS
+         * *   ZOOKEEPER
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

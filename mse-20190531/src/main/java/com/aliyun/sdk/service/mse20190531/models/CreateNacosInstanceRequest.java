@@ -229,7 +229,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The port number of the Nacos instance.
+         * The name of the Nacos instance.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -238,11 +238,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * Specifies whether to enable the service for the instance.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -251,7 +247,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the service for the instance.
+         * Specifies whether to mark the instance as a temporary node.
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -260,7 +256,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the Nacos instance.
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -269,7 +265,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -278,7 +274,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to mark the instance as a temporary node.
+         * The IP address of the Nacos instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -287,7 +283,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * The node metadata of the instance.
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -296,7 +292,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The IP address of the Nacos instance.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -305,7 +301,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
+         * The port number of the Nacos instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -314,7 +310,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -323,7 +319,7 @@ public class CreateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The node metadata of the instance.
+         * The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

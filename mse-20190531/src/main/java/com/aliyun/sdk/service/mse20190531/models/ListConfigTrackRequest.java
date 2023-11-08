@@ -226,7 +226,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The name of the configuration group.
+         * The ID of the configuration.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -235,7 +235,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The end timestamp. Unit: seconds.
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -244,7 +244,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * The name of the configuration group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -253,7 +253,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The ID of the configuration.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -262,11 +262,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The IP address of the listener.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -275,11 +271,38 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The start timestamp. Unit: seconds.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
             this.namespaceId = namespaceId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNum(Long pageNum) {
+            this.putQueryParameter("PageNum", pageNum);
+            this.pageNum = pageNum;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The extended request parameters in the JSON format.
+         */
+        public Builder requestPars(String requestPars) {
+            this.putQueryParameter("RequestPars", requestPars);
+            this.requestPars = requestPars;
             return this;
         }
 
@@ -290,33 +313,6 @@ public class ListConfigTrackRequest extends Request {
          * *   true
          * *   false
          */
-        public Builder pageNum(Long pageNum) {
-            this.putQueryParameter("PageNum", pageNum);
-            this.pageNum = pageNum;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder requestPars(String requestPars) {
-            this.putQueryParameter("RequestPars", requestPars);
-            this.requestPars = requestPars;
-            return this;
-        }
-
-        /**
-         * The IP address of the listener.
-         */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
             this.reverse = reverse;
@@ -324,7 +320,7 @@ public class ListConfigTrackRequest extends Request {
         }
 
         /**
-         * The end timestamp. Unit: seconds.
+         * The start timestamp. Unit: seconds.
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

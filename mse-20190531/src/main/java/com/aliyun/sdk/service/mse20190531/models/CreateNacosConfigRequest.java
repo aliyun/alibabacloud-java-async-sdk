@@ -291,7 +291,7 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * The configuration format such as text, JSON, or XML.
+         * The format of the configuration. Supported formats include TEXT, JSON, and XML.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

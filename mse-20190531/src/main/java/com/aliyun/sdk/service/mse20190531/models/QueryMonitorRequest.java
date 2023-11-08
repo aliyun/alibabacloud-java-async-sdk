@@ -154,7 +154,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * system error
+         * The timestamp when the monitoring ends.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,11 +163,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +172,35 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * mse-100-001
+         * The metric type. The following metric types are supported:
+         * <p>
+         * 
+         * \[Basic system metrics]
+         * 
+         * *   cpuUsage
+         * *   memoryUsage
+         * *   diskUsage
+         * *   gcCount
+         * *   gcTime
+         * 
+         * \[Nacos registry]
+         * 
+         * *   serviceCount
+         * *   writeCostTime
+         * *   readCostTime
+         * *   TPS regCenterTps
+         * *   QPS regCenterQps
+         * 
+         * \[Nacos configuration center]
+         * 
+         * *   publish
+         * *   getConfig
+         * 
+         * \[zookeeper]
+         * 
+         * *   TPS zk_TpsCount
+         * *   QPS zk_QpsCount
+         * *   zookeeper_AvgRequestLatency
          */
         public Builder monitorType(String monitorType) {
             this.putQueryParameter("MonitorType", monitorType);
@@ -185,7 +209,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -194,7 +218,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * systemError
+         * The timestamp when the monitoring starts.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -203,7 +227,7 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * The interval between data points. Unit: seconds.
          */
         public Builder step(Long step) {
             this.putQueryParameter("Step", step);
