@@ -17,6 +17,10 @@ public class StartInstanceRequest extends Request {
     private App app;
 
     @Query
+    @NameInMap("BizId")
+    private String bizId;
+
+    @Query
     @NameInMap("Channel")
     private Channel channel;
 
@@ -35,6 +39,7 @@ public class StartInstanceRequest extends Request {
     private StartInstanceRequest(Builder builder) {
         super(builder);
         this.app = builder.app;
+        this.bizId = builder.bizId;
         this.channel = builder.channel;
         this.commandRequest = builder.commandRequest;
         this.tenantId = builder.tenantId;
@@ -59,6 +64,13 @@ public class StartInstanceRequest extends Request {
      */
     public App getApp() {
         return this.app;
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
     }
 
     /**
@@ -91,6 +103,7 @@ public class StartInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<StartInstanceRequest, Builder> {
         private App app; 
+        private String bizId; 
         private Channel channel; 
         private CommandRequest commandRequest; 
         private Long tenantId; 
@@ -103,6 +116,7 @@ public class StartInstanceRequest extends Request {
         private Builder(StartInstanceRequest request) {
             super(request);
             this.app = request.app;
+            this.bizId = request.bizId;
             this.channel = request.channel;
             this.commandRequest = request.commandRequest;
             this.tenantId = request.tenantId;
@@ -116,6 +130,15 @@ public class StartInstanceRequest extends Request {
             String appShrink = shrink(app, "App", "json");
             this.putQueryParameter("App", appShrink);
             this.app = app;
+            return this;
+        }
+
+        /**
+         * BizId.
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
             return this;
         }
 
