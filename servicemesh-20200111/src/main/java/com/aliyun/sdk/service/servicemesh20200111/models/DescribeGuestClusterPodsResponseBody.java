@@ -50,7 +50,7 @@ public class DescribeGuestClusterPodsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The names of the queried pods.
+         * The list of the names of the queried pods.
          */
         public Builder podList(java.util.List < String > podList) {
             this.podList = podList;
@@ -58,7 +58,7 @@ public class DescribeGuestClusterPodsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

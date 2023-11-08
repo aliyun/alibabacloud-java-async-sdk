@@ -50,7 +50,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         private ServiceMesh serviceMesh; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to expose the API server to the Internet.
+             * The endpoint that is used to access the API server over the Internet.
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -303,7 +303,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when the call failed.
+             * The returned error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -323,7 +323,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * <p>
              * 
              * *   `Default`: Standard Edition
-             * *   `Pro`: Professional Edition
+             * *   `Pro`: Enterprise Edition and Ultimate Edition
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -339,7 +339,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ASM instance.
+             * The ASM instance ID.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;
@@ -347,7 +347,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ASM instance.
+             * The state of the ASM instance.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -440,7 +440,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String pilotPublicLoadbalancerId; 
 
             /**
-             * The ID of the SLB instance that is used when the API server is exposed to the Internet.
+             * The ID of the CLB instance that is used when the API server is exposed to the Internet.
              */
             public Builder apiServerLoadbalancerId(String apiServerLoadbalancerId) {
                 this.apiServerLoadbalancerId = apiServerLoadbalancerId;
@@ -451,8 +451,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the API server is exposed to the Internet. Valid values:
              * <p>
              * 
-             * *   `true`: The API server is exposed to the Internet.
-             * *   `false`: The API server is not exposed to the Internet.
+             * *   `true`
+             * *   `false`
              */
             public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
                 this.apiServerPublicEip = apiServerPublicEip;
@@ -463,8 +463,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether Istio Pilot is exposed to the Internet. Valid values:
              * <p>
              * 
-             * *   `true`: Istio Pilot is exposed to the Internet.
-             * *   `false`: Istio Pilot is not exposed to the Internet.
+             * *   `true`
+             * *   `false`
              */
             public Builder pilotPublicEip(Boolean pilotPublicEip) {
                 this.pilotPublicEip = pilotPublicEip;
@@ -472,7 +472,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Server Load Balancer (SLB) instance that is used when Istio Pilot is exposed to the Internet.
+             * The ID of the Classic Load Balancer (CLB) instance that is used when Istio Pilot is exposed to the Internet.
              */
             public Builder pilotPublicLoadbalancerId(String pilotPublicLoadbalancerId) {
                 this.pilotPublicLoadbalancerId = pilotPublicLoadbalancerId;
@@ -528,8 +528,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether access log collection is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Access log collection is enabled.
-             * *   `false`: Access log collection is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -537,7 +537,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project that stores access logs.
+             * The name of the Simple Log Service project that stores access logs.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -617,8 +617,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether mesh audit is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Mesh audit is enabled.
-             * *   `false`: Mesh audit is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -626,7 +626,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project that is used for mesh audit.
+             * The name of the Simple Log Service project that is used for mesh audit.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -691,11 +691,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String project; 
 
             /**
-             * Indicates whether the collection of control-plane logs is enabled. Valid values:
+             * Indicates whether the collection of control plane logs is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: The collection of control-plane logs is enabled.
-             * *   `false`: The collection of control-plane logs is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -711,7 +711,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project that stores control-plane logs.
+             * The name of the Simple Log Service project that stores control plane logs.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -877,7 +877,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.
+             * The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.
              */
             public Builder gatewayLifecycle(Integer gatewayLifecycle) {
                 this.gatewayLifecycle = gatewayLifecycle;
@@ -893,7 +893,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.
+             * The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.
              */
             public Builder sidecarLifecycle(Integer sidecarLifecycle) {
                 this.sidecarLifecycle = sidecarLifecycle;
@@ -1258,7 +1258,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private Boolean autoDiagnosisEnabled; 
 
             /**
-             * Indicates whether automatic diagnosis is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed five minutes after you modify an Istio resource.
+             * Indicates whether automatic diagnostics is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed 5 minutes after you modify an Istio resource.
              */
             public Builder autoDiagnosisEnabled(Boolean autoDiagnosisEnabled) {
                 this.autoDiagnosisEnabled = autoDiagnosisEnabled;
@@ -1343,8 +1343,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the rollback feature for Istio resources is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: The rollback feature for Istio resources is enabled.
-             * *   `false`: The rollback feature for Istio resources is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enableHistory(Boolean enableHistory) {
                 this.enableHistory = enableHistory;
@@ -1385,7 +1385,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private java.util.List < String > command; 
 
             /**
-             * The executed command.
+             * The executed commands. The value is a string that consists of JSON arrays.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -1730,7 +1730,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private java.util.List < String > command; 
 
             /**
-             * The executed command.
+             * The executed commands. The value is a string that consists of JSON arrays.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -2151,8 +2151,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether MulitiBuffer-based TLS acceleration is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: MulitiBuffer-based TLS acceleration is enabled.
-             * *   `false`: MulitiBuffer-based TLS acceleration is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2265,8 +2265,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the feature of controlling the OPA injection scope is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: The feature is enabled.
-             * *   `false`: The feature is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder OPAScopeInjected(Boolean OPAScopeInjected) {
                 this.OPAScopeInjected = OPAScopeInjected;
@@ -2585,7 +2585,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String terminationDrainDuration; 
 
             /**
-             * The configurations of additional features for access log collection
+             * The configurations of additional features for access log collection.
              */
             public Builder accessLogExtraConf(AccessLogExtraConf accessLogExtraConf) {
                 this.accessLogExtraConf = accessLogExtraConf;
@@ -2601,7 +2601,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of automatic diagnosis for the ASM instance.
+             * The configurations of automatic diagnostics for the ASM instance.
              */
             public Builder autoDiagnosis(AutoDiagnosis autoDiagnosis) {
                 this.autoDiagnosis = autoDiagnosis;
@@ -2620,8 +2620,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the Kubernetes API of clusters on the data plane can be used to access Istio resources. Valid values:
              * <p>
              * 
-             * *   `true`: The Kubernetes API of clusters on the data plane can be used to access Istio resources.
-             * *   `false`: The Kubernetes API of clusters on the data plane cannot be used to access Istio resources.
+             * *   `true`
+             * *   `false`
              */
             public Builder CRAggregationEnabled(Boolean CRAggregationEnabled) {
                 this.CRAggregationEnabled = CRAggregationEnabled;
@@ -2629,7 +2629,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The label selectors used to specify namespaces on the data plane. The control plane discovers and process only application services in the specified namespaces.
+             * The label selectors used to specify the namespaces of the clusters on the data plane. The control plane discovers and processes only application services in the specified namespaces.
              */
             public Builder discoverySelectors(java.util.List < java.util.Map<String, ?>> discoverySelectors) {
                 this.discoverySelectors = discoverySelectors;
@@ -2685,7 +2685,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resources that are requested by the istio-init container.
+             * The resources that are required by the istio-init container.
              */
             public Builder sidecarProxyInitResourceRequest(SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest) {
                 this.sidecarProxyInitResourceRequest = sidecarProxyInitResourceRequest;
@@ -2737,8 +2737,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether Gateway API is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Gateway API is enabled.
-             * *   `false`: Gateway API is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder gatewayAPIEnabled(Boolean gatewayAPIEnabled) {
                 this.gatewayAPIEnabled = gatewayAPIEnabled;
@@ -2791,11 +2791,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`. Valid values:
+             * Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`.`` Valid values:
              * <p>
              * 
-             * *   `true`: Mesh topology is enabled.
-             * *   `false`: Mesh topology is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2871,7 +2871,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * The configurations of cross-region traffic distribution.
              * <p>
              * 
-             * >  Only one of `Failover` and Distribute parameters can be set. If you set the `Distribute` parameter, you cannot set the Failover parameter.
+             * >  Either `Failover` or Distribute can be set. If you set `Distribute`, you cannot set Failover.
              */
             public Builder distribute(java.util.Map < String, ? > distribute) {
                 this.distribute = distribute;
@@ -2882,8 +2882,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether cross-region load balancing is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Cross-region load balancing is enabled.
-             * *   `false`: Cross-region load balancing is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2894,7 +2894,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * The configurations of cross-region failover.
              * <p>
              * 
-             * >  Only one of Failover and `Distribute` parameters can be set. If you set the `Failover` parameter, you cannot set the `Distribute` parameter.
+             * >  Either Failover or `Distribute` can be set. If you set `Failover`, you cannot set `Distribute`.
              */
             public Builder failover(java.util.Map < String, ? > failover) {
                 this.failover = failover;
@@ -2938,8 +2938,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether MSE is enabled. Valid values:
              * <p>
              * 
-             * - `true`: MSE is enabled.
-             * - `false`: MSE is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3043,8 +3043,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the OPA plug-in is installed. Valid values:
              * <p>
              * 
-             * *   `true`: The OPA plug-in is installed.
-             * *   `false`: The OPA plug-in is not installed.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3084,7 +3084,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory that is requested by the OPA proxy container.
+             * The size of the memory that is requested by OPA.
              */
             public Builder requestMemory(String requestMemory) {
                 this.requestMemory = requestMemory;
@@ -3140,8 +3140,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether communication is allowed between external services and services in the mesh. Valid values:
              * <p>
              * 
-             * *   `true`: The communication is allowed.
-             * *   `false`: The communication is not allowed.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3205,8 +3205,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether Secret Discovery Service (SDS) is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: SDS is enabled.
-             * *   `false`: SDS is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enableSDSServer(Boolean enableSDSServer) {
                 this.enableSDSServer = enableSDSServer;
@@ -3217,8 +3217,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether gateway configuration filtering is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Gateway configuration filtering is enabled.
-             * *   `false`: Gateway configuration filtering is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder filterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
                 this.filterGatewayClusterConfig = filterGatewayClusterConfig;
@@ -3314,8 +3314,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether HTTP/1.0 is supported. Valid values:
              * <p>
              * 
-             * *   `true`: HTTP/1.0 is supported.
-             * *   `false`: HTTP/1.0 is not supported.
+             * *   `true`
+             * *   `false`
              */
             public Builder http10Enabled(Boolean http10Enabled) {
                 this.http10Enabled = http10Enabled;
@@ -3387,8 +3387,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether a custom Prometheus instance is used. Valid values:
              * <p>
              * 
-             * *   `true`: A custom Prometheus instance is used.
-             * *   `false`: No custom Prometheus instance is used.
+             * *   `true`
+             * *   `false`
              */
             public Builder useExternal(Boolean useExternal) {
                 this.useExternal = useExternal;
@@ -3468,8 +3468,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether Dubbo Filter is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Dubbo Filter is enabled.
-             * *   `false`: Dubbo Filter is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder dubboFilterEnabled(Boolean dubboFilterEnabled) {
                 this.dubboFilterEnabled = dubboFilterEnabled;
@@ -3480,8 +3480,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether MySQL Filter is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: MySQL Filter is enabled.
-             * *   `false`: MySQL Filter is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder mysqlFilterEnabled(Boolean mysqlFilterEnabled) {
                 this.mysqlFilterEnabled = mysqlFilterEnabled;
@@ -3492,8 +3492,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether Redis Filter is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Redis Filter is enabled.
-             * *   `false`: Redis Filter is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder redisFilterEnabled(Boolean redisFilterEnabled) {
                 this.redisFilterEnabled = redisFilterEnabled;
@@ -3504,8 +3504,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether Thrift Filter is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: Thrift Filter is enabled.
-             * *   `false`: Thrift Filter is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder thriftFilterEnabled(Boolean thriftFilterEnabled) {
                 this.thriftFilterEnabled = thriftFilterEnabled;
@@ -3685,8 +3685,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether gRPC Access Log Service (ALS) for Envoy is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: gRPC ALS for Envoy is enabled.
-             * *   `false`: gRPC ALS for Envoy is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder accessLogServiceEnabled(Boolean accessLogServiceEnabled) {
                 this.accessLogServiceEnabled = accessLogServiceEnabled;
@@ -3718,11 +3718,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values: Valid values:
+             * Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: The DNS proxy feature is enabled.
-             * *   `false`: The DNS proxy feature is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enableDNSProxying(Boolean enableDNSProxying) {
                 this.enableDNSProxying = enableDNSProxying;
@@ -3810,8 +3810,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the CNI plug-in is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: The CNI plug-in is enabled.
-             * *   `false`: The CNI plug-in is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3956,11 +3956,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String sidecarInjectorWebhookAsYaml; 
 
             /**
-             * Indicates whether automatic sidecar injection can be enabled by using pod annotations. Valid values:
+             * Indicates whether automatic sidecar proxy injection can be enabled by using pod annotations. Valid values:
              * <p>
              * 
-             * *   `true`: Automatic sidecar injection can be enabled by using pod annotations.
-             * *   `false`: Automatic sidecar injection cannot be enabled by using pod annotations.
+             * *   `true`
+             * *   `false`
              */
             public Builder autoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
                 this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
@@ -3968,11 +3968,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic sidecar injection is enabled for all namespaces. Valid values:
+             * Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:
              * <p>
              * 
-             * *   `true`: Automatic sidecar injection is enabled for all namespaces.
-             * *   `false`: Automatic sidecar injection is not enabled for all namespaces.
+             * *   `true`
+             * *   `false`
              */
             public Builder enableNamespacesByDefault(Boolean enableNamespacesByDefault) {
                 this.enableNamespacesByDefault = enableNamespacesByDefault;
@@ -3988,7 +3988,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CPU cores that are available to the sidecar injector pod.
+             * The maximum number of CPU cores that are available to the pod where the sidecar injector resides.
              */
             public Builder limitCPU(String limitCPU) {
                 this.limitCPU = limitCPU;
@@ -3996,7 +3996,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the memory that is available to the sidecar injector pod.
+             * The maximum size of the memory that is available to the pod where the sidecar injector resides.
              */
             public Builder limitMemory(String limitMemory) {
                 this.limitMemory = limitMemory;
@@ -4004,7 +4004,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are requested by the sidecar injector pod.
+             * The number of CPU cores that are requested by the pod where the sidecar injector resides.
              */
             public Builder requestCPU(String requestCPU) {
                 this.requestCPU = requestCPU;
@@ -4012,7 +4012,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory that is requested by the sidecar injector pod.
+             * The size of the memory that is requested by the pod where the sidecar injector resides.
              */
             public Builder requestMemory(String requestMemory) {
                 this.requestMemory = requestMemory;
@@ -4020,7 +4020,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of component replicas that are used for sidecar injection. Default value: `1`.
+             * The number of component replicas that are used for sidecar proxy injection. Default value: `1`.
              */
             public Builder sidecarInjectorNum(Integer sidecarInjectorNum) {
                 this.sidecarInjectorNum = sidecarInjectorNum;
@@ -4028,7 +4028,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Other configurations of automatic sidecar injection, in the YAML format. For more information, see [Enable automatic sidecar injection by using multiple methods](~~186136~~).
+             * Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see [Enable automatic sidecar proxy injection](~~186136~~).
              */
             public Builder sidecarInjectorWebhookAsYaml(String sidecarInjectorWebhookAsYaml) {
                 this.sidecarInjectorWebhookAsYaml = sidecarInjectorWebhookAsYaml;
@@ -4072,8 +4072,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether WebAssembly Filter is enabled. Valid values:
              * <p>
              * 
-             * *   `true`:WebAssembly Filter is enabled.
-             * *   `false`: WebAssembly Filter is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -4418,7 +4418,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of control-plane log collection.
+             * The configurations of control plane log collection.
              */
             public Builder controlPlaneLogInfo(ControlPlaneLogInfo controlPlaneLogInfo) {
                 this.controlPlaneLogInfo = controlPlaneLogInfo;
@@ -4429,8 +4429,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether a custom Zipkin system is used. Valid values:
              * <p>
              * 
-             * *   `true`: A custom Zipkin system is used.
-             * *   `false`: No custom Zipkin system is used.
+             * *   `true`
+             * *   `false`
              */
             public Builder customizedZipkin(Boolean customizedZipkin) {
                 this.customizedZipkin = customizedZipkin;
@@ -4449,8 +4449,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * Indicates whether the feature that routes traffic to the nearest instance is enabled. Valid values:
              * <p>
              * 
-             * *   `true`: The feature is enabled.
-             * *   `false`: The feature is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder enableLocalityLB(Boolean enableLocalityLB) {
                 this.enableLocalityLB = enableLocalityLB;
@@ -4590,11 +4590,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Prometheus monitoring is enabled. We recommend that you use [Prometheus Service of Application Real-Time Monitoring Service (ARMS)](https://arms.console.aliyun.com/). Valid values:
+             * Indicates whether Prometheus monitoring is enabled. We recommend that you use [Managed Service for Prometheus](https://arms.console.aliyun.com/). Valid values:
              * <p>
              * 
-             * *   `true`: Prometheus monitoring is enabled.
-             * *   `false`: Prometheus monitoring is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder telemetry(Boolean telemetry) {
                 this.telemetry = telemetry;
@@ -4602,11 +4602,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether tracing analysis is enabled. This feature can be enabled only after [Tracing Analysis](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:
+             * Indicates whether tracing analysis is enabled. This feature can be enabled only after [Managed Service for OpenTelemetry](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:
              * <p>
              * 
-             * *   `true`: Tracing analysis is enabled.
-             * *   `false`: Tracing analysis is disabled.
+             * *   `true`
+             * *   `false`
              */
             public Builder tracing(Boolean tracing) {
                 this.tracing = tracing;
@@ -4679,7 +4679,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the security group.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4687,7 +4687,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The virtual switches (vSwitches).
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -4892,9 +4892,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * The specification of the ASM instance. Valid values:
              * <p>
              * 
-             * - `standard`: Standard Edition
-             * - `enterprise`: Enterprise Edition
-             * - `ultimate`: Ultimate Edition
+             * *   `standard`: Standard Edition
+             * *   `enterprise`: Enterprise Edition
+             * *   `ultimate`: Ultimate Edition
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -4902,7 +4902,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of clusters.
+             * The clusters.
              */
             public Builder clusters(java.util.List < String > clusters) {
                 this.clusters = clusters;
@@ -4929,8 +4929,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              * The Alibaba Cloud service for which the ASM instance is created. Valid values:
              * <p>
              * 
-             * - `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-             * - An empty value indicates that the ASM instance is created by the user.
+             * *   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+             * *   An empty value indicates that the ASM instance is created by the user.
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;

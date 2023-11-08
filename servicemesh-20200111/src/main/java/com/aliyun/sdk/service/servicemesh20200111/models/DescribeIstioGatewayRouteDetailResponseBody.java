@@ -1489,7 +1489,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ports.
+             * The ports of the specified hosts from which the traffic is routed.
              */
             public Builder port(Port port) {
                 this.port = port;
@@ -1793,7 +1793,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request headers to be matched.
+             * The list of the request headers to be matched.
              */
             public Builder headers(RouteDestinationsHeaders headers) {
                 this.headers = headers;
@@ -1942,7 +1942,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HasUnsafeFeatures.
+             * If the value is true, the original YAML file contains features that are not supported on the current interface.
              */
             public Builder hasUnsafeFeatures(Boolean hasUnsafeFeatures) {
                 this.hasUnsafeFeatures = hasUnsafeFeatures;
@@ -1958,7 +1958,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RawVSRoute.
+             * The original YAML file of the virtual service that is serialized into a JSON string.
              */
             public Builder rawVSRoute(String rawVSRoute) {
                 this.rawVSRoute = rawVSRoute;

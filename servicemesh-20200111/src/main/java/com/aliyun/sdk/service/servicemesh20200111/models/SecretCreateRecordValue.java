@@ -62,7 +62,11 @@ public class SecretCreateRecordValue extends TeaModel {
         private String message; 
 
         /**
-         * State.
+         * The result of creating the secret. Valid values:
+         * <p>
+         * 
+         * *   `success`: The secret was created.
+         * *   `fail`: The secret failed to be created.
          */
         public Builder state(String state) {
             this.state = state;
@@ -70,7 +74,7 @@ public class SecretCreateRecordValue extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster on the data plane.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -78,7 +82,7 @@ public class SecretCreateRecordValue extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned when exceptions occur. Otherwise, an empty value is returned.
          */
         public Builder message(String message) {
             this.message = message;

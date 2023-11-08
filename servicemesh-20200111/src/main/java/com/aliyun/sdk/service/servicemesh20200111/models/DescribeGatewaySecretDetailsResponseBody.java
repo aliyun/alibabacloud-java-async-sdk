@@ -58,7 +58,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +204,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Server Name Indication (SNI) value that indicates the hostname of the service.
+             * The Server Name Indication (SNI) value.
              */
             public Builder SNI(String SNI) {
                 this.SNI = SNI;

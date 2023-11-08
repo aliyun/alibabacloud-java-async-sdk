@@ -83,7 +83,7 @@ public class DescribeImportedServicesDetailRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * The name of the ASM gateway.
          */
         public Builder ASMGatewayName(String ASMGatewayName) {
             this.putBodyParameter("ASMGatewayName", ASMGatewayName);
@@ -92,7 +92,7 @@ public class DescribeImportedServicesDetailRequest extends Request {
         }
 
         /**
-         * The details of the services.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -101,7 +101,7 @@ public class DescribeImportedServicesDetailRequest extends Request {
         }
 
         /**
-         * The namespace in which the service resides.
+         * The namespace in which the services reside.
          */
         public Builder serviceNamespace(String serviceNamespace) {
             this.putBodyParameter("ServiceNamespace", serviceNamespace);

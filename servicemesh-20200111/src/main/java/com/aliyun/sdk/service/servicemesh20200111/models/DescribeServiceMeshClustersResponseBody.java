@@ -333,7 +333,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
              * *   `1`: The cluster cannot be added to the ASM instance because you do not have administrator permissions on the cluster.
              * *   `2`: The cluster cannot be added to the ASM instance because the cluster and the ASM instance reside in different VPCs between which no private connections are built.
              * *   `3`: The CIDR block of the cluster conflicts with that of the ASM instance.
-             * *   `4`: The cluster has a namespace that is named istio system.
+             * *   `4`: The cluster has a namespace that is named istio-system.
              */
             public Builder forbiddenFlag(Long forbiddenFlag) {
                 this.forbiddenFlag = forbiddenFlag;
@@ -341,7 +341,31 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ForbiddenInfo.
+             * The reason why the cluster on the data plane cannot be added to the ASM instance. The value is a JSON string in the following format:
+             * <p>
+             * 
+             *     [
+             *       {
+             *         "cluster": "cdd55bd6e054b4c6ca18ec02614******",
+             *         "object": "Pod",
+             *         "cidr": "172.16.0.0/24"
+             *       },
+             *       {
+             *         "cluster": "cfa37fdf7cb1641e1976f8293ac******",
+             *         "object": "Pod",
+             *         "cidr": "172.16.0.0/24"
+             *       }
+             *     ]
+             * 
+             * In the preceding example, the CIDR block `172.16.0.0/24` of the pod in the `cdd55bd6e054b4c6ca18ec02614******` cluster conflicts with the CIDR block `172.16.0.0/24` of the pod in the `cfa37fdf7cb1641e1976f8293ac******` cluster.
+             * 
+             * Valid values of the `object` parameter:
+             * 
+             * *   `Pod`
+             * *   `Service`
+             * *   `VSwitch`
+             * *   `VPC`
+             * *   `VPC CIDR`
              */
             public Builder forbiddenInfo(String forbiddenInfo) {
                 this.forbiddenInfo = forbiddenInfo;
@@ -365,7 +389,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ASM instance.
+             * The ASM instance ID.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;

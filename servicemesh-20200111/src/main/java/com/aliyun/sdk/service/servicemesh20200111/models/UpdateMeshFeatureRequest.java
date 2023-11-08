@@ -2130,7 +2130,7 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
-         * Specifies whether to create an SLB instance for accessing the ASM mesh topology.
+         * Specifies whether to create a CLB instance for accessing the ASM mesh topology.
          */
         public Builder OPAInjectorMemoryLimit(String OPAInjectorMemoryLimit) {
             this.putBodyParameter("OPAInjectorMemoryLimit", OPAInjectorMemoryLimit);

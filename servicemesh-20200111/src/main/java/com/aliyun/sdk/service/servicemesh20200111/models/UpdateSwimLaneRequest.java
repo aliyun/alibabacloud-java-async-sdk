@@ -152,7 +152,7 @@ public class UpdateSwimLaneRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ID of the Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

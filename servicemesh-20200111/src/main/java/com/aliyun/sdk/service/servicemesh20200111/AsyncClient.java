@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSwimLaneGroupResponse> createSwimLaneGroup(CreateSwimLaneGroupRequest request);
 
+    CompletableFuture<CreateWaypointResponse> createWaypoint(CreateWaypointRequest request);
+
     CompletableFuture<DeleteGatewayRouteResponse> deleteGatewayRoute(DeleteGatewayRouteRequest request);
 
     CompletableFuture<DeleteGatewaySecretResponse> deleteGatewaySecret(DeleteGatewaySecretRequest request);
@@ -51,6 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSwimLaneResponse> deleteSwimLane(DeleteSwimLaneRequest request);
 
     CompletableFuture<DeleteSwimLaneGroupResponse> deleteSwimLaneGroup(DeleteSwimLaneGroupRequest request);
+
+    CompletableFuture<DeleteWaypointResponse> deleteWaypoint(DeleteWaypointRequest request);
 
     CompletableFuture<DescribeASMGatewayImportedServicesResponse> describeASMGatewayImportedServices(DescribeASMGatewayImportedServicesRequest request);
 
@@ -162,14 +166,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GrantUserPermissionsResponse> grantUserPermissions(GrantUserPermissionsRequest request);
 
+    CompletableFuture<ListServiceAccountsResponse> listServiceAccounts(ListServiceAccountsRequest request);
+
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    CompletableFuture<ListWaypointsResponse> listWaypoints(ListWaypointsRequest request);
 
     CompletableFuture<ModifyApiServerEipResourceResponse> modifyApiServerEipResource(ModifyApiServerEipResourceRequest request);
 
     CompletableFuture<ModifyServiceMeshNameResponse> modifyServiceMeshName(ModifyServiceMeshNameRequest request);
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+      * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
       *
      */
     CompletableFuture<ReActivateAuditResponse> reActivateAudit(ReActivateAuditRequest request);
@@ -211,6 +219,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSwimLaneResponse> updateSwimLane(UpdateSwimLaneRequest request);
 
     CompletableFuture<UpdateSwimLaneGroupResponse> updateSwimLaneGroup(UpdateSwimLaneGroupRequest request);
+
+    CompletableFuture<UpdateWaypointResponse> updateWaypoint(UpdateWaypointRequest request);
 
     CompletableFuture<UpgradeMeshEditionPartiallyResponse> upgradeMeshEditionPartially(UpgradeMeshEditionPartiallyRequest request);
 

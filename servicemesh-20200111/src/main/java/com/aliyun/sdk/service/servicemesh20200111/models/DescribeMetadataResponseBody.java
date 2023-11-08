@@ -58,7 +58,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * The CRDs of the versions.
+             * The CRDs of all ASM versions.
              */
             public Builder versionCrds(java.util.List < java.util.Map<String, ?>> versionCrds) {
                 this.versionCrds = versionCrds;
@@ -150,7 +150,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * The ASM version and the corresponding Istio version.
+             * The Istio versions corresponding to the ASM versions.
              */
             public Builder versionRegistry(java.util.List < java.util.Map<String, ?>> versionRegistry) {
                 this.versionRegistry = versionRegistry;
@@ -158,7 +158,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * The supported versions.
+             * The list of ASM versions.
              */
             public Builder versions(java.util.List < String > versions) {
                 this.versions = versions;
@@ -283,7 +283,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * The Custom Resource Definitions (CRDs) of the versions.
+             * The custom resource definitions (CRDs) of all ASM versions.
              */
             public Builder versionCrds(java.util.List < java.util.Map<String, ?>> versionCrds) {
                 this.versionCrds = versionCrds;
@@ -291,7 +291,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * The ASM version and the corresponding Istio version.
+             * The Istio versions corresponding to the ASM versions.
              */
             public Builder versionRegistry(java.util.List < java.util.Map<String, ?>> versionRegistry) {
                 this.versionRegistry = versionRegistry;
@@ -299,7 +299,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * The supported versions.
+             * The list of ASM versions.
              */
             public Builder versions(java.util.List < String > versions) {
                 this.versions = versions;

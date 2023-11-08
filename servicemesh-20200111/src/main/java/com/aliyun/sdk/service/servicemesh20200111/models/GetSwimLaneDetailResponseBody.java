@@ -114,7 +114,7 @@ public class GetSwimLaneDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Fixed value: **ASM_TRAFFIC_TAG**.
+         * The label key of the associated service workload. The value is fixed as **ASM_TRAFFIC_TAG**.
          */
         public Builder labelSelectorKey(String labelSelectorKey) {
             this.labelSelectorKey = labelSelectorKey;
@@ -130,7 +130,7 @@ public class GetSwimLaneDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

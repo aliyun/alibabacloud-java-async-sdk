@@ -69,7 +69,7 @@ public class UpgradeMeshVersionRequest extends Request {
         } 
 
         /**
-         * PreCheck.
+         * Specifies whether to perform a precheck. Default value: false. If this parameter is set to true, this call only checks whether the current ASM instance meets the upgrade conditions and does not actually perform an upgrade.
          */
         public Builder preCheck(Boolean preCheck) {
             this.putQueryParameter("PreCheck", preCheck);
@@ -78,7 +78,7 @@ public class UpgradeMeshVersionRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

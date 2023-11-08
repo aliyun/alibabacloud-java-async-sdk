@@ -50,7 +50,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
         private UpgradeDetail upgradeDetail; 
 
         /**
-         * The upgrade results.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of ingress gateways that are upgraded.
+         * The upgrade results.
          */
         public Builder upgradeDetail(UpgradeDetail upgradeDetail) {
             this.upgradeDetail = upgradeDetail;
@@ -134,12 +134,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             private Long totalGatewaysNum; 
 
             /**
-             * The status of the ASM instance. Valid values:
-             * <p>
-             * 
-             * *   running: The instance is running.
-             * *   `upgrading`: The instance is being upgraded.
-             * *   `upgrading_failed`: The upgrade of the instance fails.
+             * The number of ingress gateways that are upgraded.
              */
             public Builder finishedGatewaysNum(Long finishedGatewaysNum) {
                 this.finishedGatewaysNum = finishedGatewaysNum;
@@ -147,7 +142,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayStatusRecord.
+             * The information about the status of the ingress gateways.
              */
             public Builder gatewayStatusRecord(java.util.Map < String, UpgradeDetailGatewayStatusRecordValue > gatewayStatusRecord) {
                 this.gatewayStatusRecord = gatewayStatusRecord;
@@ -155,7 +150,12 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of ingress gateways in the ASM instance.
+             * The status of the ASM instance. Valid values:
+             * <p>
+             * 
+             * *   running: The instance is running.
+             * *   `upgrading`: The instance is being upgraded.
+             * *   `upgrading_failed`: The upgrade of the instance fails.
              */
             public Builder meshStatus(String meshStatus) {
                 this.meshStatus = meshStatus;
@@ -163,7 +163,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the status of the ingress gateways.
+             * The total number of ingress gateways in the ASM instance.
              */
             public Builder totalGatewaysNum(Long totalGatewaysNum) {
                 this.totalGatewaysNum = totalGatewaysNum;

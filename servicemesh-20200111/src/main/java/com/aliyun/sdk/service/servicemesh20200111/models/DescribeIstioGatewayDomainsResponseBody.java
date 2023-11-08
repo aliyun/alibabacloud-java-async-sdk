@@ -58,7 +58,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * The list of domain names.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -194,7 +194,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayCRName.
+             * The name of the Istio gateway.
              */
             public Builder gatewayCRName(String gatewayCRName) {
                 this.gatewayCRName = gatewayCRName;
@@ -210,7 +210,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the port.
+             * The port name.
              */
             public Builder portName(String portName) {
                 this.portName = portName;

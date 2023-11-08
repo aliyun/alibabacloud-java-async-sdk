@@ -152,7 +152,7 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ID of the Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -161,7 +161,7 @@ public class CreateSwimLaneRequest extends Request {
         }
 
         /**
-         * The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name /$Cluster ID/$Namespace/$Service name`.
+         * The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.
          */
         public Builder servicesList(String servicesList) {
             this.putBodyParameter("ServicesList", servicesList);

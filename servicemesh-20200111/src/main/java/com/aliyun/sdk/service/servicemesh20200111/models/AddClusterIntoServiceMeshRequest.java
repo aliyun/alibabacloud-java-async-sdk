@@ -93,7 +93,7 @@ public class AddClusterIntoServiceMeshRequest extends Request {
         }
 
         /**
-         * 添加集群时不检查目标集群是否存在istio-system namespace，一般用于自建istio 迁移ASM 场景
+         * IgnoreNamespaceCheck.
          */
         public Builder ignoreNamespaceCheck(Boolean ignoreNamespaceCheck) {
             this.putBodyParameter("IgnoreNamespaceCheck", ignoreNamespaceCheck);

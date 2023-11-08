@@ -208,7 +208,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
+         * The one or more domain names that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
          */
         public Builder hosts(String hosts) {
             this.putBodyParameter("Hosts", hosts);
@@ -271,7 +271,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -94,7 +94,7 @@ public class DescribeGuestClusterPodsRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -103,7 +103,7 @@ public class DescribeGuestClusterPodsRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

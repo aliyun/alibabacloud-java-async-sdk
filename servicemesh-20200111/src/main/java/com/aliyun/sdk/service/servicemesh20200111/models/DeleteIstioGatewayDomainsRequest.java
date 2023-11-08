@@ -143,7 +143,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The maximum number of ASM gateways to query.
+         * The maximum number of Istio gateways to query.
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -152,7 +152,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The namespace in which the ASM gateway resides.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -161,7 +161,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The name of the port.
+         * The port name.
          */
         public Builder portName(String portName) {
             this.putBodyParameter("PortName", portName);
@@ -170,7 +170,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

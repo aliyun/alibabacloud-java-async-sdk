@@ -62,7 +62,7 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The labels of the namespaces. Labels are returned only when the `ShowNsLabels` parameter is set to `true`.
+         * The labels of the namespaces. Labels are returned only when `ShowNsLabels` is set to `true`.
          */
         public Builder nsLabels(java.util.Map < String, ? > nsLabels) {
             this.nsLabels = nsLabels;
@@ -78,7 +78,7 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

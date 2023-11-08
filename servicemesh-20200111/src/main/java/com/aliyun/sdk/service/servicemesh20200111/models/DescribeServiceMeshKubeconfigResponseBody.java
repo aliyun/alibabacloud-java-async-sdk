@@ -62,7 +62,7 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExpireTime.
+         * The expiration time of the kubeconfig certificate. The format is: YYYY-MM-DD hh: mm: ss.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -78,7 +78,7 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

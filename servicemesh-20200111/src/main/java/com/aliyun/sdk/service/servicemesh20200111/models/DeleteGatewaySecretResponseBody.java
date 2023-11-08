@@ -50,7 +50,7 @@ public class DeleteGatewaySecretResponseBody extends TeaModel {
         private java.util.Map < String, SecretDeleteRecordValue > secretDeleteRecord; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteGatewaySecretResponseBody extends TeaModel {
         }
 
         /**
-         * The record of deleting the secret.
+         * The records of deleting the secret in all clusters.
          */
         public Builder secretDeleteRecord(java.util.Map < String, SecretDeleteRecordValue > secretDeleteRecord) {
             this.secretDeleteRecord = secretDeleteRecord;

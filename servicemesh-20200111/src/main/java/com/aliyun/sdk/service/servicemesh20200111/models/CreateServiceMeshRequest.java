@@ -1158,7 +1158,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The type of the SLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
+         * The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
          */
         public Builder apiServerLoadBalancerSpec(String apiServerLoadBalancerSpec) {
             this.putBodyParameter("ApiServerLoadBalancerSpec", apiServerLoadBalancerSpec);
@@ -1196,7 +1196,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the SLB instance if the SLB instance uses the subscription billing method. Valid values:
+         * Specifies whether to enable auto-renewal for the CLB instance if the CLB instance uses the subscription billing method. Valid values:
          * <p>
          * 
          * - true
@@ -1210,7 +1210,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the SLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the SLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the SLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.
+         * The auto-renewal period of the CLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the CLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the CLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putBodyParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -1234,7 +1234,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The billing method of the SLB instance. Valid values:
+         * The billing method of the CLB instance. Valid values:
          * <p>
          * 
          * *   `PayOnDemand`: pay-as-you-go.
@@ -1380,7 +1380,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * EnableAmbient.
+         * Specifies whether to enable the Ambient Mesh mode for the ASM instance.
          */
         public Builder enableAmbient(Boolean enableAmbient) {
             this.putBodyParameter("EnableAmbient", enableAmbient);
@@ -1540,9 +1540,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * After this ASM instance is successfully created, automatically add an ACK cluster to it. 
-         * <p>
-         * Make sure this ASM instance and ACK cluster have same VPC, VSwitch, cluster domain.
+         * When you create an ASM instance, you can add a cluster to the ASM instance. If you do not specify this parameter, no cluster is added to the ASM instance. The cluster and the ASM instance must be in the same vSwitch of the same VPC and have the same domain name.
          */
         public Builder guestCluster(String guestCluster) {
             this.putBodyParameter("GuestCluster", guestCluster);
@@ -1748,7 +1746,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the SLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the SLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
+         * The auto-renewal period of the CLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the CLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -1757,7 +1755,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The type of the SLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
+         * The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.
          */
         public Builder pilotLoadBalancerSpec(String pilotLoadBalancerSpec) {
             this.putBodyParameter("PilotLoadBalancerSpec", pilotLoadBalancerSpec);
@@ -1835,7 +1833,11 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * Tag.
+         * Tag of the ASM instance. A tag contains the following information:
+         * <p>
+         * 
+         * *   key: the name of the tag
+         * *   value: the value of the tag
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1985,7 +1987,7 @@ public class CreateServiceMeshRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The name of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1993,7 +1995,7 @@ public class CreateServiceMeshRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

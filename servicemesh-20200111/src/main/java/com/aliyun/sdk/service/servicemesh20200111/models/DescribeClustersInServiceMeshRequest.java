@@ -55,7 +55,7 @@ public class DescribeClustersInServiceMeshRequest extends Request {
         } 
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

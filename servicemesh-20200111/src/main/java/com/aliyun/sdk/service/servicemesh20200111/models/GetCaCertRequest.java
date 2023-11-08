@@ -55,7 +55,7 @@ public class GetCaCertRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

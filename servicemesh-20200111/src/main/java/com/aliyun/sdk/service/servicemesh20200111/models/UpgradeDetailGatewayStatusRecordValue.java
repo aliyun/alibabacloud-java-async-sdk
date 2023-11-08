@@ -62,7 +62,15 @@ public class UpgradeDetailGatewayStatusRecordValue extends TeaModel {
         private String version; 
 
         /**
-         * Status.
+         * The upgrade status of the ingress gateway. Valid values:
+         * <p>
+         * 
+         * *   `upgrading`: The ingress gateway is being upgraded.
+         * *   `pending`: The ingress gateway waits to be upgraded.
+         * *   `finished`: The ingress gateway upgrade is complete.
+         * *   `notStart`: The ingress gateway upgrade does not start.
+         * *   `failed`: The ingress gateway upgrade fails.
+         * *   `unknown`: The upgrade status of the ingress gateway is unknown.
          */
         public Builder status(String status) {
             this.status = status;
@@ -70,7 +78,7 @@ public class UpgradeDetailGatewayStatusRecordValue extends TeaModel {
         }
 
         /**
-         * Message.
+         * Additional status information of the ingress gateway.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +86,7 @@ public class UpgradeDetailGatewayStatusRecordValue extends TeaModel {
         }
 
         /**
-         * Version.
+         * The version of the ingress gateway.
          */
         public Builder version(String version) {
             this.version = version;

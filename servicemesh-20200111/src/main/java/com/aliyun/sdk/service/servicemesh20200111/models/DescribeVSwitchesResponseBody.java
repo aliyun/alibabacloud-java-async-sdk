@@ -267,7 +267,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * 交换机所属的可用区。
+             * The zone to which the switch belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

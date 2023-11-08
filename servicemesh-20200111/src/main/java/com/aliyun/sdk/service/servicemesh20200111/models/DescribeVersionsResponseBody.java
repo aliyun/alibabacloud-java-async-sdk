@@ -50,7 +50,7 @@ public class DescribeVersionsResponseBody extends TeaModel {
         private java.util.List < VersionInfo> versionInfo; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ASM versions available for the ASM instance of the current edition.
+             * The list of ASM versions available for the ASM instance of the current edition.
              */
             public Builder versions(java.util.List < String > versions) {
                 this.versions = versions;

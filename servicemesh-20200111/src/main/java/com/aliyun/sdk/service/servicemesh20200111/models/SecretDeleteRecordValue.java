@@ -62,7 +62,11 @@ public class SecretDeleteRecordValue extends TeaModel {
         private String message; 
 
         /**
-         * State.
+         * The result of deleting the secret. Valid values:
+         * <p>
+         * 
+         * *   `success`: The secret was deleted.
+         * *   `fail`: The secret failed to be deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -70,7 +74,7 @@ public class SecretDeleteRecordValue extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -78,7 +82,7 @@ public class SecretDeleteRecordValue extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned when exceptions occur. Otherwise, an empty value is returned.
          */
         public Builder message(String message) {
             this.message = message;

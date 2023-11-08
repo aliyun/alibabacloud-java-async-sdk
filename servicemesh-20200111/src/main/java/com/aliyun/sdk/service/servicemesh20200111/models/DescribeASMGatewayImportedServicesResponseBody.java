@@ -50,7 +50,7 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The imported services.
+         * The list of the imported services.
          */
         public Builder importedServices(java.util.List < ImportedServices> importedServices) {
             this.importedServices = importedServices;
@@ -58,7 +58,7 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
             private String serviceNamespace; 
 
             /**
-             * The name of the service.
+             * The name of a service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

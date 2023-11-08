@@ -50,7 +50,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the queried Kubernetes clusters.
+         * The list of Kubernetes clusters that are added to the same ASM instance but are in different VPCs and are not connected by using a Cloud Enterprise Network (CEN) instance.
          */
         public Builder clusters(java.util.List < String > clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

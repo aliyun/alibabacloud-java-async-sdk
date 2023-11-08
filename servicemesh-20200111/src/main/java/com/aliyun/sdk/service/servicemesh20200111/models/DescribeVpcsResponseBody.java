@@ -103,7 +103,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +219,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The ID of a VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -99,7 +99,7 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         } 
 
         /**
-         * Enabled.
+         * Specifies whether to collect control plane logs to Simple Log Service.
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -108,7 +108,7 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         }
 
         /**
-         * LogTTLInDay.
+         * The time to live (TTL) period of the collected logs. Unit: day.
          */
         public Builder logTTLInDay(Integer logTTLInDay) {
             this.putBodyParameter("LogTTLInDay", logTTLInDay);
@@ -117,7 +117,7 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         }
 
         /**
-         * Project.
+         * The name of the Simple Log Service project to which control plane logs are collected.
          */
         public Builder project(String project) {
             this.putBodyParameter("Project", project);
@@ -126,7 +126,7 @@ public class UpdateControlPlaneLogConfigRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

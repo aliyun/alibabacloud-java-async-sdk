@@ -161,7 +161,7 @@ public class UpdateMeshCRAggregationRequest extends Request {
          * <p>
          * 
          * *   `true`: enables the Kubernetes API to access Istio resources in the ASM instance.
-         * *   `false`: does not enable the Kubernetes API to access Istio resources in the ASM instance.
+         * *   `false`: disables the Kubernetes API to access Istio resources in the ASM instance.
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -188,7 +188,7 @@ public class UpdateMeshCRAggregationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * The Service Mesh (ASM) instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

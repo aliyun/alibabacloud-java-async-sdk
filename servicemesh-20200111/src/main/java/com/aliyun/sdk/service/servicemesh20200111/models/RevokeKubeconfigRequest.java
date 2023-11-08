@@ -82,7 +82,7 @@ public class RevokeKubeconfigRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance for which you want to revoke a kubeconfig file.
+         * The ID of the ASM instance for which you want to revoke its kubeconfig file.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

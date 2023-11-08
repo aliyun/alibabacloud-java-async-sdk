@@ -161,7 +161,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -170,12 +170,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * The status of the routing rule. Valid values:
-         * <p>
-         * 
-         * *   `0`: The routing rule is valid.
-         * *   `1`: The routing rule is invalid.
-         * *   `2`: An error occurs during the creation or update of the routing rule.
+         * The status of the routing rule. Valid values: 0: The routing rule is valid. 1: The routing rule is invalid. 2: An error occurs during the creation or update of the routing rule.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -58,7 +58,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is required by the system. The return value is fixed to `0`.
+             * The value is fixed as `0`.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -182,7 +182,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is required by the system. The return value is fixed to `cluster`.
+             * The value is fixed as `cluster`.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -193,7 +193,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
              * The name of the permissions. Valid values:
              * <p>
              * 
-             * *   `istio-admin`: the permissions of Alibaba Cloud Service Mesh (ASM) administrators.
+             * *   `istio-admin`: the permissions of ASM administrators.
              * *   `istio-ops`: the permissions of ASM restricted users.
              * *   `istio-readonly`: the read-only permissions.
              */
@@ -203,7 +203,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is required by the system. The return value is fixed to `custom`.
+             * The value is fixed as `custom`.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

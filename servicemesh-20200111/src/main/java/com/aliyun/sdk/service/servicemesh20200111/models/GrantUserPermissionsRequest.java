@@ -86,7 +86,7 @@ public class GrantUserPermissionsRequest extends Request {
          * <p>
          * 
          * *   `IsCustom`: a parameter that is required by the system. Set the value to `true`.
-         * *   `Cluster`: the ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * *   `Cluster`: the ID of the Service Mesh (ASM) instance.
          * *   `RoleName`: the name of the permissions. Valid values: `istio-admin`, `istio-ops`, and `istio-readonly`. A value of istio-admin indicates the permissions of ASM administrators. A value of istio-ops indicates the permissions of ASM restricted users. A value of istio-readonly indicates the read-only permissions.
          * *   `IsRamRole`: the entity to which you want to grant the permissions. To grant the permissions to a RAM role, set the value to `true`. Otherwise, set the value to `false`.
          */
@@ -106,7 +106,7 @@ public class GrantUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID list of the RAM user or RAM role.
+         * The IDs of RAM users or RAM roles. You can grant permissions to multiple users at a time.
          */
         public Builder subAccountUserIds(java.util.List < String > subAccountUserIds) {
             String subAccountUserIdsShrink = shrink(subAccountUserIds, "SubAccountUserIds", "json");

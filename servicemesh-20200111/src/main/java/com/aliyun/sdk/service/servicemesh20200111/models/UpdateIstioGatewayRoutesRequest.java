@@ -810,7 +810,7 @@ public class UpdateIstioGatewayRoutesRequest extends Request {
             private RetryRemoteLocalities retryRemoteLocalities; 
 
             /**
-             * The number of retries allowed for a request.
+             * The number of retries that are allowed for a request.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -1431,7 +1431,7 @@ public class UpdateIstioGatewayRoutesRequest extends Request {
             private Integer number; 
 
             /**
-             * Number.
+             * The port number.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -1504,7 +1504,10 @@ public class UpdateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port of the destination service.
+             * <p>
+             * 
+             * >  If the destination service of the route has only one port, this field can be left empty. If the destination service has multiple ports, you must specify the port number.
              */
             public Builder port(Port port) {
                 this.port = port;
@@ -1698,7 +1701,7 @@ public class UpdateIstioGatewayRoutesRequest extends Request {
             private String routeType; 
 
             /**
-             * Domains.
+             * The list of requested domain names.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -1722,7 +1725,7 @@ public class UpdateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * The namespace in which the destination service resides.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1730,7 +1733,7 @@ public class UpdateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RawVSRoute.
+             * The original YAML file of the virtual service that is serialized in a JSON string.
              */
             public Builder rawVSRoute(Object rawVSRoute) {
                 this.rawVSRoute = rawVSRoute;

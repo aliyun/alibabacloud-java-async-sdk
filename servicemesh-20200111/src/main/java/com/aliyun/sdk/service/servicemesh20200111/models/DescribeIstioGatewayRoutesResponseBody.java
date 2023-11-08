@@ -210,7 +210,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationHost.
+             * Destination hosts list.
              */
             public Builder destinationHost(java.util.List < String > destinationHost) {
                 this.destinationHost = destinationHost;
@@ -218,7 +218,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationSubSet.
+             * Destination subset list.
              */
             public Builder destinationSubSet(java.util.List < String > destinationSubSet) {
                 this.destinationSubSet = destinationSubSet;

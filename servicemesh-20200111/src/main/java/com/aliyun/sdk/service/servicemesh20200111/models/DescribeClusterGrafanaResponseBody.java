@@ -58,7 +58,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the Grafana dashboard.
+             * The endpoint of a Grafana dashboard.
              */
             public Builder url(String url) {
                 this.url = url;

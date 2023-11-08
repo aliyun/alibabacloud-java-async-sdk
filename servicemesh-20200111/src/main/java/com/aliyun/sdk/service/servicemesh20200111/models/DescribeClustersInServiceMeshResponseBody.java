@@ -50,7 +50,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The clusters in the ASM instance.
+         * The list of the clusters in the ASM instance.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -323,7 +323,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The domain of the cluster.
+             * The domain name of the cluster.
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -347,7 +347,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the cluster was created.
+             * The time when the cluster was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -355,7 +355,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when the call failed.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -370,7 +370,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
              * 
              * \-`logtail_uninstalled`: The Logtail component is not installed.
              * 
-             * *   `logtail_state_get_error`: The Logtail component fails to be installed.
+             * *   `logtail_state_get_error`: The Logtail component failed to be installed.
              */
             public Builder logtailInstalledState(String logtailInstalledState) {
                 this.logtailInstalledState = logtailInstalledState;
@@ -410,7 +410,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the cluster was last modified.
+             * The time when the cluster was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

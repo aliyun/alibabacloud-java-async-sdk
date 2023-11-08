@@ -202,7 +202,7 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the lane group.
+             * The name of a lane group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

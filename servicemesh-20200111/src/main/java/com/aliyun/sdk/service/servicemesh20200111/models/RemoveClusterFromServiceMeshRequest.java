@@ -93,7 +93,7 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
         }
 
         /**
-         * 移除集群时，保留istio-system 命名空间
+         * ReserveNamespace.
          */
         public Builder reserveNamespace(Boolean reserveNamespace) {
             this.putBodyParameter("ReserveNamespace", reserveNamespace);

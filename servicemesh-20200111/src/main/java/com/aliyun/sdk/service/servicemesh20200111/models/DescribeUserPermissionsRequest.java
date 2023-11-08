@@ -55,7 +55,7 @@ public class DescribeUserPermissionsRequest extends Request {
         } 
 
         /**
-         * The ID of the RAM user or RAM role.
+         * The ID of a RAM user or RAM role.
          */
         public Builder subAccountUserId(String subAccountUserId) {
             this.putBodyParameter("SubAccountUserId", subAccountUserId);

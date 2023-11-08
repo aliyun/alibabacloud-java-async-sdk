@@ -50,7 +50,7 @@ public class GetSwimLaneListResponseBody extends TeaModel {
         private java.util.List < SwimLaneList> swimLaneList; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class GetSwimLaneListResponseBody extends TeaModel {
             }
 
             /**
-             * The label key of the associated service workload. Fixed value: `ASM_TRAFFIC_TAG`.
+             * The label key of the associated service workload. The value is fixed as `ASM_TRAFFIC_TAG`.
              */
             public Builder labelSelectorKey(String labelSelectorKey) {
                 this.labelSelectorKey = labelSelectorKey;
@@ -210,7 +210,7 @@ public class GetSwimLaneListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the lane.
+             * The name of a lane.
              */
             public Builder name(String name) {
                 this.name = name;

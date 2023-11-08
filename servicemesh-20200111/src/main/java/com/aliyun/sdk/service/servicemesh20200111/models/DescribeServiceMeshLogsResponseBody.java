@@ -58,7 +58,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ASM instance.
+             * The ASM instance ID.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;

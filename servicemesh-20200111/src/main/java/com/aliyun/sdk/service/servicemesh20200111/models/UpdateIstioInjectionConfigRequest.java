@@ -126,7 +126,11 @@ public class UpdateIstioInjectionConfigRequest extends Request {
         } 
 
         /**
-         * DataPlaneMode.
+         * The data plane mode of the namespace. This parameter is valid only when the Ambient Mesh mode is enabled for the current Service Mesh (ASM) instance. Valid values:
+         * <p>
+         * 
+         * *   ambient: sets the data plane mode of the namespace to the Ambient Mesh mode.
+         * *   sidecar: sets the data plane mode of the namespace to the Sidecar mode.
          */
         public Builder dataPlaneMode(String dataPlaneMode) {
             this.putBodyParameter("DataPlaneMode", dataPlaneMode);

@@ -62,7 +62,7 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * The access log reports of a cluster on the data plane.
+         * The access log dashboards of the cluster on the data plane.
          */
         public Builder dashboards(java.util.List < Dashboards> dashboards) {
             this.dashboards = dashboards;
@@ -78,7 +78,7 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
             private String url; 
 
             /**
-             * The title of the report.
+             * The title of the dashboard.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -138,7 +138,7 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
             }
 
             /**
-             * The URL of the report.
+             * The URL of a dashboard.
              */
             public Builder url(String url) {
                 this.url = url;

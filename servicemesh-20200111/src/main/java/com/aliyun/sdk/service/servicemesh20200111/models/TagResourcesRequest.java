@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the Service Mesh (ASM) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of the ASM instances.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to `servicemesh`.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,7 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -183,7 +183,16 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag keys.
+             * <p>
+             * 
+             * The following limits apply:
+             * 
+             * *   The key of tag N cannot be an empty string.
+             * *   Valid values of N: 1 to 20.
+             * *   The tag key can be up to 128 characters in length.
+             * *   The tag key cannot start with `aliyun` or `acs:`.
+             * *   The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -191,7 +200,15 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag values.
+             * <p>
+             * 
+             * The following limits apply:
+             * 
+             * *   The value of tag N cannot be an empty string.
+             * *   Valid values of N: 1 to 20.
+             * *   The tag value can be up to 128 characters in length.
+             * *   The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -97,7 +97,7 @@ public class GetVmMetaRequest extends Request {
         } 
 
         /**
-         * The namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
+         * The name of the namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -115,7 +115,7 @@ public class GetVmMetaRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

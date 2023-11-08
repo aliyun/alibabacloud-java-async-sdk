@@ -85,7 +85,7 @@ public class GetGrafanaDashboardUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the Container Service for Kubernetes (ACK) or serverless Kubernetes (ASK) cluster.
+         * The ID of the Container Service for Kubernetes (ACK) or ACK Serverless cluster.
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putBodyParameter("K8sClusterId", k8sClusterId);
@@ -94,7 +94,7 @@ public class GetGrafanaDashboardUrlRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+         * The ID of the Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

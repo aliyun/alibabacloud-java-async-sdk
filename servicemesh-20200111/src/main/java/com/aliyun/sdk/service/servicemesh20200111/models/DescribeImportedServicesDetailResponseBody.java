@@ -50,7 +50,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the clusters to which the service belongs.
+         * The details of the services.
          */
         public Builder details(java.util.List < Details> details) {
             this.details = details;
@@ -58,7 +58,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The labels of the service.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * The container port.
+             * The name of a port.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -154,7 +154,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodePort.
+             * The node port.
              */
             public Builder nodePort(Integer nodePort) {
                 this.nodePort = nodePort;
@@ -162,7 +162,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -170,7 +170,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The node port.
+             * The protocol of the port.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -178,7 +178,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPort.
+             * The container port.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -279,7 +279,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             private String serviceType; 
 
             /**
-             * The name of the port.
+             * The clusters on the data plane.
              */
             public Builder clusterIds(java.util.List < String > clusterIds) {
                 this.clusterIds = clusterIds;
@@ -287,7 +287,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ports declared for the service.
+             * The labels of the service.
              */
             public Builder labels(java.util.Map < String, String > labels) {
                 this.labels = labels;
@@ -295,7 +295,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Kubernetes
+             * The namespace in which the service resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -303,7 +303,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * The ports declared for the service.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -311,7 +311,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * The name of a service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -319,7 +319,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the port.
+             * The type of the service.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;

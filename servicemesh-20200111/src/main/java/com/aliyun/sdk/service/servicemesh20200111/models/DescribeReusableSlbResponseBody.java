@@ -50,7 +50,7 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
         private java.util.List < ReusableSlbList> reusableSlbList; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

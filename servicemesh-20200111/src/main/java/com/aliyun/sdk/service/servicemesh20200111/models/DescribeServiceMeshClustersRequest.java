@@ -82,7 +82,7 @@ public class DescribeServiceMeshClustersRequest extends Request {
         } 
 
         /**
-         * The maximum number of clusters in a cluster list.
+         * The maximum number of entries per page.
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("Limit", limit);
@@ -100,7 +100,7 @@ public class DescribeServiceMeshClustersRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);
