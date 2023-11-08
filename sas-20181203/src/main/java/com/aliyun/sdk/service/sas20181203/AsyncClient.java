@@ -36,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddPrivateRegistryResponse> addPrivateRegistry(AddPrivateRegistryRequest request);
 
+    CompletableFuture<AddSasModuleTrialResponse> addSasModuleTrial(AddSasModuleTrialRequest request);
+
     /**
       * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
       *
@@ -913,6 +915,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetModuleConfigResponse> getModuleConfig(GetModuleConfigRequest request);
 
+    CompletableFuture<GetModuleTrialAuthInfoResponse> getModuleTrialAuthInfo(GetModuleTrialAuthInfoRequest request);
+
     CompletableFuture<GetObjectScanEventResponse> getObjectScanEvent(GetObjectScanEventRequest request);
 
     CompletableFuture<GetOnceTaskResultInfoResponse> getOnceTaskResultInfo(GetOnceTaskResultInfoRequest request);
@@ -1064,6 +1068,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListImageRiskResponse> listImageRisk(ListImageRiskRequest request);
 
     CompletableFuture<ListInstanceCatalogResponse> listInstanceCatalog(ListInstanceCatalogRequest request);
+
+    CompletableFuture<ListInstanceRiskLevelsResponse> listInstanceRiskLevels(ListInstanceRiskLevelsRequest request);
+
+    CompletableFuture<ListInstanceRiskNumResponse> listInstanceRiskNum(ListInstanceRiskNumRequest request);
 
     CompletableFuture<ListInterceptionHistoryResponse> listInterceptionHistory(ListInterceptionHistoryRequest request);
 

@@ -16,9 +16,14 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
     @NameInMap("ClusterId")
     private String clusterId;
 
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private GetClusterCheckItemWarningStatisticsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<GetClusterCheckItemWarningStatisticsRequest, Builder> {
         private String clusterId; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -51,6 +64,7 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         private Builder(GetClusterCheckItemWarningStatisticsRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -62,6 +76,15 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

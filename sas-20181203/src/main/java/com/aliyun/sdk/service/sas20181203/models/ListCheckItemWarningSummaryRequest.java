@@ -60,6 +60,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     @NameInMap("Source")
     private String source;
 
+    @Query
+    @NameInMap("UuidList")
+    private java.util.List < String > uuidList;
+
     private ListCheckItemWarningSummaryRequest(Builder builder) {
         super(builder);
         this.checkItemFuzzy = builder.checkItemFuzzy;
@@ -74,6 +78,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.pageSize = builder.pageSize;
         this.riskType = builder.riskType;
         this.source = builder.source;
+        this.uuidList = builder.uuidList;
     }
 
     public static Builder builder() {
@@ -173,6 +178,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         return this.source;
     }
 
+    /**
+     * @return uuidList
+     */
+    public java.util.List < String > getUuidList() {
+        return this.uuidList;
+    }
+
     public static final class Builder extends Request.Builder<ListCheckItemWarningSummaryRequest, Builder> {
         private String checkItemFuzzy; 
         private String checkLevel; 
@@ -186,6 +198,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private Integer pageSize; 
         private String riskType; 
         private String source; 
+        private java.util.List < String > uuidList; 
 
         private Builder() {
             super();
@@ -205,6 +218,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.pageSize = request.pageSize;
             this.riskType = request.riskType;
             this.source = request.source;
+            this.uuidList = request.uuidList;
         } 
 
         /**
@@ -329,6 +343,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * UuidList.
+         */
+        public Builder uuidList(java.util.List < String > uuidList) {
+            this.putQueryParameter("UuidList", uuidList);
+            this.uuidList = uuidList;
             return this;
         }
 

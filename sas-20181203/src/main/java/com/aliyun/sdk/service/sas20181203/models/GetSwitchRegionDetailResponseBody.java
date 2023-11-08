@@ -50,7 +50,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * EcsCount.
+             * The number of ECS instances.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -142,7 +142,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtPlanSwitchTime.
+             * The time when the migration is scheduled.
              */
             public Builder gmtPlanSwitchTime(Long gmtPlanSwitchTime) {
                 this.gmtPlanSwitchTime = gmtPlanSwitchTime;
@@ -150,7 +150,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -158,7 +158,11 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The migration status. Valid values:
+             * <p>
+             * 
+             * *   **0**: pending
+             * *   **1**: successful
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -247,7 +251,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private java.util.List < RegionStatus> regionStatus; 
 
             /**
-             * GmtIsAgreeModified.
+             * The time when the permissions were modified.
              */
             public Builder gmtIsAgreeModified(Long gmtIsAgreeModified) {
                 this.gmtIsAgreeModified = gmtIsAgreeModified;
@@ -255,7 +259,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtNoticed.
+             * The notification time.
              */
             public Builder gmtNoticed(Long gmtNoticed) {
                 this.gmtNoticed = gmtNoticed;
@@ -263,7 +267,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsAgree.
+             * Indicates whether the migration is approved.
              */
             public Builder isAgree(String isAgree) {
                 this.isAgree = isAgree;
@@ -271,7 +275,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsNoticed.
+             * Indicates whether the notification is sent.
              */
             public Builder isNoticed(String isNoticed) {
                 this.isNoticed = isNoticed;
@@ -279,7 +283,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionStatus.
+             * The status of the switching to the region.
              */
             public Builder regionStatus(java.util.List < RegionStatus> regionStatus) {
                 this.regionStatus = regionStatus;

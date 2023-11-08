@@ -95,6 +95,12 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("Advice")
         private String advice;
 
+        @NameInMap("AffiliatedRiskTypes")
+        private java.util.List < String > affiliatedRiskTypes;
+
+        @NameInMap("AffiliatedRisks")
+        private java.util.List < String > affiliatedRisks;
+
         @NameInMap("Alias")
         private String alias;
 
@@ -127,6 +133,8 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
         private List(Builder builder) {
             this.advice = builder.advice;
+            this.affiliatedRiskTypes = builder.affiliatedRiskTypes;
+            this.affiliatedRisks = builder.affiliatedRisks;
             this.alias = builder.alias;
             this.checkId = builder.checkId;
             this.checkItem = builder.checkItem;
@@ -152,6 +160,20 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
          */
         public String getAdvice() {
             return this.advice;
+        }
+
+        /**
+         * @return affiliatedRiskTypes
+         */
+        public java.util.List < String > getAffiliatedRiskTypes() {
+            return this.affiliatedRiskTypes;
+        }
+
+        /**
+         * @return affiliatedRisks
+         */
+        public java.util.List < String > getAffiliatedRisks() {
+            return this.affiliatedRisks;
         }
 
         /**
@@ -226,6 +248,8 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String advice; 
+            private java.util.List < String > affiliatedRiskTypes; 
+            private java.util.List < String > affiliatedRisks; 
             private String alias; 
             private Long checkId; 
             private String checkItem; 
@@ -242,6 +266,22 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              */
             public Builder advice(String advice) {
                 this.advice = advice;
+                return this;
+            }
+
+            /**
+             * AffiliatedRiskTypes.
+             */
+            public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
+                this.affiliatedRiskTypes = affiliatedRiskTypes;
+                return this;
+            }
+
+            /**
+             * AffiliatedRisks.
+             */
+            public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
+                this.affiliatedRisks = affiliatedRisks;
                 return this;
             }
 

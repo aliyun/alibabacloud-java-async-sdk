@@ -82,7 +82,10 @@ public class ListHoneypotProbeUuidRequest extends Request {
         } 
 
         /**
-         * ControlNodeId.
+         * The ID of the management node.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the ID.
          */
         public Builder controlNodeId(String controlNodeId) {
             this.putQueryParameter("ControlNodeId", controlNodeId);
@@ -91,7 +94,11 @@ public class ListHoneypotProbeUuidRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +107,11 @@ public class ListHoneypotProbeUuidRequest extends Request {
         }
 
         /**
-         * ProbeType.
+         * The type of the probe. Valid values:
+         * <p>
+         * 
+         * *   **host_probe**: host probe
+         * *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);
