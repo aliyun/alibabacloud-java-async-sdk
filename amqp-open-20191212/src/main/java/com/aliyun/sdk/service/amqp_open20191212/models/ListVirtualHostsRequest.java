@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVirtualHostsRequest</p>
  */
 public class ListVirtualHostsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -26,17 +31,12 @@ public class ListVirtualHostsRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListVirtualHostsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,6 +50,13 @@ public class ListVirtualHostsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,30 +80,32 @@ public class ListVirtualHostsRequest extends Request {
         return this.nextToken;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListVirtualHostsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListVirtualHostsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(ListVirtualHostsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -122,15 +131,6 @@ public class ListVirtualHostsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

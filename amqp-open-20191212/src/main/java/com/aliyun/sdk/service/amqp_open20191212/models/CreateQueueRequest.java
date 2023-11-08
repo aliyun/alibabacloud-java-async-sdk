@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQueueRequest</p>
  */
 public class CreateQueueRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AutoDeleteState")
     private Boolean autoDeleteState;
@@ -54,11 +59,6 @@ public class CreateQueueRequest extends Request {
     @Validation(required = true)
     private String queueName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -66,6 +66,7 @@ public class CreateQueueRequest extends Request {
 
     private CreateQueueRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.autoDeleteState = builder.autoDeleteState;
         this.autoExpireState = builder.autoExpireState;
         this.deadLetterExchange = builder.deadLetterExchange;
@@ -76,7 +77,6 @@ public class CreateQueueRequest extends Request {
         this.maximumPriority = builder.maximumPriority;
         this.messageTTL = builder.messageTTL;
         this.queueName = builder.queueName;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -91,6 +91,13 @@ public class CreateQueueRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -164,13 +171,6 @@ public class CreateQueueRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -178,6 +178,7 @@ public class CreateQueueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateQueueRequest, Builder> {
+        private String regionId; 
         private Boolean autoDeleteState; 
         private Long autoExpireState; 
         private String deadLetterExchange; 
@@ -188,28 +189,36 @@ public class CreateQueueRequest extends Request {
         private Integer maximumPriority; 
         private Long messageTTL; 
         private String queueName; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateQueueRequest response) {
-            super(response);
-            this.autoDeleteState = response.autoDeleteState;
-            this.autoExpireState = response.autoExpireState;
-            this.deadLetterExchange = response.deadLetterExchange;
-            this.deadLetterRoutingKey = response.deadLetterRoutingKey;
-            this.exclusiveState = response.exclusiveState;
-            this.instanceId = response.instanceId;
-            this.maxLength = response.maxLength;
-            this.maximumPriority = response.maximumPriority;
-            this.messageTTL = response.messageTTL;
-            this.queueName = response.queueName;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(CreateQueueRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.autoDeleteState = request.autoDeleteState;
+            this.autoExpireState = request.autoExpireState;
+            this.deadLetterExchange = request.deadLetterExchange;
+            this.deadLetterRoutingKey = request.deadLetterRoutingKey;
+            this.exclusiveState = request.exclusiveState;
+            this.instanceId = request.instanceId;
+            this.maxLength = request.maxLength;
+            this.maximumPriority = request.maximumPriority;
+            this.messageTTL = request.messageTTL;
+            this.queueName = request.queueName;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AutoDeleteState.
@@ -298,15 +307,6 @@ public class CreateQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putBodyParameter("QueueName", queueName);
             this.queueName = queueName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteBindingRequest</p>
  */
 public class DeleteBindingRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("BindingKey")
     @Validation(required = true)
@@ -32,11 +37,6 @@ public class DeleteBindingRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SourceExchange")
     @Validation(required = true)
@@ -49,11 +49,11 @@ public class DeleteBindingRequest extends Request {
 
     private DeleteBindingRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bindingKey = builder.bindingKey;
         this.bindingType = builder.bindingType;
         this.destinationName = builder.destinationName;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.sourceExchange = builder.sourceExchange;
         this.virtualHost = builder.virtualHost;
     }
@@ -69,6 +69,13 @@ public class DeleteBindingRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,13 +107,6 @@ public class DeleteBindingRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sourceExchange
      */
     public String getSourceExchange() {
@@ -121,11 +121,11 @@ public class DeleteBindingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteBindingRequest, Builder> {
+        private String regionId; 
         private String bindingKey; 
         private String bindingType; 
         private String destinationName; 
         private String instanceId; 
-        private String regionId; 
         private String sourceExchange; 
         private String virtualHost; 
 
@@ -133,16 +133,25 @@ public class DeleteBindingRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBindingRequest response) {
-            super(response);
-            this.bindingKey = response.bindingKey;
-            this.bindingType = response.bindingType;
-            this.destinationName = response.destinationName;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.sourceExchange = response.sourceExchange;
-            this.virtualHost = response.virtualHost;
+        private Builder(DeleteBindingRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.bindingKey = request.bindingKey;
+            this.bindingType = request.bindingType;
+            this.destinationName = request.destinationName;
+            this.instanceId = request.instanceId;
+            this.sourceExchange = request.sourceExchange;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BindingKey.
@@ -177,15 +186,6 @@ public class DeleteBindingRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -71,6 +71,67 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Instances extends TeaModel {
         @NameInMap("AutoRenewInstance")
         private Boolean autoRenewInstance;
@@ -123,6 +184,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("SupportEIP")
         private Boolean supportEIP;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private Instances(Builder builder) {
             this.autoRenewInstance = builder.autoRenewInstance;
             this.classicEndpoint = builder.classicEndpoint;
@@ -141,6 +205,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.status = builder.status;
             this.storageSize = builder.storageSize;
             this.supportEIP = builder.supportEIP;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -270,6 +335,13 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.supportEIP;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Boolean autoRenewInstance; 
             private String classicEndpoint; 
@@ -288,6 +360,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
             private Integer storageSize; 
             private Boolean supportEIP; 
+            private java.util.List < Tags> tags; 
 
             /**
              * AutoRenewInstance.
@@ -422,6 +495,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder supportEIP(Boolean supportEIP) {
                 this.supportEIP = supportEIP;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

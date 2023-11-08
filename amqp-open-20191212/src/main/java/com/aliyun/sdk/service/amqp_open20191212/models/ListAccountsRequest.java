@@ -7,20 +7,21 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMetadataAmountRequest} extends {@link RequestModel}
+ * {@link ListAccountsRequest} extends {@link RequestModel}
  *
- * <p>GetMetadataAmountRequest</p>
+ * <p>ListAccountsRequest</p>
  */
-public class GetMetadataAmountRequest extends Request {
+public class ListAccountsRequest extends Request {
     @Host
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
-    private GetMetadataAmountRequest(Builder builder) {
+    private ListAccountsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
@@ -30,7 +31,7 @@ public class GetMetadataAmountRequest extends Request {
         return new Builder();
     }
 
-    public static GetMetadataAmountRequest create() {
+    public static ListAccountsRequest create() {
         return builder().build();
     }
 
@@ -53,7 +54,7 @@ public class GetMetadataAmountRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<GetMetadataAmountRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListAccountsRequest, Builder> {
         private String regionId; 
         private String instanceId; 
 
@@ -61,7 +62,7 @@ public class GetMetadataAmountRequest extends Request {
             super();
         } 
 
-        private Builder(GetMetadataAmountRequest request) {
+        private Builder(ListAccountsRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
@@ -86,8 +87,8 @@ public class GetMetadataAmountRequest extends Request {
         }
 
         @Override
-        public GetMetadataAmountRequest build() {
-            return new GetMetadataAmountRequest(this);
+        public ListAccountsRequest build() {
+            return new ListAccountsRequest(this);
         } 
 
     } 

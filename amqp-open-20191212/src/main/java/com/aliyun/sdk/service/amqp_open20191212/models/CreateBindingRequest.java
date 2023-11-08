@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBindingRequest</p>
  */
 public class CreateBindingRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("Argument")
     private String argument;
@@ -36,11 +41,6 @@ public class CreateBindingRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("SourceExchange")
     @Validation(required = true)
@@ -53,12 +53,12 @@ public class CreateBindingRequest extends Request {
 
     private CreateBindingRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.argument = builder.argument;
         this.bindingKey = builder.bindingKey;
         this.bindingType = builder.bindingType;
         this.destinationName = builder.destinationName;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.sourceExchange = builder.sourceExchange;
         this.virtualHost = builder.virtualHost;
     }
@@ -74,6 +74,13 @@ public class CreateBindingRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,13 +119,6 @@ public class CreateBindingRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return sourceExchange
      */
     public String getSourceExchange() {
@@ -133,12 +133,12 @@ public class CreateBindingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBindingRequest, Builder> {
+        private String regionId; 
         private String argument; 
         private String bindingKey; 
         private String bindingType; 
         private String destinationName; 
         private String instanceId; 
-        private String regionId; 
         private String sourceExchange; 
         private String virtualHost; 
 
@@ -146,17 +146,26 @@ public class CreateBindingRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBindingRequest response) {
-            super(response);
-            this.argument = response.argument;
-            this.bindingKey = response.bindingKey;
-            this.bindingType = response.bindingType;
-            this.destinationName = response.destinationName;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.sourceExchange = response.sourceExchange;
-            this.virtualHost = response.virtualHost;
+        private Builder(CreateBindingRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.argument = request.argument;
+            this.bindingKey = request.bindingKey;
+            this.bindingType = request.bindingType;
+            this.destinationName = request.destinationName;
+            this.instanceId = request.instanceId;
+            this.sourceExchange = request.sourceExchange;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Argument.
@@ -200,15 +209,6 @@ public class CreateBindingRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

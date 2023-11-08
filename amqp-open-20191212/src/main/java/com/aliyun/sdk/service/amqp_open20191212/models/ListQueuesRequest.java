@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueuesRequest</p>
  */
 public class ListQueuesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -26,11 +31,6 @@ public class ListQueuesRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -38,10 +38,10 @@ public class ListQueuesRequest extends Request {
 
     private ListQueuesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -56,6 +56,13 @@ public class ListQueuesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -80,13 +87,6 @@ public class ListQueuesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -94,24 +94,33 @@ public class ListQueuesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQueuesRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListQueuesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(ListQueuesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -137,15 +146,6 @@ public class ListQueuesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

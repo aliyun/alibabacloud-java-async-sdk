@@ -94,7 +94,7 @@ public class ListQueuesResponseBody extends TeaModel {
         private String ownerId;
 
         @NameInMap("VHostName")
-        private String VHostName;
+        private String vHostName;
 
         private Queues(Builder builder) {
             this.attributes = builder.attributes;
@@ -104,7 +104,7 @@ public class ListQueuesResponseBody extends TeaModel {
             this.lastConsumeTime = builder.lastConsumeTime;
             this.name = builder.name;
             this.ownerId = builder.ownerId;
-            this.VHostName = builder.VHostName;
+            this.vHostName = builder.vHostName;
         }
 
         public static Builder builder() {
@@ -165,10 +165,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * @return VHostName
+         * @return vHostName
          */
         public String getVHostName() {
-            return this.VHostName;
+            return this.vHostName;
         }
 
         public static final class Builder {
@@ -179,7 +179,7 @@ public class ListQueuesResponseBody extends TeaModel {
             private Long lastConsumeTime; 
             private String name; 
             private String ownerId; 
-            private String VHostName; 
+            private String vHostName; 
 
             /**
              * Attributes.
@@ -240,8 +240,8 @@ public class ListQueuesResponseBody extends TeaModel {
             /**
              * VHostName.
              */
-            public Builder VHostName(String VHostName) {
-                this.VHostName = VHostName;
+            public Builder vHostName(String vHostName) {
+                this.vHostName = vHostName;
                 return this;
             }
 
@@ -319,7 +319,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Queues.
+             * Queue。
              */
             public Builder queues(java.util.List < Queues> queues) {
                 this.queues = queues;

@@ -179,7 +179,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualHosts.
+             * Vhost。
              */
             public Builder virtualHosts(java.util.List < VirtualHosts> virtualHosts) {
                 this.virtualHosts = virtualHosts;

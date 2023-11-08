@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirtualHostRequest</p>
  */
 public class CreateVirtualHostRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Body
     @NameInMap("VirtualHost")
@@ -29,8 +29,8 @@ public class CreateVirtualHostRequest extends Request {
 
     private CreateVirtualHostRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -48,17 +48,17 @@ public class CreateVirtualHostRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +69,20 @@ public class CreateVirtualHostRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirtualHostRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateVirtualHostRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(CreateVirtualHostRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.virtualHost = request.virtualHost;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -99,6 +90,15 @@ public class CreateVirtualHostRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

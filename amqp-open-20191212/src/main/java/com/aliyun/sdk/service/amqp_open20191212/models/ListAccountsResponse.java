@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListExchangesResponse} extends {@link TeaModel}
+ * {@link ListAccountsResponse} extends {@link TeaModel}
  *
- * <p>ListExchangesResponse</p>
+ * <p>ListAccountsResponse</p>
  */
-public class ListExchangesResponse extends Response {
+public class ListAccountsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ListExchangesResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListExchangesResponseBody body;
+    private ListAccountsResponseBody body;
 
-    private ListExchangesResponse(BuilderImpl builder) {
+    private ListAccountsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListExchangesResponse create() {
+    public static ListAccountsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ListExchangesResponse extends Response {
     /**
      * @return body
      */
-    public ListExchangesResponseBody getBody() {
+    public ListAccountsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListExchangesResponse, Builder> {
+    public interface Builder extends Response.Builder<ListAccountsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListExchangesResponseBody body);
+        Builder body(ListAccountsResponseBody body);
 
         @Override
-        ListExchangesResponse build();
+        ListAccountsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListExchangesResponse, Builder>
+            extends Response.BuilderImpl<ListAccountsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListExchangesResponseBody body; 
+        private ListAccountsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListExchangesResponse response) {
+        private BuilderImpl(ListAccountsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ListExchangesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListExchangesResponseBody body) {
+        public Builder body(ListAccountsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListExchangesResponse build() {
-            return new ListExchangesResponse(this);
+        public ListAccountsResponse build() {
+            return new ListAccountsResponse(this);
         } 
 
     } 

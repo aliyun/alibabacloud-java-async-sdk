@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDownStreamBindingsRequest</p>
  */
 public class ListDownStreamBindingsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("ExchangeName")
     @Validation(required = true)
@@ -31,11 +36,6 @@ public class ListDownStreamBindingsRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -43,11 +43,11 @@ public class ListDownStreamBindingsRequest extends Request {
 
     private ListDownStreamBindingsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.exchangeName = builder.exchangeName;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -62,6 +62,13 @@ public class ListDownStreamBindingsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,13 +100,6 @@ public class ListDownStreamBindingsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -107,26 +107,35 @@ public class ListDownStreamBindingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDownStreamBindingsRequest, Builder> {
+        private String regionId; 
         private String exchangeName; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDownStreamBindingsRequest response) {
-            super(response);
-            this.exchangeName = response.exchangeName;
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(ListDownStreamBindingsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.exchangeName = request.exchangeName;
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ExchangeName.
@@ -161,15 +170,6 @@ public class ListDownStreamBindingsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueUpStreamBindingsRequest</p>
  */
 public class ListQueueUpStreamBindingsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -31,11 +36,6 @@ public class ListQueueUpStreamBindingsRequest extends Request {
     @Validation(required = true)
     private String queueName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -43,11 +43,11 @@ public class ListQueueUpStreamBindingsRequest extends Request {
 
     private ListQueueUpStreamBindingsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.queueName = builder.queueName;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -62,6 +62,13 @@ public class ListQueueUpStreamBindingsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,13 +100,6 @@ public class ListQueueUpStreamBindingsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -107,26 +107,35 @@ public class ListQueueUpStreamBindingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQueueUpStreamBindingsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
         private String queueName; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListQueueUpStreamBindingsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.queueName = response.queueName;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(ListQueueUpStreamBindingsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.queueName = request.queueName;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -161,15 +170,6 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

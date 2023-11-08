@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateExchangeRequest</p>
  */
 public class CreateExchangeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("AlternateExchange")
     private String alternateExchange;
@@ -41,11 +46,6 @@ public class CreateExchangeRequest extends Request {
     @Validation(required = true)
     private Boolean internal;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -53,13 +53,13 @@ public class CreateExchangeRequest extends Request {
 
     private CreateExchangeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.alternateExchange = builder.alternateExchange;
         this.autoDeleteState = builder.autoDeleteState;
         this.exchangeName = builder.exchangeName;
         this.exchangeType = builder.exchangeType;
         this.instanceId = builder.instanceId;
         this.internal = builder.internal;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -74,6 +74,13 @@ public class CreateExchangeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -119,13 +126,6 @@ public class CreateExchangeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -133,30 +133,39 @@ public class CreateExchangeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateExchangeRequest, Builder> {
+        private String regionId; 
         private String alternateExchange; 
         private Boolean autoDeleteState; 
         private String exchangeName; 
         private String exchangeType; 
         private String instanceId; 
         private Boolean internal; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateExchangeRequest response) {
-            super(response);
-            this.alternateExchange = response.alternateExchange;
-            this.autoDeleteState = response.autoDeleteState;
-            this.exchangeName = response.exchangeName;
-            this.exchangeType = response.exchangeType;
-            this.instanceId = response.instanceId;
-            this.internal = response.internal;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(CreateExchangeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.alternateExchange = request.alternateExchange;
+            this.autoDeleteState = request.autoDeleteState;
+            this.exchangeName = request.exchangeName;
+            this.exchangeType = request.exchangeType;
+            this.instanceId = request.instanceId;
+            this.internal = request.internal;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AlternateExchange.
@@ -209,15 +218,6 @@ public class CreateExchangeRequest extends Request {
         public Builder internal(Boolean internal) {
             this.putBodyParameter("Internal", internal);
             this.internal = internal;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

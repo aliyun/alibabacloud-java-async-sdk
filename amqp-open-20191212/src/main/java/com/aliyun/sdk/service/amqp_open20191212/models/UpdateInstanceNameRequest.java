@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceNameRequest</p>
  */
 public class UpdateInstanceNameRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -22,16 +27,11 @@ public class UpdateInstanceNameRequest extends Request {
     @Validation(required = true)
     private String instanceName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private UpdateInstanceNameRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +48,13 @@ public class UpdateInstanceNameRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -61,28 +68,30 @@ public class UpdateInstanceNameRequest extends Request {
         return this.instanceName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateInstanceNameRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String instanceName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateInstanceNameRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.regionId = response.regionId;
+        private Builder(UpdateInstanceNameRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -99,15 +108,6 @@ public class UpdateInstanceNameRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

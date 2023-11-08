@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("MaxResults")
     @Validation(required = true, maximum = 200, minimum = 1)
@@ -21,16 +26,11 @@ public class ListInstancesRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -60,28 +67,30 @@ public class ListInstancesRequest extends Request {
         return this.nextToken;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String regionId; 
         private Integer maxResults; 
         private String nextToken; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListInstancesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(ListInstancesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * MaxResults.
@@ -98,15 +107,6 @@ public class ListInstancesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

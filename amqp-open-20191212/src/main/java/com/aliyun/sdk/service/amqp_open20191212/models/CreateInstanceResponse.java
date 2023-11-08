@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListExchangesResponse} extends {@link TeaModel}
+ * {@link CreateInstanceResponse} extends {@link TeaModel}
  *
- * <p>ListExchangesResponse</p>
+ * <p>CreateInstanceResponse</p>
  */
-public class ListExchangesResponse extends Response {
+public class CreateInstanceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class ListExchangesResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListExchangesResponseBody body;
+    private CreateInstanceResponseBody body;
 
-    private ListExchangesResponse(BuilderImpl builder) {
+    private CreateInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListExchangesResponse create() {
+    public static CreateInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class ListExchangesResponse extends Response {
     /**
      * @return body
      */
-    public ListExchangesResponseBody getBody() {
+    public CreateInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListExchangesResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListExchangesResponseBody body);
+        Builder body(CreateInstanceResponseBody body);
 
         @Override
-        ListExchangesResponse build();
+        CreateInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListExchangesResponse, Builder>
+            extends Response.BuilderImpl<CreateInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListExchangesResponseBody body; 
+        private CreateInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListExchangesResponse response) {
+        private BuilderImpl(CreateInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class ListExchangesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListExchangesResponseBody body) {
+        public Builder body(CreateInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListExchangesResponse build() {
-            return new ListExchangesResponse(this);
+        public CreateInstanceResponse build() {
+            return new CreateInstanceResponse(this);
         } 
 
     } 

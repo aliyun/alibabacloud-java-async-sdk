@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueConsumersRequest</p>
  */
 public class ListQueueConsumersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -31,11 +36,6 @@ public class ListQueueConsumersRequest extends Request {
     @Validation(required = true)
     private String queue;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -43,11 +43,11 @@ public class ListQueueConsumersRequest extends Request {
 
     private ListQueueConsumersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.nextToken = builder.nextToken;
         this.queryCount = builder.queryCount;
         this.queue = builder.queue;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -62,6 +62,13 @@ public class ListQueueConsumersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,13 +100,6 @@ public class ListQueueConsumersRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -107,26 +107,35 @@ public class ListQueueConsumersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQueueConsumersRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String nextToken; 
         private Integer queryCount; 
         private String queue; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListQueueConsumersRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.nextToken = response.nextToken;
-            this.queryCount = response.queryCount;
-            this.queue = response.queue;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(ListQueueConsumersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.nextToken = request.nextToken;
+            this.queryCount = request.queryCount;
+            this.queue = request.queue;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -161,15 +170,6 @@ public class ListQueueConsumersRequest extends Request {
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);
             this.queue = queue;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

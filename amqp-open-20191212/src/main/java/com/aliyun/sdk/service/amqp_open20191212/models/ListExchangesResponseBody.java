@@ -88,7 +88,7 @@ public class ListExchangesResponseBody extends TeaModel {
         private String name;
 
         @NameInMap("VHostName")
-        private String VHostName;
+        private String vHostName;
 
         private Exchanges(Builder builder) {
             this.attributes = builder.attributes;
@@ -96,7 +96,7 @@ public class ListExchangesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.exchangeType = builder.exchangeType;
             this.name = builder.name;
-            this.VHostName = builder.VHostName;
+            this.vHostName = builder.vHostName;
         }
 
         public static Builder builder() {
@@ -143,10 +143,10 @@ public class ListExchangesResponseBody extends TeaModel {
         }
 
         /**
-         * @return VHostName
+         * @return vHostName
          */
         public String getVHostName() {
-            return this.VHostName;
+            return this.vHostName;
         }
 
         public static final class Builder {
@@ -155,7 +155,7 @@ public class ListExchangesResponseBody extends TeaModel {
             private Long createTime; 
             private String exchangeType; 
             private String name; 
-            private String VHostName; 
+            private String vHostName; 
 
             /**
              * Attributes.
@@ -200,8 +200,8 @@ public class ListExchangesResponseBody extends TeaModel {
             /**
              * VHostName.
              */
-            public Builder VHostName(String VHostName) {
-                this.VHostName = VHostName;
+            public Builder vHostName(String vHostName) {
+                this.vHostName = vHostName;
                 return this;
             }
 
@@ -263,7 +263,7 @@ public class ListExchangesResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * Exchanges.
+             * Exchange。
              */
             public Builder exchanges(java.util.List < Exchanges> exchanges) {
                 this.exchanges = exchanges;

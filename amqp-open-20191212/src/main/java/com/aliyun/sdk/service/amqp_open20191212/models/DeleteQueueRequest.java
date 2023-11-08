@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQueueRequest</p>
  */
 public class DeleteQueueRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -22,11 +27,6 @@ public class DeleteQueueRequest extends Request {
     @Validation(required = true)
     private String queueName;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Body
     @NameInMap("VirtualHost")
     @Validation(required = true)
@@ -34,9 +34,9 @@ public class DeleteQueueRequest extends Request {
 
     private DeleteQueueRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.queueName = builder.queueName;
-        this.regionId = builder.regionId;
         this.virtualHost = builder.virtualHost;
     }
 
@@ -54,6 +54,13 @@ public class DeleteQueueRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -68,13 +75,6 @@ public class DeleteQueueRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return virtualHost
      */
     public String getVirtualHost() {
@@ -82,22 +82,31 @@ public class DeleteQueueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteQueueRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String queueName; 
-        private String regionId; 
         private String virtualHost; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteQueueRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.queueName = response.queueName;
-            this.regionId = response.regionId;
-            this.virtualHost = response.virtualHost;
+        private Builder(DeleteQueueRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.queueName = request.queueName;
+            this.virtualHost = request.virtualHost;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -114,15 +123,6 @@ public class DeleteQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putBodyParameter("QueueName", queueName);
             this.queueName = queueName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

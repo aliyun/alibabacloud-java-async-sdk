@@ -18,13 +18,19 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
+
     CompletableFuture<CreateBindingResponse> createBinding(CreateBindingRequest request);
 
     CompletableFuture<CreateExchangeResponse> createExchange(CreateExchangeRequest request);
 
+    CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
+
     CompletableFuture<CreateQueueResponse> createQueue(CreateQueueRequest request);
 
     CompletableFuture<CreateVirtualHostResponse> createVirtualHost(CreateVirtualHostRequest request);
+
+    CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     CompletableFuture<DeleteBindingResponse> deleteBinding(DeleteBindingRequest request);
 
@@ -35,6 +41,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVirtualHostResponse> deleteVirtualHost(DeleteVirtualHostRequest request);
 
     CompletableFuture<GetMetadataAmountResponse> getMetadataAmount(GetMetadataAmountRequest request);
+
+    CompletableFuture<ListAccountsResponse> listAccounts(ListAccountsRequest request);
 
     CompletableFuture<ListBindingsResponse> listBindings(ListBindingsRequest request);
 
