@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.bailian20230601.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateTokenRequest} extends {@link RequestModel}
+ *
+ * <p>CreateTokenRequest</p>
+ */
+public class CreateTokenRequest extends Request {
+    @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    private CreateTokenRequest(Builder builder) {
+        super(builder);
+        this.agentKey = builder.agentKey;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateTokenRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    public static final class Builder extends Request.Builder<CreateTokenRequest, Builder> {
+        private String agentKey; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateTokenRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+        } 
+
+        /**
+         * AgentKey.
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
+
+        @Override
+        public CreateTokenRequest build() {
+            return new CreateTokenRequest(this);
+        } 
+
+    } 
+
+}
