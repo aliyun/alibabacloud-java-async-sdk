@@ -23,6 +23,10 @@ public class SubmitSolutionRequest extends Request {
     private String intentionBizId;
 
     @Query
+    @NameInMap("OperateType")
+    private String operateType;
+
+    @Query
     @NameInMap("Solution")
     @Validation(required = true)
     private String solution;
@@ -35,6 +39,7 @@ public class SubmitSolutionRequest extends Request {
         super(builder);
         this.bizType = builder.bizType;
         this.intentionBizId = builder.intentionBizId;
+        this.operateType = builder.operateType;
         this.solution = builder.solution;
         this.userId = builder.userId;
     }
@@ -67,6 +72,13 @@ public class SubmitSolutionRequest extends Request {
     }
 
     /**
+     * @return operateType
+     */
+    public String getOperateType() {
+        return this.operateType;
+    }
+
+    /**
      * @return solution
      */
     public String getSolution() {
@@ -83,6 +95,7 @@ public class SubmitSolutionRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitSolutionRequest, Builder> {
         private String bizType; 
         private String intentionBizId; 
+        private String operateType; 
         private String solution; 
         private String userId; 
 
@@ -94,6 +107,7 @@ public class SubmitSolutionRequest extends Request {
             super(request);
             this.bizType = request.bizType;
             this.intentionBizId = request.intentionBizId;
+            this.operateType = request.operateType;
             this.solution = request.solution;
             this.userId = request.userId;
         } 
@@ -113,6 +127,15 @@ public class SubmitSolutionRequest extends Request {
         public Builder intentionBizId(String intentionBizId) {
             this.putQueryParameter("IntentionBizId", intentionBizId);
             this.intentionBizId = intentionBizId;
+            return this;
+        }
+
+        /**
+         * OperateType.
+         */
+        public Builder operateType(String operateType) {
+            this.putQueryParameter("OperateType", operateType);
+            this.operateType = operateType;
             return this;
         }
 
