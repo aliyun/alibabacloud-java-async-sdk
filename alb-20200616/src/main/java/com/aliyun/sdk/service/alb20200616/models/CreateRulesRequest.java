@@ -894,6 +894,58 @@ public class CreateRulesRequest extends Request {
         } 
 
     }
+    public static class RemoveHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        private RemoveHeaderConfig(Builder builder) {
+            this.key = builder.key;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemoveHeaderConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        public static final class Builder {
+            private String key; 
+
+            /**
+             * The hostname to which requests are distributed. Valid values:
+             * <p>
+             * 
+             * *   **${host}** (default): If you set the value to ${host}, you cannot append other characters.
+             * 
+             * *   If you want to specify a custom value, make sure that the following requirements are met:
+             * 
+             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcard characters.
+             *     *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
+             *     *   The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).
+             *     *   The domain labels cannot start or end with a hyphen (-).
+             *     *   You can use asterisks (\*) and question marks (?) as wildcards anywhere in a domain label.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            public RemoveHeaderConfig build() {
+                return new RemoveHeaderConfig(this);
+            } 
+
+        } 
+
+    }
     public static class RewriteConfig extends TeaModel {
         @NameInMap("Host")
         private String host;
@@ -1219,6 +1271,9 @@ public class CreateRulesRequest extends Request {
         @NameInMap("RedirectConfig")
         private RedirectConfig redirectConfig;
 
+        @NameInMap("RemoveHeaderConfig")
+        private RemoveHeaderConfig removeHeaderConfig;
+
         @NameInMap("RewriteConfig")
         private RewriteConfig rewriteConfig;
 
@@ -1239,6 +1294,7 @@ public class CreateRulesRequest extends Request {
             this.insertHeaderConfig = builder.insertHeaderConfig;
             this.order = builder.order;
             this.redirectConfig = builder.redirectConfig;
+            this.removeHeaderConfig = builder.removeHeaderConfig;
             this.rewriteConfig = builder.rewriteConfig;
             this.trafficLimitConfig = builder.trafficLimitConfig;
             this.trafficMirrorConfig = builder.trafficMirrorConfig;
@@ -1296,6 +1352,13 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
+         * @return removeHeaderConfig
+         */
+        public RemoveHeaderConfig getRemoveHeaderConfig() {
+            return this.removeHeaderConfig;
+        }
+
+        /**
          * @return rewriteConfig
          */
         public RewriteConfig getRewriteConfig() {
@@ -1330,6 +1393,7 @@ public class CreateRulesRequest extends Request {
             private InsertHeaderConfig insertHeaderConfig; 
             private Integer order; 
             private RedirectConfig redirectConfig; 
+            private RemoveHeaderConfig removeHeaderConfig; 
             private RewriteConfig rewriteConfig; 
             private TrafficLimitConfig trafficLimitConfig; 
             private TrafficMirrorConfig trafficMirrorConfig; 
@@ -1384,6 +1448,14 @@ public class CreateRulesRequest extends Request {
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
+                return this;
+            }
+
+            /**
+             * RemoveHeaderConfig.
+             */
+            public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
+                this.removeHeaderConfig = removeHeaderConfig;
                 return this;
             }
 
@@ -1902,6 +1974,47 @@ public class CreateRulesRequest extends Request {
         } 
 
     }
+    public static class ResponseStatusCodeConfig extends TeaModel {
+        @NameInMap("Values")
+        private java.util.List < String > values;
+
+        private ResponseStatusCodeConfig(Builder builder) {
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseStatusCodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List < String > getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > values; 
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List < String > values) {
+                this.values = values;
+                return this;
+            }
+
+            public ResponseStatusCodeConfig build() {
+                return new ResponseStatusCodeConfig(this);
+            } 
+
+        } 
+
+    }
     public static class SourceIpConfig extends TeaModel {
         @NameInMap("Values")
         private java.util.List < String > values;
@@ -1965,6 +2078,9 @@ public class CreateRulesRequest extends Request {
         @NameInMap("ResponseHeaderConfig")
         private ResponseHeaderConfig responseHeaderConfig;
 
+        @NameInMap("ResponseStatusCodeConfig")
+        private ResponseStatusCodeConfig responseStatusCodeConfig;
+
         @NameInMap("SourceIpConfig")
         private SourceIpConfig sourceIpConfig;
 
@@ -1980,6 +2096,7 @@ public class CreateRulesRequest extends Request {
             this.pathConfig = builder.pathConfig;
             this.queryStringConfig = builder.queryStringConfig;
             this.responseHeaderConfig = builder.responseHeaderConfig;
+            this.responseStatusCodeConfig = builder.responseStatusCodeConfig;
             this.sourceIpConfig = builder.sourceIpConfig;
             this.type = builder.type;
         }
@@ -2042,6 +2159,13 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
+         * @return responseStatusCodeConfig
+         */
+        public ResponseStatusCodeConfig getResponseStatusCodeConfig() {
+            return this.responseStatusCodeConfig;
+        }
+
+        /**
          * @return sourceIpConfig
          */
         public SourceIpConfig getSourceIpConfig() {
@@ -2063,6 +2187,7 @@ public class CreateRulesRequest extends Request {
             private PathConfig pathConfig; 
             private QueryStringConfig queryStringConfig; 
             private ResponseHeaderConfig responseHeaderConfig; 
+            private ResponseStatusCodeConfig responseStatusCodeConfig; 
             private SourceIpConfig sourceIpConfig; 
             private String type; 
 
@@ -2119,6 +2244,14 @@ public class CreateRulesRequest extends Request {
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
+                return this;
+            }
+
+            /**
+             * ResponseStatusCodeConfig.
+             */
+            public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
+                this.responseStatusCodeConfig = responseStatusCodeConfig;
                 return this;
             }
 

@@ -644,6 +644,9 @@ public class UpdateRuleAttributeRequest extends Request {
 
     }
     public static class InsertHeaderConfig extends TeaModel {
+        @NameInMap("CoverEnabled")
+        private Boolean coverEnabled;
+
         @NameInMap("Key")
         private String key;
 
@@ -654,6 +657,7 @@ public class UpdateRuleAttributeRequest extends Request {
         private String valueType;
 
         private InsertHeaderConfig(Builder builder) {
+            this.coverEnabled = builder.coverEnabled;
             this.key = builder.key;
             this.value = builder.value;
             this.valueType = builder.valueType;
@@ -665,6 +669,13 @@ public class UpdateRuleAttributeRequest extends Request {
 
         public static InsertHeaderConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return coverEnabled
+         */
+        public Boolean getCoverEnabled() {
+            return this.coverEnabled;
         }
 
         /**
@@ -689,9 +700,18 @@ public class UpdateRuleAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean coverEnabled; 
             private String key; 
             private String value; 
             private String valueType; 
+
+            /**
+             * CoverEnabled.
+             */
+            public Builder coverEnabled(Boolean coverEnabled) {
+                this.coverEnabled = coverEnabled;
+                return this;
+            }
 
             /**
              * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
@@ -918,6 +938,50 @@ public class UpdateRuleAttributeRequest extends Request {
 
             public RedirectConfig build() {
                 return new RedirectConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class RemoveHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        private RemoveHeaderConfig(Builder builder) {
+            this.key = builder.key;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemoveHeaderConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        public static final class Builder {
+            private String key; 
+
+            /**
+             * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
+             * <p>
+             * 
+             * > You cannot specify the following header keys (case-insensitive): `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            public RemoveHeaderConfig build() {
+                return new RemoveHeaderConfig(this);
             } 
 
         } 
@@ -1260,6 +1324,9 @@ public class UpdateRuleAttributeRequest extends Request {
         @NameInMap("RedirectConfig")
         private RedirectConfig redirectConfig;
 
+        @NameInMap("RemoveHeaderConfig")
+        private RemoveHeaderConfig removeHeaderConfig;
+
         @NameInMap("RewriteConfig")
         private RewriteConfig rewriteConfig;
 
@@ -1279,6 +1346,7 @@ public class UpdateRuleAttributeRequest extends Request {
             this.insertHeaderConfig = builder.insertHeaderConfig;
             this.order = builder.order;
             this.redirectConfig = builder.redirectConfig;
+            this.removeHeaderConfig = builder.removeHeaderConfig;
             this.rewriteConfig = builder.rewriteConfig;
             this.trafficLimitConfig = builder.trafficLimitConfig;
             this.trafficMirrorConfig = builder.trafficMirrorConfig;
@@ -1336,6 +1404,13 @@ public class UpdateRuleAttributeRequest extends Request {
         }
 
         /**
+         * @return removeHeaderConfig
+         */
+        public RemoveHeaderConfig getRemoveHeaderConfig() {
+            return this.removeHeaderConfig;
+        }
+
+        /**
          * @return rewriteConfig
          */
         public RewriteConfig getRewriteConfig() {
@@ -1370,6 +1445,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private InsertHeaderConfig insertHeaderConfig; 
             private Integer order; 
             private RedirectConfig redirectConfig; 
+            private RemoveHeaderConfig removeHeaderConfig; 
             private RewriteConfig rewriteConfig; 
             private TrafficLimitConfig trafficLimitConfig; 
             private TrafficMirrorConfig trafficMirrorConfig; 
@@ -1420,6 +1496,14 @@ public class UpdateRuleAttributeRequest extends Request {
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
+                return this;
+            }
+
+            /**
+             * RemoveHeaderConfig.
+             */
+            public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
+                this.removeHeaderConfig = removeHeaderConfig;
                 return this;
             }
 
@@ -1866,6 +1950,108 @@ public class UpdateRuleAttributeRequest extends Request {
         } 
 
     }
+    public static class ResponseHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Values")
+        private java.util.List < String > values;
+
+        private ResponseHeaderConfig(Builder builder) {
+            this.key = builder.key;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseHeaderConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List < String > getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List < String > values; 
+
+            /**
+             * They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The query strings.
+             */
+            public Builder values(java.util.List < String > values) {
+                this.values = values;
+                return this;
+            }
+
+            public ResponseHeaderConfig build() {
+                return new ResponseHeaderConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class ResponseStatusCodeConfig extends TeaModel {
+        @NameInMap("Values")
+        private java.util.List < String > values;
+
+        private ResponseStatusCodeConfig(Builder builder) {
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseStatusCodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List < String > getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > values; 
+
+            /**
+             * The query strings.
+             */
+            public Builder values(java.util.List < String > values) {
+                this.values = values;
+                return this;
+            }
+
+            public ResponseStatusCodeConfig build() {
+                return new ResponseStatusCodeConfig(this);
+            } 
+
+        } 
+
+    }
     public static class SourceIpConfig extends TeaModel {
         @NameInMap("Values")
         private java.util.List < String > values;
@@ -1926,6 +2112,12 @@ public class UpdateRuleAttributeRequest extends Request {
         @NameInMap("QueryStringConfig")
         private QueryStringConfig queryStringConfig;
 
+        @NameInMap("ResponseHeaderConfig")
+        private ResponseHeaderConfig responseHeaderConfig;
+
+        @NameInMap("ResponseStatusCodeConfig")
+        private ResponseStatusCodeConfig responseStatusCodeConfig;
+
         @NameInMap("SourceIpConfig")
         private SourceIpConfig sourceIpConfig;
 
@@ -1939,6 +2131,8 @@ public class UpdateRuleAttributeRequest extends Request {
             this.methodConfig = builder.methodConfig;
             this.pathConfig = builder.pathConfig;
             this.queryStringConfig = builder.queryStringConfig;
+            this.responseHeaderConfig = builder.responseHeaderConfig;
+            this.responseStatusCodeConfig = builder.responseStatusCodeConfig;
             this.sourceIpConfig = builder.sourceIpConfig;
             this.type = builder.type;
         }
@@ -1994,6 +2188,20 @@ public class UpdateRuleAttributeRequest extends Request {
         }
 
         /**
+         * @return responseHeaderConfig
+         */
+        public ResponseHeaderConfig getResponseHeaderConfig() {
+            return this.responseHeaderConfig;
+        }
+
+        /**
+         * @return responseStatusCodeConfig
+         */
+        public ResponseStatusCodeConfig getResponseStatusCodeConfig() {
+            return this.responseStatusCodeConfig;
+        }
+
+        /**
          * @return sourceIpConfig
          */
         public SourceIpConfig getSourceIpConfig() {
@@ -2014,6 +2222,8 @@ public class UpdateRuleAttributeRequest extends Request {
             private MethodConfig methodConfig; 
             private PathConfig pathConfig; 
             private QueryStringConfig queryStringConfig; 
+            private ResponseHeaderConfig responseHeaderConfig; 
+            private ResponseStatusCodeConfig responseStatusCodeConfig; 
             private SourceIpConfig sourceIpConfig; 
             private String type; 
 
@@ -2062,6 +2272,22 @@ public class UpdateRuleAttributeRequest extends Request {
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
+                return this;
+            }
+
+            /**
+             * ResponseHeaderConfig.
+             */
+            public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
+                this.responseHeaderConfig = responseHeaderConfig;
+                return this;
+            }
+
+            /**
+             * ResponseStatusCodeConfig.
+             */
+            public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
+                this.responseStatusCodeConfig = responseStatusCodeConfig;
                 return this;
             }
 
