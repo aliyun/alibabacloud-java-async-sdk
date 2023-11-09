@@ -344,6 +344,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeConcernNecessityResponse> describeConcernNecessity(DescribeConcernNecessityRequest request);
 
+    CompletableFuture<DescribeContainerAppsResponse> describeContainerApps(DescribeContainerAppsRequest request);
+
     CompletableFuture<DescribeContainerCriteriaResponse> describeContainerCriteria(DescribeContainerCriteriaRequest request);
 
     CompletableFuture<DescribeContainerInstancesResponse> describeContainerInstances(DescribeContainerInstancesRequest request);
@@ -809,6 +811,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GenerateOnceTaskResponse> generateOnceTask(GenerateOnceTaskRequest request);
 
+    CompletableFuture<GetAegisContainerPluginRuleCriteriaResponse> getAegisContainerPluginRuleCriteria(GetAegisContainerPluginRuleCriteriaRequest request);
+
     CompletableFuture<GetAgentlessTaskCountResponse> getAgentlessTaskCount(GetAgentlessTaskCountRequest request);
 
     CompletableFuture<GetAlarmMachineCountResponse> getAlarmMachineCount(GetAlarmMachineCountRequest request);
@@ -940,6 +944,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request);
 
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
+
+    CompletableFuture<GetSasContainerWebDefenseRuleCriteriaResponse> getSasContainerWebDefenseRuleCriteria(GetSasContainerWebDefenseRuleCriteriaRequest request);
 
     CompletableFuture<GetSecurityScoreRuleResponse> getSecurityScoreRule(GetSecurityScoreRuleRequest request);
 
@@ -1271,6 +1277,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenSensitiveFileScanResponse> openSensitiveFileScan(OpenSensitiveFileScanRequest request);
 
     CompletableFuture<OperateAgentClientInstallResponse> operateAgentClientInstall(OperateAgentClientInstallRequest request);
+
+    CompletableFuture<OperateApplicationResponse> operateApplication(OperateApplicationRequest request);
 
     CompletableFuture<OperateBucketScanTaskResponse> operateBucketScanTask(OperateBucketScanTaskRequest request);
 

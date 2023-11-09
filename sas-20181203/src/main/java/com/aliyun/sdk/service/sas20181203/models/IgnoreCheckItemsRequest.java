@@ -157,7 +157,11 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * Source.
+         * Data Sources. Valid values:
+         * <p>
+         * 
+         * *   **default**: Host baseline
+         * *   **agentless**: Agentless baseline
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -95,7 +95,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
+         * The language of the content within the request and response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese

@@ -154,7 +154,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CheckDetailAssetInfo.
+         * List of asset details to check.
          */
         public Builder checkDetailAssetInfo(java.util.List < java.util.Map<String, String>> checkDetailAssetInfo) {
             this.checkDetailAssetInfo = checkDetailAssetInfo;
@@ -162,7 +162,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CheckDetailColumns.
+         * Detection content details.
          */
         public Builder checkDetailColumns(java.util.List < CheckDetailColumns> checkDetailColumns) {
             this.checkDetailColumns = checkDetailColumns;
@@ -224,6 +224,15 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
         /**
          * The type of the check item. Valid values:
+         * <p>
+         * 
+         * *   **hc_exploit**: unauthorized access
+         * *   **hc_djbh**: classified protection compliance
+         * *   **hc_best_secruity**: best security practice
+         * *   **hc_container**: container security
+         * *   **hc_custom**: custom baseline
+         * *   **cis**: Center for Internet Security (CIS) compliance
+         * *   **weak_password**: weak password
          */
         public Builder type(String type) {
             this.type = type;
@@ -287,7 +296,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Key.
+             * Key to detect content.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -295,7 +304,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The detection content key corresponds to the display name.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -303,7 +312,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item. Valid values:
+             * Display type. Value:
+             * <p>
+             * - **grid**：Detection grid
+             * - **text**：text
              */
             public Builder type(String type) {
                 this.type = type;
@@ -380,7 +392,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Grids.
+             * Detection content list.
              */
             public Builder grids(java.util.List < Grids> grids) {
                 this.grids = grids;
@@ -388,7 +400,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * Key to detect content.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -396,7 +408,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The detection content key corresponds to the display name.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -404,7 +416,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item. Valid values:
+             * Display type. Value:
+             * <p>
+             * - **grid**：Detection grid
+             * - **text**：text
              */
             public Builder type(String type) {
                 this.type = type;

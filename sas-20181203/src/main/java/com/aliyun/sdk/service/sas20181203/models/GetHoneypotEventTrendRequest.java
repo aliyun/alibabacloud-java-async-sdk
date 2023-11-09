@@ -111,7 +111,7 @@ public class GetHoneypotEventTrendRequest extends Request {
         } 
 
         /**
-         * EndTimeStamp.
+         * End time, timestamp format.
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -120,7 +120,11 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,7 +133,7 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * RiskLevelList.
+         * The risk levels of the alert events.
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
@@ -138,7 +142,7 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * The source IP address of the attack.
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -147,7 +151,7 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * StartTimeStamp.
+         * Start time, timestamp format.
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);

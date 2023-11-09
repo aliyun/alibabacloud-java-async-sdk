@@ -110,7 +110,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -126,7 +126,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of data returned. ￼
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +226,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             private Long timeStamp; 
 
             /**
-             * Count.
+             * The number of attacks that occurred.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -230,7 +234,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * The name of the attack.
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -238,7 +242,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp when the attack event occurred.
              */
             public Builder timeStamp(Long timeStamp) {
                 this.timeStamp = timeStamp;

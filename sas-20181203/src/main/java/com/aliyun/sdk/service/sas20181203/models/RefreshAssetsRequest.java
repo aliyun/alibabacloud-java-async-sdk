@@ -96,7 +96,12 @@ public class RefreshAssetsRequest extends Request {
         } 
 
         /**
-         * AssetType.
+         * The type of the asset that you want to synchronize. Valid values:
+         * <p>
+         * 
+         * *   **cloud_product**: Alibaba Cloud service
+         * *   **ecs**: Elastic Compute Service (ECS) instance
+         * *   **container_image**: container image
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -105,7 +110,10 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * CloudAssetSubType.
+         * The subtype of the cloud service.
+         * <p>
+         * 
+         * >  The following list describes the subtypes of cloud services.
          */
         public Builder cloudAssetSubType(Integer cloudAssetSubType) {
             this.putQueryParameter("CloudAssetSubType", cloudAssetSubType);
@@ -114,7 +122,31 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * CloudAssetType.
+         * The type of the cloud service. Valid values:
+         * <p>
+         * 
+         * *   **0**: ECS
+         * *   **1**: Server Load Balancer (SLB)
+         * *   **3**: ApsaraDB RDS
+         * *   **4**: ApsaraDB for MongoDB (MongoDB)
+         * *   **5**: ApsaraDB for Redis (Redis)
+         * *   **6**: Container Registry
+         * *   **8**: Container Service for Kubernetes (ACK)
+         * *   **9**: Virtual Private Cloud (VPC)
+         * *   **11**: ActionTrail
+         * *   **12**: Alibaba Cloud CDN (CDN)
+         * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
+         * *   **14**: Apsara Devops
+         * *   **15**: Resource Access Management (RAM)
+         * *   **16**: Anti-DDoS
+         * *   **17**: Web Application Firewall (WAF)
+         * *   **18**: Object Storage Service (OSS)
+         * *   **19**: PolarDB
+         * *   **20**: ApsaraDB RDS for PostgreSQL
+         * *   **21**: Microservices Engine (MSE)
+         * *   **22**: Apsara File Storage NAS (NAS)
+         * *   **23**: Data Security Center (DSC)
+         * *   **24**: Elastic IP Address (EIP)
          */
         public Builder cloudAssetType(Integer cloudAssetType) {
             this.putQueryParameter("CloudAssetType", cloudAssetType);
@@ -123,7 +155,14 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * 服务器厂商。取值：
+         * <p>
+         * 
+         * - **0**：阿里云资产
+         * - **1**：云外资产
+         * - **2**：IDC资产
+         * - **3**、**4**、**5**、**7**：其它云资产
+         * - **8**：轻量级资产
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);

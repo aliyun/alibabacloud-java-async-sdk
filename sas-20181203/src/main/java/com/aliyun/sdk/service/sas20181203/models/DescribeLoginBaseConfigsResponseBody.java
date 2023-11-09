@@ -86,7 +86,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the information about the configurations.
+         * The description of the configuration.
          */
         public Builder baseConfigs(java.util.List < BaseConfigs> baseConfigs) {
             this.baseConfigs = baseConfigs;
@@ -352,7 +352,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * Corresponding configuration remark information.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

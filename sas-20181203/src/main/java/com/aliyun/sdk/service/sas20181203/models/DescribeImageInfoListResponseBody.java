@@ -50,7 +50,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageInfos.
+         * An array that consists of the information about images.
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -58,7 +58,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -350,7 +350,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * AlarmCount.
+             * The number of alerts that are generated on the current pod, application, namespace, or cluster.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -358,7 +358,11 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmStatus.
+             * Indicates whether alerts are generated on the asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -366,7 +370,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The digest value of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -374,7 +378,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The endpoint of Container Registry.
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -382,7 +386,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCreate.
+             * The time when the image was created.
              */
             public Builder imageCreate(Long imageCreate) {
                 this.imageCreate = imageCreate;
@@ -390,7 +394,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -398,7 +402,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image.
              */
             public Builder imageSize(Long imageSize) {
                 this.imageSize = imageSize;
@@ -406,7 +410,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUpdate.
+             * The time when the image was updated.
              */
             public Builder imageUpdate(Long imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -414,7 +418,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the image instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -422,7 +426,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the image instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -430,7 +434,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * The type of the registration.
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -438,7 +442,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -446,7 +450,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -454,7 +458,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -462,7 +466,11 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * The type of the image repository. Valid values:
+             * <p>
+             * 
+             * *   `PUBLIC`
+             * *   `PRIVATE`
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -470,7 +478,11 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether the image is at risk. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -478,7 +490,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -486,7 +498,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag that is added to the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -494,7 +506,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * TagImmutable.
+             * The tag immutability.
              */
             public Builder tagImmutable(Integer tagImmutable) {
                 this.tagImmutable = tagImmutable;
@@ -502,7 +514,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -510,7 +522,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * The total number of vulnerabilities in your assets.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -518,7 +530,11 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * VulStatus.
+             * Indicates whether vulnerabilities are detected on the asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;

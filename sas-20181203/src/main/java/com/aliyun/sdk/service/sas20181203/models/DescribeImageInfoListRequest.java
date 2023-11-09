@@ -55,7 +55,10 @@ public class DescribeImageInfoListRequest extends Request {
         } 
 
         /**
-         * Uuids.
+         * The UUID of the server. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

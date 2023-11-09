@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RefreshAssetsResponseBody} extends {@link TeaModel}
+ * {@link OperateApplicationResponseBody} extends {@link TeaModel}
  *
- * <p>RefreshAssetsResponseBody</p>
+ * <p>OperateApplicationResponseBody</p>
  */
-public class RefreshAssetsResponseBody extends TeaModel {
+public class OperateApplicationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RefreshAssetsResponseBody(Builder builder) {
+    private OperateApplicationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class RefreshAssetsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RefreshAssetsResponseBody create() {
+    public static OperateApplicationResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class RefreshAssetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RefreshAssetsResponseBody build() {
-            return new RefreshAssetsResponseBody(this);
+        public OperateApplicationResponseBody build() {
+            return new OperateApplicationResponseBody(this);
         } 
 
     } 
