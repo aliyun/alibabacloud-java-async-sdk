@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDeploymentResponse> createDeployment(CreateDeploymentRequest request);
 
+    CompletableFuture<CreateMemberResponse> createMember(CreateMemberRequest request);
+
     CompletableFuture<CreateSavepointResponse> createSavepoint(CreateSavepointRequest request);
 
     CompletableFuture<CreateVariableResponse> createVariable(CreateVariableRequest request);
@@ -27,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDeploymentResponse> deleteDeployment(DeleteDeploymentRequest request);
 
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
+
+    CompletableFuture<DeleteMemberResponse> deleteMember(DeleteMemberRequest request);
 
     CompletableFuture<DeleteSavepointResponse> deleteSavepoint(DeleteSavepointRequest request);
 
@@ -42,6 +46,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
+    CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request);
+
     CompletableFuture<GetSavepointResponse> getSavepoint(GetSavepointRequest request);
 
     CompletableFuture<ListDeploymentTargetsResponse> listDeploymentTargets(ListDeploymentTargetsRequest request);
@@ -51,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEngineVersionMetadataResponse> listEngineVersionMetadata(ListEngineVersionMetadataRequest request);
 
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
+
+    CompletableFuture<ListMembersResponse> listMembers(ListMembersRequest request);
 
     CompletableFuture<ListSavepointsResponse> listSavepoints(ListSavepointsRequest request);
 
@@ -67,5 +75,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopJobResponse> stopJob(StopJobRequest request);
 
     CompletableFuture<UpdateDeploymentResponse> updateDeployment(UpdateDeploymentRequest request);
+
+    CompletableFuture<UpdateMemberResponse> updateMember(UpdateMemberRequest request);
 
 }
