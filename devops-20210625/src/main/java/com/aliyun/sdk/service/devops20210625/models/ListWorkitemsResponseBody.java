@@ -204,6 +204,9 @@ public class ListWorkitemsResponseBody extends TeaModel {
         @NameInMap("document")
         private String document;
 
+        @NameInMap("finishTime")
+        private Long finishTime;
+
         @NameInMap("gmtCreate")
         private Long gmtCreate;
 
@@ -260,6 +263,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             this.categoryIdentifier = builder.categoryIdentifier;
             this.creator = builder.creator;
             this.document = builder.document;
+            this.finishTime = builder.finishTime;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.identifier = builder.identifier;
@@ -313,6 +317,13 @@ public class ListWorkitemsResponseBody extends TeaModel {
          */
         public String getDocument() {
             return this.document;
+        }
+
+        /**
+         * @return finishTime
+         */
+        public Long getFinishTime() {
+            return this.finishTime;
         }
 
         /**
@@ -439,6 +450,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
             private String categoryIdentifier; 
             private String creator; 
             private String document; 
+            private Long finishTime; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private String identifier; 
@@ -486,6 +498,14 @@ public class ListWorkitemsResponseBody extends TeaModel {
              */
             public Builder document(String document) {
                 this.document = document;
+                return this;
+            }
+
+            /**
+             * finishTime.
+             */
+            public Builder finishTime(Long finishTime) {
+                this.finishTime = finishTime;
                 return this;
             }
 
