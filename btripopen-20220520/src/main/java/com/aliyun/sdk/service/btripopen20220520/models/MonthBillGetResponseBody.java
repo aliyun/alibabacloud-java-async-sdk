@@ -173,6 +173,9 @@ public class MonthBillGetResponseBody extends TeaModel {
         @NameInMap("ieFlightAmount")
         private Double ieFlightAmount;
 
+        @NameInMap("ieHotelAmount")
+        private Double ieHotelAmount;
+
         @NameInMap("mailBillDate")
         private Long mailBillDate;
 
@@ -190,6 +193,7 @@ public class MonthBillGetResponseBody extends TeaModel {
             this.fuPoint = builder.fuPoint;
             this.hotelAmount = builder.hotelAmount;
             this.ieFlightAmount = builder.ieFlightAmount;
+            this.ieHotelAmount = builder.ieHotelAmount;
             this.mailBillDate = builder.mailBillDate;
             this.serviceAmount = builder.serviceAmount;
             this.trainAmount = builder.trainAmount;
@@ -253,6 +257,13 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
 
         /**
+         * @return ieHotelAmount
+         */
+        public Double getIeHotelAmount() {
+            return this.ieHotelAmount;
+        }
+
+        /**
          * @return mailBillDate
          */
         public Long getMailBillDate() {
@@ -281,6 +292,7 @@ public class MonthBillGetResponseBody extends TeaModel {
             private Double fuPoint; 
             private Double hotelAmount; 
             private Double ieFlightAmount; 
+            private Double ieHotelAmount; 
             private Long mailBillDate; 
             private Double serviceAmount; 
             private Double trainAmount; 
@@ -338,6 +350,14 @@ public class MonthBillGetResponseBody extends TeaModel {
              */
             public Builder ieFlightAmount(Double ieFlightAmount) {
                 this.ieFlightAmount = ieFlightAmount;
+                return this;
+            }
+
+            /**
+             * ieHotelAmount.
+             */
+            public Builder ieHotelAmount(Double ieHotelAmount) {
+                this.ieHotelAmount = ieHotelAmount;
                 return this;
             }
 

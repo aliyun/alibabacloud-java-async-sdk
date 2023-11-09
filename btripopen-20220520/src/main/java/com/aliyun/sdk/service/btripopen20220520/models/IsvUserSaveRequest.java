@@ -215,6 +215,9 @@ public class IsvUserSaveRequest extends Request {
 
     }
     public static class UserList extends TeaModel {
+        @NameInMap("base_city_code")
+        private String baseCityCode;
+
         @NameInMap("birthday")
         private String birthday;
 
@@ -269,6 +272,7 @@ public class IsvUserSaveRequest extends Request {
         private String userName;
 
         private UserList(Builder builder) {
+            this.baseCityCode = builder.baseCityCode;
             this.birthday = builder.birthday;
             this.certList = builder.certList;
             this.departId = builder.departId;
@@ -294,6 +298,13 @@ public class IsvUserSaveRequest extends Request {
 
         public static UserList create() {
             return builder().build();
+        }
+
+        /**
+         * @return baseCityCode
+         */
+        public String getBaseCityCode() {
+            return this.baseCityCode;
         }
 
         /**
@@ -416,6 +427,7 @@ public class IsvUserSaveRequest extends Request {
         }
 
         public static final class Builder {
+            private String baseCityCode; 
             private String birthday; 
             private java.util.List < CertList> certList; 
             private Long departId; 
@@ -433,6 +445,14 @@ public class IsvUserSaveRequest extends Request {
             private java.util.List < String > thirdDepartIdList; 
             private String userId; 
             private String userName; 
+
+            /**
+             * base_city_code.
+             */
+            public Builder baseCityCode(String baseCityCode) {
+                this.baseCityCode = baseCityCode;
+                return this;
+            }
 
             /**
              * birthday.
