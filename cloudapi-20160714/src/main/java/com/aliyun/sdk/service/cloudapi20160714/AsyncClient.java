@@ -809,6 +809,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SetApisAuthoritiesResponse> setApisAuthorities(SetApisAuthoritiesRequest request);
 
+    CompletableFuture<SetAppsAuthToApiProductResponse> setAppsAuthToApiProduct(SetAppsAuthToApiProductRequest request);
+
     /**
       * *   This operation is intended for API providers and callers.
       * *   API providers can authorize any apps to call their APIs.

@@ -353,6 +353,167 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    public static class EdasConfig extends TeaModel {
+        @NameInMap("EdasAppId")
+        private String edasAppId;
+
+        @NameInMap("MicroserviceNamespace")
+        private String microserviceNamespace;
+
+        @NameInMap("MicroserviceNamespaceId")
+        private String microserviceNamespaceId;
+
+        @NameInMap("MicroserviceNamespaceName")
+        private String microserviceNamespaceName;
+
+        @NameInMap("MseInstanceId")
+        private String mseInstanceId;
+
+        @NameInMap("RegistryType")
+        private String registryType;
+
+        @NameInMap("ServiceName")
+        private String serviceName;
+
+        private EdasConfig(Builder builder) {
+            this.edasAppId = builder.edasAppId;
+            this.microserviceNamespace = builder.microserviceNamespace;
+            this.microserviceNamespaceId = builder.microserviceNamespaceId;
+            this.microserviceNamespaceName = builder.microserviceNamespaceName;
+            this.mseInstanceId = builder.mseInstanceId;
+            this.registryType = builder.registryType;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdasConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return edasAppId
+         */
+        public String getEdasAppId() {
+            return this.edasAppId;
+        }
+
+        /**
+         * @return microserviceNamespace
+         */
+        public String getMicroserviceNamespace() {
+            return this.microserviceNamespace;
+        }
+
+        /**
+         * @return microserviceNamespaceId
+         */
+        public String getMicroserviceNamespaceId() {
+            return this.microserviceNamespaceId;
+        }
+
+        /**
+         * @return microserviceNamespaceName
+         */
+        public String getMicroserviceNamespaceName() {
+            return this.microserviceNamespaceName;
+        }
+
+        /**
+         * @return mseInstanceId
+         */
+        public String getMseInstanceId() {
+            return this.mseInstanceId;
+        }
+
+        /**
+         * @return registryType
+         */
+        public String getRegistryType() {
+            return this.registryType;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private String edasAppId; 
+            private String microserviceNamespace; 
+            private String microserviceNamespaceId; 
+            private String microserviceNamespaceName; 
+            private String mseInstanceId; 
+            private String registryType; 
+            private String serviceName; 
+
+            /**
+             * EdasAppId.
+             */
+            public Builder edasAppId(String edasAppId) {
+                this.edasAppId = edasAppId;
+                return this;
+            }
+
+            /**
+             * MicroserviceNamespace.
+             */
+            public Builder microserviceNamespace(String microserviceNamespace) {
+                this.microserviceNamespace = microserviceNamespace;
+                return this;
+            }
+
+            /**
+             * MicroserviceNamespaceId.
+             */
+            public Builder microserviceNamespaceId(String microserviceNamespaceId) {
+                this.microserviceNamespaceId = microserviceNamespaceId;
+                return this;
+            }
+
+            /**
+             * MicroserviceNamespaceName.
+             */
+            public Builder microserviceNamespaceName(String microserviceNamespaceName) {
+                this.microserviceNamespaceName = microserviceNamespaceName;
+                return this;
+            }
+
+            /**
+             * MseInstanceId.
+             */
+            public Builder mseInstanceId(String mseInstanceId) {
+                this.mseInstanceId = mseInstanceId;
+                return this;
+            }
+
+            /**
+             * RegistryType.
+             */
+            public Builder registryType(String registryType) {
+                this.registryType = registryType;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public EdasConfig build() {
+                return new EdasConfig(this);
+            } 
+
+        } 
+
+    }
     public static class EventBridgeConfig extends TeaModel {
         @NameInMap("EventBridgeRegionId")
         private String eventBridgeRegionId;
@@ -1003,6 +1164,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("DiscoveryConfig")
         private DiscoveryConfig discoveryConfig;
 
+        @NameInMap("EdasConfig")
+        private EdasConfig edasConfig;
+
         @NameInMap("EventBridgeConfig")
         private EventBridgeConfig eventBridgeConfig;
 
@@ -1032,6 +1196,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         private BackendConfig(Builder builder) {
             this.discoveryConfig = builder.discoveryConfig;
+            this.edasConfig = builder.edasConfig;
             this.eventBridgeConfig = builder.eventBridgeConfig;
             this.functionComputeConfig = builder.functionComputeConfig;
             this.httpTargetHostName = builder.httpTargetHostName;
@@ -1056,6 +1221,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
          */
         public DiscoveryConfig getDiscoveryConfig() {
             return this.discoveryConfig;
+        }
+
+        /**
+         * @return edasConfig
+         */
+        public EdasConfig getEdasConfig() {
+            return this.edasConfig;
         }
 
         /**
@@ -1123,6 +1295,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private DiscoveryConfig discoveryConfig; 
+            private EdasConfig edasConfig; 
             private EventBridgeConfig eventBridgeConfig; 
             private FunctionComputeConfig functionComputeConfig; 
             private String httpTargetHostName; 
@@ -1138,6 +1311,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
              */
             public Builder discoveryConfig(DiscoveryConfig discoveryConfig) {
                 this.discoveryConfig = discoveryConfig;
+                return this;
+            }
+
+            /**
+             * EdasConfig.
+             */
+            public Builder edasConfig(EdasConfig edasConfig) {
+                this.edasConfig = edasConfig;
                 return this;
             }
 
