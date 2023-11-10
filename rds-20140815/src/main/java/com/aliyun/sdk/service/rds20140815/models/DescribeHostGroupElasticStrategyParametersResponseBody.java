@@ -98,7 +98,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         private String requestId; 
 
         /**
-         * The current CPU usage rate of the instance.
+         * The CPU utilization of the instance. Unit: percentage.
          */
         public Builder cpuShar(Integer cpuShar) {
             this.cpuShar = cpuShar;
@@ -106,7 +106,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The CPU usage of the instance.
+         * The number of CPU cores used by the instance. Unit: cores.
          */
         public Builder cpuZoom(Integer cpuZoom) {
             this.cpuZoom = cpuZoom;
@@ -114,7 +114,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * Number of IO requests.
+         * The number of I/O requests.
          */
         public Builder iopsZoom(Integer iopsZoom) {
             this.iopsZoom = iopsZoom;
@@ -122,7 +122,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The maximum number of concurrent connections for instance specifications.
+         * The maximum number of concurrent connections supported by the instance type.
          */
         public Builder maxConnZoom(Integer maxConnZoom) {
             this.maxConnZoom = maxConnZoom;
@@ -130,7 +130,7 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         }
 
         /**
-         * The total amount of memory for instances in the current exclusive cluster.
+         * The total memory size of the instance in the dedicated cluster. Unit: MB.
          */
         public Builder memoryZoom(Integer memoryZoom) {
             this.memoryZoom = memoryZoom;

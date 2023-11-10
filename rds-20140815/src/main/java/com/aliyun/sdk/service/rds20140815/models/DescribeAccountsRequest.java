@@ -136,10 +136,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          * <p>
          * 
-         * >  This parameter is not supported if your RDS instance runs RDS Cluster Edition and SQL Server 2017.
+         * >  This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

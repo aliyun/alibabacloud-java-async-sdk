@@ -126,7 +126,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the read-only instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -153,7 +153,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

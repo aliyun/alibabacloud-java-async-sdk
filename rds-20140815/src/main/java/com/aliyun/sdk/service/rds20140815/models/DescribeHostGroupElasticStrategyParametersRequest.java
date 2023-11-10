@@ -98,7 +98,7 @@ public class DescribeHostGroupElasticStrategyParametersRequest extends Request {
         } 
 
         /**
-         * Dedicated Host Group Name.
+         * The name of the dedicated cluster.
          */
         public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
             this.putQueryParameter("DedicatedHostGroupName", dedicatedHostGroupName);
@@ -107,7 +107,7 @@ public class DescribeHostGroupElasticStrategyParametersRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

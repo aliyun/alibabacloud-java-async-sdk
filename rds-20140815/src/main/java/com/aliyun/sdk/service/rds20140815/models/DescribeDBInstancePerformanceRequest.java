@@ -128,7 +128,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

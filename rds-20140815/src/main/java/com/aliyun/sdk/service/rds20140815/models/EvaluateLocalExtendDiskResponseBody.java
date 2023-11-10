@@ -86,11 +86,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:
-         * <p>
-         * 
-         * *   **on**: healthy CDN edge nodes.
-         * *   **off**: all CDN edge nodes.
+         * Indicates whether the instance is available. Valid values: true and false.
          */
         public Builder available(String available) {
             this.available = available;
@@ -98,7 +94,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the RDS instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,12 +102,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The data migration method of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values:
-         * <p>
-         * 
-         * *   **0** (default): The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.
-         * *   **1**: The system upgrades or downgrades the instance without a migration. If the upgrade or downgrade is not supported, the system reports an error.
-         * *   **2**: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify **DedicatedHostGroupId**, **TargetDedicatedHostIdForMaster**, and **TargetDedicatedHostIdForSlave**. If you set DBInstanceTransType to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.
+         * The data transfer type supported by the instance.
          */
         public Builder DBInstanceTransType(String DBInstanceTransType) {
             this.DBInstanceTransType = DBInstanceTransType;
@@ -119,7 +110,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * Local Disk Restrictions.
+         * The maximum value of the local disk. Unit: GB.
          */
         public Builder localUpgradeDiskLimit(Long localUpgradeDiskLimit) {
             this.localUpgradeDiskLimit = localUpgradeDiskLimit;
@@ -127,7 +118,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

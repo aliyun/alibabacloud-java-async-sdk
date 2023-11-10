@@ -113,7 +113,7 @@ public class SwitchDBInstanceVpcRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -125,7 +125,7 @@ public class SwitchDBInstanceVpcRequest extends Request {
          * The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the **VSwitchId** parameter.
          * <p>
          * 
-         * > You can call the [DescribeVSwitches](~~35748~~) operation to query the CIDR block of a specified vSwitch.
+         * >  You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

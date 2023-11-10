@@ -263,7 +263,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the parameter template. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID of the parameter template. You can call the DescribeRegions operation to query the most recent zone list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +272,7 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

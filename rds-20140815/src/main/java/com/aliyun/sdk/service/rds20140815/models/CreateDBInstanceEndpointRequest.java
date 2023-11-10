@@ -37,6 +37,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
 
     @Query
     @NameInMap("NodeItems")
+    @Validation(required = true)
     private java.util.List < NodeItems> nodeItems;
 
     @Query
@@ -58,10 +59,12 @@ public class CreateDBInstanceEndpointRequest extends Request {
 
     @Query
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     private String vSwitchId;
 
     @Query
     @NameInMap("VpcId")
+    @Validation(required = true)
     private String vpcId;
 
     private CreateDBInstanceEndpointRequest(Builder builder) {
@@ -342,9 +345,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
 
     public static class NodeItems extends TeaModel {
         @NameInMap("DBInstanceId")
+        @Validation(required = true)
         private String DBInstanceId;
 
         @NameInMap("NodeId")
+        @Validation(required = true)
         private String nodeId;
 
         @NameInMap("Weight")

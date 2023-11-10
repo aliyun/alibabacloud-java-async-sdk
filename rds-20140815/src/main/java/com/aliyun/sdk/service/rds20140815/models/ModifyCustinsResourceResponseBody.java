@@ -50,7 +50,7 @@ public class ModifyCustinsResourceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyCustinsResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

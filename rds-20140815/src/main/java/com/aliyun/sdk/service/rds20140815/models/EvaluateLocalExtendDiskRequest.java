@@ -140,7 +140,7 @@ public class EvaluateLocalExtendDiskRequest extends Request {
         } 
 
         /**
-         * The name of the instance.
+         * The instance name.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -158,7 +158,7 @@ public class EvaluateLocalExtendDiskRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -167,7 +167,7 @@ public class EvaluateLocalExtendDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,7 +194,7 @@ public class EvaluateLocalExtendDiskRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values: **5 to 2000**. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.
+         * The new storage capacity. Unit: GB.
          */
         public Builder storage(Integer storage) {
             this.putQueryParameter("Storage", storage);

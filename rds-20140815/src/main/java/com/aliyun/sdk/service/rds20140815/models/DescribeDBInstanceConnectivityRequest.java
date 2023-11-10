@@ -154,7 +154,7 @@ public class DescribeDBInstanceConnectivityRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.putQueryParameter("DbInstanceName", dbInstanceName);
@@ -181,7 +181,7 @@ public class DescribeDBInstanceConnectivityRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -217,7 +217,7 @@ public class DescribeDBInstanceConnectivityRequest extends Request {
         }
 
         /**
-         * The private IP address that is used to connect to the self-managed PostgreSQL instance.
+         * The source IP address.
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);

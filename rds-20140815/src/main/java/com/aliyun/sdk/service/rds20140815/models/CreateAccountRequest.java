@@ -225,7 +225,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The type of the account. Valid values:
+         * The account type. Valid values:
          * <p>
          * 
          * *   **Normal**: standard account
@@ -240,7 +240,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

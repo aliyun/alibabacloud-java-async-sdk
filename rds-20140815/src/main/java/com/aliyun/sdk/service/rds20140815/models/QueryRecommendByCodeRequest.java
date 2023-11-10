@@ -111,7 +111,7 @@ public class QueryRecommendByCodeRequest extends Request {
         } 
 
         /**
-         * code
+         * The code.
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -129,7 +129,7 @@ public class QueryRecommendByCodeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

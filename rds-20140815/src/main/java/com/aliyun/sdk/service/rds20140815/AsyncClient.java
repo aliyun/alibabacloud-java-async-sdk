@@ -661,7 +661,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   MySQL
       * ### [](#)Description
       * *   A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
-      * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~)operation to import the full backup file again.
+      * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to import the full backup file again.
       *
      */
     CompletableFuture<DeleteUserBackupFileResponse> deleteUserBackupFile(DeleteUserBackupFileRequest request);
@@ -723,6 +723,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAnalyticdbByPrimaryDBInstanceResponse> describeAnalyticdbByPrimaryDBInstance(DescribeAnalyticdbByPrimaryDBInstanceRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+     */
     CompletableFuture<DescribeAvailableClassesResponse> describeAvailableClasses(DescribeAvailableClassesRequest request);
 
     /**
@@ -1427,6 +1435,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeReadDBInstanceDelayResponse> describeReadDBInstanceDelay(DescribeReadDBInstanceDelayRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+     */
     CompletableFuture<DescribeRegionInfosResponse> describeRegionInfos(DescribeRegionInfosRequest request);
 
     /**
@@ -1673,14 +1689,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantOperatorPermissionResponse> grantOperatorPermission(GrantOperatorPermissionRequest request);
 
     /**
+      * ### [](#)Supported database engine
+      * *   SQL Server
+      * ### [](#)Description
       * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-      * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      * *   The source and destination instances must be created by using the same user credentials.
-      * *   The instance is in the Running state.
-      * *   The source and destination databases must be in the Running state.
-      * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+      * ### [](#)Precautions
+      * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+      * *   Before you call this operation, make sure that the following requirements are met:
+      *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+      *     *   The source and destination instances must be created by using the same user credentials.
+      *     *   The instance is in the Running state.
+      *     *   The source and destination databases must be in the Running state.
+      *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
       * > 
       * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
       * *   You can migrate the data of multiple databases at a time.
@@ -2038,6 +2058,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyDBInstanceTDEResponse> modifyDBInstanceTDE(ModifyDBInstanceTDERequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)References
+      * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+      *
+     */
     CompletableFuture<ModifyDBNodeResponse> modifyDBNode(ModifyDBNodeRequest request);
 
     /**
@@ -2328,8 +2356,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RebuildDBInstanceResponse> rebuildDBInstance(RebuildDBInstanceRequest request);
 
     /**
-      * ## Prerequisites
-      * A disaster recovery instance is created.
+      * The operation is phased out.
       *
      */
     CompletableFuture<ReceiveDBInstanceResponse> receiveDBInstance(ReceiveDBInstanceRequest request);
@@ -2569,6 +2596,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SwitchDBInstanceVpcResponse> switchDBInstanceVpc(SwitchDBInstanceVpcRequest request);
 
+    /**
+      * This operation is phased out.
+      *
+     */
     CompletableFuture<SwitchGuardToMasterInstanceResponse> switchGuardToMasterInstance(SwitchGuardToMasterInstanceRequest request);
 
     /**

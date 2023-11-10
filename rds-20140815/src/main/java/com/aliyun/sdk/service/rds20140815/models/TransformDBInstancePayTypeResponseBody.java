@@ -86,7 +86,11 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The billing method.
+         * The payment type.
+         * <p>
+         * 
+         * *   Valid value if the new billing method is pay-as-you-go: POSTPAY
+         * *   Valid value if the new billing method is subscription: PREPAY
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;

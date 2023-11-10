@@ -137,7 +137,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -155,7 +155,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
+         * The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.
          */
         public Builder dbProxyEndpointId(String dbProxyEndpointId) {
             this.putQueryParameter("DbProxyEndpointId", dbProxyEndpointId);
@@ -180,7 +180,7 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

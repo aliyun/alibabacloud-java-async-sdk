@@ -110,7 +110,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String migrationMode; 
 
             /**
-             * The switch to enable or disable Babelfish.
+             * Indicates whether Babelfish is enabled.
              * <p>
              * 
              * >  If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.
@@ -275,8 +275,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Node specification type. Value range:
              * <p>
              * 
-             * *   **d**: Exclusive specifications
-             * *   **x**: General specifications
+             * - d: Exclusive specifications
+             * - x: General specifications
              */
             public Builder classType(String classType) {
                 this.classType = classType;
@@ -338,12 +338,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * The status of the migration task. Valid values:
              * <p>
-             * 
-             * *   **NoStart**: The task has not started.
-             * *   **Running**:The task is in progress.
-             * *   **Success**: The task is successful.
-             * *   **Failed**: The task failed.
-             * *   **Waiting**: The task is waiting for an incremental backup file to be imported.
+             * - active
+             * - creating
+             * - deleting
+             * - classchanging
+             * - restarting
              */
             public Builder status(String status) {
                 this.status = status;
@@ -628,10 +627,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether the automatic start and stop feature is enabled for the serverless instance. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false** (default): The feature is disabled.
+             * *   **true**
+             * *   **false** (default)
              * 
-             * >  After the automatic suspension feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.
+             * >  After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.
              */
             public Builder autoPause(Boolean autoPause) {
                 this.autoPause = autoPause;
@@ -658,8 +657,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether the forced scaling feature is enabled for the serverless instance.
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false** (default): The feature is disabled.
+             * *   **true**
+             * *   **false** (default)
              * 
              * >  In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.
              */
@@ -1663,7 +1662,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. You can ignore this parameter.
+             * This parameter is invalid. You do not need to specify this parameter.
              */
             public Builder bpeEnabled(String bpeEnabled) {
                 this.bpeEnabled = bpeEnabled;
@@ -1671,7 +1670,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. You can ignore this parameter.
+             * This parameter is invalid. You do not need to specify this parameter.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1684,10 +1683,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **Basic**: RDS Basic Edition
              * *   **HighAvailability**: RDS High-availability Edition
-             * *   **cluster**: RDS Cluster Edition for MySQL
-             * *   **AlwaysOn**: RDS Cluster Edition for SQL Server
+             * *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL
+             * *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server
              * *   **Finance**: RDS Enterprise Edition
-             * *   **Serverless_basic**: RDS Serverless Basic Edition
+             * *   **Serverless_basic**: RDS Basic Edition for serverless instances
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1745,7 +1744,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * The minor engine version of the instance.
              */
             public Builder currentKernelVersion(String currentKernelVersion) {
                 this.currentKernelVersion = currentKernelVersion;
@@ -1889,8 +1888,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether the release protection feature is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -1912,7 +1911,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the serverless instance.
+             * The database engine version.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -1923,9 +1922,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The expiration time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * **
-             * 
-             * **Description** Pay-as-you-go instances never expire.
+             * >  Pay-as-you-go instances never expire.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1965,7 +1962,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance from which the incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+             * The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
              */
             public Builder incrementSourceDBInstanceId(String incrementSourceDBInstanceId) {
                 this.incrementSourceDBInstanceId = incrementSourceDBInstanceId;
@@ -2012,7 +2009,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **ManualLock**: The instance is manually locked.
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
              * *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
-             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.
+             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage space.
              * *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked due to exhausted storage.
              */
             public Builder lockMode(String lockMode) {
@@ -2040,9 +2037,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The ID of the primary instance.
              * <p>
              * 
-             * **
-             * 
-             * **Description** If this parameter is not returned, the instance is the primary instance.
+             * >  If this parameter is not returned, the instance is the primary instance.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -2186,7 +2181,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Information about the zone of the secondary instance.
+             * The information about the zone of the secondary instance.
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -2194,11 +2189,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance supports privileged accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
+             * Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
              * <p>
              * 
-             * *   **Enable**: Privileged accounts are supported.
-             * *   **Disabled**: Privileged accounts are not supported.
+             * *   **Enable**
+             * *   **Disabled**
              */
             public Builder superPermissionMode(String superPermissionMode) {
                 this.superPermissionMode = superPermissionMode;
@@ -2234,7 +2229,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * *   **1**: The instance is normal.
-             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and the performance is affected. You must adjust the specifications of these instances based on your business requirements.
+             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance. You must adjust the specifications of these instances based on your business requirements.
              */
             public Builder tipsLevel(Integer tipsLevel) {
                 this.tipsLevel = tipsLevel;
@@ -2258,7 +2253,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * The virtual private cloud (VPC) ID of the instance.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2266,7 +2261,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -2274,7 +2269,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. You can ignore this parameter.
+             * An internal parameter. You do not need to specify this parameter.
              */
             public Builder kindCode(String kindCode) {
                 this.kindCode = kindCode;

@@ -437,7 +437,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
          * *   **Year**
          * *   **Month**
          * 
-         * >  This parameter must be specified when the PayType parameter is set to **Prepaid**.
+         * >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -564,7 +564,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
          * The zone ID of the secondary instance.
          * <p>
          * 
-         * > If the instance does not run RDS Basic Edition, you must specify this parameter.
+         * >  If the instance does not run RDS Basic Edition, you must specify this parameter.
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
@@ -576,7 +576,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
          * The zone ID of the logger instance.
          * <p>
          * 
-         * > This parameter is available only when the instance runs RDS Enterprise Edition.
+         * >  This parameter is available only when the instance runs RDS Enterprise Edition.
          */
         public Builder zoneIdSlave2(String zoneIdSlave2) {
             this.putQueryParameter("ZoneIdSlave2", zoneIdSlave2);

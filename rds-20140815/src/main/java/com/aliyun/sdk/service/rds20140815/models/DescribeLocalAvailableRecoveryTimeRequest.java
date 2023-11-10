@@ -143,7 +143,7 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -152,7 +152,7 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -212,10 +212,10 @@ public class ModifyDBNodeRequest extends Request {
          * Specifies whether to automatically complete the payment. Valid values:
          * <p>
          * 
-         * 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
+         * 1.  **true**: automatically completes the payment. Make sure that your account balance is sufficient.
          * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
          * 
-         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -224,7 +224,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,7 +233,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -242,7 +242,7 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](~~26312~~).
+         * The new storage capacity of the instance. Unit: GB For more information, see [Instance types](~~26312~~).
          */
         public Builder DBInstanceStorage(String DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -251,12 +251,12 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The storage type of the new instance. Valid values:
+         * The storage type of the instance. Valid values:
          * <p>
          * 
-         * *   **local_ssd/ephemeral_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD
-         * *   **cloud_essd**: enhanced SSD (ESSD)
+         * *   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)
+         * *   **cloud_essd2**: PL2 ESSD
+         * *   **cloud_essd3**: PL3 ESSD
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -265,7 +265,10 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * An array that consists of the details of the node.
+         * The information about the node.
+         * <p>
+         * 
+         * >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -275,11 +278,11 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * Indicates that the system performed a dry run.
+         * Specifies whether to perform a dry run. Valid values: Valid values:
          * <p>
          * 
-         * *   The value is fixed as **true**.
-         * *   If the system does not perform a dry run, this parameter is not returned.
+         * *   **true**: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -306,7 +309,13 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * Do you want to perform a pre check on the operation of this node change.
+         * Specifies whether to asynchronously perform the operation. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): sends only the order. The operation is asynchronously performed.
+         * *   **false**: sends the request. After the request passes the check, the operation is directly performed.
+         * 
+         * >  The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.
          */
         public Builder produceAsync(Boolean produceAsync) {
             this.putQueryParameter("ProduceAsync", produceAsync);
@@ -386,7 +395,7 @@ public class ModifyDBNodeRequest extends Request {
             }
 
             /**
-             * Node ID
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

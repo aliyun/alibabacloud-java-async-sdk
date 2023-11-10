@@ -62,7 +62,11 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Product code.
+         * The product code. Valid values:
+         * <p>
+         * 
+         * *   rds: The instance is a subscription instance.
+         * *   bards: The instance is a pay-as-you-go instance.
          */
         public Builder commodity(String commodity) {
             this.commodity = commodity;
@@ -70,7 +74,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Return data.
+         * The configuration details of the product.
          */
         public Builder items(java.util.Map < String, ? > items) {
             this.items = items;
@@ -78,7 +82,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

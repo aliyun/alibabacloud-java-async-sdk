@@ -140,7 +140,7 @@ public class ModifyCustinsResourceRequest extends Request {
         } 
 
         /**
-         * AdjustDeadline
+         * The deadline for the modification.
          */
         public Builder adjustDeadline(String adjustDeadline) {
             this.putQueryParameter("AdjustDeadline", adjustDeadline);
@@ -149,7 +149,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -158,7 +158,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * IncreaseRatio
+         * The increase rate.
          */
         public Builder increaseRatio(String increaseRatio) {
             this.putQueryParameter("IncreaseRatio", increaseRatio);
@@ -176,7 +176,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **INSTANCE**.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -185,7 +185,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * RestoreOriginalSpecification
+         * The original value. This parameter must be specified when **ResourceType** is set to **instance**.
          */
         public Builder restoreOriginalSpecification(String restoreOriginalSpecification) {
             this.putQueryParameter("RestoreOriginalSpecification", restoreOriginalSpecification);
@@ -194,7 +194,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.
+         * The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.
          */
         public Builder targetValue(Integer targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

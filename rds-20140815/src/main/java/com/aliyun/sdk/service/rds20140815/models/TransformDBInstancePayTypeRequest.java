@@ -257,7 +257,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
+         * The new billing method of the instance. Valid values:
          * <p>
          * 
          * *   **Postpaid**: pay-as-you-go

@@ -23,6 +23,7 @@ public class CreateDBNodesRequest extends Request {
 
     @Query
     @NameInMap("DBNode")
+    @Validation(required = true)
     private java.util.List < DBNode> DBNode;
 
     @Query
@@ -237,9 +238,11 @@ public class CreateDBNodesRequest extends Request {
 
     public static class DBNode extends TeaModel {
         @NameInMap("classCode")
+        @Validation(required = true)
         private String classCode;
 
         @NameInMap("zoneId")
+        @Validation(required = true)
         private String zoneId;
 
         private DBNode(Builder builder) {

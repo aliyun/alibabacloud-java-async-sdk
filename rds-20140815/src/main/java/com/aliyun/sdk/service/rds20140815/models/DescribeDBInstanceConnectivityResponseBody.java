@@ -118,7 +118,7 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.dbInstanceName = dbInstanceName;
@@ -126,7 +126,7 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

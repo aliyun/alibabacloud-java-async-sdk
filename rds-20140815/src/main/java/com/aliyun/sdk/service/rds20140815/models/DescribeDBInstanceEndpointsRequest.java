@@ -112,7 +112,7 @@ public class DescribeDBInstanceEndpointsRequest extends Request {
          * The endpoint ID of the instance.
          * <p>
          * 
-         * If this parameter is not specified, the information about all endpoints is returned.
+         * >  If this parameter is not specified, the information about all endpoints is returned.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);

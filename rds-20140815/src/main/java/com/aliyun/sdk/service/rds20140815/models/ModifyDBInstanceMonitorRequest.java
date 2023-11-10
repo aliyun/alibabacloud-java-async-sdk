@@ -149,7 +149,7 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

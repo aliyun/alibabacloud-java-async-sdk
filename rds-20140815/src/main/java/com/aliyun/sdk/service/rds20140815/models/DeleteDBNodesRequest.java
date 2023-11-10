@@ -23,6 +23,7 @@ public class DeleteDBNodesRequest extends Request {
 
     @Query
     @NameInMap("DBNodeId")
+    @Validation(required = true)
     private java.util.List < String > DBNodeId;
 
     @Query

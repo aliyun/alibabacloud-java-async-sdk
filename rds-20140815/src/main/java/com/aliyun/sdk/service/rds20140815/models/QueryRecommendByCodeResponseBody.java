@@ -62,7 +62,7 @@ public class QueryRecommendByCodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class QueryRecommendByCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

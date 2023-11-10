@@ -82,7 +82,11 @@ public class DescribeQuickSaleConfigRequest extends Request {
         } 
 
         /**
-         * Product code.
+         * The product code. Valid values:
+         * <p>
+         * 
+         * *   rds: The instance is a subscription instance.
+         * *   bards: The instance is a pay-as-you-go instance.
          */
         public Builder commodity(String commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -91,13 +95,13 @@ public class DescribeQuickSaleConfigRequest extends Request {
         }
 
         /**
-         * The database engine that is run by the instance. Valid values:
+         * The database engine of the instance. Valid values:
          * <p>
          * 
-         * * **MySQL**
-         * * **SQLServer**
-         * * **PostgreSQL**
-         * * **MariaDB**
+         * *   **MySQL**
+         * *   **SQLServer**
+         * *   **PostgreSQL**
+         * *   **MariaDB**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -106,7 +110,7 @@ public class DescribeQuickSaleConfigRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

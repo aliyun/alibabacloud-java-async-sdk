@@ -153,7 +153,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The username of the account. You can call the [DescribeAccounts](~~610454~~) operation to query the username of the account.
+         * The username of the account. You can call the DescribeAccounts operation to obtain the username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -162,7 +162,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
