@@ -194,6 +194,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
 
+    CompletableFuture<IeHotelBillSettlementQueryResponse> ieHotelBillSettlementQuery(IeHotelBillSettlementQueryRequest request);
+
     CompletableFuture<InsInvoiceScanQueryResponse> insInvoiceScanQuery(InsInvoiceScanQueryRequest request);
 
     CompletableFuture<InsureOrderApplyResponse> insureOrderApply(InsureOrderApplyRequest request);
