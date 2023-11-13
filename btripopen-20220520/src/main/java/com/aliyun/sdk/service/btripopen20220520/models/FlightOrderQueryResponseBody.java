@@ -152,6 +152,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
     } 
 
     public static class FlightChangeTicketInfoList extends TeaModel {
+        @NameInMap("apply_id")
+        private String applyId;
+
         @NameInMap("arr_time")
         private String arrTime;
 
@@ -188,13 +191,23 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("origin_ticket_no")
         private String originTicketNo;
 
+        @NameInMap("out_apply_id")
+        private String outApplyId;
+
         @NameInMap("ticket_no")
         private String ticketNo;
+
+        @NameInMap("ticket_status")
+        private String ticketStatus;
+
+        @NameInMap("ticket_status_code")
+        private Integer ticketStatusCode;
 
         @NameInMap("upgrade_fee")
         private Double upgradeFee;
 
         private FlightChangeTicketInfoList(Builder builder) {
+            this.applyId = builder.applyId;
             this.arrTime = builder.arrTime;
             this.changeCabin = builder.changeCabin;
             this.changeCabinLevel = builder.changeCabinLevel;
@@ -207,7 +220,10 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.originTicketNo = builder.originTicketNo;
+            this.outApplyId = builder.outApplyId;
             this.ticketNo = builder.ticketNo;
+            this.ticketStatus = builder.ticketStatus;
+            this.ticketStatusCode = builder.ticketStatusCode;
             this.upgradeFee = builder.upgradeFee;
         }
 
@@ -217,6 +233,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         public static FlightChangeTicketInfoList create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -304,10 +327,31 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return outApplyId
+         */
+        public String getOutApplyId() {
+            return this.outApplyId;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
             return this.ticketNo;
+        }
+
+        /**
+         * @return ticketStatus
+         */
+        public String getTicketStatus() {
+            return this.ticketStatus;
+        }
+
+        /**
+         * @return ticketStatusCode
+         */
+        public Integer getTicketStatusCode() {
+            return this.ticketStatusCode;
         }
 
         /**
@@ -318,6 +362,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyId; 
             private String arrTime; 
             private String changeCabin; 
             private String changeCabinLevel; 
@@ -330,8 +375,19 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModify; 
             private String originTicketNo; 
+            private String outApplyId; 
             private String ticketNo; 
+            private String ticketStatus; 
+            private Integer ticketStatusCode; 
             private Double upgradeFee; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * arr_time.
@@ -430,10 +486,34 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * out_apply_id.
+             */
+            public Builder outApplyId(String outApplyId) {
+                this.outApplyId = outApplyId;
+                return this;
+            }
+
+            /**
              * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
+                return this;
+            }
+
+            /**
+             * ticket_status.
+             */
+            public Builder ticketStatus(String ticketStatus) {
+                this.ticketStatus = ticketStatus;
+                return this;
+            }
+
+            /**
+             * ticket_status_code.
+             */
+            public Builder ticketStatusCode(Integer ticketStatusCode) {
+                this.ticketStatusCode = ticketStatusCode;
                 return this;
             }
 
@@ -834,11 +914,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
     }
     public static class FlightRefundTicketInfoList extends TeaModel {
+        @NameInMap("apply_id")
+        private String applyId;
+
         @NameInMap("gmt_create")
         private String gmtCreate;
 
         @NameInMap("gmt_modify")
         private String gmtModify;
+
+        @NameInMap("out_apply_id")
+        private String outApplyId;
 
         @NameInMap("refund_order_id")
         private Long refundOrderId;
@@ -856,8 +942,10 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         private String ticketNo;
 
         private FlightRefundTicketInfoList(Builder builder) {
+            this.applyId = builder.applyId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
+            this.outApplyId = builder.outApplyId;
             this.refundOrderId = builder.refundOrderId;
             this.refundReason = builder.refundReason;
             this.refundTicketFee = builder.refundTicketFee;
@@ -874,6 +962,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -885,6 +980,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getGmtModify() {
             return this.gmtModify;
+        }
+
+        /**
+         * @return outApplyId
+         */
+        public String getOutApplyId() {
+            return this.outApplyId;
         }
 
         /**
@@ -923,13 +1025,23 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyId; 
             private String gmtCreate; 
             private String gmtModify; 
+            private String outApplyId; 
             private Long refundOrderId; 
             private String refundReason; 
             private Double refundTicketFee; 
             private Integer refundType; 
             private String ticketNo; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * gmt_create.
@@ -944,6 +1056,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
+                return this;
+            }
+
+            /**
+             * out_apply_id.
+             */
+            public Builder outApplyId(String outApplyId) {
+                this.outApplyId = outApplyId;
                 return this;
             }
 
@@ -1004,6 +1124,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("discount")
         private Integer discount;
 
+        @NameInMap("flight_no")
+        private String flightNo;
+
         @NameInMap("gmt_create")
         private String gmtCreate;
 
@@ -1038,6 +1161,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.buildPrice = builder.buildPrice;
             this.changed = builder.changed;
             this.discount = builder.discount;
+            this.flightNo = builder.flightNo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.oilPrice = builder.oilPrice;
@@ -1077,6 +1201,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public Integer getDiscount() {
             return this.discount;
+        }
+
+        /**
+         * @return flightNo
+         */
+        public String getFlightNo() {
+            return this.flightNo;
         }
 
         /**
@@ -1153,6 +1284,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Double buildPrice; 
             private Boolean changed; 
             private Integer discount; 
+            private String flightNo; 
             private String gmtCreate; 
             private String gmtModify; 
             private Double oilPrice; 
@@ -1185,6 +1317,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder discount(Integer discount) {
                 this.discount = discount;
+                return this;
+            }
+
+            /**
+             * flight_no.
+             */
+            public Builder flightNo(String flightNo) {
+                this.flightNo = flightNo;
                 return this;
             }
 
@@ -1459,6 +1599,12 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         private String departName;
 
+        @NameInMap("exceed_apply_id")
+        private String exceedApplyId;
+
+        @NameInMap("exceed_third_part_apply_id")
+        private String exceedThirdPartApplyId;
+
         @NameInMap("gmt_create")
         private String gmtCreate;
 
@@ -1497,6 +1643,8 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.departId = builder.departId;
             this.departName = builder.departName;
+            this.exceedApplyId = builder.exceedApplyId;
+            this.exceedThirdPartApplyId = builder.exceedThirdPartApplyId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.itineraryId = builder.itineraryId;
@@ -1564,6 +1712,20 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getDepartName() {
             return this.departName;
+        }
+
+        /**
+         * @return exceedApplyId
+         */
+        public String getExceedApplyId() {
+            return this.exceedApplyId;
+        }
+
+        /**
+         * @return exceedThirdPartApplyId
+         */
+        public String getExceedThirdPartApplyId() {
+            return this.exceedThirdPartApplyId;
         }
 
         /**
@@ -1644,6 +1806,8 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String corpName; 
             private String departId; 
             private String departName; 
+            private String exceedApplyId; 
+            private String exceedThirdPartApplyId; 
             private String gmtCreate; 
             private String gmtModify; 
             private String itineraryId; 
@@ -1708,6 +1872,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder departName(String departName) {
                 this.departName = departName;
+                return this;
+            }
+
+            /**
+             * exceed_apply_id.
+             */
+            public Builder exceedApplyId(String exceedApplyId) {
+                this.exceedApplyId = exceedApplyId;
+                return this;
+            }
+
+            /**
+             * exceed_third_part_apply_id.
+             */
+            public Builder exceedThirdPartApplyId(String exceedThirdPartApplyId) {
+                this.exceedThirdPartApplyId = exceedThirdPartApplyId;
                 return this;
             }
 
