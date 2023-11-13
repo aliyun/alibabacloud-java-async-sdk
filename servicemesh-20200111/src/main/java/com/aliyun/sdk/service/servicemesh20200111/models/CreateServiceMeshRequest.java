@@ -69,6 +69,10 @@ public class CreateServiceMeshRequest extends Request {
     private String chargeType;
 
     @Body
+    @NameInMap("ClusterDomain")
+    private String clusterDomain;
+
+    @Body
     @NameInMap("ClusterSpec")
     private String clusterSpec;
 
@@ -327,6 +331,7 @@ public class CreateServiceMeshRequest extends Request {
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.CRAggregationEnabled = builder.CRAggregationEnabled;
         this.chargeType = builder.chargeType;
+        this.clusterDomain = builder.clusterDomain;
         this.clusterSpec = builder.clusterSpec;
         this.configSourceEnabled = builder.configSourceEnabled;
         this.configSourceNacosID = builder.configSourceNacosID;
@@ -498,6 +503,13 @@ public class CreateServiceMeshRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return clusterDomain
+     */
+    public String getClusterDomain() {
+        return this.clusterDomain;
     }
 
     /**
@@ -935,6 +947,7 @@ public class CreateServiceMeshRequest extends Request {
         private Integer autoRenewPeriod; 
         private Boolean CRAggregationEnabled; 
         private String chargeType; 
+        private String clusterDomain; 
         private String clusterSpec; 
         private Boolean configSourceEnabled; 
         private String configSourceNacosID; 
@@ -1016,6 +1029,7 @@ public class CreateServiceMeshRequest extends Request {
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.CRAggregationEnabled = request.CRAggregationEnabled;
             this.chargeType = request.chargeType;
+            this.clusterDomain = request.clusterDomain;
             this.clusterSpec = request.clusterSpec;
             this.configSourceEnabled = request.configSourceEnabled;
             this.configSourceNacosID = request.configSourceNacosID;
@@ -1243,6 +1257,15 @@ public class CreateServiceMeshRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ClusterDomain.
+         */
+        public Builder clusterDomain(String clusterDomain) {
+            this.putBodyParameter("ClusterDomain", clusterDomain);
+            this.clusterDomain = clusterDomain;
             return this;
         }
 
