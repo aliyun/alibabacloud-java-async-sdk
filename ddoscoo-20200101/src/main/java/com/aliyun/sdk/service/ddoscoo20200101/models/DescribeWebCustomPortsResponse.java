@@ -16,6 +16,10 @@ public class DescribeWebCustomPortsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeWebCustomPortsResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeWebCustomPortsResponse extends Response {
     private DescribeWebCustomPortsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeWebCustomPortsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeWebCustomPortsResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeWebCustomPortsResponse extends Response {
     public interface Builder extends Response.Builder<DescribeWebCustomPortsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeWebCustomPortsResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeWebCustomPortsResponse extends Response {
             extends Response.BuilderImpl<DescribeWebCustomPortsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeWebCustomPortsResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeWebCustomPortsResponse extends Response {
         private BuilderImpl(DescribeWebCustomPortsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeWebCustomPortsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

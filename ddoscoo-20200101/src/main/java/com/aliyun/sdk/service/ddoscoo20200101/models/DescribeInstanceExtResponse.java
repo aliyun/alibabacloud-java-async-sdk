@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTotalAttackMaxFlowResponse} extends {@link TeaModel}
+ * {@link DescribeInstanceExtResponse} extends {@link TeaModel}
  *
- * <p>DescribeTotalAttackMaxFlowResponse</p>
+ * <p>DescribeInstanceExtResponse</p>
  */
-public class DescribeTotalAttackMaxFlowResponse extends Response {
+public class DescribeInstanceExtResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DescribeTotalAttackMaxFlowResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeTotalAttackMaxFlowResponseBody body;
+    private DescribeInstanceExtResponseBody body;
 
-    private DescribeTotalAttackMaxFlowResponse(BuilderImpl builder) {
+    private DescribeInstanceExtResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeTotalAttackMaxFlowResponse create() {
+    public static DescribeInstanceExtResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DescribeTotalAttackMaxFlowResponse extends Response {
     /**
      * @return body
      */
-    public DescribeTotalAttackMaxFlowResponseBody getBody() {
+    public DescribeInstanceExtResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeTotalAttackMaxFlowResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeInstanceExtResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeTotalAttackMaxFlowResponseBody body);
+        Builder body(DescribeInstanceExtResponseBody body);
 
         @Override
-        DescribeTotalAttackMaxFlowResponse build();
+        DescribeInstanceExtResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeTotalAttackMaxFlowResponse, Builder>
+            extends Response.BuilderImpl<DescribeInstanceExtResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeTotalAttackMaxFlowResponseBody body; 
+        private DescribeInstanceExtResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeTotalAttackMaxFlowResponse response) {
+        private BuilderImpl(DescribeInstanceExtResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DescribeTotalAttackMaxFlowResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeTotalAttackMaxFlowResponseBody body) {
+        public Builder body(DescribeInstanceExtResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeTotalAttackMaxFlowResponse build() {
-            return new DescribeTotalAttackMaxFlowResponse(this);
+        public DescribeInstanceExtResponse build() {
+            return new DescribeInstanceExtResponse(this);
         } 
 
     } 
